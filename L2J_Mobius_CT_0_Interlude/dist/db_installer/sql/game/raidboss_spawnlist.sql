@@ -225,7 +225,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 (29054,11882,-49216,-3008,0,0,0,1352750,1494), -- Venom (75)
 -- (29056,0,0,0,0,0,0,0,0), -- Ice Fairy Sirra (60)
 -- (29060,106000,-128000,-3000,0,129600,86400,1566263,9999), -- Captain Of The Ice Queen's Royal Guard (59) (Spawn by Quest)
-(29062,-16373,-53562,-10447,0,129600,86400,275385,9999), -- High Priestess van Halter (87)
+(29062,-16382,-53450,-10432,43200,129600,86400,275385,9999), -- High Priestess van Halter (87) -- AI handles ritual cinematic + door swap on balcony cleanup
 -- (29065,26528,-8244,-2007,0,129600,86400,1639965,9999), -- Sailren (80) -- stats to be done (Spawn by Quest)
 (29095,147408,-43552,-2328,0,129600,86400,2289038,4553), -- Gordon (80) -- walking around Goddard
 (29096,112798,-76800,-10,-15544,129600,86400,2231403,48422); -- Anays (87)
