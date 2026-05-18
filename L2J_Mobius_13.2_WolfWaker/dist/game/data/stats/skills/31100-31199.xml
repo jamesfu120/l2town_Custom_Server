@@ -1050,13 +1050,14 @@
 	<skill id="31140" toLevel="1" name="Sonic Violence">
 		<!-- Attacks nearby enemies swiftly and mercilessly. Deals damage equal to 116% of P. Atk. The skill's Critical Rate increases in proportion to your Momentum. If 5 Momentum points are consumed, the Critical Rate is maxed. Consumes 2 Soulstones. Requires dual swords or dual blunt weapons. -->
 		<icon>icon.skill31140</icon>
-		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
 		<affectLimit>3-12</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>150</affectRange>
 		<affectScope>POINT_BLANK</affectScope>
-		<castRange>-1</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-716</effectPoint>
 		<hitTime>7500</hitTime>
@@ -1079,7 +1080,7 @@
 		</conditions>
 		<effects>
 			<effect name="EnergyDamage">
-				<pAtkMod>1.1</pAtkMod>
+				<pAtkMod>1.16</pAtkMod>
 				<chargeConsume>5</chargeConsume>
 				<criticalChance>30</criticalChance>
 			</effect>
