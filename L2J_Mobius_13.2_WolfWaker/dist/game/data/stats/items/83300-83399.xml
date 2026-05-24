@@ -903,6 +903,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="83352" min="1" max="1" chance="33.33" /> <!-- Artificial Amber -->
+			<item id="83353" min="1" max="1" chance="50" /> <!-- Natural Yellow Amber -->
+			<item id="83354" min="1" max="1" chance="100" /> <!-- Natural Blue Amber -->
+		</capsuled_items>
 	</item>
 	<item id="83357" name="Amber Shard" type="EtcItem">
 		<!-- A shard left after failing Amber enchantment. <How to use>. Can be used to craft Amber. <Acquisition>. Failed Amber enchantment -->
