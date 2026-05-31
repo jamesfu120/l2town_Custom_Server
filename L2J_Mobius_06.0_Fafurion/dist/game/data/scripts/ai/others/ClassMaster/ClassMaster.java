@@ -363,7 +363,9 @@ public class ClassMaster extends Script implements IXmlReader
 					canChange = CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, classId); // 11
 				}
 				
-				if (canChange)
+				// Validate that the requested class belongs to the player's own class tree, preventing bypass exploits.
+				final PlayerClass targetClass = PlayerClass.getPlayerClass(classId);
+				if (canChange && (targetClass != null) && targetClass.equalsOrChildOf(player.getPlayerClass()))
 				{
 					int classDataIndex = -1;
 					if (st.hasMoreTokens())
