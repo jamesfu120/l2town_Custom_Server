@@ -165,6 +165,7 @@ public class EnergyDamage extends AbstractEffect
 			
 			// Skill specific mods.
 			final double energyChargesBoost = 1 + (charge * 0.1); // 10% bonus damage for each charge used.
+			final double chargingSkillPowerMod = effector.getStat().getValue(Stat.CHARGING_SKILL_POWER, 1);
 			final double critMod = critical ? Formulas.calcCritDamage(attacker, effected, skill) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot())
@@ -183,7 +184,7 @@ public class EnergyDamage extends AbstractEffect
 			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power + effector.getStat().getValue(Stat.SKILL_POWER_ADD, 0))) / defence;
-			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * energyChargesBoost * pvpPveMod;
+			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * energyChargesBoost * chargingSkillPowerMod * pvpPveMod;
 		}
 		
 		double balanceMod = 1;

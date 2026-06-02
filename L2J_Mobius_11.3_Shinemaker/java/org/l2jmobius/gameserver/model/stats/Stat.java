@@ -135,6 +135,7 @@ public enum Stat
 	SKILL_POWER_ADD("skillPowerAdd"),
 	PHYSICAL_SKILL_POWER("physicalSkillPower"),
 	MAGICAL_SKILL_POWER("magicalSkillPower"),
+	CHARGING_SKILL_POWER("chargingSkillPower"),
 	PHYSICAL_SKILL_CRITICAL_DAMAGE("cAtkSkill"),
 	PHYSICAL_SKILL_CRITICAL_DAMAGE_ADD("cAtkSkillAdd"),
 	MAGIC_CRITICAL_DAMAGE_ADD("mCritPowerAdd"),

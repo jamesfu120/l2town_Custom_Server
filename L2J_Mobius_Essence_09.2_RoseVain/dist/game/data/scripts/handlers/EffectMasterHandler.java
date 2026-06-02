@@ -118,6 +118,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ChangeHairStyle", ChangeHairStyle::new);
 		EffectHandler.getInstance().registerHandler("CheapShot", CheapShot::new);
 		EffectHandler.getInstance().registerHandler("CheatDeath", CheatDeath::new);
+		EffectHandler.getInstance().registerHandler("ChargingSkillPower", ChargingSkillPower::new);
 		EffectHandler.getInstance().registerHandler("ClassChange", ClassChange::new);
 		EffectHandler.getInstance().registerHandler("CombatPower", CombatPower::new);
 		EffectHandler.getInstance().registerHandler("Compelling", Compelling::new);
