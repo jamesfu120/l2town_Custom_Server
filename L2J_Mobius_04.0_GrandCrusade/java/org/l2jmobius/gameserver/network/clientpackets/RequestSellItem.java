@@ -91,7 +91,7 @@ public class RequestSellItem extends ClientPacket
 		
 		if (!getClient().getFloodProtectors().canPerformTransaction())
 		{
-			player.sendMessage("You are buying too fast.");
+			player.sendMessage("You are selling too fast.");
 			return;
 		}
 		
