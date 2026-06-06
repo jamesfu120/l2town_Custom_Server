@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.managers.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
@@ -70,6 +71,8 @@ public class AttackableAI extends CreatureAI
 {
 	private static final int RANDOM_WALK_RATE = 30; // confirmed
 	private static final int MAX_ATTACK_TIMEOUT = 1200; // int ticks, i.e. 2min
+	private static final int SKILL_PROBABILITY_SCALE = 10000;
+	private static final int MAX_PARAMETERIZED_SKILL_SLOTS = 6;
 	
 	/** The delay after which the attacked is stopped. */
 	private int _attackTimeout;
@@ -726,7 +729,7 @@ public class AttackableAI extends CreatureAI
 		if (!aiSuicideSkills.isEmpty() && ((int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100) < 30) && npc.hasSkillChance())
 		{
 			final Skill skill = aiSuicideSkills.get(Rnd.get(aiSuicideSkills.size()));
-			if (SkillCaster.checkUseConditions(npc, skill) && checkSkillTarget(skill, target))
+			if (SkillCaster.checkUseConditions(npc, skill) && checkSkillTarget(skill, target) && allowsParameterizedCast(npc, skill, target))
 			{
 				npc.doCast(skill);
 				return;
@@ -900,7 +903,7 @@ public class AttackableAI extends CreatureAI
 			if (target.isMoving() && !template.getAISkills(AISkillScope.IMMOBILIZE).isEmpty())
 			{
 				final Skill immobolizeSkill = template.getAISkills(AISkillScope.IMMOBILIZE).get(Rnd.get(template.getAISkills(AISkillScope.IMMOBILIZE).size()));
-				if (SkillCaster.checkUseConditions(npc, immobolizeSkill) && checkSkillTarget(immobolizeSkill, target))
+				if (SkillCaster.checkUseConditions(npc, immobolizeSkill) && checkSkillTarget(immobolizeSkill, target) && allowsParameterizedCast(npc, immobolizeSkill, target))
 				{
 					npc.doCast(immobolizeSkill);
 					// LOGGER.finer(this + " used immobolize skill " + immobolizeSkill + " with target " + getTarget());
@@ -912,7 +915,7 @@ public class AttackableAI extends CreatureAI
 			if (target.isCastingNow() && !template.getAISkills(AISkillScope.COT).isEmpty())
 			{
 				final Skill muteSkill = template.getAISkills(AISkillScope.COT).get(Rnd.get(template.getAISkills(AISkillScope.COT).size()));
-				if (SkillCaster.checkUseConditions(npc, muteSkill) && checkSkillTarget(muteSkill, target))
+				if (SkillCaster.checkUseConditions(npc, muteSkill) && checkSkillTarget(muteSkill, target) && allowsParameterizedCast(npc, muteSkill, target))
 				{
 					npc.doCast(muteSkill);
 					// LOGGER.finer(this + " used mute skill " + muteSkill + " with target " + getTarget());
@@ -924,7 +927,7 @@ public class AttackableAI extends CreatureAI
 			if (!npc.getShortRangeSkills().isEmpty() && (npc.calculateDistance2D(target) <= 150))
 			{
 				final Skill shortRangeSkill = npc.getShortRangeSkills().get(Rnd.get(npc.getShortRangeSkills().size()));
-				if (SkillCaster.checkUseConditions(npc, shortRangeSkill) && checkSkillTarget(shortRangeSkill, target))
+				if (SkillCaster.checkUseConditions(npc, shortRangeSkill) && checkSkillTarget(shortRangeSkill, target) && allowsParameterizedCast(npc, shortRangeSkill, target))
 				{
 					npc.doCast(shortRangeSkill);
 					// LOGGER.finer(this + " used short range skill " + shortRangeSkill + " with target " + getTarget());
@@ -936,7 +939,7 @@ public class AttackableAI extends CreatureAI
 			if (!npc.getLongRangeSkills().isEmpty())
 			{
 				final Skill longRangeSkill = npc.getLongRangeSkills().get(Rnd.get(npc.getLongRangeSkills().size()));
-				if (SkillCaster.checkUseConditions(npc, longRangeSkill) && checkSkillTarget(longRangeSkill, target))
+				if (SkillCaster.checkUseConditions(npc, longRangeSkill) && checkSkillTarget(longRangeSkill, target) && allowsParameterizedCast(npc, longRangeSkill, target))
 				{
 					npc.doCast(longRangeSkill);
 					// LOGGER.finer(this + " used long range skill " + longRangeSkill + " with target " + getTarget());
@@ -948,7 +951,7 @@ public class AttackableAI extends CreatureAI
 			if (!template.getAISkills(AISkillScope.GENERAL).isEmpty())
 			{
 				final Skill generalSkill = template.getAISkills(AISkillScope.GENERAL).get(Rnd.get(template.getAISkills(AISkillScope.GENERAL).size()));
-				if (SkillCaster.checkUseConditions(npc, generalSkill) && checkSkillTarget(generalSkill, target))
+				if (SkillCaster.checkUseConditions(npc, generalSkill) && checkSkillTarget(generalSkill, target) && allowsParameterizedCast(npc, generalSkill, target))
 				{
 					npc.doCast(generalSkill);
 					// LOGGER.finer(this + " used general skill " + generalSkill + " with target " + getTarget());
@@ -1508,5 +1511,89 @@ public class AttackableAI extends CreatureAI
 	public Attackable getActiveChar()
 	{
 		return _actor.asAttackable();
+	}
+
+	private boolean allowsParameterizedCast(Attackable caster, Skill skill, Creature target)
+	{
+		if ((caster == null) || (skill == null))
+		{
+			return true;
+		}
+
+		final StatSet params = caster.getTemplate() != null ? caster.getTemplate().getParameters() : null;
+		if ((params == null) || params.isEmpty())
+		{
+			return true;
+		}
+
+		final int slot = findParameterizedSkillSlot(params, skill.getId());
+		if (slot == 0)
+		{
+			return true;
+		}
+
+		return passesParameterizedGates(slot, params, caster, target);
+	}
+
+	private int findParameterizedSkillSlot(StatSet params, int skillId)
+	{
+		for (int slot = 1; slot <= MAX_PARAMETERIZED_SKILL_SLOTS; slot++)
+		{
+			final SkillHolder declared = params.getObject("Skill0" + slot + "_ID", SkillHolder.class);
+			if ((declared != null) && (declared.getSkillId() == skillId))
+			{
+				return slot;
+			}
+		}
+		return 0;
+	}
+
+	private boolean passesParameterizedGates(int slot, StatSet params, Attackable caster, Creature target)
+	{
+		final String prefix = "Skill0" + slot + "_";
+		final int probability = params.getInt(prefix + "Probablity", 0);
+		final boolean checksDistance = params.getInt(prefix + "Check_Dist", 0) == 1;
+		final int highHp = params.getInt(prefix + "HighHP", 0);
+
+		if (probability == 0)
+		{
+			final boolean hasAttackHint = (params.getInt(prefix + "AttackSplash", 0) == 1) || (params.getInt(prefix + "MainAttack", 0) == 1) || (params.getInt(prefix + "Target", 0) > 0);
+			if (!checksDistance && (highHp == 0) && !hasAttackHint)
+			{
+				return false;
+			}
+		}
+		else if (Rnd.get(SKILL_PROBABILITY_SCALE) >= probability)
+		{
+			return false;
+		}
+
+		if (checksDistance && (target != null))
+		{
+			final int distMin = params.getInt(prefix + "Dist_Min", 0);
+			final int distMax = params.getInt(prefix + "Dist_Max", Integer.MAX_VALUE);
+			final int distance = (int) caster.calculateDistance2D(target);
+			if ((distance < distMin) || (distance > distMax))
+			{
+				return false;
+			}
+		}
+
+		if (highHp > 0)
+		{
+			final int hpTarget = params.getInt(prefix + "HPTarget", 0);
+			final Creature hpSource = (hpTarget == 1) ? caster : target;
+			if (hpSource == null)
+			{
+				return false;
+			}
+			final double hpPercent = (hpSource.getCurrentHp() * 100.0) / hpSource.getMaxHp();
+			if (hpPercent <= highHp)
+			{
+				return false;
+			}
+		}
+
+		return true;
 	}
 }
