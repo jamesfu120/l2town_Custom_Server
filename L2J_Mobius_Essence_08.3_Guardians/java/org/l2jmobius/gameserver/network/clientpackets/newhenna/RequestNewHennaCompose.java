@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.newhenna.NewHennaList;
 import org.l2jmobius.gameserver.network.serverpackets.newhenna.NewHennaPotenCompose;
 
 /**
@@ -63,58 +63,54 @@ public class RequestNewHennaCompose extends ClientPacket
 		}
 		
 		final Inventory inventory = player.getInventory();
-		if ((player.getHenna(_slotOneIndex) == null) //
-			|| ((_slotOneItemId != -1) && (inventory.getItemByObjectId(_slotOneItemId) == null)) //
-			|| ((_slotTwoItemId != -1) && (inventory.getItemByObjectId(_slotTwoItemId) == null)))
+		if ((player.getHenna(_slotOneIndex) == null) || ((_slotOneItemId != -1) && (inventory.getItemByObjectId(_slotOneItemId) == null)) || ((_slotTwoItemId != -1) && (inventory.getItemByObjectId(_slotTwoItemId) == null)))
 		{
 			return;
 		}
 		
 		final Henna henna = player.getHenna(_slotOneIndex);
-		final CombinationHenna combinationHennas = HennaCombinationData.getInstance().getByHenna(henna.getDyeId());
+		final CombinationHenna combinationHennas = getCombination(henna.getDyeId(), inventory);
 		if (combinationHennas == null)
 		{
 			player.sendPacket(new NewHennaPotenCompose(henna.getDyeId(), -1, false));
 			return;
 		}
 		
-		if (((_slotOneItemId != -1) && (combinationHennas.getItemOne() != inventory.getItemByObjectId(_slotOneItemId).getId())) //
-			|| ((_slotTwoItemId != -1) && (combinationHennas.getItemTwo() != inventory.getItemByObjectId(_slotTwoItemId).getId())))
+		// Validate both outcomes up front so a misconfigured recipe fails before anything is consumed.
+		final CombinationHennaReward successReward = combinationHennas.getReward(CombinationItemType.ON_SUCCESS);
+		final CombinationHennaReward failureReward = combinationHennas.getReward(CombinationItemType.ON_FAILURE);
+		if ((successReward == null) || (failureReward == null) || (HennaData.getInstance().getHenna(successReward.getHennaId()) == null) || (HennaData.getInstance().getHenna(failureReward.getHennaId()) == null))
 		{
-			PacketLogger.info(getClass().getSimpleName() + ": " + player + " has modified client or combination data is outdated!" + System.lineSeparator() + "Henna DyeId: " + henna.getDyeId() + " ItemOne: " + combinationHennas.getItemOne() + " ItemTwo: " + combinationHennas.getItemTwo());
+			PacketLogger.info(getClass().getSimpleName() + ": " + player + " attempted to compose henna with incomplete reward data!" + System.lineSeparator() + "Henna DyeId: " + henna.getDyeId());
+			player.sendPacket(new NewHennaPotenCompose(henna.getDyeId(), -1, false));
+			return;
 		}
 		
 		final long commission = combinationHennas.getCommission();
 		if (commission > player.getAdena())
 		{
+			player.sendPacket(new NewHennaPotenCompose(henna.getDyeId(), -1, false));
 			return;
 		}
 		
 		final ItemHolder one = new ItemHolder(combinationHennas.getItemOne(), combinationHennas.getCountOne());
 		final ItemHolder two = new ItemHolder(combinationHennas.getItemTwo(), combinationHennas.getCountTwo());
-		if (((_slotOneItemId != -1) && ((inventory.getItemByItemId(one.getId()) == null) || (inventory.getItemByItemId(one.getId()).getCount() < one.getCount()))) //
-			|| ((_slotTwoItemId != -1) && ((inventory.getItemByItemId(two.getId()) == null) || (inventory.getItemByItemId(two.getId()).getCount() < two.getCount()))))
+		final boolean consumeItemOne = one.getId() > 0;
+		final boolean consumeItemTwo = two.getId() > 0;
+		if ((_slotOneItemId != -1) && (_slotTwoItemId != -1) && !isValidCombinationItem(inventory.getItemByObjectId(_slotOneItemId).getId(), one.getId(), two.getId()) && !isValidCombinationItem(inventory.getItemByObjectId(_slotTwoItemId).getId(), one.getId(), two.getId()))
+		{
+			PacketLogger.info(getClass().getSimpleName() + ": " + player + " has modified client or combination data is outdated!" + System.lineSeparator() + "Henna DyeId: " + henna.getDyeId() + " ItemOne: " + combinationHennas.getItemOne() + " ItemTwo: " + combinationHennas.getItemTwo());
+			player.sendPacket(new NewHennaPotenCompose(henna.getDyeId(), -1, false));
+			return;
+		}
+		
+		if ((consumeItemOne && ((inventory.getItemByItemId(one.getId()) == null) || (inventory.getItemByItemId(one.getId()).getCount() < one.getCount()))) || (consumeItemTwo && ((inventory.getItemByItemId(two.getId()) == null) || (inventory.getItemByItemId(two.getId()).getCount() < two.getCount()))))
 		{
 			player.sendPacket(new NewHennaPotenCompose(henna.getDyeId(), -1, false));
 			return;
 		}
 		
-		final InventoryUpdate iu = new InventoryUpdate();
-		if (_slotOneItemId != -1)
-		{
-			iu.addModifiedItem(inventory.getItemByItemId(one.getId()));
-		}
-		
-		if (_slotTwoItemId != -1)
-		{
-			iu.addModifiedItem(inventory.getItemByItemId(two.getId()));
-		}
-		
-		iu.addModifiedItem(inventory.getItemByItemId(Inventory.ADENA_ID));
-		
-		if (((_slotOneItemId != -1) && (inventory.destroyItemByItemId(ItemProcessType.FEE, one.getId(), one.getCount(), player, null) == null)) //
-			|| ((_slotTwoItemId != -1) && (inventory.destroyItemByItemId(ItemProcessType.FEE, two.getId(), two.getCount(), player, null) == null)) //
-			|| (inventory.destroyItemByItemId(ItemProcessType.FEE, Inventory.ADENA_ID, commission, player, null) == null))
+		if (((commission > 0) && !player.destroyItemByItemId(ItemProcessType.FEE, Inventory.ADENA_ID, commission, player, true)) || (consumeItemOne && !player.destroyItemByItemId(ItemProcessType.FEE, one.getId(), one.getCount(), player, true)) || (consumeItemTwo && !player.destroyItemByItemId(ItemProcessType.FEE, two.getId(), two.getCount(), player, true)))
 		{
 			player.sendPacket(new NewHennaPotenCompose(henna.getDyeId(), -1, false));
 			return;
@@ -122,25 +118,92 @@ public class RequestNewHennaCompose extends ClientPacket
 		
 		if (Rnd.get(0, 100) <= combinationHennas.getChance())
 		{
-			final CombinationHennaReward reward = combinationHennas.getReward(CombinationItemType.ON_SUCCESS);
 			player.removeHenna(_slotOneIndex, false);
-			player.addHenna(_slotOneIndex, HennaData.getInstance().getHenna(reward.getHennaId()));
-			player.addItem(ItemProcessType.REWARD, reward.getId(), reward.getCount(), null, false);
-			player.sendPacket(new NewHennaPotenCompose(reward.getHennaId(), reward.getId() == 0 ? -1 : reward.getId(), true));
+			player.addHenna(_slotOneIndex, HennaData.getInstance().getHenna(successReward.getHennaId()));
+			if ((successReward.getId() > 0) && (successReward.getCount() > 0))
+			{
+				player.addItem(ItemProcessType.REWARD, successReward.getId(), successReward.getCount(), null, false);
+			}
+			player.sendPacket(new NewHennaPotenCompose(successReward.getHennaId(), successReward.getId() > 0 ? successReward.getId() : -1, true));
 		}
 		else
 		{
-			final CombinationHennaReward reward = combinationHennas.getReward(CombinationItemType.ON_FAILURE);
-			if (henna.getDyeId() != reward.getHennaId())
+			if (henna.getDyeId() != failureReward.getHennaId())
 			{
 				player.removeHenna(_slotOneIndex, false);
-				player.addHenna(_slotOneIndex, HennaData.getInstance().getHenna(reward.getHennaId()));
+				player.addHenna(_slotOneIndex, HennaData.getInstance().getHenna(failureReward.getHennaId()));
 			}
 			
-			player.addItem(ItemProcessType.REWARD, reward.getId(), reward.getCount(), null, false);
-			player.sendPacket(new NewHennaPotenCompose(reward.getHennaId(), reward.getId() == 0 ? -1 : reward.getId(), false));
+			if ((failureReward.getId() > 0) && (failureReward.getCount() > 0))
+			{
+				player.addItem(ItemProcessType.REWARD, failureReward.getId(), failureReward.getCount(), null, false);
+			}
+			player.sendPacket(new NewHennaPotenCompose(failureReward.getHennaId(), failureReward.getId() > 0 ? failureReward.getId() : -1, false));
 		}
 		
-		player.sendPacket(iu);
+		player.sendPacket(new NewHennaList(player, 1));
+	}
+	
+	private boolean isValidCombinationItem(int itemId, int itemOneId, int itemTwoId)
+	{
+		return (itemId > 0) && ((itemId == itemOneId) || (itemId == itemTwoId));
+	}
+	
+	private CombinationHenna getCombination(int hennaId, Inventory inventory)
+	{
+		CombinationHenna fallback = null;
+		for (CombinationHenna combination : HennaCombinationData.getInstance().getHenna())
+		{
+			if (combination.getHenna() != hennaId)
+			{
+				continue;
+			}
+			
+			if (matchesClientItems(combination, inventory))
+			{
+				return combination;
+			}
+			
+			if ((fallback == null) && hasRequiredItems(combination, inventory))
+			{
+				fallback = combination;
+			}
+		}
+		
+		return fallback;
+	}
+	
+	private boolean matchesClientItems(CombinationHenna combination, Inventory inventory)
+	{
+		boolean hasClientItem = false;
+		if (_slotOneItemId != -1)
+		{
+			hasClientItem = true;
+			if (!isValidCombinationItem(inventory.getItemByObjectId(_slotOneItemId).getId(), combination.getItemOne(), combination.getItemTwo()))
+			{
+				return false;
+			}
+		}
+		
+		if (_slotTwoItemId != -1)
+		{
+			hasClientItem = true;
+			if (!isValidCombinationItem(inventory.getItemByObjectId(_slotTwoItemId).getId(), combination.getItemOne(), combination.getItemTwo()))
+			{
+				return false;
+			}
+		}
+		
+		return hasClientItem && hasRequiredItems(combination, inventory);
+	}
+	
+	private boolean hasRequiredItems(CombinationHenna combination, Inventory inventory)
+	{
+		return hasItem(inventory, combination.getItemOne(), combination.getCountOne()) && hasItem(inventory, combination.getItemTwo(), combination.getCountTwo());
+	}
+	
+	private boolean hasItem(Inventory inventory, int itemId, long count)
+	{
+		return (itemId <= 0) || ((inventory.getItemByItemId(itemId) != null) && (inventory.getItemByItemId(itemId).getCount() >= count));
 	}
 }
