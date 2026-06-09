@@ -130,7 +130,7 @@ public class PetSummonInfo extends ServerPacket
 		buffer.writeInt(_summon.getWeapon()); // right hand weapon
 		buffer.writeInt(_summon.getArmor()); // body armor
 		buffer.writeInt(0); // left hand weapon
-		buffer.writeByte(_summon.isShowSummonAnimation() ? 2 : _value); // 0=teleported 1=default 2=summoned
+		buffer.writeByte(_summon.isDead() ? 0 : _summon.isShowSummonAnimation() ? 2 : _value);
 		buffer.writeInt(-1); // High Five NPCString ID
 		if (_summon.isPet())
 		{
@@ -152,17 +152,9 @@ public class PetSummonInfo extends ServerPacket
 		buffer.writeInt((int) _summon.getCurrentMp()); // current mp
 		buffer.writeInt(_summon.getMaxMp()); // max mp
 		buffer.writeLong(_summon.getStat().getSp()); // sp
-		buffer.writeByte(_summon.getLevel()); // level
-		buffer.writeLong(_summon.getStat().getExp());
-		if (_summon.getExpForThisLevel() > _summon.getStat().getExp())
-		{
-			buffer.writeLong(_summon.getStat().getExp()); // 0% absolute value
-		}
-		else
-		{
-			buffer.writeLong(_summon.getExpForThisLevel()); // 0% absolute value
-		}
-		
+		buffer.writeShort(_summon.getLevel()); // level
+		buffer.writeLong(_summon.getStat().getExp()); // 0% absolute value
+		buffer.writeLong(Math.min(_summon.getExpForThisLevel(), _summon.getStat().getExp())); // 0% absolute value
 		buffer.writeLong(_summon.getExpForNextLevel()); // 100% absoulte value
 		buffer.writeInt(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
 		buffer.writeInt(_summon.getMaxLoad()); // max weight it can carry
@@ -183,7 +175,7 @@ public class PetSummonInfo extends ServerPacket
 		buffer.writeByte(_summon.getTeam().getId()); // Confirmed
 		buffer.writeByte(_summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit - Confirmed
 		buffer.writeByte(_summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
-		buffer.writeInt(0); // TODO: Find me
+		buffer.writeInt(-1);
 		buffer.writeInt(0); // "Transformation ID - Confirmed" - Used to bug Fenrir after 64 level.
 		buffer.writeByte(_summon.getOwner().getSummonPoints()); // Used Summon Points
 		buffer.writeByte(_summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points
