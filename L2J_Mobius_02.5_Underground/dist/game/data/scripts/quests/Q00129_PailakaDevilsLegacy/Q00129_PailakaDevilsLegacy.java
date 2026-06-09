@@ -133,9 +133,8 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
+		String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			case SURVIVOR:
@@ -160,14 +159,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 					}
 					case State.STARTED:
 					{
-						if (qs.getCond() > 1)
-						{
-							htmltext = "32498-08.htm";
-						}
-						else
-						{
-							htmltext = "32498-06.htm";
-						}
+						htmltext = qs.getCond() > 1 ? "32498-08.htm" : "32498-06.htm";
 						break;
 					}
 					case State.COMPLETED:
@@ -245,7 +237,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 						addExpAndSp(player, 4010000, 962);
 						giveAdena(player, 411500, true);
 						rewardItems(player, BRACELET, 1);
-						rewardItems(player, ESCAPE, 1);
+						giveItems(player, ESCAPE, 1);
 					}
 					
 					qs.exitQuest(false, true);
