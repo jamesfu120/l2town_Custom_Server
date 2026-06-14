@@ -16,14 +16,13 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2jmobius.gameserver.util.ArrayUtil;
 
 /**
  * This class manages all chest.
@@ -31,9 +30,22 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class Chest extends Monster
 {
+	// Chest NPC ids that are real boxes (openable with a key, explode when hit).
+	// Every other chest id is a mimic: it cannot be opened and turns hostile instead.
+	// @formatter:off
+	private static final int[] BOXES =
+	{
+		18265, 18266, 18267, 18268, 18269, 18270, 18271, 18272, 18273, 18274,
+		18275, 18276, 18277, 18278, 18279, 18280, 18281, 18282, 18283, 18284,
+		18285, 18286, 18287, 18288, 18289, 18290, 18291, 18292, 18293, 18294,
+		18295, 18296, 18297, 18298
+	};
+	// @formatter:on
+
+	private final boolean _isBox;
 	private volatile boolean _isInteracted;
 	private volatile boolean _specialDrop;
-	
+
 	/**
 	 * Creates a chest.
 	 * @param template the chest NPC template
@@ -42,10 +54,11 @@ public class Chest extends Monster
 	{
 		super(template);
 		setInstanceType(InstanceType.Chest);
+		_isBox = ArrayUtil.contains(BOXES, template.getId());
 		setRandomWalking(false);
 		_specialDrop = false;
 	}
-	
+
 	@Override
 	public void onSpawn()
 	{
@@ -53,8 +66,18 @@ public class Chest extends Monster
 		_isInteracted = false;
 		_specialDrop = false;
 		setMustRewardExpSp(true);
+		// onSpawn restores random walking from the template; a chest (box or mimic) must stay put until provoked.
+		setRandomWalking(false);
 	}
-	
+
+	/**
+	 * @return {@code true} if this chest is a box (can be opened with a key and explodes when hit), {@code false} if it is a mimic.
+	 */
+	public boolean isBox()
+	{
+		return _isBox;
+	}
+
 	public synchronized boolean isInteracted()
 	{
 		return _isInteracted;
@@ -109,128 +132,27 @@ public class Chest extends Monster
 		super.doItemDrop(NpcData.getInstance().getTemplate(id), lastAttacker);
 	}
 	
-	// cast - trap chest
-	public void chestTrap(Creature player)
+	/**
+	 * Makes the chest explode by casting Treasure Bomb (skill 4143) on itself.<br>
+	 * The skill is an area effect centered on the chest, so it must target self - otherwise a distant
+	 * attacker would be out of cast range and the chest would never explode.
+	 */
+	public void treasureBomb()
 	{
-		int trapSkillId = 0;
-		final int rnd = Rnd.get(120);
-		if (getTemplate().getLevel() >= 61)
+		final int skillLevel = Math.max(1, Math.min(10, Math.round(getLevel() / 10f)));
+		final Skill skill = SkillData.getInstance().getSkill(4143, skillLevel);
+		if (skill != null)
 		{
-			if (rnd >= 90)
-			{
-				trapSkillId = 4139; // explosion
-			}
-			else if (rnd >= 50)
-			{
-				trapSkillId = 4118; // area paralysys
-			}
-			else if (rnd >= 20)
-			{
-				trapSkillId = 1167; // poison cloud
-			}
-			else
-			{
-				trapSkillId = 223; // sting
-			}
+			setTarget(this);
+			doCast(skill);
 		}
-		else if (getTemplate().getLevel() >= 41)
-		{
-			if (rnd >= 90)
-			{
-				trapSkillId = 4139; // explosion
-			}
-			else if (rnd >= 60)
-			{
-				trapSkillId = 96; // bleed
-			}
-			else if (rnd >= 20)
-			{
-				trapSkillId = 1167; // poison cloud
-			}
-			else
-			{
-				trapSkillId = 4118; // area paralysys
-			}
-		}
-		else if (getTemplate().getLevel() >= 21)
-		{
-			if (rnd >= 80)
-			{
-				trapSkillId = 4139; // explosion
-			}
-			else if (rnd >= 50)
-			{
-				trapSkillId = 96; // bleed
-			}
-			else if (rnd >= 20)
-			{
-				trapSkillId = 1167; // poison cloud
-			}
-			else
-			{
-				trapSkillId = 129; // poison
-			}
-		}
-		else
-		{
-			if (rnd >= 80)
-			{
-				trapSkillId = 4139; // explosion
-			}
-			else if (rnd >= 50)
-			{
-				trapSkillId = 96; // bleed
-			}
-			else
-			{
-				trapSkillId = 129; // poison
-			}
-		}
-		
-		player.sendMessage("There was a trap!");
-		handleCast(player, trapSkillId);
-	}
-	
-	// <--
-	// cast casse
-	// <--
-	private boolean handleCast(Creature player, int skillId)
-	{
-		int skillLevel = 1;
-		final byte level = getTemplate().getLevel();
-		if ((level > 20) && (level <= 40))
-		{
-			skillLevel = 3;
-		}
-		else if ((level > 40) && (level <= 60))
-		{
-			skillLevel = 5;
-		}
-		else if (level > 60)
-		{
-			skillLevel = 6;
-		}
-		
-		if (player.isDead() || player.isInvisible() || !player.isInsideRadius2D(this, 1500))
-		{
-			return false;
-		}
-		
-		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
-		if (!player.isAffectedBySkill(skillId))
-		{
-			skill.applyEffects(this, player);
-			broadcastPacket(new MagicSkillUse(this, player, skillId, skillLevel, skill.getHitTime(), 0));
-			return true;
-		}
-		
-		return false;
 	}
 	
 	@Override
 	public boolean isMovementDisabled()
 	{
-		return true;
+		// a box never moves; a mimic must be able to chase whoever provokes it
+		return _isBox || super.isMovementDisabled();
 	}
 	
 	@Override
