@@ -49,6 +49,7 @@ public class RequestPrivateStoreManageSell extends ClientPacket
 		if (player.isAlikeDead())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		player.tryOpenPrivateSellStore(false);
