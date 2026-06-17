@@ -116,7 +116,15 @@ public class RequestPreviewItem extends ClientPacket
 		
 		if (!getClient().getFloodProtectors().canPerformTransaction())
 		{
-			player.sendMessage("You are buying too fast.");
+			player.sendMessage("You are previewing items too fast.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (!player.getAccessLevel().allowTransaction())
+		{
+			player.sendMessage("Transactions are disabled for your access level.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
