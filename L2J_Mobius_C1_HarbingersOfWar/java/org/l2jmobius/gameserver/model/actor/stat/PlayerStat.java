@@ -804,7 +804,6 @@ public class PlayerStat extends PlayableStat
 	{
 		double bonus = 1.0;
 		double vitality = 1.0;
-		double hunting = 1.0;
 		double bonusExp = 1.0;
 		
 		// Bonus from Vitality System
@@ -815,11 +814,6 @@ public class PlayerStat extends PlayableStat
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);
-		}
-		
-		if (hunting > 1.0)
-		{
-			bonus += (hunting - 1);
 		}
 		
 		if (bonusExp > 1)
@@ -841,7 +835,6 @@ public class PlayerStat extends PlayableStat
 	{
 		double bonus = 1.0;
 		double vitality = 1.0;
-		double hunting = 1.0;
 		double bonusSp = 1.0;
 		
 		// Bonus from Vitality System
@@ -852,11 +845,6 @@ public class PlayerStat extends PlayableStat
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);
-		}
-		
-		if (hunting > 1.0)
-		{
-			bonus += (hunting - 1);
 		}
 		
 		if (bonusSp > 1)
