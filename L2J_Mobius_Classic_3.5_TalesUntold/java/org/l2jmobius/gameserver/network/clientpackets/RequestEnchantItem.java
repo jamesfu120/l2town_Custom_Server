@@ -452,7 +452,17 @@ public class RequestEnchantItem extends ClientPacket
 								sm.addItemName(crystals);
 								sm.addLong(count);
 								player.sendPacket(sm);
-								iu.addNewItem(crystals); // Add the crystals gained, not the destroyed item.
+								
+								// Add the crystals gained, not the destroyed item.
+								// Report as modified if stacked onto an existing crystal stack, otherwise as a new item.
+								if (crystals.getLastChange() == Item.MODIFIED)
+								{
+									iu.addModifiedItem(crystals);
+								}
+								else
+								{
+									iu.addNewItem(crystals);
+								}
 							}
 							
 							if ((crystalId == 0) || (count == 0))
