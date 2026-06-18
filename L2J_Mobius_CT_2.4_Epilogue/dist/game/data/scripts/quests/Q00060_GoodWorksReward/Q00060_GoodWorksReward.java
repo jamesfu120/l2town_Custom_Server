@@ -1271,12 +1271,13 @@ public class Q00060_GoodWorksReward extends Quest
 					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, "Who are you to join in the battle? How upsetting."));
 				}
 			}
-			
-			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
-			if (npc0 != null)
-			{
-				npc0.getVariables().set("SPAWNED", false);
-			}
+		}
+		
+		// Always release Mark's lock when the pursuer dies, even if killed by someone without the quest.
+		final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
+		if (npc0 != null)
+		{
+			npc0.getVariables().set("SPAWNED", false);
 		}
 	}
 	
