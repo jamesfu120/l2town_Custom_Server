@@ -422,4 +422,4 @@ Laws vary by country and state. **When in doubt, consult a qualified attorney in
 
 ## Thank you!
 
-Thanks to all the people that helped with the development and contributed other the years.
+Thanks to all the people that helped with the development and contributed over the years.
