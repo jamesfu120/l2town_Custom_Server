@@ -306,11 +306,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		{
 			int count = 0; // Prevent infinite loop.
 			Location location;
-			
-			final Location centerPoint = _zone.getCenterPoint();
-			final int centerX = centerPoint.getX();
-			final int centerY = centerPoint.getY();
-			final int centerZ = centerPoint.getZ();
 			int randomX;
 			int randomY;
 			int randomZ;
@@ -323,11 +318,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 				randomZ = location.getZ();
 				
 				if (GeoEngine.getInstance().getHeight(randomX, randomY, randomZ) > _zone.getHighZ())
-				{
-					continue;
-				}
-				
-				if (!GeoEngine.getInstance().canSeeTarget(randomX, randomY, randomZ, centerX, centerY, centerZ, null))
 				{
 					continue;
 				}
@@ -345,11 +335,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 			final SpawnTerritory territory = _group.getTerritories().get(Rnd.get(_group.getTerritories().size()));
 			int count = 0; // Prevent infinite loop.
 			Location location;
-			
-			final Location centerPoint = territory.getCenterPoint();
-			final int centerX = centerPoint.getX();
-			final int centerY = centerPoint.getY();
-			final int centerZ = centerPoint.getZ();
 			int randomX;
 			int randomY;
 			int randomZ;
@@ -377,11 +362,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 						continue;
 					}
 					
-					if (!GeoEngine.getInstance().canSeeTarget(randomX, randomY, randomZ, centerX, centerY, centerZ, null))
-					{
-						continue;
-					}
-					
 					location.setHeading(-1);
 					return location;
 				}
@@ -420,11 +400,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 					continue;
 				}
 				
-				if (!GeoEngine.getInstance().canSeeTarget(randomX, randomY, randomZ, centerX, centerY, centerZ, null))
-				{
-					continue;
-				}
-				
 				location.setHeading(-1);
 				return location;
 			}
@@ -438,11 +413,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 			final SpawnTerritory territory = _spawnTemplate.getTerritories().get(Rnd.get(_spawnTemplate.getTerritories().size()));
 			int count = 0; // Prevent infinite loop.
 			Location location;
-			
-			final Location centerPoint = territory.getCenterPoint();
-			final int centerX = centerPoint.getX();
-			final int centerY = centerPoint.getY();
-			final int centerZ = centerPoint.getZ();
 			int randomX;
 			int randomY;
 			int randomZ;
@@ -470,11 +440,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 						continue;
 					}
 					
-					if (!GeoEngine.getInstance().canSeeTarget(randomX, randomY, randomZ, centerX, centerY, centerZ, null))
-					{
-						continue;
-					}
-					
 					location.setHeading(-1);
 					return location;
 				}
@@ -509,11 +474,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 				randomZ = location.getZ();
 				
 				if (GeoEngine.getInstance().getHeight(randomX, randomY, randomZ) > territory.getHighZ())
-				{
-					continue;
-				}
-				
-				if (!GeoEngine.getInstance().canSeeTarget(randomX, randomY, randomZ, centerX, centerY, centerZ, null))
 				{
 					continue;
 				}
