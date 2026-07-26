@@ -675,6 +675,12 @@ public class AttackableAI extends CreatureAI
 			{
 				for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 				{
+					// Skip buffs that are already active.
+					if (npc.isAffectedBySkill(sk.getId()))
+					{
+						continue;
+					}
+					
 					// Only consider skills if we have enough MP.
 					if (npc.getCurrentMp() <= sk.getMpConsume())
 					{
@@ -701,6 +707,12 @@ public class AttackableAI extends CreatureAI
 		{
 			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 			{
+				// Skip buffs that are already active.
+				if (npc.isAffectedBySkill(sk.getId()))
+				{
+					continue;
+				}
+				
 				// Only consider skills if we have enough MP.
 				if (npc.getCurrentMp() <= sk.getMpConsume())
 				{
