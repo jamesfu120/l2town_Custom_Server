@@ -696,8 +696,15 @@ public class AttackableAI extends CreatureAI
 		
 		if (_attackTimeout < GameTimeTaskManager.getInstance().getGameTicks())
 		{
+			// Remember the combat state, the intention change below clears it.
+			final boolean wasInCombat = npc.isInCombat();
+			
 			// Set the AI Intention to ACTIVE
 			setIntention(Intention.ACTIVE);
+			
+			// Lose hate, otherwise the next think would attack the same target again.
+			npc.clearAggroList();
+			npc.getAttackByList().clear();
 			
 			if (!_actor.isFakePlayer())
 			{
@@ -705,7 +712,7 @@ public class AttackableAI extends CreatureAI
 			}
 			
 			// Monster teleport to spawn
-			if (npc.isMonster() && (npc.getSpawn() != null) && !npc.isInInstance() && (npc.isInCombat() || World.getInstance().getVisibleObjects(npc, Player.class).isEmpty()))
+			if (npc.isMonster() && (npc.getSpawn() != null) && !npc.isInInstance() && (wasInCombat || World.getInstance().getVisibleObjects(npc, Player.class).isEmpty()))
 			{
 				npc.teleToLocation(npc.getSpawn(), false);
 			}
