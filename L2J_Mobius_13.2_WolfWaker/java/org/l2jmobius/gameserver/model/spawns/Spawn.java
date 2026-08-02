@@ -635,6 +635,24 @@ public class Spawn extends Location
 		return _spawnTemplate;
 	}
 	
+	/**
+	 * @return {@code true} when this spawn is bound to a territory instead of a fixed point
+	 */
+	public boolean hasSpawnTerritory()
+	{
+		return (_spawnTemplate != null) && _spawnTemplate.hasTerritory();
+	}
+	
+	/**
+	 * @param x
+	 * @param y
+	 * @return {@code true} if the point lies inside the territory of this spawn
+	 */
+	public boolean isInsideSpawnTerritory(int x, int y)
+	{
+		return (_spawnTemplate != null) && _spawnTemplate.isInsideTerritory(x, y);
+	}
+	
 	@Override
 	public String toString()
 	{

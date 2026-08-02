@@ -49,6 +49,17 @@ public class BannedSpawnTerritory
 		return _territory.isInsideZone(x, y, z);
 	}
 	
+	/**
+	 * Tests containment on the XY plane only, ignoring the Z band.
+	 * @param x
+	 * @param y
+	 * @return {@code true} if the point lies inside the territory polygon
+	 */
+	public boolean isInsideZone(int x, int y)
+	{
+		return _territory.isInsideZone(x, y, _territory.getLowZ());
+	}
+	
 	public void visualizeZone(int z)
 	{
 		_territory.visualizeZone(z);

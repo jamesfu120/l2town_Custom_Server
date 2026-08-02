@@ -232,6 +232,75 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		return _zone;
 	}
 	
+	/**
+	 * @return {@code true} when this entry spawns inside a territory instead of at fixed locations
+	 */
+	public boolean hasTerritory()
+	{
+		return (_zone != null) || !_group.getTerritories().isEmpty() || !_spawnTemplate.getTerritories().isEmpty();
+	}
+	
+	/**
+	 * Tests whether a point lies inside the territory this entry spawns in, following the precedence of {@link #getSpawnLocation()}.
+	 * @param x
+	 * @param y
+	 * @return {@code true} if a unit of this entry could have spawned there
+	 */
+	public boolean isInsideTerritory(int x, int y)
+	{
+		if (_zone != null)
+		{
+			return _zone.isInsideZone(x, y);
+		}
+		
+		if (!_group.getTerritories().isEmpty())
+		{
+			return isInsideAny(_group.getTerritories(), _group.getBannedTerritories(), x, y);
+		}
+		
+		if (!_spawnTemplate.getTerritories().isEmpty())
+		{
+			return isInsideAny(_spawnTemplate.getTerritories(), _spawnTemplate.getBannedTerritories(), x, y);
+		}
+		
+		return false;
+	}
+	
+	/**
+	 * @param territories the territories a unit can spawn in
+	 * @param banned the holes cut out of them
+	 * @param x
+	 * @param y
+	 * @return {@code true} if the point lies in one of the territories and in none of the holes
+	 */
+	private boolean isInsideAny(List<SpawnTerritory> territories, List<BannedSpawnTerritory> banned, int x, int y)
+	{
+		boolean inside = false;
+		for (SpawnTerritory territory : territories)
+		{
+			if (territory.isInsideZone(x, y))
+			{
+				inside = true;
+				break;
+			}
+		}
+		
+		if (!inside)
+		{
+			return false;
+		}
+		
+		for (BannedSpawnTerritory territory : banned)
+		{
+			if (territory.isInsideZone(x, y))
+			{
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
 	@Override
 	public StatSet getParameters()
 	{
