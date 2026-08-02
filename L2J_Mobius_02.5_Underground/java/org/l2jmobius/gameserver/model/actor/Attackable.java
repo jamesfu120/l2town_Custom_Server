@@ -122,6 +122,7 @@ public class Attackable extends Npc
 	
 	// Misc
 	private boolean _mustGiveExpSp;
+	private long _spawnTime = System.currentTimeMillis();
 	
 	/**
 	 * Constructor of Attackable (use Creature and Npc constructor).<br>
@@ -1511,6 +1512,9 @@ public class Attackable extends Npc
 	@Override
 	public void onSpawn()
 	{
+		// Keep track of the spawn time.
+		_spawnTime = System.currentTimeMillis();
+		
 		super.onSpawn();
 		
 		// Clear mob spoil, seed
@@ -1545,6 +1549,12 @@ public class Attackable extends Npc
 		// Check the region where this mob is, do not activate the AI if region is inactive.
 		if (hasAI())
 		{
+			// Roll the aggro timeout again, the AI object survives a respawn.
+			if (getAI() instanceof AttackableAI)
+			{
+				((AttackableAI) getAI()).rollGlobalAggro();
+			}
+			
 			// Set the intention of the Attackable to ACTIVE
 			getAI().setIntention(Intention.ACTIVE);
 			
@@ -1554,6 +1564,14 @@ public class Attackable extends Npc
 				getAI().stopAITask();
 			}
 		}
+	}
+	
+	/**
+	 * @return the time in milliseconds when this attackable was spawned.
+	 */
+	public long getSpawnTime()
+	{
+		return _spawnTime;
 	}
 	
 	@Override
