@@ -70,11 +70,12 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	private final SpawnTemplate _spawnTemplate;
 	private final SpawnGroup _group;
 	private final Set<Npc> _spawnedNpcs = ConcurrentHashMap.newKeySet();
+	private int _aliveOrReserved = 0;
 	
-	private NpcSpawnTemplate(NpcSpawnTemplate template)
+	private NpcSpawnTemplate(NpcSpawnTemplate template, SpawnGroup group)
 	{
 		_spawnTemplate = template._spawnTemplate;
-		_group = template._group;
+		_group = group;
 		_id = template._id;
 		_count = template._count;
 		_respawnTime = template._respawnTime;
@@ -283,6 +284,19 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	public Set<Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
+	}
+	
+	/**
+	 * @return the amount of units of this entry that are alive or reserved by a pending replacement
+	 */
+	public int getAliveOrReserved()
+	{
+		return _aliveOrReserved;
+	}
+	
+	public void setAliveOrReserved(int count)
+	{
+		_aliveOrReserved = count;
 	}
 	
 	public Location getSpawnLocation()
@@ -526,18 +540,19 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	/**
 	 * @param npcTemplate
 	 * @param instance
+	 * @return {@code true} when the NPC was created
 	 * @throws ClassCastException
 	 * @throws NoSuchMethodException
 	 * @throws ClassNotFoundException
 	 */
-	private void spawnNpc(NpcTemplate npcTemplate, Instance instance) throws ClassNotFoundException, NoSuchMethodException, ClassCastException
+	private boolean spawnNpc(NpcTemplate npcTemplate, Instance instance) throws ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
 		final Spawn spawn = new Spawn(npcTemplate);
 		final Location loc = getSpawnLocation();
 		if (loc == null)
 		{
 			LOGGER.warning("Couldn't initialize new spawn, no location found!");
-			return;
+			return false;
 		}
 		
 		spawn.setInstanceId(instance != null ? instance.getId() : 0);
@@ -563,7 +578,13 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 			respawnPattern = _respawnPattern;
 		}
 		
-		if ((respawn > 0) || (respawnPattern != null))
+		if (_group.getSelection() != SpawnSelection.ALL)
+		{
+			// A rolling group replaces its own units, the slot must not bring its own species back.
+			spawn.setRespawnDelay(respawn, respawnRandom);
+			spawn.stopRespawn();
+		}
+		else if ((respawn > 0) || (respawnPattern != null))
 		{
 			spawn.setRespawnDelay(respawn, respawnRandom);
 			spawn.setRespawnPattern(respawnPattern);
@@ -601,10 +622,44 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 			
 			SpawnTable.getInstance().addSpawn(spawn);
 		}
+		
+		return true;
+	}
+	
+	/**
+	 * Spawns a single unit of this entry, used by the entry selection of the owning group.
+	 * @param instance the instance to spawn in, {@code null} in the open world
+	 * @return {@code true} when the unit was spawned
+	 */
+	public boolean spawnOne(Instance instance)
+	{
+		try
+		{
+			final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_id);
+			if (npcTemplate == null)
+			{
+				LOGGER.warning("Attempting to spawn unexisting npc id: " + _id + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
+				return false;
+			}
+			
+			if (npcTemplate.isType("Defender"))
+			{
+				LOGGER.warning("Attempting to spawn npc id: " + _id + " type: " + npcTemplate.getType() + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
+				return false;
+			}
+			
+			return spawnNpc(npcTemplate, instance);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("Couldn't spawn npc " + _id + e);
+			return false;
+		}
 	}
 	
 	public void despawn()
 	{
+		_aliveOrReserved = 0;
 		_spawnedNpcs.forEach(npc ->
 		{
 			npc.getSpawn().stopRespawn();
@@ -637,6 +692,16 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	@Override
 	public NpcSpawnTemplate clone()
 	{
-		return new NpcSpawnTemplate(this);
+		return new NpcSpawnTemplate(this, _group);
+	}
+	
+	/**
+	 * Clones this entry onto another group, used when a group is cloned for an instance.
+	 * @param group the group the clone belongs to
+	 * @return the cloned entry
+	 */
+	public NpcSpawnTemplate clone(SpawnGroup group)
+	{
+		return new NpcSpawnTemplate(this, group);
 	}
 }

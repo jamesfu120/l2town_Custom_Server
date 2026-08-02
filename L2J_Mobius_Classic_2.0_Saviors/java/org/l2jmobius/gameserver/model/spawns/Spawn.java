@@ -272,6 +272,12 @@ public class Spawn extends Location
 			// Schedule the next respawn.
 			RespawnTaskManager.getInstance().add(oldNpc, System.currentTimeMillis() + (hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay));
 		}
+		
+		// Notify the spawn group, it rolls the replacement itself.
+		if (_spawnTemplate != null)
+		{
+			_spawnTemplate.getGroup().onUnitDeath(_spawnTemplate, oldNpc.getInstanceWorld());
+		}
 	}
 	
 	/**
