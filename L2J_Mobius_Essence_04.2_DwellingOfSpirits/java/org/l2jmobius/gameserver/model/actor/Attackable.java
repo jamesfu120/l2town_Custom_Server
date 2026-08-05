@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.config.custom.ChampionMonstersConfig;
 import org.l2jmobius.gameserver.config.custom.ClassBalanceConfig;
 import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
+import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.data.xml.RaidDropAnnounceData;
@@ -53,8 +54,10 @@ import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.PcCafePointsManager;
 import org.l2jmobius.gameserver.managers.WalkingManager;
 import org.l2jmobius.gameserver.managers.events.EventDropManager;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
+import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
 import org.l2jmobius.gameserver.model.actor.enums.creature.Team;
 import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
 import org.l2jmobius.gameserver.model.actor.enums.player.ElementalSpiritType;
@@ -853,7 +856,7 @@ public class Attackable extends Npc
 				getAI().notifyAction(Action.ATTACKED, attacker);
 				
 				// Calculate the amount of hate this attackable receives from this attack.
-				long hateValue = ((long) damage * 100) / (getLevel() + 7);
+				long hateValue = (long) ((((long) damage * 100) / (getLevel() + 7)) * getHateRatio(attacker));
 				if (skill == null)
 				{
 					hateValue *= attacker.getStat().getMul(Stat.HATE_ATTACK, 1);
@@ -872,6 +875,46 @@ public class Attackable extends Npc
 				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
+	}
+	
+	/**
+	 * Calculates the hate multiplier declared by the AI parameters SetHateGroup, SetHateOccupation and SetHateRace,<br>
+	 * which increase the hate received from players of a matching class category, class or race.
+	 * @param attacker the creature generating hate
+	 * @return the hate multiplier for this attacker
+	 */
+	public double getHateRatio(Creature attacker)
+	{
+		if (!attacker.isPlayer())
+		{
+			return 1;
+		}
+		
+		final StatSet params = getTemplate().getParameters();
+		if (params.isEmpty())
+		{
+			return 1;
+		}
+		
+		final Player player = attacker.asPlayer();
+		int ratio = 0;
+		final CategoryType group = params.getEnum("SetHateGroup", CategoryType.class, null);
+		if ((group != null) && player.isInCategory(group))
+		{
+			ratio += params.getInt("SetHateGroupRatio", 0);
+		}
+		
+		if (player.getPlayerClass().getId() == params.getInt("SetHateOccupation", -1))
+		{
+			ratio += params.getInt("SetHateOccupationRatio", 0);
+		}
+		
+		if (player.getRace() == params.getEnum("SetHateRace", Race.class, null))
+		{
+			ratio += params.getInt("SetHateRaceRatio", 0);
+		}
+		
+		return 1 + (ratio / 100.0);
 	}
 	
 	/**

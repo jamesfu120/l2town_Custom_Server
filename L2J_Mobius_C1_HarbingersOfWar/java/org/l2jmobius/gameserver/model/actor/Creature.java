@@ -6083,7 +6083,7 @@ public abstract class Creature extends WorldObject
 								if ((npcTarget == skillTarget) || (npc == skillTarget))
 								{
 									final Creature originalCaster = isSummon() ? this : player;
-									attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
+									attackable.addDamageHate(originalCaster, 0, (long) (((skillEffectPoint * 150) / (attackable.getLevel() + 7)) * attackable.getHateRatio(originalCaster)));
 								}
 							}
 						}

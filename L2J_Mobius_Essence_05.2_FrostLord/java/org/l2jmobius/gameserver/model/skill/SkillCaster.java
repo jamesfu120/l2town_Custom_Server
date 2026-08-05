@@ -762,7 +762,7 @@ public class SkillCaster implements Runnable
 								if ((npcTarget == skillTarget) || (npc == skillTarget))
 								{
 									final Creature originalCaster = caster.isSummon() ? caster : player;
-									attackable.addDamageHate(originalCaster, 0, (skill.getEffectPoint() * 150) / (attackable.getLevel() + 7));
+									attackable.addDamageHate(originalCaster, 0, (long) (((skill.getEffectPoint() * 150) / (attackable.getLevel() + 7)) * attackable.getHateRatio(originalCaster)));
 								}
 							}
 						}
