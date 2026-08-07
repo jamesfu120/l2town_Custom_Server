@@ -76,7 +76,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
-import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Clan
@@ -2652,9 +2651,7 @@ public class Clan
 		}
 		
 		// the player should know that he has less sp now :p
-		final StatusUpdate su = new StatusUpdate(player);
-		su.addAttribute(StatusUpdate.SP, (int) player.getSp());
-		player.sendPacket(su);
+		player.updateUserInfo();
 		
 		player.sendItemList(false);
 		changeLevel(_level + 1);

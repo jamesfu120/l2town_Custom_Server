@@ -4845,6 +4845,8 @@ public class Player extends Playable
 			// Restore the specified % of lost experience.
 			getStat().addExp(Math.round(((_expBeforeDeath - getExp()) * restorePercent) / 100));
 			setExpBeforeDeath(0);
+			
+			updateUserInfo();
 		}
 	}
 	

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.ServerPackets;
 public class StatusUpdate extends ServerPacket
 {
 	public static final int LEVEL = 0x01;
-	public static final int EXP = 0x02;
+	// Attribute 0x02 exp is refreshed through UserInfo instead.
 	public static final int STR = 0x03;
 	public static final int DEX = 0x04;
 	public static final int CON = 0x05;
@@ -42,7 +42,7 @@ public class StatusUpdate extends ServerPacket
 	public static final int MAX_HP = 0x0a;
 	public static final int CUR_MP = 0x0b;
 	public static final int MAX_MP = 0x0c;
-	public static final int SP = 0x0d;
+	// Attribute 0x0d sp is refreshed through UserInfo instead.
 	public static final int CUR_LOAD = 0x0e;
 	public static final int MAX_LOAD = 0x0f;
 	public static final int P_ATK = 0x11;

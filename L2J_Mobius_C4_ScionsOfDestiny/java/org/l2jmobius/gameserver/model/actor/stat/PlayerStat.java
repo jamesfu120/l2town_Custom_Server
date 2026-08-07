@@ -41,7 +41,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PlayerStat extends PlayableStat
@@ -101,8 +100,6 @@ public class PlayerStat extends PlayableStat
 			}
 		}
 		
-		// EXP status update currently not used in retail
-		player.updateUserInfo();
 		return true;
 	}
 	
@@ -178,6 +175,8 @@ public class PlayerStat extends PlayableStat
 			player.sendPacket(sm);
 		}
 		
+		player.updateUserInfo();
+		
 		return true;
 	}
 	
@@ -195,12 +194,13 @@ public class PlayerStat extends PlayableStat
 			return false;
 		}
 		
+		final Player player = getActiveChar();
+		
 		if (sendMessage)
 		{
 			// Send a Server->Client System Message to the Player
 			SystemMessage sm = new SystemMessage(SystemMessageId.EXPERIENCE_HAS_DECREASED_BY_S1);
 			sm.addInt((int) addToExp);
-			final Player player = getActiveChar();
 			player.sendPacket(sm);
 			sm = new SystemMessage(SystemMessageId.SP_HAS_DECREASED_BY_S1);
 			sm.addInt((int) addToSp);
@@ -210,6 +210,8 @@ public class PlayerStat extends PlayableStat
 				player.broadcastStatusUpdate();
 			}
 		}
+		
+		player.updateUserInfo();
 		
 		return true;
 	}
@@ -277,13 +279,6 @@ public class PlayerStat extends PlayableStat
 			}
 		}
 		
-		final StatusUpdate su = new StatusUpdate(player);
-		su.addAttribute(StatusUpdate.LEVEL, getLevel());
-		su.addAttribute(StatusUpdate.MAX_CP, getMaxCp());
-		su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
-		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());
-		player.sendPacket(su);
-		
 		// Update the overloaded status of the Player
 		player.refreshOverloaded();
 		
@@ -293,22 +288,6 @@ public class PlayerStat extends PlayableStat
 		// Send a Server->Client packet UserInfo to the Player
 		player.updateUserInfo();
 		return levelIncreased;
-	}
-	
-	@Override
-	public boolean addSp(long value)
-	{
-		if (!super.addSp(value))
-		{
-			return false;
-		}
-		
-		final Player player = getActiveChar();
-		final StatusUpdate su = new StatusUpdate(player);
-		su.addAttribute(StatusUpdate.SP, (int) getSp());
-		player.sendPacket(su);
-		
-		return true;
 	}
 	
 	@Override

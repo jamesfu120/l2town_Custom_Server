@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.holders.EnchantSkillLearn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ShortcutRegister;
-import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -169,10 +168,6 @@ public class RequestExEnchantSkill extends ClientPacket
 			
 			player.addSkill(skill, true);
 			player.getStat().removeExpAndSp(requiredExp, requiredSp);
-			
-			final StatusUpdate su = new StatusUpdate(player.getObjectId());
-			su.addAttribute(StatusUpdate.SP, (int) player.getSp());
-			player.sendPacket(su);
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.SUCCEEDED_IN_ENCHANTING_SKILL_S1);
 			sm.addSkillName(_skillId);
