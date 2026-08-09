@@ -23,6 +23,7 @@ package handlers.bypass.npc;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
@@ -41,6 +42,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
 import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
+import org.l2jmobius.gameserver.model.actor.holders.npc.AggroInfo;
 import org.l2jmobius.gameserver.model.actor.holders.npc.DropGroupHolder;
 import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
 import org.l2jmobius.gameserver.model.actor.holders.npc.LimitedDropHolder;
@@ -314,7 +316,9 @@ public class NpcViewMod implements IBypassHandler
 		final StringBuilder sb = new StringBuilder();
 		if (npc.isAttackable())
 		{
-			npc.asAttackable().getAggroList().values().forEach(a ->
+			final List<AggroInfo> aggroInfos = new ArrayList<>(npc.asAttackable().getAggroList().values());
+			aggroInfos.sort(Comparator.comparingLong(AggroInfo::getHate).thenComparingLong(AggroInfo::getDamage).reversed());
+			aggroInfos.forEach(a ->
 			{
 				sb.append("<table width=277 height=32 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 				sb.append("<tr><td width=110>");
