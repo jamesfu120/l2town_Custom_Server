@@ -16,10 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.shuttle;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
-import org.l2jmobius.gameserver.network.PacketLogger;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Shuttle;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**
@@ -50,16 +49,10 @@ public class RequestShuttleGetOn extends ClientPacket
 		}
 		
 		// TODO: better way?
-		for (Shuttle shuttle : World.getInstance().getVisibleObjects(player, Shuttle.class))
+		World.forFirstVisibleObject(player, Shuttle.class, shuttle -> shuttle.calculateDistance3D(player) < 1000, shuttle ->
 		{
-			if (shuttle.calculateDistance3D(player) < 1000)
-			{
-				shuttle.addPassenger(player);
-				player.getInVehiclePosition().setXYZ(_x, _y, _z);
-				break;
-			}
-			
-			PacketLogger.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance3D(player));
-		}
+			shuttle.addPassenger(player);
+			player.getInVehiclePosition().setXYZ(_x, _y, _z);
+		});
 	}
 }

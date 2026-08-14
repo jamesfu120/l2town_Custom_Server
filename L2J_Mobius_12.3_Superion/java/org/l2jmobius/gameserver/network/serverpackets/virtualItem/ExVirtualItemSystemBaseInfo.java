@@ -20,11 +20,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.virtualItem;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.IllusoryEquipmentConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -51,7 +51,7 @@ public class ExVirtualItemSystemBaseInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_VIRTUALITEM_SYSTEM_BASE_INFO.writeId(this, buffer);
 		buffer.writeInt((int) _virtualItemEventEnd);

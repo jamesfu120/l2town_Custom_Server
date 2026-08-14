@@ -30,10 +30,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.skill.EffectScope;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.conditions.Condition;
+import org.l2jmobius.gameserver.mechanics.skill.EffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 
 /**
  * @author mkizub, Mobius
@@ -751,7 +750,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;
@@ -882,7 +881,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;
@@ -1009,7 +1008,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;
@@ -1140,7 +1139,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;
@@ -1271,7 +1270,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;
@@ -1402,7 +1401,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;
@@ -1533,7 +1532,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;
@@ -1664,7 +1663,7 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 			
-			// If none found, the enchanted skill will take effects from maxLvL of norm skill
+			// If none found, the enchanted skill will take effects from maxLvL of norm skill.
 			if (!foundConditions || !foundEffects || !foundChannelingEffects || !foundStartEffects || !foundPveEffects || !foundPvpEffects || !foundEndEffects || !foundSelfEffects)
 			{
 				_currentSkill.currentLevel = lastLvl - 1;

@@ -16,11 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.auction.ItemAuction;
-import org.l2jmobius.gameserver.model.item.auction.ItemAuctionBid;
-import org.l2jmobius.gameserver.model.item.auction.ItemAuctionState;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.auction.ItemAuction;
+import org.l2jmobius.gameserver.entity.item.auction.ItemAuctionBid;
+import org.l2jmobius.gameserver.entity.item.auction.ItemAuctionState;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -56,7 +56,7 @@ public class ExItemAuctionInfoPacket extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ITEM_AUCTION_INFO.writeId(this, buffer);
 		buffer.writeByte(!_refresh);
@@ -73,7 +73,7 @@ public class ExItemAuctionInfoPacket extends AbstractItemPacket
 		}
 	}
 	
-	private void writeItemInfo(ItemInfo info, WritableBuffer buffer)
+	private void writeItemInfo(ItemInfo info, WriteBuffer buffer)
 	{
 		buffer.writeInt(info.getItem().getId());
 		buffer.writeInt(info.getItem().getId());

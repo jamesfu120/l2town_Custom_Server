@@ -24,7 +24,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Map;
@@ -40,15 +40,15 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.BB.Mail;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.BlockList;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IWriteBoardHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.BlockList;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.MailType;
 import org.l2jmobius.gameserver.util.HtmlUtil;
@@ -60,6 +60,7 @@ import org.l2jmobius.gameserver.util.HtmlUtil;
 public class MailBoard implements IWriteBoardHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(MailBoard.class.getName());
+	private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 	
 	private static final String SELECT_MAILS = "SELECT * FROM bbs_mail ORDER BY id ASC";
 	private static final String INSERT_MAIL = "INSERT INTO bbs_mail (id,receiver_id,sender_id,location,recipients,subject,message,sent_date,is_unread) VALUES (?,?,?,?,?,?,?,?,?)";
@@ -250,7 +251,7 @@ public class MailBoard implements IWriteBoardHandler
 	private void showMailList(Player player, int pageValue, MailType type, String sType, String search)
 	{
 		Set<Mail> mails;
-		if (!sType.equals("") && !search.equals(""))
+		if (!sType.isEmpty() && !search.isEmpty())
 		{
 			mails = ConcurrentHashMap.newKeySet();
 			
@@ -359,12 +360,12 @@ public class MailBoard implements IWriteBoardHandler
 		// CLeanup sb.
 		sb.setLength(0);
 		
-		final String fullSearch = (!sType.equals("") && !search.equals("")) ? ";" + sType + ";" + search : "";
+		final String fullSearch = (!sType.isEmpty() && !search.isEmpty()) ? ";" + sType + ";" + search : "";
 		
 		// Previous page button
 		sb.append("<td><table><tr><td></td></tr><tr><td><button action=\"bypass _bbsmail;");
 		sb.append(type);
-		sb.append(";");
+		sb.append(';');
 		sb.append((page == 1 ? page : page - 1));
 		sb.append(fullSearch);
 		sb.append("\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16></td></tr></table></td>");
@@ -385,7 +386,7 @@ public class MailBoard implements IWriteBoardHandler
 					{
 						sb.append("<td><a action=\"bypass _bbsmail;");
 						sb.append(type);
-						sb.append(";");
+						sb.append(';');
 						sb.append(i);
 						sb.append(fullSearch);
 						sb.append("\"> ");
@@ -405,7 +406,7 @@ public class MailBoard implements IWriteBoardHandler
 					
 					sb.append("<td><a action=\"bypass _bbsmail;");
 					sb.append(type);
-					sb.append(";");
+					sb.append(';');
 					sb.append(i);
 					sb.append(fullSearch);
 					sb.append("\"> ");
@@ -425,7 +426,7 @@ public class MailBoard implements IWriteBoardHandler
 					{
 						sb.append("<td><a action=\"bypass _bbsmail;");
 						sb.append(type);
-						sb.append(";");
+						sb.append(';');
 						sb.append(i);
 						sb.append(fullSearch);
 						sb.append("\"> ");
@@ -448,7 +449,7 @@ public class MailBoard implements IWriteBoardHandler
 					{
 						sb.append("<td><a action=\"bypass _bbsmail;");
 						sb.append(type);
-						sb.append(";");
+						sb.append(';');
 						sb.append(i);
 						sb.append(fullSearch);
 						sb.append("\"> ");
@@ -471,7 +472,7 @@ public class MailBoard implements IWriteBoardHandler
 				else
 				{
 					sb.append("<td><a action=\"bypass _bbsmail;");
-					sb.append(type).append(";");
+					sb.append(type).append(';');
 					sb.append(i);
 					sb.append(fullSearch);
 					sb.append("\"> ");
@@ -483,7 +484,7 @@ public class MailBoard implements IWriteBoardHandler
 		
 		// Next page button
 		sb.append("<td><table><tr><td></td></tr><tr><td><button action=\"bypass _bbsmail;");
-		sb.append(type).append(";");
+		sb.append(type).append(';');
 		sb.append((page == maxpage ? page : page + 1));
 		sb.append(fullSearch);
 		sb.append("\" back=\"l2ui_ch3.next1_down\" fore=\"l2ui_ch3.next1\" width=16 height=16></td></tr></table></td>");
@@ -515,7 +516,7 @@ public class MailBoard implements IWriteBoardHandler
 		content = content.replace("%delDate%", "Unknown");
 		content = content.replace("%title%", mail.getSubject().replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
 		content = content.replace("%mes%", mail.getMessage().replaceAll("\r\n", "<br>").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
-		content = content.replace("%mailId%", mail.getId() + "");
+		content = content.replace("%mailId%", String.valueOf(mail.getId()));
 		
 		HtmlUtil.sendCBHtml(player, content);
 	}
@@ -534,7 +535,7 @@ public class MailBoard implements IWriteBoardHandler
 		content = content.replace("%maillink%", link);
 		
 		content = content.replace("%recipients%", mail.getSenderId() == player.getObjectId() ? mail.getRecipients() : getPlayerName(mail.getSenderId()));
-		content = content.replace("%mailId%", mail.getId() + "");
+		content = content.replace("%mailId%", String.valueOf(mail.getId()));
 		HtmlUtil.sendCBHtml(player, content);
 	}
 	
@@ -572,7 +573,7 @@ public class MailBoard implements IWriteBoardHandler
 		
 		// Get the current time under timestamp format.
 		final Timestamp time = new Timestamp(currentDate);
-		final String formattedTime = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(time);
+		final String formattedTime = time.toLocalDateTime().format(DATE_FORMATTER);
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(INSERT_MAIL))
@@ -595,7 +596,7 @@ public class MailBoard implements IWriteBoardHandler
 					continue;
 				}
 				
-				final Player recipientPlayer = World.getInstance().getPlayer(recipientId);
+				final Player recipientPlayer = World.getPlayer(recipientId);
 				
 				if (!player.isGM())
 				{
@@ -683,7 +684,7 @@ public class MailBoard implements IWriteBoardHandler
 	private int getMailCount(int objectId, MailType location, String type, String search)
 	{
 		int count = 0;
-		if (!type.equals("") && !search.equals(""))
+		if (!type.isEmpty() && !search.isEmpty())
 		{
 			boolean byTitle = type.equalsIgnoreCase("title");
 			for (Mail mail : getMails(objectId))

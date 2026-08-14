@@ -33,20 +33,20 @@ import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.SpawnTable;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.EventMonster;
-import org.l2jmobius.gameserver.model.script.Event;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.EventMonster;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.mechanics.script.Event;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class Elpies extends Event
 {
 	// NPC
 	private static final int ELPY = 900100;
 	
-	// Amount of Elpies to spawn when the event starts
+	// Amount of Elpies to spawn when the event starts.
 	private static final int ELPY_AMOUNT = 100;
 	
 	// Event duration in minutes
@@ -158,7 +158,7 @@ public class Elpies extends Event
 			return false;
 		}
 		
-		// Check Custom Table - we use custom NPCs
+		// Check Custom Table - we use custom NPCs.
 		if (!GeneralConfig.CUSTOM_NPC_DATA)
 		{
 			LOGGER.info(getName() + ": Event can't be started because custom NPC table is disabled!");
@@ -177,13 +177,13 @@ public class Elpies extends Event
 			CURRENT_ELPY_COUNT++;
 		}
 		
-		Broadcast.toAllOnlinePlayers("*Squeak Squeak*");
-		Broadcast.toAllOnlinePlayers("Elpy invasion in " + randomLoc.getName());
-		Broadcast.toAllOnlinePlayers("Help us exterminate them!");
-		Broadcast.toAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
+		World.broadcastToAllOnlinePlayers("*Squeak Squeak*");
+		World.broadcastToAllOnlinePlayers("Elpy invasion in " + randomLoc.getName());
+		World.broadcastToAllOnlinePlayers("Help us exterminate them!");
+		World.broadcastToAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
 		_eventTask = ThreadPool.schedule(() ->
 		{
-			Broadcast.toAllOnlinePlayers("Time is up!");
+			World.broadcastToAllOnlinePlayers("Time is up!");
 			eventStop();
 		}, despawnDelay);
 		return true;
@@ -213,8 +213,8 @@ public class Elpies extends Event
 			}
 		}
 		
-		Broadcast.toAllOnlinePlayers("*Squeak Squeak*");
-		Broadcast.toAllOnlinePlayers("Elpy Event finished!");
+		World.broadcastToAllOnlinePlayers("*Squeak Squeak*");
+		World.broadcastToAllOnlinePlayers("Elpy Event finished!");
 		return true;
 	}
 	
@@ -229,7 +229,7 @@ public class Elpies extends Event
 			
 			if (CURRENT_ELPY_COUNT <= 0)
 			{
-				Broadcast.toAllOnlinePlayers("All elpies have been killed!");
+				World.broadcastToAllOnlinePlayers("All elpies have been killed!");
 				eventStop();
 			}
 		}

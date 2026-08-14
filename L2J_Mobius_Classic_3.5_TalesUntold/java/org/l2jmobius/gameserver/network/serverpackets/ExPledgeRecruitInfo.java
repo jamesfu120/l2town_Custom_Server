@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -38,7 +38,7 @@ public class ExPledgeRecruitInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_RECRUIT_INFO.writeId(this, buffer);
 		final Collection<SubPledge> subPledges = _clan.getAllSubPledges();

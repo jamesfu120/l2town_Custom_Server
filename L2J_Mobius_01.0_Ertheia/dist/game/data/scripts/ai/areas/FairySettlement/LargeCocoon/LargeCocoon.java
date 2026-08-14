@@ -16,13 +16,13 @@
  */
 package ai.areas.FairySettlement.LargeCocoon;
 
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureAttacked;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 import quests.Q10305_UnstoppableFutileEfforts.Q10305_UnstoppableFutileEfforts;
 

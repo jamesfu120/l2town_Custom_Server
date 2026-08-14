@@ -22,13 +22,13 @@ package handlers.items;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
@@ -149,8 +149,6 @@ public class PaulinasSupportBox implements IItemHandler
 		}
 		
 		final Player player = playable.asPlayer();
-		final Race race = player.getRace();
-		final PlayerClass playerClass = player.getPlayerClass();
 		if (!player.isInventoryUnder80(false))
 		{
 			player.sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
@@ -160,6 +158,8 @@ public class PaulinasSupportBox implements IItemHandler
 		player.getInventory().destroyItem(ItemProcessType.FEE, item, 1, player, null);
 		player.sendInventoryUpdate(new InventoryUpdate(item));
 		
+		final Race race = player.getRace();
+		final PlayerClass playerClass = player.getPlayerClass();
 		switch (item.getId())
 		{
 			case BOX_D_GRADE:

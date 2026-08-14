@@ -20,13 +20,11 @@
  */
 package org.l2jmobius.gameserver.data.holders;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.type.WeaponType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.type.WeaponType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author Brado
@@ -47,7 +45,7 @@ public final class CharacterStyleDataHolder
 		_shiftWeaponId = 0;
 		_skillHolder = null;
 		_weaponType = WeaponType.NONE;
-		_cost = Collections.unmodifiableList(new ArrayList<>(cost));
+		_cost = List.copyOf(cost);
 	}
 	
 	public CharacterStyleDataHolder(int styleId, String name, int shiftWeaponId, WeaponType weaponType, List<ItemHolder> cost)
@@ -57,7 +55,7 @@ public final class CharacterStyleDataHolder
 		_shiftWeaponId = shiftWeaponId;
 		_skillHolder = null;
 		_weaponType = weaponType;
-		_cost = Collections.unmodifiableList(new ArrayList<>(cost));
+		_cost = List.copyOf(cost);
 	}
 	
 	public CharacterStyleDataHolder(int styleId, String name, SkillHolder skillHolder, List<ItemHolder> cost)
@@ -67,7 +65,7 @@ public final class CharacterStyleDataHolder
 		_shiftWeaponId = 0;
 		_weaponType = WeaponType.NONE;
 		_skillHolder = skillHolder;
-		_cost = Collections.unmodifiableList(new ArrayList<>(cost));
+		_cost = List.copyOf(cost);
 	}
 	
 	public WeaponType getWeaponType()

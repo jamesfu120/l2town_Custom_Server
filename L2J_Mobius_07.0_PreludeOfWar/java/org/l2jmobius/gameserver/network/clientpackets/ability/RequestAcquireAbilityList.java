@@ -30,11 +30,11 @@ import java.util.Map;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.AbilityLearnRequest;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skill.holders.SkillLearn;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.AbilityLearnRequest;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillLearn;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -170,7 +170,7 @@ public class RequestAcquireAbilityList extends ClientPacket
 			skillsToLearn.add(learn);
 		}
 		
-		// Sort the skills by their tree id -> row -> column
+		// Sort the skills by their tree id -> row -> column.
 		skillsToLearn.sort(Comparator.comparingInt(SkillLearn::getTreeId).thenComparing(SkillLearn::getRow).thenComparing(SkillLearn::getColumn));
 		
 		for (SkillLearn learn : skillsToLearn)

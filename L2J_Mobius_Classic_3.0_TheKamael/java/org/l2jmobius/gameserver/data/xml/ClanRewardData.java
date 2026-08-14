@@ -29,10 +29,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
-import org.l2jmobius.gameserver.model.clan.enums.ClanRewardType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.clan.ClanRewardBonus;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanRewardType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author UnAfraid
@@ -53,7 +53,7 @@ public class ClanRewardData implements IXmlReader
 		parseDatapackFile("config/ClanReward.xml");
 		for (ClanRewardType type : ClanRewardType.values())
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0) + " rewards for " + type.toString().replace("_", " ").toLowerCase() + ".");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0) + " rewards for " + type.toString().replace('_', ' ').toLowerCase() + ".");
 		}
 	}
 	

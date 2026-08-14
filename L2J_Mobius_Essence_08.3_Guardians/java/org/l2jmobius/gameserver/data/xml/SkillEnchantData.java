@@ -31,9 +31,9 @@ import org.w3c.dom.Document;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.EnchantItemExpHolder;
 import org.l2jmobius.gameserver.data.holders.EnchantStarHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillEnchantHolder;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillEnchantHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Serenitty

@@ -16,15 +16,14 @@
  */
 package quests.Q00114_ResurrectionOfAnOldManager;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -243,7 +242,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 					golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), "You, " + player.getName() + ", you attacked Wendy. Prepare to die!"));
 					golem.setRunning();
 					golem.addDamageHate(player, 0, 999);
-					golem.getAI().setIntention(Intention.ATTACK, player);
+					golem.getAI().setIntentionAttack(player);
 					qs.set("spawned", "1");
 					startQuestTimer("golem_despawn", 300000, null, player);
 				}

@@ -23,22 +23,22 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.ServerConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Team;
+import org.l2jmobius.gameserver.entity.actor.instance.Decoy;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.interfaces.ILocational;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Team;
-import org.l2jmobius.gameserver.model.actor.instance.Decoy;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -190,7 +190,7 @@ public class ExCharInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CHAR_INFO.writeId(this, buffer);
 		

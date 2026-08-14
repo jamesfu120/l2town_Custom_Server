@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.l2jmobius.commons.util.ConfigReader;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 
 /**
  * This class loads all the custom offline play related configurations.

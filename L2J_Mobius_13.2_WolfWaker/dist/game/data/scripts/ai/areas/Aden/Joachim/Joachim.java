@@ -34,19 +34,19 @@ import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.enums.player.SubclassInfoType;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcMenuSelect;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcMenuSelect;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -229,13 +229,14 @@ public class Joachim extends Script
 	
 	private NpcHtmlMessage getNpcHtmlMessage(Player player, Npc npc, String fileName)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
 		if (text == null)
 		{
 			LOGGER.info("Cannot find HTML file for " + Joachim.class.getSimpleName() + " AI: " + fileName);
 			return null;
 		}
+		
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
 		html.setHtml(text);
 		return html;
@@ -270,13 +271,13 @@ public class Joachim extends Script
 		{
 			case 1: // Create DualClass
 			{
-				final int classId = event.getReply();
 				if (player.isTransformed() || player.hasSummon() || player.hasDualClass() || !player.isAwakenedClass())
 				{
 					break;
 				}
 				
 				// Validating classId
+				final int classId = event.getReply();
 				if (!getDualClasses(player, null).contains(PlayerClass.getPlayerClass(classId)))
 				{
 					break;
@@ -313,13 +314,13 @@ public class Joachim extends Script
 			}
 			case 2: // Reawaken (change dual class)
 			{
-				final int classId = event.getReply();
 				if (player.isTransformed() || player.hasSummon() || (!player.hasDualClass() || !player.isDualClassActive() || !player.isAwakenedClass()))
 				{
 					break;
 				}
 				
 				// Validating classId
+				final int classId = event.getReply();
 				if (!getDualClasses(player, null).contains(PlayerClass.getPlayerClass(classId)))
 				{
 					break;

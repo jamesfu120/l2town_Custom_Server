@@ -22,20 +22,20 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.holders.SayuneEntry;
 import org.l2jmobius.gameserver.data.xml.DoorData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.AdminTeleportType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.managers.ZoneBuildManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.AdminTeleportType;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerMoveRequest;
-import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.skill.enums.FlyType;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerMoveRequest;
+import org.l2jmobius.gameserver.mechanics.events.returns.TerminateReturn;
+import org.l2jmobius.gameserver.mechanics.skill.enums.FlyType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.SayuneType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
 import org.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 public class MoveToLocation extends ClientPacket
 {
@@ -129,9 +128,16 @@ public class MoveToLocation extends ClientPacket
 		}
 		else // 0
 		{
-			if (!PlayerConfig.ENABLE_KEYBOARD_MOVEMENT)
+			if (!PlayerConfig.ENABLE_KEYBOARD_MOVEMENT && !player.inObserverMode())
 			{
 				return;
+			}
+			
+			final int dx = _originX - player.getX();
+			final int dy = _originY - player.getY();
+			if (((dx * dx) + (dy * dy)) < 1000000) // 1000 distance ^2
+			{
+				player.setSyncedXYZ(_originX, _originY, _originZ);
 			}
 			
 			player.setCursorKeyMovement(true);
@@ -152,16 +158,16 @@ public class MoveToLocation extends ClientPacket
 			{
 				player.sendPacket(new ExFlyMove(player, SayuneType.ONE_WAY_LOC, -1, Arrays.asList(new SayuneEntry(false, -1, _targetX, _targetY, _targetZ))));
 				player.setXYZ(_targetX, _targetY, _targetZ);
-				Broadcast.toKnownPlayers(player, new ExFlyMoveBroadcast(player, SayuneType.ONE_WAY_LOC, -1, new Location(_targetX, _targetY, _targetZ)));
+				World.broadcastToVisiblePlayers(player, new ExFlyMoveBroadcast(player, SayuneType.ONE_WAY_LOC, -1, new Location(_targetX, _targetY, _targetZ)));
 				player.setTeleMode(AdminTeleportType.NORMAL);
 				break;
 			}
 			case CHARGE:
 			{
 				player.setXYZ(_targetX, _targetY, _targetZ);
-				Broadcast.toSelfAndKnownPlayers(player, new MagicSkillUse(player, 30012, 10, 500, 0));
-				Broadcast.toSelfAndKnownPlayers(player, new FlyToLocation(player, _targetX, _targetY, _targetZ, FlyType.CHARGE));
-				Broadcast.toSelfAndKnownPlayers(player, new MagicSkillLaunched(player, 30012, 10));
+				World.broadcastToSelfAndVisiblePlayers(player, new MagicSkillUse(player, 30012, 10, 500, 0));
+				World.broadcastToSelfAndVisiblePlayers(player, new FlyToLocation(player, _targetX, _targetY, _targetZ, FlyType.CHARGE));
+				World.broadcastToSelfAndVisiblePlayers(player, new MagicSkillLaunched(player, 30012, 10));
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
@@ -183,14 +189,14 @@ public class MoveToLocation extends ClientPacket
 				// Can't move if character is trying to move a huge distance.
 				final double dx = _targetX - player.getX();
 				final double dy = _targetY - player.getY();
-				if (((dx * dx) + (dy * dy)) > 98010000) // 9900*9900
+				if (((dx * dx) + (dy * dy)) > 98010000) // 9900 distance ^2
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				
 				// Finally move to the target location.
-				player.getAI().setIntention(Intention.MOVE_TO, new Location(_targetX, _targetY, _targetZ));
+				player.getAI().setIntentionMoveTo(new Location(_targetX, _targetY, _targetZ));
 				break;
 			}
 		}

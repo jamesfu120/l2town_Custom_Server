@@ -30,16 +30,16 @@ import java.util.Map;
 import java.util.Set;
 
 import org.l2jmobius.commons.time.SchedulingPattern;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.SkillCastingType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCastingType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -232,7 +232,7 @@ public class HolidayOutOfSchedule extends LongTimeEvent
 			{
 				for (Npc tree : TREE_NPCs)
 				{
-					final List<Player> aroundPlayers = World.getInstance().getVisibleObjectsInRange(tree, Player.class, 300);
+					final List<Player> aroundPlayers = World.getVisibleObjectsInRange(tree, Player.class, 300);
 					if (aroundPlayers.isEmpty())
 					{
 						continue;
@@ -304,7 +304,7 @@ public class HolidayOutOfSchedule extends LongTimeEvent
 		SCHEDULE_NPCS[1] = addSpawn(LARGE_CHRISTMAS_TREE_NPC_ID, SANTA_LOCATION.get(_santaLocation)[1]); // Remove tree.
 		TREE_NPCs.add(SCHEDULE_NPCS[1]);
 		
-		World.getInstance().getPlayers().forEach(p -> p.sendPacket(new ExShowScreenMessage(NpcStringId.SANTA_CLAUS_HAS_ARRIVED_ON_THE_ADEN_TERRITORY_FIND_RUDOLPH_IN_THE_CITY_HE_WILL_SEND_YOU_TO_SANTA, ExShowScreenMessage.TOP_CENTER, 10000, true)));
+		World.getPlayers().forEach(p -> p.sendPacket(new ExShowScreenMessage(NpcStringId.SANTA_CLAUS_HAS_ARRIVED_ON_THE_ADEN_TERRITORY_FIND_RUDOLPH_IN_THE_CITY_HE_WILL_SEND_YOU_TO_SANTA, ExShowScreenMessage.TOP_CENTER, 10000, true)));
 		startQuestTimer("SANTA_DESPAWN", endTimer.next(currentTime) - currentTime, null, null);
 	}
 	

@@ -94,6 +94,8 @@ public class GrandBossConfig
 	public static int FAFURION_MIN_PLAYERS;
 	public static int FAFURION_MAX_PLAYERS;
 	public static int FAFURION_MIN_PLAYER_LEVEL;
+	public static boolean DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS;
 	
 	public static void load()
 	{
@@ -160,5 +162,7 @@ public class GrandBossConfig
 		FAFURION_MIN_PLAYERS = config.getInt("FafurionMinPlayers", 49);
 		FAFURION_MAX_PLAYERS = config.getInt("FafurionMaxPlayers", 200);
 		FAFURION_MIN_PLAYER_LEVEL = config.getInt("FafurionMinPlayerLvl", 105);
+		DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS = config.getBoolean("DisableRaidBossHealFromPlayers", false);
+		DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS = config.getBoolean("DisableRaidBossBuffFromPlayers", false);
 	}
 }

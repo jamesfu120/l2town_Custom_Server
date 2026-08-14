@@ -26,9 +26,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.StringUtil;
@@ -49,14 +46,7 @@ public class PetNameTable
 			PreparedStatement ps = con.prepareStatement(CHECK_PET_NAME))
 		{
 			ps.setString(1, name);
-			final StringBuilder cond = new StringBuilder();
-			if (!cond.toString().isEmpty())
-			{
-				cond.append(", ");
-			}
-			
-			cond.append(PetDataTable.getInstance().getPetItemsByNpc(petNpcId));
-			ps.setString(2, cond.toString());
+			ps.setString(2, String.valueOf(PetDataTable.getInstance().getPetItemsByNpc(petNpcId)));
 			try (ResultSet rs = ps.executeQuery())
 			{
 				result = rs.next();
@@ -72,30 +62,13 @@ public class PetNameTable
 	
 	public boolean isValidPetName(String name)
 	{
-		boolean result = false;
+		// Only allow alphanumeric names.
 		if (!StringUtil.isAlphaNumeric(name))
 		{
-			return result;
+			return false;
 		}
 		
-		Pattern pattern;
-		try
-		{
-			pattern = Pattern.compile(ServerConfig.PET_NAME_TEMPLATE);
-		}
-		catch (PatternSyntaxException e)
-		{
-			LOGGER.warning(getClass().getSimpleName() + ": Pet name pattern of config is wrong!");
-			pattern = Pattern.compile(".*");
-		}
-		
-		final Matcher regexp = pattern.matcher(name);
-		if (regexp.matches())
-		{
-			result = true;
-		}
-		
-		return result;
+		return ServerConfig.PET_NAME_TEMPLATE_PATTERN.matcher(name).matches();
 	}
 	
 	private static class SingletonHolder

@@ -19,23 +19,23 @@ package handlers.items;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerAction;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.managers.SiegeGuardManager;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerAction;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerDlgAnswer;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.SiegeGuardHolder;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerDlgAnswer;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.SiegeGuardHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 
@@ -113,7 +113,7 @@ public class MercTicket extends Script implements IItemHandler
 			{
 				final Item item = _items.get(player.getObjectId());
 				SiegeGuardManager.getInstance().addTicket(item.getId(), player);
-				player.destroyItem(ItemProcessType.NONE, item.getObjectId(), 1, null, false); // Remove item from char's inventory
+				player.destroyItem(ItemProcessType.NONE, item.getObjectId(), 1, null, false); // Remove item from char's inventory.
 			}
 			
 			_items.remove(player.getObjectId());

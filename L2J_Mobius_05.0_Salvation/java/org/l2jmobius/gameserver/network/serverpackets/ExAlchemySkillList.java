@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -49,7 +49,7 @@ public class ExAlchemySkillList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ALCHEMY_SKILL_LIST.writeId(this, buffer);
 		buffer.writeInt(_skills.size());

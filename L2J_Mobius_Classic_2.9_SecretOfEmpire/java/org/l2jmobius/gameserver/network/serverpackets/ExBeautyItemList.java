@@ -22,11 +22,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.BeautyShopData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.beautyshop.BeautyData;
-import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.beautyshop.BeautyData;
+import org.l2jmobius.gameserver.mechanics.beautyshop.BeautyItem;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -60,7 +60,7 @@ public class ExBeautyItemList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_BEAUTY_ITEM_LIST.writeId(this, buffer);
 		buffer.writeInt(HAIR_TYPE);

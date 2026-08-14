@@ -28,8 +28,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.config.PvpConfig;
 import org.l2jmobius.gameserver.config.custom.DualboxCheckConfig;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 
 public class AntiFeedManager
@@ -105,7 +105,7 @@ public class AntiFeedManager
 			final GameClient attackerClient = attackerPlayer.getClient();
 			if ((targetClient == null) || (attackerClient == null) || targetClient.isDetached() || attackerClient.isDetached())
 			{
-				// unable to check ip address
+				// Unable to check ip address.
 				return !PvpConfig.ANTIFEED_DISCONNECTED_AS_DUALBOX;
 			}
 			
@@ -155,7 +155,7 @@ public class AntiFeedManager
 	{
 		if (client == null)
 		{
-			return false; // unable to determine IP address
+			return false; // Unable to determine IP address.
 		}
 		
 		final Map<Integer, AtomicInteger> event = _eventIPs.get(eventId);
@@ -196,7 +196,7 @@ public class AntiFeedManager
 	{
 		if (client == null)
 		{
-			return false; // unable to determine IP address
+			return false; // Unable to determine IP address.
 		}
 		
 		final Map<Integer, AtomicInteger> event = _eventIPs.get(eventId);
@@ -300,9 +300,9 @@ public class AntiFeedManager
 		
 		final Integer addrHash = client.getIp().hashCode();
 		int limit = max;
-		if (DualboxCheckConfig.DUALBOX_CHECK_WHITELIST.containsKey(addrHash))
+		final Integer whiteListLimit = DualboxCheckConfig.DUALBOX_CHECK_WHITELIST.get(addrHash);
+		if (whiteListLimit != null)
 		{
-			int whiteListLimit = DualboxCheckConfig.DUALBOX_CHECK_WHITELIST.get(addrHash);
 			if (whiteListLimit < 1) // DualboxCheckWhitelist takes 0 or negative value for unlimited number of connections.
 			{
 				return Integer.MAX_VALUE;

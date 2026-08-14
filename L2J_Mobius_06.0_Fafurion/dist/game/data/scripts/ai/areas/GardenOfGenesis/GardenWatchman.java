@@ -20,13 +20,13 @@
  */
 package ai.areas.GardenOfGenesis;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * Garden Watchman AI
@@ -69,7 +69,7 @@ public class GardenWatchman extends Script
 			}
 			case "DEBUFF":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 100, nearby ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 100, nearby ->
 				{
 					if ((npc != null) && npc.isScriptValue(0) && nearby.isPlayer() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
 					{

@@ -25,13 +25,13 @@ import org.l2jmobius.gameserver.config.custom.OfflinePlayConfig;
 import org.l2jmobius.gameserver.config.custom.OfflineTradeConfig;
 import org.l2jmobius.gameserver.data.xml.HuntPassData;
 import org.l2jmobius.gameserver.data.xml.ItemData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.HuntPass;
-import org.l2jmobius.gameserver.model.actor.request.RewardRequest;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.HuntPass;
+import org.l2jmobius.gameserver.entity.actor.request.RewardRequest;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -64,7 +64,7 @@ public class RequestHuntPassRewardAll extends ClientPacket
 		if (!OfflineTradeConfig.OFFLINE_DISCONNECT_SAME_ACCOUNT || !OfflinePlayConfig.OFFLINE_PLAY_DISCONNECT_SAME_ACCOUNT)
 		{
 			int sameAccountPlayers = 0;
-			for (Player worldPlayer : World.getInstance().getPlayers())
+			for (Player worldPlayer : World.getPlayers())
 			{
 				if (worldPlayer.getAccountName().equals(player.getAccountName()))
 				{

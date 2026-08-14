@@ -22,10 +22,10 @@ package org.l2jmobius.gameserver.network.serverpackets.revenge;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RevengeHistoryManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.holders.RevengeHistoryHolder;
@@ -44,7 +44,7 @@ public class ExPvpBookShareRevengeList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PVPBOOK_SHARE_REVENGE_LIST.writeId(this, buffer);
 		if (_history == null)
@@ -77,7 +77,7 @@ public class ExPvpBookShareRevengeList extends ServerPacket
 				buffer.writeInt(holder.getKillerLevel()); // KillUserLevel
 				buffer.writeInt(holder.getKillerRaceId()); // KillUserRace
 				buffer.writeInt(holder.getKillerClassId()); // KillUserClass
-				Player killer = World.getInstance().getPlayer(holder.getKillerName());
+				Player killer = World.getPlayer(holder.getKillerName());
 				buffer.writeInt((killer != null) && killer.isOnline() ? 2 : 0); // KillUserOnline (2 - online, 0 - offline)
 				buffer.writeInt(0); // KillUserKarma
 				buffer.writeInt((int) (holder.getShareTime() / 1000)); // nSharedTime

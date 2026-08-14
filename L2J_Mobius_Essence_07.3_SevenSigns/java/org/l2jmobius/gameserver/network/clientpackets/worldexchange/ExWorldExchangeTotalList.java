@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.worldexchange;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchangeTotalList;
 
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchang
  */
 public class ExWorldExchangeTotalList extends ClientPacket
 {
-	private final List<Integer> itemIds = new LinkedList<>();
+	private final List<Integer> itemIds = new ArrayList<>();
 	
 	@Override
 	protected void readImpl()

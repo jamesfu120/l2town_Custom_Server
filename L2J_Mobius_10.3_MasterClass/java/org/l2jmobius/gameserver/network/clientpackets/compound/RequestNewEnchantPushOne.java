@@ -23,10 +23,10 @@ package org.l2jmobius.gameserver.network.clientpackets.compound;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.CompoundRequest;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItem;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.CompoundRequest;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItem;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantOneFail;

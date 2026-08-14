@@ -20,16 +20,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.enchant.single;
 
-import static org.l2jmobius.gameserver.model.stats.Stat.ENCHANT_RATE;
+import static org.l2jmobius.gameserver.mechanics.stats.Stat.ENCHANT_RATE;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -49,7 +49,7 @@ public class ChangedEnchantTargetItemProbabilityList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		final EnchantItemRequest request = _player.getRequest(EnchantItemRequest.class);
 		if (request == null)

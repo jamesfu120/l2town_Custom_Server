@@ -20,20 +20,21 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.enums.ItemGrade;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.enums.ItemGrade;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.enums.UserInfoType;
@@ -151,7 +152,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (_player == null)
 		{
@@ -181,11 +182,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			{
 				if (_player.isDeathKnight())
 				{
-					classId = 0;
+					classId = PlayerClass.FIGHTER.getId();
 				}
 				else if (_player.isShineMaker())
 				{
-					classId = 53;
+					classId = PlayerClass.DWARVEN_FIGHTER.getId();
 				}
 			}
 			

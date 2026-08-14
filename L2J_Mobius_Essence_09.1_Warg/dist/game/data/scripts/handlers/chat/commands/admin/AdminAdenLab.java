@@ -26,12 +26,12 @@ import java.util.Map.Entry;
 import org.l2jmobius.gameserver.data.holders.AdenLabHolder;
 import org.l2jmobius.gameserver.data.xml.AdenLaboratoryData;
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.AdenLaboratoryManager;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.network.serverpackets.adenlab.ExAdenLabBossInfo;
 
 /**

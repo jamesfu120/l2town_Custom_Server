@@ -19,14 +19,14 @@ package instances.CavernOfThePirateCaptain;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -204,13 +204,14 @@ public class CavernOfThePirateCaptain extends InstanceScript
 		final boolean isNight = templateId == TEMPLATE_ID_60_NIGHT;
 		final Party party = player.getParty();
 		final boolean isInCC = party.isInCommandChannel();
-		final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 		final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 		if (!isPartyLeader)
 		{
 			broadcastSystemMessage(player, null, SystemMessageId.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER, false);
 			return false;
 		}
+		
+		final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 		
 		if ((members.size() < (isNight ? PLAYERS_60_NIGHT_MIN : PLAYERS_60_MIN)) || (members.size() > (isNight ? PLAYERS_60_NIGHT_MAX : PLAYERS_60_MAX)))
 		{

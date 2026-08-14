@@ -23,10 +23,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
@@ -86,7 +86,7 @@ public class RequestOustPledgeMember extends ClientPacket
 			return;
 		}
 		
-		// this also updates the database
+		// This also updates the database.
 		clan.removeClanMember(member.getObjectId(), System.currentTimeMillis() + TimeUnit.DAYS.toMillis(PlayerConfig.ALT_CLAN_JOIN_DAYS));
 		clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + TimeUnit.DAYS.toMillis(PlayerConfig.ALT_CLAN_JOIN_DAYS));
 		clan.updateClanInDB();
@@ -97,7 +97,7 @@ public class RequestOustPledgeMember extends ClientPacket
 		player.sendPacket(SystemMessageId.SUCCEEDED_IN_EXPELLING_A_CLAN_MEMBER);
 		player.sendPacket(SystemMessageId.A_NEW_MEMBER_CANNOT_JOIN_WITHIN_5_DAYS_OF_A_CLAN_MEMBER_S_EXPULSION);
 		
-		// Remove the Player From the Member list
+		// Remove the Player From the Member list.
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(_target));
 		if (member.isOnline())
 		{

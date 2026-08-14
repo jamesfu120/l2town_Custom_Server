@@ -21,11 +21,11 @@
 package org.l2jmobius.gameserver.network.clientpackets.randomcraft;
 
 import org.l2jmobius.gameserver.config.RandomCraftConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerRandomCraft;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerRandomCraft;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftRandomInfo;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftRandomLockSlot;

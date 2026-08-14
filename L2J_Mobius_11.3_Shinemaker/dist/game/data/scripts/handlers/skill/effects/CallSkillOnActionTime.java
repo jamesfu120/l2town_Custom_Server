@@ -22,15 +22,15 @@ package handlers.skill.effects;
 
 import java.util.Collections;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Dam Over Time effect implementation.
@@ -80,7 +80,7 @@ public class CallSkillOnActionTime extends AbstractEffect
 				triggerSkill.applyEffects(effector, effector);
 			}
 			
-			World.getInstance().forEachVisibleObjectInRange(effector, Creature.class, _skill.getSkill().getAffectRange(), c ->
+			World.forEachVisibleObjectInRange(effector, Creature.class, _skill.getSkill().getAffectRange(), c ->
 			{
 				final WorldObject target = triggerSkill.getTarget(effector, c, false, false, false);
 				if ((target != null) && target.isCreature())

@@ -21,15 +21,15 @@
 package ai.areas.GardenOfSpirits.Dinford;
 
 import org.l2jmobius.gameserver.data.xml.MultisellData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcMenuSelect;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcMenuSelect;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 /**

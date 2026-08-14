@@ -27,20 +27,19 @@ import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.util.StringUtil;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.html.PageBuilder;
-import org.l2jmobius.gameserver.model.html.PageResult;
-import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
-import org.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
-import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
+import org.l2jmobius.gameserver.mechanics.html.PageBuilder;
+import org.l2jmobius.gameserver.mechanics.html.PageResult;
+import org.l2jmobius.gameserver.mechanics.html.formatters.BypassParserFormatter;
+import org.l2jmobius.gameserver.mechanics.html.pagehandlers.NextPrevPageHandler;
+import org.l2jmobius.gameserver.mechanics.html.styles.ButtonsStyle;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.ArrayUtil;
@@ -257,7 +256,7 @@ public class AdminInstance implements IAdminCommandHandler
 		html.setFile(player, "data/html/admin/instances_list.htm");
 		
 		final InstanceManager instManager = InstanceManager.getInstance();
-		final List<InstanceTemplate> templateList = instManager.getInstanceTemplates().stream().sorted(Comparator.comparingLong(InstanceTemplate::getWorldCount).reversed()).filter(template -> !ArrayUtil.contains(IGNORED_TEMPLATES, template.getId())).collect(Collectors.toList());
+		final List<InstanceTemplate> templateList = instManager.getInstanceTemplates().stream().sorted(Comparator.comparingLong(InstanceTemplate::getWorldCount).reversed()).filter(template -> !ArrayUtil.contains(IGNORED_TEMPLATES, template.getId())).toList();
 		
 		// @formatter:off
 		final PageResult result = PageBuilder.newBuilder(templateList, 4, "bypass -h admin_instancelist")

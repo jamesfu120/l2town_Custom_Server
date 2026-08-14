@@ -23,8 +23,8 @@ package org.l2jmobius.gameserver.network.clientpackets.huntpass;
 import java.util.Calendar;
 
 import org.l2jmobius.gameserver.config.HuntPassConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.huntpass.HuntPassInfo;

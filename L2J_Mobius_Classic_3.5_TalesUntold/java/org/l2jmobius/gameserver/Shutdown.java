@@ -37,6 +37,8 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.OfflinePlayTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.sql.PartyMatchingHistoryTable;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.CastleManorManager;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
@@ -46,17 +48,14 @@ import org.l2jmobius.gameserver.managers.ItemAuctionManager;
 import org.l2jmobius.gameserver.managers.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.managers.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanagers.GameTimeTaskManager;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * This class provides the functions for shutting down and restarting the server.<br>
@@ -93,7 +92,7 @@ public class Shutdown extends Thread
 	{
 		final SystemMessage sysm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT);
 		sysm.addInt(seconds);
-		Broadcast.toAllOnlinePlayers(sysm);
+		World.broadcastToAllOnlinePlayers(sysm);
 	}
 	
 	/**
@@ -224,7 +223,7 @@ public class Shutdown extends Thread
 			PrecautionaryRestartManager.getInstance().restartEnabled();
 		}
 		
-		// the main instance should only run for shutdown hook, so we start a new instance
+		// The main instance should only run for shutdown hook, so we start a new instance.
 		_counterInstance = new Shutdown(seconds, restart);
 		_counterInstance.start();
 	}
@@ -251,7 +250,7 @@ public class Shutdown extends Thread
 				PrecautionaryRestartManager.getInstance().restartAborted();
 			}
 			
-			Broadcast.toAllOnlinePlayers("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!", false);
+			World.broadcastToAllOnlinePlayers("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!", false);
 		}
 	}
 	
@@ -327,7 +326,7 @@ public class Shutdown extends Thread
 		}
 		catch (Exception e)
 		{
-			// this will never happen
+			// This will never happen.
 		}
 	}
 	
@@ -361,7 +360,7 @@ public class Shutdown extends Thread
 		
 		try
 		{
-			if ((OfflinePlayConfig.RESTORE_AUTO_PLAY_OFFLINERS && GeneralConfig.ENABLE_AUTO_ASSIST))
+			if (OfflinePlayConfig.RESTORE_AUTO_PLAY_OFFLINERS && GeneralConfig.ENABLE_AUTO_ASSIST)
 			{
 				OfflinePlayTable.getInstance().storeOfflineGroups();
 				LOGGER.info("Offline Play Table: Offline play groups stored(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
@@ -484,18 +483,18 @@ public class Shutdown extends Thread
 		CursedWeaponsManager.getInstance().saveData();
 		LOGGER.info("Cursed Weapons Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
-		// Save all manor data
+		// Save all manor data.
 		if (!GeneralConfig.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
 			CastleManorManager.getInstance().storeMe();
 			LOGGER.info("Castle Manor Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		}
 		
-		// Save all global (non-player specific) Quest data that needs to persist after reboot
+		// Save all global (non-player specific) Quest data that needs to persist after reboot.
 		ScriptManager.getInstance().save();
 		LOGGER.info("Script Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
-		// Save all global variables data
+		// Save all global variables data.
 		GlobalVariablesManager.getInstance().storeMe();
 		LOGGER.info("Global Variables Manager: Variables saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
@@ -507,7 +506,7 @@ public class Shutdown extends Thread
 		SchemeBufferTable.getInstance().saveSchemes();
 		LOGGER.info("SchemeBufferTable: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
-		// Save items on ground before closing
+		// Save items on ground before closing.
 		if (GeneralConfig.SAVE_DROPPED_ITEM)
 		{
 			ItemsOnGroundManager.getInstance().saveInDb();
@@ -516,7 +515,7 @@ public class Shutdown extends Thread
 			LOGGER.info("Items On Ground Manager: Cleaned up(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		}
 		
-		// Save bot reports to database
+		// Save bot reports to database.
 		if (GeneralConfig.BOTREPORT_ENABLE)
 		{
 			BotReportTable.getInstance().saveReportedCharData();
@@ -529,7 +528,7 @@ public class Shutdown extends Thread
 		}
 		catch (Exception e)
 		{
-			// this will never happen
+			// This will never happen.
 		}
 	}
 	
@@ -538,7 +537,7 @@ public class Shutdown extends Thread
 	 */
 	private void disconnectAllCharacters()
 	{
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			Disconnection.of(player).storeAndDeleteWith(ServerClose.STATIC_PACKET);
 		}

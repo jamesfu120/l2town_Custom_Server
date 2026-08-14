@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.crossevent;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.managers.events.CrossEventManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.crossevent.ExCrossEventInfo;
 import org.l2jmobius.gameserver.network.serverpackets.crossevent.ExCrossEventReset;

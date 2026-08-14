@@ -16,19 +16,19 @@
  */
 package quests.Q10320_LetsGoToTheCentralSquare;
 
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerCreate;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerCreate;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 

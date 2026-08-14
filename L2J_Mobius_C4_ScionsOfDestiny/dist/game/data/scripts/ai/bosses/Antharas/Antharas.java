@@ -24,30 +24,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.time.TimeUtil;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MountType;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.MountType;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
-import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.MathUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Antharas AI script.<br>
@@ -401,16 +399,12 @@ public class Antharas extends Script
 				npc.disableCoreAI(false);
 				npc.setRandomWalking(true);
 				
-				for (Player nearbyPlayer : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000))
+				World.forFirstVisibleObjectInRange(npc, Player.class, 4000, nearbyPlayer -> nearbyPlayer.isHero() && GrandBossConfig.ANTHARAS_RECOGNIZE_HERO, nearbyPlayer ->
 				{
-					if (nearbyPlayer.isHero() && GrandBossConfig.ANTHARAS_RECOGNIZE_HERO)
-					{
-						npc.broadcastSay(ChatType.NPC_SHOUT, nearbyPlayer.getName() + "!!!! You cannot hope to defeat me with your meager strength.");
-						break;
-					}
-				}
+					npc.broadcastSay(ChatType.NPC_SHOUT, nearbyPlayer.getName() + "!!!! You cannot hope to defeat me with your meager strength.");
+				});
 				
-				npc.getAI().setIntention(Intention.MOVE_TO, ANTHARAS_MOVE_TARGET_LOCATION);
+				npc.getAI().setIntentionMoveTo(ANTHARAS_MOVE_TARGET_LOCATION);
 				startQuestTimer(EVENT_CHECK_ATTACK, CHECK_ATTACK_INTERVAL, npc, null);
 				// startQuestTimer(EVENT_SPAWN_MINION, MINION_SPAWN_INTERVAL, npc, null);
 				break;
@@ -426,26 +420,26 @@ public class Antharas extends Script
 				{
 					if (!npc.isAffectedBySkill(ANTHARAS_REGEN_PHASE_4.getSkillId()))
 					{
-						npc.getAI().setIntention(Intention.CAST, ANTHARAS_REGEN_PHASE_4.getSkill(), npc);
+						npc.getAI().setIntentionCast(ANTHARAS_REGEN_PHASE_4.getSkill(), npc);
 					}
 				}
 				else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
 				{
 					if (!npc.isAffectedBySkill(ANTHARAS_REGEN_PHASE_3.getSkillId()))
 					{
-						npc.getAI().setIntention(Intention.CAST, ANTHARAS_REGEN_PHASE_3.getSkill(), npc);
+						npc.getAI().setIntentionCast(ANTHARAS_REGEN_PHASE_3.getSkill(), npc);
 					}
 				}
 				else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
 				{
 					if (!npc.isAffectedBySkill(ANTHARAS_REGEN_PHASE_2.getSkillId()))
 					{
-						npc.getAI().setIntention(Intention.CAST, ANTHARAS_REGEN_PHASE_2.getSkill(), npc);
+						npc.getAI().setIntentionCast(ANTHARAS_REGEN_PHASE_2.getSkill(), npc);
 					}
 				}
 				else if (!npc.isAffectedBySkill(ANTHARAS_REGEN_PHASE_1.getSkillId()))
 				{
-					npc.getAI().setIntention(Intention.CAST, ANTHARAS_REGEN_PHASE_1.getSkill(), npc);
+					npc.getAI().setIntentionCast(ANTHARAS_REGEN_PHASE_1.getSkill(), npc);
 				}
 				
 				startQuestTimer(EVENT_SET_REGEN, REGEN_INTERVAL, npc, null);
@@ -578,7 +572,7 @@ public class Antharas extends Script
 				{
 					_sandStormState = 1;
 					npc.disableCoreAI(true);
-					npc.getAI().setIntention(Intention.MOVE_TO, new Location(ANTHARAS_FEAR_MOVE_X, ANTHARAS_FEAR_MOVE_Y, ANTHARAS_FEAR_MOVE_Z));
+					npc.getAI().setIntentionMoveTo(new Location(ANTHARAS_FEAR_MOVE_X, ANTHARAS_FEAR_MOVE_Y, ANTHARAS_FEAR_MOVE_Z));
 					startQuestTimer(EVENT_TID_FEAR_MOVE_TIMEOVER, FEAR_MOVE_FIRST_CHECK, npc, null);
 					startQuestTimer(EVENT_TID_FEAR_COOLTIME, FEAR_COOLDOWN, npc, null);
 				}
@@ -608,7 +602,7 @@ public class Antharas extends Script
 					if (_moveRetryCount <= MAX_MOVE_RETRY_COUNT)
 					{
 						_moveRetryCount++;
-						npc.getAI().setIntention(Intention.MOVE_TO, new Location(ANTHARAS_FEAR_MOVE_X, ANTHARAS_FEAR_MOVE_Y, ANTHARAS_FEAR_MOVE_Z));
+						npc.getAI().setIntentionMoveTo(new Location(ANTHARAS_FEAR_MOVE_X, ANTHARAS_FEAR_MOVE_Y, ANTHARAS_FEAR_MOVE_Z));
 						startQuestTimer(EVENT_TID_FEAR_MOVE_TIMEOVER, FEAR_MOVE_RETRY_INTERVAL, npc, null);
 					}
 					else
@@ -623,7 +617,7 @@ public class Antharas extends Script
 			{
 				_antharasBoss = (GrandBoss) addSpawn(ANTHARAS_NPC_ID, ANTHARAS_IDLE_LOCATION, false, 0);
 				addBoss(_antharasBoss);
-				Broadcast.toAllOnlinePlayers(new Earthquake(ANTHARAS_IDLE_LOCATION.getX(), ANTHARAS_IDLE_LOCATION.getY(), ANTHARAS_IDLE_LOCATION.getZ(), 20, 10));
+				World.broadcastToAllOnlinePlayers(new Earthquake(ANTHARAS_IDLE_LOCATION.getX(), ANTHARAS_IDLE_LOCATION.getY(), ANTHARAS_IDLE_LOCATION.getZ(), 20, 10));
 				setStatus(STATUS_ALIVE);
 				resetFightState();
 				break;
@@ -1247,7 +1241,7 @@ public class Antharas extends Script
 				}
 				else
 				{
-					npc.getAI().setIntention(Intention.CAST, skillToCast.getSkill(), npc);
+					npc.getAI().setIntentionCast(skillToCast.getSkill(), npc);
 				}
 			}
 		}

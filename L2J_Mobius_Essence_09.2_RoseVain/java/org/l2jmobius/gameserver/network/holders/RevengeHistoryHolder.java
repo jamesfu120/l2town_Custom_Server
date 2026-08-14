@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.holders;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.enums.RevengeType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius

@@ -23,12 +23,12 @@ package ai.areas.KashaOrc;
 import java.util.Collection;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * Kasha Orc Elite Shaman AI.<br>
@@ -80,15 +80,16 @@ public class SupportHaterShaman extends Script
 			}
 			
 			final int homeX = npc.getVariables().getInt("HomeX", 0);
-			final int homeY = npc.getVariables().getInt("HomeY", 0);
-			final int homeZ = npc.getVariables().getInt("HomeZ", 0);
 			if (homeX == 0)
 			{
 				return super.onEvent(event, npc, player);
 			}
 			
+			final int homeY = npc.getVariables().getInt("HomeY", 0);
+			final int homeZ = npc.getVariables().getInt("HomeZ", 0);
+			
 			// Distance.
-			final double distFromHome = Math.sqrt(Math.pow(npc.getX() - homeX, 2) + Math.pow(npc.getY() - homeY, 2) + Math.pow(npc.getZ() - homeZ, 2));
+			final double distFromHome = Math.sqrt(MathUtil.pow(npc.getX() - homeX, 2) + MathUtil.pow(npc.getY() - homeY, 2) + MathUtil.pow(npc.getZ() - homeZ, 2));
 			if (distFromHome > LIMIT_RANGE) // Moved too far away, RESET.
 			{
 				npc.abortAttack();
@@ -145,7 +146,7 @@ public class SupportHaterShaman extends Script
 				if (Rnd.get(100) < AGGRO_CHANCE)
 				{
 					// Calculate distance to the caster (e.g., healer).
-					final double distToCaster = Math.sqrt(Math.pow(npc.getX() - caster.getX(), 2) + Math.pow(npc.getY() - caster.getY(), 2));
+					final double distToCaster = Math.sqrt(MathUtil.pow(npc.getX() - caster.getX(), 2) + MathUtil.pow(npc.getY() - caster.getY(), 2));
 					
 					// Only reacts if within vision range.
 					if (distToCaster < VISION_RANGE)
@@ -153,7 +154,7 @@ public class SupportHaterShaman extends Script
 						// Generate extreme hatred and switch target to the caster.
 						npc.asAttackable().addDamageHate(caster, 0, HATE_AMOUNT);
 						npc.setTarget(caster);
-						npc.getAI().setIntention(Intention.ATTACK, caster);
+						npc.getAI().setIntentionAttack(caster);
 					}
 				}
 			}

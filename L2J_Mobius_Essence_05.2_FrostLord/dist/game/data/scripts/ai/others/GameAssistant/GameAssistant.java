@@ -25,17 +25,17 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerBypass;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerFreight;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerBypass;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
@@ -98,7 +98,7 @@ public class GameAssistant extends Script
 		{
 			case "package_deposit":
 			{
-				if (player.getAccountChars().size() < 1)
+				if (player.getAccountChars().isEmpty())
 				{
 					player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 				}
@@ -355,13 +355,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
@@ -394,13 +395,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
@@ -433,13 +435,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
@@ -472,13 +475,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
@@ -511,13 +515,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
@@ -550,13 +555,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
@@ -589,13 +595,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
@@ -628,13 +635,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
@@ -667,13 +675,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
@@ -706,13 +715,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
@@ -758,13 +768,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
@@ -797,13 +808,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
@@ -836,13 +848,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
@@ -875,13 +888,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
@@ -914,13 +928,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
@@ -953,13 +968,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
@@ -992,13 +1008,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
@@ -1031,13 +1048,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
@@ -1070,13 +1088,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
@@ -1109,13 +1128,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
@@ -1161,13 +1181,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
@@ -1200,13 +1221,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
@@ -1239,13 +1261,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
@@ -1278,13 +1301,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
@@ -1317,13 +1341,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
@@ -1356,13 +1381,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
@@ -1395,13 +1421,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
@@ -1434,13 +1461,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
@@ -1473,13 +1501,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
@@ -1512,13 +1541,14 @@ public class GameAssistant extends Script
 					return null;
 				}
 				
-				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
+				
+				final Item cloak = cloaks.stream().findFirst().get();
 				
 				player.destroyItem(ItemProcessType.FEE, cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);

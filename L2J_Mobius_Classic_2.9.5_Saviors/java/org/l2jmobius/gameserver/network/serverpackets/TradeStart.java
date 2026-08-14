@@ -22,11 +22,11 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.MentorManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -69,7 +69,7 @@ public class TradeStart extends AbstractItemPacket
 				_mask |= 0x08;
 			}
 			
-			// Does not shows level
+			// Does not shows level.
 			if (_partner.isGM())
 			{
 				_mask |= 0x10;
@@ -78,7 +78,7 @@ public class TradeStart extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if ((_player.getActiveTradeList() == null) || (_partner == null))
 		{

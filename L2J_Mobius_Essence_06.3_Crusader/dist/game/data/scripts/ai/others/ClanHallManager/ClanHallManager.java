@@ -16,27 +16,28 @@
  */
 package ai.others.ClanHallManager;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.data.xml.ResidenceFunctionsData;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Merchant;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.clan.enums.ClanHallGrade;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.residences.ResidenceFunction;
-import org.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
-import org.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.teleporter.TeleportHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Merchant;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanHallGrade;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
+import org.l2jmobius.gameserver.entity.residences.ResidenceFunction;
+import org.l2jmobius.gameserver.entity.residences.ResidenceFunctionTemplate;
+import org.l2jmobius.gameserver.entity.residences.ResidenceFunctionType;
+import org.l2jmobius.gameserver.entity.teleporter.TeleportHolder;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 import org.l2jmobius.gameserver.util.ArrayUtil;
@@ -47,6 +48,8 @@ import org.l2jmobius.gameserver.util.ArrayUtil;
  */
 public class ClanHallManager extends Script
 {
+	private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+	
 	// NPCs
 	// @formatter:off
 	private static final int[] CLANHALL_MANAGERS =
@@ -295,7 +298,7 @@ public class ClanHallManager extends Script
 				{
 					htmltext = getHtm(player, "ClanHallManager-10.html");
 					htmltext = htmltext.replace("%lease%", String.valueOf(clanHall.getLease()));
-					htmltext = htmltext.replace("%payDate%", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(clanHall.getNextPayment())));
+					htmltext = htmltext.replace("%payDate%", DATE_FORMAT.format(Instant.ofEpochMilli(clanHall.getNextPayment()).atZone(ZoneId.systemDefault())));
 					break;
 				}
 				case "manageFunctions":
@@ -495,7 +498,7 @@ public class ClanHallManager extends Script
 	
 	private void updateVisualEffects(ClanHall clanHall, Npc npc)
 	{
-		World.getInstance().forEachVisibleObject(npc, Player.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
+		World.forEachVisibleObject(npc, Player.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
 	}
 	
 	private String getFunctionInfo(ResidenceFunction func, String htmltextValue, String name)
@@ -505,7 +508,7 @@ public class ClanHallManager extends Script
 		{
 			htmltext = htmltext.replaceAll("%" + name + "recovery%", String.valueOf((int) func.getTemplate().getValue()) + "%");
 			htmltext = htmltext.replaceAll("%" + name + "price%", "<fstring p1=\"" + func.getTemplate().getCost().getCount() + "\" p2=\"" + func.getTemplate().getDurationAsDays() + "\">" + NpcStringId.FONT_COLOR_FFAABB_S1_FONT_ADENA_S2_D.getId() + "</fstring>");
-			htmltext = htmltext.replace("%" + name + "expire%", "Withdraw the fee for the next time at " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(func.getExpiration())));
+			htmltext = htmltext.replace("%" + name + "expire%", "Withdraw the fee for the next time at " + DATE_FORMAT.format(Instant.ofEpochMilli(func.getExpiration()).atZone(ZoneId.systemDefault())));
 			htmltext = htmltext.replaceAll("%" + name + "deactive%", "[<a action=\"bypass -h Script ClanHallManager manageFunctions removeFunction confirm " + func.getType().toString() + "\">Deactivate</a>]");
 		}
 		else

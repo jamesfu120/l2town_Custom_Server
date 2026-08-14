@@ -30,35 +30,35 @@ import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
 import org.l2jmobius.gameserver.data.xml.ActionData;
 import org.l2jmobius.gameserver.data.xml.PetSkillData;
-import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.handler.ItemHandler;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.instance.Guard;
+import org.l2jmobius.gameserver.entity.actor.transform.Transform;
+import org.l2jmobius.gameserver.entity.actor.transform.TransformTemplate;
+import org.l2jmobius.gameserver.entity.item.EtcItem;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.ActionUserHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.Guard;
-import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.item.OnItemUse;
-import org.l2jmobius.gameserver.model.item.EtcItem;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.EffectScope;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.AttachSkillHolder;
-import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
-import org.l2jmobius.gameserver.model.skill.targets.TargetType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.handler.IActionUserHandler;
+import org.l2jmobius.gameserver.handler.IItemHandler;
+import org.l2jmobius.gameserver.handler.ItemHandler;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.item.OnItemUse;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.EffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.AttachSkillHolder;
+import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -124,6 +124,12 @@ public class AutoUseTaskManager
 						
 						final Item item = player.getInventory().getItemByItemId(itemId.intValue());
 						if (item == null)
+						{
+							player.getAutoUseSettings().getAutoSupplyItems().remove(itemId);
+							continue ITEMS;
+						}
+						
+						if (item.isOlyRestrictedItem() && player.isInOlympiadMode())
 						{
 							player.getAutoUseSettings().getAutoSupplyItems().remove(itemId);
 							continue ITEMS;
@@ -584,7 +590,7 @@ public class AutoUseTaskManager
 			}
 			
 			final int mpConsume = skill.getMpConsume() + skill.getMpInitialConsume();
-			if ((((mpConsume != 0) && (mpConsume > (int) Math.floor(summon.getCurrentMp()))) || ((skill.getHpConsume() != 0) && (skill.getHpConsume() > (int) Math.floor(summon.getCurrentHp())))))
+			if ((((mpConsume != 0) && (mpConsume > (int) (summon.getCurrentMp()))) || ((skill.getHpConsume() != 0) && (skill.getHpConsume() > (int) (summon.getCurrentHp())))))
 			{
 				return false;
 			}

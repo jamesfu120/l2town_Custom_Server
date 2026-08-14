@@ -20,9 +20,9 @@
  */
 package ai.areas.Aden.Herphah;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Aden Faction Npc AI

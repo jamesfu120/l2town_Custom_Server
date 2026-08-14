@@ -26,14 +26,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * A holder representing a craftable recipe based on the former RecipeList.<br>

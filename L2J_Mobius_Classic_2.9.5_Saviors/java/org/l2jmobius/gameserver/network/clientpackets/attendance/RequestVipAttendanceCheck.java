@@ -23,11 +23,11 @@ package org.l2jmobius.gameserver.network.clientpackets.attendance;
 import org.l2jmobius.gameserver.config.AttendanceRewardsConfig;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.ItemData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.AttendanceInfoHolder;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -80,7 +80,6 @@ public class RequestVipAttendanceCheck extends ClientPacket
 		}
 		
 		final AttendanceInfoHolder attendanceInfo = player.getAttendanceInfo();
-		final boolean isRewardAvailable = attendanceInfo.isRewardAvailable();
 		final int rewardIndex = attendanceInfo.getRewardIndex();
 		final ItemHolder reward = AttendanceRewardData.getInstance().getRewards().get(rewardIndex);
 		final ItemTemplate itemTemplate = ItemData.getInstance().getTemplate(reward.getId());
@@ -95,6 +94,7 @@ public class RequestVipAttendanceCheck extends ClientPacket
 		}
 		
 		// Reward.
+		final boolean isRewardAvailable = attendanceInfo.isRewardAvailable();
 		if (isRewardAvailable)
 		{
 			// Save date and index.

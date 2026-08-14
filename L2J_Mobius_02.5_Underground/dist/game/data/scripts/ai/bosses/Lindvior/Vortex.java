@@ -20,17 +20,14 @@
  */
 package ai.bosses.Lindvior;
 
-import java.util.Collection;
-
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.enums.FlyType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.enums.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
@@ -58,11 +55,11 @@ public class Vortex extends Script
 		{
 			case "rnd_small":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 250, attackers ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 250, attackers ->
 				{
 					if ((attackers != null) && !attackers.isDead() && !attackers.isAlikeDead())
 					{
-						attackers.getAI().setIntention(Intention.IDLE);
+						attackers.getAI().setIntentionIdle();
 						final int radians = (int) Math.toRadians(npc.calculateDirectionTo(attackers));
 						final int x = (int) (attackers.getX() + (600 * Math.cos(radians)));
 						final int y = (int) (attackers.getY() + (600 * Math.sin(radians)));
@@ -71,7 +68,7 @@ public class Vortex extends Script
 						attackers.broadcastPacket(new FlyToLocation(attackers, x, y, z, FlyType.THROW_UP, 800, 800, 800));
 						attackers.setXYZ(loc);
 						attackers.broadcastPacket(new ValidateLocation(attackers));
-						npc.getAI().setIntention(Intention.ATTACK, player);
+						npc.getAI().setIntentionAttack(player);
 						startQuestTimer("stop_knock_down", 5000, npc, attackers);
 						startQuestTimer("despawn_small", 5000, npc, null);
 					}
@@ -80,7 +77,7 @@ public class Vortex extends Script
 			}
 			case "rnd_big":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 500, attackers ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 500, attackers ->
 				{
 					if ((attackers != null) && !attackers.isDead() && !attackers.isAlikeDead())
 					{
@@ -145,16 +142,7 @@ public class Vortex extends Script
 	
 	private void attackRandomTarget(Npc npc)
 	{
-		final Collection<Player> players = World.getInstance().getVisibleObjects(npc, Player.class);
-		if ((players == null) || players.isEmpty())
-		{
-			return;
-		}
-		
-		if (!players.isEmpty())
-		{
-			addAttackPlayerDesire(npc, players.stream().findAny().get());
-		}
+		World.forFirstVisibleObject(npc, Player.class, p -> addAttackPlayerDesire(npc, p));
 	}
 	
 	public static void main(String[] args)

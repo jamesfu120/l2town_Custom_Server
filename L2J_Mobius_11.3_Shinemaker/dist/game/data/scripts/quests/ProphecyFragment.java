@@ -20,13 +20,13 @@
  */
 package quests;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.script.newquestdata.QuestCondType;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
 
 import quests.Q10021_EssenceOfTheProphecy.Q10021_EssenceOfTheProphecy;
 import quests.Q10031_ProphecyMachineRestoration.Q10031_ProphecyMachineRestoration;
@@ -69,7 +69,7 @@ public class ProphecyFragment extends Script
 		QuestState questState = player.getQuestState(Q10021_EssenceOfTheProphecy.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc tarti = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == TARTI).stream().findFirst().orElse(null);
+			final Npc tarti = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == TARTI);
 			if ((tarti != null) && tarti.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -84,7 +84,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10031_ProphecyMachineRestoration.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc raymond = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == RAYMOND).stream().findFirst().orElse(null);
+			final Npc raymond = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == RAYMOND);
 			if ((raymond != null) && raymond.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -99,7 +99,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10032_ToGereth.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -114,7 +114,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10033_ProphecyInterpretation.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -131,7 +131,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10121_EssenceOfTheProphecy.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc tarti = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == TARTI).stream().findFirst().orElse(null);
+			final Npc tarti = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == TARTI);
 			if ((tarti != null) && tarti.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -146,7 +146,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10131_ProphecyMachineRestoration.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc raymond = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == RAYMOND).stream().findFirst().orElse(null);
+			final Npc raymond = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == RAYMOND);
 			if ((raymond != null) && raymond.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -161,7 +161,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10132_ToGereth.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -176,7 +176,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10133_ProphecyInterpretation.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -193,7 +193,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10221_EssenceOfTheProphecy.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc tarti = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == TARTI).stream().findFirst().orElse(null);
+			final Npc tarti = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == TARTI);
 			if ((tarti != null) && tarti.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -208,7 +208,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10231_ProphecyMachineRestoration.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc raymond = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == RAYMOND).stream().findFirst().orElse(null);
+			final Npc raymond = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == RAYMOND);
 			if ((raymond != null) && raymond.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -223,7 +223,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10232_ToGereth.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -238,7 +238,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10233_ProphecyInterpretation.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -255,7 +255,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10321_EssenceOfTheProphecy.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc tarti = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == TARTI).stream().findFirst().orElse(null);
+			final Npc tarti = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == TARTI);
 			if ((tarti != null) && tarti.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -270,7 +270,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10331_ProphecyMachineRestoration.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc raymond = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == RAYMOND).stream().findFirst().orElse(null);
+			final Npc raymond = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == RAYMOND);
 			if ((raymond != null) && raymond.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -285,7 +285,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10332_ToGereth.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);
@@ -300,7 +300,7 @@ public class ProphecyFragment extends Script
 		questState = player.getQuestState(Q10333_ProphecyInterpretation.class.getSimpleName());
 		if ((questState != null) && questState.isStarted())
 		{
-			final Npc gereth = World.getInstance().getVisibleObjects(player, Npc.class, n -> n.getId() == GERETH).stream().findFirst().orElse(null);
+			final Npc gereth = World.getFirstVisibleObject(player, Npc.class, n -> n.getId() == GERETH);
 			if ((gereth != null) && gereth.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 			{
 				questState.setCond(QuestCondType.DONE);

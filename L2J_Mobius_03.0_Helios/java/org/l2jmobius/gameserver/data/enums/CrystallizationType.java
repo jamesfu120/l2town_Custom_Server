@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.data.enums;
 
-import org.l2jmobius.gameserver.model.item.Armor;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.entity.item.Armor;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.Weapon;
 
 /**
  * @author Nik, Mobius

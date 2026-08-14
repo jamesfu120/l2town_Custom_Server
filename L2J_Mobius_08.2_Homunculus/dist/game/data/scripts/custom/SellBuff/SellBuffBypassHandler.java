@@ -22,16 +22,16 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.config.custom.SellBuffsConfig;
 import org.l2jmobius.gameserver.data.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
 import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.managers.SellBuffsManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
 /**
@@ -195,7 +195,7 @@ public class SellBuffBypassHandler implements IBypassHandler
 					}
 					
 					final SellBuffHolder holder = player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToChange.getId())).findFirst().orElse(null);
-					if ((holder != null))
+					if (holder != null)
 					{
 						player.sendMessage("Price of " + player.getKnownSkill(holder.getSkillId()).getName() + " has been changed to " + price + "!");
 						holder.setPrice(price);
@@ -217,7 +217,7 @@ public class SellBuffBypassHandler implements IBypassHandler
 						skillId = Integer.parseInt(st.nextToken());
 					}
 					
-					if ((skillId == -1))
+					if (skillId == -1)
 					{
 						return false;
 					}
@@ -316,7 +316,7 @@ public class SellBuffBypassHandler implements IBypassHandler
 						index = Integer.parseInt(st.nextToken());
 					}
 					
-					final Player seller = World.getInstance().getPlayer(objId);
+					final Player seller = World.getPlayer(objId);
 					if (seller != null)
 					{
 						if (!seller.isSellingBuffs() || !player.isInsideRadius3D(seller, Npc.INTERACTION_DISTANCE))
@@ -358,7 +358,7 @@ public class SellBuffBypassHandler implements IBypassHandler
 						return false;
 					}
 					
-					final Player seller = World.getInstance().getPlayer(objId);
+					final Player seller = World.getPlayer(objId);
 					if (seller == null)
 					{
 						return false;

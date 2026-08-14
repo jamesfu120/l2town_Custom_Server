@@ -18,15 +18,15 @@ package ai.areas.Parnassus.EntrancePortalToCrystalCaverns;
 
 import java.util.Calendar;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
+import org.l2jmobius.gameserver.util.StatSet;
 
 import instances.CrystalCaverns.CrystalCavernsCoralGarden;
 import instances.CrystalCaverns.CrystalCavernsEmeraldSquare;
@@ -114,7 +114,7 @@ public class EntrancePortalToCrystalCaverns extends Script
 		if (event.equals("LOOP_TIMER"))
 		{
 			final int currentTemplateId = getCurrentInstanceTemplateId();
-			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 500, p -> updateTriggersForPlayer(player, currentTemplateId));
+			World.forEachVisibleObjectInRange(npc, Player.class, 500, p -> updateTriggersForPlayer(player, currentTemplateId));
 		}
 	}
 	

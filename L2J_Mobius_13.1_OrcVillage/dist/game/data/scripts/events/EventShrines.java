@@ -23,10 +23,10 @@ package events;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.events.EventShrineManager;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 /**

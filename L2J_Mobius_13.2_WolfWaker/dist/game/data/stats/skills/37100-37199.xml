@@ -2965,19 +2965,69 @@
 					<item>DUALDAGGER</item>
 				</weaponType>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>DAGGER</item>
 					<item>DUALDAGGER</item>
 				</weaponType>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>DAGGER</item>
 					<item>DUALDAGGER</item>
 				</weaponType>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3004,7 +3054,7 @@
 				<magicWeapon>false</magicWeapon>
 				<twoHandWeapon>false</twoHandWeapon>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>SWORD</item>
@@ -3012,8 +3062,9 @@
 				</weaponType>
 				<magicWeapon>false</magicWeapon>
 				<twoHandWeapon>false</twoHandWeapon>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>SWORD</item>
@@ -3021,6 +3072,67 @@
 				</weaponType>
 				<magicWeapon>false</magicWeapon>
 				<twoHandWeapon>false</twoHandWeapon>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3045,21 +3157,77 @@
 				<magicWeapon>false</magicWeapon>
 				<twoHandWeapon>true</twoHandWeapon>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>SWORD</item>
 				</weaponType>
 				<magicWeapon>false</magicWeapon>
 				<twoHandWeapon>true</twoHandWeapon>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>SWORD</item>
 				</weaponType>
 				<magicWeapon>false</magicWeapon>
 				<twoHandWeapon>true</twoHandWeapon>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+				<magicWeapon>false</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3082,19 +3250,69 @@
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>FIST</item>
 					<item>DUALFIST</item>
 				</weaponType>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>FIST</item>
 					<item>DUALFIST</item>
 				</weaponType>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3115,17 +3333,61 @@
 					<item>POLE</item>
 				</weaponType>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>POLE</item>
 				</weaponType>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>POLE</item>
 				</weaponType>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3150,21 +3412,77 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3191,7 +3509,7 @@
 				<magicWeapon>true</magicWeapon>
 				<twoHandWeapon>false</twoHandWeapon>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>SWORD</item>
@@ -3199,8 +3517,9 @@
 				</weaponType>
 				<magicWeapon>true</magicWeapon>
 				<twoHandWeapon>false</twoHandWeapon>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>SWORD</item>
@@ -3208,6 +3527,67 @@
 				</weaponType>
 				<magicWeapon>true</magicWeapon>
 				<twoHandWeapon>false</twoHandWeapon>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>false</twoHandWeapon>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3232,21 +3612,77 @@
 				<magicWeapon>true</magicWeapon>
 				<twoHandWeapon>true</twoHandWeapon>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>BLUNT</item>
 				</weaponType>
 				<magicWeapon>true</magicWeapon>
 				<twoHandWeapon>true</twoHandWeapon>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>BLUNT</item>
 				</weaponType>
 				<magicWeapon>true</magicWeapon>
 				<twoHandWeapon>true</twoHandWeapon>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+				<magicWeapon>true</magicWeapon>
+				<twoHandWeapon>true</twoHandWeapon>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3269,19 +3705,69 @@
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>DUAL</item>
 					<item>DUALBLUNT</item>
 				</weaponType>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>20</amount>
 				<weaponType>
 					<item>DUAL</item>
 					<item>DUALBLUNT</item>
 				</weaponType>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>20</amount>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -3296,11 +3782,37 @@
 			<effect name="WeaponBonusMagicalAttack">
 				<amount>100</amount>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>40</amount>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>40</amount>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>40</amount>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>40</amount>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>40</amount>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>40</amount>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>40</amount>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>40</amount>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>

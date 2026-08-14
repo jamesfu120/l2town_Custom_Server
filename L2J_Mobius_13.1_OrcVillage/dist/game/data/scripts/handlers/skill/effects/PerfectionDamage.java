@@ -26,22 +26,22 @@ import java.util.Set;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureAttackPerfection;
-import org.l2jmobius.gameserver.model.item.enums.ShotType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureAttackPerfection;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Perfection damage effect implementation.

@@ -26,11 +26,11 @@ import java.sql.ResultSet;
 import java.util.Calendar;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -108,7 +108,7 @@ public class ExOlympiadRecord extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_OLYMPIAD_RECORD.writeId(this, buffer);
 		buffer.writeInt(_noblePoints); // nPoint

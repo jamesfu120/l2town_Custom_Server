@@ -27,14 +27,13 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -69,7 +68,7 @@ public class HarnakUndergroundRuinsZone extends Script
 			{
 				final ZoneType zone = ZoneManager.getInstance().getZoneById(zoneId);
 				_roomInfo.put(zone, new zoneInfo());
-				final String zoneName = zone.getName().toLowerCase().replace(" ", "_");
+				final String zoneName = zone.getName().toLowerCase().replace(' ', '_');
 				_templates.forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName), null));
 			}
 		}
@@ -177,7 +176,7 @@ public class HarnakUndergroundRuinsZone extends Script
 						if (currentInfo.getCurrentMonitorizedDamage() >= 10)
 						{
 							_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.DEMONIC_SYSTEM_WILL_ACTIVATE, ExShowScreenMessage.TOP_CENTER, 3000));
-							final String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
+							final String zoneName = _zone.getName().toLowerCase().replace(' ', '_');
 							_templates.forEach(t -> t.despawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName)));
 							_templates.forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName + "_demonic"), null));
 							_zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 600, 0, NpcStringId.DEMONIC_SYSTEM_ACTIVATED)));
@@ -202,7 +201,7 @@ public class HarnakUndergroundRuinsZone extends Script
 							}
 						}
 						
-						final String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
+						final String zoneName = _zone.getName().toLowerCase().replace(' ', '_');
 						_templates.forEach(t -> t.despawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName + "_demonic")));
 						_templates.forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName), null));
 						return;
@@ -278,7 +277,7 @@ public class HarnakUndergroundRuinsZone extends Script
 			final Monster copy = addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false).asMonster();
 			copy.setTarget(killer);
 			copy.addDamageHate(killer, 500, 99999);
-			copy.getAI().setIntention(Intention.ATTACK, killer);
+			copy.getAI().setIntentionAttack(killer);
 		}
 	}
 	

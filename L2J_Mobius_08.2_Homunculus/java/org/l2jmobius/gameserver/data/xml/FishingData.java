@@ -27,12 +27,12 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.fishing.FishingBait;
-import org.l2jmobius.gameserver.model.fishing.FishingCatch;
-import org.l2jmobius.gameserver.model.fishing.FishingRod;
+import org.l2jmobius.gameserver.mechanics.fishing.FishingBait;
+import org.l2jmobius.gameserver.mechanics.fishing.FishingCatch;
+import org.l2jmobius.gameserver.mechanics.fishing.FishingRod;
 
 /**
- * @author bit
+* @author BazookaRpm
  */
 public class FishingData implements IXmlReader
 {
@@ -97,6 +97,12 @@ public class FishingData implements IXmlReader
 								{
 									final NamedNodeMap attrs = bait.getAttributes();
 									final int itemId = parseInteger(attrs, "itemId");
+									if (ItemData.getInstance().getTemplate(itemId) == null)
+									{
+										LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + itemId);
+										continue;
+									}
+									
 									final int level = parseInteger(attrs, "level", 1);
 									final int minPlayerLevel = parseInteger(attrs, "minPlayerLevel");
 									final int maxPlayerLevel = parseInteger(attrs, "maxPlayerLevel", PlayerConfig.PLAYER_MAXIMUM_LEVEL);
@@ -106,12 +112,6 @@ public class FishingData implements IXmlReader
 									final int waitMin = parseInteger(attrs, "waitMin");
 									final int waitMax = parseInteger(attrs, "waitMax", waitMin);
 									final boolean isPremiumOnly = parseBoolean(attrs, "isPremiumOnly", false);
-									if (ItemData.getInstance().getTemplate(itemId) == null)
-									{
-										LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + itemId);
-										continue;
-									}
-									
 									final FishingBait baitData = new FishingBait(itemId, level, minPlayerLevel, maxPlayerLevel, chance, timeMin, timeMax, waitMin, waitMax, isPremiumOnly);
 									for (Node c = bait.getFirstChild(); c != null; c = c.getNextSibling())
 									{
@@ -119,13 +119,14 @@ public class FishingData implements IXmlReader
 										{
 											final NamedNodeMap cAttrs = c.getAttributes();
 											final int cId = parseInteger(cAttrs, "itemId");
-											final float cChance = parseFloat(cAttrs, "chance");
-											final float cMultiplier = parseFloat(cAttrs, "multiplier", 1f);
 											if (ItemData.getInstance().getTemplate(cId) == null)
 											{
 												LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + itemId);
 												continue;
 											}
+											
+											final float cChance = parseFloat(cAttrs, "chance");
+											final float cMultiplier = parseFloat(cAttrs, "multiplier", 1f);
 											
 											baitData.addReward(new FishingCatch(cId, cChance, cMultiplier));
 										}
@@ -144,15 +145,15 @@ public class FishingData implements IXmlReader
 								{
 									final NamedNodeMap attrs = rod.getAttributes();
 									final int itemId = parseInteger(attrs, "itemId");
-									final int reduceFishingTime = parseInteger(attrs, "reduceFishingTime", 0);
-									final float xpMultiplier = parseFloat(attrs, "xpMultiplier", 1f);
-									final float spMultiplier = parseFloat(attrs, "spMultiplier", 1f);
 									if (ItemData.getInstance().getTemplate(itemId) == null)
 									{
 										LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + itemId);
 										continue;
 									}
 									
+									final int reduceFishingTime = parseInteger(attrs, "reduceFishingTime", 0);
+									final float xpMultiplier = parseFloat(attrs, "xpMultiplier", 1f);
+									final float spMultiplier = parseFloat(attrs, "spMultiplier", 1f);
 									_rodData.put(itemId, new FishingRod(itemId, reduceFishingTime, xpMultiplier, spMultiplier));
 								}
 							}

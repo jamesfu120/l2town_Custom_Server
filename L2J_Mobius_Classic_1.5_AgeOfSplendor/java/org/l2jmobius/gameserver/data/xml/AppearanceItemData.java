@@ -27,13 +27,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.item.appearance.AppearanceHolder;
-import org.l2jmobius.gameserver.model.item.appearance.AppearanceStone;
-import org.l2jmobius.gameserver.model.item.appearance.AppearanceTargetType;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.item.appearance.AppearanceHolder;
+import org.l2jmobius.gameserver.entity.item.appearance.AppearanceStone;
+import org.l2jmobius.gameserver.entity.item.appearance.AppearanceTargetType;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid

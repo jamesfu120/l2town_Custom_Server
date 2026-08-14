@@ -18,20 +18,19 @@ package instances.MuseumDungeon;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -222,9 +221,9 @@ public class MuseumDungeon extends InstanceScript
 			{
 				toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ENOUGH_OF_THIS_COME_AT_ME);
 				toyron.asAttackable().addDamageHate(npc, 0, 500);
-				toyron.getAI().setIntention(Intention.ATTACK, npc);
+				toyron.getAI().setIntentionAttack(npc);
 				npc.asAttackable().addDamageHate(toyron, 0, 500);
-				npc.getAI().setIntention(Intention.ATTACK, toyron);
+				npc.getAI().setIntentionAttack(toyron);
 				startQuestTimer("TOYRON_FOLLOW", 3000, toyron, attacker);
 			}
 		}

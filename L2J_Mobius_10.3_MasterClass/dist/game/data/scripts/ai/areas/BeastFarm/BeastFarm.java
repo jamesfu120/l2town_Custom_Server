@@ -23,16 +23,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.TamedBeast;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
@@ -291,7 +290,7 @@ public class BeastFarm extends Script
 			_feedInfo.put(nextNpc.getObjectId(), player.getObjectId());
 			nextNpc.setRunning();
 			nextNpc.addDamageHate(player, 0, 99999);
-			nextNpc.getAI().setIntention(Intention.ATTACK, player);
+			nextNpc.getAI().setIntentionAttack(player);
 			player.setTarget(nextNpc);
 		}
 	}
@@ -319,9 +318,10 @@ public class BeastFarm extends Script
 		// first gather some values on local variables
 		final int objectId = npc.getObjectId();
 		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
-		if (GROWTH_CAPABLE_MOBS.containsKey(npcId))
+		final GrowthCapableMob growthData = GROWTH_CAPABLE_MOBS.get(npcId);
+		if (growthData != null)
 		{
-			growthLevel = GROWTH_CAPABLE_MOBS.get(npcId).getGrowthLevel();
+			growthLevel = growthData.getGrowthLevel();
 		}
 		
 		// prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
@@ -347,10 +347,11 @@ public class BeastFarm extends Script
 		}
 		
 		// if this pet can't grow, it's all done.
-		if (GROWTH_CAPABLE_MOBS.containsKey(npcId))
+		final GrowthCapableMob growthData2 = GROWTH_CAPABLE_MOBS.get(npcId);
+		if (growthData2 != null)
 		{
-			// do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
-			final int newNpcId = GROWTH_CAPABLE_MOBS.get(npcId).getLeveledNpcId(skillId);
+			// Do nothing if this monster doesn't eat the specified food (food gets consumed but has no effect).
+			final int newNpcId = growthData2.getLeveledNpcId(skillId);
 			if (newNpcId == -1)
 			{
 				if (growthLevel == 0)
@@ -358,7 +359,7 @@ public class BeastFarm extends Script
 					_feedInfo.remove(objectId);
 					npc.setRunning();
 					npc.asAttackable().addDamageHate(caster, 0, 1);
-					npc.getAI().setIntention(Intention.ATTACK, caster);
+					npc.getAI().setIntentionAttack(caster);
 				}
 				return;
 			}

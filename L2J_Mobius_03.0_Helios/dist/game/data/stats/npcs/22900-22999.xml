@@ -2226,7 +2226,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="false" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield - Heavy Armor -->
@@ -2823,7 +2823,7 @@
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
 				<clan>HARNAK</clan>
 			</clanList>

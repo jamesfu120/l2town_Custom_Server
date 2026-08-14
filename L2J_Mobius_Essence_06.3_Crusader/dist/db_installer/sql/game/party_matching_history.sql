@@ -4,4 +4,4 @@ CREATE TABLE `party_matching_history` (
   `title` VARCHAR(21) DEFAULT NULL,
   `leader` VARCHAR(35) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

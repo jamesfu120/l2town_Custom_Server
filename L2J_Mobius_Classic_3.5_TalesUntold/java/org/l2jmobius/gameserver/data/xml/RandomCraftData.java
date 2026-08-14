@@ -34,8 +34,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.holders.RandomCraftExtractDataHolder;
 import org.l2jmobius.gameserver.data.holders.RandomCraftRewardDataHolder;
 import org.l2jmobius.gameserver.data.holders.RandomCraftRewardItemHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mode, Mobius

@@ -45,9 +45,9 @@ import org.l2jmobius.gameserver.data.holders.RelicCompoundFeeHolder;
 import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
 import org.l2jmobius.gameserver.data.holders.RelicEnchantHolder;
 import org.l2jmobius.gameserver.data.holders.RelicSummonCategoryHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.enums.player.RelicGrade;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author CostyKiller, Brado
@@ -418,6 +418,36 @@ public class RelicData implements IXmlReader
 		final float div = relic.getGrade() == grade ? relic.getCompoundChanceModifier() : relic.getCompoundUpGradeChanceModifier();
 		final long combineChance = relic.getSummonChance() == 0 ? (relic.getGrade() == grade ? 1000000000L : 100000000L) : relic.getSummonChance();
 		return new BigDecimal((combineChance / div) / 100000000f).setScale(4, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(100000000)).longValue();
+	}
+	
+	/**
+	 * Retrieves a guaranteed relic for compounding based on its grade (always returns a higher grade relic).
+	 * @param grade the grade of the relic
+	 * @return the ID of the resulting higher grade relic
+	 */
+	public int getGuaranteedRelicByCompound(RelicGrade grade)
+	{
+		final RelicGrade successGrade = RelicGrade.values()[grade.ordinal() + 1];
+		final Collection<RelicDataHolder> relics = getRelicsByGrade(successGrade);
+		if ((relics == null) || relics.isEmpty())
+		{
+			return 0;
+		}
+		
+		final long totalWeight = Math.max(1, relics.stream().mapToLong(relic -> calculateCompoundChance(relic.getRelicId(), grade)).sum());
+		final long relicRng = Rnd.get(totalWeight);
+		long cumulativeWeight = 0;
+		final List<RelicDataHolder> relicList = new ArrayList<>(relics);
+		for (RelicDataHolder relic : relicList)
+		{
+			cumulativeWeight += calculateCompoundChance(relic.getRelicId(), grade);
+			if (relicRng < cumulativeWeight)
+			{
+				return relic.getRelicId();
+			}
+		}
+		
+		return relicList.get(Rnd.get(relicList.size())).getRelicId();
 	}
 	
 	/**

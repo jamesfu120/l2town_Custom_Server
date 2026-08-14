@@ -21,15 +21,16 @@
 package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Berezkin Nikolay
@@ -48,18 +49,19 @@ public class ExPvpRankingMyInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PVP_RANKING_MY_INFO.writeId(this, buffer);
 		if (!_playerList.isEmpty())
 		{
 			boolean found = false;
-			for (Integer id : _playerList.keySet())
+			for (Entry<Integer, StatSet> idEntry : _playerList.entrySet())
 			{
-				final StatSet ss = _playerList.get(id);
+				final Integer id = idEntry.getKey();
+				final StatSet ss = idEntry.getValue();
 				if (ss.getInt("charId") == _player.getObjectId())
 				{
-					final Optional<Map.Entry<Integer, StatSet>> snapshotValue = _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("charId") == _player.getObjectId()).findFirst();
+					final Optional<Entry<Integer, StatSet>> snapshotValue = _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("charId") == _player.getObjectId()).findFirst();
 					found = true;
 					buffer.writeLong(ss.getInt("points")); // pvp points
 					buffer.writeInt(id); // current rank

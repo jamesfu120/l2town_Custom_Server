@@ -22,11 +22,11 @@ package org.l2jmobius.gameserver.network.clientpackets.skillenchantextract;
 
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -86,11 +86,6 @@ public class RequestExtractSkillEnchant extends ClientPacket
 			}
 		}
 		
-		long feeAdena = 3000000L;
-		final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
-		final Skill playerSkill = player.getKnownSkill(_skillId);
-		final Skill normalSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, 0);
-		final Item lCoin = player.getInventory().getItemByItemId(_itemId);
 		final ItemTemplate reward = ItemData.getInstance().getTemplate(_rewardId);
 		if (reward == null)
 		{
@@ -99,6 +94,7 @@ public class RequestExtractSkillEnchant extends ClientPacket
 			return;
 		}
 		
+		final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
 		if (enchantedSkill == null)
 		{
 			player.sendPacket(SystemMessageId.THE_ENCHANTMENT_CANNOT_BE_EXTRACTED);
@@ -106,6 +102,7 @@ public class RequestExtractSkillEnchant extends ClientPacket
 			return;
 		}
 		
+		final Skill playerSkill = player.getKnownSkill(_skillId);
 		if (playerSkill == null)
 		{
 			player.sendPacket(SystemMessageId.THE_ENCHANTMENT_CANNOT_BE_EXTRACTED);
@@ -119,6 +116,8 @@ public class RequestExtractSkillEnchant extends ClientPacket
 			PacketLogger.warning(getClass().getSimpleName() + ": " + player + " trying extract enchanted skill that is different that the one in the list. Skill:" + enchantedSkill.getId());
 			return;
 		}
+		
+		final Item lCoin = player.getInventory().getItemByItemId(_itemId);
 		
 		if (lCoin == null)
 		{
@@ -134,6 +133,7 @@ public class RequestExtractSkillEnchant extends ClientPacket
 			return;
 		}
 		
+		final long feeAdena = 3000000L;
 		if (player.getAdena() < feeAdena)
 		{
 			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
@@ -157,6 +157,7 @@ public class RequestExtractSkillEnchant extends ClientPacket
 		player.reduceAdena(ItemProcessType.FEE, feeAdena, null, true);
 		if (player.destroyItem(ItemProcessType.FEE, lCoin, _LCoinFee, null, true))
 		{
+			final Skill normalSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, 0);
 			player.removeSkill(enchantedSkill);
 			player.addSkill(normalSkill, true);
 			player.sendSkillList();

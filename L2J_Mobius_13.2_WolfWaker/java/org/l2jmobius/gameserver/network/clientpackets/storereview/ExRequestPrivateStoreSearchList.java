@@ -29,18 +29,18 @@ import org.l2jmobius.gameserver.data.xml.CollectionData;
 import org.l2jmobius.gameserver.data.xml.EnsoulData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.data.xml.VariationData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.item.EtcItem;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.holders.ItemEnchantHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.managers.PrivateStoreHistoryManager;
 import org.l2jmobius.gameserver.managers.PrivateStoreHistoryManager.ItemHistoryTransaction;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.item.EtcItem;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.holders.ItemEnchantHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.holders.TradeItem;
 import org.l2jmobius.gameserver.network.serverpackets.storereview.ExPrivateStoreSearchHistory;
@@ -78,7 +78,7 @@ public class ExRequestPrivateStoreSearchList extends ClientPacket
 			return;
 		}
 		
-		final Collection<Player> stores = World.getInstance().getSellingOrBuyingPlayers();
+		final Collection<Player> stores = World.getSellingOrBuyingPlayers();
 		final List<ShopItem> items = new ArrayList<>();
 		final List<Integer> itemIds = new ArrayList<>();
 		stores.forEach(vendor ->
@@ -91,7 +91,7 @@ public class ExRequestPrivateStoreSearchList extends ClientPacket
 					if (isItemVisibleForShop(item))
 					{
 						// Filter by Word if supplied.
-						if (_searchWord.equals("") || (!_searchWord.equals("") && (item.getItem().getName().toLowerCase().contains(_searchWord.toLowerCase()))))
+						if (_searchWord.isEmpty() || item.getItem().getName().toLowerCase().contains(_searchWord.toLowerCase()))
 						{
 							items.add(new ShopItem(item, vendor, vendor.getPrivateStoreType()));
 							itemIds.add(item.getItem().getId());

@@ -165,8 +165,11 @@
 	<skill id="48708" toLevel="1" name="Bora's Luck - Combat">
 		<!-- P. Atk. +2%. P. Critical Rate +2%. P. Skill Critical Rate +2%. P. Critical Damage +2%. P. Skill Critical Damage +2%. Max HP +200. Max MP +200. Atk. Spd. +20. The effect remains after death. The effect can be cancelled. -->
 		<icon>icon.skill1499</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
 		<abnormalTime>14400</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
 		<castRange>900</castRange>
 		<coolTime>0</coolTime>
 		<effectPoint>1</effectPoint>
@@ -175,16 +178,41 @@
 		<isMagic>0</isMagic>
 		<mpConsume>0</mpConsume>
 		<reuseDelay>0</reuseDelay>
-		<!-- <effects> -->
-		<!-- 	<effect name="P. Critical Rate">+2%</effect> -->
-		<!-- 	<effect name="Max HP">+200</effect> -->
-		<!-- 	<effect name="P. Skill Critical Rate">+2%</effect> -->
-		<!-- 	<effect name="P. Skill Critical Damage">+2%</effect> -->
-		<!-- 	<effect name="P. Atk.">+2%</effect> -->
-		<!-- 	<effect name="Max MP">+200</effect> -->
-		<!-- 	<effect name="Atk. Spd.">+20</effect> -->
-		<!-- 	<effect name="P. Critical Damage">+2%</effect> -->
-		<!-- </effects> -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48709" toLevel="1" name="Bora's Luck - Magic">
 		<!-- M. Atk. +2%. M. Skill Critical Rate +2%. M. Skill Critical Damage +2%. Max HP +200. Max MP +200. Casting Spd. +20. The effect remains after death. The effect can be cancelled. -->

@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.entity.Location;
 
 /**
  * @author NviX, Index

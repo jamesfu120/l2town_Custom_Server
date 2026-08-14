@@ -20,7 +20,7 @@ import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.gameserver.config.TrainingCampConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 
 /**
  * @author Sdw

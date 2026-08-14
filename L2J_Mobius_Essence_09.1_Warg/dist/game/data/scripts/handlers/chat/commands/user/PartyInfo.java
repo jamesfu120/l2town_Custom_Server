@@ -16,9 +16,9 @@
  */
 package handlers.chat.commands.user;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -73,7 +73,7 @@ public class PartyInfo implements IUserCommandHandler
 				}
 			}
 			
-			// Not used in Infinite Odissey
+			// Not used in Infinite Odissey.
 			// if (!party.isLeader(player))
 			// {
 			// final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_C1);

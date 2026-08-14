@@ -7,4 +7,3 @@ CREATE TABLE IF NOT EXISTS `item_special_abilities` (
   PRIMARY KEY (`objectId`,`optionId`)
 ) DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
-CREATE INDEX idx_objectId ON item_special_abilities (objectId);

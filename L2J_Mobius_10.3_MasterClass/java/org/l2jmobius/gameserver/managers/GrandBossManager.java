@@ -32,8 +32,8 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.NpcData;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Grand Boss manager.
@@ -64,7 +64,7 @@ public class GrandBossManager
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * from grandboss_data ORDER BY boss_id"))
 		{
-			// Read all info from DB, and store it for AI to read and decide what to do faster than accessing DB in real time
+			// Read all info from DB, and store it for AI to read and decide what to do faster than accessing DB in real time.
 			while (rs.next())
 			{
 				final int bossId = rs.getInt("boss_id");

@@ -26,13 +26,13 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.Action;
 import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.ai.NextAction;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.ArmorType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.ArmorType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -99,13 +99,13 @@ public class ExPetEquipItem extends ClientPacket
 			return;
 		}
 		
-		// No UseItem is allowed while the player is in special conditions
+		// No UseItem is allowed while the player is in special conditions.
 		if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead())
 		{
 			return;
 		}
 		
-		// Char cannot use item when dead
+		// Char cannot use item when dead.
 		if (player.isDead() || pet.isDead() || !player.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_THE_FUNCTION_CANNOT_BE_USED_AS_CERTAIN_REQUIREMENTS_ARE_NOT_MET);
@@ -122,7 +122,7 @@ public class ExPetEquipItem extends ClientPacket
 		_itemId = item.getId();
 		if (player.isFishing() && ((_itemId < 6535) || (_itemId > 6540)))
 		{
-			// You cannot do anything else while fishing
+			// You cannot do anything else while fishing.
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return;
 		}

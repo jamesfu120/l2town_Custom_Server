@@ -21,16 +21,17 @@
 package ai.others;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
 
 /**
  * @author Mobius
@@ -171,37 +172,83 @@ public class RankingSkillBonuses extends Script
 		final int classRank = RankManager.getInstance().getPlayerClassRank(player);
 		if ((classRank > 0) && (classRank <= 10))
 		{
-			if ((player.getBaseClass() >= 148) && (player.getBaseClass() <= 151) || (player.getBaseClass() == 216))
+			final PlayerClass baseClass = PlayerClass.getPlayerClass(player.getBaseClass());
+			if (baseClass == null)
 			{
-				SIGEL_RANK_BENEFIT.applyEffects(player, player);
+				return;
 			}
-			else if (((player.getBaseClass() >= 152) && (player.getBaseClass() <= 157)) || (player.getBaseClass() == 188))
+			
+			switch (baseClass)
 			{
-				WARRIOR_RANK_BENEFIT.applyEffects(player, player);
-			}
-			else if ((player.getBaseClass() >= 158) && (player.getBaseClass() <= 161))
-			{
-				ROGUE_RANK_BENEFIT.applyEffects(player, player);
-			}
-			else if ((player.getBaseClass() >= 162) && (player.getBaseClass() <= 165))
-			{
-				ARCHER_RANK_BENEFIT.applyEffects(player, player);
-			}
-			else if ((player.getBaseClass() >= 171) && (player.getBaseClass() <= 175))
-			{
-				ISS_RANK_BENEFIT.applyEffects(player, player);
-			}
-			else if (((player.getBaseClass() >= 166) && (player.getBaseClass() <= 170)) || (player.getBaseClass() == 189))
-			{
-				FEOH_RANK_BENEFIT.applyEffects(player, player);
-			}
-			else if ((player.getBaseClass() >= 176) && (player.getBaseClass() <= 178))
-			{
-				SUMMONER_RANK_BENEFIT.applyEffects(player, player);
-			}
-			else if ((player.getBaseClass() >= 179) && (player.getBaseClass() <= 181))
-			{
-				HEALER_RANK_BENEFIT.applyEffects(player, player);
+				case SIGEL_PHOENIX_KNIGHT:
+				case SIGEL_HELL_KNIGHT:
+				case SIGEL_EVA_TEMPLAR:
+				case SIGEL_SHILLIEN_TEMPLAR:
+				case SIGEL_DEATH_KNIGHT:
+				{
+					SIGEL_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
+				case TYRR_DUELIST:
+				case TYRR_DREADNOUGHT:
+				case TYRR_TITAN:
+				case TYRR_GRAND_KHAVATARI:
+				case TYRR_MAESTRO:
+				case TYRR_DOOMBRINGER:
+				case EVISCERATOR:
+				{
+					WARRIOR_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
+				case OTHELL_ADVENTURER:
+				case OTHELL_WIND_RIDER:
+				case OTHELL_GHOST_HUNTER:
+				case OTHELL_FORTUNE_SEEKER:
+				{
+					ROGUE_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
+				case YUL_SAGITTARIUS:
+				case YUL_MOONLIGHT_SENTINEL:
+				case YUL_GHOST_SENTINEL:
+				case YUL_TRICKSTER:
+				{
+					ARCHER_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
+				case ISS_HIEROPHANT:
+				case ISS_SWORD_MUSE:
+				case ISS_SPECTRAL_DANCER:
+				case ISS_DOMINATOR:
+				case ISS_DOOMCRYER:
+				{
+					ISS_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
+				case FEOH_ARCHMAGE:
+				case FEOH_SOULTAKER:
+				case FEOH_MYSTIC_MUSE:
+				case FEOH_STORM_SCREAMER:
+				case FEOH_SOUL_HOUND:
+				case SAYHA_SEER:
+				{
+					FEOH_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
+				case WYNN_ARCANA_LORD:
+				case WYNN_ELEMENTAL_MASTER:
+				case WYNN_SPECTRAL_MASTER:
+				{
+					SUMMONER_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
+				case AEORE_CARDINAL:
+				case AEORE_EVA_SAINT:
+				case AEORE_SHILLIEN_SAINT:
+				{
+					HEALER_RANK_BENEFIT.applyEffects(player, player);
+					break;
+				}
 			}
 			
 			player.addSkill(CLASS_RANKING_BENEFIT, false);

@@ -20,12 +20,12 @@
  */
 package ai.areas.TalkingIsland;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Ye Sagira Guards AI.
@@ -52,7 +52,7 @@ public class YeSagiraGuards extends Script
 		{
 			if (!npc.isInCombat())
 			{
-				final Monster monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 1000));
+				final Monster monster = World.getRandomVisibleObjectInRange(npc, Monster.class, 1000);
 				if ((monster != null) && !monster.isDead() && !monster.isInCombat())
 				{
 					npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack

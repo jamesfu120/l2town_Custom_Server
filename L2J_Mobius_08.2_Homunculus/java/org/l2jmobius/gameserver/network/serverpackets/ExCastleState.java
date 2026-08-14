@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.CastleSide;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.CastleSide;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -37,7 +37,7 @@ public class ExCastleState extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CASTLE_STATE.writeId(this, buffer);
 		buffer.writeInt(_castleId);

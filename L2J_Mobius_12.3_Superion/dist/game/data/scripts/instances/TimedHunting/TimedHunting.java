@@ -26,18 +26,18 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.data.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius, Tanatos, Notorion

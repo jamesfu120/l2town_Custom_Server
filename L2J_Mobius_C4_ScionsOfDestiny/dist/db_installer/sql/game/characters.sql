@@ -61,16 +61,10 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `rec_have` TINYINT UNSIGNED NOT NULL DEFAULT 0,
   `rec_left` TINYINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`),
-  KEY `account_name` (`account_name`),
   KEY `char_name` (`char_name`),
   KEY `clanid` (`clanid`),
   KEY `online` (`online`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-# Common
-CREATE INDEX idx_charId ON characters (charId);
-CREATE INDEX idx_char_name ON characters (char_name);
-CREATE INDEX idx_account_name ON characters (account_name);
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 # CharSelectionInfo
 CREATE INDEX idx_accountName_createDate ON characters (account_name, createDate);

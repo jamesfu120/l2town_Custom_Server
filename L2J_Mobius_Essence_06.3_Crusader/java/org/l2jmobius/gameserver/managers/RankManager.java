@@ -23,8 +23,8 @@ package org.l2jmobius.gameserver.managers;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -38,10 +38,10 @@ import org.l2jmobius.gameserver.config.ServerConfig;
 import org.l2jmobius.gameserver.data.holders.PetData;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author NviX
@@ -68,14 +68,18 @@ public class RankManager
 	private Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
 	private final Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
 	private Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
-	private final List<HeroInfo> _mainHeroList = new LinkedList<>();
-	private List<HeroInfo> _snapshotHeroList = new LinkedList<>();
+	private final List<HeroInfo> _mainHeroList = new ArrayList<>();
+	private List<HeroInfo> _snapshotHeroList = new ArrayList<>();
 	private final Map<Integer, StatSet> _mainPvpList = new ConcurrentHashMap<>();
 	private Map<Integer, StatSet> _snapshotPvpList = new ConcurrentHashMap<>();
 	private final Map<Integer, StatSet> _mainPetList = new ConcurrentHashMap<>();
 	private Map<Integer, StatSet> _snapshotPetList = new ConcurrentHashMap<>();
 	private final Map<Integer, StatSet> _mainClanList = new ConcurrentHashMap<>();
 	private Map<Integer, StatSet> _snapshotClanList = new ConcurrentHashMap<>();
+	
+	// Cache maps for consulting global ranks.
+	private final Map<Integer, Integer> _globalConsultingRankCache = new ConcurrentHashMap<>();
+	private final Map<Integer, Integer> _raceConsultingRankCache = new ConcurrentHashMap<>();
 	
 	public class HeroInfo
 	{
@@ -118,7 +122,7 @@ public class RankManager
 	
 	private synchronized void update()
 	{
-		// Load charIds All
+		// Load charIds All.
 		_snapshotList = _mainList;
 		_mainList.clear();
 		_snapshotOlyList = _mainOlyList;
@@ -131,6 +135,9 @@ public class RankManager
 		_mainPetList.clear();
 		_snapshotClanList = _mainClanList;
 		_mainClanList.clear();
+		
+		_globalConsultingRankCache.clear();
+		_raceConsultingRankCache.clear();
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_CHARACTERS))
@@ -172,7 +179,7 @@ public class RankManager
 			LOGGER.log(Level.WARNING, "Could not load chars total rank data: " + this + " - " + e.getMessage(), e);
 		}
 		
-		// load olympiad data.
+		// Load olympiad data.
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(GET_CURRENT_CYCLE_DATA))
 		{
@@ -491,13 +498,22 @@ public class RankManager
 	
 	public int getPlayerGlobalRank(Player player)
 	{
+		final int cachedRank = _globalConsultingRankCache.getOrDefault(player.getObjectId(), 0);
+		if (cachedRank != 0)
+		{
+			return cachedRank;
+		}
+		
 		final int objectId = player.getObjectId();
 		for (Entry<Integer, StatSet> entry : _mainList.entrySet())
 		{
 			final StatSet stats = entry.getValue();
 			if (stats.getInt("charId", 0) == objectId)
 			{
-				return entry.getKey();
+				final int position = entry.getKey();
+				_globalConsultingRankCache.put(objectId, position);
+				
+				return position;
 			}
 		}
 		
@@ -507,11 +523,20 @@ public class RankManager
 	public int getPlayerRaceRank(Player player)
 	{
 		final int objectId = player.getObjectId();
+		
+		final int cachedRank = _raceConsultingRankCache.getOrDefault(objectId, 0);
+		if (cachedRank != 0)
+		{
+			return cachedRank;
+		}
+		
 		for (StatSet stats : _mainList.values())
 		{
 			if (stats.getInt("charId", 0) == objectId)
 			{
-				return stats.getInt("raceRank", 0);
+				final int position = stats.getInt("raceRank", 0);
+				_raceConsultingRankCache.put(objectId, position);
+				return position;
 			}
 		}
 		
@@ -534,7 +559,7 @@ public class RankManager
 	
 	public Collection<Integer> getTop50()
 	{
-		final List<Integer> result = new LinkedList<>();
+		final List<Integer> result = new ArrayList<>();
 		for (int i = 1; i <= 50; i++)
 		{
 			final StatSet stats = _mainList.get(i);

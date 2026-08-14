@@ -27,21 +27,20 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
@@ -50,8 +49,8 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * Christmas Event: Saving Santa<br>
@@ -196,7 +195,7 @@ public class SavingSanta extends LongTimeEvent
 		if (skill.getId() == 6100)
 		{
 			_isWaitingForPlayerSkill = false;
-			for (Player pl : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 600))
+			for (Player pl : World.getVisibleObjectsInRange(npc, Player.class, 600))
 			{
 				// Level 1: Scissors
 				// Level 2: Rock
@@ -244,7 +243,7 @@ public class SavingSanta extends LongTimeEvent
 					}
 					else if (level == 4)
 					{
-						Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_DEFEATED_THOMAS_D_TURKEY_AND_RESCUED_SANTA));
+						World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_DEFEATED_THOMAS_D_TURKEY_AND_RESCUED_SANTA));
 						
 						// I have to release Santa... How infuriating!!!
 						// I hate happy Merry Christmas!!!
@@ -295,7 +294,7 @@ public class SavingSanta extends LongTimeEvent
 		{
 			try
 			{
-				_sled.getAI().setIntention(Intention.IDLE);
+				_sled.getAI().setIntentionIdle();
 				_sled.broadcastPacket(new SocialAction(_sled.getObjectId(), 1));
 			}
 			catch (Exception e)
@@ -318,7 +317,7 @@ public class SavingSanta extends LongTimeEvent
 		{
 			startQuestTimer("ThomasQuest", 14400000, null, null);
 			final Npc thomas = addSpawn(THOMAS_D_TURKEY_ID, THOMAS_SPAWN.getX(), THOMAS_SPAWN.getY(), THOMAS_SPAWN.getZ(), THOMAS_SPAWN.getHeading(), false, 1800000);
-			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THOMAS_D_TURKEY_HAS_APPEARED_PLEASE_SAVE_SANTA));
+			World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THOMAS_D_TURKEY_HAS_APPEARED_PLEASE_SAVE_SANTA));
 			startQuestTimer("ThomasCast1", 15000, thomas, null);
 			_isSantaFree = false;
 		}
@@ -328,8 +327,8 @@ public class SavingSanta extends LongTimeEvent
 			{
 				startQuestTimer("SantaSpawn", 120000, null, null);
 				
-				// for (Player pl : L2World.getInstance().getAllPlayers().values())
-				for (Player pl : World.getInstance().getPlayers())
+				// for (Player pl : L2World.getAllPlayers().values())
+				for (Player pl : World.getPlayers())
 				{
 					if ((pl != null) && pl.isOnline() && (pl.getLevel() >= 20) && pl.isInCombat() && !pl.isInsideZone(ZoneId.PEACE) && !pl.isFlyingMounted())
 					{
@@ -351,8 +350,8 @@ public class SavingSanta extends LongTimeEvent
 							}
 						}
 						
-						final int locx = (int) (pl.getX() + (Math.pow(-1, getRandom(1, 2)) * 50));
-						final int locy = (int) (pl.getY() + (Math.pow(-1, getRandom(1, 2)) * 50));
+						final int locx = (int) (pl.getX() + (MathUtil.pow(-1, getRandom(1, 2)) * 50));
+						final int locy = (int) (pl.getY() + (MathUtil.pow(-1, getRandom(1, 2)) * 50));
 						final int heading = LocationUtil.calculateHeadingFrom(locx, locy, pl.getX(), pl.getY());
 						final Npc santa = addSpawn(HOLIDAY_SANTA_ID, locx, locy, pl.getZ(), heading, false, 30000);
 						_rewardedPlayers.put(pl.getAccountName(), System.currentTimeMillis());
@@ -382,7 +381,7 @@ public class SavingSanta extends LongTimeEvent
 			{
 				if (!_isSantaFree)
 				{
-					Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_DID_NOT_RESCUE_SANTA_AND_THOMAS_D_TURKEY_HAS_DISAPPEARED));
+					World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_DID_NOT_RESCUE_SANTA_AND_THOMAS_D_TURKEY_HAS_DISAPPEARED));
 					_isWaitingForPlayerSkill = false;
 				}
 			}
@@ -406,7 +405,7 @@ public class SavingSanta extends LongTimeEvent
 			{
 				if (!_isSantaFree)
 				{
-					Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_DID_NOT_RESCUE_SANTA_AND_THOMAS_D_TURKEY_HAS_DISAPPEARED));
+					World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_DID_NOT_RESCUE_SANTA_AND_THOMAS_D_TURKEY_HAS_DISAPPEARED));
 					_isWaitingForPlayerSkill = false;
 				}
 			}
@@ -456,7 +455,7 @@ public class SavingSanta extends LongTimeEvent
 			final long currentTime = System.currentTimeMillis();
 			for (Npc santaHelper1 : _santaHelpers)
 			{
-				for (Player plb : World.getInstance().getVisibleObjects(santaHelper1, Player.class))
+				World.forEachVisibleObject(santaHelper1, Player.class, plb ->
 				{
 					if ((plb.getLevel() >= 20) && !plb.isFlyingMounted())
 					{
@@ -465,7 +464,7 @@ public class SavingSanta extends LongTimeEvent
 							final long elapsedTimeSinceLastBlessed = currentTime - _blessedPlayers.get(plb.getAccountName());
 							if (elapsedTimeSinceLastBlessed < MIN_TIME_BETWEEN_2_BLESSINGS)
 							{
-								continue;
+								return;
 							}
 						}
 						else
@@ -474,13 +473,13 @@ public class SavingSanta extends LongTimeEvent
 							if ((currentTime - time) < MIN_TIME_BETWEEN_2_BLESSINGS)
 							{
 								_blessedPlayers.put(plb.getAccountName(), time);
-								continue;
+								return;
 							}
 						}
 						
 						for (Npc santaHelper : _santaHelpers)
 						{
-							for (Player playerx : World.getInstance().getVisibleObjects(santaHelper, Player.class))
+							World.forEachVisibleObject(santaHelper, Player.class, playerx ->
 							{
 								if (playerx.getPlayerClass().isMage())
 								{
@@ -508,10 +507,10 @@ public class SavingSanta extends LongTimeEvent
 										}
 									}
 								}
-							}
+							});
 						}
 					}
-				}
+				});
 			}
 		}
 		else if (event.equalsIgnoreCase("SpecialTreeHeal"))
@@ -519,7 +518,7 @@ public class SavingSanta extends LongTimeEvent
 			startQuestTimer("SpecialTreeHeal", 9000, null, null);
 			for (Npc tree : _specialTrees)
 			{
-				for (Player playerr : World.getInstance().getVisibleObjects(tree, Player.class))
+				World.forEachVisibleObject(tree, Player.class, playerr ->
 				{
 					final int xxMin = tree.getX() - 60;
 					final int yyMin = tree.getY() - 60;
@@ -532,7 +531,7 @@ public class SavingSanta extends LongTimeEvent
 					{
 						SkillData.getInstance().getSkill(2139, 1).applyEffects(tree, playerr);
 					}
-				}
+				});
 			}
 		}
 		else if (player != null)

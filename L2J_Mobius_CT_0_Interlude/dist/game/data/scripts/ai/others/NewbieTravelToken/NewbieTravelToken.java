@@ -20,10 +20,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -60,12 +60,13 @@ public class NewbieTravelToken extends Script
 		if (StringUtil.isNumeric(event))
 		{
 			final int npcId = Integer.parseInt(event);
-			if (DATA.containsKey(npcId))
+			final Location data = DATA.get(npcId);
+			if (data != null)
 			{
 				if (hasQuestItems(player, NEWBIE_TRAVEL_TOKEN))
 				{
 					takeItems(player, NEWBIE_TRAVEL_TOKEN, 1);
-					player.teleToLocation(DATA.get(npcId), false);
+					player.teleToLocation(data, false);
 				}
 				else
 				{

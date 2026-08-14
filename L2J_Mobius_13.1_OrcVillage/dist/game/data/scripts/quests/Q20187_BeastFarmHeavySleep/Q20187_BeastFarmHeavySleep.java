@@ -23,19 +23,18 @@ package quests.Q20187_BeastFarmHeavySleep;
 import java.util.Collection;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestDialogType;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.newquestdata.NewQuest;
-import org.l2jmobius.gameserver.model.script.newquestdata.NewQuestLocation;
-import org.l2jmobius.gameserver.model.script.newquestdata.QuestCondType;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestDialogType;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuest;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuestLocation;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestDialog;
@@ -208,7 +207,7 @@ public class Q20187_BeastFarmHeavySleep extends Quest
 				
 				npc.setDisplayEffect(2); // Sleep display effect.
 				npc.setImmobilized(true);
-				npc.getAI().setIntention(Intention.REST);
+				npc.getAI().setIntentionRest();
 				
 				ThreadPool.schedule(() ->
 				{

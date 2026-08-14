@@ -21,11 +21,11 @@
 package ai.areas.UndergroundLabyrinth;
 
 import org.l2jmobius.gameserver.config.PrisonConfig;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * @author Liamxroy

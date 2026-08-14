@@ -20,16 +20,16 @@
  */
 package events.EveTheFortuneTeller;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.LuckyGameType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.luckygame.ExStartLuckyGame;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Eve the Fortune Teller Returns<br>
@@ -98,7 +98,7 @@ public class EveTheFortuneTeller extends LongTimeEvent
 			}
 			case "JAYCE_SHOUT":
 			{
-				Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(JAYCE_TEXT)), 1000);
+				World.broadcastToVisiblePlayersInRange(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(JAYCE_TEXT)), 1000);
 				break;
 			}
 		}

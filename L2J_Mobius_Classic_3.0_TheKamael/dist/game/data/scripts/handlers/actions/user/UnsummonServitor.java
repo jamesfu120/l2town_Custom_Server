@@ -17,10 +17,10 @@
 package handlers.actions.user;
 
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**

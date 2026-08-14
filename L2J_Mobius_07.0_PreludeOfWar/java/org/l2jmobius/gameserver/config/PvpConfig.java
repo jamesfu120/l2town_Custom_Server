@@ -51,6 +51,9 @@ public class PvpConfig
 	public static int MAX_REPUTATION;
 	public static int REPUTATION_INCREASE;
 	public static boolean ANNOUNCE_GAINAK_SIEGE;
+	public static boolean FLAG_PLAYER_ON_RAID_ATTACK;
+	public static boolean FLAG_PLAYER_ON_CHAMPION_ATTACK;
+	public static boolean FLAG_PLAYER_ON_SUMMON_PET_RAID_CHAMPION_ATTACK;
 	
 	public static void load()
 	{
@@ -84,5 +87,8 @@ public class PvpConfig
 		MAX_REPUTATION = config.getInt("MaxReputation", 500);
 		REPUTATION_INCREASE = config.getInt("ReputationIncrease", 100);
 		ANNOUNCE_GAINAK_SIEGE = config.getBoolean("AnnounceGainakSiege", false);
+		FLAG_PLAYER_ON_RAID_ATTACK = config.getBoolean("FlagPlayerOnRaidAttack", false);
+		FLAG_PLAYER_ON_CHAMPION_ATTACK = config.getBoolean("FlagPlayerOnChampionAttack", false);
+		FLAG_PLAYER_ON_SUMMON_PET_RAID_CHAMPION_ATTACK = config.getBoolean("FlagPlayerOnSummonPetRaidChampionAttack", false);
 	}
 }

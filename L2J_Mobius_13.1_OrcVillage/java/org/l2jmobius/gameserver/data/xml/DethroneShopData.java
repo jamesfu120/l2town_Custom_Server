@@ -32,8 +32,8 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.DethroneShopHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Liamxroy

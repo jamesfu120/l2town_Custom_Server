@@ -16,11 +16,15 @@
  */
 package org.l2jmobius.loginserver.network;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
  */
 public abstract class AbstractGameServerPacket
 {
+	private static final Logger LOGGER = Logger.getLogger(AbstractGameServerPacket.class.getName());
 	private final byte[] _decrypt;
 	private int _off;
 	
@@ -41,13 +45,13 @@ public abstract class AbstractGameServerPacket
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "readString: ", e);
 		}
 		
 		return result;
 	}
 	
-	public final byte[] readBytes(int length)
+	public byte[] readBytes(int length)
 	{
 		final byte[] result = new byte[length];
 		for (int i = 0; i < length; i++)

@@ -21,11 +21,11 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.PartyRequest;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.groups.PartyMessageType;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoom;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.PartyRequest;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.groups.PartyMessageType;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.JoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -84,7 +84,7 @@ public class RequestAnswerJoinParty extends ClientPacket
 				return;
 			}
 			
-			// Assign the party to the leader upon accept of his partner
+			// Assign the party to the leader upon accept of his partner.
 			if (requestorParty == null)
 			{
 				requestor.setParty(party);

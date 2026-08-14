@@ -25,32 +25,31 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MountType;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.MountType;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
-import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.LocationUtil;
 import org.l2jmobius.gameserver.util.MathUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Antharas World Raid
@@ -226,26 +225,26 @@ public class Antharas extends Script
 						{
 							if (!npc.isAffectedBySkill(ANTH_REGEN_4.getSkillId()))
 							{
-								npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_4.getSkill(), npc);
+								npc.getAI().setIntentionCast(ANTH_REGEN_4.getSkill(), npc);
 							}
 						}
 						else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
 						{
 							if (!npc.isAffectedBySkill(ANTH_REGEN_3.getSkillId()))
 							{
-								npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_3.getSkill(), npc);
+								npc.getAI().setIntentionCast(ANTH_REGEN_3.getSkill(), npc);
 							}
 						}
 						else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
 						{
 							if (!npc.isAffectedBySkill(ANTH_REGEN_2.getSkillId()))
 							{
-								npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_2.getSkill(), npc);
+								npc.getAI().setIntentionCast(ANTH_REGEN_2.getSkill(), npc);
 							}
 						}
 						else if (!npc.isAffectedBySkill(ANTH_REGEN_1.getSkillId()))
 						{
-							npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_1.getSkill(), npc);
+							npc.getAI().setIntentionCast(ANTH_REGEN_1.getSkill(), npc);
 						}
 						
 						startQuestTimer("SET_REGEN", 60000, npc, null);
@@ -300,7 +299,7 @@ public class Antharas extends Script
 								newLoc = GeoEngine.getInstance().getValidLocation(egg.getX(), egg.getY(), egg.getZ(), newLoc.getX(), newLoc.getY(), newLoc.getZ(), _antharas.getInstanceWorld());
 								if ((newLoc != null) && GeoEngine.getInstance().canSeeTarget(egg, _antharas))
 								{
-									egg.getAI().setIntention(Intention.MOVE_TO, newLoc);
+									egg.getAI().setIntentionMoveTo(newLoc);
 								}
 								else
 								{
@@ -317,7 +316,7 @@ public class Antharas extends Script
 				{
 					_antharas = (GrandBoss) addSpawn(STAGES_NPCS[getAntharasStage() - 1][0], ANTHARAS_LOC, false, 0);
 					addBoss(ANTHARAS_CLIENT_ID, _antharas);
-					Broadcast.toAllOnlinePlayers(new Earthquake(ANTHARAS_LOC.getX(), ANTHARAS_LOC.getY(), ANTHARAS_LOC.getZ(), 20, 10));
+					World.broadcastToAllOnlinePlayers(new Earthquake(ANTHARAS_LOC.getX(), ANTHARAS_LOC.getY(), ANTHARAS_LOC.getZ(), 20, 10));
 					setStatus(ALIVE);
 					setAntharasPreviousSpawnStage(getAntharasStage());
 					notifyEvent("SPAWN_MINION", _antharas, null);
@@ -555,7 +554,7 @@ public class Antharas extends Script
 				_antharas = null;
 				notifyEvent("DESPAWN_MINIONS", null, null);
 				// ZONE.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
-				Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_EVIL_EARTH_DRAGON_ANTHARAS_HAS_BEEN_DEFEATED_BY_BRAVE_HEROES, 2, 15000, true));
+				World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_EVIL_EARTH_DRAGON_ANTHARAS_HAS_BEEN_DEFEATED_BY_BRAVE_HEROES, 2, 15000, true));
 				ZONE.broadcastPacket(new PlaySound("BS01_D"));
 				scheduleNextRespawn();
 				cancelQuestTimer("SET_REGEN", npc, null);
@@ -943,7 +942,7 @@ public class Antharas extends Script
 				}
 				else
 				{
-					npc.getAI().setIntention(Intention.CAST, skillToCast.getSkill(), npc);
+					npc.getAI().setIntentionCast(skillToCast.getSkill(), npc);
 				}
 			}
 		}

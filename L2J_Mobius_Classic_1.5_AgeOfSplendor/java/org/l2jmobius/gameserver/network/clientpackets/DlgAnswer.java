@@ -20,18 +20,18 @@ import org.l2jmobius.gameserver.config.custom.OfflinePlayConfig;
 import org.l2jmobius.gameserver.config.custom.OfflineTradeConfig;
 import org.l2jmobius.gameserver.config.custom.WeddingConfig;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerAction;
+import org.l2jmobius.gameserver.entity.actor.holders.creature.DoorRequestHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.SummonRequestHolder;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.managers.ZoneBuildManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerAction;
-import org.l2jmobius.gameserver.model.actor.holders.creature.DoorRequestHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.SummonRequestHolder;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerDlgAnswer;
-import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerDlgAnswer;
+import org.l2jmobius.gameserver.mechanics.events.returns.TerminateReturn;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
@@ -73,6 +73,38 @@ public class DlgAnswer extends ClientPacket
 		
 		if (_messageId == SystemMessageId.S1_3.getId())
 		{
+			// Custom .offline voiced command dialog.
+			if (player.removeAction(PlayerAction.OFFLINE_TRADE))
+			{
+				if ((_answer == 0) || !OfflineTradeConfig.ENABLE_OFFLINE_COMMAND || (!OfflineTradeConfig.OFFLINE_TRADE_ENABLE && !OfflineTradeConfig.OFFLINE_CRAFT_ENABLE))
+				{
+					return;
+				}
+				
+				if (!player.isInStoreMode())
+				{
+					player.sendPacket(SystemMessageId.PRIVATE_STORE_ALREADY_CLOSED);
+					return;
+				}
+				
+				if (player.isInInstance() || player.isInVehicle() || !player.canLogout())
+				{
+					return;
+				}
+				
+				// Unregister from olympiad.
+				if (OlympiadManager.getInstance().isRegistered(player))
+				{
+					OlympiadManager.getInstance().unRegisterNoble(player);
+				}
+				
+				if (!OfflineTraderTable.getInstance().enteredOfflineMode(player))
+				{
+					Disconnection.of(getClient(), player).storeAndDeleteWith(LeaveWorld.STATIC_PACKET);
+				}
+				return;
+			}
+			
 			// Custom .offlineplay voiced command dialog.
 			if (player.removeAction(PlayerAction.OFFLINE_PLAY))
 			{
@@ -146,35 +178,6 @@ public class DlgAnswer extends ClientPacket
 				
 				// The 'useConfirm' must be disabled here, as we don't want to repeat that process.
 				AdminCommandHandler.getInstance().onCommand(player, cmd, false);
-			}
-		}
-		else if (_messageId == SystemMessageId.DO_YOU_WISH_TO_EXIT_THE_GAME.getId())
-		{
-			if ((_answer == 0) || !OfflineTradeConfig.ENABLE_OFFLINE_COMMAND || (!OfflineTradeConfig.OFFLINE_TRADE_ENABLE && !OfflineTradeConfig.OFFLINE_CRAFT_ENABLE))
-			{
-				return;
-			}
-			
-			if (!player.isInStoreMode())
-			{
-				player.sendPacket(SystemMessageId.PRIVATE_STORE_ALREADY_CLOSED);
-				return;
-			}
-			
-			if (player.isInInstance() || player.isInVehicle() || !player.canLogout())
-			{
-				return;
-			}
-			
-			// Unregister from olympiad.
-			if (OlympiadManager.getInstance().isRegistered(player))
-			{
-				OlympiadManager.getInstance().unRegisterNoble(player);
-			}
-			
-			if (!OfflineTraderTable.getInstance().enteredOfflineMode(player))
-			{
-				Disconnection.of(getClient(), player).storeAndDeleteWith(LeaveWorld.STATIC_PACKET);
 			}
 		}
 		else if ((_messageId == SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT.getId()) || (_messageId == SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId()))

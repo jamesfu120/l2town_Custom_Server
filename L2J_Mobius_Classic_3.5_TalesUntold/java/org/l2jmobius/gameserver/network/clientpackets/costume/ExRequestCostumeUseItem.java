@@ -22,12 +22,12 @@ package org.l2jmobius.gameserver.network.clientpackets.costume;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.costumes.Costumes;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.costumes.Costumes;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

@@ -22,12 +22,12 @@ package handlers.items;
 
 import java.util.logging.Level;
 
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FeedableBeast;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FeedableBeast;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class BeastSpice implements IItemHandler
@@ -41,7 +41,6 @@ public class BeastSpice implements IItemHandler
 			return false;
 		}
 		
-		final Player activeChar = playable.asPlayer();
 		final SkillHolder[] skills = item.getTemplate().getSkills();
 		if (skills == null)
 		{
@@ -49,6 +48,7 @@ public class BeastSpice implements IItemHandler
 			return false;
 		}
 		
+		final Player activeChar = playable.asPlayer();
 		if (!(activeChar.getTarget() instanceof FeedableBeast))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

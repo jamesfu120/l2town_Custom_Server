@@ -23,18 +23,18 @@ package handlers.chat.commands.admin;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.util.StringUtil;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameNonClassed;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import org.l2jmobius.gameserver.model.olympiad.Participant;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameManager;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameNonClassed;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameTask;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.mechanics.olympiad.Participant;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid, Mobius
@@ -64,7 +64,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					return false;
 				}
 				
-				final Player player = World.getInstance().getPlayer(st.nextToken());
+				final Player player = World.getPlayer(st.nextToken());
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);

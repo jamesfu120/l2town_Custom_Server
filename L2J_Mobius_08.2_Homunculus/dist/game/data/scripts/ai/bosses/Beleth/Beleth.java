@@ -20,29 +20,27 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.serverpackets.DoorStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -50,6 +48,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import org.l2jmobius.gameserver.network.serverpackets.StaticObjectInfo;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Beleth's AI.
@@ -152,7 +151,7 @@ public class Beleth extends Script
 			{
 				if (!npc.isDead() && !npc.isCastingNow())
 				{
-					npc.getAI().setIntention(Intention.ACTIVE);
+					npc.getAI().setIntentionActive();
 					npc.doCast(FIREBALL.getSkill());
 				}
 				break;
@@ -587,7 +586,7 @@ public class Beleth extends Script
 	@Override
 	public void onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
-		if (!npc.isDead() && !npc.isCastingNow() && (getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, Player.class, 200).isEmpty())
+		if (!npc.isDead() && !npc.isCastingNow() && (getRandom(100) < 40) && (World.getFirstVisibleObjectInRange(npc, Player.class, 200) != null))
 		{
 			npc.setTarget(player);
 			npc.doCast(FIREBALL.getSkill());
@@ -605,7 +604,7 @@ public class Beleth extends Script
 				if ((distance2 > 890) && !npc.isMovementDisabled())
 				{
 					npc.setTarget(player);
-					npc.getAI().setIntention(Intention.FOLLOW, player);
+					npc.getAI().setIntentionFollow(player);
 					startQuestTimer("CAST", (int) (((distance2 - 890) / (npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed())) * 1000), npc, null);
 				}
 				else if (distance2 < 890)
@@ -616,15 +615,16 @@ public class Beleth extends Script
 				return;
 			}
 			
-			if ((getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, Player.class, 200).isEmpty())
+			if ((getRandom(100) < 40) && (World.getFirstVisibleObjectInRange(npc, Player.class, 200) != null))
 			{
 				npc.doCast(LIGHTENING.getSkill());
 				return;
 			}
 			
-			for (Player plr : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 950))
+			final Player fireballTarget = World.getFirstVisibleObjectInRange(npc, Player.class, 950);
+			if (fireballTarget != null)
 			{
-				npc.setTarget(plr);
+				npc.setTarget(fireballTarget);
 				npc.doCast(FIREBALL.getSkill());
 				return;
 			}
@@ -637,7 +637,7 @@ public class Beleth extends Script
 	public void onSpawn(Npc npc)
 	{
 		npc.setRunning();
-		if ((getRandom(100) < 60) && !World.getInstance().getVisibleObjectsInRange(npc, Player.class, 300).isEmpty())
+		if ((getRandom(100) < 60) && (World.getFirstVisibleObjectInRange(npc, Player.class, 300) != null))
 		{
 			npc.doCast(BLEED.getSkill());
 		}
@@ -700,7 +700,7 @@ public class Beleth extends Script
 		}
 		else if (!npc.isDead() && !npc.isCastingNow())
 		{
-			if (!World.getInstance().getVisibleObjectsInRange(npc, Player.class, 200).isEmpty())
+			if ((World.getFirstVisibleObjectInRange(npc, Player.class, 200) != null))
 			{
 				npc.doCast(LIGHTENING.getSkill());
 				return;
@@ -796,7 +796,7 @@ public class Beleth extends Script
 			{
 				minion.abortCast();
 				minion.setTarget(null);
-				minion.getAI().setIntention(Intention.IDLE);
+				minion.getAI().setIntentionIdle();
 				minion.deleteMe();
 			}
 		}

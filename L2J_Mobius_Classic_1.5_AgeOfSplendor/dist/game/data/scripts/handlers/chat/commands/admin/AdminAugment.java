@@ -21,12 +21,12 @@
 package handlers.chat.commands.admin;
 
 import org.l2jmobius.gameserver.data.xml.OptionData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.Options;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
+import org.l2jmobius.gameserver.mechanics.options.Options;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**

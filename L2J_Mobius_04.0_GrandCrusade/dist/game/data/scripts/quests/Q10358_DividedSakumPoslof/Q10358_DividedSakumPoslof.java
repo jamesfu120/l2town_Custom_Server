@@ -1,37 +1,41 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package quests.Q10358_DividedSakumPoslof;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.NpcLogListHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.NpcLogListHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 import quests.Q10337_SakumsImpact.Q10337_SakumsImpact;
 
 /**
  * Divided Sakum, Poslof (10358)
- * @author St3eT
+ * @author St3eT, Trevor The Third
  */
 public class Q10358_DividedSakumPoslof extends Quest
 {
@@ -39,7 +43,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 	private static final int LEF = 33510;
 	private static final int ADVENTURER_GUIDE = 31795;
 	private static final int ZOMBIE_WARRIOR = 20458;
-	private static final int VEELEAN = 20402; // Veelan Bugbear Warrior
+	private static final int VEELAN_BUGBEAR_WARRIOR = 20402;
 	private static final int POSLOF = 27452;
 	
 	// Items
@@ -49,12 +53,16 @@ public class Q10358_DividedSakumPoslof extends Quest
 	private static final int MIN_LEVEL = 33;
 	private static final int MAX_LEVEL = 40;
 	
+	// Rewards
+	private static final int EXP_REWARD = 750000;
+	private static final int SP_REWARD = 180;
+	
 	public Q10358_DividedSakumPoslof()
 	{
 		super(10358);
 		addStartNpc(LEF);
 		addTalkId(LEF, ADVENTURER_GUIDE);
-		addKillId(ZOMBIE_WARRIOR, VEELEAN, POSLOF);
+		addKillId(ZOMBIE_WARRIOR, VEELAN_BUGBEAR_WARRIOR, POSLOF);
 		registerQuestItems(SAKUM_SKETCH);
 		addCondCompletedQuest(Q10337_SakumsImpact.class.getSimpleName(), "33510-09.html");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33510-09.html");
@@ -88,7 +96,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 			{
 				if (qs.isCond(4))
 				{
-					addExpAndSp(player, 750000, 180);
+					addExpAndSp(player, EXP_REWARD, SP_REWARD);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -167,7 +175,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 			if (qs.isCond(1))
 			{
 				int killedZombies = qs.getInt("killed_" + ZOMBIE_WARRIOR);
-				int killedVeelans = qs.getInt("killed_" + VEELEAN);
+				int killedVeelans = qs.getInt("killed_" + VEELAN_BUGBEAR_WARRIOR);
 				if (npc.getId() == ZOMBIE_WARRIOR)
 				{
 					if (killedZombies < 20)
@@ -180,7 +188,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 				else if (killedVeelans < 23)
 				{
 					killedVeelans++;
-					qs.set("killed_" + VEELEAN, killedVeelans);
+					qs.set("killed_" + VEELAN_BUGBEAR_WARRIOR, killedVeelans);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
@@ -189,7 +197,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 					qs.setCond(2, true);
 				}
 			}
-			else if (qs.isCond(3))
+			else if (qs.isCond(3) && (npc.getId() == POSLOF))
 			{
 				qs.set("killed_" + POSLOF, 1);
 				qs.setCond(4);
@@ -207,7 +215,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 			{
 				final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
 				npcLogList.add(new NpcLogListHolder(ZOMBIE_WARRIOR, false, qs.getInt("killed_" + ZOMBIE_WARRIOR)));
-				npcLogList.add(new NpcLogListHolder(VEELEAN, false, qs.getInt("killed_" + VEELEAN)));
+				npcLogList.add(new NpcLogListHolder(VEELAN_BUGBEAR_WARRIOR, false, qs.getInt("killed_" + VEELAN_BUGBEAR_WARRIOR)));
 				return npcLogList;
 			}
 			else if (qs.isCond(3))

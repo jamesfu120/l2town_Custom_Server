@@ -16,9 +16,9 @@
  */
 package ai.others.NpcBuffers;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid

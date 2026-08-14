@@ -16,11 +16,11 @@
  */
 package ai.areas.TalkingIsland.Walkers;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Rotina AI.

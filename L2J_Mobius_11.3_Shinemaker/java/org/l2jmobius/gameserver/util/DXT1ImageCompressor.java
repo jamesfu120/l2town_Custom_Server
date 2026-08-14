@@ -26,8 +26,8 @@ import java.awt.image.BufferedImage;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-import org.l2jmobius.gameserver.model.captcha.TextureBlock;
-import org.l2jmobius.gameserver.model.captcha.TextureBlock.ARGB;
+import org.l2jmobius.gameserver.mechanics.captcha.TextureBlock;
+import org.l2jmobius.gameserver.mechanics.captcha.TextureBlock.ARGB;
 
 /**
  * https://docs.microsoft.com/pt-br/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#compression-algorithms http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.215.7942&rep=rep1&type=pdf

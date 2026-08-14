@@ -20,13 +20,13 @@
  */
 package quests.Q00759_TheDwarvenNightmareContinues;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.QuestType;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.QuestType;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
 /**
@@ -105,7 +105,7 @@ public class Q00759_TheDwarvenNightmareContinues extends Quest
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						final int reward = REWARDS[getRandom(REWARDS.length)];
+						final int reward = getRandomEntry(REWARDS);
 						qs.exitQuest(QuestType.DAILY, true);
 						giveItems(player, reward, 1);
 						break;
@@ -168,13 +168,13 @@ public class Q00759_TheDwarvenNightmareContinues extends Quest
 	@Override
 	public void onKill(Npc npc, Player player, boolean isSummon)
 	{
-		for (Player pl : World.getInstance().getVisibleObjects(npc, Player.class))
+		World.forEachVisibleObject(npc, Player.class, pl ->
 		{
 			final QuestState qs = getQuestState(pl, false);
 			if ((qs != null) && qs.isCond(1) && LocationUtil.checkIfInRange(1500, npc, qs.getPlayer(), false))
 			{
 				qs.setCond(2, true);
 			}
-		}
+		});
 	}
 }

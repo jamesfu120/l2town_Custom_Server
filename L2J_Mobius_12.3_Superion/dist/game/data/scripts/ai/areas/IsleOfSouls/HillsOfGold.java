@@ -20,12 +20,12 @@
  */
 package ai.areas.IsleOfSouls;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Hills of Gold AI.
@@ -67,7 +67,7 @@ public class HillsOfGold extends Script
 		{
 			if (!npc.isInCombat())
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, npc.getAggroRange(), nearby ->
+				World.forEachVisibleObjectInRange(npc, Monster.class, npc.getAggroRange(), nearby ->
 				{
 					if ((nearby.getId() == GOLEM_OF_REPAIRS) || (nearby.getId() == EXCAVATOR_GOLEM) || (nearby.getId() == DRILL_GOLEM))
 					{

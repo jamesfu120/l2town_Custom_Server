@@ -29,17 +29,17 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.NpcData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropGroupHolder;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.groups.CommandChannel;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropGroupHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropHolder;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.groups.CommandChannel;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -74,7 +74,7 @@ public class ValakasLootManager extends Script
 	
 	private void scanForExistingValakas()
 	{
-		for (WorldObject obj : World.getInstance().getVisibleObjects())
+		for (WorldObject obj : World.getVisibleObjects())
 		{
 			if ((obj != null) && obj.isNpc() && (obj.getId() == VALAKAS_ID) && !((Npc) obj).isDead())
 			{
@@ -195,7 +195,7 @@ public class ValakasLootManager extends Script
 		// Broadcast message to all players who inflicted damage.
 		for (Integer playerId : _damageMap.keySet())
 		{
-			final Player p = World.getInstance().getPlayer(playerId);
+			final Player p = World.getPlayer(playerId);
 			if ((p != null) && p.isOnline())
 			{
 				p.sendPacket(screenMsg);
@@ -205,7 +205,7 @@ public class ValakasLootManager extends Script
 		// Broadcast to nearby spectators.
 		if (npc != null)
 		{
-			World.getInstance().forEachVisibleObject(npc, Player.class, p ->
+			World.forEachVisibleObject(npc, Player.class, p ->
 			{
 				if (!_damageMap.containsKey(p.getObjectId()))
 				{
@@ -256,7 +256,7 @@ public class ValakasLootManager extends Script
 		// Aggregate damage per unit, defined by Party Leader.
 		for (Entry<Integer, Long> entry : _damageMap.entrySet())
 		{
-			final Player player = World.getInstance().getPlayer(entry.getKey());
+			final Player player = World.getPlayer(entry.getKey());
 			if ((player == null) || !player.isOnline())
 			{
 				continue;

@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.relics;
 
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsExchange;
 
@@ -35,8 +35,8 @@ public class RequestRelicsExchange extends ClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_index = readInt();
-		_relicId = readInt();
+		_index = readInt(); // nIndex
+		_relicId = readInt(); // nRelicsID
 	}
 	
 	@Override

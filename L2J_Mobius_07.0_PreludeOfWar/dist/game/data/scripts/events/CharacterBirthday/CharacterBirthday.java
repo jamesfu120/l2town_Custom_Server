@@ -30,17 +30,17 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.managers.MailManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.enums.MailType;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
 import org.l2jmobius.gameserver.util.LocationUtil;
@@ -173,7 +173,6 @@ public class CharacterBirthday extends Script
 			{
 				while (rset.next())
 				{
-					final int playerId = rset.getInt("charId");
 					final Calendar createDate = Calendar.getInstance();
 					createDate.setTime(rset.getDate("createDate"));
 					
@@ -182,6 +181,8 @@ public class CharacterBirthday extends Script
 					{
 						continue;
 					}
+					
+					final int playerId = rset.getInt("charId");
 					
 					String text = GeneralConfig.ALT_BIRTHDAY_MAIL_TEXT;
 					if (text.contains("$c1"))

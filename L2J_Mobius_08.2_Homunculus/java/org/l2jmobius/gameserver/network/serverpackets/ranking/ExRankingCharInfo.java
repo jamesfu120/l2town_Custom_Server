@@ -21,14 +21,15 @@
 package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author NviX
@@ -47,22 +48,24 @@ public class ExRankingCharInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RANKING_CHAR_INFO.writeId(this, buffer);
 		if (!_playerList.isEmpty())
 		{
-			for (Integer id : _playerList.keySet())
+			for (Entry<Integer, StatSet> idEntry : _playerList.entrySet())
 			{
-				final StatSet player = _playerList.get(id);
+				final Integer id = idEntry.getKey();
+				final StatSet player = idEntry.getValue();
 				if (player.getInt("charId") == _player.getObjectId())
 				{
 					buffer.writeInt(id); // server rank
 					buffer.writeInt(player.getInt("raceRank")); // race rank
 					buffer.writeInt(player.getInt("classRank")); // class rank
-					for (Integer id2 : _snapshotList.keySet())
+					for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
 					{
-						final StatSet snapshot = _snapshotList.get(id2);
+						final Integer id2 = id2Entry.getKey();
+						final StatSet snapshot = id2Entry.getValue();
 						if (player.getInt("charId") == snapshot.getInt("charId"))
 						{
 							buffer.writeInt(id2); // server rank snapshot

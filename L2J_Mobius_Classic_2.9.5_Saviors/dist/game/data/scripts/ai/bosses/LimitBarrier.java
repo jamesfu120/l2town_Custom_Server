@@ -23,26 +23,26 @@ package ai.bosses;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.scripting.annotations.Disabled;
 
 /**
  * Limit Barrier AI<br>
- *         OK - Many Raid Bosses level 50 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
- *         OK - 500 hits in 15 seconds are required to destroy the barrier. Amount of damage does not matter.<br>
- *         OK - If barrier destruction is failed, Boss restores full HP.<br>
- *         OK - Death Knight, who randomly appear after boss's death, also use Limit Barrier.<br>
- *         OK - Epic Bosses Orfen, Queen Ant and Core also use Limit Barrier.<br>
- *         OK - Epic Bosses Antharas, Zaken and Baium and their analogues in instance zones do not use Limit Barrier.<br>
- *         OK - Raid Bosses in Clan Arena do not use Limit Barrier.<br>
- *         OK - All Raid Bosses who use Limit Barrier are listed below:
+ * OK - Many Raid Bosses level 50 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
+ * OK - 500 hits in 15 seconds are required to destroy the barrier. Amount of damage does not matter.<br>
+ * OK - If barrier destruction is failed, Boss restores full HP.<br>
+ * OK - Death Knight, who randomly appear after boss's death, also use Limit Barrier.<br>
+ * OK - Epic Bosses Orfen, Queen Ant and Core also use Limit Barrier.<br>
+ * OK - Epic Bosses Antharas, Zaken and Baium and their analogues in instance zones do not use Limit Barrier.<br>
+ * OK - Raid Bosses in Clan Arena do not use Limit Barrier.<br>
+ * OK - All Raid Bosses who use Limit Barrier are listed below:
  * @author RobikBobik
  */
 @Disabled // Behaviour does not go well with low population servers.

@@ -17,15 +17,14 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.itemcontainer.ItemContainer;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -34,8 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
 /**
- * @author -Wooden-
- * @author UnAfraid, mrTJO
+ * @author -Wooden-, UnAfraid, mrTJO
  */
 public class RequestPackageSend extends ClientPacket
 {
@@ -199,9 +197,9 @@ public class RequestPackageSend extends ClientPacket
 				playerIU.addRemovedItem(oldItem);
 			}
 			
-			// Remove item objects from the world.
-			World.getInstance().removeObject(oldItem);
-			World.getInstance().removeObject(newItem);
+			// Remove item objects from the world. (redundant - warehouse.deleteMe() handles newItem; oldItem already handled by transferItem)
+			// World.removeObject(oldItem);
+			// World.removeObject(newItem);
 		}
 		
 		warehouse.deleteMe();

@@ -29,16 +29,15 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantResultType;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantResultType;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.enums.MultiEnchantResult;
@@ -202,11 +201,11 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 							final StringBuilder sb = new StringBuilder();
 							if (enchantItem.isEnchanted())
 							{
-								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(" ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(' ').append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 							}
 							else
 							{
-								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 							}
 						}
 						break;
@@ -223,11 +222,11 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 								final StringBuilder sb = new StringBuilder();
 								if (enchantItem.isEnchanted())
 								{
-									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(" ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(' ').append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 								else
 								{
-									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 							}
 						}
@@ -255,11 +254,11 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 								final StringBuilder sb = new StringBuilder();
 								if (enchantItem.isEnchanted())
 								{
-									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(" ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(' ').append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 								else
 								{
-									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 							}
 						}
@@ -278,19 +277,17 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 									final StringBuilder sb = new StringBuilder();
 									if (enchantItem.isEnchanted())
 									{
-										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(" ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(' ').append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 									}
 									else
 									{
-										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 									}
 								}
 								return;
 							}
 							
 							iu.addRemovedItem(removedEnchantItem);
-							
-							World.getInstance().removeObject(enchantItem);
 							
 							int count = 0;
 							if (enchantItem.getTemplate().isCrystallizable())
@@ -369,11 +366,11 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 								final StringBuilder sb = new StringBuilder();
 								if (enchantItem.isEnchanted())
 								{
-									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(" ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(enchantItem.getEnchantLevel()).append(' ').append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 								else
 								{
-									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append("(").append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(enchantItem.getName()).append('(').append(enchantItem.getCount()).append(") [").append(enchantItem.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 							}
 						}

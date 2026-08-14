@@ -26,16 +26,15 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.managers.ZoneManager;
 import org.l2jmobius.gameserver.managers.events.ClanDungeonRankingManager;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -202,7 +201,7 @@ public class ClanDungeon extends InstanceScript
 						mob.setTarget(player);
 						mob.setRunning();
 						mob.addDamageHate(player, 1, 999);
-						mob.getAI().setIntention(Intention.ATTACK, player);
+						mob.getAI().setIntentionAttack(player);
 					}
 				}
 				break;
@@ -246,7 +245,7 @@ public class ClanDungeon extends InstanceScript
 						{
 							if (player.destroyItemByItemId(ItemProcessType.FEE, CLAN_DUNGEON_RANKING_REWARD, 5, player, true))
 							{
-								final int randomBossId = REGULAR_BOSSES[Rnd.get(REGULAR_BOSSES.length)];
+								final int randomBossId = getRandomEntry(REGULAR_BOSSES);
 								final int ZONE = world.getParameters().getInt(SELECTED_ZONE);
 								
 								int x;
@@ -308,9 +307,9 @@ public class ClanDungeon extends InstanceScript
 						
 						if (spawnBoss)
 						{
-							if (player.destroyItemByItemId(org.l2jmobius.gameserver.model.item.enums.ItemProcessType.FEE, CLAN_DUNGEON_RANKING_REWARD, 10, player, true))
+							if (player.destroyItemByItemId(ItemProcessType.FEE, CLAN_DUNGEON_RANKING_REWARD, 10, player, true))
 							{
-								final int randomBossId = SPECIAL_BOSSES[Rnd.get(SPECIAL_BOSSES.length)];
+								final int randomBossId = getRandomEntry(SPECIAL_BOSSES);
 								final int ZONE = world.getParameters().getInt(SELECTED_ZONE);
 								
 								int x;
@@ -414,7 +413,7 @@ public class ClanDungeon extends InstanceScript
 					{
 						mob.setRunning();
 						mob.addDamageHate(player, 1, 999);
-						mob.getAI().setIntention(org.l2jmobius.gameserver.ai.Intention.ATTACK, player);
+						mob.getAI().setIntentionAttack(player);
 					}
 				}
 			}

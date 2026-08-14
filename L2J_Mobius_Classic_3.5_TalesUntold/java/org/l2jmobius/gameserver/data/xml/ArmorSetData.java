@@ -37,9 +37,9 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.ArmorSet;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.holders.ArmorsetSkillHolder;
-import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.holders.ArmorsetSkillHolder;
+import org.l2jmobius.gameserver.mechanics.stats.BaseStat;
 
 /**
  * @author godson, Luno, UnAfraid

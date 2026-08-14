@@ -34,12 +34,12 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.config.custom.CustomMailManagerConfig;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemEnchantHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemEnchantHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.enums.MailType;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
 
@@ -65,12 +65,12 @@ public class CustomMailManager
 				while (rs.next())
 				{
 					final int playerId = rs.getInt("receiver");
-					final Player player = World.getInstance().getPlayer(playerId);
+					final Player player = World.getPlayer(playerId);
 					if ((player != null) && player.isOnline())
 					{
 						// Create message.
 						final String items = rs.getString("items");
-						final MailMessage msg = new MailMessage(playerId, rs.getString("subject"), rs.getString("message"), items.length() > 0 ? MailType.PRIME_SHOP_GIFT : MailType.REGULAR);
+						final MailMessage msg = new MailMessage(playerId, rs.getString("subject"), rs.getString("message"), !items.isEmpty() ? MailType.PRIME_SHOP_GIFT : MailType.REGULAR);
 						final List<ItemEnchantHolder> itemHolders = new ArrayList<>();
 						for (String str : items.split(";"))
 						{

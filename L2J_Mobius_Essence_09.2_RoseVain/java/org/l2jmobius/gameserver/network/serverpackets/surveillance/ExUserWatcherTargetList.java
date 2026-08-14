@@ -20,13 +20,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.surveillance;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -36,14 +36,14 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExUserWatcherTargetList extends ServerPacket
 {
-	private final List<TargetInfo> _info = new LinkedList<>();
+	private final List<TargetInfo> _info = new ArrayList<>();
 	
 	public ExUserWatcherTargetList(Player player)
 	{
 		for (int objId : player.getSurveillanceList())
 		{
 			final String name = CharInfoTable.getInstance().getNameById(objId);
-			final Player target = World.getInstance().getPlayer(objId);
+			final Player target = World.getPlayer(objId);
 			boolean online = false;
 			int level = 0;
 			int classId = 0;
@@ -64,7 +64,7 @@ public class ExUserWatcherTargetList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_USER_WATCHER_TARGET_LIST.writeId(this, buffer);
 		buffer.writeInt(_info.size());

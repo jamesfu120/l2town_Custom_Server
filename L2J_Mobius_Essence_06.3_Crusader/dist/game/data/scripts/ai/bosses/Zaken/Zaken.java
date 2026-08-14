@@ -21,13 +21,13 @@
 package ai.bosses.Zaken;
 
 import org.l2jmobius.gameserver.config.GrandBossConfig;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Zaken AI<br>

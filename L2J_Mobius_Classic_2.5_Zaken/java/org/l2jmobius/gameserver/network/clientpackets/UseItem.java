@@ -30,27 +30,27 @@ import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.ai.NextAction;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.IllegalActionPunishmentType;
+import org.l2jmobius.gameserver.entity.item.EtcItem;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.ActionType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.managers.FortSiegeManager;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.IllegalActionPunishmentType;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.item.OnItemUse;
-import org.l2jmobius.gameserver.model.item.EtcItem;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.ActionType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.item.OnItemUse;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -80,7 +80,7 @@ public class UseItem extends ClientPacket
 			return;
 		}
 		
-		// Flood protect UseItem
+		// Flood protect UseItem.
 		if (!getClient().getFloodProtectors().canUseItem())
 		{
 			return;
@@ -108,10 +108,10 @@ public class UseItem extends ClientPacket
 		final Item item = player.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
-			// GM can use other player item
+			// GM can use other player item.
 			if (player.isGM())
 			{
-				final WorldObject obj = World.getInstance().findObject(_objectId);
+				final WorldObject obj = World.findObject(_objectId);
 				if ((obj != null) && obj.isItem())
 				{
 					AdminCommandHandler.getInstance().onCommand(player, "admin_use_item " + _objectId, true);
@@ -126,13 +126,13 @@ public class UseItem extends ClientPacket
 			return;
 		}
 		
-		// No UseItem is allowed while the player is in special conditions
+		// No UseItem is allowed while the player is in special conditions.
 		if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead())
 		{
 			return;
 		}
 		
-		// Char cannot use item when dead
+		// Char cannot use item when dead.
 		if (player.isDead() || !player.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
@@ -149,7 +149,7 @@ public class UseItem extends ClientPacket
 		_itemId = item.getId();
 		if (player.isFishing() && ((_itemId < 6535) || (_itemId > 6540)))
 		{
-			// You cannot do anything else while fishing
+			// You cannot do anything else while fishing.
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return;
 		}
@@ -202,10 +202,10 @@ public class UseItem extends ClientPacket
 				return;
 			}
 			
-			// Equip or unEquip
+			// Equip or unEquip.
 			if (FortSiegeManager.getInstance().isCombat(_itemId))
 			{
-				return; // no message
+				return; // No message.
 			}
 			
 			if (player.isCombatFlagEquipped())
@@ -323,7 +323,7 @@ public class UseItem extends ClientPacket
 			else if (handler.onItemUse(player, item, _ctrlPressed))
 			{
 				// Item reuse time should be added if the item is successfully used.
-				// Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
+				// Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate.
 				if (reuseDelay > 0)
 				{
 					player.addTimeStampItem(item, reuseDelay);

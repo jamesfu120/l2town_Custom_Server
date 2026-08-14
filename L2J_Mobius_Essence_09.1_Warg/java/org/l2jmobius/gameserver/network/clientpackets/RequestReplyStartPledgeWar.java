@@ -21,10 +21,10 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanWar;
-import org.l2jmobius.gameserver.model.clan.enums.ClanWarState;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanWar;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanWarState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**

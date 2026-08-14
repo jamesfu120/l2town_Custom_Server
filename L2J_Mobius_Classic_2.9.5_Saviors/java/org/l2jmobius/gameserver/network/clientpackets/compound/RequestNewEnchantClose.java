@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.compound;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.CompoundRequest;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.CompoundRequest;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

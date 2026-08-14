@@ -16,11 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.matching.CommandChannelMatchingRoom;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingMemberType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.matching.CommandChannelMatchingRoom;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingMemberType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.enums.ExManagePartyRoomMemberType;
@@ -42,7 +42,7 @@ public class ExManageMpccRoomMember extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_MANAGE_PARTY_ROOM_MEMBER.writeId(this, buffer);
 		buffer.writeInt(_type.ordinal());

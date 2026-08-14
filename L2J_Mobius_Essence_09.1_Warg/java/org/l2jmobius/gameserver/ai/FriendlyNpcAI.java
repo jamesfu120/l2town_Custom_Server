@@ -1,32 +1,36 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.ai;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.AIType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.enums.npc.AIType;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public class FriendlyNpcAI extends AttackableAI
 {
@@ -36,17 +40,17 @@ public class FriendlyNpcAI extends AttackableAI
 	}
 	
 	@Override
-	protected void onActionAttacked(Creature attacker)
+	public void notifyActionAttacked(WorldObject attacker)
 	{
 	}
 	
 	@Override
-	protected void onActionAggression(Creature target, int aggro)
+	public void notifyActionAggression(WorldObject target, int aggro)
 	{
 	}
 	
 	@Override
-	protected void onIntentionAttack(Creature target)
+	public synchronized void setIntentionAttack(WorldObject target)
 	{
 		if (target == null)
 		{
@@ -66,16 +70,19 @@ public class FriendlyNpcAI extends AttackableAI
 			return;
 		}
 		
-		// Set the Intention of this AbstractAI to ATTACK
-		changeIntention(Intention.ATTACK, target);
+		// Set the Intention of this AbstractAI to ATTACK.
+		_intention = Intention.ATTACK;
 		
-		// Set the AI attack target
+		// Set the AI attack target.
 		setTarget(target);
 		
 		stopFollow();
 		
-		// Launch the Think Action
-		notifyAction(Action.THINK, null);
+		// Schedule notifyActionThink repeatedly.
+		startAITask();
+		
+		// Launch the Think Action.
+		notifyActionThink();
 	}
 	
 	@Override
@@ -89,7 +96,7 @@ public class FriendlyNpcAI extends AttackableAI
 		
 		// Check if target is dead or if timeout is expired to stop this attack.
 		final WorldObject target = getTarget();
-		final Creature originalAttackTarget = (target != null) && target.isCreature() ? target.asCreature() : null;
+		final Creature originalAttackTarget = target == null ? null : target.asCreature();
 		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead())
 		{
 			// Stop hating this target after the attack timeout or if target is dead.
@@ -98,7 +105,7 @@ public class FriendlyNpcAI extends AttackableAI
 				npc.stopHating(originalAttackTarget);
 			}
 			
-			setIntention(Intention.ACTIVE);
+			setIntentionActive();
 			npc.setWalking();
 			return;
 		}
@@ -109,41 +116,37 @@ public class FriendlyNpcAI extends AttackableAI
 		final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
 		if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
-			for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class))
+			World.forFirstVisibleObject(npc, Attackable.class, nearby -> npc.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget), nearby ->
 			{
-				if (npc.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget))
+				int newX = combinedCollision + Rnd.get(40);
+				if (Rnd.nextBoolean())
 				{
-					int newX = combinedCollision + Rnd.get(40);
-					if (Rnd.nextBoolean())
-					{
-						newX += originalAttackTarget.getX();
-					}
-					else
-					{
-						newX = originalAttackTarget.getX() - newX;
-					}
-					
-					int newY = combinedCollision + Rnd.get(40);
-					if (Rnd.nextBoolean())
-					{
-						newY += originalAttackTarget.getY();
-					}
-					else
-					{
-						newY = originalAttackTarget.getY() - newY;
-					}
-					
-					if (!npc.isInsideRadius2D(newX, newY, 0, collision))
-					{
-						final int newZ = npc.getZ() + 30;
-						if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()))
-						{
-							moveTo(newX, newY, newZ);
-						}
-					}
-					return;
+					newX += originalAttackTarget.getX();
 				}
-			}
+				else
+				{
+					newX = originalAttackTarget.getX() - newX;
+				}
+				
+				int newY = combinedCollision + Rnd.get(40);
+				if (Rnd.nextBoolean())
+				{
+					newY += originalAttackTarget.getY();
+				}
+				else
+				{
+					newY = originalAttackTarget.getY() - newY;
+				}
+				
+				if (!npc.isInsideRadius2D(newX, newY, 0, collision))
+				{
+					final int newZ = npc.getZ() + 30;
+					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()))
+					{
+						moveTo(newX, newY, newZ);
+					}
+				}
+			});
 		}
 		
 		// Calculate Archer movement.
@@ -175,7 +178,7 @@ public class FriendlyNpcAI extends AttackableAI
 				
 				if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
 				{
-					setIntention(Intention.MOVE_TO, new Location(posX, posY, posZ, 0));
+					setIntentionMoveTo(new Location(posX, posY, posZ, 0));
 				}
 				return;
 			}

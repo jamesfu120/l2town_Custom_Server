@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.elementalspirits;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.holders.player.ElementalSpirit;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.holders.player.ElementalSpirit;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 abstract class AbstractElementalSpiritPacket extends ServerPacket
 {
-	void writeSpiritInfo(WritableBuffer buffer, ElementalSpirit spirit)
+	void writeSpiritInfo(WriteBuffer buffer, ElementalSpirit spirit)
 	{
 		buffer.writeByte(spirit.getStage());
 		buffer.writeInt(spirit.getNpcId());

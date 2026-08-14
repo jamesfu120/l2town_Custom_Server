@@ -85,6 +85,8 @@ public class GrandBossConfig
 	public static int RAMONA_SPAWN_INTERVAL;
 	public static int RAMONA_SPAWN_RANDOM;
 	public static int RAMONA_MIN_PLAYER;
+	public static boolean DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS;
 	
 	public static void load()
 	{
@@ -142,5 +144,7 @@ public class GrandBossConfig
 		RAMONA_SPAWN_INTERVAL = config.getInt("IntervalOfRamonaSpawn", 72);
 		RAMONA_SPAWN_RANDOM = config.getInt("RandomOfRamonaSpawn", 48);
 		RAMONA_MIN_PLAYER = config.getInt("RamonaMinPlayers", 7);
+		DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS = config.getBoolean("DisableRaidBossHealFromPlayers", false);
+		DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS = config.getBoolean("DisableRaidBossBuffFromPlayers", false);
 	}
 }

@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.vip;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -45,7 +45,7 @@ public class ReceiveVipLuckyGameInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.RECIVE_VIP_LUCKY_GAME_INFO.writeId(this, buffer);
 		buffer.writeByte(true); // Enabled.

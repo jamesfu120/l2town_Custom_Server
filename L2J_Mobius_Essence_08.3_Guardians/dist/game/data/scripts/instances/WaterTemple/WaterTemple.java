@@ -23,17 +23,16 @@ package instances.WaterTemple;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -243,7 +242,7 @@ public class WaterTemple extends InstanceScript
 		
 		final Npc aosNpc = addSpawn(AOS, 69000, 243368, -8734, 0, false, 0, false, world.getId());
 		aosNpc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.PLEASE_KILL_THE_MONSTERS_THAT_ARE_TRYING_TO_STEAL_THE_WATER_ENERGY_AND_HELP_ME_CLEAR_THIS_PLACE);
-		aosNpc.getAI().setIntention(Intention.MOVE_TO, new Location(70441, 243470, -9179));
+		aosNpc.getAI().setIntentionMoveTo(new Location(70441, 243470, -9179));
 		
 		startQuestTimer("START_SPAWN", 10000, aosNpc, null);
 	}

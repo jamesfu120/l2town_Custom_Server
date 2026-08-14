@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.DevelopmentConfig;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 
@@ -260,10 +260,8 @@ public enum ServerPackets
 	MULTI_SELL_LIST(0xE9),
 	SET_SUMMON_REMAIN_TIME(0xEA),
 	// EB SkillRemainSec
-	NET_PING(0xEC),
+	NET_PING(0xEC);
 	// ED Dummy ED
-	// TODO: Delete bellow?
-	CONFIRM_DLG(0xED);
 	
 	private final int _id1;
 	private final int _id2;
@@ -279,7 +277,7 @@ public enum ServerPackets
 		_id2 = id2;
 	}
 	
-	public void writeId(ServerPacket packet, WritableBuffer buffer)
+	public void writeId(ServerPacket packet, WriteBuffer buffer)
 	{
 		if (DevelopmentConfig.DEBUG_SERVER_PACKETS)
 		{

@@ -82,13 +82,45 @@
 		<!-- Armor P. Def. +7, Accessory M. Def. +7 -->
 		<operateType>P</operateType>
 		<effects>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>7</amount>
 				<mode>DIFF</mode>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>7</amount>
 				<mode>DIFF</mode>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -644,19 +676,69 @@
 			<effect name="ShotsBonus">
 				<amount>3</amount>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>
 					<value level="1">0</value>
 					<value fromLevel="2" toLevel="10">6</value>
 				</amount>
 				<mode>DIFF</mode>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>
 					<value level="1">0</value>
 					<value fromLevel="2" toLevel="10">6</value>
 				</amount>
 				<mode>DIFF</mode>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value fromLevel="2" toLevel="10">6</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value fromLevel="2" toLevel="10">6</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value fromLevel="2" toLevel="10">6</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value fromLevel="2" toLevel="10">6</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value fromLevel="2" toLevel="10">6</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value fromLevel="2" toLevel="10">6</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>FINGER</slot>
 			</effect>
 			<effect name="WeaponBonusPhysicalAttack">
 				<amount>
@@ -1216,7 +1298,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ArmorPhysicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="10">0</value>
 					<value level="11">2</value>
@@ -1231,8 +1313,9 @@
 					<value level="20">20</value>
 				</amount>
 				<mode>DIFF</mode>
+				<slot>CHEST</slot>
 			</effect>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusPhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="10">0</value>
 					<value level="11">2</value>
@@ -1247,6 +1330,109 @@
 					<value level="20">20</value>
 				</amount>
 				<mode>DIFF</mode>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">4</value>
+					<value level="13">6</value>
+					<value level="14">8</value>
+					<value level="15">10</value>
+					<value level="16">12</value>
+					<value level="17">14</value>
+					<value level="18">16</value>
+					<value level="19">18</value>
+					<value level="20">20</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">4</value>
+					<value level="13">6</value>
+					<value level="14">8</value>
+					<value level="15">10</value>
+					<value level="16">12</value>
+					<value level="17">14</value>
+					<value level="18">16</value>
+					<value level="19">18</value>
+					<value level="20">20</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">4</value>
+					<value level="13">6</value>
+					<value level="14">8</value>
+					<value level="15">10</value>
+					<value level="16">12</value>
+					<value level="17">14</value>
+					<value level="18">16</value>
+					<value level="19">18</value>
+					<value level="20">20</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>GLOVES</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">4</value>
+					<value level="13">6</value>
+					<value level="14">8</value>
+					<value level="15">10</value>
+					<value level="16">12</value>
+					<value level="17">14</value>
+					<value level="18">16</value>
+					<value level="19">18</value>
+					<value level="20">20</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">4</value>
+					<value level="13">6</value>
+					<value level="14">8</value>
+					<value level="15">10</value>
+					<value level="16">12</value>
+					<value level="17">14</value>
+					<value level="18">16</value>
+					<value level="19">18</value>
+					<value level="20">20</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">4</value>
+					<value level="13">6</value>
+					<value level="14">8</value>
+					<value level="15">10</value>
+					<value level="16">12</value>
+					<value level="17">14</value>
+					<value level="18">16</value>
+					<value level="19">18</value>
+					<value level="20">20</value>
+				</amount>
+				<mode>DIFF</mode>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>

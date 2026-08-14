@@ -20,17 +20,17 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillLearn;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillLearn;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -61,7 +61,7 @@ public class AcquireSkillList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (_player == null)
 		{
@@ -86,7 +86,7 @@ public class AcquireSkillList extends ServerPacket
 				buffer.writeLong(item.getCount());
 			}
 			
-			final List<Skill> removeSkills = new LinkedList<>();
+			final List<Skill> removeSkills = new ArrayList<>();
 			for (int id : skill.getRemoveSkills())
 			{
 				final Skill removeSkill = _player.getKnownSkill(id);

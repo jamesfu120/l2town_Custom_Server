@@ -23,12 +23,12 @@ package quests.Q00633_InTheForgottenVillage;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00633_InTheForgottenVillage extends Quest
 {
@@ -161,7 +161,8 @@ public class Q00633_InTheForgottenVillage extends Quest
 	public void onKill(Npc npc, Player player, boolean isPet)
 	{
 		final int npcId = npc.getId();
-		if (UNDEADS.containsKey(npcId))
+		final Integer undeadChance = UNDEADS.get(npcId);
+		if (undeadChance != null)
 		{
 			final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
 			if ((st == null) || !st.isStarted())
@@ -169,7 +170,7 @@ public class Q00633_InTheForgottenVillage extends Quest
 				return;
 			}
 			
-			if (getRandom(1000000) < UNDEADS.get(npcId))
+			if (getRandom(1000000) < undeadChance)
 			{
 				final Player partyMember = st.getPlayer();
 				giveItems(partyMember, ZOMBIE_LIVER, 1);

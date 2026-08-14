@@ -20,12 +20,11 @@
  */
 package quests.Q00025_HidingBehindTheTruth;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
@@ -123,7 +122,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 					triol.broadcastSay(ChatType.GENERAL, "That box was sealed by my master. Don't touch it!");
 					triol.setRunning();
 					triol.asAttackable().addDamageHate(player, 0, 999);
-					triol.getAI().setIntention(Intention.ATTACK, player);
+					triol.getAI().setIntentionAttack(player);
 					qs.setCond(7, true);
 				}
 				else if (qs.getInt("step") == 2)

@@ -22,12 +22,12 @@ import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.ai.NextAction;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerSocialAction;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerSocialAction;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAskCoupleAction;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -120,7 +120,7 @@ public class SocialAction implements IActionUserHandler
 		}
 		
 		final WorldObject target = player.getTarget();
-		if ((target == null))
+		if (target == null)
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;

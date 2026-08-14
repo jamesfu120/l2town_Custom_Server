@@ -30,22 +30,21 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.TrapAction;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.actor.instance.Trap;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.managers.GraciaSeedsManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.TrapAction;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.actor.instance.Trap;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -334,7 +333,7 @@ public class Stage1 extends InstanceScript implements IXmlReader
 	
 	protected boolean checkKillProgress(Instance world)
 	{
-		return world.getNpcs().stream().filter(n -> !n.isDead() && n.isScriptValue(1)).count() == 0;
+		return world.getNpcs().stream().noneMatch(n -> !n.isDead() && n.isScriptValue(1));
 	}
 	
 	private void spawnFlaggedNPCs(Instance world, int flag)
@@ -343,9 +342,9 @@ public class Stage1 extends InstanceScript implements IXmlReader
 		{
 			if (spw.isZone)
 			{
-				if (_spawnZoneList.containsKey(spw.zone))
+				final PolygonTerritory terr = _spawnZoneList.get(spw.zone);
+				if (terr != null)
 				{
-					final PolygonTerritory terr = _spawnZoneList.get(spw.zone);
 					for (int i = 0; i < spw.count; i++)
 					{
 						final Location location = terr.getRandomPoint();
@@ -483,7 +482,7 @@ public class Stage1 extends InstanceScript implements IXmlReader
 				final Npc videoNpc = world.getNpc(TIAT_VIDEO_NPC);
 				if (videoNpc != null)
 				{
-					playMovie(World.getInstance().getVisibleObjectsInRange(videoNpc, Player.class, 8000), Movie.SC_BOSS_TIAT_OPENING);
+					playMovie(World.getVisibleObjectsInRange(videoNpc, Player.class, 8000), Movie.SC_BOSS_TIAT_OPENING);
 					videoNpc.deleteMe();
 				}
 			}
@@ -537,7 +536,7 @@ public class Stage1 extends InstanceScript implements IXmlReader
 						final Attackable mob = addSpawn(getRandomEntry(SPAWN_MOB_IDS), npc.getSpawn().getLocation(), false, 0, false, world.getId()).asAttackable();
 						mob.setSeeThroughSilentMove(true);
 						mob.setRunning();
-						mob.getAI().setIntention(Intention.MOVE_TO, (world.getStatus() >= 7) ? MOVE_TO_TIAT : MOVE_TO_DOOR);
+						mob.getAI().setIntentionMoveTo(world.getStatus() >= 7 ? MOVE_TO_TIAT : MOVE_TO_DOOR);
 					}
 					break;
 				}
@@ -625,7 +624,7 @@ public class Stage1 extends InstanceScript implements IXmlReader
 						if (npc.getId() == TIAT)
 						{
 							world.incStatus();
-							playMovie(World.getInstance().getVisibleObjectsInRange(npc, Player.class, 8000), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
+							playMovie(World.getVisibleObjectsInRange(npc, Player.class, 8000), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
 							world.removeNpcs();
 							world.finishInstance();
 							GraciaSeedsManager.getInstance().increaseSoDTiatKilled();

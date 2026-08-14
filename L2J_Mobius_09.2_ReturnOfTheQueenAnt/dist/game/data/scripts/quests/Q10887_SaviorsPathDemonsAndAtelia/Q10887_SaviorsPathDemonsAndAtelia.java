@@ -24,13 +24,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.NpcLogListHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.NpcLogListHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
 import quests.Q10886_SaviorsPathSearchTheRefinery.Q10886_SaviorsPathSearchTheRefinery;
@@ -185,7 +185,7 @@ public class Q10887_SaviorsPathDemonsAndAtelia extends Quest
 				if (ArrayUtil.contains(MONSTERS, npc.getId()))
 				{
 					qs.set("DemonsKilled", killedDemons);
-					if ((killedDemons == DEMONS_KILLS_NEEDED))
+					if (killedDemons == DEMONS_KILLS_NEEDED)
 					{
 						qs.setCond(2, true);
 					}

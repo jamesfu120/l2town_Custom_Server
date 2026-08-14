@@ -32,26 +32,26 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.BattleWithBalokManager;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.MailManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.MailType;
@@ -60,7 +60,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.balok.BalrogWarBossInfo;
 import org.l2jmobius.gameserver.network.serverpackets.balok.BalrogWarHud;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Serenitty
@@ -179,21 +178,21 @@ public class Balok extends Script
 	private void inPreparation()
 	{
 		setStatus(1);
-		Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, 0));
-		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_BOSS_EXTERMINATION_STARTS_IN_20_MIN));
+		World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, 0));
+		World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_BOSS_EXTERMINATION_STARTS_IN_20_MIN));
 		ThreadPool.schedule(this::inPreparation10, 600000); // 10 minutes
 	}
 	
 	private void inPreparation10()
 	{
-		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_BOSS_EXTERMINATION_STARTS_IN_10_MIN));
+		World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_BOSS_EXTERMINATION_STARTS_IN_10_MIN));
 		NORMAL_BATTLE_MOBS.set(SpawnData.getInstance().getSpawnByName("BalokBattleground"));
 		ThreadPool.schedule(this::inPreparationSoon, 540000); // 9 minutes
 	}
 	
 	private void inPreparationSoon()
 	{
-		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_BOSS_EXTERMINATION_IS_ABOUT_TO_BEGIN));
+		World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_BOSS_EXTERMINATION_IS_ABOUT_TO_BEGIN));
 		ThreadPool.schedule(this::startSpawnMobs, 60000); // 1 minute
 	}
 	
@@ -204,8 +203,8 @@ public class Balok extends Script
 		setStatus(2);
 		BattleWithBalokManager.getInstance().setInBattle(true);
 		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.BALOK_REMAIN_TIME, System.currentTimeMillis() + BATTLE_TIME);
-		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.MONSTERS_ARE_SPAWNING_ON_THE_BOSS_EXTERMINATION_BATTLEFIELD));
-		Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+		World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.MONSTERS_ARE_SPAWNING_ON_THE_BOSS_EXTERMINATION_BATTLEFIELD));
+		World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
 		NORMAL_BATTLE_MOBS.get().getGroups().forEach(SpawnGroup::spawnAll);
 		_rewardTask = ThreadPool.schedule(this::finishAndReward, BATTLE_TIME); // 30 minutes
 	}
@@ -219,7 +218,7 @@ public class Balok extends Script
 			BOSS_SPAWNED.add(addSpawn(VIRA, VIRA_LOC));
 			setMidBossFirstSpawn(true);
 			BALOK_BATTLE_ZONE.broadcastPacket(new SystemMessage(SystemMessageId.THREE_INTERMEDIATE_BOSSES_HAVE_SPAWNED));
-			Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+			World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 		}
 	}
 	
@@ -233,7 +232,7 @@ public class Balok extends Script
 			_heederStatus = 1;
 			_hearakStatus = 1;
 			BALOK_BATTLE_ZONE.broadcastPacket(new SystemMessage(SystemMessageId.TWO_INTERMEDIATE_BOSSES_HAVE_SPAWNED));
-			Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+			World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 		}
 	}
 	
@@ -253,8 +252,8 @@ public class Balok extends Script
 		BOSS_SPAWNED.clear();
 		setSecondWaveKilled(true);
 		BattleWithBalokManager.getInstance().setGlobalStage(_stage);
-		Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
-		Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+		World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+		World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 	}
 	
 	private void interBossesStatus()
@@ -271,7 +270,7 @@ public class Balok extends Script
 		
 		if (_stage < 4)
 		{
-			Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+			World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 		}
 	}
 	
@@ -297,8 +296,8 @@ public class Balok extends Script
 		
 		BOSS_SPAWNED.add(addSpawn(balokType, BALOK_LOC));
 		setFinalBalokStatus(1);
-		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_FINAL_BOSS_HAS_APPEARED));
-		Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+		World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_FINAL_BOSS_HAS_APPEARED));
+		World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 	}
 	
 	private void finalBoss()
@@ -318,10 +317,10 @@ public class Balok extends Script
 		_stage = 5;
 		setFinalBaloktype(LORD_BALOK);
 		setFinalBalokStatus(1);
-		Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
-		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.QUEEN_ISTINA_IS_HERE));
+		World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+		World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.QUEEN_ISTINA_IS_HERE));
 		addSpawn(LORD_BALOK, BALOK_LOC, false);
-		Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+		World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 	}
 	
 	private void rewardType()
@@ -447,7 +446,7 @@ public class Balok extends Script
 	private void addMidbossDefeatCount(int value)
 	{
 		_midbossDefeatCount += value;
-		Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+		World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 	}
 	
 	private void setFinalBaloktype(int value)
@@ -479,11 +478,11 @@ public class Balok extends Script
 		{
 			if (_stage == 5)
 			{
-				Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_WON_THE_BATTLE_WITH_QUEEN_ISTINA));
+				World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_WON_THE_BATTLE_WITH_QUEEN_ISTINA));
 			}
 			else
 			{
-				Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_WON_THE_BOSS_BATTLE));
+				World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_WON_THE_BOSS_BATTLE));
 			}
 			
 			setFinalBalokStatus(2);
@@ -536,8 +535,8 @@ public class Balok extends Script
 		{
 			_stage = 2;
 			BattleWithBalokManager.getInstance().setGlobalStage(_stage);
-			Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
-			Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+			World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+			World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 		}
 		
 		if ((_stage == 2) && (_globalPoints >= 320000) && !_firstWaveKilled && !_midBossFirstSpawn)
@@ -550,16 +549,16 @@ public class Balok extends Script
 			_stage = 3;
 			BOSS_SPAWNED.clear();
 			BattleWithBalokManager.getInstance().setGlobalStage(_stage);
-			Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
-			Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+			World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+			World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 		}
 		
 		if ((_stage == 3) && (_globalPoints >= 800000) && !_secondWaveKilled && !_midBossSecondSpawn)
 		{
 			spawnInterBossesSecondWave();
 			BattleWithBalokManager.getInstance().setGlobalStage(_stage);
-			Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
-			Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+			World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+			World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 		}
 		
 		if ((_stage == 3) && (_midbossDefeatCount == 5))
@@ -569,8 +568,8 @@ public class Balok extends Script
 			setSecondWaveKilled(true);
 			BattleWithBalokManager.getInstance().setGlobalStage(_stage);
 			finalBoss();
-			Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
-			Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+			World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+			World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 		}
 		
 		if ((_stage == 1) && (_globalPoints < 3000) && (getRandom(5000) < 10))
@@ -587,17 +586,17 @@ public class Balok extends Script
 		NORMAL_BATTLE_MOBS.get().getGroups().forEach(SpawnGroup::despawnAll);
 		BOSS_SPAWNED.forEach(Npc::deleteMe);
 		BOSS_SPAWNED.clear();
-		Broadcast.toAllOnlinePlayers(new BalrogWarHud(_status, _stage));
+		World.broadcastToAllOnlinePlayers(new BalrogWarHud(_status, _stage));
 		if (!_balokKilled && (_stage == 4))
 		{
 			_finalBalokStatus = 3;
-			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_LOST_THE_BOSS_BATTLE));
+			World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_LOST_THE_BOSS_BATTLE));
 		}
 		
 		if (!_balokKilled && (_stage == 5))
 		{
 			_finalBalokStatus = 3;
-			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_LOST_THE_BATTLE_WITH_QUEEN_ISTINA));
+			World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.YOU_HAVE_LOST_THE_BATTLE_WITH_QUEEN_ISTINA));
 		}
 		
 		if (_kesmaStatus != 2)
@@ -626,8 +625,8 @@ public class Balok extends Script
 		}
 		
 		interBossesStatus();
-		Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
-		for (Player player : World.getInstance().getPlayers())
+		World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+		for (Player player : World.getPlayers())
 		{
 			if (BattleWithBalokManager.getInstance().getMonsterPoints(player) < 1000)
 			{
@@ -684,7 +683,7 @@ public class Balok extends Script
 		}
 		
 		player.sendPacket(new BalrogWarHud(_status, _stage));
-		Broadcast.toAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
+		World.broadcastToAllOnlinePlayers(new BalrogWarBossInfo(_finalBalokType, _finalBalokStatus, _kesmaStatus, _praisStatus, _viraStatus, _hearakStatus, _heederStatus));
 	}
 	
 	public static void main(String[] args)

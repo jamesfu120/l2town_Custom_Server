@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.network.serverpackets.autopeel;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -47,7 +47,7 @@ public class ExResultItemAutoPeel extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RESULT_ITEM_AUTO_PEEL.writeId(this, buffer);
 		buffer.writeByte(_result);

@@ -20,15 +20,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.collection;
 
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerCollectionData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerCollectionData;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -42,7 +42,7 @@ public class ExCollectionInfo extends ServerPacket
 	final int _category;
 	final Set<Integer> _collectionIds = new HashSet<>();
 	final List<Integer> _favoriteIds;
-	final List<CollectionHolder> _collectionHolders = new LinkedList<>();
+	final List<CollectionHolder> _collectionHolders = new ArrayList<>();
 	
 	public ExCollectionInfo(Player player, int category)
 	{
@@ -74,7 +74,7 @@ public class ExCollectionInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_COLLECTION_INFO.writeId(this, buffer);
 		
@@ -120,7 +120,7 @@ public class ExCollectionInfo extends ServerPacket
 		public CollectionHolder(int collectionId)
 		{
 			_collectionId = collectionId;
-			_collectionData = new LinkedList<>();
+			_collectionData = new ArrayList<>();
 		}
 		
 		public int getCollectionId()

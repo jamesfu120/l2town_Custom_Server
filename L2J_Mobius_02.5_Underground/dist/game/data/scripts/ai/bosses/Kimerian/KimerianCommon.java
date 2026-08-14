@@ -17,20 +17,20 @@
 package ai.bosses.Kimerian;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Kimerian Common instance zone.
@@ -408,7 +408,7 @@ public class KimerianCommon extends InstanceScript
 				{
 					if (creature.isPlayer() && npcVars.getBoolean("FIGHT_CAN_START", true))
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, KIMERIAN_MSG[getRandom(KIMERIAN_MSG.length)]);
+						npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(KIMERIAN_MSG));
 						addAttackPlayerDesire(npc, creature.asPlayer(), 23);
 						npcVars.set("FIGHT_CAN_START", false);
 					}

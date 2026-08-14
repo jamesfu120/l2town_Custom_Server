@@ -21,19 +21,19 @@
 package events.RudolphsBlessing;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerSummonAgathion;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerUnsummonAgathion;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerSummonAgathion;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerUnsummonAgathion;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author ivantotov, Edoo

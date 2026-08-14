@@ -24,20 +24,21 @@ import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
+import org.l2jmobius.gameserver.interfaces.ILocational;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
 
 public class SummonAI extends PlayableAI implements Runnable
 {
 	private static final int AVOID_RADIUS = 70;
 	
-	private volatile boolean _thinking; // to prevent recursive thinking
+	private volatile boolean _thinking; // To prevent recursive thinking.
 	private volatile boolean _startFollow = _actor.asSummon().getFollowStatus();
 	private Creature _lastAttack = null;
 	
@@ -45,18 +46,13 @@ public class SummonAI extends PlayableAI implements Runnable
 	private volatile boolean _isDefending;
 	private Future<?> _avoidTask = null;
 	
-	// Fix: Infinite Atk. Spd. exploit
-	private IntentionCommand _nextIntention = null;
-	
-	private void saveNextIntention(Intention intention, Object arg0, Object arg1)
-	{
-		_nextIntention = new IntentionCommand(intention, arg0, arg1);
-	}
+	// Fix: Infinite Atk. Spd. exploit.
+	private Creature _savedAttackTarget = null;
 	
 	@Override
-	public IntentionCommand getNextIntention()
+	public Intention getNextIntention()
 	{
-		return _nextIntention;
+		return _savedAttackTarget != null ? Intention.ATTACK : null;
 	}
 	
 	public SummonAI(Summon summon)
@@ -65,51 +61,75 @@ public class SummonAI extends PlayableAI implements Runnable
 	}
 	
 	@Override
-	protected void onIntentionIdle()
+	public void setIntentionIdle()
 	{
+		stopAvoidTask();
 		stopFollow();
 		_startFollow = false;
-		onIntentionActive();
+		setIntentionActive();
 	}
 	
 	@Override
-	protected void onIntentionActive()
+	public synchronized void setIntentionActive()
 	{
+		startAvoidTask();
 		final Summon summon = _actor.asSummon();
 		if (_startFollow)
 		{
-			setIntention(Intention.FOLLOW, summon.getOwner());
+			setIntentionFollow(summon.getOwner());
 		}
 		else
 		{
-			super.onIntentionActive();
+			super.setIntentionActive();
 		}
 	}
 	
 	@Override
-	synchronized void changeIntention(Intention intention, Object... args)
+	public synchronized void setIntentionFollow(WorldObject target)
 	{
-		switch (intention)
-		{
-			case ACTIVE:
-			case FOLLOW:
-			{
-				startAvoidTask();
-				break;
-			}
-			default:
-			{
-				stopAvoidTask();
-			}
-		}
-		
-		super.changeIntention(intention, args);
+		startAvoidTask();
+		super.setIntentionFollow(target);
+	}
+	
+	@Override
+	public synchronized void setIntentionAttack(WorldObject target)
+	{
+		stopAvoidTask();
+		super.setIntentionAttack(target);
+	}
+	
+	@Override
+	public synchronized void setIntentionMoveTo(ILocational destination)
+	{
+		stopAvoidTask();
+		super.setIntentionMoveTo(destination);
+	}
+	
+	@Override
+	public synchronized void setIntentionRest()
+	{
+		stopAvoidTask();
+		super.setIntentionRest();
+	}
+	
+	@Override
+	public synchronized void setIntentionPickUp(WorldObject item)
+	{
+		stopAvoidTask();
+		super.setIntentionPickUp(item);
+	}
+	
+	@Override
+	public synchronized void setIntentionInteract(WorldObject object)
+	{
+		stopAvoidTask();
+		super.setIntentionInteract(object);
 	}
 	
 	private void thinkAttack()
 	{
 		final WorldObject target = getTarget();
-		final Creature attackTarget = (target != null) && target.isCreature() ? target.asCreature() : null;
+		final Creature attackTarget = target == null ? null : target.asCreature();
 		if (checkTargetLostOrDead(attackTarget))
 		{
 			setTarget(null);
@@ -127,10 +147,10 @@ public class SummonAI extends PlayableAI implements Runnable
 		
 		clientStopMoving(null);
 		
-		// Fix: Infinite Atk. Spd. exploit
+		// Fix: Infinite Atk. Spd. exploit.
 		if (_actor.isAttackingNow())
 		{
-			saveNextIntention(Intention.ATTACK, attackTarget, null);
+			_savedAttackTarget = attackTarget;
 			return;
 		}
 		
@@ -161,7 +181,7 @@ public class SummonAI extends PlayableAI implements Runnable
 		}
 		
 		summon.setFollowStatus(false);
-		setIntention(Intention.IDLE);
+		setIntentionIdle();
 		_startFollow = val;
 		_actor.doCast(_skill, _item, _skill.hasNegativeEffect(), _dontMove);
 	}
@@ -179,7 +199,7 @@ public class SummonAI extends PlayableAI implements Runnable
 			return;
 		}
 		
-		setIntention(Intention.IDLE);
+		setIntentionIdle();
 		getActor().doPickupItem(target);
 	}
 	
@@ -196,11 +216,11 @@ public class SummonAI extends PlayableAI implements Runnable
 			return;
 		}
 		
-		setIntention(Intention.IDLE);
+		setIntentionIdle();
 	}
 	
 	@Override
-	public void onActionThink()
+	public void notifyActionThink()
 	{
 		if (_thinking || _actor.isCastingNow() || _actor.isAllSkillsDisabled())
 		{
@@ -241,7 +261,7 @@ public class SummonAI extends PlayableAI implements Runnable
 	}
 	
 	@Override
-	protected void onActionFinishCasting()
+	public void notifyActionFinishCasting()
 	{
 		if (_lastAttack == null)
 		{
@@ -249,38 +269,48 @@ public class SummonAI extends PlayableAI implements Runnable
 		}
 		else
 		{
-			setIntention(Intention.ATTACK, _lastAttack);
+			setIntentionAttack(_lastAttack);
 			_lastAttack = null;
 		}
 	}
 	
 	@Override
-	protected void onActionAttacked(Creature attacker)
+	public void notifyActionAttacked(WorldObject attacker)
 	{
-		super.onActionAttacked(attacker);
+		if (attacker == null)
+		{
+			return;
+		}
+		
+		super.notifyActionAttacked(attacker);
 		
 		if (_isDefending)
 		{
-			allServitorsDefend(attacker);
+			allServitorsDefend(attacker.asCreature());
 		}
 		else
 		{
-			avoidAttack(attacker);
+			avoidAttack(attacker.asCreature());
 		}
 	}
 	
 	@Override
-	protected void onActionEvaded(Creature attacker)
+	public void notifyActionEvaded(WorldObject attacker)
 	{
-		super.onActionEvaded(attacker);
+		if (attacker == null)
+		{
+			return;
+		}
+		
+		super.notifyActionEvaded(attacker);
 		
 		if (_isDefending)
 		{
-			allServitorsDefend(attacker);
+			allServitorsDefend(attacker.asCreature());
 		}
 		else
 		{
-			avoidAttack(attacker);
+			avoidAttack(attacker.asCreature());
 		}
 	}
 	
@@ -314,7 +344,7 @@ public class SummonAI extends PlayableAI implements Runnable
 		
 		final Creature owner = getActor().getOwner();
 		
-		// trying to avoid if summon near owner
+		// Trying to avoid if summon near owner.
 		if ((owner != null) && (owner != attacker) && owner.isInsideRadius3D(_actor, 2 * AVOID_RADIUS))
 		{
 			_startAvoid = true;
@@ -335,7 +365,7 @@ public class SummonAI extends PlayableAI implements Runnable
 		{
 			if (summon.calculateDistance3D(owner) > 3000)
 			{
-				summon.getAI().setIntention(Intention.FOLLOW, owner);
+				summon.getAI().setIntentionFollow(owner);
 			}
 			else if ((owner != attacker) && !summon.isMoving() && summon.canAttack(attacker, false))
 			{
@@ -387,8 +417,9 @@ public class SummonAI extends PlayableAI implements Runnable
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
+	public synchronized void setIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
+		stopAvoidTask();
 		if (getIntention() == Intention.ATTACK)
 		{
 			_lastAttack = (getTarget() != null) && getTarget().isCreature() ? getTarget().asCreature() : null;
@@ -398,7 +429,7 @@ public class SummonAI extends PlayableAI implements Runnable
 			_lastAttack = null;
 		}
 		
-		super.onIntentionCast(skill, target, item, forceUse, dontMove);
+		super.setIntentionCast(skill, target, item, forceUse, dontMove);
 	}
 	
 	private void startAvoidTask()

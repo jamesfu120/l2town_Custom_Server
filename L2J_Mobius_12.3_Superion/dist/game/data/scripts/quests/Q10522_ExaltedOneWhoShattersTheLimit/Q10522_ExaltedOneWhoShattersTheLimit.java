@@ -22,16 +22,16 @@ package quests.Q10522_ExaltedOneWhoShattersTheLimit;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestDialogType;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.newquestdata.NewQuest;
-import org.l2jmobius.gameserver.model.script.newquestdata.NewQuestLocation;
-import org.l2jmobius.gameserver.model.script.newquestdata.QuestCondType;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestDialogType;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuest;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuestLocation;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestDialog;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestNotification;
 
@@ -52,6 +52,7 @@ public class Q10522_ExaltedOneWhoShattersTheLimit extends Quest
 		23356,23357,23360,23487,23491,23492,23494,23495,
 		23500,23501,23502,23503,23811,23812,
 		23813,23814,23815,23834,23835,23836,23837,23838,23839,24305,
+		23901,23902,23903,23904,
 		24306,24307,24317,24318,24321,24322,24323,24324,24325,24326,
 		24329,24373,24377,24378,24379,24411,24412,24413,24414,
 		24415,24416,24417,24418,24419,24421,24422,24423,24424,24425,

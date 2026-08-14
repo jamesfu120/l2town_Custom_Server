@@ -24,17 +24,17 @@ import java.util.List;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.custom.CancelReturnConfig;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.DispelSlotType;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.DispelSlotType;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Dispel By Category effect implementation.

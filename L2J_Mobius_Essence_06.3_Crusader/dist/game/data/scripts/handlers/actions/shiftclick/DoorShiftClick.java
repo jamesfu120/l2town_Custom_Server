@@ -17,14 +17,14 @@
 package handlers.actions.shiftclick;
 
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.InstanceType;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
 import org.l2jmobius.gameserver.handler.IActionShiftHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Fort;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StaticObjectInfo;
 import org.l2jmobius.gameserver.util.HtmlUtil;

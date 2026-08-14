@@ -30,21 +30,22 @@ import org.l2jmobius.gameserver.data.xml.EnchantChallengePointData.EnchantChalle
 import org.l2jmobius.gameserver.data.xml.EnchantChallengePointData.EnchantChallengePointsOptionInfo;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantResultType;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantSupportItem;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
 import org.l2jmobius.gameserver.managers.events.BlackCouponManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantResultType;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantSupportItem;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
@@ -53,7 +54,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.EnchantResult;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.challengepoint.ExEnchantChallengePointInfo;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Mobius
@@ -105,7 +105,6 @@ public class RequestEnchantItem extends ClientPacket
 		
 		final Item item = request.getEnchantingItem();
 		final Item scroll = request.getEnchantingScroll();
-		final Item support = request.getSupportItem();
 		if ((item == null) || (scroll == null))
 		{
 			player.removeRequest(request.getClass());
@@ -120,6 +119,7 @@ public class RequestEnchantItem extends ClientPacket
 		}
 		
 		// Template for support item, if exist.
+		final Item support = request.getSupportItem();
 		EnchantSupportItem supportTemplate = null;
 		if (support != null)
 		{
@@ -309,20 +309,20 @@ public class RequestEnchantItem extends ClientPacket
 						{
 							if (support == null)
 							{
-								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 							}
 							else
 							{
-								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+								LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 							}
 						}
 						else if (support == null)
 						{
-							LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+							LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 						}
 						else
 						{
-							LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+							LOGGER_ENCHANT.info(sb.append("Success, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 						}
 					}
 					
@@ -335,7 +335,7 @@ public class RequestEnchantItem extends ClientPacket
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 						player.broadcastPacket(sm);
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.ENCHANT));
+						World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.ENCHANT));
 						
 						final Skill skill = CommonSkill.FIREWORK.getSkill();
 						if (skill != null)
@@ -387,20 +387,20 @@ public class RequestEnchantItem extends ClientPacket
 							{
 								if (support == null)
 								{
-									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 								else
 								{
-									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 								}
 							}
 							else if (support == null)
 							{
-								LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+								LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 							}
 							else
 							{
-								LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+								LOGGER_ENCHANT.info(sb.append("Safe Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 							}
 						}
 					}
@@ -476,26 +476,26 @@ public class RequestEnchantItem extends ClientPacket
 								{
 									if (support == null)
 									{
-										LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 									}
 									else
 									{
-										LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 									}
 								}
 								else if (support == null)
 								{
-									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 								else
 								{
-									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Blessed Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 								}
 							}
 						}
 						else
 						{
-							// add challenge point
+							// Add challenge point.
 							EnchantChallengePointData.getInstance().handleFailure(player, item);
 							player.sendPacket(new ExEnchantChallengePointInfo(player));
 							
@@ -515,20 +515,20 @@ public class RequestEnchantItem extends ClientPacket
 									{
 										if (support == null)
 										{
-											LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+											LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 										}
 										else
 										{
-											LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+											LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 										}
 									}
 									else if (support == null)
 									{
-										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 									}
 									else
 									{
-										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Unable to destroy, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 									}
 								}
 								return;
@@ -580,20 +580,20 @@ public class RequestEnchantItem extends ClientPacket
 								{
 									if (support == null)
 									{
-										LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 									}
 									else
 									{
-										LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(" ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+										LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", +").append(item.getEnchantLevel()).append(' ').append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 									}
 								}
 								else if (support == null)
 								{
-									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append(']').toString());
 								}
 								else
 								{
-									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append("(").append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append("(").append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append("(").append(support.getCount()).append(") [").append(support.getObjectId()).append("]").toString());
+									LOGGER_ENCHANT.info(sb.append("Fail, Character:").append(player.getName()).append(" [").append(player.getObjectId()).append("] Account:").append(player.getAccountName()).append(" IP:").append(player.getIPAddress()).append(", ").append(item.getName()).append('(').append(item.getCount()).append(") [").append(item.getObjectId()).append("], ").append(scroll.getName()).append('(').append(scroll.getCount()).append(") [").append(scroll.getObjectId()).append("], ").append(support.getName()).append('(').append(support.getCount()).append(") [").append(support.getObjectId()).append(']').toString());
 								}
 							}
 						}

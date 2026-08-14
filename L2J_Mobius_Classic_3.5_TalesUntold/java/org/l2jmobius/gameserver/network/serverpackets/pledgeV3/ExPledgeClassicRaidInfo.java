@@ -22,12 +22,12 @@ package org.l2jmobius.gameserver.network.serverpackets.pledgeV3;
 
 import java.util.Comparator;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.ClanRewardData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
-import org.l2jmobius.gameserver.model.clan.enums.ClanRewardType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanRewardBonus;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanRewardType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -45,7 +45,7 @@ public class ExPledgeClassicRaidInfo extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		final Clan clan = _player.getClan();
 		if (clan == null)

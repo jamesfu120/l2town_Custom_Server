@@ -34,8 +34,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.config.GeneralConfig;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 
 /**
  * @author Mobius
@@ -115,11 +115,7 @@ public class PrivateStoreHistoryManager
 			final Map<Integer, Integer> uniqueItemIds = new HashMap<>();
 			for (ItemHistoryTransaction transaction : tempList)
 			{
-				final int itemId = transaction.getItemId();
-				if (!uniqueItemIds.containsKey(itemId))
-				{
-					uniqueItemIds.put(itemId, 0);
-				}
+				uniqueItemIds.putIfAbsent(transaction.getItemId(), 0);
 			}
 			
 			tempList.sort(new SortByDate());

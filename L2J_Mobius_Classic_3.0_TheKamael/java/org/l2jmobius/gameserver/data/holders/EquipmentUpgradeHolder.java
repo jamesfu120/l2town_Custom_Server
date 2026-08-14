@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.data.holders;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 
 /**
  * @author Mobius

@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.captcha;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -38,7 +38,7 @@ public class ReceiveBotCaptchaResult extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CAPTCHA_ANSWER_RESULT.writeId(this, buffer);
 		buffer.writeInt(_answer);

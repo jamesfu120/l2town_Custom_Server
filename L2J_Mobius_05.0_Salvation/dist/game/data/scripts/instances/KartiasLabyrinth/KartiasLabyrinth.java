@@ -22,23 +22,22 @@ package instances.KartiasLabyrinth;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.InstanceType;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.WalkingManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Kartia Labyrinth instance zone.
@@ -895,7 +894,7 @@ public class KartiasLabyrinth extends InstanceScript
 				npc.setScriptValue(1);
 				WalkingManager.getInstance().cancelMoving(npc);
 				npc.asMonster().addDamageHate(creature, 0, 1000);
-				npc.getAI().setIntention(Intention.ACTIVE);
+				npc.getAI().setIntentionActive();
 				addAttackDesire(npc, creature);
 			}
 		}

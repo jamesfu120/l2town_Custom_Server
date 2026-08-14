@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.Shortcut;
-import org.l2jmobius.gameserver.model.actor.holders.player.Shortcuts;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcut;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcuts;
 import org.l2jmobius.gameserver.taskmanagers.AutoUseTaskManager;
 
 /**

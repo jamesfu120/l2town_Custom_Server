@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.dailymission;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -30,7 +30,7 @@ public class ExConnectedTimeAndGettableReward extends ServerPacket
 	public static final ExConnectedTimeAndGettableReward STATIC_PACKET = new ExConnectedTimeAndGettableReward();
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (!DailyMissionData.getInstance().isAvailable())
 		{

@@ -26,22 +26,22 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.zone.type.EffectZone;
+import org.l2jmobius.gameserver.entity.zone.type.NoSummonFriendZone;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.script.QuestTimer;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.variables.NpcVariables;
-import org.l2jmobius.gameserver.model.zone.type.EffectZone;
-import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
+import org.l2jmobius.gameserver.mechanics.script.QuestTimer;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.variables.NpcVariables;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -180,7 +180,7 @@ public class Ramona extends Script
 			case "SPAWN_RAMONA_1":
 			{
 				_bossStage = 1;
-				World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 3000, ramona ->
+				World.forEachVisibleObjectInRange(npc, Npc.class, 3000, ramona ->
 				{
 					if (ramona.getId() == RAMONA)
 					{
@@ -238,7 +238,7 @@ public class Ramona extends Script
 			{
 				if ((_bossStage == 1) && _ramona1.isInCombat())
 				{
-					Skill randomAttackSkill = RAMONA1_SKILLS[getRandom(RAMONA1_SKILLS.length)];
+					Skill randomAttackSkill = getRandomEntry(RAMONA1_SKILLS);
 					if (getRandom(100) > 20)
 					{
 						_ramona1.doCast(randomAttackSkill);
@@ -253,7 +253,7 @@ public class Ramona extends Script
 				{
 					if (_ramona2 != null)
 					{
-						final Npc minion = addSpawn(MINION_LIST[getRandom(MINION_LIST.length)], _ramona2.getX() + getRandom(-200, 200), _ramona2.getY() + getRandom(-200, 200), _ramona2.getZ(), _ramona2.getHeading(), false, 600000);
+						final Npc minion = addSpawn(getRandomEntry(MINION_LIST), _ramona2.getX() + getRandom(-200, 200), _ramona2.getY() + getRandom(-200, 200), _ramona2.getZ(), _ramona2.getHeading(), false, 600000);
 						minion.setRunning();
 						minion.asAttackable().setIsRaidMinion(true);
 						addAttackPlayerDesire(minion, player);
@@ -268,7 +268,7 @@ public class Ramona extends Script
 			{
 				if ((_bossStage == 2) && _ramona2.isInCombat())
 				{
-					Skill randomAttackSkill = RAMONA2_SKILLS[getRandom(RAMONA2_SKILLS.length)];
+					Skill randomAttackSkill = getRandomEntry(RAMONA2_SKILLS);
 					if (getRandom(100) > 20)
 					{
 						_ramona2.doCast(randomAttackSkill);
@@ -283,7 +283,7 @@ public class Ramona extends Script
 				{
 					if (_ramona3 != null)
 					{
-						final Npc minion = addSpawn(MINION_LIST[getRandom(MINION_LIST.length)], _ramona3.getX() + getRandom(-200, 200), _ramona3.getY() + getRandom(-200, 200), _ramona3.getZ(), _ramona3.getHeading(), false, 600000);
+						final Npc minion = addSpawn(getRandomEntry(MINION_LIST), _ramona3.getX() + getRandom(-200, 200), _ramona3.getY() + getRandom(-200, 200), _ramona3.getZ(), _ramona3.getHeading(), false, 600000);
 						minion.setRunning();
 						minion.asAttackable().setIsRaidMinion(true);
 						addAttackPlayerDesire(minion, player);
@@ -298,7 +298,7 @@ public class Ramona extends Script
 			{
 				if ((_bossStage == 3) && _ramona3.isInCombat())
 				{
-					Skill randomAttackSkill = RAMONA3_SKILLS[getRandom(RAMONA3_SKILLS.length)];
+					Skill randomAttackSkill = getRandomEntry(RAMONA3_SKILLS);
 					if (getRandom(100) > 20)
 					{
 						_ramona3.doCast(randomAttackSkill);
@@ -529,7 +529,7 @@ public class Ramona extends Script
 		
 		if ((player != null) && !player.isDead())
 		{
-			Skill skillToCast = RAMONA3_SKILLS[getRandom(RAMONA3_SKILLS.length)];
+			Skill skillToCast = getRandomEntry(RAMONA3_SKILLS);
 			if ((skillToCast != null) && SkillCaster.checkUseConditions(npc, skillToCast))
 			
 			{
@@ -546,7 +546,7 @@ public class Ramona extends Script
 		{
 			case MP_CONTROL:
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Door.class, 8000, door ->
+				World.forEachVisibleObjectInRange(npc, Door.class, 8000, door ->
 				{
 					if (door.getId() == ROOM_CONTROL_DOOR)
 					{

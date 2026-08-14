@@ -25,8 +25,8 @@ import java.sql.PreparedStatement;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -91,7 +91,7 @@ public class ExRequestUserWatcherDelete extends ClientPacket
 		player.getSurveillanceList().remove(Integer.valueOf(targetId));
 		player.sendPacket(new ExUserWatcherTargetList(player));
 		
-		final Player target = World.getInstance().getPlayer(targetId);
+		final Player target = World.getPlayer(targetId);
 		if ((target != null) && target.isVisibleFor(player))
 		{
 			player.sendPacket(new RelationChanged());

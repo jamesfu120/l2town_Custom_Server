@@ -16,21 +16,21 @@
  */
 package handlers.skill.effects;
 
-import java.util.List;
+import java.util.Collection;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.Weapon;
+import org.l2jmobius.gameserver.entity.item.enchant.attribute.AttributeHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Convert Item effect implementation.
@@ -87,7 +87,7 @@ public class ConvertItem extends AbstractEffect
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final AttributeHolder elementals = wpn.getAttributes() == null ? null : wpn.getAttackAttribute();
-		final List<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart());
+		final Collection<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (Item unequippedItem : unequipped)
 		{

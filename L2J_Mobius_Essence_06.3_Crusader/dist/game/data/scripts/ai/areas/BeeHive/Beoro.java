@@ -26,15 +26,15 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.npc.AggroInfo;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.AggroInfo;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -101,7 +101,7 @@ public class Beoro extends Script
 				if (!_beoroTransformAttempted && (npc.getCurrentHpPercent() < 50))
 				{
 					_beoroTransformAttempted = true;
-					npc.broadcastPacket(new ExShowScreenMessage(ANNOUNCEMENTS_50_HP[Rnd.get(ANNOUNCEMENTS_50_HP.length)], ExShowScreenMessage.BOTTOM_RIGHT, 5000, false));
+					npc.broadcastPacket(new ExShowScreenMessage(getRandomEntry(ANNOUNCEMENTS_50_HP), ExShowScreenMessage.BOTTOM_RIGHT, 5000, false));
 					if (Rnd.get(100) < 50)
 					{
 						addSpawn(HERMIT_BEORO, npc).asAttackable().addDamageHate(attacker, 1, 5000);
@@ -134,7 +134,7 @@ public class Beoro extends Script
 				if ((npc.getScriptValue() == 0) && (npc.getCurrentHpPercent() < 70))
 				{
 					npc.setScriptValue(1);
-					final int currentPetId = Rnd.get(100) < 25 ? SIN_EATER : Atingo.PETS[Rnd.get(Atingo.PETS.length)];
+					final int currentPetId = Rnd.get(100) < 25 ? SIN_EATER : getRandomEntry(Atingo.PETS);
 					addSpawn(currentPetId, npc, true, 10 * 60 * 1000).asAttackable().addDamageHate(attacker, 1, 5000);
 				}
 			}
@@ -171,7 +171,7 @@ public class Beoro extends Script
 		playable.stopSkillEffects(SkillFinishType.REMOVED, 1411); // Mystic Immunity
 		BEORO_ROAR.getSkill().applyEffects(npc, playable);
 		
-		final AggroInfo aggr = npc.asAttackable().getAggroList().getOrDefault(playable, null);
+		final AggroInfo aggr = npc.asAttackable().getAggroList().get(playable);
 		if (aggr != null)
 		{
 			npc.asAttackable().reduceHate(playable, -aggr.getHate());

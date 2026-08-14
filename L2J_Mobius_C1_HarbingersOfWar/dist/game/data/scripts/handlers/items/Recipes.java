@@ -25,11 +25,11 @@ import org.l2jmobius.gameserver.data.holders.RecipeHolder;
 import org.l2jmobius.gameserver.data.holders.RecipeStatHolder;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.recipe.RecipeList;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.recipe.RecipeList;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -83,7 +83,7 @@ public class Recipes implements IItemHandler
 			}
 			
 			sb.append(holder.getQuantity());
-			sb.append(" ");
+			sb.append(' ');
 			sb.append(ItemData.getInstance().getTemplate(itemId).getName());
 			sb.append("<br1>");
 		}

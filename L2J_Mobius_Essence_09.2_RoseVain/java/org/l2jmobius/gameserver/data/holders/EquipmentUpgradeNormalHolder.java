@@ -24,8 +24,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.item.enums.UpgradeDataType;
-import org.l2jmobius.gameserver.model.item.holders.ItemEnchantHolder;
+import org.l2jmobius.gameserver.entity.item.enums.UpgradeDataType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemEnchantHolder;
 
 public class EquipmentUpgradeNormalHolder
 {

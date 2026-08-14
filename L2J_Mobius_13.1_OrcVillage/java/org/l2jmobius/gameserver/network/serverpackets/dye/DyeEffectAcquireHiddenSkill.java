@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.dye;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -46,7 +46,7 @@ public class DyeEffectAcquireHiddenSkill extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_DYEEFFECT_ACQUIRE_HIDDENSKILL.writeId(this, buffer);
 		buffer.writeInt(_success);

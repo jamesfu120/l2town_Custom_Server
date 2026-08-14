@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 
 /**
@@ -46,7 +46,7 @@ public class RequestPartyMatchDetail extends ClientPacket
 			return;
 		}
 		
-		final Player otherPlayer = World.getInstance().getPlayer(_objectId);
+		final Player otherPlayer = World.getPlayer(_objectId);
 		if (otherPlayer != null)
 		{
 			player.sendPacket(new PartyMatchDetail(otherPlayer));

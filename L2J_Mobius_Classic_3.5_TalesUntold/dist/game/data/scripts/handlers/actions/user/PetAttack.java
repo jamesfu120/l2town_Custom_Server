@@ -20,13 +20,12 @@
  */
 package handlers.actions.user;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -65,7 +64,7 @@ public class PetAttack implements IActionUserHandler
 		
 		if ((player.calculateDistance3D(target) > 3000) || !GeoEngine.getInstance().canMoveToTarget(pet, target))
 		{
-			pet.getAI().setIntention(Intention.FOLLOW, player);
+			pet.getAI().setIntentionFollow(player);
 		}
 		else if (pet.canAttack(target, ctrlPressed))
 		{

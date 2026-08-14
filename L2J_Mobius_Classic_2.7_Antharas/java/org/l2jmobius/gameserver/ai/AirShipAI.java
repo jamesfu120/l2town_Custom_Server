@@ -20,13 +20,12 @@
  */
 package org.l2jmobius.gameserver.ai;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.AirShip;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.AirShip;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ExMoveToLocationAirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExStopMoveAirShip;
 
@@ -80,72 +79,72 @@ public class AirShipAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onIntentionAttack(Creature target)
+	public void setIntentionAttack(WorldObject target)
 	{
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
+	public void setIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
 	}
 	
 	@Override
-	protected void onIntentionFollow(Creature target)
+	public void setIntentionFollow(WorldObject target)
 	{
 	}
 	
 	@Override
-	protected void onIntentionPickUp(WorldObject item)
+	public void setIntentionPickUp(WorldObject item)
 	{
 	}
 	
 	@Override
-	protected void onIntentionInteract(WorldObject object)
+	public void setIntentionInteract(WorldObject object)
 	{
 	}
 	
 	@Override
-	protected void onActionAttacked(Creature attacker)
+	public void notifyActionAttacked(WorldObject attacker)
 	{
 	}
 	
 	@Override
-	protected void onActionAggression(Creature target, int aggro)
+	public void notifyActionAggression(WorldObject target, int aggro)
 	{
 	}
 	
 	@Override
-	protected void onActionBlocked(Creature attacker)
+	public void notifyActionBlocked()
 	{
 	}
 	
 	@Override
-	protected void onActionRooted(Creature attacker)
+	public void notifyActionRooted()
 	{
 	}
 	
 	@Override
-	protected void onActionForgetObject(WorldObject object)
+	public void notifyActionForgetObject(WorldObject object)
 	{
 	}
 	
 	@Override
-	protected void onActionCancel()
+	public void notifyActionCancel()
 	{
 	}
 	
 	@Override
-	protected void onActionDeath()
+	public void notifyActionDeath()
 	{
 	}
 	
 	@Override
-	protected void onActionFakeDeath()
+	public void notifyActionFakeDeath()
 	{
 	}
 	
 	@Override
-	protected void onActionFinishCasting()
+	public void notifyActionFinishCasting()
 	{
 	}
 	

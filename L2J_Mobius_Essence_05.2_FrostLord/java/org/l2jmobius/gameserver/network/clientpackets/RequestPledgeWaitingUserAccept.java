@@ -16,14 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.managers.ClanEntryManager;
 import org.l2jmobius.gameserver.managers.FortManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Fort;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2jmobius.gameserver.network.serverpackets.JoinPledge;
@@ -66,7 +66,7 @@ public class RequestPledgeWaitingUserAccept extends ClientPacket
 		final int clanId = clan.getId();
 		if (_acceptRequest)
 		{
-			final Player target = World.getInstance().getPlayer(_playerId);
+			final Player target = World.getPlayer(_playerId);
 			if (target != null)
 			{
 				final long currentTime = System.currentTimeMillis();

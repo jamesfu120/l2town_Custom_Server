@@ -26,7 +26,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -36,15 +35,15 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.ConfigReader;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Siege;
-import org.l2jmobius.gameserver.model.siege.TowerSpawn;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.interfaces.ILocational;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Siege;
+import org.l2jmobius.gameserver.mechanics.siege.TowerSpawn;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.castlewar.MercenaryCastleWarCastleSiegeHudInfo;
 
 public class SiegeManager
@@ -57,14 +56,14 @@ public class SiegeManager
 	private final Map<Integer, List<TowerSpawn>> _flameTowers = new HashMap<>();
 	private final Map<Integer, TowerSpawn> _relicTowers = new HashMap<>();
 	
-	private int _siegeCycle = 2; // 2 weeks by default
-	private int _attackerMaxClans = 500; // Max number of clans
-	private int _attackerRespawnDelay = 0; // Time in ms. Changeable in siege.config
-	private int _defenderMaxClans = 500; // Max number of clans
-	private int _flagMaxCount = 1; // Changeable in siege.config
-	private int _siegeClanMinLevel = 5; // Changeable in siege.config
-	private int _siegeLength = 120; // Time in minute. Changeable in siege.config
-	private int _bloodAllianceReward = 0; // Number of Blood Alliance items reward for successful castle defending
+	private int _siegeCycle = 2; // 2 weeks by default.
+	private int _attackerMaxClans = 500; // Max number of clans.
+	private int _attackerRespawnDelay = 0; // Time in ms. Changeable in siege.config.
+	private int _defenderMaxClans = 500; // Max number of clans.
+	private int _flagMaxCount = 1; // Changeable in siege.config.
+	private int _siegeClanMinLevel = 5; // Changeable in siege.config.
+	private int _siegeLength = 120; // Time in minute. Changeable in siege.config.
+	private int _bloodAllianceReward = 0; // Number of Blood Alliance items reward for successful castle defending.
 	
 	protected SiegeManager()
 	{
@@ -300,7 +299,7 @@ public class SiegeManager
 	
 	public Collection<Siege> getSieges()
 	{
-		final List<Siege> sieges = new LinkedList<>();
+		final List<Siege> sieges = new ArrayList<>();
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
 			sieges.add(castle.getSiege());

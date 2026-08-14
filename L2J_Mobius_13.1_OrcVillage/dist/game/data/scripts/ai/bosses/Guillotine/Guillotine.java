@@ -29,19 +29,19 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.zone.type.ArenaZone;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.model.zone.type.ArenaZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -517,13 +517,13 @@ public class Guillotine extends Script
 		{
 			cancelQuestTimers("check_arena");
 			
-			for (Npc spawnedNpc : World.getInstance().getVisibleObjects(npc, Npc.class))
+			World.forEachVisibleObject(npc, Npc.class, spawnedNpc ->
 			{
 				if ((spawnedNpc != null) && ((spawnedNpc.getId() == CLONE_NPC_ID) || (spawnedNpc.getId() == SLAVE1_NPC_ID) || (spawnedNpc.getId() == SLAVE2_NPC_ID) || (spawnedNpc.getId() == SLAVE3_NPC_ID) || ((spawnedNpc.getId() == CLONESTEMP94_NPC_ID) && _clonesTemp94.containsKey(spawnedNpc)) || ((spawnedNpc.getId() == CLONESTEMP75_NPC_ID) && _clonesTemp75.containsKey(spawnedNpc)) || ((spawnedNpc.getId() == CLONESTEMP42_NPC_ID) && _clonesTemp42.containsKey(spawnedNpc))))
 				{
 					spawnedNpc.deleteMe();
 				}
-			}
+			});
 			
 			_spawnedMainBoss = null;
 			GlobalVariablesManager.getInstance().set("GUILLOTINE_ALIVE", false);

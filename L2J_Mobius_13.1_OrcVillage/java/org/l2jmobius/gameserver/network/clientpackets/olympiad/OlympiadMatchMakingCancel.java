@@ -21,9 +21,9 @@
 package org.l2jmobius.gameserver.network.clientpackets.olympiad;
 
 import org.l2jmobius.gameserver.config.OlympiadConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadInfo;
 import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchMakingResult;

@@ -18,12 +18,12 @@ package ai.others.CastleMercenaryManager;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Merchant;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Merchant;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**

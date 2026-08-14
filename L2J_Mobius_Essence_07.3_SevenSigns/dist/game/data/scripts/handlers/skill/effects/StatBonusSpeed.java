@@ -18,15 +18,15 @@ package handlers.skill.effects;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.type.ArmorType;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStat;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.type.ArmorType;
+import org.l2jmobius.gameserver.mechanics.conditions.Condition;
+import org.l2jmobius.gameserver.mechanics.conditions.ConditionUsingItemType;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.BaseStat;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw

@@ -20,10 +20,10 @@
  */
 package ai.areas.TalkingIsland.Walkers;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
 /**
@@ -33,7 +33,7 @@ public abstract class WalkerAI extends Script
 {
 	protected void followNpc(Npc npc, int followedNpcId, int followingAngle, int minDistance, int maxDistance)
 	{
-		World.getInstance().forEachVisibleObject(npc, Npc.class, npcAround ->
+		World.forEachVisibleObject(npc, Npc.class, npcAround ->
 		{
 			if (npcAround.getId() != followedNpcId)
 			{

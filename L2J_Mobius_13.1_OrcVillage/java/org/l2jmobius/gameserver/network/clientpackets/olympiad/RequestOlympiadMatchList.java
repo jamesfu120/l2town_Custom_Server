@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.olympiad;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

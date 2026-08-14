@@ -28,8 +28,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.ConfigReader;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.DropType;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropHolder;
 
 /**
  * This class loads all the rates related configurations.
@@ -67,6 +67,7 @@ public class RatesConfig
 	public static int MONSTER_EXP_MAX_LEVEL_DIFFERENCE;
 	public static float RATE_RAIDBOSS_POINTS;
 	public static float RATE_VITALITY_EXP_MULTIPLIER;
+	public static float RATE_VITALITY_EXP_PREMIUM_MULTIPLIER;
 	public static int VITALITY_MAX_ITEMS_ALLOWED;
 	public static float RATE_VITALITY_LOST;
 	public static float RATE_VITALITY_GAIN;
@@ -154,6 +155,7 @@ public class RatesConfig
 		MONSTER_EXP_MAX_LEVEL_DIFFERENCE = config.getInt("MonsterExpMaxLevelDifference", 11);
 		RATE_RAIDBOSS_POINTS = config.getFloat("RateRaidbossPointsReward", 1);
 		RATE_VITALITY_EXP_MULTIPLIER = config.getFloat("RateVitalityExpMultiplier", 2);
+		RATE_VITALITY_EXP_PREMIUM_MULTIPLIER = config.getFloat("RateVitalityExpPremiumMultiplier", 3);
 		VITALITY_MAX_ITEMS_ALLOWED = config.getInt("VitalityMaxItemsAllowed", 999);
 		RATE_VITALITY_LOST = config.getFloat("RateVitalityLost", 1);
 		RATE_VITALITY_GAIN = config.getFloat("RateVitalityGain", 1);

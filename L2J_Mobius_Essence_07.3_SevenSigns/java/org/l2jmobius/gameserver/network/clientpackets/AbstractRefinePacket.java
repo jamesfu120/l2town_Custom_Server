@@ -23,15 +23,15 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.Arrays;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.Armor;
-import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.item.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.VariationFee;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemAttributeRequest;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.item.Armor;
+import org.l2jmobius.gameserver.entity.item.Weapon;
+import org.l2jmobius.gameserver.entity.item.enums.ItemLocation;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.options.VariationFee;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public abstract class AbstractRefinePacket extends ClientPacket
@@ -59,7 +59,7 @@ public abstract class AbstractRefinePacket extends ClientPacket
 		
 		if (feeItem != null)
 		{
-			// GemStones must belong to owner
+			// GemStones must belong to owner.
 			if (feeItem.getOwnerId() != player.getObjectId())
 			{
 				return false;
@@ -89,13 +89,13 @@ public abstract class AbstractRefinePacket extends ClientPacket
 			return false;
 		}
 		
-		// Item must belong to owner
+		// Item must belong to owner.
 		if (mineralItem.getOwnerId() != player.getObjectId())
 		{
 			return false;
 		}
 		
-		// Lifestone must be located in inventory
+		// Lifestone must be located in inventory.
 		if (mineralItem.getItemLocation() != ItemLocation.INVENTORY)
 		{
 			return false;
@@ -117,7 +117,7 @@ public abstract class AbstractRefinePacket extends ClientPacket
 			return false;
 		}
 		
-		// Item must belong to owner
+		// Item must belong to owner.
 		if (item.getOwnerId() != player.getObjectId())
 		{
 			return false;
@@ -153,7 +153,7 @@ public abstract class AbstractRefinePacket extends ClientPacket
 			return false;
 		}
 		
-		// Source item can be equipped or in inventory
+		// Source item can be equipped or in inventory.
 		switch (item.getItemLocation())
 		{
 			case INVENTORY:

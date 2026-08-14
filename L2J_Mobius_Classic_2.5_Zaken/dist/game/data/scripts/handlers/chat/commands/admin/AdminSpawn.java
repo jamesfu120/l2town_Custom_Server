@@ -35,24 +35,23 @@ import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
 import org.l2jmobius.gameserver.managers.InstanceManager;
 import org.l2jmobius.gameserver.managers.ScriptManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.MapUtil;
 
 /**
@@ -195,7 +194,7 @@ public class AdminSpawn implements IAdminCommandHandler
 						{
 							if (!npc.isDead())
 							{
-								// Only 50 because of client html limitation
+								// Only 50 because of client html limitation.
 								if (counter < 50)
 								{
 									html.append("<tr><td>" + npc.getName() + "</td><td><a action=\"bypass -h admin_move_to " + npc.getX() + " " + npc.getY() + " " + npc.getZ() + "\">Go</a></td></tr>");
@@ -230,7 +229,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_unspawnall"))
 		{
-			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME));
+			World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME));
 			
 			// Unload all scripts.
 			ScriptManager.getInstance().unloadAllScripts();
@@ -249,7 +248,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			
 			DatabaseSpawnManager.getInstance().cleanUp();
-			for (WorldObject obj : World.getInstance().getVisibleObjects())
+			for (WorldObject obj : World.getVisibleObjects())
 			{
 				if ((obj != null) && obj.isNpc())
 				{
@@ -288,7 +287,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			
 			DatabaseSpawnManager.getInstance().cleanUp();
-			for (WorldObject obj : World.getInstance().getVisibleObjects())
+			for (WorldObject obj : World.getVisibleObjects())
 			{
 				if ((obj != null) && obj.isNpc())
 				{
@@ -425,7 +424,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					{
 						// Add the current parameter to the search parameter string.
 						searchParam.append(params[i]);
-						searchParam.append(" ");
+						searchParam.append(' ');
 						
 						// Try to get the NPC template using the search parameter string.
 						searchTemplate = NpcData.getInstance().getTemplateByName(searchParam.toString().trim());
@@ -502,7 +501,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					if ((pos > 0) && (pos < searchEnd))
 					{
 						searchParam.append(param);
-						searchParam.append(" ");
+						searchParam.append(' ');
 					}
 				}
 				
@@ -553,7 +552,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			
 			final Map<Integer, Integer> npcsFound = new HashMap<>();
-			for (WorldObject obj : World.getInstance().getVisibleObjects())
+			for (WorldObject obj : World.getVisibleObjects())
 			{
 				if (!obj.isNpc())
 				{
@@ -561,14 +560,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				
 				final int npcId = obj.getId();
-				if (npcsFound.containsKey(npcId))
-				{
-					npcsFound.put(npcId, npcsFound.get(npcId) + 1);
-				}
-				else
-				{
-					npcsFound.put(npcId, 1);
-				}
+				npcsFound.merge(npcId, 1, Integer::sum);
 			}
 			
 			activeChar.sendSysMessage("Top " + count + " spawn count.");
@@ -608,7 +600,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				
 				NpcTemplate template;
-				if (npcIdStr.matches("[0-9]+"))
+				if (StringUtil.isNumeric(npcIdStr))
 				{
 					template = NpcData.getInstance().getTemplate(Integer.parseInt(npcIdStr));
 				}
@@ -721,7 +713,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		
 		if (index == 0)
 		{
-			final Npc npc = World.getInstance().getNpc(npcId);
+			final Npc npc = World.getNpc(npcId);
 			if (npc != null)
 			{
 				activeChar.teleToLocation(npc.getLocation(), PlayerConfig.MAX_OFFSET_ON_TELEPORT, npc.getInstanceWorld());
@@ -772,15 +764,15 @@ public class AdminSpawn implements IAdminCommandHandler
 		
 		final NpcTemplate template1;
 		String monsterId = monsterIdValue;
-		if (monsterId.matches("[0-9]*"))
+		if (StringUtil.isNumeric(monsterId))
 		{
-			// First parameter was an ID number
+			// First parameter was an ID number.
 			final int monsterTemplate = Integer.parseInt(monsterId);
 			template1 = NpcData.getInstance().getTemplate(monsterTemplate);
 		}
 		else
 		{
-			// First parameter wasn't just numbers so go by name not ID
+			// First parameter wasn't just numbers so go by name not ID.
 			monsterId = monsterId.replace('_', ' ');
 			template1 = NpcData.getInstance().getTemplateByName(monsterId);
 		}

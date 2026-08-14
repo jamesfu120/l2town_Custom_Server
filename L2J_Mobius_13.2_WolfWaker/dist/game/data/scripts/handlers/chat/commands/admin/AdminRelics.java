@@ -30,9 +30,10 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
 import org.l2jmobius.gameserver.data.xml.RelicData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerRelicData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerRelicData;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsCollectionUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsList;
@@ -200,27 +201,45 @@ public class AdminRelics implements IAdminCommandHandler
 	}
 	
 	/**
-	 * Get relics by grade
+	 * Get relics by grade (1=NOGRADE, 2=DGRADE, 3=CGRADE, 4=BGRADE, 5=AGRADE)
 	 * @param grade
 	 * @return
 	 */
 	private List<RelicDataHolder> getRelicsByGrade(int grade)
 	{
-		List<RelicDataHolder> result = new ArrayList<>();
-		Collection<RelicDataHolder> allRelics = RelicData.getInstance().getRelics();
-		
-		for (RelicDataHolder relic : allRelics)
+		final RelicGrade relicGrade = getRelicGrade(grade);
+		if (relicGrade == null)
 		{
-			if (relic.getGrade() == grade)
-			{
-				result.add(relic);
-			}
+			return new ArrayList<>();
 		}
 		
-		// Sort by relic ID
+		final List<RelicDataHolder> result = new ArrayList<>(RelicData.getInstance().getRelicsByGrade(relicGrade));
 		result.sort((a, b) -> Integer.compare(a.getRelicId(), b.getRelicId()));
-		
 		return result;
+	}
+	
+	/**
+	 * Map admin menu grade index to RelicGrade enum
+	 * @param grade
+	 * @return
+	 */
+	private RelicGrade getRelicGrade(int grade)
+	{
+		switch (grade)
+		{
+			case 1:
+				return RelicGrade.NOGRADE;
+			case 2:
+				return RelicGrade.DGRADE;
+			case 3:
+				return RelicGrade.CGRADE;
+			case 4:
+				return RelicGrade.BGRADE;
+			case 5:
+				return RelicGrade.AGRADE;
+			default:
+				return null;
+		}
 	}
 	
 	/**
@@ -265,7 +284,7 @@ public class AdminRelics implements IAdminCommandHandler
 		}
 		
 		// Grade name and page indicator
-		html.append("<td align=center><font color=\"LEVEL\">").append(getGradeName(grade)).append(" (").append(currentPage + 1).append("/").append(totalPages).append(")</font></td>");
+		html.append("<td align=center><font color=\"LEVEL\">").append(getGradeName(grade)).append(" (").append(currentPage + 1).append('/').append(totalPages).append(")</font></td>");
 		
 		// Next button
 		if (currentPage < (totalPages - 1))

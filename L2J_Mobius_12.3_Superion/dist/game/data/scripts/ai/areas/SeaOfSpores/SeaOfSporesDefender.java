@@ -23,10 +23,10 @@ package ai.areas.SeaOfSpores;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
@@ -66,13 +66,13 @@ public class SeaOfSporesDefender extends Script
 				addSpawn(FUNGUS, x, y, npc.getZ(), 0, false, 0);
 			}
 			
-			for (Npc minion : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 100))
+			World.forEachVisibleObjectInRange(npc, Npc.class, 100, minion ->
 			{
 				if (minion.getId() == FUNGUS)
 				{
 					minion.setInvul(true);
 				}
-			}
+			});
 		}
 	}
 	

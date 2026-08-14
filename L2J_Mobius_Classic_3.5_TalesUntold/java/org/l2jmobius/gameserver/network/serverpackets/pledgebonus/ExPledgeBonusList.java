@@ -20,14 +20,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.pledgebonus;
 
+import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.ClanRewardData;
-import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
-import org.l2jmobius.gameserver.model.clan.enums.ClanRewardType;
+import org.l2jmobius.gameserver.entity.clan.ClanRewardBonus;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanRewardType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -37,8 +37,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExPledgeBonusList extends ServerPacket
 {
-	private final List<Integer> _memberBonuses = new LinkedList<>();
-	private final List<Integer> _huntingBonuses = new LinkedList<>();
+	private final List<Integer> _memberBonuses = new ArrayList<>();
+	private final List<Integer> _huntingBonuses = new ArrayList<>();
 	
 	public ExPledgeBonusList()
 	{
@@ -53,7 +53,7 @@ public class ExPledgeBonusList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_BONUS_LIST.writeId(this, buffer);
 		buffer.writeByte(0); // 140

@@ -23,15 +23,15 @@ package ai.others.ClanStrongholdDevice;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
@@ -198,11 +198,11 @@ public class ClanStrongholdDevice extends Script
 		}
 		
 		CLAN_STRONGHOLD_EFFECT.getSkill().activateSkill(npc, killer);
-		for (Player clanMate : World.getInstance().getVisibleObjects(killer, Player.class))
+		World.forEachVisibleObject(killer, Player.class, clanMate ->
 		{
 			if (clanMate.getClanId() != killer.getClanId())
 			{
-				continue;
+				return;
 			}
 			
 			final Location deviceLocation = DEVICE_LOCATION.get(CURRENT_CLAN_ID.get(killer.getClanId()));
@@ -210,7 +210,7 @@ public class ClanStrongholdDevice extends Script
 			{
 				clanMate.doCast(CLAN_STRONGHOLD_EFFECT.getSkill());
 			}
-		}
+		});
 	}
 	
 	public static void main(String[] args)

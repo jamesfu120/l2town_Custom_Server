@@ -26,13 +26,13 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
 
 /**
  * @author Mobius
@@ -95,7 +95,7 @@ public class DailyResetManager
 		}
 		
 		// Store player variables.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getVariables().storeMe();
 			player.getAccountVariables().storeMe();

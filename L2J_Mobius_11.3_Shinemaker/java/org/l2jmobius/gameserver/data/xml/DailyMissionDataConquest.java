@@ -24,7 +24,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -32,11 +31,11 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionDataHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw, Mobius
@@ -120,7 +119,7 @@ public class DailyMissionDataConquest implements IXmlReader
 	
 	public Collection<DailyMissionDataHolder> getDailyMissionData(Player player)
 	{
-		final List<DailyMissionDataHolder> missionData = new LinkedList<>();
+		final List<DailyMissionDataHolder> missionData = new ArrayList<>();
 		for (DailyMissionDataHolder mission : _dailyMissionData)
 		{
 			if (mission.isDisplayable(player))

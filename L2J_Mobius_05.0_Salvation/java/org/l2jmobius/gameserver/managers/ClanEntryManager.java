@@ -36,10 +36,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
-import org.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
-import org.l2jmobius.gameserver.model.clan.entry.PledgeWaitingInfo;
-import org.l2jmobius.gameserver.util.MathUtil;
+import org.l2jmobius.gameserver.entity.clan.entry.PledgeApplicantInfo;
+import org.l2jmobius.gameserver.entity.clan.entry.PledgeRecruitInfo;
+import org.l2jmobius.gameserver.entity.clan.entry.PledgeWaitingInfo;
 
 /**
  * @author Sdw
@@ -355,7 +354,7 @@ public class ClanEntryManager
 	
 	public List<PledgeWaitingInfo> getSortedWaitingList(int levelMin, int levelMax, int role, int sortByValue, boolean descending)
 	{
-		final int sortBy = MathUtil.clamp(sortByValue, 1, PLAYER_COMPARATOR.size() - 1);
+		final int sortBy = Math.clamp(sortByValue, 1, PLAYER_COMPARATOR.size() - 1);
 		final List<PledgeWaitingInfo> result = new ArrayList<>();
 		for (PledgeWaitingInfo p : _waitingList.values())
 		{
@@ -433,7 +432,7 @@ public class ClanEntryManager
 	
 	public List<PledgeRecruitInfo> getSortedClanList(int clanLevel, int karma, int sortByValue, boolean descending)
 	{
-		final int sortBy = MathUtil.clamp(sortByValue, 1, CLAN_COMPARATOR.size() - 1);
+		final int sortBy = Math.clamp(sortByValue, 1, CLAN_COMPARATOR.size() - 1);
 		final List<PledgeRecruitInfo> sortedList = new ArrayList<>(_clanList.values());
 		for (int i = 0; i < sortedList.size(); i++)
 		{
@@ -444,7 +443,7 @@ public class ClanEntryManager
 			}
 		}
 		
-		Collections.sort(sortedList, descending ? CLAN_COMPARATOR.get(sortBy).reversed() : CLAN_COMPARATOR.get(sortBy));
+		sortedList.sort(descending ? CLAN_COMPARATOR.get(sortBy).reversed() : CLAN_COMPARATOR.get(sortBy));
 		return sortedList;
 	}
 	

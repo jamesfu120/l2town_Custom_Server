@@ -21,8 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -38,17 +38,17 @@ import org.l2jmobius.gameserver.data.holders.PetData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.holders.creature.PetEvolveHolder;
-import org.l2jmobius.gameserver.model.actor.instance.Guardian;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.actor.instance.Servitor;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.holders.creature.PetEvolveHolder;
+import org.l2jmobius.gameserver.entity.actor.instance.Guardian;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
+import org.l2jmobius.gameserver.entity.actor.instance.Servitor;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 
 /**
  * @author Nyaran
@@ -197,10 +197,6 @@ public class CharSummonTable
 				{
 					final int summonObjId = rs.getInt("summonId");
 					final int skillId = rs.getInt("summonSkillId");
-					final int curHp = rs.getInt("curHp");
-					final int curMp = rs.getInt("curMp");
-					final int time = rs.getInt("time");
-					
 					removeServitor(player, summonObjId);
 					skill = SkillData.getInstance().getSkill(skillId, player.getSkillLevel(skillId));
 					if (skill == null)
@@ -228,6 +224,9 @@ public class CharSummonTable
 						
 						if (servitor != null)
 						{
+							final int curHp = rs.getInt("curHp");
+							final int curMp = rs.getInt("curMp");
+							final int time = rs.getInt("time");
 							servitor.setCurrentHp(curHp);
 							servitor.setCurrentMp(curMp);
 							servitor.setLifeTimeRemaining(time);
@@ -276,7 +275,7 @@ public class CharSummonTable
 			return;
 		}
 		
-		final List<Integer> summonedNpcIds = new LinkedList<>();
+		final List<Integer> summonedNpcIds = new ArrayList<>();
 		for (Npc npc : summonedNpcs)
 		{
 			if (!npc.isDead() && npc.isSpawned() && (npc instanceof Guardian) && (npc.getCloneObjId() == 0))

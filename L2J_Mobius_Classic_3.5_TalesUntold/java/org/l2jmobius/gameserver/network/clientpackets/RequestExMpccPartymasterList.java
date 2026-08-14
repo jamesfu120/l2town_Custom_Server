@@ -20,10 +20,10 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoom;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoomType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoomType;
 import org.l2jmobius.gameserver.network.serverpackets.ExMPCCPartymasterList;
 
 /**

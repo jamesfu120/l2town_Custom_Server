@@ -37,18 +37,18 @@ import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.DropType;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropGroupHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropHolder;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropGroupHolder;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import org.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
@@ -140,7 +140,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			}
 		});
 		
-		DROP_INDEX_CACHE.values().forEach(l -> l.sort((d1, d2) -> Integer.valueOf(d1.npcLevel).compareTo(Integer.valueOf(d2.npcLevel))));
+		DROP_INDEX_CACHE.values().forEach(l -> l.sort((d1, d2) -> Integer.compare(d1.npcLevel, d2.npcLevel)));
 	}
 	
 	private void addToDropList(NpcTemplate npcTemplate, DropHolder dropHolder)
@@ -313,9 +313,9 @@ public class DropSearchBoard implements IParseBoardHandler
 					
 					builder.append("<tr>");
 					builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
-					builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace " + cbDropHolder.npcId + "\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
-					builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
-					builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
+					builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace " + cbDropHolder.npcId + "\">").append("&@").append(cbDropHolder.npcId).append(';').append("</a>").append("</td>");
+					builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append('-').append(cbDropHolder.max * rateAmount).append("</td>");
+					builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append('%').append("</td>");
 					builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
 					builder.append("</tr>");
 				}
@@ -424,7 +424,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			builder.append("<button value=\".\" action=\"bypass _bbs_search_drop " + item.getId() + " 1 $order $level\" width=32 height=32 back=\"" + icon + "\" fore=\"" + icon + "\">");
 			builder.append("</td>");
 			builder.append("<td width=200>");
-			builder.append("&#").append(item.getId()).append(";");
+			builder.append("&#").append(item.getId()).append(';');
 			builder.append("</td>");
 			
 			if (i == 2)

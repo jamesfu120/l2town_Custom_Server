@@ -21,8 +21,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
@@ -72,7 +72,7 @@ public class RequestWithdrawalPledge extends ClientPacket
 		sm.addString(player.getName());
 		clan.broadcastToOnlineMembers(sm);
 		
-		// Remove the Player From the Member list
+		// Remove the Player From the Member list.
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(player.getName()));
 		clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 		player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_CLAN);

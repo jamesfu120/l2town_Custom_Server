@@ -18,11 +18,11 @@ package ai.others.ClanHallDoorManager;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Clan Hall Door Manager AI.

@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.magiclamp;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -49,7 +49,7 @@ public class ExMagicLampInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_MAGICLAMP_INFO.writeId(this, buffer);
 		buffer.writeInt(_expPercentage);

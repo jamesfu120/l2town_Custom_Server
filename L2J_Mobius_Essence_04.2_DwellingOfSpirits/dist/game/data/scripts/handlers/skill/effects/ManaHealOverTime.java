@@ -20,12 +20,12 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Mana Heal Over Time effect implementation.
@@ -56,7 +56,7 @@ public class ManaHealOverTime extends AbstractEffect
 		double mp = effected.getCurrentMp();
 		final double maxmp = effected.getMaxRecoverableMp();
 		
-		// Not needed to set the MP and send update packet if player is already at max MP
+		// Not needed to set the MP and send update packet if player is already at max MP.
 		if (_power > 0)
 		{
 			if (mp >= maxmp)

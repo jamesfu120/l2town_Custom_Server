@@ -21,7 +21,7 @@
 package org.l2jmobius.gameserver.data.holders;
 
 import org.l2jmobius.gameserver.data.enums.LampType;
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author L2CCCP, Serenitty

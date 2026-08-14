@@ -21,13 +21,13 @@
 package quests.Q00625_TheFinestIngredientsPart2;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -302,6 +302,6 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest
 	
 	private static boolean isBumbalumpSpawned()
 	{
-		return World.getInstance().getVisibleObjects().stream().anyMatch(object -> object.getId() == ICICLE_EMPEROR_BUMBALUMP);
+		return World.getVisibleObjects().stream().anyMatch(object -> object.getId() == ICICLE_EMPEROR_BUMBALUMP);
 	}
 }

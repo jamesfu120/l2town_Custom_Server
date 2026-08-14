@@ -20,12 +20,12 @@
  */
 package ai.areas.GardenOfSpirits;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Isabella Raid Boss AI
@@ -120,7 +120,7 @@ public class Isabella extends Script
 	{
 		if (npc.getId() == ISABELLA)
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 1500, minion ->
+			World.forEachVisibleObjectInRange(npc, Monster.class, 1500, minion ->
 			{
 				if ((minion != null) && !minion.isAlikeDead() && ((minion.getId() == CROA) || (minion.getId() == AMIS)))
 				{

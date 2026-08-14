@@ -36,9 +36,12 @@ import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.loginserver.config.LoginConfig;
+import org.l2jmobius.loginserver.controller.LoginController;
+import org.l2jmobius.loginserver.data.GameServerTable;
 import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.ui.Gui;
+import org.l2jmobius.loginserver.util.FloodProtectorListener;
 
 /**
  * This class ...
@@ -225,7 +228,7 @@ public class LoginServer extends FloodProtectorListener
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "shutdown: ", e);
 		}
 		
 		Runtime.getRuntime().exit(restart ? 2 : 0);

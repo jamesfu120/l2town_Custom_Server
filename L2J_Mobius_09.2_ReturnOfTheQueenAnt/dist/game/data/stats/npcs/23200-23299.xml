@@ -470,7 +470,7 @@
 			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
@@ -2686,7 +2686,7 @@
 			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
@@ -2887,7 +2887,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -2962,7 +2962,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -4534,7 +4534,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="350">
+		<ai type="ARCHER" aggroRange="450" isAggressive="true" clanHelpRange="350">
 			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
 			</clanList>
@@ -4667,7 +4667,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
-		<ai clanHelpRange="350" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="350" aggroRange="450">
 			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
 			</clanList>

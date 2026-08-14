@@ -6,11 +6,16 @@ AbstractConditionalHpEffect: Abstract class for managing conditional HP stats. S
 AbstractStatAddEffect: Abstract class for managing stat adding.
 AbstractStatEffect: Abstract class for managing stats.
 AbstractStatPercentEffect: Abstract class for managing stat percentages. (l2jmobius)
-AccessoryMagicalDefence: Accessory magical defence stat. (l2jmobius)
 Accuracy: P. Accuracy stat.
 AccuracyBonus: Accuracy bonus stat. (l2jmobius)
 AddHate: Instant effect that increases target's hate towards you.
 AddHuntingTime: Add time for time limited hunting zones. (l2jmobius)
+AddMaxMagicCriticalRate: Stat that overrides the default config MAX_MCRIT_RATE. (l2jmobius)
+AddMaxPhysicalCriticalRate: Stat that overrides the default config MAX_PCRIT_RATE. (l2jmobius)
+AddMaxPhysicalSkillCriticalRate: Stat that overrides the default config MAX_PSKILLCRIT_RATE. (l2jmobius)
+AddPcCafePoints: Increase PcCafe points permanently. (l2jmobius)
+AddSkillBySkill: Add skill when other skill already exists. (l2jmobius)
+AddTeleportBookmarkSlot: Instant effect that increases the amount of My Teleport slots.
 AdditionalPhysicalDamage: Additional physical damage effect handler. (l2jmobius)
 AdditionalPotionCp: Increases the amount of CP heal gained from potions or elixirs. (l2jmobius)
 AdditionalPotionCpPer: Increases a percentage of CP heal gained from potions or elixirs. (l2jmobius)
@@ -18,17 +23,13 @@ AdditionalPotionHp: Increases the amount of HP heal gained from potions or elixi
 AdditionalPotionHpPer: Increases a percentage of HP heal gained from potions or elixirs. (l2jmobius)
 AdditionalPotionMp: Increases the amount of MP heal gained from potions or elixirs. (l2jmobius)
 AdditionalPotionMpPer: Increases a percentage of MP heal gained from potions or elixirs. (l2jmobius)
-AddMaxMagicCriticalRate: Stat that overrides the default config MAX_MCRIT_RATE. (l2jmobius)
-AddMaxPhysicalCriticalRate: Stat that overrides the default config MAX_PCRIT_RATE. (l2jmobius)
-AddPcCafePoints: Increase PcCafe points permanently. (l2jmobius)
-AddSkillBySkill: Add skill when other skill already exists. (l2jmobius)
-AddTeleportBookmarkSlot: Instant effect that increases the amount of My Teleport slots.
 AgathionSlot: Agathion slot modifier. (l2jmobius)
 ApplySkillEffects: Apply skill effects directly on effected without animations. (l2jmobius)
 AreaDamage: Topography (Danger Zone) resistance stat.
 AreaOfEffectDamageDefence: Area of effect damage defence stat. (l2jmobius)
 AreaOfEffectDamageModify: Area of effect damage modifier. (l2jmobius)
-ArmorPhysicalDefence: Armor physical defence stat. (l2jmobius)
+ArmorBonusMagicalDefence: Armor bonus magical defence effect. (l2jmobius)
+ArmorBonusPhysicalDefence: Armor bonus physical defence effect. (l2jmobius)
 ArtifactSlot: Artifact slot modifier. (l2jmobius)
 AssistOwnerAttack: Make summon assist owner attacking. (l2jmobius)
 AssistOwnerCast: Make summon cast a skill when owner cast another one. (l2jmobius)
@@ -47,8 +48,6 @@ BlockActions: Prevents target from doing any actions. Stun, paralyze etc.
 BlockChat: Chat ban effect (Bot Report button stuff)
 BlockControl: Blocks target's control over itself. Fear.
 BlockEscape: Blocks teleportation
-ExceedingMagicalAttackSpeed: Give magical attack when casting speed exceeding limits by %. (l2jmobius)
-ExceedingPhysicalAttackSpeed: Give physical attack when attack speed exceeding limits by %. (l2jmobius)
 BlockFrontalRangedDamage: Blocks frontal ranged damage. (l2jmobius)
 BlockMove: Blocks movement. Root.
 BlockParty: Party ban effect (Bot Report button stuff)
@@ -97,19 +96,20 @@ CpHeal: Increases current CP by a given amount.
 CpHealOverTime: Increases current CP by a given amount over time.
 CpHealPercent: Increases current CP by a given percentage amount.
 CpRegen: CP Regeneration stat.
-CraftingCritical: Crafting critical stat.
 CraftRate: Craft success rate bonus. (l2jmobius)
+CraftingCritical: Crafting critical stat.
 CriticalDamage: Critical Damage stat.
 CriticalDamagePosition: Critical Damage depending on position stat.
 CriticalRate: Critical Rate stat.
 CriticalRatePositionBonus: Critical Rate depending on position stat. Ignores the critical rate cap of 500.
 CubicMastery: Max cubics stat.
-DamageBlock: Blocks Hp or Mp damage/heal.
-DamageByAttack: An effect that changes damage taken from an attack.
-DamageShield: Reflect damage percentage stat.
-DamageShieldResist: Reflect damage percentage resist.
 DamOverTime: Damage over time effect. Magic Critical results in 10 times amount to me instantly inflicted before the effect is started.
 DamOverTimePercent: Damage percentage of HP over time.
+DamageBlock: Blocks Hp or Mp damage/heal.
+DamageByAttack: An effect that changes damage taken from an attack.
+DamageEnabledByClass: Prevents other classes from damaging the effected. (l2jmobius)
+DamageShield: Reflect damage percentage stat.
+DamageShieldResist: Reflect damage percentage resist.
 DeathLink: Inflicts magical damage proportional to your current HP.
 DebuffBlock: Blocks target being affected from debuffs.
 DefenceAttribute: Stat that increases specific defence attribute.
@@ -129,8 +129,8 @@ Detection: Detects hidden creatures.
 DisableSkill: Disables effectors known skills specified by skill ID. (l2jmobius)
 DisableTargeting: Disables your target's ability to target.
 Disarm: Removes the weapon of target player.
-Disarmor: Removes the armor of target player.
 DisarmShield: Removes the shield of target player. (l2jmobius)
+Disarmor: Removes the armor of target player.
 DispelAll: Stops all effects of the target.
 DispelByCategory: Removes given amount of target's effects from a BUFF/DEBUFF category.
 DispelBySkillId: Dispels a specific skill by it's id. (l2jmobius)
@@ -145,11 +145,12 @@ ElementalSpiritDefense: Elemental spirit defense stat effect. (JoeAlisson)
 ElixirUsageLimit: Elixir usage limit modifier. (l2jmobius)
 EnableCloak: See/unsee cloaks.
 EnchantRate: Enchant rate modifier, does not work for non grade items. (l2jmobius)
-EnemyCharge: Charges towards the enemy. Rush Impact.
 EnergyDamage: Physical damage based on Momentum formula. Triple Sonic Slash, Double Sonic Slash etc.
 EnlargeAbnormalSlot: Increase the amount of buff slots.
 EnlargeSlot: Increases the amount of inventory, warehouse, recipe or trade slots.
 Escape: Teleport to Town, Castle, Clanhall etc effect. Scroll of Escape effects.
+ExceedingMagicalAttackSpeed: Give magical attack when casting speed exceeding limits by %. (l2jmobius)
+ExceedingPhysicalAttackSpeed: Give physical attack when attack speed exceeding limits by %. (l2jmobius)
 ExpModify: Bonus EXP stat.
 ExpModifyPet: Bonus EXP stat for pets. (l2jmobius)
 Faceoff: Focuses attacking a given target with all other damage blocked.
@@ -159,9 +160,10 @@ FatalBlowRate: Blow land rate stat.
 FatalBlowRateDefence: Blow land rate defence stat. (l2jmobius)
 Fear: Causes the target to run away. Does not block it though.
 Feed: Gives food to pet.
+FeedModify: Feed modify effect handler. (l2jmobius)
 FishingExpSpBonus: Bonus Exp and SP from fishing. (l2jmobius)
 Flag: Starts pvpflag.
-FlyMove: Moves towards target location.
+FlyAway: Fly away effect handler. (l2jmobius)
 FocusEnergy: Max momentum stat.
 FocusMaxMomentum: Increases momentum to its maximum.
 FocusMomentum: Increases momentum by a given value.
@@ -203,6 +205,7 @@ ImmobileDamageBonus: Bonus damage to immobile targets. (l2jmobius)
 ImmobileDamageResist: Resist damage while immobile. (l2jmobius)
 ImmobilePetBuff: Causes your pet to become immobilized.
 InstantKillResist: Resist against Lethal strike.
+JewelSlot: Jewel slot effect handler. (l2jmobius)
 KarmaCount: Sets current Karma.
 KnockBack: Knocks back or knocks down target.
 Lethal: Upon success sets enemy Player's CP to 1 and enemy NPC's HP to 50%.
@@ -211,6 +214,11 @@ LimitHp: Sets maximum recoverable HP through heals.
 LimitMp: Sets maximum recoverable MP through heals.
 Lucky: dummy effect since behavior is hardcoded
 MagicAccuracy: M. Accuracy stat.
+MagicCriticalDamage: Magical Critical Damage stat
+MagicCriticalRate: Magical Critical Rate stat.
+MagicCriticalRateByCriticalRate: Magical Critical Rate bonus from Critical Rate stat. (l2jmobius)
+MagicLampExpRate: Sets the magic lamp exp rate. (l2jmobius)
+MagicMpCost: Sets mana cost per magic type. Clarity.
 MagicalAbnormalDispelDamage: Magical attack that does damage only if it manages to dispel the given AbnormalType
 MagicalAbnormalResist: Magical mesmerizing resist.
 MagicalAttack: Magical attack stat.
@@ -227,11 +235,6 @@ MagicalEvasion: M. Evasion stat.
 MagicalSkillPower: Magical Skill Power stat. (l2jmobius)
 MagicalSoulDamage: Magical damage based on souls formula.
 MagicalSuccessResistance: Magic resist stat (magic attack 50% effective or 1 damage)
-MagicCriticalDamage: Magical Critical Damage stat
-MagicCriticalRate: Magical Critical Rate stat.
-MagicCriticalRateByCriticalRate: Magical Critical Rate bonus from Critical Rate stat. (l2jmobius)
-MagicLampExpRate: Sets the magic lamp exp rate. (l2jmobius)
-MagicMpCost: Sets mana cost per magic type. Clarity.
 ManaCharge: Mana Recharge stat.
 ManaDamOverTime: Mana damage over time.
 ManaHeal: Increases current MP.
@@ -323,8 +326,6 @@ ReflectMagic: Deflects magical damage back to the attacker.
 ReflectSkill: Deflects physical/magical debuffs back to the attacker.
 RefuelAirship: Increases Airship's fuel.
 Relax: Sits down and increases HP regeneration until full.
-RemainMpPer: Use's skill after the % of Mp added. (l2jmobius)
-RemainHpPer: Use's skill after the % of Hp added. (l2jmobius)
 ReplaceSkillBySkill: While active replaces a skill with an alternative skill. (l2jmobius)
 ResetInstanceEntry: Resets instance re-entry time. (l2jmobius)
 ResistAbnormalByCategory: Buff/debuff resist stat.
@@ -366,12 +367,12 @@ SoulBlow: Physical attack based on blow formula with bonus damage from souls.
 SoulEating: Absorbs souls when taking exp from mobs and sets max soul count.
 SoulshotResistance: Soulshot damage resistance effect. (l2jmobius)
 Sow: Planting a seed into NPC target. Manor stuff.
+SpModify: Bonus SP stat.
 Speed: Speed stat.
 SpeedLimit: Increase a character's max Speed limit. (l2jmobius)
 SphericBarrier: Blocks damage and buff/debuff incoming from outside the specified range.
 SpiritExpModify: Spirit EXP modify stat effect. (JoeAlisson)
 SpiritshotResistance: Spiritshot damage resistance effect. (l2jmobius)
-SpModify: Bonus SP stat.
 Spoil: Spoils a mob activating its extra sweep drop.
 StatAddForLevel: Adds a fixed amount of a Stat for a specific player level. (l2jmobius)
 StatAddForMp: Adds a fixed amount of a Stat for when player max MP is over a value. (l2jmobius)
@@ -379,11 +380,11 @@ StatAddForStat: Adds a fixed amount of a Stat based on player current value. (l2
 StatBonusSkillCritical: Changes skill critical rate to depend on the specified base stat.
 StatBonusSpeed: Changes Speed stat to depend on the specified base stat.
 StatByMoveType: Adds stat based on your movement type (standing, running, walking).
+StatMulForLevel: Multiplies a fixed amount of a Stat for a specific player level. (l2jmobius)
+StatUp: Increases the specified base stat.
 StaticMagicalAttackSpeed: Sets magical attack speed to a set value. (l2jmobius)
 StaticPhysicalAttackSpeed: Sets physical attack speed to a set value. (l2jmobius)
 StaticSpeed: Sets speed to a set value. (l2jmobius)
-StatMulForLevel: Multiplies a fixed amount of a Stat for a specific player level. (l2jmobius)
-StatUp: Increases the specified base stat.
 StealAbnormal: Steals enemy's buffs.
 Summon: Summons a servitor.
 SummonAgathion: Summons the specified agathion Npc Id.
@@ -447,9 +448,10 @@ UnsummonServitors: Unsummons target servitors.
 Untargetable: Becomes untargetable.
 VampiricAttack: Increases current HP when dealing damage.
 VampiricDefence: Resist stat towards VampiricAttack
+VipUp: Vip up effect handler. (l2jmobius)
 VitalityExpRate: Sets the vitality exp rate. (l2jmobius)
-VitalityPointsRate: Vitality points consume rate.
 VitalityPointUp: Increases vitality points.
+VitalityPointsRate: Vitality points consume rate.
 WeaponAttackAngleBonus: Additional range for weapon attack angle. (l2jmobius)
 WeaponBonusMagicalAttack: Additional magical attack for weapons. (l2jmobius)
 WeaponBonusMagicalAttackMultiplier: Multiplier for weapon magical attack. (l2jmobius)

@@ -22,15 +22,14 @@ package handlers.actions.user;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.AISkillScope;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.enums.npc.AISkillScope;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -59,7 +58,7 @@ public class ServitorAttack implements IActionUserHandler
 		{
 			if (targetOutOfRange)
 			{
-				summon.getAI().setIntention(Intention.FOLLOW, player);
+				summon.getAI().setIntentionFollow(player);
 			}
 			else if (summon.canAttack(target, ctrlPressed))
 			{

@@ -22,11 +22,11 @@ package org.l2jmobius.gameserver.network.serverpackets.dailymission;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.holders.MissionLevelHolder;
 import org.l2jmobius.gameserver.data.xml.MissionLevel;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.MissionLevelPlayerDataHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.MissionLevelPlayerDataHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -61,7 +61,7 @@ public class ExMissionLevelRewardList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_MISSION_LEVEL_REWARD_LIST.writeId(this, buffer);
 		if (_info.getCurrentLevel() == 0)
@@ -207,10 +207,10 @@ public class ExMissionLevelRewardList extends ServerPacket
 			return 100;
 		}
 		
-		return (int) Math.floor(((double) info.getCurrentEXP() / (double) _holder.getXPForSpecifiedLevel(info.getCurrentLevel())) * 100.0);
+		return (int) (((double) info.getCurrentEXP() / (double) _holder.getXPForSpecifiedLevel(info.getCurrentLevel())) * 100.0);
 	}
 	
-	private void sendAvailableRewardsList(WritableBuffer buffer, MissionLevelPlayerDataHolder info)
+	private void sendAvailableRewardsList(WriteBuffer buffer, MissionLevelPlayerDataHolder info)
 	{
 		buffer.writeInt(getTotalRewards(info)); // PkMissionLevelReward
 		for (int level : _holder.getNormalRewards().keySet())

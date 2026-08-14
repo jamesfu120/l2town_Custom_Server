@@ -28,14 +28,14 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.OptionDataCategory;
-import org.l2jmobius.gameserver.model.options.OptionDataGroup;
-import org.l2jmobius.gameserver.model.options.Options;
-import org.l2jmobius.gameserver.model.options.Variation;
-import org.l2jmobius.gameserver.model.options.VariationFee;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
-import org.l2jmobius.gameserver.model.options.VariationWeaponType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.options.OptionDataCategory;
+import org.l2jmobius.gameserver.mechanics.options.OptionDataGroup;
+import org.l2jmobius.gameserver.mechanics.options.Options;
+import org.l2jmobius.gameserver.mechanics.options.Variation;
+import org.l2jmobius.gameserver.mechanics.options.VariationFee;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
+import org.l2jmobius.gameserver.mechanics.options.VariationWeaponType;
 
 /**
  * @author Pere
@@ -89,7 +89,6 @@ public class VariationData implements IXmlReader
 						final Map<Options, Double> options = new HashMap<>();
 						forEach(categoryNode, "option", optionNode ->
 						{
-							final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
 							final int optionId = parseInteger(optionNode.getAttributes(), "id");
 							final Options opt = OptionData.getInstance().getOptions(optionId);
 							if (opt == null)
@@ -98,6 +97,7 @@ public class VariationData implements IXmlReader
 								return;
 							}
 							
+							final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
 							options.put(opt, optionChance);
 						});
 						forEach(categoryNode, "optionRange", optionNode ->

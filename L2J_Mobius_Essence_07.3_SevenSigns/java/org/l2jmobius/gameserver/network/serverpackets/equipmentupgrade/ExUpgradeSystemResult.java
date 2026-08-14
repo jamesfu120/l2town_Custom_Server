@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.equipmentupgrade;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -40,7 +40,7 @@ public class ExUpgradeSystemResult extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_UPGRADE_SYSTEM_RESULT.writeId(this, buffer);
 		buffer.writeShort(_success);

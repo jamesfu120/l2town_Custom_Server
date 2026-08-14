@@ -18,17 +18,17 @@ package handlers.items;
 
 import java.util.List;
 
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.Weapon;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.ActionType;
+import org.l2jmobius.gameserver.entity.item.type.WeaponType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.enums.ShotType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.ActionType;
-import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -59,7 +59,6 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		final long count = item.getCount();
 		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getTemplate().getCrystalTypePlus() == item.getTemplate().getCrystalTypePlus());
 		if (!gradeCheck)
 		{
@@ -67,15 +66,11 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
+		final long count = item.getCount();
 		if (count < 1)
 		{
 			return false;
 		}
-		
-		player.chargeShot(ShotType.FISH_SOULSHOTS);
-		player.destroyItem(null, item.getObjectId(), 1, null, false);
-		final WorldObject oldTarget = player.getTarget();
-		player.setTarget(player);
 		
 		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
@@ -84,6 +79,10 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
+		player.chargeShot(ShotType.FISH_SOULSHOTS);
+		player.destroyItem(null, item.getObjectId(), 1, null, false);
+		final WorldObject oldTarget = player.getTarget();
+		player.setTarget(player);
 		skills.forEach(holder -> player.broadcastSkillPacket(new MagicSkillUse(player, player, holder.getSkillId(), holder.getSkillLevel(), 0, 0), player));
 		player.setTarget(oldTarget);
 		return true;

@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.ADENA_ID;
-import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
+import static org.l2jmobius.gameserver.entity.itemcontainer.Inventory.ADENA_ID;
+import static org.l2jmobius.gameserver.entity.itemcontainer.Inventory.MAX_ADENA;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
@@ -29,12 +29,12 @@ import org.l2jmobius.gameserver.data.holders.AccessLevel;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.BlockList;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.managers.MailManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.BlockList;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
@@ -294,7 +294,7 @@ public class RequestSendPost extends ClientPacket
 		{
 			for (AttachmentItem i : _items)
 			{
-				// Check validity of requested item
+				// Check validity of requested item.
 				final Item item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 				if ((item == null) || !item.isTradeable() || item.isEquipped())
 				{
@@ -310,7 +310,7 @@ public class RequestSendPost extends ClientPacket
 			}
 		}
 		
-		// Check if enough adena and charge the fee
+		// Check if enough adena and charge the fee.
 		if ((currentAdena < fee) || !player.reduceAdena(ItemProcessType.FEE, fee, null, false))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
@@ -330,11 +330,11 @@ public class RequestSendPost extends ClientPacket
 			return false;
 		}
 		
-		// Proceed to the transfer
+		// Proceed to the transfer.
 		final InventoryUpdate playerIU = new InventoryUpdate();
 		for (AttachmentItem i : _items)
 		{
-			// Check validity of requested item
+			// Check validity of requested item.
 			final Item oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 			if ((oldItem == null) || !oldItem.isTradeable() || oldItem.isEquipped())
 			{
@@ -361,7 +361,7 @@ public class RequestSendPost extends ClientPacket
 			}
 		}
 		
-		// Send updated item list to the player
+		// Send updated item list to the player.
 		player.sendInventoryUpdate(playerIU);
 		
 		return true;

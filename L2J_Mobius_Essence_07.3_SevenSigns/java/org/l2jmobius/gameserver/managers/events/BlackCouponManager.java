@@ -27,19 +27,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.logging.Logger;
-import java.util.stream.Stream;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.ItemData;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.BlackCouponRestoreCategory;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemRestoreHolder;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.BlackCouponRestoreCategory;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemRestoreHolder;
 
 public class BlackCouponManager
 {
@@ -48,7 +48,7 @@ public class BlackCouponManager
 	private ItemHolder _coupon;
 	private int _multisellId;
 	private final Map<Integer, EnumMap<BlackCouponRestoreCategory, List<ItemRestoreHolder>>> _playerRecords = new HashMap<>();
-	private final Map<Integer, HashMap<BlackCouponRestoreCategory, Integer>> _xmlRestoreList = new HashMap<>(new HashMap<>());
+	private final Map<Integer, Map<BlackCouponRestoreCategory, Integer>> _xmlRestoreList = new HashMap<>();
 	private final List<ItemRestoreHolder> _holdersToStore = new ArrayList<>();
 	private final List<ItemRestoreHolder> _holdersToDelete = new ArrayList<>();
 	private boolean _restoreIdFromXml;
@@ -93,7 +93,7 @@ public class BlackCouponManager
 		_restoreIdFromXml = restoreIdByXml;
 	}
 	
-	public void setXmlRestoreList(Map<Integer, HashMap<BlackCouponRestoreCategory, Integer>> list)
+	public void setXmlRestoreList(Map<Integer, Map<BlackCouponRestoreCategory, Integer>> list)
 	{
 		_xmlRestoreList.putAll(list);
 	}
@@ -126,7 +126,8 @@ public class BlackCouponManager
 		{
 			if (_xmlRestoreList.containsKey(itemId))
 			{
-				return _xmlRestoreList.get(item.getId()).keySet().stream().findFirst().orElse(null);
+				final Iterator<BlackCouponRestoreCategory> iterator = _xmlRestoreList.get(item.getId()).keySet().iterator();
+				return iterator.hasNext() ? iterator.next() : null;
 			}
 			
 			return null;
@@ -243,24 +244,23 @@ public class BlackCouponManager
 			final ResultSet rs = ps.executeQuery();
 			while (rs.next())
 			{
-				final int owner_id = rs.getInt("owner_id");
 				final int item_id = rs.getInt("item_id");
-				final short enchant_level = rs.getShort("enchant_level");
-				final long destroyTime = rs.getLong("add_time");
 				final BlackCouponRestoreCategory category = getCategoryByItemId(item_id);
 				if (category == null)
 				{
 					continue;
 				}
 				
+				final int owner_id = rs.getInt("owner_id");
+				final short enchant_level = rs.getShort("enchant_level");
+				final long destroyTime = rs.getLong("add_time");
 				final ItemRestoreHolder holder = new ItemRestoreHolder(owner_id, item_id, enchant_level, destroyTime, false);
 				final Optional<Integer> any = _xmlRestoreList.get(item_id).values().stream().findAny();
 				holder.setRepairItemId(any.orElseGet(holder::getDestroyedItemId));
 				
 				if (!_holdersToDelete.isEmpty())
 				{
-					final Stream<ItemRestoreHolder> check = _holdersToDelete.stream().filter(h -> h.getOwnerId() == owner_id).filter(h -> h.getDestroyDate() == destroyTime).filter(h -> h.getDestroyedItemId() == item_id).filter(h -> h.getEnchantLevel() == enchant_level);
-					if (check.findFirst().isPresent())
+					if (_holdersToDelete.stream().anyMatch(h -> (h.getOwnerId() == owner_id) && (h.getDestroyDate() == destroyTime) && (h.getDestroyedItemId() == item_id) && (h.getEnchantLevel() == enchant_level)))
 					{
 						continue;
 					}
@@ -295,7 +295,7 @@ public class BlackCouponManager
 			return;
 		}
 		
-		final Optional<Integer> any = _xmlRestoreList.getOrDefault(itemId, new HashMap<>()).values().stream().findAny();
+		final Optional<Integer> any = _xmlRestoreList.getOrDefault(itemId, Collections.emptyMap()).values().stream().findAny();
 		holder.setRepairItemId(any.orElseGet(holder::getDestroyedItemId));
 		
 		final EnumMap<BlackCouponRestoreCategory, List<ItemRestoreHolder>> playerRecords = _playerRecords.computeIfAbsent(objectId, _ -> new EnumMap<>(BlackCouponRestoreCategory.class));

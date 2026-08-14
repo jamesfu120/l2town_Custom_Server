@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.network.clientpackets.pledgeV2;
 
 import org.l2jmobius.gameserver.data.holders.ClanShopProductHolder;
 import org.l2jmobius.gameserver.data.xml.ClanShopData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeItemBuy;
 

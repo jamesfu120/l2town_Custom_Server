@@ -22,10 +22,10 @@ package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.managers.RankManager;
 import org.l2jmobius.gameserver.managers.RankManager.HeroInfo;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -43,7 +43,7 @@ public class ExOlympiadHeroAndLegendInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_OLYMPIAD_HERO_AND_LEGEND_INFO.writeId(this, buffer);
 		if (_heroes.isEmpty())

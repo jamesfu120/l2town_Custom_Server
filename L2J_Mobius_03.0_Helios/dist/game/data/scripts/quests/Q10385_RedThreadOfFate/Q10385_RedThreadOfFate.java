@@ -23,24 +23,24 @@ package quests.Q10385_RedThreadOfFate;
 import java.util.Collection;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerSocialAction;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerSocialAction;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -166,8 +166,6 @@ public class Q10385_RedThreadOfFate extends Quest
 			case "33491-03.html":
 			{
 				qs.startQuest();
-				qs.setCond(2); // arrow hack
-				qs.setCond(1);
 				giveItems(player, MYSTERIOUS_LETTER, 1);
 				showOnScreenMsg(player, NpcStringId.READ_THE_MYSTERIOUS_LETTER_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
 				htmltext = event;
@@ -618,66 +616,6 @@ public class Q10385_RedThreadOfFate extends Quest
 						}
 						break;
 					}
-					case DESERTED_DWARVEN_HOUSE:
-					{
-						if (qs.isCond(14))
-						{
-							showOnScreenMsg(player, NpcStringId.USE_THE_FONDEST_HEART_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
-							htmltext = "33788-01.html";
-						}
-						break;
-					}
-					case PAAGRIO_TEMPLE:
-					{
-						if (qs.isCond(15))
-						{
-							showOnScreenMsg(player, NpcStringId.USE_THE_FIERCEST_FLAME_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
-							htmltext = "33787-01.html";
-						}
-						break;
-					}
-					case ALTAR_OF_SHILEN:
-					{
-						if (qs.isCond(16))
-						{
-							showOnScreenMsg(player, NpcStringId.USE_THE_BRIGHTEST_LIGHT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
-							htmltext = "33785-01.html";
-						}
-						break;
-					}
-					case CAVE_OF_SOULS:
-					{
-						if (qs.isCond(17))
-						{
-							showOnScreenMsg(player, NpcStringId.USE_THE_PUREST_SOUL_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
-							htmltext = "33789-01.html";
-						}
-						break;
-					}
-					case MOTHER_TREE:
-					{
-						switch (qs.getCond())
-						{
-							case 18:
-							{
-								showOnScreenMsg(player, NpcStringId.USE_THE_CLEAREST_WATER_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
-								htmltext = "33786-01.html";
-								break;
-							}
-							case 19:
-							case 20:
-							case 21:
-							{
-								final Quest instance = ScriptManager.getInstance().getScript(TalkingIslandPast.class.getSimpleName());
-								if (instance != null)
-								{
-									instance.onEvent("enterInstance", npc, player);
-								}
-								break;
-							}
-						}
-						break;
-					}
 					case DARIN:
 					{
 						if (qs.isCond(19))
@@ -738,6 +676,66 @@ public class Q10385_RedThreadOfFate extends Quest
 						// {
 						// htmltext = "30031-04.html";
 						// }
+						break;
+					}
+					case DESERTED_DWARVEN_HOUSE:
+					{
+						if (qs.isCond(14))
+						{
+							showOnScreenMsg(player, NpcStringId.USE_THE_FONDEST_HEART_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
+							htmltext = "33788-01.html";
+						}
+						break;
+					}
+					case PAAGRIO_TEMPLE:
+					{
+						if (qs.isCond(15))
+						{
+							showOnScreenMsg(player, NpcStringId.USE_THE_FIERCEST_FLAME_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
+							htmltext = "33787-01.html";
+						}
+						break;
+					}
+					case ALTAR_OF_SHILEN:
+					{
+						if (qs.isCond(16))
+						{
+							showOnScreenMsg(player, NpcStringId.USE_THE_BRIGHTEST_LIGHT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
+							htmltext = "33785-01.html";
+						}
+						break;
+					}
+					case CAVE_OF_SOULS:
+					{
+						if (qs.isCond(17))
+						{
+							showOnScreenMsg(player, NpcStringId.USE_THE_PUREST_SOUL_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
+							htmltext = "33789-01.html";
+						}
+						break;
+					}
+					case MOTHER_TREE:
+					{
+						switch (qs.getCond())
+						{
+							case 18:
+							{
+								showOnScreenMsg(player, NpcStringId.USE_THE_CLEAREST_WATER_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
+								htmltext = "33786-01.html";
+								break;
+							}
+							case 19:
+							case 20:
+							case 21:
+							{
+								final Quest instance = ScriptManager.getInstance().getScript(TalkingIslandPast.class.getSimpleName());
+								if (instance != null)
+								{
+									instance.onEvent("enterInstance", npc, player);
+								}
+								break;
+							}
+						}
 						break;
 					}
 				}

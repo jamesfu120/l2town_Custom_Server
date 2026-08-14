@@ -16,23 +16,23 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.primeshop;
 
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.VipSystemConfig;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.PrimeShopRequest;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopGroup;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopItem;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.enums.ExBrProductReplyType;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
@@ -292,7 +292,7 @@ public class RequestBRBuyProduct extends ClientPacket
 	private static List<ItemHolder> validatePaymentId(PrimeShopGroup item)
 	{
 		
-		List<ItemHolder> temp = new LinkedList<>();
+		List<ItemHolder> temp = new ArrayList<>();
 		switch (item.getPaymentType())
 		{
 			case 0: // Prime points

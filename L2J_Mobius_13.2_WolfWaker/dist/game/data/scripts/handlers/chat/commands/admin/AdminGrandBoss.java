@@ -20,22 +20,24 @@
  */
 package handlers.chat.commands.admin;
 
-import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.entity.zone.type.NoSummonFriendZone;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ScriptManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
-import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 import ai.bosses.Baium.Baium;
 import ai.bosses.Fafurion.Fafurion;
@@ -46,6 +48,8 @@ import ai.bosses.Trasken.Trasken;
  */
 public class AdminGrandBoss implements IAdminCommandHandler
 {
+	private static final DateTimeFormatter RESPAWN_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+	
 	private static final int ANAKIM = 29348; // Anakim
 	private static final int ANAKIM_ZONE = 12003; // Anakim Zone
 	
@@ -442,7 +446,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			
 			// @formatter:off
 			final StatSet info = GrandBossManager.getInstance().getStatSet(grandBossId);
-			final String bossRespawn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(info.getLong("respawn_time"));
+			final String bossRespawn = RESPAWN_FORMAT.format(Instant.ofEpochMilli(info.getLong("respawn_time")).atZone(ZoneId.systemDefault()));
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			html.setHtml(HtmCache.getInstance().getHtm(activeChar, htmlPath));
 			html.replace("%bossStatus%", text);

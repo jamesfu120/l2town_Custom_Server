@@ -24,9 +24,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.enums.CharacterStyleCategoryType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -52,7 +52,7 @@ public class ExCharacterStyleList extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CHARACTER_STYLE_LIST.writeId(this, buffer);
 		buffer.writeInt(_type.getClientId());

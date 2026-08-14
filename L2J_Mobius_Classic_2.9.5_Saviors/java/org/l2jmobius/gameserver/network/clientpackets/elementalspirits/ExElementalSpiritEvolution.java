@@ -20,15 +20,13 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.elementalspirits;
 
-import java.util.stream.Collectors;
-
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.ElementalSpiritType;
-import org.l2jmobius.gameserver.model.actor.holders.player.ElementalSpirit;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.itemcontainer.InventoryBlockType;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.ElementalSpiritType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.ElementalSpirit;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.itemcontainer.InventoryBlockType;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.enums.UserInfoType;
@@ -112,7 +110,7 @@ public class ExElementalSpiritEvolution extends ClientPacket
 		final PlayerInventory inventory = player.getInventory();
 		try
 		{
-			inventory.setInventoryBlock(spirit.getItemsToEvolve().stream().map(ItemHolder::getId).collect(Collectors.toList()), InventoryBlockType.BLACKLIST);
+			inventory.setInventoryBlock(spirit.getItemsToEvolve().stream().map(ItemHolder::getId).toList(), InventoryBlockType.BLACKLIST);
 			for (ItemHolder itemHolder : spirit.getItemsToEvolve())
 			{
 				if (inventory.getInventoryItemCount(itemHolder.getId(), -1) < itemHolder.getCount())

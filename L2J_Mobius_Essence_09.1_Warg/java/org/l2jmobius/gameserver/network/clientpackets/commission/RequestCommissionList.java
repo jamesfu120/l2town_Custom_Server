@@ -22,12 +22,12 @@ package org.l2jmobius.gameserver.network.clientpackets.commission;
 
 import java.util.function.Predicate;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
 import org.l2jmobius.gameserver.managers.ItemCommissionManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.commission.CommissionItemType;
-import org.l2jmobius.gameserver.model.commission.CommissionTreeType;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
+import org.l2jmobius.gameserver.mechanics.commission.CommissionItemType;
+import org.l2jmobius.gameserver.mechanics.commission.CommissionTreeType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 

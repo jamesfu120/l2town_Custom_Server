@@ -21,9 +21,9 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItem;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItem;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.CombinationProbList;
 
 /**

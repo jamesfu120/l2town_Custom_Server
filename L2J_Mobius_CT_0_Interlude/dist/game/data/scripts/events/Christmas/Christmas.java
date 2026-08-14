@@ -20,11 +20,11 @@
  */
 package events.Christmas;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author Mobius
@@ -75,7 +75,7 @@ public class Christmas extends LongTimeEvent
 		{
 			if ((npc != null) && npc.isSpawned() && (npc.getId() == SANTA))
 			{
-				for (Player nearby : World.getInstance().getVisibleObjectsInRange(npc, Player.class, SANTA_BUFF_RANGE))
+				World.forEachVisibleObjectInRange(npc, Player.class, SANTA_BUFF_RANGE, nearby ->
 				{
 					boolean buffed = false;
 					npc.setTarget(nearby);
@@ -107,7 +107,7 @@ public class Christmas extends LongTimeEvent
 					{
 						nearby.sendMessage("Santa Trainee has gifted you buffs!");
 					}
-				}
+				});
 				
 				startQuestTimer("SantaBlessings", 15000, npc, null);
 			}

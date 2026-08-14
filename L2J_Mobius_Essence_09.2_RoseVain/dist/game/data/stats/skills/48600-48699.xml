@@ -1378,12 +1378,15 @@
 	<skill id="48674" toLevel="3" name="Master's Blessing - Combat">
 		<!-- The GM is always by your side. P. Atk. +15%. P. Critical Rate +5%. P. Skill Critical Rate +5%. Critical Damage for basic attacks +5%. P. Skill Critical Damage +5%. Max HP +3000. Max MP +3000. Atk. Spd. +50. With a certain chance, absorbs 3% of inflicted damage as HP. Recovers MP over time. The effect remains after death. Can be cancelled. -->
 		<icon>icon.skill1499</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
 		<abnormalTime>
 			<value level="1">3600</value>
 			<value level="2">14400</value>
 			<value level="3">28800</value>
 		</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
 		<castRange>900</castRange>
 		<coolTime>0</coolTime>
 		<effectPoint>1</effectPoint>
@@ -1392,53 +1395,49 @@
 		<isMagic>0</isMagic>
 		<mpConsume>0</mpConsume>
 		<reuseDelay>0</reuseDelay>
-		<!-- <effects> -->
-		<!-- 	<effect name="With a certain chance, absorbs of the inflicted damage as HP."> -->
-		<!-- 		<value level="1">3%</value> -->
-		<!-- 		<value level="2">3%</value> -->
-		<!-- 		<value level="3">3%</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="P. Critical Rate"> -->
-		<!-- 		<value level="1">+5%</value> -->
-		<!-- 		<value level="2">+5%</value> -->
-		<!-- 		<value level="3">+5%</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="Max HP"> -->
-		<!-- 		<value level="1">+3000</value> -->
-		<!-- 		<value level="2">+3000</value> -->
-		<!-- 		<value level="3">+3000</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="P. Skill Critical Rate"> -->
-		<!-- 		<value level="1">+5%</value> -->
-		<!-- 		<value level="2">+5%</value> -->
-		<!-- 		<value level="3">+5%</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="P. Skill Critical Damage"> -->
-		<!-- 		<value level="1">+5%</value> -->
-		<!-- 		<value level="2">+5%</value> -->
-		<!-- 		<value level="3">+5%</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="P. Atk."> -->
-		<!-- 		<value level="1">+15%</value> -->
-		<!-- 		<value level="2">+15%</value> -->
-		<!-- 		<value level="3">+15%</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="Max MP"> -->
-		<!-- 		<value level="1">+3000</value> -->
-		<!-- 		<value level="2">+3000</value> -->
-		<!-- 		<value level="3">+3000</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="Atk. Spd."> -->
-		<!-- 		<value level="1">+50</value> -->
-		<!-- 		<value level="2">+50</value> -->
-		<!-- 		<value level="3">+50</value> -->
-		<!-- 	</effect> -->
-		<!-- 	<effect name="Critical Damage for basic attacks"> -->
-		<!-- 		<value level="1">+5%</value> -->
-		<!-- 		<value level="2">+5%</value> -->
-		<!-- 		<value level="3">+5%</value> -->
-		<!-- 	</effect> -->
-		<!-- </effects> -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>3000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>3000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="ManaHealOverTime">
+				<power>10</power>
+				<ticks>15</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48675" toLevel="3" name="Master's Blessing - Magic">
 		<!-- The GM is always by your side. M. Atk. +15%. M. Skill Critical Rate +5%. M. Skill Critical Damage +5%. Max HP +3000. Max MP +3000. Casting Spd. +50. With a certain chance, absorbs 3% of inflicted damage as HP. Recovers MP over time. The effect remains after death. Can be cancelled. -->

@@ -31,30 +31,30 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.ConquestConfig;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Guard;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Guard;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.OnServerStart;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerSummonSacredFire;
-import org.l2jmobius.gameserver.model.events.holders.item.OnItemUse;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnServerStart;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerSummonSacredFire;
+import org.l2jmobius.gameserver.mechanics.events.holders.item.OnItemUse;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.dethroneability.ExHolyFireNotify;
@@ -147,8 +147,8 @@ public class SacredFire extends Script
 				}
 				else
 				{
-					// — Each attempt costs 900 Conquest points and 400,000 SP.
-					// — The price is paid even if the attempt ends in a failure.
+					// - Each attempt costs 900 Conquest points and 400,000 SP.
+					// - The price is paid even if the attempt ends in a failure.
 					player.getVariables().set(PlayerVariables.CONQUEST_PERSONAL_POINTS, player.getVariables().getLong(PlayerVariables.CONQUEST_PERSONAL_POINTS) - REQUIRED_PERSONAL_POINTS);
 					player.setSp(player.getSp() - REQUIRED_SP);
 					
@@ -184,7 +184,7 @@ public class SacredFire extends Script
 						// spawnSacredFire(player);
 						
 						// TODO: Check with increased range if more guardians attack.
-						World.getInstance().forEachVisibleObjectInRange(player, Guard.class, 1000, guard ->
+						World.forEachVisibleObjectInRange(player, Guard.class, 1000, guard ->
 						{
 							if ((guard.getId() == FLAME_POWER_GUARD) && !guard.isDead() && !guard.isDecayed() && !guard.isInCombat() && npc.getEffectList().isAffectedBySkill(FLAME_GUARDIAN_ENERGY_BUFF.getSkillId()))
 							{
@@ -193,7 +193,7 @@ public class SacredFire extends Script
 						});
 						
 						// Get the previous owner objectId from world and update Sacred Fire vars.
-						final Player previousOwner = World.getInstance().getPlayer(npc.getVariables().getInt("OWNER_OID", 0));
+						final Player previousOwner = World.getPlayer(npc.getVariables().getInt("OWNER_OID", 0));
 						
 						// Set previous owner variable of the stolen Sacred Fire state to 3 (flame extinguished).
 						previousOwner.getVariables().set("SACRED_FIRE_SLOT_" + npc.getVariables().getInt("SLOT", 0), EXTINGUISHED_STATE);
@@ -251,7 +251,7 @@ public class SacredFire extends Script
 				{
 					player.sendMessage("You can't protect this Sacred Fire.");
 				}
-				else if (npc.getVariables().hasVariable("PROTECTED") && (npc.getVariables().getBoolean("PROTECTED", false) == true))
+				else if (npc.getVariables().hasVariable("PROTECTED") && npc.getVariables().getBoolean("PROTECTED", false))
 				{
 					htmltext = "34658-31.html"; // Already used protect fire.
 				}
@@ -299,7 +299,7 @@ public class SacredFire extends Script
 			// Decay spawned sacred fires.
 			for (int i = ConquestConfig.CONQUEST_MAX_SACRED_FIRE_SLOTS_COUNT; i >= 1; i--)
 			{
-				final WorldObject sacredFire = World.getInstance().findObject(player.getVariables().getInt("SACRED_FIRE_SLOT_" + i + "_OID", 0));
+				final WorldObject sacredFire = World.findObject(player.getVariables().getInt("SACRED_FIRE_SLOT_" + i + "_OID", 0));
 				if (sacredFire != null)
 				{
 					sacredFire.asNpc().setDisplayEffect(DESTROYED);
@@ -447,7 +447,7 @@ public class SacredFire extends Script
 						player.sendPacket(sm);
 						
 						// Common items rewards.
-						if (ConquestConfig.CONQUEST_SACRED_FIRE_REWARDS.size() > 0)
+						if (!ConquestConfig.CONQUEST_SACRED_FIRE_REWARDS.isEmpty())
 						{
 							for (ItemHolder reward : ConquestConfig.CONQUEST_SACRED_FIRE_REWARDS)
 							{

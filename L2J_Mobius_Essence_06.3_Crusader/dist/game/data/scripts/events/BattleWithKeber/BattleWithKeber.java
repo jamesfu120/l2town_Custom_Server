@@ -27,23 +27,23 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicReference;
 
 import org.l2jmobius.gameserver.data.xml.SpawnData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Index
@@ -188,7 +188,7 @@ public class BattleWithKeber extends LongTimeEvent
 	}
 	private static final AtomicIntegerArray MINION_KILL_COUNTER = new AtomicIntegerArray(3);
 	private static final AtomicReference<SpawnTemplate> SPAWN_TEMPLATE = new AtomicReference<>();
-	private static final AtomicIntegerArray MINION_MAX_COUNT = new AtomicIntegerArray(3);
+	private static final List<Integer> MINION_MAX_COUNT = new CopyOnWriteArrayList<>();
 	
 	private BattleWithKeber()
 	{
@@ -207,9 +207,9 @@ public class BattleWithKeber extends LongTimeEvent
 			SPAWN_TEMPLATE.set(SpawnData.getInstance().getSpawnByName("KEBER_MINIONS"));
 			if (SPAWN_TEMPLATE.get() != null)
 			{
-				MINION_MAX_COUNT.set(0, SpawnData.getInstance().getSpawnGroupByName("KISHAN").getSpawns().stream().findFirst().get().getCount());
-				MINION_MAX_COUNT.set(1, SpawnData.getInstance().getSpawnGroupByName("NOMA").getSpawns().stream().findFirst().get().getCount());
-				MINION_MAX_COUNT.set(2, SpawnData.getInstance().getSpawnGroupByName("SPALL").getSpawns().stream().findFirst().get().getCount());
+				MINION_MAX_COUNT.add(SpawnData.getInstance().getSpawnGroupByName("KISHAN").getSpawns().stream().findFirst().get().getCount());
+				MINION_MAX_COUNT.add(SpawnData.getInstance().getSpawnGroupByName("NOMA").getSpawns().stream().findFirst().get().getCount());
+				MINION_MAX_COUNT.add(SpawnData.getInstance().getSpawnGroupByName("SPALL").getSpawns().stream().findFirst().get().getCount());
 			}
 		}
 	}
@@ -242,14 +242,14 @@ public class BattleWithKeber extends LongTimeEvent
 			}
 			case "KEBER_EVENT_START":
 			{
-				for (Npc wo : World.getInstance().getVisibleObjects(player, Npc.class))
+				World.forEachVisibleObject(player, Npc.class, wo ->
 				{
 					if (wo.getId() == KEBER_SEAL_STONE)
 					{
 						wo.setDisplayEffect(1);
-						Broadcast.toKnownPlayers((wo), new ExShowScreenMessage(BROADCAST_MESSAGES.get(EVENT_MESSAGE_START), ExShowScreenMessage.TOP_CENTER, 5000));
+						World.broadcastToVisiblePlayers((wo), new ExShowScreenMessage(BROADCAST_MESSAGES.get(EVENT_MESSAGE_START), ExShowScreenMessage.TOP_CENTER, 5000));
 					}
-				}
+				});
 				
 				MINION_KILL_COUNTER.set(0, 0);
 				MINION_KILL_COUNTER.set(1, 0);
@@ -275,21 +275,17 @@ public class BattleWithKeber extends LongTimeEvent
 			}
 			case "KEBER_EVENT_END":
 			{
-				for (Npc wo : World.getInstance().getVisibleObjects(player, Npc.class))
+				World.forEachVisibleObject(player, Npc.class, wo ->
 				{
 					if (wo.getId() == KEBER_SEAL_STONE)
 					{
 						wo.setDisplayEffect(2); // remove effect
-						for (Npc boss : World.getInstance().getVisibleObjects((wo), Npc.class))
+						World.forFirstVisibleObject((wo), Npc.class, boss -> BOSSES.contains(boss.getId()) && !boss.isAlikeDead(), boss ->
 						{
-							if (BOSSES.contains(boss.getId()) && !boss.isAlikeDead())
-							{
-								Broadcast.toKnownPlayers((wo), new ExShowScreenMessage(BROADCAST_MESSAGES.get(EVENT_MESSAGE_WEAK), ExShowScreenMessage.TOP_CENTER, 5000));
-								break;
-							}
-						}
+							World.broadcastToVisiblePlayers((wo), new ExShowScreenMessage(BROADCAST_MESSAGES.get(EVENT_MESSAGE_WEAK), ExShowScreenMessage.TOP_CENTER, 5000));
+						});
 					}
-				}
+				});
 				
 				cancelQuestTimer("KEBER_EVENT_END", null, null);
 				startQuestTimer("KEBER_EVENT_START", getMsTimeForEventStage(1), null, null);
@@ -324,8 +320,8 @@ public class BattleWithKeber extends LongTimeEvent
 			
 			final int eliteMonsterId = ELITE_MINIONS.get(type);
 			final int brainWashedMonsterId = BRAINWASHED_MINIONS.get(type);
-			final int nearbyMonstersCount = World.getInstance().getVisibleObjects(npc, Npc.class).stream().filter(nearby -> ((nearby.getId() == NORMAL_MINIONS.get(type)) || (nearby.getId() == eliteMonsterId) || (nearby.getId() == brainWashedMonsterId))).toList().size();
-			final int maxSpawnMonsters = MINION_MAX_COUNT.length() == 0 ? 0 : MINION_MAX_COUNT.get(type);
+			final int nearbyMonstersCount = (int) World.getVisibleObjects(npc, Npc.class).stream().filter(nearby -> ((nearby.getId() == NORMAL_MINIONS.get(type)) || (nearby.getId() == eliteMonsterId) || (nearby.getId() == brainWashedMonsterId))).count();
+			final int maxSpawnMonsters = MINION_MAX_COUNT.isEmpty() ? 0 : MINION_MAX_COUNT.get(type);
 			if (nearbyMonstersCount >= maxSpawnMonsters)
 			{
 				npc.deleteMe();
@@ -346,9 +342,9 @@ public class BattleWithKeber extends LongTimeEvent
 		}
 		else if (BOSSES.contains(npc.getId()))
 		{
-			// Broadcast to nearby players string which says "monster respawn"
-			Broadcast.toKnownPlayers(npc, new ExShowScreenMessage(BROADCAST_MESSAGES.get(npc.getId()), ExShowScreenMessage.TOP_CENTER, 5000));
-			World.getInstance().getVisibleObjects(npc, Player.class).stream().findAny().ifPresent(player -> addAttackPlayerDesire(npc, player));
+			// Broadcast to nearby players string which says "monster respawn".
+			World.broadcastToVisiblePlayers(npc, new ExShowScreenMessage(BROADCAST_MESSAGES.get(npc.getId()), ExShowScreenMessage.TOP_CENTER, 5000));
+			World.forFirstVisibleObject(npc, Player.class, player -> addAttackPlayerDesire(npc, player));
 		}
 	}
 	
@@ -389,16 +385,12 @@ public class BattleWithKeber extends LongTimeEvent
 			if (BOSSES.contains(npc.getId()))
 			{
 				changeNpcSpawn(getFieldType(npc.getId()), true, false);
-				Broadcast.toKnownPlayers(killer, new ExShowScreenMessage(BROADCAST_MESSAGES.get(EVENT_MESSAGE_KILL), ExShowScreenMessage.TOP_CENTER, 10000, killer.getName()));
+				World.broadcastToVisiblePlayers(killer, new ExShowScreenMessage(BROADCAST_MESSAGES.get(EVENT_MESSAGE_KILL), ExShowScreenMessage.TOP_CENTER, 10000, killer.getName()));
 				killer.sendPacket(new ExShowScreenMessage(BROADCAST_MESSAGES.get(EVENT_MESSAGE_TO_KILLER), ExShowScreenMessage.TOP_CENTER, 5000));
-				for (Npc crystal : World.getInstance().getVisibleObjects(npc, Npc.class))
+				World.forFirstVisibleObject(npc, Npc.class, crystal -> crystal.getId() == KEBER_SEAL_STONE, crystal ->
 				{
-					if (crystal.getId() == KEBER_SEAL_STONE)
-					{
-						crystal.setDisplayEffect(2);
-						break;
-					}
-				}
+					crystal.setDisplayEffect(2);
+				});
 			}
 		}
 	}
@@ -461,7 +453,7 @@ public class BattleWithKeber extends LongTimeEvent
 			SPAWN_TEMPLATE.get().getGroups().forEach(SpawnGroup::despawnAll);
 		}
 		
-		for (WorldObject wo : World.getInstance().getVisibleObjects())
+		for (WorldObject wo : World.getVisibleObjects())
 		{
 			if (!wo.isMonster())
 			{

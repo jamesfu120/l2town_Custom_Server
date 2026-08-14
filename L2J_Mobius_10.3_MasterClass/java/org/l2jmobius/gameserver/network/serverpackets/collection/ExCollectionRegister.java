@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.ItemEnchantHolder;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.ItemEnchantHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -45,7 +45,7 @@ public class ExCollectionRegister extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_COLLECTION_REGISTER.writeId(this, buffer);
 		buffer.writeShort(_collectionId);

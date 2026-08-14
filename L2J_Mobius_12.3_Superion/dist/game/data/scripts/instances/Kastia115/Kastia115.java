@@ -22,17 +22,16 @@ package instances.Kastia115;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.managers.InstanceManager;
 import org.l2jmobius.gameserver.managers.WalkingManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -253,11 +252,11 @@ public class Kastia115 extends InstanceScript
 		if ((world != null) && (player.isPlayer()))
 		{
 			final double distance = npc.calculateDistance2D(player);
-			if ((distance < 900))
+			if (distance < 900)
 			{
 				WalkingManager.getInstance().cancelMoving(npc);
 				npc.asMonster().addDamageHate(player, 0, 1000);
-				npc.getAI().setIntention(Intention.ACTIVE);
+				npc.getAI().setIntentionActive();
 				addAttackDesire(npc, player);
 			}
 		}

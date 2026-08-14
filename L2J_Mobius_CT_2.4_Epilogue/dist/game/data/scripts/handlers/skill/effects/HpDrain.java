@@ -16,15 +16,15 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.enums.ShotType;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.mechanics.conditions.Condition;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * HP Drain effect implementation.
@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  */
 public class HpDrain extends AbstractEffect
 {
+	
 	private final double _power;
 	
 	public HpDrain(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
@@ -56,7 +57,7 @@ public class HpDrain extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill)
 	{
-		if (effector.isAlikeDead() || (skill.getId() == 4050 /* TODO: Unhardcode Cubic Skill to avoid double damage */) || effector.isAffectedByAbnormalType(AbnormalType.INVINCIBILITY) || effector.isAffectedByAbnormalType(AbnormalType.ABNORMAL_INVINCIBILITY))
+		if (effector.isAlikeDead() || effector.isAffectedByAbnormalType(AbnormalType.INVINCIBILITY) || effector.isAffectedByAbnormalType(AbnormalType.ABNORMAL_INVINCIBILITY))
 		{
 			return;
 		}

@@ -30,15 +30,15 @@ import java.util.TreeMap;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.custom.MultilingualSupportConfig;
 import org.l2jmobius.gameserver.data.xml.NewQuestData;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.listeners.AbstractEventListener;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.NpcStringId.NSLocalisation;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -115,7 +115,7 @@ public class ScriptLink implements IBypassHandler
 		Collection<Quest> questList = quests;
 		if (GeneralConfig.ORDER_QUEST_LIST_BY_QUESTID)
 		{
-			final Map<Integer, Quest> orderedQuests = new TreeMap<>(); // Use TreeMap to order quests
+			final Map<Integer, Quest> orderedQuests = new TreeMap<>(); // Use TreeMap to order quests.
 			for (Quest q : questList)
 			{
 				if (NewQuestData.getInstance().getQuestById(q.getId()) == null)
@@ -243,7 +243,7 @@ public class ScriptLink implements IBypassHandler
 		}
 		
 		String content;
-		if ((sbStarted.length() > 0) || (sbCanStart.length() > 0) || (sbCantStart.length() > 0) || (sbCompleted.length() > 0))
+		if (!sbStarted.isEmpty() || !sbCanStart.isEmpty() || !sbCantStart.isEmpty() || !sbCompleted.isEmpty())
 		{
 			final StringBuilder sb = new StringBuilder(128);
 			sb.append("<html><body>");
@@ -259,7 +259,7 @@ public class ScriptLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player);
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Npc
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Npc.
 		content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 	}
@@ -283,7 +283,7 @@ public class ScriptLink implements IBypassHandler
 		
 		final Quest q = ScriptManager.getInstance().getScript(questId);
 		
-		// Get the state of the selected quest
+		// Get the state of the selected quest.
 		final QuestState qs = player.getQuestState(questId);
 		if (q != null)
 		{
@@ -308,14 +308,14 @@ public class ScriptLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player); // no quests found
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Npc
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Npc.
 		if (content != null)
 		{
 			content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 			player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 		}
 		
-		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet.
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	

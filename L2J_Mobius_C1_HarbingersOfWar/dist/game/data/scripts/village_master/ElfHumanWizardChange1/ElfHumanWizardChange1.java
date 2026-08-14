@@ -17,11 +17,11 @@
 package village_master.ElfHumanWizardChange1;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Elf Human class transfer AI
@@ -182,7 +182,7 @@ public class ElfHumanWizardChange1 extends Script
 				player.setPlayerClass(WIZARD);
 				player.setBaseClass(WIZARD);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-20.htm"; // fnAfterClassChange11
 			}
@@ -210,7 +210,7 @@ public class ElfHumanWizardChange1 extends Script
 				player.setPlayerClass(CLERIC);
 				player.setBaseClass(CLERIC);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-24.htm"; // fnAfterClassChange12
 			}
@@ -238,7 +238,7 @@ public class ElfHumanWizardChange1 extends Script
 				player.setPlayerClass(ELVEN_WIZARD);
 				player.setBaseClass(ELVEN_WIZARD);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-28.htm"; // fnAfterClassChange21
 			}
@@ -266,7 +266,7 @@ public class ElfHumanWizardChange1 extends Script
 				player.setPlayerClass(ORACLE);
 				player.setBaseClass(ORACLE);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-32.htm"; // fnAfterClassChange22
 			}

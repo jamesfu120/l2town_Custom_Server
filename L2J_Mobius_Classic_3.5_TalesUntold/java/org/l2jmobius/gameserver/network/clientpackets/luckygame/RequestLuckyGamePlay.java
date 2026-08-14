@@ -25,12 +25,12 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.holders.LuckyGameDataHolder;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.LuckyGameData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.enums.LuckyGameItemType;
@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.network.enums.LuckyGameResultType;
 import org.l2jmobius.gameserver.network.enums.LuckyGameType;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.luckygame.ExBettingLuckyGameResult;
-import org.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * @author Sdw
@@ -53,9 +52,9 @@ public class RequestLuckyGamePlay extends ClientPacket
 	@Override
 	protected void readImpl()
 	{
-		final int type = MathUtil.clamp(readInt(), 0, LuckyGameType.values().length);
+		final int type = Math.clamp(readInt(), 0, LuckyGameType.values().length);
 		_type = LuckyGameType.values()[type];
-		_reading = MathUtil.clamp(readInt(), 0, 50); // max play is 50
+		_reading = Math.clamp(readInt(), 0, 50); // max play is 50
 	}
 	
 	@Override

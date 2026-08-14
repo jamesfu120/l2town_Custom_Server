@@ -24,20 +24,20 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 
 /**
  * @URL https://l2wiki.com/essence/events_and_promos/2040.html
@@ -97,7 +97,7 @@ public class ContinuedRaid extends LongTimeEvent
 						{
 							SkillCaster.triggerCast(player, player, BUFF_BAMIUM.getSkill());
 							
-							World.getInstance().forEachVisibleObject(player, Player.class, eachPlayer ->
+							World.forEachVisibleObject(player, Player.class, eachPlayer ->
 							{
 								if (player.isInsideRadius3D(eachPlayer, 500))
 								{
@@ -112,7 +112,7 @@ public class ContinuedRaid extends LongTimeEvent
 						{
 							SkillCaster.triggerCast(player, player, BUFF_BEHEMOTH.getSkill());
 							
-							World.getInstance().forEachVisibleObject(player, Player.class, eachPlayer ->
+							World.forEachVisibleObject(player, Player.class, eachPlayer ->
 							{
 								if (player.isInsideRadius3D(eachPlayer, 500))
 								{
@@ -127,7 +127,7 @@ public class ContinuedRaid extends LongTimeEvent
 						{
 							SkillCaster.triggerCast(player, player, BUFF_GLAKIAS.getSkill());
 							
-							World.getInstance().forEachVisibleObject(player, Player.class, eachPlayer ->
+							World.forEachVisibleObject(player, Player.class, eachPlayer ->
 							{
 								if (player.isInsideRadius3D(eachPlayer, 500))
 								{
@@ -178,7 +178,7 @@ public class ContinuedRaid extends LongTimeEvent
 		}
 		
 		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getVariables().remove(PlayerVariables.DAILY_CONTINUED_RAID_GET_REWARD);
 		}

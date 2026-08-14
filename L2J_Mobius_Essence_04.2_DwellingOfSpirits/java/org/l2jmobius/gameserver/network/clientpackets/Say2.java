@@ -25,17 +25,17 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.ServerConfig;
 import org.l2jmobius.gameserver.config.custom.WalkerBotProtectionConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.ChatHandler;
 import org.l2jmobius.gameserver.handler.IChatHandler;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerChat;
-import org.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerChat;
+import org.l2jmobius.gameserver.mechanics.events.returns.ChatFilterReturn;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
@@ -297,7 +297,7 @@ public class Say2 extends ClientPacket
 			item.publish();
 			
 			pos1 = _text.indexOf(8, pos) + 1;
-			if (pos1 == 0) // missing ending tag
+			if (pos1 == 0) // Missing ending tag.
 			{
 				PacketLogger.info(client + " sent invalid publish item msg! ID:" + id);
 				return false;

@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.relics;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -37,7 +37,7 @@ public class ExRelicsSummonList extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (!RelicSystemConfig.RELIC_SYSTEM_ENABLED)
 		{

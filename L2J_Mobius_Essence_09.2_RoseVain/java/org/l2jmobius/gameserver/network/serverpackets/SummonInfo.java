@@ -22,14 +22,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.GeneralConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Team;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Team;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.enums.NpcInfoType;
@@ -244,7 +244,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.SUMMON_INFO.writeId(this, buffer);
 		buffer.writeInt(_summon.getObjectId());

@@ -24,14 +24,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * @author Liamxroy

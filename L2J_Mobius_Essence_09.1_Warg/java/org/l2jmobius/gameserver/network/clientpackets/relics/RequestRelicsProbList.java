@@ -24,14 +24,13 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.data.holders.RelicCouponHolder;
 import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
 import org.l2jmobius.gameserver.data.xml.RelicCouponData;
 import org.l2jmobius.gameserver.data.xml.RelicData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.relics.RelicsProbList;
 
@@ -58,7 +57,7 @@ public class RequestRelicsProbList extends ClientPacket
 	protected void runImpl()
 	{
 		final Player player = getPlayer();
-		if ((player == null) || ((_type != 4) && (_value >= 7)))
+		if ((player == null) || ((_type != 4) && (_value >= RelicGrade.values().length)))
 		{
 			return;
 		}
@@ -83,7 +82,7 @@ public class RequestRelicsProbList extends ClientPacket
 			}
 			case TYPE_SUMMON:
 			{
-				for (RelicDataHolder relicHolder : RelicData.getInstance().getRelics().stream().filter(relic -> relic.getSummonChance() > 0).sorted(Comparator.comparingInt(RelicDataHolder::getGradeOrdinal).reversed()).collect(Collectors.toList()))
+				for (RelicDataHolder relicHolder : RelicData.getInstance().getRelics().stream().filter(relic -> relic.getSummonChance() > 0).sorted(Comparator.comparingInt(RelicDataHolder::getGradeOrdinal).reversed()).toList())
 				{
 					relics.put(relicHolder.getRelicId(), relicHolder.getSummonChance());
 				}

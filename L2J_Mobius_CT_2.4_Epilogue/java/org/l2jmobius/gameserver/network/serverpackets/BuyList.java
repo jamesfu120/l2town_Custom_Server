@@ -22,11 +22,11 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.RatesConfig;
-import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
-import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.mechanics.buylist.BuyListHolder;
+import org.l2jmobius.gameserver.mechanics.buylist.Product;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -46,7 +46,7 @@ public class BuyList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_BUY_SELL_LIST.writeId(this, buffer); // buffer.writeByte(7) ?
 		buffer.writeLong(_money); // current money

@@ -1101,7 +1101,7 @@
 					<value level="20">30</value>
 				</amount>
 			</effect>
-			<effect name="ArmorPhysicalDefence" fromLevel="16" toLevel="20">
+			<effect name="ArmorBonusPhysicalDefence" fromLevel="16" toLevel="20">
 				<amount>
 					<value level="16">10</value>
 					<value level="17">30</value>
@@ -1109,6 +1109,47 @@
 					<value level="19">60</value>
 					<value level="20">70</value>
 				</amount>
+				<slot>CHEST</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence" fromLevel="16" toLevel="20">
+				<amount>
+					<value level="16">10</value>
+					<value level="17">30</value>
+					<value level="18">50</value>
+					<value level="19">60</value>
+					<value level="20">70</value>
+				</amount>
+				<slot>LEGS</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence" fromLevel="16" toLevel="20">
+				<amount>
+					<value level="16">10</value>
+					<value level="17">30</value>
+					<value level="18">50</value>
+					<value level="19">60</value>
+					<value level="20">70</value>
+				</amount>
+				<slot>HEAD</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence" fromLevel="16" toLevel="20">
+				<amount>
+					<value level="16">10</value>
+					<value level="17">30</value>
+					<value level="18">50</value>
+					<value level="19">60</value>
+					<value level="20">70</value>
+				</amount>
+				<slot>FEET</slot>
+			</effect>
+			<effect name="ArmorBonusPhysicalDefence" fromLevel="16" toLevel="20">
+				<amount>
+					<value level="16">10</value>
+					<value level="17">30</value>
+					<value level="18">50</value>
+					<value level="19">60</value>
+					<value level="20">70</value>
+				</amount>
+				<slot>GLOVES</slot>
 			</effect>
 			<effect name="TriggerSkillByDamageReceived" fromLevel="18" toLevel="20">
 				<attackerType>Creature</attackerType>
@@ -1139,12 +1180,29 @@
 		<affectScope>SINGLE</affectScope>
 		<isMagic>5</isMagic>
 		<effects>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusMagicalDefence">
 				<amount>
 					<value level="1">30</value>
 					<value level="2">60</value>
 					<value level="3">90</value>
 				</amount>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">60</value>
+					<value level="3">90</value>
+				</amount>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">60</value>
+					<value level="3">90</value>
+				</amount>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -1307,12 +1365,29 @@
 		<affectScope>SINGLE</affectScope>
 		<isMagic>5</isMagic>
 		<effects>
-			<effect name="AccessoryMagicalDefence">
+			<effect name="ArmorBonusMagicalDefence">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
 					<value level="3">30</value>
 				</amount>
+				<slot>EAR</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<slot>NECK</slot>
+			</effect>
+			<effect name="ArmorBonusMagicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<slot>FINGER</slot>
 			</effect>
 		</effects>
 	</skill>

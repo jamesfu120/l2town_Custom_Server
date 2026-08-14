@@ -20,11 +20,11 @@
  */
 package instances.ValakasTemple.ValakasHermit;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.spawns.NpcSpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 import instances.ValakasTemple.ValakasTemple;
 
@@ -52,7 +52,7 @@ public class ValakasHermit extends Script
 		
 		final NpcSpawnTemplate spawn = npc.getSpawn().getNpcSpawnTemplate();
 		final String group = spawn.getGroup().getName();
-		final int groupId = Integer.parseInt(group.replaceAll("hermit_", ""));
+		final int groupId = Integer.parseInt(group.replace("hermit_", ""));
 		npc.setScriptValue(groupId);
 	}
 	

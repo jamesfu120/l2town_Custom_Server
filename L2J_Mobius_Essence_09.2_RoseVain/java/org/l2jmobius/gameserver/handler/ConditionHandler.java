@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.conditions.ICondition;
+import org.l2jmobius.gameserver.mechanics.conditions.ICondition;
 import org.l2jmobius.gameserver.scripting.ScriptEngine;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw

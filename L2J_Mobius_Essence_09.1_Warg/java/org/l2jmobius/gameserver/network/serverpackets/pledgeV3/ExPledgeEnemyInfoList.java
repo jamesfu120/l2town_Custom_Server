@@ -21,12 +21,11 @@
 package org.l2jmobius.gameserver.network.serverpackets.pledgeV3;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanWar;
-import org.l2jmobius.gameserver.model.clan.enums.ClanWarState;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanWar;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanWarState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -42,11 +41,11 @@ public class ExPledgeEnemyInfoList extends ServerPacket
 	public ExPledgeEnemyInfoList(Clan playerClan)
 	{
 		_playerClan = playerClan;
-		_warList = playerClan.getWarList().values().stream().filter(it -> (it.getClanWarState(playerClan) == ClanWarState.MUTUAL) || (it.getAttackerClanId() == playerClan.getId())).collect(Collectors.toList());
+		_warList = playerClan.getWarList().values().stream().filter(it -> (it.getClanWarState(playerClan) == ClanWarState.MUTUAL) || (it.getAttackerClanId() == playerClan.getId())).toList();
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_ENEMY_INFO_LIST.writeId(this, buffer);
 		buffer.writeInt(_warList.size());

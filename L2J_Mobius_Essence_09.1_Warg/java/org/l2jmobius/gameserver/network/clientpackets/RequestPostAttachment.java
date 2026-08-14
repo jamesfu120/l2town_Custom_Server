@@ -20,18 +20,18 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.ADENA_ID;
+import static org.l2jmobius.gameserver.entity.itemcontainer.Inventory.ADENA_ID;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemLocation;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.managers.ItemManager;
 import org.l2jmobius.gameserver.managers.MailManager;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
@@ -169,7 +169,7 @@ public class RequestPostAttachment extends ClientPacket
 			}
 		}
 		
-		// Item Max Limit Check
+		// Item Max Limit Check.
 		if (!player.getInventory().validateCapacity(slots))
 		{
 			player.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
@@ -190,7 +190,7 @@ public class RequestPostAttachment extends ClientPacket
 			return;
 		}
 		
-		// Proceed to the transfer
+		// Proceed to the transfer.
 		final InventoryUpdate playerIU = new InventoryUpdate();
 		for (Item item : attachments.getItems())
 		{
@@ -227,7 +227,7 @@ public class RequestPostAttachment extends ClientPacket
 			player.sendPacket(sm);
 		}
 		
-		// Send updated item list to the player
+		// Send updated item list to the player.
 		player.sendInventoryUpdate(playerIU);
 		
 		// Send full list to avoid duplicates.
@@ -236,7 +236,7 @@ public class RequestPostAttachment extends ClientPacket
 		msg.removeAttachments();
 		
 		SystemMessage sm;
-		final Player sender = World.getInstance().getPlayer(msg.getSenderId());
+		final Player sender = World.getPlayer(msg.getSenderId());
 		if (adena > 0)
 		{
 			if (sender != null)
@@ -253,7 +253,7 @@ public class RequestPostAttachment extends ClientPacket
 				paidAdena.setOwnerId(msg.getSenderId());
 				paidAdena.setItemLocation(ItemLocation.INVENTORY);
 				paidAdena.updateDatabase(true);
-				World.getInstance().removeObject(paidAdena);
+				World.removeObject(paidAdena);
 			}
 		}
 		else if (sender != null)

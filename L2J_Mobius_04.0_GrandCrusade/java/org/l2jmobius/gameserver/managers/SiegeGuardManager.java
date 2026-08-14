@@ -28,16 +28,16 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.CastleData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Defender;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.interfaces.IPositionable;
-import org.l2jmobius.gameserver.model.item.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.SiegeGuardHolder;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Defender;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemLocation;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.interfaces.IPositionable;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.SiegeGuardHolder;
 
 /**
  * Siege Guard Manager.
@@ -62,7 +62,6 @@ public class SiegeGuardManager
 		{
 			while (rs.next())
 			{
-				final int npcId = rs.getInt("npcId");
 				final int x = rs.getInt("x");
 				final int y = rs.getInt("y");
 				final int z = rs.getInt("z");
@@ -73,13 +72,14 @@ public class SiegeGuardManager
 					continue;
 				}
 				
+				final int npcId = rs.getInt("npcId");
 				final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), npcId);
 				if ((holder != null) && !castle.getSiege().isInProgress())
 				{
 					final Item dropticket = new Item(holder.getItemId());
 					dropticket.setItemLocation(ItemLocation.VOID);
 					dropticket.dropMe(null, x, y, z);
-					World.getInstance().addObject(dropticket);
+					World.addObject(dropticket);
 					_droppedTickets.add(dropticket);
 				}
 			}
@@ -212,7 +212,7 @@ public class SiegeGuardManager
 			final Item dropticket = new Item(itemId);
 			dropticket.setItemLocation(ItemLocation.VOID);
 			dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
-			World.getInstance().addObject(dropticket);
+			World.addObject(dropticket);
 			_droppedTickets.add(dropticket);
 		}
 	}
@@ -254,7 +254,7 @@ public class SiegeGuardManager
 	}
 	
 	/**
-	 * remove a single ticket and its associated spawn from the world (used when the castle lord picks up a ticket, for example).
+	 * Remove a single ticket and its associated spawn from the world (used when the castle lord picks up a ticket, for example).
 	 * @param item the item ID
 	 */
 	public void removeTicket(Item item)

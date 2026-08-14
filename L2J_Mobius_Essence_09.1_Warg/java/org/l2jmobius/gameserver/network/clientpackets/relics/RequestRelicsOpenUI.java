@@ -20,12 +20,16 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.relics;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerRelicData;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerRelicData;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsActiveInfo;
+import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsExchange;
+import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsExchangeList;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsList;
+import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsPointInfo;
 
 /**
  * @author CostyKiller
@@ -63,5 +67,16 @@ public class RequestRelicsOpenUI extends ClientPacket
 		player.getVariables().storeMe();
 		
 		player.sendPacket(new ExRelicsList(player)); // Update confirmed relic list relics count.
+		player.sendPacket(new ExRelicsExchangeList(player));
+		player.sendPacket(new ExRelicsPointInfo(player));
+		
+		for (RelicGrade grade : RelicGrade.values())
+		{
+			final int index = grade.ordinal();
+			final String pityKey = "RELIC_EXCHANGE_REMAIN_" + index;
+			final int currentPoints = player.getVariables().getInt(pityKey, 0);
+			
+			player.sendPacket(new ExRelicsExchange(index, true, currentPoints, 0, 0));
+		}
 	}
 }

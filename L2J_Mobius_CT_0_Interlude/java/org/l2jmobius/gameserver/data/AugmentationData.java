@@ -33,10 +33,10 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.config.ServerConfig;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.Augmentation;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.options.Augmentation;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 
 /**
@@ -732,7 +732,7 @@ public class AugmentationData
 		// C - glow, high grade LS?
 		// D - strong glow, top grade LS?
 		
-		// is neither a skill nor basestat used for stat34? then generate a normal stat
+		// Is neither a skill nor basestat used for stat34? Then generate a normal stat.
 		int offset;
 		if (stat34 == 0)
 		{

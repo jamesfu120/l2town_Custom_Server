@@ -21,18 +21,17 @@
 package instances.KashaOrcsSecretBase;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.newquestdata.QuestCondType;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -169,7 +168,7 @@ public class KashaOrcsSecretBase extends InstanceScript
 							world.setStatus(FIGHT_RAID2);
 							world.getNpc(RAID1_LAVIKI).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_VE_BEEN_SENT_BY_THOSE_WRETCHED_HIGH_ORCS_HUH_I_LL_KILL_YOU);
 							world.getNpc(RAID1_LAVIKI).setRunning();
-							world.getNpc(RAID1_LAVIKI).getAI().setIntention(Intention.ATTACK, player);
+							world.getNpc(RAID1_LAVIKI).getAI().setIntentionAttack(player);
 							world.getNpc(RAID1_LAVIKI).asAttackable().addDamageHate(player, 1, 999);
 							// Show timer
 							player.sendPacket(new ExSendUIEvent(player, false, false, INSTANCE_TIME * 60, 0, NpcStringId.TIME_LEFT));
@@ -194,7 +193,7 @@ public class KashaOrcsSecretBase extends InstanceScript
 							world.setStatus(FIGHT_RAID3);
 							world.getNpc(RAID2_TOGOB).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_RE_THE_HIGH_ORCS_DOG_ON_YOUR_KNEES);
 							world.getNpc(RAID2_TOGOB).setRunning();
-							world.getNpc(RAID2_TOGOB).getAI().setIntention(Intention.ATTACK, player);
+							world.getNpc(RAID2_TOGOB).getAI().setIntentionAttack(player);
 							world.getNpc(RAID2_TOGOB).asAttackable().addDamageHate(player, 1, 999);
 							if (!world.getNpc(RAID2_TOGOB).isDead())
 							{
@@ -217,7 +216,7 @@ public class KashaOrcsSecretBase extends InstanceScript
 							world.setStatus(FIGHT_RAID4);
 							world.getNpc(RAID3_KENUAN).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_INTERRUPT_OUR_RITUAL_YOU_LL_PAY_WITH_YOUR_LIFE_FOR_THAT);
 							world.getNpc(RAID3_KENUAN).setRunning();
-							world.getNpc(RAID3_KENUAN).getAI().setIntention(Intention.ATTACK, player);
+							world.getNpc(RAID3_KENUAN).getAI().setIntentionAttack(player);
 							world.getNpc(RAID3_KENUAN).asAttackable().addDamageHate(player, 1, 999);
 							if (!world.getNpc(RAID3_KENUAN).isDead())
 							{
@@ -238,7 +237,7 @@ public class KashaOrcsSecretBase extends InstanceScript
 						ThreadPool.schedule(() ->
 						{
 							world.getNpc(RAID4_MORHI).setRunning();
-							world.getNpc(RAID4_MORHI).getAI().setIntention(Intention.ATTACK, player);
+							world.getNpc(RAID4_MORHI).getAI().setIntentionAttack(player);
 							world.getNpc(RAID4_MORHI).asAttackable().addDamageHate(player, 1, 999);
 						}, 2000);
 						break;
@@ -303,15 +302,15 @@ public class KashaOrcsSecretBase extends InstanceScript
 		{
 			final int hpPer = npc.getCurrentHpPercent();
 			{
-				if ((hpPer <= 80) && (world.getParameters().getBoolean("CHAOS_STATUE_SPAWNED") == false))
+				if ((hpPer <= 80) && !world.getParameters().getBoolean("CHAOS_STATUE_SPAWNED"))
 				{
 					startQuestTimer("SPAWN_CHAOS_STATUE", 1000, npc, null);
 				}
-				else if ((hpPer <= 50) && (world.getParameters().getBoolean("CHAOS_STATUE_SPAWNED") == false))
+				else if ((hpPer <= 50) && !world.getParameters().getBoolean("CHAOS_STATUE_SPAWNED"))
 				{
 					startQuestTimer("SPAWN_CHAOS_STATUE", 1000, npc, null);
 				}
-				else if ((hpPer <= 30) && (world.getParameters().getBoolean("CHAOS_STATUE_SPAWNED") == false))
+				else if ((hpPer <= 30) && !world.getParameters().getBoolean("CHAOS_STATUE_SPAWNED"))
 				{
 					startQuestTimer("SPAWN_CHAOS_STATUE", 1000, npc, null);
 				}

@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.commission;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.ItemCommissionManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;

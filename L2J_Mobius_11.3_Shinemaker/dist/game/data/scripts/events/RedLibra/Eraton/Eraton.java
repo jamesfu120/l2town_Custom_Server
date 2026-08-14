@@ -26,25 +26,25 @@ import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.enums.player.SubclassInfoType;
-import org.l2jmobius.gameserver.model.actor.holders.player.Shortcut;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcMenuSelect;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillLearn;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcut;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcMenuSelect;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillLearn;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -247,7 +247,6 @@ public class Eraton extends Script
 		{
 			case 1:
 			{
-				final int classId = event.getReply();
 				if (!player.isAwakenedClass())
 				{
 					player.sendPacket(new NpcHtmlMessage(getHtm(player, "34584-7.html")));
@@ -260,13 +259,15 @@ public class Eraton extends Script
 					return;
 				}
 				
+				final int classId = event.getReply();
 				if ((player.getDualClass() != null) && (player.getDualClass().getId() == classId))
 				{
 					player.sendPacket(new NpcHtmlMessage(getHtm(player, "34584-6.html").replace("%s1%", "Main").replace("%s2%", "Dual")));
 					return;
 				}
 				
-				if ((player.getClass() != null) && (player.getBaseClass() == classId))
+				final PlayerClass selectedClass = PlayerClass.getPlayerClass(classId);
+				if ((player.getClass() != null) && (PlayerClass.getPlayerClass(player.getBaseClass()) == selectedClass))
 				{
 					player.sendPacket(new NpcHtmlMessage(getHtm(player, "34584-6.html").replace("%s1%", "Main").replace("%s2%", "Current")));
 					return;
@@ -352,59 +353,69 @@ public class Eraton extends Script
 					}
 				}
 				
-				if ((classId == 216)) // Death Knight
+				switch (selectedClass)
 				{
-					player.getAppearance().setMale();
-					player.setDeathKnight(true);
-					player.setOriginalClass(PlayerClass.SIGEL_DEATH_KNIGHT);
-					player.setPlayerClass(classId);
-				}
-				else if (classId == 174) // Iss Dominator
-				{
-					player.setOriginalClass(PlayerClass.ISS_DOMINATOR);
-					player.setPlayerClass(classId);
-				}
-				else if (classId == 156) // Tyrr Maestro
-				{
-					player.setOriginalClass(PlayerClass.TYRR_MAESTRO);
-					player.setPlayerClass(classId);
-				}
-				else if (classId == 188) // Eviscerator
-				{
-					player.getAppearance().setFemale();
-					player.setOriginalClass(PlayerClass.EVISCERATOR);
-					player.setPlayerClass(classId);
-				}
-				else if (classId == 189) // Sayha's Seer
-				{
-					player.getAppearance().setFemale();
-					player.setOriginalClass(PlayerClass.SAYHA_SEER);
-					player.setPlayerClass(classId);
-				}
-				else if (classId == 235) // Shine Maker
-				{
-					player.getAppearance().setFemale();
-					player.setOriginalClass(PlayerClass.SHINE_MAKER);
-					player.setPlayerClass(classId);
-				}
-				else
-				{
-					if (player.getPlayerClass() == PlayerClass.SIGEL_DEATH_KNIGHT)
+					case SIGEL_DEATH_KNIGHT:
 					{
-						player.setOriginalClass(PlayerClass.SIGEL_PHOENIX_KNIGHT);
+						player.getAppearance().setMale();
+						player.setDeathKnight(true);
+						player.setOriginalClass(PlayerClass.SIGEL_DEATH_KNIGHT);
+						player.setPlayerClass(classId);
+						break;
 					}
-					
-					if (player.getPlayerClass() == PlayerClass.SHINE_MAKER)
+					case ISS_DOMINATOR:
 					{
-						player.setOriginalClass(PlayerClass.MAESTRO);
+						player.setOriginalClass(PlayerClass.ISS_DOMINATOR);
+						player.setPlayerClass(classId);
+						break;
 					}
-					
-					if (player.getOriginalClass() == null)
+					case TYRR_MAESTRO:
 					{
-						player.setOriginalClass(player.getPlayerClass());
+						player.setOriginalClass(PlayerClass.TYRR_MAESTRO);
+						player.setPlayerClass(classId);
+						break;
 					}
-					
-					player.setPlayerClass(classId);
+					case EVISCERATOR:
+					{
+						player.getAppearance().setFemale();
+						player.setOriginalClass(PlayerClass.EVISCERATOR);
+						player.setPlayerClass(classId);
+						break;
+					}
+					case SAYHA_SEER:
+					{
+						player.getAppearance().setFemale();
+						player.setOriginalClass(PlayerClass.SAYHA_SEER);
+						player.setPlayerClass(classId);
+						break;
+					}
+					case SHINE_MAKER:
+					{
+						player.getAppearance().setFemale();
+						player.setOriginalClass(PlayerClass.SHINE_MAKER);
+						player.setPlayerClass(classId);
+						break;
+					}
+					default:
+					{
+						if (player.getPlayerClass() == PlayerClass.SIGEL_DEATH_KNIGHT)
+						{
+							player.setOriginalClass(PlayerClass.SIGEL_PHOENIX_KNIGHT);
+						}
+						
+						if (player.getPlayerClass() == PlayerClass.SHINE_MAKER)
+						{
+							player.setOriginalClass(PlayerClass.MAESTRO);
+						}
+						
+						if (player.getOriginalClass() == null)
+						{
+							player.setOriginalClass(player.getPlayerClass());
+						}
+						
+						player.setPlayerClass(classId);
+						break;
+					}
 				}
 				
 				player.setBaseClass(player.getActiveClass());

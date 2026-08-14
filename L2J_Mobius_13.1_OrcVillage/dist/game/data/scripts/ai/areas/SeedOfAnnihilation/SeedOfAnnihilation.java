@@ -20,19 +20,18 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.EffectZone;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.EffectZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
 /**
@@ -350,12 +349,12 @@ public class SeedOfAnnihilation extends Script
 			final Location teleLoc = TELEPORT_ZONES.get(zone.getId());
 			
 			// Conditions for Quest 454
-			World.getInstance().forEachVisibleObjectInRange(creature, Npc.class, 500, npc ->
+			World.forEachVisibleObjectInRange(creature, Npc.class, 500, npc ->
 			{
 				if ((npc.getId() == 32738) && (npc.getTarget() != null) && (npc.getTarget().getObjectId() == creature.getObjectId()))
 				{
 					npc.teleToLocation(teleLoc, false);
-					npc.getAI().setIntention(Intention.FOLLOW, creature, 150);
+					npc.getAI().setIntentionFollow(creature);
 				}
 			});
 			creature.teleToLocation(teleLoc, false);

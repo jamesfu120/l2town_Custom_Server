@@ -20,21 +20,20 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.templates.PlayerTemplate;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.stats.Stat;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.enums.UserInfoType;
@@ -153,7 +152,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (_player == null)
 		{
@@ -261,7 +260,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			buffer.writeInt(_player.getCriticalHit());
 			buffer.writeInt(_player.getMAtk());
 			buffer.writeInt(_player.getMAtkSpd());
-			buffer.writeInt(_player.getPAtkSpd()); // Seems like atk speed - 1
+			buffer.writeInt(_player.getPAtkSpd()); // Seems like atk speed - 1.
 			buffer.writeInt(_player.getMagicEvasionRate());
 			buffer.writeInt(_player.getMDef());
 			buffer.writeInt(_player.getMagicAccuracy());
@@ -443,7 +442,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.STAT_POINTS)) // 235
 		{
 			buffer.writeShort(16);
-			buffer.writeShort(_player.getLevel() < 76 ? 0 : (_player.getLevel() - 75) + _variables.getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0) + (int) _player.getStat().getValue(Stat.ELIXIR_USAGE_LIMIT, 0)); // Usable points
+			buffer.writeShort(_player.getLevel() < 76 ? 0 : (_player.getLevel() - 75) + _variables.getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0)); // Usable points
 			buffer.writeShort(_variables.getInt(PlayerVariables.STAT_STR, 0));
 			buffer.writeShort(_variables.getInt(PlayerVariables.STAT_DEX, 0));
 			buffer.writeShort(_variables.getInt(PlayerVariables.STAT_CON, 0));

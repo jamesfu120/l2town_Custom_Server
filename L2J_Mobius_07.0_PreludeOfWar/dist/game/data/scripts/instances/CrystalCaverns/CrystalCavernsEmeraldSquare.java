@@ -16,21 +16,21 @@
  */
 package instances.CrystalCaverns;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Crystal Caverns - Emerald Square instance zone.
@@ -230,7 +230,7 @@ public class CrystalCavernsEmeraldSquare extends InstanceScript
 				{
 					npc.setDisplayEffect(4);
 					showOnScreenMsg(instance, NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, ExShowScreenMessage.MIDDLE_CENTER, 4000, String.valueOf(npc.getParameters().getInt("base_id", -1)));
-					World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 400, monster ->
+					World.forEachVisibleObjectInRange(npc, Monster.class, 400, monster ->
 					{
 						if ((monster.getId() == STRONGHOLD_PROTECTOR) || (monster.getId() == SQUARE_INTRUDER) || (monster.getId() == SQUARE_ATTACKER))
 						{

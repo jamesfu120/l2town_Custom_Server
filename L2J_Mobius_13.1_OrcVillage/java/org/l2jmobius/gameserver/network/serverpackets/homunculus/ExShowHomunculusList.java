@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.homunculus.Homunculus;
-import org.l2jmobius.gameserver.model.homunculus.HomunculusList;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.homunculus.Homunculus;
+import org.l2jmobius.gameserver.mechanics.homunculus.HomunculusList;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -43,7 +43,7 @@ public class ExShowHomunculusList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_SHOW_HOMUNCULUS_LIST.writeId(this, buffer);
 		int counter = 0;

@@ -37,7 +37,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.data.holders.RelicCollectionDataHolder;
 import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author CostyKiller
@@ -106,7 +106,6 @@ public class RelicCollectionData implements IXmlReader
 							if ("relic".equalsIgnoreCase(b.getNodeName()))
 							{
 								final int relicId = parseInteger(attrs, "id");
-								final int relicLevel = parseInteger(attrs, "enchantLevel", 0);
 								final RelicDataHolder relic = RelicData.getInstance().getRelic(relicId);
 								if (relic == null)
 								{
@@ -114,6 +113,7 @@ public class RelicCollectionData implements IXmlReader
 									continue;
 								}
 								
+								final int relicLevel = parseInteger(attrs, "enchantLevel", 0);
 								relics.add(new RelicDataHolder(relicId, relic.getName(), relic.getGrade(), relic.getSkillId(), relicLevel, relic.getSkillLevel()));
 							}
 						}
@@ -144,12 +144,7 @@ public class RelicCollectionData implements IXmlReader
 	 */
 	public List<RelicCollectionDataHolder> getRelicCategory(int tabId)
 	{
-		if (RELIC_COLLECTION_CATEGORIES.containsKey(tabId))
-		{
-			return RELIC_COLLECTION_CATEGORIES.get(tabId);
-		}
-		
-		return Collections.emptyList();
+		return RELIC_COLLECTION_CATEGORIES.getOrDefault(tabId, Collections.emptyList());
 	}
 	
 	/**

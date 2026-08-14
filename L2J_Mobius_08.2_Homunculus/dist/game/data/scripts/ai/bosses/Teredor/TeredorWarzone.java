@@ -19,21 +19,20 @@ package ai.bosses.Teredor;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.managers.WalkingManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Teredor Warzone instance zone.
@@ -480,7 +479,7 @@ public class TeredorWarzone extends InstanceScript
 							npc.breakCast();
 							npc.setWalking();
 							npc.asAttackable().clearAggroList();
-							npc.getAI().setIntention(Intention.ACTIVE);
+							npc.getAI().setIntentionActive();
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
 							getTimers().addTimer("TEREDOR_BUHATIMER", 10000, npc, null);
@@ -505,7 +504,7 @@ public class TeredorWarzone extends InstanceScript
 							npc.breakCast();
 							npc.setWalking();
 							npc.asAttackable().clearAggroList();
-							npc.getAI().setIntention(Intention.ACTIVE);
+							npc.getAI().setIntentionActive();
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
 							
@@ -547,7 +546,7 @@ public class TeredorWarzone extends InstanceScript
 							npc.breakCast();
 							npc.setWalking();
 							npc.asAttackable().clearAggroList();
-							npc.getAI().setIntention(Intention.ACTIVE);
+							npc.getAI().setIntentionActive();
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
 							
@@ -590,7 +589,7 @@ public class TeredorWarzone extends InstanceScript
 							npc.breakCast();
 							npc.setWalking();
 							npc.asAttackable().clearAggroList();
-							npc.getAI().setIntention(Intention.ACTIVE);
+							npc.getAI().setIntentionActive();
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
 							

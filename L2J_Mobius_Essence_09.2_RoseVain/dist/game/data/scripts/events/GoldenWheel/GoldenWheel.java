@@ -28,20 +28,20 @@ import java.util.concurrent.atomic.AtomicReference;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.managers.events.PaybackManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
-import org.l2jmobius.gameserver.model.events.holders.item.OnMultisellBuyItem;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.mechanics.events.holders.item.OnMultisellBuyItem;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
 import org.l2jmobius.gameserver.network.serverpackets.payback.PaybackUILauncher;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class GoldenWheel extends LongTimeEvent implements IXmlReader
 {
@@ -66,14 +66,14 @@ public class GoldenWheel extends LongTimeEvent implements IXmlReader
 	
 	public void reloadRewards()
 	{
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.sendPacket(new PaybackUILauncher(false));
 		}
 		
 		PaybackManager.getInstance().resetField();
 		load();
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.sendPacket(new PaybackUILauncher(true));
 		}

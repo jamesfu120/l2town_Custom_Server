@@ -21,6 +21,7 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -30,7 +31,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.item.holders.ElementalSpiritTemplateHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ElementalSpiritTemplateHolder;
 
 /**
  * @author JoeAlisson
@@ -105,12 +106,7 @@ public class ElementalSpiritData implements IXmlReader
 	
 	public ElementalSpiritTemplateHolder getSpirit(byte type, byte stage)
 	{
-		if (SPIRIT_DATA.containsKey(type))
-		{
-			return SPIRIT_DATA.get(type).get(stage);
-		}
-		
-		return null;
+		return SPIRIT_DATA.getOrDefault(type, Collections.emptyMap()).get(stage);
 	}
 	
 	public static ElementalSpiritData getInstance()

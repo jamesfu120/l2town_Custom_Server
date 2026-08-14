@@ -21,10 +21,10 @@
 package org.l2jmobius.gameserver.network.clientpackets.skillenchantguarantee;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -86,8 +86,6 @@ public class RequestSkillEnchantConfirm extends ClientPacket
 			}
 		}
 		
-		final Skill playerSkill = player.getKnownSkill(_skillId);
-		final Item lCoin = player.getInventory().getItemByItemId(_commisionId);
 		final Item guaranteeEnchantCoupon = player.getInventory().getItemByItemId(_itemId);
 		if (guaranteeEnchantCoupon == null)
 		{
@@ -95,6 +93,7 @@ public class RequestSkillEnchantConfirm extends ClientPacket
 			return;
 		}
 		
+		final Skill playerSkill = player.getKnownSkill(_skillId);
 		if (playerSkill == null)
 		{
 			player.sendPacket(SystemMessageId.THE_ENCHANTMENT_CANNOT_BE_EXTRACTED);
@@ -102,6 +101,7 @@ public class RequestSkillEnchantConfirm extends ClientPacket
 			return;
 		}
 		
+		final Item lCoin = player.getInventory().getItemByItemId(_commisionId);
 		if (lCoin == null)
 		{
 			player.sendPacket(SystemMessageId.NOT_ENOUGH_L2_COINS);

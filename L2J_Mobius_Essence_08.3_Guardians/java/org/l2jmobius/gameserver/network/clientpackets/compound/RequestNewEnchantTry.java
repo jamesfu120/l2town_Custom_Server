@@ -22,13 +22,14 @@ package org.l2jmobius.gameserver.network.clientpackets.compound;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.CompoundRequest;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItem;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItemReward;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItemType;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.CompoundRequest;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItem;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItemReward;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItemType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
@@ -36,7 +37,6 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantFail;
 import org.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantOneFail;
 import org.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantSucess;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author NasSeKa
@@ -130,7 +130,7 @@ public class RequestNewEnchantTry extends ClientPacket
 			player.sendPacket(new ExEnchantSucess(itemId, rewardItem.getEnchantLevel()));
 			if (combinationItem.isAnnounce() && (item != null))
 			{
-				Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.COMPOUND));
+				World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.COMPOUND));
 			}
 		}
 		else

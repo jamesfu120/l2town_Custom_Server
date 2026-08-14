@@ -31,8 +31,8 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.TeleportListHolder;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author NviX, Mobius
@@ -72,6 +72,7 @@ public class TeleportListData implements IXmlReader
 				final StatSet locationSet = new StatSet(parseAttributes(locationsNode));
 				locations.add(new Location(locationSet.getInt("x"), locationSet.getInt("y"), locationSet.getInt("z")));
 			});
+			
 			if (locations.isEmpty())
 			{
 				locations.add(new Location(set.getInt("x"), set.getInt("y"), set.getInt("z")));

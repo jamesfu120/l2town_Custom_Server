@@ -25,7 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.holders.SharedTeleportHolder;
-import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Creature;
 
 /**
  * Shared Teleport Manager

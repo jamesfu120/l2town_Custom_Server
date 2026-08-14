@@ -21,18 +21,18 @@
 package org.l2jmobius.gameserver.ai;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.Doppelganger;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.instance.Doppelganger;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
 import org.l2jmobius.gameserver.taskmanagers.GameTimeTaskManager;
 
 public class DoppelgangerAI extends CreatureAI
 {
-	private volatile boolean _thinking; // to prevent recursive thinking
+	private volatile boolean _thinking; // To prevent recursive thinking.
 	private volatile boolean _startFollow;
 	private Creature _lastAttack = null;
 	
@@ -42,30 +42,30 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onIntentionIdle()
+	public void setIntentionIdle()
 	{
 		stopFollow();
 		_startFollow = false;
-		onIntentionActive();
+		setIntentionActive();
 	}
 	
 	@Override
-	protected void onIntentionActive()
+	public void setIntentionActive()
 	{
 		if (_startFollow)
 		{
-			setIntention(Intention.FOLLOW, getActor().getSummoner());
+			setIntentionFollow(getActor().getSummoner());
 		}
 		else
 		{
-			super.onIntentionActive();
+			super.setIntentionActive();
 		}
 	}
 	
 	private void thinkAttack()
 	{
 		final WorldObject target = getTarget();
-		final Creature attackTarget = (target != null) && target.isCreature() ? target.asCreature() : null;
+		final Creature attackTarget = target == null ? null : target.asCreature();
 		if (checkTargetLostOrDead(attackTarget))
 		{
 			setTarget(null);
@@ -103,7 +103,7 @@ public class DoppelgangerAI extends CreatureAI
 		}
 		
 		getActor().followSummoner(false);
-		setIntention(Intention.IDLE);
+		setIntentionIdle();
 		_startFollow = val;
 		_actor.doCast(_skill, _item, _forceUse, _dontMove);
 	}
@@ -121,11 +121,11 @@ public class DoppelgangerAI extends CreatureAI
 			return;
 		}
 		
-		setIntention(Intention.IDLE);
+		setIntentionIdle();
 	}
 	
 	@Override
-	public void onActionThink()
+	public void notifyActionThink()
 	{
 		if (_thinking || _actor.isCastingNow() || _actor.isAllSkillsDisabled())
 		{
@@ -161,7 +161,7 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onActionFinishCasting()
+	public void notifyActionFinishCasting()
 	{
 		if (_lastAttack == null)
 		{
@@ -169,7 +169,7 @@ public class DoppelgangerAI extends CreatureAI
 		}
 		else
 		{
-			setIntention(Intention.ATTACK, _lastAttack);
+			setIntentionAttack(_lastAttack);
 			_lastAttack = null;
 		}
 	}
@@ -196,7 +196,7 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
+	public void setIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
 		if (getIntention() == Intention.ATTACK)
 		{
@@ -207,13 +207,13 @@ public class DoppelgangerAI extends CreatureAI
 			_lastAttack = null;
 		}
 		
-		super.onIntentionCast(skill, target, item, forceUse, dontMove);
+		super.setIntentionCast(skill, target, item, forceUse, dontMove);
 	}
 	
 	@Override
 	public void moveToPawn(WorldObject pawn, int offsetValue)
 	{
-		// Check if actor can move
+		// Check if actor can move.
 		if (!_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0))
 		{
 			int offset = offsetValue;
@@ -222,8 +222,7 @@ public class DoppelgangerAI extends CreatureAI
 				offset = 10;
 			}
 			
-			// prevent possible extra calls to this function (there is none?),
-			// also don't send movetopawn packets too often
+			// Prevent possible extra calls to this function (there is none?), also don't send movetopawn packets too often.
 			boolean sendPacket = true;
 			if (_actor.isMoving() && (getTarget() == pawn))
 			{
@@ -238,7 +237,7 @@ public class DoppelgangerAI extends CreatureAI
 				}
 				else if (_actor.isOnGeodataPath())
 				{
-					// minimum time to calculate new route is 2 seconds
+					// Minimum time to calculate new route is 2 seconds.
 					if (GameTimeTaskManager.getInstance().getGameTicks() < (_moveToPawnTimeout + 10))
 					{
 						return;
@@ -246,7 +245,7 @@ public class DoppelgangerAI extends CreatureAI
 				}
 			}
 			
-			// Set AI movement data
+			// Set AI movement data.
 			_clientMovingToPawnOffset = offset;
 			setTarget(pawn);
 			_moveToPawnTimeout = GameTimeTaskManager.getInstance().getGameTicks();
@@ -256,7 +255,7 @@ public class DoppelgangerAI extends CreatureAI
 				return;
 			}
 			
-			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
+			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager.
 			// _actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			final Location loc = new Location(pawn.getX() + Rnd.get(-offset, offset), pawn.getY() + Rnd.get(-offset, offset), pawn.getZ());
 			_actor.moveToLocation(loc.getX(), loc.getY(), loc.getZ(), 0);

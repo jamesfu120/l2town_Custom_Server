@@ -16,13 +16,12 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Targeting disable effect implementation. When affected, player will lose target and be unable to target for the duration.
@@ -40,7 +39,7 @@ public class DisableTargeting extends AbstractEffect
 		effected.setTarget(null);
 		effected.abortAttack();
 		effected.abortCast();
-		effected.getAI().setIntention(Intention.IDLE);
+		effected.getAI().setIntentionIdle();
 	}
 	
 	@Override

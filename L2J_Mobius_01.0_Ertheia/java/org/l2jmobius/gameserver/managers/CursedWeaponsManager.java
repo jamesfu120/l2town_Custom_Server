@@ -36,19 +36,19 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.GeneralConfig;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.CursedWeapon;
-import org.l2jmobius.gameserver.model.actor.instance.Defender;
-import org.l2jmobius.gameserver.model.actor.instance.FeedableBeast;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.actor.instance.Guard;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CursedWeapon;
+import org.l2jmobius.gameserver.entity.actor.instance.Defender;
+import org.l2jmobius.gameserver.entity.actor.instance.FeedableBeast;
+import org.l2jmobius.gameserver.entity.actor.instance.FortCommander;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.actor.instance.Guard;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Micht
@@ -283,7 +283,7 @@ public class CursedWeaponsManager implements IXmlReader
 	
 	public static void announce(SystemMessage sm)
 	{
-		Broadcast.toAllOnlinePlayers(sm);
+		World.broadcastToAllOnlinePlayers(sm);
 	}
 	
 	public void checkPlayer(Player player)

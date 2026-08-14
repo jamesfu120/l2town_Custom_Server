@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -36,7 +36,7 @@ public class ExDeleteHomunculusDataResult extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_DELETE_HOMUNCULUS_DATA_RESULT.writeId(this, buffer);
 		buffer.writeInt(1); // 1 - success

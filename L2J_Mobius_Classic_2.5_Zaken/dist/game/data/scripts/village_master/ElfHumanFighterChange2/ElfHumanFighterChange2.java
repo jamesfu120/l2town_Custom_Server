@@ -17,10 +17,10 @@
 package village_master.ElfHumanFighterChange2;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Elf Human class transfer AI.
@@ -160,7 +160,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(GLADIATOR);
 				player.setBaseClass(GLADIATOR);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-42.htm"; // fnAfterClassChange11
@@ -189,7 +189,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(WARLORD);
 				player.setBaseClass(WARLORD);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-46.htm"; // fnAfterClassChange12
@@ -218,7 +218,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(PALADIN);
 				player.setBaseClass(PALADIN);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-50.htm"; // fnAfterClassChange21
@@ -247,7 +247,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(DARK_AVENGER);
 				player.setBaseClass(DARK_AVENGER);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-54.htm"; // fnAfterClassChange22
@@ -276,7 +276,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(TREASURE_HUNTER);
 				player.setBaseClass(TREASURE_HUNTER);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-58.htm"; // fnAfterClassChange31
@@ -305,7 +305,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(HAWKEYE);
 				player.setBaseClass(HAWKEYE);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-62.htm"; // fnAfterClassChange32
@@ -334,7 +334,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(TEMPLE_KNIGHT);
 				player.setBaseClass(TEMPLE_KNIGHT);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-66.htm"; // fnAfterClassChange41
@@ -363,7 +363,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(SWORDSINGER);
 				player.setBaseClass(SWORDSINGER);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-70.htm"; // fnAfterClassChange42
@@ -392,7 +392,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(PLAINS_WALKER);
 				player.setBaseClass(PLAINS_WALKER);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-74.htm"; // fnAfterClassChange51
@@ -421,7 +421,7 @@ public class ElfHumanFighterChange2 extends Script
 				player.setPlayerClass(SILVER_RANGER);
 				player.setBaseClass(SILVER_RANGER);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
 				htmltext = "30109-78.htm"; // fnAfterClassChange52

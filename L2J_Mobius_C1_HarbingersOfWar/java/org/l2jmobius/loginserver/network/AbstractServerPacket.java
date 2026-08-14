@@ -19,6 +19,8 @@ package org.l2jmobius.loginserver.network;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * This class ...
@@ -26,6 +28,7 @@ import java.nio.charset.StandardCharsets;
  */
 public abstract class AbstractServerPacket
 {
+	private static final Logger LOGGER = Logger.getLogger(AbstractServerPacket.class.getName());
 	ByteArrayOutputStream _bao;
 	
 	protected AbstractServerPacket()
@@ -44,7 +47,7 @@ public abstract class AbstractServerPacket
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "writeString: ", e);
 		}
 		
 		_bao.write(0);
@@ -59,7 +62,7 @@ public abstract class AbstractServerPacket
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "writeBytes: ", e);
 		}
 	}
 	

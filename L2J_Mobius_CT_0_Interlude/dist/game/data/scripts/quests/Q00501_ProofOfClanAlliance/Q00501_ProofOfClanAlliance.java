@@ -26,20 +26,20 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
- * @author Rootware
+ * @author Rootware, Skache
  */
 public class Q00501_ProofOfClanAlliance extends Quest
 {
@@ -77,6 +77,11 @@ public class Q00501_ProofOfClanAlliance extends Quest
 	
 	// Reward
 	private static final int PROOF_OF_ALLIANCE = 3874;
+	
+	// Quest variables
+	private static final String NEED_HARIT = "need_harit";
+	private static final String NEED_VANOR = "need_vanor";
+	private static final String NEED_OEL = "need_oel";
 	
 	// Drops
 	private static final Map<Integer, Integer> DROP = new HashMap<>();
@@ -162,9 +167,10 @@ public class Q00501_ProofOfClanAlliance extends Quest
 			{
 				st.setCond(3, true);
 				st.set("state", "3");
-				takeItems(player, SYMBOL_OF_LOYALTY, 1);
-				takeItems(player, SYMBOL_OF_LOYALTY, 1);
-				takeItems(player, SYMBOL_OF_LOYALTY, 1);
+				st.set(NEED_HARIT, "1");
+				st.set(NEED_VANOR, "1");
+				st.set(NEED_OEL, "1");
+				takeItems(player, SYMBOL_OF_LOYALTY, 3);
 				giveItems(player, ANTIDOTE_RECIPE_LIST, 1);
 				SkillData.getInstance().getSkill(4082, 1).applyEffects(npc, player);
 				startQuestTimer("poison", 60000, npc, player, true);
@@ -191,16 +197,25 @@ public class Q00501_ProofOfClanAlliance extends Quest
 			}
 			case "30758-03.htm":
 			{
-				if (!_isSpawned && (player.getAdena() >= 10000))
+				if (!_isSpawned)
 				{
 					final QuestState st2 = getClanLeaderQuestState(player, npc);
+					if (st2 == null)
+					{
+						return htmltext;
+					}
+					final Clan clan = st2.getPlayer().getClan();
+					if (clan == null)
+					{
+						return htmltext;
+					}
 					st2.set("state", "4");
 					st2.set("bingo", "0");
 					st2.set("chests", "0");
-					takeItems(player, ADENA, 10000);
 					for (int[] coords : CHESTS_SPAWN)
 					{
-						addSpawn(CHEST_IDS.get(getRandom(CHEST_IDS.size())), coords[0], coords[1], coords[2], 0, false, 0);
+						final Npc chest = addSpawn(CHEST_IDS.get(getRandom(CHEST_IDS.size())), coords[0], coords[1], coords[2], 0, false, 0);
+						chest.setScriptValue(clan.getId());
 					}
 					
 					_isSpawned = true;
@@ -216,7 +231,7 @@ public class Q00501_ProofOfClanAlliance extends Quest
 			{
 				if (player.getAdena() >= 10000)
 				{
-					if (!_isSpawned)
+					if (!_isSpawned && (getClanLeaderQuestState(player, npc) != null))
 					{
 						takeItems(player, ADENA, 10000);
 					}
@@ -241,7 +256,6 @@ public class Q00501_ProofOfClanAlliance extends Quest
 			{
 				if (!hasAbnormal(player))
 				{
-					player.sendMessage("Are you noob?");
 					cancelQuestTimer("poison", npc, player); // Cancel check timer
 				}
 				
@@ -262,6 +276,42 @@ public class Q00501_ProofOfClanAlliance extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
+		if (npc.getId() == ATHREA)
+		{
+			if (player.isClanLeader())
+			{
+				return htmltext;
+			}
+			
+			final QuestState cl = getClanLeaderQuestState(player, npc);
+			if (cl == null)
+			{
+				return htmltext;
+			}
+			
+			if ((cl.getInt("state") == 3) && hasQuestItems(cl.getPlayer(), ANTIDOTE_RECIPE_LIST) && !hasQuestItems(cl.getPlayer(), BLOOD_OF_EVA) && (cl.getInt(NEED_HARIT) == 0) && (cl.getInt(NEED_VANOR) == 0) && (cl.getInt(NEED_OEL) == 0))
+			{
+				return "30758-01.htm";
+			}
+			if (cl.getInt("state") == 4)
+			{
+				if (cl.getInt("bingo") == 4)
+				{
+					cl.set("state", "5");
+					giveItems(player, BLOOD_OF_EVA, 1);
+					cl.unset("chests");
+					cl.unset("bingo");
+					_isSpawned = false;
+					return "30758-08.htm";
+				}
+				return "30758-05.htm";
+			}
+			if (cl.getInt("state") == 5)
+			{
+				return "30758-09.htm";
+			}
+			return htmltext;
+		}
 		
 		switch (st.getState())
 		{
@@ -384,17 +434,19 @@ public class Q00501_ProofOfClanAlliance extends Quest
 							{
 								st.setCond(1);
 								st.set("state", "1");
+								st.unset(NEED_HARIT);
+								st.unset(NEED_VANOR);
+								st.unset(NEED_OEL);
 								takeItems(player, ANTIDOTE_RECIPE_LIST, -1);
 								htmltext = "30759-09.htm";
 							}
-							else if ((state > 2) && (state < 6) && hasAbnormal(player) && !hasAtLeastOneQuestItem(player, HERB_OF_HARIT, HERB_OF_VANOR, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA))
-							{
-								htmltext = "30759-10.htm";
-							}
-							else if ((state == 5) && hasAbnormal(player) && hasAtLeastOneQuestItem(player, HERB_OF_HARIT, HERB_OF_VANOR, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA))
+							else if ((state == 5) && hasAbnormal(player) && hasQuestItems(player, HERB_OF_HARIT, HERB_OF_VANOR, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA))
 							{
 								st.setCond(4, true);
 								st.set("state", "6");
+								st.unset(NEED_HARIT);
+								st.unset(NEED_VANOR);
+								st.unset(NEED_OEL);
 								takeItems(player, ANTIDOTE_RECIPE_LIST, -1);
 								takeItems(player, HERB_OF_HARIT, -1);
 								takeItems(player, HERB_OF_VANOR, -1);
@@ -405,6 +457,10 @@ public class Q00501_ProofOfClanAlliance extends Quest
 								cancelQuestTimer("poison", npc, player); // Cancel check timer
 								htmltext = "30759-08.htm";
 							}
+							else if ((state > 2) && (state < 6) && hasAbnormal(player) && !hasQuestItems(player, HERB_OF_HARIT, HERB_OF_VANOR, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA))
+							{
+								htmltext = "30759-10.htm";
+							}
 							else if (state == 6)
 							{
 								htmltext = "30759-11.htm";
@@ -413,34 +469,6 @@ public class Q00501_ProofOfClanAlliance extends Quest
 						else
 						{
 							htmltext = "30759-12.htm";
-						}
-						break;
-					}
-					case ATHREA:
-					{
-						final QuestState cl = getClanLeaderQuestState(player, npc);
-						if ((cl != null) && (cl.getInt("state") == 3) && hasQuestItems(cl.getPlayer(), ANTIDOTE_RECIPE_LIST) && !hasQuestItems(cl.getPlayer(), BLOOD_OF_EVA) && hasFirstHerb(player, cl.get("herbs")) && (getHerbs(cl.get("herbs")).size() == 3))
-						{
-							htmltext = "30758-01.htm";
-						}
-						else if ((cl != null) && (cl.getInt("state") == 4))
-						{
-							if (cl.getInt("bingo") == 4)
-							{
-								cl.set("state", "5");
-								giveItems(player, BLOOD_OF_EVA, 1);
-								htmltext = "30758-08.htm";
-								cl.unset("chests");
-								cl.unset("bingo");
-							}
-							else
-							{
-								htmltext = "30758-05.htm";
-							}
-						}
-						else if ((cl != null) && (cl.getInt("state") == 5))
-						{
-							htmltext = "30758-09.htm";
 						}
 						break;
 					}
@@ -463,27 +491,45 @@ public class Q00501_ProofOfClanAlliance extends Quest
 		}
 		
 		final int npcId = npc.getId();
-		if (DROP.containsKey(npcId) && (cl.getInt("state") == 3))
+		if (DROP.containsKey(npcId) && (cl.getInt("state") >= 3) && (cl.getInt("state") < 6))
 		{
 			final int itemId = DROP.get(npcId);
-			final List<Integer> herbs = getHerbs(cl.get("herbs"));
-			if ((getRandom(10) == 1) && !hasQuestItems(player, itemId) && !hasOtherItems(player, itemId) && !herbs.contains(itemId))
+			final String herbFlag;
+			switch (itemId)
 			{
-				if (herbs.isEmpty())
+				case HERB_OF_HARIT:
 				{
-					cl.set("herbs", String.valueOf(itemId));
+					herbFlag = NEED_HARIT;
+					break;
 				}
-				else
+				case HERB_OF_VANOR:
 				{
-					cl.set("herbs", cl.get("herbs") + ";" + itemId);
+					herbFlag = NEED_VANOR;
+					break;
 				}
-				
+				case HERB_OF_OEL_MAHUM:
+				{
+					herbFlag = NEED_OEL;
+					break;
+				}
+				default:
+				{
+					return;
+				}
+			}
+			if ((cl.getInt(herbFlag) == 1) && (getRandom(10) == 1))
+			{
 				giveItems(player, itemId, 1);
+				cl.unset(herbFlag);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		else if (CHEST_IDS.contains(npcId) && (cl.getInt("state") == 4))
 		{
+			if ((player.getClan() == null) || (npc.getScriptValue() != player.getClan().getId()))
+			{
+				return;
+			}
 			final int chests = cl.getInt("chests");
 			final int bingo = cl.getInt("bingo");
 			if ((((chests == 15) && (bingo == 3)) || ((chests == 14) && (bingo == 2)) || ((chests == 13) && (bingo == 1)) || ((chests == 12) && (bingo == 0))) || ((bingo < 4) && (getRandom(4) == 0)))
@@ -493,44 +539,11 @@ public class Q00501_ProofOfClanAlliance extends Quest
 			}
 			
 			cl.set("chests", String.valueOf(chests + 1));
-			if (chests == 16)
+			if (chests >= 15)
 			{
 				_isSpawned = false;
 			}
 		}
-	}
-	
-	public boolean hasOtherItems(Player player, int itemId)
-	{
-		switch (itemId)
-		{
-			case HERB_OF_VANOR:
-			{
-				if (hasQuestItems(player, HERB_OF_HARIT) || hasQuestItems(player, HERB_OF_OEL_MAHUM))
-				{
-					return true;
-				}
-				break;
-			}
-			case HERB_OF_HARIT:
-			{
-				if (hasQuestItems(player, HERB_OF_VANOR) || hasQuestItems(player, HERB_OF_OEL_MAHUM))
-				{
-					return true;
-				}
-				break;
-			}
-			case HERB_OF_OEL_MAHUM:
-			{
-				if (hasQuestItems(player, HERB_OF_HARIT) || hasQuestItems(player, HERB_OF_VANOR))
-				{
-					return true;
-				}
-				break;
-			}
-		}
-		
-		return false;
 	}
 	
 	/**
@@ -548,35 +561,6 @@ public class Q00501_ProofOfClanAlliance extends Quest
 		final Skill skill = SkillData.getInstance().getSkill(skillId, 1);
 		npc.setTarget(player);
 		npc.doCast(skill);
-	}
-	
-	private static List<Integer> getHerbs(String list)
-	{
-		final List<Integer> array = new ArrayList<>();
-		if (list != null)
-		{
-			final String[] herbs = list.split(";");
-			for (String herb : herbs)
-			{
-				array.add(Integer.parseInt(herb));
-			}
-		}
-		
-		return array;
-	}
-	
-	public boolean hasFirstHerb(Player player, String list)
-	{
-		if (list != null)
-		{
-			final String[] herbs = list.split(";");
-			if (hasQuestItems(player, Integer.parseInt(herbs[0])))
-			{
-				return true;
-			}
-		}
-		
-		return false;
 	}
 	
 	@Override

@@ -22,12 +22,12 @@ package org.l2jmobius.gameserver.network.serverpackets.friend;
 
 import java.util.Calendar;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -59,7 +59,7 @@ public class ExBlockDetailInfo extends ServerPacket
 	{
 		_objectId = player.getObjectId();
 		_name = name;
-		_friend = World.getInstance().getPlayer(_name);
+		_friend = World.getPlayer(_name);
 		_lastAccess = (_friend == null) || _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
 		
 		final CharInfoTable charInfoTable = CharInfoTable.getInstance();
@@ -118,7 +118,7 @@ public class ExBlockDetailInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_FRIEND_DETAIL_INFO.writeId(this, buffer);
 		buffer.writeInt(_objectId);

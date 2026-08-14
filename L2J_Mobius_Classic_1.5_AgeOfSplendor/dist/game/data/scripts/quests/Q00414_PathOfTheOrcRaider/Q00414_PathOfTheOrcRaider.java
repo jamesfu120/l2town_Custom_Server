@@ -16,15 +16,14 @@
  */
 package quests.Q00414_PathOfTheOrcRaider;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
@@ -329,7 +328,7 @@ public class Q00414_PathOfTheOrcRaider extends Quest
 		{
 			npc.setRunning();
 			npc.addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(Intention.ATTACK, player);
+			npc.getAI().setIntentionAttack(player);
 		}
 	}
 }

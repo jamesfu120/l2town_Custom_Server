@@ -23,16 +23,16 @@ package handlers.items;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.item.Weapon;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.enums.ShotType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -47,9 +47,6 @@ public class SpiritShot implements IItemHandler
 			return false;
 		}
 		
-		final Player player = playable.asPlayer();
-		final Item weaponInst = player.getActiveWeaponInstance();
-		final Weapon weaponItem = player.getActiveWeaponItem();
 		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
@@ -57,9 +54,12 @@ public class SpiritShot implements IItemHandler
 			return false;
 		}
 		
+		final Player player = playable.asPlayer();
+		final Item weaponInst = player.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		final int itemId = item.getId();
 		
-		// Check if SpiritShot can be used
+		// Check if SpiritShot can be used.
 		if ((weaponInst == null) || (weaponItem.getSpiritShotCount() == 0))
 		{
 			if (!player.getAutoSoulShot().contains(itemId))
@@ -70,13 +70,13 @@ public class SpiritShot implements IItemHandler
 			return false;
 		}
 		
-		// Check if SpiritShot is already active
+		// Check if SpiritShot is already active.
 		if (player.isChargedShot(ShotType.SPIRITSHOTS))
 		{
 			return summonUseItem(playable, item);
 		}
 		
-		// Consume SpiritShot if player has enough of them
+		// Consume SpiritShot if player has enough of them.
 		if (!player.destroyItem(ItemProcessType.NONE, item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
 			if (!player.disableAutoShot(itemId))
@@ -90,13 +90,13 @@ public class SpiritShot implements IItemHandler
 		// Charge Spirit shot
 		player.chargeShot(ShotType.SPIRITSHOTS);
 		
-		// Send message to client
+		// Send message to client.
 		if (!player.getAutoSoulShot().contains(item.getId()))
 		{
 			player.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
 		}
 		
-		// Visual effect change if player has equipped Sapphire level 3 or higher
+		// Visual effect change if player has equipped Sapphire level 3 or higher.
 		if (player.getActiveShappireJewel() != null)
 		{
 			player.broadcastSkillPacket(new MagicSkillUse(player, player, player.getActiveShappireJewel().getSkillId(), player.getActiveShappireJewel().getSkillLevel(), 0, 0), player);
@@ -198,7 +198,7 @@ public class SpiritShot implements IItemHandler
 			activeOwner.sendMessage(isBlessed ? "Your pet uses blessed spiritshot." : "Your pet uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 			pet.chargeShot(shotType);
 			
-			// Visual effect change if player has equipped Sapphire level 3 or higher
+			// Visual effect change if player has equipped Sapphire level 3 or higher.
 			if (activeOwner.getActiveShappireJewel() != null)
 			{
 				activeOwner.broadcastSkillPacket(new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getSkillId(), activeOwner.getActiveShappireJewel().getSkillLevel(), 0, 0), pet);
@@ -216,7 +216,7 @@ public class SpiritShot implements IItemHandler
 				activeOwner.sendMessage(isBlessed ? "Your servitor uses blessed spiritshot." : "Your servitor uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 				s.chargeShot(shotType);
 				
-				// Visual effect change if player has equipped Sapphire level 3 or higher
+				// Visual effect change if player has equipped Sapphire level 3 or higher.
 				if (activeOwner.getActiveShappireJewel() != null)
 				{
 					activeOwner.broadcastSkillPacket(new MagicSkillUse(s, s, activeOwner.getActiveShappireJewel().getSkillId(), activeOwner.getActiveShappireJewel().getSkillLevel(), 0, 0), s);

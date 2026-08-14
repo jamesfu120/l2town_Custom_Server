@@ -20,15 +20,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.enchant;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantSupportItem;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.ChallengePoint;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantSupportItem;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -39,6 +40,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 public class ResetEnchantItemFailRewardInfo extends ServerPacket
 {
 	private final Item _enchantItem;
+	private int _challengeGroup;
+	private int _challengePoint;
 	private ItemHolder _result;
 	private Item _addedItem;
 	
@@ -87,10 +90,14 @@ public class ResetEnchantItemFailRewardInfo extends ServerPacket
 				_result = new ItemHolder(template.getCrystalItemId(), Math.max(0, _enchantItem.getCrystalCount() - ((template.getCrystalCount() + 1) / 2)));
 			}
 		}
+		
+		final ChallengePoint challenge = player.getChallengeInfo();
+		_challengeGroup = challenge.getNowGroup();
+		_challengePoint = challenge.getNowPoint();
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (_enchantItem == null)
 		{
@@ -101,8 +108,8 @@ public class ResetEnchantItemFailRewardInfo extends ServerPacket
 		
 		buffer.writeInt(_enchantItem.getObjectId());
 		
-		buffer.writeInt(0);
-		buffer.writeInt(0);
+		buffer.writeInt(_challengeGroup);
+		buffer.writeInt(_challengePoint);
 		
 		if (_result != null)
 		{

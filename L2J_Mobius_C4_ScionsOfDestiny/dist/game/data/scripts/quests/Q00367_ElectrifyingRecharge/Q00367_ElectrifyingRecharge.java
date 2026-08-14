@@ -20,13 +20,13 @@
  */
 package quests.Q00367_ElectrifyingRecharge;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 
 public class Q00367_ElectrifyingRecharge extends Quest
 {
@@ -160,7 +160,7 @@ public class Q00367_ElectrifyingRecharge extends Quest
 				{
 					htmltext = "30673-06.htm";
 					takeItems(player, 5879, 1);
-					rewardItems(player, REWARD[getRandom(REWARD.length)], 1);
+					rewardItems(player, getRandomEntry(REWARD), 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);
 				}
 				break;

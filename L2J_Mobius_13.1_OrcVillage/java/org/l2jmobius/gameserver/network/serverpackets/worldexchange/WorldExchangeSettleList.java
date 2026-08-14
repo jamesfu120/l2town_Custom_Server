@@ -23,15 +23,15 @@ package org.l2jmobius.gameserver.network.serverpackets.worldexchange;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.enums.WorldExchangeItemStatusType;
+import org.l2jmobius.gameserver.entity.item.holders.WorldExchangeHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.WorldExchangeManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.item.enums.WorldExchangeItemStatusType;
-import org.l2jmobius.gameserver.model.item.holders.WorldExchangeHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
+import org.l2jmobius.gameserver.mechanics.ensoul.EnsoulOption;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -49,7 +49,7 @@ public class WorldExchangeSettleList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_WORLD_EXCHANGE_SETTLE_LIST.writeId(this, buffer);
 		
@@ -83,7 +83,7 @@ public class WorldExchangeSettleList extends ServerPacket
 		buffer.writeInt(0); // 493
 	}
 	
-	private void getItemInfo(WritableBuffer buffer, WorldExchangeHolder holder)
+	private void getItemInfo(WriteBuffer buffer, WorldExchangeHolder holder)
 	{
 		buffer.writeLong(holder.getWorldExchangeId());
 		buffer.writeLong(holder.getPrice());

@@ -23,7 +23,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -34,7 +34,7 @@ public class PvpBookList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PVPBOOK_LIST.writeId(this, buffer);
 		final int size = 1;

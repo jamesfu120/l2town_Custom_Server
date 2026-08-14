@@ -19,15 +19,15 @@ package handlers.items;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.enums.ShotType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -127,7 +127,7 @@ public class BeastSpiritShot implements IItemHandler
 			activeOwner.sendMessage(isBlessed ? "Your pet uses blessed spiritshot." : "Your pet uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 			pet.chargeShot(shotType);
 			
-			// Visual effect change if player has equipped Sapphire level 3 or higher
+			// Visual effect change if player has equipped Sapphire level 3 or higher.
 			if (activeOwner.getActiveShappireJewel() != null)
 			{
 				activeOwner.broadcastSkillPacket(new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getSkillId(), activeOwner.getActiveShappireJewel().getSkillLevel(), 0, 0), pet);
@@ -145,7 +145,7 @@ public class BeastSpiritShot implements IItemHandler
 				activeOwner.sendMessage(isBlessed ? "Your servitor uses blessed spiritshot." : "Your servitor uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 				s.chargeShot(shotType);
 				
-				// Visual effect change if player has equipped Sapphire level 3 or higher
+				// Visual effect change if player has equipped Sapphire level 3 or higher.
 				if (activeOwner.getActiveShappireJewel() != null)
 				{
 					activeOwner.broadcastSkillPacket(new MagicSkillUse(s, s, activeOwner.getActiveShappireJewel().getSkillId(), activeOwner.getActiveShappireJewel().getSkillLevel(), 0, 0), s);

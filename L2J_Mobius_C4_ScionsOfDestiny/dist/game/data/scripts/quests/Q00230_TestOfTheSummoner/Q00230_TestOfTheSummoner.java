@@ -24,16 +24,16 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
@@ -1026,7 +1026,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 					final ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					
 					// check if the attacker is the same pet as the one that attacked before.
-					if (!isPet || (player.getSummon() != duel.getPet())) // if a foul occured find the player who had the duel in progress and give a foul crystal
+					if (!isPet || (player.getSummon() != duel.getPet())) // if a foul occurred find the player who had the duel in progress and give a foul crystal
 					{
 						final Player foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)

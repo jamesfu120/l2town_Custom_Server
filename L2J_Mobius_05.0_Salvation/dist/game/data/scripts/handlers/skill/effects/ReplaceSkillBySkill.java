@@ -22,19 +22,19 @@ package handlers.skill.effects;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.ShortcutType;
-import org.l2jmobius.gameserver.model.actor.holders.player.Shortcut;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.ShortcutType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcut;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ShortcutInit;
 import org.l2jmobius.gameserver.network.serverpackets.ShortcutRegister;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius

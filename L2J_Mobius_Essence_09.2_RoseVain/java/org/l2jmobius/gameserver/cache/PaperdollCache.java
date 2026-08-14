@@ -27,11 +27,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.data.holders.ArmorSet;
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.stats.BaseStat;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.stats.BaseStat;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 
 /**
  * @author Sahar

@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.relics;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsPointInfo;
 
@@ -53,7 +53,7 @@ public class RequestRelicsConfirmCombination extends ClientPacket
 			case 3:
 			{
 				final int relicCombinationGrade3Points = player.getVariables().getInt(PlayerVariables.RELICS_COMBINATION_GRADE_3_POINTS, 0);
-				if ((relicCombinationGrade3Points >= 20))
+				if (relicCombinationGrade3Points >= 20)
 				{
 					player.getVariables().set(PlayerVariables.RELICS_COMBINATION_GRADE_3_POINTS, relicCombinationGrade3Points - 20);
 					player.addItem(ItemProcessType.BUY, 82932, 1, player, true);
@@ -63,7 +63,7 @@ public class RequestRelicsConfirmCombination extends ClientPacket
 			case 4:
 			{
 				final int relicCombinationGrade4Points = player.getVariables().getInt(PlayerVariables.RELICS_COMBINATION_GRADE_4_POINTS, 0);
-				if ((relicCombinationGrade4Points >= 20))
+				if (relicCombinationGrade4Points >= 20)
 				{
 					player.getVariables().set(PlayerVariables.RELICS_COMBINATION_GRADE_4_POINTS, relicCombinationGrade4Points - 20);
 					player.addItem(ItemProcessType.BUY, 82933, 1, player, true);

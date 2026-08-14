@@ -20,14 +20,16 @@
  */
 package handlers.chat.commands.admin;
 
-import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.PremiumManager;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -35,6 +37,8 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminPremium implements IAdminCommandHandler
 {
+	private static final DateTimeFormatter PREMIUM_FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_premium_menu",
@@ -122,9 +126,10 @@ public class AdminPremium implements IAdminCommandHandler
 			return;
 		}
 		
+		final String entityType = PremiumSystemConfig.ACCOUNT_WIDE_PREMIUM ? "Account " : "Player ";
 		// TODO: Add check if account exists XD
 		PremiumManager.getInstance().addPremiumTime(accountName, months * 30, TimeUnit.DAYS);
-		admin.sendMessage("Account " + accountName + " will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(accountName)) + ".");
+		admin.sendMessage(entityType + accountName + " will now have premium status until " + PREMIUM_FORMAT.format(Instant.ofEpochMilli(PremiumManager.getInstance().getPremiumExpiration(accountName)).atZone(ZoneId.systemDefault())) + ".");
 	}
 	
 	private void viewPremiumInfo(Player admin, String accountName)
@@ -135,13 +140,14 @@ public class AdminPremium implements IAdminCommandHandler
 			return;
 		}
 		
+		final String entityType = PremiumSystemConfig.ACCOUNT_WIDE_PREMIUM ? "Account " : "Player ";
 		if (PremiumManager.getInstance().getPremiumExpiration(accountName) > 0)
 		{
-			admin.sendMessage("Account " + accountName + " has premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(accountName)) + ".");
+			admin.sendMessage(entityType + accountName + " has premium status until " + PREMIUM_FORMAT.format(Instant.ofEpochMilli(PremiumManager.getInstance().getPremiumExpiration(accountName)).atZone(ZoneId.systemDefault())) + ".");
 		}
 		else
 		{
-			admin.sendMessage("Account " + accountName + " has no premium status.");
+			admin.sendMessage(entityType + accountName + " has no premium status.");
 		}
 	}
 	
@@ -153,14 +159,15 @@ public class AdminPremium implements IAdminCommandHandler
 			return;
 		}
 		
+		final String entityType = PremiumSystemConfig.ACCOUNT_WIDE_PREMIUM ? "Account " : "Player ";
 		if (PremiumManager.getInstance().getPremiumExpiration(accountName) > 0)
 		{
 			PremiumManager.getInstance().removePremiumStatus(accountName, true);
-			admin.sendMessage("Account " + accountName + " has no longer premium status.");
+			admin.sendMessage(entityType + accountName + " has no longer premium status.");
 		}
 		else
 		{
-			admin.sendMessage("Account " + accountName + " has no premium status.");
+			admin.sendMessage(entityType + accountName + " has no premium status.");
 		}
 	}
 	

@@ -21,7 +21,8 @@
 package org.l2jmobius.gameserver.network;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -157,7 +158,8 @@ public enum ExClientPackets
 	BR_EVENT_RANKER_LIST(0x7D, BrEventRankerList::new, ConnectionState.IN_GAME),
 	REQUEST_BR_MINI_GAME_LOAD_SCORES(0x7E, null, ConnectionState.IN_GAME),
 	REQUEST_BR_MINI_GAME_INSERT_SCORE(0x7F, null, ConnectionState.IN_GAME),
-	REQUEST_BR_LECTURE_MARK(0x80, null, ConnectionState.IN_GAME);
+	REQUEST_BR_LECTURE_MARK(0x80, null, ConnectionState.IN_GAME),
+	EX_MAX(0x81, null, ConnectionState.IN_GAME);
 	
 	public static final ExClientPackets[] PACKET_ARRAY;
 	static
@@ -184,7 +186,10 @@ public enum ExClientPackets
 		
 		_packetId = packetId;
 		_packetSupplier = packetSupplier != null ? packetSupplier : () -> null;
-		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
+		
+		final EnumSet<ConnectionState> states = EnumSet.noneOf(ConnectionState.class);
+		Collections.addAll(states, connectionStates);
+		_connectionStates = states;
 	}
 	
 	public int getPacketId()

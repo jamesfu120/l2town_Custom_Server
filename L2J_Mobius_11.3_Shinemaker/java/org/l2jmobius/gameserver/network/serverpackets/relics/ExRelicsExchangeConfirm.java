@@ -24,11 +24,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerRelicData;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerRelicData;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -50,7 +50,7 @@ public class ExRelicsExchangeConfirm extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RELICS_EXCHANGE_CONFIRM.writeId(this, buffer);
 		

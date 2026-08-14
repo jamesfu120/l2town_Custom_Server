@@ -24,11 +24,11 @@ import java.util.Calendar;
 
 import org.l2jmobius.gameserver.data.holders.SubjugationHolder;
 import org.l2jmobius.gameserver.data.xml.SubjugationData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerPurgeHolder;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerPurgeHolder;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationSidebar;
 
 /**

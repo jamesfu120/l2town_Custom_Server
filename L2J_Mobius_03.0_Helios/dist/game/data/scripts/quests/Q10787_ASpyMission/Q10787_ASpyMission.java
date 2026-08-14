@@ -16,14 +16,14 @@
  */
 package quests.Q10787_ASpyMission;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.util.StatSet;
 
 import quests.Q10786_ResidentProblemSolver.Q10786_ResidentProblemSolver;
 
@@ -93,9 +93,13 @@ public class Q10787_ASpyMission extends Quest
 						htmltext = "33994-03.html";
 					}
 					// @formatter:off
-					World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 150).stream()
-					.filter(n -> (n.getId() == EMBRYO_PURIFIER))
-					.forEach(mob -> addAttackPlayerDesire(mob, player));
+					World.forEachVisibleObjectInRange(npc, Npc.class, 150, mob ->
+					{
+						if (mob.getId() == EMBRYO_PURIFIER)
+						{
+							addAttackPlayerDesire(mob, player);
+						}
+					});
 					// @formatter:on
 					getTimers().addTimer("DESPAWN", 1000, npc, null);
 				}

@@ -35,15 +35,15 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.enums.CrystallizationType;
 import org.l2jmobius.gameserver.data.holders.CrystallizationDataHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Armor;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.item.enchant.RewardItemsOnFailure;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.Armor;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.Weapon;
+import org.l2jmobius.gameserver.entity.item.enchant.RewardItemsOnFailure;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid, Index
@@ -79,12 +79,12 @@ public class ItemCrystallizationData implements IXmlReader
 		
 		parseDatapackFile("data/CrystallizableItems.xml");
 		
-		if (_crystallizationTemplates.size() > 0)
+		if (!_crystallizationTemplates.isEmpty())
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _crystallizationTemplates.size() + " crystallization templates.");
 		}
 		
-		if (_items.size() > 0)
+		if (!_items.isEmpty())
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _items.size() + " pre-defined crystallizable items.");
 		}
@@ -92,12 +92,12 @@ public class ItemCrystallizationData implements IXmlReader
 		// Generate remaining data.
 		generateCrystallizationData();
 		
-		if (_weaponDestroyGroup.size() > 0)
+		if (!_weaponDestroyGroup.isEmpty())
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _weaponDestroyGroup.size() + " weapon enchant failure rewards.");
 		}
 		
-		if (_armorDestroyGroup.size() > 0)
+		if (!_armorDestroyGroup.isEmpty())
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorDestroyGroup.size() + " armor enchant failure rewards.");
 		}

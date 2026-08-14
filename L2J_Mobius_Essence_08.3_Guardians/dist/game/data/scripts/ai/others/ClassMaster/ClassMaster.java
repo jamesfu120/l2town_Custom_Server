@@ -24,7 +24,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
@@ -39,24 +38,24 @@ import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.ItemData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerBypass;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLevelChanged;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerPressTutorialMark;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerProfessionChange;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerBypass;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLevelChanged;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerPressTutorialMark;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerProfessionChange;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
@@ -81,7 +80,7 @@ public class ClassMaster extends Script implements IXmlReader
 	private boolean _isEnabled;
 	private boolean _spawnClassMasters;
 	private boolean _showPopupWindow;
-	private final List<ClassChangeData> _classChangeData = new LinkedList<>();
+	private final List<ClassChangeData> _classChangeData = new ArrayList<>();
 	
 	public ClassMaster()
 	{
@@ -132,9 +131,9 @@ public class ClassMaster extends Script implements IXmlReader
 							attrs = c.getAttributes();
 							if ("classChangeOption".equals(c.getNodeName()))
 							{
-								final List<CategoryType> appliedCategories = new LinkedList<>();
-								final List<ItemHolder> requiredItems = new LinkedList<>();
-								final List<ItemHolder> rewardedItems = new LinkedList<>();
+								final List<CategoryType> appliedCategories = new ArrayList<>();
+								final List<ItemHolder> requiredItems = new ArrayList<>();
+								final List<ItemHolder> rewardedItems = new ArrayList<>();
 								boolean setNoble = false;
 								boolean setHero = false;
 								final String optionName = parseString(attrs, "name", "");
@@ -297,7 +296,7 @@ public class ClassMaster extends Script implements IXmlReader
 				
 				final int classId = Integer.parseInt(st.nextToken());
 				boolean canChange = false;
-				if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
+				if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation.
 				{
 					canChange = CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId));
 				}
@@ -409,7 +408,8 @@ public class ClassMaster extends Script implements IXmlReader
 				final Clan clan = player.getClan();
 				if ((clan == null) || !player.isClanLeader())
 				{
-					return null;
+					htmltext = "pl014.html";
+					break;
 				}
 				
 				if (clan.getLevel() >= 10)
@@ -420,6 +420,7 @@ public class ClassMaster extends Script implements IXmlReader
 				{
 					clan.changeLevel(clan.getLevel() + 1);
 					clan.broadcastClanStatus();
+					htmltext = "test_server_helper022c.html";
 				}
 				break;
 			}
@@ -908,14 +909,15 @@ public class ClassMaster extends Script implements IXmlReader
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final Player player = event.getPlayer();
 		if (!_showPopupWindow || (event.getMarkId() != 102))
 		{
 			return;
 		}
 		
 		String html = null;
-		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getRace() != Race.KAMAEL) && (player.getPlayerClass().getId() < 196))) && (player.getLevel() >= 40)) // In retail you can skip first occupation
+		final Player player = event.getPlayer();
+		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getRace() != Race.KAMAEL) && (player.getPlayerClass().getId() < PlayerClass.DEATH_PILGRIM_HUMAN.getId()))) && (player.getLevel() >= 40)) // In retail you can skip
+																																																																				// first occupation
 		{
 			html = getHtm(player, getSecondOccupationChangeHtml(player));
 		}
@@ -1117,7 +1119,7 @@ public class ClassMaster extends Script implements IXmlReader
 	{
 		boolean showOptions = false;
 		
-		// Check if there are requirements
+		// Check if there are requirements.
 		for (ClassChangeData ccd : _classChangeData)
 		{
 			if (!ccd.getItemsRequired().isEmpty() && ccd.isInCategory(player))

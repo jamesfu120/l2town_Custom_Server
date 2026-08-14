@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.network.serverpackets.attributechange;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -43,7 +43,7 @@ public class ExChangeAttributeItemList extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CHANGE_ATTRIBUTE_ITEM_LIST.writeId(this, buffer);
 		buffer.writeInt(_itemId);

@@ -29,12 +29,12 @@ import java.util.Set;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.AbstractPlayerGroup;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.AbstractPlayerGroup;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -83,7 +83,7 @@ public class DreamPriestess extends InstanceScript
 				return null;
 			}
 			
-			// for don't call many methods
+			// For don't call many methods.
 			PLAYER_LIST_TO_ENTER.put(player.getObjectId(), new HashSet<>());
 			PLAYER_LIST_TO_ENTER.get(player.getObjectId()).add(player);
 			
@@ -117,8 +117,8 @@ public class DreamPriestess extends InstanceScript
 				dungeonId = INSTANCE_IDS.get(Rnd.get(1, INSTANCE_IDS.size()) - 1);
 			}
 			
-			// zone not available in solo, but GM can enter
-			// zone will be work if comment this check
+			// Zone not available in solo, but GM can enter.
+			// Zone will be work if comment this check.
 			if (!player.isInParty() && !player.isGM())
 			{
 				PLAYER_LIST_TO_ENTER.remove(player.getObjectId());

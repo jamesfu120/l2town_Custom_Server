@@ -38,12 +38,12 @@ import org.l2jmobius.gameserver.config.NpcConfig;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.enums.npc.RaidBossStatus;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.RaidBossStatus;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.spawns.NpcSpawnTemplate;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Database spawn manager.
@@ -332,7 +332,7 @@ public class DatabaseSpawnManager
 			}
 			catch (Exception e)
 			{
-				// problem with storing spawn
+				// Problem with storing spawn.
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store npc #" + npcId + " in the DB: ", e);
 			}
 		}
@@ -388,7 +388,7 @@ public class DatabaseSpawnManager
 			}
 			catch (Exception e)
 			{
-				// problem with storing spawn
+				// Problem with storing spawn.
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store npc #" + npcId + " in the DB: ", e);
 			}
 		}
@@ -429,7 +429,7 @@ public class DatabaseSpawnManager
 			}
 			catch (Exception e)
 			{
-				// problem with deleting spawn
+				// Problem with deleting spawn.
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not remove npc #" + npcId + " from DB: ", e);
 			}
 		}
@@ -527,9 +527,9 @@ public class DatabaseSpawnManager
 			return msg;
 		}
 		
-		if (_npcs.containsKey(npcId))
+		final Npc npc = _npcs.get(npcId);
+		if (npc != null)
 		{
-			final Npc npc = _npcs.get(npcId);
 			msg += npc.getName() + ": " + npc.getDBStatus().name();
 		}
 		
@@ -543,9 +543,10 @@ public class DatabaseSpawnManager
 	 */
 	public RaidBossStatus getStatus(int npcId)
 	{
-		if (_npcs.containsKey(npcId))
+		final Npc npc = _npcs.get(npcId);
+		if (npc != null)
 		{
-			return _npcs.get(npcId).getDBStatus();
+			return npc.getDBStatus();
 		}
 		else if (_schedules.containsKey(npcId))
 		{

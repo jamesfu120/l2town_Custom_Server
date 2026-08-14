@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `prisoners` (
   `zoneId` INT UNSIGNED NOT NULL DEFAULT 0,
   `bailAmount` INT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

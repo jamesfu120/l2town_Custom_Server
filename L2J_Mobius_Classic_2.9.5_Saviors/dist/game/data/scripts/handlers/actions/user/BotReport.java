@@ -19,8 +19,8 @@ package handlers.actions.user;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.BotReportTable;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Bot Report button player action handler.

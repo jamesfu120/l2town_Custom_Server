@@ -23,21 +23,21 @@ package ai.bosses.Fafurion;
 import java.util.List;
 
 import org.l2jmobius.gameserver.config.GrandBossConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius
@@ -130,10 +130,10 @@ public class Fafurion extends Script
 				if (player.calculateDistance2D(FAFURION_SPAWN_LOC) < 5000)
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_OF_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
-					for (Player plr : World.getInstance().getVisibleObjectsInRange(player, Player.class, 5000))
+					World.forEachVisibleObjectInRange(player, Player.class, 5000, plr ->
 					{
 						plr.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_OF_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
-					}
+					});
 				}
 				break;
 			}
@@ -196,10 +196,10 @@ public class Fafurion extends Script
 				final int status = GrandBossManager.getInstance().getStatus(FAFURION_GRANDBOSS_ID);
 				if ((status > ALIVE) && (status < DEAD))
 				{
-					for (Player plr : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 5000))
+					World.forEachVisibleObjectInRange(npc, Player.class, 5000, plr ->
 					{
 						plr.sendPacket(new ExShowScreenMessage(NpcStringId.EXCEEDED_THE_FAFURION_S_NEST_RAID_TIME_LIMIT, ExShowScreenMessage.TOP_CENTER, 10000, true));
-					}
+					});
 					
 					GrandBossManager.getInstance().setStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 					FAFURION_ZONE.oustAllPlayers();
@@ -243,13 +243,13 @@ public class Fafurion extends Script
 					
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 					if (!isPartyLeader)
 					{
 						return "34488-02.html";
 					}
 					
+					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					if ((members.size() < GrandBossConfig.FAFURION_MIN_PLAYERS) || (members.size() > GrandBossConfig.FAFURION_MAX_PLAYERS))
 					{
 						return "34488-01.html";

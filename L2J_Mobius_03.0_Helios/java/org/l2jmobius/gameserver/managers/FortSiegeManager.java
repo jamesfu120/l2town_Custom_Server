@@ -37,15 +37,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.siege.CombatFlag;
-import org.l2jmobius.gameserver.model.siege.Fort;
-import org.l2jmobius.gameserver.model.siege.FortSiege;
-import org.l2jmobius.gameserver.model.siege.FortSpawnHolder;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.siege.CombatFlag;
+import org.l2jmobius.gameserver.mechanics.siege.Fort;
+import org.l2jmobius.gameserver.mechanics.siege.FortSiege;
+import org.l2jmobius.gameserver.mechanics.siege.FortSpawnHolder;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -55,7 +55,7 @@ public class FortSiegeManager
 	
 	private static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
 	
-	private int _attackerMaxClans = 500; // Max number of clans
+	private int _attackerMaxClans = 500; // Max number of clans.
 	
 	// Fort Siege settings
 	private Map<Integer, List<FortSpawnHolder>> _commanderSpawnList;
@@ -63,9 +63,9 @@ public class FortSiegeManager
 	private boolean _justToTerritory = true; // Changeable in fortsiege.properties
 	private int _flagMaxCount = 1; // Changeable in fortsiege.properties
 	private int _siegeClanMinLevel = 4; // Changeable in fortsiege.properties
-	private int _siegeLength = 60; // Time in minute. Changeable in fortsiege.properties
-	private int _countDownLength = 10; // Time in minute. Changeable in fortsiege.properties
-	private int _suspiciousMerchantRespawnDelay = 180; // Time in minute. Changeable in fortsiege.properties
+	private int _siegeLength = 60; // Time in minute. Changeable in fortsiege.properties.
+	private int _countDownLength = 10; // Time in minute. Changeable in fortsiege.properties.
+	private int _suspiciousMerchantRespawnDelay = 180; // Time in minute. Changeable in fortsiege.properties.
 	private final Map<Integer, FortSiege> _sieges = new ConcurrentHashMap<>();
 	
 	protected FortSiegeManager()

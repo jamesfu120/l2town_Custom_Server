@@ -19,15 +19,15 @@ package handlers.items;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.enums.ShotType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -126,7 +126,7 @@ public class BeastSoulShot implements IItemHandler
 			activeOwner.sendMessage("Your pet uses soulshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 			pet.chargeShot(ShotType.SOULSHOTS);
 			
-			// Visual effect change if player has equipped Ruby level 3 or higher
+			// Visual effect change if player has equipped Ruby level 3 or higher.
 			if (activeOwner.getActiveRubyJewel() != null)
 			{
 				activeOwner.broadcastSkillPacket(new MagicSkillUse(pet, pet, activeOwner.getActiveRubyJewel().getSkillId(), activeOwner.getActiveRubyJewel().getSkillLevel(), 0, 0), pet);
@@ -144,7 +144,7 @@ public class BeastSoulShot implements IItemHandler
 				activeOwner.sendMessage("Your servitor uses soulshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 				s.chargeShot(ShotType.SOULSHOTS);
 				
-				// Visual effect change if player has equipped Ruby level 3 or higher
+				// Visual effect change if player has equipped Ruby level 3 or higher.
 				if (activeOwner.getActiveRubyJewel() != null)
 				{
 					activeOwner.broadcastSkillPacket(new MagicSkillUse(s, s, activeOwner.getActiveRubyJewel().getSkillId(), activeOwner.getActiveRubyJewel().getSkillLevel(), 0, 0), s);

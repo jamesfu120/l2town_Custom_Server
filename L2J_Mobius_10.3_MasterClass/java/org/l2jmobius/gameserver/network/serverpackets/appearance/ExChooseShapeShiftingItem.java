@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.appearance;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.appearance.AppearanceStone;
-import org.l2jmobius.gameserver.model.item.appearance.AppearanceTargetType;
-import org.l2jmobius.gameserver.model.item.appearance.AppearanceType;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.appearance.AppearanceStone;
+import org.l2jmobius.gameserver.entity.item.appearance.AppearanceTargetType;
+import org.l2jmobius.gameserver.entity.item.appearance.AppearanceType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -41,7 +41,7 @@ public class ExChooseShapeShiftingItem extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CHOOSE_SHAPE_SHIFTING_ITEM.writeId(this, buffer);
 		buffer.writeInt(_targetType != null ? _targetType.ordinal() : 0);

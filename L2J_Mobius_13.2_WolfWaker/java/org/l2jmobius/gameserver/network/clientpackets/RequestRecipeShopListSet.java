@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
+import static org.l2jmobius.gameserver.entity.itemcontainer.Inventory.MAX_ADENA;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,15 +31,15 @@ import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.holders.RecipeHolder;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 import org.l2jmobius.gameserver.taskmanagers.AttackStanceTaskManager;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * RequestRecipeShopListSet client packet class.
@@ -120,7 +120,6 @@ public class RequestRecipeShopListSet extends ClientPacket
 		for (Entry<Integer, Long> item : _manufactureRecipes.entrySet())
 		{
 			final int recipeId = item.getKey();
-			final long recipeCost = item.getValue();
 			final RecipeHolder recipe = RecipeData.getInstance().getRecipe(recipeId);
 			if (recipe == null)
 			{
@@ -128,6 +127,7 @@ public class RequestRecipeShopListSet extends ClientPacket
 				return;
 			}
 			
+			final long recipeCost = item.getValue();
 			if (ItemData.getInstance().getTemplate(recipe.getItemId()).isQuestItem())
 			{
 				player.sendPacket(SystemMessageId.QUEST_RECIPES_CAN_NOT_BE_REGISTERED);
@@ -153,6 +153,6 @@ public class RequestRecipeShopListSet extends ClientPacket
 		player.setPrivateStoreType(PrivateStoreType.MANUFACTURE);
 		player.sitDown();
 		player.broadcastUserInfo();
-		Broadcast.toSelfAndKnownPlayers(player, new RecipeShopMsg(player));
+		World.broadcastToSelfAndVisiblePlayers(player, new RecipeShopMsg(player));
 	}
 }

@@ -28,7 +28,6 @@ import java.util.Deque;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -39,6 +38,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import org.w3c.dom.Document;
@@ -51,13 +51,13 @@ import org.l2jmobius.commons.util.TraceUtil;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.handler.EffectHandler;
 import org.l2jmobius.gameserver.handler.SkillConditionHandler;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.EffectScope;
-import org.l2jmobius.gameserver.model.skill.ISkillCondition;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillConditionScope;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.EffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.ISkillCondition;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillConditionScope;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * The {@code SkillData} class is responsible for parsing, loading, and managing skill data within the game server.
@@ -66,6 +66,8 @@ import org.l2jmobius.gameserver.model.skill.SkillConditionScope;
 public class SkillData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillData.class.getName());
+	
+	private static final Pattern SUB_LEVEL_VALUES_PATTERN = Pattern.compile("subLevel\\d+Values");
 	
 	private final Map<Long, Skill> _skillsByHash = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer> _maxSkillLevels = new ConcurrentHashMap<>();
@@ -199,7 +201,7 @@ public class SkillData implements IXmlReader
 										{
 											if ("effect".equalsIgnoreCase(effectsNode.getNodeName()))
 											{
-												effectParamInfo.computeIfAbsent(effectScope, _ -> new LinkedList<>()).add(parseNamedParamInfo(effectsNode, variableValues));
+												effectParamInfo.computeIfAbsent(effectScope, _ -> new ArrayList<>()).add(parseNamedParamInfo(effectsNode, variableValues));
 											}
 										}
 										break;
@@ -212,7 +214,7 @@ public class SkillData implements IXmlReader
 										{
 											if ("condition".equalsIgnoreCase(conditionNode.getNodeName()))
 											{
-												conditionParamInfo.computeIfAbsent(skillConditionScope, _ -> new LinkedList<>()).add(parseNamedParamInfo(conditionNode, variableValues));
+												conditionParamInfo.computeIfAbsent(skillConditionScope, _ -> new ArrayList<>()).add(parseNamedParamInfo(conditionNode, variableValues));
 											}
 										}
 									}
@@ -493,7 +495,7 @@ public class SkillData implements IXmlReader
 		for (int i = 0; i < attributes.getLength(); i++)
 		{
 			final String attrName = attributes.item(i).getNodeName();
-			if (attrName.matches("subLevel\\d+Values"))
+			if (SUB_LEVEL_VALUES_PATTERN.matcher(attrName).matches())
 			{
 				// Extract category number.
 				subLevelCategory = extractCategoryNumber(attrName);
@@ -657,7 +659,7 @@ public class SkillData implements IXmlReader
 		for (int i = 0; i < attributes.getLength(); i++)
 		{
 			final String attrName = attributes.item(i).getNodeName();
-			if (attrName.matches("subLevel\\d+Values"))
+			if (SUB_LEVEL_VALUES_PATTERN.matcher(attrName).matches())
 			{
 				subLevelValuesStr = attributes.item(i).getNodeValue();
 				subLevelCategory = extractCategoryNumber(attrName);
@@ -933,7 +935,7 @@ public class SkillData implements IXmlReader
 				{
 					if (list == null)
 					{
-						list = new LinkedList<>();
+						list = new ArrayList<>();
 					}
 					
 					final Object value = parseValue(n, false, true, variables);
@@ -1104,9 +1106,10 @@ public class SkillData implements IXmlReader
 				continue;
 			}
 			
-			if (variables.containsKey(token))
+			final Object value = variables.get(token);
+			if (value != null)
 			{
-				token = variables.get(token).toString();
+				token = value.toString();
 			}
 			
 			if (isNumeric(token))
@@ -1119,7 +1122,7 @@ public class SkillData implements IXmlReader
 				final String nextToken = tokenizer.hasMoreTokens() ? tokenizer.nextToken().trim() : null;
 				if ((nextToken != null) && isNumeric(nextToken))
 				{
-					postfix.append("-").append(nextToken).append(" ");
+					postfix.append('-').append(nextToken).append(' ');
 					expectNumber = false;
 				}
 				else
@@ -1380,7 +1383,7 @@ public class SkillData implements IXmlReader
 	 */
 	public List<Skill> getSiegeSkills(boolean addNoble, boolean hasCastle)
 	{
-		final List<Skill> result = new LinkedList<>();
+		final List<Skill> result = new ArrayList<>();
 		result.add(_skillsByHash.get(getSkillHashCode(CommonSkill.IMPRIT_OF_LIGHT.getId(), 1)));
 		result.add(_skillsByHash.get(getSkillHashCode(CommonSkill.IMPRIT_OF_DARKNESS.getId(), 1)));
 		result.add(_skillsByHash.get(getSkillHashCode(247, 1))); // Build Headquarters

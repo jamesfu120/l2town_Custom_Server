@@ -20,12 +20,12 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampInfo;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius, Serenitty
@@ -41,7 +41,7 @@ public class MagicLampExpRate extends AbstractStatPercentEffect
 	public void pump(Creature effected, Skill skill)
 	{
 		effected.getStat().mergeAdd(Stat.MAGIC_LAMP_EXP_RATE, _amount);
-		if ((skill != null))
+		if (skill != null)
 		{
 			effected.getStat().mergeAdd(Stat.LAMP_BONUS_EXP, _amount);
 			effected.getStat().mergeAdd(Stat.LAMP_BONUS_BUFFS_COUNT, 1d);

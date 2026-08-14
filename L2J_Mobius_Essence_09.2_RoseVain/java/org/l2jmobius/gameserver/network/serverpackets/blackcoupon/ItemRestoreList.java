@@ -22,10 +22,10 @@ package org.l2jmobius.gameserver.network.serverpackets.blackcoupon;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.enums.BlackCouponRestoreCategory;
+import org.l2jmobius.gameserver.entity.item.holders.ItemRestoreHolder;
 import org.l2jmobius.gameserver.managers.events.BlackCouponManager;
-import org.l2jmobius.gameserver.model.item.enums.BlackCouponRestoreCategory;
-import org.l2jmobius.gameserver.model.item.holders.ItemRestoreHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -54,7 +54,7 @@ public class ItemRestoreList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ITEM_RESTORE_LIST.writeId(this, buffer);
 		buffer.writeByte(_category.ordinal());

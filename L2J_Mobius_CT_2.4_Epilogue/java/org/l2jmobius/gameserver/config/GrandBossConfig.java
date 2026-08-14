@@ -54,6 +54,8 @@ public class GrandBossConfig
 	public static int BELETH_SPAWN_INTERVAL;
 	public static int BELETH_SPAWN_RANDOM;
 	public static int BELETH_MIN_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS;
 	
 	public static void load()
 	{
@@ -80,5 +82,7 @@ public class GrandBossConfig
 		BELETH_SPAWN_INTERVAL = config.getInt("IntervalOfBelethSpawn", 192);
 		BELETH_SPAWN_RANDOM = config.getInt("RandomOfBelethSpawn", 148);
 		BELETH_MIN_PLAYERS = config.getInt("BelethMinPlayers", 36);
+		DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS = config.getBoolean("DisableRaidBossHealFromPlayers", false);
+		DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS = config.getBoolean("DisableRaidBossBuffFromPlayers", false);
 	}
 }

@@ -18,29 +18,26 @@ package ai.bosses.Freya.IceQueensCastleBattle;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.MountType;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.variables.NpcVariables;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MountType;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.actor.instance.RaidBoss;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.variables.NpcVariables;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -50,6 +47,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2jmobius.gameserver.taskmanagers.DecayTaskManager;
+import org.l2jmobius.gameserver.util.StatSet;
 
 import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 
@@ -391,7 +389,7 @@ public class IceQueensCastleBattle extends InstanceScript
 							if (!freya.isInCombat())
 							{
 								freya.setRunning();
-								freya.getAI().setIntention(Intention.MOVE_TO, MIDDLE_POINT);
+								freya.getAI().setIntentionMoveTo(MIDDLE_POINT);
 							}
 						}
 						break;
@@ -630,7 +628,7 @@ public class IceQueensCastleBattle extends InstanceScript
 						final Attackable mob = npc.asAttackable();
 						mob.clearAggroList();
 						
-						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, characters -> mob.addDamageHate(characters, 0, getRandom(10000, 20000)));
+						World.forEachVisibleObjectInRange(npc, Player.class, 1000, characters -> mob.addDamageHate(characters, 0, getRandom(10000, 20000)));
 						startQuestTimer("LEADER_RANDOMIZE", 25000, npc, null);
 						break;
 					}
@@ -678,7 +676,7 @@ public class IceQueensCastleBattle extends InstanceScript
 										final Attackable breath = addSpawn(BREATH, npc.getLocation(), true, 0, false, world.getId()).asAttackable();
 										breath.setRunning();
 										breath.addDamageHate(mob.getMostHated(), 0, 999);
-										breath.getAI().setIntention(Intention.ATTACK, mob.getMostHated());
+										breath.getAI().setIntentionAttack(mob.getMostHated());
 										startQuestTimer("BLIZZARD", 20000, breath, null);
 									}
 									break;
@@ -760,7 +758,7 @@ public class IceQueensCastleBattle extends InstanceScript
 						{
 							manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
 							freya.setRunning();
-							freya.getAI().setIntention(Intention.MOVE_TO, MIDDLE_POINT);
+							freya.getAI().setIntentionMoveTo(MIDDLE_POINT);
 						}
 					}
 					
@@ -834,7 +832,7 @@ public class IceQueensCastleBattle extends InstanceScript
 						if (!freya.isInCombat())
 						{
 							freya.setRunning();
-							freya.getAI().setIntention(Intention.MOVE_TO, MIDDLE_POINT);
+							freya.getAI().setIntentionMoveTo(MIDDLE_POINT);
 						}
 					}
 					
@@ -1050,7 +1048,7 @@ public class IceQueensCastleBattle extends InstanceScript
 							{
 								breath.setRunning();
 								breath.addDamageHate(player, 0, 999);
-								breath.getAI().setIntention(Intention.ATTACK, player);
+								breath.getAI().setIntentionAttack(player);
 							}
 							else
 							{
@@ -1137,7 +1135,7 @@ public class IceQueensCastleBattle extends InstanceScript
 						{
 							manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
 							freya.setRunning();
-							freya.getAI().setIntention(Intention.MOVE_TO, MIDDLE_POINT);
+							freya.getAI().setIntentionMoveTo(MIDDLE_POINT);
 						}
 					}
 					
@@ -1186,7 +1184,7 @@ public class IceQueensCastleBattle extends InstanceScript
 	
 	private void manageRandomAttack(Instance world, Npc mob)
 	{
-		final List<Player> players = world.getPlayers().stream().filter(p -> !p.isDead() && !p.isInvisible()).collect(Collectors.toList());
+		final List<Player> players = world.getPlayers().stream().filter(p -> !p.isDead() && !p.isInvisible()).toList();
 		Collections.shuffle(players);
 		
 		final Player target = (!players.isEmpty()) ? players.get(0) : null;
@@ -1194,7 +1192,7 @@ public class IceQueensCastleBattle extends InstanceScript
 		{
 			mob.asAttackable().addDamageHate(target, 0, 999);
 			mob.setRunning();
-			mob.getAI().setIntention(Intention.ATTACK, target);
+			mob.getAI().setIntentionAttack(target);
 		}
 		else
 		{
@@ -1232,7 +1230,7 @@ public class IceQueensCastleBattle extends InstanceScript
 	private void manageMovie(Instance world, Movie movie)
 	{
 		final Npc controller = world.getParameters().getObject("controller", Npc.class);
-		playMovie(World.getInstance().getVisibleObjectsInRange(controller, Player.class, 8000), movie);
+		playMovie(World.getVisibleObjectsInRange(controller, Player.class, 8000), movie);
 	}
 	
 	private List<Npc> getKnightStatues(Instance world)

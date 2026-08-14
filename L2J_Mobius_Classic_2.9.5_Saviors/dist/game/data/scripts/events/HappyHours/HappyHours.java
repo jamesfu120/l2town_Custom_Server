@@ -20,11 +20,11 @@
  */
 package events.HappyHours;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -92,7 +92,7 @@ public class HappyHours extends LongTimeEvent
 						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Sibi's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
 						final SystemMessage systemMsg = new SystemMessage(SystemMessageId.YOU_OBTAINED_S1_ORIANA_S_COINS);
 						systemMsg.addInt(20);
-						for (Player plr : World.getInstance().getPlayers())
+						for (Player plr : World.getPlayers())
 						{
 							if ((plr != null) && (plr.isOnlineInt() == 1) && plr.isAffectedBySkill(TRANSFORMATION_SKILL))
 							{

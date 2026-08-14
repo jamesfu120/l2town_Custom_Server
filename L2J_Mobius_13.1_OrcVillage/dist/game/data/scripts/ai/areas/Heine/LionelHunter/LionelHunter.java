@@ -21,10 +21,10 @@
 package ai.areas.Heine.LionelHunter;
 
 import org.l2jmobius.gameserver.data.xml.MultisellData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 import quests.Q10514_NobleMaterial4.Q10514_NobleMaterial4;
 import quests.Q10515_NobleMaterial4.Q10515_NobleMaterial4;

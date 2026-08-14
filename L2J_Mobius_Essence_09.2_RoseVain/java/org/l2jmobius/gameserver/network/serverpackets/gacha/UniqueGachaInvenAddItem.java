@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.network.serverpackets.gacha;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.GachaItemHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.GachaItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -39,7 +39,7 @@ public class UniqueGachaInvenAddItem extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_UNIQUE_GACHA_INVEN_ADD_ITEM.writeId(this, buffer);
 		buffer.writeInt(_rewards.size());

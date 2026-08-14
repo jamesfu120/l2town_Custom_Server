@@ -23,17 +23,15 @@ package handlers.chat.commands.voiced;
 import java.util.function.Consumer;
 
 import org.l2jmobius.gameserver.config.custom.OfflinePlayConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerAction;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
 /**
@@ -96,8 +94,10 @@ public class OfflinePlay implements IVoicedCommandHandler
 				return false;
 			}
 			
-			player.addAction(PlayerAction.OFFLINE_PLAY);
-			player.sendPacket(new ConfirmDlg("Do you wish to exit and continue auto play?"));
+			// Bellow code came from non-existent in C1 DlgAnswer client packet.
+			// Proceed with no confirmation.
+			
+			player.startOfflinePlay();
 		}
 		
 		return true;

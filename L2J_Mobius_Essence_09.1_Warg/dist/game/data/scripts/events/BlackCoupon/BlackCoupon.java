@@ -31,18 +31,18 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.BlackCouponRestoreCategory;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.managers.events.BlackCouponManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
-import org.l2jmobius.gameserver.model.item.enums.BlackCouponRestoreCategory;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class BlackCoupon extends LongTimeEvent implements IXmlReader
 {
@@ -85,7 +85,7 @@ public class BlackCoupon extends LongTimeEvent implements IXmlReader
 			manager.setRestoreIdFromXml(needToParse.get());
 			if (needToParse.get())
 			{
-				final HashMap<Integer, HashMap<BlackCouponRestoreCategory, Integer>> xmlRestoreList = new HashMap<>(new HashMap<>());
+				final Map<Integer, Map<BlackCouponRestoreCategory, Integer>> xmlRestoreList = new HashMap<>();
 				forEach(listNode, "exchange", exchangeNode ->
 				{
 					forEach(exchangeNode, "items", categoryNode ->

@@ -25,12 +25,13 @@ import java.util.List;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.data.holders.RelicSummonCategoryHolder;
 import org.l2jmobius.gameserver.data.xml.RelicData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.RelicSummonRequest;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.RelicSummonRequest;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
+import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsList;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsSummonResult;
 
 /**
@@ -70,14 +71,23 @@ public class RequestRelicsIdSummon extends ClientPacket
 			return;
 		}
 		
-		for (int relicId : obtainedRelics)
+		synchronized (player)
 		{
-			player.handleRelicAcquisition(relicId);
-			if (RelicSystemConfig.RELIC_SYSTEM_DEBUG_ENABLED)
+			for (int relicId : obtainedRelics)
 			{
-				player.sendMessage("Summoned relic ID: " + relicId);
+				player.handleRelicAcquisition(relicId);
+				
+				if (RelicSystemConfig.RELIC_SYSTEM_DEBUG_ENABLED)
+				{
+					player.sendMessage("Summoned relic ID: " + relicId);
+				}
 			}
+			
+			player.storeRelics();
 		}
+		
+		player.sendPacket(new ExRelicsList(player));
+		player.sendCombatPower();
 		
 		player.addRequest(new RelicSummonRequest(player));
 		player.sendPacket(new ExRelicsSummonResult(category, obtainedRelics));

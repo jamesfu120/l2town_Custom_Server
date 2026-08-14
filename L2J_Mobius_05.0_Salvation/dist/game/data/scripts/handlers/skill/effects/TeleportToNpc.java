@@ -16,20 +16,19 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.FlyType;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.interfaces.ILocational;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Teleport player/party to summoned npc effect implementation.
@@ -91,7 +90,7 @@ public class TeleportToNpc extends AbstractEffect
 	{
 		if (effected.isInsideRadius2D(location, 900))
 		{
-			effected.getAI().setIntention(Intention.IDLE);
+			effected.getAI().setIntentionIdle();
 			effected.broadcastPacket(new FlyToLocation(effected, location, FlyType.DUMMY));
 			effected.abortAttack();
 			effected.abortCast();

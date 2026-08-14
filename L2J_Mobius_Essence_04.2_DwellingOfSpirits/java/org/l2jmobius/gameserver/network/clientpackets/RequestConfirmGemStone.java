@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.xml.VariationData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.VariationFee;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.options.VariationFee;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutCommissionResultForVariationMake;
 
@@ -77,7 +77,7 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 			return;
 		}
 		
-		// Check for fee count
+		// Check for fee count.
 		if (_feeCount != fee.getItemCount())
 		{
 			player.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);

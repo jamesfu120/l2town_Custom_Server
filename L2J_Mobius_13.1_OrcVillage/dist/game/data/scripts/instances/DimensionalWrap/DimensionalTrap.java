@@ -20,11 +20,11 @@
  */
 package instances.DimensionalWrap;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * Dimensional Trap's AI
@@ -68,7 +68,7 @@ public class DimensionalTrap extends Script
 		{
 			case "debuff_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, _type, p ->
+				World.forEachVisibleObjectInRange(npc, Player.class, _type, p ->
 				{
 					if ((p != null) && p.isPlayer() && !p.isDead())
 					{
@@ -81,7 +81,7 @@ public class DimensionalTrap extends Script
 			}
 			case "damage_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, _type, p ->
+				World.forEachVisibleObjectInRange(npc, Player.class, _type, p ->
 				{
 					if ((p != null) && p.isPlayer() && !p.isDead())
 					{
@@ -94,7 +94,7 @@ public class DimensionalTrap extends Script
 			}
 			case "heal_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, _type, p ->
+				World.forEachVisibleObjectInRange(npc, Player.class, _type, p ->
 				{
 					if ((p != null) && p.isPlayer() && !p.isDead())
 					{

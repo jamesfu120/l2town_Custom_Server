@@ -28,12 +28,12 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopGroup;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopItem;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Gnacik, UnAfraid
@@ -97,7 +97,6 @@ public class PrimeShopData implements IXmlReader
 									attrs = b.getAttributes();
 									
 									final int itemId = parseInteger(attrs, "itemId");
-									final int count = parseInteger(attrs, "count");
 									final ItemTemplate item = ItemData.getInstance().getTemplate(itemId);
 									if (item == null)
 									{
@@ -105,6 +104,7 @@ public class PrimeShopData implements IXmlReader
 										return;
 									}
 									
+									final int count = parseInteger(attrs, "count");
 									items.add(new PrimeShopItem(itemId, count, item.getWeight(), item.isTradeable() ? 1 : 0));
 								}
 							}

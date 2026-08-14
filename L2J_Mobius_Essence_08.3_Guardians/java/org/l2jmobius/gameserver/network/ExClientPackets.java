@@ -21,7 +21,8 @@
 package org.l2jmobius.gameserver.network;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -264,6 +265,9 @@ import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsActive
 import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsCloseUI;
 import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsCombination;
 import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsCombinationComplete;
+import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsConfirmCombination;
+import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsExchange;
+import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsExchangeConfirm;
 import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsIdSummon;
 import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsOpenUI;
 import org.l2jmobius.gameserver.network.clientpackets.relics.RequestRelicsProbList;
@@ -666,7 +670,7 @@ public enum ExClientPackets
 	EX_PLEDGE_ITEM_ACTIVATE(0x149, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ANNOUNCE(0x14A, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ANNOUNCE_SET(0x14B, null, ConnectionState.IN_GAME),
-	EX_CREATE_PLEDGE(0x14C, null, ConnectionState.IN_GAME),
+	EX_CREATE_PLEDGE(0x14C, RequestCreatePledge::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_INFO(0x14D, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_BUY(0x14E, null, ConnectionState.IN_GAME),
 	EX_ELEMENTAL_SPIRIT_INFO(0x14F, ExElementalSpiritInfo::new, ConnectionState.IN_GAME),
@@ -995,8 +999,8 @@ public enum ExClientPackets
 	EX_RELICS_SUMMON_CLOSE_UI(0x287, RequestRelicsSummonCloseUI::new, ConnectionState.IN_GAME),
 	EX_RELICS_ACTIVE(0x288, RequestRelicsActive::new, ConnectionState.IN_GAME),
 	EX_RELICS_SUMMON(0x289, RequestRelicsSummon::new, ConnectionState.IN_GAME),
-	EX_RELICS_EXCHANGE(0x28A, null, ConnectionState.IN_GAME),
-	EX_RELICS_EXCHANGE_CONFIRM(0x28B, null, ConnectionState.IN_GAME),
+	EX_RELICS_EXCHANGE(0x28A, RequestRelicsExchange::new, ConnectionState.IN_GAME),
+	EX_RELICS_EXCHANGE_CONFIRM(0x28B, RequestRelicsExchangeConfirm::new, ConnectionState.IN_GAME),
 	EX_RELICS_UPGRADE(0x28C, RequestRelicsUpgrade::new, ConnectionState.IN_GAME),
 	EX_RELICS_COMBINATION(0x28D, RequestRelicsCombination::new, ConnectionState.IN_GAME),
 	EX_SERVERWAR_FIELD_ENTER_USER_INFO(0x28E, null, ConnectionState.IN_GAME),
@@ -1043,7 +1047,7 @@ public enum ExClientPackets
 	// 493
 	EX_RELICS_ID_SUMMON(0x2B5, RequestRelicsIdSummon::new, ConnectionState.IN_GAME),
 	EX_RELICS_SUMMON_LIST(0x2B6, RequestRelicsSummonList::new, ConnectionState.IN_GAME),
-	EX_RELICS_CONFIRM_COMBINATION(0x2B7, null, ConnectionState.IN_GAME),
+	EX_RELICS_CONFIRM_COMBINATION(0x2B7, RequestRelicsConfirmCombination::new, ConnectionState.IN_GAME),
 	EX_NEW_HENNA_POTEN_OPENSLOT_PROB_INFO(0x2B8, RequestNewHennaPotenOpenslotProbInfo::new, ConnectionState.IN_GAME),
 	EX_NEW_HENNA_POTEN_OPENSLOT(0x2B9, RequestNewHennaPotenOpenslot::new, ConnectionState.IN_GAME),
 	EX_DYEEFFECT_LIST(0x2BA, null, ConnectionState.IN_GAME),
@@ -1081,7 +1085,10 @@ public enum ExClientPackets
 		
 		_packetId = packetId;
 		_packetSupplier = packetSupplier != null ? packetSupplier : () -> null;
-		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
+		
+		final EnumSet<ConnectionState> states = EnumSet.noneOf(ConnectionState.class);
+		Collections.addAll(states, connectionStates);
+		_connectionStates = states;
 	}
 	
 	public int getPacketId()

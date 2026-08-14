@@ -18,15 +18,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
 /**
- * @author -Wooden-
- * @author UnAfraid, mrTJO
+ * @author -Wooden-, UnAfraid, mrTJO
  */
 public class PackageSendableList extends AbstractItemPacket
 {
@@ -42,7 +41,7 @@ public class PackageSendableList extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.PACKAGE_SENDABLE_LIST.writeId(this, buffer);
 		buffer.writeInt(_objectId);

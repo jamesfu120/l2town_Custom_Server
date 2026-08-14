@@ -20,14 +20,24 @@
  */
 package ai.others.Subjugation.Yand;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
- * @author Serenitty
+ * @author Serenitty, Mobius
  */
 public class Yand extends Script
 {
@@ -39,6 +49,9 @@ public class Yand extends Script
 	
 	// Location
 	private static final Location TELEPORT_LOC = new Location(146915, -82589, -5128);
+	
+	// Misc
+	private static final String MORGOS_MILITARY_FREE_VAR = "MORGOS_MILITARY_FREE";
 	
 	private Yand()
 	{
@@ -54,14 +67,14 @@ public class Yand extends Script
 		{
 			case "GoToInsideMorgos":
 			{
-				final int military = player.getVariables().getInt("MORGOS_MILITARY_FREE", 1);
+				final int military = player.getVariables().getInt(MORGOS_MILITARY_FREE_VAR, 1);
 				if (military == 0)
 				{
 					return "34327-01.html";
 				}
 				
 				player.teleToLocation(TELEPORT_LOC);
-				player.getVariables().set("MORGOS_MILITARY_FREE", 0);
+				player.getVariables().set(MORGOS_MILITARY_FREE_VAR, 0);
 				break;
 			}
 			case "BuyScrollMorgos":
@@ -78,6 +91,33 @@ public class Yand extends Script
 	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "34327.html";
+	}
+	
+	@RegisterEvent(EventType.ON_DAILY_RESET)
+	@RegisterType(ListenerRegisterType.GLOBAL)
+	public void onDailyReset(OnDailyReset event)
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ? AND account_name NOT IN (SELECT account_name FROM characters WHERE online = 1)"))
+			{
+				ps.setString(1, MORGOS_MILITARY_FREE_VAR);
+				ps.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Could not reset variables: " + e.getMessage());
+		}
+		
+		// Update data for online players.
+		for (Player player : World.getPlayers())
+		{
+			player.getAccountVariables().remove(MORGOS_MILITARY_FREE_VAR);
+		}
+		
+		LOGGER.info("MorgosMilitaryBase has been reset.");
 	}
 	
 	public static void main(String[] args)

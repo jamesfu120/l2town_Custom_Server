@@ -16,14 +16,14 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.enums.ShotType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Soul Blow effect implementation.
@@ -89,7 +89,7 @@ public class SoulBlow extends AbstractEffect
 		double damage = Formulas.calcBlowDamage(effector, effected, skill, false, _power, shld, ss);
 		if (effector.isPlayer() && (skill.getMaxSoulConsumeCount() > 0))
 		{
-			// Souls Formula (each soul increase +4.8%)
+			// Souls Formula (each soul increase +4.8%).
 			final int chargedSouls = (effector.asPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? effector.asPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
 			damage *= 1 + (chargedSouls * 0.048);
 		}

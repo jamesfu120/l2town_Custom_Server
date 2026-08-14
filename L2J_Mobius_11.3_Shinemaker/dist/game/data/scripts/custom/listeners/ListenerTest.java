@@ -16,26 +16,26 @@
  */
 package custom.listeners;
 
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.NpcLevelRange;
-import org.l2jmobius.gameserver.model.events.annotations.Priority;
-import org.l2jmobius.gameserver.model.events.annotations.Range;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnAttackableAttack;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerDlgAnswer;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.holders.item.OnItemCreate;
-import org.l2jmobius.gameserver.model.events.holders.sieges.OnCastleSiegeStart;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.NpcLevelRange;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Priority;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Range;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnAttackableAttack;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerDlgAnswer;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.holders.item.OnItemCreate;
+import org.l2jmobius.gameserver.mechanics.events.holders.sieges.OnCastleSiegeStart;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.events.returns.TerminateReturn;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.scripting.annotations.Disabled;
 
 /**

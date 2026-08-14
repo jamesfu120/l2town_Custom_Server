@@ -804,7 +804,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attribute -->
@@ -1786,7 +1786,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<status attackable="true" />
 		<collision>
 			<radius normal="28" grown="32" />
@@ -2265,7 +2265,7 @@
 			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
@@ -2977,7 +2977,7 @@
 			<skill id="14682" level="1" /> <!-- Cry of Destiny - Pinpoint Shot -->
 			<skill id="14683" level="1" /> <!-- Cry of Destiny - Quick Fire -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
@@ -3262,7 +3262,7 @@
 			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4208" level="1" /> <!-- Stun -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />

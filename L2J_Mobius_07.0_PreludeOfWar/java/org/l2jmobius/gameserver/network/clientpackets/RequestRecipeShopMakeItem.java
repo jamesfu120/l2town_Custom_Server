@@ -21,15 +21,15 @@ import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.holders.RecipeHolder;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -86,7 +86,7 @@ public class RequestRecipeShopMakeItem extends ClientPacket
 			return;
 		}
 		
-		final Player manufacturer = World.getInstance().getPlayer(_objectId);
+		final Player manufacturer = World.getPlayer(_objectId);
 		if (manufacturer == null)
 		{
 			return;

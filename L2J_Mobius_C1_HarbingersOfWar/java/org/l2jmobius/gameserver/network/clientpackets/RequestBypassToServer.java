@@ -22,20 +22,19 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.commons.util.TraceUtil;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.managers.CaptchaManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerBypass;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -106,7 +105,7 @@ public class RequestBypassToServer extends ClientPacket
 			
 			if ((bypassOriginId > 0) && !LocationUtil.isInsideRangeOfObjectId(player, bypassOriginId, Npc.INTERACTION_DISTANCE))
 			{
-				// No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
+				// No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action.
 				return;
 			}
 		}
@@ -145,7 +144,7 @@ public class RequestBypassToServer extends ClientPacket
 				
 				if (StringUtil.isNumeric(id))
 				{
-					final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
+					final WorldObject object = World.findObject(Integer.parseInt(id));
 					if ((object != null) && object.isNpc() && (endOfId > 0) && player.isInsideRadius2D(object, Npc.INTERACTION_DISTANCE))
 					{
 						object.asNpc().onBypassFeedback(player, _command.substring(endOfId + 1));
@@ -193,7 +192,7 @@ public class RequestBypassToServer extends ClientPacket
 				{
 					if (bypassOriginId > 0)
 					{
-						final WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
+						final WorldObject bypassOrigin = World.findObject(bypassOriginId);
 						if ((bypassOrigin != null) && bypassOrigin.isCreature())
 						{
 							handler.onCommand(_command, player, bypassOrigin.asCreature());
@@ -259,7 +258,7 @@ public class RequestBypassToServer extends ClientPacket
 		{
 			final Npc temp = obj.asNpc();
 			temp.setTarget(player);
-			temp.getAI().setIntention(Intention.MOVE_TO, player.getLocation());
+			temp.getAI().setIntentionMoveTo(player.getLocation());
 		}
 	}
 }

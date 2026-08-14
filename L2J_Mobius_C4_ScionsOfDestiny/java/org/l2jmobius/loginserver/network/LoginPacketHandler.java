@@ -32,7 +32,7 @@ public class LoginPacketHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(LoginPacketHandler.class.getName());
 	
-	public static AbstractClientPacket handlePacket(byte[] data, LoginClient client)
+	public static AbstractClientPacket handle(byte[] data, LoginClient client)
 	{
 		final int opcode = data[0] & 0xFF;
 		AbstractClientPacket packet = null;

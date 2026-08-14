@@ -20,12 +20,12 @@
  */
 package quests.Q00638_SeekersOfTheHolyGrail;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00638_SeekersOfTheHolyGrail extends Quest
 {
@@ -119,7 +119,7 @@ public class Q00638_SeekersOfTheHolyGrail extends Quest
 	public void onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null))
+		if (qs != null)
 		{
 			giveItemRandomly(qs.getPlayer(), npc, PAGAN_TOTEM, 1, 0, 1, true);
 		}

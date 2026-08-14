@@ -43,6 +43,24 @@ import org.l2jmobius.gameserver.data.xml.BeautyShopData;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.IllegalActionPunishmentType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Couple;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.AntiFeedManager;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.managers.CoupleManager;
@@ -56,34 +74,16 @@ import org.l2jmobius.gameserver.managers.PetitionManager;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
 import org.l2jmobius.gameserver.managers.ServerRestartManager;
 import org.l2jmobius.gameserver.managers.SiegeManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.IllegalActionPunishmentType;
-import org.l2jmobius.gameserver.model.actor.enums.player.SubclassInfoType;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.actor.holders.player.AttendanceInfoHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.Couple;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
-import org.l2jmobius.gameserver.model.punishment.PunishmentType;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
-import org.l2jmobius.gameserver.model.siege.FortSiege;
-import org.l2jmobius.gameserver.model.siege.Siege;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.punishment.PunishmentAffect;
+import org.l2jmobius.gameserver.mechanics.punishment.PunishmentType;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Fort;
+import org.l2jmobius.gameserver.mechanics.siege.FortSiege;
+import org.l2jmobius.gameserver.mechanics.siege.Siege;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -209,7 +209,7 @@ public class EnterWorld extends ClientPacket
 			player.updatePvpTitleAndColor(false);
 		}
 		
-		// Apply special GM properties to the GM when entering
+		// Apply special GM properties to the GM when entering.
 		else
 		{
 			gmStartupProcess:
@@ -268,7 +268,7 @@ public class EnterWorld extends ClientPacket
 			}
 		}
 		
-		// Set dead status if applies
+		// Set dead status if applies.
 		if (player.getCurrentHp() < 0.5)
 		{
 			player.setDead(true);
@@ -276,7 +276,7 @@ public class EnterWorld extends ClientPacket
 		
 		boolean showClanNotice = false;
 		
-		// Clan related checks are here
+		// Clan related checks are here.
 		final Clan clan = player.getClan();
 		if (clan != null)
 		{
@@ -351,14 +351,14 @@ public class EnterWorld extends ClientPacket
 		// Send Macro List
 		player.getMacros().sendAllMacros();
 		
-		// Send Teleport Bookmark List
+		// Send Teleport Bookmark List.
 		player.sendPacket(new ExGetBookMarkInfoPacket(player));
 		
 		// Send Item List
 		player.sendPacket(new ItemList(1, player));
 		player.sendPacket(new ItemList(2, player));
 		
-		// Send Quest Item List
+		// Send Quest Item List.
 		player.sendPacket(new ExQuestItemList(1, player));
 		player.sendPacket(new ExQuestItemList(2, player));
 		
@@ -368,7 +368,7 @@ public class EnterWorld extends ClientPacket
 		// Send Action list
 		player.sendPacket(ExBasicActionList.STATIC_PACKET);
 		
-		// Send blank skill list
+		// Send blank skill list.
 		player.sendPacket(new SkillList());
 		
 		// Send GG check
@@ -409,13 +409,13 @@ public class EnterWorld extends ClientPacket
 		// Send Inventory Info
 		player.sendPacket(new ExUserInfoInvenWeight(player));
 		
-		// Send Adena / Inventory Count Info
+		// Send Adena / Inventory Count Info.
 		player.sendPacket(new ExAdenaInvenCount(player));
 		
 		// Send Equipped Items
 		player.sendPacket(new ExUserInfoEquipSlot(player));
 		
-		// Send Unread Mail Count
+		// Send Unread Mail Count.
 		if (MailManager.getInstance().hasUnreadPost(player))
 		{
 			player.sendPacket(new ExUnReadMailCount(player));
@@ -491,7 +491,7 @@ public class EnterWorld extends ClientPacket
 		sm.addString(player.getName());
 		for (int id : player.getFriendList())
 		{
-			final WorldObject obj = World.getInstance().findObject(id);
+			final WorldObject obj = World.findObject(id);
 			if (obj != null)
 			{
 				obj.sendPacket(sm);
@@ -532,7 +532,7 @@ public class EnterWorld extends ClientPacket
 		
 		if (player.isAlikeDead()) // dead or fake dead
 		{
-			// no broadcast needed since the player will already spawn dead to others
+			// No broadcast needed since the player will already spawn dead to others.
 			player.sendPacket(new Die(player));
 		}
 		
@@ -566,7 +566,7 @@ public class EnterWorld extends ClientPacket
 			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HR);
 		}
 		
-		// remove combat flag before teleporting
+		// Remove combat flag before teleporting.
 		if (player.getInventory().getItemByItemId(9819) != null)
 		{
 			final Fort fort = FortManager.getInstance().getFort(player);
@@ -682,13 +682,13 @@ public class EnterWorld extends ClientPacket
 			player.sendPacket(new ExWorldChatCnt(player));
 		}
 		
-		// Handle soulshots, disable all on EnterWorld
+		// Handle soulshots, disable all on EnterWorld.
 		player.sendPacket(new ExAutoSoulShot(0, true, 0));
 		player.sendPacket(new ExAutoSoulShot(0, true, 1));
 		player.sendPacket(new ExAutoSoulShot(0, true, 2));
 		player.sendPacket(new ExAutoSoulShot(0, true, 3));
 		
-		// Fix for equipped item skills
+		// Fix for equipped item skills.
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
 		{
 			player.updateAbnormalVisualEffects();
@@ -738,7 +738,7 @@ public class EnterWorld extends ClientPacket
 					for (int j : i)
 					{
 						sb.append(j);
-						sb.append(".");
+						sb.append('.');
 					}
 				}
 				
@@ -788,7 +788,7 @@ public class EnterWorld extends ClientPacket
 				else if (ServerConfig.MAX_PLAYERS_PER_HWID > 0)
 				{
 					int count = 0;
-					for (Player plr : World.getInstance().getPlayers())
+					for (Player plr : World.getPlayers())
 					{
 						if (plr.isOnlineInt() == 1)
 						{
@@ -851,7 +851,7 @@ public class EnterWorld extends ClientPacket
 			final int partnerId = player.getPartnerId();
 			if (partnerId != 0)
 			{
-				final Player partner = World.getInstance().getPlayer(partnerId);
+				final Player partner = World.getPlayer(partnerId);
 				if (partner != null)
 				{
 					partner.sendMessage("Your partner has logged in.");
@@ -883,7 +883,7 @@ public class EnterWorld extends ClientPacket
 	{
 		if (player.getSponsor() != 0)
 		{
-			final Player sponsor = World.getInstance().getPlayer(player.getSponsor());
+			final Player sponsor = World.getPlayer(player.getSponsor());
 			if (sponsor != null)
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
@@ -893,7 +893,7 @@ public class EnterWorld extends ClientPacket
 		}
 		else if (player.getApprentice() != 0)
 		{
-			final Player apprentice = World.getInstance().getPlayer(player.getApprentice());
+			final Player apprentice = World.getPlayer(player.getApprentice());
 			if (apprentice != null)
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);

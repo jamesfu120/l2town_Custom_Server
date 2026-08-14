@@ -23,11 +23,11 @@ package org.l2jmobius.gameserver.network.serverpackets.castlewar;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.siege.MercenaryPledgeHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.siege.MercenaryPledgeHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -46,7 +46,7 @@ public class MercenaryPledgeMemberList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_MERCENARY_MEMBER_LIST.writeId(this, buffer);
 		buffer.writeInt(_castleId);
@@ -54,7 +54,7 @@ public class MercenaryPledgeMemberList extends ServerPacket
 		buffer.writeInt(_mercenaries.size());
 		for (Entry<Integer, MercenaryPledgeHolder> entry : _mercenaries.entrySet())
 		{
-			final Player player = World.getInstance().getPlayer(entry.getKey());
+			final Player player = World.getPlayer(entry.getKey());
 			final MercenaryPledgeHolder mercenary = entry.getValue();
 			buffer.writeInt(entry.getKey() == mercenary.getPlayerId());
 			if (player == null)

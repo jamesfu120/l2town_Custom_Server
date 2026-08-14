@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.data.holders;
 
-import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Creature;
 
 /**
  * @author Sdw

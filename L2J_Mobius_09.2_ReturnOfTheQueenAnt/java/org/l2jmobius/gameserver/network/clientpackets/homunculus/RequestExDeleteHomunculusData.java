@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.homunculus.Homunculus;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.homunculus.Homunculus;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExDeleteHomunculusDataResult;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusList;

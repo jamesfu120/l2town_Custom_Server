@@ -22,10 +22,10 @@ package org.l2jmobius.gameserver.network.serverpackets.storereview;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.PrivateStoreHistoryManager;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -46,7 +46,7 @@ public class RequestPrivateStoreSearchStatistics extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PRIVATE_STORE_SEARCH_STATISTICS.writeId(this, buffer);
 		

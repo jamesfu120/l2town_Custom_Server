@@ -25,6 +25,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
+import java.util.regex.Pattern;
 
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
@@ -34,18 +35,20 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.ConfigLoader;
 import org.l2jmobius.gameserver.config.GeneralConfig;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.multisell.Entry;
-import org.l2jmobius.gameserver.model.multisell.Ingredient;
-import org.l2jmobius.gameserver.model.multisell.ListContainer;
-import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.mechanics.multisell.Entry;
+import org.l2jmobius.gameserver.mechanics.multisell.Ingredient;
+import org.l2jmobius.gameserver.mechanics.multisell.ListContainer;
+import org.l2jmobius.gameserver.mechanics.multisell.PreparedListContainer;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class MultisellData implements IXmlReader
 {
+	private static final Pattern XML_FILE_PATTERN = Pattern.compile("\\d+\\.xml");
+	
 	private final Map<Integer, ListContainer> _entries = new ConcurrentHashMap<>();
 	
 	// Special IDs.
@@ -77,7 +80,7 @@ public class MultisellData implements IXmlReader
 	{
 		try
 		{
-			final int id = Integer.parseInt(file.getName().replaceAll(".xml", ""));
+			final int id = Integer.parseInt(file.getName().replace(".xml", ""));
 			int entryId = 1;
 			Node att;
 			final ListContainer list = new ListContainer(id);
@@ -150,10 +153,10 @@ public class MultisellData implements IXmlReader
 	@Override
 	public boolean isValidXmlFile(File file)
 	{
-		return (file != null) && file.isFile() && file.getName().toLowerCase().matches("\\d+\\.xml");
+		return (file != null) && file.isFile() && XML_FILE_PATTERN.matcher(file.getName().toLowerCase()).matches();
 	}
 	
-	private final Entry parseEntry(Node node, int entryId, ListContainer list)
+	private Entry parseEntry(Node node, int entryId, ListContainer list)
 	{
 		Node n = node;
 		final Node first = n.getFirstChild();
@@ -276,15 +279,15 @@ public class MultisellData implements IXmlReader
 		
 		final PreparedListContainer list = new PreparedListContainer(template, inventoryOnly, player, npc);
 		
-		// Pass through this only when multipliers are different from 1
+		// Pass through this only when multipliers are different from 1.
 		if ((productMultiplier != 1) || (ingredientMultiplier != 1))
 		{
 			list.getEntries().forEach(entry ->
 			{
-				// Math.max used here to avoid dropping count to 0
+				// Math.max used here to avoid dropping count to 0.
 				entry.getProducts().forEach(product -> product.setItemCount((int) Math.max(product.getItemCount() * productMultiplier, 1)));
 				
-				// Math.max used here to avoid dropping count to 0
+				// Math.max used here to avoid dropping count to 0.
 				entry.getIngredients().forEach(ingredient -> ingredient.setItemCount((int) Math.max(ingredient.getItemCount() * ingredientMultiplier, 1)));
 			});
 		}

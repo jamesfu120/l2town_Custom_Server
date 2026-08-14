@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.data.xml;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -31,14 +30,14 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.enums.ClanHallGrade;
-import org.l2jmobius.gameserver.model.clan.enums.ClanHallType;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.residences.ClanHallTeleportHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanHallGrade;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanHallType;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
+import org.l2jmobius.gameserver.entity.residences.ClanHallTeleportHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author St3eT
@@ -229,7 +228,7 @@ public class ClanHallData implements IXmlReader
 			}
 		}
 		
-		Collections.sort(freeAuctionableHalls, Comparator.comparingInt(ClanHall::getResidenceId));
+		freeAuctionableHalls.sort(Comparator.comparingInt(ClanHall::getResidenceId));
 		return freeAuctionableHalls;
 	}
 	

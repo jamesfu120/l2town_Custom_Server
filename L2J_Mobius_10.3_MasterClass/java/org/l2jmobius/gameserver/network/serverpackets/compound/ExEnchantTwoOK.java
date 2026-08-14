@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.compound;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -37,7 +37,7 @@ public class ExEnchantTwoOK extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ENCHANT_TWO_OK.writeId(this, buffer);
 		buffer.writeInt(0); // success percent (if 0 - takes from dat, if 1 - will be 0.01)

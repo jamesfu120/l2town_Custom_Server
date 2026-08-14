@@ -16,9 +16,9 @@
  */
 package instances.SSQHideoutOfTheDawn;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 
 /**
  * Hideout of the Dawn instance zone.

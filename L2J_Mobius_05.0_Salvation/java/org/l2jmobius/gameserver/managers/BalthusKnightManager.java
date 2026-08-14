@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.managers;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 
 /**
  * This class manage the Balthus Knight Path.

@@ -21,13 +21,12 @@
 package quests.Q00663_SeductiveWhispers;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 /**
  * @author Mathael
@@ -395,7 +394,7 @@ public class Q00663_SeductiveWhispers extends Quest
 	private Card getRandomCard()
 	{
 		final int index = getRandom(0, 7);
-		return Arrays.stream(cards).filter(card -> (!card.equals(playerCard)) && (!card.equals(npcCard))).collect(Collectors.toList()).get(index);
+		return Arrays.stream(cards).filter(card -> (!card.equals(playerCard)) && (!card.equals(npcCard))).toList().get(index);
 	}
 	
 	private boolean isWinner(Card playerCard, Card npcCard, boolean playerIsLastDraw)

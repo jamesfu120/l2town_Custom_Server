@@ -21,14 +21,14 @@
 package quests.Q10532_LastMissionOfGlory;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestDialogType;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.newquestdata.NewQuest;
-import org.l2jmobius.gameserver.model.script.newquestdata.QuestCondType;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestDialogType;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuest;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestDialog;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestNotification;
 
@@ -199,6 +199,54 @@ public class Q10532_LastMissionOfGlory extends Quest
 		24690, // Langk Lizardman Destroyer
 		24691, // Tanta Lizardman Reservist
 		24692, // Tanta Lizardman Support Shaman
+		
+		// Field of Silence Lv. 114
+		24520,
+		24521,
+		24522,
+		
+		// Field Of Whispers Lv. 116
+		24304,
+		24305,
+		24306,
+		24307,
+		
+		// Ketra Orc Outpost Lv. 120
+		24631,
+		24632,
+		24633,
+		24634,
+		
+		// Beast Farm Lv. 122
+		24652,
+		24653,
+		24654,
+		24655,
+		24656,
+		24657,
+		
+		// Immortal Plateau Lv.122
+		23882,
+		23883,
+		23884,
+		23885,
+		23886,
+		23887,
+		
+		// Kash Orcs's Logging Site Lv. 126
+		23890,
+		23891,
+		23892,
+		23893,
+		23894,
+		23895,
+		
+		// Ketra Orcs Fortress 130
+		23901,
+		23902,
+		23903,
+		23904,
+		23905,
 	};
 	
 	public Q10532_LastMissionOfGlory()

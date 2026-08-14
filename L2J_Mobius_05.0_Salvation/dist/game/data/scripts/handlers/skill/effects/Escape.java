@@ -16,15 +16,15 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.krateisCube.KrateiArena;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.krateisCube.KrateiArena;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Escape effect implementation.
@@ -54,7 +54,7 @@ public class Escape extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		// While affected by escape blocking effect you cannot use Blink or Scroll of Escape
+		// While affected by escape blocking effect you cannot use Blink or Scroll of Escape.
 		return super.canStart(effector, effected, skill) && !effected.cannotEscape();
 	}
 	

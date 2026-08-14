@@ -23,7 +23,7 @@ package org.l2jmobius.gameserver.network.serverpackets.adenlab;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -47,7 +47,7 @@ public class ExAdenLabSpecialPlay extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ADENLAB_SPECIAL_PLAY.writeId(this, buffer);
 		buffer.writeInt(_bossId);

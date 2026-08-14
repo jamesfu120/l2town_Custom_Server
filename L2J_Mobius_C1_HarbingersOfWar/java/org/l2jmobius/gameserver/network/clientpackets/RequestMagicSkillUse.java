@@ -20,13 +20,12 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.TargetType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -39,9 +38,9 @@ public class RequestMagicSkillUse extends ClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_magicId = readInt(); // Identifier of the used skill
-		_ctrlPressed = readInt() != 0; // True if it's a ForceAttack : Ctrl pressed
-		_shiftPressed = readByte() != 0; // True if Shift pressed
+		_magicId = readInt(); // Identifier of the used skill.
+		_ctrlPressed = readInt() != 0; // True if it's a ForceAttack : Ctrl pressed.
+		_shiftPressed = readByte() != 0; // True if Shift pressed.
 	}
 	
 	@Override
@@ -104,7 +103,7 @@ public class RequestMagicSkillUse extends ClientPacket
 		// Stop if use self-buff (except if on Boat).
 		if ((skill.isContinuous() && !skill.isDebuff() && (skill.getTargetType() == TargetType.SELF)) && !player.isInBoat())
 		{
-			player.getAI().setIntention(Intention.MOVE_TO, player.getLocation());
+			player.getAI().setIntentionMoveTo(player.getLocation());
 		}
 		
 		player.useMagic(skill, _ctrlPressed, _shiftPressed);

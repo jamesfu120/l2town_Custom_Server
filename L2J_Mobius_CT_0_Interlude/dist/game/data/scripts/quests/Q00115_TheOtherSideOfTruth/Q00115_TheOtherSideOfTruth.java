@@ -20,11 +20,11 @@
  */
 package quests.Q00115_TheOtherSideOfTruth;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
 /**
@@ -142,7 +142,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			{
 				qs.set("talk", "1");
 				htmltext = "Sculpture-05.htm";
-				qs.set("" + npc.getId(), "1");
+				qs.set(String.valueOf(npc.getId()), "1");
 				break;
 			}
 			case "Sculpture-04a.htm":
@@ -152,7 +152,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 				man.broadcastSay(ChatType.GENERAL, "This looks like the right place...");
 				startQuestTimer("1", 3700, man, player);
 				htmltext = "Sculpture-04.htm";
-				if ((qs.getInt("" + SCULPTURE1) == 0) && (qs.getInt("" + SCULPTURE2) == 0))
+				if ((qs.getInt(String.valueOf(SCULPTURE1)) == 0) && (qs.getInt(String.valueOf(SCULPTURE2)) == 0))
 				{
 					giveItems(player, TABLET, 1);
 				}
@@ -160,7 +160,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "Sculpture-05.htm":
 			{
-				qs.set("" + npc.getId(), "1");
+				qs.set(String.valueOf(npc.getId()), "1");
 				break;
 			}
 			case "1":
@@ -275,7 +275,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 		{
 			if (cond == 7)
 			{
-				if (qs.getInt("" + npcId) == 1)
+				if (qs.getInt(String.valueOf(npcId)) == 1)
 				{
 					htmltext = "Sculpture-02.htm";
 				}
@@ -307,7 +307,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 		{
 			if (cond == 7)
 			{
-				if (qs.getInt("" + npcId) == 1)
+				if (qs.getInt(String.valueOf(npcId)) == 1)
 				{
 					htmltext = "Sculpture-02.htm";
 				}
@@ -339,14 +339,14 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 		{
 			if (cond == 7)
 			{
-				if (qs.getInt("" + npcId) == 1)
+				if (qs.getInt(String.valueOf(npcId)) == 1)
 				{
 					htmltext = "Sculpture-02.htm";
 				}
 				else
 				{
 					htmltext = "Sculpture-01.htm";
-					qs.set("" + npcId, "1");
+					qs.set(String.valueOf(npcId), "1");
 				}
 			}
 			else if (cond == 8)
@@ -368,14 +368,14 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 		{
 			if (cond == 7)
 			{
-				if (qs.getInt("" + npcId) == 1)
+				if (qs.getInt(String.valueOf(npcId)) == 1)
 				{
 					htmltext = "Sculpture-02.htm";
 				}
 				else
 				{
 					htmltext = "Sculpture-01.htm";
-					qs.set("" + npcId, "1");
+					qs.set(String.valueOf(npcId), "1");
 				}
 			}
 			else if (cond == 8)

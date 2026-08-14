@@ -23,8 +23,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.Location;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -66,7 +66,7 @@ public class ExActivatedCursedTreasureBoxLocation extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		// Writes the packet ID so the client can identify that these are the locations
 		ServerPackets.EX_ACTIVATED_CURSED_TREASURE_BOX_LOCATION.writeId(this, buffer);

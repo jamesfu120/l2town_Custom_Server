@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.network.serverpackets.storereview;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
 import org.l2jmobius.gameserver.managers.PrivateStoreHistoryManager.ItemHistoryTransaction;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -46,7 +46,7 @@ public class ExPrivateStoreSearchHistory extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PRIVATE_STORE_SEARCH_HISTORY.writeId(this, buffer);
 		

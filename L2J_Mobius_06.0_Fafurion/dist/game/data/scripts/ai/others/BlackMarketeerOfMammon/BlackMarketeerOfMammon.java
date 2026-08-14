@@ -19,10 +19,10 @@ package ai.others.BlackMarketeerOfMammon;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Black Marketeer of Mammon AI.

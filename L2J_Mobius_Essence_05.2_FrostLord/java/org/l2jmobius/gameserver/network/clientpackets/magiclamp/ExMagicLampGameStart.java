@@ -23,7 +23,6 @@ package org.l2jmobius.gameserver.network.clientpackets.magiclamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.MagicLampConfig;
@@ -32,8 +31,8 @@ import org.l2jmobius.gameserver.data.enums.LampType;
 import org.l2jmobius.gameserver.data.holders.MagicLampDataHolder;
 import org.l2jmobius.gameserver.data.holders.MagicLampHolder;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampGameInfoUI;
@@ -81,7 +80,7 @@ public class ExMagicLampGameStart extends ClientPacket
 			final Map<LampType, MagicLampHolder> rewards = new HashMap<>();
 			for (int x = _count; x > 0; x--)
 			{
-				final List<MagicLampDataHolder> available = MagicLampData.getInstance().getLamps().stream().filter(lamp -> (lamp.getMode() == lampMode) && chance(lamp.getChance())).collect(Collectors.toList());
+				final List<MagicLampDataHolder> available = MagicLampData.getInstance().getLamps().stream().filter(lamp -> (lamp.getMode() == lampMode) && chance(lamp.getChance())).toList();
 				final MagicLampDataHolder random = getRandom(available);
 				if (random != null)
 				{

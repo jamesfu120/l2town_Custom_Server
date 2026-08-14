@@ -26,14 +26,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.QuestType;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.QuestType;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
@@ -176,7 +176,8 @@ public class Q00509_AClansFame extends Quest
 				}
 				
 				final int raid = qs.getInt("raid");
-				if (REWARD_POINTS.containsKey(raid))
+				final List<Integer> rewardPoints = REWARD_POINTS.get(raid);
+				if (rewardPoints != null)
 				{
 					if (hasQuestItems(player, REWARD_POINTS.get(raid).get(1)))
 					{

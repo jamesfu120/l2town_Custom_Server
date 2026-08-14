@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/DailyMission.xsd">
-	<reward id="1101" name="Hunt Lv. 101+ monsters" requiredCompletion="800" isOneTime="false">
+	<reward id="1101" category="1" name="Hunt Lv. 101+ monsters" requiredCompletion="800" isOneTime="false">
 		<!-- Kill 800 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
 		<handler name="monster">
 			<param name="minLevel">101</param>
@@ -11,7 +11,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1103" name="Field Raid" requiredCompletion="6" isOneTime="false">
+	<reward id="1103" category="1" name="Field Raid" requiredCompletion="6" isOneTime="false">
 		<!-- Defeat any of the following raid bosses 6 times: Demonic Venom (Lv. 122) Avenger Graff (Lv. 124) Mad Cullan (Lv. 126) Arrogant Lebruum (Lv. 128) -->
 		<handler name="boss">
 			<param name="ids">26431,26433,26435,26437,26439,26441,26443,26444</param>
@@ -23,7 +23,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1104" name="Fishing" requiredCompletion="20" isOneTime="false">
+	<reward id="1104" category="1" name="Fishing" requiredCompletion="20" isOneTime="false">
 		<!-- Catch any type of fish 20 times at the Fishing Dock. -->
 		<handler name="fishing" />
 		<items>
@@ -33,7 +33,7 @@
 			<item id="47562" count="1" /> <!-- Santiago's Reel Fragment -->
 		</items>
 	</reward>
-	<reward id="1105" name="Attempt Augmenting" requiredCompletion="5" isOneTime="false">
+	<reward id="1105" category="1" name="Attempt Augmenting" requiredCompletion="5" isOneTime="false">
 		<!-- Attempt Augmenting 5 times with any material and items of any grade. -->
 		<handler name="augment" />
 		<items>
@@ -42,7 +42,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1106" name="Attempt Compounding" requiredCompletion="5" isOneTime="false">
+	<reward id="1106" category="1" name="Attempt Compounding" requiredCompletion="5" isOneTime="false">
 		<!-- Compound any items 5 times. The outcome does not matter. -->
 		<handler name="compound" />
 		<items>
@@ -51,7 +51,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1107" name="Olympiad Participation" requiredCompletion="5" isOneTime="false">
+	<reward id="1107" category="1" name="Olympiad Participation" requiredCompletion="5" isOneTime="false">
 		<!-- Participate in the Olympiad 5 times. -->
 		<handler name="olympiad" />
 		<items>
@@ -60,7 +60,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1108" name="Ceremony of Chaos Participation" requiredCompletion="5" isOneTime="false">
+	<reward id="1108" category="1" name="Ceremony of Chaos Participation" requiredCompletion="5" isOneTime="false">
 		<!-- Participate in the Ceremony of Chaos 5 times. -->
 		<handler name="ceremonyofchaos" />
 		<items>
@@ -69,7 +69,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1109" name="Hunting in Fioren's Crystal Prison" requiredCompletion="800" isOneTime="false">
+	<reward id="1109" category="1" name="Hunting in Fioren's Crystal Prison" requiredCompletion="800" isOneTime="false">
 		<!-- Kill 800 monsters in Fioren's Crystal Prison. -->
 		<handler name="monster">
 			<param name="ids">24427,24428,24429,24430,24431,24432,24914,24915,24916,24917,24918,24919,24945,24946,24947,24948,24949,24950</param>
@@ -81,7 +81,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1110" name="Hunt in Jamoa's Camp" requiredCompletion="800" isOneTime="false">
+	<reward id="1110" category="1" name="Hunt in Jamoa's Camp" requiredCompletion="800" isOneTime="false">
 		<!-- Kill 800 monsters in Jamoa's Camp. -->
 		<handler name="monster">
 			<param name="ids">24436,24437,24438,24439,24440,24441,24920,24921,24922,24923,24924,24925,24951,24952,24953,24954,24955,24956</param>
@@ -93,7 +93,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1111" name="Hunt in Pantheon's Museum" requiredCompletion="800" isOneTime="false">
+	<reward id="1111" category="1" name="Hunt in Pantheon's Museum" requiredCompletion="800" isOneTime="false">
 		<!-- Kill 800 monsters in Pantheon's Museum. -->
 		<handler name="monster">
 			<param name="ids">24470,24471,24472,24473,24474,24475,24837,24838,24839,24840,24841,24842,24939,24940,24941,24942,24943,24944</param>
@@ -105,7 +105,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1112" name="Hunt in the Abandoned Coal Mines" requiredCompletion="800" isOneTime="false">
+	<reward id="1112" category="1" name="Hunt in the Abandoned Coal Mines" requiredCompletion="800" isOneTime="false">
 		<!-- Kill 800 monsters in the Abandoned Coal Mines. -->
 		<handler name="monster">
 			<param name="ids">24577,24578,24579</param>
@@ -118,7 +118,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1114" name="Hunt in the Time Rift" requiredCompletion="800" isOneTime="false">
+	<reward id="1114" category="1" name="Hunt in the Time Rift" requiredCompletion="800" isOneTime="false">
 		<!-- Kill 800 monsters in the Time Rift. -->
 		<handler name="monster">
 			<param name="ids">24849,24850,24851,24852,24853,24854,24855,24856,24857</param>
@@ -130,7 +130,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="1113" name="Hunt in a Party Instance Zone" requiredCompletion="3" isOneTime="false">
+	<reward id="1113" category="1" name="Hunt in a Party Instance Zone" requiredCompletion="3" isOneTime="false">
 		<!-- Defeat any of the bosses in the following party instance zones of any difficulty level 3 times: Crystal Prison (Baylor) Nightmare Kamaloka Ashen Shadow Camp Krofin's Nest -->
 		<handler name="monster">
 			<param name="ids">29213,29380,26093,26094,26096,26099,26102,26461,26462,26463,26464,26465,23653,23654,23655,23656,23657,23658,23659,23660,23661,23662,23663,23664,24813,24814,24815,24816,24817,24818,24819,24820,24821,24822,24823,24824,26390,26467</param>
@@ -142,7 +142,7 @@
 			<item id="82305" count="1" /> <!-- Beora's Ancient Energy -->
 		</items>
 	</reward>
-	<reward id="2101" name="Field Boss I" requiredCompletion="3" isOneTime="false">
+	<reward id="2101" category="2" name="Field Boss I" requiredCompletion="3" isOneTime="false">
 		<!-- Defeat any of the field raid bosses 3 times: Orfen Lilith Anakim Lord Ishka Queen Ant Guillotine -->
 		<handler name="boss">
 			<param name="ids">29020,29325,29336,29348,29379</param>
@@ -153,7 +153,7 @@
 			<item id="-300" count="1000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="2103" name="Castle Siege: Successful Attack" requiredCompletion="1" isOneTime="false">
+	<reward id="2103" category="2" name="Castle Siege: Successful Attack" requiredCompletion="1" isOneTime="false">
 		<!-- Join a castle siege and achieve 1 win as a sieger. -->
 		<handler name="siege">
 			<param name="minClanLevel">10</param>
@@ -164,7 +164,7 @@
 			<item id="-300" count="2500" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="2104" name="Castle Siege: Successful Defense" requiredCompletion="1" isOneTime="false">
+	<reward id="2104" category="2" name="Castle Siege: Successful Defense" requiredCompletion="1" isOneTime="false">
 		<!-- Join a castle siege and achieve 1 win as a defender. -->
 		<handler name="siege">
 			<param name="minClanLevel">10</param>
@@ -175,7 +175,7 @@
 			<item id="-300" count="2500" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="2107" name="Olympiad Winner" requiredCompletion="15" isOneTime="false">
+	<reward id="2107" category="2" name="Olympiad Winner" requiredCompletion="15" isOneTime="false">
 		<!-- Win 15 Olympiad matches. -->
 		<handler name="olympiad">
 			<param name="minClanLevel">10</param>
@@ -187,7 +187,7 @@
 			<item id="-300" count="2500" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="2108" name="Olympiad Hero" requiredCompletion="1" isOneTime="false">
+	<reward id="2108" category="2" name="Olympiad Hero" requiredCompletion="1" isOneTime="false">
 		<!-- Become the Hero of your class in the Olympiad. -->
 		<handler name="olympiadhero">
 			<param name="minClanLevel">10</param>
@@ -198,7 +198,7 @@
 			<item id="-300" count="3500" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="2109" name="Ceremony of Chaos Winner" requiredCompletion="12" isOneTime="false">
+	<reward id="2109" category="2" name="Ceremony of Chaos Winner" requiredCompletion="12" isOneTime="false">
 		<!-- Achieve 12 wins in the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos">
 			<param name="minClanLevel">10</param>
@@ -210,7 +210,7 @@
 			<item id="-300" count="2500" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="2110" name="Ceremony of Chaos Champion" requiredCompletion="1" isOneTime="false">
+	<reward id="2110" category="2" name="Ceremony of Chaos Champion" requiredCompletion="1" isOneTime="false">
 		<!-- Become the final champion for a cycle of the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos">
 			<param name="minClanLevel">10</param>
@@ -221,7 +221,7 @@
 			<item id="-300" count="3500" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3025" name="Obtain Noblesse status" requiredCompletion="1">
+	<reward id="3025" category="3" name="Obtain Noblesse status" requiredCompletion="1">
 		<!-- Obtain the Noblesse status while in a clan. -->
 		<handler name="noblesse" />
 		<items>
@@ -229,7 +229,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3026" name="Obtain Exalted Status" requiredCompletion="1">
+	<reward id="3026" category="3" name="Obtain Exalted Status" requiredCompletion="1">
 		<!-- Obtain the Exalted status while in a clan. -->
 		<handler name="exalted" />
 		<items>
@@ -237,7 +237,7 @@
 			<item id="-300" count="9000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3027" name="Monster Hunting: First Steps" requiredCompletion="20000">
+	<reward id="3027" category="3" name="Monster Hunting: First Steps" requiredCompletion="20000">
 		<!-- Kill 20,000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
 		<handler name="monster" />
 		<items>
@@ -245,7 +245,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3028" name="Monster Hunting: Seasoned" requiredMissionCompleteId="3027" requiredCompletion="60000">
+	<reward id="3028" category="3" name="Monster Hunting: Seasoned" requiredMissionCompleteId="3027" requiredCompletion="60000">
 		<!-- Kill 60,000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
 		<handler name="monster" />
 		<items>
@@ -253,7 +253,7 @@
 			<item id="-300" count="9000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3029" name="Monster Hunting: Expert" requiredMissionCompleteId="3028" requiredCompletion="120000">
+	<reward id="3029" category="3" name="Monster Hunting: Expert" requiredMissionCompleteId="3028" requiredCompletion="120000">
 		<!-- Kill 120,000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
 		<handler name="monster" />
 		<items>
@@ -261,7 +261,7 @@
 			<item id="-300" count="18000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3031" name="World Boss Raid: First Steps" requiredCompletion="1">
+	<reward id="3031" category="3" name="World Boss Raid: First Steps" requiredCompletion="1">
 		<!-- Defeat any of the following bosses once: Antharas Valakas Lindvior Helios Etis van Etina -->
 		<handler name="boss">
 			<param name="minLevel">95</param>
@@ -272,7 +272,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3032" name="World Boss Raid: Seasoned" requiredMissionCompleteId="3031" requiredCompletion="10">
+	<reward id="3032" category="3" name="World Boss Raid: Seasoned" requiredMissionCompleteId="3031" requiredCompletion="10">
 		<!-- Defeat any of the following bosses 10 times: Antharas Valakas Lindvior Helios Etis van Etina -->
 		<handler name="boss">
 			<param name="minLevel">95</param>
@@ -283,7 +283,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3033" name="World Boss Raid: Expert" requiredMissionCompleteId="3032" requiredCompletion="30">
+	<reward id="3033" category="3" name="World Boss Raid: Expert" requiredMissionCompleteId="3032" requiredCompletion="30">
 		<!-- Defeat any of the following bosses 30 times: Antharas Valakas Lindvior Helios Etis van Etina -->
 		<handler name="boss">
 			<param name="minLevel">95</param>
@@ -294,7 +294,7 @@
 			<item id="-300" count="20000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3034" name="Olympiad Beginner" requiredCompletion="60">
+	<reward id="3034" category="3" name="Olympiad Beginner" requiredCompletion="60">
 		<!-- Win 60 Olympiad matches. -->
 		<handler name="olympiad">
 			<param name="winOnly">true</param>
@@ -304,7 +304,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3035" name="Olympiad Veteran" requiredMissionCompleteId="3034" requiredCompletion="180">
+	<reward id="3035" category="3" name="Olympiad Veteran" requiredMissionCompleteId="3034" requiredCompletion="180">
 		<!-- Win 180 Olympiad matches. -->
 		<handler name="olympiad">
 			<param name="winOnly">true</param>
@@ -314,7 +314,7 @@
 			<item id="-300" count="6000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3036" name="Olympiad Master" requiredMissionCompleteId="3035" requiredCompletion="360">
+	<reward id="3036" category="3" name="Olympiad Master" requiredMissionCompleteId="3035" requiredCompletion="360">
 		<!-- Win 360 Olympiad matches. -->
 		<handler name="olympiad">
 			<param name="winOnly">true</param>
@@ -324,7 +324,7 @@
 			<item id="-300" count="12000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3037" name="Olympiad: Hero of Heroes" requiredCompletion="10">
+	<reward id="3037" category="3" name="Olympiad: Hero of Heroes" requiredCompletion="10">
 		<!-- Become the Hero in the Olympiad 10 times. -->
 		<handler name="olympiadhero" />
 		<items>
@@ -332,7 +332,7 @@
 			<item id="-300" count="30000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3038" name="Olympiad: From Defeat to Victory" requiredCompletion="100">
+	<reward id="3038" category="3" name="Olympiad: From Defeat to Victory" requiredCompletion="100">
 		<!-- Lose 100 times in the Olympiad to complete this achievement. -->
 		<handler name="olympiad" />
 		<items>
@@ -340,7 +340,7 @@
 			<item id="-300" count="1000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3039" name="Olympiad Consolation Prize" requiredCompletion="200">
+	<reward id="3039" category="3" name="Olympiad Consolation Prize" requiredCompletion="200">
 		<!-- Participate in the Olympiad 200 times. -->
 		<handler name="olympiad" />
 		<items>
@@ -348,7 +348,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3040" name="Ceremony of Chaos Beginner" requiredCompletion="50">
+	<reward id="3040" category="3" name="Ceremony of Chaos Beginner" requiredCompletion="50">
 		<!-- Achieve 50 wins in the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos">
 			<param name="winOnly">true</param>
@@ -358,7 +358,7 @@
 			<item id="-300" count="4000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3041" name="Ceremony of Chaos Veteran" requiredMissionCompleteId="3040" requiredCompletion="150">
+	<reward id="3041" category="3" name="Ceremony of Chaos Veteran" requiredMissionCompleteId="3040" requiredCompletion="150">
 		<!-- Achieve 150 wins in the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos">
 			<param name="winOnly">true</param>
@@ -368,7 +368,7 @@
 			<item id="-300" count="12000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3042" name="Ceremony of Chaos Master" requiredMissionCompleteId="3041" requiredCompletion="300">
+	<reward id="3042" category="3" name="Ceremony of Chaos Master" requiredMissionCompleteId="3041" requiredCompletion="300">
 		<!-- Achieve 300 wins in the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos">
 			<param name="winOnly">true</param>
@@ -378,7 +378,7 @@
 			<item id="-300" count="24000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3043" name="Ceremony of Chaos: Best of the Best" requiredCompletion="10">
+	<reward id="3043" category="3" name="Ceremony of Chaos: Best of the Best" requiredCompletion="10">
 		<!-- Become the best Champion 10 times in the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos" />
 		<items>
@@ -386,7 +386,7 @@
 			<item id="-300" count="50000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3044" name="Ceremony of Chaos: Survival Expert" requiredCompletion="100">
+	<reward id="3044" category="3" name="Ceremony of Chaos: Survival Expert" requiredCompletion="100">
 		<!-- Become the last survivor 100 times in the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos" />
 		<items>
@@ -394,7 +394,7 @@
 			<item id="-300" count="4000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3045" name="Ceremony of Chaos Participation Reward" requiredCompletion="200">
+	<reward id="3045" category="3" name="Ceremony of Chaos Participation Reward" requiredCompletion="200">
 		<!-- Participate in the Ceremony of Chaos 200 times. -->
 		<handler name="ceremonyofchaos" />
 		<items>
@@ -402,7 +402,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3046" name="Ceremony of Chaos Consolation Prize" requiredCompletion="100">
+	<reward id="3046" category="3" name="Ceremony of Chaos Consolation Prize" requiredCompletion="100">
 		<!-- Obtain Ruler's Consideration 100 times in the Ceremony of Chaos. -->
 		<handler name="ceremonyofchaos" />
 		<items>
@@ -410,7 +410,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3047" name="Master Fisherman's Apprentice" requiredCompletion="72000">
+	<reward id="3047" category="3" name="Master Fisherman's Apprentice" requiredCompletion="72000">
 		<!-- Catch 72,000 fish. -->
 		<handler name="fishing" />
 		<items>
@@ -418,7 +418,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3048" name="Big Player in the Auction House" requiredCompletion="10">
+	<reward id="3048" category="3" name="Big Player in the Auction House" requiredCompletion="10">
 		<!-- Bid in the Rare Auction and win 10 times. -->
 		<handler name="auction" />
 		<items>
@@ -426,7 +426,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3049" name="Novice Recycler" requiredCompletion="10">
+	<reward id="3049" category="3" name="Novice Recycler" requiredCompletion="10">
 		<!-- Perform Crystallization or Alchemy Combination 10 times. -->
 		<handler name="combine" />
 		<items>
@@ -434,7 +434,7 @@
 			<item id="-300" count="1000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3050" name="Professional Recycler" requiredMissionCompleteId="3049" requiredCompletion="50">
+	<reward id="3050" category="3" name="Professional Recycler" requiredMissionCompleteId="3049" requiredCompletion="50">
 		<!-- Perform Crystallization or Alchemy Combination 50 times. -->
 		<handler name="combine" />
 		<items>
@@ -442,7 +442,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3051" name="Expert Recycler" requiredMissionCompleteId="3050" requiredCompletion="100">
+	<reward id="3051" category="3" name="Expert Recycler" requiredMissionCompleteId="3050" requiredCompletion="100">
 		<!-- Perform Crystallization or Alchemy Combination 100 times. -->
 		<handler name="combine" />
 		<items>
@@ -450,7 +450,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3052" name="Talisman of Insanity" requiredCompletion="1">
+	<reward id="3052" category="3" name="Talisman of Insanity" requiredCompletion="1">
 		<!-- Compound 1 Talisman of Insanity. -->
 		<handler name="compound">
 			<param name="itemId">39572</param>
@@ -460,7 +460,7 @@
 			<item id="-300" count="5000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3053" name="Achieve Venir's Talisman Lv. 15" requiredCompletion="1">
+	<reward id="3053" category="3" name="Achieve Venir's Talisman Lv. 15" requiredCompletion="1">
 		<!-- Compound 1 Venir's Talisman Lv. 15. -->
 		<handler name="compound">
 			<param name="itemId">39648</param>
@@ -470,7 +470,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3054" name="Achieve Venir's Talisman Lv. 24" requiredMissionCompleteId="3053" requiredCompletion="1">
+	<reward id="3054" category="3" name="Achieve Venir's Talisman Lv. 24" requiredMissionCompleteId="3053" requiredCompletion="1">
 		<!-- Compound 1 Venir's Talisman Lv. 24. -->
 		<handler name="compound">
 			<param name="itemId">39657</param>
@@ -480,7 +480,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3055" name="Augmenting Expert: Weapon" requiredCompletion="100">
+	<reward id="3055" category="3" name="Augmenting Expert: Weapon" requiredCompletion="100">
 		<!-- Use the following Spirit Stones to augment weapons 100 times: High-grade Spirit Stone Top-grade Spirit Stone Life Stone: Giant's Power -->
 		<handler name="augment">
 			<param name="mineralIds">45931,45932,36731</param>
@@ -490,7 +490,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3056" name="Augmenting Expert: Accessory" requiredCompletion="100">
+	<reward id="3056" category="3" name="Augmenting Expert: Accessory" requiredCompletion="100">
 		<!-- Use the following items to augment accessories 100 times: Augmenting Stone: Accessory Aria's Spirit Stone -->
 		<handler name="augment">
 			<param name="mineralIds">81729,38571</param>
@@ -500,7 +500,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3057" name="Augmenting Expert: Head Accessory" requiredCompletion="100">
+	<reward id="3057" category="3" name="Augmenting Expert: Head Accessory" requiredCompletion="100">
 		<!-- Use the following Spirit Stones to augment head accessories 100 times. Spirit Stone: Head Accessory Spirit Stone: Circlet -->
 		<handler name="augment">
 			<param name="mineralIds">45937,48215</param>
@@ -510,7 +510,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3058" name="All Wiped Out" requiredCompletion="3">
+	<reward id="3058" category="3" name="All Wiped Out" requiredCompletion="3">
 		<!-- Enhance your equipment 3 times with any of the following soul crystals: Kain's Soul Crystal Lv. 8 Mermoden's Soul Crystal Lv. 8 Leona's Soul Crystal Lv. 8 Pantheon's Soul Crystal Lv. 8 Lionel's Soul Crystal Lv. 8 -->
 		<handler name="ensoul">
 			<param name="crystalIds">46451,46466,46481,46496,46511</param>
@@ -520,7 +520,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3060" name="Zodiac Agathions Researcher" requiredCompletion="1">
+	<reward id="3060" category="3" name="Zodiac Agathions Researcher" requiredCompletion="1">
 		<!-- Enchant 1 Zodiac agathion to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -531,7 +531,7 @@
 			<item id="-300" count="5000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3061" name="Zodiac Agathions Collector" requiredMissionCompleteId="3060" requiredCompletion="5">
+	<reward id="3061" category="3" name="Zodiac Agathions Collector" requiredMissionCompleteId="3060" requiredCompletion="5">
 		<!-- Enchant 5 Zodiac agathions to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -542,7 +542,7 @@
 			<item id="-300" count="15000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3062" name="Zodiac Agathions Expert" requiredMissionCompleteId="3061" requiredCompletion="12">
+	<reward id="3062" category="3" name="Zodiac Agathions Expert" requiredMissionCompleteId="3061" requiredCompletion="12">
 		<!-- Enchant 12 Zodiac agathions to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -553,7 +553,7 @@
 			<item id="-300" count="25000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3063" name="+10 Apocalypse Weapon" requiredCompletion="1">
+	<reward id="3063" category="3" name="+10 Apocalypse Weapon" requiredCompletion="1">
 		<!-- Enchant 1 Apocalypse weapon to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -564,7 +564,7 @@
 			<item id="-300" count="1000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3064" name="+15 Apocalypse Weapon" requiredMissionCompleteId="3063" requiredCompletion="1">
+	<reward id="3064" category="3" name="+15 Apocalypse Weapon" requiredMissionCompleteId="3063" requiredCompletion="1">
 		<!-- Enchant 1 Apocalypse weapon to +15. -->
 		<handler name="enchant">
 			<param name="targetValue">15</param>
@@ -575,7 +575,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3065" name="+20 Apocalypse Weapon" requiredMissionCompleteId="3064" requiredCompletion="1">
+	<reward id="3065" category="3" name="+20 Apocalypse Weapon" requiredMissionCompleteId="3064" requiredCompletion="1">
 		<!-- Enchant 1 Apocalypse weapon to +20. -->
 		<handler name="enchant">
 			<param name="targetValue">20</param>
@@ -586,7 +586,7 @@
 			<item id="-300" count="5000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3066" name="+10 Specter Weapon" requiredCompletion="1">
+	<reward id="3066" category="3" name="+10 Specter Weapon" requiredCompletion="1">
 		<!-- Enchant 1 Specter weapon to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -597,7 +597,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3067" name="+15 Specter Weapon" requiredMissionCompleteId="3066" requiredCompletion="1">
+	<reward id="3067" category="3" name="+15 Specter Weapon" requiredMissionCompleteId="3066" requiredCompletion="1">
 		<!-- Enchant 1 Specter weapon to +15. -->
 		<handler name="enchant">
 			<param name="targetValue">15</param>
@@ -608,7 +608,7 @@
 			<item id="-300" count="6000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3068" name="+20 Specter Weapon" requiredMissionCompleteId="3067" requiredCompletion="1">
+	<reward id="3068" category="3" name="+20 Specter Weapon" requiredMissionCompleteId="3067" requiredCompletion="1">
 		<!-- Enchant 1 Specter weapon to +20. -->
 		<handler name="enchant">
 			<param name="targetValue">20</param>
@@ -619,7 +619,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3069" name="+10 Helios Weapon" requiredCompletion="1">
+	<reward id="3069" category="3" name="+10 Helios Weapon" requiredCompletion="1">
 		<!-- Enchant 1 Helios weapon to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -630,7 +630,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3070" name="+15 Helios Weapon" requiredMissionCompleteId="3069" requiredCompletion="1">
+	<reward id="3070" category="3" name="+15 Helios Weapon" requiredMissionCompleteId="3069" requiredCompletion="1">
 		<!-- Enchant 1 Helios weapon to +15. -->
 		<handler name="enchant">
 			<param name="targetValue">15</param>
@@ -641,7 +641,7 @@
 			<item id="-300" count="9000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3071" name="+20 Helios Weapon" requiredMissionCompleteId="3070" requiredCompletion="1">
+	<reward id="3071" category="3" name="+20 Helios Weapon" requiredMissionCompleteId="3070" requiredCompletion="1">
 		<!-- Enchant 1 Helios weapon to +20. -->
 		<handler name="enchant">
 			<param name="targetValue">20</param>
@@ -652,7 +652,7 @@
 			<item id="-300" count="15000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3072" name="+10 Bloody Helios Weapon" requiredCompletion="1">
+	<reward id="3072" category="3" name="+10 Bloody Helios Weapon" requiredCompletion="1">
 		<!-- Enchant 1 Bloody Helios weapon to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -663,7 +663,7 @@
 			<item id="-300" count="4000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3073" name="+15 Bloody Helios Weapon" requiredMissionCompleteId="3072" requiredCompletion="1">
+	<reward id="3073" category="3" name="+15 Bloody Helios Weapon" requiredMissionCompleteId="3072" requiredCompletion="1">
 		<!-- Enchant 1 Bloody Helios weapon to +15. -->
 		<handler name="enchant">
 			<param name="targetValue">15</param>
@@ -674,7 +674,7 @@
 			<item id="-300" count="12000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3074" name="+20 Bloody Helios Weapon" requiredMissionCompleteId="3073" requiredCompletion="1">
+	<reward id="3074" category="3" name="+20 Bloody Helios Weapon" requiredMissionCompleteId="3073" requiredCompletion="1">
 		<!-- Enchant 1 Bloody Helios weapon to +20. -->
 		<handler name="enchant">
 			<param name="targetValue">20</param>
@@ -685,7 +685,7 @@
 			<item id="-300" count="20000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3075" name="+10 Dark Helios Weapon" requiredCompletion="1">
+	<reward id="3075" category="3" name="+10 Dark Helios Weapon" requiredCompletion="1">
 		<!-- Enchant 1 Dark Helios weapon to +10. -->
 		<handler name="enchant">
 			<param name="targetValue">10</param>
@@ -696,7 +696,7 @@
 			<item id="-300" count="4000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3076" name="+15 Dark Helios Weapon" requiredMissionCompleteId="3075" requiredCompletion="1">
+	<reward id="3076" category="3" name="+15 Dark Helios Weapon" requiredMissionCompleteId="3075" requiredCompletion="1">
 		<!-- Enchant 1 Dark Helios weapon to +15. -->
 		<handler name="enchant">
 			<param name="targetValue">15</param>
@@ -707,7 +707,7 @@
 			<item id="-300" count="12000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3077" name="+20 Dark Helios Weapon" requiredMissionCompleteId="3076" requiredCompletion="1">
+	<reward id="3077" category="3" name="+20 Dark Helios Weapon" requiredMissionCompleteId="3076" requiredCompletion="1">
 		<!-- Enchant 1 Dark Helios weapon to +20. -->
 		<handler name="enchant">
 			<param name="targetValue">20</param>
@@ -718,7 +718,7 @@
 			<item id="-300" count="20000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3201" name="Main Class - Basic Enhancement 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3201" category="3" name="Main Class - Basic Enhancement 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 99. -->
 		<handler name="level">
 			<param name="minLevel">99</param>
@@ -729,7 +729,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3202" name="Main Class - Basic Enhancement 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3202" category="3" name="Main Class - Basic Enhancement 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 100. -->
 		<handler name="level">
 			<param name="minLevel">100</param>
@@ -740,7 +740,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3203" name="Main Class - Initial Growth 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3203" category="3" name="Main Class - Initial Growth 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 101. -->
 		<handler name="level">
 			<param name="minLevel">101</param>
@@ -751,7 +751,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3204" name="Main Class - Initial Growth 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3204" category="3" name="Main Class - Initial Growth 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 102. -->
 		<handler name="level">
 			<param name="minLevel">102</param>
@@ -762,7 +762,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3205" name="Main Class - Initial Growth 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3205" category="3" name="Main Class - Initial Growth 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 103. -->
 		<handler name="level">
 			<param name="minLevel">103</param>
@@ -773,7 +773,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3206" name="Main Class - Initial Growth 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3206" category="3" name="Main Class - Initial Growth 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 104. -->
 		<handler name="level">
 			<param name="minLevel">104</param>
@@ -784,7 +784,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3207" name="Main Class - Initial Growth 5" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3207" category="3" name="Main Class - Initial Growth 5" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 105. -->
 		<handler name="level">
 			<param name="minLevel">105</param>
@@ -795,7 +795,7 @@
 			<item id="81887" count="2" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3208" name="Main Class - First Challenge 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3208" category="3" name="Main Class - First Challenge 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 106. -->
 		<handler name="level">
 			<param name="minLevel">106</param>
@@ -807,7 +807,7 @@
 			<item id="81812" count="1" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3209" name="Main Class - First Challenge 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3209" category="3" name="Main Class - First Challenge 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 107. -->
 		<handler name="level">
 			<param name="minLevel">107</param>
@@ -819,7 +819,7 @@
 			<item id="81812" count="1" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3210" name="Main Class - First Challenge 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3210" category="3" name="Main Class - First Challenge 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 108. -->
 		<handler name="level">
 			<param name="minLevel">108</param>
@@ -831,7 +831,7 @@
 			<item id="81812" count="3" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3211" name="Main Class - First Challenge 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3211" category="3" name="Main Class - First Challenge 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 109. -->
 		<handler name="level">
 			<param name="minLevel">109</param>
@@ -843,7 +843,7 @@
 			<item id="81812" count="5" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3212" name="Main Class - Path of Ascetic 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3212" category="3" name="Main Class - Path of Ascetic 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 110. -->
 		<handler name="level">
 			<param name="minLevel">110</param>
@@ -854,7 +854,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3213" name="Main Class - Path of Ascetic 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3213" category="3" name="Main Class - Path of Ascetic 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 111. -->
 		<handler name="level">
 			<param name="minLevel">111</param>
@@ -865,7 +865,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3214" name="Main Class - Path of Ascetic 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3214" category="3" name="Main Class - Path of Ascetic 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 112. -->
 		<handler name="level">
 			<param name="minLevel">112</param>
@@ -876,7 +876,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3215" name="Main Class - Path of Ascetic 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3215" category="3" name="Main Class - Path of Ascetic 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 113. -->
 		<handler name="level">
 			<param name="minLevel">113</param>
@@ -887,7 +887,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3216" name="Main Class - Path of Ascetic 5" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3216" category="3" name="Main Class - Path of Ascetic 5" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 114. -->
 		<handler name="level">
 			<param name="minLevel">114</param>
@@ -898,7 +898,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3217" name="Path of Patience 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3217" category="3" name="Path of Patience 1" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 115. -->
 		<handler name="level">
 			<param name="minLevel">115</param>
@@ -909,7 +909,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3218" name="Path of Patience 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3218" category="3" name="Path of Patience 2" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 116. -->
 		<handler name="level">
 			<param name="minLevel">116</param>
@@ -920,7 +920,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3219" name="Path of Patience 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3219" category="3" name="Path of Patience 3" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 117. -->
 		<handler name="level">
 			<param name="minLevel">117</param>
@@ -931,7 +931,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3220" name="Path of Patience 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3220" category="3" name="Path of Patience 4" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 118. -->
 		<handler name="level">
 			<param name="minLevel">118</param>
@@ -942,7 +942,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3221" name="Path of Patience 5" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3221" category="3" name="Path of Patience 5" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 119. -->
 		<handler name="level">
 			<param name="minLevel">119</param>
@@ -953,7 +953,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3222" name="Fruits of Patience" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+	<reward id="3222" category="3" name="Fruits of Patience" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
 		<!-- Reach Main Class Lv. 120. -->
 		<handler name="level">
 			<param name="minLevel">120</param>
@@ -964,7 +964,7 @@
 			<item id="81890" count="1" /> <!-- Anniversary Badge of Lv. 120 -->
 		</items>
 	</reward>
-	<reward id="3223" name="Dual Class - Basic Enhancement 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3223" category="3" name="Dual Class - Basic Enhancement 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 99. -->
 		<handler name="level">
 			<param name="minLevel">99</param>
@@ -975,7 +975,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3224" name="Dual Class - Basic Enhancement 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3224" category="3" name="Dual Class - Basic Enhancement 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 100. -->
 		<handler name="level">
 			<param name="minLevel">100</param>
@@ -986,7 +986,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3225" name="Dual Class - Initial Growth 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3225" category="3" name="Dual Class - Initial Growth 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 101. -->
 		<handler name="level">
 			<param name="minLevel">101</param>
@@ -997,7 +997,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3226" name="Dual Class - Initial Growth 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3226" category="3" name="Dual Class - Initial Growth 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 102. -->
 		<handler name="level">
 			<param name="minLevel">102</param>
@@ -1008,7 +1008,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3227" name="Dual Class - Initial Growth 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3227" category="3" name="Dual Class - Initial Growth 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 103. -->
 		<handler name="level">
 			<param name="minLevel">103</param>
@@ -1019,7 +1019,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3228" name="Dual Class - Initial Growth 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3228" category="3" name="Dual Class - Initial Growth 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 104. -->
 		<handler name="level">
 			<param name="minLevel">104</param>
@@ -1030,7 +1030,7 @@
 			<item id="81887" count="1" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3229" name="Dual Class - Initial Growth 5" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3229" category="3" name="Dual Class - Initial Growth 5" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 105. -->
 		<handler name="level">
 			<param name="minLevel">105</param>
@@ -1041,7 +1041,7 @@
 			<item id="81887" count="2" /> <!-- Rune Stone -->
 		</items>
 	</reward>
-	<reward id="3230" name="Dual Class - First Challenge 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3230" category="3" name="Dual Class - First Challenge 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 106. -->
 		<handler name="level">
 			<param name="minLevel">106</param>
@@ -1053,7 +1053,7 @@
 			<item id="81812" count="1" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3231" name="Dual Class - First Challenge 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3231" category="3" name="Dual Class - First Challenge 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 107. -->
 		<handler name="level">
 			<param name="minLevel">107</param>
@@ -1065,7 +1065,7 @@
 			<item id="81812" count="1" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3232" name="Dual Class - First Challenge 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3232" category="3" name="Dual Class - First Challenge 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 108. -->
 		<handler name="level">
 			<param name="minLevel">108</param>
@@ -1077,7 +1077,7 @@
 			<item id="81812" count="3" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3233" name="Dual Class - First Challenge 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3233" category="3" name="Dual Class - First Challenge 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 109. -->
 		<handler name="level">
 			<param name="minLevel">109</param>
@@ -1089,7 +1089,7 @@
 			<item id="81812" count="5" /> <!-- Homunculus Upgrade Points - 10 -->
 		</items>
 	</reward>
-	<reward id="3234" name="Dual Class - Path of Ascetic 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3234" category="3" name="Dual Class - Path of Ascetic 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 110. -->
 		<handler name="level">
 			<param name="minLevel">110</param>
@@ -1100,7 +1100,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3235" name="Dual Class - Path of Ascetic 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3235" category="3" name="Dual Class - Path of Ascetic 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 111. -->
 		<handler name="level">
 			<param name="minLevel">111</param>
@@ -1111,7 +1111,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3236" name="Dual Class - Path of Ascetic 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3236" category="3" name="Dual Class - Path of Ascetic 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 112. -->
 		<handler name="level">
 			<param name="minLevel">112</param>
@@ -1122,7 +1122,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3237" name="Dual Class - Path of Ascetic 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3237" category="3" name="Dual Class - Path of Ascetic 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 113. -->
 		<handler name="level">
 			<param name="minLevel">113</param>
@@ -1133,7 +1133,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3238" name="Dual Class - Path of Ascetic 5" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3238" category="3" name="Dual Class - Path of Ascetic 5" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 114. -->
 		<handler name="level">
 			<param name="minLevel">114</param>
@@ -1144,7 +1144,7 @@
 			<item id="81888" count="1" /> <!-- Tales of Masia -->
 		</items>
 	</reward>
-	<reward id="3239" name="Dual Class - Path of Patience 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3239" category="3" name="Dual Class - Path of Patience 1" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 115. -->
 		<handler name="level">
 			<param name="minLevel">115</param>
@@ -1155,7 +1155,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3240" name="Dual Class - Path of Patience 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3240" category="3" name="Dual Class - Path of Patience 2" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 116. -->
 		<handler name="level">
 			<param name="minLevel">116</param>
@@ -1166,7 +1166,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3241" name="Dual Class - Path of Patience 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3241" category="3" name="Dual Class - Path of Patience 3" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 117. -->
 		<handler name="level">
 			<param name="minLevel">117</param>
@@ -1177,7 +1177,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3242" name="Dual Class - Path of Patience 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3242" category="3" name="Dual Class - Path of Patience 4" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 118. -->
 		<handler name="level">
 			<param name="minLevel">118</param>
@@ -1188,7 +1188,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3243" name="Dual Class - Path of Patience 5" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3243" category="3" name="Dual Class - Path of Patience 5" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 119. -->
 		<handler name="level">
 			<param name="minLevel">119</param>
@@ -1199,7 +1199,7 @@
 			<item id="81889" count="1" /> <!-- Tales of Eraton -->
 		</items>
 	</reward>
-	<reward id="3244" name="Dual Class - Fruits of Patience" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+	<reward id="3244" category="3" name="Dual Class - Fruits of Patience" requiredCompletion="1" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
 		<!-- Reach Dual Class Lv. 120. -->
 		<handler name="level">
 			<param name="minLevel">120</param>
@@ -1210,7 +1210,7 @@
 			<item id="81890" count="1" /> <!-- Anniversary Badge of Lv. 120 -->
 		</items>
 	</reward>
-	<reward id="4101" name="Power of Freya's Scroll" requiredCompletion="24" isOneTime="false">
+	<reward id="4101" category="4" name="Power of Freya's Scroll" requiredCompletion="24" isOneTime="false">
 		<!-- Use any of the following scrolls 24 times: Freya's Frozen Scroll Freya's Frozen Scroll (Event) Freya's Scroll of Storm Freya's Scroll of Storm (Event) Scroll of Storm - PA -->
 		<handler name="useitem">
 			<param name="itemIds">40227,40231,47382,27673,47428,81054,81140</param>
@@ -1220,7 +1220,7 @@
 			<item id="-300" count="250" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="4103" name="Power of Freya's Ice Rose" requiredCompletion="8" isOneTime="false">
+	<reward id="4103" category="4" name="Power of Freya's Ice Rose" requiredCompletion="8" isOneTime="false">
 		<!-- Use any of the following items 8 times: Freya's Ice Rose Freya's Ice Rose (Event) Ice Rose - PA -->
 		<handler name="useitem">
 			<param name="itemIds">48830,80441,80442,29789,48848,60000,80612</param>
@@ -1230,7 +1230,7 @@
 			<item id="-300" count="250" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="4104" name="Power of Glowing Dragon's Attribute Potion" requiredCompletion="8" isOneTime="false">
+	<reward id="4104" category="4" name="Power of Glowing Dragon's Attribute Potion" requiredCompletion="8" isOneTime="false">
 		<!-- Use any of the following items 8 times: Glowing Dragon's Attribute Potion (XP) Glowing Dragon's Attribute Potion (XP) - Event Glowing Dragon's Attribute Potion - PA Glowing Royal Dragon's Attribute Potion (XP) -->
 		<handler name="useitem">
 			<param name="itemIds">29776,48497,48755,48857,60182,60186,80748,81759</param>
@@ -1240,7 +1240,7 @@
 			<item id="-300" count="250" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="4105" name="Power of Honey Dark Beer" requiredCompletion="8" isOneTime="false">
+	<reward id="4105" category="4" name="Power of Honey Dark Beer" requiredCompletion="8" isOneTime="false">
 		<!-- Use any of the following items 8 times: Honey Dark Beer Honey Dark Beer - Event Honey Dark Beer - PA Royal Honey Dark Beer -->
 		<handler name="useitem">
 			<param name="itemIds">60179,80747,80842,81011,81460,81747</param>
@@ -1250,7 +1250,7 @@
 			<item id="-300" count="250" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="4106" name="Power of Emperor's Special Cocktail" requiredCompletion="4" isOneTime="false">
+	<reward id="4106" category="4" name="Power of Emperor's Special Cocktail" requiredCompletion="4" isOneTime="false">
 		<!-- Use any of the following items 4 times: Wondrous Cocktail Wondrous Cocktail (Event) Wondrous Cocktail - PA -->
 		<handler name="useitem">
 			<param name="itemIds">29791,80061,80062,80063,80435,80436,80437,80438,80439,80440,80753,80754,80755,80817,80818,80819,80820,80832,81012</param>
@@ -1260,7 +1260,7 @@
 			<item id="-300" count="250" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="4107" name="Nevit's Hourglass" requiredCompletion="8" isOneTime="false">
+	<reward id="4107" category="4" name="Nevit's Hourglass" requiredCompletion="8" isOneTime="false">
 		<!-- Use any of the following items 8 times: Nevit's Shining Gold Hourglass Nevit's Shining Gold Hourglass - Event Nevit's Shining Gold Hourglass - PA Nevit's Shining Royal Gold Hourglass -->
 		<handler name="useitem">
 			<param name="itemIds">48642,60183,60187,80797,80852,81013,81892</param>
@@ -1270,7 +1270,7 @@
 			<item id="-300" count="250" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="4108" name="Time Stone" requiredCompletion="3" isOneTime="false">
+	<reward id="4108" category="4" name="Time Stone" requiredCompletion="3" isOneTime="false">
 		<!-- Use any of the following items 3 times: Abandoned Coal Mines' Time Stone Fioren's Crystal Prison's Time Stone Jamoa's Camp's Time Stone Pantheon's Museum's Time Stone -->
 		<handler name="useitem">
 			<param name="itemIds">81358,82134,80996,80905,80997,80906,80998,80960</param>
@@ -1281,7 +1281,7 @@
 			<item id="-300" count="250" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="4110" name="Lunchtime Hunt!" requiredCompletion="300" isOneTime="false"> <!-- TODO: start_date=191115	start_time=191211	end_date=700	end_time=500 -->
+	<reward id="4110" category="4" name="Lunchtime Hunt!" requiredCompletion="300" isOneTime="false"> <!-- TODO: start_date=191115	start_time=191211	end_date=700	end_time=500 -->
 		<!-- Kill 300 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) Available daily from 11:30 till 14:30. The mission progress is saved. -->
 		<handler name="monster">
 			<param name="minLevel">101</param>
@@ -1294,7 +1294,7 @@
 			<item id="81455" count="2" /> <!-- Special Clan Reward Lv. 1 -->
 		</items>
 	</reward>
-	<reward id="4111" name="Evening Hunt!" requiredCompletion="300" isOneTime="false"> <!-- TODO: start_date=191115	start_time=191211	end_date=700	end_time=500 -->
+	<reward id="4111" category="4" name="Evening Hunt!" requiredCompletion="300" isOneTime="false"> <!-- TODO: start_date=191115	start_time=191211	end_date=700	end_time=500 -->
 		<!-- Kill 300 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) Available daily from 17:30 till 20:30 p.m. The mission progress is saved. -->
 		<handler name="monster">
 			<param name="minLevel">101</param>
@@ -1307,7 +1307,7 @@
 			<item id="81455" count="2" /> <!-- Special Clan Reward Lv. 1 -->
 		</items>
 	</reward>
-	<reward id="4112" name="Hunt in the Ravaged Innadril" requiredCompletion="1400" isOneTime="false">
+	<reward id="4112" category="4" name="Hunt in the Ravaged Innadril" requiredCompletion="1400" isOneTime="false">
 		<!-- Kill 1400 monsters in the Ravaged Innadril. -->
 		<handler name="monster">
 			<param name="ids">24598,24599,24600,24603,24604,24605,24957,24958,24959,24960,24992,24993,24994,24995,24996,24997,24998,24999</param>
@@ -1320,7 +1320,7 @@
 			<item id="60078" count="1" /> <!-- Water Dragon's Scroll Bundle -->
 		</items>
 	</reward>
-	<reward id="4113" name="Great Hunt" requiredCompletion="4000" isOneTime="false"> <!-- TODO: start_date=200729	start_time=200826	end_date=700	end_time=500 -->
+	<reward id="4113" category="4" name="Great Hunt" requiredCompletion="4000" isOneTime="false"> <!-- TODO: start_date=200729	start_time=200826	end_date=700	end_time=500 -->
 		<!-- Fight fire with fire! Kill 4000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
 		<handler name="monster">
 			<param name="minLevel">110</param>
@@ -1331,7 +1331,7 @@
 			<item id="81782" count="2" /> <!-- Watermelon Seed - Event -->
 		</items>
 	</reward>
-	<reward id="4114" name="Great Hunt in Party Instance Zones" requiredCompletion="3" isOneTime="false"> <!-- TODO: start_date=200729	start_time=200826	end_date=700	end_time=500 -->
+	<reward id="4114" category="4" name="Great Hunt in Party Instance Zones" requiredCompletion="3" isOneTime="false"> <!-- TODO: start_date=200729	start_time=200826	end_date=700	end_time=500 -->
 		<!-- Fight fire with fire! Defeat any of the bosses in the following party instance zones of any difficulty level 3 times: Crystal Prison (Baylor) Nightmare Kamaloka Ashen Shadow Camp Krofin's Nest -->
 		<handler name="monster">
 			<param name="ids">29213,29380,26093,26094,26096,26099,26102,26461,26462,26463,26464,26465,23653,23654,23655,23656,23657,23658,23659,23660,23661,23662,23663,23664,24813,24814,24815,24816,24817,24818,24819,24820,24821,24822,24823,24824,26390,26467</param>
@@ -1343,7 +1343,7 @@
 			<item id="81782" count="2" /> <!-- Watermelon Seed - Event -->
 		</items>
 	</reward>
-	<reward id="4115" name="Mentee Training" requiredCompletion="2" isOneTime="false"> <!-- TODO: start_date=201028	start_time=201125	end_date=700	end_time=500 -->
+	<reward id="4115" category="4" name="Mentee Training" requiredCompletion="2" isOneTime="false"> <!-- TODO: start_date=201028	start_time=201125	end_date=700	end_time=500 -->
 		<!-- Train 1 Mentee. (Mentorship lasts until the Mentee reaches Lv. 105.) To add a Mentee open the Friend Manager window (Alt+Y) and open the Mentorship tab. -->
 		<handler name="mentor" />
 		<items>
@@ -1354,7 +1354,7 @@
 		</items>
 	</reward>
 	<!--
-	<reward id="10003" name="Hunt at Lurin's Secret Workshop" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" isOneTime="false">
+	<reward id="10003" category="5" name="Hunt at Lurin's Secret Workshop" requiredCompletion="1" isMainClassOnly="true" isDualClassOnly="false" isOneTime="false">
 		Defeat Archlord Lurin at Lurin's Secret Workshop. - Can be completed once a day. - Reset daily at 6:30.
 		<handler name="monster">
 			<param name="minLevel">105</param>
@@ -1365,7 +1365,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="60000" name="Hunt Lv. 101+ monsters" requiredCompletion="800" isOneTime="false">
+	<reward id="60000" category="1" name="Hunt Lv. 101+ monsters" requiredCompletion="800" isOneTime="false">
 		<!-- Kill 800 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
 		<handler name="monster">
 			<param name="minLevel">101</param>

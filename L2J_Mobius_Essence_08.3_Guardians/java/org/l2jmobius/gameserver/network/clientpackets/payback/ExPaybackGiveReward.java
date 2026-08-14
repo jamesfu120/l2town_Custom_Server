@@ -23,10 +23,10 @@ package org.l2jmobius.gameserver.network.clientpackets.payback;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.managers.events.PaybackManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -54,7 +54,6 @@ public class ExPaybackGiveReward extends ClientPacket
 		}
 		
 		final PaybackManager manager = PaybackManager.getInstance();
-		final long consumed = manager.getPlayerConsumedProgress(player.getObjectId());
 		final List<Integer> rewardStatus = manager.getPlayerMissionProgress(player.getObjectId());
 		if ((rewardStatus == null) || rewardStatus.get(_index - 1).equals(1) || (manager.getRewardsById(_index) == null))
 		{
@@ -62,6 +61,7 @@ public class ExPaybackGiveReward extends ClientPacket
 			return;
 		}
 		
+		final long consumed = manager.getPlayerConsumedProgress(player.getObjectId());
 		final long count = manager.getRewardsById(_index).getCount();
 		if (count > consumed)
 		{

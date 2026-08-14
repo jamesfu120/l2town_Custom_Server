@@ -22,12 +22,11 @@ package org.l2jmobius.gameserver.network.clientpackets.relics;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerRelicData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerRelicData;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsCombination;
@@ -40,7 +39,7 @@ public class RequestRelicsCombination extends ClientPacket
 {
 	private int _relicsUsedGrade;
 	private int _relicsUsedCount;
-	private final List<Integer> _ingredientIds = new LinkedList<>();
+	private final List<Integer> _ingredientIds = new ArrayList<>();
 	
 	@Override
 	protected void readImpl()

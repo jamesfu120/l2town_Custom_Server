@@ -23,8 +23,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -73,7 +73,7 @@ public class RequestWithdrawalPledge extends ClientPacket
 		sm.addString(player.getName());
 		clan.broadcastToOnlineMembers(sm);
 		
-		// Remove the Player From the Member list
+		// Remove the Player From the Member list.
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(player.getName()));
 		player.sendPacket(SystemMessageId.WITHDRAWN_FROM_THE_CLAN);
 		player.sendPacket(SystemMessageId.YOU_CANNOT_JOIN_A_CLAN_WITHIN_5_DAYS_OF_EXPULSION_OR_WITHDRAWAL);

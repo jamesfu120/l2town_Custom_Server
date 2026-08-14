@@ -23,13 +23,13 @@ package quests.Q00437_DangerousLizardmen;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.NpcLogListHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.script.NpcLogListHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -119,7 +119,7 @@ public class Q00437_DangerousLizardmen extends Quest
 			if (qs.isCond(1))
 			{
 				final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-				if ((killCount < 200))
+				if (killCount < 200)
 				{
 					htmltext = "34369-03.html"; // no kill html
 				}

@@ -20,12 +20,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.AdminTeleportType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.AdminTeleportType;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
 /**
@@ -67,7 +66,7 @@ public class MoveToward extends ClientPacket
 		
 		player.setCursorKeyMovement(true);
 		player.setLastServerPosition(player.getX(), player.getY(), player.getZ());
-		player.getAI().setIntention(Intention.MOVE_TO, destination);
+		player.getAI().setIntentionMoveTo(destination);
 		
 		// Remove queued skill upon move request.
 		if (player.getQueuedSkill() != null)

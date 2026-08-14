@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.shuttle;
 
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

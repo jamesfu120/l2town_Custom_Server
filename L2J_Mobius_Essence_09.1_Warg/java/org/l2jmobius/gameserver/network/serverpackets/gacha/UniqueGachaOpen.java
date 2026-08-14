@@ -26,10 +26,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.GachaItemHolder;
 import org.l2jmobius.gameserver.managers.events.UniqueGachaManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.GachaItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -79,7 +79,7 @@ public class UniqueGachaOpen extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_UNIQUE_GACHA_OPEN.writeId(this, buffer);
 		buffer.writeByte(_openMode); // open mode 1 = const GACHA_TITLE_FORM = 1; = will open main window?
@@ -99,7 +99,7 @@ public class UniqueGachaOpen extends ServerPacket
 		}
 	}
 	
-	private void writeFullInfo(WritableBuffer buffer)
+	private void writeFullInfo(WriteBuffer buffer)
 	{
 		buffer.writeInt(_visibleItems.size()); // show items size // int
 		for (GachaItemHolder item : _visibleItems)
@@ -134,7 +134,7 @@ public class UniqueGachaOpen extends ServerPacket
 		}
 	}
 	
-	private void writeDummyInfo(WritableBuffer buffer)
+	private void writeDummyInfo(WriteBuffer buffer)
 	{
 		buffer.writeInt(0); // show items size // int
 		buffer.writeInt(0); // reward item size // int

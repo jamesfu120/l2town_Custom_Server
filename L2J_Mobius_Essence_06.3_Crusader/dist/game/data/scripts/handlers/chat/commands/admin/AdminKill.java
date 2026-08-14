@@ -23,12 +23,12 @@ package handlers.chat.commands.admin;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.config.custom.ChampionMonstersConfig;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -54,7 +54,7 @@ public class AdminKill implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
-				final Player plyr = World.getInstance().getPlayer(firstParam);
+				final Player plyr = World.getPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
@@ -62,7 +62,7 @@ public class AdminKill implements IAdminCommandHandler
 						try
 						{
 							final int radius = Integer.parseInt(st.nextToken());
-							World.getInstance().forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
+							World.forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
 							{
 								if ((knownChar instanceof FriendlyNpc) || (knownChar == activeChar))
 								{
@@ -89,7 +89,7 @@ public class AdminKill implements IAdminCommandHandler
 					try
 					{
 						final int radius = Integer.parseInt(firstParam);
-						World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
+						World.forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
 						{
 							if (wo instanceof FriendlyNpc)
 							{

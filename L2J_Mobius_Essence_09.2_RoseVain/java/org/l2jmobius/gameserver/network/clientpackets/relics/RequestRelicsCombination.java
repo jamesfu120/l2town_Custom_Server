@@ -22,24 +22,25 @@ package org.l2jmobius.gameserver.network.clientpackets.relics;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.data.holders.RelicCompoundFeeHolder;
 import org.l2jmobius.gameserver.data.xml.RelicData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.RelicGrade;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerRelicData;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerRelicData;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsCollectionUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsCombination;
+import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsExchangeList;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsList;
-import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsUpdateList;
+import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsPointInfo;
 
 /**
  * @author CostyKiller, Brado
@@ -48,7 +49,7 @@ public class RequestRelicsCombination extends ClientPacket
 {
 	private int _relicsUsedGrade;
 	private int _relicsUsedCount;
-	private final List<Integer> _ingredientIds = new LinkedList<>();
+	private final List<Integer> _ingredientIds = new ArrayList<>();
 	
 	@Override
 	protected void readImpl()
@@ -123,10 +124,21 @@ public class RequestRelicsCombination extends ClientPacket
 			if (result.getKey())
 			{
 				successCompoundIds.add(obtainedRelicId);
+				player.sendPacket(new ExRelicsAnnounce(player, obtainedRelicId));
 			}
 			else
 			{
 				failCompoundIds.add(obtainedRelicId);
+				player.sendPacket(new ExRelicsAnnounce(player, obtainedRelicId));
+			}
+			
+			// Increment pity counter for this grade slot.
+			final String pityKey = "RELIC_EXCHANGE_REMAIN_" + _relicsUsedGrade;
+			final int currentPity = player.getVariables().getInt(pityKey, 0);
+			if (currentPity < 165)
+			{
+				player.getVariables().set(pityKey, currentPity + 1);
+				player.getVariables().storeMe();
 			}
 			
 			PlayerRelicData existingRelic = null;
@@ -143,7 +155,6 @@ public class RequestRelicsCombination extends ClientPacket
 			if (existingRelic != null)
 			{
 				existingRelic.setRelicCount(existingRelic.getRelicCount() + 1);
-				player.sendPacket(new ExRelicsUpdateList(1, existingRelic.getRelicId(), 0, existingRelic.getRelicCount() + 1)); // Update confirmed relic list with new relic.
 				if (RelicSystemConfig.RELIC_SYSTEM_DEBUG_ENABLED)
 				{
 					player.sendMessage("Existing relic id: " + obtainedRelicId + " count increased.");
@@ -161,7 +172,6 @@ public class RequestRelicsCombination extends ClientPacket
 			{
 				newRelic.setRelicIndex(0);
 				storedRelics.add(newRelic);
-				player.sendPacket(new ExRelicsUpdateList(1, newRelic.getRelicId(), 0, 0)); // Update confirmed relic list with new relic.
 				if (newRelic.getRelicIndex() == 0)
 				{
 					if (!player.isRelicRegistered(newRelic.getRelicId(), newRelic.getRelicLevel()))
@@ -183,6 +193,8 @@ public class RequestRelicsCombination extends ClientPacket
 		player.sendMessage("Relics compound summary: " + successCompoundIds.size() + " succeded and " + failCompoundIds.size() + " failed.");
 		player.sendPacket(new ExRelicsCombination(player, successCompoundIds, failCompoundIds));
 		player.sendPacket(new ExRelicsList(player)); // Update confirmed relic list relics count.
+		player.sendPacket(new ExRelicsExchangeList(player));
+		player.sendPacket(new ExRelicsPointInfo(player));
 		player.storeRelics();
 	}
 }

@@ -16,17 +16,16 @@
  */
 package ai.bosses.Freya.IceQueensCastle;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -73,12 +72,12 @@ public class IceQueensCastle extends InstanceScript
 		{
 			case "ATTACK_KNIGHT":
 			{
-				World.getInstance().forEachVisibleObject(npc, Npc.class, mob ->
+				World.forEachVisibleObject(npc, Npc.class, mob ->
 				{
 					if ((mob.getId() == ARCHERY_KNIGHT) && !mob.isDead() && !mob.isDecayed())
 					{
 						npc.setRunning();
-						npc.getAI().setIntention(Intention.ATTACK, mob);
+						npc.getAI().setIntentionAttack(mob);
 						npc.asAttackable().addDamageHate(mob, 0, 999999);
 					}
 				});
@@ -89,7 +88,7 @@ public class IceQueensCastle extends InstanceScript
 			{
 				if (npc != null)
 				{
-					npc.getAI().setIntention(Intention.MOVE_TO, FREYA_LOC);
+					npc.getAI().setIntentionMoveTo(FREYA_LOC);
 				}
 				break;
 			}
@@ -148,12 +147,12 @@ public class IceQueensCastle extends InstanceScript
 		{
 			npc.setScriptValue(1);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
-			World.getInstance().forEachVisibleObject(npc, Npc.class, mob ->
+			World.forEachVisibleObject(npc, Npc.class, mob ->
 			{
 				if ((mob.getId() == ARCHERY_KNIGHT) && !mob.isDead() && !mob.isDecayed())
 				{
 					npc.setRunning();
-					npc.getAI().setIntention(Intention.ATTACK, mob);
+					npc.getAI().setIntentionAttack(mob);
 					npc.asAttackable().addDamageHate(mob, 0, 999999);
 				}
 			});

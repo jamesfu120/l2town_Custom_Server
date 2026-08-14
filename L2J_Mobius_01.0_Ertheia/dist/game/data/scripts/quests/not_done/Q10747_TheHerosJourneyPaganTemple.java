@@ -21,7 +21,7 @@
 package quests.not_done;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
 
 /**
  * @author Mobius

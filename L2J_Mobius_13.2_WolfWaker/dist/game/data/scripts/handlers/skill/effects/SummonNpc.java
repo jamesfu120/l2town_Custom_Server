@@ -28,26 +28,26 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.NpcData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.Decoy;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
-import org.l2jmobius.gameserver.model.actor.instance.Servitor;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skill.targets.TargetType;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.instance.Decoy;
+import org.l2jmobius.gameserver.entity.actor.instance.EffectPoint;
+import org.l2jmobius.gameserver.entity.actor.instance.Servitor;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Summon Npc effect implementation.
@@ -314,7 +314,7 @@ public class SummonNpc extends AbstractEffect
 	
 	private ScheduledFuture<?> skillTask(Creature creature)
 	{
-		return ThreadPool.scheduleAtFixedRate(() -> World.getInstance().forEachVisibleObjectInRange(creature, Player.class, 300, nearby ->
+		return ThreadPool.scheduleAtFixedRate(() -> World.forEachVisibleObjectInRange(creature, Player.class, 300, nearby ->
 		{
 			if (!creature.isSpawned())
 			{

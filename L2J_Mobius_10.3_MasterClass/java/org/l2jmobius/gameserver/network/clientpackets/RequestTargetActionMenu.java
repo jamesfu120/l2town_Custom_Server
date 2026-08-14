@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
@@ -60,16 +60,14 @@ public class RequestTargetActionMenu extends ClientPacket
 			return;
 		}
 		
-		for (WorldObject object : World.getInstance().getVisibleObjects(player, WorldObject.class))
+		final WorldObject object = World.getFirstVisibleObject(player, WorldObject.class, o -> _objectId == o.getObjectId());
+		if (object != null)
 		{
-			if (_objectId == object.getObjectId())
+			if (object.isTargetable() && object.isAutoAttackable(player))
 			{
-				if (object.isTargetable() && object.isAutoAttackable(player))
-				{
-					player.setTarget(object);
-				}
-				return;
+				player.setTarget(object);
 			}
+			return;
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);

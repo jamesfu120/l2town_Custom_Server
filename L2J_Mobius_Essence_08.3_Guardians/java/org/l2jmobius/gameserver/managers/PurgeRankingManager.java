@@ -38,15 +38,15 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerPurgeHolder;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerPurgeHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.enums.MailType;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationSidebar;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Berezkin Nikolay
@@ -164,7 +164,7 @@ public class PurgeRankingManager
 							LOGGER.log(Level.SEVERE, "Failed to delete character subjugation info " + charId, e);
 						}
 						
-						final Player onlinePlayer = World.getInstance().getPlayer(charId);
+						final Player onlinePlayer = World.getPlayer(charId);
 						if (onlinePlayer != null)
 						{
 							onlinePlayer.getPurgePoints().clear();

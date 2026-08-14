@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.network.serverpackets.pk;
 
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -39,12 +39,12 @@ public class ExPkPenaltyListOnlyLoc extends ServerPacket
 	
 	public ExPkPenaltyListOnlyLoc()
 	{
-		_lastPkTime = World.getInstance().getLastPkTime();
-		_players = World.getInstance().getPkPlayers();
+		_lastPkTime = World.getLastPkTime();
+		_players = World.getPkPlayers();
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PK_PENALTY_LIST_ONLY_LOC.writeId(this, buffer);
 		buffer.writeInt(_lastPkTime);

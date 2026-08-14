@@ -49,6 +49,8 @@ public class GrandBossConfig
 	public static int BALOK_HOUR;
 	public static int BALOK_MINUTE;
 	public static int BALOK_POINTS_PER_MONSTER;
+	public static boolean DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS;
 	
 	public static void load()
 	{
@@ -71,5 +73,7 @@ public class GrandBossConfig
 		BALOK_HOUR = Integer.parseInt(balokTime[0]);
 		BALOK_MINUTE = Integer.parseInt(balokTime[1]);
 		BALOK_POINTS_PER_MONSTER = config.getInt("BalokPointsPerMonster", 10);
+		DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS = config.getBoolean("DisableRaidBossHealFromPlayers", false);
+		DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS = config.getBoolean("DisableRaidBossBuffFromPlayers", false);
 	}
 }

@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.blessing;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.blessing.ExBlessOptionPutItem;
@@ -60,7 +60,7 @@ public class RequestBlessOptionPutItem extends ClientPacket
 			return;
 		}
 		
-		// first validation check - also over enchant check
+		// First validation check - also over enchant check.
 		if (item.isBlessed())
 		{
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);

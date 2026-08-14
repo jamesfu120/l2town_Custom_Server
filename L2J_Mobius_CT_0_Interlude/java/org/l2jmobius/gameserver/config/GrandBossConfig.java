@@ -53,6 +53,8 @@ public class GrandBossConfig
 	public static int ZAKEN_SPAWN_RANDOM;
 	public static int FRINTEZZA_SPAWN_INTERVAL;
 	public static int FRINTEZZA_SPAWN_RANDOM;
+	public static boolean DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS;
 	
 	public static void load()
 	{
@@ -78,5 +80,7 @@ public class GrandBossConfig
 		ZAKEN_SPAWN_RANDOM = config.getInt("RandomOfZakenSpawn", 17);
 		FRINTEZZA_SPAWN_INTERVAL = config.getInt("IntervalOfFrintezzaSpawn", 48);
 		FRINTEZZA_SPAWN_RANDOM = config.getInt("RandomOfFrintezzaSpawn", 8);
+		DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS = config.getBoolean("DisableRaidBossHealFromPlayers", false);
+		DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS = config.getBoolean("DisableRaidBossBuffFromPlayers", false);
 	}
 }

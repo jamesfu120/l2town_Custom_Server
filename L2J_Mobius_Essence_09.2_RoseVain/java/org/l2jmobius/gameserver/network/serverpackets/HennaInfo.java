@@ -23,11 +23,11 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.henna.Henna;
-import org.l2jmobius.gameserver.model.item.henna.HennaPoten;
-import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.henna.Henna;
+import org.l2jmobius.gameserver.entity.item.henna.HennaPoten;
+import org.l2jmobius.gameserver.mechanics.stats.BaseStat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -59,7 +59,7 @@ public class HennaInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.HENNA_INFO.writeId(this, buffer);
 		buffer.writeShort(_player.getHennaValue(BaseStat.INT)); // equip INT

@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
 import org.l2jmobius.gameserver.managers.RecipeManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
 
 public class RequestRecipeItemMakeSelf extends ClientPacket
 {

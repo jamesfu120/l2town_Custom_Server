@@ -35,16 +35,16 @@ import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.DropType;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropGroupHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropHolder;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropGroupHolder;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
 /**
@@ -135,7 +135,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			}
 		});
 		
-		DROP_INDEX_CACHE.values().forEach(l -> l.sort((d1, d2) -> Byte.valueOf(d1.npcLevel).compareTo(Byte.valueOf(d2.npcLevel))));
+		DROP_INDEX_CACHE.values().forEach(l -> l.sort((d1, d2) -> Byte.compare(d1.npcLevel, d2.npcLevel)));
 	}
 	
 	private void addToDropList(NpcTemplate npcTemplate, DropHolder dropHolder)
@@ -306,9 +306,9 @@ public class DropSearchBoard implements IParseBoardHandler
 					
 					builder.append("<tr>");
 					builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
-					builder.append("<td width=180>").append("<a action=\"bypass _bbs_npc_trace " + cbDropHolder.npcId + "\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
-					builder.append("<td width=100 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
-					builder.append("<td width=80 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
+					builder.append("<td width=180>").append("<a action=\"bypass _bbs_npc_trace " + cbDropHolder.npcId + "\">").append("&@").append(cbDropHolder.npcId).append(';').append("</a>").append("</td>");
+					builder.append("<td width=100 align=CENTER>").append(cbDropHolder.min * rateAmount).append('-').append(cbDropHolder.max * rateAmount).append("</td>");
+					builder.append("<td width=80 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append('%').append("</td>");
 					builder.append("<td width=80 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
 					builder.append("</tr>");
 				}
@@ -320,7 +320,7 @@ public class DropSearchBoard implements IParseBoardHandler
 				int maxDisplayPages = 9;
 				if (page > 1)
 				{
-					builder.append("<td><button action=\"bypass _bbs_search_drop ").append(itemId).append(" ").append(page - 1).append(" $order $level\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
+					builder.append("<td><button action=\"bypass _bbs_search_drop ").append(itemId).append(' ').append(page - 1).append(" $order $level\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
 				}
 				else
 				{
@@ -343,14 +343,14 @@ public class DropSearchBoard implements IParseBoardHandler
 					}
 					else
 					{
-						builder.append("<a action=\"bypass _bbs_search_drop ").append(itemId).append(" ").append(i).append(" $order $level\">").append(i).append("</a>");
+						builder.append("<a action=\"bypass _bbs_search_drop ").append(itemId).append(' ').append(i).append(" $order $level\">").append(i).append("</a>");
 					}
 					builder.append("</td>");
 				}
 				
 				if (page < pages)
 				{
-					builder.append("<td><button action=\"bypass _bbs_search_drop ").append(itemId).append(" ").append(page + 1).append(" $order $level\" back=\"l2ui_ch3.next1_down\" fore=\"l2ui_ch3.next1\" width=16 height=16 ></td>");
+					builder.append("<td><button action=\"bypass _bbs_search_drop ").append(itemId).append(' ').append(page + 1).append(" $order $level\" back=\"l2ui_ch3.next1_down\" fore=\"l2ui_ch3.next1\" width=16 height=16 ></td>");
 				}
 				else
 				{
@@ -449,7 +449,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			builder.append("<button value=\".\" action=\"bypass _bbs_search_drop " + item.getId() + " 1 $order $level\" width=32 height=32 back=\"" + icon + "\" fore=\"" + icon + "\">");
 			builder.append("</td>");
 			builder.append("<td width=200>");
-			builder.append("&#").append(item.getId()).append(";");
+			builder.append("&#").append(item.getId()).append(';');
 			builder.append("</td>");
 			
 			if (i == 2)

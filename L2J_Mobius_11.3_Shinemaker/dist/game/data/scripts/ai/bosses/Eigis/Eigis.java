@@ -20,7 +20,6 @@
  */
 package ai.bosses.Eigis;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -34,20 +33,20 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.ArenaZone;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.ArenaZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
@@ -316,9 +315,8 @@ public class Eigis extends Script
 						if (!npc.isDead() && !_isUsingSpecialSkill.get() && !_isUsingSpecialSkill2.get() && !_isUsingSpecialSkill3.get())
 						{
 							boolean hasValidTarget = false;
-							for (WeakReference<Creature> targetRef : npc.getAttackByList())
+							for (Creature target : npc.getAttackByList())
 							{
-								final Creature target = targetRef.get();
 								if ((target instanceof Player) && !target.isDead() && npc.isInsideRadius3D(target, 2000))
 								{
 									hasValidTarget = true;
@@ -681,10 +679,9 @@ public class Eigis extends Script
 	private boolean findTargetPlayer(Npc npc, AtomicReference<Player> targetPlayer)
 	{
 		final List<Player> playersInRange = new ArrayList<>();
-		for (WeakReference<Creature> targetRef : npc.getAttackByList())
+		for (Creature target : npc.getAttackByList())
 		{
-			final Creature target = targetRef.get();
-			if ((target != null) && (target instanceof Player))
+			if (target instanceof Player)
 			{
 				final Player player = (Player) target;
 				final double distance = npc.calculateDistance3D(player);
@@ -731,10 +728,9 @@ public class Eigis extends Script
 		if (_bossInCombat)
 		{
 			boolean hasTarget = false;
-			for (WeakReference<Creature> targetRef : npc.getAttackByList())
+			for (Creature target : npc.getAttackByList())
 			{
-				final Creature target = targetRef.get();
-				if ((target != null) && !target.isDead())
+				if (!target.isDead())
 				{
 					hasTarget = true;
 					break;

@@ -20,10 +20,10 @@
  */
 package ai.areas.GardenOfSpirits.Rotoeh;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * @author Mobius
@@ -52,11 +52,11 @@ public class Rotoeh extends Script
 			{
 				// if (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) < 4)
 				// {
-				// 	htmltext = "34239-01.html";
+				// htmltext = "34239-01.html";
 				// }
 				// else
 				// {
-					player.teleToLocation(BLACKBIRD_CAMPSITE);
+				player.teleToLocation(BLACKBIRD_CAMPSITE);
 				// }
 				break;
 			}

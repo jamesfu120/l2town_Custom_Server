@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.training;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.TrainingCampConfig;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -42,7 +42,7 @@ public class ExTrainingZone_Admission extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_TRAININGZONE_ADMISSION.writeId(this, buffer);
 		buffer.writeInt((int) _timeElapsed); // Training time elapsed in minutes, max : 600 - 10hr RU / 300 - 5hr NA

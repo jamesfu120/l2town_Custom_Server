@@ -24,7 +24,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -85,7 +85,7 @@ public class RequestAnswerFriendInvite extends ClientPacket
 				SystemMessage msg = new SystemMessage(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST);
 				requestor.sendPacket(msg);
 				
-				// Player added to your friend list
+				// Player added to your friend list.
 				msg = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIEND_LIST);
 				msg.addString(player.getName());
 				requestor.sendPacket(msg);
@@ -97,7 +97,7 @@ public class RequestAnswerFriendInvite extends ClientPacket
 				player.sendPacket(msg);
 				player.getFriendList().add(requestor.getObjectId());
 				
-				// Send notifications for both player in order to show them online
+				// Send notifications for both player in order to show them online.
 				player.sendPacket(new FriendAddRequestResult(requestor, 1));
 				requestor.sendPacket(new FriendAddRequestResult(player, 1));
 			}

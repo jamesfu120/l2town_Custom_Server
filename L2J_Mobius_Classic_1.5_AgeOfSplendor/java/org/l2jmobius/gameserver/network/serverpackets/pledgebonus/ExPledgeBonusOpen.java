@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.pledgebonus;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.ClanRewardData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
-import org.l2jmobius.gameserver.model.clan.enums.ClanRewardType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanRewardBonus;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanRewardType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -84,7 +84,7 @@ public class ExPledgeBonusOpen extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (_clan == null)
 		{

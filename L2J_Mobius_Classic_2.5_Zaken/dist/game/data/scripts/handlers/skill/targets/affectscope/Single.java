@@ -18,14 +18,14 @@ package handlers.skill.targets.affectscope;
 
 import java.util.function.Consumer;
 
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
 import org.l2jmobius.gameserver.handler.AffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
-import org.l2jmobius.gameserver.model.skill.targets.TargetType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 
 /**
  * Single target affect scope implementation.

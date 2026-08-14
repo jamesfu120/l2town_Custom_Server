@@ -23,7 +23,7 @@ package org.l2jmobius.gameserver.network.clientpackets.worldexchange;
 import java.util.Collections;
 
 import org.l2jmobius.gameserver.config.WorldExchangeConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchangeItemList;
 import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchangeSettleList;

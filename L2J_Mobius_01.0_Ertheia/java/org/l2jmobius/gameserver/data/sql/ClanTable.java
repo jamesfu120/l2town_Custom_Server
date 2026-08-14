@@ -38,26 +38,26 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
+import org.l2jmobius.gameserver.entity.clan.ClanPrivileges;
+import org.l2jmobius.gameserver.entity.clan.ClanWar;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanWarState;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
 import org.l2jmobius.gameserver.managers.FortManager;
 import org.l2jmobius.gameserver.managers.FortSiegeManager;
 import org.l2jmobius.gameserver.managers.IdManager;
 import org.l2jmobius.gameserver.managers.SiegeManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.clan.ClanPrivileges;
-import org.l2jmobius.gameserver.model.clan.ClanWar;
-import org.l2jmobius.gameserver.model.clan.enums.ClanWarState;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerClanCreate;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerClanDestroy;
-import org.l2jmobius.gameserver.model.events.holders.clan.OnClanWarFinish;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.siege.Fort;
-import org.l2jmobius.gameserver.model.siege.FortSiege;
-import org.l2jmobius.gameserver.model.siege.Siege;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerClanCreate;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerClanDestroy;
+import org.l2jmobius.gameserver.mechanics.events.holders.clan.OnClanWarFinish;
+import org.l2jmobius.gameserver.mechanics.siege.Fort;
+import org.l2jmobius.gameserver.mechanics.siege.FortSiege;
+import org.l2jmobius.gameserver.mechanics.siege.Siege;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.UserInfoType;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
@@ -75,7 +75,7 @@ public class ClanTable
 	
 	protected ClanTable()
 	{
-		// forums has to be loaded before clan data, because of last forum id used should have also memo included
+		// Forums has to be loaded before clan data, because of last forum id used should have also memo included.
 		if (GeneralConfig.ENABLE_COMMUNITY_BOARD)
 		{
 			ForumsBBSManager.getInstance().initRoot();
@@ -200,7 +200,7 @@ public class ClanTable
 		
 		if (getClanByName(clanName) != null)
 		{
-			// clan name is already taken
+			// Clan name is already taken.
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
 			sm.addString(clanName);
 			player.sendPacket(sm);

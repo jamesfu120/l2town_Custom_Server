@@ -23,9 +23,9 @@ package handlers.chat.commands.admin;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.GraciaSeedsManager;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class AdminGraciaSeeds implements IAdminCommandHandler

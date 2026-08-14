@@ -37,19 +37,22 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.crypt.NewCrypt;
 import org.l2jmobius.commons.util.TraceUtil;
 import org.l2jmobius.loginserver.config.LoginConfig;
+import org.l2jmobius.loginserver.controller.LoginController;
+import org.l2jmobius.loginserver.controller.SessionKey;
+import org.l2jmobius.loginserver.data.GameServerTable;
 import org.l2jmobius.loginserver.network.AbstractServerPacket;
-import org.l2jmobius.loginserver.network.gameserverpackets.BlowFishKey;
-import org.l2jmobius.loginserver.network.gameserverpackets.ChangeAccessLevel;
-import org.l2jmobius.loginserver.network.gameserverpackets.GameServerAuth;
-import org.l2jmobius.loginserver.network.gameserverpackets.PlayerAuthRequest;
-import org.l2jmobius.loginserver.network.gameserverpackets.PlayerInGame;
-import org.l2jmobius.loginserver.network.gameserverpackets.PlayerLogout;
-import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
-import org.l2jmobius.loginserver.network.loginserverpackets.AuthResponse;
-import org.l2jmobius.loginserver.network.loginserverpackets.InitLS;
-import org.l2jmobius.loginserver.network.loginserverpackets.KickPlayer;
-import org.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
-import org.l2jmobius.loginserver.network.loginserverpackets.PlayerAuthResponse;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.BlowFishKey;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.ChangeAccessLevel;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.GameServerAuth;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.PlayerAuthRequest;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.PlayerInGame;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.PlayerLogout;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.ServerStatus;
+import org.l2jmobius.loginserver.network.gameserverpackets.send.AuthResponse;
+import org.l2jmobius.loginserver.network.gameserverpackets.send.InitLS;
+import org.l2jmobius.loginserver.network.gameserverpackets.send.KickPlayer;
+import org.l2jmobius.loginserver.network.gameserverpackets.send.LoginServerFail;
+import org.l2jmobius.loginserver.network.gameserverpackets.send.PlayerAuthResponse;
 
 /**
  * Handles connection and communication between login server and game server.<br>

@@ -21,12 +21,12 @@
 package ai.areas.Conquest.ConquestTeleportDevice;
 
 import org.l2jmobius.gameserver.config.ConquestConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Teleport Device AI.
@@ -204,16 +204,17 @@ public class ConquestTeleportDevice extends Script
 	
 	private boolean checkPrivs(Player player)
 	{
-		final int prevSeasonRank1Id = RankManager.getInstance().getPreviousConquestRankList().get(1) != null ? RankManager.getInstance().getPreviousConquestRankList().get(1).getInt("charId") : 0;
-		final int currentSeasonRank1Id = RankManager.getInstance().getCurrentConquestRankList().get(1) != null ? RankManager.getInstance().getCurrentConquestRankList().get(1).getInt("charId") : 0;
 		if (ConquestConfig.CONQUEST_TELEPORTS_FOR_ALL)
 		{
 			player.sendMessage("You are free to use this teleport device.");
 			return true;
 		}
+		
 		// Check if rank 1 player id is in checker clan or not
-		else if (player.getClan() != null)
+		if (player.getClan() != null)
 		{
+			final int prevSeasonRank1Id = RankManager.getInstance().getPreviousConquestRankList().get(1) != null ? RankManager.getInstance().getPreviousConquestRankList().get(1).getInt("charId") : 0;
+			final int currentSeasonRank1Id = RankManager.getInstance().getCurrentConquestRankList().get(1) != null ? RankManager.getInstance().getCurrentConquestRankList().get(1).getInt("charId") : 0;
 			for (ClanMember member : player.getClan().getMembers())
 			{
 				if ((member.getObjectId() == prevSeasonRank1Id) || (member.getObjectId() == (currentSeasonRank1Id)))

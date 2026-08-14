@@ -22,12 +22,12 @@ package ai.bosses.Atrus;
 
 import java.util.Calendar;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
@@ -70,7 +70,7 @@ public class Atrus extends Script
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					World.getInstance().getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.KASHA_S_AVATAR_ATRUS_HAS_DISAPPEARED_ALONG_WITH_THE_CHAOS_VORTEX, 2, 10000, true));
+					World.getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.KASHA_S_AVATAR_ATRUS_HAS_DISAPPEARED_ALONG_WITH_THE_CHAOS_VORTEX, 2, 10000, true));
 					npc.deleteMe();
 					activeAtrus = null;
 				}
@@ -90,7 +90,7 @@ public class Atrus extends Script
 	@Override
 	public void onKill(Npc npc, Player killer, boolean isPet)
 	{
-		World.getInstance().getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.YOU_HAVE_DEFEATED_KASHA_S_AVATAR_ATRUS_AND_QUELLED_THE_CHAOS_POWER, 2, 10000, true));
+		World.getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.YOU_HAVE_DEFEATED_KASHA_S_AVATAR_ATRUS_AND_QUELLED_THE_CHAOS_POWER, 2, 10000, true));
 		activeAtrus = null;
 	}
 	

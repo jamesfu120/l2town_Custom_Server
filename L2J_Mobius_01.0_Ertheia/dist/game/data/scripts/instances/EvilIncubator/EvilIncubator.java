@@ -19,19 +19,19 @@ package instances.EvilIncubator;
 import java.util.EnumMap;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -240,7 +240,7 @@ public class EvilIncubator extends InstanceScript
 							if (helperCount == 2)
 							{
 								st.setCond(7, true);
-								World.getInstance().getVisibleObjectsInRange(world.getNpc(ADOLPH), FriendlyNpc.class, 1000).forEach(FriendlyNpc::deleteMe);
+								World.forEachVisibleObjectInRange(world.getNpc(ADOLPH), FriendlyNpc.class, 1000, FriendlyNpc::deleteMe);
 							}
 						}
 						break;
@@ -297,13 +297,13 @@ public class EvilIncubator extends InstanceScript
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player);
 		if ((st == null) || !st.isStarted())
 		{
 			return super.onTalk(npc, player);
 		}
 		
+		String htmltext = getNoQuestMsg(player);
 		if (st.getState() == State.STARTED)
 		{
 			switch (npc.getId())
@@ -517,7 +517,7 @@ public class EvilIncubator extends InstanceScript
 	
 	private void managerWorldAttack(Instance world, List<Npc> spawnedNpcs)
 	{
-		final List<FriendlyNpc> helperList = World.getInstance().getVisibleObjects(world.getFirstPlayer(), FriendlyNpc.class);
+		final List<FriendlyNpc> helperList = World.getVisibleObjects(world.getFirstPlayer(), FriendlyNpc.class);
 		if ((spawnedNpcs != null) && !spawnedNpcs.isEmpty())
 		{
 			for (Npc npc : spawnedNpcs)
@@ -538,13 +538,13 @@ public class EvilIncubator extends InstanceScript
 		
 		for (FriendlyNpc helper : helperList)
 		{
-			for (Attackable monster : World.getInstance().getVisibleObjects(helper, Attackable.class))
+			World.forEachVisibleObject(helper, Attackable.class, monster ->
 			{
 				if (!(monster instanceof FriendlyNpc))
 				{
 					addAttackDesire(helper, monster);
 				}
-			}
+			});
 		}
 	}
 	

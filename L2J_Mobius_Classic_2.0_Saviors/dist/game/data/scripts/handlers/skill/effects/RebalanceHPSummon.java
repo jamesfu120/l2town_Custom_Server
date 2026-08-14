@@ -16,14 +16,14 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Rebalance HP effect implementation.
@@ -76,9 +76,9 @@ public class RebalanceHPSummon extends AbstractEffect
 			if (!summon.isDead() && LocationUtil.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 			{
 				double newHP = summon.getMaxHp() * percentHP;
-				if (newHP > summon.getCurrentHp()) // The target gets healed
+				if (newHP > summon.getCurrentHp()) // The target gets healed.
 				{
-					// The heal will be blocked if the current hp passes the limit
+					// The heal will be blocked if the current hp passes the limit.
 					if (summon.getCurrentHp() > summon.getMaxRecoverableHp())
 					{
 						newHP = summon.getCurrentHp();
@@ -94,9 +94,9 @@ public class RebalanceHPSummon extends AbstractEffect
 		}
 		
 		double newHP = effector.getMaxHp() * percentHP;
-		if (newHP > effector.getCurrentHp()) // The target gets healed
+		if (newHP > effector.getCurrentHp()) // The target gets healed.
 		{
-			// The heal will be blocked if the current hp passes the limit
+			// The heal will be blocked if the current hp passes the limit.
 			if (effector.getCurrentHp() > effector.getMaxRecoverableHp())
 			{
 				newHP = effector.getCurrentHp();

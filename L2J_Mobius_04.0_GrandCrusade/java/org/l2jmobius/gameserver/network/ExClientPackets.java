@@ -21,7 +21,8 @@
 package org.l2jmobius.gameserver.network;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -417,7 +418,8 @@ public enum ExClientPackets
 	EXREQUEST_MATCH_GROUP_CHANGE_MASTER(0x135, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_LIST_FOR_AD(0x136, null, ConnectionState.IN_GAME),
 	REQUEST_UPGRADE_SYSTEM_RESULT(0x137, null, ConnectionState.IN_GAME),
-	REQUEST_USER_BAN_INFO(0x138, null, ConnectionState.IN_GAME);
+	REQUEST_USER_BAN_INFO(0x138, null, ConnectionState.IN_GAME),
+	EX_MAX(0x139, null, ConnectionState.IN_GAME);
 	
 	public static final ExClientPackets[] PACKET_ARRAY;
 	static
@@ -444,7 +446,10 @@ public enum ExClientPackets
 		
 		_packetId = packetId;
 		_packetSupplier = packetSupplier != null ? packetSupplier : () -> null;
-		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
+		
+		final EnumSet<ConnectionState> states = EnumSet.noneOf(ConnectionState.class);
+		Collections.addAll(states, connectionStates);
+		_connectionStates = states;
 	}
 	
 	public int getPacketId()

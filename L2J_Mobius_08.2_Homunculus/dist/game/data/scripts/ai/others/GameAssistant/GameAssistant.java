@@ -23,14 +23,14 @@ package ai.others.GameAssistant;
 import java.util.Collection;
 import java.util.HashMap;
 
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
@@ -178,7 +178,7 @@ public class GameAssistant extends Script
 			}
 			case "package_deposit":
 			{
-				if (player.getAccountChars().size() < 1)
+				if (player.getAccountChars().isEmpty())
 				{
 					player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 				}

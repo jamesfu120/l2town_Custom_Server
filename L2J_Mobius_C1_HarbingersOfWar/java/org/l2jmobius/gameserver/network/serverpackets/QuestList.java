@@ -20,13 +20,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -43,7 +44,7 @@ public class QuestList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		final List<Quest> quests = _player.getAllActiveQuests();
 		ServerPackets.QUEST_LIST.writeId(this, buffer);
@@ -69,7 +70,7 @@ public class QuestList extends ServerPacket
 			}
 		}
 		
-		final List<Item> questItems = _player.getInventory().getQuestItems();
+		final Collection<Item> questItems = _player.getInventory().getQuestItems();
 		buffer.writeShort(questItems.size());
 		for (Item item : questItems)
 		{

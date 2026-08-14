@@ -24,15 +24,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.custom.MerchantZeroSellPriceConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.CastleManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.buylist.ProductList;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.siege.TaxType;
+import org.l2jmobius.gameserver.mechanics.buylist.Product;
+import org.l2jmobius.gameserver.mechanics.buylist.ProductList;
+import org.l2jmobius.gameserver.mechanics.siege.TaxType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -121,7 +121,7 @@ public class ExBuySellList extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_BUY_SELL_LIST.writeId(this, buffer);
 		buffer.writeInt(_type);
@@ -155,7 +155,7 @@ public class ExBuySellList extends AbstractItemPacket
 		}
 	}
 	
-	private void sendBuyList(WritableBuffer buffer)
+	private void sendBuyList(WriteBuffer buffer)
 	{
 		buffer.writeLong(_money); // current money
 		buffer.writeInt(_listId);
@@ -171,7 +171,7 @@ public class ExBuySellList extends AbstractItemPacket
 		}
 	}
 	
-	private void sendSellList(WritableBuffer buffer)
+	private void sendSellList(WriteBuffer buffer)
 	{
 		buffer.writeInt(_inventorySlots);
 		if (!_sellList.isEmpty())
@@ -207,12 +207,12 @@ public class ExBuySellList extends AbstractItemPacket
 		buffer.writeByte(_done ? 1 : 0);
 	}
 	
-	private void sendUnk(WritableBuffer buffer)
+	private void sendUnk(WriteBuffer buffer)
 	{
 		buffer.writeByte(_unkType);
 	}
 	
-	private void sendCurrentTax(WritableBuffer buffer)
+	private void sendCurrentTax(WriteBuffer buffer)
 	{
 		buffer.writeInt(CASTLES.length);
 		for (int id : CASTLES)

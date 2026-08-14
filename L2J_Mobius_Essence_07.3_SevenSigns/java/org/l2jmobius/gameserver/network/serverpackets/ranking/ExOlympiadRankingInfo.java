@@ -25,19 +25,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.ServerConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RankingOlympiadCategory;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RankingOlympiadScope;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.enums.player.RankingOlympiadCategory;
-import org.l2jmobius.gameserver.model.actor.enums.player.RankingOlympiadScope;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Berezkin Nikolay
@@ -66,7 +65,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_OLYMPIAD_RANKING_INFO.writeId(this, buffer);
 		buffer.writeByte(_tabId); // Tab id
@@ -82,7 +81,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 		}
 	}
 	
-	private void writeFilteredRankingData(RankingOlympiadCategory category, RankingOlympiadScope scope, PlayerClass playerClass, WritableBuffer buffer)
+	private void writeFilteredRankingData(RankingOlympiadCategory category, RankingOlympiadScope scope, PlayerClass playerClass, WriteBuffer buffer)
 	{
 		switch (category)
 		{
@@ -93,13 +92,13 @@ public class ExOlympiadRankingInfo extends ServerPacket
 			}
 			case CLASS:
 			{
-				writeScopeData(scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == playerClass.getId()).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == playerClass.getId()).collect(Collectors.toList()), buffer);
+				writeScopeData(scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == playerClass.getId()).toList(), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == playerClass.getId()).toList(), buffer);
 				break;
 			}
 		}
 	}
 	
-	private void writeScopeData(RankingOlympiadScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot, WritableBuffer buffer)
+	private void writeScopeData(RankingOlympiadScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot, WriteBuffer buffer)
 	{
 		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
@@ -108,7 +107,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 		{
 			case TOP_100:
 			{
-				limited = list.stream().limit(100).collect(Collectors.toList());
+				limited = list.stream().limit(100).toList();
 				break;
 			}
 			case ALL:
@@ -118,7 +117,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 			}
 			case TOP_50:
 			{
-				limited = list.stream().limit(50).collect(Collectors.toList());
+				limited = list.stream().limit(50).toList();
 				break;
 			}
 			case SELF:
@@ -134,7 +133,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 		
 		buffer.writeInt(limited.size());
 		int rank = 1;
-		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
+		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).toList())
 		{
 			int curRank = rank++;
 			final StatSet player = data.getValue();
@@ -144,7 +143,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 			if (!snapshot.isEmpty())
 			{
 				int snapshotRank = 1;
-				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
+				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
 				{
 					final StatSet snapshotData = ssData.getValue();
 					if (player.getInt("charId") == snapshotData.getInt("charId"))

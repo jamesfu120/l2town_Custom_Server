@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.holders;
 
-import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
+import static org.l2jmobius.gameserver.entity.itemcontainer.Inventory.MAX_ADENA;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -27,16 +27,16 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.managers.PrivateStoreHistoryManager;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
 import org.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
@@ -124,7 +124,7 @@ public class TradeList
 	 */
 	public Collection<TradeItem> getAvailableItems(PlayerInventory inventory)
 	{
-		final List<TradeItem> list = new LinkedList<>();
+		final List<TradeItem> list = new ArrayList<>();
 		for (TradeItem item : _items)
 		{
 			item = new TradeItem(item, item.getCount(), item.getPrice());
@@ -189,7 +189,7 @@ public class TradeList
 			return null;
 		}
 		
-		final WorldObject o = World.getInstance().findObject(objectId);
+		final WorldObject o = World.findObject(objectId);
 		if (!(o instanceof Item))
 		{
 			return null;
@@ -232,7 +232,7 @@ public class TradeList
 		final TradeItem titem = new TradeItem(item, count, price);
 		_items.add(titem);
 		
-		// If Player has already confirmed this trade, invalidate the confirmation
+		// If Player has already confirmed this trade, invalidate the confirmation.
 		invalidateConfirmation();
 		return titem;
 	}
@@ -279,7 +279,7 @@ public class TradeList
 		final TradeItem titem = new TradeItem(item, count, price);
 		_items.add(titem);
 		
-		// If Player has already confirmed this trade, invalidate the confirmation
+		// If Player has already confirmed this trade, invalidate the confirmation.
 		invalidateConfirmation();
 		return titem;
 	}
@@ -309,7 +309,7 @@ public class TradeList
 		{
 			if ((titem.getObjectId() == objectId) || (titem.getItem().getId() == itemId))
 			{
-				// If Partner has already confirmed this trade, invalidate the confirmation
+				// If Partner has already confirmed this trade, invalidate the confirmation.
 				if (_partner != null)
 				{
 					final TradeList partnerList = _partner.getActiveTradeList();
@@ -322,7 +322,7 @@ public class TradeList
 					partnerList.invalidateConfirmation();
 				}
 				
-				// Reduce item count or complete item
+				// Reduce item count or complete item.
 				if ((count != -1) && (titem.getCount() > count))
 				{
 					titem.setCount(titem.getCount() - count);
@@ -386,7 +386,7 @@ public class TradeList
 			return true; // Already confirmed
 		}
 		
-		// If Partner has already confirmed this trade, proceed exchange
+		// If Partner has already confirmed this trade, proceed exchange.
 		if (_partner != null)
 		{
 			final TradeList partnerList = _partner.getActiveTradeList();
@@ -396,7 +396,7 @@ public class TradeList
 				return false;
 			}
 			
-			// Synchronization order to avoid deadlock
+			// Synchronization order to avoid deadlock.
 			TradeList sync1;
 			TradeList sync2;
 			if (getOwner().getObjectId() > partnerList.getOwner().getObjectId())
@@ -455,14 +455,14 @@ public class TradeList
 	 */
 	private boolean validate()
 	{
-		// Check for Owner validity
-		if ((_owner == null) || (World.getInstance().getPlayer(_owner.getObjectId()) == null))
+		// Check for Owner validity.
+		if ((_owner == null) || (World.getPlayer(_owner.getObjectId()) == null))
 		{
 			LOGGER.warning("Invalid owner of TradeList");
 			return false;
 		}
 		
-		// Check for Item validity
+		// Check for Item validity.
 		for (TradeItem titem : _items)
 		{
 			final Item item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
@@ -499,7 +499,7 @@ public class TradeList
 				return false;
 			}
 			
-			// Add changes to inventory update packets
+			// Add changes to inventory update packets.
 			if (ownerIU != null)
 			{
 				if ((oldItem.getCount() > 0) && (oldItem != newItem))
@@ -594,7 +594,7 @@ public class TradeList
 	{
 		boolean success = false;
 		
-		// check weight and slots
+		// Check weight and slots.
 		if ((!_owner.getInventory().validateWeight(partnerList.calcItemsWeight())) || !(partnerList.getOwner().getInventory().validateWeight(calcItemsWeight())))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.WEIGHT_LIMIT_IS_EXCEEDED);
@@ -607,7 +607,7 @@ public class TradeList
 		}
 		else
 		{
-			// Prepare inventory update packet
+			// Prepare inventory update packet.
 			final InventoryUpdate ownerIU = new InventoryUpdate();
 			final InventoryUpdate partnerIU = new InventoryUpdate();
 			
@@ -615,7 +615,7 @@ public class TradeList
 			partnerList.TransferItems(_owner, partnerIU, ownerIU);
 			TransferItems(partnerList.getOwner(), ownerIU, partnerIU);
 			
-			// Send inventory update packets
+			// Send inventory update packets.
 			_owner.sendInventoryUpdate(ownerIU);
 			_partner.sendInventoryUpdate(partnerIU);
 			
@@ -694,7 +694,7 @@ public class TradeList
 				continue;
 			}
 			
-			// check for overflow in the single item
+			// Check for overflow in the single item.
 			if ((MAX_ADENA / item.getCount()) < item.getPrice())
 			{
 				// private store attempting to overflow - disable it
@@ -704,7 +704,7 @@ public class TradeList
 			
 			totalPrice += item.getCount() * item.getPrice();
 			
-			// check for overflow of the total price
+			// Check for overflow of the total price.
 			if ((MAX_ADENA < totalPrice) || (totalPrice < 0))
 			{
 				// private store attempting to overflow - disable it
@@ -712,7 +712,7 @@ public class TradeList
 				return 1;
 			}
 			
-			// Check if requested item is available for manipulation
+			// Check if requested item is available for manipulation.
 			final Item oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if ((oldItem == null) || !oldItem.isTradeable())
 			{
@@ -756,16 +756,16 @@ public class TradeList
 			return 1;
 		}
 		
-		// Prepare inventory update packets
-		final InventoryUpdate ownerIU = new InventoryUpdate();
-		final InventoryUpdate playerIU = new InventoryUpdate();
-		final Item adenaItem = playerInventory.getAdenaInstance();
 		if (!playerInventory.reduceAdena(ItemProcessType.BUY, totalPrice, player, _owner))
 		{
 			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			return 1;
 		}
 		
+		// Prepare inventory update packets.
+		final InventoryUpdate ownerIU = new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
+		final Item adenaItem = playerInventory.getAdenaInstance();
 		playerIU.addItem(adenaItem);
 		ownerInventory.addAdena(ItemProcessType.SELL, totalPrice, _owner, player);
 		
@@ -780,17 +780,17 @@ public class TradeList
 				continue;
 			}
 			
-			// Check if requested item is available for manipulation
+			// Check if requested item is available for manipulation.
 			final Item oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if (oldItem == null)
 			{
-				// should not happens - validation already done
+				// Should not happens - validation already done.
 				lock();
 				ok = false;
 				break;
 			}
 			
-			// Proceed with item transfer
+			// Proceed with item transfer.
 			final Item newItem = ownerInventory.transferItem(ItemProcessType.TRANSFER, item.getObjectId(), item.getCount(), playerInventory, _owner, player);
 			if (newItem == null)
 			{
@@ -802,7 +802,7 @@ public class TradeList
 			
 			PrivateStoreHistoryManager.getInstance().registerTransaction(PrivateStoreType.SELL, newItem, item.getCount(), item.getCount() * item.getPrice());
 			
-			// Add changes to inventory update packets
+			// Add changes to inventory update packets.
 			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
 				ownerIU.addModifiedItem(oldItem);
@@ -821,7 +821,7 @@ public class TradeList
 				playerIU.addNewItem(newItem);
 			}
 			
-			// Send messages about the transaction to both players
+			// Send messages about the transaction to both players.
 			if (newItem.isStackable())
 			{
 				SystemMessage msg = new SystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
@@ -852,7 +852,7 @@ public class TradeList
 			_owner.sendPacket(new ExPrivateStoreSellingResult(item.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
 		}
 		
-		// Send inventory update packet
+		// Send inventory update packet.
 		_owner.sendInventoryUpdate(ownerIU);
 		player.sendInventoryUpdate(playerIU);
 		
@@ -881,24 +881,24 @@ public class TradeList
 		final PlayerInventory ownerInventory = _owner.getInventory();
 		final PlayerInventory playerInventory = player.getInventory();
 		
-		// Prepare inventory update packet
+		// Prepare inventory update packet.
 		final InventoryUpdate ownerIU = new InventoryUpdate();
 		final InventoryUpdate playerIU = new InventoryUpdate();
 		long totalPrice = 0;
 		
-		final TradeItem[] sellerItems = _items.toArray(new TradeItem[_items.size()]);
+		final TradeItem[] sellerItems = _items.toArray(new TradeItem[0]);
 		for (RequestTrade item : requestedItems)
 		{
-			// searching item in tradelist using itemId
+			// Searching item in tradelist using itemId.
 			boolean found = false;
 			for (TradeItem ti : sellerItems)
 			{
 				if (ti.getItem().getId() == item.getItemId())
 				{
-					// price should be the same
+					// Price should be the same.
 					if (ti.getPrice() == item.getPrice())
 					{
-						// if requesting more than available - decrease count
+						// If requesting more than available - decrease count.
 						if (ti.getCount() < item.getCount())
 						{
 							item.setCount(ti.getCount());
@@ -910,14 +910,14 @@ public class TradeList
 				}
 			}
 			
-			// not found any item in the tradelist with same itemId and price
-			// maybe another player already sold this item ?
+			// Not found any item in the tradelist with same itemId and price.
+			// Maybe another player already sold this item?
 			if (!found)
 			{
 				continue;
 			}
 			
-			// check for overflow in the single item
+			// Check for overflow in the single item.
 			if ((MAX_ADENA / item.getCount()) < item.getPrice())
 			{
 				lock();
@@ -926,7 +926,7 @@ public class TradeList
 			
 			final long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
 			
-			// check for overflow of the total price
+			// Check for overflow of the total price.
 			if ((MAX_ADENA < _totalPrice) || (_totalPrice < 0))
 			{
 				lock();
@@ -949,7 +949,7 @@ public class TradeList
 				continue;
 			}
 			
-			// Check if requested item is available for manipulation
+			// Check if requested item is available for manipulation.
 			int objectId = tradeItem.getObjectId();
 			Item oldItem = player.checkItemManipulation(objectId, item.getCount(), "sell");
 			// private store - buy use same objectId for buying several non-stackable items
@@ -981,7 +981,7 @@ public class TradeList
 				continue;
 			}
 			
-			// Proceed with item transfer
+			// Proceed with item transfer.
 			final Item newItem = playerInventory.transferItem(ItemProcessType.TRANSFER, objectId, item.getCount(), ownerInventory, player, _owner);
 			if (newItem == null)
 			{
@@ -993,10 +993,10 @@ public class TradeList
 			
 			PrivateStoreHistoryManager.getInstance().registerTransaction(PrivateStoreType.BUY, newItem, item.getCount(), item.getCount() * item.getPrice());
 			
-			// increase total price only after successful transaction
+			// Increase total price only after successful transaction.
 			totalPrice = _totalPrice;
 			
-			// Add changes to inventory update packets
+			// Add changes to inventory update packets.
 			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
 				playerIU.addModifiedItem(oldItem);
@@ -1015,7 +1015,7 @@ public class TradeList
 				ownerIU.addNewItem(newItem);
 			}
 			
-			// Send messages about the transaction to both players
+			// Send messages about the transaction to both players.
 			if (newItem.isStackable())
 			{
 				SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
@@ -1064,7 +1064,7 @@ public class TradeList
 		
 		if (ok)
 		{
-			// Send inventory update packet
+			// Send inventory update packet.
 			_owner.sendInventoryUpdate(ownerIU);
 			player.sendInventoryUpdate(playerIU);
 			

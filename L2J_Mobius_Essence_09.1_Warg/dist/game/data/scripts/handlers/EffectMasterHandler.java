@@ -40,7 +40,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AbnormalTimeChange", AbnormalTimeChange::new);
 		EffectHandler.getInstance().registerHandler("AbnormalTimeChangeBySkillId", AbnormalTimeChangeBySkillId::new);
 		EffectHandler.getInstance().registerHandler("AbsorbDamage", AbsorbDamage::new);
-		EffectHandler.getInstance().registerHandler("AccessoryMagicalDefence", AccessoryMagicalDefence::new);
 		EffectHandler.getInstance().registerHandler("Accuracy", Accuracy::new);
 		EffectHandler.getInstance().registerHandler("AccuracyBonus", AccuracyBonus::new);
 		EffectHandler.getInstance().registerHandler("AddHate", AddHate::new);
@@ -54,6 +53,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AdditionalPotionMpPer", AdditionalPotionMpPer::new);
 		EffectHandler.getInstance().registerHandler("AddMaxMagicCriticalRate", AddMaxMagicCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("AddMaxPhysicalCriticalRate", AddMaxPhysicalCriticalRate::new);
+		EffectHandler.getInstance().registerHandler("AddMaxPhysicalSkillCriticalRate", AddMaxPhysicalSkillCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("AddPcCafePoints", AddPcCafePoints::new);
 		EffectHandler.getInstance().registerHandler("AddSkillBySkill", AddSkillBySkill::new);
 		EffectHandler.getInstance().registerHandler("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
@@ -62,7 +62,8 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AreaDamage", AreaDamage::new);
 		EffectHandler.getInstance().registerHandler("AreaOfEffectDamageDefence", AreaOfEffectDamageDefence::new);
 		EffectHandler.getInstance().registerHandler("AreaOfEffectDamageModify", AreaOfEffectDamageModify::new);
-		EffectHandler.getInstance().registerHandler("ArmorPhysicalDefence", ArmorPhysicalDefence::new);
+		EffectHandler.getInstance().registerHandler("ArmorBonusMagicalDefence", ArmorBonusMagicalDefence::new);
+		EffectHandler.getInstance().registerHandler("ArmorBonusPhysicalDefence", ArmorBonusPhysicalDefence::new);
 		EffectHandler.getInstance().registerHandler("ArtifactSlot", ArtifactSlot::new);
 		EffectHandler.getInstance().registerHandler("AssistOwnerAttack", AssistOwnerAttack::new);
 		EffectHandler.getInstance().registerHandler("AssistOwnerCast", AssistOwnerCast::new);
@@ -140,6 +141,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CubicMastery", CubicMastery::new);
 		EffectHandler.getInstance().registerHandler("DamageBlock", DamageBlock::new);
 		EffectHandler.getInstance().registerHandler("DamageByAttack", DamageByAttack::new);
+		EffectHandler.getInstance().registerHandler("DamageEnabledByClass", DamageEnabledByClass::new);
 		EffectHandler.getInstance().registerHandler("DamageShield", DamageShield::new);
 		EffectHandler.getInstance().registerHandler("DamageShieldResist", DamageShieldResist::new);
 		EffectHandler.getInstance().registerHandler("DamOverTime", DamOverTime::new);

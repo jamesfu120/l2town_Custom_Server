@@ -23,8 +23,8 @@ package org.l2jmobius.gameserver.network.serverpackets.equipmentupgradenormal;
 import java.util.Collections;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.UniqueItemEnchantHolder;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.UniqueItemEnchantHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -52,7 +52,7 @@ public class ExUpgradeSystemNormalResult extends AbstractItemPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_UPGRADE_SYSTEM_NORMAL_RESULT.writeId(this, buffer);
 		buffer.writeShort(_result); // Result ID

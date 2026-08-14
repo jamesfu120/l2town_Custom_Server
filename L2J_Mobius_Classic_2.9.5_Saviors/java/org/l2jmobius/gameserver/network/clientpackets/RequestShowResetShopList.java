@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.xml.BeautyShopData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.beautyshop.BeautyData;
-import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.beautyshop.BeautyData;
+import org.l2jmobius.gameserver.mechanics.beautyshop.BeautyItem;
 import org.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyRegistReset;
 
 /**

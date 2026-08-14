@@ -30,25 +30,24 @@ import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.residences.Bidder;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
+import org.l2jmobius.gameserver.entity.residences.ClanHallAuction;
 import org.l2jmobius.gameserver.managers.ClanHallAuctionManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.html.PageBuilder;
-import org.l2jmobius.gameserver.model.html.PageResult;
-import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
-import org.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
-import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.residences.Bidder;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.html.PageBuilder;
+import org.l2jmobius.gameserver.mechanics.html.PageResult;
+import org.l2jmobius.gameserver.mechanics.html.formatters.BypassParserFormatter;
+import org.l2jmobius.gameserver.mechanics.html.pagehandlers.NextPrevPageHandler;
+import org.l2jmobius.gameserver.mechanics.html.styles.ButtonsStyle;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -58,6 +57,9 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class ClanHallAuctioneer extends Script
 {
+	private static final DateTimeFormatter AUCTION_END_FORMATTER = new DateTimeFormatterBuilder().appendPattern("dd/MM/yyyy HH").appendLiteral(" hour ").appendPattern("mm").appendLiteral(" minutes").toFormatter();
+	private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	
 	// NPC
 	private static final int AUCTIONEER = 30767; // Auctioneer
 	
@@ -153,13 +155,11 @@ public class ClanHallAuctioneer extends Script
 					final ClanHallAuction clanHallAuction = ClanHallAuctionManager.getInstance().getClanHallAuctionByClan(clan);
 					if (clanHallAuction != null)
 					{
-						final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
-						
 						htmltext = getHtm(player, "ClanHallAuctioneer-bid2.html");
 						htmltext = htmltext.replace("%id%", String.valueOf(clanHallAuction.getClanHallId()));
 						htmltext = htmltext.replace("%minBid%", String.valueOf(clanHallAuction.getHighestBid()));
 						htmltext = htmltext.replace("%myBid%", String.valueOf(clanHallAuction.getClanBid(clan)));
-						htmltext = htmltext.replace("%auctionEnd%", builder.appendPattern("dd/MM/yyyy HH").appendLiteral(" hour ").appendPattern("mm").appendLiteral(" minutes").toFormatter().format(Instant.ofEpochMilli(System.currentTimeMillis() + ClanHallAuctionManager.getInstance().getRemainingTime()).atZone(ZoneId.systemDefault())));
+						htmltext = htmltext.replace("%auctionEnd%", AUCTION_END_FORMATTER.format(Instant.ofEpochMilli(System.currentTimeMillis() + ClanHallAuctionManager.getInstance().getRemainingTime()).atZone(ZoneId.systemDefault())));
 					}
 				}
 				else
@@ -197,7 +197,6 @@ public class ClanHallAuctioneer extends Script
 				final long remainingTime = ClanHallAuctionManager.getInstance().getRemainingTime();
 				final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
 				
-				final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
 				htmltext = getHtm(player, "ClanHallAuctioneer-bidInfo.html");
 				htmltext = htmltext.replace("%id%", String.valueOf(clanHall.getResidenceId()));
 				htmltext = htmltext.replace("%owner%", owner != null ? owner.getName() : "");
@@ -207,7 +206,7 @@ public class ClanHallAuctioneer extends Script
 				htmltext = htmltext.replace("%minBid%", String.valueOf(clanHallAuction.getHighestBid()));
 				htmltext = htmltext.replace("%myBid%", String.valueOf(clanHallAuction.getClanBid(clan)));
 				htmltext = htmltext.replace("%bidNumber%", String.valueOf(clanHallAuction.getBidCount()));
-				htmltext = htmltext.replace("%auctionEnd%", builder.appendPattern("dd/MM/yyyy HH").appendLiteral(" hour ").appendPattern("mm").appendLiteral(" minutes").toFormatter().format(endTime.atZone(ZoneId.systemDefault())));
+				htmltext = htmltext.replace("%auctionEnd%", AUCTION_END_FORMATTER.format(endTime.atZone(ZoneId.systemDefault())));
 				htmltext = htmltext.replace("%hours%", String.valueOf(TimeUnit.MILLISECONDS.toHours(remainingTime)));
 				htmltext = htmltext.replace("%minutes%", String.valueOf(TimeUnit.MILLISECONDS.toMinutes(remainingTime % 3600000)));
 				break;
@@ -253,7 +252,6 @@ public class ClanHallAuctioneer extends Script
 				final Clan owner = clanHall.getOwner();
 				final long remainingTime = ClanHallAuctionManager.getInstance().getRemainingTime();
 				final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
-				final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 				html.setHtml(getHtm(player, "ClanHallAuctioneer-info.html"));
 				
@@ -264,7 +262,7 @@ public class ClanHallAuctioneer extends Script
 				html.replace("%grade%", clanHall.getGrade().getGradeValue());
 				html.replace("%minBid%", clanHallAuction.getHighestBid());
 				html.replace("%bidNumber%", clanHallAuction.getBidCount());
-				html.replace("%auctionEnd%", builder.appendPattern("dd/MM/yyyy HH").appendLiteral(" hour ").appendPattern("mm").appendLiteral(" minutes").toFormatter().format(endTime.atZone(ZoneId.systemDefault())));
+				html.replace("%auctionEnd%", AUCTION_END_FORMATTER.format(endTime.atZone(ZoneId.systemDefault())));
 				html.replace("%hours%", TimeUnit.MILLISECONDS.toHours(remainingTime));
 				html.replace("%minutes%", TimeUnit.MILLISECONDS.toMinutes(remainingTime % 3600000));
 				player.sendPacket(html);
@@ -302,7 +300,7 @@ public class ClanHallAuctioneer extends Script
 					sb.append("\"><font color=\"ffffaa\">&%");
 					sb.append(clanHall.getResidenceId());
 					sb.append(";[0]</font></a></td><td width=50>");
-					sb.append(DateTimeFormatter.ofPattern("dd/MM/yyyy").format(Instant.ofEpochMilli(System.currentTimeMillis() + ClanHallAuctionManager.getInstance().getRemainingTime()).atZone(ZoneId.systemDefault())));
+					sb.append(DATE_FORMAT.format(Instant.ofEpochMilli(System.currentTimeMillis() + ClanHallAuctionManager.getInstance().getRemainingTime()).atZone(ZoneId.systemDefault())));
 					sb.append("</td><td width=70 align=right><font color=\"aaffff\">");
 					sb.append(auction.getHighestBid());
 					sb.append("</font></td></tr>");
@@ -418,7 +416,7 @@ public class ClanHallAuctioneer extends Script
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId(), getHtm(player, "ClanHallAuctioneer-bidderList.html"));
 			// @formatter:off
-			final PageResult result = PageBuilder.newBuilder(clanHallAuction.getBids().values().stream().sorted(Comparator.comparingLong(Bidder::getTime).reversed()).collect(Collectors.toList()), 10, "bypass -h Script ClanHallAuctioneer auctionList")
+			final PageResult result = PageBuilder.newBuilder(clanHallAuction.getBids().values().stream().sorted(Comparator.comparingLong(Bidder::getTime).reversed()).toList(), 10, "bypass -h Script ClanHallAuctioneer auctionList")
 				.currentPage(page)
 				.pageHandler(NextPrevPageHandler.INSTANCE)
 				.formatter(BypassParserFormatter.INSTANCE)

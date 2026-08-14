@@ -7,11 +7,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<acquire sp="1" />
+		<acquire sp="1" exp="490" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="30" critical="4" accuracy="5" attackSpeed="257" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -35,10 +35,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
+		<acquire exp="490" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="30" critical="4" accuracy="5" attackSpeed="257" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -62,11 +63,11 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="200.23844" magical="146.5258" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.001028" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336" magical="208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="64" />
 				<run ground="120" />
@@ -88,18 +89,18 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="31845" level="80" type="FriendlyMob" name="Bloody Pixy">
+	<npc id="31845" level="50" type="FriendlyMob" name="Bloody Pixy">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.001028" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336" magical="208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -129,11 +130,11 @@
 		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- rhand: Trident -->
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.001028" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336" magical="208" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="45" />
 				<run ground="110" />
@@ -163,11 +164,11 @@
 		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- rhand: Trident -->
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.001028" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336" magical="208" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="45" />
 				<run ground="110" />
@@ -189,18 +190,18 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31848" level="80" type="FriendlyMob" name="Pixy">
+	<npc id="31848" level="50" type="FriendlyMob" name="Pixy">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.001028" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336" magical="208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -229,11 +230,11 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.001028" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336" magical="208" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="64" />
 				<run ground="120" />
@@ -255,18 +256,18 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="31850" level="80" type="FriendlyMob" name="Blight Treant">
+	<npc id="31850" level="50" type="FriendlyMob" name="Blight Treant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1563.101131" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305" magical="208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="12" />
 				<run ground="12" />
@@ -288,18 +289,18 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="31851" level="80" type="FriendlyMob" name="Treant">
+	<npc id="31851" level="50" type="FriendlyMob" name="Treant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1563.101131" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305" magical="208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="12" />
 				<run ground="12" />
@@ -328,11 +329,11 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire sp="226" />
+		<acquire sp="226" exp="3000" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="200.23844" magical="146.5258" />
+			<vitals hp="1563.101131" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305" magical="208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -354,18 +355,18 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31853" level="80" type="FriendlyMob" name="Treant Bremec">
+	<npc id="31853" level="50" type="FriendlyMob" name="Treant Bremec">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire sp="226" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<acquire sp="226" exp="3000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1563.101131" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305" magical="208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200" magical="146" />
 			<speed>
 				<walk ground="12" />
 				<run ground="12" />
@@ -390,11 +391,11 @@
 	<npc id="31854" level="70" type="Folk" name="Event Manager">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<acquire sp="10" />
+		<acquire sp="10" exp="490" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699" magical="470" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -414,11 +415,11 @@
 	<npc id="31855" level="70" type="Folk" name="Event Manager">
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<acquire sp="10" />
+		<acquire sp="10" exp="490" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699" magical="470" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -438,11 +439,11 @@
 	<npc id="31856" level="70" type="Folk" name="Event Manager">
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<acquire sp="10" />
+		<acquire sp="10" exp="490" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699" magical="470" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -462,11 +463,11 @@
 	<npc id="31857" level="70" type="Folk" name="Event Manager">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
-		<acquire sp="10" />
+		<acquire sp="10" exp="490" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699" magical="470" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -486,11 +487,11 @@
 	<npc id="31858" level="70" type="Folk" name="Event Manager">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
-		<acquire sp="10" />
+		<acquire sp="10" exp="490" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699" magical="470" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -514,11 +515,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<acquire sp="1" />
+		<acquire sp="1" exp="490" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="30" critical="4" accuracy="5" attackSpeed="257" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -542,10 +543,11 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
+		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="2444.468189" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699" magical="470" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />

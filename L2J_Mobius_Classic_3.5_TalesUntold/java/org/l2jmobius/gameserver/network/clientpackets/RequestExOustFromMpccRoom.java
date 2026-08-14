@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoom;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoomType;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoomType;
 
 /**
  * @author jeremy
@@ -50,7 +50,7 @@ public class RequestExOustFromMpccRoom extends ClientPacket
 		final MatchingRoom room = player.getMatchingRoom();
 		if ((room != null) && (room.getLeader() == player) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
 		{
-			final Player target = World.getInstance().getPlayer(_objectId);
+			final Player target = World.getPlayer(_objectId);
 			if (target != null)
 			{
 				room.deleteMember(target, true);

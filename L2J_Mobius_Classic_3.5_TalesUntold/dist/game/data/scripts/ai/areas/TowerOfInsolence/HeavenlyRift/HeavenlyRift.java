@@ -20,20 +20,19 @@
  */
 package ai.areas.TowerOfInsolence.HeavenlyRift;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
@@ -317,7 +316,7 @@ public class HeavenlyRift extends Script
 							Creature angel = addSpawn(DIVINE_ANGEL, 112696, 13960, 10986, 1, false, 60000 * BATTLE_TIME);
 							
 							angel.setRunning();
-							angel.getAI().setIntention(Intention.ATTACK, tower);
+							angel.getAI().setIntentionAttack(tower);
 							angel.asAttackable().addDamageHate(tower, 0, 999999);
 							
 							_varAngelCount1++;
@@ -450,7 +449,7 @@ public class HeavenlyRift extends Script
 			{
 				if (_var3 == 1)
 				{
-					ZONE.getCharactersInside().forEach(player -> npc.getAI().setIntention(Intention.MOVE_TO, CENTER));
+					ZONE.getCharactersInside().forEach(player -> npc.getAI().setIntentionMoveTo(CENTER));
 				}
 			}
 		}
@@ -487,7 +486,7 @@ public class HeavenlyRift extends Script
 				}
 				else
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, Playable.class, 200, creature ->
+					World.forEachVisibleObjectInRange(npc, Playable.class, 200, creature ->
 					{
 						if ((creature != null) && !creature.isDead())
 						{
@@ -499,7 +498,7 @@ public class HeavenlyRift extends Script
 					{
 						if (getRandom(100) < 50)
 						{
-							npc.dropItem(killer.asPlayer(), getRandom(100) < 90 ? ITEM_DROP_1[getRandom(ITEM_DROP_1.length)] : ITEM_DROP_2[getRandom(ITEM_DROP_2.length)], 1);
+							npc.dropItem(killer.asPlayer(), getRandom(100) < 90 ? getRandomEntry(ITEM_DROP_1) : getRandomEntry(ITEM_DROP_2), 1);
 						}
 					}
 				}

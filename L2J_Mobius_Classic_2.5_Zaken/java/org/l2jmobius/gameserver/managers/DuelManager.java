@@ -25,9 +25,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.Duel;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Duel;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 
 public class DuelManager
@@ -58,7 +58,7 @@ public class DuelManager
 			return;
 		}
 		
-		// return if a player has PvPFlag
+		// Return if a player has PvPFlag.
 		final String engagedInPvP = "The duel was canceled because a duelist engaged in PvP combat.";
 		if (partyDuel == 1)
 		{
@@ -84,7 +84,7 @@ public class DuelManager
 				}
 			}
 			
-			// A player has PvP flag
+			// A player has PvP flag.
 			if (playerInPvP)
 			{
 				for (Player temp : playerA.getParty().getMembers())

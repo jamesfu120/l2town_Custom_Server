@@ -22,12 +22,12 @@ package org.l2jmobius.gameserver.network.clientpackets.autopeel;
 
 import java.util.Collections;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.AutoPeelRequest;
+import org.l2jmobius.gameserver.entity.item.EtcItem;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.AutoPeelRequest;
-import org.l2jmobius.gameserver.model.item.EtcItem;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.autopeel.ExResultItemAutoPeel;
 

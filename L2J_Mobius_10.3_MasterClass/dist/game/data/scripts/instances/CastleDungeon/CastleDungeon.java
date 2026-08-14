@@ -28,15 +28,15 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceTemplate;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
 import quests.Q00512_BladeUnderFoot.Q00512_BladeUnderFoot;
@@ -116,9 +116,10 @@ public class CastleDungeon extends InstanceScript
 	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
-		if (NPCS.containsKey(npcId))
+		final Integer template = NPCS.get(npcId);
+		if (template != null)
 		{
-			enterInstance(player, npc, NPCS.get(npcId));
+			enterInstance(player, npc, template);
 		}
 		
 		return null;

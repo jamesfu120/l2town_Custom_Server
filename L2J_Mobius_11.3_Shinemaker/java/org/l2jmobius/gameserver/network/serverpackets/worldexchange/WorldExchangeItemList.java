@@ -22,13 +22,13 @@ package org.l2jmobius.gameserver.network.serverpackets.worldexchange;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.item.enums.WorldExchangeItemSubType;
-import org.l2jmobius.gameserver.model.item.holders.WorldExchangeHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.enums.WorldExchangeItemSubType;
+import org.l2jmobius.gameserver.entity.item.holders.WorldExchangeHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.ensoul.EnsoulOption;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -52,13 +52,11 @@ public class WorldExchangeItemList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_WORLD_EXCHANGE_ITEM_LIST.writeId(this, buffer);
 		
-		final int totalPages = (int) Math.ceil((double) _holders.size() / ITEMS_PER_PAGE);
-		final int startIndex = (_page == 0) ? 0 : (_page - 1) * ITEMS_PER_PAGE;
-		final int endIndex = Math.min(startIndex + ITEMS_PER_PAGE, _holders.size());
+		final int totalPages = Math.ceilDiv(_holders.size(), ITEMS_PER_PAGE);
 		if (_holders.isEmpty() || (_page > totalPages))
 		{
 			buffer.writeShort(0); // Category
@@ -68,6 +66,8 @@ public class WorldExchangeItemList extends ServerPacket
 			return;
 		}
 		
+		final int startIndex = (_page == 0) ? 0 : (_page - 1) * ITEMS_PER_PAGE;
+		final int endIndex = Math.min(startIndex + ITEMS_PER_PAGE, _holders.size());
 		buffer.writeShort(_type.getId());
 		buffer.writeByte(0);
 		buffer.writeInt(_page);
@@ -78,7 +78,7 @@ public class WorldExchangeItemList extends ServerPacket
 		}
 	}
 	
-	private void getItemInfo(WritableBuffer buffer, WorldExchangeHolder holder)
+	private void getItemInfo(WriteBuffer buffer, WorldExchangeHolder holder)
 	{
 		buffer.writeLong(holder.getWorldExchangeId());
 		buffer.writeLong(holder.getPrice());

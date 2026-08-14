@@ -20,32 +20,33 @@
  */
 package handlers.dailymissions;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.DailyMissionStatus;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionPlayerEntry;
+import org.l2jmobius.gameserver.entity.groups.CommandChannel;
+import org.l2jmobius.gameserver.entity.groups.Party;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.DailyMissionStatus;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionPlayerEntry;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnAttackableKill;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.groups.CommandChannel;
-import org.l2jmobius.gameserver.model.groups.Party;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnAttackableKill;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
 
 /**
  * @author Mobius
  */
 public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 {
+	private static final DateTimeFormatter TIME_FORMAT = DateTimeFormatter.ofPattern("HH:mm");
+	
 	private final int _amount;
 	private final int _minLevel;
 	private final int _maxLevel;
@@ -124,7 +125,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 			return;
 		}
 		
-		if (checkTimeInterval() || (_startHour.equals("") && _endHour.equals("")))
+		if (checkTimeInterval() || (_startHour.isEmpty() && _endHour.isEmpty()))
 		{
 			final Party party = player.getParty();
 			if (party != null)
@@ -162,22 +163,15 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 	
 	private boolean checkTimeInterval()
 	{
-		if (!_startHour.equals("") && !_endHour.equals(""))
+		if (!_startHour.isEmpty() && !_endHour.isEmpty())
 		{
-			final Date date = new Date();
-			final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-			dateFormat.format(date);
-			try
+			final LocalTime now = LocalTime.now();
+			final LocalTime start = LocalTime.parse(_startHour, TIME_FORMAT);
+			final LocalTime end = LocalTime.parse(_endHour, TIME_FORMAT);
+			// Check hour parameters.
+			if (now.isAfter(start) && now.isBefore(end))
 			{
-				// Check hour parameters.
-				if (dateFormat.parse(dateFormat.format(date)).after(dateFormat.parse(_startHour)) && dateFormat.parse(dateFormat.format(date)).before(dateFormat.parse(_endHour)))
-				{
-					return true;
-				}
-			}
-			catch (ParseException e)
-			{
-				e.printStackTrace();
+				return true;
 			}
 		}
 		

@@ -29,11 +29,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.Mentee;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Mentee;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 
 /**
  * @author UnAfraid
@@ -151,14 +151,14 @@ public class MentorManager
 	
 	public void setPenalty(int mentorId, long penalty)
 	{
-		final Player player = World.getInstance().getPlayer(mentorId);
+		final Player player = World.getPlayer(mentorId);
 		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
 		vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
 	}
 	
 	public long getMentorPenalty(int mentorId)
 	{
-		final Player player = World.getInstance().getPlayer(mentorId);
+		final Player player = World.getPlayer(mentorId);
 		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
 		return vars.getLong("Mentor-Penalty-" + mentorId, 0);
 	}
@@ -170,9 +170,10 @@ public class MentorManager
 	public void addMentor(int mentorId, int menteeId)
 	{
 		final Map<Integer, Mentee> mentees = _menteeData.computeIfAbsent(mentorId, _ -> new ConcurrentHashMap<>());
-		if (mentees.containsKey(menteeId))
+		final Mentee mentee = mentees.get(menteeId);
+		if (mentee != null)
 		{
-			mentees.get(menteeId).load(); // Just reloading data if is already there
+			mentee.load(); // Just reloading data if is already there.
 		}
 		else
 		{
@@ -186,10 +187,11 @@ public class MentorManager
 	 */
 	public void removeMentor(int mentorId, int menteeId)
 	{
-		if (_menteeData.containsKey(mentorId))
+		final Map<Integer, Mentee> mentees = _menteeData.get(mentorId);
+		if (mentees != null)
 		{
-			_menteeData.get(mentorId).remove(menteeId);
-			if (_menteeData.get(mentorId).isEmpty())
+			mentees.remove(menteeId);
+			if (mentees.isEmpty())
 			{
 				_menteeData.remove(mentorId);
 				_mentors.remove(mentorId);
@@ -207,12 +209,7 @@ public class MentorManager
 		{
 			if (map.getValue().containsKey(menteeId))
 			{
-				if (!_mentors.containsKey(map.getKey()))
-				{
-					_mentors.put(map.getKey(), new Mentee(map.getKey()));
-				}
-				
-				return _mentors.get(map.getKey());
+				return _mentors.computeIfAbsent(map.getKey(), Mentee::new);
 			}
 		}
 		
@@ -221,12 +218,8 @@ public class MentorManager
 	
 	public Collection<Mentee> getMentees(int mentorId)
 	{
-		if (_menteeData.containsKey(mentorId))
-		{
-			return _menteeData.get(mentorId).values();
-		}
-		
-		return Collections.emptyList();
+		final Map<Integer, Mentee> mentees = _menteeData.get(mentorId);
+		return (mentees != null) ? mentees.values() : Collections.emptyList();
 	}
 	
 	/**
@@ -236,12 +229,7 @@ public class MentorManager
 	 */
 	public Mentee getMentee(int mentorId, int menteeId)
 	{
-		if (_menteeData.containsKey(mentorId))
-		{
-			return _menteeData.get(mentorId).get(menteeId);
-		}
-		
-		return null;
+		return _menteeData.getOrDefault(mentorId, Collections.emptyMap()).get(menteeId);
 	}
 	
 	public boolean isAllMenteesOffline(int menteorId, int menteeId)

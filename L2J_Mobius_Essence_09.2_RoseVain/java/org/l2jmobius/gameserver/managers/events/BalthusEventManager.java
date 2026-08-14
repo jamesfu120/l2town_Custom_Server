@@ -40,16 +40,15 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.managers.MailManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.MailType;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
@@ -58,6 +57,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.balthusevent.ExBalthusEvent;
 import org.l2jmobius.gameserver.network.serverpackets.balthusevent.ExBalthusEventJackpotUser;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Index
@@ -254,7 +254,7 @@ public class BalthusEventManager
 		
 		_cycleConcurrentScheduling = ThreadPool.schedule(this::redeemReward, timeForRoll);
 		
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			if ((player != null) && !player.isInOfflineMode())
 			{
@@ -390,7 +390,7 @@ public class BalthusEventManager
 		
 		if (!_participationRewardOnRedeem || (winners != null))
 		{
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				if ((player != null) && !player.isInOfflineMode())
 				{

@@ -22,23 +22,27 @@ package org.l2jmobius.gameserver.network.serverpackets.attendance;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.config.AttendanceRewardsConfig;
 import org.l2jmobius.gameserver.data.holders.AttendanceItemHolder;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author Mobius, Serenitty, Lonely
+ * @author Mobius, Serenitty, Lonely, CostyKiller
  */
 public class ExVipAttendanceList extends ServerPacket
 {
 	private final int _index;
 	private final int _delayreward;
 	private final boolean _available;
+	private final boolean _loopReset;
+	private final int _currentCycleDay;
 	private final List<AttendanceItemHolder> _rewardItems;
 	
 	public ExVipAttendanceList(Player player)
@@ -47,11 +51,15 @@ public class ExVipAttendanceList extends ServerPacket
 		_index = attendanceInfo.getRewardIndex();
 		_delayreward = player.getAttendanceDelay();
 		_available = attendanceInfo.isRewardAvailable();
+		_currentCycleDay = attendanceInfo.getCurrentCycleDay();
 		_rewardItems = AttendanceRewardData.getInstance().getRewards();
+		
+		// Loop reset flag: when true, all days should appear as unclaimed (RewardDay = 0).
+		_loopReset = AttendanceRewardsConfig.ATTENDANCE_REWARDS_LOOP && (AttendanceRewardsConfig.ATTENDANCE_REWARDS_SHARE_ACCOUNT ? player.getAccountVariables().getBoolean(PlayerVariables.ATTENDANCE_LOOP_RESET, false) : player.getVariables().getBoolean(PlayerVariables.ATTENDANCE_LOOP_RESET, false));
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_VIP_ATTENDANCE_LIST.writeId(this, buffer);
 		
@@ -63,41 +71,72 @@ public class ExVipAttendanceList extends ServerPacket
 			buffer.writeByte(reward.getHighlight());
 		}
 		
-		buffer.writeInt(1); // MinimumLevel
+		buffer.writeInt(AttendanceRewardsConfig.ATTENDANCE_REWARD_LCOIN_CHECK); // MinimumLevel / coin check threshold sent to client
 		buffer.writeInt(_delayreward); // RemainCheckTime
-		if (_available)
+		
+		// RewardDay controls which days show the red "claimed" mark.
+		// When loop just reset, send 0 so all days appear as unclaimed.
+		final int rewardDay = _loopReset ? 0 : _index;
+		
+		if (AttendanceRewardsConfig.ATTENDANCE_REWARDS_MATCH_REAL_DAYS)
 		{
-			buffer.writeByte(_index + 1); // RollBookDay
-			if ((_delayreward == 0) && (_available))
+			// Real-days mode:
+			// RollBookDay = today's cycle day (where the calendar highlights "today").
+			// AttendanceDay = only the first unclaimed day (_index + 1) when available,
+			// so only that one day gets the free "Reward" button.
+			// Missed days between AttendanceDay and RollBookDay are
+			// expected to show the purchase (coin) button on the client.
+			// RewardDay = how many days claimed so far (red marks up to here).
+			if (_available)
 			{
-				buffer.writeByte(_index + 1); // AttendanceDay
+				buffer.writeByte(_currentCycleDay); // RollBookDay - today's position on calendar
+				buffer.writeByte(_index + 1); // AttendanceDay - ONLY first unclaimed is free
+				buffer.writeByte(rewardDay); // RewardDay - claimed so far
+				buffer.writeByte(0); // FollowBaseDay
+				buffer.writeByte(0); // FollowBaseDay
 			}
 			else
 			{
-				buffer.writeByte(_index); // AttendanceDay
+				buffer.writeByte(_currentCycleDay); // RollBookDay
+				buffer.writeByte(_index); // AttendanceDay - nothing free to claim
+				buffer.writeByte(rewardDay); // RewardDay
+				buffer.writeByte(0); // FollowBaseDay
+				buffer.writeByte(1); // FollowBaseDay
 			}
-			
-			buffer.writeByte(_index); // RewardDay
-			buffer.writeByte(0); // FollowBaseDay
-			// buffer.writeByte(_available);
-			buffer.writeByte(0); // FollowBaseDay
 		}
 		else
 		{
-			buffer.writeByte(_index); // RollBookDay
-			if ((_delayreward == 0) && (_available))
+			// Normal mode: original logic unchanged.
+			if (_available)
 			{
-				buffer.writeByte(_index + 1); // AttendanceDay
+				buffer.writeByte(_index + 1); // RollBookDay
+				if ((_delayreward == 0) && (_available))
+				{
+					buffer.writeByte(_index + 1); // AttendanceDay
+				}
+				else
+				{
+					buffer.writeByte(_index); // AttendanceDay
+				}
+				buffer.writeByte(rewardDay); // RewardDay
+				buffer.writeByte(0); // FollowBaseDay
+				buffer.writeByte(0); // FollowBaseDay
 			}
 			else
 			{
-				buffer.writeByte(_index); // AttendanceDay
+				buffer.writeByte(_index); // RollBookDay
+				if ((_delayreward == 0) && (_available))
+				{
+					buffer.writeByte(_index + 1); // AttendanceDay
+				}
+				else
+				{
+					buffer.writeByte(_index); // AttendanceDay
+				}
+				buffer.writeByte(rewardDay); // RewardDay
+				buffer.writeByte(0); // FollowBaseDay
+				buffer.writeByte(1); // FollowBaseDay
 			}
-			
-			buffer.writeByte(_index); // RewardDay
-			buffer.writeByte(0); // FollowBaseDay
-			// buffer.writeByte(_available);
-			buffer.writeByte(1); // FollowBaseDay
 		}
 	}
 }

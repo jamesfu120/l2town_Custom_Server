@@ -17,18 +17,18 @@
 package handlers.skill.effects;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Harvesting effect implementation.
@@ -86,7 +86,7 @@ public class Harvesting extends AbstractEffect
 					
 					player.sendPacket(sm);
 					
-					// Send msg to party
+					// Send msg to party.
 					final Party party = player.getParty();
 					if (party != null)
 					{
@@ -130,15 +130,15 @@ public class Harvesting extends AbstractEffect
 			diff = -diff;
 		}
 		
-		// apply penalty, target <=> player levels
-		// 5% penalty for each level
+		// Apply penalty, target <=> player levels.
+		// 5% penalty for each level.
 		int basicSuccess = 100;
 		if (diff > 5)
 		{
 			basicSuccess -= (diff - 5) * 5;
 		}
 		
-		// success rate can't be less than 1%
+		// Success rate can't be less than 1%.
 		if (basicSuccess < 1)
 		{
 			basicSuccess = 1;

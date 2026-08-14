@@ -28,24 +28,23 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.AttackableAI;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -57,7 +56,7 @@ import org.l2jmobius.gameserver.util.ArrayUtil;
  */
 public class TimedHunting extends InstanceScript
 {
-	// NPCs (on official server random pick of NPC's)
+	// NPCs (on official server random pick of NPC's).
 	private static final int KATE = 34120; // Dragon Valley 80-99
 	private static final int DEEKHIN = 34121; // Cemetery 50-59
 	private static final int BUNCH = 34122; // Giant's Cave 90+
@@ -419,7 +418,7 @@ public class TimedHunting extends InstanceScript
 		
 		if (count > 1)
 		{
-			sb.append(".");
+			sb.append('.');
 		}
 		
 		return sb.toString();
@@ -431,66 +430,70 @@ public class TimedHunting extends InstanceScript
 		if (!player.getInstanceWorld().getParameters().getBoolean("TimedHuntingTaskFinished", false))
 		{
 			final Instance instance = player.getInstanceWorld();
-			player.sendPacket(new ExSendUIEvent(player, false, false, Math.min(600, (int) (instance.getRemainingTime() / 1000)), 0, NpcStringId.TIME_LEFT));
-			
-			final ScheduledFuture<?> spawnTask = ThreadPool.scheduleAtFixedRate(() ->
+			final long remainingTime = Math.max(0, instance.getRemainingTime());
+			if (remainingTime > 0)
 			{
-				if (!instance.getParameters().getBoolean("PlayerIsOut", false) && (instance.getAliveNpcCount() == 1))
+				player.sendPacket(new ExSendUIEvent(player, false, false, Math.min(600, (int) (remainingTime / 1000)), 0, NpcStringId.TIME_LEFT));
+				
+				final ScheduledFuture<?> spawnTask = ThreadPool.scheduleAtFixedRate(() ->
 				{
-					if (getRandom(5) == 0)
+					if (!instance.getParameters().getBoolean("PlayerIsOut", false) && (instance.getAliveNpcCount() == 1))
 					{
-						player.getInstanceWorld().spawnGroup("treasures");
-					}
-					else
-					{
-						if (getRandom(3) == 0)
+						if (getRandom(5) == 0)
 						{
 							player.getInstanceWorld().spawnGroup("treasures");
 						}
-						
-						if (getRandom(7) == 0)
+						else
 						{
-							final List<Npc> guardian = player.getInstanceWorld().spawnGroup("guardian");
-							if (!guardian.isEmpty())
+							if (getRandom(3) == 0)
 							{
-								final Npc guardianNpc = guardian.get(0);
-								final KeeperType type = getRandomEntry(KeeperType.values());
-								if (type == null)
-								{
-									LOGGER.warning(String.format("[%s]: No KeeperType found for instance %d", getClass().getSimpleName(), instance.getId()));
-									return;
-								}
-								
-								instance.setParameter("KeeperType", type.name());
-								guardianNpc.setTitleString(type.getTitle());
-								guardianNpc.broadcastInfo();
+								player.getInstanceWorld().spawnGroup("treasures");
 							}
-						}
-						
-						for (Npc npc : player.getInstanceWorld().spawnGroup("monsters"))
-						{
-							if (npc.isAttackable())
+							
+							if (getRandom(7) == 0)
 							{
-								((AttackableAI) npc.getAI()).setGlobalAggro(0);
-								npc.asAttackable().addDamageHate(player, 0, 9999);
-								npc.getAI().setIntention(Intention.ATTACK);
+								final List<Npc> guardian = player.getInstanceWorld().spawnGroup("guardian");
+								if (!guardian.isEmpty())
+								{
+									final KeeperType type = getRandomEntry(KeeperType.values());
+									if (type == null)
+									{
+										LOGGER.warning(String.format("[%s]: No KeeperType found for instance %d", getClass().getSimpleName(), instance.getId()));
+										return;
+									}
+									
+									instance.setParameter("KeeperType", type.name());
+									final Npc guardianNpc = guardian.get(0);
+									guardianNpc.setTitleString(type.getTitle());
+									guardianNpc.broadcastInfo();
+								}
+							}
+							
+							for (Npc npc : player.getInstanceWorld().spawnGroup("monsters"))
+							{
+								if (npc.isAttackable())
+								{
+									((AttackableAI) npc.getAI()).setGlobalAggro(0);
+									npc.asAttackable().addDamageHate(player, 0, 9999);
+									npc.getAI().setIntentionAttack(player);
+								}
 							}
 						}
 					}
-				}
-			}, 0, 10000);
-			
-			ThreadPool.schedule(() ->
-			{
-				instance.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-				instance.getParameters().set("TimedHuntingTaskFinished", true);
-				if (spawnTask != null)
+				}, 0, 10000);
+				
+				ThreadPool.schedule(() ->
 				{
-					spawnTask.cancel(false);
-				}
-			}, instance.getRemainingTime() - 30000);
+					instance.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
+					instance.getParameters().set("TimedHuntingTaskFinished", true);
+					if (spawnTask != null)
+					{
+						spawnTask.cancel(false);
+					}
+				}, Math.max(0, remainingTime - 30000));
+			}
 			
-			ThreadPool.schedule(instance::finishInstance, instance.getRemainingTime());
+			ThreadPool.schedule(instance::finishInstance, remainingTime);
 		}
 	}
 	

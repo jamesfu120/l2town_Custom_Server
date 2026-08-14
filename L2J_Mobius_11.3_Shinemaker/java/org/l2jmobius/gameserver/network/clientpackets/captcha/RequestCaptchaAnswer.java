@@ -21,10 +21,10 @@
 package org.l2jmobius.gameserver.network.clientpackets.captcha;
 
 import org.l2jmobius.gameserver.data.BotReportTable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.CaptchaRequest;
-import org.l2jmobius.gameserver.model.captcha.Captcha;
-import org.l2jmobius.gameserver.model.captcha.CaptchaGenerator;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.CaptchaRequest;
+import org.l2jmobius.gameserver.mechanics.captcha.Captcha;
+import org.l2jmobius.gameserver.mechanics.captcha.CaptchaGenerator;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;

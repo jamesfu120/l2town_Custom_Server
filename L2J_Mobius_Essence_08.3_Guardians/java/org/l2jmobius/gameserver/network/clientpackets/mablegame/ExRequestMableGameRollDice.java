@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.network.clientpackets.mablegame;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.MableGameData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.mablegame.ExMableGameDiceResult;
 import org.l2jmobius.gameserver.network.serverpackets.mablegame.ExMableGamePrison;

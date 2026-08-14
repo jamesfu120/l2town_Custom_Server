@@ -23,20 +23,19 @@ package ai.bosses.Antharas;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MountType;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.MountType;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -228,16 +227,12 @@ public class Antharas extends InstanceScript
 				antharas.disableCoreAI(false);
 				antharas.setRandomWalking(true);
 				
-				for (Player players : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000))
+				World.forFirstVisibleObjectInRange(npc, Player.class, 4000, players -> players.isHero() && GrandBossConfig.ANTHARAS_RECOGNIZE_HERO, players ->
 				{
-					if (players.isHero() && GrandBossConfig.ANTHARAS_RECOGNIZE_HERO)
-					{
-						broadcastPacket(world, new ExShowScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH, 2, 4000, players.getName()));
-						break;
-					}
-				}
+					broadcastPacket(world, new ExShowScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH, 2, 4000, players.getName()));
+				});
 				
-				antharas.getAI().setIntention(Intention.MOVE_TO, new Location(179011, 114871, -7704));
+				antharas.getAI().setIntentionMoveTo(new Location(179011, 114871, -7704));
 				startQuestTimer("CHECK_ATTACK", 60000, antharas, null, false);
 				break;
 			}
@@ -249,26 +244,26 @@ public class Antharas extends InstanceScript
 					{
 						if (!npc.isAffectedBySkill(ANTH_REGEN_4.getSkillId()))
 						{
-							npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_4.getSkill(), npc);
+							npc.getAI().setIntentionCast(ANTH_REGEN_4.getSkill(), npc);
 						}
 					}
 					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
 					{
 						if (!npc.isAffectedBySkill(ANTH_REGEN_3.getSkillId()))
 						{
-							npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_3.getSkill(), npc);
+							npc.getAI().setIntentionCast(ANTH_REGEN_3.getSkill(), npc);
 						}
 					}
 					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
 					{
 						if (!npc.isAffectedBySkill(ANTH_REGEN_2.getSkillId()))
 						{
-							npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_2.getSkill(), npc);
+							npc.getAI().setIntentionCast(ANTH_REGEN_2.getSkill(), npc);
 						}
 					}
 					else if (!npc.isAffectedBySkill(ANTH_REGEN_1.getSkillId()))
 					{
-						npc.getAI().setIntention(Intention.CAST, ANTH_REGEN_1.getSkill(), npc);
+						npc.getAI().setIntentionCast(ANTH_REGEN_1.getSkill(), npc);
 					}
 					
 					startQuestTimer("SET_REGEN", 60000, npc, player, false);
@@ -312,7 +307,7 @@ public class Antharas extends InstanceScript
 					{
 						npc.getInstanceWorld().getParameters().set("sandStorm", 1);
 						npc.disableCoreAI(true);
-						npc.getAI().setIntention(Intention.MOVE_TO, new Location(177648, 114816, -7735));
+						npc.getAI().setIntentionMoveTo(new Location(177648, 114816, -7735));
 						startQuestTimer("TID_FEAR_MOVE_TIMEOVER", 2000, npc, null);
 						startQuestTimer("TID_FEAR_COOLTIME", 300000, npc, null);
 					}
@@ -340,7 +335,7 @@ public class Antharas extends InstanceScript
 					if (moveChance <= 3)
 					{
 						npc.getInstanceWorld().getParameters().set("moveChance", moveChance + 1);
-						npc.getAI().setIntention(Intention.MOVE_TO, new Location(177648, 114816, -7735));
+						npc.getAI().setIntentionMoveTo(new Location(177648, 114816, -7735));
 						startQuestTimer("TID_FEAR_MOVE_TIMEOVER", 5000, npc, null);
 					}
 					else
@@ -796,7 +791,7 @@ public class Antharas extends InstanceScript
 				}
 				else
 				{
-					npc.getAI().setIntention(Intention.CAST, skillToCast.getSkill(), npc);
+					npc.getAI().setIntentionCast(skillToCast.getSkill(), npc);
 				}
 			}
 		}

@@ -22,23 +22,22 @@ package ai.others.BalthusKnights.Monsters.BalthusAntharas;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 import quests.Q10555_ChargeAtAntharas.Q10555_ChargeAtAntharas;
 
@@ -119,7 +118,6 @@ public final class BalthusAntharas extends Script
 	public void onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		
 		if ((instance != null) && (instance.getTemplateId() == 271))
 		{
 			if (npc.getId() == ANTHARAS)
@@ -419,13 +417,13 @@ public final class BalthusAntharas extends Script
 				}
 				case "p_BomberTask2":
 				{
-					instance.getAliveNpcs(HATCHLING_BOMBER).forEach(bomber -> World.getInstance().forEachVisibleObject(bomber, Npc.class, character ->
+					instance.getAliveNpcs(HATCHLING_BOMBER).forEach(bomber -> World.forEachVisibleObject(bomber, Npc.class, character ->
 					{
 						if ((character != null) && (!character.isDead()) && (ArrayUtil.contains(BOMBER_TARGETS, character.getId()) || character.isPlayable()))
 						{
 							bomber.setRunning();
 							bomber.asAttackable().addDamageHate(character, 0, 100);
-							bomber.getAI().setIntention(Intention.ATTACK, character, null);
+							bomber.getAI().setIntentionAttack(character);
 						}
 					}));
 					getTimers().addTimer("p_BomberTask3", 14000L, null, null);
@@ -465,7 +463,7 @@ public final class BalthusAntharas extends Script
 						getTimers().cancelTimersOf(herphah);
 						herphah.abortCast();
 						herphah.setTarget(null);
-						herphah.getAI().setIntention(Intention.IDLE);
+						herphah.getAI().setIntentionIdle();
 						herphah.setTalkable(true);
 						instance.setStatus(5);
 						final QuestState qs = instance.getFirstPlayer().getQuestState(Q10555_ChargeAtAntharas.class.getSimpleName());

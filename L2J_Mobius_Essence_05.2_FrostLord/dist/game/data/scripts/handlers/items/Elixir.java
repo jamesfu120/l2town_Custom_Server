@@ -20,11 +20,11 @@
  */
 package handlers.items;
 
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.stats.Stat;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -40,16 +40,14 @@ public class Elixir extends ItemSkills
 		}
 		
 		final Player player = playable.asPlayer();
+		if (player == null)
+		{
+			return false;
+		}
+		
 		final int effectBonus = (int) player.getStat().getValue(Stat.ELIXIR_USAGE_LIMIT, 0);
 		final int elixirsAvailable = player.getVariables().getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0);
-		if ((player.getLevel() < 76) || //
-			((player.getLevel() < 88) && (elixirsAvailable >= (5 + effectBonus))) || //
-			((player.getLevel() < 91) && (elixirsAvailable >= (10 + effectBonus))) || //
-			((player.getLevel() < 92) && (elixirsAvailable >= (11 + effectBonus))) || //
-			((player.getLevel() < 93) && (elixirsAvailable >= (12 + effectBonus))) || //
-			((player.getLevel() < 94) && (elixirsAvailable >= (13 + effectBonus))) || //
-			((player.getLevel() < 95) && (elixirsAvailable >= (14 + effectBonus))) || //
-			((player.getLevel() < 100) && (elixirsAvailable >= (15 + effectBonus))))
+		if ((player.getLevel() < 76) || (elixirsAvailable >= (5 + effectBonus)))
 		{
 			player.sendPacket(SystemMessageId.THE_ELIXIR_UNAVAILABLE);
 			return false;

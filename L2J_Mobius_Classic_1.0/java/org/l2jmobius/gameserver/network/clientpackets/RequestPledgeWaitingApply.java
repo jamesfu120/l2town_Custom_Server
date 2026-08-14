@@ -17,12 +17,12 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.entry.PledgeApplicantInfo;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanEntryStatus;
 import org.l2jmobius.gameserver.managers.ClanEntryManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
-import org.l2jmobius.gameserver.model.clan.enums.ClanEntryStatus;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
@@ -65,7 +65,7 @@ public class RequestPledgeWaitingApply extends ClientPacket
 		{
 			player.sendPacket(new ExPledgeRecruitApplyInfo(ClanEntryStatus.WAITING));
 			
-			final Player clanLeader = World.getInstance().getPlayer(clan.getLeaderId());
+			final Player clanLeader = World.getPlayer(clan.getLeaderId());
 			if (clanLeader != null)
 			{
 				clanLeader.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);

@@ -20,14 +20,14 @@
  */
 package ai.others.Servitors;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius
@@ -65,7 +65,7 @@ public class ClanFlag extends Script
 					final Clan summonerClan = npc.getSummoner().getClan();
 					if (summonerClan != null)
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 2000, target ->
+						World.forEachVisibleObjectInRange(npc, Player.class, 2000, target ->
 						{
 							if ((target != null) && !target.isDead() && GeoEngine.getInstance().canSeeTarget(npc, target))
 							{

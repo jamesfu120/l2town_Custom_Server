@@ -20,18 +20,18 @@ import org.l2jmobius.gameserver.config.custom.OfflinePlayConfig;
 import org.l2jmobius.gameserver.config.custom.OfflineTradeConfig;
 import org.l2jmobius.gameserver.config.custom.WeddingConfig;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerAction;
+import org.l2jmobius.gameserver.entity.actor.holders.creature.DoorRequestHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.SummonRequestHolder;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.managers.ZoneBuildManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerAction;
-import org.l2jmobius.gameserver.model.actor.holders.creature.DoorRequestHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.SummonRequestHolder;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerDlgAnswer;
-import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerDlgAnswer;
+import org.l2jmobius.gameserver.mechanics.events.returns.TerminateReturn;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -74,6 +74,43 @@ public class DlgAnswer extends ClientPacket
 		
 		if (_messageId == SystemMessageId.S1_3.getId())
 		{
+			// Custom .offline voiced command dialog.
+			if (player.removeAction(PlayerAction.OFFLINE_TRADE))
+			{
+				if ((_answer == 0) || !OfflineTradeConfig.ENABLE_OFFLINE_COMMAND || (!OfflineTradeConfig.OFFLINE_TRADE_ENABLE && !OfflineTradeConfig.OFFLINE_CRAFT_ENABLE))
+				{
+					return;
+				}
+				
+				if (!player.isInStoreMode())
+				{
+					player.sendPacket(SystemMessageId.PRIVATE_STORE_ALREADY_CLOSED);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				
+				if (player.isInInstance() || player.isInVehicle() || !player.canLogout())
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				
+				// Remove player from boss zone.
+				player.removeFromBossZone();
+				
+				// Unregister from olympiad.
+				if (Olympiad.getInstance().isRegistered(player))
+				{
+					Olympiad.getInstance().unRegisterNoble(player);
+				}
+				
+				if (!OfflineTraderTable.getInstance().enteredOfflineMode(player))
+				{
+					Disconnection.of(getClient(), player).storeAndDeleteWith(LeaveWorld.STATIC_PACKET);
+				}
+				return;
+			}
+			
 			// Custom .offlineplay voiced command dialog.
 			if (player.removeAction(PlayerAction.OFFLINE_PLAY))
 			{
@@ -147,40 +184,6 @@ public class DlgAnswer extends ClientPacket
 				
 				// The 'useConfirm' must be disabled here, as we don't want to repeat that process.
 				AdminCommandHandler.getInstance().onCommand(player, cmd, false);
-			}
-		}
-		else if (_messageId == SystemMessageId.DO_YOU_WISH_TO_EXIT_THE_GAME.getId())
-		{
-			if ((_answer == 0) || !OfflineTradeConfig.ENABLE_OFFLINE_COMMAND || (!OfflineTradeConfig.OFFLINE_TRADE_ENABLE && !OfflineTradeConfig.OFFLINE_CRAFT_ENABLE))
-			{
-				return;
-			}
-			
-			if (!player.isInStoreMode())
-			{
-				player.sendPacket(SystemMessageId.PRIVATE_STORE_ALREADY_CLOSED);
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			if ((player.getInstanceId() > 0) || player.isInVehicle() || !player.canLogout())
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			// Remove player from boss zone.
-			player.removeFromBossZone();
-			
-			// Unregister from olympiad.
-			if (Olympiad.getInstance().isRegistered(player))
-			{
-				Olympiad.getInstance().unRegisterNoble(player);
-			}
-			
-			if (!OfflineTraderTable.getInstance().enteredOfflineMode(player))
-			{
-				Disconnection.of(getClient(), player).storeAndDeleteWith(LeaveWorld.STATIC_PACKET);
 			}
 		}
 		else if ((_messageId == SystemMessageId.C1_IS_MAKING_AN_ATTEMPT_AT_RESURRECTION_WITH_S2_EXPERIENCE_POINTS_DO_YOU_WANT_TO_BE_RESURRECTED.getId()) || (_messageId == SystemMessageId.RESURRECTION_IS_POSSIBLE_BECAUSE_OF_THE_COURAGE_CHARM_S_EFFECT_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId()))

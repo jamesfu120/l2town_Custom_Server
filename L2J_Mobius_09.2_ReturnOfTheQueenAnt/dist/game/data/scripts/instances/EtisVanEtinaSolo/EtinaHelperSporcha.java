@@ -20,23 +20,23 @@
  */
 package instances.EtisVanEtinaSolo;
 
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.events.holders.instance.OnInstanceStatusChange;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureAttacked;
+import org.l2jmobius.gameserver.mechanics.events.holders.instance.OnInstanceStatusChange;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Etina Helper Sporcha AI.
@@ -113,7 +113,7 @@ public class EtinaHelperSporcha extends Script
 					WorldObject target = npc.getTarget();
 					if (target == null)
 					{
-						npc.setTarget(getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500)));
+						npc.setTarget(World.getRandomVisibleObjectInRange(npc, Monster.class, 2500));
 					}
 					
 					if ((target != null) && !target.isInvul() && target.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, target) && !ArrayUtil.contains(NOT_ATK_NPCS, target.getId()) && !ArrayUtil.contains(ETINA_HELPERS, target.getId()))

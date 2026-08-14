@@ -433,7 +433,7 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
@@ -2627,7 +2627,7 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
@@ -2816,7 +2816,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -2884,7 +2884,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -4319,7 +4319,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="350">
+		<ai type="ARCHER" aggroRange="450" isAggressive="true" clanHelpRange="350">
 			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
 			</clanList>
@@ -4461,7 +4461,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai clanHelpRange="350" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="350" aggroRange="450">
 			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
 			</clanList>

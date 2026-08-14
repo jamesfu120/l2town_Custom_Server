@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinAlly;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -46,7 +46,7 @@ public class RequestJoinAlly extends ClientPacket
 			return;
 		}
 		
-		final Player target = World.getInstance().getPlayer(_objectId);
+		final Player target = World.getPlayer(_objectId);
 		if (target == null)
 		{
 			player.sendPacket(SystemMessageId.THE_TARGET_CANNOT_BE_INVITED);

@@ -35,16 +35,16 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.managers.MailManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.MailType;
@@ -54,7 +54,6 @@ import org.l2jmobius.gameserver.network.serverpackets.secretshop.ExFestivalBmAll
 import org.l2jmobius.gameserver.network.serverpackets.secretshop.ExFestivalBmGame;
 import org.l2jmobius.gameserver.network.serverpackets.secretshop.ExFestivalBmInfo;
 import org.l2jmobius.gameserver.network.serverpackets.secretshop.ExFestivalBmTopItemInfo;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Serenitty
@@ -258,7 +257,7 @@ public class SecretShopEventManager
 				
 				if (reward.isTopGrade())
 				{
-					Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.EVENT_PARTICIPATE));
+					World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.EVENT_PARTICIPATE));
 					sendClanReward(player); // Optional
 					if (noTopGradeRewardsRemaining())
 					{
@@ -358,7 +357,7 @@ public class SecretShopEventManager
 		
 		_activeRewards.clear();
 		Collections.shuffle(topRewards);
-		_activeRewards.addAll(topRewards.stream().limit(3).collect(Collectors.toList()));
+		_activeRewards.addAll(topRewards.stream().limit(3).toList());
 		_activeRewards.addAll(rewards);
 	}
 	
@@ -398,13 +397,13 @@ public class SecretShopEventManager
 			return;
 		}
 		
-		Broadcast.toAllOnlinePlayers(new ExFestivalBmTopItemInfo(_exchangeEnabled ? getNextEndTime() : getNextStartTime(), _exchangeEnabled, _activeRewards));
+		World.broadcastToAllOnlinePlayers(new ExFestivalBmTopItemInfo(_exchangeEnabled ? getNextEndTime() : getNextStartTime(), _exchangeEnabled, _activeRewards));
 	}
 	
 	private List<SecretShopRewardHolder> getSortedRewards()
 	{
 		final List<SecretShopRewardHolder> showRewards = new ArrayList<>(_activeRewards);
-		showRewards.sort(Comparator.comparing(SecretShopRewardHolder::getId));
+		showRewards.sort(Comparator.comparingInt(SecretShopRewardHolder::getId));
 		return showRewards;
 	}
 	

@@ -26,23 +26,23 @@ import java.util.List;
 import java.util.Objects;
 
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceTemplate;
+import org.l2jmobius.gameserver.entity.spawns.NpcSpawnTemplate;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureTeleported;
-import org.l2jmobius.gameserver.model.events.holders.instance.OnInstanceStatusChange;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureTeleported;
+import org.l2jmobius.gameserver.mechanics.events.holders.instance.OnInstanceStatusChange;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
@@ -265,12 +265,12 @@ public class ValakasTemple extends InstanceScript
 		world.setStatus(SAVE_HERMIT);
 		world.spawnGroup("tomb"); // Make sure no one do not want to speed run it.
 		final List<Npc> monstersNearHermit = world.getNpcsOfGroup("hermit_attackers_01");
-		final Npc hermitInInstance = world.getNpcOfGroup("hermit_01", Objects::nonNull);
 		if ((monstersNearHermit == null) || monstersNearHermit.isEmpty())
 		{
 			return;
 		}
 		
+		final Npc hermitInInstance = world.getNpcOfGroup("hermit_01", Objects::nonNull);
 		for (Npc monster : monstersNearHermit)
 		{
 			final Attackable attackable = monster.asAttackable();

@@ -24,9 +24,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.data.sql.CostumeTable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.costumes.Costume;
-import org.l2jmobius.gameserver.model.costumes.Costumes;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.costumes.Costume;
+import org.l2jmobius.gameserver.mechanics.costumes.Costumes;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.costume.ExCostumeEvolution;

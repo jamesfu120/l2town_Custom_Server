@@ -24,10 +24,10 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;
 
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.ensoul.EnsoulOption;
 
 public class TradeItem
 {

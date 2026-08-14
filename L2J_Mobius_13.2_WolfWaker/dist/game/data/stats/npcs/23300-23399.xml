@@ -320,7 +320,7 @@
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="600" isAggressive="true" />
 	</npc>
 	<npc id="23316" level="99" type="Monster" name="Nerva Orc Seeress">
 		<race>HUMANOID</race>
@@ -730,7 +730,7 @@
 			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="600" isAggressive="true" />
 	</npc>
 	<npc id="23326" level="99" type="Monster" name="Wizard" title="Nerva Bloodlust">
 		<race>HUMANOID</race>

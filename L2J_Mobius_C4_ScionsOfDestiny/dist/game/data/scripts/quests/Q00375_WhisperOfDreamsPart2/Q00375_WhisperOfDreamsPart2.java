@@ -21,12 +21,12 @@
 package quests.Q00375_WhisperOfDreamsPart2;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00375_WhisperOfDreamsPart2 extends Quest
 {
@@ -104,7 +104,7 @@ public class Q00375_WhisperOfDreamsPart2 extends Quest
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					takeItems(player, KARIK_HORN, 100);
 					takeItems(player, CAVE_HOWLER_SKULL, 100);
-					giveItems(player, REWARDS[getRandom(REWARDS.length)], 1);
+					giveItems(player, getRandomEntry(REWARDS), 1);
 				}
 				else
 				{

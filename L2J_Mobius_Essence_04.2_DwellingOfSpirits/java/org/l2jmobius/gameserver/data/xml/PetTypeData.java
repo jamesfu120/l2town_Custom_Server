@@ -32,8 +32,8 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius

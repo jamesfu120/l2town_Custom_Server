@@ -22,12 +22,12 @@ package org.l2jmobius.gameserver.network.serverpackets.vip;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.VipSystemConfig;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopGroup;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopItem;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -42,7 +42,7 @@ public class ReceiveVipProductList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (!VipSystemConfig.VIP_SYSTEM_ENABLED)
 		{
@@ -72,7 +72,7 @@ public class ReceiveVipProductList extends ServerPacket
 		}
 	}
 	
-	private void writeProduct(PrimeShopGroup product, WritableBuffer buffer)
+	private void writeProduct(PrimeShopGroup product, WriteBuffer buffer)
 	{
 		buffer.writeInt(product.getBrId());
 		buffer.writeByte(product.getCat());

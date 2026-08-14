@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.holders;
 
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 
 public class TradeItem
 {

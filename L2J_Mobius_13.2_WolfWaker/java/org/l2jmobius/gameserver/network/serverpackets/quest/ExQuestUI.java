@@ -20,12 +20,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.quest;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExQuestUI extends ServerPacket
 {
-	private final List<QuestState> _questStates = new LinkedList<>();
+	private final List<QuestState> _questStates = new ArrayList<>();
 	private int _activeQuestCount = 0;
 	
 	public ExQuestUI(Player player)
@@ -55,7 +55,7 @@ public class ExQuestUI extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_QUEST_UI.writeId(this, buffer);
 		

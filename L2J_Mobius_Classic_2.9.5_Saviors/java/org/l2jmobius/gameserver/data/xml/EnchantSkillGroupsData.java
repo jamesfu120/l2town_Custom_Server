@@ -28,11 +28,11 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.EnchantSkillHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillEnchantType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillEnchantType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Micr0
@@ -154,7 +154,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 	 */
 	public EnchantSkillHolder getEnchantSkillHolder(int level)
 	{
-		return _enchantSkillHolders.getOrDefault(level, null);
+		return _enchantSkillHolders.get(level);
 	}
 	
 	public static EnchantSkillGroupsData getInstance()

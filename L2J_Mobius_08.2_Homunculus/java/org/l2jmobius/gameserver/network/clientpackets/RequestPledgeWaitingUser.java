@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.entry.PledgeApplicantInfo;
 import org.l2jmobius.gameserver.managers.ClanEntryManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingList;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingUser;
 

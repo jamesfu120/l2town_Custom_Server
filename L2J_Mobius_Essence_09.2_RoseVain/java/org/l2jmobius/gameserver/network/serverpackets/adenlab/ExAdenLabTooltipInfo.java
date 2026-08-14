@@ -24,7 +24,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -42,7 +42,7 @@ public class ExAdenLabTooltipInfo extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ADENLAB_TOOLTIP_INFO.writeId(this, buffer);
 		buffer.writeInt(_pkAdenLabBossTooltip.size());

@@ -19,12 +19,12 @@ package ai.areas.KeucereusAllianceBase.Nottingale;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
 import org.l2jmobius.gameserver.managers.AirShipManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;

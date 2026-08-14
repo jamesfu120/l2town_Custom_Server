@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.network.holders;
 
 import java.util.Objects;
 
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 
 public class TradeItem
 {

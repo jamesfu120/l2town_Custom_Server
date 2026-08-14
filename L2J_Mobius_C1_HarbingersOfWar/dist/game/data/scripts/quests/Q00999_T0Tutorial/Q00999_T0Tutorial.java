@@ -24,12 +24,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00999_T0Tutorial extends Script
 {
@@ -149,14 +149,14 @@ public class Q00999_T0Tutorial extends Script
 			return null;
 		}
 		
-		String htmltext = event;
-		
-		final QuestState st = player.getQuestState(getName());
 		final QuestState qs = player.getQuestState("Q00255_Tutorial");
 		if (qs == null)
 		{
-			return htmltext;
+			return event;
 		}
+		
+		String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		
 		final int Ex = qs.getInt("Ex");
 		if (event.equalsIgnoreCase("TimerEx_NewbieHelper"))
@@ -317,7 +317,7 @@ public class Q00999_T0Tutorial extends Script
 								// st.playTutorialVoice("tutorial_voice_027");
 								giveItems(player, SPIRITSHOT_FOR_BEGINNERS, 100);
 								htmltext = talk._htmlfiles[2];
-								if (htmltext.equals(""))
+								if (htmltext.isEmpty())
 								{
 									htmltext = "<html><body>I`m sorry. I only help warriors. Please go to another Newbie Helper who may assist you.</body></html>";
 								}
@@ -327,7 +327,7 @@ public class Q00999_T0Tutorial extends Script
 								// st.playTutorialVoice("tutorial_voice_026");
 								giveItems(player, SOULSHOT_FOR_BEGINNERS, 200);
 								htmltext = talk._htmlfiles[1];
-								if (htmltext.equals(""))
+								if (htmltext.isEmpty())
 								{
 									htmltext = "<html><body>I`m sorry. I only help mystics. Please go to another Newbie Helper who may assist you.</body></html>";
 								}
@@ -379,7 +379,7 @@ public class Q00999_T0Tutorial extends Script
 			htmltext = npc.getId() + "-04.htm";
 		}
 		
-		if ((htmltext == null) || htmltext.equals(""))
+		if ((htmltext == null) || htmltext.isEmpty())
 		{
 			npc.showChatWindow(player);
 		}

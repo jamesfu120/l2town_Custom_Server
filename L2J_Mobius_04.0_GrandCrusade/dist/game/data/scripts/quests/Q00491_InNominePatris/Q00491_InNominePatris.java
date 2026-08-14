@@ -20,12 +20,13 @@
  */
 package quests.Q00491_InNominePatris;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.QuestType;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.data.enums.CategoryType;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.QuestType;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -33,20 +34,22 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 /**
  * In Nomine Patris (491)
  * @URL https://l2wiki.com/In_Nomine_Patris
- * @author Gigi
+ * @author Gigi, Trevor The Third
  */
 public class Q00491_InNominePatris extends Quest
 {
 	// NPCs
 	private static final int SIRIK = 33649;
-	
-	// Monster's
+	private static final int SUCCUBUS_SOLDIER = 23181;
+	private static final int SUCCUBUS_WARRIOR = 23182;
+	private static final int SUCCUBUS_ARCHER = 23183;
+	private static final int SUCCUBUS_SHAMAN = 23184;
 	private static final int[] MONSTERS =
 	{
-		23181, // Succubus Soldier
-		23182, // Succubus Warrior
-		23183, // Succubus Archer
-		23184 // Succubus Shaman
+		SUCCUBUS_SOLDIER,
+		SUCCUBUS_WARRIOR,
+		SUCCUBUS_ARCHER,
+		SUCCUBUS_SHAMAN,
 	};
 	
 	// Items
@@ -66,8 +69,9 @@ public class Q00491_InNominePatris extends Quest
 		addStartNpc(SIRIK);
 		addTalkId(SIRIK);
 		addKillId(MONSTERS);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "conditions.htm");
+		addCondInCategory(CategoryType.FOURTH_CLASS_GROUP, "conditions.htm");
 		registerQuestItems(DIMENSIONAL_FRAGMENT);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
 	}
 	
 	@Override
@@ -113,35 +117,28 @@ public class Q00491_InNominePatris extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (npc.getId() == SIRIK)
+		switch (qs.getState())
 		{
-			switch (qs.getState())
+			case State.CREATED:
 			{
-				case State.COMPLETED:
+				htmltext = "33649-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				htmltext = (qs.isCond(1)) ? "33649-07.html" : "33649-05.html";
+				break;
+			}
+			case State.COMPLETED:
+			{
+				if (qs.isNowAvailable())
 				{
-					if (!qs.isNowAvailable())
-					{
-						htmltext = "complete.htm";
-						break;
-					}
-					
 					qs.setState(State.CREATED);
+					htmltext = "33649-01.html";
 				}
-				case State.CREATED:
+				else
 				{
-					htmltext = (player.isAwakenedClass() ? "33649-01.htm" : "33649-00.html");
-					break;
-				}
-				case State.STARTED:
-				{
-					if (qs.isCond(1))
-					{
-						htmltext = "33649-07.html";
-					}
-					else if (qs.isCond(2))
-					{
-						htmltext = "33649-05.html";
-					}
+					htmltext = "complete.htm";
 					break;
 				}
 			}

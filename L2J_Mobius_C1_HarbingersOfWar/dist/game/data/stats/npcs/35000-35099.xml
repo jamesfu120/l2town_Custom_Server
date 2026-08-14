@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35010" level="50" type="Defender" name="Mercenary">
+	<npc id="35010" level="46" type="Defender" name="Mercenary">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" lhand="628" /> <!-- rhand: Knight's Sword lhand: Hoplon -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="212" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" shieldRate="20" />
+			<vitals hp="1230" hpRegen="5.5" mp="638" mpRegen="2.1" />
+			<attack physical="395" magical="339" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="184" magical="140" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -30,15 +30,15 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35011" level="50" type="Defender" name="Mercenary">
+	<npc id="35011" level="46" type="Defender" name="Mercenary">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="212" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1230" hpRegen="5.5" mp="638" mpRegen="2.1" />
+			<attack physical="460" magical="339" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="184" magical="140" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -60,15 +60,15 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35012" level="50" type="Defender" name="Mercenary">
+	<npc id="35012" level="46" type="Defender" name="Mercenary">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="212" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1230" hpRegen="5.5" mp="638" mpRegen="2.1" />
+			<attack physical="511" magical="339" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="184" magical="140" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -79,7 +79,7 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>MERCENARY_SIEGE</clan>
@@ -90,18 +90,18 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35013" level="50" type="Defender" name="Mercenary">
+	<npc id="35013" level="48" type="Defender" name="Mercenary">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="230" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1324" hpRegen="5.5" mp="1038" mpRegen="4.2" />
+			<attack physical="395" magical="371" random="50" critical="1" accuracy="9" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="255" magical="147" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -124,18 +124,18 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35014" level="50" type="Defender" name="Mercenary">
+	<npc id="35014" level="48" type="Defender" name="Mercenary">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="230" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1324" hpRegen="5.5" mp="1038" mpRegen="4.2" />
+			<attack physical="395" magical="371" random="50" critical="1" accuracy="4.75" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="255" magical="147" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -158,15 +158,15 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35015" level="50" type="Defender" name="Mercenary">
+	<npc id="35015" level="46" type="Defender" name="Mercenary">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" lhand="628" /> <!-- rhand: Knight's Sword lhand: Hoplon -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="212" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" shieldRate="20" />
+			<vitals hp="1230" hpRegen="5.5" mp="638" mpRegen="2.1" />
+			<attack physical="395" magical="339" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="184" magical="140" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -188,15 +188,15 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35016" level="50" type="Defender" name="Mercenary">
+	<npc id="35016" level="46" type="Defender" name="Mercenary">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="212" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1230" hpRegen="5.5" mp="638" mpRegen="2.1" />
+			<attack physical="460" magical="339" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="184" magical="140" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -218,15 +218,15 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35017" level="50" type="Defender" name="Mercenary">
+	<npc id="35017" level="46" type="Defender" name="Mercenary">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="212" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1230" hpRegen="5.5" mp="638" mpRegen="2.1" />
+			<attack physical="511" magical="339" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="184" magical="140" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -237,7 +237,7 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>MERCENARY_SIEGE</clan>
@@ -248,18 +248,18 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35018" level="50" type="Defender" name="Mercenary">
+	<npc id="35018" level="48" type="Defender" name="Mercenary">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="230" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1324" hpRegen="5.5" mp="1038" mpRegen="4.2" />
+			<attack physical="395" magical="371" random="50" critical="1" accuracy="9" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="255" magical="147" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -282,18 +282,18 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35019" level="50" type="Defender" name="Mercenary">
+	<npc id="35019" level="48" type="Defender" name="Mercenary">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
-		<acquire exp="449" sp="1" />
+		<acquire exp="230" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="1324" hpRegen="5.5" mp="1038" mpRegen="4.2" />
+			<attack physical="395" magical="371" random="50" critical="1" accuracy="4.75" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="255" magical="147" />
 			<speed>
 				<walk ground="50" />
 				<run ground="195" />
@@ -324,9 +324,9 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="100000.0" hpRegen="3.16" mp="989.0" mpRegen="0.91" />
-			<attack physical="547.68" magical="773.28" random="7" critical="4" accuracy="4.75" attackSpeed="376" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="753.0" magical="271.4" />
+			<vitals hp="100000" hpRegen="2" mp="891.6" mpRegen="0.9" />
+			<attack physical="604" magical="674" random="7" critical="4" accuracy="4.75" attackSpeed="385" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="837" magical="296" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -344,10 +344,11 @@
 	<npc id="35063" level="20" type="Artefact" name="Gludio Holy Artifact">
 		<race>ETC</race>
 		<sex>ETC</sex>
+		<acquire exp="40" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
-			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="86.87049" magical="63.56806" />
+			<attack physical="44" magical="30" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="86" magical="63" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
@@ -368,11 +369,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
-		<acquire exp="688" sp="1" />
+		<acquire exp="423" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="38355.9060587002" hpRegen="8.5" mp="5332.2" mpRegen="3" />
-			<attack physical="3298.27085008098" magical="750.763809564873" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+			<vitals hp="4386.862848" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="1165" magical="573" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="271" magical="198" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -399,11 +400,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
-		<acquire exp="655" sp="1" />
+		<acquire exp="384" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="34617.7253215841" hpRegen="8.5" mp="5126.4" mpRegen="3" />
-			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+			<vitals hp="4075.621631" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="1042" magical="512" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257" magical="188" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -430,11 +431,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
-		<acquire exp="624" sp="1" />
+		<acquire exp="360" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
+			<vitals hp="1933.240437" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="866" magical="473" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247" magical="181" shield="124" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -464,11 +465,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="592" sp="1" />
+		<acquire exp="336" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="1828.682664" hpRegen="6.5" mp="1466.1" mpRegen="2.4" />
+			<attack physical="797" magical="435" random="50" critical="1" accuracy="9" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237" magical="174" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -499,11 +500,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
-		<acquire exp="592" sp="1" />
+		<acquire exp="336" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="1828.682664" hpRegen="6.5" mp="1466.1" mpRegen="2.4" />
+			<attack physical="797" magical="435" random="50" critical="1" accuracy="4.75" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237" magical="174" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -531,11 +532,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
-		<acquire exp="592" sp="1" />
+		<acquire exp="336" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="1828.682664" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="797" magical="435" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="237" magical="174" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -562,11 +563,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -593,11 +594,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -624,11 +625,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -640,7 +641,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>GLUDIO_SIEGE</clan>
@@ -655,11 +656,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -686,11 +687,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -717,11 +718,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -733,7 +734,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>GLUDIO_SIEGE</clan>
@@ -748,11 +749,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -779,11 +780,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -810,11 +811,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -826,7 +827,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>GLUDIO_SIEGE</clan>
@@ -841,11 +842,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
-		<acquire exp="624" sp="1" />
+		<acquire exp="360" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
+			<vitals hp="1933.240437" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="866" magical="473" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247" magical="181" shield="124" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -875,11 +876,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="592" sp="1" />
+		<acquire exp="336" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="1828.682664" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="797" magical="435" random="50" critical="1" accuracy="9" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237" magical="174" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -910,11 +911,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
-		<acquire exp="592" sp="1" />
+		<acquire exp="336" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="1828.682664" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="797" magical="435" random="50" critical="1" accuracy="4.75" attackSpeed="379" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237" magical="174" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -942,11 +943,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
-		<acquire exp="592" sp="1" />
+		<acquire exp="336" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="1828.682664" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="797" magical="435" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="237" magical="174" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -973,11 +974,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1004,11 +1005,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1035,11 +1036,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1051,7 +1052,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>GLUDIO_SIEGE</clan>
@@ -1066,11 +1067,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1097,11 +1098,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1128,11 +1129,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1144,7 +1145,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>GLUDIO_SIEGE</clan>
@@ -1159,11 +1160,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="-3.75" attackSpeed="325" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1190,11 +1191,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="30" critical="4" accuracy="0" attackSpeed="379" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1221,11 +1222,11 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="561" sp="1" />
+		<acquire exp="314" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="1724.683098" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="730" magical="399" random="10" critical="8" accuracy="-3.75" attackSpeed="293" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="228" magical="167" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1237,7 +1238,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>GLUDIO_SIEGE</clan>

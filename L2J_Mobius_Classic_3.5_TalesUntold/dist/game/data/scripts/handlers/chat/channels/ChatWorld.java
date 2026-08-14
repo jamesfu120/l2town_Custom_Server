@@ -23,12 +23,12 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.custom.FactionSystemConfig;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.IChatHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -93,7 +93,7 @@ public class ChatWorld implements IChatHandler
 			// Verify if player is not spaming.
 			if (GeneralConfig.WORLD_CHAT_INTERVAL.getSeconds() > 0)
 			{
-				final Instant instant = REUSE.getOrDefault(activeChar.getObjectId(), null);
+				final Instant instant = REUSE.get(activeChar.getObjectId());
 				if ((instant != null) && instant.isAfter(now))
 				{
 					final Duration timeDiff = Duration.between(now, instant);
@@ -114,7 +114,7 @@ public class ChatWorld implements IChatHandler
 			{
 				if (activeChar.isGood())
 				{
-					for (Player player : World.getInstance().getAllGoodPlayers())
+					for (Player player : World.getAllGoodPlayers())
 					{
 						if (activeChar.isNotBlocked(player))
 						{
@@ -125,7 +125,7 @@ public class ChatWorld implements IChatHandler
 				
 				if (activeChar.isEvil())
 				{
-					for (Player player : World.getInstance().getAllEvilPlayers())
+					for (Player player : World.getAllEvilPlayers())
 					{
 						if (activeChar.isNotBlocked(player))
 						{
@@ -136,7 +136,7 @@ public class ChatWorld implements IChatHandler
 			}
 			else
 			{
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					if (activeChar.isNotBlocked(player))
 					{

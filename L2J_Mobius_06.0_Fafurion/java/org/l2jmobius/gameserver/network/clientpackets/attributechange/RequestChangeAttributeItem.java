@@ -21,13 +21,13 @@
 package org.l2jmobius.gameserver.network.clientpackets.attributechange;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.enchant.attribute.AttributeHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -64,7 +64,7 @@ public class RequestChangeAttributeItem extends ClientPacket
 		final PlayerInventory inventory = player.getInventory();
 		final Item item = inventory.getItemByObjectId(_itemObjId);
 		
-		// attempting to destroy item
+		// Attempting to destroy item.
 		if (player.getInventory().destroyItemByItemId(ItemProcessType.FEE, _consumeItemId, 1, player, item) == null)
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);

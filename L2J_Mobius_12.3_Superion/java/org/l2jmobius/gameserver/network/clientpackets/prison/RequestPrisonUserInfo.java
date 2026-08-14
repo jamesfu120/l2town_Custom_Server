@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.prison;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.prison.ExPrisonUserInfo;
 

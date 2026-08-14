@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.data.holders;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemPointHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemPointHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw

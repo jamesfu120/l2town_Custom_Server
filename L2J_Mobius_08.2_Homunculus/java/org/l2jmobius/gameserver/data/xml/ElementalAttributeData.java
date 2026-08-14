@@ -30,11 +30,11 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.AttributeSystemConfig;
 import org.l2jmobius.gameserver.data.holders.ElementalItemHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.item.enums.ElementalItemType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.enums.ElementalItemType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius

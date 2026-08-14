@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.taskmanagers;
 
 import java.util.Calendar;
 
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.OnDayNightChange;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDayNightChange;
 
 /**
  * GameTime task manager class.
@@ -119,7 +119,7 @@ public class GameTimeTaskManager extends Thread
 		return _gameTime % 60;
 	}
 	
-	public static final GameTimeTaskManager getInstance()
+	public static GameTimeTaskManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

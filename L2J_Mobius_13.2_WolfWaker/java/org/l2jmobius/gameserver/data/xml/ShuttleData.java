@@ -28,14 +28,14 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.holders.creature.VehiclePathPoint;
-import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
-import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2jmobius.gameserver.model.shuttle.ShuttleDataHolder;
-import org.l2jmobius.gameserver.model.shuttle.ShuttleEngine;
-import org.l2jmobius.gameserver.model.shuttle.ShuttleStop;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.holders.creature.VehiclePathPoint;
+import org.l2jmobius.gameserver.entity.actor.instance.Shuttle;
+import org.l2jmobius.gameserver.entity.actor.templates.CreatureTemplate;
+import org.l2jmobius.gameserver.entity.shuttle.ShuttleDataHolder;
+import org.l2jmobius.gameserver.entity.shuttle.ShuttleEngine;
+import org.l2jmobius.gameserver.entity.shuttle.ShuttleStop;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid

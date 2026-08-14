@@ -20,15 +20,15 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.subjugation;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SubjugationGacha;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerPurgeHolder;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerPurgeHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationGacha;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationGachaUI;
@@ -69,18 +69,29 @@ public class RequestSubjugationGacha extends ClientPacket
 			player.getInventory().reduceAdena(ItemProcessType.FEE, 20000L * _amount, player, null);
 			final int curKeys = playerKeys.getKeys() - _amount;
 			player.getPurgePoints().put(_category, new PlayerPurgeHolder(playerKeys.getPoints(), curKeys, 0));
+			final int dataSize = subjugationData.size();
+			final double[] chances = new double[dataSize];
+			final int[] itemIds = new int[dataSize];
+			double maxBound = 0;
+			int idx = 0;
+			for (Entry<Integer, Double> entry : subjugationData.entrySet())
+			{
+				final double chance = entry.getValue();
+				chances[idx] = chance;
+				itemIds[idx] = entry.getKey();
+				maxBound += chance;
+				idx++;
+			}
 			Map<Integer, Integer> rewards = new HashMap<>();
 			for (int i = 0; i < _amount; i++)
 			{
 				double rate = 0;
-				for (int index = 0; index < subjugationData.size(); index++)
+				for (int index = 0; index < dataSize; index++)
 				{
-					final double[] chances = subjugationData.values().stream().mapToDouble(it -> it).toArray();
-					final double maxBound = Arrays.stream(chances).sum();
 					final double itemChance = chances[index];
 					if (Rnd.get(maxBound - rate) < itemChance)
 					{
-						final int itemId = subjugationData.keySet().stream().mapToInt(it -> it).toArray()[index];
+						final int itemId = itemIds[index];
 						rewards.put(itemId, rewards.getOrDefault(itemId, 0) + 1);
 						player.addItem(ItemProcessType.REWARD, itemId, 1, player, true);
 						break;

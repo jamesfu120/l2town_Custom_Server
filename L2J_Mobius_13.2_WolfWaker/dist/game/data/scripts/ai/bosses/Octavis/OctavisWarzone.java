@@ -16,26 +16,26 @@
  */
 package ai.bosses.Octavis;
 
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.managers.WalkingManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.stats.Stat;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Octavis Warzone instance zone.
@@ -390,7 +390,13 @@ public class OctavisWarzone extends InstanceScript
 				final Creature mostHated = npc.asAttackable().getMostHated();
 				if ((mostHated != null) && mostHated.isPlayer() && (npc.calculateDistance3D(npc) < 5000))
 				{
-					World.getInstance().getVisibleObjectsInRange(npc, Attackable.class, 4000, obj -> ArrayUtil.contains(BEASTS_MINIONS, obj.getId()) || ArrayUtil.contains(GLADIATORS, obj.getId())).forEach(minion -> addAttackPlayerDesire(minion, mostHated.asPlayer(), 23));
+					World.forEachVisibleObjectInRange(npc, Attackable.class, 4000, minion ->
+					{
+						if (ArrayUtil.contains(BEASTS_MINIONS, minion.getId()) || ArrayUtil.contains(GLADIATORS, minion.getId()))
+						{
+							addAttackPlayerDesire(minion, mostHated.asPlayer(), 23);
+						}
+					});
 				}
 				
 				getTimers().addTimer("MINION_CALL", 5000 + (getRandom(5) * 1000), npc, null);

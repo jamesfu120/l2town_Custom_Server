@@ -28,16 +28,16 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.custom.CaptchaConfig;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.actor.request.CaptchaRequest;
-import org.l2jmobius.gameserver.model.captcha.Captcha;
-import org.l2jmobius.gameserver.model.captcha.CaptchaGenerator;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureKilled;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.actor.request.CaptchaRequest;
+import org.l2jmobius.gameserver.mechanics.captcha.Captcha;
+import org.l2jmobius.gameserver.mechanics.captcha.CaptchaGenerator;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureKilled;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaImage;
 
@@ -119,7 +119,7 @@ public class CaptchaManager
 		}
 	}
 	
-	public static final CaptchaManager getInstance()
+	public static CaptchaManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

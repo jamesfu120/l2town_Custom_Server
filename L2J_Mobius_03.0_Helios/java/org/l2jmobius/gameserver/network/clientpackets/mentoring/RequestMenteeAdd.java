@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.mentoring;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -45,7 +45,7 @@ public class RequestMenteeAdd extends ClientPacket
 			return;
 		}
 		
-		final Player mentee = World.getInstance().getPlayer(_target);
+		final Player mentee = World.getPlayer(_target);
 		if (mentee == null)
 		{
 			return;

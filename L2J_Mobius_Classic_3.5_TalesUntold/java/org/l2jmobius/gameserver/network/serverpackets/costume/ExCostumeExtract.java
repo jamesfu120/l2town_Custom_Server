@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.costume;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CostumeTable;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -60,7 +60,7 @@ public class ExCostumeExtract extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_COSTUME_EXTRACT.writeId(this, buffer);
 		buffer.writeByte(_success);

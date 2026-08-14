@@ -24,10 +24,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 
 public class Q00255_Tutorial extends Quest
 {
@@ -172,12 +172,12 @@ public class Q00255_Tutorial extends Quest
 	@Override
 	public String onEvent(String event, Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, false);
 		if (PlayerConfig.DISABLE_TUTORIAL)
 		{
 			return "";
 		}
 		
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return null;
@@ -329,17 +329,19 @@ public class Q00255_Tutorial extends Quest
 					}
 					case 23:
 					{
-						if (TCLb.containsKey(classId))
+						final String entry = TCLb.get(classId);
+						if (entry != null)
 						{
-							html = TCLb.get(classId);
+							html = entry;
 						}
 						break;
 					}
 					case 24:
 					{
-						if (TCLc.containsKey(classId))
+						final String entry = TCLc.get(classId);
+						if (entry != null)
 						{
-							html = TCLc.get(classId);
+							html = entry;
 						}
 						break;
 					}
@@ -350,9 +352,10 @@ public class Q00255_Tutorial extends Quest
 					}
 					case 26:
 					{
-						if (TCLa.containsKey(classId))
+						final String entry = TCLa.get(classId);
+						if (entry != null)
 						{
-							html = TCLa.get(classId);
+							html = entry;
 						}
 						break;
 					}
@@ -686,9 +689,10 @@ public class Q00255_Tutorial extends Quest
 				}
 				case 24:
 				{
-					if (QMCb.containsKey(classId))
+					final String entry = QMCb.get(classId);
+					if (entry != null)
 					{
-						html = QMCb.get(classId);
+						html = entry;
 					}
 					break;
 				}
@@ -709,9 +713,10 @@ public class Q00255_Tutorial extends Quest
 				}
 				case 35:
 				{
-					if (QMCc.containsKey(classId))
+					final String entry = QMCc.get(classId);
+					if (entry != null)
 					{
-						html = QMCc.get(classId);
+						html = entry;
 					}
 					break;
 				}

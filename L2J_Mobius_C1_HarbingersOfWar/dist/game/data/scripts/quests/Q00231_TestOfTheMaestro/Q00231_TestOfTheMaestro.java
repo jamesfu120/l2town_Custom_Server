@@ -20,15 +20,14 @@
  */
 package quests.Q00231_TestOfTheMaestro;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q00231_TestOfTheMaestro extends Quest
@@ -140,13 +139,13 @@ public class Q00231_TestOfTheMaestro extends Quest
 			{
 				final Attackable bugbear1 = addSpawn(KING_BUGBEAR, 140333, -194153, -3138, 0, false, 200000).asAttackable();
 				bugbear1.addDamageHate(player, 0, 999);
-				bugbear1.getAI().setIntention(Intention.ATTACK, player);
+				bugbear1.getAI().setIntentionAttack(player);
 				final Attackable bugbear2 = addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000).asAttackable();
 				bugbear2.addDamageHate(player, 0, 999);
-				bugbear2.getAI().setIntention(Intention.ATTACK, player);
+				bugbear2.getAI().setIntentionAttack(player);
 				final Attackable bugbear3 = addSpawn(KING_BUGBEAR, 140304, -194082, -3157, 0, false, 200000).asAttackable();
 				bugbear3.addDamageHate(player, 0, 999);
-				bugbear3.getAI().setIntention(Intention.ATTACK, player);
+				bugbear3.getAI().setIntentionAttack(player);
 				return null;
 			}
 		}

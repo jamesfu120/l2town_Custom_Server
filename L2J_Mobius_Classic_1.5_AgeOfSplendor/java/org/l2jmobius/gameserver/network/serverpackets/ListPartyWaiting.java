@@ -16,14 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom;
+import org.l2jmobius.gameserver.entity.groups.matching.PartyMatchingRoomLevelType;
 import org.l2jmobius.gameserver.managers.MatchingRoomManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoom;
-import org.l2jmobius.gameserver.model.groups.matching.PartyMatchingRoomLevelType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -34,7 +34,7 @@ public class ListPartyWaiting extends ServerPacket
 {
 	private static final int NUM_PER_PAGE = 64;
 	
-	private final List<MatchingRoom> _rooms = new LinkedList<>();
+	private final List<MatchingRoom> _rooms = new ArrayList<>();
 	private final int _size;
 	
 	public ListPartyWaiting(PartyMatchingRoomLevelType type, int location, int page, int requestorLevel)
@@ -55,7 +55,7 @@ public class ListPartyWaiting extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.LIST_PARTY_WATING.writeId(this, buffer);
 		buffer.writeInt(_size);

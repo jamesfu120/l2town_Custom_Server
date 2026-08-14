@@ -20,15 +20,15 @@
  */
 package instances.FallenEmperorsThrone;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author CostyKiller
@@ -274,7 +274,7 @@ public class FallenEmperorsThrone extends InstanceScript
 			{
 				world.getParameters().set("ANNOUNCE", true);
 				startQuestTimer("DEBUFF_TASK", 20000, npc, attacker);
-				Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_ADEN_WARRIORS_BEGIN_BATTLE_WITH_THE_GIANT_EMPEROR_HELIOS, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_ADEN_WARRIORS_BEGIN_BATTLE_WITH_THE_GIANT_EMPEROR_HELIOS, ExShowScreenMessage.TOP_CENTER, 10000, true));
 			}
 			
 			if ((npc.getId() == FE_HELIOS1) && !STAGE1_50 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))

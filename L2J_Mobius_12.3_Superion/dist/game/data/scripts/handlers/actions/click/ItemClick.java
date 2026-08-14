@@ -20,15 +20,14 @@
  */
 package handlers.actions.click;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.InstanceType;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
 import org.l2jmobius.gameserver.handler.IActionClickHandler;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.managers.SiegeGuardManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class ItemClick implements IActionClickHandler
@@ -41,13 +40,13 @@ public class ItemClick implements IActionClickHandler
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_CHANGE_MERCENARY_POSITIONS);
 			player.setTarget(target);
-			player.getAI().setIntention(Intention.IDLE);
+			player.getAI().setIntentionIdle();
 			return false;
 		}
 		
 		if (!player.isFlying())
 		{
-			player.getAI().setIntention(Intention.PICK_UP, target);
+			player.getAI().setIntentionPickUp(target);
 		}
 		
 		return true;

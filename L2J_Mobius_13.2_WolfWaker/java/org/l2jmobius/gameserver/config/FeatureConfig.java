@@ -106,6 +106,7 @@ public class FeatureConfig
 	public static int CLAN_CONTRIBUTION_REWARD_FOR_ENEMY;
 	public static int CLAN_CONTRIBUTION_REQUIRED;
 	public static int CLAN_CONTRIBUTION_FAME_REWARD;
+	public static boolean CLAN_WAR_KILL_MESSAGE;
 	public static int BALLISTA_POINTS;
 	public static int BLOODALLIANCE_POINTS;
 	public static int BLOODOATH_POINTS;
@@ -200,6 +201,7 @@ public class FeatureConfig
 		CLAN_CONTRIBUTION_REWARD_FOR_ENEMY = config.getInt("ClanContributionRewardForEnemy", 1);
 		CLAN_CONTRIBUTION_REQUIRED = config.getInt("ClanContributionRequired", 100);
 		CLAN_CONTRIBUTION_FAME_REWARD = config.getInt("ClanContributionFameReward", 300);
+		CLAN_WAR_KILL_MESSAGE = config.getBoolean("ClanWarKillMessage", false);
 		BALLISTA_POINTS = config.getInt("KillBallistaPoints", 500);
 		BLOODALLIANCE_POINTS = config.getInt("BloodAlliancePoints", 500);
 		BLOODOATH_POINTS = config.getInt("BloodOathPoints", 200);

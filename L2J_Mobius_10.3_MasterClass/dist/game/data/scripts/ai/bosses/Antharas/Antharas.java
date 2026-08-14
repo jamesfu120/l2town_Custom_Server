@@ -24,17 +24,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 
@@ -174,12 +173,10 @@ public class Antharas extends InstanceScript
 				{
 					if ((npc != null) && !npc.isDead())
 					{
-						final List<Player> playersInRange = World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000);
-						playersInRange.removeIf(p -> p.calculateDistance3D(npc) > 1000);
-						final Player target = playersInRange.isEmpty() ? null : getRandomEntry(playersInRange);
+						final Player target = World.getRandomVisibleObjectInRange(npc, Player.class, 1000);
 						if (target != null)
 						{
-							npc.getAI().setIntention(Intention.CAST, ATTACK_SKILL.getSkill(), target);
+							npc.getAI().setIntentionCast(ATTACK_SKILL.getSkill(), target);
 						}
 					}
 					break;

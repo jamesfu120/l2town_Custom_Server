@@ -27,13 +27,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.DoorData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.CastleManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
 
 /**
  * This class handles following admin commands: - open1 = open coloseum door 24190001 - open2 = open coloseum door 24190002 - open3 = open coloseum door 24190003 - open4 = open coloseum door 24190004 - openall = open all coloseum door - close1 = close coloseum door 24190001 - close2 = close coloseum
@@ -174,18 +174,9 @@ public class AdminDoorControl implements IAdminCommandHandler
 				}
 				else
 				{
-					final Set<Integer> doorIds;
-					if (PLAYER_SHOWN_DOORS.containsKey(activeChar))
-					{
-						doorIds = PLAYER_SHOWN_DOORS.get(activeChar);
-					}
-					else
-					{
-						doorIds = new HashSet<>();
-						PLAYER_SHOWN_DOORS.put(activeChar, doorIds);
-					}
+					final Set<Integer> doorIds = PLAYER_SHOWN_DOORS.computeIfAbsent(activeChar, _ -> new HashSet<>());
 					
-					World.getInstance().forEachVisibleObject(activeChar, Door.class, door ->
+					World.forEachVisibleObject(activeChar, Door.class, door ->
 					{
 						if (doorIds.contains(door.getId()))
 						{

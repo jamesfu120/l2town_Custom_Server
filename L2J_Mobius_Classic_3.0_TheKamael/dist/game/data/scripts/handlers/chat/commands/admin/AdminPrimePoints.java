@@ -20,10 +20,10 @@ import java.util.Collection;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.FormatUtil;
 
@@ -123,12 +123,12 @@ public class AdminPrimePoints implements IAdminCommandHandler
 						
 						if (range <= 0)
 						{
-							final int count = increaseForAll(World.getInstance().getPlayers(), value);
+							final int count = increaseForAll(World.getPlayers(), value);
 							activeChar.sendSysMessage("You increased Prime Point(s) of all online players (" + count + ") by " + value + ".");
 						}
 						else if (range > 0)
 						{
-							final int count = increaseForAll(World.getInstance().getVisibleObjectsInRange(activeChar, Player.class, range), value);
+							final int count = increaseForAll(World.getVisibleObjectsInRange(activeChar, Player.class, range), value);
 							activeChar.sendSysMessage("You increased Prime Point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
 						}
 						break;

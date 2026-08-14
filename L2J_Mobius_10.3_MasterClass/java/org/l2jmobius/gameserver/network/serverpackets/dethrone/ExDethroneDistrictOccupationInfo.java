@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.dethrone;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.ServerConfig;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 public class ExDethroneDistrictOccupationInfo extends ServerPacket
 {
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_DETHRONE_DISTRICT_OCCUPATION_INFO.writeId(this, buffer);
 		buffer.writeInt(3); // array size for conquest regions (currently 3)

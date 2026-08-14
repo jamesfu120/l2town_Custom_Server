@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.pledgeV2;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeShowInfoUpdate;

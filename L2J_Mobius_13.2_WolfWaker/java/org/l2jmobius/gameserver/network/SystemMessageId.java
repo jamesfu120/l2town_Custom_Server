@@ -37,7 +37,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.gameserver.config.custom.MultilingualSupportConfig;
-import org.l2jmobius.gameserver.model.clientstrings.Builder;
+import org.l2jmobius.gameserver.mechanics.clientstrings.Builder;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SystemMessageId
@@ -10460,7 +10460,7 @@ public class SystemMessageId
 	@ClientString(id = 3610, message = "Kr....ah..ahhhhh...!!!")
 	public static SystemMessageId KR_AH_AHHHHH;
 	
-	@ClientString(id = 3611, message = "You—you fool.")
+	@ClientString(id = 3611, message = "You-you fool.")
 	public static SystemMessageId YOU_YOU_FOOL;
 	
 	@ClientString(id = 3612, message = "Leave this place now!")

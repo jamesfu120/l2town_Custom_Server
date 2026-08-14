@@ -16,17 +16,17 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.alchemy;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -48,7 +48,7 @@ public class RequestAlchemyTryMixCube extends ClientPacket
 	// TODO: Figure out how much stones are given
 	private static final int TEMPEST_STONE_AMOUNT = 1;
 	
-	private List<ItemHolder> _items = new LinkedList<>();
+	private List<ItemHolder> _items = new ArrayList<>();
 	
 	@Override
 	protected void readImpl()
@@ -124,7 +124,7 @@ public class RequestAlchemyTryMixCube extends ClientPacket
 		int position = 0;
 		long itemsPrice = 0;
 		
-		// First loop for safety check + price calculation
+		// First loop for safety check + price calculation.
 		for (ItemHolder item : _items)
 		{
 			final Item itemInstance = player.getInventory().getItemByObjectId(item.getId());
@@ -139,7 +139,6 @@ public class RequestAlchemyTryMixCube extends ClientPacket
 				return;
 			}
 			
-			final long price = itemInstance.getReferencePrice();
 			if (itemInstance.getReferencePrice() == 0)
 			{
 				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_USED_IN_COMPOUNDING);
@@ -154,6 +153,7 @@ public class RequestAlchemyTryMixCube extends ClientPacket
 				return;
 			}
 			
+			final long price = itemInstance.getReferencePrice();
 			itemsPrice += price * item.getCount();
 			position++;
 			
@@ -171,15 +171,15 @@ public class RequestAlchemyTryMixCube extends ClientPacket
 		}
 		
 		// Calculate the amount of air stones the player should received based on the total price of items he mixed.
-		int airStonesCount = (int) Math.floor((itemsPrice / 5000) * (_items.size() < 3 ? 0.3f : 0.5f));
+		int airStonesCount = (int) ((itemsPrice / 5000) * (_items.size() < 3 ? 0.3f : 0.5f));
 		
-		// Process only if there is at least one air stone to give
+		// Process only if there is at least one air stone to give.
 		if (airStonesCount > 0)
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
 			long elcyumCrystals = 0;
 			
-			// Second loop for items deletion if we're still in the game
+			// Second loop for items deletion if we're still in the game.
 			for (ItemHolder item : _items)
 			{
 				final Item itemInstance = player.getInventory().getItemByObjectId(item.getId());
@@ -204,22 +204,22 @@ public class RequestAlchemyTryMixCube extends ClientPacket
 			
 			final ExTryMixCube mixCubeResult = new ExTryMixCube(TryMixCubeType.SUCCESS_NORMAL);
 			
-			// Whenever there is Elcyum Crystal applied there's a chance to receive Tempest Stone
+			// Whenever there is Elcyum Crystal applied there's a chance to receive Tempest Stone.
 			// TODO: Figure out the chance
 			if ((elcyumCrystals > 0) && (Rnd.get(100) < 50))
 			{
-				// Broadcast animation on success
+				// Broadcast animation on success.
 				player.broadcastPacket(new MagicSkillUse(player, CommonSkill.ALCHEMY_CUBE_RANDOM_SUCCESS.getId(), TEMPEST_STONE_AMOUNT, 500, 1500));
 				
-				// Give Tempest Stone to the player
+				// Give Tempest Stone to the player.
 				final Item tempestStonesInstance = player.addItem(ItemProcessType.REWARD, Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, null, true);
 				iu.addItem(tempestStonesInstance);
 				
-				// Add the alchemy result entry to the packet
+				// Add the alchemy result entry to the packet.
 				mixCubeResult.addItem(new AlchemyResult(Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, TryMixCubeResultType.EXTRA));
 			}
 			
-			// Calculate the elcyum crystals bonus
+			// Calculate the elcyum crystals bonus.
 			final boolean bonusSuccess = ((100. * Rnd.nextDouble()) < (elcyumCrystals / 1000));
 			if (bonusSuccess)
 			{
@@ -229,7 +229,7 @@ public class RequestAlchemyTryMixCube extends ClientPacket
 			final Item airStonesInstance = player.addItem(ItemProcessType.REWARD, Inventory.AIR_STONE_ID, airStonesCount, null, true);
 			iu.addItem(airStonesInstance);
 			
-			// Add the Air Stones
+			// Add the Air Stones.
 			mixCubeResult.addItem(new AlchemyResult(Inventory.AIR_STONE_ID, airStonesCount, bonusSuccess ? TryMixCubeResultType.BONUS : TryMixCubeResultType.NORMAL));
 			
 			// send packets

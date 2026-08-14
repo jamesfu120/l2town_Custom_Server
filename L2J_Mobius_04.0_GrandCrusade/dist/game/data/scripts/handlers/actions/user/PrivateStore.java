@@ -19,10 +19,10 @@ package handlers.actions.user;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
@@ -47,7 +47,7 @@ public class PrivateStore implements IActionUserHandler
 			return;
 		}
 		
-		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
+		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death).
 		if (!player.canOpenPrivateStore())
 		{
 			if (player.isInsideZone(ZoneId.NO_STORE))

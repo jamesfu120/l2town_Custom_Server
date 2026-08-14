@@ -22,8 +22,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -94,7 +94,7 @@ public class ChangePassword implements IVoicedCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("A problem occured while changing password!");
+				activeChar.sendMessage("A problem occurred while changing password!");
 				LOGGER.log(Level.WARNING, "", e);
 			}
 		}

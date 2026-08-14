@@ -23,12 +23,12 @@ package org.l2jmobius.gameserver.network.serverpackets.newhenna;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.HennaPatternPotentialData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.henna.Henna;
-import org.l2jmobius.gameserver.model.item.henna.HennaPoten;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.henna.Henna;
+import org.l2jmobius.gameserver.entity.item.henna.HennaPoten;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -58,7 +58,7 @@ public class NewHennaList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_NEW_HENNA_LIST.writeId(this, buffer);
 		buffer.writeByte(_sendType); // SendType

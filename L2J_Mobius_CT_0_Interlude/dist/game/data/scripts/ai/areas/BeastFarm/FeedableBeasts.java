@@ -25,16 +25,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.TamedBeast;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
@@ -140,12 +139,8 @@ public class FeedableBeasts extends Script
 		
 		public Integer getMob(int spice, int mobType, int classType)
 		{
-			if (_spiceToMob.containsKey(spice))
-			{
-				return _spiceToMob.get(spice)[mobType][classType];
-			}
-			
-			return null;
+			final int[][] data = _spiceToMob.get(spice);
+			return (data != null) ? data[mobType][classType] : null;
 		}
 		
 		public Integer getRandomMob(int spice)
@@ -453,7 +448,7 @@ public class FeedableBeasts extends Script
 			
 			nextNpc.setRunning();
 			nextNpc.addDamageHate(player, 0, 99999);
-			nextNpc.getAI().setIntention(Intention.ATTACK, player);
+			nextNpc.getAI().setIntentionAttack(player);
 		}
 	}
 	
@@ -479,7 +474,7 @@ public class FeedableBeasts extends Script
 			
 			nextNpc.setRunning();
 			nextNpc.addDamageHate(player, 0, 99999);
-			nextNpc.getAI().setIntention(Intention.ATTACK, player);
+			nextNpc.getAI().setIntentionAttack(player);
 		}
 		
 		return super.onEvent(event, npc, player);
@@ -508,9 +503,10 @@ public class FeedableBeasts extends Script
 		// First gather some values on local variables
 		final int objectId = npc.getObjectId();
 		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in GROWTH_CAPABLE_MOBS, then it's at max growth (3)
-		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
+		final GrowthCapableMob growthData = GROWTH_CAPABLE_MONSTERS.get(npcId);
+		if (growthData != null)
 		{
-			growthLevel = GROWTH_CAPABLE_MONSTERS.get(npcId).getGrowthLevel();
+			growthLevel = growthData.getGrowthLevel();
 		}
 		
 		// Prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
@@ -536,10 +532,11 @@ public class FeedableBeasts extends Script
 		npc.broadcastSocialAction(2);
 		
 		// If the pet can grow
-		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
+		final GrowthCapableMob growthData2 = GROWTH_CAPABLE_MONSTERS.get(npcId);
+		if (growthData2 != null)
 		{
 			// Do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
-			if (GROWTH_CAPABLE_MONSTERS.get(npcId).getMob(food, 0, 0) == null)
+			if (growthData2.getMob(food, 0, 0) == null)
 			{
 				return;
 			}
@@ -558,7 +555,7 @@ public class FeedableBeasts extends Script
 			}
 			
 			// Polymorph the mob, with a certain chance, given its current growth level
-			if (getRandom(100) < GROWTH_CAPABLE_MONSTERS.get(npcId).getChance())
+			if (getRandom(100) < growthData2.getChance())
 			{
 				spawnNext(npc, growthLevel, caster, food);
 			}

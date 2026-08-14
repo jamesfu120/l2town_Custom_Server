@@ -20,16 +20,12 @@
  */
 package handlers.actions.click;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.InstanceType;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
 import org.l2jmobius.gameserver.handler.IActionClickHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
-import org.l2jmobius.gameserver.model.actor.holders.creature.DoorRequestHolder;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
-import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 
 public class DoorClick implements IActionClickHandler
@@ -37,7 +33,7 @@ public class DoorClick implements IActionClickHandler
 	@Override
 	public boolean onAction(Player player, WorldObject target, boolean interact)
 	{
-		// Check if the Player already target the Npc
+		// Check if the Player already target the Npc.
 		if (player.getTarget() != target)
 		{
 			player.setTarget(target);
@@ -51,27 +47,31 @@ public class DoorClick implements IActionClickHandler
 			{
 				if (Math.abs(player.getZ() - target.getZ()) < 400)
 				{
-					player.getAI().setIntention(Intention.ATTACK, target);
+					player.getAI().setIntentionAttack(target);
 				}
 			}
 			else if ((player.getClan() != null) && (door.getClanHall() != null) && (player.getClanId() == door.getClanHall().getOwnerId()))
 			{
 				if (!door.isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
 				{
-					player.getAI().setIntention(Intention.INTERACT, target);
+					player.getAI().setIntentionInteract(target);
 				}
-				else if (!door.getClanHall().isSiegableHall() || !((SiegableHall) door.getClanHall()).isInSiege())
-				{
-					player.addScript(new DoorRequestHolder(door));
-					if (!door.isOpen())
-					{
-						player.sendPacket(new ConfirmDlg(1140));
-					}
-					else
-					{
-						player.sendPacket(new ConfirmDlg(1141));
-					}
-				}
+				
+				// Bellow code commented, since in C1 DlgAnswer client packet does not exist.
+				
+				// else if (!door.getClanHall().isSiegableHall() || !((SiegableHall) door.getClanHall()).isInSiege())
+				// {
+				//
+				// player.addScript(new DoorRequestHolder(door));
+				// if (!door.isOpen())
+				// {
+				// player.sendPacket(new ConfirmDlg(1140));
+				// }
+				// else
+				// {
+				// player.sendPacket(new ConfirmDlg(1141));
+				// }
+				// }
 			}
 		}
 		

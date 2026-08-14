@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.revenge;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RevengeHistoryManager;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.pledgebonus;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.clan.enums.ClanRewardType;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanRewardType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -37,7 +37,7 @@ public class ExPledgeBonusUpdate extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_BONUS_UPDATE.writeId(this, buffer);
 		buffer.writeByte(_type.getClientId());

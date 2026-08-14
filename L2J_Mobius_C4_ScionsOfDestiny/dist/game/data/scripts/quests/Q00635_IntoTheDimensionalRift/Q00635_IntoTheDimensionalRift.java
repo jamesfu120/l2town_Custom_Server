@@ -20,12 +20,12 @@
  */
 package quests.Q00635_IntoTheDimensionalRift;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 /**
  * @author Mobius
@@ -95,7 +95,7 @@ public class Q00635_IntoTheDimensionalRift extends Quest
 					htmltext = "5a.htm";
 				}
 				
-				qs.set("count", "" + (count + 1));
+				qs.set("count", String.valueOf(count + 1));
 				qs.setState(State.STARTED);
 				qs.setCond(1);
 				qs.getPlayer().teleToLocation(-114790, -180576, -6781);
@@ -142,7 +142,7 @@ public class Q00635_IntoTheDimensionalRift extends Quest
 			{
 				qs.setState(State.CREATED);
 				id = (npcId - 31493);
-				qs.set("id", "" + id);
+				qs.set("id", String.valueOf(id));
 				htmltext = "4.htm";
 			}
 		}

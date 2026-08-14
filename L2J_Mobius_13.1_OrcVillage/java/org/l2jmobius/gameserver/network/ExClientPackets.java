@@ -21,7 +21,8 @@
 package org.l2jmobius.gameserver.network;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -126,6 +127,8 @@ import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExCancelEnc
 import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExRemoveEnchantSupportItem;
 import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExTryToPutEnchantSupportItem;
 import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExTryToPutEnchantTargetItem;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.challengepoint.ExRequestResetEnchantChallengePoint;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.challengepoint.ExRequestSetEnchantChallengePoint;
 import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestFinishMultiEnchantScroll;
 import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestMultiEnchantItemList;
 import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestSetMultiEnchantItemList;
@@ -620,7 +623,7 @@ public enum ExClientPackets
 	EX_PLEDGE_ITEM_ACTIVATE(0x14A, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ANNOUNCE(0x14B, RequestExPledgeAnnounce::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_ANNOUNCE_SET(0x14C, RequestExPledgeAnnounceSet::new, ConnectionState.IN_GAME),
-	EX_CREATE_PLEDGE(0x14D, null, ConnectionState.IN_GAME),
+	EX_CREATE_PLEDGE(0x14D, RequestCreatePledge::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_INFO(0x14E, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_BUY(0x14F, RequestExPledgeItemBuy::new, ConnectionState.IN_GAME),
 	EX_ELEMENTAL_SPIRIT_INFO(0x150, null, ConnectionState.IN_GAME),
@@ -846,8 +849,8 @@ public enum ExClientPackets
 	EX_SAYHAS_SUPPORT_TOGGLE(0x227, HuntpassSayhasToggle::new, ConnectionState.IN_GAME),
 	// 362
 	EX_REQ_ENCHANT_FAIL_REWARD_INFO(0x228, ExRequestEnchantFailRewardInfo::new, ConnectionState.IN_GAME),
-	EX_SET_ENCHANT_CHALLENGE_POINT(0x229, null, ConnectionState.IN_GAME),
-	EX_RESET_ENCHANT_CHALLENGE_POINT(0x22A, null, ConnectionState.IN_GAME),
+	EX_SET_ENCHANT_CHALLENGE_POINT(0x229, ExRequestSetEnchantChallengePoint::new, ConnectionState.IN_GAME),
+	EX_RESET_ENCHANT_CHALLENGE_POINT(0x22A, ExRequestResetEnchantChallengePoint::new, ConnectionState.IN_GAME),
 	EX_REQ_VIEW_ENCHANT_RESULT(0x22B, ExRequestViewEnchantResult::new, ConnectionState.IN_GAME),
 	EX_REQ_START_MULTI_ENCHANT_SCROLL(0x22C, ExRequestStartMultiEnchantScroll::new, ConnectionState.IN_GAME),
 	EX_REQ_VIEW_MULTI_ENCHANT_RESULT(0x22D, ExRequestViewMultiEnchantResult::new, ConnectionState.IN_GAME),
@@ -1047,7 +1050,10 @@ public enum ExClientPackets
 		
 		_packetId = packetId;
 		_packetSupplier = packetSupplier != null ? packetSupplier : () -> null;
-		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
+		
+		final EnumSet<ConnectionState> states = EnumSet.noneOf(ConnectionState.class);
+		Collections.addAll(states, connectionStates);
+		_connectionStates = states;
 	}
 	
 	public int getPacketId()

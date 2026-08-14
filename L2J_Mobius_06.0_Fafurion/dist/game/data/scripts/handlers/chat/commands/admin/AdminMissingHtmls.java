@@ -21,23 +21,22 @@
 package handlers.chat.commands.admin;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.BroadcastingTower;
+import org.l2jmobius.gameserver.entity.actor.instance.Fisherman;
+import org.l2jmobius.gameserver.entity.actor.instance.FlyTerrainObject;
+import org.l2jmobius.gameserver.entity.actor.instance.Guard;
+import org.l2jmobius.gameserver.entity.actor.instance.Merchant;
+import org.l2jmobius.gameserver.entity.actor.instance.Warehouse;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.BroadcastingTower;
-import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
-import org.l2jmobius.gameserver.model.actor.instance.FlyTerrainObject;
-import org.l2jmobius.gameserver.model.actor.instance.Guard;
-import org.l2jmobius.gameserver.model.actor.instance.Merchant;
-import org.l2jmobius.gameserver.model.actor.instance.Warehouse;
-import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
 
 /**
  * @author Mobius
@@ -68,7 +67,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				final int bottomRightY = (((y - World.TILE_ZERO_COORD_Y) * World.TILE_SIZE) + World.TILE_SIZE) - 1;
 				activeChar.sendSysMessage("GeoMap: " + x + "_" + y + " (" + topLeftX + "," + topLeftY + " to " + bottomRightX + "," + bottomRightY + ")");
 				final List<Integer> results = new ArrayList<>();
-				for (WorldObject obj : World.getInstance().getVisibleObjects())
+				for (WorldObject obj : World.getVisibleObjects())
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
@@ -92,7 +91,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					}
 				}
 				
-				Collections.sort(results);
+				results.sort(null);
 				for (int id : results)
 				{
 					activeChar.sendSysMessage("NPC " + id + " does not have a default html.");
@@ -105,7 +104,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 			{
 				activeChar.sendSysMessage("Missing htmls for the whole world.");
 				final List<Integer> results = new ArrayList<>();
-				for (WorldObject obj : World.getInstance().getVisibleObjects())
+				for (WorldObject obj : World.getVisibleObjects())
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
@@ -129,7 +128,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					}
 				}
 				
-				Collections.sort(results);
+				results.sort(null);
 				for (int id : results)
 				{
 					activeChar.sendSysMessage("NPC " + id + " does not have a default html.");
@@ -140,7 +139,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 			}
 			case "admin_next_missing_html":
 			{
-				for (WorldObject obj : World.getInstance().getVisibleObjects())
+				for (WorldObject obj : World.getVisibleObjects())
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //

@@ -21,16 +21,17 @@
 package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.ServerConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author NviX
@@ -59,7 +60,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_OLYMPIAD_RANKING_INFO.writeId(this, buffer);
 		buffer.writeByte(_tabId); // Tab id
@@ -77,17 +78,19 @@ public class ExOlympiadRankingInfo extends ServerPacket
 					if (_rankingType == 0)
 					{
 						buffer.writeInt(_playerList.size() > 100 ? 100 : _playerList.size());
-						for (Integer id : _playerList.keySet())
+						for (Entry<Integer, StatSet> idEntry : _playerList.entrySet())
 						{
-							final StatSet player = _playerList.get(id);
+							final Integer id = idEntry.getKey();
+							final StatSet player = idEntry.getValue();
 							buffer.writeSizedString(player.getString("name")); // name
 							buffer.writeSizedString(player.getString("clanName")); // clan name
 							buffer.writeInt(id); // rank
 							if (!_snapshotList.isEmpty())
 							{
-								for (Integer id2 : _snapshotList.keySet())
+								for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
 								{
-									final StatSet snapshot = _snapshotList.get(id2);
+									final Integer id2 = id2Entry.getKey();
+									final StatSet snapshot = id2Entry.getValue();
 									if (player.getInt("charId") == snapshot.getInt("charId"))
 									{
 										buffer.writeInt(id2); // previous rank
@@ -113,9 +116,10 @@ public class ExOlympiadRankingInfo extends ServerPacket
 					else
 					{
 						boolean found = false;
-						for (Integer id : _playerList.keySet())
+						for (Entry<Integer, StatSet> idEntry : _playerList.entrySet())
 						{
-							final StatSet player = _playerList.get(id);
+							final Integer id = idEntry.getKey();
+							final StatSet player = idEntry.getValue();
 							if (player.getInt("charId") == _player.getObjectId())
 							{
 								found = true;
@@ -138,9 +142,10 @@ public class ExOlympiadRankingInfo extends ServerPacket
 									buffer.writeInt(id2);
 									if (!_snapshotList.isEmpty())
 									{
-										for (Integer id3 : _snapshotList.keySet())
+										for (Entry<Integer, StatSet> id3Entry : _snapshotList.entrySet())
 										{
-											final StatSet snapshot = _snapshotList.get(id3);
+											final Integer id3 = id3Entry.getKey();
+											final StatSet snapshot = id3Entry.getValue();
 											if (player.getInt("charId") == snapshot.getInt("charId"))
 											{
 												buffer.writeInt(id3); // class rank snapshot
@@ -188,9 +193,8 @@ public class ExOlympiadRankingInfo extends ServerPacket
 						
 						buffer.writeInt(count > 50 ? 50 : count);
 						int i = 1;
-						for (Integer id : _playerList.keySet())
+						for (StatSet player : _playerList.values())
 						{
-							final StatSet player = _playerList.get(id);
 							if (_classId == player.getInt("classId"))
 							{
 								buffer.writeSizedString(player.getString("name"));
@@ -200,9 +204,10 @@ public class ExOlympiadRankingInfo extends ServerPacket
 								{
 									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
 									int j = 1;
-									for (Integer id2 : _snapshotList.keySet())
+									for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
 									{
-										final StatSet snapshot = _snapshotList.get(id2);
+										final Integer id2 = id2Entry.getKey();
+										final StatSet snapshot = id2Entry.getValue();
 										if (_classId == snapshot.getInt("classId"))
 										{
 											snapshotRaceList.put(j, _snapshotList.get(id2));
@@ -210,9 +215,10 @@ public class ExOlympiadRankingInfo extends ServerPacket
 										}
 									}
 									
-									for (Integer id2 : snapshotRaceList.keySet())
+									for (Entry<Integer, StatSet> id2Entry : snapshotRaceList.entrySet())
 									{
-										final StatSet snapshot = snapshotRaceList.get(id2);
+										final Integer id2 = id2Entry.getKey();
+										final StatSet snapshot = id2Entry.getValue();
 										if (player.getInt("charId") == snapshot.getInt("charId"))
 										{
 											buffer.writeInt(id2); // class rank snapshot
@@ -242,9 +248,10 @@ public class ExOlympiadRankingInfo extends ServerPacket
 						boolean found = false;
 						final Map<Integer, StatSet> classList = new ConcurrentHashMap<>();
 						int i = 1;
-						for (Integer id : _playerList.keySet())
+						for (Entry<Integer, StatSet> idEntry : _playerList.entrySet())
 						{
-							final StatSet set = _playerList.get(id);
+							final Integer id = idEntry.getKey();
+							final StatSet set = idEntry.getValue();
 							if (_player.getBaseClass() == set.getInt("classId"))
 							{
 								classList.put(i, _playerList.get(id));
@@ -252,9 +259,10 @@ public class ExOlympiadRankingInfo extends ServerPacket
 							}
 						}
 						
-						for (Integer id : classList.keySet())
+						for (Entry<Integer, StatSet> idEntry : classList.entrySet())
 						{
-							final StatSet player = classList.get(id);
+							final Integer id = idEntry.getKey();
+							final StatSet player = idEntry.getValue();
 							if (player.getInt("charId") == _player.getObjectId())
 							{
 								found = true;

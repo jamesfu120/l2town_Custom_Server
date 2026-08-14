@@ -24,10 +24,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -49,7 +48,7 @@ public class RelicsProbList extends ServerPacket
 		{
 			case 1:
 			{
-				for (int relicId : Stream.of(RelicSystemConfig.D_GRADE_COMMON_RELICS, RelicSystemConfig.D_GRADE_SHINING_RELICS, RelicSystemConfig.NO_GRADE_COMMON_RELICS).flatMap(List::stream).collect(Collectors.toList()))
+				for (int relicId : Stream.of(RelicSystemConfig.D_GRADE_COMMON_RELICS, RelicSystemConfig.D_GRADE_SHINING_RELICS, RelicSystemConfig.NO_GRADE_COMMON_RELICS).flatMap(List::stream).toList())
 				{
 					_relics.put(relicId, calculateChance(relicId));
 				}
@@ -57,7 +56,7 @@ public class RelicsProbList extends ServerPacket
 			}
 			case 2:
 			{
-				for (int relicId : Stream.of(RelicSystemConfig.C_GRADE_COMMON_RELICS, RelicSystemConfig.C_GRADE_SHINING_RELICS, RelicSystemConfig.D_GRADE_COMMON_RELICS, RelicSystemConfig.D_GRADE_SHINING_RELICS).flatMap(List::stream).collect(Collectors.toList()))
+				for (int relicId : Stream.of(RelicSystemConfig.C_GRADE_COMMON_RELICS, RelicSystemConfig.C_GRADE_SHINING_RELICS, RelicSystemConfig.D_GRADE_COMMON_RELICS, RelicSystemConfig.D_GRADE_SHINING_RELICS).flatMap(List::stream).toList())
 				{
 					_relics.put(relicId, calculateChance(relicId));
 				}
@@ -65,7 +64,7 @@ public class RelicsProbList extends ServerPacket
 			}
 			case 3:
 			{
-				for (int relicId : Stream.of(RelicSystemConfig.B_GRADE_COMMON_RELICS, RelicSystemConfig.B_GRADE_SHINING_RELICS, RelicSystemConfig.C_GRADE_COMMON_RELICS, RelicSystemConfig.C_GRADE_SHINING_RELICS).flatMap(List::stream).collect(Collectors.toList()))
+				for (int relicId : Stream.of(RelicSystemConfig.B_GRADE_COMMON_RELICS, RelicSystemConfig.B_GRADE_SHINING_RELICS, RelicSystemConfig.C_GRADE_COMMON_RELICS, RelicSystemConfig.C_GRADE_SHINING_RELICS).flatMap(List::stream).toList())
 				{
 					_relics.put(relicId, calculateChance(relicId));
 				}
@@ -73,7 +72,7 @@ public class RelicsProbList extends ServerPacket
 			}
 			case 4:
 			{
-				for (int relicId : Stream.of(RelicSystemConfig.A_GRADE_COMMON_RELICS, RelicSystemConfig.B_GRADE_COMMON_RELICS, RelicSystemConfig.B_GRADE_SHINING_RELICS).flatMap(List::stream).collect(Collectors.toList()))
+				for (int relicId : Stream.of(RelicSystemConfig.A_GRADE_COMMON_RELICS, RelicSystemConfig.B_GRADE_COMMON_RELICS, RelicSystemConfig.B_GRADE_SHINING_RELICS).flatMap(List::stream).toList())
 				{
 					_relics.put(relicId, calculateChance(relicId));
 				}
@@ -83,7 +82,7 @@ public class RelicsProbList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RELICS_PROB_LIST.writeId(this, buffer);
 		buffer.writeInt(_type);

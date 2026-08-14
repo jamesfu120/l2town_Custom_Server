@@ -23,21 +23,21 @@ package handlers.skill.effects;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.InstanceType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.handler.TargetHandler;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureKilled;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skill.targets.TargetType;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureKilled;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Liamxroy
@@ -59,8 +59,6 @@ public class CallSkillByKill extends AbstractEffect
 	
 	private void onCreatureKilled(OnCreatureKilled event, Creature target)
 	{
-		final Creature attacker = event.getAttacker();
-		final Creature eventTarget = event.getTarget();
 		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)))
 		{
 			return;
@@ -78,9 +76,11 @@ public class CallSkillByKill extends AbstractEffect
 			return;
 		}
 		
+		final Creature attacker = event.getAttacker();
+		final Creature eventTarget = event.getTarget();
 		if ((((_victimType != null) && !_victimType.isEmpty()) && _victimType.contains(target.getInstanceType()) && (event.getAttacker() == target)))
 		{
-			if ((_targetType != null))
+			if (_targetType != null)
 			{
 				final ITargetTypeHandler handler = TargetHandler.getInstance().getHandler(_targetType);
 				if (handler != null)

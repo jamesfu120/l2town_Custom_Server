@@ -22,20 +22,19 @@ package instances.ChamberOfProphecies;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.newquestdata.QuestCondType;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCastingType;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCastingType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
@@ -224,7 +223,7 @@ public class ChamberOfProphecies extends InstanceScript
 					{
 						ferin.setRunning();
 						ferin.setTarget(vanHalter);
-						ferin.getAI().setIntention(Intention.FOLLOW, vanHalter);
+						ferin.getAI().setIntentionFollow(vanHalter);
 					}
 					startQuestTimer("CLOSE", 0, null, player);
 				}
@@ -282,7 +281,7 @@ public class ChamberOfProphecies extends InstanceScript
 			npc.asAttackable().setCanReturnToSpawnPoint(false);
 		}
 		npc.setTarget(player);
-		npc.getAI().setIntention(Intention.FOLLOW, player);
+		npc.getAI().setIntentionFollow(player);
 	}
 
 	private void startHelperTimers(Npc vanHalter, Npc ferin, Player player)
@@ -524,7 +523,7 @@ public class ChamberOfProphecies extends InstanceScript
 						cancelQuestTimer("ATTACK2", vanHalter, player);
 						if (vanHalter != null)
 						{
-							vanHalter.getAI().setIntention(Intention.IDLE, player);
+							vanHalter.getAI().setIntentionIdle();
 						}
 						cancelQuestTimer("FOLLOW", ferin, player);
 						cancelQuestTimer("HEAL_CHECK", ferin, player);
@@ -532,7 +531,7 @@ public class ChamberOfProphecies extends InstanceScript
 						{
 							ferin.setRunning();
 							ferin.setTarget(vanHalter);
-							ferin.getAI().setIntention(Intention.FOLLOW, vanHalter);
+							ferin.getAI().setIntentionFollow(vanHalter);
 						}
 						final Npc makkum = world.getNpc(MAKKUM);
 						if (makkum != null)
@@ -569,7 +568,7 @@ public class ChamberOfProphecies extends InstanceScript
 					{
 						npc.setRunning();
 						npc.setTarget(player);
-						npc.getAI().setIntention(Intention.FOLLOW, player);
+						npc.getAI().setIntentionFollow(player);
 					}
 					startQuestTimer("FOLLOW", 2000, npc, player, false);
 				}
@@ -590,12 +589,12 @@ public class ChamberOfProphecies extends InstanceScript
 				if (npc.getId() == HELPER_FERIN)
 				{
 					npc.setTarget(player);
-					npc.getAI().setIntention(Intention.FOLLOW, player);
+					npc.getAI().setIntentionFollow(player);
 				}
 				else if (!monstersAlive)
 				{
 					npc.setTarget(player);
-					npc.getAI().setIntention(Intention.FOLLOW, player);
+					npc.getAI().setIntentionFollow(player);
 				}
 				else
 				{
@@ -612,7 +611,7 @@ public class ChamberOfProphecies extends InstanceScript
 					if (!found)
 					{
 						npc.setTarget(player);
-						npc.getAI().setIntention(Intention.FOLLOW, player);
+						npc.getAI().setIntentionFollow(player);
 					}
 				}
 				if (monstersAlive)
@@ -661,7 +660,7 @@ public class ChamberOfProphecies extends InstanceScript
 				}
 				npc.setTarget(player);
 				npc.setRunning();
-				npc.getAI().setIntention(Intention.FOLLOW, player);
+				npc.getAI().setIntentionFollow(player);
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THAT_GUY_KAIN_HAS_A_SMARMY_FACE));
 				player.sendPacket(new PlaySound(3, "Npcdialog1.apple_quest_7", 0, 0, 0, 0, 0));
 				break;
@@ -738,7 +737,7 @@ public class ChamberOfProphecies extends InstanceScript
 			{
 				if ((npc != null) && (npc.getId() == HELPER_FERIN))
 				{
-					npc.getAI().setIntention(Intention.IDLE, player);
+					npc.getAI().setIntentionIdle();
 					cancelQuestTimer("BROADCAST_TEXT", npc, player);
 				}
 				break;

@@ -22,16 +22,15 @@ package instances.CommandPost;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.managers.InstanceManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -119,8 +118,6 @@ public class CommandPost extends InstanceScript
 				final Party party = player.getParty();
 				if (player.isInParty())
 				{
-					final long currentTime = System.currentTimeMillis();
-					
 					if (!party.isLeader(player))
 					{
 						player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
@@ -133,6 +130,7 @@ public class CommandPost extends InstanceScript
 						return null;
 					}
 					
+					final long currentTime = System.currentTimeMillis();
 					final List<Player> members = party.getMembers();
 					for (Player member : members)
 					{
@@ -403,7 +401,7 @@ public class CommandPost extends InstanceScript
 			if (target != null)
 			{
 				npc.setRunning();
-				npc.getAI().setIntention(Intention.ATTACK, target);
+				npc.getAI().setIntentionAttack(target);
 				npc.asAttackable().addDamageHate(target, 1, 999);
 			}
 		}

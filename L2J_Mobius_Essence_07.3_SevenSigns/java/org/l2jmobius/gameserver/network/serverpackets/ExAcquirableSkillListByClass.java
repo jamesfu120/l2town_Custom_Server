@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.skill.enums.AcquireSkillType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillLearn;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.mechanics.skill.enums.AcquireSkillType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillLearn;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -39,7 +39,7 @@ public class ExAcquirableSkillListByClass extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS.writeId(this, buffer);
 		buffer.writeShort(_type.getId());

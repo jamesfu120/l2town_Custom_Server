@@ -24,11 +24,11 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -423,7 +423,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				}
 			}
 			
-			// show the enchant menu after an action
+			// Show the enchant menu after an action.
 			showMainPage(activeChar, pageToShow);
 		}
 		
@@ -532,7 +532,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				{
 					getVars = getVars.replace("%ar" + i + "_icon%", item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon());
 					
-					// if enchant value is 0 - show "blank instead of 0
+					// If enchant value is 0 - show "blank instead of 0.
 					if (currentEnch != 0)
 					{
 						getVars = getVars.replace("%ar" + i + "_ench%", Integer.toString(currentEnch));
@@ -562,7 +562,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					currentEnch = findItem.getEnchantLevel();
 				}
 				
-				// If no agathion in slot - returns blank square icon
+				// If no agathion in slot - returns blank square icon.
 				if ((item == null) || (findItem == null))
 				{
 					getVars = getVars.replace("%ag" + i + "_icon%", "L2UI_CT1.Windows.Windows_DF_TooltipBG");
@@ -572,7 +572,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				{
 					getVars = getVars.replace("%ag" + i + "_icon%", item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon());
 					
-					// if enchant value is 0 - show "blank instead of 0
+					// If enchant value is 0 - show "blank instead of 0.
 					if (currentEnch != 0)
 					{
 						getVars = getVars.replace("%ag" + i + "_ench%", Integer.toString(currentEnch));
@@ -602,7 +602,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					currentEnch = findItem.getEnchantLevel();
 				}
 				
-				// If no talisman in slot - returns blank square icon
+				// If no talisman in slot - returns blank square icon.
 				if ((item == null) || (findItem == null))
 				{
 					getVars = getVars.replace("%t" + i + "_icon%", "L2UI_CT1.Windows.Windows_DF_TooltipBG");
@@ -612,7 +612,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				{
 					getVars = getVars.replace("%t" + i + "_icon%", item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon());
 					
-					// if enchant value is 0 - show "blank instead of 0
+					// If enchant value is 0 - show "blank instead of 0.
 					if (currentEnch != 0)
 					{
 						getVars = getVars.replace("%t" + i + "_ench%", Integer.toString(currentEnch));

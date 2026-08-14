@@ -22,11 +22,11 @@ package instances.TimedHunting;
 
 import org.l2jmobius.gameserver.data.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 
 /**
  * @author Mobius
@@ -40,7 +40,7 @@ public class TimedHunting extends InstanceScript
 	// Misc
 	private static final int[] TEMPLATE_IDS =
 	{
-		1007, //Isle of Souls
+		1007, // Isle of Souls
 		1013 // Corroded Fields
 	};
 	

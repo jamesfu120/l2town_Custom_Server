@@ -17,11 +17,11 @@
 package village_master.ElfHumanFighterChange1;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Elf Human class transfer AI
@@ -183,7 +183,7 @@ public class ElfHumanFighterChange1 extends Script
 				player.setPlayerClass(WARRIOR);
 				player.setBaseClass(WARRIOR);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-23.htm"; // fnAfterClassChange11
 			}
@@ -211,7 +211,7 @@ public class ElfHumanFighterChange1 extends Script
 				player.setPlayerClass(KNIGHT);
 				player.setBaseClass(KNIGHT);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-27.htm"; // fnAfterClassChange12
 			}
@@ -239,7 +239,7 @@ public class ElfHumanFighterChange1 extends Script
 				player.setPlayerClass(ROGUE);
 				player.setBaseClass(ROGUE);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-31.htm"; // fnAfterClassChange13
 			}
@@ -267,7 +267,7 @@ public class ElfHumanFighterChange1 extends Script
 				player.setPlayerClass(ELVEN_KNIGHT);
 				player.setBaseClass(ELVEN_KNIGHT);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-35.htm"; // fnAfterClassChange21
 			}
@@ -295,7 +295,7 @@ public class ElfHumanFighterChange1 extends Script
 				player.setPlayerClass(ELVEN_SCOUT);
 				player.setBaseClass(ELVEN_SCOUT);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-39.htm"; // fnAfterClassChange22
 			}

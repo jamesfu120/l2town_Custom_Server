@@ -24,11 +24,11 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ClanLevelData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -108,7 +108,7 @@ public class AdminPledge implements IAdminCommandHandler
 				{
 					case "create":
 					{
-						if ((parameter == null) || (parameter.length() == 0))
+						if ((parameter == null) || parameter.isEmpty())
 						{
 							activeChar.sendSysMessage("Please, enter clan name.");
 							showMainPage(activeChar);
@@ -250,7 +250,7 @@ public class AdminPledge implements IAdminCommandHandler
 						{
 							final int stage = Integer.parseInt(parameter);
 							GlobalVariablesManager.getInstance().set(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + clan.getId(), stage);
-							activeChar.sendSysMessage("You set " + stage + " Monster Arena stage for clan " + clan.getName() + "");
+							activeChar.sendSysMessage("You set " + stage + " Monster Arena stage for clan " + clan.getName());
 						}
 						catch (Exception e)
 						{

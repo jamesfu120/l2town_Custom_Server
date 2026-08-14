@@ -20,16 +20,15 @@
  */
 package quests.Q00223_TestOfTheChampion;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q00223_TestOfTheChampion extends Quest
@@ -361,7 +360,7 @@ public class Q00223_TestOfTheChampion extends Quest
 						
 						collector.setRunning();
 						collector.addDamageHate(originalKiller, 0, 999);
-						collector.getAI().setIntention(Intention.ATTACK, originalKiller);
+						collector.getAI().setIntentionAttack(originalKiller);
 					}
 					
 					npc.setScriptValue(1);
@@ -380,7 +379,7 @@ public class Q00223_TestOfTheChampion extends Quest
 						final Attackable collector = addSpawn(ROAD_COLLECTOR, npc, true, 0).asAttackable();
 						collector.setRunning();
 						collector.addDamageHate(originalKiller, 0, 999);
-						collector.getAI().setIntention(Intention.ATTACK, originalKiller);
+						collector.getAI().setIntentionAttack(originalKiller);
 					}
 					
 					npc.setScriptValue(1);

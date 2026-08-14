@@ -25,32 +25,31 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.ai.Action;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.enums.CategoryType;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.FlyType;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.FlyType;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Check if this effect is not counted as being stunned.
- * @author UnAfraid, Mobius
+ * @author UnAfraid, Mobius, Atronic
  */
 public class KnockBack extends AbstractEffect
 {
@@ -58,6 +57,7 @@ public class KnockBack extends AbstractEffect
 	private final int _speed;
 	private final int _delay;
 	private final int _animationSpeed;
+	private final int _chance;
 	private final boolean _knockDown;
 	private final FlyType _type;
 	
@@ -109,6 +109,7 @@ public class KnockBack extends AbstractEffect
 		_speed = params.getInt("speed", 0);
 		_delay = params.getInt("delay", 0);
 		_animationSpeed = params.getInt("animationSpeed", 0);
+		_chance = params.getInt("chance", 100);
 		_knockDown = params.getBoolean("knockDown", false);
 		_type = params.getEnum("type", FlyType.class, _knockDown ? FlyType.PUSH_DOWN_HORIZONTAL : FlyType.PUSH_HORIZONTAL);
 	}
@@ -116,7 +117,7 @@ public class KnockBack extends AbstractEffect
 	@Override
 	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
-		return _knockDown || Formulas.calcProbability(100, effector, effected, skill);
+		return _knockDown || Formulas.calcProbability(_chance, effector, effected, skill);
 	}
 	
 	@Override
@@ -165,29 +166,42 @@ public class KnockBack extends AbstractEffect
 		
 		if (!effected.isPlayer())
 		{
-			effected.getAI().notifyAction(Action.THINK);
+			effected.getAI().notifyActionThink();
 		}
 	}
 	
 	private void knockBack(Creature effector, Creature effected)
 	{
-		if (!ACTIVE_KNOCKBACKS.contains(effected))
+		if ((effector == null) || (effected == null))
 		{
-			ACTIVE_KNOCKBACKS.add(effected);
-			
-			// Prevent knocking back raids, town NPCs, immobilized or invulnerable targets.
-			if (effected.isRaid() || (effected.isNpc() && !effected.isAttackable()) || effected.isImmobilized() || effected.isInvul())
-			{
-				return;
-			}
-			
+			return;
+		}
+		
+		if (effected.isDead())
+		{
+			return;
+		}
+		
+		// Prevent knocking back raids, town NPCs, immobilized or invulnerable targets.
+		if (effected.isRaid() || (effected.isNpc() && !effected.isAttackable()) || effected.isImmobilized() || effected.isInvul())
+		{
+			return;
+		}
+		
+		if (!ACTIVE_KNOCKBACKS.add(effected))
+		{
+			return;
+		}
+		
+		try
+		{
 			final double radians = Math.toRadians(LocationUtil.calculateAngleFrom(effector, effected));
 			final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));
 			final int y = (int) (effected.getY() + (_distance * Math.sin(radians)));
 			final int z = effected.getZ();
 			final Location loc = GeoEngine.getInstance().getValidLocation(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 			
-			effected.getAI().setIntention(Intention.IDLE);
+			effected.getAI().setIntentionIdle();
 			effected.broadcastPacket(new FlyToLocation(effected, loc, _type, _speed, _delay, _animationSpeed));
 			if (_knockDown)
 			{
@@ -198,17 +212,25 @@ public class KnockBack extends AbstractEffect
 			effected.broadcastPacket(new ValidateLocation(effected));
 			effected.revalidateZone(true);
 			
-			World.getInstance().forEachVisibleObjectInRange(effected, Player.class, 1200, nearby ->
+			World.forEachVisibleObjectInRange(effected, Player.class, 1200, nearby ->
 			{
 				if ((nearby.getRace() != Race.ERTHEIA) && (nearby.getTarget() == effected) && nearby.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearby.isAlterSkillActive())
 				{
-					final int chainSkill = KNOCKBACK_SKILLS.get(nearby.getPlayerClass()).intValue();
-					if (nearby.getSkillRemainingReuseTime(chainSkill) == -1)
+					final Integer chainSkill = KNOCKBACK_SKILLS.get(nearby.getPlayerClass()).intValue();
+					if ((nearby.getSkillRemainingReuseTime(chainSkill) == -1))
 					{
 						nearby.sendPacket(new ExAlterSkillRequest(nearby, chainSkill, chainSkill, 3));
 					}
 				}
 			});
+		}
+		finally
+		{
+			if (!_knockDown)
+			{
+				final int unlockDelay = Math.max(300, _delay + _animationSpeed + 200);
+				ThreadPool.schedule(() -> ACTIVE_KNOCKBACKS.remove(effected), unlockDelay);
+			}
 		}
 	}
 }

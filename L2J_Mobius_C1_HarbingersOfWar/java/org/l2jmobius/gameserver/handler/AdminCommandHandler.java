@@ -29,8 +29,8 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.AdminData;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.util.GMAudit;
 
 public class AdminCommandHandler implements IHandler<IAdminCommandHandler, String>

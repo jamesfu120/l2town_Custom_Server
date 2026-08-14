@@ -29,9 +29,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.HomunculusData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.homunculus.Homunculus;
-import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.homunculus.Homunculus;
+import org.l2jmobius.gameserver.mechanics.homunculus.HomunculusTemplate;
 
 /**
  * @author nexvill, Mobius

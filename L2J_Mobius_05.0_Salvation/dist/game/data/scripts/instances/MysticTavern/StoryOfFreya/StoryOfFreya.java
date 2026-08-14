@@ -23,19 +23,19 @@ package instances.MysticTavern.StoryOfFreya;
 import java.util.List;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.managers.ScriptManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -268,7 +268,7 @@ public class StoryOfFreya extends InstanceScript
 			}
 			case "startAttack":
 			{
-				for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpc.class, 300))
+				World.forEachVisibleObjectInRange(npc, FriendlyNpc.class, 300, nearby ->
 				{
 					if (nearby.getId() == KNIGHT)
 					{
@@ -277,7 +277,7 @@ public class StoryOfFreya extends InstanceScript
 						nearby.reduceCurrentHp(1, npc, null);
 						addAttackDesire(nearby, npc);
 					}
-				}
+				});
 				break;
 			}
 			case "finishInstance":

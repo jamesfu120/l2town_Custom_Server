@@ -20,12 +20,11 @@
  */
 package ai.areas.ForgeOfTheGods;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * @author Mobius
@@ -50,7 +49,7 @@ public class MagmaDrake extends Script
 			final Attackable newNpc = addSpawn(MAGMA_DRAKE_MINION, npc.getX(), npc.getY(), npc.getZ() + 20, npc.getHeading(), false, 0, true).asAttackable();
 			newNpc.setRunning();
 			newNpc.addDamageHate(attacker, 0, 500);
-			newNpc.getAI().setIntention(Intention.ATTACK, attacker);
+			newNpc.getAI().setIntentionAttack(attacker);
 		}
 	}
 	

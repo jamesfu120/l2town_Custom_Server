@@ -27,14 +27,14 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.time.SchedulingPattern;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceTemplate;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.holders.instance.OnInstanceStatusChange;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.mechanics.events.holders.instance.OnInstanceStatusChange;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
 
 /**
  * @author Index
@@ -220,7 +220,7 @@ public class KelbimFortressManager extends InstanceScript
 				
 				world.getParameters().remove(KelbimFortressManager.VARIABLE_KELBIM_GUARD_STATUS);
 				
-				// DO NOT STOP TASK_END_ZONE BECAUSE IT WILL BREAK THIS RUNNING
+				// DO NOT STOP TASK_END_ZONE BECAUSE IT WILL BREAK THIS RUNNING.
 				stopTask(world, TASK_END_ZONE, true, false);
 				stopTask(world, TASK_KELBIM_CHECK_STATUS, true, true);
 				stopTask(world, TASK_SPAWN_ELITE, true, true);

@@ -21,11 +21,11 @@
 package quests.Q10447_TimingIsEverything;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.util.LocationUtil;
@@ -154,11 +154,12 @@ public class Q10447_TimingIsEverything extends Quest
 	@Override
 	public void onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		if (!LocationUtil.checkIfInRange(PlayerConfig.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return;
 		}
+		
+		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		
 		if ((qs != null) && qs.isCond(1) && (giveItemRandomly(qs.getPlayer(), npc, NARVAS_PRISON_KEY, 1, 1, 0.1, false)))
 		{

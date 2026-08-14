@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -35,7 +35,7 @@ public class ExStorageMaxCount extends ServerPacket
 	private Player _player;
 	private int _inventory;
 	private int _warehouse;
-	private int _freight;
+	// private int _freight;
 	private int _clan;
 	private int _privateSell;
 	private int _privateBuy;
@@ -51,7 +51,7 @@ public class ExStorageMaxCount extends ServerPacket
 			_player = player;
 			_inventory = player.getInventoryLimit();
 			_warehouse = player.getWareHouseLimit();
-			_freight = PlayerConfig.ALT_FREIGHT_SLOTS;
+			// _freight = PlayerConfig.ALT_FREIGHT_SLOTS;
 			_privateSell = player.getPrivateSellStoreLimit();
 			_privateBuy = player.getPrivateBuyStoreLimit();
 			_clan = PlayerConfig.WAREHOUSE_SLOTS_CLAN;
@@ -63,7 +63,7 @@ public class ExStorageMaxCount extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (_player == null)
 		{
@@ -73,7 +73,7 @@ public class ExStorageMaxCount extends ServerPacket
 		ServerPackets.EX_STORAGE_MAX_COUNT.writeId(this, buffer);
 		buffer.writeInt(_inventory);
 		buffer.writeInt(_warehouse);
-		buffer.writeInt(_freight);
+		// buffer.writeInt(_freight);
 		buffer.writeInt(_clan);
 		buffer.writeInt(_privateSell);
 		buffer.writeInt(_privateBuy);

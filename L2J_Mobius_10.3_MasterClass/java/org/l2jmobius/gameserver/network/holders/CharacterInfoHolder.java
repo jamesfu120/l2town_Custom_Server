@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.network.holders;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 
 /**
  * Used to Store data sent to Client for Character.<br>

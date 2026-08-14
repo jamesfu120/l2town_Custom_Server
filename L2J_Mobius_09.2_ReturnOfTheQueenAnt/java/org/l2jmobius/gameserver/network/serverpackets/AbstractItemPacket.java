@@ -20,14 +20,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.item.WarehouseItem;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.WarehouseItem;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.mechanics.buylist.Product;
+import org.l2jmobius.gameserver.mechanics.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.network.enums.ItemListType;
 import org.l2jmobius.gameserver.network.holders.TradeItem;
 
@@ -47,32 +47,32 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		return MASKS;
 	}
 	
-	protected void writeItem(TradeItem item, long count, WritableBuffer buffer)
+	protected void writeItem(TradeItem item, long count, WriteBuffer buffer)
 	{
 		writeItem(new ItemInfo(item), count, buffer);
 	}
 	
-	protected void writeItem(TradeItem item, WritableBuffer buffer)
+	protected void writeItem(TradeItem item, WriteBuffer buffer)
 	{
 		writeItem(new ItemInfo(item), buffer);
 	}
 	
-	protected void writeItem(WarehouseItem item, WritableBuffer buffer)
+	protected void writeItem(WarehouseItem item, WriteBuffer buffer)
 	{
 		writeItem(new ItemInfo(item), buffer);
 	}
 	
-	protected void writeItem(Item item, WritableBuffer buffer)
+	protected void writeItem(Item item, WriteBuffer buffer)
 	{
 		writeItem(new ItemInfo(item), buffer);
 	}
 	
-	protected void writeItem(Product item, WritableBuffer buffer)
+	protected void writeItem(Product item, WriteBuffer buffer)
 	{
 		writeItem(new ItemInfo(item), buffer);
 	}
 	
-	protected void writeItem(ItemInfo item, WritableBuffer buffer)
+	protected void writeItem(ItemInfo item, WriteBuffer buffer)
 	{
 		final int mask = calculateMask(item);
 		buffer.writeShort(mask);
@@ -84,7 +84,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		buffer.writeByte(item.getCustomType1()); // Filler (always 0)
 		buffer.writeShort(item.getEquipped()); // Equipped : 00-No, 01-yes
 		buffer.writeLong(item.getItem().getBodyPart().getMask()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		buffer.writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
+		buffer.writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item).
 		buffer.writeInt(item.getMana());
 		buffer.writeByte(0); // 270 protocol
 		buffer.writeInt(item.getTime());
@@ -122,7 +122,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		// }
 	}
 	
-	protected void writeItem(ItemInfo item, long count, WritableBuffer buffer)
+	protected void writeItem(ItemInfo item, long count, WriteBuffer buffer)
 	{
 		final int mask = calculateMask(item);
 		buffer.writeShort(mask);
@@ -134,7 +134,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		buffer.writeByte(item.getCustomType1()); // Filler (always 0)
 		buffer.writeShort(item.getEquipped()); // Equipped : 00-No, 01-yes
 		buffer.writeLong(item.getItem().getBodyPart().getMask()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		buffer.writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
+		buffer.writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item).
 		buffer.writeInt(item.getMana());
 		buffer.writeByte(0); // 270 protocol
 		buffer.writeInt(item.getTime());
@@ -215,7 +215,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		return mask;
 	}
 	
-	protected void writeItemAugment(ItemInfo item, WritableBuffer buffer)
+	protected void writeItemAugment(ItemInfo item, WriteBuffer buffer)
 	{
 		if ((item != null) && (item.getAugmentation() != null))
 		{
@@ -229,13 +229,13 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 	}
 	
-	protected void writeItemElementalAndEnchant(ItemInfo item, WritableBuffer buffer)
+	protected void writeItemElementalAndEnchant(ItemInfo item, WriteBuffer buffer)
 	{
 		writeItemElemental(item, buffer);
 		writeItemEnchantEffect(item, buffer);
 	}
 	
-	protected void writeItemElemental(ItemInfo item, WritableBuffer buffer)
+	protected void writeItemElemental(ItemInfo item, WriteBuffer buffer)
 	{
 		if (item != null)
 		{
@@ -261,7 +261,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 	}
 	
-	protected void writeItemEnchantEffect(ItemInfo item, WritableBuffer buffer)
+	protected void writeItemEnchantEffect(ItemInfo item, WriteBuffer buffer)
 	{
 		// Enchant Effects
 		for (int op : item.getEnchantOptions())
@@ -270,7 +270,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 	}
 	
-	protected void writeItemEnsoulOptions(ItemInfo item, WritableBuffer buffer)
+	protected void writeItemEnsoulOptions(ItemInfo item, WriteBuffer buffer)
 	{
 		if (item != null)
 		{
@@ -293,7 +293,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 	}
 	
-	protected void writeInventoryBlock(PlayerInventory inventory, WritableBuffer buffer)
+	protected void writeInventoryBlock(PlayerInventory inventory, WriteBuffer buffer)
 	{
 		if (inventory.hasInventoryBlock())
 		{

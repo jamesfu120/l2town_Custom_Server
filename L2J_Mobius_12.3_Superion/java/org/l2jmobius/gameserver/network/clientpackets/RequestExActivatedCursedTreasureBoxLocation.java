@@ -32,7 +32,7 @@ public class RequestExActivatedCursedTreasureBoxLocation extends ClientPacket
 	@Override
 	protected void readImpl()
 	{
-		// Empty packet, used only as a trigger (Request)
+		// Empty packet, used only as a trigger (Request).
 	}
 	
 	@Override

@@ -22,7 +22,6 @@ package handlers.bypass.npc;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -34,23 +33,23 @@ import org.l2jmobius.gameserver.config.NpcConfig;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.DropType;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.AggroInfo;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropGroupHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.LimitedDropHolder;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
-import org.l2jmobius.gameserver.model.actor.holders.npc.AggroInfo;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropGroupHolder;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
-import org.l2jmobius.gameserver.model.actor.holders.npc.LimitedDropHolder;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.HtmlUtil;
 
@@ -88,7 +87,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -121,7 +120,7 @@ public class NpcViewMod implements IBypassHandler
 				try
 				{
 					final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
-					final WorldObject target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+					final WorldObject target = World.findObject(Integer.parseInt(st.nextToken()));
 					final Npc npc = target instanceof Npc ? target.asNpc() : null;
 					if (npc == null)
 					{
@@ -149,7 +148,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -177,7 +176,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -418,7 +417,7 @@ public class NpcViewMod implements IBypassHandler
 			return;
 		}
 		
-		Collections.sort(dropList, (d1, d2) -> Integer.valueOf(d1.getItemId()).compareTo(Integer.valueOf(d2.getItemId())));
+		dropList.sort((d1, d2) -> Integer.compare(d1.getItemId(), d2.getItemId()));
 		
 		int pages = dropList.size() / DROP_LIST_ITEMS_PER_PAGE;
 		if ((DROP_LIST_ITEMS_PER_PAGE * pages) < dropList.size())
@@ -450,8 +449,8 @@ public class NpcViewMod implements IBypassHandler
 			end = dropList.size();
 		}
 		
-		final DecimalFormat amountFormat = new DecimalFormat("#,###");
-		final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
+		final DecimalFormat amountFormat = new DecimalFormat("#,#######");
+		final DecimalFormat chanceFormat = new DecimalFormat("0.#######");
 		int leftHeight = 0;
 		int rightHeight = 0;
 		final PlayerStat stat = player.getStat();
@@ -658,7 +657,7 @@ public class NpcViewMod implements IBypassHandler
 			return;
 		}
 		
-		Collections.sort(limitedDropList, (d1, d2) -> Integer.valueOf(d1.getItemId()).compareTo(Integer.valueOf(d2.getItemId())));
+		limitedDropList.sort((d1, d2) -> Integer.compare(d1.getItemId(), d2.getItemId()));
 		
 		int pages = limitedDropList.size() / DROP_LIST_ITEMS_PER_PAGE;
 		if ((DROP_LIST_ITEMS_PER_PAGE * pages) < limitedDropList.size())
@@ -690,8 +689,8 @@ public class NpcViewMod implements IBypassHandler
 			end = limitedDropList.size();
 		}
 		
-		final DecimalFormat amountFormat = new DecimalFormat("#,###");
-		final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
+		final DecimalFormat amountFormat = new DecimalFormat("#,#######");
+		final DecimalFormat chanceFormat = new DecimalFormat("0.#######");
 		int leftHeight = 0;
 		int rightHeight = 0;
 		final PlayerStat stat = player.getStat();
@@ -711,11 +710,17 @@ public class NpcViewMod implements IBypassHandler
 			// Apply rate bonuses.
 			double rateChance = dropRateEffectBonus;
 			double rateAmount = dropAmountEffectBonus;
+			int playerMaxLevel = dropItem.getMaxPlayerLevel();
+			int dailyLimit = dropItem.getDailyLimit();
 			
 			// Apply config rates.
 			if (RatesConfig.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId()) != null)
 			{
 				rateChance *= RatesConfig.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
+			}
+			else if (RatesConfig.LIMITED_DROP_CHANCE_BY_ID.get(dropItem.getItemId()) != null)
+			{
+				rateChance *= RatesConfig.LIMITED_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
 			}
 			else
 			{
@@ -753,6 +758,16 @@ public class NpcViewMod implements IBypassHandler
 				}
 			}
 			
+			// Apply daily limit rates if available.
+			if (RatesConfig.LIMITED_DROP_MAX_LEVEL_INCREASE != 0)
+			{
+				playerMaxLevel += RatesConfig.LIMITED_DROP_MAX_LEVEL_INCREASE;
+			}
+			if (RatesConfig.LIMITED_DROP_DAILY_LIMIT_BY_ID.get(dropItem.getItemId()) != null)
+			{
+				dailyLimit *= RatesConfig.LIMITED_DROP_DAILY_LIMIT_BY_ID.get(dropItem.getItemId());
+			}
+			
 			sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 			sb.append("<tr><td width=32 valign=top>");
 			sb.append("<button width=\"32\" height=\"32\" back=\"" + (item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon()) + "\" fore=\"" + (item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon()) + "\" itemtooltip=\"" + dropItem.getItemId() + "\">");
@@ -788,13 +803,13 @@ public class NpcViewMod implements IBypassHandler
 			sb.append("<td width=247 align=center>");
 			sb.append(dropItem.getMinPlayerLevel());
 			sb.append(" - ");
-			sb.append(dropItem.getMaxPlayerLevel());
+			sb.append(playerMaxLevel);
 			sb.append("</td></tr>");
 			
 			// Daily Limit.
 			sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Daily:</font></td>");
 			sb.append("<td width=247 align=center>");
-			sb.append(dropItem.getDailyLimit());
+			sb.append(dailyLimit);
 			sb.append("</td></tr>");
 			
 			sb.append("</table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");

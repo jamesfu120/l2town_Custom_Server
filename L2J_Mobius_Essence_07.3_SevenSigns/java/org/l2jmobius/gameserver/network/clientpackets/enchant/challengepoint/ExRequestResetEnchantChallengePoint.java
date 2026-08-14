@@ -21,11 +21,11 @@
 package org.l2jmobius.gameserver.network.clientpackets.enchant.challengepoint;
 
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.challengepoint.ExResetEnchantChallengePoint;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.single.ExChangedEnchantTargetItemProbList;

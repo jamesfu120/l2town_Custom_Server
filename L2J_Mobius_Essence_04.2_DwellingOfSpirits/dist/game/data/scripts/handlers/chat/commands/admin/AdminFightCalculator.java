@@ -24,14 +24,14 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -210,11 +210,11 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		double dmg1 = 0;
 		double dmg2 = 0;
 		
-		// ATTACK speed in milliseconds
+		// ATTACK speed in milliseconds.
 		int sAtk1 = Formulas.calculateTimeBetweenAttacks(npc1.getPAtkSpd());
 		int sAtk2 = Formulas.calculateTimeBetweenAttacks(npc2.getPAtkSpd());
 		
-		// number of ATTACK per 100 seconds
+		// number of ATTACK per 100 seconds.
 		sAtk1 = 100000 / sAtk1;
 		sAtk2 = 100000 / sAtk2;
 		for (int i = 0; i < 10000; i++)
@@ -302,7 +302,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		final int tdmg1 = (int) (sAtk1 * dmg1);
 		final int tdmg2 = (int) (sAtk2 * dmg2);
 		
-		// HP restored per 100 seconds
+		// HP restored per 100 seconds.
 		final double maxHp1 = npc1.getMaxHp();
 		final int hp1 = (int) ((npc1.getStat().getValue(Stat.REGENERATE_HP_RATE) * 100000) / Formulas.getRegeneratePeriod(npc1));
 		final double maxHp2 = npc2.getMaxHp();
@@ -353,7 +353,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 		
-		if (trimmedParams.length() != 0)
+		if (!trimmedParams.isEmpty())
 		{
 			npc1.deleteMe();
 			npc2.deleteMe();

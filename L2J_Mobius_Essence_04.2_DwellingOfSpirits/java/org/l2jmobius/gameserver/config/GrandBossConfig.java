@@ -47,6 +47,8 @@ public class GrandBossConfig
 	public static int QUEEN_ANT_SPAWN_RANDOM;
 	public static int ZAKEN_SPAWN_INTERVAL;
 	public static int ZAKEN_SPAWN_RANDOM;
+	public static boolean DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS;
 	
 	public static void load()
 	{
@@ -66,5 +68,7 @@ public class GrandBossConfig
 		QUEEN_ANT_SPAWN_RANDOM = config.getInt("RandomOfQueenAntSpawn", 17);
 		ZAKEN_SPAWN_INTERVAL = config.getInt("IntervalOfZakenSpawn", 168);
 		ZAKEN_SPAWN_RANDOM = config.getInt("RandomOfZakenSpawn", 48);
+		DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS = config.getBoolean("DisableRaidBossHealFromPlayers", false);
+		DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS = config.getBoolean("DisableRaidBossBuffFromPlayers", false);
 	}
 }

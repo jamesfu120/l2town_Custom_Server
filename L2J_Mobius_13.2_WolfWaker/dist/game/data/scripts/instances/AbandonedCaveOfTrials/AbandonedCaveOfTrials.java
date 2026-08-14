@@ -26,17 +26,17 @@ import java.time.ZoneId;
 import java.time.temporal.TemporalAdjusters;
 
 import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.newquestdata.QuestCondType;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExLevelAmbienceChangedInfo;
@@ -549,7 +549,7 @@ public class AbandonedCaveOfTrials extends InstanceScript
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					if (world.getParameters().getBoolean("STAGE" + world.getStatus() + "_WARDERS_ASSISTANTS_SPAWNED") == false)
+					if (!world.getParameters().getBoolean("STAGE" + world.getStatus() + "_WARDERS_ASSISTANTS_SPAWNED"))
 					{
 						world.spawnGroup("STAGE" + world.getStatus() + "_WARDERS_ASSISTANTS");
 						world.setParameter("STAGE" + world.getStatus() + "_WARDERS_ASSISTANTS_SPAWNED", true);
@@ -601,7 +601,7 @@ public class AbandonedCaveOfTrials extends InstanceScript
 					npc.asAttackable().setRunning();
 					npc.asAttackable().setTarget(attacker);
 					npc.asAttackable().addDamageHate(attacker, 0, 99999);
-					npc.asAttackable().getAI().setIntention(Intention.ATTACK, attacker);
+					npc.asAttackable().getAI().setIntentionAttack(attacker);
 					break;
 				}
 				case KASHA_ORC_WARDEN_HALKIRK:

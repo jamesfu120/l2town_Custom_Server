@@ -20,15 +20,14 @@
  */
 package handlers.chat.commands.user;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.config.custom.FactionSystemConfig;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.SkillCastingType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCastingType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -56,8 +55,6 @@ public class Unstuck implements IUserCommandHandler
 			player.sendMessage("You cannot use this function while you are neutral.");
 			return false;
 		}
-		
-		final int unstuckTimer = (player.getAccessLevel().isGm() ? 1000 : PlayerConfig.UNSTUCK_INTERVAL * 1000);
 		
 		if (player.isInOlympiadMode())
 		{
@@ -93,11 +90,12 @@ public class Unstuck implements IUserCommandHandler
 		}
 		else
 		{
+			final int unstuckTimer = (player.getAccessLevel().isGm() ? 1000 : PlayerConfig.UNSTUCK_INTERVAL * 1000);
 			final SkillCaster skillCaster = SkillCaster.castSkill(player, player.getTarget(), escape, null, SkillCastingType.NORMAL, false, false, unstuckTimer);
 			if (skillCaster == null)
 			{
 				player.sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
-				player.getAI().setIntention(Intention.ACTIVE);
+				player.getAI().setIntentionActive();
 				return false;
 			}
 			

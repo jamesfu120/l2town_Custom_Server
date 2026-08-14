@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.serverpackets.olympiad;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadInfo;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadInfo;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -52,7 +52,7 @@ public class ExOlympiadMatchResult extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RECEIVE_OLYMPIAD.writeId(this, buffer);
 		buffer.writeInt(1); // Type 0 = Match List, 1 = Match Result
@@ -86,9 +86,9 @@ public class ExOlympiadMatchResult extends ServerPacket
 			buffer.writeInt(0); // Helios
 		}
 		
-        buffer.writeByte(3); // Round 1 outcome
-        buffer.writeByte(2); // Round 2 outcome
-        buffer.writeByte(3); // Round 3 outcome
+		buffer.writeByte(3); // Round 1 outcome
+		buffer.writeByte(2); // Round 2 outcome
+		buffer.writeByte(3); // Round 3 outcome
 		buffer.writeInt(15); // Bonus Reward
 		buffer.writeInt(0); // Bonus Reward for looser
 	}

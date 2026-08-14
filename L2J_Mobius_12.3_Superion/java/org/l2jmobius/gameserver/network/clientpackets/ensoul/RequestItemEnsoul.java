@@ -21,17 +21,17 @@
 package org.l2jmobius.gameserver.network.clientpackets.ensoul;
 
 import org.l2jmobius.gameserver.data.xml.EnsoulData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulStone;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.item.OnItemSoulCrystalAdd;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.ensoul.EnsoulOption;
+import org.l2jmobius.gameserver.mechanics.ensoul.EnsoulStone;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.item.OnItemSoulCrystalAdd;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -180,7 +180,6 @@ public class RequestItemEnsoul extends ClientPacket
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (EnsoulItemOption itemOption : _options)
 		{
-			final int position = itemOption.getPosition() - 1;
 			final Item soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
 			if (soulCrystal == null)
 			{
@@ -207,6 +206,7 @@ public class RequestItemEnsoul extends ClientPacket
 				continue;
 			}
 			
+			final int position = itemOption.getPosition() - 1;
 			ItemHolder fee;
 			if (itemOption.getType() == 1)
 			{

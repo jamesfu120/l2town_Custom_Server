@@ -25,19 +25,18 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.script.Faction;
-import org.l2jmobius.gameserver.model.script.NpcLogListHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.mechanics.script.Faction;
+import org.l2jmobius.gameserver.mechanics.script.NpcLogListHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
@@ -151,12 +150,12 @@ public class Q10537_KamaelDisarray extends Quest
 			}
 			case "attack":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpc.class, 500, cha ->
+				World.forEachVisibleObjectInRange(npc, FriendlyNpc.class, 500, cha ->
 				{
 					if (cha.getId() == RETBACH)
 					{
 						npc.setTarget(cha);
-						npc.getAI().setIntention(Intention.ATTACK, cha);
+						npc.getAI().setIntentionAttack(cha);
 						ThreadPool.schedule(() -> cha.reduceCurrentHp(1000000, npc, null), 6000);
 					}
 				});

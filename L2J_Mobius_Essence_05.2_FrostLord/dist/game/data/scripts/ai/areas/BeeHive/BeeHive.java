@@ -23,14 +23,14 @@ package ai.areas.BeeHive;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author Index
@@ -118,12 +118,9 @@ public class BeeHive extends Script
 		else if (getRandomBoolean())
 		{
 			// Check if already spawned.
-			for (Monster monster : World.getInstance().getVisibleObjects(killer, Monster.class))
+			if (World.getFirstVisibleObject(killer, Monster.class, monster -> monster.getScriptValue() == killer.getObjectId()) != null)
 			{
-				if (monster.getScriptValue() == killer.getObjectId())
-				{
-					return;
-				}
+				return;
 			}
 			
 			final boolean isLow = LV_70_MONSTERS.contains(npc.getId());

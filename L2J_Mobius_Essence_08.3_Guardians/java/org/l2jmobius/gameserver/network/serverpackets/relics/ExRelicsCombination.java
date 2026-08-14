@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.network.serverpackets.relics;
 
 import java.util.ArrayList;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -43,7 +43,7 @@ public class ExRelicsCombination extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RELICS_COMBINATION.writeId(this, buffer);
 		buffer.writeByte(1); // If not true the compound result page is not showing up.
@@ -59,7 +59,7 @@ public class ExRelicsCombination extends ServerPacket
 		}
 		
 		buffer.writeInt(0); // Obtained items when failed array size.
-		buffer.writeInt(0); // Item 1 id.
-		buffer.writeLong(0); // Item 1 count.
+		buffer.writeInt(1); // Item 1 id.
+		buffer.writeLong(1); // Item 1 count.
 	}
 }

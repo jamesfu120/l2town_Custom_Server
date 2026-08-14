@@ -20,13 +20,13 @@ import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Dispel By Slot effect implementation.
@@ -78,7 +78,7 @@ public class DispelBySlot extends AbstractEffect
 		// Continue only if target has any of the abnormals. Save useless cycles.
 		if (effected.getEffectList().hasAbnormalType(_dispelAbnormals.keySet()))
 		{
-			// Dispel transformations (buff and by GM)
+			// Dispel transformations (buff and by GM).
 			final Short transformToDispel = _dispelAbnormals.get(AbnormalType.TRANSFORM);
 			if ((transformToDispel != null) && ((transformToDispel.intValue() == effected.getTransformationId()) || (transformToDispel.intValue() < 0)))
 			{

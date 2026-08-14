@@ -16,10 +16,10 @@
  */
 package ai.areas.TalkingIsland;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Drill Sergeant AI.
@@ -49,7 +49,7 @@ public class DrillSergeant extends Script
 			final int socialActionId = getRandomEntry(SOCIAL_ACTIONS);
 			npc.broadcastSocialAction(socialActionId);
 			
-			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 500, chars ->
+			World.forEachVisibleObjectInRange(npc, Npc.class, 500, chars ->
 			{
 				if (chars.getId() == GUARD)
 				{

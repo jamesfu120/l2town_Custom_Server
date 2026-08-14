@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 
 public class RequestTutorialClientEvent extends ClientPacket
 {
@@ -46,7 +46,7 @@ public class RequestTutorialClientEvent extends ClientPacket
 		final QuestState qs = player.getQuestState("255_Tutorial");
 		if (qs != null)
 		{
-			qs.getQuest().notifyEvent("CE" + _eventId + "", null, player);
+			qs.getQuest().notifyEvent("CE" + _eventId, null, player);
 		}
 	}
 }

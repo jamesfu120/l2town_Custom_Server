@@ -29,9 +29,9 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.RecipeHolder;
 import org.l2jmobius.gameserver.data.holders.RecipeStatHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.recipe.RecipeList;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.recipe.RecipeList;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * The Class RecipeData.
@@ -78,8 +78,6 @@ public class RecipeData implements IXmlReader
 						final NamedNodeMap attrs = d.getAttributes();
 						Node att;
 						int id = -1;
-						final StatSet set = new StatSet();
-						
 						att = attrs.getNamedItem("id");
 						if (att == null)
 						{
@@ -87,6 +85,7 @@ public class RecipeData implements IXmlReader
 							continue;
 						}
 						
+						final StatSet set = new StatSet();
 						id = Integer.parseInt(att.getNodeValue());
 						set.set("id", id);
 						

@@ -112,6 +112,7 @@ import handlers.bypass.npc.NpcViewMod;
 import handlers.bypass.npc.Observation;
 import handlers.bypass.npc.PlayerHelp;
 import handlers.bypass.npc.PrivateWarehouse;
+import handlers.bypass.npc.Rebirth;
 import handlers.bypass.npc.ReleaseAttribute;
 import handlers.bypass.npc.ScriptLink;
 import handlers.bypass.npc.SkillList;
@@ -485,6 +486,7 @@ public class MasterHandler
 			TutorialClose.class,
 			VoiceCommand.class,
 			Wear.class,
+			Rebirth.class,
 		},
 		{
 			// Chat Handlers

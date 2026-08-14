@@ -53,6 +53,7 @@ import org.l2jmobius.gameserver.config.custom.PvpAnnounceConfig;
 import org.l2jmobius.gameserver.config.custom.PvpRewardItemConfig;
 import org.l2jmobius.gameserver.config.custom.PvpTitleColorConfig;
 import org.l2jmobius.gameserver.config.custom.RandomSpawnsConfig;
+import org.l2jmobius.gameserver.config.custom.RebirthConfig;
 import org.l2jmobius.gameserver.config.custom.SchemeBufferConfig;
 import org.l2jmobius.gameserver.config.custom.ScreenWelcomeMessageConfig;
 import org.l2jmobius.gameserver.config.custom.SellBuffsConfig;
@@ -137,5 +138,6 @@ public class ConfigLoader
 		WalkerBotProtectionConfig.load();
 		WarehouseSortingConfig.load();
 		WeddingConfig.load();
+		RebirthConfig.load();
 	}
 }

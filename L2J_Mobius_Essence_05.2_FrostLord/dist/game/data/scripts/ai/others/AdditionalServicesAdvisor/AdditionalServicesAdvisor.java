@@ -20,22 +20,23 @@
  */
 package ai.others.AdditionalServicesAdvisor;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.enums.player.SubclassInfoType;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
@@ -137,7 +138,8 @@ public class AdditionalServicesAdvisor extends Script
 				if (event.startsWith("choose_class"))
 				{
 					final int classId = Integer.parseInt(event.split(" ")[1]);
-					if (classId > 195)
+					final PlayerClass selectedClass = PlayerClass.getPlayerClass(classId);
+					if ((selectedClass != null) && (selectedClass.getId() > PlayerClass.SOUL_HOUND.getId()))
 					{
 						html = getHtm(player, "34153-choose_gender_unavailable.htm");
 					}
@@ -154,10 +156,12 @@ public class AdditionalServicesAdvisor extends Script
 				{
 					final String[] split = event.split(" ");
 					final int classId = Integer.parseInt(split[1]);
-					final boolean female = split[2].equals("female");
-					if (female && (classId > 195))
+					final PlayerClass selectedClass = PlayerClass.getPlayerClass(classId);
+					boolean female = split[2].equals("female");
+					if (female && isMaleOnlyClass(selectedClass))
 					{
-						return null;
+						player.sendMessage("You can't choose female for these classes. Changed to male.");
+						female = false;
 					}
 					
 					html = getHtm(player, "34153-choose_gender_confirm.htm");
@@ -169,10 +173,12 @@ public class AdditionalServicesAdvisor extends Script
 				{
 					final String[] split = event.split(" ");
 					final int classId = Integer.parseInt(split[1]);
+					final PlayerClass selectedClass = PlayerClass.getPlayerClass(classId);
 					final boolean female = split[2].equals("female");
-					if (female && (classId > 195))
+					if (female && isMaleOnlyClass(selectedClass))
 					{
-						break;
+						player.sendMessage("You can't choose female for these classes.");
+						return null;
 					}
 					
 					html = getHtm(player, "34153-choose_gender_unavailable.htm");
@@ -190,24 +196,25 @@ public class AdditionalServicesAdvisor extends Script
 					
 					final String[] split = event.split(" ");
 					final int classId = Integer.parseInt(split[1]);
-					
 					if (player.getPlayerClass().getId() == classId)
 					{
 						player.sendMessage("You're in the same class now.");
 						break;
 					}
 					
+					final PlayerAppearance appearance = player.getAppearance();
+					final PlayerClass selectedClass = PlayerClass.getPlayerClass(classId);
 					final boolean female = split[2].equals("female");
-					if (female && (classId > 195))
+					if (female && isMaleOnlyClass(selectedClass))
 					{
-						break;
+						appearance.setMale();
 					}
 					
 					if (hasQuestItems(player, CLASS_CHANGE_COUPON))
 					{
 						takeItems(player, CLASS_CHANGE_COUPON, 1);
 						
-						final List<Integer> bookRefunds = new LinkedList<>();
+						final List<Integer> bookRefunds = new ArrayList<>();
 						if (player.getSkillLevel(45235) > 0) // Increased Weight Limit of Glory
 						{
 							bookRefunds.add(93064); // Weight Limit Coupon of Glory (Sealed)
@@ -247,7 +254,6 @@ public class AdditionalServicesAdvisor extends Script
 						player.setVitalityPoints(0, true);
 						player.setExpBeforeDeath(0);
 						
-						final PlayerAppearance appearance = player.getAppearance();
 						if (female)
 						{
 							appearance.setFemale();
@@ -386,6 +392,41 @@ public class AdditionalServicesAdvisor extends Script
 		}
 		
 		return null;
+	}
+	
+	private boolean isMaleOnlyClass(PlayerClass playerClass)
+	{
+		if (playerClass == null)
+		{
+			return false;
+		}
+		
+		switch (playerClass)
+		{
+			case DEATH_PILGRIM_HUMAN:
+			case DEATH_BLADE_HUMAN:
+			case DEATH_MESSENGER_HUMAN:
+			case DEATH_KIGHT_HUMAN:
+			case DEATH_PILGRIM_ELF:
+			case DEATH_BLADE_ELF:
+			case DEATH_MESSENGER_ELF:
+			case DEATH_KIGHT_ELF:
+			case DEATH_PILGRIM_DARK_ELF:
+			case DEATH_BLADE_DARK_ELF:
+			case DEATH_MESSENGER_DARK_ELF:
+			case DEATH_KIGHT_DARK_ELF:
+			case SYLPH_GUNNER:
+			case SHARPSHOOTER:
+			case WIND_SNIPER:
+			case STORM_BLASTER:
+			{
+				return true;
+			}
+			default:
+			{
+				return false;
+			}
+		}
 	}
 	
 	public static void main(String[] args)

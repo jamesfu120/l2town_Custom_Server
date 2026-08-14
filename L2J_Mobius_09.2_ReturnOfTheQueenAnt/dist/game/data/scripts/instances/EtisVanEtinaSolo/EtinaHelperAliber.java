@@ -20,27 +20,26 @@
  */
 package instances.EtisVanEtinaSolo;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.events.holders.instance.OnInstanceStatusChange;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureAttacked;
+import org.l2jmobius.gameserver.mechanics.events.holders.instance.OnInstanceStatusChange;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Etina Helper Aliber AI.
@@ -140,7 +139,7 @@ public class EtinaHelperAliber extends Script
 							WorldObject target = npc.getTarget();
 							if (target == null)
 							{
-								npc.setTarget(getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500)));
+								npc.setTarget(World.getRandomVisibleObjectInRange(npc, Monster.class, 2500));
 							}
 							
 							if ((target != null) && !target.isInvul() && target.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, target) && !ArrayUtil.contains(NOT_ATK_NPCS, target.getId()) && !ArrayUtil.contains(ETINA_HELPERS, target.getId()))
@@ -182,7 +181,7 @@ public class EtinaHelperAliber extends Script
 						}
 						else
 						{
-							aliber.getAI().setIntention(Intention.MOVE_TO, SKILL_CAST_LOCATIONS[0]);
+							aliber.getAI().setIntentionMoveTo(SKILL_CAST_LOCATIONS[0]);
 						}
 					}
 					else if (!instance.getNpcsOfGroup("BARRICADES_2").isEmpty() && (instance.getAliveNpcCount(CORRIDOR_MOBS_1) == 0) && instance.getNpcsOfGroup("BARRICADES_1").isEmpty())
@@ -204,7 +203,7 @@ public class EtinaHelperAliber extends Script
 						}
 						else
 						{
-							aliber.getAI().setIntention(Intention.MOVE_TO, SKILL_CAST_LOCATIONS[1]);
+							aliber.getAI().setIntentionMoveTo(SKILL_CAST_LOCATIONS[1]);
 						}
 					}
 					else if (!instance.getNpcsOfGroup("BARRICADES_3").isEmpty() && (instance.getAliveNpcCount(CORRIDOR_MOBS_2) == 0) && instance.getNpcsOfGroup("BARRICADES_2").isEmpty())
@@ -226,7 +225,7 @@ public class EtinaHelperAliber extends Script
 						}
 						else
 						{
-							aliber.getAI().setIntention(Intention.MOVE_TO, SKILL_CAST_LOCATIONS[2]);
+							aliber.getAI().setIntentionMoveTo(SKILL_CAST_LOCATIONS[2]);
 						}
 					}
 					else if (!instance.getNpcsOfGroup("BARRICADES_4").isEmpty() && (instance.getAliveNpcCount(CORRIDOR_MOBS_3) == 0) && instance.getNpcsOfGroup("BARRICADES_3").isEmpty())
@@ -248,7 +247,7 @@ public class EtinaHelperAliber extends Script
 						}
 						else
 						{
-							aliber.getAI().setIntention(Intention.MOVE_TO, SKILL_CAST_LOCATIONS[3]);
+							aliber.getAI().setIntentionMoveTo(SKILL_CAST_LOCATIONS[3]);
 						}
 					}
 					break;

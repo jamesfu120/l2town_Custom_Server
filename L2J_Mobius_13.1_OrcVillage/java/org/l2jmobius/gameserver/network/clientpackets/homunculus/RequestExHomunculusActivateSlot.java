@@ -24,13 +24,15 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.HomunculusSlotData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.homunculus.HomunculusSlotTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.homunculus.HomunculusSlotTemplate;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.PacketLogger;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExActivateHomunculusResult;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusList;
@@ -59,7 +61,6 @@ public class RequestExHomunculusActivateSlot extends ClientPacket
 		}
 		
 		final int size = player.getHomunculusList().size();
-		final HomunculusSlotTemplate template = HomunculusSlotData.getInstance().getTemplate(_slot);
 		if ((size != 0) && ((player.getHomunculusList().get(_slot) != null) || (_slot == player.getAvailableHomunculusSlotCount())))
 		{
 			PacketLogger.info(getClass().getSimpleName() + " player " + player.getName() + " " + player.getObjectId() + " trying unlock already unlocked slot!");
@@ -67,6 +68,7 @@ public class RequestExHomunculusActivateSlot extends ClientPacket
 			return;
 		}
 		
+		final HomunculusSlotTemplate template = HomunculusSlotData.getInstance().getTemplate(_slot);
 		if (!template.getSlotEnabled())
 		{
 			Logger.getLogger(getClass().getSimpleName() + " player " + player.getName() + " " + player.getObjectId() + " trying unlock disabled slot!");
@@ -96,6 +98,9 @@ public class RequestExHomunculusActivateSlot extends ClientPacket
 		
 		player.broadcastUserInfo();
 		player.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _slot);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.SLOT_S1_IS_UNLOCKED);
+		sm.addInt(_slot);
+		player.sendPacket(sm);
 		player.sendPacket(new ExHomunculusPointInfo(player));
 		player.sendPacket(new ExShowHomunculusList(player));
 		player.sendPacket(new ExActivateHomunculusResult(true));

@@ -24,10 +24,10 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItem;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItemReward;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItemType;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItem;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItemReward;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItemType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid
@@ -124,7 +124,7 @@ public class CombinationItemsData implements IXmlReader
 		return result;
 	}
 	
-	public static final CombinationItemsData getInstance()
+	public static CombinationItemsData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

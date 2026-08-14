@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.castlewar;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 public class ExPledgeMercenaryRecruitInfoSet extends ClientPacket
@@ -53,7 +53,7 @@ public class ExPledgeMercenaryRecruitInfoSet extends ClientPacket
 			return;
 		}
 		
-		if (clan.isRecruitMercenary() && (clan.getMapMercenary().size() > 0))
+		if (clan.isRecruitMercenary() && !clan.getMapMercenary().isEmpty())
 		{
 			return;
 		}

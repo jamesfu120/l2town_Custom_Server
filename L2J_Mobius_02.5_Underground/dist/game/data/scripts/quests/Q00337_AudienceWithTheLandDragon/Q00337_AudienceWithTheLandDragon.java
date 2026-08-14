@@ -20,13 +20,12 @@
  */
 package quests.Q00337_AudienceWithTheLandDragon;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 /**
  * Audience with the Land Dragon (337)
@@ -532,7 +531,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 							final Npc mob = addSpawn(npcInfo[5], npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), npc.getHeading(), true, 60000, false);
 							mob.setRunning();
 							mob.asAttackable().addDamageHate(attacker, 0, 500);
-							mob.getAI().setIntention(Intention.ATTACK, attacker);
+							mob.getAI().setIntentionAttack(attacker);
 						}
 						
 						if (npcId == ABYSSAL_JEWEL_3)

@@ -24,15 +24,15 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.config.RatesConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.BlessingItemRequest;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemSkillType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.BlessingItemRequest;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
@@ -99,7 +99,7 @@ public class RequestBlessOptionEnchant extends ClientPacket
 			return;
 		}
 		
-		// first validation check - also over enchant check
+		// First validation check - also over enchant check.
 		if (item.isBlessed())
 		{
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
@@ -141,7 +141,7 @@ public class RequestBlessOptionEnchant extends ClientPacket
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 				player.broadcastPacket(sm);
-				// Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.ENCHANT));
+				// World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.ENCHANT));
 				
 				final Skill skill = CommonSkill.FIREWORK.getSkill();
 				if (skill != null)

@@ -21,12 +21,13 @@
 package org.l2jmobius.gameserver.network.clientpackets.variation;
 
 import org.l2jmobius.gameserver.data.xml.VariationData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.Variation;
-import org.l2jmobius.gameserver.model.options.VariationFee;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.options.Variation;
+import org.l2jmobius.gameserver.mechanics.options.VariationFee;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
@@ -122,19 +123,32 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		// Only reuse old options for slots that are truly optional and intentionally left empty (if needed).
-		// For your rare group, we don't fallback to old augment.
 		final int option1 = augment.getOption1Id();
 		final int option2 = augment.getOption2Id();
 		final int option3 = augment.getOption3Id();
 		
-		// Optional: only fallback for option1/2 if your design requires at least 2 guaranteed options.
 		final VariationInstance oldAugment = targetItem.getAugmentation();
 		if (oldAugment != null)
 		{
-			final int newOption1 = (option1 > 0) ? option1 : 0;
-			final int newOption2 = (option2 > 0) ? option2 : 0;
-			final int newOption3 = (option3 > 0) ? option3 : 0; // Do not fallback to old 3rd option.
+			final int newOption1;
+			final int newOption2;
+			final int newOption3;
+			
+			if (targetItem.getTemplate().getBodyPart() == BodyPart.BACK)
+			{
+				// Preserve the existing slot if the new mineral didn't provide a value for it.
+				newOption1 = (option1 > 0) ? option1 : oldAugment.getOption1Id();
+				newOption2 = (option2 > 0) ? option2 : oldAugment.getOption2Id();
+				newOption3 = 0; // Cloaks never use option3.
+			}
+			else
+			{
+				// Non-cloaks: no fallback to old options, replace entirely.
+				newOption1 = (option1 > 0) ? option1 : 0;
+				newOption2 = (option2 > 0) ? option2 : 0;
+				newOption3 = (option3 > 0) ? option3 : 0;
+			}
+			
 			augment = new VariationInstance(augment.getMineralId(), newOption1, newOption2, newOption3);
 		}
 		

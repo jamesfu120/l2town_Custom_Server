@@ -20,12 +20,12 @@
  */
 package ai.areas.RaidersCrossroads.NervasTemporaryPrison;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
@@ -76,19 +76,15 @@ public class NervasTemporaryPrison extends Script
 			{
 				if (hasQuestItems(player, NERVA_KEY))
 				{
-					for (Door door : World.getInstance().getVisibleObjectsInRange(npc, Door.class, Npc.INTERACTION_DISTANCE))
+					World.forEachVisibleObjectInRange(npc, Door.class, Npc.INTERACTION_DISTANCE, door ->
 					{
 						door.openMe();
-					}
+					});
 					
-					for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, Npc.INTERACTION_DISTANCE))
+					World.forFirstVisibleObjectInRange(npc, Npc.class, Npc.INTERACTION_DISTANCE, nearby -> nearby.getId() == KAYSEN, nearby ->
 					{
-						if (nearby.getId() == KAYSEN)
-						{
-							nearby.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_TOOK_DOWN_THE_NERVA_ORCS_AND_GOT_THEIR_TEMPORARY_PRISON_KEY);
-							break;
-						}
-					}
+						nearby.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_TOOK_DOWN_THE_NERVA_ORCS_AND_GOT_THEIR_TEMPORARY_PRISON_KEY);
+					});
 					
 					takeItems(player, NERVA_KEY, 1);
 					
@@ -114,10 +110,10 @@ public class NervasTemporaryPrison extends Script
 	@Override
 	public void onSpawn(Npc npc)
 	{
-		for (Door door : World.getInstance().getVisibleObjectsInRange(npc, Door.class, Npc.INTERACTION_DISTANCE))
+		World.forEachVisibleObjectInRange(npc, Door.class, Npc.INTERACTION_DISTANCE, door ->
 		{
 			door.closeMe();
-		}
+		});
 	}
 	
 	@Override

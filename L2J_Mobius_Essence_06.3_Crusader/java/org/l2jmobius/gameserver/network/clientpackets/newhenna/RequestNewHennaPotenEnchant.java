@@ -24,13 +24,13 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.HennaPatternPotentialData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerHennaEnchant;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.henna.DyePotentialFee;
-import org.l2jmobius.gameserver.model.item.henna.HennaPoten;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.henna.DyePotentialFee;
+import org.l2jmobius.gameserver.entity.item.henna.HennaPoten;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerHennaEnchant;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.newhenna.NewHennaPotenEnchant;
 
@@ -58,13 +58,13 @@ public class RequestNewHennaPotenEnchant extends ClientPacket
 			return;
 		}
 		
-		int dailyStep = player.getDyePotentialDailyStep();
-		final DyePotentialFee currentFee = HennaPatternPotentialData.getInstance().getFee(dailyStep);
-		int dailyCount = player.getDyePotentialDailyCount();
 		if ((_slotId < 1) || (_slotId > 4))
 		{
 			return;
 		}
+		
+		int dailyStep = player.getDyePotentialDailyStep();
+		int dailyCount = player.getDyePotentialDailyCount();
 		
 		final HennaPoten hennaPattern = player.getHennaPoten(_slotId);
 		int enchantExp = hennaPattern.getEnchantExp();
@@ -75,6 +75,7 @@ public class RequestNewHennaPotenEnchant extends ClientPacket
 			return;
 		}
 		
+		final DyePotentialFee currentFee = HennaPatternPotentialData.getInstance().getFee(dailyStep);
 		if ((currentFee == null) || (dailyCount <= 0))
 		{
 			return;

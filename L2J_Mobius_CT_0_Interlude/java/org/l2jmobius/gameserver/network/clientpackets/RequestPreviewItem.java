@@ -23,16 +23,16 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Merchant;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Merchant;
-import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
-import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.buylist.BuyListHolder;
+import org.l2jmobius.gameserver.mechanics.buylist.Product;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -89,10 +89,10 @@ public class RequestPreviewItem extends ClientPacket
 			return; // prevent too long lists
 		}
 		
-		// Create _items table that will contain all ItemID to Wear
+		// Create _items table that will contain all ItemID to Wear.
 		_items = new int[_count];
 		
-		// Fill _items table with all ItemID to Wear
+		// Fill _items table with all ItemID to Wear.
 		for (int i = 0; i < _count; i++)
 		{
 			_items[i] = readInt();
@@ -107,7 +107,7 @@ public class RequestPreviewItem extends ClientPacket
 			return;
 		}
 		
-		// Get the current player and return if null
+		// Get the current player and return if null.
 		final Player player = getPlayer();
 		if (player == null)
 		{
@@ -128,13 +128,13 @@ public class RequestPreviewItem extends ClientPacket
 			return;
 		}
 		
-		// If Alternate rule Karma punishment is set to true, forbid Wear to player with Karma
+		// If Alternate rule Karma punishment is set to true, forbid Wear to player with Karma.
 		if (!PlayerConfig.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getKarma() > 0))
 		{
 			return;
 		}
 		
-		// Check current target of the player and the INTERACTION_DISTANCE
+		// Check current target of the player and the INTERACTION_DISTANCE.
 		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null // No target (i.e. GM Shop)
 		) || !((target instanceof Merchant)) // Target not a merchant
@@ -150,7 +150,7 @@ public class RequestPreviewItem extends ClientPacket
 			return;
 		}
 		
-		// Get the current merchant targeted by the player
+		// Get the current merchant targeted by the player.
 		final Merchant merchant = (target instanceof Merchant) ? (Merchant) target : null;
 		if (merchant == null)
 		{
@@ -204,7 +204,7 @@ public class RequestPreviewItem extends ClientPacket
 			}
 		}
 		
-		// Charge buyer and add tax to castle treasury if not owned by npc clan because a Try On is not Free
+		// Charge buyer and add tax to castle treasury if not owned by npc clan because a Try On is not Free.
 		if ((totalPrice < 0) || !player.reduceAdena(ItemProcessType.FEE, totalPrice, player.getLastFolkNPC(), true))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);

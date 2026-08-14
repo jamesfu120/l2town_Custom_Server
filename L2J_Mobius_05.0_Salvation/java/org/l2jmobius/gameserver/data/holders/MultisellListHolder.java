@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * A static list container of all multisell entries of a given list.

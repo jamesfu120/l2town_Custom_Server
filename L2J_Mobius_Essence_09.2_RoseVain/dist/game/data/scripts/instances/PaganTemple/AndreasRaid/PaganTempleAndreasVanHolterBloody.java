@@ -26,14 +26,14 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.holders.instance.OnInstanceStatusChange;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.events.holders.instance.OnInstanceStatusChange;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 import instances.PaganTemple.PaganTempleManager;
 
@@ -175,7 +175,7 @@ public class PaganTempleAndreasVanHolterBloody extends Script
 		final int hpPercent = npc.getCurrentHpPercent();
 		if ((hpPercent < 95.0) || (hpPercent < 90.0) || (hpPercent < 85.0) || (hpPercent < 80.0) || (hpPercent < 75.0) || (hpPercent < 70.0) || (hpPercent < 65.0) || (hpPercent < 60.0) || (hpPercent < 55.0) || (hpPercent < 50.0))
 		{
-			final List<Player> players = World.getInstance().getVisibleObjectsInRange(npc, Player.class, 600);
+			final List<Player> players = World.getVisibleObjectsInRange(npc, Player.class, 600);
 			final List<Npc> guardList01 = PaganTempleManager.spawnNpcsGroup(world, "AKOLYTH_GUARD_01", false, true);
 			final List<Npc> guardList02 = PaganTempleManager.spawnNpcsGroup(world, "AKOLYTH_GUARD_CENTER_LEFT", false, true);
 			final List<Npc> guardList03 = PaganTempleManager.spawnNpcsGroup(world, "AKOLYTH_GUARD_CENTER_RIGHT", false, true);

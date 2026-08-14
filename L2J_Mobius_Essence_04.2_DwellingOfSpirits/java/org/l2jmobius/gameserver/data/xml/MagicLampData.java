@@ -30,10 +30,10 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.MagicLampConfig;
 import org.l2jmobius.gameserver.data.holders.GreaterMagicLampHolder;
 import org.l2jmobius.gameserver.data.holders.MagicLampDataHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author L2CCCP

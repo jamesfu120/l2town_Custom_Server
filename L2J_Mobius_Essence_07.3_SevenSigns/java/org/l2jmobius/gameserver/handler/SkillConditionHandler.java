@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.skill.ISkillCondition;
+import org.l2jmobius.gameserver.mechanics.skill.ISkillCondition;
 import org.l2jmobius.gameserver.scripting.ScriptEngine;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author NosBit

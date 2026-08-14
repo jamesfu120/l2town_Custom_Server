@@ -19,17 +19,17 @@ package ai.others.CastleTeleporter;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.siege.Siege;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.siege.Siege;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Castle Teleporter AI.
@@ -157,7 +157,7 @@ public class CastleTeleporter extends Script
 				msg.addStringParameter(npc.getCastle().getName());
 				npc.getCastle().oustAllPlayers();
 				npc.setScriptValue(0);
-				for (Player pl : World.getInstance().getPlayers()) // TODO: Is it possible to get all the players for that region, instead of all players?
+				for (Player pl : World.getPlayers()) // TODO: Is it possible to get all the players for that region, instead of all players?
 				{
 					if (region == MapRegionData.getInstance().getMapRegionLocId(pl))
 					{

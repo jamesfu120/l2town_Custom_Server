@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.network.serverpackets.gacha;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.GachaItemTimeStampHolder;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.GachaItemTimeStampHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -40,7 +40,7 @@ public class UniqueGachaHistory extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_UNIQUE_GACHA_HISTORY.writeId(this, buffer);
 		buffer.writeInt(_items.size());

@@ -18,16 +18,15 @@ package ai.areas.SeedOfAnnihilation;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.areas.SeedOfAnnihilation.Nemo.Nemo;
@@ -99,7 +98,7 @@ public class Maguen extends Script
 				maguen.getVariables().set("SUMMON_PLAYER", player);
 				maguen.setTitle(player.getName());
 				maguen.setRunning();
-				maguen.getAI().setIntention(Intention.FOLLOW, player);
+				maguen.getAI().setIntentionFollow(player);
 				maguen.broadcastStatusUpdate();
 				showOnScreenMsg(player, NpcStringId.MAGUEN_APPEARANCE, 2, 4000);
 				startQuestTimer("DIST_CHECK_TIMER", 1000, maguen, player);

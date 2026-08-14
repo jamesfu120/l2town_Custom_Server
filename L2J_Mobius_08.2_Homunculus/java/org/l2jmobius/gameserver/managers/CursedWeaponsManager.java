@@ -48,25 +48,24 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.CursedWeapon;
-import org.l2jmobius.gameserver.model.actor.instance.Defender;
-import org.l2jmobius.gameserver.model.actor.instance.FeedableBeast;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.actor.instance.Guard;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CursedWeapon;
+import org.l2jmobius.gameserver.entity.actor.instance.Defender;
+import org.l2jmobius.gameserver.entity.actor.instance.FeedableBeast;
+import org.l2jmobius.gameserver.entity.actor.instance.FortCommander;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.actor.instance.Guard;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExActivatedCursedTreasureBoxLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponList;
 import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * CursedWeaponsManager AI - Version Prelude of War 2019
@@ -75,6 +74,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
 public class CursedWeaponsManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CursedWeaponsManager.class.getName());
+	
 	private final Map<Integer, CursedWeapon> _cursedWeapons = new HashMap<>();
 	
 	// NPCs.
@@ -153,7 +153,7 @@ public class CursedWeaponsManager implements IXmlReader
 	// Clean cursed sword icons and treasure chest icons.
 	public void clearEventVisuals()
 	{
-		final ArrayList<ExCursedWeaponLocation.CursedWeaponInfo> splitList = new ArrayList<>();
+		final List<ExCursedWeaponLocation.CursedWeaponInfo> splitList = new ArrayList<>();
 		final Location locZ = new Location(100000, 100000, 0);
 		final Location locA = new Location(-100000, -100000, 0);
 		splitList.add(new ExCursedWeaponLocation.CursedWeaponInfo(locZ, 8190, 1, 0L));
@@ -468,7 +468,7 @@ public class CursedWeaponsManager implements IXmlReader
 		
 		// 3. Random drop between Cursed Swords.
 		final List<CursedWeapon> shuffledWeapons = new ArrayList<>(_cursedWeapons.values());
-		java.util.Collections.shuffle(shuffledWeapons);
+		Collections.shuffle(shuffledWeapons);
 		
 		// Current region of the monster.
 		final int currentRegionId = MapRegionData.getInstance().getMapRegionLocId(attackable.getX(), attackable.getY());
@@ -550,7 +550,7 @@ public class CursedWeaponsManager implements IXmlReader
 	
 	public static void announce(SystemMessage sm)
 	{
-		Broadcast.toAllOnlinePlayers(sm);
+		World.broadcastToAllOnlinePlayers(sm);
 	}
 	
 	public void checkPlayer(Player player)
@@ -670,19 +670,9 @@ public class CursedWeaponsManager implements IXmlReader
 		}
 	}
 	
-	public static CursedWeaponsManager getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final CursedWeaponsManager INSTANCE = new CursedWeaponsManager();
-	}
-	
 	public void broadcastToWorld(ServerPacket packet)
 	{
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -708,7 +698,7 @@ public class CursedWeaponsManager implements IXmlReader
 		final Set<Integer> emptyActiveList = new HashSet<>();
 		player.sendPacket(new ExCursedWeaponList(emptyActiveList));
 		
-		final ArrayList<ExCursedWeaponLocation.CursedWeaponInfo> splitList = new ArrayList<>();
+		final List<ExCursedWeaponLocation.CursedWeaponInfo> splitList = new ArrayList<>();
 		final Location locZ = new Location(100000, 100000, 0);
 		final Location locA = new Location(-100000, -100000, 0);
 		splitList.add(new ExCursedWeaponLocation.CursedWeaponInfo(locZ, 8190, 1, 0L));
@@ -718,5 +708,15 @@ public class CursedWeaponsManager implements IXmlReader
 		player.sendPacket(new ExCursedWeaponLocation(Collections.emptyList()));
 		player.sendPacket(new ExActivatedCursedTreasureBoxLocation(8190, Collections.emptyList()));
 		player.sendPacket(new ExActivatedCursedTreasureBoxLocation(8689, Collections.emptyList()));
+	}
+	
+	public static CursedWeaponsManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final CursedWeaponsManager INSTANCE = new CursedWeaponsManager();
 	}
 }

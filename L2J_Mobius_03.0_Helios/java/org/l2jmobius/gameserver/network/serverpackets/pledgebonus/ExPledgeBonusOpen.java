@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.pledgebonus;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.ClanRewardData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
-import org.l2jmobius.gameserver.model.clan.enums.ClanRewardType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanRewardBonus;
+import org.l2jmobius.gameserver.entity.clan.enums.ClanRewardType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -40,7 +40,7 @@ public class ExPledgeBonusOpen extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		final Clan clan = _player.getClan();
 		if (clan == null)
@@ -50,29 +50,33 @@ public class ExPledgeBonusOpen extends ServerPacket
 		}
 		
 		final ClanRewardBonus highestMembersOnlineBonus = ClanRewardData.getInstance().getHighestReward(ClanRewardType.MEMBERS_ONLINE);
-		final ClanRewardBonus highestHuntingBonus = ClanRewardData.getInstance().getHighestReward(ClanRewardType.HUNTING_MONSTERS);
-		final ClanRewardBonus membersOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(clan);
-		final ClanRewardBonus huntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(clan);
 		if (highestMembersOnlineBonus == null)
 		{
 			PacketLogger.warning("Couldn't find highest available clan members online bonus!!");
 			return;
 		}
-		else if (highestHuntingBonus == null)
+		
+		final ClanRewardBonus highestHuntingBonus = ClanRewardData.getInstance().getHighestReward(ClanRewardType.HUNTING_MONSTERS);
+		if (highestHuntingBonus == null)
 		{
 			PacketLogger.warning("Couldn't find highest available clan hunting bonus!!");
 			return;
 		}
-		else if (highestMembersOnlineBonus.getSkillReward() == null)
+		
+		if (highestMembersOnlineBonus.getSkillReward() == null)
 		{
 			PacketLogger.warning("Couldn't find skill reward for highest available members online bonus!!");
 			return;
 		}
-		else if (highestHuntingBonus.getItemReward() == null)
+		
+		if (highestHuntingBonus.getItemReward() == null)
 		{
 			PacketLogger.warning("Couldn't find item reward for highest available hunting bonus!!");
 			return;
 		}
+		
+		final ClanRewardBonus membersOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(clan);
+		final ClanRewardBonus huntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(clan);
 		
 		// General OP Code
 		ServerPackets.EX_PLEDGE_BONUS_OPEN.writeId(this, buffer);

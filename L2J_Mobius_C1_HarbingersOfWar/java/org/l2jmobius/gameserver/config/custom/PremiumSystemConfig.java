@@ -39,6 +39,7 @@ public class PremiumSystemConfig
 	
 	// Constants
 	public static boolean PREMIUM_SYSTEM_ENABLED;
+	public static boolean ACCOUNT_WIDE_PREMIUM;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
 	public static float PREMIUM_RATE_DROP_CHANCE;
@@ -54,6 +55,7 @@ public class PremiumSystemConfig
 	{
 		final ConfigReader config = new ConfigReader(PREMIUM_SYSTEM_CONFIG_FILE);
 		PREMIUM_SYSTEM_ENABLED = config.getBoolean("EnablePremiumSystem", false);
+		ACCOUNT_WIDE_PREMIUM = config.getBoolean("AccountWidePremium", true);
 		PREMIUM_RATE_XP = config.getFloat("PremiumRateXp", 2);
 		PREMIUM_RATE_SP = config.getFloat("PremiumRateSp", 2);
 		PREMIUM_RATE_DROP_CHANCE = config.getFloat("PremiumRateDropChance", 2);

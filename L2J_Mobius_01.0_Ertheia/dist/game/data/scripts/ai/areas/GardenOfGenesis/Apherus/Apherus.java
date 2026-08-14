@@ -20,16 +20,16 @@
  */
 package ai.areas.GardenOfGenesis.Apherus;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -84,7 +84,7 @@ public class Apherus extends Script
 	{
 		if (event.equals("buff"))
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 3000, apherus ->
+			World.forEachVisibleObjectInRange(npc, Npc.class, 3000, apherus ->
 			{
 				if ((apherus.getId() == APHERUS))
 				{
@@ -111,7 +111,7 @@ public class Apherus extends Script
 	@Override
 	public void onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 1500, minion ->
+		World.forEachVisibleObjectInRange(npc, Npc.class, 1500, minion ->
 		{
 			if (minion.getId() == APHERUS_SUBORDINATE)
 			{
@@ -177,7 +177,7 @@ public class Apherus extends Script
 			{
 				for (int i = 0; i < 4; i++)
 				{
-					final Monster protector = addSpawn(APHERUS_DOOR_GUARD[getRandom(APHERUS_DOOR_GUARD.length)], player.getX() + getRandom(10, 30), player.getY() + getRandom(10, 30), player.getZ(), 0, false, 600000, false).asMonster();
+					final Monster protector = addSpawn(getRandomEntry(APHERUS_DOOR_GUARD), player.getX() + getRandom(10, 30), player.getY() + getRandom(10, 30), player.getZ(), 0, false, 600000, false).asMonster();
 					protector.setRunning();
 					protector.setTarget(player);
 					addAttackPlayerDesire(protector, player);

@@ -26,15 +26,16 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -89,7 +90,7 @@ public class RequestCrystallizeItem extends ClientPacket
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			if ((player.getRace() != Race.DWARF) && (player.getPlayerClass().getId() != 117) && (player.getPlayerClass().getId() != 55))
+			if ((player.getRace() != Race.DWARF) && (player.getPlayerClass() != PlayerClass.FORTUNE_SEEKER) && (player.getPlayerClass() != PlayerClass.BOUNTY_HUNTER))
 			{
 				PacketLogger.info(player + " used crystalize with classid: " + player.getPlayerClass().getId());
 			}

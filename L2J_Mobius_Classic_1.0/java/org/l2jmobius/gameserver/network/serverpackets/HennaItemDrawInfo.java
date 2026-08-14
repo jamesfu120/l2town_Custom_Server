@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Henna;
-import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.Henna;
+import org.l2jmobius.gameserver.mechanics.stats.BaseStat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -42,7 +42,7 @@ public class HennaItemDrawInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.HENNA_ITEM_INFO.writeId(this, buffer);
 		buffer.writeInt(_henna.getDyeId()); // symbol Id

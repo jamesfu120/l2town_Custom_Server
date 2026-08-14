@@ -31,20 +31,20 @@ import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.enums.player.SubclassInfoType;
-import org.l2jmobius.gameserver.model.actor.holders.player.SubClassHolder;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcMenuSelect;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.SubClassHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcMenuSelect;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -191,12 +191,12 @@ public class Raina extends Script
 				else
 				{
 					final Set<PlayerClass> availSubs = getAvailableSubClasses(player);
-					final StringBuilder sb = new StringBuilder();
-					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "subclassList.html");
 					if ((availSubs == null) || availSubs.isEmpty())
 					{
 						break;
 					}
+					
+					final StringBuilder sb = new StringBuilder();
 					
 					for (PlayerClass subClass : availSubs)
 					{
@@ -208,6 +208,7 @@ public class Raina extends Script
 						}
 					}
 					
+					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "subclassList.html");
 					html.replace("%subclassList%", sb.toString());
 					player.sendPacket(html);
 				}
@@ -481,12 +482,13 @@ public class Raina extends Script
 			case 0: // Add subclass confirm menu
 			{
 				final int classId = event.getReply();
-				final StringBuilder sb = new StringBuilder();
-				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addConfirm.html");
 				if (!isValidNewSubClass(player, classId))
 				{
 					return;
 				}
+				
+				final StringBuilder sb = new StringBuilder();
+				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addConfirm.html");
 				
 				final int npcStringId = 11170000 + classId;
 				sb.append("<fstring p1=\"1\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
@@ -516,14 +518,14 @@ public class Raina extends Script
 			}
 			case 2: // Remove (change) subclass list
 			{
-				final int subclassIndex = event.getReply();
 				final Set<PlayerClass> availSubs = getAvailableSubClasses(player);
-				final StringBuilder sb = new StringBuilder();
-				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "removeSubclassList.html");
 				if ((availSubs == null) || availSubs.isEmpty())
 				{
 					return;
 				}
+				
+				final int subclassIndex = event.getReply();
+				final StringBuilder sb = new StringBuilder();
 				
 				for (PlayerClass subClass : availSubs)
 				{
@@ -535,6 +537,7 @@ public class Raina extends Script
 					}
 				}
 				
+				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "removeSubclassList.html");
 				npc.getVariables().set("SUBCLASS_INDEX_" + player.getObjectId(), subclassIndex);
 				html.replace("%subclassList%", sb.toString());
 				player.sendPacket(html);
@@ -668,14 +671,14 @@ public class Raina extends Script
 			}
 			case 7: // change subclass list
 			{
-				final int subclassIndex = event.getReply();
 				final Set<PlayerClass> availSubs = getAvailableSubClasses(player);
-				final StringBuilder sb = new StringBuilder();
-				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "changeSubclassList.html");
 				if ((availSubs == null) || availSubs.isEmpty())
 				{
 					return;
 				}
+				
+				final int subclassIndex = event.getReply();
+				final StringBuilder sb = new StringBuilder();
 				
 				for (PlayerClass subClass : availSubs)
 				{
@@ -686,6 +689,7 @@ public class Raina extends Script
 						sb.append("<fstring p1=\"8\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
 					}
 				}
+				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "changeSubclassList.html");
 				npc.getVariables().set("SUBCLASS_INDEX_" + player.getObjectId(), subclassIndex);
 				html.replace("%subclassList%", sb.toString());
 				player.sendPacket(html);
@@ -784,7 +788,7 @@ public class Raina extends Script
 	{
 		// final QuestState qs = isErtheia ? player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName()) : player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 		// return (((qs != null) && qs.isCompleted()) || Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS);
-		return (PlayerConfig.ALT_GAME_SUBCLASS_WITHOUT_QUESTS);
+		return PlayerConfig.ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
 	}
 	
 	/**
@@ -875,7 +879,7 @@ public class Raina extends Script
 		return tempList;
 	}
 	
-	public final Set<PlayerClass> getSubclasses(Player player, int classId)
+	public Set<PlayerClass> getSubclasses(Player player, int classId)
 	{
 		Set<PlayerClass> subclasses = null;
 		final PlayerClass pClass = PlayerClass.getPlayerClass(classId);
@@ -945,13 +949,14 @@ public class Raina extends Script
 	
 	private NpcHtmlMessage getNpcHtmlMessage(Player player, Npc npc, String fileName)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
 		if (text == null)
 		{
 			LOGGER.info("Cannot find HTML file for " + Raina.class.getSimpleName() + " AI: " + fileName);
 			return null;
 		}
+		
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
 		html.setHtml(text);
 		return html;

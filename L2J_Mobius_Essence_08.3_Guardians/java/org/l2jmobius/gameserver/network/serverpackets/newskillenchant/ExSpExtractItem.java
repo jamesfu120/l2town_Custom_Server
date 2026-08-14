@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.newskillenchant;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
 public class ExSpExtractItem extends AbstractItemPacket
 {
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_SP_EXTRACT_ITEM.writeId(this, buffer);
 		buffer.writeByte(0);

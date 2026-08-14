@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
@@ -76,7 +76,7 @@ public class RequestRecipeShopManageList extends ClientPacket
 			return;
 		}
 		
-		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
+		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death).
 		if (player.isAlikeDead())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);

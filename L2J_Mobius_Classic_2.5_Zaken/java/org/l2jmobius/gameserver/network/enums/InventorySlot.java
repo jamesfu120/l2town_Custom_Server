@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.enums;
 
-import org.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.interfaces.IUpdateTypeComponent;
 
 /**
  * @author UnAfraid

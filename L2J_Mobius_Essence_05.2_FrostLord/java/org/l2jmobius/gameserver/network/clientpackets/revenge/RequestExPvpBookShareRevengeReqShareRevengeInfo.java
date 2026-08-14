@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.revenge;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RevengeHistoryManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -58,7 +58,7 @@ public class RequestExPvpBookShareRevengeReqShareRevengeInfo extends ClientPacke
 			return;
 		}
 		
-		final Player killer = World.getInstance().getPlayer(_killerName);
+		final Player killer = World.getPlayer(_killerName);
 		if ((killer == null) || !killer.isOnline())
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE);

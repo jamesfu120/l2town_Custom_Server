@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -73,7 +73,7 @@ public class RequestPledgeSetMemberPowerGrade extends ClientPacket
 		
 		if (member.getPledgeType() == Clan.SUBUNIT_ACADEMY)
 		{
-			// also checked from client side
+			// Also checked from client side.
 			player.sendPacket(SystemMessageId.THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER);
 			return;
 		}

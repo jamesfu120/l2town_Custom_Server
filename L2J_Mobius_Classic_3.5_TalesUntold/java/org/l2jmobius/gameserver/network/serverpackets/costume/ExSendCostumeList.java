@@ -23,7 +23,7 @@ package org.l2jmobius.gameserver.network.serverpackets.costume;
 import java.util.Collection;
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CostumeTable;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -47,7 +47,7 @@ public class ExSendCostumeList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_SEND_COSTUME_LIST.writeId(this, buffer);
 		buffer.writeInt(_costumes.size());

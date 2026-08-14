@@ -20,11 +20,11 @@
  */
 package ai.areas.TalkingIsland;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Trainning Soldier AI.
@@ -48,14 +48,10 @@ public class TrainningSoldier extends Script
 		{
 			if (!npc.isInCombat())
 			{
-				for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 150))
+				World.forFirstVisibleObjectInRange(npc, Npc.class, 150, nearby -> (nearby != null) && (nearby.getId() == DUMMY), nearby ->
 				{
-					if ((nearby != null) && (nearby.getId() == DUMMY))
-					{
-						addAttackDesire(npc, nearby);
-						break;
-					}
-				}
+					addAttackDesire(npc, nearby);
+				});
 			}
 			
 			getTimers().addTimer("START_ATTACK_" + npc.getObjectId(), null, 10000, npc, null);

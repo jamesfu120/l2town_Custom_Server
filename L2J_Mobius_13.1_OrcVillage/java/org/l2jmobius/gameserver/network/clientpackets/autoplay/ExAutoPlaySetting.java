@@ -24,8 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
 import org.l2jmobius.gameserver.taskmanagers.AutoPlayTaskManager;

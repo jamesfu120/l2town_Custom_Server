@@ -296,8 +296,61 @@
 	<skill id="40652" toLevel="1" name="Berserker's Scroll">
 		<!-- STR +1/ INT +1. Atk. Spd./ Casting Spd. +100. Speed +5. Skill Power +5%. Max HP/ MP +5%. Acquired XP/ SP +30%. Paralysis/ Silence/ Fear Resistance +15%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bereserker_scroll_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPECIAL_BERSERKER</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>0</hitTime>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>104174</itemConsumeId> <!-- Berserker's Scroll -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>15</PARALYZE>
+				<FEAR>15</FEAR>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40653" toLevel="1" name="Berserker's Scroll">
 		<!-- STR +1/ INT +1. Atk. Spd./ Casting Spd. +100. Speed +5. Skill Power +5%. Max HP/ MP +5%. Acquired XP/ SP +30%. Paralysis/ Silence/ Fear Resistance +15%. The effect remains after death. You can cancel the effect by yourself. -->

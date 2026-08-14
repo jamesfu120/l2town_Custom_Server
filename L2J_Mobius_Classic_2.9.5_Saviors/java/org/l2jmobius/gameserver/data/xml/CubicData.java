@@ -27,14 +27,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.templates.CubicTemplate;
-import org.l2jmobius.gameserver.model.cubic.CubicSkill;
-import org.l2jmobius.gameserver.model.cubic.ICubicConditionHolder;
-import org.l2jmobius.gameserver.model.cubic.conditions.HealthCondition;
-import org.l2jmobius.gameserver.model.cubic.conditions.HpCondition;
-import org.l2jmobius.gameserver.model.cubic.conditions.HpCondition.HpConditionType;
-import org.l2jmobius.gameserver.model.cubic.conditions.RangeCondition;
+import org.l2jmobius.gameserver.entity.actor.templates.CubicTemplate;
+import org.l2jmobius.gameserver.entity.cubic.CubicSkill;
+import org.l2jmobius.gameserver.entity.cubic.ICubicConditionHolder;
+import org.l2jmobius.gameserver.entity.cubic.conditions.HealthCondition;
+import org.l2jmobius.gameserver.entity.cubic.conditions.HpCondition;
+import org.l2jmobius.gameserver.entity.cubic.conditions.HpCondition.HpConditionType;
+import org.l2jmobius.gameserver.entity.cubic.conditions.RangeCondition;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid

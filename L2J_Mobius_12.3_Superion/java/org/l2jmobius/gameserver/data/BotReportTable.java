@@ -40,14 +40,14 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.CaptchaRequest;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.CaptchaRequest;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaResult;
@@ -145,9 +145,10 @@ public class BotReportTable
 				final int botId = rset.getInt(COLUMN_BOT_ID);
 				final int reporter = rset.getInt(COLUMN_REPORTER_ID);
 				final long date = rset.getLong(COLUMN_REPORT_TIME);
-				if (_reports.containsKey(botId))
+				final ReportedCharData existing = _reports.get(botId);
+				if (existing != null)
 				{
-					_reports.get(botId).addReporter(reporter, date);
+					existing.addReporter(reporter, date);
 				}
 				else
 				{
@@ -489,12 +490,8 @@ public class BotReportTable
 	 */
 	private static boolean timeHasPassed(Map<Integer, Long> map, int objectId)
 	{
-		if (map.containsKey(objectId))
-		{
-			return (System.currentTimeMillis() - map.get(objectId)) > GeneralConfig.BOTREPORT_REPORT_DELAY;
-		}
-		
-		return true;
+		final Long time = map.get(objectId);
+		return (time == null) || ((System.currentTimeMillis() - time.longValue()) > GeneralConfig.BOTREPORT_REPORT_DELAY);
 	}
 	
 	/**

@@ -20,13 +20,13 @@
  */
 package instances.FaeronTrainingGrounds1;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
@@ -68,12 +68,13 @@ public class FaeronTrainingGrounds1 extends InstanceScript
 	public String onEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10735_ASpecialPower.class.getSimpleName());
-		final Instance world = player.getInstanceWorld();
-		String htmltext = null;
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
+		
+		final Instance world = player.getInstanceWorld();
+		String htmltext = null;
 		
 		switch (event)
 		{
@@ -127,12 +128,13 @@ public class FaeronTrainingGrounds1 extends InstanceScript
 	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10735_ASpecialPower.class.getSimpleName());
-		final Instance world = player.getInstanceWorld();
-		String htmltext = getNoQuestMsg(player);
 		if (qs == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
+		
+		final Instance world = player.getInstanceWorld();
+		String htmltext = getNoQuestMsg(player);
 		
 		if (qs.isStarted())
 		{

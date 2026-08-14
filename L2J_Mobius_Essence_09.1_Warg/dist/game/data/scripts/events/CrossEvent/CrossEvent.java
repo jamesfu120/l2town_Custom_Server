@@ -30,19 +30,19 @@ import org.w3c.dom.NamedNodeMap;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CrossEventAdvancedRewardHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CrossEventRegularRewardHolder;
 import org.l2jmobius.gameserver.managers.events.CrossEventManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.CrossEventAdvancedRewardHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.CrossEventRegularRewardHolder;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.crossevent.ExCrossEventData;
 import org.l2jmobius.gameserver.network.serverpackets.crossevent.ExCrossEventInfo;
 
@@ -168,7 +168,7 @@ public class CrossEvent extends LongTimeEvent implements IXmlReader
 		}
 		
 		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getVariables().remove(PlayerVariables.CROSS_EVENT_DAILY_RESET_COUNT);
 		}

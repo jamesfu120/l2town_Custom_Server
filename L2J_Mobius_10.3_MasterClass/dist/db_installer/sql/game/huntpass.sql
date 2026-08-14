@@ -10,4 +10,4 @@ CREATE TABLE IF NOT EXISTS `huntpass` (
   `sayha_points_used` INT NOT NULL DEFAULT 0,
   `unclaimed_reward` BOOLEAN NOT NULL DEFAULT FALSE,
   PRIMARY KEY (`account_name`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

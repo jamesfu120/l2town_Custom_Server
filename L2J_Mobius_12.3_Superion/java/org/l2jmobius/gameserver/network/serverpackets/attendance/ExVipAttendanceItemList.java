@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.attendance;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.holders.AttendanceItemHolder;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -37,7 +37,7 @@ public class ExVipAttendanceItemList extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_VIP_ATTENDANCE_ITEM_LIST.writeId(this, buffer);
 		buffer.writeByte(0);

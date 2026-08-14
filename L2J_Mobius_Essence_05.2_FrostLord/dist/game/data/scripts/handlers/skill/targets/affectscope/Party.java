@@ -20,17 +20,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.AffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
 
 /**
  * @author Nik
@@ -46,7 +46,7 @@ public class Party implements IAffectScopeHandler
 		if (target.isPlayable())
 		{
 			final Player player = target.asPlayer();
-			final org.l2jmobius.gameserver.model.groups.Party party = player.getParty();
+			final org.l2jmobius.gameserver.entity.groups.Party party = player.getParty();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
@@ -71,7 +71,7 @@ public class Party implements IAffectScopeHandler
 				
 				if (p != player)
 				{
-					final org.l2jmobius.gameserver.model.groups.Party targetParty = p.getParty();
+					final org.l2jmobius.gameserver.entity.groups.Party targetParty = p.getParty();
 					if ((party == null) || (targetParty == null) || (party.getLeaderObjectId() != targetParty.getLeaderObjectId()))
 					{
 						return false;
@@ -94,7 +94,7 @@ public class Party implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			World.getInstance().forEachVisibleObjectInRange(target, Playable.class, affectRange, c ->
+			World.forEachVisibleObjectInRange(target, Playable.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{
@@ -141,7 +141,7 @@ public class Party implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, affectRange, n ->
+			World.forEachVisibleObjectInRange(npc, Npc.class, affectRange, n ->
 			{
 				if (n == creature)
 				{

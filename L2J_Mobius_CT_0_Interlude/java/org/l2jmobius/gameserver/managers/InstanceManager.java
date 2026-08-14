@@ -34,10 +34,10 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceWorld;
 
 /**
  * Instance manager.
@@ -84,7 +84,7 @@ public class InstanceManager implements IXmlReader
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceIdNames.size() + " instance names.");
 		}
 		
-		// Load instance templates
+		// Load instance templates.
 		_instanceTemplates.clear();
 		final File instanceFolder = new File("data/instances");
 		if (instanceFolder.exists())
@@ -220,12 +220,7 @@ public class InstanceManager implements IXmlReader
 	 */
 	public String getInstanceIdName(int id)
 	{
-		if (_instanceIdNames.containsKey(id))
-		{
-			return _instanceIdNames.get(id);
-		}
-		
-		return ("UnknownInstance");
+		return _instanceIdNames.getOrDefault(id, "UnknownInstance");
 	}
 	
 	@Override

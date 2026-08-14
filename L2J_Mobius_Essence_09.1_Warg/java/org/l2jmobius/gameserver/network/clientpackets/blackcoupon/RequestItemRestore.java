@@ -24,12 +24,12 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.BlackCouponRestoreCategory;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemRestoreHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.events.BlackCouponManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.BlackCouponRestoreCategory;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemRestoreHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -75,7 +75,7 @@ public class RequestItemRestore extends ClientPacket
 			return;
 		}
 		
-		final ItemRestoreHolder restoreHolder = filter.stream().filter(holder -> holder.getEnchantLevel() == _enchantLevel).min(Comparator.comparing(ItemRestoreHolder::getDestroyDate)).orElse(null);
+		final ItemRestoreHolder restoreHolder = filter.stream().filter(holder -> holder.getEnchantLevel() == _enchantLevel).min(Comparator.comparingLong(ItemRestoreHolder::getDestroyDate)).orElse(null);
 		if (restoreHolder == null)
 		{
 			return;

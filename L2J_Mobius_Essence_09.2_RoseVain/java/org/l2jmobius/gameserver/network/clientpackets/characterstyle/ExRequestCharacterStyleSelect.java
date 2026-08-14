@@ -22,9 +22,9 @@ package org.l2jmobius.gameserver.network.clientpackets.characterstyle;
 
 import org.l2jmobius.gameserver.data.enums.CharacterStyleCategoryType;
 import org.l2jmobius.gameserver.data.xml.CharacterStylesData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;

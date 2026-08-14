@@ -20,14 +20,13 @@
  */
 package instances.NornilsGarden;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.ArrayUtil;
@@ -144,13 +143,13 @@ public class NornilsGarden extends InstanceScript
 				{
 					if ((world != null) && !npc.isDead() && !npc.isInCombat() && !world.getDoor(16200201).isOpen())
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1500, knownChar ->
+						World.forEachVisibleObjectInRange(npc, Player.class, 1500, knownChar ->
 						{
 							if (ArrayUtil.contains(ATTACABLE_MONSTERS, npc.getId()) && !npc.isInCombat())
 							{
 								npc.setRunning();
 								npc.asAttackable().addDamageHate(knownChar, 0, 99999);
-								npc.getAI().setIntention(Intention.ATTACK, knownChar);
+								npc.getAI().setIntentionAttack(knownChar);
 							}
 						});
 						startQuestTimer("check_agrro", 1000, npc, null);

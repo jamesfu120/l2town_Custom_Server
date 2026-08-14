@@ -22,9 +22,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.skill.enums.SkillEnchantType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillEnchantType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw

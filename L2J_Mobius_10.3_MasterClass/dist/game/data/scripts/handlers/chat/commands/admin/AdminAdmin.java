@@ -28,12 +28,12 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -181,7 +181,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("An error occured while ending olympiad: " + e);
+				LOGGER.warning("An error occurred while ending olympiad: " + e);
 			}
 			
 			activeChar.sendSysMessage("Heroes formed.");
@@ -358,11 +358,11 @@ public class AdminAdmin implements IAdminCommandHandler
 					while (st.hasMoreTokens())
 					{
 						sb.append(st.nextToken());
-						sb.append(" ");
+						sb.append(' ');
 					}
 					
 					final CreatureSay cs = new CreatureSay(activeChar, ChatType.WORLD, activeChar.getName(), sb.toString());
-					for (Player player : World.getInstance().getPlayers())
+					for (Player player : World.getPlayers())
 					{
 						if (player.isNotBlocked(activeChar))
 						{

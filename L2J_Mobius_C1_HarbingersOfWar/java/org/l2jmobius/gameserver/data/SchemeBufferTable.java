@@ -32,26 +32,26 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.config.custom.SchemeBufferConfig;
-import org.l2jmobius.gameserver.model.actor.holders.npc.BuffSkillHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.BuffSkillHolder;
 
 /**
- * Loads Scheme Buffer categories and skills from XML and persists player schemes into memory and database.<br>
- * Maintains category-aware skill lists to support duplicated skill IDs across different categories.
+ * Loads available scheme buffer skills and manages player schemes in memory and database.<br>
+ * Provides category-aware lookups to support duplicated skill IDs across different categories.
  * <ul>
- * <li>Loads available skills from {@value #SKILLS_XML_PATH}.</li>
+ * <li>Loads skills from {@value #SKILLS_XML_PATH}.</li>
  * <li>Loads and saves player schemes from/to database.</li>
- * <li>Provides category-aware lookups to avoid conflicts for manual pages (e.g. Resist).</li>
+ * <li>Resolves category-aware skill holders for manual pages.</li>
  * </ul>
  * @author Mobius, BazookaRpm
  */
@@ -66,18 +66,22 @@ public class SchemeBufferTable
 	private static final String INSERT_SCHEME = "INSERT INTO buffer_schemes (object_id, scheme_name, skills) VALUES (?,?,?)";
 	private static final String TYPE_MAGE_GROUP = "MAGE_GROUP";
 	private static final String TYPE_FIGHTER_GROUP = "FIGHTER_GROUP";
+	private static final String DB_COLUMN_OBJECT_ID = "object_id";
+	private static final String DB_COLUMN_SCHEME_NAME = "scheme_name";
+	private static final String DB_COLUMN_SKILLS = "skills";
+	private static final String SKILL_SEPARATOR = ",";
 	
-	// Player Schemes Storage.
+	// Player schemes storage.
 	private final Map<Integer, Map<String, List<Integer>>> _schemesTable = new ConcurrentHashMap<>();
 	
-	// Skills Registry.
+	// Skills registry.
 	private final Map<Integer, BuffSkillHolder> _availableBuffs = new LinkedHashMap<>();
 	private final Map<String, List<Integer>> _skillIdsByType = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 	private final Map<String, Map<Integer, BuffSkillHolder>> _availableBuffsByType = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 	private final List<String> _skillTypesOrder = new ArrayList<>();
 	
 	/**
-	 * Initializes the table by loading XML skills and database player schemes.
+	 * Initializes skills registry and loads player schemes.
 	 */
 	public SchemeBufferTable()
 	{
@@ -91,74 +95,158 @@ public class SchemeBufferTable
 	 */
 	public void saveSchemes()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection connection = DatabaseFactory.getConnection())
 		{
-			try (PreparedStatement st = con.prepareStatement(DELETE_SCHEMES))
+			try (PreparedStatement deleteStatement = connection.prepareStatement(DELETE_SCHEMES))
 			{
-				st.execute();
+				deleteStatement.execute();
 			}
 			
-			try (PreparedStatement st = con.prepareStatement(INSERT_SCHEME))
+			try (PreparedStatement insertStatement = connection.prepareStatement(INSERT_SCHEME))
 			{
 				for (Entry<Integer, Map<String, List<Integer>>> playerEntry : _schemesTable.entrySet())
 				{
 					for (Entry<String, List<Integer>> schemeEntry : playerEntry.getValue().entrySet())
 					{
-						final StringBuilder sb = new StringBuilder();
+						final StringBuilder skillsBuilder = new StringBuilder();
 						for (int skillId : schemeEntry.getValue())
 						{
-							sb.append(skillId).append(',');
+							skillsBuilder.append(skillId).append(SKILL_SEPARATOR);
 						}
 						
-						if (sb.length() > 0)
+						if (!skillsBuilder.isEmpty())
 						{
-							sb.setLength(sb.length() - 1);
+							skillsBuilder.setLength(skillsBuilder.length() - SKILL_SEPARATOR.length());
 						}
 						
-						st.setInt(1, playerEntry.getKey());
-						st.setString(2, schemeEntry.getKey());
-						st.setString(3, sb.toString());
-						st.addBatch();
+						insertStatement.setInt(1, playerEntry.getKey());
+						insertStatement.setString(2, schemeEntry.getKey());
+						insertStatement.setString(3, skillsBuilder.toString());
+						insertStatement.addBatch();
 					}
 				}
-				st.executeBatch();
+				insertStatement.executeBatch();
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("SchemeBufferTable: Error while saving schemes. " + e);
+			LOGGER.log(Level.WARNING, "SchemeBufferTable: Error while saving schemes. Players: " + _schemesTable.size() + ".", e);
 		}
 	}
 	
 	/**
-	 * Registers or replaces a scheme for the given player.<br>
-	 * If the player does not exist yet, it is created, otherwise max schemes limit is enforced.
+	 * Registers or replaces a scheme for the given player.
 	 * @param playerId
 	 * @param schemeName
-	 * @param list
+	 * @param skillIds
 	 */
-	public void setScheme(int playerId, String schemeName, List<Integer> list)
+	public void setScheme(int playerId, String schemeName, List<Integer> skillIds)
 	{
-		if (!_schemesTable.containsKey(playerId))
-		{
-			_schemesTable.put(playerId, new TreeMap<>(String.CASE_INSENSITIVE_ORDER));
-		}
-		else if (_schemesTable.get(playerId).size() >= SchemeBufferConfig.BUFFER_MAX_SCHEMES)
+		final Map<String, List<Integer>> schemes = _schemesTable.computeIfAbsent(playerId, key -> new ConcurrentSkipListMap<>(String.CASE_INSENSITIVE_ORDER));
+		if ((schemes.size() >= SchemeBufferConfig.BUFFER_MAX_SCHEMES) && !schemes.containsKey(schemeName))
 		{
 			return;
 		}
 		
-		_schemesTable.get(playerId).put(schemeName, list);
+		final List<Integer> safeList = (skillIds != null) ? List.copyOf(skillIds) : Collections.emptyList();
+		schemes.put(schemeName, safeList);
 	}
 	
 	/**
-	 * Returns the scheme map for a player.
+	 * Deletes a scheme for the given player.
+	 * @param playerId
+	 * @param schemeName
+	 * @return true if removed.
+	 */
+	public boolean deleteScheme(int playerId, String schemeName)
+	{
+		final Map<String, List<Integer>> schemes = _schemesTable.get(playerId);
+		if (schemes == null)
+		{
+			return false;
+		}
+		
+		final boolean removed = schemes.remove(schemeName) != null;
+		if (schemes.isEmpty())
+		{
+			_schemesTable.remove(playerId);
+		}
+		return removed;
+	}
+	
+	/**
+	 * Adds a skill to a scheme (copy-on-write). No-op if scheme doesn't exist.
+	 * @param playerId
+	 * @param schemeName
+	 * @param skillId
+	 * @return true if added.
+	 */
+	public boolean addSkillToScheme(int playerId, String schemeName, int skillId)
+	{
+		final Map<String, List<Integer>> schemes = _schemesTable.get(playerId);
+		if (schemes == null)
+		{
+			return false;
+		}
+		
+		final List<Integer> current = schemes.get(schemeName);
+		if (current == null)
+		{
+			return false;
+		}
+		
+		if (current.contains(skillId))
+		{
+			return false;
+		}
+		
+		final List<Integer> updated = new ArrayList<>(current);
+		updated.add(skillId);
+		schemes.put(schemeName, Collections.unmodifiableList(updated));
+		return true;
+	}
+	
+	/**
+	 * Removes a skill from a scheme (copy-on-write). No-op if scheme doesn't exist.
+	 * @param playerId
+	 * @param schemeName
+	 * @param skillId
+	 * @return true if removed.
+	 */
+	public boolean removeSkillFromScheme(int playerId, String schemeName, int skillId)
+	{
+		final Map<String, List<Integer>> schemes = _schemesTable.get(playerId);
+		if (schemes == null)
+		{
+			return false;
+		}
+		
+		final List<Integer> current = schemes.get(schemeName);
+		if (current == null)
+		{
+			return false;
+		}
+		
+		if (!current.contains(skillId))
+		{
+			return false;
+		}
+		
+		final List<Integer> updated = new ArrayList<>(current);
+		updated.remove(Integer.valueOf(skillId));
+		schemes.put(schemeName, Collections.unmodifiableList(updated));
+		return true;
+	}
+	
+	/**
+	 * Returns the scheme map for a player (read-only view).
 	 * @param playerId
 	 * @return the schemes map or null.
 	 */
 	public Map<String, List<Integer>> getPlayerSchemes(int playerId)
 	{
-		return _schemesTable.get(playerId);
+		final Map<String, List<Integer>> schemes = _schemesTable.get(playerId);
+		return (schemes != null) ? Collections.unmodifiableMap(schemes) : null;
 	}
 	
 	/**
@@ -169,47 +257,23 @@ public class SchemeBufferTable
 	 */
 	public List<Integer> getScheme(int playerId, String schemeName)
 	{
-		if ((_schemesTable.get(playerId) == null) || (_schemesTable.get(playerId).get(schemeName) == null))
+		final Map<String, List<Integer>> schemes = _schemesTable.get(playerId);
+		if ((schemes == null) || (schemes.get(schemeName) == null))
 		{
 			return Collections.emptyList();
 		}
-		return _schemesTable.get(playerId).get(schemeName);
+		return schemes.get(schemeName);
 	}
 	
 	/**
-	 * Checks whether a scheme contains a specific skill ID.
-	 * @param playerId
-	 * @param schemeName
-	 * @param skillId
-	 * @return true if the scheme contains the skill ID.
-	 */
-	public boolean getSchemeContainsSkill(int playerId, String schemeName, int skillId)
-	{
-		final List<Integer> skills = getScheme(playerId, schemeName);
-		if (skills.isEmpty())
-		{
-			return false;
-		}
-		
-		for (int id : skills)
-		{
-			if (id == skillId)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	/**
-	 * Returns a copy of skill IDs belonging to a category/type.
+	 * Returns the skill ID list for a category/type without copying.<br>
+	 * The returned list is immutable and safe to share across threads.
 	 * @param groupType
 	 * @return the category skill IDs.
 	 */
 	public List<Integer> getSkillsIdsByType(String groupType)
 	{
-		final List<Integer> list = _skillIdsByType.get(groupType);
-		return (list != null) ? new ArrayList<>(list) : Collections.emptyList();
+		return _skillIdsByType.getOrDefault(groupType, Collections.emptyList());
 	}
 	
 	/**
@@ -232,8 +296,7 @@ public class SchemeBufferTable
 	}
 	
 	/**
-	 * Returns the global holder for a skill ID (compatibility path).<br>
-	 * If duplicated IDs exist, "last loaded wins" applies for this global map.
+	 * Returns the global holder for a skill ID.
 	 * @param skillId
 	 * @return the global holder or null.
 	 */
@@ -243,17 +306,15 @@ public class SchemeBufferTable
 	}
 	
 	/**
-	 * Returns the category-aware holder for a skill ID.<br>
-	 * If not found under the category, falls back to the global holder map.
+	 * Returns the category-aware holder for a skill ID.
 	 * @param groupType
 	 * @param skillId
 	 * @return the resolved holder or null.
 	 */
 	public BuffSkillHolder getAvailableBuff(String groupType, int skillId)
 	{
-		final Map<Integer, BuffSkillHolder> map = _availableBuffsByType.get(groupType);
-		final BuffSkillHolder holder = (map != null) ? map.get(skillId) : null;
-		return (holder != null) ? holder : _availableBuffs.get(skillId);
+		final Map<Integer, BuffSkillHolder> holdersByType = _availableBuffsByType.get(groupType);
+		return (holdersByType != null) ? holdersByType.getOrDefault(skillId, _availableBuffs.get(skillId)) : _availableBuffs.get(skillId);
 	}
 	
 	/**
@@ -267,24 +328,26 @@ public class SchemeBufferTable
 	
 	private void loadAvailableBuffs()
 	{
-		int categories = 0;
-		int skills = 0;
+		int categoryCount = 0;
+		int skillCount = 0;
 		
 		try
 		{
-			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-			final DocumentBuilder builder = factory.newDocumentBuilder();
-			final Document document = builder.parse(new File(SKILLS_XML_PATH));
-			final Node root = document.getFirstChild();
-			
-			for (Node categoryNode = root.getFirstChild(); categoryNode != null; categoryNode = categoryNode.getNextSibling())
+			final Node rootNode = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new File(SKILLS_XML_PATH)).getDocumentElement();
+			for (Node categoryNode = (rootNode != null) ? rootNode.getFirstChild() : null; categoryNode != null; categoryNode = categoryNode.getNextSibling())
 			{
 				if (!"category".equalsIgnoreCase(categoryNode.getNodeName()))
 				{
 					continue;
 				}
 				
-				final Node typeNode = categoryNode.getAttributes().getNamedItem("type");
+				final NamedNodeMap categoryAttributes = categoryNode.getAttributes();
+				if (categoryAttributes == null)
+				{
+					continue;
+				}
+				
+				final Node typeNode = categoryAttributes.getNamedItem("type");
 				if (typeNode == null)
 				{
 					continue;
@@ -296,7 +359,7 @@ public class SchemeBufferTable
 					_skillIdsByType.put(category, new ArrayList<>());
 					_availableBuffsByType.put(category, new LinkedHashMap<>());
 					_skillTypesOrder.add(category);
-					categories++;
+					categoryCount++;
 				}
 				
 				for (Node buffNode = categoryNode.getFirstChild(); buffNode != null; buffNode = buffNode.getNextSibling())
@@ -306,15 +369,15 @@ public class SchemeBufferTable
 						continue;
 					}
 					
-					final NamedNodeMap attrs = buffNode.getAttributes();
-					if (attrs == null)
+					final NamedNodeMap attributes = buffNode.getAttributes();
+					if (attributes == null)
 					{
 						continue;
 					}
 					
-					final Node idNode = attrs.getNamedItem("id");
-					final Node levelNode = attrs.getNamedItem("level");
-					final Node priceNode = attrs.getNamedItem("price");
+					final Node idNode = attributes.getNamedItem("id");
+					final Node levelNode = attributes.getNamedItem("level");
+					final Node priceNode = attributes.getNamedItem("price");
 					if ((idNode == null) || (levelNode == null) || (priceNode == null))
 					{
 						continue;
@@ -323,27 +386,38 @@ public class SchemeBufferTable
 					final int skillId = Integer.parseInt(idNode.getNodeValue());
 					final int level = Integer.parseInt(levelNode.getNodeValue());
 					final int price = Integer.parseInt(priceNode.getNodeValue());
-					final Node descNode = attrs.getNamedItem("desc");
-					final String desc = (descNode != null) ? descNode.getNodeValue() : "";
+					final Node descNode = attributes.getNamedItem("desc");
+					final String description = (descNode != null) ? descNode.getNodeValue() : "";
 					
-					final List<Integer> ids = _skillIdsByType.get(category);
-					if (!ids.contains(skillId))
+					final List<Integer> skillIds = _skillIdsByType.get(category);
+					if (!skillIds.contains(skillId))
 					{
-						ids.add(skillId);
+						skillIds.add(skillId);
 					}
 					
-					final BuffSkillHolder holder = new BuffSkillHolder(skillId, level, price, category, desc);
+					final BuffSkillHolder holder = new BuffSkillHolder(skillId, level, price, category, description);
 					_availableBuffsByType.get(category).put(skillId, holder);
-					_availableBuffs.put(skillId, holder);
-					skills++;
+					
+					final BuffSkillHolder existing = _availableBuffs.get(skillId);
+					if ((existing == null) || (holder.getLevel() > existing.getLevel()))
+					{
+						_availableBuffs.put(skillId, holder);
+					}
+					
+					skillCount++;
 				}
 			}
 			
-			LOGGER.info("SchemeBufferTable: Loaded " + categories + " categories and " + skills + " entries from " + SKILLS_XML_PATH + ".");
+			for (Entry<String, List<Integer>> entry : _skillIdsByType.entrySet())
+			{
+				entry.setValue(Collections.unmodifiableList(entry.getValue()));
+			}
+			
+			LOGGER.info("SchemeBufferTable: Loaded " + categoryCount + " categories and " + skillCount + " entries.");
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("SchemeBufferTable: Failed to load " + SKILLS_XML_PATH + ". " + e);
+			LOGGER.log(Level.WARNING, "SchemeBufferTable: Failed to load skills XML: " + SKILLS_XML_PATH + ".", e);
 		}
 	}
 	
@@ -351,38 +425,48 @@ public class SchemeBufferTable
 	{
 		int entryCount = 0;
 		
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement st = con.prepareStatement(LOAD_SCHEMES);
-			ResultSet rs = st.executeQuery())
+		try (Connection connection = DatabaseFactory.getConnection();
+			PreparedStatement statement = connection.prepareStatement(LOAD_SCHEMES);
+			ResultSet resultSet = statement.executeQuery())
 		{
-			while (rs.next())
+			while (resultSet.next())
 			{
-				final int objectId = rs.getInt("object_id");
-				final String schemeName = rs.getString("scheme_name");
-				final String skills = rs.getString("skills");
+				final String schemeName = resultSet.getString(DB_COLUMN_SCHEME_NAME);
+				final String skills = resultSet.getString(DB_COLUMN_SKILLS);
 				if ((schemeName == null) || (skills == null))
 				{
 					continue;
 				}
 				
-				final String[] split = skills.split(",");
-				final List<Integer> schemeList = new ArrayList<>(split.length);
+				final int objectId = resultSet.getInt(DB_COLUMN_OBJECT_ID);
+				final String[] split = skills.split(SKILL_SEPARATOR);
+				final List<Integer> schemeSkillIds = new ArrayList<>(split.length);
 				
 				for (String token : split)
 				{
 					if (token.isEmpty())
 					{
-						break;
+						continue;
 					}
 					
-					final int skillId = Integer.parseInt(token);
+					final int skillId;
+					try
+					{
+						skillId = Integer.parseInt(token);
+					}
+					catch (NumberFormatException e)
+					{
+						LOGGER.warning("SchemeBufferTable: Invalid skill id '" + token + "' for scheme '" + schemeName + "' (objectId: " + objectId + ").");
+						continue;
+					}
+					
 					if (_availableBuffs.containsKey(skillId))
 					{
-						schemeList.add(skillId);
+						schemeSkillIds.add(skillId);
 					}
 				}
 				
-				setScheme(objectId, schemeName, schemeList);
+				setScheme(objectId, schemeName, schemeSkillIds);
 				entryCount++;
 			}
 			
@@ -390,7 +474,7 @@ public class SchemeBufferTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("SchemeBufferTable: Failed to load buff schemes from database. " + e);
+			LOGGER.log(Level.WARNING, "SchemeBufferTable: Failed to load buff schemes from database.", e);
 		}
 	}
 	

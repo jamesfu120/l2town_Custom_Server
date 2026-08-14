@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -40,7 +40,7 @@ public class ExCollectionReceiveReward extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_COLLECTION_RECEIVE_REWARD.writeId(this, buffer);
 		buffer.writeShort(_collectionId);

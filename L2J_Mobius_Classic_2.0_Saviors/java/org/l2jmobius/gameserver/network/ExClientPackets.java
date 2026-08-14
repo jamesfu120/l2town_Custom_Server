@@ -21,7 +21,8 @@
 package org.l2jmobius.gameserver.network;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -381,7 +382,8 @@ public enum ExClientPackets
 	REQUEST_SSO_AUTHN_TOKEN(0x124, null, ConnectionState.IN_GAME),
 	REQUEST_QUEUE_TICKET_LOGIN(0x125, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_MEMO_INFO(0x126, RequestBlockDetailInfo::new, ConnectionState.IN_GAME),
-	REQUEST_TRY_EN_SOUL_EXTRACTION(0x127, RequestTryEnSoulExtraction::new, ConnectionState.IN_GAME);
+	REQUEST_TRY_EN_SOUL_EXTRACTION(0x127, RequestTryEnSoulExtraction::new, ConnectionState.IN_GAME),
+	EX_MAX(0x128, null, ConnectionState.IN_GAME);
 	
 	public static final ExClientPackets[] PACKET_ARRAY;
 	static
@@ -408,7 +410,10 @@ public enum ExClientPackets
 		
 		_packetId = packetId;
 		_packetSupplier = packetSupplier != null ? packetSupplier : () -> null;
-		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
+		
+		final EnumSet<ConnectionState> states = EnumSet.noneOf(ConnectionState.class);
+		Collections.addAll(states, connectionStates);
+		_connectionStates = states;
 	}
 	
 	public int getPacketId()

@@ -24,8 +24,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
 /**
@@ -53,7 +53,7 @@ public class RequestPartyMatchList extends ClientPacket
 		if (_status == 1) // PartyMatch window has opened.
 		{
 			player.setPartyMatchingActive(true);
-			final Set<Player> players = World.getInstance().getPlayers().stream() //
+			final Set<Player> players = World.getPlayers().stream() //
 				// .filter(nearby -> nearby != player) // On retail you can see yourself in list.
 				.filter(Player::isPartyMatchingActive) //
 				.filter(nearby -> Math.abs(nearby.getLevel() - player.getLevel()) <= 15) //

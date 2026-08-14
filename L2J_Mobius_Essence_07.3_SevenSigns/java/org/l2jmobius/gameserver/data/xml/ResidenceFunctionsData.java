@@ -28,8 +28,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
+import org.l2jmobius.gameserver.entity.residences.ResidenceFunctionTemplate;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid
@@ -90,9 +90,10 @@ public class ResidenceFunctionsData implements IXmlReader
 	 */
 	public ResidenceFunctionTemplate getFunction(int id, int level)
 	{
-		if (_functions.containsKey(id))
+		final List<ResidenceFunctionTemplate> functions = _functions.get(id);
+		if (functions != null)
 		{
-			for (ResidenceFunctionTemplate template : _functions.get(id))
+			for (ResidenceFunctionTemplate template : functions)
 			{
 				if (template.getLevel() == level)
 				{

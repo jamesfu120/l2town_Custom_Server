@@ -27,26 +27,26 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.NoSummonFriendZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Trasken RB
@@ -429,13 +429,14 @@ public class Trasken extends Script
 					return;
 				}
 				
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 250, cha ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 250, cha ->
 				{
 					if (cha != null)
 					{
 						npc.setTarget(cha);
 					}
 				});
+				
 				if (getRandom(100) < 30)
 				{
 					final Npc doom = addSpawn(18998, attacker.getX() + 25, attacker.getY() + 25, attacker.getZ(), 0, false, 30, false);
@@ -506,7 +507,7 @@ public class Trasken extends Script
 			case TIE:
 			case BIG_TIE:
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 600, npc::setTarget);
+				World.forEachVisibleObjectInRange(npc, Player.class, 600, npc::setTarget);
 				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
@@ -515,7 +516,7 @@ public class Trasken extends Script
 			case TRADJAN:
 			{
 				npc.getSpawn().setRespawnDelay(120);
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 3500, npc::setTarget);
+				World.forEachVisibleObjectInRange(npc, Player.class, 3500, npc::setTarget);
 				break;
 			}
 			case LAVRA_1:
@@ -523,7 +524,7 @@ public class Trasken extends Script
 			case LAVRA_3:
 			{
 				npc.getSpawn().setRespawnDelay(200);
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 3500, npc::setTarget);
+				World.forEachVisibleObjectInRange(npc, Player.class, 3500, npc::setTarget);
 				break;
 			}
 			case VICTIM_EARTWORMS_1:
@@ -531,7 +532,7 @@ public class Trasken extends Script
 			case VICTIM_EARTWORMS_3:
 			{
 				npc.getSpawn().setRespawnDelay(30);
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, npc::setTarget);
+				World.forEachVisibleObjectInRange(npc, Player.class, 1000, npc::setTarget);
 				break;
 			}
 			case DIGISTIVE:
@@ -539,7 +540,7 @@ public class Trasken extends Script
 				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, npc::setTarget);
+				World.forEachVisibleObjectInRange(npc, Player.class, 1000, npc::setTarget);
 				break;
 			}
 			case HEART_ERTHWYRM:
@@ -641,7 +642,7 @@ public class Trasken extends Script
 							_tieTrasken.getSpawn().stopRespawn();
 							_tieTrasken.decayMe();
 							
-							final int[] spawn = TAIL_RANDOM_SPAWN[getRandom(TAIL_RANDOM_SPAWN.length)];
+							final int[] spawn = getRandomEntry(TAIL_RANDOM_SPAWN);
 							if (SpawnTable.getInstance().getSpawns(TAIL_TRASKEN) == null)
 							{
 								ThreadPool.schedule(() ->
@@ -663,7 +664,7 @@ public class Trasken extends Script
 							_trasken.getSpawn().stopRespawn();
 							_trasken.decayMe();
 							
-							final int[] spawn1 = TRASKEN_RANDOM_SPAWN[getRandom(TRASKEN_RANDOM_SPAWN.length)];
+							final int[] spawn1 = getRandomEntry(TRASKEN_RANDOM_SPAWN);
 							if (SpawnTable.getInstance().getSpawns(TRASKEN) == null)
 							{
 								ThreadPool.schedule(() ->

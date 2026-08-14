@@ -28,23 +28,22 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.AdminTeleportType;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.actor.instance.RaidBoss;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.AdminTeleportType;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -134,7 +133,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				final int x = Integer.parseInt(st.nextToken());
 				final int y = Integer.parseInt(st.nextToken());
 				final int z = Integer.parseInt(st.nextToken());
-				activeChar.getAI().setIntention(Intention.MOVE_TO, new Location(x, y, z, 0));
+				activeChar.getAI().setIntentionMoveTo(new Location(x, y, z, 0));
 			}
 			catch (Exception e)
 			{
@@ -149,7 +148,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				// Case of empty or missing coordinates
+				// Case of empty or missing coordinates.
 				AdminHtml.showAdminHtml(activeChar, "teleports.htm");
 			}
 			catch (NumberFormatException nfe)
@@ -167,7 +166,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				// Case of empty coordinates
+				// Case of empty coordinates.
 				activeChar.sendSysMessage("Wrong or no Coordinates given.");
 				showTeleportCharWindow(activeChar); // back to character teleport
 			}
@@ -177,7 +176,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(17);
-				final Player player = World.getInstance().getPlayer(targetName);
+				final Player player = World.getPlayer(targetName);
 				teleportToCharacter(activeChar, player);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -212,7 +211,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				
 				final String targetName = param[1];
-				final Player player = World.getInstance().getPlayer(targetName);
+				final Player player = World.getPlayer(targetName);
 				if (player != null)
 				{
 					teleportCharacter(player, activeChar.getLocation(), activeChar);
@@ -290,7 +289,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			else if (st.countTokens() == 1)
 			{
 				final String name = st.nextToken();
-				final Player player = World.getInstance().getPlayer(name);
+				final Player player = World.getPlayer(name);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
@@ -374,7 +373,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			final int x = Integer.parseInt(st.nextToken());
 			final int y = Integer.parseInt(st.nextToken());
 			final int z = Integer.parseInt(st.nextToken());
-			activeChar.getAI().setIntention(Intention.IDLE);
+			activeChar.getAI().setIntentionIdle();
 			activeChar.teleToLocation(x, y, z, null);
 			activeChar.sendSysMessage("You have been teleported to " + coords);
 		}
@@ -464,7 +463,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			{
 				activeChar.sendSysMessage("You have recalled " + player.getName());
 				player.sendMessage("Admin is teleporting you.");
-				player.getAI().setIntention(Intention.IDLE);
+				player.getAI().setIntentionIdle();
 				player.teleToLocation(loc, true, activeChar.getInstanceWorld());
 			}
 		}
@@ -485,7 +484,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.getAI().setIntention(Intention.IDLE);
+			activeChar.getAI().setIntentionIdle();
 			activeChar.teleToLocation(player, true, player.getInstanceWorld());
 			activeChar.sendSysMessage("You have teleported to character " + player.getName() + ".");
 		}

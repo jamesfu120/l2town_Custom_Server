@@ -26,10 +26,10 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -172,7 +172,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("An error occured while ending olympiad: " + e);
+				LOGGER.warning("An error occurred while ending olympiad: " + e);
 			}
 			
 			activeChar.sendSysMessage("Heroes formed.");

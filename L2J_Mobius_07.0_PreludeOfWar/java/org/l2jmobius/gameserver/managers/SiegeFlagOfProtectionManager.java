@@ -26,10 +26,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
 
 /**
  * Siege Flag Of Protection Manager.
@@ -135,7 +135,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -149,7 +149,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -163,7 +163,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -177,7 +177,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -191,7 +191,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -205,7 +205,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -219,7 +219,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -233,7 +233,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}
@@ -247,7 +247,7 @@ public class SiegeFlagOfProtectionManager
 				}
 				catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "loadFlags: ", e);
 				}
 				break;
 			}

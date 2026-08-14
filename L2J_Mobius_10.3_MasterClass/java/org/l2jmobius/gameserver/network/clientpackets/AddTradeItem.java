@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.holders.TradeItem;
@@ -71,9 +71,9 @@ public class AddTradeItem extends ClientPacket
 		}
 		
 		final Player partner = trade.getPartner();
-		if ((partner == null) || (World.getInstance().getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null))
+		if ((partner == null) || (World.getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null))
 		{
-			// Trade partner not found, cancel trade
+			// Trade partner not found, cancel trade.
 			if (partner != null)
 			{
 				PacketLogger.warning("Character:" + player.getName() + " requested invalid trade object: " + _objectId);

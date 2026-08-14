@@ -1,42 +1,45 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.network.serverpackets.friend;
 
 import java.util.Calendar;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author Sdw
+ * @author Sdw, Atronic
  */
 public class ExFriendDetailInfo extends ServerPacket
 {
 	private final int _objectId;
 	private final Player _friend;
 	private final String _name;
-	private final int _lastAccess;
 	private final boolean _isOnline;
 	private final int _friendObjectId;
 	private final int _level;
@@ -48,15 +51,13 @@ public class ExFriendDetailInfo extends ServerPacket
 	private final int _allyCrestId;
 	private final String _allyName;
 	private final Calendar _createDate;
-	private final int _lastAccessDelay;
 	private final String _friendMemo;
 	
 	public ExFriendDetailInfo(Player player, String name)
 	{
 		_objectId = player.getObjectId();
 		_name = name;
-		_friend = World.getInstance().getPlayer(_name);
-		_lastAccess = (_friend == null) || _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
+		_friend = World.getPlayer(_name);
 		
 		final CharInfoTable charInfoTable = CharInfoTable.getInstance();
 		if (_friend == null)
@@ -88,7 +89,6 @@ public class ExFriendDetailInfo extends ServerPacket
 			}
 			
 			_createDate = charInfoTable.getCharacterCreationDate(charId);
-			_lastAccessDelay = charInfoTable.getLastAccessDelay(charId);
 			_friendMemo = charInfoTable.getFriendMemo(_objectId, charId);
 		}
 		else
@@ -108,13 +108,12 @@ public class ExFriendDetailInfo extends ServerPacket
 			_allyName = clan != null ? clan.getAllyName() : "";
 			
 			_createDate = _friend.getCreateDate();
-			_lastAccessDelay = _lastAccess;
 			_friendMemo = charInfoTable.getFriendMemo(_objectId, _friend.getObjectId());
 		}
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_FRIEND_DETAIL_INFO.writeId(this, buffer);
 		buffer.writeInt(_objectId);
@@ -131,7 +130,7 @@ public class ExFriendDetailInfo extends ServerPacket
 		buffer.writeString(_allyName);
 		buffer.writeByte(_createDate.get(Calendar.MONTH) + 1);
 		buffer.writeByte(_createDate.get(Calendar.DAY_OF_MONTH));
-		buffer.writeInt(_lastAccessDelay);
+		buffer.writeInt(-1);
 		buffer.writeString(_friendMemo);
 	}
 }

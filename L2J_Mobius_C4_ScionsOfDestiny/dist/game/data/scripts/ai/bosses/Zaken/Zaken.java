@@ -30,20 +30,20 @@ import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.zone.type.BossZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.zone.type.BossZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.taskmanagers.GameTimeTaskManager;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Controls Zaken raid boss behavior, including form switching, teleport logic and minion spawning.<br>
@@ -498,7 +498,7 @@ public class Zaken extends Script
 							final Creature nextTarget = npc.asAttackable().getMostHated();
 							if (nextTarget != null)
 							{
-								npc.getAI().setIntention(Intention.ATTACK, nextTarget);
+								npc.getAI().setIntentionAttack(nextTarget);
 							}
 							
 							_mostHatedTicks = 0;
@@ -781,7 +781,7 @@ public class Zaken extends Script
 				if (skillId == SKILL_TELEPORT_SELF)
 				{
 					npc.teleToLocation(_teleportTargetX, _teleportTargetY, _teleportTargetZ);
-					npc.getAI().setIntention(Intention.IDLE);
+					npc.getAI().setIntentionIdle();
 				}
 				else if (skillId == SKILL_TELEPORT_SINGLE)
 				{
@@ -791,7 +791,7 @@ public class Zaken extends Script
 					final Creature nextTarget = npc.asAttackable().getMostHated();
 					if (nextTarget != null)
 					{
-						npc.getAI().setIntention(Intention.ATTACK, nextTarget);
+						npc.getAI().setIntentionAttack(nextTarget);
 					}
 				}
 				else if (skillId == SKILL_TELEPORT_AREA)
@@ -909,7 +909,7 @@ public class Zaken extends Script
 					final Creature nextTarget = npc.asAttackable().getMostHated();
 					if (nextTarget != null)
 					{
-						npc.getAI().setIntention(Intention.ATTACK, nextTarget);
+						npc.getAI().setIntentionAttack(nextTarget);
 					}
 				}
 			}

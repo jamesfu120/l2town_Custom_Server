@@ -20,18 +20,24 @@
  */
 package handlers.items;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
+import org.l2jmobius.gameserver.data.holders.RelicCouponHolder;
+import org.l2jmobius.gameserver.data.xml.RelicCouponData;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.RelicSummonRequest;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.RelicSummonRequest;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsSummonResult;
 
 /**
- * @author CostyKiller
+ * @author CostyKiller, Brado
  */
 public class RelicSummonCoupon implements IItemHandler
 {
@@ -50,28 +56,45 @@ public class RelicSummonCoupon implements IItemHandler
 			return false;
 		}
 		
-		// If you have 100 relics in your confirmation list, restrictions are applied to the relic summoning and compounding functions.
-		if (player.getAccountVariables().getInt(AccountVariables.UNCONFIRMED_RELICS_COUNT, 0) == 100)
-		{
-			player.sendPacket(SystemMessageId.SUMMON_COMPOUND_IS_UNAVAILABLE_AS_YOU_HAVE_MORE_THAN_100_UNCONFIRMED_RELICS);
-			return false;
-		}
-		
 		if (player.hasRequest(RelicSummonRequest.class))
 		{
 			return false;
 		}
 		
-		// if (!player.destroyItemByItemId(ItemProcessType.FEE, item.getId(), 1, player, true))
-		// {
-		// player.sendPacket(SystemMessageId.FAILURE_ALL_ITEMS_HAVE_DISAPPEARED);
-		// return false;
-		// }
+		// If you have 100 relics in your confirmation list, restrictions are applied to the relic summoning and compounding functions.
+		if (player.getAccountVariables().getInt(AccountVariables.UNCONFIRMED_RELICS_COUNT, 0) >= RelicSystemConfig.RELIC_UNCONFIRMED_LIST_LIMIT)
+		{
+			player.sendPacket(SystemMessageId.SUMMON_COMPOUND_IS_UNAVAILABLE_AS_YOU_HAVE_MORE_THAN_100_UNCONFIRMED_RELICS);
+			return false;
+		}
+		
+		final RelicCouponHolder relicCoupon = RelicCouponData.getInstance().getCouponFromCouponItemId(item.getId());
+		if ((relicCoupon == null) || !player.destroyItem(ItemProcessType.DESTROY, item, 1, player, true))
+		{
+			player.sendPacket(SystemMessageId.FAILURE_ALL_ITEMS_HAVE_DISAPPEARED);
+			return false;
+		}
 		
 		player.addRequest(new RelicSummonRequest(player));
 		
-		final int relicSummonCount = RelicSystemConfig.ELEVEN_SUMMON_COUNT_COUPONS.contains(item.getId()) ? 11 : 1;
-		player.sendPacket(new ExRelicsSummonResult(player, item.getId(), relicSummonCount));
+		final List<Integer> obtainedRelics = RelicCouponData.getInstance().generateSummonRelics(relicCoupon);
+		if (obtainedRelics.isEmpty())
+		{
+			player.sendPacket(SystemMessageId.AN_ERROR_HAS_OCCURRED_PLEASE_TRY_AGAIN_LATER);
+			PacketLogger.finer("Relic Coupon: " + item.getId() + " generated 0 relics!");
+			return false;
+		}
+		
+		for (int relicId : obtainedRelics)
+		{
+			player.handleRelicAcquisition(relicId);
+			if (RelicSystemConfig.RELIC_SYSTEM_DEBUG_ENABLED)
+			{
+				player.sendMessage("Summoned relic ID: " + relicId);
+			}
+		}
+		
+		player.sendPacket(new ExRelicsSummonResult(relicCoupon, obtainedRelics));
 		return true;
 	}
 }

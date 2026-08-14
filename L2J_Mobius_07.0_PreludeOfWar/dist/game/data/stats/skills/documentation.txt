@@ -8,14 +8,15 @@ AbstractStatPercentEffect: Abstract class for managing stat percentages. (l2jmob
 Accuracy: P. Accuracy stat.
 AddHate: Instant effect that increases target's hate towards you.
 AddHuntingTime: Add time for time limited hunting zones. (l2jmobius)
-AdditionalPotionCp: Increases the amount of CP heal gained from potions or elixirs. (l2jmobius)
-AdditionalPotionHp: Increases the amount of HP heal gained from potions or elixirs. (l2jmobius)
-AdditionalPotionMp: Increases the amount of MP heal gained from potions or elixirs. (l2jmobius)
 AddMaxMagicCriticalRate: Stat that overrides the default config MAX_MCRIT_RATE. (l2jmobius)
 AddMaxPhysicalCriticalRate: Stat that overrides the default config MAX_PCRIT_RATE. (l2jmobius)
+AddMaxPhysicalSkillCriticalRate: Stat that overrides the default config MAX_PSKILLCRIT_RATE. (l2jmobius)
 AddPcCafePoints: Increase PcCafe points permanently. (l2jmobius)
 AddSkillBySkill: Add skill when other skill already exists. (l2jmobius)
 AddTeleportBookmarkSlot: Instant effect that increases the amount of My Teleport slots.
+AdditionalPotionCp: Increases the amount of CP heal gained from potions or elixirs. (l2jmobius)
+AdditionalPotionHp: Increases the amount of HP heal gained from potions or elixirs. (l2jmobius)
+AdditionalPotionMp: Increases the amount of MP heal gained from potions or elixirs. (l2jmobius)
 AgathionSlot: Agathion slot modifier. (l2jmobius)
 AirBind: Used by airbind chain skills. (l2jmobius)
 ApplySkillEffects: Apply skill effects directly on effected without animations. (l2jmobius)
@@ -75,8 +76,8 @@ CpHeal: Increases current CP by a given amount.
 CpHealOverTime: Increases current CP by a given amount over time.
 CpHealPercent: Increases current CP by a given percentage amount.
 CpRegen: CP Regeneration stat.
-CraftingCritical: Crafting critical stat.
 CraftRate: Craft success rate bonus. (l2jmobius)
+CraftingCritical: Crafting critical stat.
 CreateCommonItem: Allows the player to create common recipe items up to a certain level.
 CreateItem: Allows the player to create dwarven recipe items up to a certain level.
 CriticalDamage: Critical Damage stat.
@@ -85,12 +86,13 @@ CriticalRate: Critical Rate stat.
 CriticalRatePositionBonus: Critical Rate depending on position stat. Ignores the critical rate cap of 500.
 Crystallize: Allows the player to crystallize items up to a certain grade.
 CubicMastery: Max cubics stat.
-DamageBlock: Blocks Hp or Mp damage/heal.
-DamageByAttack: An effect that changes damage taken from an attack.
-DamageShield: Reflect damage percentage stat.
-DamageShieldResist: Reflect damage percentage resist.
 DamOverTime: Damage over time effect. Magic Critical results in 10 times amount to me instantly inflicted before the effect is started.
 DamOverTimePercent: Damage percentage of HP over time.
+DamageBlock: Blocks Hp or Mp damage/heal.
+DamageByAttack: An effect that changes damage taken from an attack.
+DamageEnabledByClass: Prevents other classes from damaging the effected. (l2jmobius)
+DamageShield: Reflect damage percentage stat.
+DamageShieldResist: Reflect damage percentage resist.
 DeathLink: Inflicts magical damage proportional to your current HP.
 DebuffBlock: Blocks target being affected from debuffs.
 DefenceAttribute: Stat that increases specific defence attribute.
@@ -121,7 +123,6 @@ DragonWeaponDefence: Dragon weapon defence stat. (l2jmobius)
 DuelistFury: Synergy effect for Faceoff effect. (l2jmobius)
 EnableCloak: See/unsee cloaks.
 EnchantRate: Enchant rate modifier, does not work for non grade items. (l2jmobius)
-EnemyCharge: Charges towards the enemy. Rush Impact.
 EnergyDamage: Physical damage based on Momentum formula. Triple Sonic Slash, Double Sonic Slash etc.
 EnlargeAbnormalSlot: Increase the amount of buff slots.
 EnlargeSlot: Increases the amount of inventory, warehouse, recipe or trade slots.
@@ -137,7 +138,7 @@ Feed: Gives food to pet.
 FishingExpSpBonus: Bonus Exp and SP from fishing. (l2jmobius)
 Flag: Starts pvpflag.
 FlipBlock: Effect for Handy's Block Checker Event. (l2jmobius)
-FlyMove: Moves towards target location.
+FlyAway: Fly away effect handler. (l2jmobius)
 FocusEnergy: Max momentum stat.
 FocusMaxMomentum: Increases momentum to its maximum.
 FocusMomentum: Increases momentum by a given value.
@@ -177,6 +178,7 @@ ImmobileDamageBonus: Bonus damage to immobile targets. (l2jmobius)
 ImmobileDamageResist: Resist damage while immobile. (l2jmobius)
 ImmobilePetBuff: Causes your pet to become immobilized.
 InstantKillResist: Resist against Lethal strike.
+JewelSlot: Jewel slot effect handler. (l2jmobius)
 KarmaCount: Sets current Karma.
 KnockBack: Knocks back or knocks down target.
 Lethal: Upon success sets enemy Player's CP to 1 and enemy NPC's HP to 50%.
@@ -186,6 +188,9 @@ LimitMp: Sets maximum recoverable MP through heals.
 LimitSkill: Limits skill duration. (l2jmobius)
 Lucky: dummy effect since behavior is hardcoded
 MagicAccuracy: M. Accuracy stat.
+MagicCriticalDamage: Magical Critical Damage stat
+MagicCriticalRate: Magical Critical Rate stat.
+MagicMpCost: Sets mana cost per magic type. Clarity.
 MagicalAbnormalDispelDamage: Magical attack that does damage only if it manages to dispel the given AbnormalType
 MagicalAbnormalResist: Magical mesmerizing resist.
 MagicalAttack: Magical attack stat.
@@ -201,9 +206,6 @@ MagicalEvasion: M. Evasion stat.
 MagicalSkillPower: Magical Skill Power stat. (l2jmobius)
 MagicalSoulDamage: Magical damage based on souls formula.
 MagicalSuccessResistance: Magic resist stat (magic attack 50% effective or 1 damage)
-MagicCriticalDamage: Magical Critical Damage stat
-MagicCriticalRate: Magical Critical Rate stat.
-MagicMpCost: Sets mana cost per magic type. Clarity.
 ManaCharge: Mana Recharge stat.
 ManaDamOverTime: Mana damage over time.
 ManaHeal: Increases current MP.
@@ -283,8 +285,6 @@ ReflectMagic: Deflects magical damage back to the attacker.
 ReflectSkill: Deflects physical/magical debuffs back to the attacker.
 RefuelAirship: Increases Airship's fuel.
 Relax: Sits down and increases HP regeneration until full.
-RemainMpPer: Use's skill after the % of Mp added. (l2jmobius)
-RemainHpPer: Use's skill after the % of Hp added. (l2jmobius)
 ReplaceSkillBySkill: While active replaces a skill with an alternative skill. (l2jmobius)
 ResetInstanceEntry: Resets instance re-entry time. (l2jmobius)
 ResistAbnormalByCategory: Buff/debuff resist stat.
@@ -292,6 +292,7 @@ ResistDispelByCategory: Buff/Debuff cancellation resist.
 ResistSkill: Become invulnerable against given skills.
 Restoration: Creates specified item id and count.
 RestorationRandom: Creates items randomly from a specified list. Its multiplied by extractable rate from config.
+RestoreSymbolSeal: Restore symbol seal effect handler. (l2jmobius)
 Resurrection: Resurrects target Player or Summon.
 ResurrectionSpecial: Resurrects target Player or Summon only in specified instance IDs.
 Reuse: Decreases skill reuse time based on its magic type.
@@ -318,10 +319,10 @@ SkillTurningOverTime: Stops target's casting at a fixed rate.
 SoulBlow: Physical attack based on blow formula with bonus damage from souls.
 SoulEating: Absorbs souls when taking exp from mobs and sets max soul count.
 Sow: Planting a seed into NPC target. Manor stuff.
+SpModify: Bonus SP stat.
 Speed: Speed stat.
 SpeedLimit: Increase a character's max Speed limit. (l2jmobius)
 SphericBarrier: Blocks damage and buff/debuff incoming from outside the specified range.
-SpModify: Bonus SP stat.
 Spoil: Spoils a mob activating its extra sweep drop.
 StatAddForLevel: Adds a fixed amount of a Stat for a specific player level. (l2jmobius)
 StatBonusSkillCritical: Changes skill critical rate to depend on the specified base stat.
@@ -381,8 +382,8 @@ Untargetable: Becomes untargetable.
 VampiricAttack: Increases current HP when dealing damage.
 VampiricDefence: Resist stat towards VampiricAttack
 VitalityExpRate: Sets the vitality exp rate. (l2jmobius)
-VitalityPointsRate: Vitality points consume rate.
 VitalityPointUp: Increases vitality points.
+VitalityPointsRate: Vitality points consume rate.
 WeaponAttackAngleBonus: Additional range for weapon attack angle. (l2jmobius)
 WeightLimit: Maximum weight stat.
 WeightPenalty: Weight penalty level stat.

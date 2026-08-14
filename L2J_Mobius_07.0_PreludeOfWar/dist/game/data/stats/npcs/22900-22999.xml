@@ -2143,7 +2143,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="false" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="25" grown="32" />
 			<height normal="36" grown="55" />
@@ -2788,7 +2788,7 @@
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
 				<clan>HARNAK</clan>
 			</clanList>

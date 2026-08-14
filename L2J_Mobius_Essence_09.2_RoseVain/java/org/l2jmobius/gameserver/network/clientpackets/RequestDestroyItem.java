@@ -25,15 +25,15 @@ import java.sql.PreparedStatement;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -94,13 +94,13 @@ public class RequestDestroyItem extends ClientPacket
 		
 		final Item itemToRemove = player.getInventory().getItemByObjectId(_objectId);
 		
-		// if we can't find the requested item, it is actually a cheat
+		// If we can't find the requested item, it is actually a cheat.
 		if (itemToRemove == null)
 		{
-			// GM can destroy other player items
+			// GM can destroy other player items.
 			if (player.isGM())
 			{
-				final WorldObject obj = World.getInstance().findObject(_objectId);
+				final WorldObject obj = World.findObject(_objectId);
 				if ((obj != null) && obj.isItem())
 				{
 					if (_count > ((Item) obj).getCount())
@@ -117,7 +117,7 @@ public class RequestDestroyItem extends ClientPacket
 			return;
 		}
 		
-		// Cannot discard item that the skill is consuming
+		// Cannot discard item that the skill is consuming.
 		if (player.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId()))
 		{
 			player.sendPacket(SystemMessageId.THE_ITEM_CANNOT_BE_DROPPED);

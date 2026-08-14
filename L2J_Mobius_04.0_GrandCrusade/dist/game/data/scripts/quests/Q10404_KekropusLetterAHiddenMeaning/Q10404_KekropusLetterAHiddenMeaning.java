@@ -20,11 +20,11 @@
  */
 package quests.Q10404_KekropusLetterAHiddenMeaning;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -115,12 +115,13 @@ public class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = getNoQuestMsg(player);
 		
 		if (qs.isStarted())
 		{

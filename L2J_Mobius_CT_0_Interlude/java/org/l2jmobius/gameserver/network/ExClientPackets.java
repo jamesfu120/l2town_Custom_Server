@@ -21,7 +21,8 @@
 package org.l2jmobius.gameserver.network;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -124,7 +125,8 @@ public enum ExClientPackets
 	REQUEST_CONFIRM_CANCEL_ITEM(0x2D, RequestConfirmCancelItem::new, ConnectionState.IN_GAME),
 	REQUEST_REFINE_CANCEL(0x2E, RequestRefineCancel::new, ConnectionState.IN_GAME),
 	REQUEST_EX_MAGIC_SKILL_USE_GROUND(0x2F, RequestExMagicSkillUseGround::new, ConnectionState.IN_GAME),
-	REQUEST_DUEL_SURRENDER(0x30, RequestDuelSurrender::new, ConnectionState.IN_GAME);
+	REQUEST_DUEL_SURRENDER(0x30, RequestDuelSurrender::new, ConnectionState.IN_GAME),
+	EX_MAX(0x31, null, ConnectionState.IN_GAME);
 	
 	public static final ExClientPackets[] PACKET_ARRAY;
 	static
@@ -151,7 +153,10 @@ public enum ExClientPackets
 		
 		_packetId = packetId;
 		_packetSupplier = packetSupplier != null ? packetSupplier : () -> null;
-		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
+		
+		final EnumSet<ConnectionState> states = EnumSet.noneOf(ConnectionState.class);
+		Collections.addAll(states, connectionStates);
+		_connectionStates = states;
 	}
 	
 	public int getPacketId()

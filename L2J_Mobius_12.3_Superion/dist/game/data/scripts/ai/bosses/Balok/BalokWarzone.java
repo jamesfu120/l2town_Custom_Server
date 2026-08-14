@@ -24,23 +24,22 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Balok Warzone instance zone.
@@ -176,7 +175,7 @@ public class BalokWarzone extends InstanceScript
 					{
 						if (npc.calculateDistance2D(_balok) > 335)
 						{
-							npc.getAI().setIntention(Intention.MOVE_TO, new Location(_balok.getX() + 100, _balok.getY() + 50, _balok.getZ(), _balok.getHeading()));
+							npc.getAI().setIntentionMoveTo(new Location(_balok.getX() + 100, _balok.getY() + 50, _balok.getZ(), _balok.getHeading()));
 							getTimers().addTimer("stage_last_minion_walk", 2000, npc, player);
 						}
 						else
@@ -199,7 +198,7 @@ public class BalokWarzone extends InstanceScript
 				}
 				case "imprission_minions":
 				{
-					final int[] randomJail = PRISONS_SPAWN[getRandom(PRISONS_SPAWN.length)]; // Random jail
+					final int[] randomJail = getRandomEntry(PRISONS_SPAWN); // Random jail
 					player.teleToLocation(randomJail[0], randomJail[1], randomJail[2]);
 					world.broadcastPacket(new ExShowScreenMessage("$s1, locked away in the prison.".replace("$s1", player.getName()), 5000));
 					break;
@@ -233,7 +232,7 @@ public class BalokWarzone extends InstanceScript
 					npc.setScriptValue(1);
 				}
 				
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 300, instPlayer ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 300, instPlayer ->
 				{
 					if ((instPlayer == null) || (getRandom(100) > 2))
 					{
@@ -289,10 +288,8 @@ public class BalokWarzone extends InstanceScript
 		{
 			synchronized (_minionList)
 			{
-				if (_minionList.contains(npc))
+				if (_minionList.remove(npc))
 				{
-					_minionList.remove(npc);
-					
 					if (!_minionList.isEmpty())
 					{
 						startQuestTimer("stage_last_send_minions", 2000, npc, null);

@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.BlockList;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.BlockList;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomAnnounce;
 
 /**
@@ -44,7 +44,7 @@ public class RequestPartyMatchingAnnounce extends ClientPacket
 			return;
 		}
 		
-		for (Player worldPlayers : World.getInstance().getPlayers())
+		for (Player worldPlayers : World.getPlayers())
 		{
 			if (!BlockList.isBlocked(worldPlayers, player))
 			{

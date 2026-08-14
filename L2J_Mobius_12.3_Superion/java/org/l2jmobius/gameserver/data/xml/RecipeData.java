@@ -23,7 +23,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -31,10 +30,10 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.RecipeHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.enums.StatusUpdateType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Nik
@@ -94,7 +93,7 @@ public class RecipeData implements IXmlReader
 							}
 							else if ("product".equalsIgnoreCase(c.getNodeName()))
 							{
-								productGroup = getItemList(c).stream().map(ItemChanceHolder.class::cast).collect(Collectors.toList());
+								productGroup = getItemList(c).stream().map(ItemChanceHolder.class::cast).toList();
 							}
 							else if ("npcFee".equalsIgnoreCase(c.getNodeName()))
 							{

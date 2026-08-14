@@ -16,21 +16,19 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.ai.Action;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.instance.Defender;
+import org.l2jmobius.gameserver.entity.actor.instance.FortCommander;
+import org.l2jmobius.gameserver.entity.actor.instance.SiegeFlag;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.instance.Defender;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Fear effect implementation.
@@ -79,7 +77,6 @@ public class Fear extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		effected.getAI().notifyAction(Action.AFRAID);
 		fearAction(effector, effected);
 	}
 	
@@ -88,7 +85,7 @@ public class Fear extends AbstractEffect
 	{
 		if (!effected.isPlayer())
 		{
-			effected.getAI().notifyAction(Action.THINK);
+			effected.getAI().notifyActionThink();
 		}
 	}
 	
@@ -101,6 +98,6 @@ public class Fear extends AbstractEffect
 		final int posZ = effected.getZ();
 		
 		final Location destination = GeoEngine.getInstance().getValidLocation(effected.getX(), effected.getY(), effected.getZ(), posX, posY, posZ, effected.getInstanceWorld());
-		effected.getAI().setIntention(Intention.MOVE_TO, destination);
+		effected.getAI().setIntentionMoveTo(destination);
 	}
 }

@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeReceivePowerInfo;
 
 /**
@@ -47,7 +47,7 @@ public class RequestPledgeMemberPowerInfo extends ClientPacket
 			return;
 		}
 		
-		// do we need powers to do that??
+		// Do we need powers to do that??
 		final Clan clan = player.getClan();
 		if (clan == null)
 		{

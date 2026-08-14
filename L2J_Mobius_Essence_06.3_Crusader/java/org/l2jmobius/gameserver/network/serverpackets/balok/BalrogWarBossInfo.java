@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.balok;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.managers.BattleWithBalokManager;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -55,7 +55,7 @@ public class BalrogWarBossInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_BALROGWAR_BOSSINFO.writeId(this, buffer);
 		if ((_globalpoints < 320000) && (_globalstage <= 2))

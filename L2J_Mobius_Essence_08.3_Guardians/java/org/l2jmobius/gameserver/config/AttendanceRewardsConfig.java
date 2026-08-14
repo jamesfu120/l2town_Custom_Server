@@ -37,8 +37,12 @@ public class AttendanceRewardsConfig
 	public static boolean VIP_ONLY_ATTENDANCE_REWARDS;
 	public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
 	public static int ATTENDANCE_REWARD_DELAY;
+	public static byte ATTENDANCE_REWARD_LCOIN_CHECK;
 	public static boolean ATTENDANCE_POPUP_START;
 	public static boolean ATTENDANCE_POPUP_WINDOW;
+	public static boolean ATTENDANCE_REWARDS_LOOP;
+	public static boolean ATTENDANCE_REWARDS_MATCH_REAL_DAYS;
+	public static int ATTENDANCE_CYCLE_START_DAY;
 	
 	public static void load()
 	{
@@ -47,8 +51,12 @@ public class AttendanceRewardsConfig
 		PREMIUM_ONLY_ATTENDANCE_REWARDS = config.getBoolean("PremiumOnlyAttendanceRewards", false);
 		VIP_ONLY_ATTENDANCE_REWARDS = config.getBoolean("VipOnlyAttendanceRewards", false);
 		ATTENDANCE_REWARDS_SHARE_ACCOUNT = config.getBoolean("AttendanceRewardsShareAccount", false);
+		ATTENDANCE_REWARD_LCOIN_CHECK = config.getByte("RewardLCoinCheck", (byte) 26);
 		ATTENDANCE_REWARD_DELAY = config.getInt("AttendanceRewardDelay", 30);
 		ATTENDANCE_POPUP_START = config.getBoolean("AttendancePopupStart", true);
 		ATTENDANCE_POPUP_WINDOW = config.getBoolean("AttendancePopupWindow", false);
+		ATTENDANCE_REWARDS_LOOP = config.getBoolean("AttendanceRewardsLoop", false);
+		ATTENDANCE_REWARDS_MATCH_REAL_DAYS = config.getBoolean("AttendanceRewardsMatchRealDays", false);
+		ATTENDANCE_CYCLE_START_DAY = config.getInt("AttendanceCycleStartDay", 1);
 	}
 }

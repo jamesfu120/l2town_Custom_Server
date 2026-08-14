@@ -2109,7 +2109,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="false" />
+		<ai type="ARCHER" aggroRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
@@ -2716,7 +2716,7 @@
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
+		<ai type="ARCHER" aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
 				<clan>HARNAK</clan>
 			</clanList>

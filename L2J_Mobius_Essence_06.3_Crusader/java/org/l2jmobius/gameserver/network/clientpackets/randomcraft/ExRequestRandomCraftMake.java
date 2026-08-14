@@ -21,8 +21,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.randomcraft;
 
 import org.l2jmobius.gameserver.config.RandomCraftConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerRandomCraft;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerRandomCraft;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

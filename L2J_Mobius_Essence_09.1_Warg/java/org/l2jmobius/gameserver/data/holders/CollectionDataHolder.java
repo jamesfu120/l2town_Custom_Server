@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.data.holders;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.item.holders.ItemEnchantHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemEnchantHolder;
 
 /**
  * @author Berezkin Nikolay
@@ -55,7 +55,7 @@ public class CollectionDataHolder
 	{
 		return _name;
 	}
-
+	
 	public int getOptionId()
 	{
 		return _optionId;

@@ -23,31 +23,30 @@ package instances.MysticTavern.StoryOfTauti;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.managers.ScriptManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -152,7 +151,7 @@ public class StoryOfTauti extends InstanceScript
 						final Npc deton = world.getNpc(DETON);
 						deton.setTarget(player);
 						deton.setRunning();
-						deton.getAI().setIntention(Intention.FOLLOW, player);
+						deton.getAI().setIntentionFollow(player);
 					}
 					else
 					{
@@ -165,13 +164,13 @@ public class StoryOfTauti extends InstanceScript
 			{
 				final Npc deton = world.getNpc(DETON);
 				deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARE_YOU_THE_ONES_WHO_WILL_BE_HELPING_OUT_WELCOME_I_VE_BEEN_WAITING_FOR_YOU);
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 				{
 					if ((pl != null) && ((pl.isInParty() && pl.getParty().isLeader(pl)) || pl.isGM()))
 					{
 						deton.setTarget(pl);
 						deton.setRunning();
-						deton.getAI().setIntention(Intention.FOLLOW, pl);
+						deton.getAI().setIntentionFollow(pl);
 					}
 				});
 				startQuestTimer("msg_1", 7000, deton, null);
@@ -200,7 +199,7 @@ public class StoryOfTauti extends InstanceScript
 			{
 				final Npc deton = world.getNpc(DETON);
 				deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_I_M_SURE_I_VE_SEEN_THIS_BEFORE_YES_THAT_MEANS_THE_STAKATOS);
-				deton.getAI().setIntention(Intention.MOVE_TO, DETON_MOVE);
+				deton.getAI().setIntentionMoveTo(DETON_MOVE);
 				startQuestTimer("msg_5", 7000, deton, null);
 				break;
 			}
@@ -238,7 +237,7 @@ public class StoryOfTauti extends InstanceScript
 			{
 				if ((world != null) && !npc.isDead())
 				{
-					for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpc.class, 1000))
+					World.forEachVisibleObjectInRange(npc, FriendlyNpc.class, 1000, nearby ->
 					{
 						if ((nearby.getId() == FLAME_FLOWER) && npc.isScriptValue(0) && nearby.isScriptValue(0))
 						{
@@ -257,7 +256,7 @@ public class StoryOfTauti extends InstanceScript
 								}
 							}
 						}
-					}
+					});
 					
 					startQuestTimer("check_flower", 3000, npc, null);
 				}
@@ -286,7 +285,7 @@ public class StoryOfTauti extends InstanceScript
 			}
 			case "attack_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1500, pl ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 1500, pl ->
 				{
 					if ((pl != null) && !pl.isDead())
 					{
@@ -336,7 +335,7 @@ public class StoryOfTauti extends InstanceScript
 				deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_LL_LEAVE_THOSE_MONSTERS_TO_YOU_I_LL_GO_CHECK_OUT_SOMETHING_OVER_THERE_IT_S_VERY_IMPORTANT);
 				deton.setTarget(null);
 				deton.stopMove(null);
-				deton.getAI().setIntention(Intention.MOVE_TO, DETON_MOVE_1);
+				deton.getAI().setIntentionMoveTo(DETON_MOVE_1);
 				startQuestTimer("delete_daton", 3500, deton, null);
 				break;
 			}
@@ -378,13 +377,13 @@ public class StoryOfTauti extends InstanceScript
 				deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DO_SOMETHING_ABOUT_THESE_MONSTERS_SHOW_ME_YOUR_STRENGTH_I_LL_BE_WAITING_OVER_THERE);
 				deton.setTarget(null);
 				deton.stopMove(null);
-				deton.getAI().setIntention(Intention.MOVE_TO, DETON_MOVE_1);
+				deton.getAI().setIntentionMoveTo(DETON_MOVE_1);
 				startQuestTimer("delete_daton", 5000, deton, null);
 				break;
 			}
 			case "switch_quest":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 				{
 					if (pl.isInParty())
 					{
@@ -546,7 +545,6 @@ public class StoryOfTauti extends InstanceScript
 				case SEAL_TOMBSTONE:
 				{
 					final Npc deton = world.getNpc(DETON);
-					final Npc device = world.getNpc(SEAL_DEVICE);
 					final Npc tombstone = world.getNpc(SEAL_TOMBSTONE);
 					if (tombstone.isScriptValue(0))
 					{
@@ -555,6 +553,7 @@ public class StoryOfTauti extends InstanceScript
 						break;
 					}
 					
+					final Npc device = world.getNpc(SEAL_DEVICE);
 					if (tombstone.isScriptValue(1) && (tombstone.getCurrentHpPercent() < 60))
 					{
 						device.setDisplayEffect(1);
@@ -614,7 +613,7 @@ public class StoryOfTauti extends InstanceScript
 						world.spawnGroup("last_deton");
 						final Npc deton = world.getNpc(DETON);
 						deton.setRunning();
-						deton.getAI().setIntention(Intention.MOVE_TO, DETON_MOVE_3);
+						deton.getAI().setIntentionMoveTo(DETON_MOVE_3);
 						startQuestTimer("msg_12", 6000, deton, null);
 						deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NICE_NICE_I_SEE_THAT_EVERYONE_S_FIGHTING_HARD_FOR_ME);
 						world.setStatus(11);
@@ -626,7 +625,7 @@ public class StoryOfTauti extends InstanceScript
 						archangel.setInvul(true);
 						SEAL_ARCHANGEL_WRATH.getSkill().applyEffects(npc, attacker);
 						world.setStatus(12);
-						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
+						World.forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 						{
 							if (pl.isInParty())
 							{
@@ -677,13 +676,13 @@ public class StoryOfTauti extends InstanceScript
 						cancelQuestTimer("end_instance", deton, null);
 						world.getPlayers().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, true, true, 0, 0, NpcStringId.ELAPSED_TIME)));
 						world.setStatus(4);
-						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
+						World.forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 						{
 							if ((pl.isInParty() && pl.getParty().isLeader(pl)) || pl.isGM())
 							{
 								deton.setTarget(pl);
 								deton.setRunning();
-								deton.getAI().setIntention(Intention.FOLLOW, pl);
+								deton.getAI().setIntentionFollow(pl);
 							}
 						});
 						deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ANYWAY_THE_STAKATOS_WILL_NOT_COME_OUT_ANYMORE_WHY_WELL);
@@ -709,7 +708,7 @@ public class StoryOfTauti extends InstanceScript
 					final Npc deton = world.getNpc(DETON);
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.LET_S_GO_DOWN_THIS_WAY_I_LL_BE_RIGHT_BEHIND_YOU, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
 					deton.setRunning();
-					deton.getAI().setIntention(Intention.MOVE_TO, DETON_MOVE_2);
+					deton.getAI().setIntentionMoveTo(DETON_MOVE_2);
 					startQuestTimer("msg_11", 3000, deton, null);
 					break;
 				}
@@ -830,14 +829,14 @@ public class StoryOfTauti extends InstanceScript
 				case FLAME_FLOWER:
 				{
 					npc.setCurrentHp(npc.getMaxHp() * 0.20);
-					for (Npc tombstone : World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 500))
+					World.forEachVisibleObjectInRange(npc, Monster.class, 500, tombstone ->
 					{
 						if (tombstone.getId() == SEAL_TOMBSTONE)
 						{
 							npc.setTarget(tombstone);
 							tryToEffect(npc, tombstone, DECREASE_PDEF.getSkillId());
 						}
-					}
+					});
 					break;
 				}
 				case SEAL_TOMBSTONE:
@@ -857,7 +856,7 @@ public class StoryOfTauti extends InstanceScript
 				}
 				case FLAME_GOLEM:
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1500, player ->
+					World.forEachVisibleObjectInRange(npc, Player.class, 1500, player ->
 					{
 						if (player.isInParty())
 						{
@@ -885,7 +884,7 @@ public class StoryOfTauti extends InstanceScript
 				case FLAME_SCARAB:
 				{
 					startQuestTimer("attack_player", 2000, npc, null);
-					World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1500, player ->
+					World.forEachVisibleObjectInRange(npc, Player.class, 1500, player ->
 					{
 						if (player.isInParty())
 						{
@@ -912,13 +911,13 @@ public class StoryOfTauti extends InstanceScript
 				}
 				case NPC_1:
 				{
-					for (Player nearby : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
+					World.forEachVisibleObjectInRange(npc, Player.class, 2000, nearby ->
 					{
 						if (world.getNpc(NPC_1).isScriptValue(0) && (nearby != null))
 						{
 							startQuestTimer("clone_player", 500, npc, nearby);
 						}
-					}
+					});
 					break;
 				}
 				case SEAL_ARCHANGEL:

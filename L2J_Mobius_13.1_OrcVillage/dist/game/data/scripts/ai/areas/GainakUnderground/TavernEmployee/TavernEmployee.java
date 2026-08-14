@@ -20,9 +20,9 @@
  */
 package ai.areas.GainakUnderground.TavernEmployee;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -139,32 +139,32 @@ public class TavernEmployee extends Script
 		{
 			case "spam_text1":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), SPAM_TEXT1[getRandom(SPAM_TEXT1.length)]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(SPAM_TEXT1)));
 				break;
 			}
 			case "spam_text2":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), SPAM_TEXT2[getRandom(SPAM_TEXT2.length)]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(SPAM_TEXT2)));
 				break;
 			}
 			case "spam_text3":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), SPAM_TEXT3[getRandom(SPAM_TEXT3.length)]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(SPAM_TEXT3)));
 				break;
 			}
 			case "spam_text4":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), SPAM_TEXT4[getRandom(SPAM_TEXT4.length)]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(SPAM_TEXT4)));
 				break;
 			}
 			case "spam_text5":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), SPAM_TEXT5[getRandom(SPAM_TEXT5.length)]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(SPAM_TEXT5)));
 				break;
 			}
 			case "spam_text6":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), SPAM_TEXT6[getRandom(SPAM_TEXT6.length)]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(SPAM_TEXT6)));
 				break;
 			}
 		}

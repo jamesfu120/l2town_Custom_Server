@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.sayune;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.SayuneRequest;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

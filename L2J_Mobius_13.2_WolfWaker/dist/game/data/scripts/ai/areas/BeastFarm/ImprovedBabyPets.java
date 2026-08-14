@@ -16,22 +16,20 @@
  */
 package ai.areas.BeastFarm;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.MathUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Improved Baby Pets AI.
@@ -71,10 +69,10 @@ public class ImprovedBabyPets extends Script
 				final double hpPer = (player.getCurrentHp() / player.getMaxHp()) * 100;
 				final double mpPer = (player.getCurrentMp() / player.getMaxMp()) * 100;
 				final int healType = summon.getTemplate().getParameters().getInt("heal_type", 0);
-				final int skillLv = (int) Math.floor((summon.getLevel() / 5) - 11);
+				final int skillLv = (summon.getLevel() / 5) - 11;
 				if (healType == 1)
 				{
-					final int stepLv = MathUtil.clamp(skillLv, 0, 3);
+					final int stepLv = Math.clamp(skillLv, 0, 3);
 					if ((hpPer >= 30) && (hpPer < 70))
 					{
 						castHeal(summon, stepLv, 1);
@@ -88,17 +86,17 @@ public class ImprovedBabyPets extends Script
 				{
 					if (hpPer < 30)
 					{
-						castHeal(summon, MathUtil.clamp(skillLv, 0, 3), 2);
+						castHeal(summon, Math.clamp(skillLv, 0, 3), 2);
 					}
 					else if (mpPer < 60)
 					{
-						castHeal(summon, MathUtil.clamp(skillLv, 0, 5), 1);
+						castHeal(summon, Math.clamp(skillLv, 0, 5), 1);
 					}
 				}
 			}
 			else if (event.equals("BUFF") && !summon.isAffectedBySkill(PET_CONTROL) && !summon.isHungry())
 			{
-				final int buffStep = (int) MathUtil.clamp(Math.floor((summon.getLevel() / 5) - 11), 0, 3);
+				final int buffStep = Math.clamp(((summon.getLevel() / 5) - 11), 0, 3);
 				for (int i = 1; i <= (2 * (1 + buffStep)); i++)
 				{
 					if (castBuff(summon, buffStep, i))
@@ -151,7 +149,7 @@ public class ImprovedBabyPets extends Script
 				
 				if ((targetType >= 0) && (targetType <= 2))
 				{
-					summon.getAI().setIntention(Intention.CAST, skill.getSkill(), (targetType == 1) ? summon : owner);
+					summon.getAI().setIntentionCast(skill.getSkill(), (targetType == 1) ? summon : owner);
 					summon.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_USES_S1).addSkillName(skill.getSkill()));
 					if (previousFollowStatus != summon.getFollowStatus())
 					{
@@ -182,7 +180,7 @@ public class ImprovedBabyPets extends Script
 			
 			if (!owner.hasAbnormalType(skill.getSkill().getAbnormalType()) && (targetType >= 0) && (targetType <= 2))
 			{
-				summon.getAI().setIntention(Intention.CAST, skill.getSkill(), (targetType == 1) ? summon : owner);
+				summon.getAI().setIntentionCast(skill.getSkill(), (targetType == 1) ? summon : owner);
 				summon.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_USES_S1).addSkillName(skill.getSkill()));
 				if (previousFollowStatus != summon.getFollowStatus())
 				{

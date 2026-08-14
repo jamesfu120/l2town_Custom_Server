@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
-import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.controller.SessionKey;
 import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**

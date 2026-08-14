@@ -32,24 +32,24 @@ import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.enums.player.SubclassInfoType;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcMenuSelect;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcMenuSelect;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -306,12 +306,12 @@ public class RedLibra extends LongTimeEvent
 		{
 			case 1:
 			{
-				final int classId = event.getReply();
 				if (!player.hasDualClass() || (player.getLevel() < 85) || !player.isDualClassActive() || !player.isAwakenedClass() || (player.getAdena() < REAWAKEN_PRICE) || player.isTransformed() || player.hasSummon() || !player.isInventoryUnder80(true) || (player.getWeightPenalty() >= 2))
 				{
 					break;
 				}
 				
+				final int classId = event.getReply();
 				if (!getDualClasses(player, null).contains(PlayerClass.getPlayerClass(classId)))
 				{
 					break;
@@ -382,13 +382,14 @@ public class RedLibra extends LongTimeEvent
 	
 	private NpcHtmlMessage getNpcHtmlMessage(Player player, Npc npc, String fileName)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
 		if (text == null)
 		{
 			LOGGER.info("Cannot find HTML file for " + RedLibra.class.getSimpleName() + " AI: " + fileName);
 			return null;
 		}
+		
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
 		html.setHtml(text);
 		return html;
@@ -416,7 +417,7 @@ public class RedLibra extends LongTimeEvent
 		}
 		
 		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getAccountVariables().remove(GREEN_BUFF_VAR);
 		}

@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.dye;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -41,7 +41,7 @@ public class DyeEffectEnchantProbInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_DYEEFFECT_ENCHANT_PROB_INFO.writeId(this, buffer);
 		buffer.writeInt(_category);

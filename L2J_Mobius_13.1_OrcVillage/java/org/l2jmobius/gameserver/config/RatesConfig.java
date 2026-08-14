@@ -28,8 +28,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.ConfigReader;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.DropType;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropHolder;
 
 /**
  * This class loads all the rates related configurations.
@@ -83,7 +83,9 @@ public class RatesConfig
 	public static int PET_FOOD_RATE;
 	public static float SINEATER_XP_RATE;
 	public static float LUCKY_CHANCE_MULTIPLIER;
-	public static float LIMITED_CHANCE_MULTIPLIER;
+	public static int LIMITED_DROP_MAX_LEVEL_INCREASE;
+	public static Map<Integer, Float> LIMITED_DROP_DAILY_LIMIT_BY_ID;
+	public static Map<Integer, Float> LIMITED_DROP_CHANCE_BY_ID;
 	public static int KARMA_DROP_LIMIT;
 	public static int KARMA_RATE_DROP;
 	public static int KARMA_RATE_DROP_ITEM;
@@ -184,7 +186,62 @@ public class RatesConfig
 		PET_FOOD_RATE = ratesConfig.getInt("PetFoodRate", 1);
 		SINEATER_XP_RATE = ratesConfig.getFloat("SinEaterXpRate", 1);
 		LUCKY_CHANCE_MULTIPLIER = ratesConfig.getFloat("LuckyChanceMultiplier", 1);
-		LIMITED_CHANCE_MULTIPLIER = ratesConfig.getFloat("LimitedChanceMultiplier", 1);
+		LIMITED_DROP_MAX_LEVEL_INCREASE = ratesConfig.getInt("LimitedDropMaxLevelIncrease", 5);
+		final String[] limitedDropDailyLimitMultiplier = ratesConfig.getString("LimitedDropDailyLimitMultiplierByItemId", "").split(";");
+		LIMITED_DROP_DAILY_LIMIT_BY_ID = new HashMap<>(limitedDropDailyLimitMultiplier.length);
+		if (!limitedDropDailyLimitMultiplier[0].isEmpty())
+		{
+			for (String item : limitedDropDailyLimitMultiplier)
+			{
+				final String[] itemSplit = item.split(",");
+				if (itemSplit.length != 2)
+				{
+					LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> LimitedDropDailyLimitMultiplierByItemId \"", item, "\""));
+				}
+				else
+				{
+					try
+					{
+						LIMITED_DROP_DAILY_LIMIT_BY_ID.put(Integer.parseInt(itemSplit[0]), Float.parseFloat(itemSplit[1]));
+					}
+					catch (NumberFormatException nfe)
+					{
+						if (!item.isEmpty())
+						{
+							LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> LimitedDropDailyLimitMultiplierByItemId \"", item, "\""));
+						}
+					}
+				}
+			}
+		}
+		
+		final String[] limitedDropChanceMultiplier = ratesConfig.getString("LimitedDropChanceMultiplierByItemId", "").split(";");
+		LIMITED_DROP_CHANCE_BY_ID = new HashMap<>(limitedDropChanceMultiplier.length);
+		if (!limitedDropChanceMultiplier[0].isEmpty())
+		{
+			for (String item : limitedDropChanceMultiplier)
+			{
+				final String[] itemSplit = item.split(",");
+				if (itemSplit.length != 2)
+				{
+					LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> LimitedDropChanceMultiplierByItemId \"", item, "\""));
+				}
+				else
+				{
+					try
+					{
+						LIMITED_DROP_CHANCE_BY_ID.put(Integer.parseInt(itemSplit[0]), Float.parseFloat(itemSplit[1]));
+					}
+					catch (NumberFormatException nfe)
+					{
+						if (!item.isEmpty())
+						{
+							LOGGER.warning(StringUtil.concat("Config.load(): invalid config property -> LimitedDropChanceMultiplierByItemId \"", item, "\""));
+						}
+					}
+				}
+			}
+		}
 		KARMA_DROP_LIMIT = ratesConfig.getInt("KarmaDropLimit", 10);
 		KARMA_RATE_DROP = ratesConfig.getInt("KarmaRateDrop", 70);
 		KARMA_RATE_DROP_ITEM = ratesConfig.getInt("KarmaRateDropItem", 50);

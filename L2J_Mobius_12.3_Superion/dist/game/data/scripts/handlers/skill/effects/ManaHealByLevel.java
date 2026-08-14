@@ -16,16 +16,16 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Mana Heal By Level effect implementation.
@@ -72,14 +72,14 @@ public class ManaHealByLevel extends AbstractEffect
 		
 		double amount = _power;
 		
-		// recharged mp influenced by difference between target level and skill level
-		// if target is within 5 levels or lower then skill level there's no penalty.
+		// Recharged mp influenced by difference between target level and skill level.
+		// If target is within 5 levels or lower then skill level there's no penalty.
 		amount = effected.getStat().getValue(Stat.MANA_CHARGE, amount);
 		if (effected.getLevel() > skill.getMagicLevel())
 		{
 			final int levelDiff = effected.getLevel() - skill.getMagicLevel();
 			
-			// if target is too high compared to skill level, the amount of recharged mp gradually decreases.
+			// If target is too high compared to skill level, the amount of recharged mp gradually decreases.
 			if (levelDiff == 6)
 			{
 				amount *= 0.9; // only 90% effective
@@ -122,7 +122,7 @@ public class ManaHealByLevel extends AbstractEffect
 			}
 		}
 		
-		// Prevents overheal and negative amount
+		// Prevents overheal and negative amount.
 		amount = Math.max(Math.min(amount, effected.getMaxRecoverableMp() - effected.getCurrentMp()), 0);
 		if (amount != 0)
 		{

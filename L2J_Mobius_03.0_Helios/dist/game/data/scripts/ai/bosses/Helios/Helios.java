@@ -27,20 +27,20 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.holders.SpawnHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.zone.type.NoSummonFriendZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius, NviX
@@ -189,7 +189,7 @@ public class Helios extends Script
 		{
 			_announce = true;
 			_debuffTask = ThreadPool.scheduleAtFixedRate(() -> _bossZone.getPlayersInside().forEach(player -> AUDIENCE_DEBUFF.getSkill().applyEffects(player, player)), 5000, 20000);
-			Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_ADEN_WARRIORS_BEGIN_BATTLE_WITH_THE_GIANT_EMPEROR_HELIOS, ExShowScreenMessage.TOP_CENTER, 10000, true));
+			World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_ADEN_WARRIORS_BEGIN_BATTLE_WITH_THE_GIANT_EMPEROR_HELIOS, ExShowScreenMessage.TOP_CENTER, 10000, true));
 		}
 		
 		if ((npc.getId() == HELIOS1) && !_stage1 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))
@@ -371,7 +371,7 @@ public class Helios extends Script
 				if ((status > ALIVE) && (status < DEAD))
 				{
 					_bossZone.oustAllPlayers();
-					Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_HEROES_DRAINED_OF_THEIR_POWERS_HAVE_BEEN_BANISHED_FROM_THE_THRONE_OF_HELIOS_BY_HELIOS_POWERS, ExShowScreenMessage.TOP_CENTER, 10000, true));
+					World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_HEROES_DRAINED_OF_THEIR_POWERS_HAVE_BEEN_BANISHED_FROM_THE_THRONE_OF_HELIOS_BY_HELIOS_POWERS, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					GrandBossManager.getInstance().setStatus(HELIOS3, ALIVE);
 					clean();
 				}

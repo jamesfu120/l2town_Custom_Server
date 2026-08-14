@@ -31,13 +31,13 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldRegion;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.actor.templates.DoorTemplate;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * This class loads and hold info about doors.
@@ -74,7 +74,7 @@ public class DoorData implements IXmlReader
 	public StatSet parseDoor(Node doorNode)
 	{
 		final StatSet params = new StatSet(parseAttributes(doorNode));
-		params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in CreatureTemplate
+		params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in CreatureTemplate.
 		
 		forEach(doorNode, IXmlReader::isNode, innerDoorNode ->
 		{
@@ -220,7 +220,7 @@ public class DoorData implements IXmlReader
 		final Collection<Door> doors;
 		if (instance == null)
 		{
-			final WorldRegion region = World.getInstance().getRegion(x, y, z);
+			final WorldRegion region = World.getRegion(x, y, z);
 			if (region != null)
 			{
 				doors = region.getDoors();
@@ -242,7 +242,7 @@ public class DoorData implements IXmlReader
 		
 		for (Door doorInst : doors)
 		{
-			// check dead and open
+			// Check dead and open.
 			if ((instance != doorInst.getInstanceWorld()) || doorInst.isDead() || doorInst.isOpen() || !doorInst.checkCollision() || (doorInst.getX(0) == 0))
 			{
 				continue;
@@ -253,21 +253,21 @@ public class DoorData implements IXmlReader
 			{
 				final int j = (i + 1) < 4 ? i + 1 : 0;
 				
-				// lower part of the multiplier fraction, if it is 0 we avoid an error and also know that the lines are parallel
+				// Lower part of the multiplier fraction, if it is 0 we avoid an error and also know that the lines are parallel.
 				final int denominator = ((ty - y) * (doorInst.getX(i) - doorInst.getX(j))) - ((tx - x) * (doorInst.getY(i) - doorInst.getY(j)));
 				if (denominator == 0)
 				{
 					continue;
 				}
 				
-				// multipliers to the equations of the lines. If they are lower than 0 or bigger than 1, we know that segments don't intersect
+				// Multipliers to the equations of the lines. If they are lower than 0 or bigger than 1, we know that segments don't intersect.
 				final float multiplier1 = (float) (((doorInst.getX(j) - doorInst.getX(i)) * (y - doorInst.getY(i))) - ((doorInst.getY(j) - doorInst.getY(i)) * (x - doorInst.getX(i)))) / denominator;
 				final float multiplier2 = (float) (((tx - x) * (y - doorInst.getY(i))) - ((ty - y) * (x - doorInst.getX(i)))) / denominator;
 				if ((multiplier1 >= 0) && (multiplier1 <= 1) && (multiplier2 >= 0) && (multiplier2 <= 1))
 				{
 					final int intersectZ = Math.round(z + (multiplier1 * (tz - z)));
 					
-					// now checking if the resulting point is between door's min and max z
+					// Now checking if the resulting point is between door's min and max z.
 					if ((intersectZ > doorInst.getZMin()) && (intersectZ < doorInst.getZMax()))
 					{
 						if (!doubleFaceCheck || intersectFace)

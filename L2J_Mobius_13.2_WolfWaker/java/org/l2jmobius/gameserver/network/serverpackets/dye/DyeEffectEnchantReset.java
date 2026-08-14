@@ -20,13 +20,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.dye;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -87,7 +87,7 @@ public class DyeEffectEnchantReset extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_DYEEFFECT_ENCHANT_RESET.writeId(this, buffer);
 		if ((_player.getInventory().getItemByItemId(RatesConfig.DYE_ENCHANT_RESET_FEE_ITEM_ID) != null) && (_player.getInventory().getItemByItemId(RatesConfig.DYE_ENCHANT_RESET_FEE_ITEM_ID).getCount() < RatesConfig.DYE_ENCHANT_RESET_FEE_ITEM_COUNT))

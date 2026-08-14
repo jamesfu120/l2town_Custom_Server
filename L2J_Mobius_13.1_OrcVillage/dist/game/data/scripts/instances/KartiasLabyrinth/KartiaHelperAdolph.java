@@ -20,27 +20,25 @@
  */
 package instances.KartiasLabyrinth;
 
-import java.util.List;
-
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.holders.instance.OnInstanceStatusChange;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureAttacked;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.events.holders.instance.OnInstanceStatusChange;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Kartia Helper Adolph AI.
@@ -128,10 +126,9 @@ public class KartiaHelperAdolph extends Script
 				}
 				else if (!npc.isInCombat() || (npc.getTarget() == null))
 				{
-					final List<Monster> monsterList = World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 500);
-					if (!monsterList.isEmpty())
+					final Monster monster = World.getRandomVisibleObjectInRange(npc, Monster.class, 500);
+					if (monster != null)
 					{
-						final Monster monster = getRandomEntry(monsterList);
 						if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !ArrayUtil.contains(MIRRORS, monster.getId()) && !ArrayUtil.contains(KARTIA_FRIENDS, monster.getId()))
 						{
 							addAttackDesire(npc, monster);
@@ -154,13 +151,13 @@ public class KartiaHelperAdolph extends Script
 	
 	public void useRandomSkill(Npc npc)
 	{
-		final Instance instance = npc.getInstanceWorld();
 		final WorldObject target = npc.getTarget();
 		if (target == null)
 		{
 			return;
 		}
 		
+		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && !npc.isCastingNow() && (!ArrayUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatSet instParams = instance.getTemplateParameters();
@@ -192,17 +189,13 @@ public class KartiaHelperAdolph extends Script
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
 							npc.doCast(skill1.getSkill(), null, true, false);
-							final List<Monster> monsterList = World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 300);
-							if (!monsterList.isEmpty())
+							World.forEachVisibleObjectInRange(npc, Monster.class, 300, monster ->
 							{
-								for (Monster monster : monsterList)
+								if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !ArrayUtil.contains(MIRRORS, monster.getId()) && !ArrayUtil.contains(KARTIA_FRIENDS, monster.getId()))
 								{
-									if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !ArrayUtil.contains(MIRRORS, monster.getId()) && !ArrayUtil.contains(KARTIA_FRIENDS, monster.getId()))
-									{
-										monster.addDamageHate(npc, 100, 10000);
-									}
+									monster.addDamageHate(npc, 100, 10000);
 								}
-							}
+							});
 						}
 						break;
 					}

@@ -17,9 +17,9 @@
 package handlers.actions.user;
 
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
 import org.l2jmobius.gameserver.managers.AirShipManager;
-import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Airship Action player action handler.

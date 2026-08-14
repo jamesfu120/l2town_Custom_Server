@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade;
 
 import org.l2jmobius.gameserver.data.holders.EquipmentUpgradeNormalHolder;
 import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeNormalData;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.equipmentupgrade.ExUpgradeSystemProbList;
 

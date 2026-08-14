@@ -28,10 +28,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.crypt.NewCrypt;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.loginserver.LoginController;
-import org.l2jmobius.loginserver.LoginController.ScrambledKeyPair;
 import org.l2jmobius.loginserver.LoginServer;
-import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.controller.LoginController;
+import org.l2jmobius.loginserver.controller.LoginController.ScrambledKeyPair;
+import org.l2jmobius.loginserver.controller.SessionKey;
 import org.l2jmobius.loginserver.network.serverpackets.Init;
 
 /**
@@ -86,7 +86,7 @@ public class LoginClient extends Thread
 			_in = socket.getInputStream();
 			_out = new BufferedOutputStream(socket.getOutputStream());
 			
-			// ensure that no errors occured and start thread
+			// Ensure that no errors occurred and start thread.
 			start();
 		}
 		catch (IOException e)
@@ -158,7 +158,7 @@ public class LoginClient extends Thread
 				}
 				
 				// Execute client packet.
-				final AbstractClientPacket packet = LoginPacketHandler.handlePacket(decrypt, this);
+				final AbstractClientPacket packet = LoginPacketHandler.handle(decrypt, this);
 				if (packet != null)
 				{
 					LoginServer.getInstance().execute(packet);
@@ -319,7 +319,7 @@ public class LoginClient extends Thread
 			sb.append("IP: ");
 			sb.append(ip);
 		}
-		sb.append("]");
+		sb.append(']');
 		return sb.toString();
 	}
 }

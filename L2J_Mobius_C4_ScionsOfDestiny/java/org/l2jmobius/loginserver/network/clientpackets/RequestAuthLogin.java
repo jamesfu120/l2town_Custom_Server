@@ -22,15 +22,16 @@ package org.l2jmobius.loginserver.network.clientpackets;
 
 import java.security.GeneralSecurityException;
 import java.util.Collection;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
 
 import org.l2jmobius.loginserver.GameServerListener;
-import org.l2jmobius.loginserver.GameServerTable;
 import org.l2jmobius.loginserver.GameServerThread;
-import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.config.LoginConfig;
+import org.l2jmobius.loginserver.controller.LoginController;
+import org.l2jmobius.loginserver.data.GameServerTable;
 import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.LoginClient.LoginClientState;
@@ -65,7 +66,7 @@ public class RequestAuthLogin extends AbstractClientPacket
 		}
 		catch (GeneralSecurityException e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "run: ", e);
 			return;
 		}
 		catch (IllegalArgumentException e)
@@ -94,7 +95,7 @@ public class RequestAuthLogin extends AbstractClientPacket
 			return;
 		}
 		
-		// Account BANNED (must always be checked after isLoginValid)
+		// Account BANNED (must always be checked after isLoginValid).
 		if (getClient().getAccessLevel() < 0)
 		{
 			getClient().sendPacket(new AccountKicked(AccountKicked.REASON_ILLEGAL_USE));

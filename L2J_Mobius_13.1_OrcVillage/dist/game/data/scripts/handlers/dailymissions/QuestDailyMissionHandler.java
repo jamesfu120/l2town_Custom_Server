@@ -17,17 +17,17 @@
 package handlers.dailymissions;
 
 import org.l2jmobius.gameserver.data.xml.NewQuestData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.DailyMissionStatus;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionPlayerEntry;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.DailyMissionStatus;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionPlayerEntry;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerQuestComplete;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.newquestdata.NewQuest;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerQuestComplete;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuest;
 
 /**
  * @author UnAfraid

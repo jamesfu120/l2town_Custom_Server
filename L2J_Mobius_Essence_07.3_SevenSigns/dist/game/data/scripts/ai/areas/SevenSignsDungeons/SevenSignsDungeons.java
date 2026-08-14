@@ -28,15 +28,15 @@ import java.util.Map.Entry;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Mobius
@@ -181,8 +181,8 @@ public class SevenSignsDungeons extends Script
 	
 	private void announce()
 	{
-		Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.IN_5_MINUTES_MONSTERS_WILL_APPEAR_IN_A_SEVEN_SIGNS_DUNGEON_YOU_HAVE_30_MINUTES_TO_KILL_THEM, ExShowScreenMessage.TOP_CENTER, 10000, true));
-		ThreadPool.schedule(() -> Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.USE_TELEPORT_TO_GO_TO_A_SEVEN_SIGNS_DUNGEON, ExShowScreenMessage.TOP_CENTER, 10000, true)), 16000);
+		World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.IN_5_MINUTES_MONSTERS_WILL_APPEAR_IN_A_SEVEN_SIGNS_DUNGEON_YOU_HAVE_30_MINUTES_TO_KILL_THEM, ExShowScreenMessage.TOP_CENTER, 10000, true));
+		ThreadPool.schedule(() -> World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.USE_TELEPORT_TO_GO_TO_A_SEVEN_SIGNS_DUNGEON, ExShowScreenMessage.TOP_CENTER, 10000, true)), 16000);
 		ThreadPool.schedule(() -> enableDungeons(), 300000); // 5 minutes.
 	}
 	

@@ -23,11 +23,11 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -105,10 +105,7 @@ public class HermuncusMinion extends Script
 				}
 				
 				final Integer currentLoc = HERMUNCUS_MINIONS.get(npc.getId());
-				if (teleportList.contains(currentLoc))
-				{
-					teleportList.remove(currentLoc);
-				}
+				teleportList.remove(currentLoc);
 				
 				final StringBuilder sb = new StringBuilder();
 				for (Integer teleportLoc : teleportList)
@@ -121,19 +118,15 @@ public class HermuncusMinion extends Script
 		}
 		else if (event.equals("teleport") && st.hasMoreTokens())
 		{
-			final int locId = Integer.parseInt(st.nextToken());
 			if (player.getAdena() < 150000)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return null;
 			}
 			
-			Location loc = null;
-			if (TELEPORTS_85.containsKey(locId))
-			{
-				loc = TELEPORTS_85.get(locId);
-			}
-			else if (TELEPORTS_90.containsKey(locId))
+			final int locId = Integer.parseInt(st.nextToken());
+			Location loc = TELEPORTS_85.get(locId);
+			if (loc == null)
 			{
 				loc = TELEPORTS_90.get(locId);
 			}

@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `character_friends` (
   `relation` INT UNSIGNED NOT NULL DEFAULT 0,
   `memo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`charId`,`friendId`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

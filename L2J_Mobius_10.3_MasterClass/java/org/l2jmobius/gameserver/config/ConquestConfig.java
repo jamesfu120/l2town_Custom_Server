@@ -25,7 +25,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.util.ConfigReader;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 
 /**
  * This class loads all the Conquest related configurations.

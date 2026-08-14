@@ -23,12 +23,12 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.managers.events.LetterCollectorManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**

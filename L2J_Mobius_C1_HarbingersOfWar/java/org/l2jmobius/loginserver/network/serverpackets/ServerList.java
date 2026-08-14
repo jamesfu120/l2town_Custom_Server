@@ -24,10 +24,12 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import org.l2jmobius.loginserver.GameServerTable.GameServer;
+import org.l2jmobius.loginserver.data.GameServerTable.GameServer;
 import org.l2jmobius.loginserver.network.AbstractServerPacket;
-import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.ServerStatus;
 
 /**
  * ServerList Format: cc [cddcchhcdc] c: server list size (number of servers) c: ? [ (repeat for each servers) c: server id (ignored by client?) d: server ip d: server port c: age limit (used by client?) c: pvp or not (used by client?) h: current number of players h: max number of players c: 0 if
@@ -36,6 +38,7 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  */
 public class ServerList extends AbstractServerPacket
 {
+	private static final Logger LOGGER = Logger.getLogger(ServerList.class.getName());
 	private final List<ServerData> _servers;
 	
 	private boolean _listDone = false;
@@ -103,7 +106,7 @@ public class ServerList extends AbstractServerPacket
 				}
 				catch (UnknownHostException e)
 				{
-					e.printStackTrace();
+					LOGGER.log(Level.WARNING, "getContent: ", e);
 					writeByte(127);
 					writeByte(0);
 					writeByte(0);

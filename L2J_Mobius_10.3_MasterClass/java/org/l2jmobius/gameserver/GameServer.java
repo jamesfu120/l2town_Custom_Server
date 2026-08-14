@@ -35,7 +35,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.ConnectionManager;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.time.TimeUtil;
-import org.l2jmobius.commons.util.DeadlockWatcher;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.config.ConfigLoader;
@@ -134,6 +133,7 @@ import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.data.xml.VariationData;
+import org.l2jmobius.gameserver.entity.World;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ConditionHandler;
 import org.l2jmobius.gameserver.handler.DailyMissionHandler;
@@ -185,12 +185,11 @@ import org.l2jmobius.gameserver.managers.events.EventDropManager;
 import org.l2jmobius.gameserver.managers.games.KrateisCubeManager;
 import org.l2jmobius.gameserver.managers.games.MonsterRaceManager;
 import org.l2jmobius.gameserver.managers.games.UndergroundColiseumManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.OnServerStart;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnServerStart;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.GamePacketHandler;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -200,7 +199,7 @@ import org.l2jmobius.gameserver.taskmanagers.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanagers.ItemLifeTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanagers.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.ui.Gui;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.DeadlockWatcher;
 
 public class GameServer
 {
@@ -224,7 +223,7 @@ public class GameServer
 		final File logFolder = new File(".", "log");
 		logFolder.mkdir();
 		
-		// Create input stream for log file -- or store file data into memory
+		// Create input stream for log file -- or store file data into memory.
 		try (InputStream is = new FileInputStream(new File("./log.cfg")))
 		{
 			LogManager.getLogManager().readConfiguration(is);
@@ -239,7 +238,7 @@ public class GameServer
 		printSection("ThreadPool");
 		ThreadPool.init();
 		
-		// Start game time task manager early
+		// Start game time task manager early.
 		GameTimeTaskManager.getInstance();
 		
 		printSection("IdManager");
@@ -250,7 +249,7 @@ public class GameServer
 		ScriptEngine.getInstance();
 		
 		printSection("World");
-		World.getInstance();
+		World.init();
 		MapRegionData.getInstance();
 		ZoneManager.getInstance();
 		DoorData.getInstance();
@@ -375,7 +374,7 @@ public class GameServer
 		Olympiad.getInstance();
 		Hero.getInstance();
 		
-		// Call to load caches
+		// Call to load caches.
 		printSection("Cache");
 		HtmCache.getInstance();
 		CrestTable.getInstance();
@@ -506,7 +505,7 @@ public class GameServer
 			{
 				if (ServerConfig.RESTART_ON_DEADLOCK)
 				{
-					Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
+					World.broadcastToAllOnlinePlayers("Server has stability issues - restarting now.");
 					Shutdown.getInstance().startShutdown(null, 60, true);
 				}
 			});

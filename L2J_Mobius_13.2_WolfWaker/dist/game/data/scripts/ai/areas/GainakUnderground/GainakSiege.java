@@ -22,26 +22,26 @@ package ai.areas.GainakUnderground;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.PvpConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.PeaceZone;
+import org.l2jmobius.gameserver.entity.zone.type.SiegeZone;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.PeaceZone;
-import org.l2jmobius.gameserver.model.zone.type.SiegeZone;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author LasTravel, Gigi
@@ -74,7 +74,7 @@ public class GainakSiege extends Script
 		startQuestTimer("GAINAK_WAR", getTimeBetweenSieges() * 60000, null, null);
 	}
 	
-	private final int getTimeBetweenSieges()
+	private int getTimeBetweenSieges()
 	{
 		return getRandom(120, 180); // 2 to 3 hours.
 	}
@@ -106,7 +106,7 @@ public class GainakSiege extends Script
 				{
 					final SystemMessage s = new SystemMessage(SystemMessageId.PROGRESS_EVENT_DAY_S1);
 					s.addString("Gainak is now in peace.");
-					Broadcast.toAllOnlinePlayers(s);
+					World.broadcastToAllOnlinePlayers(s);
 				}
 			}
 			else
@@ -127,7 +127,7 @@ public class GainakSiege extends Script
 				{
 					final SystemMessage s = new SystemMessage(SystemMessageId.PROGRESS_EVENT_DAY_S1);
 					s.addString("Gainak is now under siege.");
-					Broadcast.toAllOnlinePlayers(s);
+					World.broadcastToAllOnlinePlayers(s);
 				}
 				
 				ZoneManager.getInstance().getZoneById(GAINAK_TOWN_ZONE.getId(), PeaceZone.class).setEnabled(false);

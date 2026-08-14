@@ -861,7 +861,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="14293" level="1" /> <!-- Range Strike -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
@@ -921,7 +921,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="14429" level="1" /> <!-- Head Marksman's Attack -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
@@ -4544,7 +4544,7 @@
 			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Resistance -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
 				<item id="17526" min="1" max="1" chance="58.335" /> <!-- Scroll: Enchant R-grade Weapon -->

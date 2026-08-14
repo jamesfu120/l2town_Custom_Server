@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom;
 import org.l2jmobius.gameserver.managers.MatchingRoomManager;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoom;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -33,7 +33,7 @@ public class ExListMpccWaiting extends ServerPacket
 	private static final int NUM_PER_PAGE = 64;
 	
 	private final int _size;
-	private final List<MatchingRoom> _rooms = new LinkedList<>();
+	private final List<MatchingRoom> _rooms = new ArrayList<>();
 	
 	public ExListMpccWaiting(int page, int location, int level)
 	{
@@ -53,7 +53,7 @@ public class ExListMpccWaiting extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_LIST_MPCC_WAITING.writeId(this, buffer);
 		buffer.writeInt(_size);

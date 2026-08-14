@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.data.holders;
 import java.util.Collections;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
 
 /**
  * @author UnAfraid

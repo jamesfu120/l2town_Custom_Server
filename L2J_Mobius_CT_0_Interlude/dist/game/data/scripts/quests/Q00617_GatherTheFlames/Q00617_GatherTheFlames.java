@@ -24,11 +24,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00617_GatherTheFlames extends Quest
 {
@@ -116,7 +116,7 @@ public class Q00617_GatherTheFlames extends Quest
 			{
 				htmltext = "31539-07.htm";
 				takeItems(player, TORCH, 1000);
-				giveItems(player, REWARD[getRandom(REWARD.length)], 1);
+				giveItems(player, getRandomEntry(REWARD), 1);
 			}
 		}
 		else if (event.equals("31539-08.htm"))

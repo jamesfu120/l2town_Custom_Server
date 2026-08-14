@@ -16,13 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.friend;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 public class L2FriendList extends ServerPacket
 {
-	private final List<FriendInfo> _info = new LinkedList<>();
+	private final List<FriendInfo> _info = new ArrayList<>();
 	
 	private static class FriendInfo
 	{
@@ -59,7 +59,7 @@ public class L2FriendList extends ServerPacket
 		for (int objId : player.getFriendList())
 		{
 			final String name = CharInfoTable.getInstance().getNameById(objId);
-			final Player player1 = World.getInstance().getPlayer(objId);
+			final Player player1 = World.getPlayer(objId);
 			boolean online = false;
 			int level = 0;
 			int classId = 0;
@@ -80,7 +80,7 @@ public class L2FriendList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.L2_FRIEND_LIST.writeId(this, buffer);
 		buffer.writeInt(_info.size());

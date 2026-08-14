@@ -21,10 +21,10 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.transform.Transform;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -37,9 +37,9 @@ public class RequestMagicSkillUse extends ClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_magicId = readInt(); // Identifier of the used skill
-		_ctrlPressed = readInt() != 0; // True if it's a ForceAttack : Ctrl pressed
-		_shiftPressed = readByte() != 0; // True if Shift pressed
+		_magicId = readInt(); // Identifier of the used skill.
+		_ctrlPressed = readInt() != 0; // True if it's a ForceAttack : Ctrl pressed.
+		_shiftPressed = readByte() != 0; // True if Shift pressed.
 	}
 	
 	@Override

@@ -89,6 +89,7 @@ import handlers.bypass.npc.Observation;
 import handlers.bypass.npc.PlayerHelp;
 import handlers.bypass.npc.PrivateWarehouse;
 import handlers.bypass.npc.QuestList;
+import handlers.bypass.npc.Rebirth;
 import handlers.bypass.npc.ReceivePremium;
 import handlers.bypass.npc.ReleaseAttribute;
 import handlers.bypass.npc.RentPet;
@@ -455,6 +456,7 @@ public class MasterHandler
 			TutorialClose.class,
 			VoiceCommand.class,
 			Wear.class,
+			Rebirth.class,
 		},
 		{
 			// Chat Handlers

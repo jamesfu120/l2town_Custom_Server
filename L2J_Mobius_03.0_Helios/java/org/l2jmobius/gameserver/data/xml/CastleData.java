@@ -28,10 +28,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.siege.CastleSide;
-import org.l2jmobius.gameserver.model.siege.CastleSpawnHolder;
-import org.l2jmobius.gameserver.model.siege.SiegeGuardHolder;
-import org.l2jmobius.gameserver.model.siege.SiegeGuardType;
+import org.l2jmobius.gameserver.mechanics.siege.CastleSide;
+import org.l2jmobius.gameserver.mechanics.siege.CastleSpawnHolder;
+import org.l2jmobius.gameserver.mechanics.siege.SiegeGuardHolder;
+import org.l2jmobius.gameserver.mechanics.siege.SiegeGuardType;
 
 /**
  * @author St3eT
@@ -117,9 +117,10 @@ public class CastleData implements IXmlReader
 	public List<CastleSpawnHolder> getSpawnsForSide(int castleId, CastleSide side)
 	{
 		final List<CastleSpawnHolder> result = new ArrayList<>();
-		if (_spawns.containsKey(castleId))
+		final List<CastleSpawnHolder> spawns = _spawns.get(castleId);
+		if (spawns != null)
 		{
-			for (CastleSpawnHolder spawn : _spawns.get(castleId))
+			for (CastleSpawnHolder spawn : spawns)
 			{
 				if (spawn.getSide() == side)
 				{

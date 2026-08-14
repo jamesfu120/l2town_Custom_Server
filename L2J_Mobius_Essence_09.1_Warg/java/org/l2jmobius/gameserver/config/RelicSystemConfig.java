@@ -38,6 +38,7 @@ public class RelicSystemConfig
 	public static boolean RELIC_ANNOUNCE_ONLY_A_B_GRADE;
 	public static int RELIC_UNCONFIRMED_LIST_LIMIT;
 	public static int RELIC_UNCONFIRMED_TIME_LIMIT;
+	public static int RELIC_GUARANTEED_COMPOUND_LIMIT;
 	
 	public static void load()
 	{
@@ -48,5 +49,6 @@ public class RelicSystemConfig
 		RELIC_ANNOUNCE_ONLY_A_B_GRADE = config.getBoolean("RelicAnnounceOnlyABGrade", true);
 		RELIC_UNCONFIRMED_LIST_LIMIT = config.getInt("RelicUnconfirmedListLimit", 100);
 		RELIC_UNCONFIRMED_TIME_LIMIT = config.getInt("RelicUnconfirmedTimeLimit", 7);
+		RELIC_GUARANTEED_COMPOUND_LIMIT = config.getInt("RelicGuaranteedCompoundLimit", 11);
 	}
 }

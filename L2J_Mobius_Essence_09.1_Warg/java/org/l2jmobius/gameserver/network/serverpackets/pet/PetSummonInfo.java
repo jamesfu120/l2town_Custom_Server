@@ -22,14 +22,14 @@ package org.l2jmobius.gameserver.network.serverpackets.pet;
 
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.enums.EvolveLevel;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Team;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.actor.instance.Servitor;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Team;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
+import org.l2jmobius.gameserver.entity.actor.instance.Servitor;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -112,7 +112,7 @@ public class PetSummonInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.PET_INFO.writeId(this, buffer);
 		buffer.writeByte(_summon.getSummonType());

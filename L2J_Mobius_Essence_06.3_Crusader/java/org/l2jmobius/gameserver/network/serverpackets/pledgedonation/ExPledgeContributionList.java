@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.network.serverpackets.pledgedonation;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -41,7 +41,7 @@ public class ExPledgeContributionList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_CONTRIBUTION_LIST.writeId(this, buffer);
 		buffer.writeInt(_contributors.size());

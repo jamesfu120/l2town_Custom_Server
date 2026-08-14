@@ -22,12 +22,12 @@ package ai.others.BalthusKnights.Helper.Herphah;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 import quests.Q10555_ChargeAtAntharas.Q10555_ChargeAtAntharas;
 
@@ -123,7 +123,7 @@ public final class Herphah extends Script
 	}
 	
 	@Override
-	public final String onFirstTalk(Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		final Instance instance = npc.getInstanceWorld();

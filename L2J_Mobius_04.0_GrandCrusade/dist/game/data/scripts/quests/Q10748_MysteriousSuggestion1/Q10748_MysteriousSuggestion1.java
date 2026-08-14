@@ -20,17 +20,17 @@
  */
 package quests.Q10748_MysteriousSuggestion1;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.QuestType;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.QuestType;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 /**
  * Mysterious Suggestion - 1 (10748)
@@ -91,12 +91,13 @@ public final class Q10748_MysteriousSuggestion1 extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
 		if (qs == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
 		{

@@ -20,19 +20,19 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.dethrone;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.ServerConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author CostyKiller, Mobius
@@ -80,7 +80,7 @@ public class ExDethroneRankingInfo extends ServerPacket
 	
 	private List<RankInfo> extractRankInfo(Map<Integer, StatSet> playerList, int maxSize)
 	{
-		final List<RankInfo> rankInfoList = new LinkedList<>();
+		final List<RankInfo> rankInfoList = new ArrayList<>();
 		int count = Math.min(playerList.size(), maxSize);
 		for (Entry<Integer, StatSet> entry : playerList.entrySet())
 		{
@@ -97,7 +97,7 @@ public class ExDethroneRankingInfo extends ServerPacket
 	
 	private List<RankInfo> extractPersonalRankInfo(Map<Integer, StatSet> playerList, Player player)
 	{
-		final List<RankInfo> rankInfoList = new LinkedList<>();
+		final List<RankInfo> rankInfoList = new ArrayList<>();
 		for (Entry<Integer, StatSet> entry : playerList.entrySet())
 		{
 			if (entry.getValue().getInt("charId") == player.getObjectId())
@@ -117,7 +117,7 @@ public class ExDethroneRankingInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_DETHRONE_RANKING_INFO.writeId(this, buffer);
 		buffer.writeByte(_currentSeason);

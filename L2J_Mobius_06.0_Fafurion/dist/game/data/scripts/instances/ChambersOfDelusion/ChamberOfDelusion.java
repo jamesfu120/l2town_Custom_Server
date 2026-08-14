@@ -26,19 +26,19 @@ import java.util.stream.IntStream;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GeneralConfig;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Chambers of Delusion.
@@ -244,9 +244,10 @@ public class ChamberOfDelusion extends InstanceScript
 	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
-		if (ENTRANCE_GATEKEEPER.containsKey(npcId))
+		final Integer template = ENTRANCE_GATEKEEPER.get(npcId);
+		if (template != null)
 		{
-			enterInstance(player, npc, ENTRANCE_GATEKEEPER.get(npcId));
+			enterInstance(player, npc, template);
 		}
 		
 		return null;
@@ -437,7 +438,7 @@ public class ChamberOfDelusion extends InstanceScript
 				}
 				catch (Exception e)
 				{
-					LOGGER.log(Level.WARNING, "Error occured in room change task: ", e);
+					LOGGER.log(Level.WARNING, "Error occurred in room change task: ", e);
 				}
 			}, nextInterval - 5000);
 			world.setParameter("roomChangeTask", roomChangeTask);

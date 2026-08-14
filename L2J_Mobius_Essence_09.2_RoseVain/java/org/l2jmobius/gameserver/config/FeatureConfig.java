@@ -134,6 +134,7 @@ public class FeatureConfig
 	public static int CLAN_LEVEL_8_REQUIREMENT;
 	public static int CLAN_LEVEL_9_REQUIREMENT;
 	public static int CLAN_LEVEL_10_REQUIREMENT;
+	public static boolean CLAN_WAR_KILL_MESSAGE;
 	public static boolean PK_PENALTY_LIST;
 	public static int PK_PENALTY_LIST_MINIMUM_COUNT;
 	public static int ITEM_PENALTY_RESTORE_ADENA;
@@ -251,6 +252,7 @@ public class FeatureConfig
 		CLAN_LEVEL_8_REQUIREMENT = config.getInt("ClanLevel8Requirement", 40);
 		CLAN_LEVEL_9_REQUIREMENT = config.getInt("ClanLevel9Requirement", 40);
 		CLAN_LEVEL_10_REQUIREMENT = config.getInt("ClanLevel10Requirement", 40);
+		CLAN_WAR_KILL_MESSAGE = config.getBoolean("ClanWarKillMessage", false);
 		PK_PENALTY_LIST = config.getBoolean("PkPenaltyList", true);
 		PK_PENALTY_LIST_MINIMUM_COUNT = config.getInt("PkPenaltyMinimumCount", 9);
 		ITEM_PENALTY_RESTORE_ADENA = config.getInt("PkPenaltyRestoreAdenaCost", 100);

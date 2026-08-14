@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.network.serverpackets.magiclamp;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.holders.MagicLampHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -41,7 +41,7 @@ public class ExMagicLampGameResult extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_MAGICLAMP_GAME_RESULT.writeId(this, buffer);
 		buffer.writeInt(_rewards.size());

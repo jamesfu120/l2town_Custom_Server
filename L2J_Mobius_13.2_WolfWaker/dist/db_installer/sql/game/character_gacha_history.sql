@@ -7,4 +7,4 @@ CREATE TABLE `character_gacha_history` (
   `item_rank` int NULL DEFAULT 1,
   `receive_time` bigint NOT NULL,
   PRIMARY KEY (`char_id`, `receive_time`) USING BTREE
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

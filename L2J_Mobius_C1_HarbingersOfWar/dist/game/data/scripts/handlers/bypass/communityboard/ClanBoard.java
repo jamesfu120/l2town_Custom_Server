@@ -25,11 +25,11 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IWriteBoardHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.HtmlUtil;
 
@@ -291,7 +291,7 @@ public class ClanBoard implements IWriteBoardHandler
 			html.append("\" back=\"L2UI.leftBtn2\" fore=\"L2UI.leftBtn1\" width=16 height=16 ></td>");
 		}
 		
-		int nbp = (int) Math.ceil((double) ClanTable.getInstance().getClanCount() / 10); // Calculate number of pages
+		int nbp = Math.ceilDiv(ClanTable.getInstance().getClanCount(), 10); // Calculate number of pages
 		for (i = 1; i <= nbp; i++)
 		{
 			if (i == index)
@@ -588,9 +588,9 @@ public class ClanBoard implements IWriteBoardHandler
 			{
 				if (players != null)
 				{
-					if (membersList.length() > 0)
+					if (!membersList.isEmpty())
 					{
-						membersList.append(";");
+						membersList.append(';');
 					}
 					
 					membersList.append(players.getName());

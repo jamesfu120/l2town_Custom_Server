@@ -27,8 +27,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.Weapon;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
 
 /**
@@ -250,7 +250,7 @@ public class CreatureAttackTaskManager
 		DUAL_SECOND,
 	}
 	
-	public static final CreatureAttackTaskManager getInstance()
+	public static CreatureAttackTaskManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

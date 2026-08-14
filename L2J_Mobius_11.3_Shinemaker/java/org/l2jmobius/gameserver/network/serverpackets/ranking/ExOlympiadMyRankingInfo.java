@@ -31,17 +31,17 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadFight;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadFight;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author NviX, dontknowdontcare
@@ -60,7 +60,7 @@ public class ExOlympiadMyRankingInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_OLYMPIAD_MY_RANKING_INFO.writeId(this, buffer);
 		final Date date = new Date();
@@ -68,7 +68,7 @@ public class ExOlympiadMyRankingInfo extends ServerPacket
 		calendar.setTime(date);
 		int year = calendar.get(Calendar.YEAR);
 		
-		// Add one to month {0 - 11}
+		// Add one to month {0 - 11}.
 		
 		int month = calendar.get(Calendar.MONTH) + 1;
 		

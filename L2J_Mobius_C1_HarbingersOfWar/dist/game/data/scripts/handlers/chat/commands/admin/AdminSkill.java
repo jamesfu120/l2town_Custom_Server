@@ -34,16 +34,16 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.html.PageBuilder;
-import org.l2jmobius.gameserver.model.html.PageResult;
-import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillLearn;
+import org.l2jmobius.gameserver.mechanics.html.PageBuilder;
+import org.l2jmobius.gameserver.mechanics.html.PageResult;
+import org.l2jmobius.gameserver.mechanics.html.styles.ButtonsStyle;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillLearn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -264,7 +264,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final Player player = target.asPlayer();
-		final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
+		final Skill[] skills = player.getAllSkills().toArray(new Skill[0]);
 		final int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
 		if (skills.length > (maxSkillsPerPage * maxPages))
@@ -400,7 +400,7 @@ public class AdminSkill implements IAdminCommandHandler
 			sb.append(skill.getIcon());
 			sb.append("\" width=32 height=32></td><td width=190><a action=\"bypass admin_skill_add_list ");
 			sb.append(playerClass);
-			sb.append(" ");
+			sb.append(' ');
 			sb.append(skill.getId());
 			sb.append("\">");
 			sb.append(skill.getName());
@@ -447,7 +447,7 @@ public class AdminSkill implements IAdminCommandHandler
 			sb.append(skill.getIcon());
 			sb.append("\" width=32 height=32></td><td width=190><a action=\"bypass admin_add_skill ");
 			sb.append(skill.getId());
-			sb.append(" ");
+			sb.append(' ');
 			sb.append(skill.getLevel());
 			sb.append("\">");
 			sb.append(skill.getName());
@@ -507,8 +507,8 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
-			adminSkills = activeChar.getAllSkills().toArray(new Skill[activeChar.getAllSkills().size()]);
+			final Skill[] skills = player.getAllSkills().toArray(new Skill[0]);
+			adminSkills = activeChar.getAllSkills().toArray(new Skill[0]);
 			for (Skill skill : adminSkills)
 			{
 				activeChar.removeSkill(skill);
@@ -542,7 +542,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
+			final Skill[] skills = player.getAllSkills().toArray(new Skill[0]);
 			for (Skill skill : skills)
 			{
 				player.removeSkill(skill);

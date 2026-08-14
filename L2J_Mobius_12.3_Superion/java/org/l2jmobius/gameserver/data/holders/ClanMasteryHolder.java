@@ -23,7 +23,7 @@ package org.l2jmobius.gameserver.data.holders;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 
 /**
  * @author Mobius

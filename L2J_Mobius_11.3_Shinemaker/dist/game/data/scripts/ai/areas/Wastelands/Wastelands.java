@@ -18,21 +18,21 @@ package ai.areas.Wastelands;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
@@ -98,7 +98,13 @@ public class Wastelands extends Script
 			{
 				npc.broadcastSocialAction(4);
 				npc.broadcastSay(ChatType.NPC_GENERAL, GUARD_SHOUT[getRandom(2)], 1000);
-				World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 500).stream().filter(n -> n.getId() == GUARD).forEach(guard -> startQuestTimer("SOCIAL_ACTION", getRandom(2500, 3500), guard, null));
+				World.forEachVisibleObjectInRange(npc, Npc.class, 500, guard ->
+				{
+					if (guard.getId() == GUARD)
+					{
+						startQuestTimer("SOCIAL_ACTION", getRandom(2500, 3500), guard, null);
+					}
+				});
 				break;
 			}
 			case "SOCIAL_ACTION":
@@ -138,17 +144,11 @@ public class Wastelands extends Script
 				
 				if (attackId > 0)
 				{
-					// @formatter:off
-					final Monster monster = World.getInstance().getVisibleObjectsInRange(guard, Monster.class, 1000)
-						.stream()
-						.filter(obj -> (obj.getId() == attackId))
-						.findFirst()
-						.orElse(null);
-					// @formatter:on
+					final Monster monster = World.getFirstVisibleObjectInRange(guard, Monster.class, 1000, obj -> obj.getId() == attackId);
 					
 					if (monster != null)
 					{
-						World.getInstance().forEachVisibleObjectInRange(guard, Npc.class, 1000, chars ->
+						World.forEachVisibleObjectInRange(guard, Npc.class, 1000, chars ->
 						{
 							if (chars.getId() == attackId)
 							{
@@ -164,13 +164,7 @@ public class Wastelands extends Script
 						
 						if (guard.getId() == SCHUAZEN)
 						{
-							// @formatter:off
-							final FriendlyNpc decoGuard = World.getInstance().getVisibleObjectsInRange(guard, FriendlyNpc.class, 500)
-								.stream()
-								.filter(obj -> (obj.getId() == DECO_GUARD2))
-								.findFirst()
-								.orElse(null);
-							// @formatter:on
+							final FriendlyNpc decoGuard = World.getFirstVisibleObjectInRange(guard, FriendlyNpc.class, 500, obj -> obj.getId() == DECO_GUARD2);
 							
 							if (decoGuard != null)
 							{
@@ -214,13 +208,7 @@ public class Wastelands extends Script
 			case REGENERATED_POSLOF:
 			{
 				final int guardId = npc.getId() == REGENERATED_KANILOV ? JOEL : SCHUAZEN;
-				// @formatter:off
-				final FriendlyNpc guard =  World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpc.class, 500)
-					.stream()
-					.filter(obj -> (obj.getId() == guardId))
-					.findFirst()
-					.orElse(null);
-				// @formatter:on
+				final FriendlyNpc guard = World.getFirstVisibleObjectInRange(npc, FriendlyNpc.class, 500, obj -> obj.getId() == guardId);
 				
 				if (guard != null)
 				{
@@ -253,7 +241,7 @@ public class Wastelands extends Script
 	{
 		if (npc.getId() == REGENERATED_POSLOF)
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, 1000, guard ->
+			World.forEachVisibleObjectInRange(npc, Attackable.class, 1000, guard ->
 			{
 				if ((guard.getId() == DECO_GUARD2))
 				{
@@ -263,7 +251,7 @@ public class Wastelands extends Script
 		}
 		else if (npc.getId() == SAKUM)
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, 1000, guard ->
+			World.forEachVisibleObjectInRange(npc, Attackable.class, 1000, guard ->
 			{
 				if ((guard.getId() == COMMANDO) || (guard.getId() == COMMANDO_CAPTAIN))
 				{
@@ -281,13 +269,7 @@ public class Wastelands extends Script
 	{
 		final Attackable guard = event.getTarget().asAttackable();
 		
-		// @formatter:off
-		final Attackable sakum = World.getInstance().getVisibleObjectsInRange(guard, Attackable.class, 1000)
-			.stream()
-			.filter(obj -> (obj.getId() == SAKUM))
-			.findFirst()
-			.orElse(null);
-		// @formatter:on
+		final Attackable sakum = World.getFirstVisibleObjectInRange(guard, Attackable.class, 1000, obj -> obj.getId() == SAKUM);
 		
 		if (sakum != null)
 		{

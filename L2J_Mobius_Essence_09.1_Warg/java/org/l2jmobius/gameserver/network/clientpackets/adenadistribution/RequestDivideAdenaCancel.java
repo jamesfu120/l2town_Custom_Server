@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.adenadistribution;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.AdenaDistributionRequest;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.AdenaDistributionRequest;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;

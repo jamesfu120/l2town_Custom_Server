@@ -18,14 +18,13 @@ package ai.others;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Chest;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Chest;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 
 /**
  * Chest AI implementation.
@@ -46,16 +45,6 @@ public class Chests extends Script
 		21821, 21822
 	};
 	// @formatter:on
-	private static final int SKILL_DELUXE_KEY = 2229;
-	
-	// Base chance for BOX to be opened
-	private static final int BASE_CHANCE = 100;
-	
-	// Percent to decrease base chance when grade of DELUXE key not match
-	private static final int LEVEL_DECREASE = 40;
-	
-	// Chance for a chest to actually be a BOX (as opposed to being a mimic).
-	private static final int IS_BOX = 40;
 	
 	private Chests()
 	{
@@ -68,8 +57,8 @@ public class Chests extends Script
 	{
 		if (npc instanceof Chest)
 		{
-			// this behavior is only run when the target of skill is the passed npc (chest)
-			// i.e. when the player is attempting to open the chest using a skill
+			// This behavior is only run when the target of skill is the passed npc (chest).
+			// i.e. When the player is attempting to open the chest using a skill.
 			boolean found = false;
 			for (WorldObject target : targets)
 			{
@@ -85,46 +74,18 @@ public class Chests extends Script
 				return;
 			}
 			
-			final Chest chest = ((Chest) npc);
+			// Keys / unlock skills are handled by the OpenChest skill effect.
+			if (skill.getTargetType() == TargetType.UNLOCKABLE)
+			{
+				return;
+			}
 			
-			// if this has already been interacted, no further ai decisions are needed
-			// if it's the first interaction, check if this is a box or mimic
-			if (!chest.isInteracted())
+			// Only a box explodes when forced open by an offensive skill; a mimic retaliates as a normal monster.
+			final Chest chest = ((Chest) npc);
+			if (chest.isBox() && !chest.isInteracted())
 			{
 				chest.setInteracted();
-				
-				// if openned by a deluxe key
-				if (skill.getId() == SKILL_DELUXE_KEY)
-				{
-					// check the chance to open the box
-					int keyLevelNeeded = chest.getLevel() / 10;
-					keyLevelNeeded -= skill.getLevel();
-					if (keyLevelNeeded < 0)
-					{
-						keyLevelNeeded *= -1;
-					}
-					
-					final int chance = BASE_CHANCE - (keyLevelNeeded * LEVEL_DECREASE);
-					
-					// success, pretend-death with rewards: chest.reduceCurrentHp(99999999, player)
-					if (getRandom(100) < chance)
-					{
-						caster.broadcastSocialAction(3);
-						chest.setMustRewardExpSp(false);
-						chest.setSpecialDrop();
-						chest.reduceCurrentHp(99999999, caster, null);
-						return;
-					}
-					
-					caster.broadcastSocialAction(13);
-				}
-				else
-				{
-					final Creature originalCaster = isSummon ? caster.getSummon() : caster;
-					chest.setRunning();
-					chest.addDamageHate(originalCaster, 0, 999);
-					chest.getAI().setIntention(Intention.ATTACK, originalCaster);
-				}
+				chest.treasureBomb();
 			}
 		}
 	}
@@ -134,31 +95,12 @@ public class Chests extends Script
 	{
 		if (npc instanceof Chest)
 		{
+			// Only a box explodes on the first hit; a mimic retaliates as a normal monster.
 			final Chest chest = ((Chest) npc);
-			
-			// if this was a mimic, set the target, start the skills and become agro
-			if (!chest.isInteracted())
+			if (chest.isBox() && !chest.isInteracted())
 			{
 				chest.setInteracted();
-				if (getRandom(100) < IS_BOX)
-				{
-					chest.deleteMe();
-				}
-				else
-				{
-					// if this weren't a box, upon interaction start the mimic behaviors...
-					// TODO: perhaps a self-buff (skill id 4245) with random chance goes here?
-					final Creature originalAttacker = isSummon ? attacker.getSummon() : attacker;
-					chest.setRunning();
-					chest.addDamageHate(originalAttacker, 0, (damage * 100) / (chest.getLevel() + 7));
-					chest.getAI().setIntention(Intention.ATTACK, originalAttacker);
-					
-					// Maybe here?
-					if (getRandomBoolean())
-					{
-						chest.chestTrap(originalAttacker);
-					}
-				}
+				chest.treasureBomb();
 			}
 		}
 	}

@@ -26,24 +26,24 @@ import java.util.List;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.QuestTimer;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.QuestTimer;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Kelbim AI
@@ -155,7 +155,7 @@ public class Kelbim extends Script
 			case "unlock_kelbim":
 			{
 				GrandBossManager.getInstance().setStatus(KELBIM, ALIVE);
-				Broadcast.toAllOnlinePlayers(new Earthquake(-55754, 59903, -269, 20, 10));
+				World.broadcastToAllOnlinePlayers(new Earthquake(-55754, 59903, -269, 20, 10));
 				openDoor(DOOR1, 0);
 				openDoor(DOOR2, 0);
 				break;
@@ -217,7 +217,7 @@ public class Kelbim extends Script
 				
 				for (int i = 0; i < getRandom((_bossStage * 2) / 2, _bossStage * 2); i++)
 				{
-					final Npc minion = addSpawn(KELBIM_GUARDIANS[getRandom(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
+					final Npc minion = addSpawn(getRandomEntry(KELBIM_GUARDIANS), _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
 					minion.setRunning();
 					minion.asAttackable().setIsRaidMinion(true);
 					_minions.add(minion);
@@ -230,7 +230,7 @@ public class Kelbim extends Script
 				{
 					if (_kelbimBoss.isInCombat())
 					{
-						final Skill randomAttackSkill = AREA_SKILLS[getRandom(AREA_SKILLS.length)];
+						final Skill randomAttackSkill = getRandomEntry(AREA_SKILLS);
 						final List<Npc> skillNpcs = new ArrayList<>();
 						for (Player pl : ZONE.getPlayersInside())
 						{

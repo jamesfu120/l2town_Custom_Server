@@ -20,17 +20,20 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import java.util.Map;
+
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.instance.Cubic;
+import org.l2jmobius.gameserver.entity.actor.instance.Decoy;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.TerritoryWarManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.instance.Decoy;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -127,7 +130,7 @@ public class CharInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.CHAR_INFO.writeId(this, buffer);
 		buffer.writeInt(_x);
@@ -191,7 +194,7 @@ public class CharInfo extends ServerPacket
 		}
 		
 		// In UserInfo leader rights and siege flags, but here found nothing??
-		// Therefore RelationChanged packet with that info is required
+		// Therefore RelationChanged packet with that info is required.
 		buffer.writeInt(0);
 		buffer.writeByte(!_player.isSitting()); // standing = 1 sitting = 0
 		buffer.writeByte(_player.isRunning()); // running = 1 walking = 0
@@ -201,8 +204,9 @@ public class CharInfo extends ServerPacket
 		buffer.writeByte(_player.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
 		buffer.writeByte(_player.getPrivateStoreType().getId());
 		
-		buffer.writeShort(_player.getCubics().size());
-		for (int cubicId : _player.getCubics().keySet())
+		final Map<Integer, Cubic> cubics = _player.getCubics();
+		buffer.writeShort(cubics.size());
+		for (int cubicId : cubics.keySet())
 		{
 			buffer.writeShort(cubicId);
 		}

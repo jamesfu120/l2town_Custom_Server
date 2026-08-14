@@ -18,13 +18,13 @@ package ai.others;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Chest;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.TargetType;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Chest;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 
 /**
  * Chest AI implementation.
@@ -45,7 +45,7 @@ public class Chests extends Script
 		21821, 21822
 	};
 	// @formatter:on
-
+	
 	private Chests()
 	{
 		addAttackId(TREASURE_CHESTS);
@@ -57,8 +57,8 @@ public class Chests extends Script
 	{
 		if (npc instanceof Chest)
 		{
-			// this behavior is only run when the target of skill is the passed npc (chest)
-			// i.e. when the player is attempting to open the chest using a skill
+			// This behavior is only run when the target of skill is the passed npc (chest).
+			// i.e. When the player is attempting to open the chest using a skill.
 			boolean found = false;
 			for (WorldObject target : targets)
 			{
@@ -74,13 +74,13 @@ public class Chests extends Script
 				return;
 			}
 			
-			// keys / unlock skills are handled by the OpenChest skill effect
+			// Keys / unlock skills are handled by the OpenChest skill effect.
 			if (skill.getTargetType() == TargetType.UNLOCKABLE)
 			{
 				return;
 			}
-
-			// only a box explodes when forced open by an offensive skill; a mimic retaliates as a normal monster
+			
+			// Only a box explodes when forced open by an offensive skill; a mimic retaliates as a normal monster.
 			final Chest chest = ((Chest) npc);
 			if (chest.isBox() && !chest.isInteracted())
 			{
@@ -89,13 +89,13 @@ public class Chests extends Script
 			}
 		}
 	}
-
+	
 	@Override
 	public void onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc instanceof Chest)
 		{
-			// only a box explodes on the first hit; a mimic retaliates as a normal monster
+			// Only a box explodes on the first hit; a mimic retaliates as a normal monster.
 			final Chest chest = ((Chest) npc);
 			if (chest.isBox() && !chest.isInteracted())
 			{

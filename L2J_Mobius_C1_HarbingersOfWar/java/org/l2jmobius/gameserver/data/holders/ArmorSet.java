@@ -1,31 +1,38 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.data.holders;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 
 /**
- * @author Luno
+ * @author Luno, Mobius
  */
 public class ArmorSet
 {
@@ -47,6 +54,12 @@ public class ArmorSet
 	private int _wit;
 	private int _int;
 	
+	// Retail-style numeric set bonuses, keyed by Stat. Shield-suffixed maps apply only when wearing the set's shield.
+	private final Map<Stat, Double> _statAdd;
+	private final Map<Stat, Double> _statMul;
+	private final Map<Stat, Double> _statAddShield;
+	private final Map<Stat, Double> _statMulShield;
+	
 	public ArmorSet()
 	{
 		_legs = new ArrayList<>();
@@ -57,6 +70,10 @@ public class ArmorSet
 		_skills = new ArrayList<>();
 		_shieldSkills = new ArrayList<>();
 		_enchant6Skill = new ArrayList<>();
+		_statAdd = new EnumMap<>(Stat.class);
+		_statMul = new EnumMap<>(Stat.class);
+		_statAddShield = new EnumMap<>(Stat.class);
+		_statMulShield = new EnumMap<>(Stat.class);
 	}
 	
 	public void addChest(int id)
@@ -132,6 +149,38 @@ public class ArmorSet
 	public void addInt(int value)
 	{
 		_int = value;
+	}
+	
+	public void addStatAdd(Stat stat, double value, boolean shield)
+	{
+		final Map<Stat, Double> map = shield ? _statAddShield : _statAdd;
+		map.merge(stat, value, Double::sum);
+	}
+	
+	public void addStatMul(Stat stat, double value, boolean shield)
+	{
+		final Map<Stat, Double> map = shield ? _statMulShield : _statMul;
+		map.merge(stat, value, (a, b) -> a * b);
+	}
+	
+	public Double getStatAdd(Stat stat)
+	{
+		return _statAdd.get(stat);
+	}
+	
+	public Double getStatMul(Stat stat)
+	{
+		return _statMul.get(stat);
+	}
+	
+	public Double getStatAddShield(Stat stat)
+	{
+		return _statAddShield.get(stat);
+	}
+	
+	public Double getStatMulShield(Stat stat)
+	{
+		return _statMulShield.get(stat);
 	}
 	
 	/**
@@ -277,7 +326,7 @@ public class ArmorSet
 	 */
 	public boolean isEnchanted6(Player player)
 	{
-		// Player don't have full set
+		// Player don't have full set.
 		if (!containAll(player))
 		{
 			return false;
@@ -285,30 +334,30 @@ public class ArmorSet
 		
 		final Inventory inv = player.getInventory();
 		final Item chestItem = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
-		final Item legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
-		final Item headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
-		final Item glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
-		final Item feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 		if ((chestItem == null) || (chestItem.getEnchantLevel() < 6))
 		{
 			return false;
 		}
 		
+		final Item legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		if (!_legs.isEmpty() && ((legsItem == null) || (legsItem.getEnchantLevel() < 6)))
 		{
 			return false;
 		}
 		
+		final Item glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
 		if (!_gloves.isEmpty() && ((glovesItem == null) || (glovesItem.getEnchantLevel() < 6)))
 		{
 			return false;
 		}
 		
+		final Item headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
 		if (!_head.isEmpty() && ((headItem == null) || (headItem.getEnchantLevel() < 6)))
 		{
 			return false;
 		}
 		
+		final Item feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 		if (!_feet.isEmpty() && ((feetItem == null) || (feetItem.getEnchantLevel() < 6)))
 		{
 			return false;

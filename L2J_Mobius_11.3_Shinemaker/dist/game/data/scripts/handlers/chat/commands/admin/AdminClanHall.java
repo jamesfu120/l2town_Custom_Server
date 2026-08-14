@@ -20,27 +20,27 @@
  */
 package handlers.chat.commands.admin;
 
-import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
+import org.l2jmobius.gameserver.entity.residences.ResidenceFunction;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.html.PageBuilder;
-import org.l2jmobius.gameserver.model.html.PageResult;
-import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
-import org.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
-import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.residences.ResidenceFunction;
+import org.l2jmobius.gameserver.mechanics.html.PageBuilder;
+import org.l2jmobius.gameserver.mechanics.html.PageResult;
+import org.l2jmobius.gameserver.mechanics.html.formatters.BypassParserFormatter;
+import org.l2jmobius.gameserver.mechanics.html.pagehandlers.NextPrevPageHandler;
+import org.l2jmobius.gameserver.mechanics.html.styles.ButtonsStyle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -50,6 +50,8 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminClanHall implements IAdminCommandHandler
 {
+	private static final DateTimeFormatter FUNCTION_FORMAT = DateTimeFormatter.ofPattern("dd/MM HH:mm");
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_clanhall",
@@ -165,7 +167,7 @@ public class AdminClanHall implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
-		final List<ClanHall> clanHallList = ClanHallData.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getResidenceId)).collect(Collectors.toList());
+		final List<ClanHall> clanHallList = ClanHallData.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getResidenceId)).toList();
 		
 		// @formatter:off
 		final PageResult result = PageBuilder.newBuilder(clanHallList, 4, "bypass -h admin_clanhall")
@@ -240,7 +242,7 @@ public class AdminClanHall implements IAdminCommandHandler
 					sb.append("<td align=center fixwidth=\"40\">" + function.getId() + "</td>");
 					sb.append("<td align=center fixwidth=\"200\">" + function.getType().toString() + "</td>");
 					sb.append("<td align=center fixwidth=\"40\">" + function.getLevel() + "</td>");
-					sb.append("<td align=center fixwidth=\"200\">" + new SimpleDateFormat("dd/MM HH:mm").format(new Date(function.getExpiration())) + "</td>");
+					sb.append("<td align=center fixwidth=\"200\">" + FUNCTION_FORMAT.format(Instant.ofEpochMilli(function.getExpiration()).atZone(ZoneId.systemDefault())) + "</td>");
 					sb.append("<td align=center fixwidth=\"100\"><button value=\"Remove\" action=\"bypass -h admin_clanhall id=" + clanHallId + " action=cancelFunc actionVal=" + function.getId() + "\" width=50 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 					sb.append("</tr>");
 				});

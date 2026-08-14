@@ -44,23 +44,23 @@ import org.l2jmobius.gameserver.data.xml.MableGameData;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.SubClassHolder;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.vip.VipManager;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.SubClassHolder;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopGroup;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
+import org.l2jmobius.gameserver.mechanics.vip.VipManager;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 
@@ -162,7 +162,7 @@ public class DailyResetManager
 		}
 		
 		// Store player variables.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getVariables().storeMe();
 			player.getAccountVariables().storeMe();
@@ -211,7 +211,7 @@ public class DailyResetManager
 		}
 		
 		int vitality = PlayerStat.MAX_VITALITY_POINTS / 4;
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			final int VP = player.getVitalityPoints();
 			player.setVitalityPoints(VP + vitality, false);
@@ -253,7 +253,7 @@ public class DailyResetManager
 			return;
 		}
 		
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, false);
 			for (SubClassHolder subclass : player.getSubClasses().values())
@@ -324,7 +324,7 @@ public class DailyResetManager
 			final Skill skill = SkillData.getInstance().getSkill(skillId, 1 /* No known need for more levels */);
 			if (skill != null)
 			{
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					if (player.hasSkillReuse(skill.getReuseHashCode()))
 					{
@@ -364,7 +364,7 @@ public class DailyResetManager
 		
 		// Update data for online players.
 		boolean update;
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			update = false;
 			for (int itemId : RESET_ITEMS)
@@ -406,7 +406,7 @@ public class DailyResetManager
 		}
 		
 		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.setWorldChatUsed(0);
 			player.sendPacket(new ExWorldChatCnt(player));
@@ -436,7 +436,7 @@ public class DailyResetManager
 			LOGGER.log(Level.SEVERE, "Could not reset Recommendations System: ", e);
 		}
 		
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.setRecomLeft(0);
 			player.setRecomHave(player.getRecomHave() - 20);
@@ -462,7 +462,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.resetTraingCampDuration();
 			}
@@ -473,12 +473,12 @@ public class DailyResetManager
 	
 	private void resetVip()
 	{
-		// Delete all entries for received gifts
+		// Delete all entries for received gifts.
 		AccountVariables.deleteVipPurchases(AccountVariables.VIP_ITEM_BOUGHT);
 		
-		// Checks the tier expiration for online players
-		// offline players get handled on next time they log in.
-		for (Player player : World.getInstance().getPlayers())
+		// Checks the tier expiration for online players.
+		// Offline players get handled on next time they log in.
+		for (Player player : World.getPlayers())
 		{
 			if (player.getVipTier() > 0)
 			{
@@ -518,7 +518,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
@@ -553,7 +553,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
@@ -583,7 +583,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getAccountVariables().remove(PlayerVariables.ATTENDANCE_DATE);
 			}
@@ -607,7 +607,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getVariables().remove(PlayerVariables.ATTENDANCE_DATE);
 			}
@@ -633,7 +633,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getAccountVariables().remove(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + holder.getBrId());
 			}
@@ -646,37 +646,31 @@ public class DailyResetManager
 	{
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ? AND account_name NOT IN (SELECT account_name FROM characters WHERE online = 1)"))
+			PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var LIKE ? AND account_name NOT IN (SELECT account_name FROM characters WHERE online = 1)"))
 		{
-			for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
-			{
-				ps.setString(1, AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + holder.getProductionId());
-				ps.executeUpdate();
-			}
-			
-			// for (LimitShopProductHolder holder : LimitShopCraftData.getInstance().getProducts())
-			// {
-			// ps.setString(1, AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + holder.getProductionId());
-			// ps.executeUpdate();
-			// }
+			ps.setString(1, AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + "%");
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset LimitShopData: " + e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset daily LimitShopData: " + e);
 		}
 		
-		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		// Create a set of active product variables first.
+		final Set<String> productVariables = new HashSet<>();
+		for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
 		{
-			for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
+			productVariables.add(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + holder.getProductionId());
+		}
+		
+		// Now remove for each online player using the collected product variables.
+		for (Player player : World.getPlayers())
+		{
+			final AccountVariables accountVariables = player.getAccountVariables();
+			for (String variableName : productVariables)
 			{
-				player.getAccountVariables().remove(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + holder.getProductionId());
+				accountVariables.remove(variableName);
 			}
-			
-			// for (LimitShopProductHolder holder : LimitShopCraftData.getInstance().getProducts())
-			// {
-			// player.getAccountVariables().remove(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + holder.getProductionId());
-			// }
 		}
 		
 		LOGGER.info("Daily LimitShopData have been reset.");
@@ -686,37 +680,31 @@ public class DailyResetManager
 	{
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ? AND account_name NOT IN (SELECT account_name FROM characters WHERE online = 1)"))
+			PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var LIKE ? AND account_name NOT IN (SELECT account_name FROM characters WHERE online = 1)"))
 		{
-			for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
-			{
-				ps.setString(1, AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + holder.getProductionId());
-				ps.executeUpdate();
-			}
-			
-			// for (LimitShopProductHolder holder : LimitShopCraftData.getInstance().getProducts())
-			// {
-			// ps.setString(1, AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + holder.getProductionId());
-			// ps.executeUpdate();
-			// }
+			ps.setString(1, AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + "%");
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset LimitShopData: " + e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset monthly LimitShopData: " + e);
 		}
 		
-		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		// Create a set of active product variables first.
+		final Set<String> productVariables = new HashSet<>();
+		for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
 		{
-			for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
+			productVariables.add(AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + holder.getProductionId());
+		}
+		
+		// Now remove for each online player using the collected product variables.
+		for (Player player : World.getPlayers())
+		{
+			final AccountVariables accountVariables = player.getAccountVariables();
+			for (String variableName : productVariables)
 			{
-				player.getAccountVariables().remove(AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + holder.getProductionId());
+				accountVariables.remove(variableName);
 			}
-			
-			// for (LimitShopProductHolder holder : LimitShopCraftData.getInstance().getProducts())
-			// {
-			// player.getAccountVariables().remove(AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + holder.getProductionId());
-			// }
 		}
 		
 		LOGGER.info("Monthly LimitShopData have been reset.");

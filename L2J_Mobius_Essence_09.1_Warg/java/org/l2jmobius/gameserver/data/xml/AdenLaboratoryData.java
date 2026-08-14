@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.data.holders.AdenLabHolder;
 import org.l2jmobius.gameserver.data.holders.AdenLabSkillHolder;
 import org.l2jmobius.gameserver.data.holders.AdenLabStageHolder;
 import org.l2jmobius.gameserver.managers.AdenLaboratoryManager;
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author SaltyMike
@@ -281,8 +281,8 @@ public class AdenLaboratoryData implements IXmlReader
 															}
 														}
 														
-														_adenLabData.computeIfAbsent((byte) bossId, k -> new HashMap<>()) // Get existing or create new map for bossId
-															.put(adenLabHolder.getPageIndex(), adenLabHolder); // Add/update the pageIndex entry
+														_adenLabData.computeIfAbsent((byte) bossId, k -> new HashMap<>()) // Get existing or create new map for bossId.
+															.put(adenLabHolder.getPageIndex(), adenLabHolder); // Add/update the pageIndex entry.
 													}
 													else
 													{
@@ -366,7 +366,14 @@ public class AdenLaboratoryData implements IXmlReader
 	 */
 	public Map<Byte, List<AdenLabSkillHolder>> getSkillsByOptionIndex(byte bossId, byte pageIndex, byte optionIndex)
 	{
-		return (_skillsLookupTable.containsKey(bossId) && _skillsLookupTable.get(bossId).containsKey(pageIndex)) ? _skillsLookupTable.get(bossId).get(pageIndex).get(optionIndex) : null;
+		final Map<Byte, Map<Byte, Map<Byte, List<AdenLabSkillHolder>>>> bossMap = _skillsLookupTable.get(bossId);
+		if (bossMap == null)
+		{
+			return null;
+		}
+		
+		final Map<Byte, Map<Byte, List<AdenLabSkillHolder>>> pageMap = bossMap.get(pageIndex);
+		return (pageMap != null) ? pageMap.get(optionIndex) : null;
 	}
 	
 	protected boolean handlePageIndex(NamedNodeMap attributes, AdenLabHolder adenLabHolder)
@@ -488,7 +495,7 @@ public class AdenLaboratoryData implements IXmlReader
 		}
 		
 		// Find the highest key that is less than or equal to the requested pageIndex.
-		final byte highestAvailablePage = pageCache.keySet().stream().filter(index -> index <= pageIndex).max(Byte::compare).orElse((byte) -1); // Default to -1 if no valid page is found
+		final byte highestAvailablePage = pageCache.keySet().stream().filter(index -> index <= pageIndex).max(Byte::compare).orElse((byte) -1); // Default to -1 if no valid page is found.
 		
 		return highestAvailablePage == -1 ? Collections.emptyList() : pageCache.get(highestAvailablePage);
 	}

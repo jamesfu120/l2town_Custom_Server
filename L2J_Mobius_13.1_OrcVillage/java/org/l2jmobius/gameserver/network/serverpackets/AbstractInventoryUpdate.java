@@ -25,9 +25,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 
 /**
  * @author Mobius
@@ -117,7 +117,7 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket
 		return _items.values();
 	}
 	
-	protected void writeItems(WritableBuffer buffer)
+	protected void writeItems(WriteBuffer buffer)
 	{
 		synchronized (_items)
 		{

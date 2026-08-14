@@ -29,11 +29,11 @@ import java.util.StringTokenizer;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.BlockList;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.BlockList;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -100,7 +100,7 @@ public class FriendsBoard implements IParseBoardHandler
 				
 				for (int friendId : player.getFriendList())
 				{
-					final Player friend = World.getInstance().getPlayer(friendId);
+					final Player friend = World.getPlayer(friendId);
 					if (friend != null)
 					{
 						friend.getFriendList().remove(Integer.valueOf(friend.getObjectId()));
@@ -135,7 +135,7 @@ public class FriendsBoard implements IParseBoardHandler
 						statement.close();
 						
 						final String name = CharInfoTable.getInstance().getNameById(friendId);
-						final Player friend = World.getInstance().getPlayer(friendId);
+						final Player friend = World.getPlayer(friendId);
 						if (friend != null)
 						{
 							friend.getFriendList().remove(Integer.valueOf(friend.getObjectId()));
@@ -242,12 +242,12 @@ public class FriendsBoard implements IParseBoardHandler
 				continue;
 			}
 			
-			final Player friend = World.getInstance().getPlayer(id);
+			final Player friend = World.getPlayer(id);
 			friendListHtml.append("<a action=\"bypass _friend;select;");
 			friendListHtml.append(id);
 			friendListHtml.append("\">[Select]</a>&nbsp;");
 			friendListHtml.append(friendName);
-			friendListHtml.append(" ");
+			friendListHtml.append(' ');
 			friendListHtml.append(((friend != null) && friend.isOnline()) ? "(on)" : "(off)");
 			friendListHtml.append("<br1>");
 		}
@@ -264,12 +264,12 @@ public class FriendsBoard implements IParseBoardHandler
 				continue;
 			}
 			
-			final Player friend = World.getInstance().getPlayer(id);
+			final Player friend = World.getPlayer(id);
 			friendListHtml.append("<a action=\"bypass _friend;deselect;");
 			friendListHtml.append(id);
 			friendListHtml.append("\">[Deselect]</a>&nbsp;");
 			friendListHtml.append(friendName);
-			friendListHtml.append(" ");
+			friendListHtml.append(' ');
 			friendListHtml.append(((friend != null) && friend.isOnline()) ? "(on)" : "(off)");
 			friendListHtml.append("<br1>");
 		}
@@ -305,10 +305,10 @@ public class FriendsBoard implements IParseBoardHandler
 				continue;
 			}
 			
-			final Player block = World.getInstance().getPlayer(id);
+			final Player block = World.getPlayer(id);
 			blockListHtml.append("<a action=\"bypass _block;select;");
 			blockListHtml.append(id).append("\">[Select]</a>&nbsp;");
-			blockListHtml.append(blockName).append(" ");
+			blockListHtml.append(blockName).append(' ');
 			blockListHtml.append(((block != null) && block.isOnline()) ? "(on)" : "(off)");
 			blockListHtml.append("<br1>");
 		}
@@ -325,10 +325,10 @@ public class FriendsBoard implements IParseBoardHandler
 				continue;
 			}
 			
-			final Player block = World.getInstance().getPlayer(id);
+			final Player block = World.getPlayer(id);
 			blockListHtml.append("<a action=\"bypass _block;deselect;");
 			blockListHtml.append(id).append("\">[Deselect]</a>&nbsp;");
-			blockListHtml.append(blockName).append(" ");
+			blockListHtml.append(blockName).append(' ');
 			blockListHtml.append(((block != null) && block.isOnline()) ? "(on)" : "(off)");
 			blockListHtml.append("<br1>");
 		}
@@ -355,9 +355,9 @@ public class FriendsBoard implements IParseBoardHandler
 				continue;
 			}
 			
-			if (sb.length() > 0)
+			if (!sb.isEmpty())
 			{
-				sb.append(";");
+				sb.append(';');
 			}
 			
 			sb.append(friendName);

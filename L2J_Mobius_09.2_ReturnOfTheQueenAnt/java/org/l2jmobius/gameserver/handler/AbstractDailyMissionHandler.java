@@ -30,15 +30,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.DailyMissionStatus;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionPlayerEntry;
-import org.l2jmobius.gameserver.model.events.ListenersContainer;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.SpecialItemType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.DailyMissionStatus;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionPlayerEntry;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.SpecialItemType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.events.ListenersContainer;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -160,7 +160,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			ps.setLong(5, entry.getLastCompleted());
 			ps.execute();
 			
-			// Cache if not exists
+			// Cache if not exists.
 			_entries.computeIfAbsent(entry.getObjectId(), _ -> entry);
 		}
 		catch (Exception e)

@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -31,9 +32,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.GeneralConfig;
-import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.buylist.ProductList;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.mechanics.buylist.Product;
+import org.l2jmobius.gameserver.mechanics.buylist.ProductList;
 
 /**
  * @author NosBit
@@ -41,6 +42,8 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 public class BuyListData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
+	
+	private static final Pattern XML_FILE_PATTERN = Pattern.compile("\\d+\\.xml");
 	
 	private final Map<Integer, ProductList> _buyLists = new ConcurrentHashMap<>();
 	
@@ -71,10 +74,6 @@ public class BuyListData implements IXmlReader
 			while (rs.next())
 			{
 				final int buyListId = rs.getInt("buylist_id");
-				final int itemId = rs.getInt("item_id");
-				final long count = rs.getLong("count");
-				final long nextRestockTime = rs.getLong("next_restock_time");
-				
 				final ProductList buyList = getBuyList(buyListId);
 				if (buyList == null)
 				{
@@ -82,12 +81,16 @@ public class BuyListData implements IXmlReader
 					continue;
 				}
 				
+				final int itemId = rs.getInt("item_id");
 				final Product product = buyList.getProductByItemId(itemId);
 				if (product == null)
 				{
 					LOGGER.warning("ItemId found in database but not loaded from xml! BuyListId: " + buyListId + " ItemId: " + itemId);
 					continue;
 				}
+				
+				final long count = rs.getLong("count");
+				final long nextRestockTime = rs.getLong("next_restock_time");
 				
 				// Update product count and restock time if below maximum.
 				if (count < product.getMaxCount())
@@ -108,7 +111,7 @@ public class BuyListData implements IXmlReader
 	{
 		try
 		{
-			final int buyListId = Integer.parseInt(file.getName().replaceAll(".xml", ""));
+			final int buyListId = Integer.parseInt(file.getName().replace(".xml", ""));
 			forEach(document, "list", list ->
 			{
 				final int defaultBaseTax = parseInteger(list.getAttributes(), "baseTax", 0);
@@ -164,7 +167,7 @@ public class BuyListData implements IXmlReader
 	@Override
 	public boolean isValidXmlFile(File file)
 	{
-		return (file != null) && file.isFile() && file.getName().toLowerCase().matches("\\d+\\.xml");
+		return (file != null) && file.isFile() && XML_FILE_PATTERN.matcher(file.getName().toLowerCase()).matches();
 	}
 	
 	public ProductList getBuyList(int listId)

@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.variation;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -44,7 +44,7 @@ public class ApplyVariationOption extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_APPLY_VARIATION_OPTION.writeId(this, buffer);
 		buffer.writeByte(_result);

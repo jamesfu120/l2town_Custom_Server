@@ -27,40 +27,38 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.CeremonyOfChaosConfig;
 import org.l2jmobius.gameserver.data.enums.CategoryType;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.groups.PartyMessageType;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
-import org.l2jmobius.gameserver.model.events.holders.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
-import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.groups.PartyMessageType;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.mechanics.events.holders.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
+import org.l2jmobius.gameserver.mechanics.events.listeners.AbstractEventListener;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.CeremonyOfChaosResult;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
@@ -77,6 +75,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousH
 import org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseRemainTime;
 import org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseResult;
 import org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseState;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw, Mobius, CostyKiller
@@ -146,7 +145,7 @@ public class CeremonyOfChaos extends Script
 		_registrationOpen = true;
 		
 		// Message all players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			if (player.isOnline())
 			{
@@ -167,7 +166,7 @@ public class CeremonyOfChaos extends Script
 		{
 			_registrationOpen = false;
 			
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				if (player.isOnline())
 				{
@@ -194,7 +193,7 @@ public class CeremonyOfChaos extends Script
 	private void prepareForFight()
 	{
 		PARTICIPANT_PLAYERS.clear();
-		final List<Player> players = REGISTERED_PLAYERS.stream().sorted(Comparator.comparingInt(Player::getLevel)).collect(Collectors.toList());
+		final List<Player> players = REGISTERED_PLAYERS.stream().sorted(Comparator.comparingInt(Player::getLevel)).toList();
 		for (Player player : players)
 		{
 			if (player.isOnline() && canRegister(player, true))
@@ -909,9 +908,8 @@ public class CeremonyOfChaos extends Script
 		if (player != null)
 		{
 			REGISTERED_PLAYERS.remove(player);
-			if (PARTICIPANT_PLAYERS.contains(player))
+			if (PARTICIPANT_PLAYERS.remove(player))
 			{
-				PARTICIPANT_PLAYERS.remove(player);
 				if (PARTICIPANT_PLAYERS.size() <= 1)
 				{
 					stopFight();

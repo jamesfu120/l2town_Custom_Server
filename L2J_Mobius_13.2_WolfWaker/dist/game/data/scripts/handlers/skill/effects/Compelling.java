@@ -20,14 +20,12 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.ai.Action;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius
@@ -58,7 +56,6 @@ public class Compelling extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		effected.getAI().notifyAction(Action.AFRAID);
 		compellingAction(effector, effected);
 	}
 	
@@ -74,13 +71,13 @@ public class Compelling extends AbstractEffect
 	{
 		if (!effected.isPlayer())
 		{
-			effected.getAI().notifyAction(Action.THINK);
+			effected.getAI().notifyActionThink();
 		}
 	}
 	
 	private void compellingAction(Creature effector, Creature effected)
 	{
 		effected.setRunning();
-		effected.getAI().setIntention(Intention.MOVE_TO, effector.getLocation());
+		effected.getAI().setIntentionMoveTo(effector.getLocation());
 	}
 }

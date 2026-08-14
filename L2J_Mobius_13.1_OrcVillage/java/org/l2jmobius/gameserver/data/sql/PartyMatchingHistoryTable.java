@@ -23,12 +23,13 @@ package org.l2jmobius.gameserver.data.sql;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayDeque;
 import java.util.Collection;
-import java.util.LinkedList;
+import java.util.Deque;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoomHistory;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoomHistory;
 
 /**
  * @author Mobius
@@ -41,7 +42,7 @@ public class PartyMatchingHistoryTable
 	private static final String DELETE_PARTY_HISTORY = "DELETE FROM party_matching_history";
 	private static final String INSERT_PARTY_HISTORY = "INSERT INTO party_matching_history (title,leader) values (?,?)";
 	
-	private static final LinkedList<MatchingRoomHistory> HISTORY = new LinkedList<>();
+	private static final Deque<MatchingRoomHistory> HISTORY = new ArrayDeque<>(100);
 	
 	protected PartyMatchingHistoryTable()
 	{

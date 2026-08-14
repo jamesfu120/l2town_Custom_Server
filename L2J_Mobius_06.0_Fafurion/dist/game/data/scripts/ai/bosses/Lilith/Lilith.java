@@ -24,28 +24,27 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportWhereType;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportWhereType;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.QuestTimer;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.QuestTimer;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Lilith AI
@@ -219,12 +218,13 @@ public class Lilith extends Script
 		
 		final Party party = player.getParty();
 		final boolean isInCC = party.isInCommandChannel();
-		final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 		final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 		if (!isPartyLeader)
 		{
 			return "31118-03.html";
 		}
+		
+		final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 		
 		if ((members.size() < GrandBossConfig.LILITH_MIN_PLAYERS) || (members.size() > GrandBossConfig.LILITH_MAX_PLAYERS))
 		{
@@ -324,7 +324,7 @@ public class Lilith extends Script
 					npc.asAttackable().clearAggroList();
 					npc.setTarget(caster);
 					npc.asAttackable().addDamageHate(caster, 500, 99999);
-					npc.getAI().setIntention(Intention.ATTACK, caster);
+					npc.getAI().setIntentionAttack(caster);
 				}
 			}
 		}

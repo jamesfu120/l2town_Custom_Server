@@ -6,4 +6,3 @@ CREATE TABLE IF NOT EXISTS `item_variations` (
   PRIMARY KEY (`itemId`)
 ) DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
-CREATE INDEX idx_itemId ON item_variations (itemId);

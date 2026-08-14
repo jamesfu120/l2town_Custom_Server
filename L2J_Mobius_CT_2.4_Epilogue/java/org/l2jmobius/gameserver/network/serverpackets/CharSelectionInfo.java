@@ -23,31 +23,28 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.ServerConfig;
 import org.l2jmobius.gameserver.config.custom.MultilingualSupportConfig;
 import org.l2jmobius.gameserver.config.custom.OfflinePlayConfig;
 import org.l2jmobius.gameserver.config.custom.OfflineTradeConfig;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.holders.CharacterInfoHolder;
 
 public class CharSelectionInfo extends ServerPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(CharSelectionInfo.class.getName());
-	
 	private final String _loginName;
 	private final int _sessionId;
 	private int _activeId;
@@ -80,12 +77,12 @@ public class CharSelectionInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.CHARACTER_SELECTION_INFO.writeId(this, buffer);
 		final int size = _characterPackages.size();
 		buffer.writeInt(size); // Created character count
-		buffer.writeInt(ServerConfig.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
+		buffer.writeInt(ServerConfig.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) ).
 		buffer.writeByte(0);
 		long lastAccess = 0;
 		if (_activeId == -1)
@@ -171,7 +168,7 @@ public class CharSelectionInfo extends ServerPacket
 	private static List<CharacterInfoHolder> loadCharacterSelectInfo(String loginName)
 	{
 		CharacterInfoHolder charInfopackage;
-		final List<CharacterInfoHolder> characterList = new LinkedList<>();
+		final List<CharacterInfoHolder> characterList = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate"))
 		{
@@ -188,7 +185,7 @@ public class CharSelectionInfo extends ServerPacket
 						// Disconnect offline trader.
 						if (OfflineTradeConfig.OFFLINE_DISCONNECT_SAME_ACCOUNT)
 						{
-							final Player player = World.getInstance().getPlayer(charInfopackage.getObjectId());
+							final Player player = World.getPlayer(charInfopackage.getObjectId());
 							if ((player != null) && player.isInStoreMode())
 							{
 								Disconnection.of(player).storeAndDelete();
@@ -199,7 +196,7 @@ public class CharSelectionInfo extends ServerPacket
 						// Disconnect offline play.
 						if (OfflinePlayConfig.OFFLINE_PLAY_DISCONNECT_SAME_ACCOUNT)
 						{
-							final Player player = World.getInstance().getPlayer(charInfopackage.getObjectId());
+							final Player player = World.getPlayer(charInfopackage.getObjectId());
 							if ((player != null) && player.isOfflinePlay())
 							{
 								Disconnection.of(player).storeAndDelete();
@@ -211,7 +208,7 @@ public class CharSelectionInfo extends ServerPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
+			PacketLogger.warning("Could not restore char info: " + e.getMessage() + " " + e);
 		}
 		
 		return characterList;
@@ -236,7 +233,7 @@ public class CharSelectionInfo extends ServerPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Could not restore char subclass info: " + e.getMessage(), e);
+			PacketLogger.warning("Could not restore char subclass info: " + e.getMessage() + " " + e);
 		}
 	}
 	
@@ -245,7 +242,7 @@ public class CharSelectionInfo extends ServerPacket
 		final int objectId = chardata.getInt("charId");
 		final String name = chardata.getString("char_name");
 		
-		// See if the char must be deleted
+		// See if the char must be deleted.
 		final long deletetime = chardata.getLong("deletetime");
 		if ((deletetime > 0) && (System.currentTimeMillis() > deletetime))
 		{
@@ -305,7 +302,7 @@ public class CharSelectionInfo extends ServerPacket
 			charInfopackage.setHtmlPrefix("data/lang/" + lang + "/");
 		}
 		
-		// if is in subclass, load subclass exp, sp, level info
+		// If is in subclass, load subclass exp, sp, level info.
 		if (baseClassId != activeClassId)
 		{
 			loadCharacterSubclassInfo(charInfopackage, objectId, activeClassId);
@@ -313,7 +310,7 @@ public class CharSelectionInfo extends ServerPacket
 		
 		charInfopackage.setClassId(activeClassId);
 		
-		// Get the augmentation id for equipped weapon
+		// Get the augmentation id for equipped weapon.
 		int weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND);
 		if (weaponObjId < 1)
 		{
@@ -337,7 +334,7 @@ public class CharSelectionInfo extends ServerPacket
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "Could not restore augmentation info: " + e.getMessage(), e);
+				PacketLogger.warning("Could not restore augmentation info: " + e.getMessage() + " " + e);
 			}
 		}
 		

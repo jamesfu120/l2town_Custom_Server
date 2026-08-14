@@ -20,11 +20,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
 import org.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
 /**
@@ -47,7 +47,7 @@ public class RequestListPartyMatchingWaitingRoom extends ClientPacket
 		final int size = readInt();
 		if ((size > 0) && (size < 128))
 		{
-			_classId = new LinkedList<>();
+			_classId = new ArrayList<>();
 			for (int i = 0; i < size; i++)
 			{
 				_classId.add(PlayerClass.getPlayerClass(readInt()));

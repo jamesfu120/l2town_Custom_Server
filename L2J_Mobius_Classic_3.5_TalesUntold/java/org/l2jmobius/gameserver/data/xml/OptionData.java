@@ -27,11 +27,11 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.handler.EffectHandler;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.options.OptionSkillHolder;
-import org.l2jmobius.gameserver.model.options.OptionSkillType;
-import org.l2jmobius.gameserver.model.options.Options;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.options.OptionSkillHolder;
+import org.l2jmobius.gameserver.mechanics.options.OptionSkillType;
+import org.l2jmobius.gameserver.mechanics.options.Options;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid

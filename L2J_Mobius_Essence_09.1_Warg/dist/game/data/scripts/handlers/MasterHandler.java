@@ -264,6 +264,7 @@ import handlers.items.ChallengePointsCoupon;
 import handlers.items.ChangeAttributeCrystal;
 import handlers.items.CharmOfCourage;
 import handlers.items.ChatBackground;
+import handlers.items.ClassChangeCoupon;
 import handlers.items.Elixir;
 import handlers.items.EnchantAttribute;
 import handlers.items.EnchantScrolls;
@@ -553,6 +554,7 @@ public class MasterHandler
 			ChangeAttributeCrystal.class,
 			CharmOfCourage.class,
 			ChatBackground.class,
+			ClassChangeCoupon.class,
 			Elixir.class,
 			EnchantAttribute.class,
 			EnchantScrolls.class,

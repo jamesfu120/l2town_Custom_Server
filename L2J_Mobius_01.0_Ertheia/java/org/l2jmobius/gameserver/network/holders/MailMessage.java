@@ -22,12 +22,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.managers.IdManager;
 import org.l2jmobius.gameserver.managers.MailManager;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.enums.MailType;
 
 /**
@@ -442,7 +442,7 @@ public class MailMessage
 		return _attachments;
 	}
 	
-	protected final synchronized void unloadAttachments()
+	protected synchronized void unloadAttachments()
 	{
 		if (_attachments != null)
 		{

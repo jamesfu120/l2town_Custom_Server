@@ -22,17 +22,17 @@ package ai.bosses.SevenSignsRBs;
 
 import java.util.List;
 
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.RaidBossStatus;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.npc.RaidBossStatus;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 
 /**
  * @author RobikBobik
@@ -207,14 +207,14 @@ public class SevenSignsRBs extends Script
 			{
 				if (ANAKIM_ZONE.isInsideZone(player.getLocation()))
 				{
-					final Location destination = TELEPORT_TO_DARK_ELVEN[getRandom(TELEPORT_TO_DARK_ELVEN.length)];
+					final Location destination = getRandomEntry(TELEPORT_TO_DARK_ELVEN);
 					player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
 					break;
 				}
 				
 				if (LILITH_ZONE.isInsideZone(player.getLocation()))
 				{
-					final Location destination = TELEPORT_TO_ADEN[getRandom(TELEPORT_TO_ADEN.length)];
+					final Location destination = getRandomEntry(TELEPORT_TO_ADEN);
 					player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
 					break;
 				}

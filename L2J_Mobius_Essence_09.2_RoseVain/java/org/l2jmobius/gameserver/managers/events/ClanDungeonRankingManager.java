@@ -37,10 +37,10 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.managers.MailManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
 
 /**
@@ -103,13 +103,15 @@ public class ClanDungeonRankingManager
 	
 	public int getPlayerRank(Player player)
 	{
-		final int playerPoints = _playerPoints.getOrDefault(player.getObjectId(), new AtomicInteger(0)).get();
+		final AtomicInteger current = _playerPoints.get(player.getObjectId());
+		final int playerPoints = current != null ? current.get() : 0;
 		return (int) _playerPoints.values().stream().filter(points -> points.get() > playerPoints).count() + 1;
 	}
 	
 	public int getPlayerPoints(Player player)
 	{
-		return _playerPoints.getOrDefault(player.getObjectId(), new AtomicInteger(0)).get();
+		final AtomicInteger current = _playerPoints.get(player.getObjectId());
+		return current != null ? current.get() : 0;
 	}
 	
 	public void rewardTopPlayersOnMonday()
@@ -144,9 +146,9 @@ public class ClanDungeonRankingManager
 		final Mail attachments = message.createAttachments();
 		if (attachments != null)
 		{
-			// 1. We use the Enum ItemProcessType.REWARD (or FEE/CONSUME if you prefer)
-			// 2. We cast rewards to (long)
-			// 3. We pass null for Player and Object (the compiler accepts null if the type is compatible)
+			// 1. We use the Enum ItemProcessType.REWARD (or FEE/CONSUME if you prefer).
+			// 2. We cast rewards to (long).
+			// 3. We pass null for Player and Object (the compiler accepts null if the type is compatible).
 			attachments.addItem(ItemProcessType.REWARD, CLAN_DUNGEON_RANKING_REWARD, rewards, null, null);
 			
 			MailManager.getInstance().sendMessage(message);
@@ -170,7 +172,7 @@ public class ClanDungeonRankingManager
 				{
 					ps.setInt(1, playerId);
 					ps.setInt(2, points.get());
-					ps.addBatch(); // Add to batch instead of executing immediately
+					ps.addBatch(); // Add to batch instead of executing immediately.
 				}
 				catch (SQLException e)
 				{

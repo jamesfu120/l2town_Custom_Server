@@ -25,18 +25,18 @@ import java.util.List;
 
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.NpcSpawnTemplate;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.zone.type.SpawnTerritory;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import org.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 
 /**
  * @author Mobius
@@ -69,7 +69,7 @@ public class AdminDelete implements IAdminCommandHandler
 	{
 		if (range > 0)
 		{
-			World.getInstance().forEachVisibleObjectInRange(player, Npc.class, range, target -> deleteNpc(player, target));
+			World.forEachVisibleObjectInRange(player, Npc.class, range, target -> deleteNpc(player, target));
 			return;
 		}
 		

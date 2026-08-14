@@ -20,12 +20,12 @@
  */
 package quests.Q00336_CoinsOfMagic;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 /**
  * Adapted from FirstTeam Interlude
@@ -234,7 +234,7 @@ public class Q00336_CoinsOfMagic extends Quest
 				html = "30232-" + (19 - grade) + ".htm";
 				takeItems(player, KALDIS_COIN + grade, -1);
 				giveItems(player, COIN_DIAGRAM + grade, 1);
-				st.set("grade", "" + (grade - 1));
+				st.set("grade", String.valueOf(grade - 1));
 				if (grade == 3)
 				{
 					st.setCond(9);
@@ -389,7 +389,7 @@ public class Q00336_CoinsOfMagic extends Quest
 		// {
 		// if (getRandom(100) < (chance * npc.getTemplate().getBaseHpConsumeRate()))
 		// {
-		// giveItems(player, BASIC_COINS[getRandom(BASIC_COINS.length)], 1);
+		// giveItems(player, getRandomEntry(BASIC_COINS), 1);
 		// }
 		// return null;
 		// }

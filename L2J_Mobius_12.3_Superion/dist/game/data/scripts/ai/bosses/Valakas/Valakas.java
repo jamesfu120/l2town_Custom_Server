@@ -26,29 +26,28 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import org.l2jmobius.gameserver.util.LocationUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Valakas AI
@@ -213,7 +212,7 @@ public class Valakas extends Script
 			{
 				_valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
 				_valakas.setInvul(true);
-				_valakas.getAI().setIntention(Intention.IDLE);
+				_valakas.getAI().setIntentionIdle();
 				if (status == WAITING)
 				{
 					startQuestTimer("beginning", VALAKAS_WAIT_TIME * 60000, _valakas, null);
@@ -233,7 +232,7 @@ public class Valakas extends Script
 			GrandBossManager.getInstance().setStatus(VALAKAS, DORMANT);
 			_valakas.setInvul(true);
 			_valakas.setRunning();
-			_valakas.getAI().setIntention(Intention.IDLE);
+			_valakas.getAI().setIntentionIdle();
 		}
 	}
 	
@@ -344,7 +343,7 @@ public class Valakas extends Script
 				npc.setImmobilized(false);
 				npc.enableAllSkills();
 				npc.setTargetable(true);
-				npc.getAI().setIntention(Intention.ACTIVE);
+				npc.getAI().setIntentionActive();
 				npc.broadcastInfo();
 				
 				resetMechanicState();
@@ -415,7 +414,7 @@ public class Valakas extends Script
 				npc.abortCast();
 				npc.abortAttack();
 				npc.stopMove(null);
-				npc.getAI().setIntention(Intention.IDLE);
+				npc.getAI().setIntentionIdle();
 				
 				npc.setTarget(npc);
 				npc.doCast(VALAKAS_TRAMPLE_1.getSkill());
@@ -433,7 +432,7 @@ public class Valakas extends Script
 			case "CAST_FURY_INDIVIDUAL":
 			{
 				npc.setTarget(npc);
-				npc.getAI().setIntention(Intention.ACTIVE);
+				npc.getAI().setIntentionActive();
 				npc.doCast(VALAKAS_FURY.getSkill());
 				ThreadPool.schedule(() ->
 				{
@@ -491,7 +490,7 @@ public class Valakas extends Script
 				toggleAttackSkills(npc, false);
 				
 				npc.stopMove(null);
-				npc.getAI().setIntention(Intention.IDLE);
+				npc.getAI().setIntentionIdle();
 				npc.abortCast();
 				npc.abortAttack();
 				npc.setTarget(npc);
@@ -644,7 +643,7 @@ public class Valakas extends Script
 				npc.disableCoreAI(true);
 				toggleAttackSkills(npc, false);
 				npc.stopMove(null);
-				npc.getAI().setIntention(Intention.IDLE);
+				npc.getAI().setIntentionIdle();
 				npc.abortCast();
 				npc.abortAttack();
 				npc.setTarget(npc);
@@ -713,7 +712,7 @@ public class Valakas extends Script
 				// Inactivity 1 hour (60 minutes).
 				if ((GrandBossManager.getInstance().getStatus(VALAKAS) == FIGHTING) && ((_timeTracker + 3600000) < System.currentTimeMillis()))
 				{
-					npc.getAI().setIntention(Intention.IDLE);
+					npc.getAI().setIntentionIdle();
 					npc.teleToLocation(VALAKAS_REGENERATION_LOC);
 					GrandBossManager.getInstance().setStatus(VALAKAS, DORMANT);
 					npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
@@ -986,7 +985,7 @@ public class Valakas extends Script
 				}
 				else
 				{
-					npc.getAI().setIntention(Intention.FOLLOW, target, null);
+					npc.getAI().setIntentionFollow(target);
 				}
 			}
 			return;
@@ -1064,7 +1063,7 @@ public class Valakas extends Script
 			}
 			else
 			{
-				npc.getAI().setIntention(Intention.FOLLOW, target, null);
+				npc.getAI().setIntentionFollow(target);
 			}
 		}
 	}
@@ -1072,7 +1071,7 @@ public class Valakas extends Script
 	private Playable getRandomTarget(Npc npc)
 	{
 		final List<Playable> result = new ArrayList<>();
-		World.getInstance().forEachVisibleObject(npc, Playable.class, obj ->
+		World.forEachVisibleObject(npc, Playable.class, obj ->
 		{
 			if ((obj != null) && !obj.isDead() && !obj.isInvisible() && !obj.isPet() && obj.isPlayable())
 			{

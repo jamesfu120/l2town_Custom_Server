@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.commission;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -37,7 +37,7 @@ public class ExResponseCommissionDelete extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RESPONSE_COMMISSION_DELETE.writeId(this, buffer);
 		buffer.writeInt(_result);

@@ -35,9 +35,9 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.CollectionDataHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.holders.ItemEnchantHolder;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.holders.ItemEnchantHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Berezkin Nikolay
@@ -101,8 +101,6 @@ public class CollectionData implements IXmlReader
 							if ("item".equalsIgnoreCase(b.getNodeName()))
 							{
 								final int itemId = parseInteger(attrs, "id");
-								final long itemCount = parseLong(attrs, "count", 1L);
-								final int itemEnchantLevel = parseInteger(attrs, "enchantLevel", 0);
 								final ItemTemplate item = ItemData.getInstance().getTemplate(itemId);
 								if (item == null)
 								{
@@ -110,6 +108,8 @@ public class CollectionData implements IXmlReader
 									continue;
 								}
 								
+								final long itemCount = parseLong(attrs, "count", 1L);
+								final int itemEnchantLevel = parseInteger(attrs, "enchantLevel", 0);
 								items.add(new ItemEnchantHolder(itemId, itemCount, itemEnchantLevel));
 							}
 						}
@@ -130,12 +130,7 @@ public class CollectionData implements IXmlReader
 	
 	public List<CollectionDataHolder> getCollectionsByTabId(int tabId)
 	{
-		if (_collectionsByTabId.containsKey(tabId))
-		{
-			return _collectionsByTabId.get(tabId);
-		}
-		
-		return Collections.emptyList();
+		return _collectionsByTabId.getOrDefault(tabId, Collections.emptyList());
 	}
 	
 	public Collection<CollectionDataHolder> getCollections()

@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
-import org.l2jmobius.gameserver.model.shuttle.ShuttleStop;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.instance.Shuttle;
+import org.l2jmobius.gameserver.entity.shuttle.ShuttleStop;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -41,7 +41,7 @@ public class ExShuttleInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_SHUTTLE_INFO.writeId(this, buffer);
 		buffer.writeInt(_shuttle.getObjectId());

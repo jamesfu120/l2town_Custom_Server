@@ -26,31 +26,29 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.SpawnTable;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.NoSummonFriendZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDamageReceived;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDamageReceived;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -61,7 +59,7 @@ import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Lindvior Boss
@@ -472,7 +470,7 @@ public class Lindvior extends Script
 					_chargedValues[index] += caster.isGM() ? (30 / 4) + 2 : (1 / 4) + 2;
 					_chargedValues[index] = Math.min(_chargedValues[index], 6);
 					
-					World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 3000, player ->
+					World.forEachVisibleObjectInRange(npc, Player.class, 3000, player ->
 					{
 						player.sendPacket(new ExShowScreenMessage(NpcStringId.S1_HAS_CHARGED_THE_CANNON, ExShowScreenMessage.TOP_CENTER, 10000, true, caster.getName()));
 						player.sendPacket(new ExSendUIEvent(player, ExSendUIEvent.TYPE_NORNIL, _chargedValues[index], 6, NpcStringId.CHARGING));
@@ -501,7 +499,7 @@ public class Lindvior extends Script
 			case NPC_ATTACKER_GENERATORS:
 			case NPC_ATTACKER_GENERATORS_1:
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpc.class, 800, cha ->
+				World.forEachVisibleObjectInRange(npc, FriendlyNpc.class, 800, cha ->
 				{
 					if (cha.getId() == GENERATOR_GUARD)
 					{
@@ -811,9 +809,9 @@ public class Lindvior extends Script
 						// TODO Need core implemented combo skill packet.
 						// On this moment player automatic charge generator if distance generator and player <= 900
 						generators.doCast(SKILL_RECHARGE_POSIBLE.getSkill());
-						World.getInstance().forEachVisibleObjectInRange(generators, Player.class, 900, p ->
+						World.forEachVisibleObjectInRange(generators, Player.class, 900, p ->
 						{
-							p.getAI().setIntention(Intention.IDLE);
+							p.getAI().setIntentionIdle();
 							p.setTarget(generators);
 							p.doCast(RECHARGE.getSkill());
 						});
@@ -824,7 +822,7 @@ public class Lindvior extends Script
 							guard.setInvul(false);
 							if (!guard.isDead())
 							{
-								guard.broadcastSay(ChatType.NPC_GENERAL, GUARD_MSG_1[getRandom(GUARD_MSG_1.length)]);
+								guard.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(GUARD_MSG_1));
 							}
 						});
 					}
@@ -848,12 +846,12 @@ public class Lindvior extends Script
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpc.class, 3000, generator ->
+					World.forEachVisibleObjectInRange(npc, FriendlyNpc.class, 3000, generator ->
 					{
 						if (generator.getId() == NPC_GENERATOR)
 						{
 							npc.setTarget(generator);
-							npc.getAI().setIntention(Intention.MOVE_TO, generator.getLocation());
+							npc.getAI().setIntentionMoveTo(generator.getLocation());
 							if (npc.calculateDistance3D(generator) < 500)
 							{
 								npc.reduceCurrentHp(1, generator, null);
@@ -874,7 +872,7 @@ public class Lindvior extends Script
 	{
 		if (npc.getId() == LINDVIOR_RAID)
 		{
-			Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.HONORABLE_WARRIORS_HAVE_DRIVEN_OFF_LINDVIOR_THE_EVIL_WIND_DRAGON, ExShowScreenMessage.TOP_CENTER, 10000, true));
+			World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.HONORABLE_WARRIORS_HAVE_DRIVEN_OFF_LINDVIOR_THE_EVIL_WIND_DRAGON, ExShowScreenMessage.TOP_CENTER, 10000, true));
 			if (_mobsSpawnTask != null)
 			{
 				_mobsSpawnTask.cancel(true);
@@ -940,7 +938,7 @@ public class Lindvior extends Script
 	{
 		if (event.equals("NPC_SHOUT") && (npc != null) && !npc.isDead())
 		{
-			npc.broadcastSay(ChatType.NPC_GENERAL, GUARD_MSG[getRandom(GUARD_MSG.length)]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(GUARD_MSG));
 			getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 		}
 	}
@@ -971,7 +969,7 @@ public class Lindvior extends Script
 		
 		for (int i = 0; i < count; i++)
 		{
-			_monsterSpawn.add(addSpawn(npcIds[getRandom(npcIds.length)], x, y, loc.getZ(), loc.getHeading(), true, 0, true));
+			_monsterSpawn.add(addSpawn(getRandomEntry(npcIds), x, y, loc.getZ(), loc.getHeading(), true, 0, true));
 		}
 	}
 	

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.clan.entry.PledgeRecruitInfo;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -34,7 +34,7 @@ public class ExPledgeRecruitBoardDetail extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_RECRUIT_BOARD_DETAIL.writeId(this, buffer);
 		buffer.writeInt(_pledgeRecruitInfo.getClanId());

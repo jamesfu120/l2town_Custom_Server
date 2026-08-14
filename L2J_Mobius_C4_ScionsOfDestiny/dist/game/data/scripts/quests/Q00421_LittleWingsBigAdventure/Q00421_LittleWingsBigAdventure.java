@@ -20,21 +20,21 @@
  */
 package quests.Q00421_LittleWingsBigAdventure;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.ChatType;
+import org.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * iCond is an internal variable, used because cond isn't developped on that quest (only 3 states) :
@@ -281,7 +281,7 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 			// Random luck is reached and you still have some leaves ; go further.
 			if ((getRandom(100) < 1) && hasQuestItems(st.getPlayer(), FAIRY_LEAF))
 			{
-				final int idMask = (int) Math.pow(2, (npc.getId() - 27182) - 1);
+				final int idMask = (int) MathUtil.pow(2, (npc.getId() - 27182) - 1);
 				final int iCond = st.getInt("iCond");
 				if ((iCond | idMask) != iCond)
 				{
@@ -325,7 +325,7 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 			final Attackable newNpc = addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), getRandom(65536), true, 300000).asAttackable();
 			newNpc.setRunning();
 			newNpc.addDamageHate(originalKiller, 0, 999);
-			newNpc.getAI().setIntention(Intention.ATTACK, originalKiller);
+			newNpc.getAI().setIntentionAttack(originalKiller);
 		}
 	}
 }

@@ -24,8 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.ConfigReader;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 
 /**
  * This class loads all the Balthus knights related configurations.

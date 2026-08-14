@@ -20,11 +20,11 @@
  */
 package quests.Q00619_RelicsOfTheOldEmpire;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00619_RelicsOfTheOldEmpire extends Quest
 {
@@ -36,7 +36,7 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest
 	private static int ENTRANCE = 7075;
 	
 	// Rewards ; all S grade weapons recipe (60%)
-	private static int[] RCP_REWARDS =
+	private static int[] RECIPES =
 	{
 		6881,
 		6883,
@@ -94,7 +94,7 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest
 				{
 					htmltext = "31538-09.htm";
 					takeItems(player, RELICS, 1000);
-					giveItems(player, RCP_REWARDS[getRandom(RCP_REWARDS.length)], 1);
+					giveItems(player, getRandomEntry(RECIPES), 1);
 				}
 				else
 				{

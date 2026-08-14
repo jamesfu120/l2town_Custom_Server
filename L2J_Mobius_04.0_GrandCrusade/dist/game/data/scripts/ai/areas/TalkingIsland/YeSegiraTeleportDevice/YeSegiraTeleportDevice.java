@@ -19,19 +19,19 @@ package ai.areas.TalkingIsland.YeSegiraTeleportDevice;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerCreate;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerCreate;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.enums.Movie;
 
 import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
@@ -90,9 +90,10 @@ public class YeSegiraTeleportDevice extends Script
 	@Override
 	public String onEvent(String event, Npc npc, Player player)
 	{
-		if (LOCATIONS.containsKey(event))
+		final Location loc = LOCATIONS.get(event);
+		if (loc != null)
 		{
-			player.teleToLocation(LOCATIONS.get(event), true);
+			player.teleToLocation(loc, true);
 			if (event.equals("observatory") && player.getVariables().getBoolean(MOVIE_VAR, false))
 			{
 				playMovie(player, Movie.SI_ILLUSION_03_QUE);

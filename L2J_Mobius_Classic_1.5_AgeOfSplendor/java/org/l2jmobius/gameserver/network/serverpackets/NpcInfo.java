@@ -18,20 +18,20 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.NpcConfig;
 import org.l2jmobius.gameserver.config.custom.MultilingualSupportConfig;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Team;
-import org.l2jmobius.gameserver.model.actor.instance.Doppelganger;
-import org.l2jmobius.gameserver.model.actor.instance.Guard;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Team;
+import org.l2jmobius.gameserver.entity.actor.instance.Doppelganger;
+import org.l2jmobius.gameserver.entity.actor.instance.Guard;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.ServerPackets;
@@ -264,7 +264,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (_npc.isDecayed())
 		{
@@ -291,7 +291,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 						
 						_blockSize -= _npc.getName().length() * 2;
 						_blockSize += localisation[0].length() * 2;
-						if (!localisation[1].equals(""))
+						if (!localisation[1].isEmpty())
 						{
 							if (!containsMask(NpcInfoType.TITLE))
 							{
@@ -300,7 +300,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 							
 							final String title = _npc.getTitle();
 							_initSize -= title.length() * 2;
-							if (title.equals(""))
+							if (title.isEmpty())
 							{
 								_initSize += localisation[1].length() * 2;
 							}
@@ -337,9 +337,9 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			String title = _npc.getTitle();
 			
 			// Localisation related.
-			if ((localisation != null) && !localisation[1].equals(""))
+			if ((localisation != null) && !localisation[1].isEmpty())
 			{
-				if (title.equals(""))
+				if (title.isEmpty())
 				{
 					title = localisation[1];
 				}

@@ -33,7 +33,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author CostyKiller

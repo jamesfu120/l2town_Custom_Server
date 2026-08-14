@@ -36,16 +36,16 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.holders.NpcRoutesHolder;
 import org.l2jmobius.gameserver.data.xml.NpcData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.holders.npc.WalkInfo;
-import org.l2jmobius.gameserver.model.actor.holders.npc.WalkNode;
-import org.l2jmobius.gameserver.model.actor.holders.npc.WalkRoute;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcMoveNodeArrived;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.WalkInfo;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.WalkNode;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.WalkRoute;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.actor.tasks.npc.walker.ArrivedTask;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcMoveNodeArrived;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
 /**
@@ -59,8 +59,8 @@ public class WalkingManager implements IXmlReader
 	// Repeat style:
 	// -1 - no repeat
 	// 0 - go back
-	// 1 - go to first point (circle style)
-	// 2 - teleport to first point (conveyor style)
+	// 1 - go to first point (circle style).
+	// 2 - teleport to first point (conveyor style).
 	// 3 - random walking between points.
 	public static final byte NO_REPEAT = -1;
 	public static final byte REPEAT_GO_BACK = 0;
@@ -250,17 +250,17 @@ public class WalkingManager implements IXmlReader
 	 */
 	public void startMoving(Npc npc, String routeName)
 	{
-		if (_routes.containsKey(routeName) && (npc != null) && !npc.isDead()) // check, if these route and NPC present
+		if (_routes.containsKey(routeName) && (npc != null) && !npc.isDead()) // Check, if these route and NPC present.
 		{
-			if (!_activeRoutes.containsKey(npc.getObjectId())) // new walk task
+			if (!_activeRoutes.containsKey(npc.getObjectId())) // New walk task.
 			{
-				// only if not already moved / not engaged in battle... should not happens if called on spawn
+				// Only if not already moved / not engaged in battle... should not happens if called on spawn.
 				if ((npc.getAI().getIntention() == Intention.ACTIVE) || (npc.getAI().getIntention() == Intention.IDLE))
 				{
 					final WalkInfo walk = new WalkInfo(routeName);
 					WalkNode node = walk.getCurrentNode();
 					
-					// adjust next waypoint, if NPC spawns at first waypoint
+					// Adjust next waypoint, if NPC spawns at first waypoint.
 					if ((npc.getX() == node.getX()) && (npc.getY() == node.getY()))
 					{
 						walk.calculateNextNode(npc);
@@ -282,14 +282,14 @@ public class WalkingManager implements IXmlReader
 						npc.setWalking();
 					}
 					
-					npc.getAI().setIntention(Intention.MOVE_TO, node);
+					npc.getAI().setIntentionMoveTo(node);
 					
 					final ScheduledFuture<?> task = _repeatMoveTasks.get(npc);
 					if ((task == null) || task.isCancelled() || task.isDone())
 					{
 						final ScheduledFuture<?> newTask = ThreadPool.scheduleAtFixedRate(() -> startMoving(npc, routeName), 10000, 10000);
 						_repeatMoveTasks.put(npc, newTask);
-						walk.setWalkCheckTask(newTask); // start walk check task, for resuming walk after fight
+						walk.setWalkCheckTask(newTask); // Start walk check task, for resuming walk after fight.
 					}
 					
 					npc.setWalker();
@@ -304,7 +304,7 @@ public class WalkingManager implements IXmlReader
 					}
 				}
 			}
-			else // walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
+			else // Walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it.
 			{
 				if (_activeRoutes.containsKey(npc.getObjectId()) && ((npc.getAI().getIntention() == Intention.ACTIVE) || (npc.getAI().getIntention() == Intention.IDLE)))
 				{
@@ -314,7 +314,7 @@ public class WalkingManager implements IXmlReader
 						return;
 					}
 					
-					// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
+					// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future.
 					if (walk.isBlocked() || walk.isSuspended())
 					{
 						return;
@@ -331,7 +331,7 @@ public class WalkingManager implements IXmlReader
 						npc.setWalking();
 					}
 					
-					npc.getAI().setIntention(Intention.MOVE_TO, node);
+					npc.getAI().setIntentionMoveTo(node);
 					walk.setBlocked(false);
 					walk.setStoppedByAttack(false);
 				}
@@ -392,12 +392,12 @@ public class WalkingManager implements IXmlReader
 		if (monster != null)
 		{
 			monster.stopMove(null);
-			monster.getAI().setIntention(Intention.ACTIVE);
+			monster.getAI().setIntentionActive();
 		}
 		else
 		{
 			npc.stopMove(null);
-			npc.getAI().setIntention(Intention.ACTIVE);
+			npc.getAI().setIntentionActive();
 		}
 	}
 	
@@ -415,7 +415,7 @@ public class WalkingManager implements IXmlReader
 			return;
 		}
 		
-		// Notify quest
+		// Notify quest.
 		if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_MOVE_NODE_ARRIVED, npc))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveNodeArrived(npc), npc);
@@ -423,7 +423,7 @@ public class WalkingManager implements IXmlReader
 		
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
 		
-		// Opposite should not happen... but happens sometime
+		// Opposite should not happen... but happens sometime.
 		if ((walk.getCurrentNodeId() < 0) || (walk.getCurrentNodeId() >= walk.getRoute().getNodesCount()))
 		{
 			return;
@@ -437,7 +437,7 @@ public class WalkingManager implements IXmlReader
 		}
 		
 		walk.calculateNextNode(npc);
-		walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
+		walk.setBlocked(true); // Prevents to be ran from walk check task, if there is delay in this node.
 		if (!node.getChatText().isEmpty())
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());

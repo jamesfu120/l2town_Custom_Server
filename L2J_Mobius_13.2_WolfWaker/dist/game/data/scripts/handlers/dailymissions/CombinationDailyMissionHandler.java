@@ -23,15 +23,15 @@ package handlers.dailymissions;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.DailyMissionStatus;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionPlayerEntry;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.DailyMissionStatus;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionPlayerEntry;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.item.OnItemCombination;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.item.OnItemCombination;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
 
 /**
  * @author CostyKiller

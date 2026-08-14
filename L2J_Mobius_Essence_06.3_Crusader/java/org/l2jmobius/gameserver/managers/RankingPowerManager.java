@@ -27,18 +27,17 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.NpcData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Decoy;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Decoy;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Serenitty
@@ -71,7 +70,7 @@ public class RankingPowerManager
 		final SystemMessage msg = new SystemMessage(SystemMessageId.A_RANKING_LEADER_C1_USED_LEADER_POWER_IN_S2);
 		msg.addString(player.getName());
 		msg.addZoneName(location.getX(), location.getY(), location.getZ());
-		Broadcast.toAllOnlinePlayers(msg);
+		World.broadcastToAllOnlinePlayers(msg);
 	}
 	
 	private void createClone(Player player)
@@ -94,7 +93,7 @@ public class RankingPowerManager
 	{
 		_decoyTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
-			World.getInstance().forEachVisibleObjectInRange(_decoyInstance, Player.class, 300, nearby ->
+			World.forEachVisibleObjectInRange(_decoyInstance, Player.class, 300, nearby ->
 			{
 				final BuffInfo info = nearby.getEffectList().getBuffInfoBySkillId(LEADER_POWER.getSkillId());
 				if ((info == null) || (info.getTime() < (LEADER_POWER.getSkill().getAbnormalTime() - 60)))
@@ -103,6 +102,7 @@ public class RankingPowerManager
 					LEADER_POWER.getSkill().applyEffects(_decoyInstance, nearby);
 				}
 			});
+			
 			if (Rnd.nextBoolean()) // Add some randomness?
 			{
 				ThreadPool.schedule(() -> _decoyInstance.broadcastSocialAction(2), 4500);

@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.dailymission;
 
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
@@ -63,7 +63,7 @@ public class RequestTodoList extends ClientPacket
 			// }
 			case 9: // Daily Rewards
 			{
-				// Initial EW request should be false
+				// Initial EW request should be false.
 				player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 				break;
 			}

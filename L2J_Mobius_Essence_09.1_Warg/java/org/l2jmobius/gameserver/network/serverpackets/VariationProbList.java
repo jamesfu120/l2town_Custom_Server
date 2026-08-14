@@ -25,13 +25,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.VariationData;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.OptionDataCategory;
-import org.l2jmobius.gameserver.model.options.OptionDataGroup;
-import org.l2jmobius.gameserver.model.options.Options;
-import org.l2jmobius.gameserver.model.options.Variation;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.options.OptionDataCategory;
+import org.l2jmobius.gameserver.mechanics.options.OptionDataGroup;
+import org.l2jmobius.gameserver.mechanics.options.Options;
+import org.l2jmobius.gameserver.mechanics.options.Variation;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -90,7 +90,7 @@ public class VariationProbList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_VARIATION_PROB_LIST.writeId(this, buffer);
 		buffer.writeInt(_refineryId);

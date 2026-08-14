@@ -20,18 +20,18 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.managers.InstanceManager;
 import org.l2jmobius.gameserver.managers.MatchingRoomManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -43,7 +43,7 @@ public class ExListPartyMatchingWaitingRoom extends ServerPacket
 	private static final int NUM_PER_PAGE = 64;
 	
 	private final int _size;
-	private final List<Player> _players = new LinkedList<>();
+	private final List<Player> _players = new ArrayList<>();
 	
 	public ExListPartyMatchingWaitingRoom(int page, int minLevel, int maxLevel, List<PlayerClass> classIds, String query)
 	{
@@ -63,7 +63,7 @@ public class ExListPartyMatchingWaitingRoom extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM.writeId(this, buffer);
 		buffer.writeInt(_size);

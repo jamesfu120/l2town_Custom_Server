@@ -22,18 +22,17 @@ package instances.ChamberOfProphecies;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCastingType;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCastingType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
@@ -53,7 +52,7 @@ import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
 public class ChamberOfProphecies extends InstanceScript
 {
 	private static final Logger LOGGER = Logger.getLogger(ChamberOfProphecies.class.getName());
-	
+
 	private enum RoomState
 	{
 		ROOM1_COMBAT(0),
@@ -63,19 +62,19 @@ public class ChamberOfProphecies extends InstanceScript
 		ROOM3_BOSS(4),
 		CHOICE_PHASE(5),
 		FINAL_PHASE(6);
-		
+
 		private final int value;
-		
+
 		RoomState(int value)
 		{
 			this.value = value;
 		}
-		
+
 		int getValue()
 		{
 			return value;
 		}
-		
+
 		static RoomState fromInt(int value)
 		{
 			for (RoomState state : values())
@@ -88,19 +87,19 @@ public class ChamberOfProphecies extends InstanceScript
 			return null;
 		}
 	}
-	
+
 	// NPCs
 	private static final int KAIN_VAN_HALTER = 31639;
 	private static final int GRAIL = 33996;
 	private static final int MYSTERIOUS_WIZARD = 33980;
-	
+
 	// Helper NPCs
 	private static final int HELPER_VAN_HALTER = 33999;
 	private static final int HELPER_FERIN = 34001;
-	
+
 	// Boss
 	private static final int MAKKUM = 19571;
-	
+
 	// Misc
 	private static final int DOOR_2 = 17230102;
 	private static final int DOOR_3 = 17230103;
@@ -114,7 +113,7 @@ public class ChamberOfProphecies extends InstanceScript
 	private static final int SPAWN_OFFSET = 120;
 	private static final int HEAL_SKILL_ID = 14901;
 	private static final int HEAL_SKILL_LEVEL = 1;
-	
+
 	/**
 	 * Initializes the {@code ChamberOfProphecies} instance script.<br>
 	 * This constructor sets up the starting NPCs and their associated dialogue IDs.
@@ -126,7 +125,7 @@ public class ChamberOfProphecies extends InstanceScript
 		addFirstTalkId(KAIN_VAN_HALTER, GRAIL, MYSTERIOUS_WIZARD);
 		addTalkId(KAIN_VAN_HALTER, GRAIL, MYSTERIOUS_WIZARD);
 	}
-	
+
 	private boolean changeInstanceStatus(Instance world, RoomState newState)
 	{
 		final RoomState current = RoomState.fromInt(world.getStatus());
@@ -142,12 +141,12 @@ public class ChamberOfProphecies extends InstanceScript
 		world.setStatus(newState.getValue());
 		return true;
 	}
-	
+
 	private RoomState getState(Instance world)
 	{
 		return RoomState.fromInt(world.getStatus());
 	}
-	
+
 	@Override
 	protected void onEnter(Player player, Instance instance, boolean isFirstEntry)
 	{
@@ -163,7 +162,7 @@ public class ChamberOfProphecies extends InstanceScript
 				instance.despawnGroup("wof_room3");
 				instance.despawnGroup("wof_room3_2");
 				instance.despawnGroup("wof_room4");
-				
+
 				final boolean isRoom3 = ((enterState == RoomState.ROOM3_SPAWNED) || (enterState == RoomState.ROOM3_BOSS));
 				if (isRoom3)
 				{
@@ -182,7 +181,7 @@ public class ChamberOfProphecies extends InstanceScript
 					instance.setStatus(RoomState.ROOM1_COMBAT.getValue());
 					player.teleToLocation(FIRST_ROOM_LOC, instance);
 				}
-				
+
 				final Npc vanHalter = addSpawn(HELPER_VAN_HALTER, getOffsetLocation(player, -SPAWN_OFFSET), false, 0, false, instance.getId());
 				final Npc ferin = addSpawn(HELPER_FERIN, getOffsetLocation(player, SPAWN_OFFSET), false, 0, false, instance.getId());
 				initHelperNpc(vanHalter, player);
@@ -194,7 +193,7 @@ public class ChamberOfProphecies extends InstanceScript
 			{
 				cancelAllHelperTimers(instance.getNpc(HELPER_VAN_HALTER), instance.getNpc(HELPER_FERIN), player);
 				deleteAllNpcs(instance, KAIN_VAN_HALTER, HELPER_VAN_HALTER, HELPER_FERIN);
-				
+
 				if (instance.getNpc(MAKKUM) == null)
 				{
 					instance.openCloseDoor(DOOR_4, false);
@@ -209,17 +208,17 @@ public class ChamberOfProphecies extends InstanceScript
 						instance.spawnGroup("q10753_16_instance_grail");
 					}
 					player.teleToLocation(THIRD_ROOM_LOC, instance);
-					
+
 					final Npc vanHalter = addSpawn(HELPER_VAN_HALTER, getOffsetLocation(player, -SPAWN_OFFSET), false, 0, false, instance.getId());
 					final Npc ferin = addSpawn(HELPER_FERIN, getOffsetLocation(player, SPAWN_OFFSET), false, 0, false, instance.getId());
 					initHelperNpc(vanHalter, player);
 					startQuestTimer("ATTACK2", 200, vanHalter, player, false);
-					
+
 					if (ferin != null)
 					{
 						ferin.setRunning();
 						ferin.setTarget(vanHalter);
-						ferin.getAI().setIntention(Intention.FOLLOW, vanHalter);
+						ferin.getAI().setIntentionFollow(vanHalter);
 					}
 					startQuestTimer("CLOSE", 0, null, player);
 				}
@@ -239,7 +238,7 @@ public class ChamberOfProphecies extends InstanceScript
 			teleportPlayerIn(player, instance);
 		}
 	}
-	
+
 	private static void deleteAllNpcs(Instance world, int... npcIds)
 	{
 		for (int npcId : npcIds)
@@ -250,7 +249,7 @@ public class ChamberOfProphecies extends InstanceScript
 			}
 		}
 	}
-	
+
 	private void cancelAllHelperTimers(Npc vanHalter, Npc ferin, Player player)
 	{
 		if (vanHalter != null)
@@ -268,7 +267,7 @@ public class ChamberOfProphecies extends InstanceScript
 			cancelQuestTimer("BROADCAST_TEXT", ferin, player);
 		}
 	}
-	
+
 	private void initHelperNpc(Npc npc, Player player)
 	{
 		npc.setRunning();
@@ -277,9 +276,9 @@ public class ChamberOfProphecies extends InstanceScript
 			npc.asAttackable().setCanReturnToSpawnPoint(false);
 		}
 		npc.setTarget(player);
-		npc.getAI().setIntention(Intention.FOLLOW, player);
+		npc.getAI().setIntentionFollow(player);
 	}
-	
+
 	private void startHelperTimers(Npc vanHalter, Npc ferin, Player player)
 	{
 		if (vanHalter != null)
@@ -294,12 +293,12 @@ public class ChamberOfProphecies extends InstanceScript
 			startQuestTimer("BROADCAST_TEXT", 12000, ferin, player);
 		}
 	}
-	
+
 	private void startCombatMonitoring(Npc npc, Player player)
 	{
 		startQuestTimer("CHECK_STATUS", 7000, npc, player);
 	}
-	
+
 	private static Location getOffsetLocation(Player player, int offset)
 	{
 		final double headingRad = Math.toRadians(player.getHeading() / (65535.0 / 360.0));
@@ -307,7 +306,7 @@ public class ChamberOfProphecies extends InstanceScript
 		final double perpY = Math.cos(headingRad);
 		return new Location((int) (player.getX() + (perpX * offset)), (int) (player.getY() + (perpY * offset)), player.getZ(), player.getHeading());
 	}
-	
+
 	/**
 	 * Handles various events within the Chamber of Prophecies instance.<br>
 	 * It manages quest progression, NPC behaviors, and world state changes.
@@ -337,7 +336,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				world.openCloseDoor(DOOR_4, false);
 				world.broadcastPacket(ExShowUsm.USM_Q015_E);
 				world.despawnGroup("q10753_16_instance_grail");
@@ -368,7 +367,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				world.spawnGroup("q10753_16_instance_halter_2");
 				changeInstanceStatus(world, RoomState.FINAL_PHASE);
 				startQuestTimer("DESPAWN_WIZARD", 2000, npc, player);
@@ -385,7 +384,7 @@ public class ChamberOfProphecies extends InstanceScript
 					{
 						takeItems(player, PROPHECY_MACHINE, 1);
 					}
-					
+
 					qs.setCond(22, true);
 				}
 				break;
@@ -397,10 +396,10 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				cancelAllHelperTimers(world.getNpc(HELPER_VAN_HALTER), world.getNpc(HELPER_FERIN), player);
 				deleteAllNpcs(world, KAIN_VAN_HALTER, HELPER_VAN_HALTER, HELPER_FERIN);
-				
+
 				final RoomState teleportState = getState(world);
 				if ((teleportState != null) && (teleportState.ordinal() < RoomState.ROOM3_SPAWNED.ordinal()))
 				{
@@ -410,15 +409,15 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					player.teleToLocation(THIRD_ROOM_LOC);
 				}
-				
+
 				addSpawn(HELPER_VAN_HALTER, getOffsetLocation(player, -SPAWN_OFFSET), false, 0, false, world.getId());
 				addSpawn(HELPER_FERIN, getOffsetLocation(player, SPAWN_OFFSET), false, 0, false, world.getId());
-				
+
 				if ((getState(world) == RoomState.ROOM1_COMBAT) && world.getAliveNpcs(Monster.class).isEmpty())
 				{
 					world.spawnGroup("wof_room1");
 				}
-				
+
 				final Npc vanHalter = world.getNpc(HELPER_VAN_HALTER);
 				final Npc ferin = world.getNpc(HELPER_FERIN);
 				if (vanHalter != null)
@@ -430,7 +429,7 @@ public class ChamberOfProphecies extends InstanceScript
 					initHelperNpc(ferin, player);
 				}
 				startHelperTimers(vanHalter, ferin, player);
-				
+
 				if (vanHalter != null)
 				{
 					startCombatMonitoring(vanHalter, player);
@@ -444,7 +443,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				final RoomState statusState = getState(world);
 				if ((statusState != null) && (statusState.ordinal() < RoomState.CHOICE_PHASE.ordinal()))
 				{
@@ -463,7 +462,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				final Npc ferin = world.getNpc(HELPER_FERIN);
 				final Npc vanHalter = world.getNpc(HELPER_VAN_HALTER);
 				final RoomState state = getState(world);
@@ -471,7 +470,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				if (!world.getAliveNpcs(Monster.class).isEmpty())
 				{
 					if ((state == RoomState.ROOM1_COMBAT) || (state == RoomState.ROOM2_SPAWNED) || (state == RoomState.ROOM2_COMBAT) || (state == RoomState.ROOM3_SPAWNED) || (state == RoomState.ROOM3_BOSS))
@@ -480,7 +479,7 @@ public class ChamberOfProphecies extends InstanceScript
 					}
 					break;
 				}
-				
+
 				switch (state)
 				{
 					case ROOM1_COMBAT:
@@ -525,7 +524,7 @@ public class ChamberOfProphecies extends InstanceScript
 						cancelQuestTimer("ATTACK2", vanHalter, player);
 						if (vanHalter != null)
 						{
-							vanHalter.getAI().setIntention(Intention.IDLE, player);
+							vanHalter.getAI().setIntentionIdle();
 						}
 						cancelQuestTimer("FOLLOW", ferin, player);
 						cancelQuestTimer("HEAL_CHECK", ferin, player);
@@ -533,7 +532,7 @@ public class ChamberOfProphecies extends InstanceScript
 						{
 							ferin.setRunning();
 							ferin.setTarget(vanHalter);
-							ferin.getAI().setIntention(Intention.FOLLOW, vanHalter);
+							ferin.getAI().setIntentionFollow(vanHalter);
 						}
 						final Npc makkum = world.getNpc(MAKKUM);
 						if (makkum != null)
@@ -570,7 +569,7 @@ public class ChamberOfProphecies extends InstanceScript
 					{
 						npc.setRunning();
 						npc.setTarget(player);
-						npc.getAI().setIntention(Intention.FOLLOW, player);
+						npc.getAI().setIntentionFollow(player);
 					}
 					startQuestTimer("FOLLOW", 2000, npc, player, false);
 				}
@@ -585,18 +584,18 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				npc.setRunning();
 				final boolean monstersAlive = !world.getAliveNpcs(Monster.class).isEmpty();
 				if (npc.getId() == HELPER_FERIN)
 				{
 					npc.setTarget(player);
-					npc.getAI().setIntention(Intention.FOLLOW, player);
+					npc.getAI().setIntentionFollow(player);
 				}
 				else if (!monstersAlive)
 				{
 					npc.setTarget(player);
-					npc.getAI().setIntention(Intention.FOLLOW, player);
+					npc.getAI().setIntentionFollow(player);
 				}
 				else
 				{
@@ -613,7 +612,7 @@ public class ChamberOfProphecies extends InstanceScript
 					if (!found)
 					{
 						npc.setTarget(player);
-						npc.getAI().setIntention(Intention.FOLLOW, player);
+						npc.getAI().setIntentionFollow(player);
 					}
 				}
 				if (monstersAlive)
@@ -629,7 +628,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				changeInstanceStatus(world, RoomState.ROOM2_SPAWNED);
 				world.openCloseDoor(DOOR_2, true);
 				world.spawnGroup("wof_room2");
@@ -643,7 +642,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				final Npc vanHalter = world.getNpc(HELPER_VAN_HALTER);
 				cancelQuestTimer("ATTACK", vanHalter, player);
 				cancelQuestTimer("ATTACK1", vanHalter, player);
@@ -662,7 +661,7 @@ public class ChamberOfProphecies extends InstanceScript
 				}
 				npc.setTarget(player);
 				npc.setRunning();
-				npc.getAI().setIntention(Intention.FOLLOW, player);
+				npc.getAI().setIntentionFollow(player);
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THAT_GUY_KAIN_HAS_A_SMARMY_FACE));
 				player.sendPacket(new PlaySound(3, "Npcdialog1.apple_quest_7", 0, 0, 0, 0, 0));
 				break;
@@ -720,7 +719,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GO_NOW_KAIN_CAN_HANDLE_THIS));
 				}
-				
+
 				startQuestTimer("REST", 5000, npc, player);
 				break;
 			}
@@ -739,7 +738,7 @@ public class ChamberOfProphecies extends InstanceScript
 			{
 				if ((npc != null) && (npc.getId() == HELPER_FERIN))
 				{
-					npc.getAI().setIntention(Intention.IDLE, player);
+					npc.getAI().setIntentionIdle();
 					cancelQuestTimer("BROADCAST_TEXT", npc, player);
 				}
 				break;
@@ -751,7 +750,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				world.spawnGroup("q10753_16_instance_grail");
 				showOnScreenMsg(player, NpcStringId.LEAVE_THIS_PLACE_TO_KAIN_GO_TO_THE_NEXT_ROOM, ExShowScreenMessage.TOP_CENTER, 6000);
 				world.openCloseDoor(DOOR_4, true);
@@ -765,7 +764,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				final Npc grail = world.getNpc(GRAIL);
 				if (grail == null)
 				{
@@ -791,7 +790,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				world.despawnGroup("q10753_16_instance_wizard");
 				break;
 			}
@@ -802,7 +801,7 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					break;
 				}
-				
+
 				Npc ferin = world.getNpc(HELPER_FERIN);
 				if ((ferin == null) || ferin.isDead())
 				{
@@ -823,13 +822,13 @@ public class ChamberOfProphecies extends InstanceScript
 					}
 					break;
 				}
-				
+
 				if (player.isDead() || !player.isOnline())
 				{
 					startQuestTimer("HEAL_CHECK", 5000, ferin, player);
 					break;
 				}
-				
+
 				if (player.getCurrentHpPercent() < 80)
 				{
 					final Skill healSkill = SkillData.getInstance().getSkill(HEAL_SKILL_ID, HEAL_SKILL_LEVEL);
@@ -896,15 +895,15 @@ public class ChamberOfProphecies extends InstanceScript
 				{
 					return null;
 				}
-				
+
 				world.finishInstance(0);
 				break;
 			}
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	/**
 	 * Handles the dialogue shown when a player talks to an {@code Npc} for the first time.<br>
 	 * It checks the current quest state and returns the appropriate HTML file path based on the NPC ID.
@@ -941,10 +940,10 @@ public class ChamberOfProphecies extends InstanceScript
 				break;
 			}
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	/**
 	 * This is the entry point for the {@code ChamberOfProphecies} class.<br>
 	 * It initializes a new instance of the class.

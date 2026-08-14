@@ -17,12 +17,17 @@
 package org.l2jmobius.gameserver.network.clientpackets.enchant;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.data.xml.EnchantChallengePointData;
+import org.l2jmobius.gameserver.data.xml.EnchantChallengePointData.EnchantChallengePointsItemInfo;
+import org.l2jmobius.gameserver.data.xml.EnchantChallengePointData.EnchantChallengePointsOptionInfo;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -30,6 +35,8 @@ import org.l2jmobius.gameserver.network.serverpackets.enchant.EnchantResult;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.ExPutEnchantScrollItemResult;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.ExPutEnchantTargetItemResult;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.single.ChangedEnchantTargetItemProbabilityList;
+import org.l2jmobius.gameserver.network.serverpackets.enchant.single.ExChangedEnchantTargetItemProbList;
+import org.l2jmobius.gameserver.network.serverpackets.enchant.single.ExChangedEnchantTargetItemProbList.EnchantProbInfo;
 
 /**
  * @author KenM
@@ -93,5 +100,31 @@ public class RequestExTryToPutEnchantTargetItem extends ClientPacket
 		request.setTimestamp(System.currentTimeMillis());
 		player.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
 		player.sendPacket(new ChangedEnchantTargetItemProbabilityList(player, false));
+		
+		final double chance = scrollTemplate.getChance(player, item);
+		if (chance > 0)
+		{
+			double challengePointsChance = 0;
+			final EnchantChallengePointsItemInfo info = EnchantChallengePointData.getInstance().getInfoByItemId(item.getId());
+			if (info != null)
+			{
+				final int groupId = info.groupId();
+				final int pendingGroupId = player.getChallengeInfo().getChallengePointsPendingRecharge()[0];
+				final int pendingOptionIndex = player.getChallengeInfo().getChallengePointsPendingRecharge()[1];
+				if ((pendingGroupId == groupId) && ((pendingOptionIndex == EnchantChallengePointData.OPTION_PROB_INC1) || (pendingOptionIndex == EnchantChallengePointData.OPTION_PROB_INC2)))
+				{
+					final EnchantChallengePointsOptionInfo optionInfo = EnchantChallengePointData.getInstance().getOptionInfo(pendingGroupId, pendingOptionIndex);
+					if ((optionInfo != null) && (item.getEnchantLevel() >= optionInfo.minEnchant()) && (item.getEnchantLevel() <= optionInfo.maxEnchant()))
+					{
+						challengePointsChance = optionInfo.chance();
+						player.getChallengeInfo().setChallengePointsPendingRecharge(-1, -1);
+					}
+				}
+			}
+			
+			final int crystalLevel = item.getTemplate().getCrystalType().getLevel();
+			final double enchantRateStat = (crystalLevel > CrystalType.NONE.getLevel()) && (crystalLevel < CrystalType.EVENT.getLevel()) ? player.getStat().getValue(Stat.ENCHANT_RATE) : 0;
+			player.sendPacket(new ExChangedEnchantTargetItemProbList(new EnchantProbInfo(item.getObjectId(), (int) ((chance + challengePointsChance + enchantRateStat) * 100), (int) (chance * 100), (int) (challengePointsChance * 100), (int) (enchantRateStat * 100))));
+		}
 	}
 }

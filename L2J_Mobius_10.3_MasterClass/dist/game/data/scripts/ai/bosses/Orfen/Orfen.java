@@ -29,25 +29,25 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.groups.CommandChannel;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.type.ArenaZone;
+import org.l2jmobius.gameserver.entity.zone.type.EffectZone;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.groups.CommandChannel;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.type.ArenaZone;
-import org.l2jmobius.gameserver.model.zone.type.EffectZone;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -673,7 +673,7 @@ public class Orfen extends Script
 						if ((minion != null) && !minion.isDead() && (minion.getId() == ARIMA))
 						{
 							minion.setTarget(attacker);
-							minion.getAI().setIntention(Intention.ATTACK, attacker);
+							minion.getAI().setIntentionAttack(attacker);
 						}
 					}
 				}
@@ -698,12 +698,13 @@ public class Orfen extends Script
 				final boolean hasExistingArimas = _minions.stream().anyMatch(m -> (m != null) && !m.isDead() && (m.getId() == ARIMA));
 				if (hasExistingArimas)
 				{
+					final WorldObject orfenTarget = npc.getTarget();
 					for (Npc minion : _minions)
 					{
-						if ((minion != null) && !minion.isDead() && (minion.getId() == ARIMA) && (npc.getTarget() != null) && npc.getTarget().isPlayer())
+						if ((minion != null) && !minion.isDead() && (minion.getId() == ARIMA) && (orfenTarget != null) && orfenTarget.isPlayer())
 						{
-							minion.setTarget(npc.getTarget());
-							minion.getAI().setIntention(Intention.ATTACK, npc.getTarget());
+							minion.setTarget(orfenTarget);
+							minion.getAI().setIntentionAttack(orfenTarget);
 						}
 					}
 				}
@@ -1025,10 +1026,11 @@ public class Orfen extends Script
 				_arimaRegressTimerStart.put(minion, System.currentTimeMillis() - (ARIMA_REGRESS_TIMER_MS - remainingTime));
 				startQuestTimer("SHROUD_REGRESS_CHECK_" + minion.getObjectId(), remainingTime, minion, null);
 				
-				if ((npc.getTarget() != null) && npc.getTarget().isPlayer())
+				final WorldObject orfenTarget = npc.getTarget();
+				if ((orfenTarget != null) && orfenTarget.isPlayer())
 				{
-					minion.setTarget(npc.getTarget());
-					minion.getAI().setIntention(Intention.ATTACK, npc.getTarget());
+					minion.setTarget(orfenTarget);
+					minion.getAI().setIntentionAttack(orfenTarget);
 				}
 			}
 			catch (Exception e)
@@ -1053,10 +1055,11 @@ public class Orfen extends Script
 				final Npc mob = addSpawn(TORFEDO, loc, false, 0);
 				_minions.add(mob);
 				
-				if ((npc.getTarget() != null) && npc.getTarget().isPlayer())
+				final WorldObject orfenTarget = npc.getTarget();
+				if ((orfenTarget != null) && orfenTarget.isPlayer())
 				{
-					mob.setTarget(npc.getTarget());
-					mob.getAI().setIntention(Intention.ATTACK, npc.getTarget());
+					mob.setTarget(orfenTarget);
+					mob.getAI().setIntentionAttack(orfenTarget);
 				}
 			}
 			catch (Exception e)
@@ -1073,10 +1076,11 @@ public class Orfen extends Script
 				final Npc mob = addSpawn(HARANA, loc, false, 0);
 				_minions.add(mob);
 				
-				if ((npc.getTarget() != null) && npc.getTarget().isPlayer())
+				final WorldObject orfenTarget = npc.getTarget();
+				if ((orfenTarget != null) && orfenTarget.isPlayer())
 				{
-					mob.setTarget(npc.getTarget());
-					mob.getAI().setIntention(Intention.ATTACK, npc.getTarget());
+					mob.setTarget(orfenTarget);
+					mob.getAI().setIntentionAttack(orfenTarget);
 				}
 			}
 			catch (Exception e)
@@ -1114,7 +1118,7 @@ public class Orfen extends Script
 				}
 				else
 				{
-					minion.getAI().setIntention(Intention.ACTIVE);
+					minion.getAI().setIntentionActive();
 					if (minion.isAttackable())
 					{
 						minion.asAttackable().clearAggroList();

@@ -22,13 +22,13 @@ package quests.Q10374_ThatPlaceSuccubus;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
@@ -118,12 +118,13 @@ public class Q10374_ThatPlaceSuccubus extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
 		if ((npc.getId() == ZENYA) && !CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, player.getPlayerClass().getId()))
 		{
 			return "noClass.html";
 		}
+		
+		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
 		{

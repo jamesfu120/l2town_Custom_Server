@@ -25,20 +25,20 @@ import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.enums.FlyType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.enums.FlyType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExChangeClientEffectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -187,7 +187,7 @@ public class AtrusBoss extends Script
 			
 			if (_combatZone != null)
 			{
-				for (Npc n : World.getInstance().getVisibleObjects(npc, Npc.class))
+				World.forEachVisibleObject(npc, Npc.class, n ->
 				{
 					if ((n.getId() == CHAOS_SEAL) || (n.getId() == POWER_SEAL))
 					{
@@ -196,7 +196,7 @@ public class AtrusBoss extends Script
 							n.deleteMe();
 						}
 					}
-				}
+				});
 			}
 			// 1. Activates the local visual of Kasha Orc Fortress
 			setVisualActive(true);
@@ -358,7 +358,7 @@ public class AtrusBoss extends Script
 					_combatZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.DUE_TO_THE_CHAOTIC_SEAL_S_EFFECT_ATRUS_IS_UNLEASHING_THE_CHAOS_POWER, ExShowScreenMessage.TOP_CENTER, 7000, true));
 				}
 				
-				_atrus.getAI().setIntention(Intention.IDLE);
+				_atrus.getAI().setIntentionIdle();
 				_atrus.abortAttack();
 				_atrus.abortCast();
 				_atrus.stopMove(null);
@@ -407,7 +407,7 @@ public class AtrusBoss extends Script
 			if ((npc != null) && !npc.isDead() && (_atrus != null) && !_atrus.isDead())
 			{
 				_atrus.setTarget(npc);
-				_atrus.getAI().setIntention(Intention.CAST, KASHA_FRAY.getSkill(), npc);
+				_atrus.getAI().setIntentionCast(KASHA_FRAY.getSkill(), npc);
 			}
 		}
 		
@@ -436,7 +436,7 @@ public class AtrusBoss extends Script
 				_isMechanicActive = false;
 				_atrus.setInvul(false);
 				_atrus.setTargetable(true);
-				_atrus.getAI().setIntention(Intention.ACTIVE);
+				_atrus.getAI().setIntentionActive();
 			}
 		}
 		
@@ -455,7 +455,7 @@ public class AtrusBoss extends Script
 				else
 				{
 					_atrus.setInvul(false);
-					_atrus.getAI().setIntention(Intention.ACTIVE);
+					_atrus.getAI().setIntentionActive();
 				}
 			}
 		}
@@ -534,7 +534,7 @@ public class AtrusBoss extends Script
 		
 		if (target == null)
 		{
-			npc.getAI().setIntention(Intention.ACTIVE);
+			npc.getAI().setIntentionActive();
 			return;
 		}
 		
@@ -593,7 +593,7 @@ public class AtrusBoss extends Script
 		
 		if (target == null)
 		{
-			npc.getAI().setIntention(Intention.ACTIVE);
+			npc.getAI().setIntentionActive();
 			return;
 		}
 		
@@ -694,7 +694,7 @@ public class AtrusBoss extends Script
 		Npc seal = addSpawn(POWER_SEAL, loc, false, 0);
 		_powerSeals.add(seal);
 		
-		_atrus.getAI().setIntention(Intention.IDLE);
+		_atrus.getAI().setIntentionIdle();
 		_atrus.abortAttack();
 		_atrus.abortCast();
 		_atrus.stopMove(null);
@@ -813,7 +813,7 @@ public class AtrusBoss extends Script
 			_atrus.asAttackable().clearAggroList();
 		}
 		
-		_atrus.getAI().setIntention(Intention.IDLE);
+		_atrus.getAI().setIntentionIdle();
 		_atrus.abortAttack();
 		_atrus.abortCast();
 		_atrus.stopMove(null);

@@ -46,11 +46,12 @@ import org.l2jmobius.gameserver.data.holders.AdenLabSkillHolder;
 import org.l2jmobius.gameserver.data.holders.AdenLabStageHolder;
 import org.l2jmobius.gameserver.data.xml.AdenLaboratoryData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.AdenLabRequest;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.AdenLabRequest;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -66,7 +67,6 @@ import org.l2jmobius.gameserver.network.serverpackets.adenlab.ExAdenLabSpecialSl
 import org.l2jmobius.gameserver.network.serverpackets.adenlab.ExAdenLabTranscendAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.adenlab.ExAdenLabTranscendEnchant;
 import org.l2jmobius.gameserver.network.serverpackets.adenlab.ExAdenLabTranscendProb;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author SaltyMike
@@ -101,7 +101,7 @@ public class AdenLaboratoryManager
 			final Map<Byte, List<int[]>> bossSkills = bossEntry.getValue();
 			
 			// Get the max page index for this bossId.
-			final byte maxPageIndex = bossSkills.keySet().stream().max(AdenLaboratoryManager::sortingComparator).orElse((byte) -1); // Default to -1 if no pages exist for this boss
+			final byte maxPageIndex = bossSkills.keySet().stream().max(AdenLaboratoryManager::sortingComparator).orElse((byte) -1); // Default to -1 if no pages exist for this boss.
 			if (maxPageIndex == -1)
 			{
 				continue; // If no valid page exists, skip this boss.
@@ -246,7 +246,7 @@ public class AdenLaboratoryManager
 		final float bonusChance = player.getAdenLabBonusChance();
 		float finalSuccessRate = 0f;
 		
-		// Special game type must always pick a stage
+		// Special game type must always pick a stage.
 		if (holder.getGameType() == AdenLabGameType.SPECIAL)
 		{
 			final int result = getWeightedResult(player, holder, optionIndex, false);
@@ -258,7 +258,7 @@ public class AdenLaboratoryManager
 				// numberOfSimulations = 100000;
 				player.sendMessage("Initiating simulation of weighted probabilities. Simulating " + numberOfSimulations + " times...");
 				
-				final Map<Integer, Integer> stageDistribution = new HashMap<>(); // Stores counts of selected stages
+				final Map<Integer, Integer> stageDistribution = new HashMap<>(); // Stores counts of selected stages.
 				final long startTime = System.nanoTime();
 				
 				// Simulate odds
@@ -363,7 +363,7 @@ public class AdenLaboratoryManager
 			}
 		}
 		
-		float randomWeight = (float) (Rnd.nextDouble() * totalWeight);
+		float randomWeight = Rnd.nextFloat() * totalWeight;
 		
 		// Select the stage based on the weighted random value.
 		float cumulativeWeight = 0f;
@@ -749,7 +749,7 @@ public class AdenLaboratoryManager
 		}
 		
 		// Take items and update inventory.
-		takeItemsAndUpdateInventory(player, feeItemsMap.isEmpty() ? new HashMap<>() : feeItemsMap, adenaCount);
+		takeItemsAndUpdateInventory(player, feeItemsMap, adenaCount);
 		
 		// TODO: Keep an eye out on newer releases since this might change. At the moment we assume that all Normal games have ONLY ONE stage!
 		final byte result = calculateSuccess(bossId, pageIndex, (byte) 1, player, false, 0);
@@ -760,8 +760,8 @@ public class AdenLaboratoryManager
 		}
 		else
 		{
-			// We have found the right card, so we increment the page number and reset the card count back to 0
-			// increment the page limit only if a higher page is not already opened to prevent exploits.
+			// We have found the right card, so we increment the page number and reset the card count back to 0.
+			// Increment the page limit only if a higher page is not already opened to prevent exploits.
 			if (player.getAdenLabCurrentlyUnlockedPage(bossId) == pageIndex)
 			{
 				player.incrementAdenLabCurrentPage(bossId);
@@ -851,7 +851,7 @@ public class AdenLaboratoryManager
 		}
 		
 		// Self-explanatory.
-		takeItemsAndUpdateInventory(player, new HashMap<>(), adenaCount); // empty map because the fee is only adena
+		takeItemsAndUpdateInventory(player, new HashMap<>(), adenaCount); // Empty map because the fee is only adena.
 		
 		player.removeRequest(AdenLabRequest.class);
 		player.sendPacket(new ExAdenLabSpecialFix(bossId, pageIndex, true));
@@ -893,7 +893,7 @@ public class AdenLaboratoryManager
 		}
 		
 		// Take items and handle UI update.
-		takeItemsAndUpdateInventory(player, new HashMap<>(), adenaCount); // yes, the empty map is intentionally sent
+		takeItemsAndUpdateInventory(player, new HashMap<>(), adenaCount); // Yes, the empty map is intentionally sent.
 		
 		for (Entry<Integer, Integer> temp : drawnOptions.entrySet())
 		{
@@ -927,7 +927,7 @@ public class AdenLaboratoryManager
 				for (AdenLabStageHolder stage : stages)
 				{
 					final int levelIndex = stage.getStageLevel() - 1;
-					final int chance = Math.round(stage.getStageChance() * 10000); // Must always multiply by 10000 because every point = 0.01%
+					final int chance = Math.round(stage.getStageChance() * 10000); // Must always multiply by 10000 because every point = 0.01%.
 					
 					// Ensure the list is large enough.
 					while (options.size() <= levelIndex)
@@ -979,7 +979,7 @@ public class AdenLaboratoryManager
 		Map<Byte, Integer> confirmedOptions = confirmedOptionsMap.get((byte) pageIndex);
 		if (confirmedOptions == null)
 		{
-			confirmedOptions = new HashMap<>(); // Initialize as empty if null
+			confirmedOptions = new HashMap<>(); // Initialize as empty if null.
 		}
 		
 		for (Entry<Byte, Integer> stage : confirmedOptions.entrySet())
@@ -1016,7 +1016,7 @@ public class AdenLaboratoryManager
 			}
 		}
 		
-		// Fetch fee items and validate if the player has enough of them
+		// Fetch fee items and validate if the player has enough of them.
 		final Map<Item, Long> feeItemsMap = getFeeItemsFromCache(player, AdenLaboratoryConfig.ADENLAB_INCREDIBLE_ROLL_FEE_TYPE_CACHE, feeIndex);
 		if (!feeItemsMap.isEmpty())
 		{
@@ -1042,10 +1042,10 @@ public class AdenLaboratoryManager
 		}
 		
 		// Take items and update inventory.
-		takeItemsAndUpdateInventory(player, feeItemsMap.isEmpty() ? new HashMap<>() : feeItemsMap, 0);
+		takeItemsAndUpdateInventory(player, feeItemsMap, 0);
 		
 		// TODO: keep an eye out on newer releases since this might change.
-		// At the moment we assume that all Transcendent stages have a pageIndex of 25 and optionIndex of 1
+		// At the moment we assume that all Transcendent stages have a pageIndex of 25 and optionIndex of 1.
 		final byte result = calculateSuccess(bossId, (byte) 25, (byte) 1, player, false, 0);
 		if (result == 1)
 		{
@@ -1061,7 +1061,7 @@ public class AdenLaboratoryManager
 			
 			calculateAdenLabCombatPower(player);
 			
-			Broadcast.toAllOnlinePlayers(new ExAdenLabTranscendAnnounce(player.getName(), bossId, (byte) newLevel));
+			World.broadcastToAllOnlinePlayers(new ExAdenLabTranscendAnnounce(player.getName(), bossId, (byte) newLevel));
 		}
 		
 		player.removeRequest(AdenLabRequest.class);
@@ -1092,7 +1092,7 @@ public class AdenLaboratoryManager
 				for (AdenLabStageHolder holder : stages)
 				{
 					final int levelIndex = holder.getStageLevel() - 1;
-					final int chance = Math.round(holder.getStageChance() * 10000); // Must always multiply by 10000 because every point = 0.01%
+					final int chance = Math.round(holder.getStageChance() * 10000); // Must always multiply by 10000 because every point = 0.01%.
 					while (options.size() <= levelIndex)
 					{
 						options.add(0); // Filling missing indices with 0 as a precaution.
@@ -1228,12 +1228,12 @@ public class AdenLaboratoryManager
 					byte optionIndex = optionEntry.getKey();
 					int stageLevel = optionEntry.getValue();
 					
-					// Append the formatted entry
+					// Append the formatted entry.
 					if (!sb.isEmpty())
 					{
-						sb.append(";");
+						sb.append(';');
 					}
-					sb.append(bossId).append(",").append(pageIndex).append(",").append(optionIndex).append(",").append(stageLevel);
+					sb.append(bossId).append(',').append(pageIndex).append(',').append(optionIndex).append(',').append(stageLevel);
 				}
 			}
 		}

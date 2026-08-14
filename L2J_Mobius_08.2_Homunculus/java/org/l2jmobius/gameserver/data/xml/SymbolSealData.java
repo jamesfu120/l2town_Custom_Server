@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.SymbolSealHolder;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 
 /**
  * @author NviX
@@ -63,10 +63,7 @@ public class SymbolSealData implements IXmlReader
 					if ("class".equalsIgnoreCase(d.getNodeName()))
 					{
 						final int classId = parseInteger(d.getAttributes(), "id");
-						if (!_data.containsKey(classId))
-						{
-							_data.put(classId, new ArrayList<>());
-						}
+						_data.computeIfAbsent(classId, k -> new ArrayList<>());
 						
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{

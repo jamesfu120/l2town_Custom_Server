@@ -21,7 +21,8 @@
 package org.l2jmobius.gameserver.network;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -425,7 +426,7 @@ public enum ExClientPackets
 	EX_PLEDGE_ITEM_ACTIVATE(0x14A, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ANNOUNCE(0x14B, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ANNOUNCE_SET(0x14C, null, ConnectionState.IN_GAME),
-	EX_CREATE_PLEDGE(0x14D, null, ConnectionState.IN_GAME),
+	EX_CREATE_PLEDGE(0x14D, RequestCreatePledge::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_INFO(0x14E, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_BUY(0x14F, null, ConnectionState.IN_GAME),
 	EX_ELEMENTAL_SPIRIT_INFO(0x150, null, ConnectionState.IN_GAME),
@@ -442,7 +443,8 @@ public enum ExClientPackets
 	EX_LOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
 	EX_UNLOCKED_ITEM_CANCEL(0x15C, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_LIST_FOR_AD(0x15D, null, ConnectionState.IN_GAME),
-	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME);
+	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
+	EX_MAX(0x15F, null, ConnectionState.IN_GAME);
 	
 	public static final ExClientPackets[] PACKET_ARRAY;
 	static
@@ -469,7 +471,10 @@ public enum ExClientPackets
 		
 		_packetId = packetId;
 		_packetSupplier = packetSupplier != null ? packetSupplier : () -> null;
-		_connectionStates = new HashSet<>(Arrays.asList(connectionStates));
+		
+		final EnumSet<ConnectionState> states = EnumSet.noneOf(ConnectionState.class);
+		Collections.addAll(states, connectionStates);
+		_connectionStates = states;
 	}
 	
 	public int getPacketId()

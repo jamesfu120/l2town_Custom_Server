@@ -26,13 +26,14 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.ConfigReader;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.data.holders.ResurrectByPaymentHolder;
-import org.l2jmobius.gameserver.model.actor.enums.player.IllegalActionPunishmentType;
-import org.l2jmobius.gameserver.model.groups.PartyExpType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.IllegalActionPunishmentType;
+import org.l2jmobius.gameserver.entity.groups.PartyExpType;
 
 /**
  * This class loads all the player related configurations.
@@ -296,7 +297,7 @@ public class PlayerConfig
 					catch (Exception e)
 					{
 						LOGGER.warning("[FirstResurrectList]: invalid config property -> Times data cannot be parsed. Look on exception " + timeSplit[0]);
-						e.printStackTrace();
+						LOGGER.log(Level.WARNING, "load: ", e);
 					}
 				}
 				RESURRECT_BY_PAYMENT_FIRST_RESURRECT_VALUES.put(Integer.parseInt(timeSplit[0]), RESURRECT_DATA);
@@ -335,7 +336,7 @@ public class PlayerConfig
 					catch (Exception e)
 					{
 						LOGGER.warning("[SecondResurrectList]: invalid config property -> Times data cannot be parsed. Look on exception " + timeSplit[0]);
-						e.printStackTrace();
+						LOGGER.log(Level.WARNING, "load: ", e);
 					}
 				}
 				RESURRECT_BY_PAYMENT_SECOND_RESURRECT_VALUES.put(Integer.parseInt(timeSplit[0]), RESURRECT_DATA);

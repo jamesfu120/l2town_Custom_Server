@@ -20,12 +20,11 @@
  */
 package ai.areas.GardenOfSpirits;
 
-import org.l2jmobius.gameserver.ai.Action;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Fury Kiku AI
@@ -69,11 +68,11 @@ public class FuryKiku extends Script
 			case "ATTACK":
 			{
 				npc.setRunning();
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 300, p ->
+				World.forEachVisibleObjectInRange(npc, Player.class, 300, p ->
 				{
 					if ((p != null) && p.isPlayable() && !p.isDead())
 					{
-						npc.getAI().notifyAction(Action.AGGRESSION, p, 1000);
+						npc.getAI().notifyActionAggression(p, 1000);
 					}
 				});
 				break;

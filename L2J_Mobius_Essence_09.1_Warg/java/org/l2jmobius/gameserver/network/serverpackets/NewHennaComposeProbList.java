@@ -21,13 +21,12 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.HennaCombinationData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.henna.CombinationHenna;
-import org.l2jmobius.gameserver.model.item.henna.Henna;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.henna.CombinationHenna;
+import org.l2jmobius.gameserver.entity.item.henna.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -44,7 +43,7 @@ public class NewHennaComposeProbList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		final int allHennaSlots = _player.getAvailableHennaSlots();
 		final int emptyHennaSlots = _player.getHennaEmptySlots();
@@ -56,7 +55,7 @@ public class NewHennaComposeProbList extends ServerPacket
 			final Henna henna = _player.getHenna(slot);
 			if (henna != null)
 			{
-				final List<CombinationHenna> hennaList = HennaCombinationData.getInstance().getHenna().stream().filter(h -> h.getHenna() == henna.getDyeId()).collect(Collectors.toList());
+				final List<CombinationHenna> hennaList = HennaCombinationData.getInstance().getHenna().stream().filter(h -> h.getHenna() == henna.getDyeId()).toList();
 				
 				buffer.writeInt(henna.getDyeId());
 				buffer.writeInt(hennaList.size());

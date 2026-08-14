@@ -28,10 +28,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CostumeTable;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 
@@ -41,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 public class ExSendCostumeListFull extends ServerPacket
 {
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_SEND_COSTUME_LIST_FULL.writeId(this, buffer);
 		final Player player = client.getPlayer();
@@ -82,7 +83,7 @@ public class ExSendCostumeListFull extends ServerPacket
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			PacketLogger.warning("loadCostumes: " + e);
 		}
 		
 		return costumeList;

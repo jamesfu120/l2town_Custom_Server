@@ -17,32 +17,29 @@
 package instances.MemoryOfDisaster;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerCallToChangeClass;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLevelChanged;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureAttacked;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerCallToChangeClass;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLevelChanged;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -54,6 +51,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.awakening.ExCallToChangeClass;
 import org.l2jmobius.gameserver.taskmanagers.DecayTaskManager;
 import org.l2jmobius.gameserver.util.ArrayUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Memory Of Disaster instance zone.
@@ -283,7 +281,7 @@ public class MemoryOfDisaster extends InstanceScript
 					{
 						case "AWAKENING_GUIDE":
 						{
-							npc.getAI().setIntention(Intention.MOVE_TO, AWAKENING_GUIDE_MOVE_1);
+							npc.getAI().setIntentionMoveTo(AWAKENING_GUIDE_MOVE_1);
 							npc.setRunning();
 							break;
 						}
@@ -554,7 +552,7 @@ public class MemoryOfDisaster extends InstanceScript
 			}
 			case "ATTACK_TIME":
 			{
-				final List<Npc> tentacles = npc.getInstanceWorld().getAliveNpcs(TENTACLE).stream().filter(n -> n.getVariables().getBoolean("isLeaderKiller", false)).collect(Collectors.toList());
+				final List<Npc> tentacles = npc.getInstanceWorld().getAliveNpcs(TENTACLE).stream().filter(n -> n.getVariables().getBoolean("isLeaderKiller", false)).toList();
 				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> addAttackDesire(n, tentacles.get(getRandom(tentacles.size()))));
 				break;
 			}
@@ -563,7 +561,7 @@ public class MemoryOfDisaster extends InstanceScript
 				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n ->
 				{
 					n.setRunning();
-					n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_RUN[getRandom(SHOUT_RUN.length)]);
+					n.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SHOUT_RUN));
 					n.getAI().moveTo(DWARVES_MOVE_1);
 				});
 				break;
@@ -642,7 +640,7 @@ public class MemoryOfDisaster extends InstanceScript
 			}
 			case "TIMER_ID_DIE":
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, SACRIFICED_DARK_ELF_SUICIDE_MESSAGES[getRandom(SACRIFICED_DARK_ELF_SUICIDE_MESSAGES.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SACRIFICED_DARK_ELF_SUICIDE_MESSAGES));
 				npc.doDie(npc);
 				DecayTaskManager.getInstance().cancel(npc);
 				break;
@@ -677,7 +675,7 @@ public class MemoryOfDisaster extends InstanceScript
 			}
 			else if ((npc.getX() == DWARVES_MOVE_3.getX()) && (npc.getY() == DWARVES_MOVE_3.getY()))
 			{
-				addMoveToDesire(npc, DWARVES_MOVE_RANDOM[getRandom(DWARVES_MOVE_RANDOM.length)], 23);
+				addMoveToDesire(npc, getRandomEntry(DWARVES_MOVE_RANDOM), 23);
 			}
 		}
 		
@@ -869,7 +867,7 @@ public class MemoryOfDisaster extends InstanceScript
 				}
 				else
 				{
-					dwarf.broadcastSay(ChatType.NPC_GENERAL, SHOUT_BRONK_DEATH[getRandom(SHOUT_BRONK_DEATH.length)]);
+					dwarf.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SHOUT_BRONK_DEATH));
 				}
 			}
 			
@@ -879,7 +877,7 @@ public class MemoryOfDisaster extends InstanceScript
 		}
 		else if (npc.getId() == SILVERA)
 		{
-			npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_SILVERA_DEATH[getRandom(SHOUT_SILVERA_DEATH.length)]));
+			npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SHOUT_SILVERA_DEATH)));
 		}
 	}
 	

@@ -27,9 +27,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.ConfigReader;
-import org.l2jmobius.gameserver.model.actor.enums.player.ChatBroadcastType;
-import org.l2jmobius.gameserver.model.actor.enums.player.IllegalActionPunishmentType;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.entity.actor.enums.player.ChatBroadcastType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.IllegalActionPunishmentType;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
 /**

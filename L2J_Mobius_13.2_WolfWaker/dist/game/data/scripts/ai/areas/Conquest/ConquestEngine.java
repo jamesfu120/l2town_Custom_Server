@@ -23,10 +23,11 @@ package ai.areas.Conquest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
@@ -35,28 +36,27 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.ConquestConfig;
 import org.l2jmobius.gameserver.data.xml.DethroneShopData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.zone.type.ConquestZone;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerPvPKill;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.type.ConquestZone;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerPvPKill;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.dethrone.ExDethroneSeasonInfo;
-import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
 /**
@@ -65,6 +65,7 @@ import org.l2jmobius.gameserver.util.LocationUtil;
  */
 public class ConquestEngine extends Script
 {
+	private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	private static final ConquestPointData CONQUEST_POINT_DATA = ConquestPointData.getInstance();
 	private static final int BLOODY_COIN = 80306;
 	private static final boolean DEBUG = false; // Set it true to display point related messages into server console.
@@ -133,8 +134,8 @@ public class ConquestEngine extends Script
 		millisToEnd %= 3600000;
 		final long numMins = millisToEnd / 60000;
 		String status = _isConquestAvailable ? "is Open, Closes in: " : "is Closed, Opens in: ";
-		LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Access: " + status + "" + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
-		LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Season End: " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(System.currentTimeMillis() + getMillisToConquestSeasonEnd()));
+		LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Access: " + status + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
+		LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Season End: " + DATE_FORMAT.format(Instant.ofEpochMilli(System.currentTimeMillis() + getMillisToConquestSeasonEnd()).atZone(java.time.ZoneId.systemDefault())));
 		
 		// Current Cycle Status
 		boolean loaded = false;
@@ -193,7 +194,7 @@ public class ConquestEngine extends Script
 				// Current Cycle messages
 				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CONQUEST_CYCLE_S1_IS_OVER);
 				sm.addInt(_currentCycle);
-				Broadcast.toAllOnlinePlayers(sm);
+				World.broadcastToAllOnlinePlayers(sm);
 				LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Cycle: " + _currentCycle + " is now over.");
 				
 				// Update Conquest Season End
@@ -210,7 +211,7 @@ public class ConquestEngine extends Script
 				GlobalVariablesManager.getInstance().storeMe();
 				final SystemMessage sm2 = new SystemMessage(SystemMessageId.THE_CONQUEST_CYCLE_S1_HAS_BEGUN);
 				sm2.addInt(_nextCycle);
-				Broadcast.toAllOnlinePlayers(sm2);
+				World.broadcastToAllOnlinePlayers(sm2);
 				LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Cycle: " + _nextCycle + " has begun.");
 				resetConquestData();
 			}
@@ -389,12 +390,12 @@ public class ConquestEngine extends Script
 			
 			// Message on console when is open
 			LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Access: is Open, Closes in: " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.sendPacket(new ExDethroneSeasonInfo(true));
 			}
 			
-			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_PATH_TO_THE_CONQUEST_WORLD_IS_OPEN_YOU_CAN_GET_THERE_ON_MONDAYS_TUESDAYS_WEDNESDAYS_AND_THURSDAYS_FROM_10_00_TILL_12_00_AND_FROM_22_00_TILL_00_00_AND_ON_FRIDAYS_SATURDAYS_AND_SUNDAYS_FROM_20_00_TILL_00_00_PVP_IS_DISABLED_FROM_20_00_TILL_22_00_BECAUSE_THE_NEW_WORLD_EXPLORATION_IS_UNDER_WAY));
+			World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_PATH_TO_THE_CONQUEST_WORLD_IS_OPEN_YOU_CAN_GET_THERE_ON_MONDAYS_TUESDAYS_WEDNESDAYS_AND_THURSDAYS_FROM_10_00_TILL_12_00_AND_FROM_22_00_TILL_00_00_AND_ON_FRIDAYS_SATURDAYS_AND_SUNDAYS_FROM_20_00_TILL_00_00_PVP_IS_DISABLED_FROM_20_00_TILL_22_00_BECAUSE_THE_NEW_WORLD_EXPLORATION_IS_UNDER_WAY));
 			_scheduledOpenAccessEndTask = ThreadPool.schedule(() ->
 			{
 				_isConquestAvailable = false;
@@ -414,12 +415,12 @@ public class ConquestEngine extends Script
 				
 				// Message on console when is closed
 				LOGGER.info(ConquestEngine.class.getSimpleName() + ": Conquest Access: is Closed, Opens in: " + numDays2 + " days, " + numHours2 + " hours and " + numMins2 + " mins.");
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					player.sendPacket(new ExDethroneSeasonInfo(false));
 				}
 				
-				Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_PATH_TO_THE_CONQUEST_WORLD_IS_CLOSED_YOU_CAN_GET_THERE_ON_MONDAYS_TUESDAYS_WEDNESDAYS_AND_THURSDAYS_FROM_10_00_TILL_12_00_AND_FROM_22_00_TILL_00_00_AND_ON_FRIDAYS_SATURDAYS_AND_SUNDAYS_FROM_20_00_TILL_00_00_PVP_IS_DISABLED_FROM_20_00_TILL_22_00_BECAUSE_THE_NEW_WORLD_EXPLORATION_IS_UNDER_WAY));
+				World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_PATH_TO_THE_CONQUEST_WORLD_IS_CLOSED_YOU_CAN_GET_THERE_ON_MONDAYS_TUESDAYS_WEDNESDAYS_AND_THURSDAYS_FROM_10_00_TILL_12_00_AND_FROM_22_00_TILL_00_00_AND_ON_FRIDAYS_SATURDAYS_AND_SUNDAYS_FROM_20_00_TILL_00_00_PVP_IS_DISABLED_FROM_20_00_TILL_22_00_BECAUSE_THE_NEW_WORLD_EXPLORATION_IS_UNDER_WAY));
 				
 				// Teleport players to origin location if Open Access ends.
 				ConquestZone conquestZone = (ConquestZone) ZoneManager.getInstance().getZoneByName("conquest");
@@ -550,7 +551,7 @@ public class ConquestEngine extends Script
 		}
 		
 		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getVariables().remove(PlayerVariables.CONQUEST_PERSONAL_POINTS);
 			player.getVariables().remove(PlayerVariables.CONQUEST_REWARDS_RECEIVED);
@@ -892,7 +893,7 @@ public class ConquestEngine extends Script
 		
 		// Update data for online players.
 		// Attack and Life Points
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			final PlayerVariables vars = player.getVariables();
 			vars.set(PlayerVariables.CONQUEST_ATTACK_POINTS, ConquestConfig.CONQUEST_ATTACK_POINTS);
@@ -902,7 +903,7 @@ public class ConquestEngine extends Script
 		LOGGER.info(getClass().getSimpleName() + ": Player points entries have been reset.");
 		
 		// Abilities Counters
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			final PlayerVariables vars = player.getVariables();
 			vars.remove(PlayerVariables.CONQUEST_ABILITY_LIFE_SOURCE_RESET);

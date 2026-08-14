@@ -20,17 +20,17 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
+import static org.l2jmobius.gameserver.entity.itemcontainer.Inventory.MAX_ADENA;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.holders.TradeItem;
 import org.l2jmobius.gameserver.network.holders.TradeList;
@@ -142,7 +142,7 @@ public class SetPrivateStoreListBuy extends ClientPacket
 		final TradeList tradeList = player.getBuyList();
 		tradeList.clear();
 		
-		// Check maximum number of allowed slots for pvt shops
+		// Check maximum number of allowed slots for pvt shops.
 		if (_items.length > player.getPrivateBuyStoreLimit())
 		{
 			player.sendPacket(new PrivateStoreManageListBuy(player));
@@ -168,7 +168,7 @@ public class SetPrivateStoreListBuy extends ClientPacket
 			}
 		}
 		
-		// Check for available funds
+		// Check for available funds.
 		if (totalCost > player.getAdena())
 		{
 			player.sendPacket(new PrivateStoreManageListBuy(player));

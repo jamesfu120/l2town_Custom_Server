@@ -24,11 +24,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoom;
-import org.l2jmobius.gameserver.model.groups.matching.MatchingRoomType;
-import org.l2jmobius.gameserver.model.groups.matching.PartyMatchingRoomLevelType;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom;
+import org.l2jmobius.gameserver.entity.groups.matching.MatchingRoomType;
+import org.l2jmobius.gameserver.entity.groups.matching.PartyMatchingRoomLevelType;
 
 /**
  * @author Sdw
@@ -106,9 +106,10 @@ public class MatchingRoomManager
 	public List<MatchingRoom> getPartyMathchingRooms(int location, PartyMatchingRoomLevelType type, int requestorLevel)
 	{
 		final List<MatchingRoom> result = new ArrayList<>();
-		if (_rooms.containsKey(MatchingRoomType.PARTY))
+		final Map<Integer, MatchingRoom> rooms = _rooms.get(MatchingRoomType.PARTY);
+		if (rooms != null)
 		{
-			for (MatchingRoom room : _rooms.get(MatchingRoomType.PARTY).values())
+			for (MatchingRoom room : rooms.values())
 			{
 				if (((location < 0) || (room.getLocation() == location)) //
 					&& ((type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLevel() >= requestorLevel) && (room.getMaxLevel() <= requestorLevel))))
@@ -129,9 +130,10 @@ public class MatchingRoomManager
 	public List<MatchingRoom> getCCMathchingRooms(int location, int level)
 	{
 		final List<MatchingRoom> result = new ArrayList<>();
-		if (_rooms.containsKey(MatchingRoomType.COMMAND_CHANNEL))
+		final Map<Integer, MatchingRoom> rooms = _rooms.get(MatchingRoomType.COMMAND_CHANNEL);
+		if (rooms != null)
 		{
-			for (MatchingRoom room : _rooms.get(MatchingRoomType.COMMAND_CHANNEL).values())
+			for (MatchingRoom room : rooms.values())
 			{
 				if ((room.getLocation() == location) //
 					&& ((room.getMinLevel() <= level) && (room.getMaxLevel() >= level)))
@@ -151,9 +153,10 @@ public class MatchingRoomManager
 	
 	public MatchingRoom getPartyMathchingRoom(int location, int level)
 	{
-		if (_rooms.containsKey(MatchingRoomType.PARTY))
+		final Map<Integer, MatchingRoom> rooms = _rooms.get(MatchingRoomType.PARTY);
+		if (rooms != null)
 		{
-			for (MatchingRoom room : _rooms.get(MatchingRoomType.PARTY).values())
+			for (MatchingRoom room : rooms.values())
 			{
 				if ((room.getLocation() == location) //
 					&& ((room.getMinLevel() <= level) && (room.getMaxLevel() >= level)))

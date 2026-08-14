@@ -668,8 +668,10 @@
 	<skill id="61899" toLevel="1" name="Test Critical Damage Limit: 50%">
 		<!-- Max Critical Rate limit 50% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
 		<abnormalTime>10</abnormalTime>
+		<affectScope>SINGLE</affectScope>
 		<castRange>-1</castRange>
 		<coolTime>0</coolTime>
 		<effectPoint>-9999</effectPoint>
@@ -678,8 +680,19 @@
 		<isMagic>1</isMagic>
 		<mpConsume>0</mpConsume>
 		<reuseDelay>0</reuseDelay>
-		<!-- <effects> -->
-		<!-- 	<effect name="Max Critical Rate limit">50%</effect> -->
-		<!-- </effects> -->
+		<effects>
+			<effect name="AddMaxPhysicalCriticalRate">
+				<amount>-250</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AddMaxPhysicalSkillCriticalRate">
+				<amount>-250</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AddMaxMagicCriticalRate">
+				<amount>-250</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

@@ -23,13 +23,13 @@ package ai.areas.Giran.EvasAvatar;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author Liamxroy
@@ -79,7 +79,7 @@ public class EvasAvatar extends Script
 			SkillCaster.triggerCast(npc, player, getBuffForDay().getSkill());
 			
 			// Buff players around
-			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 500, target ->
+			World.forEachVisibleObjectInRange(npc, Player.class, 500, target ->
 			{
 				if ((target != player) && (target != null) && !target.isDead() && GeoEngine.getInstance().canSeeTarget(npc, target))
 				{

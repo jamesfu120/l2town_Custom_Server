@@ -20,22 +20,21 @@
  */
 package ai.areas.MonasteryOfSilence;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.util.ArrayUtil;
@@ -105,7 +104,7 @@ public class MonasteryOfSilence extends Script
 					{
 						npc.setRunning();
 						npc.asAttackable().addDamageHate(player, 0, 999);
-						npc.getAI().setIntention(Intention.ATTACK, player);
+						npc.getAI().setIntentionAttack(player);
 						break;
 					}
 				}
@@ -130,7 +129,7 @@ public class MonasteryOfSilence extends Script
 					{
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), text[Rnd.get(2) + 1].replace("name", caster.getName())));
 						npc.asAttackable().addDamageHate(caster, 0, 999);
-						npc.getAI().setIntention(Intention.ATTACK, caster);
+						npc.getAI().setIntentionAttack(caster);
 						break;
 					}
 				}
@@ -145,7 +144,7 @@ public class MonasteryOfSilence extends Script
 		{
 			npc.setRunning();
 			npc.asAttackable().addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(Intention.ATTACK, player);
+			npc.getAI().setIntentionAttack(player);
 		}
 	}
 	
@@ -154,8 +153,8 @@ public class MonasteryOfSilence extends Script
 	{
 		if (ArrayUtil.contains(mobs1, npc.getId()))
 		{
-			final List<Playable> result = new LinkedList<>();
-			for (WorldObject obj : World.getInstance().getVisibleObjects(npc, WorldObject.class))
+			final List<Playable> result = new ArrayList<>();
+			World.forEachVisibleObject(npc, WorldObject.class, obj ->
 			{
 				if ((obj instanceof Player) || (obj instanceof Pet))
 				{
@@ -164,7 +163,7 @@ public class MonasteryOfSilence extends Script
 						result.add(obj.asPlayable());
 					}
 				}
-			}
+			});
 			
 			if (!result.isEmpty())
 			{
@@ -189,7 +188,7 @@ public class MonasteryOfSilence extends Script
 							{
 								npc.setRunning();
 								npc.asAttackable().addDamageHate(target, 0, 999);
-								npc.getAI().setIntention(Intention.ATTACK, target);
+								npc.getAI().setIntentionAttack(target);
 								break;
 							}
 						}

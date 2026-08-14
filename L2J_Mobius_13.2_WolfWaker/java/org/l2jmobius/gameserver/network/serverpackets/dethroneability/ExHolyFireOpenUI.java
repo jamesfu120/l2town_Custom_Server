@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.dethroneability;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.ConquestConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -41,7 +41,7 @@ public class ExHolyFireOpenUI extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_HOLY_FIRE_OPEN_UI.writeId(this, buffer);
 		buffer.writeInt(ConquestConfig.CONQUEST_MAX_SACRED_FIRE_SLOTS_COUNT); // 0 - slots are locked / 1-4 - number of open slots (max ui limit is 4)

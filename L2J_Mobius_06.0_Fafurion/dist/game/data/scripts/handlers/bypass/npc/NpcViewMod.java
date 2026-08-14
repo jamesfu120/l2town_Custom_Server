@@ -22,7 +22,6 @@ package handlers.bypass.npc;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -34,22 +33,22 @@ import org.l2jmobius.gameserver.config.NpcConfig;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.actor.enums.npc.DropType;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.AggroInfo;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropGroupHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.DropHolder;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.actor.enums.npc.DropType;
-import org.l2jmobius.gameserver.model.actor.holders.npc.AggroInfo;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropGroupHolder;
-import org.l2jmobius.gameserver.model.actor.holders.npc.DropHolder;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.HtmlUtil;
 
@@ -87,7 +86,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -120,7 +119,7 @@ public class NpcViewMod implements IBypassHandler
 				try
 				{
 					final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
-					final WorldObject target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+					final WorldObject target = World.findObject(Integer.parseInt(st.nextToken()));
 					final Npc npc = target instanceof Npc ? target.asNpc() : null;
 					if (npc == null)
 					{
@@ -148,7 +147,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -176,7 +175,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -403,7 +402,7 @@ public class NpcViewMod implements IBypassHandler
 			return;
 		}
 		
-		Collections.sort(dropList, (d1, d2) -> Integer.valueOf(d1.getItemId()).compareTo(Integer.valueOf(d2.getItemId())));
+		dropList.sort((d1, d2) -> Integer.compare(d1.getItemId(), d2.getItemId()));
 		
 		int pages = dropList.size() / DROP_LIST_ITEMS_PER_PAGE;
 		if ((DROP_LIST_ITEMS_PER_PAGE * pages) < dropList.size())

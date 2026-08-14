@@ -16,27 +16,34 @@
  */
 package ai.others;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureAttack;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureSkillFinishCast;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcSpawn;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureAttack;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureSkillFinishCast;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcSpawn;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * @author Nik
  */
 public class Incarnation extends Script
 {
-	@RegisterEvent(EventType.ON_NPC_SPAWN) @RegisterType(ListenerRegisterType.NPC) @Id(13302) @Id(13303) @Id(13304) @Id(13305) @Id(13455) @Id(13456) @Id(13457)
+	@RegisterEvent(EventType.ON_NPC_SPAWN)
+	@RegisterType(ListenerRegisterType.NPC)
+	@Id(13302)
+	@Id(13303)
+	@Id(13304)
+	@Id(13305)
+	@Id(13455)
+	@Id(13456)
+	@Id(13457)
 	public void onNpcSpawn(OnNpcSpawn event)
 	{
 		final Npc npc = event.getNpc();
@@ -54,9 +61,9 @@ public class Incarnation extends Script
 			return;
 		}
 		
-		// Attack target of summoner
+		// Attack target of summoner.
 		npc.setRunning();
-		npc.getAI().setIntention(Intention.ATTACK, target);
+		npc.getAI().setIntentionAttack(target);
 	}
 	
 	public static void main(String[] args)

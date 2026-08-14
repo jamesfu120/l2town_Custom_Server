@@ -36,20 +36,20 @@ import org.l2jmobius.gameserver.config.TrainingCampConfig;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.SubClassHolder;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.OnDailyReset;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.DailyMissionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.SubClassHolder;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnDailyReset;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.primeshop.PrimeShopGroup;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 
@@ -140,7 +140,7 @@ public class DailyResetManager
 		}
 		
 		// Store player variables.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getVariables().storeMe();
 			player.getAccountVariables().storeMe();
@@ -187,7 +187,7 @@ public class DailyResetManager
 		}
 		
 		int vitality = PlayerStat.MAX_VITALITY_POINTS / 4;
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			final int VP = player.getVitalityPoints();
 			player.setVitalityPoints(VP + vitality, false);
@@ -229,7 +229,7 @@ public class DailyResetManager
 			return;
 		}
 		
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, false);
 			for (SubClassHolder subclass : player.getSubClasses().values())
@@ -308,7 +308,7 @@ public class DailyResetManager
 		}
 		
 		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.setWorldChatUsed(0);
 			player.sendPacket(new ExWorldChatCnt(player));
@@ -338,7 +338,7 @@ public class DailyResetManager
 			LOGGER.log(Level.SEVERE, "Could not reset Recommendations System: ", e);
 		}
 		
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.setRecomLeft(0);
 			player.setRecomHave(player.getRecomHave() - 20);
@@ -364,7 +364,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.resetTraingCampDuration();
 			}
@@ -397,7 +397,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getAccountVariables().remove(PlayerVariables.ATTENDANCE_DATE);
 			}
@@ -421,7 +421,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getVariables().remove(PlayerVariables.ATTENDANCE_DATE);
 			}
@@ -447,7 +447,7 @@ public class DailyResetManager
 			}
 			
 			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				player.getAccountVariables().remove(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + holder.getBrId());
 			}
@@ -478,7 +478,7 @@ public class DailyResetManager
 		}
 		
 		// Update data for online players.
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
 		}

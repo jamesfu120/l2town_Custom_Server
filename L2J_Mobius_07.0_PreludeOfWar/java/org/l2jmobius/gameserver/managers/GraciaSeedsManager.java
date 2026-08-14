@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GraciaSeedsConfig;
-import org.l2jmobius.gameserver.model.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
 
 public class GraciaSeedsManager
 {
@@ -101,16 +101,16 @@ public class GraciaSeedsManager
 		{
 			case 1:
 			{
-				// do nothing, players should kill Tiat a few times
+				// Do nothing players should kill Tiat a few times
 				break;
 			}
 			case 2:
 			{
-				// Conquest Complete state, if too much time is passed than change to defense state
+				// Conquest Complete state, if too much time is passed than change to defense state.
 				final long timePast = System.currentTimeMillis() - _SoDLastStateChangeDate.getTimeInMillis();
 				if (timePast >= GraciaSeedsConfig.SOD_STAGE_2_LENGTH)
 				{
-					// change to Attack state because Defend statet is not implemented
+					// Change to Attack state because Defend statet is not implemented.
 					setSoDState(1, true);
 				}
 				else

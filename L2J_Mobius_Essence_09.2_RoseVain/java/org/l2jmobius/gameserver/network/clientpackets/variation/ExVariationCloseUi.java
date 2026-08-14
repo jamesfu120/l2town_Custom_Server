@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.variation;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.VariationRequest;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.VariationRequest;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

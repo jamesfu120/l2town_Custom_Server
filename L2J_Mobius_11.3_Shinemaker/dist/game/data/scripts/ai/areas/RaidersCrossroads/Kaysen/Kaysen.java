@@ -20,13 +20,13 @@
  */
 package ai.areas.RaidersCrossroads.Kaysen;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -88,15 +88,11 @@ public class Kaysen extends Script
 			{
 				if (npc.isSpawned())
 				{
-					for (Door door : World.getInstance().getVisibleObjectsInRange(npc, Door.class, Npc.INTERACTION_DISTANCE))
+					World.forFirstVisibleObjectInRange(npc, Door.class, Npc.INTERACTION_DISTANCE, door -> !door.isOpen(), door ->
 					{
-						if (!door.isOpen())
-						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FIND_THE_PRISON_KEY_CARRIED_BY_THE_NERVA_ORCS_AND_GET_ME_OUT_OF_HERE_I_LL_MAKE_IT_WORTH_YOUR_WHILE_I_PROMISE);
-							startQuestTimer("NPC_SHOUT", getRandom(10, 15) * 1000, npc, null);
-							break;
-						}
-					}
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FIND_THE_PRISON_KEY_CARRIED_BY_THE_NERVA_ORCS_AND_GET_ME_OUT_OF_HERE_I_LL_MAKE_IT_WORTH_YOUR_WHILE_I_PROMISE);
+						startQuestTimer("NPC_SHOUT", getRandom(10, 15) * 1000, npc, null);
+					});
 				}
 				break;
 			}
@@ -151,12 +147,9 @@ public class Kaysen extends Script
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, Npc.INTERACTION_DISTANCE))
+		if (World.getFirstVisibleObjectInRange(npc, Npc.class, Npc.INTERACTION_DISTANCE, nearby -> nearby.getId() == NERVAS_TEMPORARY_PRISON) != null)
 		{
-			if (nearby.getId() == NERVAS_TEMPORARY_PRISON)
-			{
-				return "19458-no.html";
-			}
+			return "19458-no.html";
 		}
 		
 		return "19458.html";

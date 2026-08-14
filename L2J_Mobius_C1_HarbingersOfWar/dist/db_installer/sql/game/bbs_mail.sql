@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `bbs_mail` (
   `sent_date` TIMESTAMP NULL DEFAULT NULL,
   `is_unread` SMALLINT(1) DEFAULT 1,
   PRIMARY KEY  (`id`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -23,13 +23,13 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.holders.ElementalItemHolder;
 import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemAttributeRequest;
+import org.l2jmobius.gameserver.entity.item.enchant.attribute.AttributeHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
-import org.l2jmobius.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAttributeEnchantResult;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -88,7 +88,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket
 			return;
 		}
 		
-		// Restrict enchant during a trade (bug if enchant fails)
+		// Restrict enchant during a trade (bug if enchant fails).
 		if (player.getActiveRequester() != null)
 		{
 			// Cancel trade
@@ -152,17 +152,13 @@ public class RequestExEnchantItemAttribute extends ClientPacket
 		final long count = Math.min(stone.getCount(), _count);
 		AttributeType elementToAdd = ElementalAttributeData.getInstance().getItemElement(stoneId);
 		
-		// Armors have the opposite element
+		// Armors have the opposite element.
 		if (item.isArmor())
 		{
 			elementToAdd = elementToAdd.getOpposite();
 		}
 		
-		final AttributeType opositeElement = elementToAdd.getOpposite();
 		final AttributeHolder oldElement = item.getAttribute(elementToAdd);
-		final int elementValue = oldElement == null ? 0 : oldElement.getValue();
-		final int limit = getLimit(item, stoneId);
-		int powerToAdd = getPowerToAdd(stoneId, elementValue, item);
 		if ((item.isWeapon() && (oldElement != null) && (oldElement.getType() != elementToAdd) && (oldElement.getType() != AttributeType.NONE)) || (item.isArmor() && (item.getAttribute(elementToAdd) == null) && (item.getAttributes() != null) && (item.getAttributes().size() >= 3)))
 		{
 			player.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED);
@@ -170,9 +166,13 @@ public class RequestExEnchantItemAttribute extends ClientPacket
 			return;
 		}
 		
+		final int elementValue = oldElement == null ? 0 : oldElement.getValue();
+		final AttributeType opositeElement = elementToAdd.getOpposite();
+		final int limit = getLimit(item, stoneId);
+		int powerToAdd = getPowerToAdd(stoneId, elementValue, item);
 		if (item.isArmor() && (item.getAttributes() != null))
 		{
-			// can't add opposite element
+			// Can't add opposite element.
 			for (AttributeHolder attribute : item.getAttributes())
 			{
 				if (attribute.getType() == opositeElement)
@@ -284,7 +284,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket
 			result = 2;
 		}
 		
-		// Stone must be removed
+		// Stone must be removed.
 		if (stone.getCount() == 0)
 		{
 			iu.addRemovedItem(stone);

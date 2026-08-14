@@ -17,16 +17,15 @@
 package quests.Q10742_AFurryFriend;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
 import org.l2jmobius.gameserver.managers.WalkingManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -104,7 +103,7 @@ public class Q10742_AFurryFriend extends Quest
 						showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 8000);
 						htmltext = "33995-02.html";
 					}
-					else if (World.getInstance().getVisibleObjectsInRange(player, Npc.class, 500).stream().noneMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
+					else if (World.getFirstVisibleObjectInRange(player, Npc.class, 500, n -> (n.getId() == RICKY) && (n.getSummoner() == player)) == null)
 					{
 						showOnScreenMsg(player, NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, ExShowScreenMessage.MIDDLE_CENTER, 5000);
 						player.sendPacket(new ExSendUIEvent(player, false, false, 120, 0, NpcStringId.REMAINING_TIME));
@@ -114,7 +113,7 @@ public class Q10742_AFurryFriend extends Quest
 						ricky.setSummoner(player);
 						ricky.setTitle(player.getName());
 						ricky.setRunning();
-						ricky.getAI().setIntention(Intention.FOLLOW, player);
+						ricky.getAI().setIntentionFollow(player);
 						startQuestTimer("CHECK_RICKY_DISTANCE", 2500, ricky, player);
 					}
 					else // Already have Ricky
@@ -133,7 +132,7 @@ public class Q10742_AFurryFriend extends Quest
 				else if ((npc != null) && !npc.isDecayed())
 				{
 					// Follow was breaking sometimes, making sure it doesn't happen.
-					npc.getAI().setIntention(Intention.FOLLOW, player);
+					npc.getAI().setIntentionFollow(player);
 					
 					// Check Ricky position
 					final double distanceToRicky = player.calculateDistance2D(npc);
@@ -152,7 +151,7 @@ public class Q10742_AFurryFriend extends Quest
 					}
 					else
 					{
-						final Npc leira = World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 300).stream().filter(n -> (n.getId() == LEIRA)).findAny().orElse(null);
+						final Npc leira = World.getFirstVisibleObjectInRange(npc, Npc.class, 300, n -> n.getId() == LEIRA);
 						if (leira != null)
 						{
 							qs.setCond(2, true);

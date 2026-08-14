@@ -46,19 +46,18 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.WorldExchangeConfig;
 import org.l2jmobius.gameserver.config.custom.MultilingualSupportConfig;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.WorldExchangeItemStatusType;
-import org.l2jmobius.gameserver.model.item.enums.WorldExchangeItemSubType;
-import org.l2jmobius.gameserver.model.item.enums.WorldExchangeSortType;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
-import org.l2jmobius.gameserver.model.item.holders.WorldExchangeHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.options.VariationInstance;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemLocation;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.WorldExchangeItemStatusType;
+import org.l2jmobius.gameserver.entity.item.enums.WorldExchangeItemSubType;
+import org.l2jmobius.gameserver.entity.item.enums.WorldExchangeSortType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
+import org.l2jmobius.gameserver.entity.item.holders.WorldExchangeHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.options.VariationInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -67,6 +66,7 @@ import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchang
 import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchangeSellCompleteAlarm;
 import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchangeSettleList;
 import org.l2jmobius.gameserver.network.serverpackets.worldexchange.WorldExchangeSettleRecvResult;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Index
@@ -268,14 +268,13 @@ public class WorldExchangeManager implements IXmlReader
 				boolean needChange = false;
 				final long worldExchangeId = rs.getLong("world_exchange_id");
 				_lastWorldExchangeId = Math.max(worldExchangeId, _lastWorldExchangeId);
-				final Item itemInstance = itemInstances.get(rs.getInt("item_object_id"));
 				WorldExchangeItemStatusType storeType = WorldExchangeItemStatusType.getWorldExchangeItemStatusType(rs.getInt("item_status"));
-				
 				if (storeType == WorldExchangeItemStatusType.WORLD_EXCHANGE_NONE)
 				{
 					continue;
 				}
 				
+				final Item itemInstance = itemInstances.get(rs.getInt("item_object_id"));
 				if (itemInstance == null)
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": Failed loading commission item with world exchange id " + worldExchangeId + " because item instance does not exist or failed to load.");
@@ -749,7 +748,7 @@ public class WorldExchangeManager implements IXmlReader
 		}
 		
 		player.sendPacket(sm);
-		for (Player oldOwner : World.getInstance().getPlayers())
+		for (Player oldOwner : World.getPlayers())
 		{
 			if (oldOwner.getObjectId() == newHolder.getOldOwnerId())
 			{
@@ -775,7 +774,7 @@ public class WorldExchangeManager implements IXmlReader
 		newItem.setVisualId(oldItem.getVisualId(), false);
 		newItem.setBlessed(oldItem.isBlessed());
 		newItem.setOwnerId(oldItem.getOwnerId());
-		newItem.updateDatabase(true); // in any case it will be store in database
+		newItem.updateDatabase(true); // In any case it will be store in database.
 		final VariationInstance vi = oldItem.getAugmentation();
 		if (vi != null)
 		{
@@ -867,12 +866,12 @@ public class WorldExchangeManager implements IXmlReader
 		{
 			case PRICE_ASCE:
 			{
-				Collections.sort(sortedList, Comparator.comparing(WorldExchangeHolder::getPrice));
+				sortedList.sort(Comparator.comparingLong(WorldExchangeHolder::getPrice));
 				break;
 			}
 			case PRICE_DESC:
 			{
-				Collections.sort(sortedList, Comparator.comparing(WorldExchangeHolder::getPrice));
+				sortedList.sort(Comparator.comparingLong(WorldExchangeHolder::getPrice));
 				Collections.reverse(sortedList);
 				break;
 			}
@@ -880,11 +879,11 @@ public class WorldExchangeManager implements IXmlReader
 			{
 				if ((lang == null) || (!lang.equals("en") && _localItemNames.containsKey(lang)))
 				{
-					Collections.sort(sortedList, Comparator.comparing(o -> getItemName(lang, o.getItemInstance().getId(), o.getItemInstance().isBlessed())));
+					sortedList.sort(Comparator.comparing(o -> getItemName(lang, o.getItemInstance().getId(), o.getItemInstance().isBlessed())));
 				}
 				else
 				{
-					Collections.sort(sortedList, Comparator.comparing(o -> (o.getItemInstance().isBlessed() ? "Blessed " : "") + o.getItemInstance().getItemName()));
+					sortedList.sort(Comparator.comparing(o -> (o.getItemInstance().isBlessed() ? "Blessed " : "") + o.getItemInstance().getItemName()));
 				}
 				break;
 			}
@@ -892,11 +891,11 @@ public class WorldExchangeManager implements IXmlReader
 			{
 				if ((lang == null) || (!lang.equals("en") && _localItemNames.containsKey(lang)))
 				{
-					Collections.sort(sortedList, Comparator.comparing(o -> getItemName(lang, o.getItemInstance().getId(), o.getItemInstance().isBlessed())));
+					sortedList.sort(Comparator.comparing(o -> getItemName(lang, o.getItemInstance().getId(), o.getItemInstance().isBlessed())));
 				}
 				else
 				{
-					Collections.sort(sortedList, Comparator.comparing(o -> (o.getItemInstance().isBlessed() ? "Blessed " : "") + o.getItemInstance().getItemName()));
+					sortedList.sort(Comparator.comparing(o -> (o.getItemInstance().isBlessed() ? "Blessed " : "") + o.getItemInstance().getItemName()));
 				}
 				
 				Collections.reverse(sortedList);
@@ -904,12 +903,12 @@ public class WorldExchangeManager implements IXmlReader
 			}
 			case PRICE_PER_PIECE_ASCE:
 			{
-				Collections.sort(sortedList, Comparator.comparingLong(WorldExchangeHolder::getPrice));
+				sortedList.sort(Comparator.comparingLong(WorldExchangeHolder::getPrice));
 				break;
 			}
 			case PRICE_PER_PIECE_DESC:
 			{
-				Collections.sort(sortedList, Comparator.comparingLong(WorldExchangeHolder::getPrice).reversed());
+				sortedList.sort(Comparator.comparingLong(WorldExchangeHolder::getPrice).reversed());
 				break;
 			}
 		}

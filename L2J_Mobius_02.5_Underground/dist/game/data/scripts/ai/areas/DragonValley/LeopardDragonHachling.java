@@ -23,12 +23,11 @@ package ai.areas.DragonValley;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -79,7 +78,7 @@ public class LeopardDragonHachling extends Script
 			else
 			{
 				npc.abortAttack();
-				npc.getAI().setIntention(Intention.MOVE_TO, nearestLocation(npc));
+				npc.getAI().setIntentionMoveTo(nearestLocation(npc));
 			}
 		}
 		
@@ -97,7 +96,7 @@ public class LeopardDragonHachling extends Script
 		}
 		
 		npc.abortAttack();
-		npc.getAI().setIntention(Intention.MOVE_TO, nearestLocation(npc));
+		npc.getAI().setIntentionMoveTo(nearestLocation(npc));
 	}
 	
 	private Location nearestLocation(Npc npc)

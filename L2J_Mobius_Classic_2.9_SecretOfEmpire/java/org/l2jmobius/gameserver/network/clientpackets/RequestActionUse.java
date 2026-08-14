@@ -24,15 +24,15 @@ import java.util.Arrays;
 
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
 import org.l2jmobius.gameserver.data.xml.ActionData;
-import org.l2jmobius.gameserver.handler.IActionUserHandler;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.actor.transform.Transform;
+import org.l2jmobius.gameserver.entity.actor.transform.TransformTemplate;
 import org.l2jmobius.gameserver.handler.ActionUserHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
+import org.l2jmobius.gameserver.handler.IActionUserHandler;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -65,7 +65,7 @@ public class RequestActionUse extends ClientPacket
 			return;
 		}
 		
-		// Don't do anything if player is dead or confused
+		// Don't do anything if player is dead or confused.
 		if ((player.isFakeDeath() && (_actionId != 0)) || player.isDead() || player.isControlBlocked())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -118,7 +118,7 @@ public class RequestActionUse extends ClientPacket
 		{
 			case 51: // General Manufacture
 			{
-				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
+				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death).
 				if (player.isAlikeDead())
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);

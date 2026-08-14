@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.castlewar;
 
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.managers.SiegeManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.siege.Siege;
+import org.l2jmobius.gameserver.mechanics.siege.Siege;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.castlewar.MercenaryCastleWarCastleSiegeAttackerList;
@@ -47,12 +47,13 @@ public class ExPledgeMercenaryMemberJoin extends ClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getPlayer();
 		final Siege siege = SiegeManager.getInstance().getSiege(_castleId);
 		if ((siege != null) && siege.isInProgress())
 		{
 			return;
 		}
+		
+		final Player player = getPlayer();
 		
 		if (_type)
 		{

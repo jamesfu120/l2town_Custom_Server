@@ -34,12 +34,12 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.EquipmentUpgradeNormalHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemEnchantHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemEnchantHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.serverpackets.equipmentupgradenormal.ExUpgradeSystemNormalResult;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Index
@@ -59,7 +59,7 @@ public class EquipmentUpgradeNormalData implements IXmlReader
 	
 	public void reload()
 	{
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.sendPacket(ExUpgradeSystemNormalResult.FAIL);
 		}

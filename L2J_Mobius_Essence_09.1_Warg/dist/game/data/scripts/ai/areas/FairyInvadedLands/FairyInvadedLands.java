@@ -25,14 +25,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.SpawnData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Liamxroy
@@ -80,12 +80,12 @@ public class FairyInvadedLands extends Script
 		{
 			case "announce_lycaria":
 			{
-				Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_FAIRY_MAGIC_HAS_ATTRACTED_LYCARIA, 2, 10000, true));
+				World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_FAIRY_MAGIC_HAS_ATTRACTED_LYCARIA, 2, 10000, true));
 				break;
 			}
 			case "announce_lyansus":
 			{
-				Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_FAIRY_MAGIC_HAS_ATTRACTED_LYANSUS, 2, 10000, true));
+				World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_FAIRY_MAGIC_HAS_ATTRACTED_LYANSUS, 2, 10000, true));
 				break;
 			}
 			case "spawn":
@@ -157,12 +157,12 @@ public class FairyInvadedLands extends Script
 		
 		if (npc.getId() == LYCARIA)
 		{
-			Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.S1_DEFEATS_GUARDIAN_OF_THE_INVADED_LANDS, 2, 10000, true, killer.getName()));
+			World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.S1_DEFEATS_GUARDIAN_OF_THE_INVADED_LANDS, 2, 10000, true, killer.getName()));
 			startQuestTimer("despawn_lycaria", 1000, null, null);
 		}
 		else if (npc.getId() == LYANSUS)
 		{
-			Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.S1_DEFEATS_GUARDIAN_OF_THE_INVADED_LANDS, 2, 10000, true, killer.getName()));
+			World.broadcastToAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.S1_DEFEATS_GUARDIAN_OF_THE_INVADED_LANDS, 2, 10000, true, killer.getName()));
 			startQuestTimer("despawn_lyansus", 1000, null, null);
 		}
 	}

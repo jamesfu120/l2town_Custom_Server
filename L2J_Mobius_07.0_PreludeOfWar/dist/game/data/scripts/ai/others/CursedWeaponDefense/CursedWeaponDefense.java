@@ -29,32 +29,30 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CursedWeapon;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.CursedWeapon;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDamageReceived;
-import org.l2jmobius.gameserver.model.events.returns.DamageReturn;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDamageReceived;
+import org.l2jmobius.gameserver.mechanics.events.returns.DamageReturn;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * CursedWeaponDefense AI
@@ -212,13 +210,14 @@ public class CursedWeaponDefense extends Script
 		}
 		
 		final Npc npc = (Npc) event.getTarget();
-		final int npcId = npc.getId();
 		
 		// Protection petrification/Invul.
 		if (npc.isAffectedBySkill(SKILL_PETRIFICATION) || npc.isInvul())
 		{
 			return new DamageReturn(false, true, false, 0);
 		}
+		
+		final int npcId = npc.getId();
 		
 		// Attack validation.
 		Creature attacker = event.getAttacker();
@@ -241,21 +240,20 @@ public class CursedWeaponDefense extends Script
 			return null;
 		}
 		
-		// Validation for players.
-		Player player = (Player) attacker;
-		
-		final int weaponId = player.getActiveWeaponInstance() != null ? player.getActiveWeaponInstance().getTemplate().getId() : 0;
-		
-		boolean holdingZariche = (weaponId == ZARICHE_WEAPON_ID);
-		boolean holdingAkamanah = (weaponId == AKAMANAH_WEAPON_ID);
-		boolean holdingCursedWeapon = (holdingZariche || holdingAkamanah);
-		
 		// Always allowed for player to deal damage against Treasure Chest in vulnerable mode.
 		// Regular player damage limit 20 - Player holding cursed sword damage limit 200 (Creature.java).
 		if ((npcId == ZARICHE_BOX) || (npcId == AKAMANAH_BOX))
 		{
 			return null;
 		}
+		
+		// Validation for players.
+		Player player = (Player) attacker;
+		final int weaponId = player.getActiveWeaponInstance() != null ? player.getActiveWeaponInstance().getTemplate().getId() : 0;
+		
+		boolean holdingZariche = (weaponId == ZARICHE_WEAPON_ID);
+		boolean holdingAkamanah = (weaponId == AKAMANAH_WEAPON_ID);
+		boolean holdingCursedWeapon = (holdingZariche || holdingAkamanah);
 		
 		// Holder of cursed sword can only deal damage against Priest of Purification with a damage limit of 1500.
 		if ((npcId == ZARICHE_PRIEST_HAND) || (npcId == ZARICHE_PRIEST_PRAYER) || (npcId == AKAMANAH_PRIEST_HAND) || (npcId == AKAMANAH_PRIEST_PRAYER))
@@ -289,7 +287,7 @@ public class CursedWeaponDefense extends Script
 				
 				if (box.hasAI())
 				{
-					box.getAI().setIntention(Intention.IDLE);
+					box.getAI().setIntentionIdle();
 				}
 			}
 			return;
@@ -377,9 +375,10 @@ public class CursedWeaponDefense extends Script
 			
 			String spotId = (isZariche ? "ZARICHE_" : "AKAMANAH_") + typeKey + "_" + i;
 			
-			if (_priestRespawnTimes.containsKey(spotId))
+			final Long respawnTimeBoxed = _priestRespawnTimes.get(spotId);
+			if (respawnTimeBoxed != null)
 			{
-				long respawnTime = _priestRespawnTimes.get(spotId);
+				long respawnTime = respawnTimeBoxed.longValue();
 				if (System.currentTimeMillis() < respawnTime)
 				{
 					continue;
@@ -420,7 +419,7 @@ public class CursedWeaponDefense extends Script
 		
 		if (box.hasAI())
 		{
-			box.getAI().setIntention(Intention.IDLE);
+			box.getAI().setIntentionIdle();
 		}
 		
 		box.setImmobilized(true);
@@ -853,7 +852,7 @@ public class CursedWeaponDefense extends Script
 					if (!_forceRespawnDone)
 					{
 						_forceRespawnDone = true;
-						Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.S1).addString("TEST MODE: Special Event Started!"));
+						World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.S1).addString("TEST MODE: Special Event Started!"));
 					}
 					
 					liftDefense(true);
@@ -1026,7 +1025,7 @@ public class CursedWeaponDefense extends Script
 						
 						restoreDefense(true);
 						restoreDefense(false);
-						Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.S1).addString("Cursed Weapon Event ending in 1 minute!"));
+						World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.S1).addString("Cursed Weapon Event ending in 1 minute!"));
 					}
 					return;
 				}
@@ -1035,7 +1034,7 @@ public class CursedWeaponDefense extends Script
 				if (!_forceRespawnDone)
 				{
 					_forceRespawnDone = true;
-					// Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.S1).addString("Cursed Weapon Special Event Started! Boxes are vulnerable!"));
+					// World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.S1).addString("Cursed Weapon Special Event Started! Boxes are vulnerable!"));
 				}
 				
 				liftDefense(true);
@@ -1150,7 +1149,7 @@ public class CursedWeaponDefense extends Script
 			return;
 		}
 		
-		final Player player = World.getInstance().getPlayer(playerId);
+		final Player player = World.getPlayer(playerId);
 		if ((player != null) && player.isInsideZone(ZoneId.PEACE)) // isOwnerCoward
 		{
 			if (isZariche)

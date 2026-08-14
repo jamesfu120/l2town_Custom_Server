@@ -22,17 +22,16 @@ package handlers.skill.effects;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.SubclassInfoType;
-import org.l2jmobius.gameserver.model.actor.holders.player.Shortcut;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcut;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillDone;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
@@ -42,6 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import org.l2jmobius.gameserver.taskmanagers.AutoUseTaskManager;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw, Mobius
@@ -111,7 +111,7 @@ public class ClassChange extends AbstractEffect
 			
 			if (player.isInParty())
 			{
-				// Delete party window for other party members
+				// Delete party window for other party members.
 				final Party party = player.getParty();
 				party.broadcastToPartyMembers(player, PartySmallWindowDeleteAll.STATIC_PACKET);
 				for (Player member : party.getMembers())

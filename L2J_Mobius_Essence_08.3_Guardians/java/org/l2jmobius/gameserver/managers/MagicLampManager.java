@@ -30,10 +30,10 @@ import org.l2jmobius.gameserver.data.enums.LampType;
 import org.l2jmobius.gameserver.data.holders.MagicLampDataHolder;
 import org.l2jmobius.gameserver.data.holders.MagicLampHolder;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampInfo;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampResult;
 

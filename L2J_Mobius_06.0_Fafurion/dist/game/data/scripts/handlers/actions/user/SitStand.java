@@ -20,12 +20,12 @@ import org.l2jmobius.gameserver.ai.Action;
 import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.ai.NextAction;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MountType;
+import org.l2jmobius.gameserver.entity.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.MountType;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 
 /**

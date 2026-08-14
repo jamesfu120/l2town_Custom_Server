@@ -21,14 +21,13 @@
 package handlers.skill.effects;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Chest;
-import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Chest;
+import org.l2jmobius.gameserver.mechanics.conditions.Condition;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Open Chest effect implementation.
@@ -61,23 +60,23 @@ public class OpenChest extends AbstractEffect
 		{
 			return;
 		}
-
+		
 		chest.setInteracted();
-
-		// a mimic cannot be unlocked: trying to open it makes it turn hostile
+		
+		// A mimic cannot be unlocked: trying to open it makes it turn hostile.
 		if (!chest.isBox())
 		{
 			player.broadcastSocialAction(13);
 			chest.addDamageHate(player, 0, 1);
-			chest.getAI().setIntention(Intention.ATTACK, player);
+			chest.getAI().setIntentionAttack(player);
 			return;
 		}
-
+		
 		final int skillId = skill.getId();
 		int successChance;
 		if ((skillId == 2065) || (skillId == 2229))
 		{
-			// deluxe / box keys: the key grade must match the chest level, every grade off costs 40%
+			// Deluxe / box keys: the key grade must match the chest level, every grade off costs 40%.
 			final int keyLevelNeeded = Math.abs((chest.getLevel() / 10) - skill.getLevel());
 			successChance = ((skillId == 2065) ? 60 : 100) - (keyLevelNeeded * 40);
 		}
@@ -87,10 +86,10 @@ public class OpenChest extends AbstractEffect
 		}
 		else
 		{
-			// rogue unlock skills (27, 2322, 2400)
+			// Rogue unlock skills (27, 2322, 2400).
 			successChance = 100;
 		}
-
+		
 		if (Rnd.get(100) < successChance)
 		{
 			player.broadcastSocialAction(3);
@@ -100,7 +99,7 @@ public class OpenChest extends AbstractEffect
 		}
 		else
 		{
-			// a failed unlock destroys the box
+			// A failed unlock destroys the box.
 			player.broadcastSocialAction(13);
 			chest.deleteMe();
 		}

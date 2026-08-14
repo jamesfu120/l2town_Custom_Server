@@ -21,8 +21,9 @@
 package handlers.chat.commands.voiced;
 
 import org.l2jmobius.gameserver.config.custom.OfflineTradeConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerAction;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -34,7 +35,9 @@ public class Offline implements IVoicedCommandHandler
 {
 	private static final String[] VOICED_COMMANDS =
 	{
-		"offline"
+		"offline",
+		"offlinetrade",
+		"offline_trade"
 	};
 	
 	@Override
@@ -61,7 +64,8 @@ public class Offline implements IVoicedCommandHandler
 				return false;
 			}
 			
-			player.sendPacket(new ConfirmDlg(SystemMessageId.THE_GAME_WILL_BE_CLOSED_CONTINUE));
+			player.addAction(PlayerAction.OFFLINE_TRADE);
+			player.sendPacket(new ConfirmDlg("Do you wish to exit and continue trading?"));
 		}
 		
 		return true;

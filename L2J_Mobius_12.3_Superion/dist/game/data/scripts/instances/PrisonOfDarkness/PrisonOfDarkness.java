@@ -17,19 +17,19 @@
 package instances.PrisonOfDarkness;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.Movie;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Prison of Darkness instance zone.
@@ -137,7 +137,7 @@ public class PrisonOfDarkness extends InstanceScript
 				{
 					if (npcVars.getBoolean("CAN_TELEPORT", true))
 					{
-						npc.teleToLocation(WARP_POINT_RANDOM_LOCS[getRandom(WARP_POINT_RANDOM_LOCS.length)]);
+						npc.teleToLocation(getRandomEntry(WARP_POINT_RANDOM_LOCS));
 						showOnScreenMsg(instance, NpcStringId.THE_LOCATION_OF_THE_ESCAPE_DEVICE_IS_MOVED, ExShowScreenMessage.TOP_CENTER, 4000);
 						
 						switch (npcVars.getInt("TIME_MULTIPLER", 5))
@@ -336,7 +336,7 @@ public class PrisonOfDarkness extends InstanceScript
 			{
 				case WARP_POINT:
 				{
-					npc.teleToLocation(WARP_POINT_RANDOM_LOCS[getRandom(WARP_POINT_RANDOM_LOCS.length)]);
+					npc.teleToLocation(getRandomEntry(WARP_POINT_RANDOM_LOCS));
 					getTimers().addTimer("CHANGE_POSITION", (60000 * npcVars.getInt("TIME_MULTIPLER", 5)), npc, null);
 					break;
 				}
@@ -361,7 +361,7 @@ public class PrisonOfDarkness extends InstanceScript
 				case 0:
 				{
 					takeItems(creature.asPlayer(), GIANT_CANNONBALL, -1);
-					creature.teleToLocation(PLAYERS_RANDOM_LOCS[getRandom(PLAYERS_RANDOM_LOCS.length)]);
+					creature.teleToLocation(getRandomEntry(PLAYERS_RANDOM_LOCS));
 					showOnScreenMsg(creature.asPlayer(), NpcStringId.YOU_NEED_TO_FIND_ESCAPE_DEVICE_RE_ENTRY_IS_NOT_ALLOWED_ONCE_YOU_VE_LEFT_THE_INSTANCE_ZONE, ExShowScreenMessage.TOP_CENTER, 4000);
 					instance.getParameters().increaseInt("PLAYERS_COUNT", 0, 1);
 					break;
@@ -400,7 +400,7 @@ public class PrisonOfDarkness extends InstanceScript
 		{
 			if ((skill == TELEPORT.getSkill()) && (player != null) && (npc.calculateDistance3D(player) < 1000) && (npc.getCurrentHpPercent() > 10))
 			{
-				player.teleToLocation(PLAYERS_TELEPORT_RANDOM_LOCS[getRandom(PLAYERS_TELEPORT_RANDOM_LOCS.length)]);
+				player.teleToLocation(getRandomEntry(PLAYERS_TELEPORT_RANDOM_LOCS));
 			}
 		}
 	}

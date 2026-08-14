@@ -26,20 +26,20 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerBypass;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerPressTutorialMark;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerBypass;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerPressTutorialMark;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -365,7 +365,8 @@ public class Q00255_Tutorial extends Quest
 		}
 	}
 	
-	@RegisterEvent(EventType.ON_PLAYER_PRESS_TUTORIAL_MARK) @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	@RegisterEvent(EventType.ON_PLAYER_PRESS_TUTORIAL_MARK)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
 		final QuestState qs = getQuestState(event.getPlayer(), false);
@@ -409,7 +410,8 @@ public class Q00255_Tutorial extends Quest
 		}
 	}
 	
-	@RegisterEvent(EventType.ON_PLAYER_BYPASS) @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerBypass(OnPlayerBypass event)
 	{
 		final Player player = event.getPlayer();
@@ -419,7 +421,8 @@ public class Q00255_Tutorial extends Quest
 		}
 	}
 	
-	@RegisterEvent(EventType.ON_PLAYER_LOGIN) @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		if (PlayerConfig.DISABLE_TUTORIAL)

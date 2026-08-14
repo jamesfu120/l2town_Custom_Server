@@ -17,10 +17,10 @@
 package handlers.chat.commands.user;
 
 import org.l2jmobius.gameserver.config.OlympiadConfig;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -49,7 +49,6 @@ public class OlympiadStat implements IUserCommandHandler
 			return false;
 		}
 		
-		final int nobleObjId = player.getObjectId();
 		final WorldObject target = player.getTarget();
 		if ((target == null) || !target.isPlayer() || (target.asPlayer().getPlayerClass().level() < 2))
 		{
@@ -57,6 +56,7 @@ public class OlympiadStat implements IUserCommandHandler
 			return false;
 		}
 		
+		final int nobleObjId = player.getObjectId();
 		final SystemMessage sm = new SystemMessage(SystemMessageId.FOR_THE_CURRENT_OLYMPIAD_YOU_HAVE_PARTICIPATED_IN_S1_MATCH_ES_AND_HAD_S2_WIN_S_AND_S3_DEFEAT_S_YOU_CURRENTLY_HAVE_S4_OLYMPIAD_POINT_S);
 		sm.addInt(Olympiad.getInstance().getCompetitionDone(nobleObjId));
 		sm.addInt(Olympiad.getInstance().getCompetitionWon(nobleObjId));

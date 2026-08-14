@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.sql.CrestTable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Crest;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Crest;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
 
 /**
@@ -51,7 +51,7 @@ public class RequestExPledgeCrestLarge extends ClientPacket
 		{
 			for (int i = 0; i <= 4; i++)
 			{
-				final int size = Math.max(Math.min(14336, data.length - (14336 * i)), 0);
+				final int size = Math.clamp(data.length - (14336 * i), 0, 14336);
 				if (size == 0)
 				{
 					continue;

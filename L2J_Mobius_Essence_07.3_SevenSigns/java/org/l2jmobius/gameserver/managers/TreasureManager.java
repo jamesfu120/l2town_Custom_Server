@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
 
 public class TreasureManager
 {

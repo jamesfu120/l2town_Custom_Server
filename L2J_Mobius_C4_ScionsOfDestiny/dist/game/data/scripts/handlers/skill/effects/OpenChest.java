@@ -21,14 +21,13 @@
 package handlers.skill.effects;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Chest;
-import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Chest;
+import org.l2jmobius.gameserver.mechanics.conditions.Condition;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Open Chest effect implementation.
@@ -57,41 +56,39 @@ public class OpenChest extends AbstractEffect
 		
 		final Player player = effector.asPlayer();
 		final Chest chest = (Chest) effected;
-		if (chest.isDead() || (player.getInstanceId() != chest.getInstanceId()))
+		if (chest.isDead() || chest.isInteracted() || (player.getInstanceId() != chest.getInstanceId()))
 		{
 			return;
 		}
 		
-		final boolean levelCheck = (((player.getLevel() <= 77) && (Math.abs(chest.getLevel() - player.getLevel()) <= 6)) || ((player.getLevel() >= 78) && (Math.abs(chest.getLevel() - player.getLevel()) <= 5)));
-		if (!levelCheck)
+		chest.setInteracted();
+		
+		// A mimic cannot be unlocked: trying to open it makes it turn hostile.
+		if (!chest.isBox())
 		{
 			player.broadcastSocialAction(13);
 			chest.addDamageHate(player, 0, 1);
-			chest.getAI().setIntention(Intention.ATTACK, player);
+			chest.getAI().setIntentionAttack(player);
 			return;
 		}
 		
-		final int chestLevel = chest.getLevel();
-		final int keyLevel = skill.getLevel();
-		final int optimalMax = (keyLevel * 10) + 9;
-		int successChance = (skill.getId() == 2065) ? 60 : 100;
-		if (chestLevel > optimalMax)
+		final int skillId = skill.getId();
+		int successChance;
+		if ((skillId == 2065) || (skillId == 2229))
 		{
-			int levelDiff = chestLevel - optimalMax;
-			successChance -= (levelDiff * 10);
+			// Deluxe / box keys: the key grade must match the chest level, every grade off costs 40%.
+			final int keyLevelNeeded = Math.abs((chest.getLevel() / 10) - skill.getLevel());
+			successChance = ((skillId == 2065) ? 60 : 100) - (keyLevelNeeded * 40);
 		}
-		
-		if ((skill.getId() == 27) || (skill.getId() == 2322) || (skill.getId() == 2400))
-		{
-			successChance = 100;
-		}
-		
-		if (skill.getId() == 3155)
+		else if (skillId == 3155)
 		{
 			successChance = 90;
 		}
-		
-		successChance = Math.max(10, successChance);
+		else
+		{
+			// Rogue unlock skills (27, 2322, 2400).
+			successChance = 100;
+		}
 		
 		if (Rnd.get(100) < successChance)
 		{
@@ -102,9 +99,9 @@ public class OpenChest extends AbstractEffect
 		}
 		else
 		{
+			// A failed unlock destroys the box.
 			player.broadcastSocialAction(13);
-			chest.addDamageHate(player, 0, 1);
-			chest.getAI().setIntention(Intention.ATTACK, player);
+			chest.deleteMe();
 		}
 	}
 }

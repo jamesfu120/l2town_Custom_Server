@@ -35,7 +35,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.ConnectionManager;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.time.TimeUtil;
-import org.l2jmobius.commons.util.DeadlockWatcher;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.config.ConfigLoader;
@@ -64,6 +63,7 @@ import org.l2jmobius.gameserver.data.xml.ArmorSetData;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
+import org.l2jmobius.gameserver.data.xml.CubicData;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.DynamicExpRateData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
@@ -99,6 +99,10 @@ import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
 import org.l2jmobius.gameserver.data.xml.StaticObjectData;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.groups.matching.PartyMatchRoomList;
+import org.l2jmobius.gameserver.entity.groups.matching.PartyMatchWaitingList;
+import org.l2jmobius.gameserver.entity.spawns.AutoSpawnHandler;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.EffectHandler;
 import org.l2jmobius.gameserver.managers.AntiFeedManager;
@@ -136,17 +140,13 @@ import org.l2jmobius.gameserver.managers.WalkingManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
 import org.l2jmobius.gameserver.managers.games.LotteryManager;
 import org.l2jmobius.gameserver.managers.games.MonsterRaceManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.OnServerStart;
-import org.l2jmobius.gameserver.model.groups.matching.PartyMatchRoomList;
-import org.l2jmobius.gameserver.model.groups.matching.PartyMatchWaitingList;
-import org.l2jmobius.gameserver.model.olympiad.Hero;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
-import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
-import org.l2jmobius.gameserver.model.spawns.AutoSpawnHandler;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.OnServerStart;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.mechanics.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.GamePacketHandler;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -155,7 +155,7 @@ import org.l2jmobius.gameserver.taskmanagers.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanagers.ItemLifeTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanagers.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.ui.Gui;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.DeadlockWatcher;
 
 public class GameServer
 {
@@ -179,7 +179,7 @@ public class GameServer
 		final File logFolder = new File(".", "log");
 		logFolder.mkdir();
 		
-		// Create input stream for log file -- or store file data into memory
+		// Create input stream for log file -- or store file data into memory.
 		try (InputStream is = new FileInputStream(new File("./log.cfg")))
 		{
 			LogManager.getLogManager().readConfiguration(is);
@@ -194,7 +194,7 @@ public class GameServer
 		printSection("ThreadPool");
 		ThreadPool.init();
 		
-		// Start game time task manager early
+		// Start game time task manager early.
 		GameTimeTaskManager.getInstance();
 		
 		printSection("IdManager");
@@ -206,13 +206,14 @@ public class GameServer
 		
 		printSection("World");
 		InstanceManager.getInstance();
-		World.getInstance();
+		World.init();
 		MapRegionData.getInstance();
 		AnnouncementsTable.getInstance();
 		GlobalVariablesManager.getInstance();
 		
 		printSection("Data");
 		CategoryData.getInstance();
+		CubicData.getInstance();
 		DynamicExpRateData.getInstance();
 		
 		printSection("Skills");
@@ -292,7 +293,7 @@ public class GameServer
 		printSection("Seven Signs");
 		SevenSigns.getInstance();
 		
-		// Call to load caches
+		// Call to load caches.
 		printSection("Cache");
 		HtmCache.getInstance();
 		CrestTable.getInstance();
@@ -413,7 +414,7 @@ public class GameServer
 			{
 				if (ServerConfig.RESTART_ON_DEADLOCK)
 				{
-					Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
+					World.broadcastToAllOnlinePlayers("Server has stability issues - restarting now.");
 					Shutdown.getInstance().startShutdown(null, 60, true);
 				}
 			});

@@ -24,21 +24,21 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.data.holders.RelicCouponHolder;
 import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
 import org.l2jmobius.gameserver.data.xml.RelicCouponData;
 import org.l2jmobius.gameserver.data.xml.RelicData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerRelicData;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerRelicData;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author CostyKiller, Mobius
@@ -57,7 +57,7 @@ public class ExRelicsSummonResult extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_RELICS_SUMMON_RESULT.writeId(this, buffer);
 		
@@ -112,7 +112,7 @@ public class ExRelicsSummonResult extends ServerPacket
 					
 					if (RelicSystemConfig.RELIC_SUMMON_ANNOUNCE)
 					{
-						Broadcast.toAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
+						World.broadcastToAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
 					}
 				}
 				
@@ -373,7 +373,7 @@ public class ExRelicsSummonResult extends ServerPacket
 						if (RelicSystemConfig.RELIC_SUMMON_ANNOUNCE)
 						{
 							// Announce new the obtained relic.
-							Broadcast.toAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
+							World.broadcastToAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
 						}
 					}
 					// Update existing relics if not A/B Grade relics.
@@ -390,7 +390,7 @@ public class ExRelicsSummonResult extends ServerPacket
 						// Announce the existing obtained relic.
 						if (RelicSystemConfig.RELIC_SUMMON_ANNOUNCE && !RelicSystemConfig.RELIC_ANNOUNCE_ONLY_A_B_GRADE)
 						{
-							Broadcast.toAllOnlinePlayers(new ExRelicsAnnounce(_player, existingRelic.getRelicId()));
+							World.broadcastToAllOnlinePlayers(new ExRelicsAnnounce(_player, existingRelic.getRelicId()));
 						}
 						
 						// Check if relic is already registered in some collection.
@@ -423,7 +423,7 @@ public class ExRelicsSummonResult extends ServerPacket
 						if (RelicSystemConfig.RELIC_SUMMON_ANNOUNCE)
 						{
 							// Announce the new obtained relic.
-							Broadcast.toAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
+							World.broadcastToAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
 						}
 					}
 					else // Add new relics if not A/B Grade relics.
@@ -439,7 +439,7 @@ public class ExRelicsSummonResult extends ServerPacket
 						if (RelicSystemConfig.RELIC_SUMMON_ANNOUNCE && !RelicSystemConfig.RELIC_ANNOUNCE_ONLY_A_B_GRADE)
 						{
 							// Announce the new obtained relic
-							Broadcast.toAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
+							World.broadcastToAllOnlinePlayers(new ExRelicsAnnounce(_player, newRelic.getRelicId()));
 						}
 						
 						if (!_player.isRelicRegistered(newRelic.getRelicId(), newRelic.getRelicLevel()))

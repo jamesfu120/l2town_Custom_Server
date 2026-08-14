@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.subjugation;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerPurgeHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerPurgeHolder;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationGachaUI;
 

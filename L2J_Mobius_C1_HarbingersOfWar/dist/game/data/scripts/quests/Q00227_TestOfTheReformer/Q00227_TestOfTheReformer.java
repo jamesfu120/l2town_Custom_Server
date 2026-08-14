@@ -20,15 +20,14 @@
  */
 package quests.Q00227_TestOfTheReformer;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
@@ -327,11 +326,11 @@ public class Q00227_TestOfTheReformer extends Quest
 								startQuestTimer("ol_mahums_despawn", 5000, null, player, true);
 								
 								_olMahumInspector.asAttackable().addDamageHate(_olMahumPilgrim, 0, 99999);
-								_olMahumInspector.getAI().setIntention(Intention.ATTACK, _olMahumPilgrim);
+								_olMahumInspector.getAI().setIntentionAttack(_olMahumPilgrim);
 								
 								// TODO : make Npc be able to attack Attackable.
 								// _olMahumPilgrim.asAttackable().addDamageHate(_olMahumInspector, 0, 99999);
-								// _olMahumPilgrim.getAI().setIntention(Intention.ATTACK, _olMahumInspector);
+								// _olMahumPilgrim.getAI().setIntentionAttack(_olMahumInspector);
 							}
 						}
 						else if (cond == 7)
@@ -354,7 +353,7 @@ public class Q00227_TestOfTheReformer extends Quest
 							{
 								_olMahumBetrayer = addSpawn(OL_MAHUM_BETRAYER, -4106, 40174, -3660, 0, false, 0);
 								_olMahumBetrayer.setRunning();
-								_olMahumBetrayer.getAI().setIntention(Intention.MOVE_TO, new Location(-7732, 36787, -3709));
+								_olMahumBetrayer.getAI().setIntentionMoveTo(new Location(-7732, 36787, -3709));
 								
 								// Resets Ol Mahum Betrayer's instance
 								startQuestTimer("betrayer_despawn", 40000, null, player, false);

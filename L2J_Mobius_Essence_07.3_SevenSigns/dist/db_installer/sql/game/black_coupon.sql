@@ -5,5 +5,5 @@ CREATE TABLE `black_coupon`  (
   `enchant_level` smallint(3) NOT NULL,
   `add_time` bigint(20) NOT NULL,
   PRIMARY KEY (`owner_id`, `item_id`, `enchant_level`, `add_time`) USING BTREE
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 SET FOREIGN_KEY_CHECKS = 1;

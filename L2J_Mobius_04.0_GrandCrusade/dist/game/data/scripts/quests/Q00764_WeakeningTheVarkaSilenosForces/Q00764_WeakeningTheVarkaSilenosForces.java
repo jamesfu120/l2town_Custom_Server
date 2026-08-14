@@ -20,13 +20,13 @@
  */
 package quests.Q00764_WeakeningTheVarkaSilenosForces;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.QuestType;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.QuestType;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 /**
  * Weakening the Varka Silenos Forces (764)
@@ -198,12 +198,13 @@ public class Q00764_WeakeningTheVarkaSilenosForces extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
 		if ((npc.getId() == HANSEN) && player.isMageClass())
 		{
 			return "33853-00.htm";
 		}
+		
+		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
 		if (npc.getId() == HANSEN)
 		{

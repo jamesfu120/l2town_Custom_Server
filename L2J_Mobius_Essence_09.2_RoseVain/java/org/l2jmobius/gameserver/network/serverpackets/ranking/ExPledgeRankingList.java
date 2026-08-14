@@ -25,16 +25,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Berezkin Nikolay
@@ -55,7 +54,7 @@ public class ExPledgeRankingList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_RANKING_LIST.writeId(this, buffer);
 		buffer.writeByte(_category);
@@ -69,19 +68,19 @@ public class ExPledgeRankingList extends ServerPacket
 		}
 	}
 	
-	private void writeScopeData(WritableBuffer buffer, boolean isTop150, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
+	private void writeScopeData(WriteBuffer buffer, boolean isTop150, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
 	{
 		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("clan_id", 0) == _player.getClanId()).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
-		final List<Entry<Integer, StatSet>> limited = isTop150 ? list.stream().limit(150).collect(Collectors.toList()) : playerData == null ? Collections.emptyList() : list.subList(Math.max(0, indexOf - 10), Math.min(list.size(), indexOf + 10));
+		final List<Entry<Integer, StatSet>> limited = isTop150 ? list.stream().limit(150).toList() : playerData == null ? Collections.emptyList() : list.subList(Math.max(0, indexOf - 10), Math.min(list.size(), indexOf + 10));
 		buffer.writeInt(limited.size());
 		int rank = 1;
-		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
+		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).toList())
 		{
 			int curRank = rank++;
 			final StatSet player = data.getValue();
 			buffer.writeInt(!isTop150 ? data.getKey() : curRank);
-			for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
+			for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
 			{
 				final StatSet snapshotData = ssData.getValue();
 				if (player.getInt("clan_id") == snapshotData.getInt("clan_id"))

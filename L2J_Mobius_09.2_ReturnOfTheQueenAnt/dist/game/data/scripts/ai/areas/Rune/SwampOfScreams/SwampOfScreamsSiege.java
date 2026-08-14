@@ -25,12 +25,12 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
@@ -79,7 +79,7 @@ public class SwampOfScreamsSiege extends Script
 		{
 			case "day_time_spawn":
 			{
-				World.getInstance().getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_13_00_15_00_NKILL_THE_MONSTERS_APPEARED_IN_THE_SWAMP_OF_SCREAMS, 2, 10000, true));
+				World.getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_13_00_15_00_NKILL_THE_MONSTERS_APPEARED_IN_THE_SWAMP_OF_SCREAMS, 2, 10000, true));
 				SPAWN_SWAMP_MONSTERS.set(SpawnData.getInstance().getSpawnByName("SwampOfScreamsMonsters"));
 				SPAWN_SWAMP_MONSTERS.get().getGroups().forEach(SpawnGroup::spawnAll);
 				_daytime = true;
@@ -88,7 +88,7 @@ public class SwampOfScreamsSiege extends Script
 			}
 			case "night_time_spawn":
 			{
-				World.getInstance().getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_22_00_24_00_NKILL_THE_MONSTERS_APPEARED_IN_THE_SWAMP_OF_SCREAMS, 2, 10000, true));
+				World.getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_22_00_24_00_NKILL_THE_MONSTERS_APPEARED_IN_THE_SWAMP_OF_SCREAMS, 2, 10000, true));
 				SPAWN_SWAMP_MONSTERS.set(SpawnData.getInstance().getSpawnByName("SwampOfScreamsMonsters"));
 				SPAWN_SWAMP_MONSTERS.get().getGroups().forEach(SpawnGroup::spawnAll);
 				_daytime = false;
@@ -99,12 +99,12 @@ public class SwampOfScreamsSiege extends Script
 			{
 				if (_daytime)
 				{
-					World.getInstance().getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_22_00_24_00_NMONSTERS_OF_THE_SWAMP_OF_SCREAMS_ARE_DEFEATED, 2, 10000, true));
+					World.getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_22_00_24_00_NMONSTERS_OF_THE_SWAMP_OF_SCREAMS_ARE_DEFEATED, 2, 10000, true));
 					scheduleDayTime();
 				}
 				else
 				{
-					World.getInstance().getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_13_00_15_00_NMONSTERS_OF_THE_SWAMP_OF_SCREAMS_ARE_DEFEATED, 2, 10000, true));
+					World.getPlayers().forEach(p -> showOnScreenMsg(p, NpcStringId.EVENT_ALARM_13_00_15_00_NMONSTERS_OF_THE_SWAMP_OF_SCREAMS_ARE_DEFEATED, 2, 10000, true));
 					scheduleNightTime();
 				}
 				

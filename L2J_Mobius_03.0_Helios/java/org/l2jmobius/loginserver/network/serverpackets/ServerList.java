@@ -27,11 +27,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.loginserver.data.GameServerTable;
+import org.l2jmobius.loginserver.data.GameServerTable.GameServerInfo;
 import org.l2jmobius.loginserver.network.LoginClient;
-import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.ServerStatus;
 
 /**
  * ServerList
@@ -41,7 +41,7 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  * 
  * c: server list size (number of servers)
  * c: ?
- * [ (repeat for each servers)
+ * [ (repeat for each servers) 
  * c: server id (ignored by client?)
  * d: server ip
  * d: server port
@@ -107,7 +107,7 @@ public class ServerList extends LoginServerPacket
 			_ageLimit = 0;
 			_brackets = gsi.isShowingBrackets();
 			
-			// If server GM-only - show status only to GMs
+			// If server GM-only - show status only to GMs.
 			_status = (client.getAccessLevel() < 0) || ((gsi.getStatus() == ServerStatus.STATUS_GM_ONLY) && (client.getAccessLevel() <= 0)) ? ServerStatus.STATUS_DOWN : gsi.getStatus();
 			_serverId = gsi.getId();
 		}
@@ -119,6 +119,12 @@ public class ServerList extends LoginServerPacket
 		_lastServer = client.getLastServer();
 		for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
 		{
+			// Hide GM-only servers from non-GM accounts.
+			if ((gsi.getStatus() == ServerStatus.STATUS_GM_ONLY) && (client.getAccessLevel() < 1))
+			{
+				continue;
+			}
+			
 			_servers.add(new ServerData(client, gsi));
 		}
 		
@@ -139,7 +145,7 @@ public class ServerList extends LoginServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(LoginClient client, WritableBuffer buffer)
+	protected void writeImpl(LoginClient client, WriteBuffer buffer)
 	{
 		buffer.writeByte(0x04);
 		buffer.writeByte(_servers.size());

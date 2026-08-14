@@ -23,12 +23,12 @@ package quests.Q00629_CleanUpTheSwampOfScreams;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00629_CleanUpTheSwampOfScreams extends Quest
 {
@@ -115,14 +115,13 @@ public class Q00629_CleanUpTheSwampOfScreams extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		
 		if (!hasAtLeastOneQuestItem(player, 7246, 7247))
 		{
 			return "31553-6.htm";
 		}
 		
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
 		switch (st.getState())
 		{
 			case State.CREATED:

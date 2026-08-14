@@ -28,10 +28,10 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.combination.CombinationItemType;
-import org.l2jmobius.gameserver.model.item.henna.CombinationHenna;
-import org.l2jmobius.gameserver.model.item.henna.CombinationHennaReward;
+import org.l2jmobius.gameserver.entity.item.combination.CombinationItemType;
+import org.l2jmobius.gameserver.entity.item.henna.CombinationHenna;
+import org.l2jmobius.gameserver.entity.item.henna.CombinationHennaReward;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Index
@@ -103,7 +103,7 @@ public class HennaCombinationData implements IXmlReader
 		return null;
 	}
 	
-	public static final HennaCombinationData getInstance()
+	public static HennaCombinationData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

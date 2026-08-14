@@ -27,13 +27,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.SubjugationHolder;
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Berezkin Nikolay
@@ -64,7 +63,7 @@ public class SubjugationData implements IXmlReader
 		{
 			final StatSet set = new StatSet(parseAttributes(purgeNode));
 			final int category = set.getInt("category");
-			final List<int[]> hottimes = Arrays.stream(set.getString("hottimes").split(";")).map(it -> Arrays.stream(it.split("-")).mapToInt(Integer::parseInt).toArray()).collect(Collectors.toList());
+			final List<int[]> hottimes = Arrays.stream(set.getString("hottimes").split(";")).map(it -> Arrays.stream(it.split("-")).mapToInt(Integer::parseInt).toArray()).toList();
 			final Map<Integer, Integer> npcs = new HashMap<>();
 			forEach(purgeNode, "npc", npcNode ->
 			{

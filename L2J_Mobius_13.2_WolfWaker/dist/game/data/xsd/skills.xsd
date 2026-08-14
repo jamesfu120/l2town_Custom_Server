@@ -2504,6 +2504,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="relicGrade" type="xs:unsignedInt" />
 															<xs:element name="level" type="xs:string" />
 															<xs:element name="existingSkillId" type="xs:unsignedInt" />
 															<xs:element name="existingSkillLevel" type="xs:unsignedByte" />

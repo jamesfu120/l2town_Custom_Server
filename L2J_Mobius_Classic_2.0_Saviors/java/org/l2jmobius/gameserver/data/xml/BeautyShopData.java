@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -25,11 +26,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.Sex;
-import org.l2jmobius.gameserver.model.beautyshop.BeautyData;
-import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.Sex;
+import org.l2jmobius.gameserver.mechanics.beautyshop.BeautyData;
+import org.l2jmobius.gameserver.mechanics.beautyshop.BeautyItem;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw
@@ -144,17 +145,13 @@ public class BeautyShopData implements IXmlReader
 	
 	public boolean hasBeautyData(Race race, Sex sex)
 	{
-		return _beautyList.containsKey(race) && _beautyList.get(race).containsKey(sex);
+		final Map<Sex, BeautyData> raceMap = _beautyList.get(race);
+		return (raceMap != null) && raceMap.containsKey(sex);
 	}
 	
 	public BeautyData getBeautyData(Race race, Sex sex)
 	{
-		if (_beautyList.containsKey(race))
-		{
-			return _beautyList.get(race).get(sex);
-		}
-		
-		return null;
+		return _beautyList.getOrDefault(race, Collections.emptyMap()).get(sex);
 	}
 	
 	public static BeautyShopData getInstance()

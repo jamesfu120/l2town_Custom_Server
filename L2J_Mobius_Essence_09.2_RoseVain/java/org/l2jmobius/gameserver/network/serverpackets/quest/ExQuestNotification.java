@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.quest;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -39,7 +39,7 @@ public class ExQuestNotification extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_QUEST_NOTIFICATION.writeId(this, buffer);
 		buffer.writeInt(_questState.getQuest().getId());

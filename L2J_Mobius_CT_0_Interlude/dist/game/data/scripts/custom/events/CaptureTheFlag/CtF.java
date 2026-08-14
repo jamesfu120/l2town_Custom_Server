@@ -39,48 +39,48 @@ import org.l2jmobius.commons.time.SchedulingPattern;
 import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.custom.DualboxCheckConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Team;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.groups.CommandChannel;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.groups.PartyDistributionType;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceWorld;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.zone.ZoneForm;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
 import org.l2jmobius.gameserver.managers.AntiFeedManager;
 import org.l2jmobius.gameserver.managers.InstanceManager;
 import org.l2jmobius.gameserver.managers.ItemManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Team;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
-import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.groups.CommandChannel;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.groups.PartyDistributionType;
-import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.script.Event;
-import org.l2jmobius.gameserver.model.script.QuestTimer;
-import org.l2jmobius.gameserver.model.skill.CommonSkill;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneForm;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.mechanics.events.listeners.AbstractEventListener;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+import org.l2jmobius.gameserver.mechanics.script.Event;
+import org.l2jmobius.gameserver.mechanics.script.QuestTimer;
+import org.l2jmobius.gameserver.mechanics.skill.CommonSkill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Capture The Flag event.
@@ -302,7 +302,7 @@ public class CtF extends Event
 					return null;
 				}
 				
-				// Remove the player from the IP count
+				// Remove the player from the IP count.
 				if (DualboxCheckConfig.DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP > 0)
 				{
 					AntiFeedManager.getInstance().removePlayer(AntiFeedManager.L2EVENT_ID, player);
@@ -355,7 +355,7 @@ public class CtF extends Event
 			}
 			case "TeleportToArena":
 			{
-				// Set state to STARTING
+				// Set state to STARTING.
 				setState(EventState.STARTING);
 				
 				// Remove offline players.
@@ -371,7 +371,7 @@ public class CtF extends Event
 				// Check if there are enough players to start the event.
 				if (PLAYER_LIST.size() < MINIMUM_PARTICIPANT_COUNT)
 				{
-					Broadcast.toAllOnlinePlayers("CtF Event: Event was canceled, not enough participants.");
+					World.broadcastToAllOnlinePlayers("CtF Event: Event was canceled, not enough participants.");
 					for (Player participant : PLAYER_LIST)
 					{
 						removeListeners(participant);
@@ -573,14 +573,14 @@ public class CtF extends Event
 					removeFlagCarrier(RED_TEAM_CARRIER);
 				}
 				
-				// Remove Headquarters team Blue
+				// Remove Headquarters team Blue.
 				if (FLAG_BLUE_SPAWN != null)
 				{
 					FLAG_BLUE_SPAWN.deleteMe();
 					FLAG_BLUE_SPAWN = null;
 				}
 				
-				// Remove Headquarters team Red
+				// Remove Headquarters team Red.
 				if (FLAG_RED_SPAWN != null)
 				{
 					FLAG_RED_SPAWN.deleteMe();
@@ -826,7 +826,7 @@ public class CtF extends Event
 		if (event.startsWith("RegistrationWarn:"))
 		{
 			int minutesLeft = Integer.parseInt(event.split(":")[1]);
-			Broadcast.toAllOnlinePlayers("CtF Event: Registration opened for " + minutesLeft + " minutes.");
+			World.broadcastToAllOnlinePlayers("CtF Event: Registration opened for " + minutesLeft + " minutes.");
 		}
 		
 		return htmltext;
@@ -845,12 +845,12 @@ public class CtF extends Event
 		if (PLAYER_LIST.contains(player))
 		{
 			// Npc is in instance.
-			if ((npc.getInstanceId() > 0) && (npc.getId() == MANAGER))
+			if (npc.isInInstance() && (npc.getId() == MANAGER))
 			{
 				return "manager-buffheal.html";
 			}
 			
-			if (((npc.getInstanceId() > 0) && (npc.getId() == BLUE_TEAM_HEADQUARTERS)) || (npc.getId() == RED_TEAM_HEADQUARTERS))
+			if ((npc.isInInstance() && (npc.getId() == BLUE_TEAM_HEADQUARTERS)) || (npc.getId() == RED_TEAM_HEADQUARTERS))
 			{
 				final String flag = npc.getTemplate().getName();
 				final String team = getParticipantTeamName(player);
@@ -868,7 +868,7 @@ public class CtF extends Event
 						}
 						else
 						{
-							// player has returned with enemy flag
+							// Player has returned with enemy flag.
 							player.broadcastPacket(new MagicSkillUse(player, npc, 1034, 1, 1, 1));
 							removeFlagCarrier(player);
 							enemyTeamFlag(player);
@@ -879,7 +879,7 @@ public class CtF extends Event
 					}
 					else if (getEnemyCarrier(player) == null)
 					{
-						// team flag is missing
+						// Team flag is missing.
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 						html.setFile(player, HTML_PATH + "flag_friendly.html");
 						html.replace("%enemyteam%", enemyteam);
@@ -889,7 +889,7 @@ public class CtF extends Event
 					}
 					else
 					{
-						// go get the flag
+						// Go get the flag.
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 						html.setFile(player, HTML_PATH + "flag_friendly_missing.html");
 						html.replace("%enemyteam%", enemyteam);
@@ -1106,7 +1106,7 @@ public class CtF extends Event
 			return false;
 		}
 		
-		if (player.getInstanceId() > 0)
+		if (player.isInInstance())
 		{
 			player.sendMessage("You cannot register while in an instance.");
 			return false;
@@ -1150,7 +1150,7 @@ public class CtF extends Event
 	private static Player getTeamCarrier(Player player)
 	{
 		// Check if team carrier has disconnected.
-		if ((BLUE_TEAM.contains(player) && (BLUE_TEAM_CARRIER != null) && (!BLUE_TEAM_CARRIER.isOnline() || (BLUE_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))) || ((RED_TEAM.contains(player) == true) && (RED_TEAM_CARRIER != null) && (!RED_TEAM_CARRIER.isOnline() || (RED_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))))
+		if ((BLUE_TEAM.contains(player) && (BLUE_TEAM_CARRIER != null) && (!BLUE_TEAM_CARRIER.isOnline() || (BLUE_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))) || (RED_TEAM.contains(player) && (RED_TEAM_CARRIER != null) && (!RED_TEAM_CARRIER.isOnline() || (RED_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))))
 		{
 			player.destroyItemByItemId(ItemProcessType.DESTROY, getEnemyTeamFlagId(player), 1, player, false);
 			return null;
@@ -1163,7 +1163,7 @@ public class CtF extends Event
 	private static Player getEnemyCarrier(Player player)
 	{
 		// Check if enemy carrier has disconnected.
-		if ((BLUE_TEAM.contains(player) && (RED_TEAM_CARRIER != null) && (!RED_TEAM_CARRIER.isOnline() || (RED_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))) || ((RED_TEAM.contains(player) == true) && (BLUE_TEAM_CARRIER != null) && (!BLUE_TEAM_CARRIER.isOnline() || (BLUE_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))))
+		if ((BLUE_TEAM.contains(player) && (RED_TEAM_CARRIER != null) && (!RED_TEAM_CARRIER.isOnline() || (RED_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))) || (RED_TEAM.contains(player) && (BLUE_TEAM_CARRIER != null) && (!BLUE_TEAM_CARRIER.isOnline() || (BLUE_TEAM_CARRIER.getInstanceId() != PVP_WORLD.getInstanceId()))))
 		{
 			player.destroyItemByItemId(ItemProcessType.DESTROY, getEnemyTeamFlagId(player), 1, player, false);
 			return null;
@@ -1175,7 +1175,7 @@ public class CtF extends Event
 	
 	private static boolean playerIsCarrier(Player player)
 	{
-		return ((player == BLUE_TEAM_CARRIER) || (player == RED_TEAM_CARRIER)) ? true : false;
+		return (player == BLUE_TEAM_CARRIER) || (player == RED_TEAM_CARRIER);
 	}
 	
 	private static int getEnemyTeamFlagId(Player player)
@@ -1432,7 +1432,7 @@ public class CtF extends Event
 		// Set state PARTICIPATING
 		setState(EventState.PARTICIPATING);
 		
-		// Cancel timers. (In case event started immediately after another event was canceled.)
+		// Cancel timers. (In case event started immediately after another event was canceled.).
 		for (List<QuestTimer> timers : getQuestTimers().values())
 		{
 			for (QuestTimer timer : timers)
@@ -1441,7 +1441,7 @@ public class CtF extends Event
 			}
 		}
 		
-		// Register the event at AntiFeedManager and clean it for just in case if the event is already registered
+		// Register the event at AntiFeedManager and clean it for just in case if the event is already registered.
 		if (DualboxCheckConfig.DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP > 0)
 		{
 			AntiFeedManager.getInstance().registerEvent(AntiFeedManager.L2EVENT_ID);
@@ -1459,8 +1459,8 @@ public class CtF extends Event
 		startQuestTimer("TeleportToArena", REGISTRATION_TIME * 60000, null, null);
 		
 		// Send message to players.
-		Broadcast.toAllOnlinePlayers("CtF Event: Registration opened for " + REGISTRATION_TIME + " minutes.");
-		Broadcast.toAllOnlinePlayers("CtF Event: You can register at Giran CtF Event Manager.");
+		World.broadcastToAllOnlinePlayers("CtF Event: Registration opened for " + REGISTRATION_TIME + " minutes.");
+		World.broadcastToAllOnlinePlayers("CtF Event: You can register at Giran CtF Event Manager.");
 		
 		// @formatter:off
 		final int[] warnings = {10, 5, 4, 3, 2, 1};
@@ -1503,14 +1503,14 @@ public class CtF extends Event
 			removeFlagCarrier(RED_TEAM_CARRIER);
 		}
 		
-		// Remove Headquarters team Blue
+		// Remove Headquarters team Blue.
 		if (FLAG_BLUE_SPAWN != null)
 		{
 			FLAG_BLUE_SPAWN.deleteMe();
 			FLAG_BLUE_SPAWN = null;
 		}
 		
-		// Remove Headquarters team Red
+		// Remove Headquarters team Red.
 		if (FLAG_RED_SPAWN != null)
 		{
 			FLAG_RED_SPAWN.deleteMe();
@@ -1555,7 +1555,7 @@ public class CtF extends Event
 		}
 		
 		// Send message to players.
-		Broadcast.toAllOnlinePlayers("CtF Event: Event was canceled.");
+		World.broadcastToAllOnlinePlayers("CtF Event: Event was canceled.");
 		
 		// Set state PARTICIPATING
 		setState(EventState.INACTIVE);

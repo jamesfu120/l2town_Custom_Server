@@ -30,9 +30,9 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.EnchantOptions;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.options.EnchantOptions;
 
 /**
  * @author UnAfraid, Mobius
@@ -99,10 +99,7 @@ public class EnchantItemOptionsData implements IXmlReader
 											_data.put(itemId, data);
 										}
 										
-										if (!data.containsKey(op.getLevel()))
-										{
-											data.put(op.getLevel(), op);
-										}
+										data.putIfAbsent(op.getLevel(), op);
 										
 										op.setOption(i, id);
 									}
@@ -137,12 +134,8 @@ public class EnchantItemOptionsData implements IXmlReader
 	 */
 	public EnchantOptions getOptions(int itemId, int enchantLevel)
 	{
-		if (!_data.containsKey(itemId) || !_data.get(itemId).containsKey(enchantLevel))
-		{
-			return null;
-		}
-		
-		return _data.get(itemId).get(enchantLevel);
+		final Map<Integer, EnchantOptions> levelMap = _data.get(itemId);
+		return (levelMap != null) ? levelMap.get(enchantLevel) : null;
 	}
 	
 	/**

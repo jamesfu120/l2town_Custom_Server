@@ -492,7 +492,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="57" min="26899" max="62800" chance="70" /> <!-- Adena -->
@@ -903,7 +903,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->

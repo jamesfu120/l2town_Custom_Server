@@ -24,16 +24,16 @@ import java.time.Duration;
 import java.util.function.Consumer;
 
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureHpChange;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.creature.OnCreatureHpChange;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
 
 /**
  * @author Berezkin Nikolay
@@ -83,7 +83,7 @@ public class Atingo extends Script
 	{
 		ThreadPool.schedule(() ->
 		{
-			if (World.getInstance().getVisibleObjects().stream().noneMatch(it -> it.getId() == ATINGO))
+			if (World.getVisibleObjects().stream().noneMatch(it -> it.getId() == ATINGO))
 			{
 				addSpawn(ATINGO, getRandomEntry(SPAWNS));
 			}
@@ -110,7 +110,7 @@ public class Atingo extends Script
 		final int petObjId = npc.getScriptValue();
 		if (petObjId > 0)
 		{
-			final Npc pet = World.getInstance().findObject(petObjId).asNpc();
+			final Npc pet = World.findObject(petObjId).asNpc();
 			if (pet != null)
 			{
 				pet.setInvul(false);
@@ -120,7 +120,7 @@ public class Atingo extends Script
 		
 		ThreadPool.schedule(() ->
 		{
-			if (World.getInstance().getVisibleObjects().stream().noneMatch(it -> it.getId() == ATINGO))
+			if (World.getVisibleObjects().stream().noneMatch(it -> it.getId() == ATINGO))
 			{
 				addSpawn(ATINGO, getRandomEntry(SPAWNS));
 			}

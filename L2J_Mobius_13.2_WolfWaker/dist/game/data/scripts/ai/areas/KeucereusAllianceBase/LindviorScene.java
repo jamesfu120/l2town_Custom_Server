@@ -24,11 +24,11 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import org.l2jmobius.gameserver.data.SpawnTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.enums.Movie;
@@ -82,7 +82,7 @@ public class LindviorScene extends Script
 			{
 				if (npc != null)
 				{
-					playMovie(World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000), Movie.SC_LINDVIOR);
+					playMovie(World.getVisibleObjectsInRange(npc, Player.class, 4000), Movie.SC_LINDVIOR);
 				}
 				break;
 			}

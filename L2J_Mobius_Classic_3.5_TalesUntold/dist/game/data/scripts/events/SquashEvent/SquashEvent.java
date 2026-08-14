@@ -25,12 +25,12 @@ import java.util.Collection;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.ItemData;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.type.CrystalType;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -625,7 +625,7 @@ public class SquashEvent extends LongTimeEvent
 	{
 		if (getRandom(100) < 20)
 		{
-			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _CHRONO_TEXT[getRandom(_CHRONO_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), getRandomEntry(_CHRONO_TEXT)));
 		}
 	}
 	
@@ -633,7 +633,7 @@ public class SquashEvent extends LongTimeEvent
 	{
 		if (getRandom(100) < 20)
 		{
-			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NOCHRONO_TEXT[getRandom(_NOCHRONO_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), getRandomEntry(_NOCHRONO_TEXT)));
 		}
 	}
 	
@@ -641,7 +641,7 @@ public class SquashEvent extends LongTimeEvent
 	{
 		if (getRandom(100) < 30)
 		{
-			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NECTAR_TEXT[getRandom(_NECTAR_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), getRandomEntry(_NECTAR_TEXT)));
 		}
 	}
 	

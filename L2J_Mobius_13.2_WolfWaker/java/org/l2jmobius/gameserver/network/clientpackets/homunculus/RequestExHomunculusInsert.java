@@ -21,8 +21,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusHPSPVP;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusInsertResult;

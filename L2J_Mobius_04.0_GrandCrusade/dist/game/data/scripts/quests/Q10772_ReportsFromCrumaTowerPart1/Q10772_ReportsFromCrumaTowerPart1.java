@@ -16,18 +16,18 @@
  */
 package quests.Q10772_ReportsFromCrumaTowerPart1;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
+import org.l2jmobius.gameserver.util.StatSet;
 
 import quests.Q10771_VolatilePower.Q10771_VolatilePower;
 
@@ -87,7 +87,7 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 			}
 			case "spawn_owl":
 			{
-				if (qs.isCond(1) && World.getInstance().getVisibleObjectsInRange(player, Npc.class, 700).stream().noneMatch(n -> n.getId() == MAGIC_OWL))
+				if (qs.isCond(1) && (World.getFirstVisibleObjectInRange(player, Npc.class, 700, n -> n.getId() == MAGIC_OWL) == null))
 				{
 					addSpawn(MAGIC_OWL, OWL_LOC, true, 20000);
 				}

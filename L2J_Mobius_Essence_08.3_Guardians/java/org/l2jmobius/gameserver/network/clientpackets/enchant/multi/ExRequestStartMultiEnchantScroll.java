@@ -21,10 +21,10 @@
 package org.l2jmobius.gameserver.network.clientpackets.enchant.multi;
 
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.EnchantItemRequest;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.multi.ExResetSelectMultiEnchantScroll;
 
@@ -55,8 +55,6 @@ public class ExRequestStartMultiEnchantScroll extends ClientPacket
 			player.addRequest(new EnchantItemRequest(player, _scrollObjectId));
 		}
 		
-		final EnchantItemRequest request = player.getRequest(EnchantItemRequest.class);
-		
 		final Item scroll = player.getInventory().getItemByObjectId(_scrollObjectId);
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
 		if ((scrollTemplate == null) || scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() || scrollTemplate.isSafe() || scrollTemplate.isGiant())
@@ -65,6 +63,7 @@ public class ExRequestStartMultiEnchantScroll extends ClientPacket
 			return;
 		}
 		
+		final EnchantItemRequest request = player.getRequest(EnchantItemRequest.class);
 		request.setEnchantingScroll(_scrollObjectId);
 		
 		player.sendPacket(new ExResetSelectMultiEnchantScroll(player, _scrollObjectId, 0));

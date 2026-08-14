@@ -16,12 +16,12 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.DispelSlotType;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.DispelSlotType;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw
@@ -42,7 +42,7 @@ public class ResistAbnormalByCategory extends AbstractEffect
 	{
 		switch (_slot)
 		{
-			// Only this one is in use it seems
+			// Only this one is in use it seems.
 			case DEBUFF:
 			{
 				effected.getStat().mergeMul(Stat.RESIST_ABNORMAL_DEBUFF, 1 + (_amount / 100));

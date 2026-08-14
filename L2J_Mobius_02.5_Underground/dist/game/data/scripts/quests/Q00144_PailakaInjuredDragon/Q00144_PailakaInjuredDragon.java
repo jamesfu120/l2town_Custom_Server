@@ -16,16 +16,15 @@
  */
 package quests.Q00144_PailakaInjuredDragon;
 
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.util.MathUtil;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author Sdw
@@ -220,7 +219,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			final int currentBuffCount = npc.getVariables().getInt("buff_count");
 			if (currentBuffCount < 5)
 			{
-				final int buffOffset = MathUtil.clamp(Integer.parseInt(event.substring(event.indexOf(' ') + 1)), 0, BUFFS.length);
+				final int buffOffset = Math.clamp(Integer.parseInt(event.substring(event.indexOf(' ') + 1)), 0, BUFFS.length);
 				npc.setTarget(player);
 				npc.doCast(BUFFS[buffOffset].getSkill());
 				npc.getVariables().set("buff_count", currentBuffCount + 1);

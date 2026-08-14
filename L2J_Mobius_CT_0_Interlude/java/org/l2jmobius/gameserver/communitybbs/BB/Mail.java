@@ -23,12 +23,14 @@ package org.l2jmobius.gameserver.communitybbs.BB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 
 import org.l2jmobius.gameserver.network.enums.MailType;
 
 public class Mail
 {
+	private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+	
 	private final int _id;
 	private final int _receiverId;
 	private final int _senderId;
@@ -55,7 +57,7 @@ public class Mail
 		_subject = rs.getString("subject");
 		_message = rs.getString("message");
 		_sentDate = rs.getTimestamp("sent_date");
-		_formattedSentDate = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(_sentDate);
+		_formattedSentDate = _sentDate.toLocalDateTime().format(DATE_FORMATTER);
 		_isUnread = rs.getInt("is_unread") != 0;
 	}
 	

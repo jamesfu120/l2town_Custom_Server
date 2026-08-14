@@ -16,15 +16,14 @@
  */
 package quests.Q00065_CertifiedSoulBreaker;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -737,7 +736,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 			startQuestTimer("DESPAWN_5", 5000, npc, null);
 			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, "Drats! How could I be so wrong??"));
 			npc.setRunning();
-			npc.getAI().setIntention(Intention.MOVE_TO, MOVE_TO);
+			npc.getAI().setIntentionMoveTo(MOVE_TO);
 		}
 		else if (npc.getId() == GUARDIAN_ANGEL)
 		{

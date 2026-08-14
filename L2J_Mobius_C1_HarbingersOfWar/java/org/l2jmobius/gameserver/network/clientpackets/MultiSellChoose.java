@@ -21,19 +21,20 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
-import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.multisell.Entry;
-import org.l2jmobius.gameserver.model.multisell.Ingredient;
-import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.mechanics.multisell.Entry;
+import org.l2jmobius.gameserver.mechanics.multisell.Ingredient;
+import org.l2jmobius.gameserver.mechanics.multisell.PreparedListContainer;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -66,12 +67,6 @@ public class MultiSellChoose extends ClientPacket
 		}
 		
 		if (!getClient().getFloodProtectors().canUseMultiSell())
-		{
-			player.setMultiSell(null);
-			return;
-		}
-		
-		if ((_amount < 1) || (_amount > GeneralConfig.MULTISELL_AMOUNT_LIMIT))
 		{
 			player.setMultiSell(null);
 			return;
@@ -269,10 +264,11 @@ public class MultiSellChoose extends ClientPacket
 								if (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0))
 								{
 									// loop through this list and remove (one by one) each item until the required amount is taken.
-									final List<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
-									for (int i = 0; i < (e.getItemCount() * _amount); i++)
+									final Collection<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
+									final Iterator<Item> it = inventoryContents.iterator();
+									for (int i = 0; (i < (e.getItemCount() * _amount)) && it.hasNext(); i++)
 									{
-										if (!player.destroyItem(ItemProcessType.FEE, inventoryContents.get(i).getObjectId(), 1, player.getTarget(), true))
+										if (!player.destroyItem(ItemProcessType.FEE, it.next().getObjectId(), 1, player.getTarget(), true))
 										{
 											player.setMultiSell(null);
 											return;
@@ -319,8 +315,8 @@ public class MultiSellChoose extends ClientPacket
 									// choice 1. Small number of items exchanged. No sorting.
 									for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 									{
-										final List<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
-										itemToTake = inventoryContents.get(0);
+										final Collection<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
+										itemToTake = inventoryContents.iterator().next();
 										
 										// get item with the LOWEST enchantment level from the inventory...
 										// +0 is lowest by default...
@@ -354,7 +350,7 @@ public class MultiSellChoose extends ClientPacket
 					}
 				}
 				
-				// Generate the appropriate items
+				// Generate the appropriate items.
 				for (Ingredient e : entry.getProducts())
 				{
 					if (e.getItemId() < 0)

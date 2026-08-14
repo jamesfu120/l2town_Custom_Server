@@ -23,7 +23,7 @@ package org.l2jmobius.gameserver.data.holders;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 
 /**
  * @author Index

@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.VipSystemConfig;
-import org.l2jmobius.gameserver.model.vip.VipInfo;
+import org.l2jmobius.gameserver.mechanics.vip.VipInfo;
 
 /**
  * @author marciox25

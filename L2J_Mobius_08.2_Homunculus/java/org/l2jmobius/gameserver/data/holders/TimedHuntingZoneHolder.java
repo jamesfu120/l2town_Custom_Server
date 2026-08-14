@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.data.holders;
 
-import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.entity.Location;
 
 /**
  * @author Mobius

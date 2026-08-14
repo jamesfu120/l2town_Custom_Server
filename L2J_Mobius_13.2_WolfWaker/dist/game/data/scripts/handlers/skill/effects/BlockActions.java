@@ -19,15 +19,13 @@ package handlers.skill.effects;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.ai.Action;
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Block Actions effect implementation.
@@ -109,12 +107,12 @@ public class BlockActions extends AbstractEffect
 			}
 			else
 			{
-				effected.getAI().setIntention(Intention.ACTIVE);
+				effected.getAI().setIntentionActive();
 			}
 		}
 		else
 		{
-			effected.getAI().notifyAction(Action.THINK);
+			effected.getAI().notifyActionThink();
 		}
 	}
 }

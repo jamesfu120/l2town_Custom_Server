@@ -22,13 +22,13 @@ import java.util.List;
 import java.util.Objects;
 
 import org.l2jmobius.gameserver.config.NpcConfig;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Mammons AI.
@@ -120,7 +120,7 @@ public class Mammons extends Script
 					blacksmith.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(RANDOM_SAY));
 					if (NpcConfig.ANNOUNCE_MAMMON_SPAWN)
 					{
-						Broadcast.toAllOnlinePlayers("Mammon's has been spawned in Town of " + blacksmith.getCastle().getName() + ".", false);
+						World.broadcastToAllOnlinePlayers("Mammon's has been spawned in Town of " + blacksmith.getCastle().getName() + ".", false);
 					}
 				}
 				break;

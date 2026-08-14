@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -40,7 +40,7 @@ public class ExHomunculusPointInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_HOMUNCULUS_POINT_INFO.writeId(this, buffer);
 		buffer.writeInt(_variables.getInt(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, 0)); // points

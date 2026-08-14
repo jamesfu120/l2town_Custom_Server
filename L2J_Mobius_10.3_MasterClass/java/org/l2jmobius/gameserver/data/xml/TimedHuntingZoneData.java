@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.TimedHuntingZoneHolder;
-import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.entity.Location;
 
 /**
  * @author Mobius

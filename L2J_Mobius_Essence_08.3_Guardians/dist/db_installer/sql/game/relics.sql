@@ -7,4 +7,4 @@ CREATE TABLE `relics` (
   `relicIndex` int(11) unsigned NOT NULL DEFAULT 0,
   `relicSummonTime` bigint(13) NOT NULL DEFAULT 0,
   PRIMARY KEY (`accountName`,`relicId`,`relicIndex`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

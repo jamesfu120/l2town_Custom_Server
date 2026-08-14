@@ -21,16 +21,16 @@
 package quests.Q00482_RecertificationOfValue;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.QuestType;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.QuestType;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 
 import quests.Q10353_CertificationOfValue.Q10353_CertificationOfValue;
@@ -247,12 +247,13 @@ public class Q00482_RecertificationOfValue extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{

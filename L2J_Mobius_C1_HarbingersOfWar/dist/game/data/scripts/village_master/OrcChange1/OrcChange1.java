@@ -17,11 +17,11 @@
 package village_master.OrcChange1;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Orc class transfer AI.
@@ -117,7 +117,7 @@ public class OrcChange1 extends Script
 		{
 			htmltext = "30500-24.htm"; // fnYouAreFourthClass
 		}
-		else if ((classId == 45) && (player.getPlayerClass() == PlayerClass.ORC_FIGHTER))
+		else if ((classId == PlayerClass.ORC_RAIDER.getId()) && (player.getPlayerClass() == PlayerClass.ORC_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -136,7 +136,7 @@ public class OrcChange1 extends Script
 				player.setPlayerClass(45);
 				player.setBaseClass(45);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-14.htm"; // fnAfterClassChange11
 			}
@@ -145,7 +145,7 @@ public class OrcChange1 extends Script
 				htmltext = npc.getId() + "-13.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == 47) && (player.getPlayerClass() == PlayerClass.ORC_FIGHTER))
+		else if ((classId == PlayerClass.ORC_MONK.getId()) && (player.getPlayerClass() == PlayerClass.ORC_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -164,7 +164,7 @@ public class OrcChange1 extends Script
 				player.setPlayerClass(47);
 				player.setBaseClass(47);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-18.htm"; // fnAfterClassChange12
 			}
@@ -173,7 +173,7 @@ public class OrcChange1 extends Script
 				htmltext = npc.getId() + "-17.htm"; // fnNoProof12
 			}
 		}
-		else if ((classId == 50) && (player.getPlayerClass() == PlayerClass.ORC_MAGE))
+		else if ((classId == PlayerClass.ORC_SHAMAN.getId()) && (player.getPlayerClass() == PlayerClass.ORC_MAGE))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -192,7 +192,7 @@ public class OrcChange1 extends Script
 				player.setPlayerClass(50);
 				player.setBaseClass(50);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = npc.getId() + "-22.htm"; // fnAfterClassChange21
 			}

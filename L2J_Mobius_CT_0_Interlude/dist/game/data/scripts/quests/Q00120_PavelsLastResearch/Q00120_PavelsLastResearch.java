@@ -20,12 +20,12 @@
  */
 package quests.Q00120_PavelsLastResearch;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 import quests.Q00114_ResurrectionOfAnOldManager.Q00114_ResurrectionOfAnOldManager;
@@ -399,12 +399,13 @@ public class Q00120_PavelsLastResearch extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
 		if (qs == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = getNoQuestMsg(player);
 		
 		final int state = qs.getState();
 		final int npcId = npc.getId();

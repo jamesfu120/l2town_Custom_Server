@@ -20,11 +20,11 @@
  */
 package ai.bosses.Coatl;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
@@ -36,21 +36,22 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
+import org.l2jmobius.gameserver.entity.zone.type.ArenaZone;
 import org.l2jmobius.gameserver.managers.DatabaseSpawnManager;
 import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
-import org.l2jmobius.gameserver.model.zone.type.ArenaZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.BuffInfo;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * Coatl AI
@@ -112,7 +113,7 @@ public class Coatl extends Script
 	private final Set<Integer> _involvedPlayers = new HashSet<>();
 	private final Map<Creature, Integer> _aggroList = new ConcurrentHashMap<>();
 	private final Map<String, Object[]> _timerParameters = new HashMap<>();
-	private final Queue<Runnable> _specialMechanicsQueue = new LinkedList<>();
+	private final Queue<Runnable> _specialMechanicsQueue = new ArrayDeque<>();
 	
 	private boolean _isInitialBarrier = false;
 	private boolean _isTimedBarrier = false;
@@ -623,7 +624,7 @@ public class Coatl extends Script
 		{
 			if (isSummon)
 			{
-				for (org.l2jmobius.gameserver.model.actor.Summon summon : attacker.getServitors().values())
+				for (Summon summon : attacker.getServitors().values())
 				{
 					if (summon != null)
 					{

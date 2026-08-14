@@ -17,17 +17,17 @@
 package handlers.skill.effects;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectFlag;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Lethal effect implementation.
@@ -102,7 +102,7 @@ public class Lethal extends AbstractEffect
 				effected.setCurrentHp(1);
 				effected.sendPacket(SystemMessageId.LETHAL_STRIKE);
 			}
-			// for Monsters HP is set to 1.
+			// For Monsters HP is set to 1.
 			else if (effected.isMonster() || effected.isSummon())
 			{
 				effected.setCurrentHp(1);
@@ -120,7 +120,7 @@ public class Lethal extends AbstractEffect
 				effected.sendPacket(SystemMessageId.HALF_KILL);
 				effected.sendPacket(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL);
 			}
-			// for Monsters HP is set to 50%.
+			// For Monsters HP is set to 50%.
 			else if (effected.isMonster() || effected.isSummon())
 			{
 				effected.setCurrentHp(effected.getCurrentHp() * 0.5);

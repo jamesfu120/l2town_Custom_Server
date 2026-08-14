@@ -22,10 +22,10 @@ package org.l2jmobius.gameserver.network.serverpackets.crossevent;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CrossEventAdvancedRewardHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CrossEventRegularRewardHolder;
 import org.l2jmobius.gameserver.managers.events.CrossEventManager;
-import org.l2jmobius.gameserver.model.actor.holders.player.CrossEventAdvancedRewardHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.CrossEventRegularRewardHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -50,7 +50,7 @@ public class ExCrossEventData extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CROSS_EVENT_DATA.writeId(this, buffer);
 		

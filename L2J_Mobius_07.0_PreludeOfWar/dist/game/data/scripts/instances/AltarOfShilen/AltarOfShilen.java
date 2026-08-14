@@ -27,16 +27,16 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -161,7 +161,7 @@ public class AltarOfShilen extends InstanceScript
 		
 		if (event.equals("check_player"))
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 400, p ->
+			World.forEachVisibleObjectInRange(npc, Player.class, 400, p ->
 			{
 				if ((p != null) && p.isPlayer() && !p.isDead())
 				{
@@ -230,7 +230,7 @@ public class AltarOfShilen extends InstanceScript
 				{
 					if ((world.getStatus() == 3) && event.equals("teleport1"))
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, p ->
+						World.forEachVisibleObjectInRange(npc, Player.class, 1000, p ->
 						{
 							if ((p != null) && p.isPlayable() && !p.isDead())
 							{
@@ -249,7 +249,7 @@ public class AltarOfShilen extends InstanceScript
 				{
 					if ((world.getStatus() == 5) && event.equals("teleport2"))
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, p ->
+						World.forEachVisibleObjectInRange(npc, Player.class, 1000, p ->
 						{
 							if ((p != null) && p.isPlayable() && !p.isDead())
 							{
@@ -705,7 +705,7 @@ public class AltarOfShilen extends InstanceScript
 							
 							if (isInInstance(world))
 							{
-								World.getInstance().forEachVisibleObjectInRange(_altar, Monster.class, 8000, boss ->
+								World.forEachVisibleObjectInRange(_altar, Monster.class, 8000, boss ->
 								{
 									if ((boss != null) && !boss.isDead())
 									{

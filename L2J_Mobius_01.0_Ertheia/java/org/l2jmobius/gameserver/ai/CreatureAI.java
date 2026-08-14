@@ -1,18 +1,22 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.ai;
 
@@ -21,23 +25,23 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.WorldRegion;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.entity.actor.transform.Transform;
+import org.l2jmobius.gameserver.entity.item.enums.ItemLocation;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.interfaces.ILocational;
 import org.l2jmobius.gameserver.managers.WalkingManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcMoveFinished;
-import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.item.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcMoveFinished;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
@@ -45,7 +49,7 @@ import org.l2jmobius.gameserver.taskmanagers.AttackStanceTaskManager;
 
 /**
  * This class manages AI of Creature.<br>
- * CreatureAI :
+ * CreatureAI:
  * <ul>
  * <li>AttackableAI</li>
  * <li>DoorAI</li>
@@ -57,74 +61,26 @@ public class CreatureAI extends AbstractAI
 {
 	private OnNpcMoveFinished _onNpcMoveFinished = null;
 	
-	public static class IntentionCommand
-	{
-		protected final Intention _intention;
-		protected final Object _arg0;
-		protected final Object _arg1;
-		
-		protected IntentionCommand(Intention pIntention, Object pArg0, Object pArg1)
-		{
-			_intention = pIntention;
-			_arg0 = pArg0;
-			_arg1 = pArg1;
-		}
-		
-		public Intention getIntention()
-		{
-			return _intention;
-		}
-	}
-	
-	/**
-	 * Cast Task
-	 * @author Zoey76
-	 */
-	public static class CastTask implements Runnable
-	{
-		private final Creature _creature;
-		private final WorldObject _target;
-		private final Skill _skill;
-		private final Item _item;
-		private final boolean _forceUse;
-		private final boolean _dontMove;
-		
-		public CastTask(Creature actor, Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
-		{
-			_creature = actor;
-			_target = target;
-			_skill = skill;
-			_item = item;
-			_forceUse = forceUse;
-			_dontMove = dontMove;
-		}
-		
-		@Override
-		public void run()
-		{
-			if (_creature.isAttackingNow())
-			{
-				_creature.abortAttack();
-			}
-			
-			_creature.getAI().changeIntentionToCast(_skill, _target, _item, _forceUse, _dontMove);
-		}
-	}
-	
 	public CreatureAI(Creature creature)
 	{
 		super(creature);
 	}
 	
-	public IntentionCommand getNextIntention()
-	{
-		return null;
-	}
-	
 	@Override
-	protected void onActionAttacked(Creature attacker)
+	public void notifyActionAttacked(WorldObject attacker)
 	{
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
 		clientStartAutoAttack();
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.ATTACKED))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -140,19 +96,28 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionIdle()
+	public void setIntentionIdle()
 	{
-		// Set the AI Intention to IDLE
-		changeIntention(Intention.IDLE);
+		// Stop the follow mode (IDLE is neither FOLLOW nor ATTACK).
+		stopFollow();
 		
-		// Init cast target
+		// Set the AI Intention to IDLE.
+		_intention = Intention.IDLE;
+		
+		// Init cast target.
 		setCastTarget(null);
 		
-		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 		clientStopMoving(null);
 		
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
+		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast).
 		clientStopAutoAttack();
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isRemovedBy(Intention.IDLE))
+		{
+			setNextAction(null);
+		}
 	}
 	
 	/**
@@ -168,35 +133,49 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionActive()
+	public void setIntentionActive()
 	{
-		// Check if the Intention is not already Active
-		if (getIntention() == Intention.ACTIVE)
+		try
 		{
-			return;
+			// Stop the follow mode (ACTIVE is neither FOLLOW nor ATTACK).
+			stopFollow();
+			
+			// Check if the Intention is not already Active.
+			if (getIntention() == Intention.ACTIVE)
+			{
+				return;
+			}
+			
+			// Set the AI Intention to ACTIVE.
+			_intention = Intention.ACTIVE;
+			
+			// Check if region and its neighbors are active.
+			final WorldRegion region = _actor.getWorldRegion();
+			if ((region == null) || !region.areNeighborsActive())
+			{
+				return;
+			}
+			
+			// Init cast target.
+			setCastTarget(null);
+			
+			// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
+			clientStopMoving(null);
+			
+			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast).
+			clientStopAutoAttack();
+			
+			// Launch the Think Action.
+			notifyActionThink();
 		}
-		
-		// Set the AI Intention to ACTIVE
-		changeIntention(Intention.ACTIVE);
-		
-		// Check if region and its neighbors are active.
-		final WorldRegion region = _actor.getWorldRegion();
-		if ((region == null) || !region.areNeighborsActive())
+		finally
 		{
-			return;
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isRemovedBy(Intention.ACTIVE))
+			{
+				setNextAction(null);
+			}
 		}
-		
-		// Init cast target
-		setCastTarget(null);
-		
-		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
-		clientStopMoving(null);
-		
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-		clientStopAutoAttack();
-		
-		// Launch the Think Action
-		onActionThink();
 	}
 	
 	/**
@@ -208,10 +187,16 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionRest()
+	public void setIntentionRest()
 	{
-		// Set the AI Intention to IDLE
-		setIntention(Intention.IDLE);
+		// Set the AI Intention to IDLE.
+		setIntentionIdle();
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isRemovedBy(Intention.REST))
+		{
+			setNextAction(null);
+		}
 	}
 	
 	/**
@@ -232,59 +217,66 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionAttack(Creature target)
+	public void setIntentionAttack(WorldObject target)
 	{
-		if ((target == null) || !target.isTargetable())
+		try
 		{
-			clientActionFailed();
-			return;
-		}
-		
-		if (getIntention() == Intention.REST)
-		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
-		}
-		
-		if (_actor.isAllSkillsDisabled() || _actor.isCastingNow() || _actor.isControlBlocked())
-		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
-		}
-		
-		// Check if the Intention is already ATTACK
-		if (getIntention() == Intention.ATTACK)
-		{
-			// Check if the AI already targets the Creature
-			if (getTarget() != target)
+			if ((target == null) || !target.isTargetable())
 			{
-				// Set the AI attack target (change target)
-				setTarget(target);
-				
-				// stopFollow();
-				
-				// Launch the Think Action
-				notifyAction(Action.THINK, null);
+				clientActionFailed();
+				return;
+			}
+			
+			if (getIntention() == Intention.REST)
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			if (_actor.isAllSkillsDisabled() || _actor.isCastingNow() || _actor.isControlBlocked())
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			// Check if the Intention is already ATTACK.
+			if (getIntention() == Intention.ATTACK)
+			{
+				// Check if the AI already targets the Creature.
+				if (getTarget() != target)
+				{
+					// Set the AI attack target (change target).
+					setTarget(target);
+					
+					// Launch the Think Action.
+					notifyActionThink();
+				}
+				else
+				{
+					clientActionFailed(); // else client freezes until cancel target
+				}
 			}
 			else
 			{
-				clientActionFailed(); // else client freezes until cancel target
+				// Set the Intention of this AbstractAI to ATTACK.
+				_intention = Intention.ATTACK;
+				
+				// Set the AI attack target.
+				setTarget(target);
+				
+				// Launch the Think Action.
+				notifyActionThink();
 			}
 		}
-		else
+		finally
 		{
-			// Set the Intention of this AbstractAI to ATTACK
-			changeIntention(Intention.ATTACK, target);
-			
-			// Set the AI attack target
-			setTarget(target);
-			
-			// stopFollow();
-			
-			// Launch the Think Action
-			notifyAction(Action.THINK, null);
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isRemovedBy(Intention.ATTACK))
+			{
+				setNextAction(null);
+			}
 		}
 	}
 	
@@ -302,46 +294,68 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
+	public void setIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
-		if ((getIntention() == Intention.REST) && skill.isMagic())
+		try
 		{
-			clientActionFailed();
-			return;
+			// Stop the follow mode (CAST is neither FOLLOW nor ATTACK).
+			stopFollow();
+			
+			if ((getIntention() == Intention.REST) && skill.isMagic())
+			{
+				clientActionFailed();
+				return;
+			}
+			
+			final long currentTime = System.nanoTime();
+			final long attackEndTime = _actor.getAttackEndTime();
+			if (attackEndTime > currentTime)
+			{
+				ThreadPool.schedule(() ->
+				{
+					if (_actor.isAttackingNow())
+					{
+						_actor.abortAttack();
+					}
+					
+					changeIntentionToCast(skill, target, item, forceUse, dontMove);
+				}, TimeUnit.NANOSECONDS.toMillis(attackEndTime - currentTime));
+			}
+			else
+			{
+				changeIntentionToCast(skill, target, item, forceUse, dontMove);
+			}
 		}
-		
-		final long currentTime = System.nanoTime();
-		final long attackEndTime = _actor.getAttackEndTime();
-		if (attackEndTime > currentTime)
+		finally
 		{
-			ThreadPool.schedule(new CastTask(_actor, skill, target, item, forceUse, dontMove), TimeUnit.NANOSECONDS.toMillis(attackEndTime - currentTime));
-		}
-		else
-		{
-			changeIntentionToCast(skill, target, item, forceUse, dontMove);
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isRemovedBy(Intention.CAST))
+			{
+				setNextAction(null);
+			}
 		}
 	}
 	
 	protected void changeIntentionToCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
-		// Set the AI cast target
+		// Set the AI cast target.
 		setCastTarget(target);
 		
-		// Set the AI skill used by INTENTION_CAST
+		// Set the AI skill used by INTENTION_CAST.
 		_skill = skill;
 		
-		// Set the AI item that triggered this skill
+		// Set the AI item that triggered this skill.
 		_item = item;
 		
-		// Set the ctrl/shift pressed parameters
+		// Set the ctrl/shift pressed parameters.
 		_forceUse = forceUse;
 		_dontMove = dontMove;
 		
-		// Change the Intention of this AbstractAI to CAST
-		changeIntention(Intention.CAST, skill);
+		// Change the Intention of this AbstractAI to CAST.
+		_intention = Intention.CAST;
 		
-		// Launch the Think Action
-		notifyAction(Action.THINK, null);
+		// Launch the Think Action.
+		notifyActionThink();
 	}
 	
 	/**
@@ -355,33 +369,47 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionMoveTo(ILocational loc)
+	public void setIntentionMoveTo(ILocational loc)
 	{
-		if (getIntention() == Intention.REST)
+		try
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
+			// Stop the follow mode (MOVE_TO is neither FOLLOW nor ATTACK).
+			stopFollow();
+			
+			if (getIntention() == Intention.REST)
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			// Set the Intention of this AbstractAI to MOVE_TO.
+			_intention = Intention.MOVE_TO;
+			
+			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast).
+			clientStopAutoAttack();
+			
+			// Abort the attack of the Creature and send Server->Client ActionFailed packet.
+			_actor.abortAttack();
+			
+			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast).
+			moveTo(loc.getX(), loc.getY(), loc.getZ());
 		}
-		
-		if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
+		finally
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isRemovedBy(Intention.MOVE_TO))
+			{
+				setNextAction(null);
+			}
 		}
-		
-		// Set the Intention of this AbstractAI to MOVE_TO
-		changeIntention(Intention.MOVE_TO, loc);
-		
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-		clientStopAutoAttack();
-		
-		// Abort the attack of the Creature and send Server->Client ActionFailed packet
-		_actor.abortAttack();
-		
-		// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast)
-		moveTo(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
 	/**
@@ -395,51 +423,62 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionFollow(Creature target)
+	public void setIntentionFollow(WorldObject target)
 	{
-		if (getIntention() == Intention.REST)
+		try
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
+			if (getIntention() == Intention.REST)
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			if (_actor.isMovementDisabled() || (_actor.getMoveSpeed() <= 0))
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			// Dead actors can't follow.
+			if (_actor.isDead())
+			{
+				clientActionFailed();
+				return;
+			}
+			
+			// Do not follow yourself.
+			if (_actor == target)
+			{
+				clientActionFailed();
+				return;
+			}
+			
+			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast).
+			clientStopAutoAttack();
+			
+			// Set the Intention of this AbstractAI to FOLLOW.
+			_intention = Intention.FOLLOW;
+			
+			// Create and Launch an AI Follow Task to execute every 1s.
+			startFollow(target.asCreature());
 		}
-		
-		if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
+		finally
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isRemovedBy(Intention.FOLLOW))
+			{
+				setNextAction(null);
+			}
 		}
-		
-		if (_actor.isMovementDisabled() || (_actor.getMoveSpeed() <= 0))
-		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
-		}
-		
-		// Dead actors can`t follow
-		if (_actor.isDead())
-		{
-			clientActionFailed();
-			return;
-		}
-		
-		// do not follow yourself
-		if (_actor == target)
-		{
-			clientActionFailed();
-			return;
-		}
-		
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-		clientStopAutoAttack();
-		
-		// Set the Intention of this AbstractAI to FOLLOW
-		changeIntention(Intention.FOLLOW, target);
-		
-		// Create and Launch an AI Follow Task to execute every 1s
-		startFollow(target);
 	}
 	
 	/**
@@ -453,44 +492,58 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionPickUp(WorldObject object)
+	public void setIntentionPickUp(WorldObject object)
 	{
-		if (getIntention() == Intention.REST)
+		try
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
+			// Stop the follow mode (PICK_UP is neither FOLLOW nor ATTACK).
+			stopFollow();
+			
+			if (getIntention() == Intention.REST)
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast).
+			clientStopAutoAttack();
+			
+			if (object.isItem() && (((Item) object).getItemLocation() != ItemLocation.VOID))
+			{
+				return;
+			}
+			
+			// Set the Intention of this AbstractAI to PICK_UP.
+			_intention = Intention.PICK_UP;
+			
+			// Set the AI pick up target.
+			setTarget(object);
+			
+			if ((object.getX() == 0) && (object.getY() == 0))
+			{
+				// LOGGER.warning("Object in coords 0,0 - using a temporary fix");
+				object.setXYZ(getActor().getX(), getActor().getY(), getActor().getZ() + 5);
+			}
+			
+			// Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast).
+			moveToPawn(object, 20);
 		}
-		
-		if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
+		finally
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isRemovedBy(Intention.PICK_UP))
+			{
+				setNextAction(null);
+			}
 		}
-		
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-		clientStopAutoAttack();
-		
-		if (object.isItem() && (((Item) object).getItemLocation() != ItemLocation.VOID))
-		{
-			return;
-		}
-		
-		// Set the Intention of this AbstractAI to PICK_UP
-		changeIntention(Intention.PICK_UP, object);
-		
-		// Set the AI pick up target
-		setTarget(object);
-		
-		if ((object.getX() == 0) && (object.getY() == 0))
-		{
-			// LOGGER.warning("Object in coords 0,0 - using a temporary fix");
-			object.setXYZ(getActor().getX(), getActor().getY(), getActor().getZ() + 5);
-		}
-		
-		// Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast)
-		moveToPawn(object, 20);
 	}
 	
 	/**
@@ -505,35 +558,49 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionInteract(WorldObject object)
+	public void setIntentionInteract(WorldObject object)
 	{
-		if (getIntention() == Intention.REST)
+		try
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
-		}
-		
-		if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
-		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-			clientActionFailed();
-			return;
-		}
-		
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-		clientStopAutoAttack();
-		
-		if (getIntention() != Intention.INTERACT)
-		{
-			// Set the Intention of this AbstractAI to INTERACT
-			changeIntention(Intention.INTERACT, object);
+			// Stop the follow mode (INTERACT is neither FOLLOW nor ATTACK).
+			stopFollow();
 			
-			// Set the AI interact target
-			setTarget(object);
+			if (getIntention() == Intention.REST)
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
 			
-			// Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast)
-			moveToPawn(object, 60);
+			if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
+			{
+				// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.
+				clientActionFailed();
+				return;
+			}
+			
+			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast).
+			clientStopAutoAttack();
+			
+			if (getIntention() != Intention.INTERACT)
+			{
+				// Set the Intention of this AbstractAI to INTERACT.
+				_intention = Intention.INTERACT;
+				
+				// Set the AI interact target.
+				setTarget(object);
+				
+				// Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast).
+				moveToPawn(object, 60);
+			}
+		}
+		finally
+		{
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isRemovedBy(Intention.INTERACT))
+			{
+				setNextAction(null);
+			}
 		}
 	}
 	
@@ -541,18 +608,36 @@ public class CreatureAI extends AbstractAI
 	 * Do nothing.
 	 */
 	@Override
-	public void onActionThink()
+	public void notifyActionThink()
 	{
-		// do nothing
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.THINK))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
 	 * Do nothing.
 	 */
 	@Override
-	protected void onActionAggression(Creature target, int aggro)
+	public void notifyActionAggression(WorldObject target, int aggro)
 	{
-		// do nothing
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.AGGRESSION))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -568,20 +653,31 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionBlocked(Creature attacker)
+	public void notifyActionBlocked()
 	{
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast).
 		_actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor))
 		{
 			AttackStanceTaskManager.getInstance().removeAttackStanceTask(_actor);
 		}
 		
-		// Stop Server AutoAttack also
+		// Stop Server AutoAttack also.
 		setAutoAttacking(false);
 		
-		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 		clientStopMoving(null);
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.BLOCKED))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -594,18 +690,21 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionRooted(Creature attacker)
+	public void notifyActionRooted()
 	{
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-		// _actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
-		// if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor))
-		// AttackStanceTaskManager.getInstance().removeAttackStanceTask(_actor);
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
 		
-		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 		clientStopMoving(null);
 		
-		// Launch actions corresponding to the Action onAttacked
-		onActionAttacked(attacker);
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.ROOTED))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -618,13 +717,21 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionConfused(Creature attacker)
+	public void notifyActionConfused()
 	{
-		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 		clientStopMoving(null);
 		
-		// Launch actions corresponding to the Action onAttacked
-		onActionAttacked(attacker);
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.CONFUSED))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -636,19 +743,36 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionMuted(Creature attacker)
+	public void notifyActionMuted()
 	{
-		// Break a cast and send Server->Client ActionFailed packet and a System Message to the Creature
-		onActionAttacked(attacker);
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.MUTED))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
 	 * Do nothing.
 	 */
 	@Override
-	protected void onActionEvaded(Creature attacker)
+	public void notifyActionEvaded(WorldObject attacker)
 	{
-		// do nothing
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.EVADED))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -660,10 +784,25 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionReadyToAct()
+	public void notifyActionReadyToAct()
 	{
-		// Launch actions corresponding to the Action Think
-		onActionThink();
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		// Skip if the actor is casting (matches the prior dispatcher gate).
+		if (!_actor.isCastingNow())
+		{
+			// Launch actions corresponding to the Action Think.
+			notifyActionThink();
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.READY_TO_ACT))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -676,42 +815,65 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionArrived()
+	public void notifyActionArrived()
 	{
-		getActor().revalidateZone(true);
-		
-		if (getActor().moveToNextRoutePoint())
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
 		{
 			return;
 		}
 		
-		clientStoppedMoving();
-		
-		// If the Intention was MOVE_TO, set the Intention to ACTIVE
-		if (getIntention() == Intention.MOVE_TO)
+		try
 		{
-			setIntention(Intention.ACTIVE);
-		}
-		
-		if (_actor.isNpc())
-		{
-			final Npc npc = _actor.asNpc();
-			WalkingManager.getInstance().onArrived(npc); // Walking Manager support
-			
-			// Notify to scripts
-			if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_MOVE_FINISHED, npc))
+			// Skip if the actor is casting (matches the prior dispatcher gate, e.g. from stopmove during cast).
+			if (_actor.isCastingNow())
 			{
-				if (_onNpcMoveFinished == null)
-				{
-					_onNpcMoveFinished = new OnNpcMoveFinished(npc);
-				}
+				return;
+			}
+			
+			getActor().revalidateZone(true);
+			
+			if (getActor().moveToNextRoutePoint())
+			{
+				return;
+			}
+			
+			clientStoppedMoving();
+			
+			// If the Intention was MOVE_TO, set the Intention to ACTIVE.
+			if (getIntention() == Intention.MOVE_TO)
+			{
+				setIntentionActive();
+			}
+			
+			if (_actor.isNpc())
+			{
+				final Npc npc = _actor.asNpc();
+				WalkingManager.getInstance().onArrived(npc); // Walking Manager support.
 				
-				EventDispatcher.getInstance().notifyEventAsync(_onNpcMoveFinished, npc);
+				// Notify to scripts
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_MOVE_FINISHED, npc))
+				{
+					if (_onNpcMoveFinished == null)
+					{
+						_onNpcMoveFinished = new OnNpcMoveFinished(npc);
+					}
+					
+					EventDispatcher.getInstance().notifyEventAsync(_onNpcMoveFinished, npc);
+				}
+			}
+			
+			// Launch actions corresponding to the Action Think.
+			notifyActionThink();
+		}
+		finally
+		{
+			final NextAction nextAction = getNextAction();
+			if ((nextAction != null) && nextAction.isTriggeredBy(Action.ARRIVED))
+			{
+				setNextAction(null);
+				nextAction.doAction();
 			}
 		}
-		
-		// Launch actions corresponding to the Action Think
-		onActionThink();
 	}
 	
 	/**
@@ -723,10 +885,25 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionArrivedRevalidate()
+	public void notifyActionArrivedRevalidate()
 	{
-		// Launch actions corresponding to the Action Think
-		onActionThink();
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		// Skip if the actor is not moving any more (matches the prior dispatcher gate).
+		if (_actor.isMoving())
+		{
+			// Launch actions corresponding to the Action Think.
+			notifyActionThink();
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.ARRIVED_REVALIDATE))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -740,19 +917,30 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionArrivedBlocked(Location location)
+	public void notifyActionArrivedBlocked(Location location)
 	{
-		// If the Intention was MOVE_TO, set the Intention to ACTIVE
-		if ((getIntention() == Intention.MOVE_TO) || (getIntention() == Intention.CAST))
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
 		{
-			setIntention(Intention.ACTIVE);
+			return;
 		}
 		
-		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+		// If the Intention was MOVE_TO, set the Intention to ACTIVE.
+		if ((getIntention() == Intention.MOVE_TO) || (getIntention() == Intention.CAST))
+		{
+			setIntentionActive();
+		}
+		
+		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 		clientStopMoving(location);
 		
-		// Launch actions corresponding to the Action Think
-		onActionThink();
+		// Launch actions corresponding to the Action Think.
+		notifyActionThink();
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.ARRIVED_BLOCKED))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -768,51 +956,65 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionForgetObject(WorldObject object)
+	public void notifyActionForgetObject(WorldObject object)
 	{
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		// Remove the object from the seen creatures list (matches the prior dispatcher side effect).
+		_actor.removeSeenCreature(object);
+		
 		final WorldObject target = getTarget();
 		
 		// Stop any casting pointing to this object.
 		getActor().abortCast(sc -> sc.getTarget() == object);
 		
-		// If the object was targeted and the Intention was INTERACT or PICK_UP, set the Intention to ACTIVE
+		// If the object was targeted and the Intention was INTERACT or PICK_UP, set the Intention to ACTIVE.
 		if (target == object)
 		{
 			setTarget(null);
 			
 			if (isFollowing())
 			{
-				// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+				// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 				clientStopMoving(null);
 				
-				// Stop an AI Follow Task
+				// Stop an AI Follow Task.
 				stopFollow();
 			}
 			
 			// Stop any intention that has target we want to forget.
 			if (getIntention() != Intention.MOVE_TO)
 			{
-				setIntention(Intention.ACTIVE);
+				setIntentionActive();
 			}
 		}
 		
-		// Check if the targeted object was the actor
+		// Check if the targeted object was the actor.
 		if (_actor == object)
 		{
-			// Cancel AI target
+			// Cancel AI target.
 			setTarget(null);
 			
-			// Init cast target
+			// Init cast target.
 			setCastTarget(null);
 			
-			// Stop an AI Follow Task
+			// Stop an AI Follow Task.
 			stopFollow();
 			
-			// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+			// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 			clientStopMoving(null);
 			
-			// Set the Intention of this AbstractAI to IDLE
-			changeIntention(Intention.IDLE);
+			// Set the Intention of this AbstractAI to IDLE.
+			_intention = Intention.IDLE;
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.FORGET_OBJECT))
+		{
+			nextAction.doAction();
 		}
 	}
 	
@@ -826,11 +1028,16 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionCancel()
+	public void notifyActionCancel()
 	{
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
 		_actor.abortCast();
 		
-		// Stop an AI Follow Task
+		// Stop an AI Follow Task.
 		stopFollow();
 		
 		if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor))
@@ -838,8 +1045,14 @@ public class CreatureAI extends AbstractAI
 			_actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
 		}
 		
-		// Launch actions corresponding to the Action Think
-		onActionThink();
+		// Launch actions corresponding to the Action Think.
+		notifyActionThink();
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.CANCEL))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
@@ -852,9 +1065,14 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionDeath()
+	public void notifyActionDeath()
 	{
-		// Stop an AI Tasks
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		// Stop an AI Tasks.
 		stopAITask();
 		
 		if (_actor.isNpc())
@@ -862,12 +1080,18 @@ public class CreatureAI extends AbstractAI
 			_actor.asNpc().setDisplayEffect(0);
 		}
 		
-		// Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast)
+		// Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast).
 		clientNotifyDead();
 		
 		if (!_actor.isPlayable() && !_actor.isFakePlayer())
 		{
 			_actor.setWalking();
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.DEATH))
+		{
+			nextAction.doAction();
 		}
 	}
 	
@@ -880,27 +1104,47 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onActionFakeDeath()
+	public void notifyActionFakeDeath()
 	{
-		// Stop an AI Follow Task
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		// Stop an AI Follow Task.
 		stopFollow();
 		
-		// Stop the actor movement and send Server->Client packet StopMove/StopRotation (broadcast)
+		// Stop the actor movement and send Server->Client packet StopMove/StopRotation (broadcast).
 		clientStopMoving(null);
 		
 		// Init AI
 		_intention = Intention.IDLE;
 		setTarget(null);
 		setCastTarget(null);
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.FAKE_DEATH))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	/**
 	 * Do nothing.
 	 */
 	@Override
-	protected void onActionFinishCasting()
+	public void notifyActionFinishCasting()
 	{
-		// do nothing
+		if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI())
+		{
+			return;
+		}
+		
+		final NextAction nextAction = getNextAction();
+		if ((nextAction != null) && nextAction.isTriggeredBy(Action.FINISH_CASTING))
+		{
+			nextAction.doAction();
+		}
 	}
 	
 	protected boolean maybeMoveToPosition(ILocational worldPosition, int offset)
@@ -935,7 +1179,7 @@ public class CreatureAI extends AbstractAI
 			
 			final double dx = worldPosition.getX() - x;
 			final double dy = worldPosition.getY() - y;
-			double dist = Math.hypot(dx, dy);
+			double dist = Math.sqrt((dx * dx) + (dy * dy));
 			
 			final double sin = dy / dist;
 			final double cos = dx / dist;
@@ -974,7 +1218,7 @@ public class CreatureAI extends AbstractAI
 	 */
 	protected boolean maybeMoveToPawn(WorldObject target, int offsetValue)
 	{
-		// Get the distance between the current position of the Creature and the target (x,y)
+		// Get the distance between the current position of the Creature and the target (x,y).
 		if (target == null)
 		{
 			// LOGGER.warning("maybeMoveToPawn: target == NULL!");
@@ -994,10 +1238,10 @@ public class CreatureAI extends AbstractAI
 		
 		if (!_actor.isInsideRadius2D(target, offsetWithCollision))
 		{
-			// Caller should be Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp
+			// Caller should be Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp.
 			if (isFollowing())
 			{
-				// allow larger hit range when the target is moving (check is run only once per second)
+				// Allow larger hit range when the target is moving (check is run only once per second).
 				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 100))
 				{
 					return true;
@@ -1009,11 +1253,11 @@ public class CreatureAI extends AbstractAI
 			
 			if (_actor.isMovementDisabled() || (_actor.getMoveSpeed() <= 0))
 			{
-				// If player is trying attack target but he cannot move to attack target
-				// change his intention to idle
+				// If player is trying attack target but he cannot move to attack target.
+				// Change his intention to idle.
 				if (_actor.getAI().getIntention() == Intention.ATTACK)
 				{
-					_actor.getAI().setIntention(Intention.IDLE);
+					_actor.getAI().setIntentionIdle();
 				}
 				
 				return true;
@@ -1031,7 +1275,7 @@ public class CreatureAI extends AbstractAI
 				}
 			}
 			
-			// If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
+			// If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player.
 			if (!_actor.isRunning() && !(this instanceof PlayerAI) && !(this instanceof SummonAI))
 			{
 				_actor.setRunning();
@@ -1055,7 +1299,7 @@ public class CreatureAI extends AbstractAI
 			}
 			else
 			{
-				// Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast)
+				// Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast).
 				moveToPawn(target, offset);
 			}
 			
@@ -1067,7 +1311,7 @@ public class CreatureAI extends AbstractAI
 			stopFollow();
 		}
 		
-		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
+		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast).
 		// clientStopMoving(null);
 		return false;
 	}
@@ -1093,7 +1337,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if ((target == null) || target.isDead())
 		{
-			setIntention(Intention.ACTIVE);
+			setIntentionActive();
 			return true;
 		}
 		
@@ -1121,7 +1365,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if (target == null)
 		{
-			setIntention(Intention.ACTIVE);
+			setIntentionActive();
 			return true;
 		}
 		
@@ -1133,7 +1377,7 @@ public class CreatureAI extends AbstractAI
 				{
 					if (!GeoEngine.getInstance().canMoveToTarget(_actor, target))
 					{
-						setIntention(Intention.ACTIVE);
+						setIntentionActive();
 						return true;
 					}
 				}
@@ -1141,7 +1385,7 @@ public class CreatureAI extends AbstractAI
 				{
 					if (!GeoEngine.getInstance().canSeeTarget(_actor, target))
 					{
-						setIntention(Intention.ACTIVE);
+						setIntentionActive();
 						return true;
 					}
 				}
@@ -1154,7 +1398,7 @@ public class CreatureAI extends AbstractAI
 					return false;
 				}
 				
-				setIntention(Intention.ACTIVE);
+				setIntentionActive();
 				return true;
 			}
 		}
@@ -1228,12 +1472,12 @@ public class CreatureAI extends AbstractAI
 				}
 			}
 			
-			// water movement analysis
+			// Water movement analysis.
 			if (_actor.isNpc())
 			{
 				switch (_actor.getId())
 				{
-					case 20314: // great white shark
+					case 20314: // Great White Shark
 					case 20849: // Light Worm
 					{
 						cannotMoveOnLand = true;
@@ -1247,7 +1491,7 @@ public class CreatureAI extends AbstractAI
 				}
 			}
 			
-			// skill analysis
+			// Skill analysis.
 			for (Skill sk : _actor.getAllSkills())
 			{
 				if (sk.isPassive())
@@ -1285,9 +1529,7 @@ public class CreatureAI extends AbstractAI
 				}
 				else if (sk.hasEffectType(EffectType.BLOCK_ACTIONS))
 				{
-					// hardcoding petrification until improvements are made to
-					// EffectTemplate... petrification is totally different for
-					// AI than paralyze
+					// Hardcoding petrification until improvements are made to EffectTemplate... petrification is totally different for AI than paralyze.
 					switch (sk.getId())
 					{
 						case 367:
@@ -1344,7 +1586,7 @@ public class CreatureAI extends AbstractAI
 				}
 			}
 			
-			// Because of missing skills, some mages/balanced cannot play like mages
+			// Because of missing skills, some mages/balanced cannot play like mages.
 			if (!hasLongRangeDamageSkills && isMage)
 			{
 				isBalanced = true;

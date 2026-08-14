@@ -16,17 +16,16 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.FlyType;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * This Blink effect switches the location of the caster and the target.<br>
@@ -58,7 +57,7 @@ public class BlinkSwap extends AbstractEffect
 		final Location effectedLoc = new Location(effected);
 		final Location effectorLoc = new Location(effector);
 		
-		effector.getAI().setIntention(Intention.IDLE);
+		effector.getAI().setIntentionIdle();
 		effector.broadcastPacket(new FlyToLocation(effector, effectedLoc, FlyType.DUMMY));
 		effector.abortAttack();
 		effector.abortCast();
@@ -66,7 +65,7 @@ public class BlinkSwap extends AbstractEffect
 		effector.broadcastPacket(new ValidateLocation(effector));
 		effector.revalidateZone(true);
 		
-		effected.getAI().setIntention(Intention.IDLE);
+		effected.getAI().setIntentionIdle();
 		effected.broadcastPacket(new FlyToLocation(effected, effectorLoc, FlyType.DUMMY));
 		effected.abortAttack();
 		effected.abortCast();

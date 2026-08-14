@@ -20,10 +20,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.enums.player.MacroUpdateType;
-import org.l2jmobius.gameserver.model.actor.holders.player.Macro;
-import org.l2jmobius.gameserver.model.actor.holders.player.MacroCmd;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MacroUpdateType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Macro;
+import org.l2jmobius.gameserver.entity.actor.holders.player.MacroCmd;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -44,11 +44,11 @@ public class SendMacroList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.MACRO_LIST.writeId(this, buffer);
 		buffer.writeByte(_updateType.getId());
-		buffer.writeInt(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0); // modified, created or deleted macro's id
+		buffer.writeInt((_updateType != MacroUpdateType.LIST) && (_macro != null) ? _macro.getId() : 0); // Modified, created or deleted macro's id.
 		buffer.writeByte(_count); // count of Macros
 		buffer.writeByte(_macro != null); // unknown
 		if ((_macro != null) && (_updateType != MacroUpdateType.DELETE))

@@ -30,6 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -39,20 +40,22 @@ import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.data.holders.MultisellListHolder;
 import org.l2jmobius.gameserver.data.holders.PreparedMultisellListHolder;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enchant.EnchantItemGroup;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.enums.SpecialItemType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enchant.EnchantItemGroup;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.enums.SpecialItemType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class MultisellData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(MultisellData.class.getName());
+	
+	private static final Pattern XML_FILE_PATTERN = Pattern.compile("\\d+\\.xml");
 	
 	public static final int PAGE_SIZE = 40;
 	
@@ -232,7 +235,7 @@ public class MultisellData implements IXmlReader
 	@Override
 	public boolean isValidXmlFile(File file)
 	{
-		return (file != null) && file.isFile() && file.getName().toLowerCase().matches("\\d+\\.xml");
+		return (file != null) && file.isFile() && XML_FILE_PATTERN.matcher(file.getName().toLowerCase()).matches();
 	}
 	
 	/**
@@ -306,7 +309,7 @@ public class MultisellData implements IXmlReader
 	 * @param holder the {@code ItemHolder} instance representing the item to check.
 	 * @return {@code true} if the item exists and meets the count requirements, {@code false} otherwise.
 	 */
-	private final boolean itemExists(ItemHolder holder)
+	private boolean itemExists(ItemHolder holder)
 	{
 		final SpecialItemType specialItem = SpecialItemType.getByClientId(holder.getId());
 		if (specialItem != null)
@@ -325,7 +328,7 @@ public class MultisellData implements IXmlReader
 	 */
 	public MultisellListHolder getMultisell(int id)
 	{
-		return _multisells.getOrDefault(id, null);
+		return _multisells.get(id);
 	}
 	
 	public static MultisellData getInstance()

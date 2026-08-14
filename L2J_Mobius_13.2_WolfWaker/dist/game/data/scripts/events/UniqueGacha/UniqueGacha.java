@@ -27,13 +27,13 @@ import java.util.logging.Level;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.UniqueGachaRank;
 import org.l2jmobius.gameserver.managers.events.UniqueGachaManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.UniqueGachaRank;
-import org.l2jmobius.gameserver.model.script.LongTimeEvent;
-import org.l2jmobius.gameserver.model.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.LongTimeEvent;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class UniqueGacha extends LongTimeEvent implements IXmlReader
 {
@@ -93,7 +93,7 @@ public class UniqueGacha extends LongTimeEvent implements IXmlReader
 					{
 						final StatSet itemSet = new StatSet(parseAttributes(itemNode));
 						final int itemId = itemSet.getInt("id");
-						final long count = Long.parseLong(itemSet.getString("count", "1").replaceAll("_", ""));
+						final long count = Long.parseLong(itemSet.getString("count", "1").replace("_", ""));
 						final int chance = parseDoubleWithoutPoint(itemSet.getString("chance"), "0", UniqueGachaManager.MINIMUM_CHANCE_AFTER_DOT);
 						if (chance == 1)
 						{
@@ -112,7 +112,7 @@ public class UniqueGacha extends LongTimeEvent implements IXmlReader
 				{
 					final StatSet gameSet = new StatSet(parseAttributes(gameNode));
 					final int gameCount = gameSet.getInt("gameCount");
-					final long count = Long.parseLong(gameSet.getString("costCount", "1").replaceAll("_", ""));
+					final long count = Long.parseLong(gameSet.getString("costCount", "1").replace("_", ""));
 					manager.addGameCost(gameCount, count);
 				});
 			});

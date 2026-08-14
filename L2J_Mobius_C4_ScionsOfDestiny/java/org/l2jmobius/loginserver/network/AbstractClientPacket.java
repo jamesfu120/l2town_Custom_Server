@@ -16,11 +16,15 @@
  */
 package org.l2jmobius.loginserver.network;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
  */
 public abstract class AbstractClientPacket implements Runnable
 {
+	private static final Logger LOGGER = Logger.getLogger(AbstractClientPacket.class.getName());
 	private final LoginClient _client;
 	private final byte[] _decrypt;
 	private int _off;
@@ -56,7 +60,7 @@ public abstract class AbstractClientPacket implements Runnable
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "readString: ", e);
 		}
 		
 		return result;

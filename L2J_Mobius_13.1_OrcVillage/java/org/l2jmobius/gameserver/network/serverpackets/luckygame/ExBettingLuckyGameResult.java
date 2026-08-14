@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.enums.LuckyGameItemType;
@@ -61,11 +61,11 @@ public class ExBettingLuckyGameResult extends ServerPacket
 		_type = type;
 		_rewards = rewards;
 		_ticketCount = ticketCount;
-		_size = (int) rewards.values().stream().mapToLong(i -> i.stream().count()).sum();
+		_size = rewards.values().stream().mapToInt(List::size).sum();
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_BETTING_LUCKY_GAME_RESULT.writeId(this, buffer);
 		buffer.writeInt(_result.getClientId());

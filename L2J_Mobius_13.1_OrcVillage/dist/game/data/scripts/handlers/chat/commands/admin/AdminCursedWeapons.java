@@ -24,14 +24,15 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.StringTokenizer;
 
+import org.l2jmobius.commons.util.StringUtil;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CursedWeapon;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.managers.CursedWeaponsManager;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.CursedWeapon;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -253,7 +254,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 						replyMSG.append("</td></tr>");
 						replyMSG.append("<tr><td>Kills:</td><td>");
 						replyMSG.append(cw.getPlayerPkKills());
-						replyMSG.append("/");
+						replyMSG.append('/');
 						replyMSG.append(cw.getNbKills());
 						replyMSG.append("</td></tr><tr><td>Time remaining:</td><td>");
 						replyMSG.append(cw.getTimeLeft() / 60000);
@@ -305,7 +306,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			try
 			{
 				String parameter = st.nextToken();
-				if (parameter.matches("[0-9]*"))
+				if (StringUtil.isNumeric(parameter))
 				{
 					id = Integer.parseInt(parameter);
 				}

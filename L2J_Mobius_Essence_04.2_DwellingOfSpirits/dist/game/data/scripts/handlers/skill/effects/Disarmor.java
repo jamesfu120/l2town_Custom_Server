@@ -16,20 +16,20 @@
  */
 package handlers.skill.effects;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.enums.BodyPart;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Disarm by inventory slot effect implementation. At end of effect, it re-equips that item.
@@ -67,7 +67,7 @@ public class Disarmor extends AbstractEffect
 		}
 		
 		final Player player = effected.asPlayer();
-		final List<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final Collection<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		if (!unequipped.isEmpty())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
@@ -80,7 +80,7 @@ public class Disarmor extends AbstractEffect
 			player.broadcastUserInfo();
 			
 			SystemMessage sm = null;
-			final Item unequippedItem = unequipped.get(0);
+			final Item unequippedItem = unequipped.iterator().next();
 			if (unequippedItem.isEnchanted())
 			{
 				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);

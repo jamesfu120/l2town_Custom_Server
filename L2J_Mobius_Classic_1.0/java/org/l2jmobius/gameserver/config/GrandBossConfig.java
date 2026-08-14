@@ -42,6 +42,8 @@ public class GrandBossConfig
 	public static int ORFEN_SPAWN_RANDOM;
 	public static int QUEEN_ANT_SPAWN_INTERVAL;
 	public static int QUEEN_ANT_SPAWN_RANDOM;
+	public static boolean DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS;
+	public static boolean DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS;
 	
 	public static void load()
 	{
@@ -56,5 +58,7 @@ public class GrandBossConfig
 		ORFEN_SPAWN_RANDOM = config.getInt("RandomOfOrfenSpawn", 20);
 		QUEEN_ANT_SPAWN_INTERVAL = config.getInt("IntervalOfQueenAntSpawn", 36);
 		QUEEN_ANT_SPAWN_RANDOM = config.getInt("RandomOfQueenAntSpawn", 17);
+		DISABLE_RAIDBOSS_HEAL_FROM_PLAYERS = config.getBoolean("DisableRaidBossHealFromPlayers", false);
+		DISABLE_RAIDBOSS_BUFF_FROM_PLAYERS = config.getBoolean("DisableRaidBossBuffFromPlayers", false);
 	}
 }

@@ -22,10 +22,10 @@ package org.l2jmobius.gameserver.network.serverpackets.collection;
 
 import java.util.Collection;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.holders.CollectionDataHolder;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -43,7 +43,7 @@ public class ExCollectionSummary extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_COLLECTION_SUMMARY.writeId(this, buffer);
 		buffer.writeInt(_collections.size());

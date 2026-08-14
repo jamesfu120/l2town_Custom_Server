@@ -20,15 +20,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillLearn;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillLearn;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -44,7 +44,7 @@ public class ExAcquireSkillInfo extends ServerPacket
 	private final long _spCost;
 	private final int _minLevel;
 	private final Set<ItemHolder> _itemReq;
-	private final List<Skill> _skillRem = new LinkedList<>();
+	private final List<Skill> _skillRem = new ArrayList<>();
 	
 	/**
 	 * Special constructor for Alternate Skill Learning system.<br>
@@ -72,7 +72,7 @@ public class ExAcquireSkillInfo extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_ACQUIRE_SKILL_INFO.writeId(this, buffer);
 		buffer.writeInt(_player.getReplacementSkill(_id));

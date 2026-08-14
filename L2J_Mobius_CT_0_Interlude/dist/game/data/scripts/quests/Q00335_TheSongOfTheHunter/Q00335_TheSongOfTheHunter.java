@@ -25,12 +25,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.enums.ChatType;
+import org.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * Adapted from FirstTeam Interlude
@@ -296,7 +297,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 			takeItems(player, i, -1);
 		}
 		
-		giveAdena(player, (3400 * (int) Math.pow(2, bloodCrystalLevel - 2)), true);
+		giveAdena(player, (3400 * (int) MathUtil.pow(2, bloodCrystalLevel - 2)), true);
 		return true;
 	}
 	
@@ -1037,7 +1038,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 		}
 		
 		int result = 0;
-		final int mval = (int) Math.pow(2, bits);
+		final int mval = (int) MathUtil.pow(2, bits);
 		for (int i = 0; i < m; ++i)
 		{
 			result <<= bits;
@@ -1064,7 +1065,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 	private static int[] unpackInt(int value, int bits)
 	{
 		final int m = 32 / bits;
-		final int mval = (int) Math.pow(2, bits);
+		final int mval = (int) MathUtil.pow(2, bits);
 		final int[] result = new int[m];
 		int a = value;
 		for (int i = m; i > 0; --i)

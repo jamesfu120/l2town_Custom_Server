@@ -20,11 +20,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.balok;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
 import org.l2jmobius.gameserver.managers.BattleWithBalokManager;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 public class BalrogWarShowRanking extends ServerPacket
 {
-	private final List<RankHolder> _ranking = new LinkedList<>();
+	private final List<RankHolder> _ranking = new ArrayList<>();
 	
 	public BalrogWarShowRanking()
 	{
@@ -48,7 +48,7 @@ public class BalrogWarShowRanking extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_BALROGWAR_SHOW_RANKING.writeId(this, buffer);
 		buffer.writeInt(_ranking.size());

@@ -23,11 +23,11 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -54,7 +54,7 @@ public class ExChooseInventoryAttributeItem extends ServerPacket
 		
 		_level = ElementalAttributeData.getInstance().getMaxElementLevel(_itemId);
 		
-		// Register only items that can be put an attribute stone/crystal
+		// Register only items that can be put an attribute stone/crystal.
 		for (Item item : player.getInventory().getItems())
 		{
 			if (ElementalAttributeData.getInstance().isElementableWithStone(item, stone.getId()))
@@ -65,7 +65,7 @@ public class ExChooseInventoryAttributeItem extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM.writeId(this, buffer);
 		buffer.writeInt(_itemId);

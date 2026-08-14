@@ -33,20 +33,20 @@ import org.l2jmobius.gameserver.data.holders.LimitShopRandomCraftReward;
 import org.l2jmobius.gameserver.data.xml.LimitShopClanData;
 import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
 import org.l2jmobius.gameserver.data.xml.LimitShopData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.SpecialItemType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.PrimeShopRequest;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.SpecialItemType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.enums.ExBrProductReplyType;
 import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExPurchaseLimitShopItemResult;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Mobius
@@ -333,7 +333,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId(), _product.getCount(), player, true);
 					if (_product.isAnnounce())
 					{
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
+						World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
 					}
 				}
 				else if ((chance < _product.getChance2()) || (_product.getProductionId3() == 0))
@@ -342,7 +342,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId2(), _product.getCount2(), player, true);
 					if (_product.isAnnounce2())
 					{
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
+						World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
 					}
 				}
 				else if ((chance < _product.getChance3()) || (_product.getProductionId4() == 0))
@@ -351,7 +351,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId3(), _product.getCount3(), player, true);
 					if (_product.isAnnounce3())
 					{
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
+						World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
 					}
 				}
 				else if ((chance < _product.getChance4()) || (_product.getProductionId5() == 0))
@@ -360,7 +360,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId4(), _product.getCount4(), player, true);
 					if (_product.isAnnounce4())
 					{
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
+						World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
 					}
 				}
 				else if (_product.getProductionId5() > 0)
@@ -369,7 +369,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId5(), _product.getCount5(), player, true);
 					if (_product.isAnnounce5())
 					{
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
+						World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
 					}
 				}
 			}
@@ -385,7 +385,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId(), _product.getCount(), player, true);
 					if (_product.isAnnounce())
 					{
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
+						World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
 					}
 				}
 			}
@@ -396,7 +396,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 			final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId(), _product.getCount() * _amount, player, true);
 			if (_product.isAnnounce())
 			{
-				Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
+				World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.SPECIAL_CREATION));
 			}
 		}
 		
@@ -410,13 +410,12 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 		{
 			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + _product.getProductionId(), 0) + _amount);
 		}
-		else if (_product.getAccountBuyLimit() > 0)
+		if (_product.getAccountBuyLimit() > 0)
 		{
 			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + _amount);
 		}
 		
 		player.sendPacket(new ExPurchaseLimitShopItemResult(true, _shopIndex, _productId, Math.max(remainingInfo - _amount, 0), rewards.values()));
-		player.sendItemList();
 		
 		// Remove request.
 		ThreadPool.schedule(() -> player.removeRequest(PrimeShopRequest.class), 1000);

@@ -20,27 +20,25 @@
  */
 package ai.bosses.Baium;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.enums.CategoryType;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MountType;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.MountType;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.SkillCaster;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.variables.NpcVariables;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.SkillCaster;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.variables.NpcVariables;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -48,6 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.MathUtil;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Baium AI.
@@ -83,10 +82,10 @@ public class Baium extends Script
 	
 	// Locations
 	private static final Location BAIUM_GIFT_LOC = new Location(115910, 17337, 10105);
-	private static final Location BAIUM_LOC = new Location(116033, 17447, 10107, 40188);
-	private static final Location TELEPORT_CUBIC_LOC = new Location(115017, 15549, 10090);
+	private static final Location LOCATION_BAIUM_SPAWN = new Location(116033, 17447, 10107, 40188);
+	private static final Location LOCATION_TELEPORT_CUBE = new Location(115017, 15549, 10090);
 	private static final Location TELEPORT_IN_LOC = new Location(114077, 15882, 10078);
-	private static final Location[] TELEPORT_OUT_LOC =
+	private static final Location[] TELEPORT_OUT_LOCATIONS =
 	{
 		new Location(108784, 16000, -4928),
 		new Location(113824, 10448, -5164),
@@ -127,7 +126,7 @@ public class Baium extends Script
 			}
 			case ALIVE:
 			{
-				addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
+				addSpawn(BAIUM_STONE, LOCATION_BAIUM_SPAWN, false, 0);
 				break;
 			}
 			case IN_FIGHT:
@@ -197,7 +196,7 @@ public class Baium extends Script
 			}
 			case "teleportOut":
 			{
-				final Location destination = TELEPORT_OUT_LOC[getRandom(TELEPORT_OUT_LOC.length)];
+				final Location destination = getRandomEntry(TELEPORT_OUT_LOCATIONS);
 				player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
 				break;
 			}
@@ -206,7 +205,7 @@ public class Baium extends Script
 				if (getStatus() == ALIVE)
 				{
 					setStatus(IN_FIGHT);
-					_baium = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
+					_baium = (GrandBoss) addSpawn(BAIUM, LOCATION_BAIUM_SPAWN, false, 0);
 					_baium.disableCoreAI(true);
 					_baium.setRandomWalking(false);
 					addBoss(_baium);
@@ -305,13 +304,10 @@ public class Baium extends Script
 				}
 				else
 				{
-					for (Player creature : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
+					final Player creature = World.getFirstVisibleObjectInRange(npc, Player.class, 2000, c -> ZONE.isInsideZone(c) && !c.isDead());
+					if (creature != null)
 					{
-						if (ZONE.isInsideZone(creature) && !creature.isDead())
-						{
-							addAttackPlayerDesire(npc, creature);
-							break;
-						}
+						addAttackPlayerDesire(npc, creature);
 					}
 				}
 				break;
@@ -321,13 +317,13 @@ public class Baium extends Script
 				if (npc != null)
 				{
 					final Attackable mob = npc.asAttackable();
-					final Creature mostHated = mob.getMostHated();
 					if ((_baium == null) || _baium.isDead())
 					{
 						mob.deleteMe();
 						break;
 					}
 					
+					final Creature mostHated = mob.getMostHated();
 					if ((mostHated != null) && mostHated.isPlayer() && ZONE.isInsideZone(mostHated))
 					{
 						if (mob.getTarget() != mostHated)
@@ -339,23 +335,17 @@ public class Baium extends Script
 					}
 					else
 					{
-						boolean found = false;
-						for (Playable creature : World.getInstance().getVisibleObjectsInRange(mob, Playable.class, 1000))
+						final Playable creature = World.getFirstVisibleObjectInRange(mob, Playable.class, 1000, c -> ZONE.isInsideZone(c) && !c.isDead());
+						if (creature != null)
 						{
-							if (ZONE.isInsideZone(creature) && !creature.isDead())
+							if (mob.getTarget() != creature)
 							{
-								if (mob.getTarget() != creature)
-								{
-									mob.clearAggroList();
-								}
-								
-								addAttackPlayerDesire(mob, creature);
-								found = true;
-								break;
+								mob.clearAggroList();
 							}
+							
+							addAttackPlayerDesire(mob, creature);
 						}
-						
-						if (!found)
+						else
 						{
 							if (mob.isInsideRadius3D(_baium, 40))
 							{
@@ -366,11 +356,11 @@ public class Baium extends Script
 								
 								mob.setRunning();
 								mob.addDamageHate(_baium, 0, 999);
-								mob.getAI().setIntention(Intention.ATTACK, _baium);
+								mob.getAI().setIntentionAttack(_baium);
 							}
 							else
 							{
-								mob.getAI().setIntention(Intention.FOLLOW, _baium);
+								mob.getAI().setIntentionFollow(_baium);
 							}
 						}
 					}
@@ -384,7 +374,7 @@ public class Baium extends Script
 				if ((npc != null) && ((_lastAttack + 1800000) < System.currentTimeMillis()))
 				{
 					notifyEvent("CLEAR_ZONE", null, null);
-					addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
+					addSpawn(BAIUM_STONE, LOCATION_BAIUM_SPAWN, false, 0);
 					setStatus(ALIVE);
 				}
 				else if (npc != null)
@@ -402,7 +392,7 @@ public class Baium extends Script
 			case "CLEAR_STATUS":
 			{
 				setStatus(ALIVE);
-				addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
+				addSpawn(BAIUM_STONE, LOCATION_BAIUM_SPAWN, false, 0);
 				break;
 			}
 			case "CLEAR_ZONE":
@@ -558,7 +548,7 @@ public class Baium extends Script
 		if (ZONE.isCharacterInZone(killer))
 		{
 			setStatus(DEAD);
-			addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
+			addSpawn(TELE_CUBE, LOCATION_TELEPORT_CUBE, false, 900000);
 			ZONE.broadcastPacket(new PlaySound("BS01_D"));
 			
 			final long baseIntervalMillis = GrandBossConfig.BAIUM_SPAWN_INTERVAL * 3600000;
@@ -617,7 +607,7 @@ public class Baium extends Script
 		startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
 		if (!ZONE.isCharacterInZone(npc) && (_baium != null))
 		{
-			_baium.teleToLocation(BAIUM_LOC);
+			_baium.teleToLocation(LOCATION_BAIUM_SPAWN);
 		}
 	}
 	

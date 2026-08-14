@@ -27,9 +27,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class PaybackManager
 {
@@ -148,17 +148,18 @@ public class PaybackManager
 	
 	public long getPlayerConsumedProgress(int objectID)
 	{
-		return _playerProgress.getOrDefault(objectID, null).getInt("CONSUMED_COINS");
+		final StatSet set = _playerProgress.get(objectID);
+		return set == null ? 0 : set.getInt("CONSUMED_COINS", 0);
 	}
 	
 	public void changePlayerConsumedProgress(int objectID, long newValue)
 	{
-		if (_playerProgress.getOrDefault(objectID, null) == null)
+		if (_playerProgress.get(objectID) == null)
 		{
 			return;
 		}
 		
-		final StatSet set = _playerProgress.getOrDefault(objectID, null);
+		final StatSet set = _playerProgress.get(objectID);
 		set.remove("CONSUMED_COINS");
 		set.set("CONSUMED_COINS", newValue);
 		_playerProgress.replace(objectID, set);
@@ -171,7 +172,7 @@ public class PaybackManager
 	
 	public void changeMissionProgress(int objectID, int missionID, int status)
 	{
-		if (_playerProgress.getOrDefault(objectID, null) == null)
+		if (_playerProgress.get(objectID) == null)
 		{
 			return;
 		}
@@ -189,9 +190,9 @@ public class PaybackManager
 	private String getStringVariable(StatSet progress)
 	{
 		final StringBuilder returnString = new StringBuilder();
-		returnString.append("MISSION_PROGRESS").append("=").append("[").append(progress.getString("MISSION_PROGRESS")).append("]");
-		returnString.append(":");
-		returnString.append("CONSUMED_COINS").append("=").append(progress.getLong("CONSUMED_COINS"));
+		returnString.append("MISSION_PROGRESS").append('=').append('[').append(progress.getString("MISSION_PROGRESS")).append(']');
+		returnString.append(':');
+		returnString.append("CONSUMED_COINS").append('=').append(progress.getLong("CONSUMED_COINS"));
 		return returnString.toString();
 	}
 	

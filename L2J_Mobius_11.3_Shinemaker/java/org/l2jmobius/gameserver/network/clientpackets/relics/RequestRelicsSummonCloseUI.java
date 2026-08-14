@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.relics;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.RelicSummonRequest;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.RelicSummonRequest;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**

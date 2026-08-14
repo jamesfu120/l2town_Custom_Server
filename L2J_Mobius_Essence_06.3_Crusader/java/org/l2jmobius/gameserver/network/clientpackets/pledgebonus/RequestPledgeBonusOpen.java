@@ -21,7 +21,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.pledgebonus;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusOpen;
 import org.l2jmobius.gameserver.network.serverpackets.pledgedonation.ExPledgeDonationInfo;

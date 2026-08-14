@@ -32,39 +32,41 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.UniqueGachaRank;
+import org.l2jmobius.gameserver.entity.item.holders.GachaItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.GachaItemTimeStampHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.GachaWarehouse;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.Containers;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
-import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.UniqueGachaRank;
-import org.l2jmobius.gameserver.model.item.holders.GachaItemHolder;
-import org.l2jmobius.gameserver.model.item.holders.GachaItemTimeStampHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.GachaWarehouse;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.script.Quest;
+import org.l2jmobius.gameserver.mechanics.events.Containers;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.gacha.UniqueGachaSidebarInfo;
+import org.l2jmobius.gameserver.util.StatSet;
 
 public class UniqueGachaManager
 {
+	private static final Logger LOGGER = Logger.getLogger(UniqueGachaManager.class.getName());
 	/**
 	 * @implNote 0.000001 MAXIMAL OF MINIMUM VALUE
 	 */
@@ -73,7 +75,7 @@ public class UniqueGachaManager
 	public static final String GACHA_PLAYER_VARIABLE = "GACHA_ROLL_COUNT";
 	public static final String GACHA_LOCK_PLAYER_VARIABLE = "UniqueGachaRoll";
 	
-	private static final LinkedList<GachaItemTimeStampHolder> EMPTY_LINKED_LIST = new LinkedList<>();
+	private static final List<GachaItemTimeStampHolder> EMPTY_LINKED_LIST = new ArrayList<>();
 	
 	private final Set<GachaItemHolder> _visibleItems = new HashSet<>();
 	private final Map<UniqueGachaRank, Set<GachaItemHolder>> _rewardItems = new HashMap<>();
@@ -81,7 +83,7 @@ public class UniqueGachaManager
 	private final Map<Integer, Long> _gameCosts = new HashMap<>();
 	
 	private final Map<Player, GachaWarehouse> _temporaryWarehouse = new HashMap<>();
-	private final Map<Integer, LinkedList<GachaItemTimeStampHolder>> _gachaHistory = new HashMap<>();
+	private final Map<Integer, List<GachaItemTimeStampHolder>> _gachaHistory = new HashMap<>();
 	
 	private boolean _isActive;
 	private long _activeUntilPeriod;
@@ -178,7 +180,7 @@ public class UniqueGachaManager
 		
 		if (isActive())
 		{
-			GachaWarehouse warehouse = _temporaryWarehouse.getOrDefault(player, null);
+			GachaWarehouse warehouse = _temporaryWarehouse.get(player);
 			if (warehouse == null)
 			{
 				warehouse = new GachaWarehouse(player);
@@ -198,7 +200,7 @@ public class UniqueGachaManager
 			return;
 		}
 		
-		GachaWarehouse warehouse = _temporaryWarehouse.getOrDefault(player, null);
+		final GachaWarehouse warehouse = _temporaryWarehouse.get(player);
 		if (warehouse != null)
 		{
 			warehouse.deleteMe();
@@ -276,12 +278,13 @@ public class UniqueGachaManager
 	
 	public Entry<List<GachaItemHolder>, Boolean> tryToRoll(Player player, int rollCount)
 	{
-		boolean rare = false;
-		final List<GachaItemHolder> rewards = new ArrayList<>();
 		if (!checkRequirements(player, rollCount))
 		{
 			return returnEmptyList();
 		}
+		
+		boolean rare = false;
+		final List<GachaItemHolder> rewards = new ArrayList<>();
 		
 		try
 		{
@@ -340,7 +343,7 @@ public class UniqueGachaManager
 			return false;
 		}
 		
-		final GachaWarehouse warehouse = _temporaryWarehouse.getOrDefault(player, null);
+		final GachaWarehouse warehouse = _temporaryWarehouse.get(player);
 		if (warehouse == null)
 		{
 			return false;
@@ -358,12 +361,12 @@ public class UniqueGachaManager
 	{
 		final String count = String.valueOf(roll);
 		final String timeStamp = String.valueOf(System.currentTimeMillis() / 1000L) + "0".repeat(3 - count.length()) + (count);
-		_gachaHistory.computeIfAbsent(player.getObjectId(), _ -> new LinkedList<>()).addLast(new GachaItemTimeStampHolder(item.getId(), item.getCount(), item.getEnchantLevel(), item.getRank(), Long.parseLong(timeStamp), false));
+		_gachaHistory.computeIfAbsent(player.getObjectId(), _ -> new ArrayList<>()).addLast(new GachaItemTimeStampHolder(item.getId(), item.getCount(), item.getEnchantLevel(), item.getRank(), Long.parseLong(timeStamp), false));
 	}
 	
 	private boolean addItemToTemporaryWarehouse(Player player, GachaItemHolder reward)
 	{
-		final GachaWarehouse warehouse = _temporaryWarehouse.getOrDefault(player, null);
+		final GachaWarehouse warehouse = _temporaryWarehouse.get(player);
 		if (warehouse == null)
 		{
 			return false;
@@ -400,7 +403,7 @@ public class UniqueGachaManager
 	
 	public boolean receiveItemsFromTemporaryWarehouse(Player player, List<ItemHolder> requestedItems)
 	{
-		final GachaWarehouse warehouse = _temporaryWarehouse.getOrDefault(player, null);
+		final GachaWarehouse warehouse = _temporaryWarehouse.get(player);
 		final PlayerInventory inventory = player.getInventory();
 		if ((warehouse == null) || (inventory == null))
 		{
@@ -440,7 +443,7 @@ public class UniqueGachaManager
 	
 	public Collection<Item> getTemporaryWarehouse(Player player)
 	{
-		final GachaWarehouse warehouse = _temporaryWarehouse.getOrDefault(player, null);
+		final GachaWarehouse warehouse = _temporaryWarehouse.get(player);
 		if (warehouse == null)
 		{
 			return Collections.emptyList();
@@ -536,7 +539,7 @@ public class UniqueGachaManager
 		return _gachaHistory.getOrDefault(player.getObjectId(), EMPTY_LINKED_LIST);
 	}
 	
-	private static void restoreGachaHistory(Map<Integer, LinkedList<GachaItemTimeStampHolder>> history)
+	private static void restoreGachaHistory(Map<Integer, List<GachaItemTimeStampHolder>> history)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement st = con.createStatement();
@@ -550,26 +553,26 @@ public class UniqueGachaManager
 				final int enchantLevel = rset.getInt("item_enchant");
 				final int itemRank = rset.getInt("item_rank");
 				final long receiveTime = rset.getLong("receive_time");
-				history.computeIfAbsent(characterId, _ -> new LinkedList<>()).addLast(new GachaItemTimeStampHolder(itemId, itemCount, enchantLevel, UniqueGachaRank.getRankByClientId(itemRank), receiveTime, true));
+				history.computeIfAbsent(characterId, _ -> new ArrayList<>()).addLast(new GachaItemTimeStampHolder(itemId, itemCount, enchantLevel, UniqueGachaRank.getRankByClientId(itemRank), receiveTime, true));
 			}
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "restoreGachaHistory: ", e);
 		}
 	}
 	
-	private static void storeGachaHistory(Map<Integer, LinkedList<GachaItemTimeStampHolder>> history)
+	private static void storeGachaHistory(Map<Integer, List<GachaItemTimeStampHolder>> history)
 	{
-		final Map<Integer, LinkedList<GachaItemTimeStampHolder>> map = new HashMap<>(history);
+		final Map<Integer, List<GachaItemTimeStampHolder>> map = new HashMap<>(history);
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `character_gacha_history`(`char_id`, `item_id`, `item_count`, `item_enchant`, `item_rank`, `receive_time`) VALUES(?, ?, ?, ?, ?, ?)"))
 		{
 			boolean containsUpdate = false;
-			for (Entry<Integer, LinkedList<GachaItemTimeStampHolder>> entry : map.entrySet())
+			for (Entry<Integer, List<GachaItemTimeStampHolder>> entry : map.entrySet())
 			{
 				final int charId = entry.getKey();
-				final LinkedList<GachaItemTimeStampHolder> list = new LinkedList<>(entry.getValue());
+				final List<GachaItemTimeStampHolder> list = new ArrayList<>(entry.getValue());
 				for (GachaItemTimeStampHolder item : list)
 				{
 					if (item.getStoredStatus())
@@ -595,7 +598,7 @@ public class UniqueGachaManager
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "storeGachaHistory: ", e);
 		}
 	}
 	

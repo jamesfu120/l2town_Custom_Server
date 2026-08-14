@@ -33,19 +33,19 @@ import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Event;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.script.Event;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.enums.SkillFinishType;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Gnacik
@@ -92,7 +92,7 @@ public class Race extends Event
 	// Skills (Frog by default)
 	private static int _skill = 6201;
 	
-	// We must keep second NPC spawn for radar
+	// We must keep second NPC spawn for radar.
 	private static int[] _randspawn = null;
 	
 	// @formatter:off
@@ -193,13 +193,13 @@ public class Race extends Event
 	@Override
 	public boolean eventStart(Player eventMaker)
 	{
-		// Don't start event if it is active
+		// Don't start event if it is active.
 		if (_isactive)
 		{
 			return false;
 		}
 		
-		// Check Custom Table - we use custom NPCs
+		// Check Custom Table - we use custom NPCs.
 		if (!GeneralConfig.CUSTOM_NPC_DATA)
 		{
 			LOGGER.info(getName() + ": Event can't be started, because custom npc table is disabled!");
@@ -218,8 +218,8 @@ public class Race extends Event
 		_npc = recordSpawn(START_NPC, 18429, 145861, -3090, 35000, false, 0);
 		
 		// Announce event start
-		Broadcast.toAllOnlinePlayers("* Race Event started! *");
-		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + REGISTER_TIME + " min before Race Start...");
+		World.broadcastToAllOnlinePlayers("* Race Event started! *");
+		World.broadcastToAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + REGISTER_TIME + " min before Race Start...");
 		
 		// Schedule Event end
 		_eventTask = ThreadPool.schedule(this::StartRace, REGISTER_TIME * 60 * 1000);
@@ -228,10 +228,10 @@ public class Race extends Event
 	
 	protected void StartRace()
 	{
-		// Abort race if no players signup
+		// Abort race if no players signup.
 		if (_players.isEmpty())
 		{
-			Broadcast.toAllOnlinePlayers("Race aborted, nobody signup.");
+			World.broadcastToAllOnlinePlayers("Race aborted, nobody signup.");
 			eventStop();
 			return;
 		}
@@ -240,7 +240,7 @@ public class Race extends Event
 		_isRaceStarted = true;
 		
 		// Announce
-		Broadcast.toAllOnlinePlayers("Race started!");
+		World.broadcastToAllOnlinePlayers("Race started!");
 		
 		// Get random Finish
 		final int location = getRandom(0, LOCATIONS.length - 1);
@@ -249,7 +249,7 @@ public class Race extends Event
 		// And spawn NPC
 		recordSpawn(STOP_NPC, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3], false, 0);
 		
-		// Transform players and send message
+		// Transform players and send message.
 		for (Player player : _players)
 		{
 			if ((player != null) && player.isOnline())
@@ -268,14 +268,14 @@ public class Race extends Event
 			}
 		}
 		
-		// Schedule timeup for Race
+		// Schedule timeup for Race.
 		_eventTask = ThreadPool.schedule(this::timeUp, RACE_TIME * 60 * 1000);
 	}
 	
 	@Override
 	public boolean eventStop()
 	{
-		// Don't stop inactive event
+		// Don't stop inactive event.
 		if (!_isactive)
 		{
 			return false;
@@ -285,7 +285,7 @@ public class Race extends Event
 		_isactive = false;
 		_isRaceStarted = false;
 		
-		// Cancel task if any
+		// Cancel task if any.
 		if (_eventTask != null)
 		{
 			_eventTask.cancel(true);
@@ -293,7 +293,7 @@ public class Race extends Event
 		}
 		
 		// Untransform players
-		// Teleport to event start point
+		// Teleport to event start point.
 		for (Player player : _players)
 		{
 			if ((player != null) && player.isOnline())
@@ -316,7 +316,7 @@ public class Race extends Event
 		_players.clear();
 		
 		// Announce event end
-		Broadcast.toAllOnlinePlayers("* Race Event finished *");
+		World.broadcastToAllOnlinePlayers("* Race Event finished *");
 		return true;
 	}
 	
@@ -399,11 +399,7 @@ public class Race extends Event
 		else if (event.equalsIgnoreCase("quit"))
 		{
 			player.untransform();
-			if (_players.contains(player))
-			{
-				_players.remove(player);
-			}
-			
+			_players.remove(player);
 			return "900103-quit.htm";
 		}
 		else if (event.equalsIgnoreCase("finish"))
@@ -490,7 +486,7 @@ public class Race extends Event
 	
 	protected void timeUp()
 	{
-		Broadcast.toAllOnlinePlayers("Time up, nobody wins!");
+		World.broadcastToAllOnlinePlayers("Time up, nobody wins!");
 		eventStop();
 	}
 	
@@ -498,7 +494,7 @@ public class Race extends Event
 	{
 		final int[] reward = REWARDS[getRandom(REWARDS.length - 1)];
 		player.addItem(ItemProcessType.REWARD, reward[0], reward[1], _npc, true);
-		Broadcast.toAllOnlinePlayers(player.getName() + " is a winner!");
+		World.broadcastToAllOnlinePlayers(player.getName() + " is a winner!");
 		eventStop();
 	}
 	

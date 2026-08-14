@@ -23,10 +23,9 @@ package org.l2jmobius.gameserver.network.serverpackets.subjugation;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.holders.player.PlayerPurgeHolder;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerPurgeHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -40,11 +39,11 @@ public class ExSubjugationList extends ServerPacket
 	
 	public ExSubjugationList(Map<Integer, PlayerPurgeHolder> playerHolder)
 	{
-		_playerHolder = playerHolder.entrySet().stream().filter(it -> it.getValue() != null).collect(Collectors.toList());
+		_playerHolder = playerHolder.entrySet().stream().filter(it -> it.getValue() != null).toList();
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_SUBJUGATION_LIST.writeId(this, buffer);
 		buffer.writeInt(_playerHolder.size());

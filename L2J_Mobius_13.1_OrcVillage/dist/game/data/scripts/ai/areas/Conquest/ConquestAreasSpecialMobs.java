@@ -25,15 +25,15 @@ import java.util.Set;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.zone.type.ConquestZone;
 import org.l2jmobius.gameserver.managers.ZoneManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import org.l2jmobius.gameserver.model.zone.type.ConquestZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -548,7 +548,7 @@ public final class ConquestAreasSpecialMobs extends Script
 			{
 				_asaCanSpawn = true;
 				ASA_SOUL_TREE_MINIONS.getGroups().forEach(SpawnGroup::despawnAll);
-				if (World.getInstance().getNpc(SOUL_TREE_ASA) != null)
+				if (World.getNpc(SOUL_TREE_ASA) != null)
 				{
 					CONQUEST_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SOUL_TREE_HAS_DISAPPEARED_FROM_ASA, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}
@@ -568,7 +568,7 @@ public final class ConquestAreasSpecialMobs extends Script
 			{
 				_animaCanSpawn = true;
 				ANIMA_SOUL_TREE_MINIONS.getGroups().forEach(SpawnGroup::despawnAll);
-				if (World.getInstance().getNpc(SOUL_TREE_ANIMA) != null)
+				if (World.getNpc(SOUL_TREE_ANIMA) != null)
 				{
 					CONQUEST_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SOUL_TREE_HAS_DISAPPEARED_FROM_ANIMA, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}
@@ -588,7 +588,7 @@ public final class ConquestAreasSpecialMobs extends Script
 			{
 				_noxCanSpawn = true;
 				NOX_SOUL_TREE_MINIONS.getGroups().forEach(SpawnGroup::despawnAll);
-				if (World.getInstance().getNpc(SOUL_TREE_NOX) != null)
+				if (World.getNpc(SOUL_TREE_NOX) != null)
 				{
 					CONQUEST_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SOUL_TREE_HAS_DISAPPEARED_FROM_NOX, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}
@@ -608,7 +608,7 @@ public final class ConquestAreasSpecialMobs extends Script
 			{
 				_vitaCanSpawn = true;
 				VITA_SOUL_TREE_MINIONS.getGroups().forEach(SpawnGroup::despawnAll);
-				if (World.getInstance().getNpc(SOUL_TREE_VITA) != null)
+				if (World.getNpc(SOUL_TREE_VITA) != null)
 				{
 					CONQUEST_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SOUL_TREE_HAS_DISAPPEARED_FROM_VITA, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}
@@ -628,7 +628,7 @@ public final class ConquestAreasSpecialMobs extends Script
 			{
 				_ignisCanSpawn = true;
 				IGNIS_SOUL_TREE_MINIONS.getGroups().forEach(SpawnGroup::despawnAll);
-				if (World.getInstance().getNpc(SOUL_TREE_IGNIS) != null)
+				if (World.getNpc(SOUL_TREE_IGNIS) != null)
 				{
 					CONQUEST_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SOUL_TREE_HAS_DISAPPEARED_FROM_IGNIS, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}

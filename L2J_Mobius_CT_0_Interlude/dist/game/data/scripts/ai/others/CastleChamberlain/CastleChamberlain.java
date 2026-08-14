@@ -27,28 +27,28 @@ import org.l2jmobius.gameserver.config.FeatureConfig;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.TeleportType;
+import org.l2jmobius.gameserver.entity.actor.instance.Door;
+import org.l2jmobius.gameserver.entity.actor.instance.Merchant;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.teleporter.TeleportHolder;
 import org.l2jmobius.gameserver.managers.CastleManorManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.TeleportType;
-import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.actor.instance.Merchant;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.Id;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.npc.OnNpcManorBypass;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
-import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Castle.CastleFunction;
-import org.l2jmobius.gameserver.model.siege.manor.SeedProduction;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.teleporter.TeleportHolder;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.Id;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.npc.OnNpcManorBypass;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.mechanics.siege.Castle;
+import org.l2jmobius.gameserver.mechanics.siege.Castle.CastleFunction;
+import org.l2jmobius.gameserver.mechanics.siege.manor.SeedProduction;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowCropInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowCropSetting;
@@ -143,7 +143,7 @@ public class CastleChamberlain extends Script
 		return packet;
 	}
 	
-	private final String funcConfirmHtml(Player player, Npc npc, Castle castle, int func, int level)
+	private String funcConfirmHtml(Player player, Npc npc, Castle castle, int func, int level)
 	{
 		if (isOwner(player, npc) && player.hasAccess(ClanAccess.CASTLE_MANAGE_FUNCTIONS))
 		{
@@ -196,7 +196,7 @@ public class CastleChamberlain extends Script
 		}
 	}
 	
-	private final int getFunctionFee(int func, int level)
+	private int getFunctionFee(int func, int level)
 	{
 		int fee = 0;
 		switch (func)
@@ -231,7 +231,7 @@ public class CastleChamberlain extends Script
 		return fee;
 	}
 	
-	private final long getFunctionRatio(int func)
+	private long getFunctionRatio(int func)
 	{
 		long ratio = 0;
 		switch (func)
@@ -266,7 +266,7 @@ public class CastleChamberlain extends Script
 		return ratio;
 	}
 	
-	private final int getDoorUpgradePrice(int type, int level)
+	private int getDoorUpgradePrice(int type, int level)
 	{
 		int price = 0;
 		switch (type)
@@ -356,7 +356,7 @@ public class CastleChamberlain extends Script
 		return price;
 	}
 	
-	private final String getSealOwner(int seal)
+	private String getSealOwner(int seal)
 	{
 		String result;
 		switch (SevenSigns.getInstance().getSealOwner(seal))
@@ -381,7 +381,7 @@ public class CastleChamberlain extends Script
 		return result;
 	}
 	
-	private final int getTaxLimit()
+	private int getTaxLimit()
 	{
 		final int taxLimit;
 		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
@@ -406,7 +406,7 @@ public class CastleChamberlain extends Script
 		return taxLimit;
 	}
 	
-	private final int getTrapUpgradePrice(int level)
+	private int getTrapUpgradePrice(int level)
 	{
 		int price = 0;
 		switch (level)
@@ -450,7 +450,7 @@ public class CastleChamberlain extends Script
 		return price;
 	}
 	
-	private final boolean isOwner(Player player, Npc npc)
+	private boolean isOwner(Player player, Npc npc)
 	{
 		return player.isGM() || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
 	}

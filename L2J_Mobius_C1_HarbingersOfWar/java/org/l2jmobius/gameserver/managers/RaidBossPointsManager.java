@@ -32,7 +32,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 
 /**
  * @author Kerberos, JIV
@@ -138,13 +138,7 @@ public class RaidBossPointsManager
 	
 	public int calculateRanking(int playerObjId)
 	{
-		final Map<Integer, Integer> rank = getRankList();
-		if (rank.containsKey(playerObjId))
-		{
-			return rank.get(playerObjId);
-		}
-		
-		return 0;
+		return getRankList().getOrDefault(playerObjId, 0);
 	}
 	
 	public Map<Integer, Integer> getRankList()
@@ -160,7 +154,7 @@ public class RaidBossPointsManager
 		}
 		
 		final List<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
-		list.sort(Comparator.comparing(Entry<Integer, Integer>::getValue).reversed());
+		list.sort(Comparator.comparingInt(Entry<Integer, Integer>::getValue).reversed());
 		int ranking = 1;
 		final Map<Integer, Integer> tmpRanking = new HashMap<>();
 		for (Entry<Integer, Integer> entry : list)

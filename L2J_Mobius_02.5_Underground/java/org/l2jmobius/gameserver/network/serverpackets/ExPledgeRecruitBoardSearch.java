@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.entry.PledgeRecruitInfo;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -41,14 +41,14 @@ public class ExPledgeRecruitBoardSearch extends ServerPacket
 	{
 		_clanList = clanList;
 		_currentPage = currentPage;
-		_totalNumberOfPage = (int) Math.ceil((double) _clanList.size() / CLAN_PER_PAGE);
+		_totalNumberOfPage = Math.ceilDiv(_clanList.size(), CLAN_PER_PAGE);
 		_startIndex = Math.max(0, (_currentPage - 1) * CLAN_PER_PAGE); // Ensure startIndex is non-negative.
 		_endIndex = Math.min(_startIndex + CLAN_PER_PAGE, _clanList.size()); // Ensure endIndex is within bounds.
 		_clanOnCurrentPage = _endIndex - _startIndex;
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PLEDGE_RECRUIT_BOARD_SEARCH.writeId(this, buffer);
 		buffer.writeInt(_currentPage);

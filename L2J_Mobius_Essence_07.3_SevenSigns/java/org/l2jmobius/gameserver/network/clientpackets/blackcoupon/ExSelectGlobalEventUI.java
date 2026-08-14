@@ -21,8 +21,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.blackcoupon;
 
 import org.l2jmobius.gameserver.data.xml.MultisellData;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.events.BlackCouponManager;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 public class ExSelectGlobalEventUI extends ClientPacket

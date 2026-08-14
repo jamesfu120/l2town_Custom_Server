@@ -22,7 +22,6 @@ package handlers.items;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -30,17 +29,17 @@ import java.util.Map.Entry;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.AutoPeelRequest;
+import org.l2jmobius.gameserver.entity.item.EtcItem;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ExtractableProduct;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.managers.DailyResetManager;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.AutoPeelRequest;
-import org.l2jmobius.gameserver.model.item.EtcItem;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ExtractableProduct;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -62,7 +61,6 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final Player player = playable.asPlayer();
 		final EtcItem etcitem = (EtcItem) item.getTemplate();
 		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
@@ -71,6 +69,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
+		final Player player = playable.asPlayer();
 		if (!player.isInventoryUnder80(false))
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_ITEM_OWNERSHIP_LIMIT_AND_YOU_CANNOT_TAKE_THE_ITEM_CHECK_ITEM_OWNERSHIP_TIME_LIMITS_FOR_THE_INVENTORY_PLEASE);
@@ -259,7 +258,7 @@ public class ExtractableItems implements IItemHandler
 			if (request.isProcessing())
 			{
 				request.setProcessing(false);
-				final List<ItemHolder> rewards = new LinkedList<>();
+				final List<ItemHolder> rewards = new ArrayList<>();
 				for (Entry<Item, Long> entry : extractedItems.entrySet())
 				{
 					rewards.add(new ItemHolder(entry.getKey().getId(), entry.getValue()));
@@ -274,7 +273,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		else // Fixes last auto peel not shown. No effect if auto peel window is closed.
 		{
-			final List<ItemHolder> rewards = new LinkedList<>();
+			final List<ItemHolder> rewards = new ArrayList<>();
 			for (Entry<Item, Long> entry : extractedItems.entrySet())
 			{
 				rewards.add(new ItemHolder(entry.getKey().getId(), entry.getValue()));
@@ -288,14 +287,7 @@ public class ExtractableItems implements IItemHandler
 	
 	private void addItem(Map<Item, Long> extractedItems, Item newItem, long count)
 	{
-		if (extractedItems.containsKey(newItem))
-		{
-			extractedItems.put(newItem, extractedItems.get(newItem) + count);
-		}
-		else
-		{
-			extractedItems.put(newItem, count);
-		}
+		extractedItems.merge(newItem, count, Long::sum);
 	}
 	
 	private void sendMessage(Player player, Item item, long count)

@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.characterstyle;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -40,7 +40,7 @@ public class ExCharacterStyleUpdateFavorite extends ServerPacket
 	}
 	
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_CHARACTER_STYLE_UPDATE_FAVORITE.writeId(this, buffer);
 		buffer.writeByte(_result);

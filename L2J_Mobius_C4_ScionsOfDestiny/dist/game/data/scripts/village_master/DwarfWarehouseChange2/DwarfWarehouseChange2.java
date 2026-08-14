@@ -17,10 +17,10 @@
 package village_master.DwarfWarehouseChange2;
 
 import org.l2jmobius.gameserver.data.enums.CategoryType;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Dwarf class transfer AI.
@@ -103,7 +103,7 @@ public class DwarfWarehouseChange2 extends Script
 				player.setPlayerClass(BOUNTY_HUNTER);
 				player.setBaseClass(BOUNTY_HUNTER);
 				
-				// SystemMessage and cast skill is done by setClassId
+				// SystemMessage and cast skill is done by setClassId.
 				player.broadcastUserInfo();
 				htmltext = "30511-11.htm"; // fnAfterClassChange11
 			}

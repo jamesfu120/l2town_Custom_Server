@@ -20,12 +20,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ai.Intention;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.MercTicketManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class RequestPetGetItem extends ClientPacket
@@ -53,7 +52,7 @@ public class RequestPetGetItem extends ClientPacket
 			return;
 		}
 		
-		final Item item = (Item) World.getInstance().findObject(_objectId);
+		final Item item = (Item) World.findObject(_objectId);
 		if (item == null)
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -80,6 +79,6 @@ public class RequestPetGetItem extends ClientPacket
 			return;
 		}
 		
-		pet.getAI().setIntention(Intention.PICK_UP, item);
+		pet.getAI().setIntentionPickUp(item);
 	}
 }

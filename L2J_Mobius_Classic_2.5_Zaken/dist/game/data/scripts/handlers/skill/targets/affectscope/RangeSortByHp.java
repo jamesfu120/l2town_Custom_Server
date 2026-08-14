@@ -21,21 +21,20 @@
 package handlers.skill.targets.affectscope;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
 import org.l2jmobius.gameserver.handler.AffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
 
 /**
  * Range sorted by lowest to highest hp percent affect scope implementation.
@@ -79,7 +78,7 @@ public class RangeSortByHp implements IAffectScopeHandler
 			return true;
 		};
 		
-		final List<Creature> result = World.getInstance().getVisibleObjectsInRange(target, Creature.class, affectRange, filter);
+		final List<Creature> result = World.getVisibleObjectsInRange(target, Creature.class, affectRange, filter);
 		
 		// Add object of origin since it is skipped in the getVisibleObjects method.
 		if (target.isCreature() && filter.test(target.asCreature()))
@@ -89,7 +88,7 @@ public class RangeSortByHp implements IAffectScopeHandler
 		
 		// Sort from lowest hp to highest hp.
 		final List<Creature> sortedList = new ArrayList<>(result);
-		Collections.sort(sortedList, Comparator.comparingInt(Creature::getCurrentHpPercent));
+		sortedList.sort(Comparator.comparingInt(Creature::getCurrentHpPercent));
 		
 		int count = 0;
 		final int limit = (affectLimit > 0) ? affectLimit : Integer.MAX_VALUE;

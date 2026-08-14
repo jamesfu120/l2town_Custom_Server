@@ -23,19 +23,19 @@ package org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.holders.EquipmentUpgradeHolder;
 import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemInfo;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.variables.ItemVariables;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.item.enchant.attribute.AttributeHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemInfo;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.ensoul.EnsoulOption;
+import org.l2jmobius.gameserver.mechanics.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.equipmentupgrade.ExUpgradeSystemResult;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Mobius
@@ -116,7 +116,7 @@ public class RequestUpgradeSystemResult extends ClientPacket
 		final Item addedItem = player.addItem(ItemProcessType.REWARD, upgradeHolder.getResultItemId(), 1, player, true);
 		if (upgradeHolder.isAnnounce())
 		{
-			Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, addedItem, ExItemAnnounce.UPGRADE));
+			World.broadcastToAllOnlinePlayers(new ExItemAnnounce(player, addedItem, ExItemAnnounce.UPGRADE));
 		}
 		
 		// Transfer item enchantments.

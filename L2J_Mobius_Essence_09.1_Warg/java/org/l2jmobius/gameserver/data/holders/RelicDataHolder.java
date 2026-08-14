@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.data.holders;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
 
 /**
  * @author CostyKiller

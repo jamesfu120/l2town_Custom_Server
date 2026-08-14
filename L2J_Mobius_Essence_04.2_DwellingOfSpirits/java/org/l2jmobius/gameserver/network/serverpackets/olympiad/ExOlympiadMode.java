@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.olympiad;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadMode;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadMode;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -38,10 +38,9 @@ public class ExOlympiadMode extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_OLYMPIAD_MODE.writeId(this, buffer);
 		buffer.writeByte(_mode.ordinal());
 	}
 }
-

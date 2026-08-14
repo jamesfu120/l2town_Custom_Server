@@ -31,7 +31,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -50,19 +49,19 @@ import org.l2jmobius.gameserver.data.holders.InstanceReenterTimeHolder;
 import org.l2jmobius.gameserver.data.holders.StringStringHolder;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.npc.MinionHolder;
-import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.instancezone.InstanceReenterType;
-import org.l2jmobius.gameserver.model.instancezone.InstanceRemoveBuffType;
-import org.l2jmobius.gameserver.model.instancezone.InstanceTeleportType;
-import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
-import org.l2jmobius.gameserver.model.instancezone.conditions.Condition;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.npc.MinionHolder;
+import org.l2jmobius.gameserver.entity.actor.templates.DoorTemplate;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceReenterType;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceRemoveBuffType;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceTeleportType;
+import org.l2jmobius.gameserver.entity.instancezone.InstanceTemplate;
+import org.l2jmobius.gameserver.entity.instancezone.conditions.Condition;
+import org.l2jmobius.gameserver.entity.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Instance manager.
@@ -77,7 +76,7 @@ public class InstanceManager implements IXmlReader
 	
 	// Client instance names
 	private final Map<Integer, String> _instanceNames = new HashMap<>();
-	private final List<StringStringHolder> _instanceTemplateNames = new LinkedList<>(); // Id, Name.
+	private final List<StringStringHolder> _instanceTemplateNames = new ArrayList<>(); // Id, Name.
 	
 	// Instance templates holder
 	private final Map<Integer, InstanceTemplate> _instanceTemplates = new ConcurrentHashMap<>();
@@ -100,17 +99,17 @@ public class InstanceManager implements IXmlReader
 	@Override
 	public void load()
 	{
-		// Load instance names
+		// Load instance names.
 		_instanceNames.clear();
 		parseDatapackFile("data/InstanceNames.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceNames.size() + " instance names.");
 		
-		// Load instance templates
+		// Load instance templates.
 		_instanceTemplates.clear();
 		parseDatapackDirectory("data/instances", true);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceTemplates.size() + " instance templates.");
 		
-		// Load player's reenter data
+		// Load player's reenter data.
 		_playerTimes.clear();
 		restoreInstanceTimes();
 		LOGGER.info(getClass().getSimpleName() + ": Loaded instance reenter times for " + _playerTimes.size() + " players.");
@@ -160,7 +159,7 @@ public class InstanceManager implements IXmlReader
 	 */
 	private void parseInstanceTemplate(Node instanceNode, File file)
 	{
-		// Parse "instance" node
+		// Parse "instance" node.
 		final int id = parseInteger(instanceNode.getAttributes(), "id");
 		if (_instanceTemplates.containsKey(id))
 		{
@@ -170,13 +169,13 @@ public class InstanceManager implements IXmlReader
 		
 		final InstanceTemplate template = new InstanceTemplate(new StatSet(parseAttributes(instanceNode)));
 		
-		// Update name if wasn't provided
+		// Update name if wasn't provided.
 		if (template.getName() == null)
 		{
 			template.setName(_instanceNames.get(id));
 		}
 		
-		// Parse "instance" node children
+		// Parse "instance" node children.
 		forEach(instanceNode, IXmlReader::isNode, innerNode ->
 		{
 			switch (innerNode.getNodeName())
@@ -401,16 +400,16 @@ public class InstanceManager implements IXmlReader
 								}
 							}
 							
-							// If none parameters found then set empty StatSet
+							// If none parameters found then set empty StatSet.
 							if (params == null)
 							{
 								params = StatSet.EMPTY_STATSET;
 							}
 							
-							// Now when everything is loaded register condition to template
+							// Now when everything is loaded register condition to template.
 							try
 							{
-								final Class<?> clazz = Class.forName("org.l2jmobius.gameserver.model.instancezone.conditions.Condition" + type);
+								final Class<?> clazz = Class.forName("org.l2jmobius.gameserver.entity.instancezone.conditions.Condition" + type);
 								final Constructor<?> constructor = clazz.getConstructor(InstanceTemplate.class, StatSet.class, boolean.class, boolean.class);
 								conditions.add((Condition) constructor.newInstance(template, params, onlyLeader, showMessageAndHtml));
 							}
@@ -556,11 +555,7 @@ public class InstanceManager implements IXmlReader
 	 */
 	public void register(Instance instance)
 	{
-		final int instanceId = instance.getId();
-		if (!_instanceWorlds.containsKey(instanceId))
-		{
-			_instanceWorlds.put(instanceId, instance);
-		}
+		_instanceWorlds.putIfAbsent(instance.getId(), instance);
 	}
 	
 	/**
@@ -606,7 +601,7 @@ public class InstanceManager implements IXmlReader
 		{
 			while (rs.next())
 			{
-				// Check if instance penalty passed
+				// Check if instance penalty passed.
 				final long time = rs.getLong("time");
 				if (time > System.currentTimeMillis())
 				{
@@ -633,7 +628,7 @@ public class InstanceManager implements IXmlReader
 	 */
 	public Map<Integer, Long> getAllInstanceTimes(Player player)
 	{
-		// When player don't have any instance penalty
+		// When player don't have any instance penalty.
 		final Map<Integer, Long> instanceTimes = _playerTimes.get(player.getObjectId());
 		if ((instanceTimes == null) || instanceTimes.isEmpty())
 		{
@@ -696,14 +691,14 @@ public class InstanceManager implements IXmlReader
 	 */
 	public long getInstanceTime(Player player, int id)
 	{
-		// Check if exists reenter data for player
+		// Check if exists reenter data for player.
 		final Map<Integer, Long> playerData = _playerTimes.get(player.getObjectId());
 		if ((playerData == null) || !playerData.containsKey(id))
 		{
 			return -1;
 		}
 		
-		// If reenter time is higher then current, delete it
+		// If reenter time is higher then current, delete it.
 		final long time = playerData.get(id);
 		if (time <= System.currentTimeMillis())
 		{

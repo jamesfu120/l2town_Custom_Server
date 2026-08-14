@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.enums;
 
 import java.util.function.Function;
 
-import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Creature;
 
 /**
  * @author UnAfraid

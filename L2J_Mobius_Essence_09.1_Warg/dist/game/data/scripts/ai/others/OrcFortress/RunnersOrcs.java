@@ -23,12 +23,11 @@ package ai.others.OrcFortress;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * @author Serenitty
@@ -82,13 +81,13 @@ public class RunnersOrcs extends Script
 	@Override
 	public void onSpawn(Npc npc)
 	{
-		World.getInstance().forEachVisibleObject(npc, Npc.class, flag ->
+		World.forEachVisibleObject(npc, Npc.class, flag ->
 		{
 			if ((flag.getId() == ORC_FORTRESS_FLAG))
 			{
 				npc.setRunning();
 				npc.asAttackable().addDamageHate(flag, 0, 999999);
-				npc.getAI().setIntention(Intention.ATTACK, flag);
+				npc.getAI().setIntentionAttack(flag);
 			}
 		});
 	}
@@ -98,11 +97,11 @@ public class RunnersOrcs extends Script
 	{
 		if (creature.isPlayer())
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 800, players ->
+			World.forEachVisibleObjectInRange(npc, Player.class, 800, players ->
 			{
 				npc.setRunning();
 				npc.asAttackable().addDamageHate(players, 0, 999999);
-				npc.getAI().setIntention(Intention.ATTACK, players);
+				npc.getAI().setIntentionAttack(players);
 			});
 		}
 	}

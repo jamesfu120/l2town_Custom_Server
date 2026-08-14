@@ -23,18 +23,18 @@ package handlers.skill.effects;
 import java.util.EnumSet;
 
 import org.l2jmobius.gameserver.data.sql.CostumeTable;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.costumes.Costume;
-import org.l2jmobius.gameserver.model.costumes.CostumeGrade;
-import org.l2jmobius.gameserver.model.costumes.Costumes;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.costumes.Costume;
+import org.l2jmobius.gameserver.mechanics.costumes.CostumeGrade;
+import org.l2jmobius.gameserver.mechanics.costumes.Costumes;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.costume.ExCostumeUseItem;
 import org.l2jmobius.gameserver.network.serverpackets.costume.ExSendCostumeList;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author GolbergSoft, Mobius, Liamxroy

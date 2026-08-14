@@ -24,12 +24,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.TemplateChanceHolder;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.TemplateChanceHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Transformation type effect, which disables attack or use of skills.

@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.ClanAccess;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.ClanAccess;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class RequestGiveNickName extends ClientPacket
@@ -46,7 +46,7 @@ public class RequestGiveNickName extends ClientPacket
 			return;
 		}
 		
-		// Noblesse can bestow a title to themselves
+		// Noblesse can bestow a title to themselves.
 		if ((player.getNobleLevel() > 0) && _target.equalsIgnoreCase(player.getName()))
 		{
 			player.setTitle(_title);
@@ -74,7 +74,7 @@ public class RequestGiveNickName extends ClientPacket
 				final Player member = member1.getPlayer();
 				if (member != null)
 				{
-					// is target from the same clan?
+					// Is target from the same clan?
 					member.setTitle(_title);
 					member.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
 					member.broadcastTitleInfo();

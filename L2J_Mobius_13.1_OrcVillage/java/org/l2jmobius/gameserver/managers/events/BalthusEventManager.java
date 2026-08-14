@@ -34,21 +34,20 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
 import org.l2jmobius.gameserver.managers.MailManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.MailType;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.balthusevent.ExBalthusEvent;
 import org.l2jmobius.gameserver.network.serverpackets.balthusevent.ExBalthusEventJackpotUser;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Index
@@ -247,8 +246,8 @@ public class BalthusEventManager
 			if (_winner != null)
 			{
 				LOGGER.info(getClass().getSimpleName() + ": New winner for " + _currState + " of Balthus Event is " + _winner.getName() + " - " + _winner.getObjectId() + ". Player win " + ItemData.getInstance().getTemplate(_rewardItem.getId()).getName() + " - " + _rewardItem.getId() + " count: " + _rewardItem.getCount() + ".");
-				Broadcast.toAllOnlinePlayers(new ExBalthusEventJackpotUser());
-				Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S2_FROM_THE_FESTIVAL_FAIRY).addPcName(_winner).addItemName(_rewardItem.getId()));
+				World.broadcastToAllOnlinePlayers(new ExBalthusEventJackpotUser());
+				World.broadcastToAllOnlinePlayers(new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S2_FROM_THE_FESTIVAL_FAIRY).addPcName(_winner).addItemName(_rewardItem.getId()));
 				_isRunning = true;
 				sendConsolationItemsToAll();
 				sendRewardToPlayer(_winner);
@@ -268,7 +267,7 @@ public class BalthusEventManager
 			resetCurrentStage();
 		}
 		
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getPlayers())
 		{
 			player.sendPacket(new ExBalthusEvent(player));
 		}

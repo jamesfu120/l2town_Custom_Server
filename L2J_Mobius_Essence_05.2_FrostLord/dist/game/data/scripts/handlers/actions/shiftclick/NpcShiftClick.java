@@ -26,18 +26,18 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.config.NpcConfig;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.InstanceType;
+import org.l2jmobius.gameserver.entity.residences.ClanHall;
+import org.l2jmobius.gameserver.entity.spawns.NpcSpawnTemplate;
+import org.l2jmobius.gameserver.entity.spawns.Spawn;
 import org.l2jmobius.gameserver.handler.IActionShiftHandler;
 import org.l2jmobius.gameserver.managers.ScriptManager;
 import org.l2jmobius.gameserver.managers.WalkingManager;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.model.actor.enums.creature.InstanceType;
-import org.l2jmobius.gameserver.model.residences.ClanHall;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import handlers.bypass.npc.NpcViewMod;
@@ -47,10 +47,10 @@ public class NpcShiftClick implements IActionShiftHandler
 	@Override
 	public boolean onAction(Player player, WorldObject target, boolean interact)
 	{
-		// Check if the Player is a GM
+		// Check if the Player is a GM.
 		if (player.isGM())
 		{
-			// Set the target of the Player player
+			// Set the target of the Player player.
 			player.setTarget(target);
 			
 			final Npc npc = target.asNpc();
@@ -121,8 +121,8 @@ public class NpcShiftClick implements IActionShiftHandler
 				{
 					final String fileName = template.getSpawnTemplate().getFile().getAbsolutePath().substring(2).replace('\\', '/');
 					html.replace("%spawnfile%", fileName.replace("data/spawns/", ""));
-					html.replace("%spawnname%", String.valueOf(template.getSpawnTemplate().getName())); // used String.valueOf because it can be null
-					html.replace("%spawngroup%", String.valueOf(template.getGroup().getName())); // used String.valueOf because it can be null
+					html.replace("%spawnname%", String.valueOf(template.getSpawnTemplate().getName())); // Used String.valueOf because it can be null.
+					html.replace("%spawngroup%", String.valueOf(template.getGroup().getName())); // Used String.valueOf because it can be null.
 					if (template.getSpawnTemplate().getAI() != null)
 					{
 						final Quest script = ScriptManager.getInstance().getScript(template.getSpawnTemplate().getAI());

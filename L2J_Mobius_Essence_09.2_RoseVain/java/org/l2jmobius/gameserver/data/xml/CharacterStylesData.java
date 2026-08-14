@@ -36,9 +36,9 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.enums.CharacterStyleCategoryType;
 import org.l2jmobius.gameserver.data.holders.CharacterStyleDataHolder;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.type.WeaponType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.type.WeaponType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 
 /**
  * @author Brado
@@ -154,7 +154,7 @@ public class CharacterStylesData implements IXmlReader
 		for (CharacterStyleCategoryType styleType : CharacterStyleCategoryType.values())
 		{
 			final List<CharacterStyleDataHolder> list = STYLES.get(styleType);
-			if (list.size() > 0)
+			if (!list.isEmpty())
 			{
 				if (styleType == CharacterStyleCategoryType.APPEARANCE_WEAPON)
 				{
@@ -179,20 +179,12 @@ public class CharacterStylesData implements IXmlReader
 	
 	public int getWeaponStyleByStyleId(int styleId)
 	{
-		if (_cachedWeaponMap.containsKey(styleId))
-		{
-			return _cachedWeaponMap.get(styleId);
-		}
-		return 0;
+		return _cachedWeaponMap.getOrDefault(styleId, 0);
 	}
 	
 	public SkillHolder getKillEffectStyleByStyleId(int styleId)
 	{
-		if (_cachedKillEffectMap.containsKey(styleId))
-		{
-			return _cachedKillEffectMap.get(styleId);
-		}
-		return null;
+		return _cachedKillEffectMap.get(styleId);
 	}
 	
 	public List<CharacterStyleDataHolder> getStylesByCategory(CharacterStyleCategoryType category)

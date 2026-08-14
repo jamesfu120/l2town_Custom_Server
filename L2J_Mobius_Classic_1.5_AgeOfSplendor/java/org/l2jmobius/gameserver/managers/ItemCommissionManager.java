@@ -28,8 +28,8 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
@@ -40,16 +40,16 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.CommissionManager;
-import org.l2jmobius.gameserver.model.commission.CommissionItem;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.CommissionManager;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemLocation;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.itemcontainer.Mail;
+import org.l2jmobius.gameserver.mechanics.commission.CommissionItem;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.MailType;
 import org.l2jmobius.gameserver.network.holders.MailMessage;
@@ -147,7 +147,7 @@ public class ItemCommissionManager
 	 */
 	public void showAuctions(Player player, Predicate<ItemTemplate> filter)
 	{
-		final List<CommissionItem> commissionItems = new LinkedList<>();
+		final List<CommissionItem> commissionItems = new ArrayList<>();
 		for (CommissionItem item : _commissionItems.values())
 		{
 			if (filter.test(item.getItemInfo().getItem()))
@@ -184,7 +184,7 @@ public class ItemCommissionManager
 	 */
 	public void showPlayerAuctions(Player player)
 	{
-		final List<CommissionItem> commissionItems = new LinkedList<>();
+		final List<CommissionItem> commissionItems = new ArrayList<>();
 		for (CommissionItem c : _commissionItems.values())
 		{
 			if (c.getItemInstance().getOwnerId() == player.getObjectId())

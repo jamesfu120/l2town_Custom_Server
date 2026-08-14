@@ -21,11 +21,13 @@
 package handlers.chat.commands.voiced;
 
 import org.l2jmobius.gameserver.config.custom.OfflineTradeConfig;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 
 /**
  * @author Mobius
@@ -34,7 +36,9 @@ public class Offline implements IVoicedCommandHandler
 {
 	private static final String[] VOICED_COMMANDS =
 	{
-		"offline"
+		"offline",
+		"offlinetrade",
+		"offline_trade"
 	};
 	
 	@Override
@@ -49,13 +53,22 @@ public class Offline implements IVoicedCommandHandler
 				return false;
 			}
 			
-			if ((player.getInstanceId() > 0) || player.isInVehicle() || !player.canLogout())
+			if (player.isInInstance() || player.isInVehicle() || !player.canLogout())
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return false;
 			}
 			
-			player.sendPacket(new ConfirmDlg(SystemMessageId.QUIT_GAME_DO_YOU_WANT_TO_CONTINUE));
+			// Bellow code came from non-existent in C1 DlgAnswer client packet.
+			// Proceed with no confirmation.
+			
+			// Remove player from boss zone.
+			player.removeFromBossZone();
+			
+			if (!OfflineTraderTable.getInstance().enteredOfflineMode(player))
+			{
+				Disconnection.of(player.getClient(), player).storeAndDeleteWith(LeaveWorld.STATIC_PACKET);
+			}
 		}
 		
 		return true;

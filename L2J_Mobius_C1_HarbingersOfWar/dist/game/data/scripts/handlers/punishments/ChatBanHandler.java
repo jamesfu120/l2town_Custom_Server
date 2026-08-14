@@ -17,11 +17,11 @@
 package handlers.punishments;
 
 import org.l2jmobius.gameserver.LoginServerThread;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IPunishmentHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
-import org.l2jmobius.gameserver.model.punishment.PunishmentType;
+import org.l2jmobius.gameserver.mechanics.punishment.PunishmentTask;
+import org.l2jmobius.gameserver.mechanics.punishment.PunishmentType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -39,7 +39,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getPlayer(objectId);
 				if (player != null)
 				{
 					applyToPlayer(task, player);
@@ -63,7 +63,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -75,7 +75,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case HWID:
 			{
 				final String hwid = String.valueOf(task.getKey());
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					final GameClient client = player.getClient();
 					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
@@ -96,7 +96,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getPlayer(objectId);
 				if (player != null)
 				{
 					removeFromPlayer(player);
@@ -120,7 +120,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -132,7 +132,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case HWID:
 			{
 				final String hwid = String.valueOf(task.getKey());
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					final GameClient client = player.getClient();
 					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))

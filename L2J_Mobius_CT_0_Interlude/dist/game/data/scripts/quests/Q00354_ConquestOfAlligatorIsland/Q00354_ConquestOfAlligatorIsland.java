@@ -23,12 +23,12 @@ package quests.Q00354_ConquestOfAlligatorIsland;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 public class Q00354_ConquestOfAlligatorIsland extends Quest
 {
@@ -157,9 +157,10 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 		if (qs != null)
 		{
 			final int npcId = npc.getId();
-			if (MOB1.containsKey(npcId))
+			final Double mob1Chance = MOB1.get(npcId);
+			if (mob1Chance != null)
 			{
-				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
+				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, 1, 0, mob1Chance, true);
 			}
 			else
 			{

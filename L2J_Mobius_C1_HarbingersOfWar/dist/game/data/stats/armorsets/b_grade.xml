@@ -8,6 +8,9 @@
 		<gloves id="5710" /> <!-- Zubei's Gauntlets - Heavy -->
 		<feet id="5726" /> <!-- Zubei's Boots - Heavy -->
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<!-- Zubei's Heavy Set: P. Def. +5.26%, HP +294.49. -->
+		<mul stat="pDef" val="1.0526" />
+		<add stat="maxHp" val="294.49" />
 	</set>
 	<set id="26">
 		<chest id="2376" /> <!-- Avadon Breastplate -->
@@ -17,6 +20,9 @@
 		<feet id="5730" /> <!-- Avadon Boots - Heavy -->
 		<shield id="673" /> <!-- Avadon Shield -->
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<!-- Avadon Heavy Set: HP +294.49, shield defense rate +24% with shield. -->
+		<add stat="maxHp" val="294.49" />
+		<mul stat="rShld" val="1.24" shield="true" />
 	</set>
 	<set id="27">
 		<chest id="2384" /> <!-- Zubei's Leather Shirt -->
@@ -25,6 +31,8 @@
 		<gloves id="5711" /> <!-- Zubei's Gauntlets - Light -->
 		<feet id="5727" /> <!-- Zubei's Boots - Light -->
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<!-- Zubei's Light Set: Evasion +4. -->
+		<add stat="rEvas" val="4" />
 	</set>
 	<set id="28">
 		<chest id="2390" /> <!-- Avadon Leather Armor -->
@@ -32,6 +40,9 @@
 		<gloves id="5715" /> <!-- Avadon Gloves - Light -->
 		<feet id="5731" /> <!-- Avadon Boots - Light -->
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<!-- Avadon Light Set: M. Def. +5.25%, weight capacity +5795. -->
+		<mul stat="mDef" val="1.0525" />
+		<add stat="weightPenalty" val="5795" />
 	</set>
 	<set id="29">
 		<chest id="2397" /> <!-- Tunic of Zubei -->
@@ -40,6 +51,9 @@
 		<gloves id="5712" /> <!-- Zubei's Gauntlets - Robe -->
 		<feet id="5728" /> <!-- Zubei's Boots - Robe -->
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<!-- Zubei's Robe Set: M. Atk. +10.25%, MP Regeneration -5%. -->
+		<mul stat="mAtk" val="1.1025" />
+		<mul stat="regMp" val="0.95" />
 	</set>
 	<set id="30">
 		<chest id="2406" /> <!-- Avadon Robe -->
@@ -47,6 +61,9 @@
 		<gloves id="5716" /> <!-- Avadon Gloves - Robe -->
 		<feet id="5732" /> <!-- Avadon Boots - Robe -->
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<!-- Avadon Robe Set: P. Def. +5.26%, Casting Spd. +15%. -->
+		<mul stat="pDef" val="1.0526" />
+		<mul stat="mAtkSpd" val="1.15" />
 	</set>
 	<set id="32">
 		<chest id="358" /> <!-- Blue Wolf Breastplate -->
@@ -58,6 +75,9 @@
 		<str val="3" />
 		<con val="-1" />
 		<dex val="-2" />
+		<!-- Blue Wolf Heavy Set: Speed +7, HP Regeneration +5.26%, STR +3, CON -1, DEX -2. -->
+		<add stat="runSpd" val="7" />
+		<mul stat="regHp" val="1.0526" />
 	</set>
 	<set id="33">
 		<chest id="2381" /> <!-- Doom Plate Armor -->
@@ -68,6 +88,10 @@
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
 		<str val="-3" />
 		<con val="3" />
+		<!-- Doom Heavy Set: HP +320, Breath +200, shield defense rate +24% with shield, STR -3, CON +3. -->
+		<add stat="maxHp" val="320" />
+		<add stat="breath" val="200" />
+		<mul stat="rShld" val="1.24" shield="true" />
 	</set>
 	<set id="34">
 		<chest id="2391" /> <!-- Blue Wolf Leather Armor -->
@@ -78,6 +102,9 @@
 		<int val="-2" />
 		<men val="3" />
 		<wit val="-1" />
+		<!-- Blue Wolf Light Set: P. Def. +5.26%, Casting Spd. +15%, INT -2, MEN +3, WIT -1. -->
+		<mul stat="pDef" val="1.0526" />
+		<mul stat="mAtkSpd" val="1.15" />
 	</set>
 	<set id="35">
 		<chest id="2392" /> <!-- Leather Armor of Doom -->
@@ -85,9 +112,14 @@
 		<gloves id="5723" /> <!-- Doom Gloves - Light -->
 		<feet id="5739" /> <!-- Doom Boots - Light -->
 		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill id="3527" level="1" /> <!-- Doom Light Armor Set: poison resistance trait -->
 		<str val="-1" />
 		<con val="-2" />
 		<dex val="3" />
+		<!-- Doom Light Set: Breath +200, P. Atk. +2.7%, MP Regeneration +2.5%, +20 poison resistance trait, STR -1, CON -2, DEX +3. -->
+		<add stat="breath" val="200" />
+		<mul stat="pAtk" val="1.027" />
+		<mul stat="regMp" val="1.025" />
 	</set>
 	<set id="36">
 		<chest id="2398" /> <!-- Blue Wolf Tunic -->
@@ -99,6 +131,9 @@
 		<int val="-2" />
 		<men val="-1" />
 		<wit val="3" />
+		<!-- Blue Wolf Robe Set: MP +206, MP Regeneration +5.24%, INT -2, MEN -1, WIT +3. -->
+		<add stat="maxMp" val="206" />
+		<mul stat="regMp" val="1.0524" />
 	</set>
 	<set id="37">
 		<chest id="2399" /> <!-- Tunic of Doom -->
@@ -110,5 +145,9 @@
 		<int val="2" />
 		<men val="1" />
 		<wit val="-3" />
+		<!-- Doom Robe Set: Speed +7, Breath +200, MP Regeneration +5.26%, INT +2, MEN +1, WIT -3. -->
+		<add stat="runSpd" val="7" />
+		<add stat="breath" val="200" />
+		<mul stat="regMp" val="1.0526" />
 	</set>
 </list>

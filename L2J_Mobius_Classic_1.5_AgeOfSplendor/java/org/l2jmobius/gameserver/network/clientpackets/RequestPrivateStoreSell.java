@@ -20,14 +20,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import static org.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
+import static org.l2jmobius.gameserver.entity.actor.Npc.INTERACTION_DISTANCE;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.config.custom.OfflineTradeConfig;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.holders.RequestTrade;
 import org.l2jmobius.gameserver.network.holders.TradeList;
@@ -96,7 +96,7 @@ public class RequestPrivateStoreSell extends ClientPacket
 			return;
 		}
 		
-		final Player storePlayer = World.getInstance().getPlayer(_storePlayerId);
+		final Player storePlayer = World.getPlayer(_storePlayerId);
 		if ((storePlayer == null) || !player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE))
 		{
 			return;
@@ -132,7 +132,7 @@ public class RequestPrivateStoreSell extends ClientPacket
 			return;
 		}
 		
-		// Update offline trade record, if realtime saving is enabled
+		// Update offline trade record, if realtime saving is enabled.
 		if (OfflineTradeConfig.OFFLINE_TRADE_ENABLE && OfflineTradeConfig.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached()))
 		{
 			OfflineTraderTable.getInstance().onTransaction(storePlayer, storeList.getItemCount() == 0, false);

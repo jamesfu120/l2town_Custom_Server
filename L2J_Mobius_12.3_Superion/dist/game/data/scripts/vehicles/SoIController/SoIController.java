@@ -20,8 +20,8 @@
  */
 package vehicles.SoIController;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.holders.creature.VehiclePathPoint;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.holders.creature.VehiclePathPoint;
 import org.l2jmobius.gameserver.network.enums.Movie;
 
 import vehicles.AirShipController;

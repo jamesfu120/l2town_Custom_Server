@@ -25,7 +25,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -34,22 +33,22 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.clan.ClanMember;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.RevengeType;
 import org.l2jmobius.gameserver.network.holders.RevengeHistoryHolder;
 import org.l2jmobius.gameserver.network.serverpackets.revenge.ExPvpBookShareRevengeKillerLocation;
 import org.l2jmobius.gameserver.network.serverpackets.revenge.ExPvpBookShareRevengeList;
 import org.l2jmobius.gameserver.network.serverpackets.revenge.ExPvpBookShareRevengeNewRevengeInfo;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Mobius
@@ -248,7 +247,7 @@ public class RevengeHistoryManager
 			return;
 		}
 		
-		final Player killer = World.getInstance().getPlayer(killerName);
+		final Player killer = World.getPlayer(killerName);
 		if ((killer == null) || !killer.isOnline())
 		{
 			player.sendPacket(SystemMessageId.THE_ENEMY_IS_OFFLINE_AND_CANNOT_BE_FOUND_RIGHT_NOW);
@@ -343,7 +342,7 @@ public class RevengeHistoryManager
 			return;
 		}
 		
-		final Player killer = World.getInstance().getPlayer(killerName);
+		final Player killer = World.getPlayer(killerName);
 		if (!checkTeleportConditions(player, killer))
 		{
 			return;
@@ -399,7 +398,7 @@ public class RevengeHistoryManager
 			return;
 		}
 		
-		final Player killer = World.getInstance().getPlayer(killerName);
+		final Player killer = World.getPlayer(killerName);
 		if (!checkTeleportConditions(player, killer))
 		{
 			return;
@@ -453,7 +452,7 @@ public class RevengeHistoryManager
 			revenge.setType(RevengeType.OWN_HELP_REQUEST);
 			revenge.setShareTime(currentTime);
 			
-			final List<Player> targets = new LinkedList<>();
+			final List<Player> targets = new ArrayList<>();
 			if (type == 1)
 			{
 				final Clan clan = player.getClan();
@@ -476,7 +475,7 @@ public class RevengeHistoryManager
 			{
 				for (Integer playerObjectId : RankManager.getInstance().getTop50())
 				{
-					final Player plr = World.getInstance().getPlayer(playerObjectId);
+					final Player plr = World.getPlayer(playerObjectId);
 					if (plr != null)
 					{
 						targets.add(plr);

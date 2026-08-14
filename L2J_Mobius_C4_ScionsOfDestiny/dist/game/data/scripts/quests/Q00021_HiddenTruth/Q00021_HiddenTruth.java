@@ -20,13 +20,12 @@
  */
 package quests.Q00021_HiddenTruth;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
 public class Q00021_HiddenTruth extends Quest
@@ -106,20 +105,20 @@ public class Q00021_HiddenTruth extends Quest
 			}
 			case "1":
 			{
-				_page.getAI().setIntention(Intention.MOVE_TO, PAGE_LOCS[0]);
+				_page.getAI().setIntentionMoveTo(PAGE_LOCS[0]);
 				_page.broadcastSay(ChatType.GENERAL, "Follow me...");
 				startQuestTimer("2", 5000, _page, player, false);
 				return null;
 			}
 			case "2":
 			{
-				_page.getAI().setIntention(Intention.MOVE_TO, PAGE_LOCS[1]);
+				_page.getAI().setIntentionMoveTo(PAGE_LOCS[1]);
 				startQuestTimer("3", 12000, _page, player, false);
 				return null;
 			}
 			case "3":
 			{
-				_page.getAI().setIntention(Intention.MOVE_TO, PAGE_LOCS[2]);
+				_page.getAI().setIntentionMoveTo(PAGE_LOCS[2]);
 				startQuestTimer("4", 18000, _page, player, false);
 				return null;
 			}

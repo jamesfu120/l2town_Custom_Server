@@ -26,7 +26,6 @@ import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -37,9 +36,9 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.enums.EvolveLevel;
 import org.l2jmobius.gameserver.data.holders.PetData;
 import org.l2jmobius.gameserver.data.holders.PetLevelData;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.enums.player.MountType;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.actor.enums.player.MountType;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * This class parse and hold all pet parameters.<br>
@@ -116,7 +115,7 @@ public class PetDataTable implements IXmlReader
 					petType = 0;
 				}
 				
-				// index ignored for now
+				// Index ignored for now.
 				final PetData data = new PetData(npcId, itemId, defaultPetType, evolveLevel, index, petType);
 				for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling())
 				{
@@ -309,7 +308,7 @@ public class PetDataTable implements IXmlReader
 	
 	public List<PetData> getPetDatasByEvolve(int itemId, EvolveLevel evolveLevel)
 	{
-		return _pets.values().stream().filter(petData -> (petData.getItemId() == itemId) && (petData.getEvolveLevel() == evolveLevel)).collect(Collectors.toList());
+		return _pets.values().stream().filter(petData -> (petData.getItemId() == itemId) && (petData.getEvolveLevel() == evolveLevel)).toList();
 	}
 	
 	public void setPetName(int objectId, String name)

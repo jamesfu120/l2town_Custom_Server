@@ -23,12 +23,12 @@ package ai.bosses.Beleth.Wormhole;
 import java.util.List;
 
 import org.l2jmobius.gameserver.config.GrandBossConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -80,13 +80,14 @@ public class Wormhole extends Script
 			
 			final Party party = player.getParty();
 			final boolean isInCC = party.isInCommandChannel();
-			final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 			if (!isPartyLeader)
 			{
 				return "33901-3.html";
 			}
-			else if ((members.size() < GrandBossConfig.BELETH_MIN_PLAYERS) || (members.size() > GrandBossConfig.BELETH_MAX_PLAYERS))
+			
+			final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+			if ((members.size() < GrandBossConfig.BELETH_MIN_PLAYERS) || (members.size() > GrandBossConfig.BELETH_MAX_PLAYERS))
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 				packet.setHtml(getHtm(player, "33901-2.html"));

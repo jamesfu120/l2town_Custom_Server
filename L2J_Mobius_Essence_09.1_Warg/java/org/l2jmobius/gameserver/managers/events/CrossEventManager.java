@@ -26,11 +26,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.CrossEventAdvancedRewardHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.CrossEventHolder;
-import org.l2jmobius.gameserver.model.actor.holders.player.CrossEventRegularRewardHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CrossEventAdvancedRewardHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CrossEventHolder;
+import org.l2jmobius.gameserver.entity.actor.holders.player.CrossEventRegularRewardHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.crossevent.ExCrossEventInfo;
 
 /**
@@ -132,16 +132,7 @@ public class CrossEventManager
 	public void addRewardsAvailable(Player player, int reward)
 	{
 		final String accountName = player.getAccountName();
-		final List<Integer> rewards;
-		if (_rewardsAvailable.containsKey(accountName))
-		{
-			rewards = _rewardsAvailable.get(accountName);
-		}
-		else
-		{
-			rewards = new ArrayList<>();
-			_rewardsAvailable.put(player.getAccountName(), rewards);
-		}
+		final List<Integer> rewards = _rewardsAvailable.computeIfAbsent(accountName, _ -> new ArrayList<>());
 		
 		rewards.add(reward);
 	}

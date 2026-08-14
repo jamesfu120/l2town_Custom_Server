@@ -20,11 +20,11 @@
  */
 package quests.Q00137_TempleChampionPart1;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 
 /**
  * Temple Champion - 1 (137)
@@ -134,12 +134,13 @@ public class Q00137_TempleChampionPart1 extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
 		if (qs.isCompleted())
 		{
 			return getAlreadyCompletedMsg(player);
 		}
+		
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getCond())
 		{

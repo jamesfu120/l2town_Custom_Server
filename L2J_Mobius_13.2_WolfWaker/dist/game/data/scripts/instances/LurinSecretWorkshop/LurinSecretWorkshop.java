@@ -20,16 +20,15 @@
  */
 package instances.LurinSecretWorkshop;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.IllusoryEquipmentConfig;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
 import org.l2jmobius.gameserver.managers.InstanceManager;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -441,10 +440,10 @@ public class LurinSecretWorkshop extends InstanceScript
 		if ((world != null) && (player.isPlayer()))
 		{
 			final double distance = npc.calculateDistance2D(player);
-			if ((distance < 900))
+			if (distance < 900)
 			{
 				npc.asMonster().addDamageHate(player, 0, 1000);
-				npc.getAI().setIntention(Intention.ACTIVE);
+				npc.getAI().setIntentionActive();
 				addAttackDesire(npc, player);
 			}
 		}
@@ -526,13 +525,14 @@ public class LurinSecretWorkshop extends InstanceScript
 	
 	private NpcHtmlMessage getNpcHtmlMessage(Player player, Npc npc, String fileName)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
 		if (text == null)
 		{
 			LOGGER.info("Cannot find HTML file for " + getClass().getSimpleName() + " Instance: " + fileName);
 			return null;
 		}
+		
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
 		html.setHtml(text);
 		return html;

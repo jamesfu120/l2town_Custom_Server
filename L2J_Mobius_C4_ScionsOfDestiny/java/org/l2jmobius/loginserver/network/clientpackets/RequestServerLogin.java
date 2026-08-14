@@ -20,12 +20,12 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
-import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.config.LoginConfig;
+import org.l2jmobius.loginserver.controller.LoginController;
+import org.l2jmobius.loginserver.data.GameServerTable;
 import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.LoginClient;
-import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
+import org.l2jmobius.loginserver.network.gameserverpackets.receive.ServerStatus;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import org.l2jmobius.loginserver.network.serverpackets.PlayFail;
 import org.l2jmobius.loginserver.network.serverpackets.PlayOk;
@@ -69,7 +69,6 @@ public class RequestServerLogin extends AbstractClientPacket
 	public void run()
 	{
 		
-		final LoginController lc = LoginController.getInstance();
 		final int status = GameServerTable.getInstance().getGameServerStatus(getServerID());
 		if ((status == ServerStatus.STATUS_DOWN) || ((status == ServerStatus.STATUS_GM_ONLY) && (getClient().getAccessLevel() <= 0)))
 		{
@@ -77,6 +76,7 @@ public class RequestServerLogin extends AbstractClientPacket
 			return;
 		}
 		
+		final LoginController lc = LoginController.getInstance();
 		final int onlinePlayers = lc.getOnlinePlayerCount(getServerID());
 		if (onlinePlayers >= lc.getMaxAllowedOnlinePlayers(getServerID()))
 		{

@@ -20,13 +20,13 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
@@ -275,13 +275,14 @@ public class Q10814_BefittingOfTheStatus extends Quest
 	
 	private NpcHtmlMessage getNpcHtmlMessage(Player player, Npc npc, String fileName)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
 		if (text == null)
 		{
 			LOGGER.info("Cannot find HTML file for " + Q10814_BefittingOfTheStatus.class.getSimpleName() + " Quest: " + fileName);
 			return null;
 		}
+		
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
 		html.setHtml(text);
 		return html;

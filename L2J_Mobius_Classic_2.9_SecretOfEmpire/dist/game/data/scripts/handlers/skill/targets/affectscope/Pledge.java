@@ -20,16 +20,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.AffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
 
 /**
  * @author Nik
@@ -88,7 +88,7 @@ public class Pledge implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			World.getInstance().forEachVisibleObjectInRange(playable, Playable.class, affectRange, c ->
+			World.forEachVisibleObjectInRange(playable, Playable.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{

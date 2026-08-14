@@ -25,9 +25,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.config.AdenLaboratoryConfig;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.AdenLabRequest;
 import org.l2jmobius.gameserver.managers.AdenLaboratoryManager;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.AdenLabRequest;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;

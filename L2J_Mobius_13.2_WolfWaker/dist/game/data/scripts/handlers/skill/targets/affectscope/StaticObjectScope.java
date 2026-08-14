@@ -20,15 +20,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.handler.AffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
 
 /**
  * Static Object affect scope implementation. Used to detect hidden doors.
@@ -78,7 +78,7 @@ public class StaticObjectScope implements IAffectScopeHandler
 		}
 		
 		// Check and add targets.
-		World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
+		World.forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 		{
 			if (filter.test(c))
 			{

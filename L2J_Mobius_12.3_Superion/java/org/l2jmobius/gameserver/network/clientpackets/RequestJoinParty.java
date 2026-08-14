@@ -24,15 +24,15 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.BlockList;
-import org.l2jmobius.gameserver.model.actor.holders.player.ClientSettings;
-import org.l2jmobius.gameserver.model.actor.request.PartyRequest;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.groups.PartyDistributionType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.BlockList;
+import org.l2jmobius.gameserver.entity.actor.holders.player.ClientSettings;
+import org.l2jmobius.gameserver.entity.actor.request.PartyRequest;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.groups.PartyDistributionType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
@@ -114,7 +114,7 @@ public class RequestJoinParty extends ClientPacket
 			else // The Conquest name contains a character at start.
 			{
 				Player found = null;
-				for (Player player : World.getInstance().getPlayers())
+				for (Player player : World.getPlayers())
 				{
 					final String conquestName = player.getConquestName();
 					if ((conquestName != null) && _name.equalsIgnoreCase(conquestName.substring(1)))
@@ -134,7 +134,7 @@ public class RequestJoinParty extends ClientPacket
 		}
 		else
 		{
-			target = World.getInstance().getPlayer(_name);
+			target = World.getPlayer(_name);
 		}
 		
 		if (target == null)
@@ -217,7 +217,7 @@ public class RequestJoinParty extends ClientPacket
 			return;
 		}
 		
-		// removed in version Prelude of War - 02 August 2019
+		// Removed in version Prelude of War - 02 August 2019.
 		// if (target.isCursedWeaponEquipped() || requestor.isCursedWeaponEquipped())
 		// {
 		// requestor.sendPacket(SystemMessageId.INVALID_TARGET);

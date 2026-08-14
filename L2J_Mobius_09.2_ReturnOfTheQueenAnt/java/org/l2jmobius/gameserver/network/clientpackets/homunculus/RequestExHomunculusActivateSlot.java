@@ -24,11 +24,11 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.HomunculusSlotData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.homunculus.HomunculusSlotTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.mechanics.homunculus.HomunculusSlotTemplate;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExActivateHomunculusResult;
@@ -59,7 +59,6 @@ public class RequestExHomunculusActivateSlot extends ClientPacket
 		}
 		
 		final int size = player.getHomunculusList().size();
-		final HomunculusSlotTemplate template = HomunculusSlotData.getInstance().getTemplate(_slot);
 		if ((size != 0) && ((player.getHomunculusList().get(_slot) != null) || (_slot == player.getAvailableHomunculusSlotCount())))
 		{
 			PacketLogger.info(getClass().getSimpleName() + " player " + player.getName() + " " + player.getObjectId() + " trying unlock already unlocked slot!");
@@ -67,6 +66,7 @@ public class RequestExHomunculusActivateSlot extends ClientPacket
 			return;
 		}
 		
+		final HomunculusSlotTemplate template = HomunculusSlotData.getInstance().getTemplate(_slot);
 		if (!template.getSlotEnabled())
 		{
 			Logger.getLogger(getClass().getSimpleName() + " player " + player.getName() + " " + player.getObjectId() + " trying unlock disabled slot!");

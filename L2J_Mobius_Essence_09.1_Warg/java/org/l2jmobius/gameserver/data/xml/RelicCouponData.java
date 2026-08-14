@@ -40,7 +40,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.holders.RelicCouponHolder;
 import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
-import org.l2jmobius.gameserver.model.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
 
 /**
  * @author Brado
@@ -177,7 +177,7 @@ public class RelicCouponData implements IXmlReader
 			}
 			
 			final List<RelicDataHolder> relicsByGrade = new ArrayList<>();
-			relicsByGrade.addAll(RelicData.getInstance().getRelicsByGrade(rolledGrade).stream().filter(r -> !coupon.getDisabledIds().contains(r.getRelicId())).collect(Collectors.toList()));
+			relicsByGrade.addAll(RelicData.getInstance().getRelicsByGrade(rolledGrade).stream().filter(r -> !coupon.getDisabledIds().contains(r.getRelicId())).toList());
 			final long totalWeight = relicsByGrade.stream().mapToLong(RelicDataHolder::getSummonChance).sum();
 			if (totalWeight <= 0)
 			{
@@ -236,7 +236,7 @@ public class RelicCouponData implements IXmlReader
 				final Map<Integer, Integer> tempResults = new HashMap<>();
 				for (Entry<RelicGrade, Integer> entry : grades.entrySet())
 				{
-					for (RelicDataHolder rh : RelicData.getInstance().getRelicsByGrade(entry.getKey()).stream().filter(r -> !holder.getDisabledIds().contains(r.getRelicId())).collect(Collectors.toList()))
+					for (RelicDataHolder rh : RelicData.getInstance().getRelicsByGrade(entry.getKey()).stream().filter(r -> !holder.getDisabledIds().contains(r.getRelicId())).toList())
 					{
 						tempResults.put(rh.getRelicId(), entry.getValue());
 					}

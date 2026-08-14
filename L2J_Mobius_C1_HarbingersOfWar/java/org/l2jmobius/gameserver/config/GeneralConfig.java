@@ -26,8 +26,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.ConfigReader;
-import org.l2jmobius.gameserver.model.actor.enums.player.ChatBroadcastType;
-import org.l2jmobius.gameserver.model.actor.enums.player.IllegalActionPunishmentType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.ChatBroadcastType;
+import org.l2jmobius.gameserver.entity.actor.enums.player.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 
 /**
@@ -139,7 +139,6 @@ public class GeneralConfig
 	public static int NORMAL_ENCHANT_COST_MULTIPLIER;
 	public static int SAFE_ENCHANT_COST_MULTIPLIER;
 	public static boolean CORRECT_PRICES;
-	public static long MULTISELL_AMOUNT_LIMIT;
 	public static boolean ENABLE_FALLING_DAMAGE;
 	public static boolean DEBUFF_DURATION_USES_RESISTS;
 	
@@ -269,7 +268,6 @@ public class GeneralConfig
 		NORMAL_ENCHANT_COST_MULTIPLIER = config.getInt("NormalEnchantCostMultipiler", 1);
 		SAFE_ENCHANT_COST_MULTIPLIER = config.getInt("SafeEnchantCostMultipiler", 5);
 		CORRECT_PRICES = config.getBoolean("CorrectPrices", true);
-		MULTISELL_AMOUNT_LIMIT = config.getLong("MultisellAmountLimit", 10000);
 		ENABLE_FALLING_DAMAGE = config.getBoolean("EnableFallingDamage", true);
 		DEBUFF_DURATION_USES_RESISTS = config.getBoolean("DebuffDurationUsesResists", false);
 	}

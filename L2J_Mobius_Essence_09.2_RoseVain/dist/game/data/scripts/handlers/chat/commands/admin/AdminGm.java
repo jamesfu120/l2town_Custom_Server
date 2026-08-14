@@ -21,8 +21,8 @@
 package handlers.chat.commands.admin;
 
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * This class handles following admin commands: - GM = turns GM mode off

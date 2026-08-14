@@ -26,15 +26,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Player;
 
 /**
  * @author JoeAlisson, GolbergSoft
  */
 public class CostumeTable
 {
+	private static final Logger LOGGER = Logger.getLogger(CostumeTable.class.getName());
 	private int _playerId;
 	private int _id;
 	private long _amount;
@@ -133,7 +136,7 @@ public class CostumeTable
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "update: ", e);
 		}
 	}
 	
@@ -155,7 +158,7 @@ public class CostumeTable
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "load: ", e);
 		}
 	}
 	
@@ -182,7 +185,7 @@ public class CostumeTable
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "getCostumesForPlayer: ", e);
 		}
 		
 		return costumes;

@@ -24,25 +24,23 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.commons.time.TimeUtil;
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.groups.CommandChannel;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.zone.type.BossZone;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.groups.CommandChannel;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.zone.type.BossZone;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -54,6 +52,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Frintezza AI
@@ -836,7 +835,7 @@ public class Frintezza extends Script
 					cha.setTarget(null);
 					cha.stopMove(null);
 					cha.setImmobilized(true);
-					cha.getAI().setIntention(Intention.IDLE);
+					cha.getAI().setIntentionIdle();
 				}
 				break;
 			}
@@ -1142,7 +1141,7 @@ public class Frintezza extends Script
 							cha.stopMove(null);
 							cha.setParalyzed(true);
 							cha.setImmobilized(true);
-							cha.getAI().setIntention(Intention.IDLE);
+							cha.getAI().setIntentionIdle();
 							skill.applyEffects(_frintezza, cha);
 							cha.startAbnormalVisualEffect(true, AbnormalVisualEffect.DANCE_ROOT);
 							cha.sendPacket(new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU).addSkillName(5008, 5));
@@ -1306,7 +1305,7 @@ public class Frintezza extends Script
 							cha.stopMove(null);
 							cha.setParalyzed(true);
 							cha.setImmobilized(true);
-							cha.getAI().setIntention(Intention.IDLE);
+							cha.getAI().setIntentionIdle();
 							cha.startAbnormalVisualEffect(true, AbnormalVisualEffect.FLOATING_ROOT);
 						}
 					}

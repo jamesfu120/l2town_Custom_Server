@@ -23,15 +23,15 @@ package org.l2jmobius.gameserver.network.clientpackets.autoplay;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
 import org.l2jmobius.gameserver.data.xml.ActionData;
-import org.l2jmobius.gameserver.handler.IActionUserHandler;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.enums.player.ShortcutType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcut;
+import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcuts;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.ActionUserHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.enums.player.ShortcutType;
-import org.l2jmobius.gameserver.model.actor.holders.player.Shortcut;
-import org.l2jmobius.gameserver.model.actor.holders.player.Shortcuts;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.handler.IActionUserHandler;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.taskmanagers.AutoUseTaskManager;
 
@@ -133,7 +133,7 @@ public class ExRequestActivateAutoShortcut extends ClientPacket
 		}
 		
 		final Shortcut shortcut = player.getShortcut(_slot, _page);
-		if ((shortcut == null))
+		if (shortcut == null)
 		{
 			return;
 		}

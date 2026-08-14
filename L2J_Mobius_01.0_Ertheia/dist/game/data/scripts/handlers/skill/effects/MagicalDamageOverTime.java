@@ -16,14 +16,14 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * MagicalAttack-damage over time effect implementation.
@@ -77,7 +77,7 @@ public class MagicalDamageOverTime extends AbstractEffect
 			// For DOT skills that will not kill effected player.
 			if (!_canKill)
 			{
-				// Fix for players dying by DOTs if HP < 1 since reduceCurrentHP method will kill them
+				// Fix for players dying by DOTs if HP < 1 since reduceCurrentHP method will kill them.
 				if (target.getCurrentHp() <= 1)
 				{
 					return skill.isToggle();

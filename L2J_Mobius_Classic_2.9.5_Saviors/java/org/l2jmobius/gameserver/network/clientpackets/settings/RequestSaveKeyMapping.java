@@ -21,13 +21,13 @@
 package org.l2jmobius.gameserver.network.clientpackets.settings;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**
- * Request Save Key Mapping client 
+ * Request Save Key Mapping client
  * @author Mobius
  */
 public class RequestSaveKeyMapping extends ClientPacket
@@ -40,7 +40,7 @@ public class RequestSaveKeyMapping extends ClientPacket
 	protected void readImpl()
 	{
 		final int dataSize = readInt();
-		if ((dataSize > 0) && (dataSize <= remaining()))
+		if (dataSize > 0)
 		{
 			_uiKeyMapping = readBytes(dataSize);
 		}

@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ArmorsetSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ArmorsetSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.mechanics.stats.BaseStat;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
 /**
@@ -175,7 +175,7 @@ public class ArmorSet
 	 */
 	public int getSetEnchant(Player player)
 	{
-		// Player don't have full set
+		// Player don't have full set.
 		if (getPieceCount(player) < _minimumPieces)
 		{
 			return 0;

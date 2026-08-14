@@ -42,27 +42,27 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.crypt.NewCrypt;
-import org.l2jmobius.commons.network.base.BaseWritablePacket;
+import org.l2jmobius.commons.network.packet.SimpleWritablePacket;
 import org.l2jmobius.commons.util.HexUtil;
 import org.l2jmobius.commons.util.TraceUtil;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.ServerConfig;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.AuthRequest;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.BlowFishKey;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.ChangeAccessLevel;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.PlayerAuthRequest;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.PlayerInGame;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.PlayerLogout;
-import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
-import org.l2jmobius.gameserver.network.loginserverpackets.login.AuthResponse;
-import org.l2jmobius.gameserver.network.loginserverpackets.login.InitLS;
-import org.l2jmobius.gameserver.network.loginserverpackets.login.KickPlayer;
-import org.l2jmobius.gameserver.network.loginserverpackets.login.LoginServerFail;
-import org.l2jmobius.gameserver.network.loginserverpackets.login.PlayerAuthResponse;
+import org.l2jmobius.gameserver.network.loginserverpackets.receive.AuthResponse;
+import org.l2jmobius.gameserver.network.loginserverpackets.receive.InitLS;
+import org.l2jmobius.gameserver.network.loginserverpackets.receive.KickPlayer;
+import org.l2jmobius.gameserver.network.loginserverpackets.receive.LoginServerFail;
+import org.l2jmobius.gameserver.network.loginserverpackets.receive.PlayerAuthResponse;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.AuthRequest;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.BlowFishKey;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.ChangeAccessLevel;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.PlayerAuthRequest;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.PlayerInGame;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.PlayerLogout;
+import org.l2jmobius.gameserver.network.loginserverpackets.send.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.LoginFail;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
@@ -285,7 +285,7 @@ public class LoginServerThread extends Thread
 							if (World.getAllPlayersCount() > 0)
 							{
 								final List<String> playerList = new ArrayList<>();
-								for (Player player : World.getInstance().getPlayers())
+								for (Player player : World.getPlayers())
 								{
 									playerList.add(player.getAccountName());
 								}
@@ -510,7 +510,7 @@ public class LoginServerThread extends Thread
 		}
 		else // Offline player restored after restart.
 		{
-			for (Player player : World.getInstance().getPlayers())
+			for (Player player : World.getPlayers())
 			{
 				if (account.equals(player.getAccountName()))
 				{
@@ -533,7 +533,7 @@ public class LoginServerThread extends Thread
 	 * Sends packet to login server with proper encryption and checksums.
 	 * @param packet the packet to send
 	 */
-	private void sendPacket(BaseWritablePacket packet)
+	private void sendPacket(SimpleWritablePacket packet)
 	{
 		if ((_blowfish == null) || (_socket == null) || _socket.isClosed())
 		{

@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.network.serverpackets.collection;
 
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.holders.CollectionDataHolder;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -42,7 +42,7 @@ public class ExCollectionActiveEvent extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_COLLECTION_ACTIVE_EVENT.writeId(this, buffer);
 		buffer.writeInt(_collections.size());

@@ -22,16 +22,15 @@ package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Optional;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.managers.RankManager;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Berezkin Nikolay
@@ -40,8 +39,8 @@ public class ExPetRankingMyInfo extends ServerPacket
 {
 	private final int _petId;
 	private final Player _player;
-	private final Optional<Entry<Integer, StatSet>> _ranking;
-	private final Optional<Entry<Integer, StatSet>> _snapshotRanking;
+	private final Entry<Integer, StatSet> _ranking;
+	private final Entry<Integer, StatSet> _snapshotRanking;
 	private final Map<Integer, StatSet> _rankingList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
@@ -49,22 +48,22 @@ public class ExPetRankingMyInfo extends ServerPacket
 	{
 		_player = player;
 		_petId = petId;
-		_ranking = RankManager.getInstance().getPetRankList().entrySet().stream().filter(it -> it.getValue().getInt("controlledItemObjId") == petId).findFirst();
-		_snapshotRanking = RankManager.getInstance().getSnapshotPetRankList().entrySet().stream().filter(it -> it.getValue().getInt("controlledItemObjId") == petId).findFirst();
+		_ranking = RankManager.getInstance().getPetRankList().entrySet().stream().filter(it -> it.getValue().getInt("controlledItemObjId") == petId).findFirst().orElse(null);
+		_snapshotRanking = RankManager.getInstance().getSnapshotPetRankList().entrySet().stream().filter(it -> it.getValue().getInt("controlledItemObjId") == petId).findFirst().orElse(null);
 		_rankingList = RankManager.getInstance().getPetRankList();
 		_snapshotList = RankManager.getInstance().getSnapshotPetRankList();
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_PET_RANKING_MY_INFO.writeId(this, buffer);
 		buffer.writeInt(_petId);
 		buffer.writeShort(1);
 		buffer.writeInt(-1);
 		buffer.writeInt(0);
-		buffer.writeInt(_ranking.isPresent() ? _ranking.get().getKey() : 0); // server rank
-		buffer.writeInt(_snapshotRanking.isPresent() ? _snapshotRanking.get().getKey() : 0); // snapshot server rank
+		buffer.writeInt(_ranking != null ? _ranking.getKey() : 0); // server rank
+		buffer.writeInt(_snapshotRanking != null ? _snapshotRanking.getKey() : 0); // snapshot server rank
 		if (_petId > 0)
 		{
 			int typeRank = 1;

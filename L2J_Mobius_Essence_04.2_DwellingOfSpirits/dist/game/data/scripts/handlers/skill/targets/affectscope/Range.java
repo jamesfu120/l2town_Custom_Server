@@ -20,17 +20,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.AffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
-import org.l2jmobius.gameserver.model.skill.targets.TargetType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 
 /**
  * Range affect scope implementation. Gathers objects in area of target origin (including origin itself).
@@ -87,7 +87,7 @@ public class Range implements IAffectScopeHandler
 				final Location worldPosition = creature.asPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
 				{
-					World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, (int) (affectRange + creature.calculateDistance2D(worldPosition)), c ->
+					World.forEachVisibleObjectInRange(creature, Creature.class, (int) (affectRange + creature.calculateDistance2D(worldPosition)), c ->
 					{
 						if (!c.isInsideRadius3D(worldPosition, affectRange))
 						{
@@ -110,7 +110,7 @@ public class Range implements IAffectScopeHandler
 				action.accept(target);
 			}
 			
-			World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
+			World.forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{

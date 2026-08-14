@@ -82,6 +82,7 @@ import handlers.bypass.npc.Multisell;
 import handlers.bypass.npc.NpcViewMod;
 import handlers.bypass.npc.PlayerHelp;
 import handlers.bypass.npc.PrivateWarehouse;
+import handlers.bypass.npc.Rebirth;
 import handlers.bypass.npc.ScriptLink;
 import handlers.bypass.npc.Sell;
 import handlers.bypass.npc.SkillList;
@@ -380,6 +381,7 @@ public class MasterHandler
 			NpcViewMod.class,
 			PlayerHelp.class,
 			PrivateWarehouse.class,
+			Rebirth.class,
 			Sell.class,
 			ScriptLink.class,
 			SkillList.class,

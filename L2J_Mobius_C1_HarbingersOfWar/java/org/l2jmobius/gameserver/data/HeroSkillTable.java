@@ -21,7 +21,7 @@
 package org.l2jmobius.gameserver.data;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 
 /**
  * @author BiTi

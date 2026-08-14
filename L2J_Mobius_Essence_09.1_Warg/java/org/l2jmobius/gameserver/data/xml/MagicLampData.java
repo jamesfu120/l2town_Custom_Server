@@ -32,7 +32,7 @@ import org.w3c.dom.NodeList;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.holders.MagicLampDataHolder;
-import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Serenitty

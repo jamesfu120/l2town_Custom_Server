@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.actor.enums.player.RelicGrade;
+import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
 
 /**
  * @author Brado

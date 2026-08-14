@@ -22,14 +22,14 @@ package quests.Q00783_VestigeOfTheMagicPower;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.script.Faction;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.QuestType;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.mechanics.script.Faction;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.QuestType;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 
@@ -79,13 +79,14 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 	@Override
 	public String onEvent(String event, Npc npc, Player player)
 	{
-		String htmltext = null;
-		final int chance = getRandom(100);
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = null;
+		final int chance = getRandom(100);
 		
 		switch (event)
 		{

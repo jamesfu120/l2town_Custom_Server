@@ -29,16 +29,16 @@ import java.util.Map.Entry;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.EtcItem;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.enums.SpecialItemType;
+import org.l2jmobius.gameserver.entity.item.holders.ExtractableProduct;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.managers.DailyResetManager;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.EtcItem;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.enums.SpecialItemType;
-import org.l2jmobius.gameserver.model.item.holders.ExtractableProduct;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -59,7 +59,6 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final Player player = playable.asPlayer();
 		final EtcItem etcitem = (EtcItem) item.getTemplate();
 		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
@@ -68,6 +67,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
+		final Player player = playable.asPlayer();
 		if (!player.isInventoryUnder80(false))
 		{
 			player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_IS_LESS_THAN_80_AND_SLOT_COUNT_IS_LESS_THAN_90_OF_CAPACITY);
@@ -291,14 +291,7 @@ public class ExtractableItems implements IItemHandler
 	
 	private void addItem(Map<Item, Long> extractedItems, Item newItem, long count)
 	{
-		if (extractedItems.containsKey(newItem))
-		{
-			extractedItems.put(newItem, extractedItems.get(newItem) + count);
-		}
-		else
-		{
-			extractedItems.put(newItem, count);
-		}
+		extractedItems.merge(newItem, count, Long::sum);
 	}
 	
 	private void sendMessage(Player player, Item item, long count)

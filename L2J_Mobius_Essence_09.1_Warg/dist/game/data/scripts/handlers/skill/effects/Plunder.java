@@ -18,19 +18,18 @@ package handlers.skill.effects;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.ai.Action;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author Sdw
@@ -67,14 +66,13 @@ public class Plunder extends AbstractEffect
 		}
 		
 		final Monster monster = effected.asMonster();
-		final Player player = effector.asPlayer();
-		
 		if (monster.isSpoiled())
 		{
 			effector.sendPacket(SystemMessageId.THE_TARGET_HAS_BEEN_ALREADY_ROBBED);
 			return;
 		}
 		
+		final Player player = effector.asPlayer();
 		monster.setPlundered(player);
 		
 		if (!player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
@@ -100,6 +98,6 @@ public class Plunder extends AbstractEffect
 			}
 		}
 		
-		monster.getAI().notifyAction(Action.ATTACKED, effector);
+		monster.getAI().notifyActionAttacked(effector);
 	}
 }

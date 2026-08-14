@@ -24,14 +24,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Attackable;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.stats.Formulas;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Randomize Hate effect implementation.
@@ -67,7 +67,7 @@ public class RandomizeHate extends AbstractEffect
 		
 		final Attackable effectedMob = effected.asAttackable();
 		final List<Creature> targetList = new ArrayList<>();
-		World.getInstance().forEachVisibleObject(effected, Creature.class, cha ->
+		World.forEachVisibleObject(effected, Creature.class, cha ->
 		{
 			if ((cha != effectedMob) && (cha != effector))
 			{
@@ -80,13 +80,13 @@ public class RandomizeHate extends AbstractEffect
 				targetList.add(cha);
 			}
 		});
-		// if there is no target, exit function
+		// If there is no target, exit function.
 		if (targetList.isEmpty())
 		{
 			return;
 		}
 		
-		// Choosing randomly a new target
+		// Choosing randomly a new target.
 		final Creature target = targetList.get(Rnd.get(targetList.size()));
 		final long hate = effectedMob.getHating(effector);
 		effectedMob.stopHating(effector);

@@ -20,11 +20,11 @@
  */
 package quests.Q10705_BottleOfTautisSoul;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
 
 import quests.Q10384_AnAudienceWithTauti.Q10384_AnAudienceWithTauti;
 
@@ -56,13 +56,14 @@ public class Q10705_BottleOfTautisSoul extends Quest
 	@Override
 	public String onEvent(String event, Npc npc, Player player)
 	{
-		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
-		final QuestState qs1 = player.getQuestState(Q10384_AnAudienceWithTauti.class.getSimpleName());
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
+		
+		String htmltext = null;
+		final QuestState qs1 = player.getQuestState(Q10384_AnAudienceWithTauti.class.getSimpleName());
 		
 		switch (event)
 		{

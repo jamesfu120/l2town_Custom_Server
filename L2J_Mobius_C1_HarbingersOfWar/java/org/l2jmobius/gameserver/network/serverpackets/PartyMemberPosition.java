@@ -23,9 +23,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.groups.Party;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.groups.Party;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 
@@ -54,7 +54,7 @@ public class PartyMemberPosition extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.PARTY_MEMBER_POSITION.writeId(this, buffer);
 		buffer.writeInt(Math.min(40, _players.size()));

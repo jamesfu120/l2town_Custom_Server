@@ -22,14 +22,13 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.groups.Party;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.groups.Party;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExRequestNewInvitePartyInquiry;
-import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * @author Serenitty
@@ -146,7 +145,7 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 					return;
 				}
 				
-				Broadcast.toAllOnlinePlayers(new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType));
+				World.broadcastToAllOnlinePlayers(new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType));
 				break;
 			}
 			case TRADE:
@@ -157,7 +156,7 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 					return;
 				}
 				
-				Broadcast.toAllOnlinePlayers(new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType));
+				World.broadcastToAllOnlinePlayers(new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType));
 				break;
 			}
 			case GENERAL:
@@ -170,7 +169,7 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 				
 				final ExRequestNewInvitePartyInquiry msg = new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType);
 				player.sendPacket(msg);
-				World.getInstance().forEachVisibleObjectInRange(player, Player.class, PlayerConfig.ALT_PARTY_RANGE, nearby -> nearby.sendPacket(msg));
+				World.forEachVisibleObjectInRange(player, Player.class, PlayerConfig.ALT_PARTY_RANGE, nearby -> nearby.sendPacket(msg));
 				break;
 			}
 			case CLAN:

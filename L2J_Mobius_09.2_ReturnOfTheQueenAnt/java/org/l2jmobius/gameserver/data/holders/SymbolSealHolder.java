@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.data.holders;
 
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 
 /**
  * @author NviX

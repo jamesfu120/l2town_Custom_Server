@@ -20,21 +20,21 @@
  */
 package handlers.skill.effects;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.item.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
+import org.l2jmobius.gameserver.mechanics.effects.EffectType;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.UserInfoType;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Vitality Point Up effect implementation.
@@ -85,7 +85,7 @@ public class VitalityPointUp extends AbstractEffect
 		// Send item list to update vitality items with red icons in inventory.
 		ThreadPool.schedule(() ->
 		{
-			final List<Item> items = new LinkedList<>();
+			final List<Item> items = new ArrayList<>();
 			ITEMS: for (Item i : player.getInventory().getItems())
 			{
 				if (i.getTemplate().hasSkills())

@@ -22,22 +22,21 @@ package ai.bosses.Orfen;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.GrandBossConfig;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.managers.GrandBossManager;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Orfen's AI
@@ -72,18 +71,18 @@ public class Orfen extends Script
 		final int status = GrandBossManager.getInstance().getStatus(ORFEN);
 		if (status == DEAD)
 		{
-			// load the unlock date and time for Orfen from DB
+			// Load the unlock date and time for Orfen from DB.
 			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 			
-			// if Orfen is locked until a certain time, mark it so and start the unlock timer
-			// the unlock time has not yet expired.
+			// If Orfen is locked until a certain time, mark it so and start the unlock timer.
+			// The unlock time has not yet expired.
 			if (temp > 0)
 			{
 				startQuestTimer("orfen_unlock", temp, null, null);
 			}
 			else
 			{
-				// the time has already expired while the server was offline. Immediately spawn Orfen.
+				// The time has already expired while the server was offline. Immediately spawn Orfen.
 				final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, SPAWN_LOCATION, false, 0);
 				GrandBossManager.getInstance().setStatus(ORFEN, ALIVE);
 				spawnBoss(orfen);
@@ -136,7 +135,7 @@ public class Orfen extends Script
 				else if (npc.calculateDistance2D(npc.getSpawn()) > 10000)
 				{
 					npc.asAttackable().clearAggroList();
-					npc.getAI().setIntention(Intention.MOVE_TO, SPAWN_LOCATION);
+					npc.getAI().setIntentionMoveTo(SPAWN_LOCATION);
 				}
 				break;
 			}

@@ -20,9 +20,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.herobook;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.herobook.HeroBookInfoHolder;
-import org.l2jmobius.gameserver.model.herobook.HeroBookManager;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.herobook.HeroBookInfoHolder;
+import org.l2jmobius.gameserver.mechanics.herobook.HeroBookManager;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.herobook.ExHeroBookChargeProb;
 

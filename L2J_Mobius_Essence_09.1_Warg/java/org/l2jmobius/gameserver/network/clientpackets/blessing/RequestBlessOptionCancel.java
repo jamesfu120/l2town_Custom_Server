@@ -20,8 +20,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.blessing;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.BlessingItemRequest;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.BlessingItemRequest;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.blessing.ExBlessOptionCancel;
 

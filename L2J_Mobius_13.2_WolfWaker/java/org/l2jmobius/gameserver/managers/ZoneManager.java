@@ -39,54 +39,55 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
-import org.l2jmobius.gameserver.model.zone.ZoneForm;
-import org.l2jmobius.gameserver.model.zone.ZoneRegion;
-import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
-import org.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
-import org.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
-import org.l2jmobius.gameserver.model.zone.type.ArenaZone;
-import org.l2jmobius.gameserver.model.zone.type.CastleZone;
-import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
-import org.l2jmobius.gameserver.model.zone.type.ConditionZone;
-import org.l2jmobius.gameserver.model.zone.type.ConquestZone;
-import org.l2jmobius.gameserver.model.zone.type.DamageZone;
-import org.l2jmobius.gameserver.model.zone.type.DerbyTrackZone;
-import org.l2jmobius.gameserver.model.zone.type.EffectZone;
-import org.l2jmobius.gameserver.model.zone.type.FishingZone;
-import org.l2jmobius.gameserver.model.zone.type.FortZone;
-import org.l2jmobius.gameserver.model.zone.type.HqZone;
-import org.l2jmobius.gameserver.model.zone.type.JailZone;
-import org.l2jmobius.gameserver.model.zone.type.LandingZone;
-import org.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
-import org.l2jmobius.gameserver.model.zone.type.NoLandingZone;
-import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
-import org.l2jmobius.gameserver.model.zone.type.NoStoreZone;
-import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
-import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
-import org.l2jmobius.gameserver.model.zone.type.PeaceZone;
-import org.l2jmobius.gameserver.model.zone.type.ResidenceHallTeleportZone;
-import org.l2jmobius.gameserver.model.zone.type.ResidenceTeleportZone;
-import org.l2jmobius.gameserver.model.zone.type.ResidenceZone;
-import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
-import org.l2jmobius.gameserver.model.zone.type.SayuneZone;
-import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
-import org.l2jmobius.gameserver.model.zone.type.SiegableHallZone;
-import org.l2jmobius.gameserver.model.zone.type.SiegeZone;
-import org.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
-import org.l2jmobius.gameserver.model.zone.type.SwampZone;
-import org.l2jmobius.gameserver.model.zone.type.TaxZone;
-import org.l2jmobius.gameserver.model.zone.type.TeleportZone;
-import org.l2jmobius.gameserver.model.zone.type.TimedHuntingZone;
-import org.l2jmobius.gameserver.model.zone.type.UndyingZone;
-import org.l2jmobius.gameserver.model.zone.type.WaterZone;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.zone.AbstractZoneSettings;
+import org.l2jmobius.gameserver.entity.zone.ZoneForm;
+import org.l2jmobius.gameserver.entity.zone.ZoneRegion;
+import org.l2jmobius.gameserver.entity.zone.ZoneRespawn;
+import org.l2jmobius.gameserver.entity.zone.ZoneType;
+import org.l2jmobius.gameserver.entity.zone.form.ZoneCuboid;
+import org.l2jmobius.gameserver.entity.zone.form.ZoneCylinder;
+import org.l2jmobius.gameserver.entity.zone.form.ZoneNPoly;
+import org.l2jmobius.gameserver.entity.zone.type.ArenaZone;
+import org.l2jmobius.gameserver.entity.zone.type.CastleZone;
+import org.l2jmobius.gameserver.entity.zone.type.ClanHallZone;
+import org.l2jmobius.gameserver.entity.zone.type.ConditionZone;
+import org.l2jmobius.gameserver.entity.zone.type.ConquestZone;
+import org.l2jmobius.gameserver.entity.zone.type.DamageZone;
+import org.l2jmobius.gameserver.entity.zone.type.DerbyTrackZone;
+import org.l2jmobius.gameserver.entity.zone.type.EffectZone;
+import org.l2jmobius.gameserver.entity.zone.type.FishingZone;
+import org.l2jmobius.gameserver.entity.zone.type.FlagPvPZone;
+import org.l2jmobius.gameserver.entity.zone.type.FortZone;
+import org.l2jmobius.gameserver.entity.zone.type.HqZone;
+import org.l2jmobius.gameserver.entity.zone.type.JailZone;
+import org.l2jmobius.gameserver.entity.zone.type.LandingZone;
+import org.l2jmobius.gameserver.entity.zone.type.MotherTreeZone;
+import org.l2jmobius.gameserver.entity.zone.type.NoLandingZone;
+import org.l2jmobius.gameserver.entity.zone.type.NoRestartZone;
+import org.l2jmobius.gameserver.entity.zone.type.NoStoreZone;
+import org.l2jmobius.gameserver.entity.zone.type.NoSummonFriendZone;
+import org.l2jmobius.gameserver.entity.zone.type.OlympiadStadiumZone;
+import org.l2jmobius.gameserver.entity.zone.type.PeaceZone;
+import org.l2jmobius.gameserver.entity.zone.type.ResidenceHallTeleportZone;
+import org.l2jmobius.gameserver.entity.zone.type.ResidenceTeleportZone;
+import org.l2jmobius.gameserver.entity.zone.type.ResidenceZone;
+import org.l2jmobius.gameserver.entity.zone.type.RespawnZone;
+import org.l2jmobius.gameserver.entity.zone.type.SayuneZone;
+import org.l2jmobius.gameserver.entity.zone.type.ScriptZone;
+import org.l2jmobius.gameserver.entity.zone.type.SiegableHallZone;
+import org.l2jmobius.gameserver.entity.zone.type.SiegeZone;
+import org.l2jmobius.gameserver.entity.zone.type.SpawnTerritory;
+import org.l2jmobius.gameserver.entity.zone.type.SwampZone;
+import org.l2jmobius.gameserver.entity.zone.type.TaxZone;
+import org.l2jmobius.gameserver.entity.zone.type.TeleportZone;
+import org.l2jmobius.gameserver.entity.zone.type.TimedHuntingZone;
+import org.l2jmobius.gameserver.entity.zone.type.UndyingZone;
+import org.l2jmobius.gameserver.entity.zone.type.WaterZone;
+import org.l2jmobius.gameserver.interfaces.ILocational;
 
 /**
  * This class manages the zones.
@@ -136,6 +137,7 @@ public class ZoneManager implements IXmlReader
 		_classZones.put(DerbyTrackZone.class, new ConcurrentHashMap<>());
 		_classZones.put(EffectZone.class, new ConcurrentHashMap<>());
 		_classZones.put(FishingZone.class, new ConcurrentHashMap<>());
+		_classZones.put(FlagPvPZone.class, new ConcurrentHashMap<>());
 		_classZones.put(FortZone.class, new ConcurrentHashMap<>());
 		_classZones.put(HqZone.class, new ConcurrentHashMap<>());
 		_classZones.put(JailZone.class, new ConcurrentHashMap<>());
@@ -230,7 +232,7 @@ public class ZoneManager implements IXmlReader
 							zoneName = null;
 						}
 						
-						// Check zone name for NpcSpawnTerritory. Must exist and to be unique
+						// Check zone name for NpcSpawnTerritory. Must exist and to be unique.
 						if (zoneType.equalsIgnoreCase("NpcSpawnTerritory"))
 						{
 							if (zoneName == null)
@@ -250,7 +252,7 @@ public class ZoneManager implements IXmlReader
 						zoneType = parseString(attrs, "type");
 						zoneShape = parseString(attrs, "shape");
 						
-						// Get the zone shape from xml
+						// Get the zone shape from xml.
 						ZoneForm zoneForm = null;
 						try
 						{
@@ -266,7 +268,7 @@ public class ZoneManager implements IXmlReader
 								}
 							}
 							
-							coords = rs.toArray(new int[rs.size()][2]);
+							coords = rs.toArray(new int[0][2]);
 							rs.clear();
 							
 							if ((coords == null) || (coords.length == 0))
@@ -276,7 +278,7 @@ public class ZoneManager implements IXmlReader
 							}
 							
 							// Create this zone. Parsing for cuboids is a bit different than for other polygons cuboids need exactly 2 points to be defined.
-							// Other polygons need at least 3 (one per vertex)
+							// Other polygons need at least 3 (one per vertex).
 							if (zoneShape.equalsIgnoreCase("Cuboid"))
 							{
 								if (coords.length == 2)
@@ -291,7 +293,7 @@ public class ZoneManager implements IXmlReader
 							}
 							else if (zoneShape.equalsIgnoreCase("NPoly"))
 							{
-								// nPoly needs to have at least 3 vertices
+								// nPoly needs to have at least 3 vertices.
 								if (coords.length > 2)
 								{
 									final int[] aX = new int[coords.length];
@@ -312,8 +314,8 @@ public class ZoneManager implements IXmlReader
 							}
 							else if (zoneShape.equalsIgnoreCase("Cylinder"))
 							{
-								// A Cylinder zone requires a center point
-								// at x,y and a radius
+								// A Cylinder zone requires a center point.
+								// at x,y and a radius.
 								attrs = d.getAttributes();
 								final int zoneRad = Integer.parseInt(attrs.getNamedItem("rad").getNodeValue());
 								if ((coords.length == 1) && (zoneRad > 0))
@@ -337,20 +339,20 @@ public class ZoneManager implements IXmlReader
 							LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": ZoneData: Failed to load zone " + zoneId + " coordinates: " + e.getMessage(), e);
 						}
 						
-						// No further parameters needed, if NpcSpawnTerritory is loading
+						// No further parameters needed, if NpcSpawnTerritory is loading.
 						if (zoneType.equalsIgnoreCase("NpcSpawnTerritory"))
 						{
 							_spawnTerritories.put(zoneName, new SpawnTerritory(zoneName, zoneForm));
 							continue;
 						}
 						
-						// Create the zone
+						// Create the zone.
 						Class<?> newZone = null;
 						Constructor<?> zoneConstructor = null;
 						ZoneType temp;
 						try
 						{
-							newZone = Class.forName("org.l2jmobius.gameserver.model.zone.type." + zoneType);
+							newZone = Class.forName("org.l2jmobius.gameserver.entity.zone.type." + zoneType);
 							zoneConstructor = newZone.getConstructor(int.class);
 							temp = (ZoneType) zoneConstructor.newInstance(zoneId);
 							temp.setZone(zoneForm);
@@ -361,7 +363,7 @@ public class ZoneManager implements IXmlReader
 							continue;
 						}
 						
-						// Check for additional parameters
+						// Check for additional parameters.
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{
 							if ("stat".equalsIgnoreCase(cd.getNodeName()))
@@ -437,7 +439,7 @@ public class ZoneManager implements IXmlReader
 		load();
 		
 		// Re-validate all characters in zones.
-		for (WorldObject obj : World.getInstance().getVisibleObjects())
+		for (WorldObject obj : World.getVisibleObjects())
 		{
 			if (obj.isCreature())
 			{
@@ -557,9 +559,10 @@ public class ZoneManager implements IXmlReader
 	{
 		for (Map<Integer, ? extends ZoneType> map : _classZones.values())
 		{
-			if (map.containsKey(id))
+			final ZoneType zone = map.get(id);
+			if (zone != null)
 			{
-				return map.get(id);
+				return zone;
 			}
 		}
 		
@@ -610,9 +613,10 @@ public class ZoneManager implements IXmlReader
 	@SuppressWarnings("unchecked")
 	public <T extends ZoneType> T getZoneByName(String name, Class<T> zoneType)
 	{
-		if (_classZones.containsKey(zoneType))
+		final Map<Integer, ? extends ZoneType> zones = _classZones.get(zoneType);
+		if (zones != null)
 		{
-			for (ZoneType zone : _classZones.get(zoneType).values())
+			for (ZoneType zone : zones.values())
 			{
 				if ((zone.getName() != null) && zone.getName().equals(name))
 				{

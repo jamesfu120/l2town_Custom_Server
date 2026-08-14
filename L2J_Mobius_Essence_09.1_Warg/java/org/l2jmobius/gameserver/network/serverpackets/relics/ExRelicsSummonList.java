@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.network.serverpackets.relics;
 
 import java.util.Comparator;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.data.holders.RelicSummonCategoryHolder;
 import org.l2jmobius.gameserver.data.xml.RelicData;
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 public class ExRelicsSummonList extends ServerPacket
 {
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)
+	protected void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (!RelicSystemConfig.RELIC_SYSTEM_ENABLED)
 		{

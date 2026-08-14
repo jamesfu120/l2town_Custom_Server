@@ -20,17 +20,20 @@
  */
 package quests.Q00503_PursuitOfClanAmbition;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestState;
-import org.l2jmobius.gameserver.model.script.State;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
+import org.l2jmobius.gameserver.mechanics.script.State;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 
 /**
- * @author Jackass
+ * @author Jackass, Skache
  */
 public class Q00503_PursuitOfClanAmbition extends Quest
 {
@@ -38,80 +41,84 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 	private static final int MARTIEN = 30645;
 	private static final int ATHREA = 30758;
 	private static final int KALIS = 30759;
-	private static final int GUSTAF = 30760;
-	private static final int FRITZ = 30761;
-	private static final int LUTZ = 30762;
-	private static final int KURTZ = 30763;
+	private static final int SIR_GUSTAV_ATHEBALDT = 30760;
+	private static final int CORPSE_OF_FRITZ = 30761;
+	private static final int CORPSE_OF_LUTZ = 30762;
+	private static final int CORPSE_OF_KURTZ = 30763;
 	private static final int KUSTO = 30512;
 	private static final int BALTHAZAR = 30764;
-	private static final int RODEMAI = 30868;
-	private static final int COFFER = 30765;
+	private static final int SIR_ERIC_RODEMAI = 30868;
+	private static final int IMPERIAL_COFFER = 30765;
 	private static final int CLEO = 30766;
 	
 	// Monsters
-	private static final int THUNDER_WYRM = 20282;
-	private static final int THUNDER_WYRM_TWO = 20243;
+	private static final int THUNDER_WYRM = 20243;
+	private static final int THUNDER_WYRM_HOLD = 20282;
 	private static final int DRAKE = 20137;
-	private static final int DRAKE_TWO = 20285;
+	private static final int DRAKE_HOLD = 20285;
 	private static final int BLITZ_WYRM = 27178;
-	private static final int GIANT_SOLDIER = 20654;
-	private static final int GIANT_SCOUT = 20656;
+	private static final int LESSER_GIANT_SOLDIER = 20654;
+	private static final int LESSER_GIANT_SCOUT = 20656;
 	private static final int GRAVE_GUARD = 20668;
 	private static final int GRAVE_KEYMASTER = 27179;
 	private static final int IMPERIAL_SLAVE = 27180;
-	
-	// Attack mob
 	private static final int IMPERIAL_GRAVEKEEPER = 27181;
 	
+	// Imperial Gravekeeper teleports
+	private static final int TELEPORT_1_X = 179520;
+	private static final int TELEPORT_1_Y = 6464;
+	private static final int TELEPORT_1_Z = -2706;
+	private static final int TELEPORT_2_X = 171104;
+	private static final int TELEPORT_2_Y = 6496;
+	private static final int TELEPORT_2_Z = -2706;
+	
+	// Skill
+	private static final int DARK_HEAL_SKILL = 4080;
+	
 	// First part items
-	private static final int G_LET_MARTIEN = 3866;
-	private static final int TH_WYRM_EGGS = 3842;
-	private static final int DRAKE_EGGS = 3841;
-	private static final int BL_WYRM_EGGS = 3840;
-	private static final int MI_DRAKE_EGGS = 3839;
-	private static final int BROOCH = 3843;
-	private static final int BL_ANVIL_COIN = 3871;
+	private static final int GUSTAVS_1ST_LETTER = 3866;
+	private static final int MIST_DRAKE_EGG = 3839;
+	private static final int BLITZ_WYRM_EGG = 3840;
+	private static final int DRAKE_EGG = 3841;
+	private static final int THUNDER_WYRM_EGG = 3842;
+	private static final int BROOCH_OF_THE_MAGPIE = 3843;
+	private static final int BLACK_ANVIL_COIN = 3871;
 	
 	// Second part items
-	private static final int G_LET_BALTHAZAR = 3867;
-	private static final int RECIPE_POWER_STONE = 3838;
-	private static final int POWER_STONE = 3846;
+	private static final int GUSTAVS_2ND_LETTER = 3867;
+	private static final int RECIPE_TITANS_POWERSTONE = 3838;
 	private static final int NEBULITE_CRYSTALS = 3844;
-	private static final int BROKE_POWER_STONE = 3845;
+	private static final int BROKEN_TITANS_POWERSTONE = 3845;
+	private static final int TITANS_POWERSTONE = 3846;
 	
 	// Third part items
-	private static final int G_LET_RODEMAI = 3868;
-	private static final int IMP_KEYS = 3847;
-	private static final int SCEPTER_JUDGEMENT = 3869;
+	private static final int GUSTAVS_3RD_LETTER = 3868;
+	private static final int SCEPTER_OF_JUDGMENT = 3869;
+	private static final int IMPERIAL_KEY = 3847;
 	
 	// Final item
-	private static final int PROOF_ASPIRATION = 3870;
+	private static final int SEAL_OF_ASPIRATION = 3870;
 	
 	// Droplist
 	private static final int[][] DROPLIST =
 	{
-		// npcId, cond, MaxCount, chance, item1, item2 (giants), item3 (giants)
+		// npcId, cond, MaxCount, chance, item1
 		// @formatter:off
-		{THUNDER_WYRM, 2, 10, 200000, TH_WYRM_EGGS, 0, 0},
-		{THUNDER_WYRM_TWO, 2, 10, 150000, TH_WYRM_EGGS, 0, 0},
-		{DRAKE, 2, 10, 200000, DRAKE_EGGS, 0, 0},
-		{DRAKE_TWO, 2, 10, 250000, DRAKE_EGGS, 0, 0},
-		{BLITZ_WYRM, 2, 10, 1000000, BL_WYRM_EGGS, 0, 0},
-		{GIANT_SOLDIER, 5, 10, 250000, NEBULITE_CRYSTALS, BROKE_POWER_STONE, POWER_STONE},
-		{GIANT_SCOUT, 5, 10, 350000, NEBULITE_CRYSTALS, BROKE_POWER_STONE, POWER_STONE},
-		{GRAVE_GUARD, 10, 0, 150000, 0, 0, 0},
-		{GRAVE_KEYMASTER, 10, 6, 800000, IMP_KEYS, 0, 0},
-		{IMPERIAL_GRAVEKEEPER, 10, 0, 0, 0, 0, 0}
+		{THUNDER_WYRM, 2, 10, 500000, THUNDER_WYRM_EGG},
+		{THUNDER_WYRM_HOLD, 2, 10, 500000, THUNDER_WYRM_EGG},
+		{DRAKE, 2, 10, 500000, DRAKE_EGG},
+		{DRAKE_HOLD, 2, 10, 500000, DRAKE_EGG},
+		{BLITZ_WYRM, 2, 10, 1000000, BLITZ_WYRM_EGG},
 		// @formatter:on
 	};
 	
 	public Q00503_PursuitOfClanAmbition()
 	{
 		super(503, "Pursuit of Clan Ambition!");
-		registerQuestItems(MI_DRAKE_EGGS, BL_WYRM_EGGS, DRAKE_EGGS, TH_WYRM_EGGS, BROOCH, NEBULITE_CRYSTALS, BROKE_POWER_STONE, POWER_STONE, IMP_KEYS, G_LET_MARTIEN, G_LET_BALTHAZAR, G_LET_RODEMAI, SCEPTER_JUDGEMENT);
-		addStartNpc(GUSTAF);
-		addTalkId(MARTIEN, ATHREA, KALIS, GUSTAF, FRITZ, LUTZ, KURTZ, KUSTO, BALTHAZAR, RODEMAI, COFFER, CLEO);
-		addKillId(THUNDER_WYRM_TWO, THUNDER_WYRM, DRAKE, DRAKE_TWO, BLITZ_WYRM, GIANT_SOLDIER, GIANT_SCOUT, GRAVE_GUARD, GRAVE_KEYMASTER, IMPERIAL_GRAVEKEEPER);
+		registerQuestItems(MIST_DRAKE_EGG, BLITZ_WYRM_EGG, DRAKE_EGG, THUNDER_WYRM_EGG, BROOCH_OF_THE_MAGPIE, NEBULITE_CRYSTALS, BROKEN_TITANS_POWERSTONE, TITANS_POWERSTONE, IMPERIAL_KEY, GUSTAVS_1ST_LETTER, GUSTAVS_2ND_LETTER, GUSTAVS_3RD_LETTER, SCEPTER_OF_JUDGMENT);
+		addStartNpc(SIR_GUSTAV_ATHEBALDT);
+		addTalkId(MARTIEN, ATHREA, KALIS, SIR_GUSTAV_ATHEBALDT, CORPSE_OF_FRITZ, CORPSE_OF_LUTZ, CORPSE_OF_KURTZ, KUSTO, BALTHAZAR, SIR_ERIC_RODEMAI, IMPERIAL_COFFER, CLEO);
+		addKillId(THUNDER_WYRM_HOLD, THUNDER_WYRM, DRAKE, DRAKE_HOLD, BLITZ_WYRM, LESSER_GIANT_SOLDIER, LESSER_GIANT_SCOUT, GRAVE_GUARD, GRAVE_KEYMASTER, IMPERIAL_GRAVEKEEPER);
 		addAttackId(IMPERIAL_GRAVEKEEPER);
 	}
 	
@@ -130,25 +137,25 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			case "30760-08.htm":
 			{
 				st.startQuest();
-				giveItems(player, G_LET_MARTIEN, 1);
+				giveItems(player, GUSTAVS_1ST_LETTER, 1);
 				break;
 			}
 			case "30760-12.htm":
 			{
-				giveItems(player, G_LET_BALTHAZAR, 1);
+				giveItems(player, GUSTAVS_2ND_LETTER, 1);
 				st.setCond(4);
 				break;
 			}
 			case "30760-16.htm":
 			{
-				giveItems(player, G_LET_RODEMAI, 1);
+				giveItems(player, GUSTAVS_3RD_LETTER, 1);
 				st.setCond(7);
 				break;
 			}
 			case "30760-20.htm":
 			{
-				takeItems(player, SCEPTER_JUDGEMENT, -1);
-				giveItems(player, PROOF_ASPIRATION, 1);
+				takeItems(player, SCEPTER_OF_JUDGMENT, -1);
+				giveItems(player, SEAL_OF_ASPIRATION, 1);
 				addExpAndSp(player, 0, 250000);
 				st.exitQuest(false, true);
 				finishQuestToClan(player);
@@ -156,13 +163,16 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "30760-22.htm":
 			{
-				st.setCond(1);
+				if ((st.getCond() == 11) || hasQuestItems(player, SCEPTER_OF_JUDGMENT))
+				{
+					st.setCond(13);
+				}
 				break;
 			}
 			case "30760-23.htm":
 			{
-				takeItems(player, SCEPTER_JUDGEMENT, -1);
-				giveItems(player, PROOF_ASPIRATION, 1);
+				takeItems(player, SCEPTER_OF_JUDGMENT, -1);
+				giveItems(player, SEAL_OF_ASPIRATION, 1);
 				addExpAndSp(player, 0, 250000);
 				st.exitQuest(false, true);
 				finishQuestToClan(player);
@@ -171,22 +181,22 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			case "30645-03.htm":
 			{
 				setQuestToClanMembers(player);
-				takeItems(player, G_LET_MARTIEN, -1);
+				takeItems(player, GUSTAVS_1ST_LETTER, -1);
 				st.setCond(2);
 				st.set("kurt", "0");
 				break;
 			}
 			case "30763-02.htm":
 			{
-				giveItems(player, MI_DRAKE_EGGS, 6);
-				giveItems(player, BROOCH, 1);
+				giveItems(player, MIST_DRAKE_EGG, 6);
+				giveItems(player, BROOCH_OF_THE_MAGPIE, 1);
 				st.set("kurt", "1");
 				break;
 			}
 			case "30762-02.htm":
 			{
-				giveItems(player, MI_DRAKE_EGGS, 4);
-				giveItems(player, BL_WYRM_EGGS, 3);
+				giveItems(player, MIST_DRAKE_EGG, 4);
+				giveItems(player, BLITZ_WYRM_EGG, 3);
 				addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
 				addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
 				st.set("lutz", "1");
@@ -194,7 +204,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "30761-02.htm":
 			{
-				giveItems(player, BL_WYRM_EGGS, 3);
+				giveItems(player, BLITZ_WYRM_EGG, 3);
 				addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
 				addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
 				st.set("fritz", "1");
@@ -202,32 +212,32 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "30512-03.htm":
 			{
-				takeItems(player, BROOCH, 1);
-				giveItems(player, BL_ANVIL_COIN, 1);
+				takeItems(player, BROOCH_OF_THE_MAGPIE, 1);
+				giveItems(player, BLACK_ANVIL_COIN, 1);
 				st.set("kurt", "2");
 				break;
 			}
 			case "30764-03.htm":
 			{
-				takeItems(player, G_LET_BALTHAZAR, -1);
+				takeItems(player, GUSTAVS_2ND_LETTER, -1);
 				st.setCond(5);
 				break;
 			}
 			case "30764-05.htm":
 			{
-				takeItems(player, G_LET_BALTHAZAR, -1);
+				takeItems(player, GUSTAVS_2ND_LETTER, -1);
 				st.setCond(5);
 				break;
 			}
 			case "30764-06.htm":
 			{
-				takeItems(player, BL_ANVIL_COIN, -1);
-				giveItems(player, RECIPE_POWER_STONE, 1);
+				takeItems(player, BLACK_ANVIL_COIN, -1);
+				giveItems(player, RECIPE_TITANS_POWERSTONE, 1);
 				break;
 			}
 			case "30868-04.htm":
 			{
-				takeItems(player, G_LET_RODEMAI, -1);
+				takeItems(player, GUSTAVS_3RD_LETTER, -1);
 				st.setCond(8);
 				break;
 			}
@@ -238,7 +248,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "30868-10.htm":
 			{
-				st.setCond(12);
+				st.setCond(11);
 				break;
 			}
 			case "30766-04.htm":
@@ -251,9 +261,13 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				sister2.broadcastPacket(new NpcSay(sister2, ChatType.NPC_GENERAL, "War and death!"));
 				break;
 			}
-			case "Open":
+			case "OPEN":
 			{
-				if (getQuestItemsCount(player, IMP_KEYS) < 6)
+				if (!player.isClanLeader() || !st.isStarted() || (st.getCond() != 10) || hasQuestItems(player, SCEPTER_OF_JUDGMENT))
+				{
+					htmltext = "30765-02.htm";
+				}
+				else if (getQuestItemsCount(player, IMPERIAL_KEY) < 6)
 				{
 					htmltext = "30765-03a.htm";
 				}
@@ -261,8 +275,8 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					htmltext = "30765-03.htm";
 					st.setCond(11);
-					takeItems(player, IMP_KEYS, 6);
-					giveItems(player, SCEPTER_JUDGEMENT, 1);
+					takeItems(player, IMPERIAL_KEY, 6);
+					giveItems(player, SCEPTER_OF_JUDGMENT, 1);
 				}
 				break;
 			}
@@ -274,13 +288,29 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
+		final QuestState leaderSt = getClanLeaderQuestState(player, npc);
+		if ((npc.getId() == IMPERIAL_COFFER) && !player.isClanLeader() && (leaderSt != null) && leaderSt.isStarted() && (leaderSt.getCond() == 10))
+		{
+			return "30765-02.htm";
+		}
+		
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
 		
-		switch (st.getState())
+		int state = st.getState();
+		if (!player.isClanLeader() && (state == State.CREATED) && (leaderSt != null) && leaderSt.isStarted())
+		{
+			state = State.STARTED;
+		}
+		
+		switch (state)
 		{
 			case State.CREATED:
 			{
+				if (npc.getId() != SIR_GUSTAV_ATHEBALDT)
+				{
+					break;
+				}
 				if (player.getClan() == null)
 				{
 					htmltext = "30760-01.htm";
@@ -288,7 +318,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				}
 				else if (player.isClanLeader())
 				{
-					if (hasQuestItems(player, PROOF_ASPIRATION))
+					if (hasQuestItems(player, SEAL_OF_ASPIRATION))
 					{
 						htmltext = "30760-03.htm";
 						st.exitQuest(true);
@@ -314,14 +344,14 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			{
 				final int cond = st.getCond();
 				int memberCond = 0;
-				if (getClanLeaderQuestState(player, npc) != null)
+				if (leaderSt != null)
 				{
-					memberCond = getClanLeaderQuestState(player, npc).getCond();
+					memberCond = leaderSt.getCond();
 				}
 				
 				switch (npc.getId())
 				{
-					case GUSTAF:
+					case SIR_GUSTAV_ATHEBALDT:
 					{
 						if (player.isClanLeader())
 						{
@@ -353,7 +383,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 							{
 								htmltext = "30760-17.htm";
 							}
-							else if (cond == 12)
+							else if (cond == 11)
 							{
 								htmltext = "30760-19.htm";
 							}
@@ -361,7 +391,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 							{
 								htmltext = "30760-24.htm";
 							}
-							else if (hasQuestItems(player, SCEPTER_JUDGEMENT))
+							else if (hasQuestItems(player, SCEPTER_OF_JUDGMENT))
 							{
 								htmltext = "30760-19.htm";
 							}
@@ -380,13 +410,13 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 							{
 								htmltext = "30760-15t.htm";
 							}
-							else if (memberCond == 12)
+							else if (memberCond == 11)
 							{
 								htmltext = "30760-19t.htm";
 							}
 							else if (memberCond == 13)
 							{
-								htmltext = "30766-24t.htm";
+								htmltext = "30760-24t.htm";
 							}
 						}
 						break;
@@ -401,14 +431,14 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 							}
 							else if (cond == 2)
 							{
-								if ((getQuestItemsCount(player, MI_DRAKE_EGGS) > 9) && (getQuestItemsCount(player, BL_WYRM_EGGS) > 9) && (getQuestItemsCount(player, DRAKE_EGGS) > 9) && (getQuestItemsCount(player, TH_WYRM_EGGS) > 9))
+								if ((getQuestItemsCount(player, MIST_DRAKE_EGG) > 9) && (getQuestItemsCount(player, BLITZ_WYRM_EGG) > 9) && (getQuestItemsCount(player, DRAKE_EGG) > 9) && (getQuestItemsCount(player, THUNDER_WYRM_EGG) > 9))
 								{
 									htmltext = "30645-05.htm";
 									st.setCond(3);
-									takeItems(player, MI_DRAKE_EGGS, -1);
-									takeItems(player, BL_WYRM_EGGS, -1);
-									takeItems(player, DRAKE_EGGS, -1);
-									takeItems(player, TH_WYRM_EGGS, -1);
+									takeItems(player, MIST_DRAKE_EGG, -1);
+									takeItems(player, BLITZ_WYRM_EGG, -1);
+									takeItems(player, DRAKE_EGG, -1);
+									takeItems(player, THUNDER_WYRM_EGG, -1);
 								}
 								else
 								{
@@ -433,7 +463,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 						}
 						break;
 					}
-					case LUTZ:
+					case CORPSE_OF_LUTZ:
 					{
 						if (player.isClanLeader() && (cond == 2))
 						{
@@ -448,7 +478,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 						}
 						break;
 					}
-					case KURTZ:
+					case CORPSE_OF_KURTZ:
 					{
 						if (player.isClanLeader() && (cond == 2))
 						{
@@ -463,7 +493,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 						}
 						break;
 					}
-					case FRITZ:
+					case CORPSE_OF_FRITZ:
 					{
 						if (player.isClanLeader() && (cond == 2))
 						{
@@ -482,7 +512,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 					{
 						if (player.isClanLeader())
 						{
-							if (getQuestItemsCount(player, BROOCH) == 1)
+							if (getQuestItemsCount(player, BROOCH_OF_THE_MAGPIE) == 1)
 							{
 								if (st.getInt("kurt") == 0)
 								{
@@ -524,12 +554,12 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 							}
 							else if (cond == 5)
 							{
-								if ((getQuestItemsCount(player, POWER_STONE) > 9) && (getQuestItemsCount(player, NEBULITE_CRYSTALS) > 9))
+								if ((getQuestItemsCount(player, TITANS_POWERSTONE) > 9) && (getQuestItemsCount(player, NEBULITE_CRYSTALS) > 9))
 								{
 									htmltext = "30764-08.htm";
-									takeItems(player, POWER_STONE, -1);
+									takeItems(player, TITANS_POWERSTONE, -1);
 									takeItems(player, NEBULITE_CRYSTALS, -1);
-									takeItems(player, BROOCH, -1);
+									takeItems(player, BROOCH_OF_THE_MAGPIE, -1);
 									st.setCond(6);
 								}
 								else
@@ -551,7 +581,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 						}
 						break;
 					}
-					case RODEMAI:
+					case SIR_ERIC_RODEMAI:
 					{
 						if (player.isClanLeader())
 						{
@@ -623,13 +653,13 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 						}
 						break;
 					}
-					case COFFER:
+					case IMPERIAL_COFFER:
 					{
 						if (player.isClanLeader())
 						{
-							if (cond == 10)
+							if ((cond == 10) && !hasQuestItems(player, SCEPTER_OF_JUDGMENT))
 							{
-								htmltext = "30765-01.htm";
+								htmltext = getQuestItemsCount(player, IMPERIAL_KEY) >= 6 ? "30765-01.htm" : "30765-03a.htm";
 							}
 						}
 						else
@@ -668,15 +698,68 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 	@Override
 	public void onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
-		if ((skill == null) && ((npc.getMaxHp() / 2) > npc.getCurrentHp()))
+		if (npc.isDead() || (npc.getId() != IMPERIAL_GRAVEKEEPER))
 		{
-			if (getRandom(100) < 4)
+			return;
+		}
+		
+		final Player realAttacker = isSummon && (attacker.asPlayer() != null) ? attacker.asPlayer() : attacker;
+		if ((realAttacker == null) || !realAttacker.isOnline())
+		{
+			return;
+		}
+		
+		final QuestState qs = getClanLeaderQuestState(realAttacker, npc);
+		if ((qs == null) || !qs.isStarted() || (qs.getCond() != 10))
+		{
+			return;
+		}
+		
+		final double hpPercent = (npc.getCurrentHp() / npc.getMaxHp()) * 100.0;
+		
+		final int lastSpawnTrigger = npc.getVariables().getInt("lastSpawnTrigger", 100);
+		if ((lastSpawnTrigger > 80) && (hpPercent <= 80))
+		{
+			spawnImperialSlaves(npc);
+			npc.getVariables().set("lastSpawnTrigger", 80);
+		}
+		else if ((lastSpawnTrigger > 40) && (hpPercent <= 40))
+		{
+			spawnImperialSlaves(npc);
+			npc.getVariables().set("lastSpawnTrigger", 40);
+		}
+		else if ((lastSpawnTrigger > 20) && (hpPercent <= 20))
+		{
+			spawnImperialSlaves(npc);
+			npc.getVariables().set("lastSpawnTrigger", 20);
+		}
+		
+		final int lastTeleport = npc.getVariables().getInt("lastTeleport", 100);
+		if ((lastTeleport > 50) && (hpPercent <= 50))
+		{
+			npc.asAttackable().setCanReturnToSpawnPoint(false);
+			teleportImperialGravekeeper(npc, TELEPORT_1_X, TELEPORT_1_Y, TELEPORT_1_Z);
+			npc.getVariables().set("lastTeleport", 50);
+		}
+		else if ((lastTeleport > 30) && (hpPercent <= 30))
+		{
+			npc.asAttackable().setCanReturnToSpawnPoint(false);
+			teleportImperialGravekeeper(npc, TELEPORT_2_X, TELEPORT_2_Y, TELEPORT_2_Z);
+			npc.getVariables().set("lastTeleport", 30);
+		}
+		
+		final Skill selfHealSkill = SkillData.getInstance().getSkill(DARK_HEAL_SKILL, 1);
+		if (selfHealSkill != null)
+		{
+			final long now = System.currentTimeMillis();
+			final long lastCast = npc.getVariables().getLong("lastDarkHealCast", 0);
+			final long reuseDelay = 60000;
+			
+			if (((now - lastCast) >= reuseDelay) && !npc.isCastingNow() && !npc.isSkillDisabled(selfHealSkill) && (npc.getCurrentMp() >= selfHealSkill.getMpConsume()) && (npc.getCurrentHp() > selfHealSkill.getHpConsume()))
 			{
-				addSpawn(IMPERIAL_SLAVE, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
-			}
-			else
-			{
-				attacker.teleToLocation(185462, 20342, -3250);
+				npc.setTarget(npc);
+				npc.getAI().setIntentionCast(selfHealSkill, npc);
+				npc.getVariables().set("lastDarkHealCast", now);
 			}
 		}
 	}
@@ -691,48 +774,119 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			return;
 		}
 		
+		int npcId = npc.getId();
+		int cond = st.getCond();
+		
+		if (npcId == IMPERIAL_GRAVEKEEPER)
+		{
+			final Player clanLeader = st.getPlayer();
+			if ((clanLeader != null) && clanLeader.isOnline() && (cond == 10) && !hasQuestItems(clanLeader, SCEPTER_OF_JUDGMENT) && (clanLeader.calculateDistance3D(npc) <= 1500))
+			{
+				final Npc coffer = addSpawn(IMPERIAL_COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
+				coffer.broadcastPacket(new NpcSay(coffer, ChatType.NPC_GENERAL, "Curse of the gods on the one that defiles the property of the empire!"));
+			}
+			return;
+		}
+		
+		if (npcId == GRAVE_GUARD)
+		{
+			final Player clanLeader = st.getPlayer();
+			if ((clanLeader != null) && clanLeader.isOnline() && (cond == 10) && !hasQuestItems(clanLeader, SCEPTER_OF_JUDGMENT) && (clanLeader.calculateDistance3D(npc) <= 1500))
+			{
+				int graveGuardKills = st.getInt("grave_guard_kills") + 1;
+				st.set("grave_guard_kills", graveGuardKills);
+				if (((graveGuardKills >= 5) && (getRandom(100) < 50)) || (graveGuardKills >= 10))
+				{
+					st.set("grave_guard_kills", 0);
+					addSpawn(GRAVE_KEYMASTER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+				}
+			}
+			return;
+		}
+		
+		if (npcId == GRAVE_KEYMASTER)
+		{
+			final Player clanLeader = st.getPlayer();
+			if ((clanLeader != null) && clanLeader.isOnline() && (cond == 10) && !hasQuestItems(clanLeader, SCEPTER_OF_JUDGMENT) && (getQuestItemsCount(clanLeader, IMPERIAL_KEY) < 6) && (clanLeader.calculateDistance3D(npc) <= 1500))
+			{
+				giveItems(clanLeader, IMPERIAL_KEY, 1);
+				if (getQuestItemsCount(clanLeader, IMPERIAL_KEY) >= 6)
+				{
+					playSound(clanLeader, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+				}
+				else
+				{
+					playSound(clanLeader, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+			}
+			return;
+		}
+		
+		if (((npcId == DRAKE) || (npcId == DRAKE_HOLD)) && (cond == 2))
+		{
+			final Player clanLeader = st.getPlayer();
+			giveItemRandomly(clanLeader, npc, MIST_DRAKE_EGG, 1, 10, 0.10, true);
+			giveItemRandomly(clanLeader, npc, DRAKE_EGG, 1, 10, 0.50, true);
+			return;
+		}
+		
+		// Handling for LESSER_GIANT_SOLDIER and LESSER_GIANT_SCOUT for retail chances
+		if (((npcId == LESSER_GIANT_SOLDIER) || (npcId == LESSER_GIANT_SCOUT)) && (cond == 5))
+		{
+			final Player clanLeader = st.getPlayer();
+			final int roll = getRandom(100);
+			
+			if ((roll < 10) && (getQuestItemsCount(clanLeader, TITANS_POWERSTONE) < 10))
+			{
+				giveItems(clanLeader, TITANS_POWERSTONE, 1);
+			}
+			else if ((roll < 30) && (getQuestItemsCount(clanLeader, NEBULITE_CRYSTALS) < 10))
+			{
+				giveItems(clanLeader, NEBULITE_CRYSTALS, 1);
+			}
+			else if (roll < 80)
+			{
+				giveItems(clanLeader, BROKEN_TITANS_POWERSTONE, 1);
+			}
+			
+			return; // Skip rest of the drop logic for these NPCs
+		}
+		
 		for (int[] element : DROPLIST)
 		{
-			if (element[0] == npc.getId())
+			if (element[0] == npcId)
 			{
-				final int cond = element[1];
-				if (st.getCond() == cond)
+				if (cond == element[1])
 				{
 					final int maxCount = element[2];
 					final int chance = element[3];
 					final int item1 = element[4];
-					final int item2 = element[5];
-					final int item3 = element[6];
+					
 					if (item1 != 0)
 					{
 						giveItemRandomly(st.getPlayer(), item1, 1, maxCount, chance / 1000000d, true);
 					}
-					else
+					else if ((element[0] == GRAVE_GUARD) && (getQuestItemsCount(st.getPlayer(), IMPERIAL_KEY) < 6) && (getRandom(1000000) < chance))
 					{
-						if (element[0] == IMPERIAL_GRAVEKEEPER)
-						{
-							final Npc coffer = addSpawn(COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
-							coffer.broadcastPacket(new NpcSay(coffer, ChatType.NPC_GENERAL, "Curse of the gods on the one that defiles the property of the empire!"));
-						}
-						else if ((element[0] == GRAVE_GUARD) && (getQuestItemsCount(st.getPlayer(), IMP_KEYS) < 6) && (getRandom(50) < chance))
-						{
-							addSpawn(GRAVE_KEYMASTER, player.getX(), player.getY(), player.getZ(), player.getHeading(), true, 0);
-						}
-					}
-					
-					if ((item2 != 0) && (item3 != 0))
-					{
-						if (getRandom(4) == 0)
-						{
-							giveItemRandomly(st.getPlayer(), item2, 1, maxCount, chance / 1000000d, true);
-						}
-						else
-						{
-							giveItemRandomly(st.getPlayer(), item3, 1, maxCount, chance / 1000000d, true);
-						}
+						addSpawn(GRAVE_KEYMASTER, player.getX(), player.getY(), player.getZ(), player.getHeading(), true, 0);
 					}
 				}
 			}
 		}
+	}
+	
+	private void spawnImperialSlaves(Npc npc)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			addSpawn(IMPERIAL_SLAVE, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+		}
+	}
+	
+	private void teleportImperialGravekeeper(Npc npc, int x, int y, int z)
+	{
+		npc.broadcastPacket(new TeleportToLocation(npc, x, y, z, npc.getHeading()));
+		npc.setXYZ(x, y, z);
+		npc.revalidateZone(true);
 	}
 }

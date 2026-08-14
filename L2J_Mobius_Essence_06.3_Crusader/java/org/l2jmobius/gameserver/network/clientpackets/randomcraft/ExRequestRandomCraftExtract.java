@@ -26,10 +26,10 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.config.RandomCraftConfig;
 import org.l2jmobius.gameserver.data.xml.RandomCraftData;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.RandomCraftRequest;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.RandomCraftRequest;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftExtract;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
@@ -82,7 +82,6 @@ public class ExRequestRandomCraftExtract extends ClientPacket
 		Map<Integer, Long> toDestroy = new HashMap<>();
 		for (Entry<Integer, Long> e : _items.entrySet())
 		{
-			final int objId = e.getKey();
 			final long count = e.getValue();
 			if (count < 1)
 			{
@@ -90,6 +89,7 @@ public class ExRequestRandomCraftExtract extends ClientPacket
 				return;
 			}
 			
+			final int objId = e.getKey();
 			final Item item = player.getInventory().getItemByObjectId(objId);
 			if (item != null)
 			{

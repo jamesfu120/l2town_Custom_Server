@@ -26,16 +26,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.InstanceScript;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.InstanceScript;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.skill.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -731,7 +730,7 @@ public class LastImperialTomb extends InstanceScript
 	@Override
 	protected void onEnter(Player player, Instance world, boolean firstEnter)
 	{
-		// Teleport player to instance
+		// Teleport player to instance.
 		super.onEnter(player, world, firstEnter);
 		
 		if (world.getStatus() > 3)
@@ -903,7 +902,6 @@ public class LastImperialTomb extends InstanceScript
 	
 	private void playRandomSong(Instance world)
 	{
-		final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 		final boolean isPlayingSong = world.getParameters().getBoolean("isPlayingSong");
 		if (isPlayingSong)
 		{
@@ -911,6 +909,7 @@ public class LastImperialTomb extends InstanceScript
 		}
 		
 		world.setParameter("isPlayingSong", true);
+		final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 		final int random = getRandom(1, 5);
 		final SkillHolder skill = new SkillHolder(5007, random);
 		final SkillHolder skillEffect = new SkillHolder(5008, random);
@@ -940,7 +939,7 @@ public class LastImperialTomb extends InstanceScript
 				player.setTarget(null);
 				player.stopMove(null);
 				player.setImmobilized(true);
-				player.getAI().setIntention(Intention.IDLE);
+				player.getAI().setIntentionIdle();
 			}
 		}
 	}
@@ -994,12 +993,12 @@ public class LastImperialTomb extends InstanceScript
 		if (target != null)
 		{
 			npc.asAttackable().addDamageHate(target, 0, 500);
-			npc.getAI().setIntention(Intention.ATTACK, target);
+			npc.getAI().setIntentionAttack(target);
 			npc.setRunning();
 		}
 		else
 		{
-			npc.getAI().setIntention(Intention.MOVE_TO, LOCATION);
+			npc.getAI().setIntentionMoveTo(LOCATION);
 		}
 	}
 	

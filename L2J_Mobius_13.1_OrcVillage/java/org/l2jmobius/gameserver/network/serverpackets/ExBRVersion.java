@@ -20,7 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.network.WritableBuffer;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.AttendanceRewardsConfig;
 import org.l2jmobius.gameserver.config.ServerConfig;
 import org.l2jmobius.gameserver.config.WorldExchangeConfig;
@@ -37,7 +37,7 @@ public class ExBRVersion extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		if (!WorldExchangeConfig.ENABLE_WORLD_EXCHANGE)
 		{

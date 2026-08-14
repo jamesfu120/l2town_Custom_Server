@@ -24,20 +24,20 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.SubClassHolder;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerSubChange;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.SubClassHolder;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.mechanics.events.EventType;
+import org.l2jmobius.gameserver.mechanics.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.mechanics.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerSubChange;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 
 /**
@@ -406,7 +406,7 @@ public class Gallias extends Script
 	 * @param player
 	 * @return
 	 */
-	private final boolean hasSubCertificate(Player player)
+	private boolean hasSubCertificate(Player player)
 	{
 		final PlayerVariables vars = player.getVariables();
 		final Set<Integer> subs = player.getSubClasses().keySet();
@@ -429,7 +429,7 @@ public class Gallias extends Script
 	 * @param player
 	 * @return
 	 */
-	private final boolean hasDualCertificate(Player player)
+	private boolean hasDualCertificate(Player player)
 	{
 		final PlayerVariables vars = player.getVariables();
 		for (int lv : DUAL_SKILL_LEVELS)
@@ -443,12 +443,12 @@ public class Gallias extends Script
 		return false;
 	}
 	
-	private final String getSubSkillVariableName(Player player, int level)
+	private String getSubSkillVariableName(Player player, int level)
 	{
 		return "SubSkill-" + player.getClassIndex() + "-" + level;
 	}
 	
-	private final String getDualSkillVariableName(int level)
+	private String getDualSkillVariableName(int level)
 	{
 		return "DualSkill-" + level;
 	}

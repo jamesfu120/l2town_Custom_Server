@@ -22,11 +22,11 @@ package ai.others.BalthusKnights.Helper.BalthusKnights;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.instance.Monster;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 /**
  * Balthus Knights AI
@@ -50,7 +50,6 @@ public final class BalthusKnights extends Script
 	public void onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		
 		if ((instance != null) && (instance.getTemplateId() == 271))
 		{
 			switch (instance.getStatus())
@@ -61,7 +60,7 @@ public final class BalthusKnights extends Script
 					addSpawn((Rnd.get(2) == 1) ? GEM_DRAGON_ANTHARAS : HATCHLING, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false, instance.getId());
 					ThreadPool.schedule(() ->
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 200, mob ->
+						World.forEachVisibleObjectInRange(npc, Monster.class, 200, mob ->
 						{
 							if ((mob != null) && (!mob.isDead()) && ((mob.getId() == HATCHLING) || (mob.getId() == GEM_DRAGON_ANTHARAS)))
 							{
@@ -77,7 +76,7 @@ public final class BalthusKnights extends Script
 					npc.setInvul(true);
 					ThreadPool.schedule(() ->
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 60, mob ->
+						World.forEachVisibleObjectInRange(npc, Monster.class, 60, mob ->
 						{
 							if ((mob != null) && (!mob.isDead()) && ((mob.getId() == HATCHLING) || (mob.getId() == GEM_DRAGON_ANTHARAS)))
 							{

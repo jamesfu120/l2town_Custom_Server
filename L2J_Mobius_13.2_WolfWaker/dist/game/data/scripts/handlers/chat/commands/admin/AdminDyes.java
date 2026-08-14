@@ -24,10 +24,10 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.model.variables.AccountVariables;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.dye.DyeEffectList;
 
@@ -62,7 +62,7 @@ public class AdminDyes implements IAdminCommandHandler
 			StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
 			
-			if (!(st.countTokens() == 2))
+			if (st.countTokens() != 2)
 			{
 				activeChar.sendMessage("Usage: //dye_set_level <slotId (1, 2, 3)> <level>");
 				return false;
@@ -151,7 +151,7 @@ public class AdminDyes implements IAdminCommandHandler
 					target.addSkill(hiddenSealBuffSkill, true);
 				}
 			}
-			if (!(activeChar == target.asPlayer()))
+			if (activeChar != target.asPlayer())
 			{
 				target.sendMessage("Admin updated your tattoos.");
 			}
@@ -223,7 +223,7 @@ public class AdminDyes implements IAdminCommandHandler
 			target.getAccountVariables().set(AccountVariables.DYE_CHALLENGE_COUNT_FOR_SLOT_ + slotId, 30);
 			target.getAccountVariables().set(AccountVariables.DYE_LEVEL_FOR_SLOT_ + slotId, 0);
 			target.getAccountVariables().set(AccountVariables.DYE_HIDDEN_SKILL_LEVEL_FOR_SLOT_ + slotId, 0);
-			if (!(activeChar == target.asPlayer()))
+			if (activeChar != target.asPlayer())
 			{
 				target.sendMessage("Admin updated your tattoos.");
 			}

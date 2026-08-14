@@ -19,12 +19,12 @@ package quests.Q00372_LegacyOfInsolence;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.script.Quest;
-import org.l2jmobius.gameserver.model.script.QuestSound;
-import org.l2jmobius.gameserver.model.script.QuestState;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.mechanics.script.QuestSound;
+import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
 /**
@@ -130,11 +130,12 @@ public class Q00372_LegacyOfInsolence extends Quest
 	public String onEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		final int chance = getRandom(100);
 		if (qs == null)
 		{
 			return super.onEvent(event, npc, player);
 		}
+		
+		final int chance = getRandom(100);
 		
 		String htmltext = null;
 		switch (event)

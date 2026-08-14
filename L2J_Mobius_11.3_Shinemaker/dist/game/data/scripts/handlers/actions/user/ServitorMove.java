@@ -16,11 +16,10 @@
  */
 package handlers.actions.user;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -51,7 +50,7 @@ public class ServitorMove implements IActionUserHandler
 					}
 					
 					summon.setFollowStatus(false);
-					summon.getAI().setIntention(Intention.MOVE_TO, player.getTarget().getLocation());
+					summon.getAI().setIntentionMoveTo(player.getTarget().getLocation());
 				}
 			}
 		}

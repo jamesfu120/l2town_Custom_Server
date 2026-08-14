@@ -25,12 +25,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
-import org.l2jmobius.gameserver.model.script.Script;
+import org.l2jmobius.gameserver.entity.Location;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.instancezone.Instance;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.mechanics.script.Script;
 
 import instances.PaganTemple.PaganTempleManager;
 
@@ -90,19 +90,18 @@ public class PaganTempleEliNpc extends Script
 	
 	private static String handleTalkAction(String event, Npc npc, Player player, Instance world)
 	{
-		final int index = event.length() <= "TALK".length() ? 0 : Integer.parseInt(event.substring("TALK".length() + 1));
 		if (!PaganTempleManager.isAvailableToEnter(player))
 		{
 			return ELI_NPC_ID + "-no.htm";
 		}
-		else if (index == 1)
+		
+		final int index = event.length() <= "TALK".length() ? 0 : Integer.parseInt(event.substring("TALK".length() + 1));
+		if (index == 1)
 		{
 			return ELI_NPC_ID + "-info.htm";
 		}
-		else
-		{
-			return ELI_NPC_ID + ".htm";
-		}
+		
+		return ELI_NPC_ID + ".htm";
 	}
 	
 	private static String handleTeleportAction(String event, Npc npc, Player player, Instance world)

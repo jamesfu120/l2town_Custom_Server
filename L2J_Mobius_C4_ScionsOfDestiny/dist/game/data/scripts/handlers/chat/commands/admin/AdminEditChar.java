@@ -30,29 +30,30 @@ import java.util.Map;
 import java.util.StringJoiner;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.config.custom.AutoPlayConfig;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Playable;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.Summon;
+import org.l2jmobius.gameserver.entity.actor.appearance.PlayerAppearance;
+import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
+import org.l2jmobius.gameserver.entity.clan.Clan;
+import org.l2jmobius.gameserver.entity.groups.Party;
+import org.l2jmobius.gameserver.entity.groups.PartyDistributionType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.groups.Party;
-import org.l2jmobius.gameserver.model.groups.PartyDistributionType;
-import org.l2jmobius.gameserver.model.html.PageBuilder;
-import org.l2jmobius.gameserver.model.html.PageResult;
-import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
-import org.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
-import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
+import org.l2jmobius.gameserver.mechanics.html.PageBuilder;
+import org.l2jmobius.gameserver.mechanics.html.PageResult;
+import org.l2jmobius.gameserver.mechanics.html.formatters.BypassParserFormatter;
+import org.l2jmobius.gameserver.mechanics.html.pagehandlers.NextPrevPageHandler;
+import org.l2jmobius.gameserver.mechanics.html.styles.ButtonsStyle;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
@@ -67,6 +68,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class AdminEditChar implements IAdminCommandHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(AdminEditChar.class.getName());
+	
+	private static final Pattern IPV4_PATTERN = Pattern.compile("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$");
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -116,9 +119,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_character_info"))
 		{
 			final String[] data = command.split(" ");
-			if ((data.length > 1))
+			if (data.length > 1)
 			{
-				showCharacterInfo(activeChar, World.getInstance().getPlayer(data[1]));
+				showCharacterInfo(activeChar, World.getPlayer(data[1]));
 			}
 			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
@@ -143,7 +146,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				// Case of empty page number
+				// Case of empty page number.
 				activeChar.sendSysMessage("Usage: //show_characters <page_number>");
 			}
 		}
@@ -189,7 +192,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_edit_character"))
 		{
 			final String[] data = command.split(" ");
-			if ((data.length > 1))
+			if (data.length > 1)
 			{
 				editCharacter(activeChar, data[1]);
 			}
@@ -438,7 +441,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final Party party = player.getParty();
 				if (party != null)
 				{
-					// Delete party window for other party members
+					// Delete party window for other party members.
 					party.broadcastToPartyMembers(player, PartySmallWindowDeleteAll.STATIC_PACKET);
 					for (Player member : party.getMembers())
 					{
@@ -567,7 +570,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
 				final String playerName = st.nextToken();
 				Player player = null;
-				player = World.getInstance().getPlayer(playerName);
+				player = World.getPlayer(playerName);
 				if (player == null)
 				{
 					final Connection con = DatabaseFactory.getConnection();
@@ -699,7 +702,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(19);
 				final int objId = Integer.parseInt(val);
-				target = World.getInstance().getPet(objId);
+				target = World.getPet(objId);
 			}
 			catch (Exception e)
 			{
@@ -721,7 +724,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(16);
-				target = World.getInstance().getPlayer(val);
+				target = World.getPlayer(val);
 				if (target == null)
 				{
 					target = activeChar.getTarget();
@@ -784,6 +787,11 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				
 				target.asCreature().setCurrentHp(Double.parseDouble(data[1]));
+				
+				if (target.isPlayer())
+				{
+					target.asPlayer().updateUserInfo();
+				}
 			}
 			catch (Exception e)
 			{
@@ -803,6 +811,11 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				
 				target.asCreature().setCurrentMp(Double.parseDouble(data[1]));
+				
+				if (target.isPlayer())
+				{
+					target.asPlayer().updateUserInfo();
+				}
 			}
 			catch (Exception e)
 			{
@@ -822,6 +835,11 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				
 				target.asCreature().setCurrentCp(Double.parseDouble(data[1]));
+				
+				if (target.isPlayer())
+				{
+					target.asPlayer().updateUserInfo();
+				}
 			}
 			catch (Exception e)
 			{
@@ -859,7 +877,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void listCharacters(Player activeChar, int page)
 	{
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage();
@@ -989,7 +1007,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%hwid%", hwid);
 		adminReply.replace("%ai%", player.getAI().getIntention().name());
 		adminReply.replace("%autoplay%", AutoPlayConfig.ENABLE_AUTO_PLAY ? "<br1>AutoPlay: " + (player.isAutoPlaying() ? "Enabled" : "Disabled") : "");
-		adminReply.replace("%inst%", player.getInstanceId() > 0 ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + player.getInstanceId() + "\">" + player.getInstanceId() + "</a></td></tr>" : "");
+		adminReply.replace("%inst%", player.isInInstance() ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + player.getInstanceId() + "\">" + player.getInstanceId() + "</a></td></tr>" : "");
 		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
 		activeChar.sendPacket(adminReply);
 	}
@@ -1036,7 +1054,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		WorldObject target = null;
 		if (targetName != null)
 		{
-			target = World.getInstance().getPlayer(targetName);
+			target = World.getPlayer(targetName);
 		}
 		else
 		{
@@ -1062,10 +1080,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.setFile(activeChar, "data/html/admin/charfind.htm");
 		
 		final StringBuilder replyMSG = new StringBuilder(1000);
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
-		{ // Add player info into new Table row
+		{ // Add player info into new Table row.
 			name = player.getName();
 			if (name.toLowerCase().contains(characterToFind.toLowerCase()))
 			{
@@ -1126,7 +1144,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else
 		{
-			if (!ipAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
+			if (!IPV4_PATTERN.matcher(ipAdress).matches())
 			{
 				throw new IllegalArgumentException("Malformed IPv4 number");
 			}
@@ -1140,7 +1158,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar, "data/html/admin/ipfind.htm");
 		
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
 		{
@@ -1222,7 +1240,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findCharactersPerAccount(Player activeChar, String characterName)
 	{
-		final Player player = World.getInstance().getPlayer(characterName);
+		final Player player = World.getPlayer(characterName);
 		if (player == null)
 		{
 			throw new IllegalArgumentException("Player doesn't exist");
@@ -1250,7 +1268,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		String ip = "0.0.0.0";
 		GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
 		{
@@ -1283,7 +1301,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		final List<String> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
+		keys.sort(Comparator.comparingInt(dualboxIPs::get).reversed());
 		
 		final StringBuilder results = new StringBuilder();
 		for (String dualboxIP : keys)
@@ -1304,7 +1322,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		final Map<IpPack, List<Player>> ipMap = new HashMap<>();
 		GameClient client;
 		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
 		{
@@ -1337,7 +1355,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		final List<IpPack> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
+		keys.sort(Comparator.comparingInt(dualboxIPs::get).reversed());
 		
 		final StringBuilder results = new StringBuilder();
 		for (IpPack dualboxIP : keys)

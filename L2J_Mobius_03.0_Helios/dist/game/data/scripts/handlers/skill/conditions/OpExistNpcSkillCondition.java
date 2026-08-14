@@ -22,13 +22,13 @@ package handlers.skill.conditions;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.skill.ISkillCondition;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.World;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.mechanics.skill.ISkillCondition;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * @author UnAfraid, Mobius
@@ -49,12 +49,9 @@ public class OpExistNpcSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		for (Npc npc : World.getInstance().getVisibleObjectsInRange(caster, Npc.class, _range))
+		if (World.getFirstVisibleObjectInRange(caster, Npc.class, _range, npc -> _npcIds.contains(npc.getId())) != null)
 		{
-			if (_npcIds.contains(npc.getId()))
-			{
-				return _isAround;
-			}
+			return _isAround;
 		}
 		
 		return !_isAround;

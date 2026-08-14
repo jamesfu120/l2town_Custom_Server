@@ -16,11 +16,10 @@
  */
 package handlers.actions.user;
 
-import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.data.holders.ActionDataHolder;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Pet;
 import org.l2jmobius.gameserver.handler.IActionUserHandler;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -50,7 +49,7 @@ public class PetMove implements IActionUserHandler
 		else if ((player.getTarget() != null) && (pet != player.getTarget()) && !pet.isMovementDisabled())
 		{
 			pet.setFollowStatus(false);
-			pet.getAI().setIntention(Intention.MOVE_TO, player.getTarget().getLocation());
+			pet.getAI().setIntentionMoveTo(player.getTarget().getLocation());
 		}
 	}
 	

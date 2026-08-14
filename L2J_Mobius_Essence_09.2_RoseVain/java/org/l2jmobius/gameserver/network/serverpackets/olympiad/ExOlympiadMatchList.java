@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.network.serverpackets.olympiad;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.WritableBuffer;
-import org.l2jmobius.gameserver.model.olympiad.AbstractOlympiadGame;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameClassed;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameNonClassed;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
+import org.l2jmobius.commons.network.buffer.WriteBuffer;
+import org.l2jmobius.gameserver.mechanics.olympiad.AbstractOlympiadGame;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameClassed;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameManager;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameNonClassed;
+import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.ServerPackets;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
@@ -55,7 +55,7 @@ public class ExOlympiadMatchList extends ServerPacket
 	}
 	
 	@Override
-	public void writeImpl(GameClient client, WritableBuffer buffer)
+	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_GFX_OLYMPIAD.writeId(this, buffer);
 		

@@ -18,14 +18,13 @@ package ai.others;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.ai.Intention;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Chest;
-import org.l2jmobius.gameserver.model.script.Script;
-import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.entity.WorldObject;
+import org.l2jmobius.gameserver.entity.actor.Creature;
+import org.l2jmobius.gameserver.entity.actor.Npc;
+import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.instance.Chest;
+import org.l2jmobius.gameserver.mechanics.script.Script;
+import org.l2jmobius.gameserver.mechanics.skill.Skill;
 
 /**
  * Chest AI implementation.
@@ -85,7 +84,7 @@ public class Chests extends Script
 				return;
 			}
 			
-			final Chest chest = ((Chest) npc);
+			final Chest chest = (Chest) npc;
 			
 			// if this has already been interacted, no further ai decisions are needed
 			// if it's the first interaction, check if this is a box or mimic
@@ -123,7 +122,7 @@ public class Chests extends Script
 					final Creature originalCaster = isSummon ? caster.getSummon() : caster;
 					chest.setRunning();
 					chest.addDamageHate(originalCaster, 0, 999);
-					chest.getAI().setIntention(Intention.ATTACK, originalCaster);
+					chest.getAI().setIntentionAttack(originalCaster);
 				}
 			}
 		}
@@ -134,7 +133,7 @@ public class Chests extends Script
 	{
 		if (npc instanceof Chest)
 		{
-			final Chest chest = ((Chest) npc);
+			final Chest chest = (Chest) npc;
 			
 			// if this was a mimic, set the target, start the skills and become agro
 			if (!chest.isInteracted())
@@ -151,7 +150,7 @@ public class Chests extends Script
 					final Creature originalAttacker = isSummon ? attacker.getSummon() : attacker;
 					chest.setRunning();
 					chest.addDamageHate(originalAttacker, 0, (damage * 100) / (chest.getLevel() + 7));
-					chest.getAI().setIntention(Intention.ATTACK, originalAttacker);
+					chest.getAI().setIntentionAttack(originalAttacker);
 					
 					// Maybe here?
 					if (getRandomBoolean())
