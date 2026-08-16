@@ -3962,7 +3962,10 @@ public abstract class Creature extends WorldObject
 			// If no distance to go through, the movement is canceled.
 			if ((distance < 1) && ((GeoEngineConfig.PATHFINDING > 0) || isPlayable()))
 			{
-				if (isSummon())
+				// An attack or cast already in flight has to survive this, cancelling it is what strands melee.
+				final Intention intention = hasAI() ? getAI().getIntention() : null;
+				final boolean pendingTargetAction = (intention == Intention.ATTACK) || (intention == Intention.CAST);
+				if (isSummon() && !pendingTargetAction)
 				{
 					// Do not break following owner.
 					if (getAI().getTarget() != asPlayer())
@@ -3971,7 +3974,7 @@ public abstract class Creature extends WorldObject
 						getAI().setIntentionIdle();
 					}
 				}
-				else
+				else if (!pendingTargetAction)
 				{
 					getAI().setIntentionIdle();
 				}
