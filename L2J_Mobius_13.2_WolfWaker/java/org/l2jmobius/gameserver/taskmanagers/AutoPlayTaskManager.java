@@ -136,6 +136,12 @@ public class AutoPlayTaskManager
 						// We take granted that mage classes do not auto hit.
 						if (isMageCaster(player))
 						{
+							// A caster out of range would otherwise stand still casting at a target it never approaches.
+							if ((player.calculateDistance2D(creature) > 900) && !player.isMoving() && player.hasAI() && !player.isDisabled())
+							{
+								player.getAI().setIntentionMoveTo(creature);
+							}
+							
 							continue PLAY;
 						}
 						
@@ -300,6 +306,12 @@ public class AutoPlayTaskManager
 					// We take granted that mage classes do not auto hit.
 					if (isMageCaster(player))
 					{
+						// A caster out of range would otherwise stand still casting at a target it never approaches.
+						if ((player.calculateDistance2D(creature) > 900) && !player.isMoving() && player.hasAI() && !player.isDisabled())
+						{
+							player.getAI().setIntentionMoveTo(creature);
+						}
+						
 						continue PLAY;
 					}
 					
