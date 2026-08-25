@@ -258,16 +258,18 @@ public class Q00340_SubjugationOfLizardmen extends Quest
 			case 20027:
 			case 20030:
 			{
-				if (st.isCond(3) && (getQuestItemsCount(player, HOLY) < 1))
+				if (st.isCond(3))
 				{
-					if (getRandom(100) < 10)
+					// The rosary only starts dropping once the holy symbol is held, and never replaces it.
+					if (!hasQuestItems(player, HOLY) && (getRandom(100) < 10))
 					{
 						giveItems(player, HOLY, 1);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						if (getRandom(100) < 10)
-						{
-							giveItems(player, ROSARY, 1);
-						}
+					}
+					else if (hasQuestItems(player, HOLY) && !hasQuestItems(player, ROSARY) && (getRandom(100) < 10))
+					{
+						giveItems(player, ROSARY, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				break;
