@@ -117,15 +117,15 @@ public class Q00379_FantasyWine extends Quest
 			{
 				final int leaf = getQuestItemsCount(player, LEAF);
 				final int stone = getQuestItemsCount(player, STONE);
-				if ((leaf == 80) && (stone == 100))
+				if ((leaf >= 80) && (stone >= 100))
 				{
 					htmltext = "30074-5.htm";
 				}
-				else if (leaf == 80)
+				else if (leaf >= 80)
 				{
 					htmltext = "30074-4a.htm";
 				}
-				else if (stone == 100)
+				else if (stone >= 100)
 				{
 					htmltext = "30074-4b.htm";
 				}
@@ -151,14 +151,11 @@ public class Q00379_FantasyWine extends Quest
 		
 		if (npc.getId() == ENKU_CHAMPION)
 		{
-			giveItems(player, LEAF, 1);
+			// Stop at the required amount, further kills would only bloat the inventory.
 			if (getQuestItemsCount(player, LEAF) < 80)
 			{
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			else
-			{
-				if (getQuestItemsCount(player, STONE) >= 100)
+				giveItems(player, LEAF, 1);
+				if ((getQuestItemsCount(player, LEAF) >= 80) && (getQuestItemsCount(player, STONE) >= 100))
 				{
 					st.setCond(2, true);
 				}
@@ -170,14 +167,11 @@ public class Q00379_FantasyWine extends Quest
 		}
 		else
 		{
-			giveItems(player, STONE, 1);
+			// Stop at the required amount, further kills would only bloat the inventory.
 			if (getQuestItemsCount(player, STONE) < 100)
 			{
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			else
-			{
-				if (getQuestItemsCount(player, LEAF) >= 80)
+				giveItems(player, STONE, 1);
+				if ((getQuestItemsCount(player, STONE) >= 100) && (getQuestItemsCount(player, LEAF) >= 80))
 				{
 					st.setCond(2, true);
 				}
