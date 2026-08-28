@@ -191,7 +191,7 @@ public class ServerConfig
 			KICK_MISSING_HWID = true;
 		}
 		
-		final String[] protocols = config.getString("AllowedProtocolRevisions", "603;606;607").split(";");
+		final String[] protocols = config.getString("AllowedProtocolRevisions", "542;1-9999").split(";");
 		PROTOCOL_LIST = new ArrayList<>(protocols.length);
 		for (String protocol : protocols)
 		{
