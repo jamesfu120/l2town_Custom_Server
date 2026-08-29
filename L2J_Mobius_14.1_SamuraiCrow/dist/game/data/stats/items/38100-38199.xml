@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="38100" name="Leona's Cube (1-time)" type="EtcItem">
+	<item id="38100" name="黎歐納晶體-1次用" type="EtcItem">
 		<!-- Leona's cube. Double-click to obtain 1 of the following items: Emperor's Rune Pack (2-hour), Emperor's Vitality Tonic, Scroll: 10 mln/ 5 mln/ 1 mln SP. Can be used once a day. -->
 		<set name="icon" val="icon.etc_violet_crystal_cube_pc_i00" />
 		<set name="weight" val="10" />
@@ -15,7 +15,7 @@
 			<skill id="17325" level="1" /> <!-- Leona's Cube (1-time) -->
 		</skills>
 	</item>
-	<item id="38101" name="Leona's Scroll: 1,000,000 SP" type="EtcItem">
+	<item id="38101" name="黎歐納100 SP卷軸" type="EtcItem">
 		<!-- SP +100. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="weight" val="30" />
@@ -30,7 +30,7 @@
 			<skill id="17321" level="1" /> <!-- Leona's Scroll: 100 SP -->
 		</skills>
 	</item>
-	<item id="38102" name="Leona's Scroll: 5,000,000 SP" type="EtcItem">
+	<item id="38102" name="黎歐納500 SP卷軸" type="EtcItem">
 		<!-- SP +500. -->
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="weight" val="30" />
@@ -46,7 +46,7 @@
 			<skill id="17322" level="1" /> <!-- Leona's Scroll: 500 SP -->
 		</skills>
 	</item>
-	<item id="38103" name="Leona's Scroll: 10,000,000 SP" type="EtcItem">
+	<item id="38103" name="黎歐納1000 SP卷軸" type="EtcItem">
 		<!-- SP +1000. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
@@ -62,7 +62,7 @@
 			<skill id="17323" level="1" /> <!-- Leona's Scroll: 1000 SP -->
 		</skills>
 	</item>
-	<item id="38104" name="Leona's Cube Pack" type="EtcItem">
+	<item id="38104" name="黎歐納晶體禮盒" type="EtcItem">
 		<!-- Double-click to obtain Leona's Cube (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="weight" val="10" />
@@ -78,7 +78,7 @@
 			<item id="38095" min="1" max="1" chance="100" /> <!-- Leona's Cube - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="38105" name="Superior CP Potion" type="EtcItem">
+	<item id="38105" name="超強力鬥志藥水" type="EtcItem">
 		<!-- Restores 1000 CP. -->
 		<set name="icon" val="icon.etc_cp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -97,7 +97,7 @@
 			<skill id="17324" level="1" /> <!-- Superior CP Potion -->
 		</skills>
 	</item>
-	<item id="38106" name="Small Green Mackerel" additionalName="Not used" type="EtcItem">
+	<item id="38106" name="小型藍點馬鮫魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i02" />
 		<set name="is_stackable" val="true" />
@@ -108,7 +108,7 @@
 			<skill id="17326" level="1" /> <!-- Small Mackerel -->
 		</skills>
 	</item>
-	<item id="38107" name="Small Blue Mackerel" additionalName="Not used" type="EtcItem">
+	<item id="38107" name="小型青花魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i04" />
 		<set name="is_stackable" val="true" />
@@ -119,7 +119,7 @@
 			<skill id="17327" level="1" /> <!-- Small Blue Mackerel -->
 		</skills>
 	</item>
-	<item id="38108" name="Small Flatfish" additionalName="Not used" type="EtcItem">
+	<item id="38108" name="小型比目魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i06" />
 		<set name="is_stackable" val="true" />
@@ -130,7 +130,7 @@
 			<skill id="17328" level="1" /> <!-- Small Flatfish -->
 		</skills>
 	</item>
-	<item id="38109" name="Small Rockfish" additionalName="Not used" type="EtcItem">
+	<item id="38109" name="小型黑鱸魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i08" />
 		<set name="is_stackable" val="true" />
@@ -141,7 +141,7 @@
 			<skill id="17329" level="1" /> <!-- Small Rockfish -->
 		</skills>
 	</item>
-	<item id="38110" name="Small Salmon" additionalName="Not used" type="EtcItem">
+	<item id="38110" name="小型秋鮭魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i10" />
 		<set name="is_stackable" val="true" />
@@ -152,7 +152,7 @@
 			<skill id="17330" level="1" /> <!-- Small Salmon -->
 		</skills>
 	</item>
-	<item id="38111" name="Small Marlin" additionalName="Not used" type="EtcItem">
+	<item id="38111" name="小型槍魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i12" />
 		<set name="is_stackable" val="true" />
@@ -163,7 +163,7 @@
 			<skill id="17331" level="1" /> <!-- Small Marlin -->
 		</skills>
 	</item>
-	<item id="38112" name="Small Tuna" additionalName="Not used" type="EtcItem">
+	<item id="38112" name="小型鮪魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i14" />
 		<set name="is_stackable" val="true" />
@@ -174,7 +174,7 @@
 			<skill id="17332" level="1" /> <!-- Small Tuna -->
 		</skills>
 	</item>
-	<item id="38113" name="Green Mackerel" additionalName="Not used" type="EtcItem">
+	<item id="38113" name="藍點馬鮫魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i02" />
 		<set name="is_stackable" val="true" />
@@ -185,7 +185,7 @@
 			<skill id="17333" level="1" /> <!-- Mackerel -->
 		</skills>
 	</item>
-	<item id="38114" name="Blue Mackerel" additionalName="Not used" type="EtcItem">
+	<item id="38114" name="青花魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i04" />
 		<set name="is_stackable" val="true" />
@@ -196,7 +196,7 @@
 			<skill id="17334" level="1" /> <!-- Blue Mackerel -->
 		</skills>
 	</item>
-	<item id="38115" name="Flatfish" additionalName="Not used" type="EtcItem">
+	<item id="38115" name="比目魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i06" />
 		<set name="is_stackable" val="true" />
@@ -207,7 +207,7 @@
 			<skill id="17335" level="1" /> <!-- Flatfish -->
 		</skills>
 	</item>
-	<item id="38116" name="Rockfish" additionalName="Not used" type="EtcItem">
+	<item id="38116" name="黑鱸魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i08" />
 		<set name="is_stackable" val="true" />
@@ -218,7 +218,7 @@
 			<skill id="17336" level="1" /> <!-- Rockfish -->
 		</skills>
 	</item>
-	<item id="38117" name="Salmon" additionalName="Not used" type="EtcItem">
+	<item id="38117" name="秋鮭魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i10" />
 		<set name="is_stackable" val="true" />
@@ -229,7 +229,7 @@
 			<skill id="17337" level="1" /> <!-- Salmon -->
 		</skills>
 	</item>
-	<item id="38118" name="Marlin" additionalName="Not used" type="EtcItem">
+	<item id="38118" name="槍魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i12" />
 		<set name="is_stackable" val="true" />
@@ -240,7 +240,7 @@
 			<skill id="17338" level="1" /> <!-- Marlin -->
 		</skills>
 	</item>
-	<item id="38119" name="Tuna" additionalName="Not used" type="EtcItem">
+	<item id="38119" name="鮪魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i14" />
 		<set name="is_stackable" val="true" />
@@ -251,7 +251,7 @@
 			<skill id="17339" level="1" /> <!-- Tuna -->
 		</skills>
 	</item>
-	<item id="38120" name="Large Green Mackerel" additionalName="Not used" type="EtcItem">
+	<item id="38120" name="龐大的藍點馬鮫魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i02" />
 		<set name="is_stackable" val="true" />
@@ -262,7 +262,7 @@
 			<skill id="17340" level="1" /> <!-- Large Mackerel -->
 		</skills>
 	</item>
-	<item id="38121" name="Large Blue Mackerel" additionalName="Not used" type="EtcItem">
+	<item id="38121" name="龐大的青花魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i04" />
 		<set name="is_stackable" val="true" />
@@ -273,7 +273,7 @@
 			<skill id="17341" level="1" /> <!-- Large Blue Mackerel -->
 		</skills>
 	</item>
-	<item id="38122" name="Large Flatfish" additionalName="Not used" type="EtcItem">
+	<item id="38122" name="龐大的比目魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i06" />
 		<set name="is_stackable" val="true" />
@@ -284,7 +284,7 @@
 			<skill id="17342" level="1" /> <!-- Large Flatfish -->
 		</skills>
 	</item>
-	<item id="38123" name="Large Rockfish" additionalName="Not used" type="EtcItem">
+	<item id="38123" name="龐大的黑鱸魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i08" />
 		<set name="is_stackable" val="true" />
@@ -295,7 +295,7 @@
 			<skill id="17343" level="1" /> <!-- Large Rockfish -->
 		</skills>
 	</item>
-	<item id="38124" name="Large Salmon" additionalName="Not used" type="EtcItem">
+	<item id="38124" name="龐大的秋鮭魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i10" />
 		<set name="is_stackable" val="true" />
@@ -306,7 +306,7 @@
 			<skill id="17344" level="1" /> <!-- Large Salmon -->
 		</skills>
 	</item>
-	<item id="38125" name="Large Marlin" additionalName="Not used" type="EtcItem">
+	<item id="38125" name="龐大的槍魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i12" />
 		<set name="is_stackable" val="true" />
@@ -317,7 +317,7 @@
 			<skill id="17345" level="1" /> <!-- Large Marlin -->
 		</skills>
 	</item>
-	<item id="38126" name="Large Tuna" additionalName="Not used" type="EtcItem">
+	<item id="38126" name="龐大的鮪魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i14" />
 		<set name="is_stackable" val="true" />
@@ -328,7 +328,7 @@
 			<skill id="17346" level="1" /> <!-- Large Tuna -->
 		</skills>
 	</item>
-	<item id="38127" name="Small Killifish" additionalName="Not used" type="EtcItem">
+	<item id="38127" name="小型青鱂魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i01" />
 		<set name="is_stackable" val="true" />
@@ -339,7 +339,7 @@
 			<skill id="17347" level="1" /> <!-- Small Killifish -->
 		</skills>
 	</item>
-	<item id="38128" name="Small Minnow" additionalName="Not used" type="EtcItem">
+	<item id="38128" name="小型寬鰭鱲魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i03" />
 		<set name="is_stackable" val="true" />
@@ -350,7 +350,7 @@
 			<skill id="17348" level="1" /> <!-- Small Minnow -->
 		</skills>
 	</item>
-	<item id="38129" name="Small Mandarin Fish" additionalName="Not used" type="EtcItem">
+	<item id="38129" name="小型斑鱖魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i05" />
 		<set name="is_stackable" val="true" />
@@ -361,7 +361,7 @@
 			<skill id="17349" level="1" /> <!-- Small Mandarin Fish -->
 		</skills>
 	</item>
-	<item id="38130" name="Small Goldfish" additionalName="Not used" type="EtcItem">
+	<item id="38130" name="小型鯽魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i07" />
 		<set name="is_stackable" val="true" />
@@ -372,7 +372,7 @@
 			<skill id="17350" level="1" /> <!-- Small Goldfish -->
 		</skills>
 	</item>
-	<item id="38131" name="Small Eel" additionalName="Not used" type="EtcItem">
+	<item id="38131" name="小型鰻魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i09" />
 		<set name="is_stackable" val="true" />
@@ -383,7 +383,7 @@
 			<skill id="17351" level="1" /> <!-- Small Eel -->
 		</skills>
 	</item>
-	<item id="38132" name="Small Catfish" additionalName="Not used" type="EtcItem">
+	<item id="38132" name="小型鯰魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i11" />
 		<set name="is_stackable" val="true" />
@@ -394,7 +394,7 @@
 			<skill id="17352" level="1" /> <!-- Small Catfish -->
 		</skills>
 	</item>
-	<item id="38133" name="Small Carp" additionalName="Not used" type="EtcItem">
+	<item id="38133" name="小型鯉魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i13" />
 		<set name="is_stackable" val="true" />
@@ -405,7 +405,7 @@
 			<skill id="17353" level="1" /> <!-- Small Carp -->
 		</skills>
 	</item>
-	<item id="38134" name="Killifish" additionalName="Not used" type="EtcItem">
+	<item id="38134" name="青鱂魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i01" />
 		<set name="is_stackable" val="true" />
@@ -416,7 +416,7 @@
 			<skill id="17354" level="1" /> <!-- Killifish -->
 		</skills>
 	</item>
-	<item id="38135" name="Minnow" additionalName="Not used" type="EtcItem">
+	<item id="38135" name="寬鰭鱲魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i03" />
 		<set name="is_stackable" val="true" />
@@ -427,7 +427,7 @@
 			<skill id="17355" level="1" /> <!-- Minnow -->
 		</skills>
 	</item>
-	<item id="38136" name="Mandarin Fish" additionalName="Not used" type="EtcItem">
+	<item id="38136" name="斑鱖魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i05" />
 		<set name="is_stackable" val="true" />
@@ -438,7 +438,7 @@
 			<skill id="17356" level="1" /> <!-- Mandarin Fish -->
 		</skills>
 	</item>
-	<item id="38137" name="Goldfish" additionalName="Not used" type="EtcItem">
+	<item id="38137" name="鯽魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i07" />
 		<set name="is_stackable" val="true" />
@@ -449,7 +449,7 @@
 			<skill id="17357" level="1" /> <!-- Goldfish -->
 		</skills>
 	</item>
-	<item id="38138" name="Eel" additionalName="Not used" type="EtcItem">
+	<item id="38138" name="鰻魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i09" />
 		<set name="is_stackable" val="true" />
@@ -460,7 +460,7 @@
 			<skill id="17358" level="1" /> <!-- Eel -->
 		</skills>
 	</item>
-	<item id="38139" name="Catfish" additionalName="Not used" type="EtcItem">
+	<item id="38139" name="鯰魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_small_i11" />
 		<set name="is_stackable" val="true" />
@@ -471,7 +471,7 @@
 			<skill id="17359" level="1" /> <!-- Catfish -->
 		</skills>
 	</item>
-	<item id="38140" name="Carp" additionalName="Not used" type="EtcItem">
+	<item id="38140" name="鯉魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_normal_i13" />
 		<set name="is_stackable" val="true" />
@@ -482,7 +482,7 @@
 			<skill id="17360" level="1" /> <!-- Carp -->
 		</skills>
 	</item>
-	<item id="38141" name="Large Killifish" additionalName="Not used" type="EtcItem">
+	<item id="38141" name="龐大的青鱂魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i01" />
 		<set name="is_stackable" val="true" />
@@ -493,7 +493,7 @@
 			<skill id="17361" level="1" /> <!-- Large Killifish -->
 		</skills>
 	</item>
-	<item id="38142" name="Large Minnow" additionalName="Not used" type="EtcItem">
+	<item id="38142" name="龐大的寬鰭鱲魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i03" />
 		<set name="is_stackable" val="true" />
@@ -504,7 +504,7 @@
 			<skill id="17362" level="1" /> <!-- Large Minnow -->
 		</skills>
 	</item>
-	<item id="38143" name="Large Mandarin Fish" additionalName="Not used" type="EtcItem">
+	<item id="38143" name="龐大的斑鱖魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i05" />
 		<set name="is_stackable" val="true" />
@@ -515,7 +515,7 @@
 			<skill id="17363" level="1" /> <!-- Large Mandarin Fish -->
 		</skills>
 	</item>
-	<item id="38144" name="Large Goldfish" additionalName="Not used" type="EtcItem">
+	<item id="38144" name="龐大的鯽魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i07" />
 		<set name="is_stackable" val="true" />
@@ -526,7 +526,7 @@
 			<skill id="17364" level="1" /> <!-- Large Goldfish -->
 		</skills>
 	</item>
-	<item id="38145" name="Large Eel" additionalName="Not used" type="EtcItem">
+	<item id="38145" name="龐大的鰻魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i09" />
 		<set name="is_stackable" val="true" />
@@ -537,7 +537,7 @@
 			<skill id="17365" level="1" /> <!-- Large Eel -->
 		</skills>
 	</item>
-	<item id="38146" name="Large Catfish" additionalName="Not used" type="EtcItem">
+	<item id="38146" name="龐大的鯰魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i11" />
 		<set name="is_stackable" val="true" />
@@ -548,7 +548,7 @@
 			<skill id="17366" level="1" /> <!-- Large Catfish -->
 		</skills>
 	</item>
-	<item id="38147" name="Large Carp" additionalName="Not used" type="EtcItem">
+	<item id="38147" name="龐大的鯉魚" additionalName="Not used" type="EtcItem">
 		<!-- This fish is extinct. Double-click to obtain Fish Bone, Fish Scale or Fish Jewel that can be exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i13" />
 		<set name="is_stackable" val="true" />
@@ -559,7 +559,7 @@
 			<skill id="17367" level="1" /> <!-- Large Carp -->
 		</skills>
 	</item>
-	<item id="38148" name="Whale" additionalName="Not used" type="EtcItem">
+	<item id="38148" name="鯨魚" additionalName="Not used" type="EtcItem">
 		<!-- Extinct. Double-click to obtain Fish or Whale Blubber that can be exchanged for Elcyum Powder through the Fishing Guild members. -->
 		<set name="icon" val="icon.fish_huge_i15" />
 		<set name="is_stackable" val="true" />
@@ -570,7 +570,7 @@
 			<skill id="17368" level="1" /> <!-- Whale -->
 		</skills>
 	</item>
-	<item id="38149" name="Corroded Normal Bait" additionalName="Not used" type="EtcItem">
+	<item id="38149" name="腐蝕的一般魚餌" additionalName="Not used" type="EtcItem">
 		<!-- A common bait that is no longer used, unfortunately. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="price" val="1000" />
@@ -579,7 +579,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38150" name="Prize-winning Bait" additionalName="Not used" type="EtcItem">
+	<item id="38150" name="漁靈餌" additionalName="Not used" type="EtcItem">
 		<!-- Prize-winning Bait that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="price" val="1300" />
@@ -588,7 +588,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38151" name="Luminous Bait" additionalName="Not used" type="EtcItem">
+	<item id="38151" name="夜光魚餌" additionalName="Not used" type="EtcItem">
 		<!-- Luminous Bait that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="price" val="1500" />
@@ -597,7 +597,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38152" name="Luminous Prize-winning Bait" additionalName="Not used" type="EtcItem">
+	<item id="38152" name="夜光漁靈餌" additionalName="Not used" type="EtcItem">
 		<!-- Luminous Prize-winning Bait that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_night_huge_lure" />
 		<set name="price" val="1800" />
@@ -606,7 +606,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38153" name="Normal Fishing Shot" additionalName="Not used" type="EtcItem">
+	<item id="38153" name="一般漁靈彈" additionalName="Not used" type="EtcItem">
 		<!-- A common Fishing Shot that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i00" />
 		<set name="weight" val="3" />
@@ -617,7 +617,7 @@
 		<set name="material" val="PAPER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="38154" name="Fishing Shot" type="EtcItem">
+	<item id="38154" name="漁靈彈" type="EtcItem">
 		<!-- Soulshot consumed by a fishing rod like general soulshots. Increases the success rate for fishing. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />
 		<set name="default_action" val="FISHINGSHOT" />
@@ -632,7 +632,7 @@
 			<skill id="17386" level="1" /> <!-- High-grade Fishing Shot -->
 		</skills>
 	</item>
-	<item id="38155" name="Fishing Rod (Novice)" additionalName="Not used" type="Weapon">
+	<item id="38155" name="新手釣竿" additionalName="Not used" type="Weapon">
 		<!-- A novice fishing rod that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.weapon_fishing_rod_i00" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -650,7 +650,7 @@
 			<stat type="randomDamage">1</stat>
 		</stats>
 	</item>
-	<item id="38156" name="Fishing Rod (Experienced)" additionalName="Not used" type="Weapon">
+	<item id="38156" name="中堅釣竿" additionalName="Not used" type="Weapon">
 		<!-- A mid-grade fishing rod that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.weapon_fishing_rod_i03" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -668,7 +668,7 @@
 			<stat type="randomDamage">1</stat>
 		</stats>
 	</item>
-	<item id="38157" name="Fishing Rod (Expert)" additionalName="Not used" type="Weapon">
+	<item id="38157" name="高手釣竿" additionalName="Not used" type="Weapon">
 		<!-- A high-grade fishing that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.weapon_fishing_rod_i01" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -686,7 +686,7 @@
 			<stat type="randomDamage">1</stat>
 		</stats>
 	</item>
-	<item id="38158" name="Fishing Rod (Hero)" additionalName="Not used" type="Weapon">
+	<item id="38158" name="英雄釣竿" additionalName="Not used" type="Weapon">
 		<!-- A top-grade fishing rod that can no longer be used. Can be exchanged for adena through the Fishing Guild members. -->
 		<set name="icon" val="icon.weapon_fishing_rod_i04" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -706,20 +706,20 @@
 			<skill id="17609" level="1" /> <!-- Fishing Rod's Power (Hero) -->
 		</skills>
 	</item>
-	<item id="38159" name="Pass to Fishing Dock (1-hour)" additionalName="Not used" type="EtcItem">
+	<item id="38159" name="夢幻釣魚場利用券-1小時" additionalName="Not used" type="EtcItem">
 		<!-- Pass that was used to enter the Fantasy Fishing Dock before it was opened. Now anyone can enter freely. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="38160" name="Pass to Fishing Dock (2-hour)" additionalName="Not used" type="EtcItem">
+	<item id="38160" name="夢幻釣魚場利用券-2小時" additionalName="Not used" type="EtcItem">
 		<!-- Pass that was used to enter the Fantasy Fishing Dock before it was opened. Now anyone can enter freely. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="38161" name="Agathion Virgo Lv. 5" type="Armor">
+	<item id="38161" name="處女座壺精手鐲5階段" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50, Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -741,7 +741,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="38162" name="Agathion Virgo Lv. 4" type="Armor">
+	<item id="38162" name="處女座壺精手鐲4階段" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enhanced Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -763,7 +763,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="38163" name="Agathion Virgo Lv. 3" type="Armor">
+	<item id="38163" name="處女座壺精手鐲3階段" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enhanced Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -785,7 +785,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="38164" name="Agathion Virgo Lv. 2" type="Armor">
+	<item id="38164" name="處女座壺精手鐲2階段" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -806,7 +806,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="38165" name="Agathion Virgo Lv. 1" type="Armor">
+	<item id="38165" name="處女座壺精手鐲1階段" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). -->
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -826,49 +826,49 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="38166" name="Fish Bone" additionalName="Not used" type="EtcItem">
+	<item id="38166" name="魚刺" additionalName="Not used" type="EtcItem">
 		<!-- Can be obtained from an extinct fish. Can be used for crafting common items or exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_fang_ivory_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38167" name="Fish Scale" additionalName="Not used" type="EtcItem">
+	<item id="38167" name="魚鱗" additionalName="Not used" type="EtcItem">
 		<!-- Can be obtained from an extinct fish. Can be used for crafting common items or exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38168" name="Fish Oil" additionalName="Not used" type="EtcItem">
+	<item id="38168" name="魚油" additionalName="Not used" type="EtcItem">
 		<!-- Can be obtained from an extinct fish. Can be used for crafting common items or exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_fish_oil_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38169" name="Fish Fin" additionalName="Not used" type="EtcItem">
+	<item id="38169" name="魚鰭" additionalName="Not used" type="EtcItem">
 		<!-- Can be obtained from an extinct fish. Can be used for crafting common items or exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_gludio_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38170" name="Fish Jewel" additionalName="Not used" type="EtcItem">
+	<item id="38170" name="魚寶石" additionalName="Not used" type="EtcItem">
 		<!-- Can be obtained from an extinct fish. Can be used for crafting common items or exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_fish_gem_i01" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38171" name="Whale Blubber" additionalName="Not used" type="EtcItem">
+	<item id="38171" name="鯨魚油" additionalName="Not used" type="EtcItem">
 		<!-- Can be obtained from an extinct fish. Can be used for crafting common items or exchanged for appearance modification items through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_fish_oil_i02" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38172" name="Recipe: Arrow-pierced Apple (100%)" type="EtcItem">
+	<item id="38172" name="製作卷軸(穿箭蘋果100%)" type="EtcItem">
 		<!-- For all races. A recipe for Arrow-pierced Apple. Requires Create Common Item Lv. 6. Success rate: 100%. With a certain chance, creates a head accessory enhanced with a locket. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="weight" val="30" />
@@ -880,7 +880,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="38173" name="Arrow-pierced Apple Chunk" type="EtcItem">
+	<item id="38173" name="穿箭蘋果碎片" type="EtcItem">
 		<!-- Key material for making Arrow-pierced Apple. Can be sold in any shop. -->
 		<set name="icon" val="icon.piece_apple" />
 		<set name="weight" val="60" />
@@ -889,7 +889,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38174" name="Samurai Long Sword Appearance Stone" type="EtcItem">
+	<item id="38174" name="瑟魯基長劍外型加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Samurai Long Sword. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -902,7 +902,7 @@
 			<skill id="17370" level="1" /> <!-- Appearance Stone: Samurai Long Sword -->
 		</skills>
 	</item>
-	<item id="38175" name="Apprentice's Spellbook Appearance Stone" type="EtcItem">
+	<item id="38175" name="見習生魔法書外型加工石" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of Apprentice's Spellbook. -->
 		<set name="icon" val="Icon.special_look_change_book" />
 		<set name="is_stackable" val="true" />
@@ -915,7 +915,7 @@
 			<skill id="17371" level="1" /> <!-- Appearance Stone: Apprentice's Spellbook -->
 		</skills>
 	</item>
-	<item id="38176" name="Crystal Dagger Appearance Stone" type="EtcItem">
+	<item id="38176" name="水晶匕首外型加工石" type="EtcItem">
 		<!-- Turns the appearance of a one-handed dagger into that of a Crystal Dagger. -->
 		<set name="icon" val="icon.shape_shifting_dagger_i00" />
 		<set name="is_stackable" val="true" />
@@ -929,7 +929,7 @@
 			<skill id="17372" level="1" /> <!-- Appearance Stone: Crystal Dagger -->
 		</skills>
 	</item>
-	<item id="38177" name="Appearance Stone: Hellblade" additionalName="30-day" type="EtcItem">
+	<item id="38177" name="貫雷劍外型加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Hellblade. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -943,7 +943,7 @@
 			<skill id="17373" level="1" /> <!-- Appearance Stone: Hellblade (30-day) -->
 		</skills>
 	</item>
-	<item id="38178" name="Appearance Stone: Butcher Blades" additionalName="30-day" type="EtcItem">
+	<item id="38178" name="僕從庖刀外型加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of dual daggers to that of Doll's Butcher Blades. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_dualdagger_i00" />
 		<set name="is_stackable" val="true" />
@@ -957,7 +957,7 @@
 			<skill id="17374" level="1" /> <!-- Appearance Stone: Butcher Blades (30-day) -->
 		</skills>
 	</item>
-	<item id="38179" name="Appearance Stone: Tiat's Tiatenon" additionalName="30-day" type="EtcItem">
+	<item id="38179" name="蒂雅堤諾外型加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of Tiat's Tiatenon. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -971,7 +971,7 @@
 			<skill id="17375" level="1" /> <!-- Appearance Stone: Tiat's Tiatenon (30-day) -->
 		</skills>
 	</item>
-	<item id="38180" name="Appearance Stone: Aenkinel's Astaroth" additionalName="30-day" type="EtcItem">
+	<item id="38180" name="阿斯塔洛特外型加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changed the appearance of dual swords to that of Aenkinel's Astaroth. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
@@ -985,7 +985,7 @@
 			<skill id="17376" level="1" /> <!-- Appearance Stone: Aenkinel's Astaroth (30-day) -->
 		</skills>
 	</item>
-	<item id="38181" name="Appearance Stone: Yehan Klanikus' Tirbing" additionalName="30-day" type="EtcItem">
+	<item id="38181" name="提爾鋒外型加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of Tirbing. Available for 30 d. -->
 		<set name="icon" val="icon.shape_shifting_twohand_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -999,7 +999,7 @@
 			<skill id="17377" level="1" /> <!-- Appearance Stone: Tirbing (30-day) -->
 		</skills>
 	</item>
-	<item id="38182" name="Appearance Stone: Mardil's Wind" additionalName="30-day" type="EtcItem">
+	<item id="38182" name="瑪蒂之風外型加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of Mardil's Wind. Available for 30 d. -->
 		<set name="icon" val="Icon.shape_shifting_magic_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -1013,7 +1013,7 @@
 			<skill id="17378" level="1" /> <!-- Appearance Stone: Mardil's Wind (30-day) -->
 		</skills>
 	</item>
-	<item id="38183" name="Appearance Stone: Hellblade" type="EtcItem">
+	<item id="38183" name="貫雷劍外型加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Hellblade. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -1026,7 +1026,7 @@
 			<skill id="17379" level="1" /> <!-- Appearance Stone: Hellblade -->
 		</skills>
 	</item>
-	<item id="38184" name="Appearance Stone: Butcher Blades" type="EtcItem">
+	<item id="38184" name="僕從庖刀外型加工石" type="EtcItem">
 		<!-- Turns the appearance of a dual dagger into that of a Butcher Blades. -->
 		<set name="icon" val="icon.shape_shifting_dualdagger_i00" />
 		<set name="is_stackable" val="true" />
@@ -1039,7 +1039,7 @@
 			<skill id="17380" level="1" /> <!-- Appearance Stone: Butcher Blades -->
 		</skills>
 	</item>
-	<item id="38185" name="Appearance Stone: Tiat's Tiatenon" type="EtcItem">
+	<item id="38185" name="蒂雅堤諾外型加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of Tiat's Tiatenon. -->
 		<set name="icon" val="icon.shape_shifting_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -1052,7 +1052,7 @@
 			<skill id="17381" level="1" /> <!-- Appearance Stone: Tiat's Tiatenon -->
 		</skills>
 	</item>
-	<item id="38186" name="Appearance Stone: Aenkinel's Astaroth" type="EtcItem">
+	<item id="38186" name="阿斯塔洛特外型加工石" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of Aenkinel's Astaroth. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
@@ -1066,7 +1066,7 @@
 			<skill id="17382" level="1" /> <!-- Appearance Stone: Aenkinel's Astaroth -->
 		</skills>
 	</item>
-	<item id="38187" name="Appearance Stone: Yehan Klanikus' Tirbing" type="EtcItem">
+	<item id="38187" name="提爾鋒外型加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of Tirbing. -->
 		<set name="icon" val="icon.shape_shifting_twohand_sword_i00" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
@@ -1078,7 +1078,7 @@
 			<skill id="17383" level="1" /> <!-- Appearance Stone: Tirbing -->
 		</skills>
 	</item>
-	<item id="38188" name="Appearance Stone: Mardil's Wind" type="EtcItem">
+	<item id="38188" name="瑪蒂之風外型加工石" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of Mardil's Wind. -->
 		<set name="icon" val="Icon.shape_shifting_magic_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -1092,7 +1092,7 @@
 			<skill id="17384" level="1" /> <!-- Appearance Stone: Mardil's Wind -->
 		</skills>
 	</item>
-	<item id="38189" name="Blue Mackerel Appearance Stone: One-handed Sword" additionalName="30-day" type="EtcItem">
+	<item id="38189" name="青花魚加工石-單手刀劍" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Blue Mackerel for 30 d. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -1106,7 +1106,7 @@
 			<skill id="17578" level="1" /> <!-- Appearance Stone: Blue Mackerel - One-handed Sword (30-day) -->
 		</skills>
 	</item>
-	<item id="38190" name="Trumpetfish Appearance Stone: Dagger" additionalName="30-day" type="EtcItem">
+	<item id="38190" name="斑點管口魚加工石-匕首" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of Trimpetfish for 30 d. -->
 		<set name="icon" val="icon.shape_shifting_dagger_i00" />
 		<set name="is_stackable" val="true" />
@@ -1120,7 +1120,7 @@
 			<skill id="17579" level="1" /> <!-- Appearance Stone: Trumpetfish - Dagger -->
 		</skills>
 	</item>
-	<item id="38191" name="Shark Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
+	<item id="38191" name="鯊魚加工石-雙手刀劍" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of Shark for 30 d. -->
 		<set name="icon" val="icon.shape_shifting_twohand_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -1134,7 +1134,7 @@
 			<skill id="17580" level="1" /> <!-- Appearance Stone: Shark - Two-handed Sword (30-day) -->
 		</skills>
 	</item>
-	<item id="38192" name="Squid Appearance Stone: Spear" additionalName="30-day" type="EtcItem">
+	<item id="38192" name="魷魚加工石-槍" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a spear into that of a Squid. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_pole_i00" />
 		<set name="is_stackable" val="true" />
@@ -1148,7 +1148,7 @@
 			<skill id="17581" level="1" /> <!-- Appearance Stone: Squid - Spear -->
 		</skills>
 	</item>
-	<item id="38193" name="Sea Horse Appearance Stone: Two-handed Staff" additionalName="30-day" type="EtcItem">
+	<item id="38193" name="海馬加工石-雙手魔杖" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of a Sea Horse for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -1162,7 +1162,7 @@
 			<skill id="17582" level="1" /> <!-- Appearance Stone: Sea Horse - Two-handed Staff (30-day) -->
 		</skills>
 	</item>
-	<item id="38194" name="Lobster Appearance Stone: Fist Weapon" additionalName="30-day" type="EtcItem">
+	<item id="38194" name="龍蝦加工石-格鬥兵器" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a fist weapon into that of a Lobster. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="is_stackable" val="true" />
@@ -1176,7 +1176,7 @@
 			<skill id="17583" level="1" /> <!-- Appearance Stone: Lobster - Fist Weapon (30-day) -->
 		</skills>
 	</item>
-	<item id="38195" name="Giant Crab Appearance Stone: Bow" additionalName="30-day" type="EtcItem">
+	<item id="38195" name="大蟹加工石-弓" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a bow into that of a Giant Crab. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_bow_i00" />
 		<set name="is_stackable" val="true" />
@@ -1190,7 +1190,7 @@
 			<skill id="17584" level="1" /> <!-- Appearance Stone: Giant Crab - Bow -->
 		</skills>
 	</item>
-	<item id="38196" name="Crayfish Appearance Stone: Crossbow" additionalName="30-day" type="EtcItem">
+	<item id="38196" name="螯蝦加工石-弩弓" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a crossbow into that of a Crayfish. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_twohand_crossbow_i00" />
 		<set name="is_stackable" val="true" />
@@ -1204,7 +1204,7 @@
 			<skill id="17585" level="1" /> <!-- Appearance Stone: Crayfish - Crossbow -->
 		</skills>
 	</item>
-	<item id="38197" name="Starfish Appearance Stone: Sigil" additionalName="30-day" type="EtcItem">
+	<item id="38197" name="海星加工石-符印" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of Starfish for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="Icon.shape_shifting_sigil_i00" />
 		<set name="is_stackable" val="true" />
@@ -1218,7 +1218,7 @@
 			<skill id="17586" level="1" /> <!-- Appearance Stone: Starfish - Sigil -->
 		</skills>
 	</item>
-	<item id="38198" name="Turtle Appearance Stone: Shield" additionalName="30-day" type="EtcItem">
+	<item id="38198" name="烏龜加工石-盾牌" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of Turtle for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="Icon.shape_shifting_shield_i00" />
 		<set name="is_stackable" val="true" />
@@ -1232,7 +1232,7 @@
 			<skill id="17587" level="1" /> <!-- Appearance Stone: Turtle - Shield -->
 		</skills>
 	</item>
-	<item id="38199" name="Blue Mackerel Appearance Stone: Dual Sword" additionalName="30-day" type="EtcItem">
+	<item id="38199" name="青花魚加工石-雙刀" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of Blue Mackerel for 30 d. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />

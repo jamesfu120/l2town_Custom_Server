@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46300" name="Christmas Talisman - M. Def." additionalName="1-hour" type="Armor">
+	<item id="46300" name="聖誕護身符-魔法防禦力" additionalName="1-hour" type="Armor">
 		<!-- M. Def. +7%. Effects of two identical talismans do not stack. Duration: 1 h. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -18,7 +18,7 @@
 			<skill id="13835" level="1" /> <!-- Christmas Talisman - M. Def. -->
 		</skills>
 	</item>
-	<item id="46301" name="Christmas Talisman - Attribute Resistance" additionalName="1-hour" type="Armor">
+	<item id="46301" name="聖誕護身符-屬性防禦" additionalName="1-hour" type="Armor">
 		<!-- Attribute Resistance +30. Effects of two identical talismans do not stack. Duration: 1 h. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -36,7 +36,7 @@
 			<skill id="13836" level="1" /> <!-- Christmas Talisman - Attribute Resistance -->
 		</skills>
 	</item>
-	<item id="46302" name="Christmas Talisman Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
+	<item id="46302" name="聖誕護身符禮盒" additionalName="P. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - P. Skill Critical Damage (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -48,7 +48,7 @@
 			<item id="46293" min="1" max="1" chance="100" /> <!-- Christmas Talisman - P. Skill Critical Damage - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46303" name="Christmas Talisman Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
+	<item id="46303" name="聖誕護身符禮盒" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - M. Skill Critical Damage (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -60,7 +60,7 @@
 			<item id="46294" min="1" max="1" chance="100" /> <!-- Christmas Talisman - M. Skill Critical Damage - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46304" name="Christmas Talisman Pack" additionalName="Ultimate Defense" type="EtcItem">
+	<item id="46304" name="聖誕護身符禮盒" additionalName="Ultimate Defense" type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - Ultimate Defense (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -72,7 +72,7 @@
 			<item id="46295" min="1" max="1" chance="100" /> <!-- Christmas Talisman - Ultimate Defense - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46305" name="Christmas Talisman Pack" additionalName="Debuff Resistance" type="EtcItem">
+	<item id="46305" name="聖誕護身符禮盒" additionalName="Debuff Resistance" type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - Debuff Resistance (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -84,7 +84,7 @@
 			<item id="46296" min="1" max="1" chance="100" /> <!-- Christmas Talisman - Debuff Resistance - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46306" name="Christmas Talisman Pack" additionalName="P. Atk." type="EtcItem">
+	<item id="46306" name="聖誕護身符禮盒" additionalName="P. Atk." type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - P. Atk. (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -96,7 +96,7 @@
 			<item id="46297" min="1" max="1" chance="100" /> <!-- Christmas Talisman - P. Atk. - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46307" name="Christmas Talisman Pack" additionalName="M. Atk." type="EtcItem">
+	<item id="46307" name="聖誕護身符禮盒" additionalName="M. Atk." type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - M. Atk. (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -108,7 +108,7 @@
 			<item id="46298" min="1" max="1" chance="100" /> <!-- Christmas Talisman - M. Atk. - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46308" name="Christmas Talisman Pack" additionalName="P. Def." type="EtcItem">
+	<item id="46308" name="聖誕護身符禮盒" additionalName="P. Def." type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - P. Def. (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -120,7 +120,7 @@
 			<item id="46299" min="1" max="1" chance="100" /> <!-- Christmas Talisman - P. Def. - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46309" name="Christmas Talisman Pack" additionalName="M. Def." type="EtcItem">
+	<item id="46309" name="聖誕護身符禮盒" additionalName="M. Def." type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - M. Def. (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -132,7 +132,7 @@
 			<item id="46300" min="1" max="1" chance="100" /> <!-- Christmas Talisman - M. Def. - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46310" name="Christmas Talisman Pack" additionalName="Attribute Resistance" type="EtcItem">
+	<item id="46310" name="聖誕護身符禮盒" additionalName="Attribute Resistance" type="EtcItem">
 		<!-- Double-click to obtain Christmas Talisman - Attribute Resistance (1-hour). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
@@ -144,7 +144,7 @@
 			<item id="46301" min="1" max="1" chance="100" /> <!-- Christmas Talisman - Attribute Resistance - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="46311" name="Emergency Whistle - Adolph" type="EtcItem">
+	<item id="46311" name="緊急信號笛-阿道夫" type="EtcItem">
 		<!-- Sends a signal for Adolph to use the Protection of Faith skill. Can be used twice. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
@@ -160,7 +160,7 @@
 			<skill id="18491" level="1" /> <!-- Emergency Whistle - Adolph -->
 		</skills>
 	</item>
-	<item id="46312" name="Emergency Whistle - Barton" type="EtcItem">
+	<item id="46312" name="緊急信號笛-巴頓" type="EtcItem">
 		<!-- Sends a signal for Barton to use the Berserker skill. Increases Debuff Resistance/ Speed/ P. Atk./ P. Accuracy/ P. Def./ Atk. Spd./ Critical Damage. Recovers 20% HP upon killing an enemy. Additionally, when HP < 60%, P. Atk. +10%, Critical Rate +100. When HP < +30%, P. Atk. +30%, Critical Rate +300. Can be used twice. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
@@ -176,7 +176,7 @@
 			<skill id="18492" level="1" /> <!-- Emergency Whistle - Barton -->
 		</skills>
 	</item>
-	<item id="46313" name="Emergency Whistle - Hayuk" type="EtcItem">
+	<item id="46313" name="緊急信號笛-哈優克" type="EtcItem">
 		<!-- Sends a signal for Hayuk to use the Phoenix Arrow skill. Can be used twice. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
@@ -192,7 +192,7 @@
 			<skill id="18493" level="1" /> <!-- Emergency Whistle - Hayuk -->
 		</skills>
 	</item>
-	<item id="46314" name="Emergency Whistle - Elise" type="EtcItem">
+	<item id="46314" name="緊急信號笛-愛莉絲" type="EtcItem">
 		<!-- Sends a signal for Elise to use the Celestial Party Protection skill. Can be used twice. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
@@ -208,7 +208,7 @@
 			<skill id="18494" level="1" /> <!-- Emergency Whistle - Elise -->
 		</skills>
 	</item>
-	<item id="46315" name="Emergency Whistle - Eliyah" type="EtcItem">
+	<item id="46315" name="緊急信號笛-艾里亞" type="EtcItem">
 		<!-- Sends a signal for Eliyah to use the Shadow Snare skill. Can be used twice. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
@@ -224,7 +224,7 @@
 			<skill id="18495" level="1" /> <!-- Emergency Whistle - Eliyah -->
 		</skills>
 	</item>
-	<item id="46316" name="System Control Room Key" type="EtcItem">
+	<item id="46316" name="系統控制室鑰匙" type="EtcItem">
 		<!-- Key to get to Core in the Cruma Tower. Key to the System Control Room. -->
 		<set name="icon" val="icon.etc_dark_key_i00" />
 		<set name="weight" val="5" />
@@ -238,7 +238,7 @@
 			<skill id="18501" level="1" /> <!-- System Control Room Key -->
 		</skills>
 	</item>
-	<item id="46317" name="Shadow Shaper" type="Weapon">
+	<item id="46317" name="暗影鉋刀" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_dagger" />
 		<set name="weapon_type" val="DAGGER" />
@@ -278,7 +278,7 @@
 			<skill id="13842" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Shaper -->
 		</skills>
 	</item>
-	<item id="46318" name="Shadow Cutter" type="Weapon">
+	<item id="46318" name="暗影切刃" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_onehand_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -317,7 +317,7 @@
 			<skill id="13837" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Cutter -->
 		</skills>
 	</item>
-	<item id="46319" name="Shadow Slasher" type="Weapon">
+	<item id="46319" name="暗影殺刃" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_twohand_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -356,7 +356,7 @@
 			<skill id="13838" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Slasher -->
 		</skills>
 	</item>
-	<item id="46320" name="Shadow Fighter" type="Weapon">
+	<item id="46320" name="暗影戰爪" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_fist" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -396,7 +396,7 @@
 			<skill id="13839" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Fighter -->
 		</skills>
 	</item>
-	<item id="46321" name="Shadow Stormer" type="Weapon">
+	<item id="46321" name="暗影風暴者" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_spear" />
 		<set name="weapon_type" val="POLE" />
@@ -437,7 +437,7 @@
 			<skill id="13840" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Stormer -->
 		</skills>
 	</item>
-	<item id="46322" name="Shadow Thrower" type="Weapon">
+	<item id="46322" name="暗影投弓" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_bow" />
 		<set name="weapon_type" val="BOW" />
@@ -477,7 +477,7 @@
 			<skill id="13843" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Thrower -->
 		</skills>
 	</item>
-	<item id="46323" name="Shadow Guardian" type="Weapon">
+	<item id="46323" name="暗影射靈" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -517,7 +517,7 @@
 			<skill id="13844" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Guardian -->
 		</skills>
 	</item>
-	<item id="46324" name="Shadow Buster" type="Weapon">
+	<item id="46324" name="暗影爆刃" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -557,7 +557,7 @@
 			<skill id="13845" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Buster -->
 		</skills>
 	</item>
-	<item id="46325" name="Shadow Retributer" type="Weapon">
+	<item id="46325" name="暗影報恨者" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
 		<set name="weapon_type" val="BLUNT" />
@@ -599,7 +599,7 @@
 			<skill id="13846" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Retributer -->
 		</skills>
 	</item>
-	<item id="46326" name="Shadow Dual Sword" type="Weapon">
+	<item id="46326" name="暗影雙刀" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. <Enchanting>. Can be enchanted up to +10 with Scroll: Enchant Shadow Weapon. Cannot be augmented, crystallized or imbued with special properties. The item's appearance cannot be modified. <Upgrade>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get an exchangeable Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="weapon_type" val="DUAL" />
@@ -638,7 +638,7 @@
 			<skill id="13841" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Shadow Dual Swords -->
 		</skills>
 	</item>
-	<item id="46327" name="Shadow Shaper" type="Weapon">
+	<item id="46327" name="暗影鉋刀" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P. Atk. +7%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. Cannot be enchanted, augmented or crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_dagger" />
 		<set name="weapon_type" val="DAGGER" />
@@ -666,7 +666,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46328" name="Shadow Cutter" type="Weapon">
+	<item id="46328" name="暗影切刃" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P. Atk. +7%, Critical Rate for basic attacks +10%, Atk. Spd. +15%. Cannot be enchanted, augmented or crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_onehand_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -693,7 +693,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46329" name="Shadow Slasher" type="Weapon">
+	<item id="46329" name="暗影殺刃" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P./ M. Atk. +7%, Critical Rate for basic attacks and P./ M. skills +10%, Atk. Spd./ Casting Spd. +15%. Cannot be enchanted, augmented and crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_twohand_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -720,7 +720,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46330" name="Shadow Fighter" type="Weapon">
+	<item id="46330" name="暗影戰爪" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P. Atk. +7%, Critical Rate for basic attacks +10%, Atk. Spd. +15%. Cannot be enchanted, augmented or crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_fist" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -748,7 +748,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46331" name="Shadow Stormer" type="Weapon">
+	<item id="46331" name="暗影風暴者" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P. Atk. +7%, Critical Rate for basic attacks +10%, Atk. Spd. +15%. Cannot be enchanted, augmented or crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_spear" />
 		<set name="weapon_type" val="POLE" />
@@ -777,7 +777,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="46332" name="Shadow Thrower" type="Weapon">
+	<item id="46332" name="暗影投弓" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P./ M. Atk. +7%, Critical Damage for basic attacks and P./ M. skills +10%, Atk. Spd./ Casting Spd. +15%. Cannot be enchanted, augmented and crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_bow" />
 		<set name="weapon_type" val="BOW" />
@@ -805,7 +805,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46333" name="Shadow Guardian" type="Weapon">
+	<item id="46333" name="暗影射靈" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P. Atk. +7%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. Cannot be enchanted, augmented or crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -833,7 +833,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46334" name="Shadow Buster" type="Weapon">
+	<item id="46334" name="暗影爆刃" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, M. Atk. +7%, M. Skill Critical Rate +5%, Atk. Spd. +15%. Cannot be enchanted, augmented or crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -861,7 +861,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46335" name="Shadow Retributer" type="Weapon">
+	<item id="46335" name="暗影報恨者" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P./ M. Atk. +7%, Critical Damage for basic attacks/ M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15%. Cannot be enchanted, augmented and crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
 		<set name="weapon_type" val="BLUNT" />
@@ -891,7 +891,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46336" name="Shadow Dual Sword" type="Weapon">
+	<item id="46336" name="暗影雙刀" type="Weapon">
 		<!-- A weapon of the Ashen Shadow Revolutionaries. PvE damage +10%, Max HP/ MP +15%, P. Atk. +7%, Critical Rate for basic attacks +10%, Atk. Spd. +15%. Cannot be enchanted, augmented or crystallized. The item's appearance cannot be modified. 1 special soul crystal can be inserted. <Upgrade>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an Enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="weapon_type" val="DUAL" />
@@ -918,7 +918,7 @@
 			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
 		</skills>
 	</item>
-	<item id="46337" name="Scroll: Enchant Shadow Weapon" type="EtcItem">
+	<item id="46337" name="暗影武器強化卷軸" type="EtcItem">
 		<!-- A scroll to enchant a Shadow Weapon that can be obtained from the Ashen Shadow Revolutionaries. Cannot be used on regular weapons. -->
 		<set name="icon" val="icon.weapon_shadow_ench_wp" />
 		<set name="weight" val="10" />
@@ -933,7 +933,7 @@
 			<skill id="18502" level="1" /> <!-- Scroll: Enchant Shadow Weapon -->
 		</skills>
 	</item>
-	<item id="46338" name="Sigel Knight Transformation Appearance" type="Armor">
+	<item id="46338" name="席格爾騎士變身體外型" type="Armor">
 		<!-- Tainted Sigel Knight Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -948,7 +948,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46339" name="Tyrr Warrior Transformation Appearance" type="Armor">
+	<item id="46339" name="提爾鬥士變身體外型" type="Armor">
 		<!-- Tainted Tyrr Warrior Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -963,7 +963,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46340" name="Othell Rogue Transformation Appearance" type="Armor">
+	<item id="46340" name="歐瑟遊俠變身體外型" type="Armor">
 		<!-- Tainted Othell Rogue Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -978,7 +978,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46341" name="Yul Archer Transformation Appearance" type="Armor">
+	<item id="46341" name="尤爾弓手變身體外型" type="Armor">
 		<!-- Tainted Yul Archer Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -993,7 +993,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46342" name="Feoh Wizard Transformation Appearance" type="Armor">
+	<item id="46342" name="菲歐巫師變身體外型" type="Armor">
 		<!-- Tainted Feoh Wizard Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -1008,7 +1008,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46343" name="Iss Enchanter Transformation Appearance" type="Armor">
+	<item id="46343" name="伊斯法師變身體外型" type="Armor">
 		<!-- Tainted Iss Enchanter Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -1023,7 +1023,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46344" name="Wynn Summoner Transformation Appearance" type="Armor">
+	<item id="46344" name="維因召喚士變身體外型" type="Armor">
 		<!-- Tainted Wynn Summoner Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -1038,7 +1038,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46345" name="Aeore Healer Transformation Appearance" type="Armor">
+	<item id="46345" name="艾羅牧師變身體外型" type="Armor">
 		<!-- Tainted Aeore Healer Appearance -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
@@ -1053,7 +1053,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46346" name="Agathion Blessed Virgo" additionalName="30-day" type="Armor">
+	<item id="46346" name="祝福的處女座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1078,7 +1078,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46347" name="Agathion Blessed Capricorn" additionalName="30-day" type="Armor">
+	<item id="46347" name="祝福的魔羯座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Capricorn. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1103,7 +1103,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46348" name="Agathion Blessed Libra" additionalName="30-day" type="Armor">
+	<item id="46348" name="祝福的天秤座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Libra. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1128,7 +1128,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46349" name="Agathion Blessed Aries" additionalName="30-day" type="Armor">
+	<item id="46349" name="祝福的牡羊座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Aries. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1153,7 +1153,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46350" name="Agathion Blessed Taurus" additionalName="30-day" type="Armor">
+	<item id="46350" name="祝福的金牛座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Taurus. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1178,7 +1178,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46351" name="Agathion Blessed Leo" additionalName="30-day" type="Armor">
+	<item id="46351" name="祝福的獅子座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Leo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1203,7 +1203,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46352" name="Agathion Blessed Gemini" additionalName="30-day" type="Armor">
+	<item id="46352" name="祝福的雙子座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Gemini. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1228,7 +1228,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46353" name="Agathion Blessed Scorpio" additionalName="30-day" type="Armor">
+	<item id="46353" name="祝福的天蠍座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Scorpio. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1253,7 +1253,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46354" name="Agathion Blessed Aquarius" additionalName="30-day" type="Armor">
+	<item id="46354" name="祝福的水瓶座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Aquarius. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1278,7 +1278,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46355" name="Agathion Blessed Sagittarius" additionalName="30-day" type="Armor">
+	<item id="46355" name="祝福的射手座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Sagittarius. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1303,7 +1303,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46356" name="Agathion Blessed Cancer" additionalName="30-day" type="Armor">
+	<item id="46356" name="祝福的巨蟹座壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Cancer. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1328,7 +1328,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="46357" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46357" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1343,7 +1343,7 @@
 			<item id="46346" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Virgo - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46358" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46358" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1358,7 +1358,7 @@
 			<item id="46347" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Capricorn - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46359" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46359" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1373,7 +1373,7 @@
 			<item id="46348" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Libra - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46360" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46360" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1388,7 +1388,7 @@
 			<item id="46349" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Aries - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46361" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46361" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1403,7 +1403,7 @@
 			<item id="46350" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Taurus - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46362" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46362" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1418,7 +1418,7 @@
 			<item id="46351" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Leo - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46363" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46363" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1433,7 +1433,7 @@
 			<item id="46352" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Gemini - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46364" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46364" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1448,7 +1448,7 @@
 			<item id="46353" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Scorpio - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46365" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46365" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1463,7 +1463,7 @@
 			<item id="46354" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Aquarius - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46366" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46366" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1478,7 +1478,7 @@
 			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Pisces - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46367" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46367" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1493,7 +1493,7 @@
 			<item id="46355" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Sagittarius - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46368" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46368" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1508,7 +1508,7 @@
 			<item id="46356" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Cancer - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46369" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+	<item id="46369" name="最高級種子手鐲禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet Pack (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="weight" val="10" />
@@ -1524,7 +1524,7 @@
 			<skill id="18503" level="1" /> <!-- Blessed Zodiac Agathion Pack (30-day) -->
 		</skills>
 	</item>
-	<item id="46370" name="Christmas Card" additionalName="Event" type="EtcItem">
+	<item id="46370" name="聖誕老人的聖誕卡" additionalName="Event" type="EtcItem">
 		<!-- Christmas Card given by Santa Claus. Only given to people who have been good for a year. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="weight" val="1" />
@@ -1535,7 +1535,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46371" name="Ashen Certificate" type="EtcItem">
+	<item id="46371" name="灰色證書" type="EtcItem">
 		<!-- Certificate of the Revolutionaries that Refugee Neti has requested. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_questitem" val="true" />
@@ -1547,7 +1547,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46372" name="Revolutionaries' Strategic Map Piece" type="EtcItem">
+	<item id="46372" name="革命軍作戰地圖碎片" type="EtcItem">
 		<!-- Part of the map that shows the strategy of the Ashen Shadow Revolutionaries. If you've collected them all, take them to Sir Klaus Vasper. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="is_questitem" val="true" />
@@ -1559,7 +1559,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46373" name="Transport Goods" type="EtcItem">
+	<item id="46373" name="革命軍補給箱" type="EtcItem">
 		<!-- Goods that Blacksmith Kluto has requested from you. If you've collected them all, take them to Blacksmith Kluto. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_questitem" val="true" />
@@ -1571,7 +1571,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46374" name="Destroyed Mark Fragment" type="EtcItem">
+	<item id="46374" name="毀壞的象徵碎片" type="EtcItem">
 		<!-- Proof that you've completed that Yuyuria has requested from you. If you've collected them all, take them to Wanderer Yuyuria. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="is_questitem" val="true" />
@@ -1583,7 +1583,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46375" name="Gludin Hero's Reward Box" type="EtcItem">
+	<item id="46375" name="古魯丁守護英雄報酬箱" type="EtcItem">
 		<!-- Reward box given in exchange for saving Gludin from danger. Double-click to use. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="is_tradable" val="false" />
@@ -1598,7 +1598,7 @@
 			<skill id="18496" level="1" /> <!-- Gludin Hero's Reward Box -->
 		</skills>
 	</item>
-	<item id="46376" name="Shadow Weapon Exchange Coupon" type="EtcItem">
+	<item id="46376" name="暗影武器交換券" type="EtcItem">
 		<!-- Coupon you can trade in for a Shadow Weapon. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
 		<set name="is_depositable" val="false" />
@@ -1609,7 +1609,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46377" name="Frozen One-handed Sword" type="Weapon">
+	<item id="46377" name="冰凍單手刀劍" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1634,7 +1634,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46378" name="Frozen Dagger" type="Weapon">
+	<item id="46378" name="冰凍匕首" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1660,7 +1660,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="46379" name="Frozen Two-handed Sword" type="Weapon">
+	<item id="46379" name="冰凍雙手刀劍" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1685,7 +1685,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46380" name="Frozen Fist Weapon" type="Weapon">
+	<item id="46380" name="冰凍格鬥兵器" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualfist_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1711,7 +1711,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="46381" name="Frozen Spear" type="Weapon">
+	<item id="46381" name="冰凍槍" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_pole_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1737,7 +1737,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46382" name="Crystallized Ice Bow" type="Weapon">
+	<item id="46382" name="冰凍弓" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1764,7 +1764,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="46383" name="Frozen Crossbow" type="Weapon">
+	<item id="46383" name="冰凍弩弓" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_crossbow_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1790,7 +1790,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46384" name="Frozen One-handed Blunt Weapon" type="Weapon">
+	<item id="46384" name="冰凍單手鈍器" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1815,7 +1815,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46385" name="Frozen Magic Sword" type="Weapon">
+	<item id="46385" name="冰凍魔法劍" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1841,7 +1841,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46386" name="Frozen One-handed Staff" type="Weapon">
+	<item id="46386" name="冰凍單手魔杖" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1867,7 +1867,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46387" name="Frozen Two-handed Staff" type="Weapon">
+	<item id="46387" name="冰凍雙手魔杖" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_twohand_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1893,7 +1893,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46388" name="Frozen Dual Sword" type="Weapon">
+	<item id="46388" name="冰凍雙刀" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dual_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -1918,7 +1918,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46389" name="Frozen Dual Dagger" type="Weapon">
+	<item id="46389" name="冰凍雙匕首" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1944,7 +1944,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46390" name="Frozen Dual Blunt Weapon" type="Weapon">
+	<item id="46390" name="冰凍雙鈍器" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualblunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1969,7 +1969,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46391" name="Frozen Shield" type="Weapon">
+	<item id="46391" name="冰凍盾牌" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="D" />
@@ -1984,7 +1984,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="46392" name="Frozen Sigil" type="Armor">
+	<item id="46392" name="冰凍符印" type="Armor">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -2001,7 +2001,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="46393" name="NPC Ashen Shadow Revolutionary Cloak" type="Armor">
+	<item id="46393" name="NPC專用灰影革命軍斗篷" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
@@ -2011,20 +2011,20 @@
 			<stat type="pDef">7</stat>
 		</stats>
 	</item>
-	<item id="46394" name="NPC Ashen Shadow Revolutionary Mask" type="Armor">
+	<item id="46394" name="NPC專用灰影革命軍面具" type="Armor">
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="bodypart" val="hair" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="46395" name="Shadow Ingot" type="EtcItem">
+	<item id="46395" name="暗影鑄錠" type="EtcItem">
 		<!-- Required for enhancing Shadow weapons. Take a +10 Shadow weapon and 10 Shadow Ingots to Neti in Gludio to obtain an enhanced Shadow weapon. -->
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46396" name="NPC Sigel Knight Transformation Cloak" type="Armor">
+	<item id="46396" name="NPC專用席格爾騎士變身體斗篷" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
@@ -2035,7 +2035,7 @@
 			<stat type="pDef">7</stat>
 		</stats>
 	</item>
-	<item id="46397" name="NPC Tyrr Warrior Transformation Cloak" type="Armor">
+	<item id="46397" name="NPC專用提爾鬥士變身體斗篷" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
@@ -2046,7 +2046,7 @@
 			<stat type="pDef">7</stat>
 		</stats>
 	</item>
-	<item id="46398" name="NPC Othell Rogue Transformation Cloak" type="Armor">
+	<item id="46398" name="NPC專用歐瑟遊俠變身體斗篷" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
@@ -2057,7 +2057,7 @@
 			<stat type="pDef">7</stat>
 		</stats>
 	</item>
-	<item id="46399" name="NPC Yul Archer Transformation Cloak" type="Armor">
+	<item id="46399" name="NPC專用尤爾弓手變身體斗篷" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />

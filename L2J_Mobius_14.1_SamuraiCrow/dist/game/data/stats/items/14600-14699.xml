@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14600" name="Schuttgart Dark Resistance Ring" type="Armor">
+	<item id="14600" name="修加特 暗的守護戒指" type="Armor">
 		<!-- A ring given to the Guardian of Schuttgart. Dark Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -22,7 +22,7 @@
 			<skill id="8387" level="1" /> <!-- Protection Ring - Schuttgart -->
 		</skills>
 	</item>
-	<item id="14601" name="Ancient Cloak" additionalName="Kamaels only" type="Armor">
+	<item id="14601" name="古代斗篷-闇天使專用" additionalName="Kamaels only" type="Armor">
 		<!-- An elaborate ancient cloak. Kamael only. Cannot be enchanted, augmented or imbued with an attribute. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -47,7 +47,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="14602" name="Ancient Cloak" type="Armor">
+	<item id="14602" name="古代斗篷" type="Armor">
 		<!-- An elaborate ancient cloak. Cannot be enchanted, augmented or imbued with an attribute. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -72,7 +72,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="14603" name="Sealed Ancient Cloak" type="EtcItem">
+	<item id="14603" name="封印的古代斗篷" type="EtcItem">
 		<!-- Old and not very useful equipment. Cannot be used. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
@@ -86,7 +86,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="14604" name="Red Talisman - Territory Guardian" type="Armor">
+	<item id="14604" name="赤色護身符-領地守護者" type="Armor">
 		<!-- When used, greatly increases CP and CP Recovery Rate. Effects of two identical talismans do not stack. Shadow item. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -104,7 +104,7 @@
 			<skill id="8308" level="1" /> <!-- Red Talisman - Keeper -->
 		</skills>
 	</item>
-	<item id="14605" name="Red Talisman - Territory Escort" type="Armor">
+	<item id="14605" name="赤色護身符-領地護衛軍" type="Armor">
 		<!-- When used, greatly increases CP and CP Recovery Rate. Effects of two identical talismans do not stack. Shadow item. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -122,7 +122,7 @@
 			<skill id="8309" level="1" /> <!-- Red Talisman - Protector -->
 		</skills>
 	</item>
-	<item id="14606" name="Gracian Soldier Two-handed Sword" type="Weapon">
+	<item id="14606" name="格勒西亞士兵雙手刀劍" type="Weapon">
 		<!-- A Gracian Soldier's sword. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -147,7 +147,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14607" name="Mark of Gracia" type="EtcItem">
+	<item id="14607" name="格勒西亞憑證" type="EtcItem">
 		<!-- Token given to new or dormant PC in Gracia server. It can be exchanged to an item through Token Exchanger. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -157,7 +157,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14608" name="Ancient Cloak (Light Armor)" type="Armor">
+	<item id="14608" name="古代斗篷-輕裝備專用" type="Armor">
 		<!-- An elaborate ancient cloak. Can be used by Warriors, Shield Masters, Fighters and Bards. Not for Kamael. Cannot be enchanted, augmented or imbued with an attribute. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -183,7 +183,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="14609" name="Ancient Cloak" type="Armor">
+	<item id="14609" name="古代斗篷" type="Armor">
 		<!-- An elaborate ancient cloak. Cannot be enchanted, augmented or imbued with an attribute. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -205,7 +205,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="14610" name="Ancient Cloak (Robe)" type="Armor">
+	<item id="14610" name="古代斗篷-長袍裝專用" type="Armor">
 		<!-- An elaborate ancient cloak. Can be used by Healers, Casters, Wizards and Summoners. Not for Kamael. Cannot be enchanted, augmented or imbued with an attribute. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -231,7 +231,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="14611" name="Rudolph's Nose" type="Armor">
+	<item id="14611" name="魯道夫之鼻" type="Armor">
 		<!-- Rudolph's nose. Available for 14 d. -->
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -244,7 +244,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 	</item>
-	<item id="14612" name="Holiday Red Sock" type="EtcItem">
+	<item id="14612" name="聖誕紅色襪子" type="EtcItem">
 		<!-- Item needed to receive a gift from Santa who goes around each territory. -->
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="immediate_effect" val="true" />
@@ -255,7 +255,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14613" name="Rock-Paper-Scissors Santa Hat" type="Armor">
+	<item id="14613" name="剪刀-石頭-布聖誕帽" type="Armor">
 		<!-- When used, one can play rock-paper-scissors with Thomas D. Turkey in each territory. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -274,7 +274,7 @@
 			<skill id="6099" level="1" /> <!-- Paper -->
 		</skills>
 	</item>
-	<item id="14614" name="Santa's Buff Gift Set" type="EtcItem">
+	<item id="14614" name="聖誕輔助魔法禮物組" type="EtcItem">
 		<!-- Santa's buff gift set. When used, can feel yourself becoming stronger by Santa's blessing for 1 h. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -291,7 +291,7 @@
 			<skill id="2856" level="1" /> <!-- Christmas Buff Kit -->
 		</skills>
 	</item>
-	<item id="14615" name="Holiday Scroll (Wizard)" type="EtcItem">
+	<item id="14615" name="聖誕慶典卷軸-法師型" type="EtcItem">
 		<!-- A scroll for the New Year festivities. The buff's duration: 1 h. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -308,7 +308,7 @@
 			<skill id="2857" level="1" /> <!-- Holiday Event - Enchant Scroll (Wizard) -->
 		</skills>
 	</item>
-	<item id="14616" name="Santa's Gift" type="EtcItem">
+	<item id="14616" name="聖誕老人的禮物" type="EtcItem">
 		<!-- A gift from Santa Claus. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -322,7 +322,7 @@
 			<skill id="2858" level="1" /> <!-- Holiday Red Sock -->
 		</skills>
 	</item>
-	<item id="14617" name="Agathion Rudolph" type="Armor">
+	<item id="14617" name="壺精封印手鐲-魯道夫" type="Armor">
 		<!-- A bracelet for summoning Agathion Rudolph. Available for 14 d. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -340,7 +340,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="14618" name="Agathion Rudolph" type="EtcItem">
+	<item id="14618" name="壺精封印手鐲-魯道夫" type="EtcItem">
 		<!-- A bracelet for summoning Agathion Rudolph. Can be used only during the New Year event. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
@@ -350,7 +350,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="14619" name="Santa's Weapon Coupon" type="EtcItem">
+	<item id="14619" name="聖誕老人的武器交換券" type="EtcItem">
 		<!-- Gift from Santa. It can be exchanged with a weapon through Cat of Christmas. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
 		<set name="immediate_effect" val="true" />
@@ -361,7 +361,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14620" name="Santa's Weapon Coupon" type="EtcItem">
+	<item id="14620" name="聖誕老人的武器交換券" type="EtcItem">
 		<!-- Gift from Santa. It can be exchanged with a weapon through Cat of Christmas. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
 		<set name="immediate_effect" val="true" />
@@ -372,7 +372,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14621" name="Santa's Sirra Blade" type="Weapon">
+	<item id="14621" name="聖誕老人的希露冰刃" type="Weapon">
 		<!-- Sirra's Blade - Christmas Gift -->
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -405,7 +405,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14622" name="Santa's Sword of Ipos" type="Weapon">
+	<item id="14622" name="聖誕老人的伊波斯巨劍" type="Weapon">
 		<!-- Ipos' Sword - Christmas Gift -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -438,7 +438,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14623" name="Santa's Barakiel Axe" type="Weapon">
+	<item id="14623" name="聖誕老人的貝拉凱爾聖斧" type="Weapon">
 		<!-- Barakiel's Axe - Christmas Gift -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -472,7 +472,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14624" name="Santa's Behemoth' Tuning Fork" type="Weapon">
+	<item id="14624" name="聖誕老人的貝希莫斯巨叉" type="Weapon">
 		<!-- Behemoth's Tuning Fork - Christmas Gift -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -506,7 +506,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14625" name="Santa's Naga's Storm" type="Weapon">
+	<item id="14625" name="聖誕老人的那卡風暴" type="Weapon">
 		<!-- Naga's Storm - Christmas Gift -->
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -540,7 +540,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14626" name="Santa's Tiphon Spear" type="Weapon">
+	<item id="14626" name="聖誕老人的岱依封長戟" type="Weapon">
 		<!-- Tiphon's Spear - Christmas Gift -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -575,7 +575,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="14627" name="Santa's Shyeed Bow" type="Weapon">
+	<item id="14627" name="聖誕老人的夏伊德獵弓" type="Weapon">
 		<!-- Shyeed's Bow - Christmas Gift -->
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -611,7 +611,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14628" name="Santa's Sobekk Hurricane" type="Weapon">
+	<item id="14628" name="聖誕老人的索貝克颶風" type="Weapon">
 		<!-- Sobekk's Hurricane - Christmas Gift -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -645,7 +645,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14629" name="Santa's Themis Tongue" type="Weapon">
+	<item id="14629" name="聖誕老人的緹米絲之舌" type="Weapon">
 		<!-- Themis' Tongue - Christmas Gift -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -680,7 +680,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="14630" name="Santa's Cabrio's Hand" type="Weapon">
+	<item id="14630" name="聖誕老人的卡布里歐之手" type="Weapon">
 		<!-- Cabrio's Hand - Christmas Gift -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -716,7 +716,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="14631" name="Santa's Daimon Crystal" type="Weapon">
+	<item id="14631" name="聖誕老人的惡魔結晶" type="Weapon">
 		<!-- Daimon's Crystal - Christmas Gift -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -752,7 +752,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="14632" name="Santa's Éclair Bijou" type="Weapon">
+	<item id="14632" name="聖誕老人的閃光之珠" type="Weapon">
 		<!-- Kamael-exclusive weapon: Sirra's Blade - Christmas Gift conversion. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -790,7 +790,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="14633" name="Santa's Éclair Bijou" type="Weapon">
+	<item id="14633" name="聖誕老人的復仇爆弩" type="Weapon">
 		<!-- Kamael-exclusive weapon: Shyeed's Bow - Christmas Gift conversion. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -828,7 +828,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14634" name="Santa's Durendal" type="Weapon">
+	<item id="14634" name="聖誕老人的光明守護之劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Ipos' Sword - Christmas Gift conversion -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -865,7 +865,7 @@
 			<skill id="8322" level="1" /> <!-- Santa's Blessed Weapon -->
 		</skills>
 	</item>
-	<item id="14635" name="Low-grade Battle Reward Pack" type="EtcItem">
+	<item id="14635" name="下級戰鬥報酬箱" type="EtcItem">
 		<!-- Double-click to open. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -881,7 +881,7 @@
 			<skill id="2852" level="1" /> <!-- Duel Reward Box -->
 		</skills>
 	</item>
-	<item id="14636" name="Mid-grade Battle Reward Pack" type="EtcItem">
+	<item id="14636" name="中級戰鬥報酬箱" type="EtcItem">
 		<!-- Double-click to open. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -897,7 +897,7 @@
 			<skill id="2853" level="1" /> <!-- Duel Reward Box -->
 		</skills>
 	</item>
-	<item id="14637" name="High-grade Battle Reward Pack" type="EtcItem">
+	<item id="14637" name="高級戰鬥報酬箱" type="EtcItem">
 		<!-- Double-click to open. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -913,7 +913,7 @@
 			<skill id="2854" level="1" /> <!-- Duel Reward Box -->
 		</skills>
 	</item>
-	<item id="14638" name="Top-grade Battle Reward Box" type="EtcItem">
+	<item id="14638" name="特級戰鬥報酬箱" type="EtcItem">
 		<!-- Double-click to open. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -929,7 +929,7 @@
 			<skill id="2855" level="1" /> <!-- Duel Reward Box -->
 		</skills>
 	</item>
-	<item id="14639" name="Event - Claymore" type="EtcItem">
+	<item id="14639" name="活動-雙刃大砍刀" type="EtcItem">
 		<!-- Double-click to obtain Claymore and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="PEEL" />
@@ -946,7 +946,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14640" name="Event - Bonebreaker" type="EtcItem">
+	<item id="14640" name="活動-碎骨者" type="EtcItem">
 		<!-- Double-click to obtain Bonebreaker and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="PEEL" />
@@ -963,7 +963,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14641" name="Event - Atuba Hammer" type="EtcItem">
+	<item id="14641" name="活動-阿吐巴鎚" type="EtcItem">
 		<!-- Double-click to obtain Atuba Hammer and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
 		<set name="default_action" val="PEEL" />
@@ -980,7 +980,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14642" name="Event - Ghost Staff" type="EtcItem">
+	<item id="14642" name="活動-魂靈魔杖" type="EtcItem">
 		<!-- Double-click to obtain Ghost Staff and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="PEEL" />
@@ -997,7 +997,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14643" name="Event - Staff of Life" type="EtcItem">
+	<item id="14643" name="活動-生命手杖" type="EtcItem">
 		<!-- Double-click to obtain Staff of Life and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1014,7 +1014,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14644" name="Event - Atuba Mace" type="EtcItem">
+	<item id="14644" name="活動-阿吐巴釘鎚" type="EtcItem">
 		<!-- Double-click to obtain Atuba Mace and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1031,7 +1031,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14645" name="Event - Mithril Dagger" type="EtcItem">
+	<item id="14645" name="活動-米索莉匕首" type="EtcItem">
 		<!-- Double-click to obtain Mithril Dagger and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1048,7 +1048,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14646" name="Event - Scallop Jamadhr" type="EtcItem">
+	<item id="14646" name="活動-波浪刀" type="EtcItem">
 		<!-- Double-click to obtain Scallop Jamadhr and 5 Cakes. -->
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1065,7 +1065,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14647" name="Event - Light Bow" type="EtcItem">
+	<item id="14647" name="活動-風暴弓" type="EtcItem">
 		<!-- Double-click to obtain Light Bow and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1082,7 +1082,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14648" name="Event - Glaive" type="EtcItem">
+	<item id="14648" name="活動-闊矛" type="EtcItem">
 		<!-- Double-click to obtain Glaive and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1099,7 +1099,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14649" name="Event - Elven Long Sword" type="EtcItem">
+	<item id="14649" name="活動-精靈長劍" type="EtcItem">
 		<!-- Double-click to obtain Elven Long Sword and Cake (5 pcs.). -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1116,7 +1116,7 @@
 			<item id="13421" min="5" max="5" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14650" name="Event - Samurai Long Sword" type="EtcItem">
+	<item id="14650" name="活動-瑟魯基長劍" type="EtcItem">
 		<!-- Double-click to obtain Samurai Long Sword and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1133,7 +1133,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14651" name="Event - Deadman's Staff" type="EtcItem">
+	<item id="14651" name="活動-亡者魔杖" type="EtcItem">
 		<!-- Double-click to obtain Deadman's Staff and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1150,7 +1150,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14652" name="Event - Ghoul's Staff" type="EtcItem">
+	<item id="14652" name="活動-食屍鬼魔杖" type="EtcItem">
 		<!-- Double-click to obtain Ghoul's Staff and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1167,7 +1167,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14653" name="Event - Demon's Staff" type="EtcItem">
+	<item id="14653" name="活動-惡魔魔杖" type="EtcItem">
 		<!-- Double-click to obtain Demon's Staff and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1184,7 +1184,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14654" name="Event - Crystal Dagger" type="EtcItem">
+	<item id="14654" name="活動-水晶匕首" type="EtcItem">
 		<!-- Double-click to obtain Crystal Dagger and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1201,7 +1201,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14655" name="Event - Great Pata" type="EtcItem">
+	<item id="14655" name="活動-巨型帕塔拳刃" type="EtcItem">
 		<!-- Double-click to obtain Great Pata and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1218,7 +1218,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14656" name="Event - Eminence Bow" type="EtcItem">
+	<item id="14656" name="活動-卓越弓" type="EtcItem">
 		<!-- Double-click to obtain Eminence Bow and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1235,7 +1235,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14657" name="Event - Orcish Poleaxe" type="EtcItem">
+	<item id="14657" name="活動-歐西斯戰斧" type="EtcItem">
 		<!-- Double-click to obtain Orcish Poleaxe and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1252,7 +1252,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14658" name="Event - Yaksa Mace" type="EtcItem">
+	<item id="14658" name="活動-夜叉釘鎚" type="EtcItem">
 		<!-- Double-click to obtain Yaksa Mace and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1269,7 +1269,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14659" name="Event - Berserker Blade" type="EtcItem">
+	<item id="14659" name="活動-狂戰士之刃" type="EtcItem">
 		<!-- Double-click to obtain Berserker Blade and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1286,7 +1286,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14660" name="Event - Ecliptic Sword" type="EtcItem">
+	<item id="14660" name="活動-日蝕劍" type="EtcItem">
 		<!-- Double-click to obtain Ecliptic Sword and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1303,7 +1303,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14661" name="Event - Ecliptic Axe" type="EtcItem">
+	<item id="14661" name="活動-月蝕斧" type="EtcItem">
 		<!-- Double-click to obtain Ecliptic Axe and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1320,7 +1320,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14662" name="Event - Dwarven Hammer" type="EtcItem">
+	<item id="14662" name="活動-矮人巨鎚" type="EtcItem">
 		<!-- Double-click to obtain Dwarven Hammer and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1337,7 +1337,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14663" name="Event - Katana*Katana" type="EtcItem">
+	<item id="14663" name="活動-武士刀*武士刀" type="EtcItem">
 		<!-- Double-click to obtain Katana*Katana and Cake (3 pcs.). -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1354,7 +1354,7 @@
 			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
 		</capsuled_items>
 	</item>
-	<item id="14664" name="Gludio Resistance Earring" type="Armor">
+	<item id="14664" name="古魯丁守護耳環" type="Armor">
 		<!-- An earring given to Gludio's Keeper. Confusion Atk. Rate +15, Infection Resistance +15, Water Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1376,7 +1376,7 @@
 			<skill id="8348" level="1" /> <!-- Gludio Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14665" name="Dion Resistance Earring" type="Armor">
+	<item id="14665" name="狄恩守護耳環" type="Armor">
 		<!-- An earring given to Dion's Keeper. Obstruction Atk. Rate +15, Infection Resistance +15, Holy Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1398,7 +1398,7 @@
 			<skill id="8349" level="1" /> <!-- Dion Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14666" name="Giran Resistance Earring" type="Armor">
+	<item id="14666" name="奇岩守護耳環" type="Armor">
 		<!-- An earring given to Giran's Keeper. Infection Atk. Rate +15, Confusion Resistance +15, Wind Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1420,7 +1420,7 @@
 			<skill id="8350" level="1" /> <!-- Giran Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14667" name="Oren Resistance Earring" type="Armor">
+	<item id="14667" name="歐瑞守護耳環" type="Armor">
 		<!-- An earring given to Oren's Keeper. Confusion Atk. Rate +15, Obstruction Resistance +15, Dark Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1442,7 +1442,7 @@
 			<skill id="8351" level="1" /> <!-- Oren Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14668" name="Aden Resistance Earring" type="Armor">
+	<item id="14668" name="亞丁守護耳環" type="Armor">
 		<!-- An earring given to Aden's Keeper. Confusion Atk. Rate and Resistance +15, Earth Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1464,7 +1464,7 @@
 			<skill id="8352" level="1" /> <!-- Aden Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14669" name="Innadril Resistance Earring" type="Armor">
+	<item id="14669" name="因納得立守護耳環" type="Armor">
 		<!-- An earring given to Innadril's Keeper. Stupor Atk. Rate +15, Confusion Resistance +15, Water Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1486,7 +1486,7 @@
 			<skill id="8353" level="1" /> <!-- Innadril Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14670" name="Goddard Resistance Earring" type="Armor">
+	<item id="14670" name="高達特守護耳環" type="Armor">
 		<!-- An earring given to Goddard's Keeper. Stupor Atk. Rate +15, Confusion Resistance +15, Fire Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1508,7 +1508,7 @@
 			<skill id="8354" level="1" /> <!-- Goddard Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14671" name="Rune Resistance Earring" type="Armor">
+	<item id="14671" name="魯因守護耳環" type="Armor">
 		<!-- An earring given to Rune's Keeper. Infection Atk. Rate +15, Obstruction Resistance +15, Fire Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1530,7 +1530,7 @@
 			<skill id="8355" level="1" /> <!-- Rune Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14672" name="Schuttgart Resistance Earring" type="Armor">
+	<item id="14672" name="修加特守護耳環" type="Armor">
 		<!-- A earring given to Schuttgart's Keeper. Obstruction Atk. Rate +15%, Confusion Resistance +15, Wind Resistance +8. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1552,7 +1552,7 @@
 			<skill id="8356" level="1" /> <!-- Schuttgart Resistance Earring -->
 		</skills>
 	</item>
-	<item id="14673" name="Rudolph's Nose" type="EtcItem">
+	<item id="14673" name="魯道夫之鼻" type="EtcItem">
 		<!-- Rudolph's nose. Can be used only during the New Year event. -->
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1561,7 +1561,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="14674" name="Santa's Tallum Blade*Damascus Sword" type="Weapon">
+	<item id="14674" name="聖誕老人的塔魯刀*大馬士革刀" type="Weapon">
 		<!-- Tallum Blade*Damascus Sword - Christmas Gift -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1595,7 +1595,7 @@
 			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="14675" name="Agathion Saerom" type="Armor">
+	<item id="14675" name="壺精封印手鐲-新羅" type="Armor">
 		<!-- A bracelet for summoning an agathion. You won't receive any gifts, if your inventory is full. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1616,7 +1616,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="14676" name="Agathion's New Year's Gift" type="EtcItem">
+	<item id="14676" name="壺精的新年禮物" type="EtcItem">
 		<!-- Christmas Gift: Agathion. Double-click to obtain a gift. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1630,7 +1630,7 @@
 			<skill id="2865" level="1" /> <!-- Christmas Gift 1 - Agathion -->
 		</skills>
 	</item>
-	<item id="14677" name="Agathion's New Year's Gift" type="EtcItem">
+	<item id="14677" name="壺精的新年禮物" type="EtcItem">
 		<!-- Christmas Gift: Agathion. Double-click to obtain a gift. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1644,7 +1644,7 @@
 			<skill id="2866" level="1" /> <!-- Christmas Gift 2 - Agathion -->
 		</skills>
 	</item>
-	<item id="14678" name="B-grade Neolithic Crystal" type="EtcItem">
+	<item id="14678" name="新羅之珠-B" type="EtcItem">
 		<!-- Take it to the Game Assistant to exchange a standard B-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1653,7 +1653,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="14679" name="A-grade Neolithic Crystal" type="EtcItem">
+	<item id="14679" name="新羅之珠-A" type="EtcItem">
 		<!-- Take it to the Game Assistant to exchange a standard A-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1662,7 +1662,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="14680" name="S-grade Neolithic Crystal" type="EtcItem">
+	<item id="14680" name="新羅之珠-S" type="EtcItem">
 		<!-- Take it to the Game Assistant to exchange a standard S-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1671,7 +1671,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14681" name="Neolithic Crystal (S80-grade)" type="EtcItem">
+	<item id="14681" name="新羅之珠-S80" type="EtcItem">
 		<!-- Take it to the Game Assistant to exchange a standard S80-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1680,7 +1680,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14682" name="Superior No-grade Elixir of Life" type="EtcItem">
+	<item id="14682" name="超強力生命靈藥-普通" type="EtcItem">
 		<!-- Recovers HP. Can only be used on yourself. Required level: 1-19. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1701,7 +1701,7 @@
 			<skill id="2860" level="1" /> <!-- Great No-grade Elixir of Life -->
 		</skills>
 	</item>
-	<item id="14683" name="Superior Elixir of Life" type="EtcItem">
+	<item id="14683" name="超強力生命靈藥" type="EtcItem">
 		<!-- Recovers HP. Can only be used on yourself. Required level: 20-39. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1723,7 +1723,7 @@
 			<skill id="2860" level="2" /> <!-- Great D-grade Elixir of Life -->
 		</skills>
 	</item>
-	<item id="14684" name="Superior Elixir of Life" type="EtcItem">
+	<item id="14684" name="超強力生命靈藥" type="EtcItem">
 		<!-- Recovers HP. Can only be used on yourself. Required level: 40-51. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1745,7 +1745,7 @@
 			<skill id="2860" level="3" /> <!-- Great C-grade Elixir of Life -->
 		</skills>
 	</item>
-	<item id="14685" name="Superior Elixir of Life" type="EtcItem">
+	<item id="14685" name="超強力生命靈藥" type="EtcItem">
 		<!-- Recovers HP. Can only be used on yourself. Required level: 52-60. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1767,7 +1767,7 @@
 			<skill id="2860" level="4" /> <!-- Great B-grade Elixir of Life -->
 		</skills>
 	</item>
-	<item id="14686" name="Superior Elixir of Life" type="EtcItem">
+	<item id="14686" name="超強力生命靈藥" type="EtcItem">
 		<!-- Recovers HP. Can only be used on yourself. Required level: 61-75. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1789,7 +1789,7 @@
 			<skill id="2860" level="5" /> <!-- Great A-grade Elixir of Life -->
 		</skills>
 	</item>
-	<item id="14687" name="Superior Elixir of Life" type="EtcItem">
+	<item id="14687" name="超強力生命靈藥" type="EtcItem">
 		<!-- Recovers HP. Can only be used on yourself. Required level: 76-84. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1812,7 +1812,7 @@
 			<skill id="2860" level="6" /> <!-- Great S-grade Elixir of Life -->
 		</skills>
 	</item>
-	<item id="14688" name="Superior No-grade Elixir of Mind" type="EtcItem">
+	<item id="14688" name="超強力精神靈藥-普通" type="EtcItem">
 		<!-- Recovers MP. Can only be used on yourself. Required level: 1-19. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1833,7 +1833,7 @@
 			<skill id="2861" level="1" /> <!-- Great No-grade Elixir of Mind -->
 		</skills>
 	</item>
-	<item id="14689" name="Superior Elixir of Mind" type="EtcItem">
+	<item id="14689" name="超強力精神靈藥" type="EtcItem">
 		<!-- Recovers MP. Can only be used on yourself. Required level: 20-39. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1855,7 +1855,7 @@
 			<skill id="2861" level="2" /> <!-- Great D-grade Elixir of Mind -->
 		</skills>
 	</item>
-	<item id="14690" name="Superior Elixir of Mind" type="EtcItem">
+	<item id="14690" name="超強力精神靈藥" type="EtcItem">
 		<!-- Recovers MP. Can only be used on yourself. Required level: 40-51. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1877,7 +1877,7 @@
 			<skill id="2861" level="3" /> <!-- Great C-grade Elixir of Mind -->
 		</skills>
 	</item>
-	<item id="14691" name="Superior Elixir of Mind" type="EtcItem">
+	<item id="14691" name="超強力精神靈藥" type="EtcItem">
 		<!-- Recovers MP. Can only be used on yourself. Required level: 52-60. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1899,7 +1899,7 @@
 			<skill id="2861" level="4" /> <!-- Great B-grade Elixir of Mind -->
 		</skills>
 	</item>
-	<item id="14692" name="Superior Elixir of Mind" type="EtcItem">
+	<item id="14692" name="超強力精神靈藥" type="EtcItem">
 		<!-- Recovers MP. Can only be used on yourself. Required level: 61-75. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1921,7 +1921,7 @@
 			<skill id="2861" level="5" /> <!-- Great A-grade Elixir of Mind -->
 		</skills>
 	</item>
-	<item id="14693" name="Superior Elixir of Mind" type="EtcItem">
+	<item id="14693" name="超強力精神靈藥" type="EtcItem">
 		<!-- Recovers MP. Can only be used on yourself. Required level: 76-84. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1944,7 +1944,7 @@
 			<skill id="2861" level="6" /> <!-- Great S-grade Elixir of Mind -->
 		</skills>
 	</item>
-	<item id="14694" name="Superior No-grade Elixir of CP" type="EtcItem">
+	<item id="14694" name="超強力鬥志靈藥-普通" type="EtcItem">
 		<!-- Recovers CP. Can only be used on yourself. Required level: 1-19. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1962,7 +1962,7 @@
 			<skill id="2862" level="1" /> <!-- Great No-grade Elixir of CP -->
 		</skills>
 	</item>
-	<item id="14695" name="Superior Elixir of CP" type="EtcItem">
+	<item id="14695" name="超強力鬥志靈藥" type="EtcItem">
 		<!-- Recovers CP. Can only be used on yourself. Required level: 20-39. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1981,7 +1981,7 @@
 			<skill id="2862" level="2" /> <!-- Great D-grade Elixir of CP -->
 		</skills>
 	</item>
-	<item id="14696" name="Superior Elixir of CP" type="EtcItem">
+	<item id="14696" name="超強力鬥志靈藥" type="EtcItem">
 		<!-- Recovers CP. Can only be used on yourself. Required level: 40-51. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2000,7 +2000,7 @@
 			<skill id="2862" level="3" /> <!-- Great C-grade Elixir of CP -->
 		</skills>
 	</item>
-	<item id="14697" name="Superior Elixir of CP" type="EtcItem">
+	<item id="14697" name="超強力鬥志靈藥" type="EtcItem">
 		<!-- Recovers CP. Can only be used on yourself. Required level: 52-60. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2019,7 +2019,7 @@
 			<skill id="2862" level="4" /> <!-- Great B-grade Elixir of CP -->
 		</skills>
 	</item>
-	<item id="14698" name="Superior Elixir of CP" type="EtcItem">
+	<item id="14698" name="超強力鬥志靈藥" type="EtcItem">
 		<!-- Recovers CP. Can only be used on yourself. Required level: 61-75. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2038,7 +2038,7 @@
 			<skill id="2862" level="5" /> <!-- Great A-grade Elixir of CP -->
 		</skills>
 	</item>
-	<item id="14699" name="Superior Elixir of CP" type="EtcItem">
+	<item id="14699" name="超強力鬥志靈藥" type="EtcItem">
 		<!-- Recovers CP. Can only be used on yourself. Required level: 76-84. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />

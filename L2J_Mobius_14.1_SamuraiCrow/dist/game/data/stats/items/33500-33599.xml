@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="33500" name="Mark of Lords" type="EtcItem">
+	<item id="33500" name="領主的憑證" type="EtcItem">
 		<!-- Proof received as a campaign reward. Can exchange for a gift from the Kingdom Mark Manager in the Town of each castle. -->
 		<set name="icon" val="icon.campaign_high_rank_reward" />
 		<set name="price" val="20000" />
@@ -11,7 +11,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="33501" name="King's Mark" type="EtcItem">
+	<item id="33501" name="國王的憑證" type="EtcItem">
 		<!-- High-level proof received by those with high achievements during the campaign. Can exchange for a special gift from the Kingdom Mark Manager in the Town of each castle. -->
 		<set name="icon" val="icon.campaign_public_reward" />
 		<set name="price" val="400000" />
@@ -22,7 +22,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="33502" name="S-grade Weapon Attribute Change Crystal" type="EtcItem">
+	<item id="33502" name="武器屬性變更水晶-S級" type="EtcItem">
 		<!-- Double-click to change the attribute of an S-/ S80-grade weapon (not bound). The weapon must be in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="crystal_type" val="S" />
@@ -39,7 +39,7 @@
 			<skill id="12881" level="1" /> <!-- Change Property -->
 		</skills>
 	</item>
-	<item id="33503" name="Hero's Blessed Buff Scroll" type="EtcItem">
+	<item id="33503" name="英雄的祝福輔助魔法卷軸" type="EtcItem">
 		<!-- HP Recovery Rate/ Max MP/ P. Critical Damage +20%. For 1 h., applies the following effects: Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="weight" val="120" />
@@ -73,7 +73,7 @@
 			<skill id="22269" level="6" /> <!-- Concentration -->
 		</skills>
 	</item>
-	<item id="33504" name="Package: Hero's Blessed Buff Scroll (5 pcs.)" type="EtcItem">
+	<item id="33504" name="英雄的祝福輔助魔法卷軸 5張/組" type="EtcItem">
 		<!-- HP Recovery Rate/ Max MP/ P. Critical Damage +20%. Double-click to obtain 5 scrolls that apply the following effects for 1 h.: Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -89,7 +89,7 @@
 			<item id="33503" min="5" max="5" chance="100" /> <!-- Hero's Blessed Buff Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="33505" name="Scroll: Noblesse Blessing" type="EtcItem">
+	<item id="33505" name="貴族的祝福輔助魔法卷軸" type="EtcItem">
 		<!-- For 60 min., maintains buffs upon death. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="weight" val="120" />
@@ -107,7 +107,7 @@
 			<skill id="12898" level="1" /> <!-- Noblesse Blessing -->
 		</skills>
 	</item>
-	<item id="33506" name="Package: Scroll: Noblesse Blessing (5 pcs.)" type="EtcItem">
+	<item id="33506" name="貴族的祝福輔助魔法卷軸 5張/組" type="EtcItem">
 		<!-- Contains 5 scrolls that maintain buffs upon death, for 60 min. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -123,7 +123,7 @@
 			<item id="33505" min="5" max="5" chance="100" /> <!-- Scroll: Noblesse Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="33507" name="Scroll: Mount Kukuru" type="EtcItem">
+	<item id="33507" name="酷酷魯騎乘卷軸" type="EtcItem">
 		<!-- A scroll for mounting Kukuru. Required level: 40. -->
 		<set name="icon" val="icon.scroll_of_kukur_event" />
 		<set name="weight" val="120" />
@@ -141,7 +141,7 @@
 			<skill id="9209" level="1" /> <!-- Kukuru -->
 		</skills>
 	</item>
-	<item id="33508" name="Package: Scroll: Mount Kukuru (30 pcs.)" type="EtcItem">
+	<item id="33508" name="酷酷魯騎乘卷軸 30張/組" type="EtcItem">
 		<!-- A scroll for mounting Kukuru. Required level: 40. Contains 30 scrolls, each of them gives 10 min. of riding. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -157,7 +157,7 @@
 			<item id="33507" min="30" max="30" chance="100" /> <!-- Scroll: Mount Kukuru -->
 		</capsuled_items>
 	</item>
-	<item id="33509" name="Returning Hero's Shirt" type="Armor">
+	<item id="33509" name="凱旋英雄的襯衫" type="Armor">
 		<!-- A t-shirt for returning heroes. When equipped, STR +1, INT +1. -->
 		<set name="icon" val="icon.shirt_of_destination_event" />
 		<set name="default_action" val="EQUIP" />
@@ -176,7 +176,7 @@
 			<skill id="13342" level="1" /> <!-- T-shirt of Destiny -->
 		</skills>
 	</item>
-	<item id="33510" name="Returning Hero's Belt" type="Armor">
+	<item id="33510" name="凱旋英雄的腰帶" type="Armor">
 		<!-- Belt for a returning hero. When equipped, Weight Limit +5000. -->
 		<set name="icon" val="icon.belt_of_destination_event" />
 		<set name="armor_type" val="LIGHT" />
@@ -193,7 +193,7 @@
 			<skill id="13343" level="1" /> <!-- Belt of Destiny -->
 		</skills>
 	</item>
-	<item id="33511" name="Returning Hero's Mark" type="EtcItem">
+	<item id="33511" name="凱旋英雄的憑證" type="EtcItem">
 		<!-- A returning hero's mark. Can be exchanged for Returning Hero's equipment through the Game Assistant. -->
 		<set name="icon" val="icon.return_user_item" />
 		<set name="is_tradable" val="false" />
@@ -205,7 +205,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="33512" name="Returning Hero's Vitality Replenishing Juice" type="EtcItem">
+	<item id="33512" name="凱旋英雄的活力恢復飲料" type="EtcItem">
 		<!-- When used, for 4 h., recovers Vitality when acquiring XP while hunting. Cannot be used while the Birthday buff is applied. Cooldown: 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
@@ -224,7 +224,7 @@
 			<skill id="9577" level="1" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</skills>
 	</item>
-	<item id="33513" name="Package: Returning Hero's Vitality Replenishing Juice (5 pcs.)" type="EtcItem">
+	<item id="33513" name="凱旋英雄的活力恢復飲料 5個/組" type="EtcItem">
 		<!-- Double-click to obtain 5 Vitality Recovering Cakes (4-hour) that recover Vitality of nearby party members while acquiring XP through hunting. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -241,7 +241,7 @@
 			<item id="33512" min="5" max="5" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</capsuled_items>
 	</item>
-	<item id="33514" name="Hero's Gift Box" type="EtcItem">
+	<item id="33514" name="英雄禮盒" type="EtcItem">
 		<!-- Double-click to obtain Hero's Blessed Buff Scroll (5 pcs.), Package: Minion Coupon (3 pcs.), Package: Scroll: Noblesse Blessing (5 pcs.), Package: Scroll: Mount Kukuru (30 pcs.), Package: Feather of Blessing (3 pcs.). -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="100" />
@@ -252,7 +252,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="33515" name="Gift Box of Destiny" type="EtcItem">
+	<item id="33515" name="命運禮盒" type="EtcItem">
 		<!-- Double-click to obtain Returning Hero's Mark (250 pcs.), Package: Returning Hero's Vitality Replenishing Juice (5 pcs.), Package: Superior Minion Coupon (2 pcs.). -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="weight" val="100" />
@@ -263,7 +263,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="33516" name="R-grade Unbind Scroll" additionalName="Campaign" type="EtcItem">
+	<item id="33516" name="束縛解除卷軸-R級" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to unbind a R-grade bound item through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="2" />
@@ -276,7 +276,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33517" name="R95-grade Unbind Scroll" additionalName="Campaign" type="EtcItem">
+	<item id="33517" name="束縛解除卷軸-R95級" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to unbind a R95-grade bound item through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="2" />
@@ -289,7 +289,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33518" name="Blessed Scroll of Resurrection" type="EtcItem">
+	<item id="33518" name="祝福的復活卷軸" type="EtcItem">
 		<!-- A magic scroll that resurrects a dead character fully recovering their XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="weight" val="120" />
@@ -307,7 +307,7 @@
 			<skill id="12935" level="1" /> <!-- Blessed Scroll of Resurrection -->
 		</skills>
 	</item>
-	<item id="33519" name="Scroll: Enchant R-grade Weapon" additionalName="Campaign" type="EtcItem">
+	<item id="33519" name="武器強化卷軸-R級" additionalName="Campaign" type="EtcItem">
 		<!-- For R-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +6. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists, crossbow: P. Atk. +7. Bow: P. Atk. +12. All weapons: M. Atk. +5. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="120" />
@@ -326,7 +326,7 @@
 			<skill id="9185" level="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="33520" name="Scroll: Enchant R-grade Armor" additionalName="Campaign" type="EtcItem">
+	<item id="33520" name="防具強化卷軸-R級" additionalName="Campaign" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. is greatly increased, HP is increased with each enchant value. Enchanting is safe up to +3. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="120" />
@@ -345,7 +345,7 @@
 			<skill id="9186" level="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="33521" name="Wig Box" additionalName="Campaign" type="EtcItem">
+	<item id="33521" name="假髮禮盒" additionalName="Campaign" type="EtcItem">
 		<!-- Box containing various wigs. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -362,7 +362,7 @@
 			<item id="17309" min="1" max="1" chance="100" /> <!-- Immortal Shield -->
 		</capsuled_items>
 	</item>
-	<item id="33522" name="Attribute Pack" additionalName="Campaign" type="EtcItem">
+	<item id="33522" name="屬性禮盒" additionalName="Campaign" type="EtcItem">
 		<!-- Double-click to obtain Attribute Stones, Attribute Crystals and Attribute Change Crystals. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -378,7 +378,7 @@
 			<item id="17314" min="1" max="1" chance="100" /> <!-- Immortal Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="33523" name="Talisman - M. Critical Rate (Passive)" additionalName="Campaign" type="Armor">
+	<item id="33523" name="護身符-魔法致命攻擊率 {主動} " additionalName="Campaign" type="Armor">
 		<!-- M. Skill Critical Rate +2%. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -395,7 +395,7 @@
 			<skill id="8644" level="1" /> <!-- R-grade Talisman - M. Critical Rate -->
 		</skills>
 	</item>
-	<item id="33524" name="Talisman - P. Accuracy (Passive)" additionalName="Campaign" type="Armor">
+	<item id="33524" name="護身符-物理命中能力 {主動} " additionalName="Campaign" type="Armor">
 		<!-- P. Accuracy +2. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_ph_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -412,7 +412,7 @@
 			<skill id="8645" level="1" /> <!-- R85-grade Talisman - P. Accuracy -->
 		</skills>
 	</item>
-	<item id="33525" name="Talisman - M. Accuracy (Passive)" additionalName="Campaign" type="Armor">
+	<item id="33525" name="護身符-魔法命中 {主動} " additionalName="Campaign" type="Armor">
 		<!-- M. Accuracy +2. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_mh_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -429,7 +429,7 @@
 			<skill id="8646" level="1" /> <!-- R85-grade Talisman - M. Accuracy -->
 		</skills>
 	</item>
-	<item id="33526" name="Talisman - Evasion (Passive)" additionalName="Campaign" type="Armor">
+	<item id="33526" name="護身符-迴避 {主動} " additionalName="Campaign" type="Armor">
 		<!-- Evasion +2. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_pm_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -446,7 +446,7 @@
 			<skill id="8647" level="1" /> <!-- R85-grade Talisman - P. Evasion -->
 		</skills>
 	</item>
-	<item id="33527" name="Talisman - M. Evasion (Passive)" additionalName="Campaign" type="Armor">
+	<item id="33527" name="護身符-魔法迴避 {主動} " additionalName="Campaign" type="Armor">
 		<!-- M. Evasion +2. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_mm_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -463,7 +463,7 @@
 			<skill id="8648" level="1" /> <!-- R85-grade Talisman - M. Evasion -->
 		</skills>
 	</item>
-	<item id="33528" name="Talisman - P. Critical Rate (Passive)" additionalName="Campaign" type="Armor">
+	<item id="33528" name="護身符-物理致命攻擊率 {主動} " additionalName="Campaign" type="Armor">
 		<!-- Critical Rate for basic attacks +2%. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_cr_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -480,7 +480,7 @@
 			<skill id="8649" level="1" /> <!-- R-grade Talisman - P. Critical Rate -->
 		</skills>
 	</item>
-	<item id="33529" name="Talisman - Critical Evasion (Passive)" additionalName="Campaign" type="Armor">
+	<item id="33529" name="護身符-致命攻擊迴避 {主動} " additionalName="Campaign" type="Armor">
 		<!-- Received P. Critical Rate -2%. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_cm_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -497,7 +497,7 @@
 			<skill id="8650" level="1" /> <!-- R85-grade Talisman - P. Critical Evasion -->
 		</skills>
 	</item>
-	<item id="33530" name="Talisman - M. Critical Rate (Active)" additionalName="Campaign" type="Armor">
+	<item id="33530" name="護身符-魔法致命攻擊 {主動} " additionalName="Campaign" type="Armor">
 		<!-- M. Skill Critical Rate +4%. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_mc_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -515,7 +515,7 @@
 			<skill id="8687" level="1" /> <!-- R-grade Talisman - M. Critical Rate (Active) -->
 		</skills>
 	</item>
-	<item id="33531" name="Talisman - P. Accuracy (Active)" additionalName="Campaign" type="Armor">
+	<item id="33531" name="護身符-物理命中 {主動} " additionalName="Campaign" type="Armor">
 		<!-- When used, P. Accuracy +4. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_ph_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -533,7 +533,7 @@
 			<skill id="8688" level="1" /> <!-- R85-grade Talisman - P. Accuracy (Active) -->
 		</skills>
 	</item>
-	<item id="33532" name="Talisman - M. Accuracy (Active)" additionalName="Campaign" type="Armor">
+	<item id="33532" name="護身符-魔法命中 {主動} " additionalName="Campaign" type="Armor">
 		<!-- When used, M. Accuracy +4. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_mh_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -551,7 +551,7 @@
 			<skill id="8689" level="1" /> <!-- R85-grade Talisman - M. Accuracy (Active) -->
 		</skills>
 	</item>
-	<item id="33533" name="Talisman - Evasion (Active)" additionalName="Campaign" type="Armor">
+	<item id="33533" name="護身符-迴避 {主動} " additionalName="Campaign" type="Armor">
 		<!-- When used, Evasion +4. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_pm_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -569,7 +569,7 @@
 			<skill id="8690" level="1" /> <!-- R85-grade Talisman - P. Evasion (Active) -->
 		</skills>
 	</item>
-	<item id="33534" name="Talisman - M. Evasion (Active)" additionalName="Campaign" type="Armor">
+	<item id="33534" name="護身符-魔法迴避 {主動} " additionalName="Campaign" type="Armor">
 		<!-- When used, M. Evasion +4. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_mm_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -587,7 +587,7 @@
 			<skill id="8691" level="1" /> <!-- R85-grade Talisman - M. Evasion (Active) -->
 		</skills>
 	</item>
-	<item id="33535" name="Talisman - Critical Rate (Active)" additionalName="Campaign" type="Armor">
+	<item id="33535" name="護身符-致命攻擊率 {主動} " additionalName="Campaign" type="Armor">
 		<!-- When used, Critical Rate for basic attacks +4%. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_cr_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -605,7 +605,7 @@
 			<skill id="8692" level="1" /> <!-- R-grade Talisman - P. Critical Rate (Active) -->
 		</skills>
 	</item>
-	<item id="33536" name="Talisman - Critical Evasion (Active)" additionalName="Campaign" type="Armor">
+	<item id="33536" name="護身符 - 致命攻擊迴避 {主動} " additionalName="Campaign" type="Armor">
 		<!-- When used, received Critical Rate from basic attacks -4%. Shadow item. -->
 		<set name="icon" val="icon.r_talisman_cm_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -623,7 +623,7 @@
 			<skill id="8693" level="1" /> <!-- R85-grade Talisman - P. Critical Evasion (Active) -->
 		</skills>
 	</item>
-	<item id="33537" name="Basic Talisman - Atk. Spd." additionalName="Campaign" type="Armor">
+	<item id="33537" name="基本型護身符-物理攻擊速度" additionalName="Campaign" type="Armor">
 		<!-- Atk. Spd. +2%. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -640,7 +640,7 @@
 			<skill id="13138" level="1" /> <!-- Haste Talisman -->
 		</skills>
 	</item>
-	<item id="33538" name="Basic Talisman - P. Atk." additionalName="Campaign" type="Armor">
+	<item id="33538" name="基本型護身符-物理攻擊力" additionalName="Campaign" type="Armor">
 		<!-- P. Atk. +2%. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -657,7 +657,7 @@
 			<skill id="13139" level="1" /> <!-- P. Atk. Talisman -->
 		</skills>
 	</item>
-	<item id="33539" name="Basic Talisman - P. Def." additionalName="Campaign" type="Armor">
+	<item id="33539" name="基本型護身符-物理防禦力" additionalName="Campaign" type="Armor">
 		<!-- P. Def. +3%. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -674,7 +674,7 @@
 			<skill id="13140" level="1" /> <!-- P. Def. Talisman -->
 		</skills>
 	</item>
-	<item id="33540" name="Basic Talisman - Casting Spd." additionalName="Campaign" type="Armor">
+	<item id="33540" name="基本型護身符-施法速度" additionalName="Campaign" type="Armor">
 		<!-- Casting Spd. +2%. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -691,7 +691,7 @@
 			<skill id="13141" level="1" /> <!-- Casting Spd. Talisman -->
 		</skills>
 	</item>
-	<item id="33541" name="Basic Talisman - M. Def." additionalName="Campaign" type="Armor">
+	<item id="33541" name="基本型護身符-魔法防禦力" additionalName="Campaign" type="Armor">
 		<!-- M. Def. +3%. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -708,7 +708,7 @@
 			<skill id="13142" level="1" /> <!-- M. Def. Talisman -->
 		</skills>
 	</item>
-	<item id="33542" name="Basic Talisman - M. Atk." additionalName="Campaign" type="Armor">
+	<item id="33542" name="基本型護身符-魔法攻擊力" additionalName="Campaign" type="Armor">
 		<!-- M. Atk. +2%. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -725,7 +725,7 @@
 			<skill id="13143" level="1" /> <!-- M. Atk. Talisman -->
 		</skills>
 	</item>
-	<item id="33543" name="Bound Samurai Long Sword*Samurai Long Sword" additionalName="Event" type="Weapon">
+	<item id="33543" name="束縛的瑟魯基長劍*瑟魯基長劍" additionalName="Event" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +4%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -755,7 +755,7 @@
 			<skill id="3045" level="14" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="33544" name="Unidentified Samurai Long Sword*Samurai Long Sword" type="EtcItem">
+	<item id="33544" name="未確認的瑟魯基長劍*瑟魯基長劍" type="EtcItem">
 		<!-- Samurai Long Sword*Samurai Long Sword in an unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="is_sellable" val="false" />
@@ -764,7 +764,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="33545" name="Bound Tallum Blade*Damascus" additionalName="Event" type="Weapon">
+	<item id="33545" name="束縛的塔魯刀*大馬士革刀" additionalName="Event" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -794,7 +794,7 @@
 			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="33546" name="Unidentified Tallum Blade*Damascus" type="EtcItem">
+	<item id="33546" name="未確認的塔魯刀*大馬士革刀" type="EtcItem">
 		<!-- Tallum Blade*Damascus in an unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="is_sellable" val="false" />
@@ -803,7 +803,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="33547" name="Bound Dynasty Sword - Focus" additionalName="Event" type="Weapon">
+	<item id="33547" name="束縛的王朝劍-偵測" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +111. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -834,7 +834,7 @@
 			<skill id="3566" level="2" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33548" name="Bound Dynasty Sword - Health" additionalName="Event" type="Weapon">
+	<item id="33548" name="束縛的王朝劍-強健" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max HP +25%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -865,7 +865,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="33549" name="Bound Dynasty Sword - Decrease Weight" additionalName="Event" type="Weapon">
+	<item id="33549" name="束縛的王朝劍-輕裝" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Weight limit +20%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -897,7 +897,7 @@
 			<skill id="3498" level="1" /> <!-- Special Property: Decrease Weight -->
 		</skills>
 	</item>
-	<item id="33550" name="Bound Dynasty Blade - Focus" additionalName="Event" type="Weapon">
+	<item id="33550" name="束縛的王朝之刃-偵測" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +111. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -928,7 +928,7 @@
 			<skill id="3566" level="2" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33551" name="Bound Dynasty Blade - Health" additionalName="Event" type="Weapon">
+	<item id="33551" name="束縛的王朝之刃-強健" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max HP +25%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -959,7 +959,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="33552" name="Bound Dynasty Blade - Decrease Weight" additionalName="Event" type="Weapon">
+	<item id="33552" name="束縛的王朝之刃-輕裝" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Weight limit +20%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 			<skill id="3498" level="1" /> <!-- Special Property: Decrease Weight -->
 		</skills>
 	</item>
-	<item id="33553" name="Bound Dynasty Phantom - Acumen" additionalName="Event" type="Weapon">
+	<item id="33553" name="束縛的王朝幻影劍-靈活思緒" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1023,7 +1023,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="33554" name="Bound Dynasty Phantom - Mana Up" additionalName="Event" type="Weapon">
+	<item id="33554" name="束縛的王朝幻影劍-魔力上升" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max MP +30%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1055,7 +1055,7 @@
 			<skill id="3014" level="2" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="33555" name="Bound Dynasty Phantom - Conversion" additionalName="Event" type="Weapon">
+	<item id="33555" name="束縛的王朝幻影劍-魂體轉換" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max MP +60%, Max HP -40%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1087,7 +1087,7 @@
 			<skill id="3048" level="2" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="33556" name="Bound Dynasty Bow - Cheap Shot" additionalName="Event" type="Weapon">
+	<item id="33556" name="束縛的王朝弓-節射" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Skill MP Consumption -4%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1122,7 +1122,7 @@
 			<skill id="8312" level="1" /> <!-- Special Property: Cheap Shot -->
 		</skills>
 	</item>
-	<item id="33557" name="Bound Dynasty Bow - Guidance" additionalName="Event" type="Weapon">
+	<item id="33557" name="束縛的王朝弓-導引" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. P. Accuracy +5.32. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1156,7 +1156,7 @@
 			<skill id="3573" level="2" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="33558" name="Bound Dynasty Bow - Focus" additionalName="Event" type="Weapon">
+	<item id="33558" name="束縛的王朝弓-偵測" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +116. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1190,7 +1190,7 @@
 			<skill id="3567" level="2" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33559" name="Bound Dynasty Knife - Focus" additionalName="Event" type="Weapon">
+	<item id="33559" name="束縛的王朝小刀-偵測" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +116. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1222,7 +1222,7 @@
 			<skill id="3567" level="2" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33560" name="Bound Dynasty Knife - Evasion" additionalName="Event" type="Weapon">
+	<item id="33560" name="束縛的王朝小刀-迴避" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Evasion +5. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1255,7 +1255,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="33561" name="Bound Dynasty Knife - Critical Damage" additionalName="Event" type="Weapon">
+	<item id="33561" name="束縛的王朝小刀-Crt.傷害" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Critical Rate +559. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1287,7 +1287,7 @@
 			<skill id="3066" level="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="33562" name="Bound Dynasty Halberd - Anger" additionalName="Event" type="Weapon">
+	<item id="33562" name="束縛的王朝長柄戰戟-怒擊" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. HP -15%, P. Atk. +78. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1319,7 +1319,7 @@
 			<skill id="3600" level="10" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="33563" name="Bound Dynasty Halberd - Critical Stun" additionalName="Event" type="Weapon">
+	<item id="33563" name="束縛的王朝長柄戰戟-Crt.衝擊" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. With a 48% chance, stuns the target on a critical attack. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1352,7 +1352,7 @@
 			<skill id="3552" level="2" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="33564" name="Bound Dynasty Halberd - Decrease Weight" additionalName="Event" type="Weapon">
+	<item id="33564" name="束縛的王朝長柄戰戟-輕裝" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Weight limit +20%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1385,7 +1385,7 @@
 			<skill id="3498" level="1" /> <!-- Special Property: Decrease Weight -->
 		</skills>
 	</item>
-	<item id="33565" name="Bound Dynasty Cudgel - Anger" additionalName="Event" type="Weapon">
+	<item id="33565" name="束縛的王朝戰鎚-怒擊" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. HP -15%, P. Atk. +78. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1417,7 +1417,7 @@
 			<skill id="3057" level="4" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="33566" name="Bound Dynasty Cudgel - Health" additionalName="Event" type="Weapon">
+	<item id="33566" name="束縛的王朝戰鎚-強健" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max HP +25%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1449,7 +1449,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="33567" name="Bound Dynasty Cudgel - Rsk. Focus" additionalName="Event" type="Weapon">
+	<item id="33567" name="束縛的王朝戰鎚-Rsk.偵測" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Critical Rate for basic attacks +16.4% when HP < 60%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1481,7 +1481,7 @@
 			<skill id="3027" level="7" /> <!-- Special Property: Rsk. Focus -->
 		</skills>
 	</item>
-	<item id="33568" name="Bound Dynasty Mace - Mana Up" additionalName="Event" type="Weapon">
+	<item id="33568" name="束縛的王朝釘鎚-魔力上升" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max MP +30%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1514,7 +1514,7 @@
 			<skill id="3014" level="2" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="33569" name="Bound Dynasty Mace - Conversion" additionalName="Event" type="Weapon">
+	<item id="33569" name="束縛的王朝釘鎚-魂體轉換" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max MP +60%, Max HP -40%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1547,7 +1547,7 @@
 			<skill id="3048" level="2" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="33570" name="Bound Dynasty Mace - Acumen" additionalName="Event" type="Weapon">
+	<item id="33570" name="束縛的王朝釘鎚-靈活思緒" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1580,7 +1580,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="33571" name="Bound Dynasty Bagh-Nakh - Rsk. Evasion" additionalName="Event" type="Weapon">
+	<item id="33571" name="束縛的王朝拳套爪-Rsk.迴避" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Evasion +6.8 when HP < 60%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1613,7 +1613,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="33572" name="Bound Dynasty Bagh-Nakh - Focus" additionalName="Event" type="Weapon">
+	<item id="33572" name="束縛的王朝拳套爪-偵測" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +106. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1645,7 +1645,7 @@
 			<skill id="3565" level="2" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33573" name="Bound Dynasty Bagh-Nakh - Haste" additionalName="Event" type="Weapon">
+	<item id="33573" name="束縛的王朝拳套爪-速度激發" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +10%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 			<skill id="3564" level="2" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="33574" name="Bound Dynasty Staff - Mana Up" additionalName="Event" type="Weapon">
+	<item id="33574" name="束縛的王朝魔杖-魔力上升" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max MP +30%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1710,7 +1710,7 @@
 			<skill id="3014" level="2" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="33575" name="Bound Dynasty Staff - Conversion" additionalName="Event" type="Weapon">
+	<item id="33575" name="束縛的王朝魔杖-魂體轉換" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max MP +60%, Max HP -40%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1743,7 +1743,7 @@
 			<skill id="3048" level="2" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="33576" name="Bound Dynasty Staff - Acumen" additionalName="Event" type="Weapon">
+	<item id="33576" name="束縛的王朝魔杖-靈活思緒" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1776,7 +1776,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="33577" name="Bound Dynasty Crusher - Anger" additionalName="Event" type="Weapon">
+	<item id="33577" name="束縛的王朝毀滅者-怒擊" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. HP -15%, P. Atk. +78. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1808,7 +1808,7 @@
 			<skill id="3057" level="4" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="33578" name="Bound Dynasty Crusher - Health" additionalName="Event" type="Weapon">
+	<item id="33578" name="束縛的王朝毀滅者-強健" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Max HP +25%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1840,7 +1840,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="33579" name="Bound Dynasty Crusher - Rsk. Focus" additionalName="Event" type="Weapon">
+	<item id="33579" name="束縛的王朝毀滅者-Rsk.偵測" additionalName="Event" type="Weapon">
 		<!-- <Special properties>. Critical Rate for basic attacks +16.4% when HP < 60%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1872,7 +1872,7 @@
 			<skill id="3027" level="7" /> <!-- Special Property: Rsk. Focus -->
 		</skills>
 	</item>
-	<item id="33580" name="Bound Dynasty Dual Dagger" additionalName="Event" type="Weapon">
+	<item id="33580" name="束縛的王朝雙匕首" additionalName="Event" type="Weapon">
 		<!-- Enchanting increases P. Atk. Starting from +4, Critical Rate for basic attacks +10.9%. Can be equipped by dagger wielders of Lv. 81+. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1904,7 +1904,7 @@
 			<skill id="8295" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33581" name="Bound Dynasty Dual Swords" additionalName="Event" type="Weapon">
+	<item id="33581" name="束縛的王朝雙刀" additionalName="Event" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for basic attacks +10.9%, Max HP +10%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1935,7 +1935,7 @@
 			<skill id="3411" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33582" name="Bound Dynasty Rapier - Focus" additionalName="Event" type="Weapon">
+	<item id="33582" name="束縛的王朝細劍-偵測" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Sword conversion. <Special properties>. P. Critical Rate +111. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1968,7 +1968,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="33583" name="Bound Dynasty Rapier - Health" additionalName="Event" type="Weapon">
+	<item id="33583" name="束縛的王朝細劍-強健" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Sword conversion. <Special properties>. Max HP +25%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2001,7 +2001,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="33584" name="Bound Dynasty Rapier - Decrease Weight" additionalName="Event" type="Weapon">
+	<item id="33584" name="束縛的王朝細劍-輕裝" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Sword conversion. <Special properties>. Weight limit +20%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2035,7 +2035,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="33585" name="Bound Dynasty Ancient Sword - Focus" additionalName="Event" type="Weapon">
+	<item id="33585" name="束縛的王朝古代劍-偵測" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Blade conversion. <Special properties>. P. Critical Rate +111. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2067,7 +2067,7 @@
 			<skill id="3566" level="2" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33586" name="Bound Dynasty Ancient Sword - Health" additionalName="Event" type="Weapon">
+	<item id="33586" name="束縛的王朝古代劍-強健" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Blade conversion. <Special properties>. Max HP +25%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2099,7 +2099,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="33587" name="Bound Dynasty Ancient Sword - Decrease Weight" additionalName="Event" type="Weapon">
+	<item id="33587" name="束縛的王朝古代劍-輕裝" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Blade conversion. <Special properties>. Weight limit +20%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2132,7 +2132,7 @@
 			<skill id="3498" level="1" /> <!-- Special Property: Decrease Weight -->
 		</skills>
 	</item>
-	<item id="33588" name="Bound Dynasty Crossbow - Cheap Shot" additionalName="Event" type="Weapon">
+	<item id="33588" name="束縛的王朝十字弓-節射" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Bow conversion. <Special properties> MP Consumption -12% when using skills. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2166,7 +2166,7 @@
 			<skill id="3360" level="1" /> <!-- Special Property: Cheap Shot -->
 		</skills>
 	</item>
-	<item id="33589" name="Bound Dynasty Crossbow - Guidance" additionalName="Event" type="Weapon">
+	<item id="33589" name="束縛的王朝十字弓-導引" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Bow conversion. <Special properties>. P. Accuracy +5.32. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2199,7 +2199,7 @@
 			<skill id="3573" level="2" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="33590" name="Bound Dynasty Crossbow - Focus" additionalName="Event" type="Weapon">
+	<item id="33590" name="束縛的王朝十字弓-偵測" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive weapon: Dynasty Bow conversion. <Special properties>. P. Critical Rate +116. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2232,7 +2232,7 @@
 			<skill id="3567" level="2" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="33591" name="Bound Dynasty Breastplate" additionalName="Event" type="Armor">
+	<item id="33591" name="束縛的王朝盔甲" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2251,7 +2251,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="33592" name="Bound Dynasty Gaiters" additionalName="Event" type="Armor">
+	<item id="33592" name="束縛的王朝脛甲" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2270,7 +2270,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="33593" name="Bound Dynasty Helmet" additionalName="Event" type="Armor">
+	<item id="33593" name="束縛的王朝頭盔" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2287,7 +2287,7 @@
 			<stat type="pDef">92</stat>
 		</stats>
 	</item>
-	<item id="33594" name="Bound Dynasty Gauntlets" additionalName="Event" type="Armor">
+	<item id="33594" name="束縛的王朝長手套" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2305,7 +2305,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="33595" name="Bound Dynasty Boots" additionalName="Event" type="Armor">
+	<item id="33595" name="束縛的王朝長靴" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2323,7 +2323,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="33596" name="Bound Dynasty Shield" additionalName="Event" type="Armor">
+	<item id="33596" name="束縛的王朝盾" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -2343,7 +2343,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="33597" name="Bound Dynasty Leather Armor" additionalName="Event" type="Armor">
+	<item id="33597" name="束縛的王朝皮甲" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2362,7 +2362,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="33598" name="Bound Dynasty Leather Leggings" additionalName="Event" type="Armor">
+	<item id="33598" name="束縛的王朝皮脛甲" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2381,7 +2381,7 @@
 			<stat type="pDef">106</stat>
 		</stats>
 	</item>
-	<item id="33599" name="Bound Dynasty Leather Helmet" additionalName="Event" type="Armor">
+	<item id="33599" name="束縛的王朝皮頭盔" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="33900" name="Immortal Circlet" additionalName="Robe (Event)" type="Armor">
+	<item id="33900" name="永生頭箍" additionalName="Robe (Event)" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal. Robe, can be upgraded by the Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -20,7 +20,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33901" name="Immortal Tunic" additionalName="Robe (Event)" type="Armor">
+	<item id="33901" name="永生外衣" additionalName="Robe (Event)" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Robe, can be upgraded by the Blacksmith in any town. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -47,7 +47,7 @@
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
 		</skills>
 	</item>
-	<item id="33902" name="Immortal Stockings" additionalName="Robe (Event)" type="Armor">
+	<item id="33902" name="永生長襪" additionalName="Robe (Event)" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal. Robe, can be upgraded by the Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -71,7 +71,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="33903" name="Immortal Gloves" additionalName="Robe (Event)" type="Armor">
+	<item id="33903" name="永生手套" additionalName="Robe (Event)" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal. Robe, can be upgraded by the Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -92,7 +92,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33904" name="Immortal Shoes" additionalName="Robe (Event)" type="Armor">
+	<item id="33904" name="永生鞋" additionalName="Robe (Event)" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal. Robe, can be upgraded by the Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -113,7 +113,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33905" name="Immortal Sigil" type="Armor">
+	<item id="33905" name="永生符印" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_karyen_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -135,7 +135,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="33906" name="Immortal Necklace" additionalName="Event" type="Armor">
+	<item id="33906" name="永生項鍊" additionalName="Event" type="Armor">
 		<!-- Immortal Necklace. MP +53. -->
 		<set name="icon" val="icon.r1_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -152,7 +152,7 @@
 			<stat type="mDef">123</stat>
 		</stats>
 	</item>
-	<item id="33907" name="Immortal Earring" additionalName="Event" type="Armor">
+	<item id="33907" name="永生耳環" additionalName="Event" type="Armor">
 		<!-- Immortal Earring. MP +40. -->
 		<set name="icon" val="icon.r1_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -169,7 +169,7 @@
 			<stat type="mDef">92</stat>
 		</stats>
 	</item>
-	<item id="33908" name="Immortal Ring" additionalName="Event" type="Armor">
+	<item id="33908" name="永生戒指" additionalName="Event" type="Armor">
 		<!-- Immortal Ring. MP +26. -->
 		<set name="icon" val="icon.r1_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -186,7 +186,7 @@
 			<stat type="mDef">62</stat>
 		</stats>
 	</item>
-	<item id="33909" name="Requiem Shaper" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33909" name="鎮魂鉋刀" additionalName="Guidance (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Accuracy +7.6. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -221,7 +221,7 @@
 			<skill id="13279" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dagger -->
 		</skills>
 	</item>
-	<item id="33910" name="Requiem Shaper" additionalName="Haste (Event)" type="Weapon">
+	<item id="33910" name="鎮魂鉋刀" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -256,7 +256,7 @@
 			<skill id="13279" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dagger -->
 		</skills>
 	</item>
-	<item id="33911" name="Requiem Shaper" additionalName="Focus (Event)" type="Weapon">
+	<item id="33911" name="鎮魂鉋刀" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +8.27%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -291,7 +291,7 @@
 			<skill id="13279" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dagger -->
 		</skills>
 	</item>
-	<item id="33912" name="Requiem Cutter" additionalName="Haste (Event)" type="Weapon">
+	<item id="33912" name="鎮魂切刃" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, P. Accuracy and Critical Rate for basic attacks. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -325,7 +325,7 @@
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Sword -->
 		</skills>
 	</item>
-	<item id="33913" name="Requiem Cutter" additionalName="Focus (Event)" type="Weapon">
+	<item id="33913" name="鎮魂切刃" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.95%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, P. Accuracy, and Critical Rate for basic attacks. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -359,7 +359,7 @@
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Sword -->
 		</skills>
 	</item>
-	<item id="33914" name="Requiem Cutter" additionalName="Health / Event" type="Weapon">
+	<item id="33914" name="鎮魂切刃" additionalName="Health / Event" type="Weapon">
 		<!-- <Soul crystal property>. Max HP +25%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, P. Accuracy and Critical Rate for basic attacks. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -393,7 +393,7 @@
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Sword -->
 		</skills>
 	</item>
-	<item id="33915" name="Requiem Slasher" additionalName="Focus (Event)" type="Weapon">
+	<item id="33915" name="鎮魂殺刃" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.95%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -427,7 +427,7 @@
 			<skill id="13258" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Sword -->
 		</skills>
 	</item>
-	<item id="33916" name="Requiem Slasher" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33916" name="鎮魂殺刃" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +288. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -461,7 +461,7 @@
 			<skill id="13258" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Sword -->
 		</skills>
 	</item>
-	<item id="33917" name="Requiem Slasher" additionalName="Haste (Event)" type="Weapon">
+	<item id="33917" name="鎮魂殺刃" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -495,7 +495,7 @@
 			<skill id="13258" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Sword -->
 		</skills>
 	</item>
-	<item id="33918" name="Requiem Avenger" additionalName="Haste (Event)" type="Weapon">
+	<item id="33918" name="鎮魂復仇者" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -530,7 +530,7 @@
 			<skill id="13253" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Blunt Weapon -->
 		</skills>
 	</item>
-	<item id="33919" name="Requiem Avenger" additionalName="Critical Damage (Event)" type="Weapon">
+	<item id="33919" name="鎮魂復仇者" additionalName="Critical Damage (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +1108 on a critical attack. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -565,7 +565,7 @@
 			<skill id="13253" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Blunt Weapon -->
 		</skills>
 	</item>
-	<item id="33920" name="Requiem Avenger" additionalName="Focus (Event)" type="Weapon">
+	<item id="33920" name="鎮魂復仇者" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.95%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -600,7 +600,7 @@
 			<skill id="13253" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Blunt Weapon -->
 		</skills>
 	</item>
-	<item id="33921" name="Requiem Fighter" additionalName="Focus (Event)" type="Weapon">
+	<item id="33921" name="鎮魂戰爪" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.63%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Atk. Spd., and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -635,7 +635,7 @@
 			<skill id="13264" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Fist Weapon -->
 		</skills>
 	</item>
-	<item id="33922" name="Requiem Fighter" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33922" name="鎮魂戰爪" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +288. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<skill id="13264" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Fist Weapon -->
 		</skills>
 	</item>
-	<item id="33923" name="Requiem Fighter" additionalName="Haste (Event)" type="Weapon">
+	<item id="33923" name="鎮魂戰爪" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -705,7 +705,7 @@
 			<skill id="13264" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Fist Weapon -->
 		</skills>
 	</item>
-	<item id="33924" name="Requiem Stormer" additionalName="HP Drain (Event)" type="Weapon">
+	<item id="33924" name="鎮魂風暴者" additionalName="HP Drain (Event)" type="Weapon">
 		<!-- <Soul crystal property>. With a certain chance, absorbs 4% of inflicted damage as HP. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and the number of targets hit on attack. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -740,7 +740,7 @@
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Spear -->
 		</skills>
 	</item>
-	<item id="33925" name="Requiem Stormer" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33925" name="鎮魂風暴者" additionalName="Guidance (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Accuracy +7.6. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and increases the number of targets hit on attack. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -775,7 +775,7 @@
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Spear -->
 		</skills>
 	</item>
-	<item id="33926" name="Requiem Stormer" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33926" name="鎮魂風暴者" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +288. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and increases the number of targets hit on attack. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -810,7 +810,7 @@
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Spear -->
 		</skills>
 	</item>
-	<item id="33927" name="Requiem Thrower" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33927" name="鎮魂投弓" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +288. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -846,7 +846,7 @@
 			<skill id="13289" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Bow -->
 		</skills>
 	</item>
-	<item id="33928" name="Requiem Thrower" additionalName="Focus (Event)" type="Weapon">
+	<item id="33928" name="鎮魂投弓" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.95%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -882,7 +882,7 @@
 			<skill id="13289" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Bow -->
 		</skills>
 	</item>
-	<item id="33929" name="Requiem Thrower" additionalName="Long Blow (Event)" type="Weapon">
+	<item id="33929" name="鎮魂投弓" additionalName="Long Blow (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Increases attack range. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -918,7 +918,7 @@
 			<skill id="13289" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Bow -->
 		</skills>
 	</item>
-	<item id="33930" name="Requiem Guardian" additionalName="Focus (Event)" type="Weapon">
+	<item id="33930" name="鎮魂射靈" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.95%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -954,7 +954,7 @@
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Crossbow -->
 		</skills>
 	</item>
-	<item id="33931" name="Requiem Guardian" additionalName="Critical Slow (Event)" type="Weapon">
+	<item id="33931" name="鎮魂射靈" additionalName="Critical Slow (Event)" type="Weapon">
 		<!-- <Soul crystal property>. With a certain chance, applies Slow on the target on a critical attack. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Crossbow -->
 		</skills>
 	</item>
-	<item id="33932" name="Requiem Guardian" additionalName="Haste (Event)" type="Weapon">
+	<item id="33932" name="鎮魂射靈" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage and Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1027,7 +1027,7 @@
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Crossbow -->
 		</skills>
 	</item>
-	<item id="33933" name="Requiem Buster" additionalName="Acumen (Event)" type="Weapon">
+	<item id="33933" name="鎮魂爆刃" additionalName="Acumen (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Casting Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy, and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_kaynon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1062,7 +1062,7 @@
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Magic Sword -->
 		</skills>
 	</item>
-	<item id="33934" name="Requiem Buster" additionalName="Magic Hold (Event)" type="Weapon">
+	<item id="33934" name="鎮魂爆刃" additionalName="Magic Hold (Event)" type="Weapon">
 		<!-- <Soul crystal property>. With a 20% chance, applies Dryad Root on the target when using M. skills. Deals additional PvP damage. With a certain chance, increases Casting Spd. when hit. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_kaynon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1098,7 +1098,7 @@
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Magic Sword -->
 		</skills>
 	</item>
-	<item id="33935" name="Requiem Buster" additionalName="Mana Up (Event)" type="Weapon">
+	<item id="33935" name="鎮魂爆刃" additionalName="Mana Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Max MP +30%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy, and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_kaynon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1133,7 +1133,7 @@
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Magic Sword -->
 		</skills>
 	</item>
-	<item id="33936" name="Requiem Caster" additionalName="Empower (Event)" type="Weapon">
+	<item id="33936" name="鎮魂術杖" additionalName="Empower (Event)" type="Weapon">
 		<!-- <Soul crystal property>. M. Atk. +296. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_anatrian_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1169,7 +1169,7 @@
 			<skill id="13296" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Staff -->
 		</skills>
 	</item>
-	<item id="33937" name="Requiem Caster" additionalName="Acumen (Event)" type="Weapon">
+	<item id="33937" name="鎮魂術杖" additionalName="Acumen (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Casting Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy, and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_anatrian_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1205,7 +1205,7 @@
 			<skill id="13296" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Staff -->
 		</skills>
 	</item>
-	<item id="33938" name="Requiem Caster" additionalName="Magic Hold (Event)" type="Weapon">
+	<item id="33938" name="鎮魂術杖" additionalName="Magic Hold (Event)" type="Weapon">
 		<!-- <Soul crystal property>. With a 20% chance, applies Dryad Root on the target when using M. skills. Deals additional PvP damage. With a certain chance, increases Casting Spd. when hit. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_anatrian_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 			<skill id="13296" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Staff -->
 		</skills>
 	</item>
-	<item id="33939" name="Requiem Retributer" additionalName="MP Regeneration (Event)" type="Weapon">
+	<item id="33939" name="鎮魂報恨者" additionalName="MP Regeneration (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Increases MP Recovery Rate. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1279,7 +1279,7 @@
 			<skill id="13301" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Staff -->
 		</skills>
 	</item>
-	<item id="33940" name="Requiem Retributer" additionalName="Acumen (Event)" type="Weapon">
+	<item id="33940" name="鎮魂報恨者" additionalName="Acumen (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Casting Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1316,7 +1316,7 @@
 			<skill id="13301" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Staff -->
 		</skills>
 	</item>
-	<item id="33941" name="Requiem Retributer" additionalName="Empower (Event)" type="Weapon">
+	<item id="33941" name="鎮魂報恨者" additionalName="Empower (Event)" type="Weapon">
 		<!-- <Soul crystal property>. M. Atk. +296. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1353,7 +1353,7 @@
 			<skill id="13301" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Staff -->
 		</skills>
 	</item>
-	<item id="33942" name="Requiem Dual Swords" additionalName="Haste (Event)" type="Weapon">
+	<item id="33942" name="鎮魂雙刀" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +15%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Rate for basic attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1387,7 +1387,7 @@
 			<skill id="13274" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Swords -->
 		</skills>
 	</item>
-	<item id="33943" name="Requiem Dual Swords" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33943" name="鎮魂雙刀" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +288. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Rate for basic attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1421,7 +1421,7 @@
 			<skill id="13274" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Swords -->
 		</skills>
 	</item>
-	<item id="33944" name="Requiem Dual Swords" additionalName="Health / Event" type="Weapon">
+	<item id="33944" name="鎮魂雙刀" additionalName="Health / Event" type="Weapon">
 		<!-- <Soul crystal property>. Max HP +25%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Rate for basic attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1455,7 +1455,7 @@
 			<skill id="13274" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Swords -->
 		</skills>
 	</item>
-	<item id="33945" name="Requiem Dual Daggers" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33945" name="鎮魂雙匕首" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +288. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Damage for basic attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1490,7 +1490,7 @@
 			<skill id="13284" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Daggers -->
 		</skills>
 	</item>
-	<item id="33946" name="Requiem Dual Daggers" additionalName="Focus (Event)" type="Weapon">
+	<item id="33946" name="鎮魂雙匕首" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.95%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Damage for basic attacks, and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1525,7 +1525,7 @@
 			<skill id="13284" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Daggers -->
 		</skills>
 	</item>
-	<item id="33947" name="Requiem Dual Daggers" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33947" name="鎮魂雙匕首" additionalName="Guidance (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Accuracy +7.6. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Damage for basic attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1560,7 +1560,7 @@
 			<skill id="13284" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Daggers -->
 		</skills>
 	</item>
-	<item id="33948" name="Requiem Dual Blunt Weapons" additionalName="Focus (Event)" type="Weapon">
+	<item id="33948" name="鎮魂雙鈍器" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +7.95%. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, P. Skill Power, and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1595,7 +1595,7 @@
 			<skill id="13269" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Blunt Weapons -->
 		</skills>
 	</item>
-	<item id="33949" name="Requiem Dual Blunt Weapons" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33949" name="鎮魂雙鈍器" additionalName="Guidance (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Accuracy +7.6. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1630,7 +1630,7 @@
 			<skill id="13269" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Blunt Weapons -->
 		</skills>
 	</item>
-	<item id="33950" name="Requiem Dual Blunt Weapons" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33950" name="鎮魂雙鈍器" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul crystal property>. P. Atk. +288. Deals additional PvP damage. Starting from +4, increases Soulshot/ Spiritshot damage, P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1665,7 +1665,7 @@
 			<skill id="13269" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Blunt Weapons -->
 		</skills>
 	</item>
-	<item id="33951" name="Immortal Helmet" additionalName="Reinforced heavy armor / Event" type="Armor">
+	<item id="33951" name="永生頭盔" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1685,7 +1685,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33952" name="Immortal Breastplate" additionalName="Reinforced heavy armor / Event" type="Armor">
+	<item id="33952" name="永生胸甲" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1710,7 +1710,7 @@
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
 		</skills>
 	</item>
-	<item id="33953" name="Immortal Gaiters" additionalName="Reinforced heavy armor / Event" type="Armor">
+	<item id="33953" name="永生脛甲" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1732,7 +1732,7 @@
 			<stat type="pDef">190</stat>
 		</stats>
 	</item>
-	<item id="33954" name="Immortal Gauntlets" additionalName="Reinforced heavy armor / Event" type="Armor">
+	<item id="33954" name="永生護手" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1753,7 +1753,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33955" name="Immortal Boots" additionalName="Reinforced heavy armor / Event" type="Armor">
+	<item id="33955" name="永生靴" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1774,7 +1774,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33956" name="Immortal Shield" additionalName="Event" type="Armor">
+	<item id="33956" name="永生盾" additionalName="Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1799,7 +1799,7 @@
 			<skill id="8781" level="1" /> <!-- Equip Shield -->
 		</skills>
 	</item>
-	<item id="33957" name="Immortal Leather Helmet" additionalName="Not used" type="Armor">
+	<item id="33957" name="永生皮頭盔" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1819,7 +1819,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33958" name="Immortal Leather Armor" additionalName="Not used" type="Armor">
+	<item id="33958" name="永生皮甲" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1846,7 +1846,7 @@
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
 		</skills>
 	</item>
-	<item id="33959" name="Immortal Leather Leggings" additionalName="Not used" type="Armor">
+	<item id="33959" name="永生皮脛甲" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1870,7 +1870,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="33960" name="Immortal Leather Gloves" additionalName="Not used" type="Armor">
+	<item id="33960" name="永生皮手套" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1891,7 +1891,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33961" name="Immortal Leather Boots" additionalName="Not used" type="Armor">
+	<item id="33961" name="永生皮靴" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1912,7 +1912,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33962" name="Immortal Circlet" additionalName="Reinforced robe/ Event" type="Armor">
+	<item id="33962" name="永生頭箍" additionalName="Reinforced robe/ Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1932,7 +1932,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33963" name="Immortal Tunic" additionalName="Reinforced robe/ Event" type="Armor">
+	<item id="33963" name="永生外衣" additionalName="Reinforced robe/ Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1959,7 +1959,7 @@
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
 		</skills>
 	</item>
-	<item id="33964" name="Immortal Stockings" additionalName="Reinforced robe/ Event" type="Armor">
+	<item id="33964" name="永生長襪" additionalName="Reinforced robe/ Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1983,7 +1983,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="33965" name="Immortal Gloves" additionalName="Reinforced robe/ Event" type="Armor">
+	<item id="33965" name="永生手套" additionalName="Reinforced robe/ Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2004,7 +2004,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33966" name="Immortal Shoes" additionalName="Reinforced robe/ Event" type="Armor">
+	<item id="33966" name="永生鞋" additionalName="Reinforced robe/ Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2025,7 +2025,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33967" name="Immortal Helmet" additionalName="Not used" type="Armor">
+	<item id="33967" name="永生頭盔" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2045,7 +2045,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33968" name="Immortal Breastplate" additionalName="Not used" type="Armor">
+	<item id="33968" name="永生胸甲" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -2070,7 +2070,7 @@
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
 		</skills>
 	</item>
-	<item id="33969" name="Immortal Gaiters" additionalName="Not used" type="Armor">
+	<item id="33969" name="永生脛甲" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -2092,7 +2092,7 @@
 			<stat type="pDef">190</stat>
 		</stats>
 	</item>
-	<item id="33970" name="Immortal Gauntlets" additionalName="Not used" type="Armor">
+	<item id="33970" name="永生護手" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2113,7 +2113,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33971" name="Immortal Boots" additionalName="Not used" type="Armor">
+	<item id="33971" name="永生靴" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2134,7 +2134,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33972" name="Immortal Shield" additionalName="Not used" type="Armor">
+	<item id="33972" name="永生盾" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2159,7 +2159,7 @@
 			<skill id="8781" level="1" /> <!-- Equip Shield -->
 		</skills>
 	</item>
-	<item id="33973" name="Immortal Leather Helmet" additionalName="Reinforced light armor / Event" type="Armor">
+	<item id="33973" name="永生皮頭盔" additionalName="Reinforced light armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2179,7 +2179,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33974" name="Immortal Leather Armor" additionalName="Reinforced light armor / Event" type="Armor">
+	<item id="33974" name="永生皮甲" additionalName="Reinforced light armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2206,7 +2206,7 @@
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
 		</skills>
 	</item>
-	<item id="33975" name="Immortal Leather Leggings" additionalName="Reinforced light armor / Event" type="Armor">
+	<item id="33975" name="永生皮脛甲" additionalName="Reinforced light armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2230,7 +2230,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="33976" name="Immortal Leather Gloves" additionalName="Reinforced light armor / Event" type="Armor">
+	<item id="33976" name="永生皮手套" additionalName="Reinforced light armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2251,7 +2251,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33977" name="Immortal Leather Boots" additionalName="Reinforced light armor / Event" type="Armor">
+	<item id="33977" name="永生皮靴" additionalName="Reinforced light armor / Event" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2272,7 +2272,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33978" name="Immortal Circlet" additionalName="Not used" type="Armor">
+	<item id="33978" name="永生頭箍" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2292,7 +2292,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33979" name="Immortal Tunic" additionalName="Not used" type="Armor">
+	<item id="33979" name="永生外衣" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -2319,7 +2319,7 @@
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
 		</skills>
 	</item>
-	<item id="33980" name="Immortal Stockings" additionalName="Not used" type="Armor">
+	<item id="33980" name="永生長襪" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -2343,7 +2343,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="33981" name="Immortal Gloves" additionalName="Not used" type="Armor">
+	<item id="33981" name="永生手套" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2364,7 +2364,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33982" name="Immortal Shoes" additionalName="Not used" type="Armor">
+	<item id="33982" name="永生鞋" additionalName="Not used" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2385,7 +2385,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33983" name="Giant's STR Dye Lv. 5" additionalName="STR +5 / DEX -1 / Event" type="EtcItem">
+	<item id="33983" name="5階段巨人力量紋章染料" additionalName="STR +5 / DEX -1 / Event" type="EtcItem">
 		<!-- Giant's STR Dye Lv. 5 (STR +5, DEX -1). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_str" />
 		<set name="weight" val="150" />
@@ -2396,7 +2396,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33984" name="Giant's DEX Dye Lv. 5" additionalName="DEX +5 / CON -1 / Event" type="EtcItem">
+	<item id="33984" name="5階段巨人敏捷紋章染料" additionalName="DEX +5 / CON -1 / Event" type="EtcItem">
 		<!-- Giant's DEX Dye Lv. 5 (DEX +5, CON -1). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -2407,7 +2407,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33985" name="Giant's CON Dye Lv. 5" additionalName="CON +5 / STR -1 / Event" type="EtcItem">
+	<item id="33985" name="5階段巨人體質紋章染料" additionalName="CON +5 / STR -1 / Event" type="EtcItem">
 		<!-- Giant's CON Dye Lv. 5 (CON +5, STR -1). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_con" />
 		<set name="weight" val="150" />
@@ -2418,7 +2418,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33986" name="Giant's INT Dye Lv. 5" additionalName="INT +5/ WIT +1 (Event)" type="EtcItem">
+	<item id="33986" name="5階段巨人智力紋章染料" additionalName="INT +5/ WIT +1 (Event)" type="EtcItem">
 		<!-- Giant's INT Dye Lv. 5 (INT +5, WIT -1). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_int" />
 		<set name="weight" val="150" />
@@ -2429,7 +2429,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33987" name="Giant's WIT Dye Lv. 5" additionalName="WIT +5 / MEN -1 / Event" type="EtcItem">
+	<item id="33987" name="5階段巨人智慧紋章染料" additionalName="WIT +5 / MEN -1 / Event" type="EtcItem">
 		<!-- Giant's WIT Dye Lv. 5 (WIT +5, MEN -1). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_wit" />
 		<set name="weight" val="150" />
@@ -2440,7 +2440,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33988" name="Giant's MEN Dye Lv. 5" additionalName="MEN +5 / INT -1 / Event" type="EtcItem">
+	<item id="33988" name="5階段巨人精神紋章染料" additionalName="MEN +5 / INT -1 / Event" type="EtcItem">
 		<!-- Giant's MEN Dye Lv. 5 (MEN +5, INT -1). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_men" />
 		<set name="weight" val="150" />
@@ -2451,7 +2451,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33989" name="Ancient STR Dye Lv. 5" additionalName="STR +5/ DEX -1/ Fire Resistance +25 (Event)" type="EtcItem">
+	<item id="33989" name="5階段古代力量紋章染料" additionalName="STR +5/ DEX -1/ Fire Resistance +25 (Event)" type="EtcItem">
 		<!-- Ancient STR Dye Lv. 5 (STR +5, DEX -1, Fire Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_str" />
 		<set name="weight" val="150" />
@@ -2462,7 +2462,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33990" name="Ancient DEX Dye Lv. 5" additionalName="DEX +5/ CON -1/ Earth Resistance +25 (Event)" type="EtcItem">
+	<item id="33990" name="5階段古代敏捷紋章染料" additionalName="DEX +5/ CON -1/ Earth Resistance +25 (Event)" type="EtcItem">
 		<!-- Ancient DEX Dye Lv. 5 (DEX +5, CON -1, Earth Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_dex" />
 		<set name="weight" val="150" />
@@ -2473,7 +2473,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33991" name="Ancient CON Dye Lv. 5" additionalName="CON +5/ STR -1/ Dark Resistance +25 (Event)" type="EtcItem">
+	<item id="33991" name="5階段古代體質紋章染料" additionalName="CON +5/ STR -1/ Dark Resistance +25 (Event)" type="EtcItem">
 		<!-- Ancient CON Dye Lv. 5 (CON +5, STR -1, Dark Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_con" />
 		<set name="weight" val="150" />
@@ -2484,7 +2484,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33992" name="Ancient INT Dye Lv. 5" additionalName="INT +5/ WIT -1/ Water Resistance +25 (Event)" type="EtcItem">
+	<item id="33992" name="5階段古代智力紋章染料" additionalName="INT +5/ WIT -1/ Water Resistance +25 (Event)" type="EtcItem">
 		<!-- Ancient INT Dye Lv. 5 (INT +5, WIT -1, Water Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_int" />
 		<set name="weight" val="150" />
@@ -2495,7 +2495,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33993" name="Ancient WIT Dye Lv. 5" additionalName="WIT +5/ MEN -1/ Wind Resistance +25 (Event)" type="EtcItem">
+	<item id="33993" name="5階段古代智慧紋章染料" additionalName="WIT +5/ MEN -1/ Wind Resistance +25 (Event)" type="EtcItem">
 		<!-- Ancient WIT Dye Lv. 5 (WIT +5, MEN -1, Wind Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_wit" />
 		<set name="weight" val="150" />
@@ -2506,7 +2506,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33994" name="Ancient MEN Dye Lv. 5" additionalName="MEN +5/ INT -1/ Holy Resistance +25 (Event)" type="EtcItem">
+	<item id="33994" name="5階段古代精神紋章染料" additionalName="MEN +5/ INT -1/ Holy Resistance +25 (Event)" type="EtcItem">
 		<!-- Ancient MEN Dye Lv. 5 (MEN +5, INT -1, Holy Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_men" />
 		<set name="weight" val="150" />
@@ -2517,7 +2517,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33995" name="Legendary STR Dye Lv. 5" additionalName="STR +5/ DEX +1/ Fire Resistance +25 (Event)" type="EtcItem">
+	<item id="33995" name="5階段傳說力量紋章染料" additionalName="STR +5/ DEX +1/ Fire Resistance +25 (Event)" type="EtcItem">
 		<!-- Legendary STR Dye Lv. 5 (STR +5, DEX +1, Fire Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_str" />
 		<set name="weight" val="150" />
@@ -2528,7 +2528,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33996" name="Legendary DEX Dye Lv. 5" additionalName="DEX +5/ CON +1/ Earth Resistance +25 (Event)" type="EtcItem">
+	<item id="33996" name="5階段傳說敏捷紋章染料" additionalName="DEX +5/ CON +1/ Earth Resistance +25 (Event)" type="EtcItem">
 		<!-- Legendary DEX Dye Lv. 5 (DEX +5, CON +1, Earth Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_dex" />
 		<set name="weight" val="150" />
@@ -2539,7 +2539,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33997" name="Legendary CON Dye Lv. 5" additionalName="CON +5/ STR +1/ Dark Resistance +25 (Event)" type="EtcItem">
+	<item id="33997" name="5階段傳說體質紋章染料" additionalName="CON +5/ STR +1/ Dark Resistance +25 (Event)" type="EtcItem">
 		<!-- Legendary CON Dye Lv. 5 (CON +5, STR +1, Dark Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_con" />
 		<set name="weight" val="150" />
@@ -2550,7 +2550,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33998" name="Legendary INT Dye Lv. 5" additionalName="INT +5/ WIT +1/ Water Resistance +25 (Event)" type="EtcItem">
+	<item id="33998" name="5階段傳說智力紋章染料" additionalName="INT +5/ WIT +1/ Water Resistance +25 (Event)" type="EtcItem">
 		<!-- Legendary INT Dye Lv. 5 (INT +5, WIT +1, Water Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_int" />
 		<set name="weight" val="150" />
@@ -2561,7 +2561,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33999" name="Legendary WIT Dye Lv. 5" additionalName="WIT +5/ MEN +1/ Wind Resistance +25 (Event)" type="EtcItem">
+	<item id="33999" name="5階段傳說智慧紋章染料" additionalName="WIT +5/ MEN +1/ Wind Resistance +25 (Event)" type="EtcItem">
 		<!-- Legendary WIT Dye Lv. 5 (WIT +5, MEN +1, Wind Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_wit" />
 		<set name="weight" val="150" />

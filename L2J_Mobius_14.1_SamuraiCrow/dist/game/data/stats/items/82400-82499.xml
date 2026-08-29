@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="82400" name="Augmenting Stone Pack" type="EtcItem">
+	<item id="82400" name="精煉石禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Augmenting Stone: Mask, Augmenting Stone: Brooch, Augmenting Stone: Circlet, Augmenting Stone: Accessory, Augmenting Stone: Dragon Leather Shirt, Augmenting Stone: Kaliel's Bracelet, Augmenting Stone: Superior Seed Bracelet, Augmenting Stone: Artifact Book. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -24,7 +24,7 @@
 			<item id="82399" min="1" max="1" chance="12.5" /> <!-- Augmenting Stone: Mask -->
 		</capsuled_items>
 	</item>
-	<item id="82401" name="Pure Crystal" type="EtcItem">
+	<item id="82401" name="純粹結晶" type="EtcItem">
 		<!-- A crystal left after soul purification and disappearance. It's priceless. -->
 		<set name="icon" val="icon.cursed_prison_soul" />
 		<set name="immediate_effect" val="true" />
@@ -34,7 +34,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82402" name="Moonlight Petal" type="EtcItem">
+	<item id="82402" name="月落花瓣" type="EtcItem">
 		<!-- A petal of a mysterious flower grown under moonlight in earth covered with sweet blood. It slightly smells of blood. -->
 		<set name="icon" val="icon.cursed_prison_petal" />
 		<set name="immediate_effect" val="true" />
@@ -44,7 +44,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82403" name="Eigis' Energy Pouch" additionalName="Event" type="EtcItem">
+	<item id="82403" name="亞伊基斯活力水袋" additionalName="Event" type="EtcItem">
 		<!-- A pouch full of Eigis' energy. Double-click to obtain Beora's Ancient Energy (10 pcs.). -->
 		<set name="icon" val="icon.etc_golden_spice_blessed_i00" />
 		<set name="default_action" val="PEEL" />
@@ -59,7 +59,7 @@
 			<item id="82305" min="10" max="10" chance="100" /> <!-- Beora's Ancient Energy -->
 		</capsuled_items>
 	</item>
-	<item id="82404" name="Vitality Maintaining Rune" additionalName="1-day" type="EtcItem">
+	<item id="82404" name="活力維持古文" additionalName="1-day" type="EtcItem">
 		<!-- When in inventory, sustains Vitality. Available for 1 d. -->
 		<set name="icon" val="icon.ev_charge_run" />
 		<set name="immediate_effect" val="true" />
@@ -73,7 +73,7 @@
 			<skill id="39615" level="1" /> <!-- Vitality Sustaining Rune -->
 		</skills>
 	</item>
-	<item id="82405" name="Session Zone Supply Box" additionalName="Event" type="EtcItem">
+	<item id="82405" name="時間制獵場補給品禮盒" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained for completing the following session zones: Fioren's Crystal Prison, Jamoa's Camp, Pantheon's Museum. Double-click to obtain one of the following items: Enhanced Rune Stone, Tales of Aden, Freya's Scroll of Storm, Nevit's Shining Gold Hourglass, Adventurer's Luck Scroll. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
@@ -102,7 +102,7 @@
 			<item id="82345" min="1" max="1" chance="7.692308" /> <!-- Tales of Aden - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82406" name="+5 Fallen Angel's Earring Pack" additionalName="Event" type="EtcItem">
+	<item id="82406" name="+5墮天使耳環禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +5 Fallen Angel's Earring. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -120,7 +120,7 @@
 			<skill id="36344" level="1" /> <!-- +5 Fallen Angel's Earring Pack -->
 		</skills>
 	</item>
-	<item id="82407" name="+5 Fallen Angel's Ring Pack" additionalName="Event" type="EtcItem">
+	<item id="82407" name="+5墮天使戒指禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +5 Fallen Angel's Ring. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -138,7 +138,7 @@
 			<skill id="36345" level="1" /> <!-- +5 Fallen Angel's Ring Pack -->
 		</skills>
 	</item>
-	<item id="82408" name="Mysterious Supply Pack" additionalName="Event" type="EtcItem">
+	<item id="82408" name="那勒西斯消耗品箱" additionalName="Event" type="EtcItem">
 		<!-- A supply pack imbued with Narcissus' power. Double-click to obtain Emperor's Special Cocktail (500 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Honey Dark Beer, Nevit's Shining Gold Hourglass (1000 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -157,7 +157,7 @@
 			<item id="81013" min="1000" max="1000" chance="100" /> <!-- Nevit's Shining Gold Hourglass - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82409" name="Tales of Narcissus Pack" additionalName="Event" type="EtcItem">
+	<item id="82409" name="那勒西斯歷史書禮盒" additionalName="Event" type="EtcItem">
 		<!-- A pack imbued with Narcissus' power. Double-click to obtain Tales of Dimensions (800 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -172,7 +172,7 @@
 			<item id="82344" min="800" max="800" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="82410" name="Noah's Gift" additionalName="Event" type="EtcItem">
+	<item id="82410" name="諾亞禮盒" additionalName="Event" type="EtcItem">
 		<!-- A box full of gifts from Aden Mage Guardian Noah. Double-click to obtain Tales of Aden, Emperor's Special Cocktail (3 pcs.), Adventurer's Luck Scroll, Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Honey Dark Beer (6 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -192,7 +192,7 @@
 			<item id="81460" min="6" max="6" chance="100" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82411" name="Sayha's Pack" additionalName="Lv. 1" type="EtcItem">
+	<item id="82411" name="沙哈禮盒" additionalName="Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_green_box_01" />
 		<set name="default_action" val="PEEL" />
@@ -224,7 +224,7 @@
 			<item id="35564" min="1" max="1" chance="5.555556" /> <!-- Ruler's Authority - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82412" name="Enhanced Sayha's Pack" additionalName="Lv. 2" type="EtcItem">
+	<item id="82412" name="高級沙哈禮盒" additionalName="Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_green_box_02" />
 		<set name="default_action" val="PEEL" />
@@ -267,7 +267,7 @@
 			<item id="82391" min="1" max="1" chance="3.448276" /> <!-- Augmenting Stone: Mask -->
 		</capsuled_items>
 	</item>
-	<item id="82413" name="Superior Sayha's Pack" additionalName="Lv. 3" type="EtcItem">
+	<item id="82413" name="最高級沙哈禮盒" additionalName="Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_green_box_03" />
 		<set name="default_action" val="PEEL" />
@@ -308,7 +308,7 @@
 			<item id="80335" min="1" max="1" chance="3.703704" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82414" name="Beora's Energy Rune" additionalName="30-day" type="EtcItem">
+	<item id="82414" name="貝歐娜活力古文" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, Vitality bonus +30%. The effect does not work on boss monsters. -->
 		<set name="icon" val="icon.bm_package_vitality_rune_30d" />
 		<set name="immediate_effect" val="true" />
@@ -322,7 +322,7 @@
 			<skill id="39807" level="1" /> <!-- Beora's Energy Rune -->
 		</skills>
 	</item>
-	<item id="82415" name="Week Kit" type="EtcItem">
+	<item id="82415" name="每週組合包商品" type="EtcItem">
 		<!-- Double-click to obtain Tales of Dimensions (50 pcs.), Beora's Ancient Energy (300 pcs.), Freya's Ice Rose (100 pcs.), Glowing Dragon's Attribute Potion (XP) (100 pcs.), Honey Dark Beer (100 pcs.), Wondrous Cocktail (50 pcs.), Einhasad's Golden Coin (200 pcs.). -->
 		<set name="icon" val="icon.bm_week_package" />
 		<set name="default_action" val="PEEL" />
@@ -343,7 +343,7 @@
 			<item id="82344" min="50" max="50" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="82416" name="Month Kit" type="EtcItem">
+	<item id="82416" name="每月組合包商品" type="EtcItem">
 		<!-- Double-click to obtain Tales of Dimensions (200 pcs.), Beora's Ancient Energy (500 pcs.), Freya's Scroll of Storm (500 pcs.), Nevit's Shining Gold Hourglass (100 pcs.), Nevit's Cloak of Light (1 pc.), Beora's Energy Rune (1 pc.), Aether (2000 pcs.), Einhasad's Golden Coin (400 pcs.). -->
 		<set name="icon" val="icon.bm_month_package" />
 		<set name="default_action" val="PEEL" />
@@ -365,7 +365,7 @@
 			<item id="82344" min="200" max="200" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="82417" name="Beora's Pack" additionalName="Lv. 1" type="EtcItem">
+	<item id="82417" name="貝歐娜禮盒" additionalName="Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
@@ -392,7 +392,7 @@
 			<item id="35564" min="1" max="1" chance="7.692308" /> <!-- Ruler's Authority - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82418" name="Beora's Shining Pack" additionalName="Lv. 2" type="EtcItem">
+	<item id="82418" name="閃耀的貝歐娜寶箱" additionalName="Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -439,7 +439,7 @@
 			<item id="80335" min="1" max="1" chance="3.030303" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82419" name="Death Knights' New Cloak" type="Armor">
+	<item id="82419" name="死亡騎士專用新斗篷" type="Armor">
 		<!-- Einhasad's Shelter for Death Knights. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -455,7 +455,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="82420" name="Gran Kain's Scroll: Enchant Cloak" type="EtcItem">
+	<item id="82420" name="格蘭肯斗篷強化卷軸" type="EtcItem">
 		<!-- For Cloak of Light Dragon. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
 		<set name="icon" val="icon.bm_shilen_scrl_of_cloak" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -468,7 +468,7 @@
 			<skill id="39808" level="1" /> <!-- Scroll: Enchant Light Dragon's Cloak -->
 		</skills>
 	</item>
-	<item id="82421" name="Protection of Light" type="EtcItem">
+	<item id="82421" name="光之加護" type="EtcItem">
 		<!-- Can be obtained while crafting Light Dragon's Cloak. Collect several of these to have the guaranteed success for Light Dragon's Sealed Cloak craft. -->
 		<set name="icon" val="icon.bm_star_agathion_mineral" />
 		<set name="immediate_effect" val="true" />
@@ -478,7 +478,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82422" name="Sealed Cloak of Light Dragon" type="EtcItem">
+	<item id="82422" name="封印的光之龍斗篷" type="EtcItem">
 		<!-- Double-click to obtain Light Dragon's Cloak. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="PEEL" />
@@ -493,7 +493,7 @@
 			<item id="82338" min="1" max="1" chance="100" /> <!-- Light Dragon's Cloak -->
 		</capsuled_items>
 	</item>
-	<item id="82423" name="Dry Ice" additionalName="Event" type="EtcItem">
+	<item id="82423" name="乾冰" additionalName="Event" type="EtcItem">
 		<!-- Cooling dry ice. <How to use>. Required for compounding Freya's Ice Doll Lv. 1-9. In case of failure, Dry Ice disappears, but Freya's Ice Doll remains and its level stays the same. -->
 		<set name="icon" val="icon.ev_dryice" />
 		<set name="immediate_effect" val="true" />
@@ -503,7 +503,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82424" name="Freya's Ice Doll Lv. 1" additionalName="Event" type="EtcItem">
+	<item id="82424" name="芙蕾雅冰凍人偶-1階段" additionalName="Event" type="EtcItem">
 		<!-- An ice doll imbued with Freya's cool energy. Can be upgraded through compounding and then exchanged for a reward. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_low" />
 		<set name="immediate_effect" val="true" />
@@ -513,7 +513,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82425" name="Freya's Ice Doll Lv. 2" additionalName="Event" type="EtcItem">
+	<item id="82425" name="芙蕾雅冰凍人偶-2階段" additionalName="Event" type="EtcItem">
 		<!-- An ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_low" />
 		<set name="immediate_effect" val="true" />
@@ -523,7 +523,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82426" name="Freya's Ice Doll Lv. 3" additionalName="Event" type="EtcItem">
+	<item id="82426" name="芙蕾雅冰凍人偶-3階段" additionalName="Event" type="EtcItem">
 		<!-- An ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_low" />
 		<set name="immediate_effect" val="true" />
@@ -533,7 +533,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82427" name="Freya's Ice Doll Lv. 4" additionalName="Event" type="EtcItem">
+	<item id="82427" name="芙蕾雅冰凍人偶-4階段" additionalName="Event" type="EtcItem">
 		<!-- An ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_low" />
 		<set name="immediate_effect" val="true" />
@@ -543,7 +543,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82428" name="Freya's Ice Doll Lv. 5" additionalName="Event" type="EtcItem">
+	<item id="82428" name="芙蕾雅冰凍人偶-5階段" additionalName="Event" type="EtcItem">
 		<!-- An ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_low" />
 		<set name="immediate_effect" val="true" />
@@ -553,7 +553,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82429" name="Freya's Ice Doll Lv. 6" additionalName="Event" type="EtcItem">
+	<item id="82429" name="芙蕾雅冰凍人偶-6階段" additionalName="Event" type="EtcItem">
 		<!-- An ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_low" />
 		<set name="immediate_effect" val="true" />
@@ -563,7 +563,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82430" name="Freya's Ice Doll Lv. 7" additionalName="Event" type="EtcItem">
+	<item id="82430" name="芙蕾雅冰凍人偶-7階段" additionalName="Event" type="EtcItem">
 		<!-- A glowing ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_high" />
 		<set name="immediate_effect" val="true" />
@@ -573,7 +573,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82431" name="Freya's Ice Doll Lv. 8" additionalName="Event" type="EtcItem">
+	<item id="82431" name="芙蕾雅冰凍人偶-8階段" additionalName="Event" type="EtcItem">
 		<!-- A glowing ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. -->
 		<set name="icon" val="icon.ev_icedoll_high" />
 		<set name="immediate_effect" val="true" />
@@ -583,7 +583,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82432" name="Freya's Ice Doll Lv. 9" additionalName="Event" type="EtcItem">
+	<item id="82432" name="芙蕾雅冰凍人偶-9階段" additionalName="Event" type="EtcItem">
 		<!-- A glowing ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Upgrade>. Compound with Dry Ice. <Weekend server-limited craft>. Can be used to create various items through the limited craft from 12:00 on Saturday till 00:00 on Sunday. -->
 		<set name="icon" val="icon.ev_icedoll_high" />
 		<set name="immediate_effect" val="true" />
@@ -593,7 +593,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82433" name="Freya's Ice Doll Lv. 10" additionalName="Event" type="EtcItem">
+	<item id="82433" name="芙蕾雅冰凍人偶-10階段" additionalName="Event" type="EtcItem">
 		<!-- A glowing ice doll imbued with Freya's cool energy. Can be exchanged for any reward through the event craft. <Weekend server-limited craft>. Can be used to create various items through the limited craft from 12:00 on Saturday till 00:00 on Sunday. -->
 		<set name="icon" val="icon.ev_icedoll_high" />
 		<set name="immediate_effect" val="true" />
@@ -603,7 +603,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82434" name="Frozen Chest" additionalName="Event" type="EtcItem">
+	<item id="82434" name="急凍禮盒" additionalName="Event" type="EtcItem">
 		<!-- Frozen by Freya's spell. Double-click to obtain Freya's Ice Doll Lv. 1 (1 pc.) and Dry Ice (100 pcs.). -->
 		<set name="icon" val="icon.sa_cube" />
 		<set name="default_action" val="PEEL" />
@@ -619,7 +619,7 @@
 			<item id="82424" min="1" max="1" chance="100" /> <!-- Freya's Ice Doll Lv. 1 - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82435" name="Freya's Ice Doll Pack" additionalName="Event" type="EtcItem">
+	<item id="82435" name="芙蕾雅冰凍人偶禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Freya's Ice Doll Lv. 2-6. -->
 		<set name="icon" val="icon.ev_icebox_01" />
 		<set name="default_action" val="PEEL" />
@@ -640,7 +640,7 @@
 			<item id="82429" min="1" max="1" chance="20" /> <!-- Freya's Ice Doll Lv. 6 - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82436" name="Appearance Stone Pack" additionalName="Event" type="EtcItem">
+	<item id="82436" name="外型加工石寶箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 1 Appearance Stone. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -688,7 +688,7 @@
 			<item id="81886" min="1" max="1" chance="3.125" /> <!-- Appearance Stone: Party Costume -->
 		</capsuled_items>
 	</item>
-	<item id="82437" name="Shining Ice Box" additionalName="Event" type="EtcItem">
+	<item id="82437" name="閃耀保冰箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Augmenting Stone Pack (1 pc.), Freya's Ice Rose (12 pcs.), Glowing Dragon's Attribute Potion (XP) (12 pcs.), Wondrous Cocktail (6 pcs.), Honey Dark Beer (12 pcs.), Tales of Aden (6 pcs.). -->
 		<set name="icon" val="icon.ev_2020_summer_box" />
 		<set name="default_action" val="PEEL" />
@@ -708,7 +708,7 @@
 			<item id="82400" min="1" max="1" chance="100" /> <!-- Augmenting Stone Pack -->
 		</capsuled_items>
 	</item>
-	<item id="82438" name="Dragon's Necklace Pack" additionalName="Event" type="EtcItem">
+	<item id="82438" name="龍之項鍊禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Dragon's Necklace. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -723,7 +723,7 @@
 			<item id="80333" min="1" max="1" chance="100" /> <!-- Dragon's Necklace -->
 		</capsuled_items>
 	</item>
-	<item id="82439" name="Dragon's Earring Pack" additionalName="Event" type="EtcItem">
+	<item id="82439" name="龍之耳環禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Dragon's Earring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -738,7 +738,7 @@
 			<item id="80334" min="1" max="1" chance="100" /> <!-- Dragon's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="82440" name="Dragon's Ring Pack" additionalName="Event" type="EtcItem">
+	<item id="82440" name="龍之戒指禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Dragon's Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -753,7 +753,7 @@
 			<item id="80335" min="1" max="1" chance="100" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82441" name="Freya's Charisma Potion" type="EtcItem">
+	<item id="82441" name="芙蕾雅魅力藥劑" type="EtcItem">
 		<!-- When used, CHA +5 for 30 min. The effect does not stack with Einhasad's Charisma Potion, Freya's Luck Potion, Archangel's Grace, or High Priest's Grace. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_charisma_potion1" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -767,7 +767,7 @@
 			<skill id="39809" level="1" /> <!-- Freya's Charisma Potion -->
 		</skills>
 	</item>
-	<item id="82442" name="Lulu's Fortune Box" type="EtcItem">
+	<item id="82442" name="努路幸運箱" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -821,7 +821,7 @@
 			<item id="80335" min="1" max="1" chance="2.5" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82443" name="Tempting Swimsuit" type="Armor">
+	<item id="82443" name="迷人泳裝" type="Armor">
 		<!-- Tempting Swimsuit -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
@@ -832,7 +832,7 @@
 		<set name="weight" val="1000" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="82444" name="Paradise Swimsuit" type="Armor">
+	<item id="82444" name="樂園泳裝" type="Armor">
 		<!-- Paradise Swimsuit -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
@@ -843,7 +843,7 @@
 		<set name="weight" val="1000" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="82445" name="Fresh Watermelon Flower" additionalName="Event" type="EtcItem">
+	<item id="82445" name="冰涼巨大西瓜花" additionalName="Event" type="EtcItem">
 		<!-- A flower gently picked from a watermelon. Take it to Doo Doo Doo in any town to obtain an Appearance Stone. -->
 		<set name="icon" val="icon.etc_flower_i02" />
 		<set name="immediate_effect" val="true" />
@@ -851,7 +851,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82446" name="Appearance Stone: Beach Swimsuit" additionalName="Event" type="EtcItem">
+	<item id="82446" name="海灘泳裝加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Beach Swimsuit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon.g_scrl_change_co_swimsuit_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -866,7 +866,7 @@
 			<skill id="39710" level="2" /> <!-- Appearance Stone: Beach Swimsuit -->
 		</skills>
 	</item>
-	<item id="82447" name="Appearance Stone: Alluring Swimsuit" additionalName="Event" type="EtcItem">
+	<item id="82447" name="艷麗泳裝加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Alluring Swimsuit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon.g_scrl_change_co_swimsuit_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -881,7 +881,7 @@
 			<skill id="39711" level="2" /> <!-- Appearance Stone: Alluring Swimsuit -->
 		</skills>
 	</item>
-	<item id="82448" name="Appearance Stone: Seductive Swimsuit" additionalName="Event" type="EtcItem">
+	<item id="82448" name="誘人泳裝加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Seductive Swimsuit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon.g_scrl_change_co_swimsuit_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -896,7 +896,7 @@
 			<skill id="39712" level="2" /> <!-- Seductive Swimsuit -->
 		</skills>
 	</item>
-	<item id="82449" name="Appearance Stone: Tempting Swimsuit" additionalName="Event" type="EtcItem">
+	<item id="82449" name="迷人泳裝加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Alluring Swimsuit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon.g_scrl_change_co_swimsuit_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -911,7 +911,7 @@
 			<skill id="39813" level="1" /> <!-- Appearance Stone: Tempting Swimsuit -->
 		</skills>
 	</item>
-	<item id="82450" name="Appearance Stone: Paradise Swimsuit" additionalName="Event" type="EtcItem">
+	<item id="82450" name="樂園泳裝加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Paradise Swimsuit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon.g_scrl_change_co_swimsuit_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -926,7 +926,7 @@
 			<skill id="39814" level="1" /> <!-- Appearance Stone: Paradise Swimsuit -->
 		</skills>
 	</item>
-	<item id="82451" name="Appearance Stone: Baby Shark Doo Doo Doo" additionalName="Event" type="EtcItem">
+	<item id="82451" name="鯊嘟嘟鯊魚衣裳加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the armor appearance to that of Baby Shark Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -941,7 +941,7 @@
 			<skill id="39815" level="1" /> <!-- Appearance Stone: Baby Shark -->
 		</skills>
 	</item>
-	<item id="82452" name="Appearance Stone: Transparent Sigil" additionalName="Event" type="EtcItem">
+	<item id="82452" name="透明符印加工石" additionalName="Event" type="EtcItem">
 		<!-- Make a sigil transparent. Use Recovery Stone to restore the original appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -956,7 +956,7 @@
 			<skill id="39716" level="2" /> <!-- Appearance Stone: Transparent Sigil -->
 		</skills>
 	</item>
-	<item id="82453" name="Benusta's Reward Pack" type="EtcItem">
+	<item id="82453" name="貝努斯塔報酬箱" type="EtcItem">
 		<!-- Double-click to obtain one of the available rewards: a greater jewel Lv. 1, various items or adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -997,7 +997,7 @@
 			<item id="47700" min="1" max="1" chance="4" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82454" name="Benusta's Enhanced Reward Pack" type="EtcItem">
+	<item id="82454" name="貝努斯塔報酬箱" type="EtcItem">
 		<!-- Double-click to obtain one of the available rewards: a greater jewel Lv. 5, various items or adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1038,7 +1038,7 @@
 			<item id="48822" min="1" max="1" chance="4" /> <!-- Greater Blue Cat's Eye Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="82455" name="Benusta's Superior Reward Box" type="EtcItem">
+	<item id="82455" name="貝努斯塔報酬箱" type="EtcItem">
 		<!-- Double-click to obtain one of the available rewards: a superior jewel Lv. 1, various items or adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1081,7 +1081,7 @@
 			<item id="81625" min="1" max="1" chance="3.703704" /> <!-- Superior Blue Cat's Eye Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82456" name="Benusta's Shining Reward Box" type="EtcItem">
+	<item id="82456" name="閃耀的貝努斯塔報酬箱" type="EtcItem">
 		<!-- Double-click to obtain one of the available rewards: an R110-grade weapon/ armor, various items or adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1135,7 +1135,7 @@
 			<item id="80120" min="1" max="1" chance="2.631579" /> <!-- Leviathan Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="82457" name="Extra Pass: Party Instance Zone" type="EtcItem">
+	<item id="82457" name="隊伍即時地區追加入場券" type="EtcItem">
 		<!-- Resets cooldown to Spirit Forest, Crystal Prison (Baylor), Ashen Shadow Camp, Nightmare Kamaloka, Krofin's Nest. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1151,7 +1151,7 @@
 			<skill id="39816" level="1" /> <!-- Extra Pass: Party Instance Zone -->
 		</skills>
 	</item>
-	<item id="82458" name="Masia's Soul Crystal Lv. 1" additionalName="Accessories" type="EtcItem">
+	<item id="82458" name="瑪斯亞搜魂石-1階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1162,7 +1162,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82459" name="Masia's Soul Crystal Lv. 2" additionalName="Accessories" type="EtcItem">
+	<item id="82459" name="瑪斯亞搜魂石-2階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1173,7 +1173,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82460" name="Masia's Soul Crystal Lv. 3" additionalName="Accessories" type="EtcItem">
+	<item id="82460" name="瑪斯亞搜魂石-3階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1184,7 +1184,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82461" name="Masia's Soul Crystal Lv. 4" additionalName="Accessories" type="EtcItem">
+	<item id="82461" name="瑪斯亞搜魂石-4階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1195,7 +1195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82462" name="Masia's Soul Crystal Lv. 5" additionalName="Accessories" type="EtcItem">
+	<item id="82462" name="瑪斯亞搜魂石-5階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1206,7 +1206,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82463" name="Masia's Soul Crystal Lv. 6" additionalName="Accessories" type="EtcItem">
+	<item id="82463" name="瑪斯亞搜魂石-6階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1217,7 +1217,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82464" name="Masia's Soul Crystal Lv. 7" additionalName="Accessories" type="EtcItem">
+	<item id="82464" name="瑪斯亞搜魂石-7階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1228,7 +1228,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82465" name="Masia's Soul Crystal Lv. 8" additionalName="Accessories" type="EtcItem">
+	<item id="82465" name="瑪斯亞搜魂石-8階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1239,7 +1239,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82466" name="Masia's Soul Crystal Lv. 9" additionalName="Accessories" type="EtcItem">
+	<item id="82466" name="瑪斯亞搜魂石-9階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1250,7 +1250,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82467" name="Masia's Soul Crystal Lv. 10" additionalName="Accessories" type="EtcItem">
+	<item id="82467" name="瑪斯亞搜魂石-10階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Masia's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
 		<set name="icon" val="icon.ensoul_stone_masia" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1261,7 +1261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82468" name="Wishing Stone" additionalName="Event" type="EtcItem">
+	<item id="82468" name="願望石" additionalName="Event" type="EtcItem">
 		<!-- A stone that is said to grant wishes. Take it to Moon Child on the event stage in any town to evaluate it. When used, P./ M. Atk. +150, STR/ INT/ CON +3, Speed +7, acquired XP/ SP +10% for 30 min. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.elemental_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1276,7 +1276,7 @@
 			<skill id="39817" level="1" /> <!-- Wishing Stone -->
 		</skills>
 	</item>
-	<item id="82469" name="Superior Red Cat's Eye Shard" additionalName="Event" type="EtcItem">
+	<item id="82469" name="最高級緋金綠寶石碎片" additionalName="Event" type="EtcItem">
 		<!-- According to Moon Child, it is a shard of Superior Red Cat's Eye. Collect 15 of these to use in the limited craft on weekends. <Weekend limited craft>. Superior Red Cat's Eye Lv. 5 can be crafted every Saturday and Sunday from 22:00 till 23:00. The crafting is limited per server. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1286,7 +1286,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82470" name="Enhanced Rune Stone Fragment" additionalName="Event" type="EtcItem">
+	<item id="82470" name="高級古文石碎片" additionalName="Event" type="EtcItem">
 		<!-- According to Moon Child, it is a fragment of Enhanced Rune Stone. Collect 12 of these to use in the limited craft on weekends. <Weekend limited craft>. Enhanced Rune Stone can be crafted every Saturday and Sunday from 22:00 till 23:00. The crafting is limited per server. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1296,7 +1296,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82471" name="Weapon Enhancement Stone Fragment" additionalName="Event" type="EtcItem">
+	<item id="82471" name="武器強化石碎片" additionalName="Event" type="EtcItem">
 		<!-- According to Moon Child, it is a fragment of Weapon Upgrade Stone. Collect 10 of these to use in the limited craft on weekends. <Weekend limited craft>. Weapon Upgrade Stone can be crafted every Saturday and Sunday from 22:00 till 23:00. The crafting is limited per server. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1306,7 +1306,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82472" name="Vitality Sustaining Rune" additionalName="14-day" type="EtcItem">
+	<item id="82472" name="活力維持古文" additionalName="14-day" type="EtcItem">
 		<!-- When in inventory, sustains the Vitality level. Available for 14 d. -->
 		<set name="icon" val="icon.ev_charge_run" />
 		<set name="immediate_effect" val="true" />
@@ -1322,7 +1322,7 @@
 			<skill id="39615" level="1" /> <!-- Vitality Sustaining Rune -->
 		</skills>
 	</item>
-	<item id="82473" name="Golden Chest" additionalName="Lv. 1" type="EtcItem">
+	<item id="82473" name="金光禮盒" additionalName="Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1349,7 +1349,7 @@
 			<item id="35564" min="1" max="1" chance="7.692308" /> <!-- Ruler's Authority - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82474" name="Glowing Golden Chest" additionalName="Lv. 2" type="EtcItem">
+	<item id="82474" name="閃亮的金光禮盒" additionalName="Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain 1 item from the list. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -1398,7 +1398,7 @@
 			<item id="80335" min="1" max="1" chance="2.857143" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82475" name="Artifact - Acquired Adena" additionalName="Support Unit" type="Armor">
+	<item id="82475" name="聖紋石獲得金幣" additionalName="Support Unit" type="Armor">
 		<!-- An artifact that increases adena drop rate. Can be equipped in a support artifact slot. When enchanted, increases the adena drop rate bonus. Can be enhanced only with support artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_d_adena" />
 		<set name="default_action" val="EQUIP" />
@@ -1412,7 +1412,7 @@
 			<skill id="36375" level="1" /> <!-- Artifact - Adena Drop Rate -->
 		</skills>
 	</item>
-	<item id="82476" name="Festival Fairy's Box: Radiant Accessory" additionalName="Event" type="EtcItem">
+	<item id="82476" name="稀有飾品禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Antharas' Blessed Earring, Valakas' Blessed Necklace, Lindvior's Earring. -->
 		<set name="icon" val="icon.ev_green_box_03" />
 		<set name="default_action" val="PEEL" />
@@ -1429,7 +1429,7 @@
 			<item id="36946" min="1" max="1" chance="100" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="82477" name="R-grade Soulshot Pouch" type="EtcItem">
+	<item id="82477" name="靈魂彈包裹" type="EtcItem">
 		<!-- Double-click to obtain 50,000 Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1444,7 +1444,7 @@
 			<item id="33780" min="50000" max="50000" chance="100" /> <!-- Soulshot - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82478" name="Blessed R-grade Spiritshot Pouch" type="EtcItem">
+	<item id="82478" name="魔靈彈包裹" type="EtcItem">
 		<!-- Double-click to obtain 50,000 Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1459,7 +1459,7 @@
 			<item id="33794" min="50000" max="50000" chance="100" /> <!-- Spiritshot - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82479" name="+6 Fallen Angel's Earring Pack Lv. 3" type="EtcItem">
+	<item id="82479" name="+6墮天使耳環禮盒-3階段" type="EtcItem">
 		<!-- Double-click to obtain +6 Fallen Angel's Earring (Cooldown Lv. 3). -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1474,7 +1474,7 @@
 			<item id="82219" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Fallen Angel's Earring - Cooldown Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="82480" name="Shining Spellbook Pack" type="EtcItem">
+	<item id="82480" name="閃耀的技能書禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. There is a high chance to get Forgotten Spellbook - Chapter 1. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
@@ -1522,7 +1522,7 @@
 			<item id="80335" min="1" max="1" chance="2.941176" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82481" name="Summer Sorceress' Teardrop" additionalName="Ore Lv. 1" type="EtcItem">
+	<item id="82481" name="夏日妖精的眼淚碎片" additionalName="Ore Lv. 1" type="EtcItem">
 		<!-- A shard of Summer Sorceress' crystallized teardrop. Legends say that its depths conceal Jinia's flower. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water or Summer Labyrinth' Cool Energy. -->
 		<set name="icon" val="icon.freya_fairy_tear" />
 		<set name="immediate_effect" val="true" />
@@ -1532,7 +1532,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82482" name="Summer Sorceress' Teardrop" additionalName="Ore Lv. 2" type="EtcItem">
+	<item id="82482" name="夏日妖精的眼淚碎片" additionalName="Ore Lv. 2" type="EtcItem">
 		<!-- A shard of Summer Sorceress' crystallized teardrop. Legends say that its depths conceal Jinia's flower. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water or Summer Labyrinth' Cool Energy. -->
 		<set name="icon" val="icon.freya_fairy_tear" />
 		<set name="immediate_effect" val="true" />
@@ -1542,7 +1542,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82483" name="Summer Sorceress' Teardrop" additionalName="Ore Lv. 3" type="EtcItem">
+	<item id="82483" name="夏日妖精的眼淚碎片" additionalName="Ore Lv. 3" type="EtcItem">
 		<!-- A shard of Summer Sorceress' crystallized teardrop. Legends say that its depths conceal Jinia's flower. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water or Summer Labyrinth' Cool Energy. -->
 		<set name="icon" val="icon.freya_fairy_tear" />
 		<set name="immediate_effect" val="true" />
@@ -1552,7 +1552,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82484" name="Summer Sorceress' Crystal" additionalName="Crystal Lv. 1" type="EtcItem">
+	<item id="82484" name="夏日妖精結晶" additionalName="Crystal Lv. 1" type="EtcItem">
 		<!-- A crystal obtained through cleansing of Summer Sorceress' Teardrops. You think you can see Jinia's flower in its depths. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water or Summer Labyrinth' Cool Energy. -->
 		<set name="icon" val="icon.freya_fairy_crystal" />
 		<set name="immediate_effect" val="true" />
@@ -1562,7 +1562,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82485" name="Summer Sorceress' Crystal" additionalName="Crystal Lv. 2" type="EtcItem">
+	<item id="82485" name="夏日妖精結晶" additionalName="Crystal Lv. 2" type="EtcItem">
 		<!-- A crystal obtained through cleansing of Summer Sorceress' Teardrops. You think you can see Jinia's flower in its depths. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water or Summer Labyrinth' Cool Energy. -->
 		<set name="icon" val="icon.freya_fairy_crystal" />
 		<set name="immediate_effect" val="true" />
@@ -1572,7 +1572,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82486" name="Summer Sorceress' Crystal" additionalName="Crystal Lv. 3" type="EtcItem">
+	<item id="82486" name="夏日妖精結晶" additionalName="Crystal Lv. 3" type="EtcItem">
 		<!-- A crystal obtained through cleansing of Summer Sorceress' Teardrops. You think you can see Jinia's flower in its depths. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water or Summer Labyrinth' Cool Energy. -->
 		<set name="icon" val="icon.freya_fairy_crystal" />
 		<set name="immediate_effect" val="true" />
@@ -1582,7 +1582,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82487" name="Frosty Ice Flower" additionalName="Icebound" type="EtcItem">
+	<item id="82487" name="瀰漫寒氣冰燦花" additionalName="Icebound" type="EtcItem">
 		<!-- A frosty ice flower from the crystal. It will wither right away if not treated with care. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water, Summer Labyrinth's Warm Energy or Summer Labyrinth's Temperate Energy. -->
 		<set name="icon" val="icon.freya_ice_flower" />
 		<set name="immediate_effect" val="true" />
@@ -1592,7 +1592,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82488" name="Frosty Ice Flower" additionalName="Frozen" type="EtcItem">
+	<item id="82488" name="瀰漫寒氣冰燦花" additionalName="Frozen" type="EtcItem">
 		<!-- A frosty ice flower from the crystal. It will wither right away if not treated with care. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water, Summer Labyrinth's Warm Energy or Summer Labyrinth's Temperate Energy. -->
 		<set name="icon" val="icon.freya_ice_flower" />
 		<set name="immediate_effect" val="true" />
@@ -1602,7 +1602,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82489" name="Frosty Ice Flower" additionalName="Blooming" type="EtcItem">
+	<item id="82489" name="瀰漫寒氣冰燦花" additionalName="Blooming" type="EtcItem">
 		<!-- A frosty ice flower from the crystal. It will wither right away if not treated with care. <Cleansing>. Can be cleansed through compounding with High Priest's Holy Water, Summer Labyrinth's Warm Energy or Summer Labyrinth's Temperate Energy. -->
 		<set name="icon" val="icon.freya_ice_flower" />
 		<set name="immediate_effect" val="true" />
@@ -1612,7 +1612,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82490" name="Jinia's Flower" type="EtcItem">
+	<item id="82490" name="吉妮亞之花" type="EtcItem">
 		<!-- A rare flower. Nobody has seen it since the time Freya created the Frozen Labyrinth. Kanna's knights believed that it would appear again when the Labyrinth restored its former appearance. That was why they gave a new name to their order - Jinia Guild. <Acquisition>. Cleansing of Summer Sorceress' Teardrops. -->
 		<set name="icon" val="icon.freya_flower" />
 		<set name="immediate_effect" val="true" />
@@ -1622,7 +1622,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82491" name="Summer Labyrinth' Warm Energy" type="EtcItem">
+	<item id="82491" name="夏日迷宮溫暖氣息" type="EtcItem">
 		<!-- Once upon a time this energy made Jinia's Flower bloom. Many believe that the flower can appear again if the Summer Labyrinth becomes warm again. <How to use>. Can be compounded with Frosty Ice Flower. Success rate: 50% (fixed). -->
 		<set name="icon" val="icon.freya_heart_energy" />
 		<set name="immediate_effect" val="true" />
@@ -1630,7 +1630,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82492" name="Summer Labyrinth' Cool Energy" type="EtcItem">
+	<item id="82492" name="夏日迷宮溫和氣息" type="EtcItem">
 		<!-- Once upon a time this energy made Jinia's Flower bloom. Many believe that the flower can appear again if the Summer Labyrinth becomes cool again. <How to use>. Can be compounded with Summer Sorceress' Teardrop, Summer Sorceress' Crystal and Frosty Ice Flower. In case of failure, the enhancement level remains the same, only Summer Labyrinth' Cool Energy is lost. -->
 		<set name="icon" val="icon.freya_mild_energy" />
 		<set name="immediate_effect" val="true" />
@@ -1638,7 +1638,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82493" name="Freya's Cloak" type="EtcItem">
+	<item id="82493" name="芙蕾雅斗篷" type="EtcItem">
 		<!-- A frost-covered cloak of Ice Queen Freya. A long time ago Elder Sayan's crystal ball shattered. Its power was released and turned Princess Maliss into the Ice Queen. Since then she has been calling herself Freya, the Ice Queen. -->
 		<set name="icon" val="icon.freya_cape" />
 		<set name="immediate_effect" val="true" />
@@ -1646,7 +1646,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82494" name="Freya's Necklace" type="EtcItem">
+	<item id="82494" name="芙蕾雅項鍊" type="EtcItem">
 		<!-- A frost-covered necklace of Ice Queen Freya. Kanna's knights swore to turn the Ice Queen back into Maliss and renamed themselves into Jinia Guild. After that, throughout the ages every guild leader changed their name to Jinia. -->
 		<set name="icon" val="icon.freya_necklace" />
 		<set name="immediate_effect" val="true" />
@@ -1654,7 +1654,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82495" name="Freya's Staff" type="EtcItem">
+	<item id="82495" name="芙蕾雅魔杖" type="EtcItem">
 		<!-- A frost-covered staff of Ice Queen Freya. The Ice Queen's real name is Maliss. She is from the Elmoreden's imperial dynasty. Even as a child, the princess showed strong magic potential. -->
 		<set name="icon" val="icon.freya_stick" />
 		<set name="immediate_effect" val="true" />
@@ -1662,7 +1662,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82496" name="Freya's Crown" type="EtcItem">
+	<item id="82496" name="芙蕾雅王冠" type="EtcItem">
 		<!-- A frost-covered crown of Ice Queen Freya. After being exiled from the Ivory Tower, Maliss settled in the Summer Labyrinth with her loyal Kanna's knights. -->
 		<set name="icon" val="icon.freya_crown" />
 		<set name="immediate_effect" val="true" />
@@ -1670,7 +1670,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82497" name="Freya's Jewelry Box" type="EtcItem">
+	<item id="82497" name="芙蕾雅寶石盒" type="EtcItem">
 		<!-- A frost-covered jewelry box of Ice Queen Freya. Double-click to obtain Summer Sorceress' Teardrop (120 pcs.). -->
 		<set name="icon" val="icon.ev_icebox_02" />
 		<set name="default_action" val="PEEL" />
@@ -1685,7 +1685,7 @@
 			<item id="82481" min="120" max="120" chance="100" /> <!-- Summer Sorceress' Teardrop - Ore Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82498" name="Extra Pass: Ice Queen's Castle" type="EtcItem">
+	<item id="82498" name="冰雪女王之城追加入場券" type="EtcItem">
 		<!-- Allows you to re-enter the bound instance zone: Ice Queen's Castle. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1701,7 +1701,7 @@
 			<skill id="39810" level="1" /> <!-- Extra Pass: Ice Queen's Castle -->
 		</skills>
 	</item>
-	<item id="82499" name="Personal Conquest Points" type="EtcItem">
+	<item id="82499" name="個人迪斯倫點數" type="EtcItem">
 		<!-- Points granted for actions in the Conquest world: monster hunting, PvP, missions and the Sacred Fire summoning. The number of personal Conquest points define your place in the corresponding rankings. Keep in mind that the personal ranking reward is given only if you have at least 1000 personal Conquest points. -->
 		<set name="icon" val="icon.dethrone_personal_point" />
 		<set name="immediate_effect" val="true" />

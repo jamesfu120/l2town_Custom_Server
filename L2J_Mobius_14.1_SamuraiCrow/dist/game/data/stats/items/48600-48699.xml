@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="48600" name="Energy of Tanzanite" type="EtcItem">
+	<item id="48600" name="丹泉寶石氣息" type="EtcItem">
 		<!-- Has a chance to produce a Greater Tanzanite if combined with a level 5 Tanzanite. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48601" name="Energy of Red Cat's Eye" type="EtcItem">
+	<item id="48601" name="緋金綠寶石氣息" type="EtcItem">
 		<!-- Has a chance to produce a Greater Red Cat's Eye if combined with a level 5 Red Cat's Eye. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48602" name="Energy of Blue Cat's Eye" type="EtcItem">
+	<item id="48602" name="靛金綠寶石氣息" type="EtcItem">
 		<!-- Has a chance to produce a Greater Blue Cat's Eye if combined with a level 5 Blue Cat's Eye. -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48603" name="Gem Crystal" type="EtcItem">
+	<item id="48603" name="寶石結晶" type="EtcItem">
 		<!-- A material item used to make a level 4 Gem with energy. Can be exchanged through a Black Marketeer of Mammon or Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_jewel_piece" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -29,7 +29,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48604" name="Episode Mask 2" type="Armor">
+	<item id="48604" name="插曲面具2" type="Armor">
 		<set name="icon" val="icon.episode_mask_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -44,7 +44,7 @@
 			<skill id="35205" level="1" /> <!-- Savior's Mask: Base Effect -->
 		</skills>
 	</item>
-	<item id="48605" name="Episode Mask 3" type="Armor">
+	<item id="48605" name="插曲面具3" type="Armor">
 		<set name="icon" val="icon.episode_mask_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -59,7 +59,7 @@
 			<skill id="35205" level="1" /> <!-- Savior's Mask: Base Effect -->
 		</skills>
 	</item>
-	<item id="48606" name="Throne of Heroes 1st Place Reward Box" type="EtcItem">
+	<item id="48606" name="英雄王座1位獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the 1st place clan of the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -80,7 +80,7 @@
 			<item id="36386" min="2" max="2" chance="100" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="48607" name="Throne of Heroes 2nd Place Reward Box" type="EtcItem">
+	<item id="48607" name="英雄王座2位獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the 2nd place clan of the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -104,7 +104,7 @@
 			<item id="39738" min="2" max="2" chance="100" /> <!-- Rune Stone -->
 		</capsuled_items>
 	</item>
-	<item id="48608" name="Throne of Heroes 3rd Place Reward Box" type="EtcItem">
+	<item id="48608" name="英雄王座3位獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the 3rd place clan of the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -124,7 +124,7 @@
 			<item id="39738" min="2" max="2" chance="100" /> <!-- Rune Stone -->
 		</capsuled_items>
 	</item>
-	<item id="48609" name="Throne of Heroes 4th Place Reward Box" type="EtcItem">
+	<item id="48609" name="英雄王座4位獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the 4th place clan of the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -146,7 +146,7 @@
 			<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
 		</capsuled_items>
 	</item>
-	<item id="48610" name="Throne of Heroes 5th Place Reward Box" type="EtcItem">
+	<item id="48610" name="英雄王座5位獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the 5th place clan of the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -168,7 +168,7 @@
 			<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
 		</capsuled_items>
 	</item>
-	<item id="48611" name="Throne of Heroes Lv. 1 Reward Box" type="EtcItem">
+	<item id="48611" name="英雄王座1級獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the clans that reached level 1 in the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -189,7 +189,7 @@
 			<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
 		</capsuled_items>
 	</item>
-	<item id="48612" name="Throne of Heroes Lv. 2 Reward Box" type="EtcItem">
+	<item id="48612" name="英雄王座2級獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the clans that reached level 2 in the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -210,7 +210,7 @@
 			<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
 		</capsuled_items>
 	</item>
-	<item id="48613" name="Throne of Heroes Lv. 3 Reward Box" type="EtcItem">
+	<item id="48613" name="英雄王座3級獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the clans that reached level 3 in the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -231,7 +231,7 @@
 			<item id="36386" min="3" max="3" chance="100" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="48614" name="Throne of Heroes Lv. 4 Reward Box" type="EtcItem">
+	<item id="48614" name="英雄王座4級獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the clans that reached level 4 in the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -252,7 +252,7 @@
 			<item id="36386" min="3" max="3" chance="100" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="48615" name="Throne of Heroes Lv. 5 Reward Box" type="EtcItem">
+	<item id="48615" name="英雄王座5級獎勵禮盒" type="EtcItem">
 		<!-- A reward box for the clans that reached level 5 in the Throne of Heroes. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -273,7 +273,7 @@
 			<item id="36386" min="2" max="2" chance="100" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="48616" name="Helios Weapon Crafting Pack" type="EtcItem">
+	<item id="48616" name="赫利奧斯武器製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain Crafting Pack: Helios Weapon. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -287,7 +287,7 @@
 			<skill id="39241" level="1" /> <!-- Throne of Heroes 2nd Place Reward Box -->
 		</skills>
 	</item>
-	<item id="48617" name="Eternal Armor Crafting Pack" type="EtcItem">
+	<item id="48617" name="艾迪奧斯防具製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain Crafting Pack: Eternal Armor. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -301,7 +301,7 @@
 			<skill id="39241" level="1" /> <!-- Throne of Heroes 2nd Place Reward Box -->
 		</skills>
 	</item>
-	<item id="48618" name="Specter Weapon Crafting Pack" type="EtcItem">
+	<item id="48618" name="幻靈武器製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain Crafting Pack: Specter Weapon. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -315,7 +315,7 @@
 			<skill id="39241" level="1" /> <!-- Throne of Heroes 2nd Place Reward Box -->
 		</skills>
 	</item>
-	<item id="48619" name="Seraph Armor Crafting Pack" type="EtcItem">
+	<item id="48619" name="卡戴拉防具製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain Crafting Pack: Seraph Armor. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -329,7 +329,7 @@
 			<skill id="39241" level="1" /> <!-- Throne of Heroes 2nd Place Reward Box -->
 		</skills>
 	</item>
-	<item id="48620" name="R99 Heavy Armor Crafting Pack" type="EtcItem">
+	<item id="48620" name="R99重裝製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain Eternal Heavy Armor Set Pack. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -348,7 +348,7 @@
 			<item id="38059" min="1" max="1" chance="100" /> <!-- Crafting Pack: Eternal Shield -->
 		</capsuled_items>
 	</item>
-	<item id="48621" name="R99 Light Armor Crafting Pack" type="EtcItem">
+	<item id="48621" name="R99輕裝製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain Eternal Light Armor Set Pack. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -366,7 +366,7 @@
 			<item id="38064" min="1" max="1" chance="100" /> <!-- Crafting Pack: Eternal Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="48622" name="R99 Robe Crafting Pack" type="EtcItem">
+	<item id="48622" name="R99長袍製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain Eternal Robe Set Pack. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -385,7 +385,7 @@
 			<item id="38070" min="1" max="1" chance="100" /> <!-- Crafting Pack: Eternal Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="48623" name="Hero's Ring" additionalName="30-day" type="Armor">
+	<item id="48623" name="勇士的戒指" additionalName="30-day" type="Armor">
 		<!-- A ring purchased with Marks of Battle. Max MP +33, Max CP +10%, Confusion Atk. Rate and Resistance +15%, Critical Damage for basic attacks and P./ M. skills +15%, Atk. Spd./ Casting Spd. +5%. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -406,7 +406,7 @@
 			<skill id="35210" level="1" /> <!-- Hero's Ring -->
 		</skills>
 	</item>
-	<item id="48624" name="Hero's Miracle Cure" type="EtcItem">
+	<item id="48624" name="勇士的靈藥" type="EtcItem">
 		<!-- An elixir purchased with Marks of Battle. Recovers 7000 HP. If HP is full, recovers CP. Can be used under most debuffs. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.pvp_battle_quick_healing_potion2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -420,7 +420,7 @@
 			<skill id="18670" level="1" /> <!-- Gran Kain's Elixir -->
 		</skills>
 	</item>
-	<item id="48625" name="Hero's Rune Box (1-hour)" type="EtcItem">
+	<item id="48625" name="勇士古文(1小時)禮盒" type="EtcItem">
 		<!-- A box containing the Hero's Rune, purchased with Marks of Battle. Double-click to obtain Hero's Rune (1-hour) that increases acquired XP/ SP by 20%. -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
@@ -433,7 +433,7 @@
 			<item id="48626" min="1" max="1" chance="100" /> <!-- Hero's Rune - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="48626" name="Hero's Rune" additionalName="1-hour" type="EtcItem">
+	<item id="48626" name="勇士古文" additionalName="1-hour" type="EtcItem">
 		<!-- The Hero's Rune purchased with Marks of Battle. When in inventory, acquired XP/ SP +20%. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="material" val="PAPER" />
@@ -447,7 +447,7 @@
 			<skill id="39243" level="1" /> <!-- Hero's Rune -->
 		</skills>
 	</item>
-	<item id="48627" name="Shining Fortune Box" type="EtcItem">
+	<item id="48627" name="閃耀幸運箱" type="EtcItem">
 		<!-- Double-click to obtain 30 Shining Magic Baits. Also, you can obtain one of the following items: Archangel's/ Nevit's Lucky Pack. -->
 		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="default_action" val="PEEL" />
@@ -459,7 +459,7 @@
 			<item id="47908" min="30" max="30" chance="100" /> <!-- Shining Magic Bait Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="48628" name="Archangel's Fortune Box" type="EtcItem">
+	<item id="48628" name="大天使幸運箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.bm_nebit_angel_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -471,7 +471,7 @@
 			<skill id="39230" level="2" /> <!-- Archangel's Lucky Pack -->
 		</skills>
 	</item>
-	<item id="48629" name="Nevit's Fortune Box" type="EtcItem">
+	<item id="48629" name="奈比特幸運箱" type="EtcItem">
 		<!-- Double-click to obtain a very rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -483,7 +483,7 @@
 			<skill id="39230" level="3" /> <!-- Nevit's Lucky Pack -->
 		</skills>
 	</item>
-	<item id="48630" name="Master Fisherman's Blessing - 1-hr" type="EtcItem">
+	<item id="48630" name="姜太公祝福-1小時" type="EtcItem">
 		<!-- For 1 h., acquired XP/ SP while fishing +100%. Applied to all baits. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -496,7 +496,7 @@
 			<skill id="39231" level="1" /> <!-- Master Fisherman's Blessing (1-hour) -->
 		</skills>
 	</item>
-	<item id="48631" name="Master Fisherman's Blessing - 2-hr" type="EtcItem">
+	<item id="48631" name="姜太公祝福-2小時" type="EtcItem">
 		<!-- For 2 h., acquired XP/ SP while fishing +100%. Applied to all baits. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -509,7 +509,7 @@
 			<skill id="39231" level="2" /> <!-- Master Fisherman's Blessing (2-hour) -->
 		</skills>
 	</item>
-	<item id="48632" name="Master Fisherman's Blessing - 4-hr" type="EtcItem">
+	<item id="48632" name="姜太公祝福-4小時" type="EtcItem">
 		<!-- For 4 h., acquired XP/ SP while fishing +100%. Applied to all baits. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -522,7 +522,7 @@
 			<skill id="39231" level="3" /> <!-- Master Fisherman's Blessing (4-hour) -->
 		</skills>
 	</item>
-	<item id="48633" name="Master Fisherman's Blessing (8-hour)" type="EtcItem">
+	<item id="48633" name="姜太公祝福-8小時" type="EtcItem">
 		<!-- For 8 h., acquired XP/ SP while fishing +100%. Applied to all baits. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -535,7 +535,7 @@
 			<skill id="39231" level="4" /> <!-- Master Fisherman's Blessing (8-hour) -->
 		</skills>
 	</item>
-	<item id="48634" name="Fishing Dock Pass Box (1-hour)" type="EtcItem">
+	<item id="48634" name="夢幻釣魚場入場券禮盒(1小時)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 1 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -549,7 +549,7 @@
 			<item id="48638" min="1" max="1" chance="100" /> <!-- Pass to Fishing Dock (1-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="48635" name="Fishing Dock Pass Box (2-hour)" type="EtcItem">
+	<item id="48635" name="夢幻釣魚場入場券禮盒(2小時)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 2 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -563,7 +563,7 @@
 			<item id="48639" min="1" max="1" chance="100" /> <!-- Pass to Fishing Dock (2-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="48636" name="Fishing Dock Pass Box (4-hour)" type="EtcItem">
+	<item id="48636" name="夢幻釣魚場入場券禮盒(4小時)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 4 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -577,7 +577,7 @@
 			<item id="48640" min="1" max="1" chance="100" /> <!-- Pass to Fishing Dock (4-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="48637" name="Fishing Dock Pass Box (8-hour)" type="EtcItem">
+	<item id="48637" name="夢幻釣魚場入場券禮盒(8小時)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 8 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -591,7 +591,7 @@
 			<item id="48641" min="1" max="1" chance="100" /> <!-- Pass to Fishing Dock (8-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="48638" name="Pass to Fishing Dock (1-hour)" type="EtcItem">
+	<item id="48638" name="夢幻釣魚場入場券(1小時)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -599,7 +599,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48639" name="Pass to Fishing Dock (2-hour)" type="EtcItem">
+	<item id="48639" name="夢幻釣魚場入場券(2小時)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -607,7 +607,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48640" name="Pass to Fishing Dock (4-hour)" type="EtcItem">
+	<item id="48640" name="夢幻釣魚場入場券(4小時)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -615,7 +615,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48641" name="Pass to Fishing Dock (8-hour)" type="EtcItem">
+	<item id="48641" name="夢幻釣魚場入場券(8小時)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -623,7 +623,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48642" name="Shining Nevit's Gold Hourglass" type="EtcItem">
+	<item id="48642" name="閃耀的奈比特黃金沙漏" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP while hunting +100%. Does not stack with Fall of the Dragon and Dandy's Home Run Ball. Cooldown: 5 min. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -636,7 +636,7 @@
 			<skill id="39571" level="1" /> <!-- Nevit's Shining Gold Hourglass -->
 		</skills>
 	</item>
-	<item id="48643" name="Angel's Gift Bundle Lv. 5" type="EtcItem">
+	<item id="48643" name="天使禮物包裹5階段" type="EtcItem">
 		<!-- Double-click to obtain Greater Red/ Blue Cat's Eye (30-day), Greater Ruby/ Sapphire Pack, Greater Diamond Pack, Greater Opal Pack, Greater Pearl Pack, Full Rare Accessory Pack (30-day) (Lindvior's Earring, Antharas' Blessed Earring, Valakas' Blessed Necklace, Earth Wyrm's Ring, Tauti's Ring). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -654,7 +654,7 @@
 			<item id="48659" min="1" max="1" chance="100" /> <!-- Greater Red/ Blue Cat's Eye Lucky Casket Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48644" name="Greater Ruby Lv. 1" additionalName="30-day" type="Armor">
+	<item id="48644" name="高級紅寶石1階段" additionalName="30-day" type="Armor">
 		<!-- Soulshot/ Beast Soulshot damage +20%, P. Atk. +9%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -672,7 +672,7 @@
 			<skill id="18717" level="6" /> <!-- Greater Ruby -->
 		</skills>
 	</item>
-	<item id="48645" name="Greater Sapphire Lv. 1" additionalName="30-day" type="Armor">
+	<item id="48645" name="高級藍寶石1階段" additionalName="30-day" type="Armor">
 		<!-- Spiritshot/ Blessed Spiritshot damage +20%, M. Atk. +13%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -690,7 +690,7 @@
 			<skill id="18719" level="6" /> <!-- Greater Sapphire -->
 		</skills>
 	</item>
-	<item id="48646" name="Greater Opal Lv. 1" additionalName="30-day" type="Armor">
+	<item id="48646" name="高級貓眼石1階段" additionalName="30-day" type="Armor">
 		<!-- Attribute Attack +120, Attribute Resistance +70. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -706,7 +706,7 @@
 			<skill id="17705" level="6" /> <!-- Greater Opal -->
 		</skills>
 	</item>
-	<item id="48647" name="Greater Diamond Lv. 1" additionalName="30-day" type="Armor">
+	<item id="48647" name="高級鑽石1階段" additionalName="30-day" type="Armor">
 		<!-- P. Def. +1986, received Critical Damage from basic attacks -5%. Additionally, P. Def. +10%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -722,7 +722,7 @@
 			<skill id="17708" level="6" /> <!-- Greater Diamond -->
 		</skills>
 	</item>
-	<item id="48648" name="Greater Pearl Lv. 1" additionalName="30-day" type="Armor">
+	<item id="48648" name="高級珍珠1階段" additionalName="30-day" type="Armor">
 		<!-- M. Def. +1150, received M. Skill Critical Damage -5%. Additionally, M. Def. +10%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -738,7 +738,7 @@
 			<skill id="17709" level="6" /> <!-- Greater Pearl -->
 		</skills>
 	</item>
-	<item id="48649" name="Greater Ruby/ Sapphire Box Lv. 1" additionalName="30-day" type="EtcItem">
+	<item id="48649" name="高級紅寶石&amp;藍寶石1階段盒子" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Ruby Lv. 1 and Sapphire Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -753,7 +753,7 @@
 			<item id="48645" min="1" max="1" chance="100" /> <!-- Greater Sapphire Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48650" name="Blue Potion - Fishing XP Bonus" additionalName="1-hour" type="EtcItem">
+	<item id="48650" name="藍色藥水-釣魚經驗值增加" additionalName="1-hour" type="EtcItem">
 		<!-- For 1 h., acquired XP while fishing +50%. Applied to all baits. Effects of several potions and Master Fisherman's Blessing stack. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -766,7 +766,7 @@
 			<skill id="39232" level="1" /> <!-- Blue Potion - Fishing XP Bonus -->
 		</skills>
 	</item>
-	<item id="48651" name="Rudolph's Yellow Potion" type="EtcItem">
+	<item id="48651" name="幸運活力藥劑" type="EtcItem">
 		<!-- Recharges a certain amount of Vitality when used. No limitations on use. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -778,7 +778,7 @@
 			<skill id="39233" level="1" /> <!-- Lucky Vitality Potion -->
 		</skills>
 	</item>
-	<item id="48652" name="Rudolph's Red Potion" type="EtcItem">
+	<item id="48652" name="魯道夫的紅色藥水" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +30%, SP/ Vitality bonus +30%, P. Atk./ P. Def./ M. Atk./ M. Def. +15%. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -790,7 +790,7 @@
 			<skill id="39242" level="1" /> <!-- Rudolph's Red Potion -->
 		</skills>
 	</item>
-	<item id="48653" name="Peeves' Gift Bundle" type="EtcItem">
+	<item id="48653" name="皮弗斯禮物包裹" type="EtcItem">
 		<!-- Double-click to obtain a gift from Peeves. -->
 		<set name="icon" val="BranchIcon.Icon.newyear_lucky_bag3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -804,7 +804,7 @@
 			<skill id="39244" level="1" /> <!-- Peeves' Gift Bundle -->
 		</skills>
 	</item>
-	<item id="48654" name="Fresh Tuna" type="EtcItem">
+	<item id="48654" name="新鮮鮪魚" type="EtcItem">
 		<!-- A fresh tuna that Fisher Peeves is desperately looking for. Take it to Deton on the event platform of each town. -->
 		<set name="icon" val="icon.fish_normal_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -813,7 +813,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48655" name="Greater Opal Lv. 1 Box" additionalName="30-day" type="EtcItem">
+	<item id="48655" name="高級貓眼石1階段盒子" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Opal Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
@@ -827,7 +827,7 @@
 			<item id="48646" min="1" max="1" chance="100" /> <!-- Greater Opal Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48656" name="Greater Diamond Lv. 1 Box" additionalName="30-day" type="EtcItem">
+	<item id="48656" name="高級鑽石1階段盒子" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Diamond Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
@@ -841,7 +841,7 @@
 			<item id="48647" min="1" max="1" chance="100" /> <!-- Greater Diamond Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48657" name="Greater Pearl Lv. 1 Box" additionalName="30-day" type="EtcItem">
+	<item id="48657" name="高級珍珠1階段盒子" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Pearl Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
@@ -855,7 +855,7 @@
 			<item id="48648" min="1" max="1" chance="100" /> <!-- Greater Pearl Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48658" name="Full Rare Accessory Pack" additionalName="30-day" type="EtcItem">
+	<item id="48658" name="全稀有飾品禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain the following 30-day items: Lindvior's Earring, Antharas' Blessed Earring, Valakas' Blessed Necklace, Tauti's Ring, Earth Wyrm's Ring. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
@@ -872,7 +872,7 @@
 			<item id="46710" min="1" max="1" chance="100" /> <!-- Lindvior's Earring - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48659" name="Greater Red/ Blue Cat's Eye Box Lv. 1" additionalName="30-day" type="EtcItem">
+	<item id="48659" name="高級緋&amp;靛金綠寶石1階段盒子" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Blue Cat's Eye and Greater Red Cat's Eye Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -887,7 +887,7 @@
 			<item id="47922" min="1" max="1" chance="100" /> <!-- Greater Blue Cat's Eye Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48660" name="Festival Fairy's New Year Gift Cube" additionalName="Event" type="EtcItem">
+	<item id="48660" name="秋蓉中秋禮物晶體" additionalName="Event" type="EtcItem">
 		<!-- A special cube that the Festival Fairy has prepared as a Thanksgiving gift. You can obtain 1 to 3 Festival Fairy's Lucky Pouches, depending on how many times you use it. You can earn 2 Dandy's Home Run Balls on the 5th use, 3 Dandy's Home Run Balls on the 10th use, and Festival Fairy's Gift on the 15th use. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="immediate_effect" val="true" />
@@ -896,7 +896,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48661" name="Rudolph's Purple Potion" type="EtcItem">
+	<item id="48661" name="魯道夫的紫色藥水" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +30%, Vitality bonus/ SP +30%, P. Atk./ P. Def./ M. Atk./ M. Def./ Critical Damage for basic attacks/ Skill Power +15%. The effect does not stack with Rudolph's Red Potion. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -908,7 +908,7 @@
 			<skill id="39242" level="2" /> <!-- Rudolph's Purple Potion -->
 		</skills>
 	</item>
-	<item id="48662" name="Peeves' Special Vitality Tonic Bundle" type="EtcItem">
+	<item id="48662" name="皮弗斯特別活力水包裹" type="EtcItem">
 		<!-- Double-click to obtain Wind Energy and Peeves' Purple Potion. There is a chance to receive Peeves' special gift. -->
 		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -920,7 +920,7 @@
 			<skill id="39244" level="2" /> <!-- Peeves' Special Vitality Tonic Bundle -->
 		</skills>
 	</item>
-	<item id="48663" name="Blue Potion - Fishing XP Bonus" additionalName="2-hour" type="EtcItem">
+	<item id="48663" name="藍色藥水-釣魚經驗值增加" additionalName="2-hour" type="EtcItem">
 		<!-- For 2 h., acquired XP while fishing +50%. Applied to all baits. Effects of several potions and Master Fisherman's Blessing stack. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -934,7 +934,7 @@
 			<skill id="39232" level="2" /> <!-- Blue Potion - Fishing XP Bonus -->
 		</skills>
 	</item>
-	<item id="48664" name="Blue Potion - Fishing XP Bonus" additionalName="4-hour" type="EtcItem">
+	<item id="48664" name="藍色藥水-釣魚經驗值增加" additionalName="4-hour" type="EtcItem">
 		<!-- For 4 h., acquired XP while fishing +50%. Applied to all baits. Effects of several potions and Master Fisherman's Blessing stack. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -948,7 +948,7 @@
 			<skill id="39232" level="3" /> <!-- Blue Potion - Fishing XP Bonus -->
 		</skills>
 	</item>
-	<item id="48665" name="Blue Potion - Fishing XP Bonus" additionalName="8-hour" type="EtcItem">
+	<item id="48665" name="藍色藥水-釣魚經驗值增加" additionalName="8-hour" type="EtcItem">
 		<!-- For 6 h., acquired XP while fishing +50%. Applied to all baits. Effects of several potions and Master Fisherman's Blessing stack. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -962,7 +962,7 @@
 			<skill id="39232" level="4" /> <!-- Blue Potion - Fishing XP Bonus -->
 		</skills>
 	</item>
-	<item id="48666" name="Low-grade Dragon Weapon Pack" type="EtcItem">
+	<item id="48666" name="龍戰爪禮盒" type="EtcItem">
 		<!-- Double-click to obtain one Antharas/ Valakas/ Lindvior/ Fafurion weapon. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -1007,7 +1007,7 @@
 			<item id="80315" min="1" max="1" chance="3.225806" /> <!-- Fafurion Dual Daggers -->
 		</capsuled_items>
 	</item>
-	<item id="48667" name="Mid-grade Dragon Weapon Pack" type="EtcItem">
+	<item id="48667" name="龍戰爪禮盒(1階段)" type="EtcItem">
 		<!-- Double-click to obtain one Antharas/ Valakas/ Lindvior/ Fafurion weapon of Lv. 1. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -1052,7 +1052,7 @@
 			<item id="80316" min="1" max="1" chance="3.225806" /> <!-- Fafurion Dual Daggers - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="48668" name="Scroll: Enchant Angel Accessory" type="EtcItem">
+	<item id="48668" name="天使飾品強化卷軸" type="EtcItem">
 		<!-- A scroll for enchanting Angel's and Dragon's accessories as well as Angel's Blessed accessories. Maximum enchant value is +10. In case of failure, the item is destroyed. -->
 		<set name="icon" val="icon.scrl_of_ench_acc" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1067,7 +1067,7 @@
 			<skill id="39247" level="1" /> <!-- Scroll: Enchant Angel's Accessory -->
 		</skills>
 	</item>
-	<item id="48669" name="Angel's Necklace" type="Armor">
+	<item id="48669" name="天使項鍊" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. When enchanted, increases CHA/ LUC, Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Atk. Rate and Resistance, Speed, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and all attack power -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="crystal_type" val="R" />
@@ -1097,7 +1097,7 @@
 			<skill id="35211" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Angel's Necklace: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="48670" name="Festival Fairy's New Year Gift Bundle" additionalName="Event" type="EtcItem">
+	<item id="48670" name="秋蓉的中秋禮包" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Golden Sweets (10 pcs.) and Jewel Coupon. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="PEEL" />
@@ -1115,7 +1115,7 @@
 			<item id="80494" min="1" max="1" chance="100" /> <!-- Jewel Coupon - Event -->
 		</capsuled_items>
 	</item>
-	<item id="48671" name="Windstorm Box" type="EtcItem">
+	<item id="48671" name="暴風禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Dandy's Home Run Ball, Dandy's Golden Ball, Ruler's Authority (7-day), Nevit's Cloak of Light (30-day), Emperor's Rune Pack (2-hour), Bloody Weapon Upgrade Stone, Dark Weapon Upgrade Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1129,7 +1129,7 @@
 			<skill id="39248" level="1" /> <!-- Windstorm Box -->
 		</skills>
 	</item>
-	<item id="48672" name="Festival Fairy's Gift" additionalName="Event" type="EtcItem">
+	<item id="48672" name="秋蓉特別福袋" additionalName="Event" type="EtcItem">
 		<!-- A pouch with gifts from the Festival Fairy. Double-click to obtain 3 Dandy's Golden Balls, Fishing Dock Pass Box (1-hour), Zodiac Agathion Cube. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="PEEL" />
@@ -1147,7 +1147,7 @@
 			<item id="48673" min="1" max="1" chance="100" /> <!-- Fishing Dock Pass Box (1-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="48673" name="Fishing Dock Pass Box (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="48673" name="夢幻釣魚場入場券禮盒(1小時)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 1 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1162,7 +1162,7 @@
 			<item id="48638" min="1" max="1" chance="100" /> <!-- Pass to Fishing Dock (1-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="48674" name="Freya's Dark Rune Pack (30-day)" type="EtcItem">
+	<item id="48674" name="芙蕾雅黑暗古文(30日)禮盒" type="EtcItem">
 		<!-- Double-click to obtain Freya's Dark Rune (30-day). The effect of Freya's Dark Rune is not applied to Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune_box" />
 		<set name="default_action" val="PEEL" />
@@ -1177,7 +1177,7 @@
 			<item id="48680" min="1" max="1" chance="100" /> <!-- Freya's Dark Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48675" name="Freya's Bloody Rune Pack (30-day)" type="EtcItem">
+	<item id="48675" name="芙蕾雅血腥古文(30日)禮盒" type="EtcItem">
 		<!-- Double-click to obtain Freya's Bloody Rune (30-day). -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
@@ -1192,7 +1192,7 @@
 			<item id="48681" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48676" name="Freya's Vital Rune Pack (30-day)" type="EtcItem">
+	<item id="48676" name="芙蕾雅活力古文(30日)禮盒" type="EtcItem">
 		<!-- Double-click to obtain Freya's Vital Rune (30-day). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1207,7 +1207,7 @@
 			<item id="48682" min="1" max="1" chance="100" /> <!-- Freya's Vital Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48677" name="High-grade Skill Power Talisman Pack" additionalName="Skill Critical Damage" type="EtcItem">
+	<item id="48677" name="上級技能威力護身符禮盒" additionalName="Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain High-grade Talisman of Skill Power (30-day). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -1221,7 +1221,7 @@
 			<item id="48683" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Skill Power - Skill Critical Damage -->
 		</capsuled_items>
 	</item>
-	<item id="48678" name="High-grade Talisman of Attribute Attack Pack" additionalName="Critical Damage for basic attacks" type="EtcItem">
+	<item id="48678" name="上級攻擊屬性護身符禮盒" additionalName="Critical Damage for basic attacks" type="EtcItem">
 		<!-- Double-click to obtain High-grade Talisman of Attribute Attack (30-day). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -1235,7 +1235,7 @@
 			<item id="48684" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Attribute Attack - Critical Damage for basic attacks -->
 		</capsuled_items>
 	</item>
-	<item id="48679" name="High-grade Skill Cooldown Talisman Pack" additionalName="P./M. Def." type="EtcItem">
+	<item id="48679" name="上級技能再使用時間護身符禮盒" additionalName="P./M. Def." type="EtcItem">
 		<!-- Double-click to obtain High-grade Talisman of Skill Cooldown (30-day). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -1249,7 +1249,7 @@
 			<item id="48685" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Skill Cooldown - P./M. Def. -->
 		</capsuled_items>
 	</item>
-	<item id="48680" name="Freya's Dark Rune" additionalName="30-day" type="EtcItem">
+	<item id="48680" name="芙蕾雅黑暗古文" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, PvP damage +15%. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune" />
 		<set name="material" val="PAPER" />
@@ -1267,7 +1267,7 @@
 			<skill id="35029" level="1" /> <!-- Freya's Dark Rune -->
 		</skills>
 	</item>
-	<item id="48681" name="Freya's Bloody Rune" additionalName="30-day" type="EtcItem">
+	<item id="48681" name="芙蕾雅血腥古文" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, PvE damage +15%. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="material" val="PAPER" />
@@ -1283,7 +1283,7 @@
 			<skill id="18647" level="1" /> <!-- Freya's Bloody Rune -->
 		</skills>
 	</item>
-	<item id="48682" name="Freya's Vital Rune" additionalName="30-day" type="EtcItem">
+	<item id="48682" name="芙蕾雅活力古文" additionalName="30-day" type="EtcItem">
 		<!-- If stored in the inventory, increases Bonus XP gain in Vitality state by 50% (excludes boss monsters) and decreases Vitality Consumption Spd. by 15%. -->
 		<set name="icon" val="icon.bm_freya_vital_rune" />
 		<set name="material" val="PAPER" />
@@ -1299,7 +1299,7 @@
 			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
 		</skills>
 	</item>
-	<item id="48683" name="High-grade Skill Power Talisman" additionalName="Skill Critical Damage" type="Armor">
+	<item id="48683" name="上級技能威力護身符" additionalName="Skill Critical Damage" type="Armor">
 		<!-- P./ M. Skill Power +5%, P./ M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1315,7 +1315,7 @@
 			<skill id="13959" level="2" /> <!-- High-grade Talisman of Skill Power - Skill Critical Damage -->
 		</skills>
 	</item>
-	<item id="48684" name="High-grade Talisman of Attribute Attack" additionalName="Critical Damage for basic attacks" type="Armor">
+	<item id="48684" name="上級攻擊屬性護身符" additionalName="Critical Damage for basic attacks" type="Armor">
 		<!-- Attribute Attack +70, Critical Damage for basic attacks +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1331,7 +1331,7 @@
 			<skill id="13960" level="2" /> <!-- High-grade Talisman of Attribute Attack - Critical Damage for Basic Attacks -->
 		</skills>
 	</item>
-	<item id="48685" name="High-grade Skill Cooldown Talisman" additionalName="P./M. Def." type="Armor">
+	<item id="48685" name="上級技能再使用時間護身符" additionalName="P./M. Def." type="Armor">
 		<!-- Skill cooldown -5%, P./ M. Def. +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1347,7 +1347,7 @@
 			<skill id="13961" level="2" /> <!-- High-grade Talisman of Skill Cooldown - P./ M. Def. -->
 		</skills>
 	</item>
-	<item id="48686" name="Dimensional Bracelet Pack Lv. 6 (30-day)" type="EtcItem">
+	<item id="48686" name="次元手鐲階段6(30日)禮盒" type="EtcItem">
 		<!-- Double-click to obtain Dimensional Bracelet Lv. 6 (CHA +5). -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="PEEL" />
@@ -1361,7 +1361,7 @@
 			<item id="48687" min="1" max="1" chance="100" /> <!-- Dimensional Bracelet Lv. 6 - CHA +5 -->
 		</capsuled_items>
 	</item>
-	<item id="48687" name="Dimensional Bracelet Lv. 6" additionalName="CHA +5" type="Armor">
+	<item id="48687" name="次元手鐲-階段6" additionalName="CHA +5" type="Armor">
 		<!-- When equipped, unlocks 6 talisman slots. CHA +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
@@ -1378,7 +1378,7 @@
 			<skill id="18057" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
 	</item>
-	<item id="48688" name="Goblin Pouch" type="EtcItem">
+	<item id="48688" name="妖怪小袋" type="EtcItem">
 		<!-- Double-click to obtain a rare item. -->
 		<set name="icon" val="icon.bm_goblin_pocket" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1390,7 +1390,7 @@
 			<skill id="39240" level="2" /> <!-- Goblin Pouch -->
 		</skills>
 	</item>
-	<item id="48689" name="Red Libra Request - Silent Valley" additionalName="Not used" type="EtcItem">
+	<item id="48689" name="紅色天秤委託書-寂靜之谷" additionalName="Not used" type="EtcItem">
 		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in the Silent Valley. Required level: 95-101. Double-click to accept. Can only be used once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1401,7 +1401,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48690" name="Red Libra Request - Atelia Refinery" type="EtcItem">
+	<item id="48690" name="紅色天秤委託書-阿斯塔廷精煉所" type="EtcItem">
 		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in the Atelia Refinery. Double-click to accept. Can only be used once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1412,7 +1412,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48691" name="Red Libra Request - Fallen Emperor's Throne" type="EtcItem">
+	<item id="48691" name="紅色天秤委託書-衰敗皇帝的王座" type="EtcItem">
 		<!-- A request from the Red Libra Guild calling on you to defeat Helios in the Fallen Emperor's Throne. Double-click to accept. Can only be used once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1423,7 +1423,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48692" name="Red Libra's Request - Hall of Etina" type="EtcItem">
+	<item id="48692" name="紅色天秤委託書-艾帝納的末路" type="EtcItem">
 		<!-- A request from the Red Libra Guild calling on you to defeat Etis van Etina in the Hall of Etina. Double-click to accept. Can only be used once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1434,7 +1434,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48693" name="Red Libra Request - Silent Valley" additionalName="Not used" type="EtcItem">
+	<item id="48693" name="紅色天秤委託書-寂靜之谷" additionalName="Not used" type="EtcItem">
 		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in the Silent Valley. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -1444,7 +1444,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48694" name="Red Libra Request - Atelia Refinery" type="EtcItem">
+	<item id="48694" name="紅色天秤委託書-阿斯塔廷精煉所" type="EtcItem">
 		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in the Atelia Refinery. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -1454,7 +1454,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48695" name="Red Libra Request - Fallen Emperor's Throne" type="EtcItem">
+	<item id="48695" name="紅色天秤委託書-衰敗皇帝的王座" type="EtcItem">
 		<!-- A request from the Red Libra Guild calling on you to defeat Helios at the Fallen Emperor's Throne. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -1464,7 +1464,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48696" name="Red Libra's Request - Hall of Etina" type="EtcItem">
+	<item id="48696" name="紅色天秤委託書-艾帝納的末路" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Etis van Etina. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -1474,7 +1474,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48697" name="Red Libra's Extra Pass: Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
+	<item id="48697" name="紅色天秤入場券-卡爾提亞迷宮95Lv隊伍" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for Kartia's Labyrinth (Lv. 95 Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1489,7 +1489,7 @@
 			<skill id="39334" level="1" /> <!-- Red Libra's Extra Pass: Kartia's Labyrinth Lv. 95 (Party) -->
 		</skills>
 	</item>
-	<item id="48698" name="Red Libra's Extra Pass: Crystal Prison (Baylor)" type="EtcItem">
+	<item id="48698" name="紅色天秤入場券-水晶監獄(巴爾勒)" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for Crystal Prison (Baylor). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1504,7 +1504,7 @@
 			<skill id="39335" level="1" /> <!-- Red Libra's Extra Pass: Crystal Prison (Baylor) -->
 		</skills>
 	</item>
-	<item id="48699" name="Red Libra's Extra Pass: Nightmare Kamaloka" type="EtcItem">
+	<item id="48699" name="紅色天秤入場券-無限的避難處" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for the Nightmare Kamaloka. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />

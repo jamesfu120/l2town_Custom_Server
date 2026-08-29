@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="28600" name="Cloak Augmenting Stone - Elmore" type="EtcItem">
+	<item id="28600" name="斗篷精煉石-艾爾摩" type="EtcItem">
 		<!-- Required for augmenting Legendary Elmore Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be cancelled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28601" name="Cloak Augmenting Stone - Ferios" type="EtcItem">
+	<item id="28601" name="斗篷精煉石-貝里歐斯" type="EtcItem">
 		<!-- Required for augmenting Legendary Ferios Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be cancelled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28602" name="Cloak Augmenting Stone Pack" type="EtcItem">
+	<item id="28602" name="斗篷精煉石禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Augmenting Stone: Cloak - Elmoreden/ Aden/ Elmore/ Ferios. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
@@ -31,7 +31,7 @@
 			<item id="28601" min="1" max="1" chance="25" /> <!-- Augmenting Stone: Cloak - Ferios -->
 		</capsuled_items>
 	</item>
-	<item id="28603" name="Dragon's Treasure Chest" type="EtcItem">
+	<item id="28603" name="龍之寶箱" type="EtcItem">
 		<!-- Double-click to obtain one of the valuable items:. Energy of Seven Signs, Baium's Soul Ring, Valakas'/ Antharas' Soul Bottle, Package: +7 Sayha's/ Eva's/ Maphr's/ Pa'agrio's Shirt, Windy Stone: Enchant R-grade Weapon/ Armor, Giant's Scroll: Enchant R-grade Weapon/ Armor, Package: Blessed Stone: Enchant R-grade Weapon/ Armor, Blessed Scroll: Enchant R-grade Weapon/ Armor, Package: Scroll: Enchant R-grade Weapon/ Armor, Destruction Scroll: Enchant Shirt, Giant's Power Pack (20 pcs.), Energy of Destruction Pack (20 pcs.), Ertheia's Miraculous Wind Scroll Box, Rune Stone, Wind Energy, R-grade Gemstone (15 pcs.), Dragon's Golden Key, Dragon's Attribute Potion. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
@@ -71,7 +71,7 @@
 			<item id="37521" min="1" max="1" chance="3.703704" /> <!-- Baium's Soul Ring -->
 		</capsuled_items>
 	</item>
-	<item id="28604" name="Shining Dragon's Treasure Chest" type="EtcItem">
+	<item id="28604" name="閃耀的龍之寶箱" type="EtcItem">
 		<!-- Double-click to obtain one of the valuable items:. Dragon's Weapon Fragment, Dragon Claw, Dark/ Bloody Helios Upgrade Stone, Dark/ Bloody Eternal Upgrade Stone, Lindvior's Earring, Valakas' Blessed Necklace, Antharas' Blessed Earring, Ring of Creation, Package: +7 Magical/ Physical Reflect Shirt, Package: +7 Shiny Elemental Shirt, Freya's Stone: Enchant R-grade Weapon/ Armor, Windy Stone: Enchant R-grade Weapon/ Armor, Package: Blessed Stone: Enchant R-grade Weapon, Giant's Scroll: Enchant R-grade Weapon, Blessed Scroll: Enchant R-grade Weapon, Package: Maphr's High-grade Rune 100% (30-day), Package: XP Rune 100% (30-day), Package: Eva's Rune (30-day), Zodiac Agathion Box, Destruction Scroll: Enchant Shirt, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Manuscript - Mastery (2 pcs.), Giant's Power Pack (100 pcs.), Energy of Destruction Pack (100 pcs.), Top-grade Spirit Stone, Emperor's Vitality Tonic (Medium), Durandil Wire (5 pcs.), Dragon's Attribute Potion (XP) (3 pcs.). -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="PEEL" />
@@ -140,7 +140,7 @@
 			<item id="47214" min="1" max="1" chance="1.785714" /> <!-- Ring of Creation -->
 		</capsuled_items>
 	</item>
-	<item id="28605" name="+10 Legendary Elmoreden Cloak Box" type="EtcItem">
+	<item id="28605" name="+10 艾爾摩亞丁斗篷-傳說禮盒" type="EtcItem">
 		<!-- Double-click to obtain Legendary Elmoreden Cloak enchanted to +10. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -155,7 +155,7 @@
 			<item id="28589" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Legendary Elmoreden Cloak -->
 		</capsuled_items>
 	</item>
-	<item id="28606" name="+10 Aden Cloak - Legendary Box" type="EtcItem">
+	<item id="28606" name="+10亞丁斗篷-傳說禮盒" type="EtcItem">
 		<!-- Double-click to obtain Legendary Aden Cloak enchanted to +10. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -170,7 +170,7 @@
 			<item id="28590" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Legendary Aden Cloak -->
 		</capsuled_items>
 	</item>
-	<item id="28607" name="+10 Legendary Elmore Cloak Box" type="EtcItem">
+	<item id="28607" name="+10艾爾摩斗篷-傳說禮盒" type="EtcItem">
 		<!-- Double-click to obtain Legendary Elmore Cloak enchanted to +10. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -185,7 +185,7 @@
 			<item id="28591" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Legendary Elmore Cloak -->
 		</capsuled_items>
 	</item>
-	<item id="28608" name="+10 Legendary Ferios Cloak Box" type="EtcItem">
+	<item id="28608" name="+10貝里歐斯斗篷-傳說禮盒" type="EtcItem">
 		<!-- Double-click to obtain Legendary Ferios Cloak enchanted to +10. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -200,7 +200,7 @@
 			<item id="28592" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Legendary Ferios Cloak -->
 		</capsuled_items>
 	</item>
-	<item id="28609" name="Balthus Knights' High-grade Mark" type="EtcItem">
+	<item id="28609" name="上級班卓斯騎士團憑證" type="EtcItem">
 		<!-- Transforms into Balthus Knight for 2 h. Required level: 85+. The effect is removed if you switch to the subclass/ dual class. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -215,7 +215,7 @@
 			<skill id="27859" level="1" /> <!-- Balthus Knights' Top-grade Mark -->
 		</skills>
 	</item>
-	<item id="28610" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
+	<item id="28610" name="經驗者二重奏手鐲禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Veteran Duo's Bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -226,7 +226,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28611" name="Returned Duo Bracelet Pack" additionalName="Event" type="EtcItem">
+	<item id="28611" name="回歸者二重奏手鐲禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Returned Duo's Bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -237,7 +237,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28612" name="Royal R99-grade White Save Ticket" additionalName="Event" type="EtcItem">
+	<item id="28612" name="皇家白色救援交換券(R99)" additionalName="Event" type="EtcItem">
 		<!-- For R99-grade-armor. Enchant success rate +15% when using a common Scroll: Enchant Armor. Can be used with equipment enchanted from +3 to +9. In case of failure, the item is not crystallized, but its enchant value is decreased by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="material" val="PAPER" />
@@ -250,7 +250,7 @@
 			<skill id="27860" level="1" /> <!-- Royal R99-grade White Save Ticket - Armor -->
 		</skills>
 	</item>
-	<item id="28613" name="Evolved Agathion Virgo" additionalName="Lv. 1" type="Armor">
+	<item id="28613" name="進化的Virgo壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -271,7 +271,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28614" name="Evolved Agathion Virgo" additionalName="Lv. 2" type="Armor">
+	<item id="28614" name="進化的Virgo壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -292,7 +292,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28615" name="Evolved Agathion Virgo" additionalName="Lv. 3" type="Armor">
+	<item id="28615" name="進化的Virgo壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -313,7 +313,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28616" name="Evolved Agathion Virgo" additionalName="Lv. 4" type="Armor">
+	<item id="28616" name="進化的Virgo壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -334,7 +334,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28617" name="Evolved Agathion Virgo" additionalName="Lv. 5" type="Armor">
+	<item id="28617" name="進化的Virgo壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -355,7 +355,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28618" name="Evolved Agathion Capricorn" additionalName="Lv. 1" type="Armor">
+	<item id="28618" name="進化的Capri壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -376,7 +376,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28619" name="Evolved Agathion Capricorn" additionalName="Lv. 2" type="Armor">
+	<item id="28619" name="進化的Capri壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -397,7 +397,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28620" name="Evolved Agathion Capricorn" additionalName="Lv. 3" type="Armor">
+	<item id="28620" name="進化的Capri壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -418,7 +418,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28621" name="Evolved Agathion Capricorn" additionalName="Lv. 4" type="Armor">
+	<item id="28621" name="進化的Capri壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -439,7 +439,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28622" name="Evolved Agathion Capricorn" additionalName="Lv. 5" type="Armor">
+	<item id="28622" name="進化的Capri壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -460,7 +460,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28623" name="Evolved Agathion Libra" additionalName="Lv. 1" type="Armor">
+	<item id="28623" name="進化的Lib壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -481,7 +481,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28624" name="Evolved Agathion Libra" additionalName="Lv. 2" type="Armor">
+	<item id="28624" name="進化的Lib壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -502,7 +502,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28625" name="Evolved Agathion Libra" additionalName="Lv. 3" type="Armor">
+	<item id="28625" name="進化的Lib壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -523,7 +523,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28626" name="Evolved Agathion Libra" additionalName="Lv. 4" type="Armor">
+	<item id="28626" name="進化的Lib壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -544,7 +544,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28627" name="Evolved Agathion Libra" additionalName="Lv. 5" type="Armor">
+	<item id="28627" name="進化的Lib壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -565,7 +565,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28628" name="Evolved Agathion Aries" additionalName="Lv. 1" type="Armor">
+	<item id="28628" name="進化的Aries壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -586,7 +586,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28629" name="Evolved Agathion Aries" additionalName="Lv. 2" type="Armor">
+	<item id="28629" name="進化的Aries壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -607,7 +607,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28630" name="Evolved Agathion Aries" additionalName="Lv. 3" type="Armor">
+	<item id="28630" name="進化的Aries壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -628,7 +628,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28631" name="Evolved Agathion Aries" additionalName="Lv. 4" type="Armor">
+	<item id="28631" name="進化的Aries壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -649,7 +649,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28632" name="Evolved Agathion Aries" additionalName="Lv. 5" type="Armor">
+	<item id="28632" name="進化的Aries壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28633" name="Evolved Agathion Taurus" additionalName="Lv. 1" type="Armor">
+	<item id="28633" name="進化的Tau壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -691,7 +691,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28634" name="Evolved Agathion Taurus" additionalName="Lv. 2" type="Armor">
+	<item id="28634" name="進化的Tau壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -712,7 +712,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28635" name="Evolved Agathion Taurus" additionalName="Lv. 3" type="Armor">
+	<item id="28635" name="進化的Tau壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -733,7 +733,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28636" name="Evolved Agathion Taurus" additionalName="Lv. 4" type="Armor">
+	<item id="28636" name="進化的Tau壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -754,7 +754,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28637" name="Evolved Agathion Taurus" additionalName="Lv. 5" type="Armor">
+	<item id="28637" name="進化的Tau壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -775,7 +775,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28638" name="Evolved Agathion Leo" additionalName="Lv. 1" type="Armor">
+	<item id="28638" name="進化的Leo壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Leo. When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. Nemean Lion's Defense Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -796,7 +796,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28639" name="Evolved Agathion Leo" additionalName="Lv. 2" type="Armor">
+	<item id="28639" name="進化的Leo壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Leo. When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. Nemean Lion's Defense Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -817,7 +817,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28640" name="Evolved Agathion Leo" additionalName="Lv. 3" type="Armor">
+	<item id="28640" name="進化的Leo壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Leo. When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. Nemean Lion's Defense Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -838,7 +838,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28641" name="Evolved Agathion Leo" additionalName="Lv. 4" type="Armor">
+	<item id="28641" name="進化的Leo壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Leo. When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. Nemean Lion's Defense Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -859,7 +859,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28642" name="Evolved Agathion Leo" additionalName="Lv. 5" type="Armor">
+	<item id="28642" name="進化的Leo壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Leo. When equipped, unlocks the agathion's main slot and 2 additional slots. <Active skill>. Nemean Lion's Defense Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -880,7 +880,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28643" name="Evolved Agathion Gemini" additionalName="Lv. 1" type="Armor">
+	<item id="28643" name="進化的Gem壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Gemini. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Bountiful Resurrection Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -901,7 +901,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28644" name="Evolved Agathion Gemini" additionalName="Lv. 2" type="Armor">
+	<item id="28644" name="進化的Gem壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Gemini. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Bountiful Resurrection Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -922,7 +922,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28645" name="Evolved Agathion Gemini" additionalName="Lv. 3" type="Armor">
+	<item id="28645" name="進化的Gem壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Gemini. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Bountiful Resurrection Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -943,7 +943,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28646" name="Evolved Agathion Gemini" additionalName="Lv. 4" type="Armor">
+	<item id="28646" name="進化的Gem壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Gemini. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Bountiful Resurrection Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -964,7 +964,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28647" name="Evolved Agathion Gemini" additionalName="Lv. 5" type="Armor">
+	<item id="28647" name="進化的Gem壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Gemini. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Bountiful Resurrection Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -985,7 +985,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28648" name="Evolved Agathion Scorpio" additionalName="Lv. 1" type="Armor">
+	<item id="28648" name="進化的Sco壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Scorpio. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scorpion's Mass Exile Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1006,7 +1006,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28649" name="Evolved Agathion Scorpio" additionalName="Lv. 2" type="Armor">
+	<item id="28649" name="進化的Sco壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Scorpio. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scorpion's Mass Exile Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1027,7 +1027,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28650" name="Evolved Agathion Scorpio" additionalName="Lv. 3" type="Armor">
+	<item id="28650" name="進化的Sco壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Scorpio. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scorpion's Mass Exile Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1048,7 +1048,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28651" name="Evolved Agathion Scorpio" additionalName="Lv. 4" type="Armor">
+	<item id="28651" name="進化的Sco壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Scorpio. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scorpion's Mass Exile Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1069,7 +1069,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28652" name="Evolved Agathion Scorpio" additionalName="Lv. 5" type="Armor">
+	<item id="28652" name="進化的Sco壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Scorpio. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Scorpion's Mass Exile Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1090,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28653" name="Evolved Agathion Aquarius" additionalName="Lv. 1" type="Armor">
+	<item id="28653" name="進化的Aqu壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aquarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Mass Binding Flood Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1111,7 +1111,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28654" name="Evolved Agathion Aquarius" additionalName="Lv. 2" type="Armor">
+	<item id="28654" name="進化的Aqu壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aquarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Mass Binding Flood Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1132,7 +1132,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28655" name="Evolved Agathion Aquarius" additionalName="Lv. 3" type="Armor">
+	<item id="28655" name="進化的Aqu壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aquarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Mass Binding Flood Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1153,7 +1153,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28656" name="Evolved Agathion Aquarius" additionalName="Lv. 4" type="Armor">
+	<item id="28656" name="進化的Aqu壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aquarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Mass Binding Flood Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1174,7 +1174,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28657" name="Evolved Agathion Aquarius" additionalName="Lv. 5" type="Armor">
+	<item id="28657" name="進化的Aqu壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aquarius. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Mass Binding Flood Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1195,7 +1195,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28658" name="Evolved Agathion Pisces" additionalName="Lv. 1" type="Armor">
+	<item id="28658" name="進化的Pis壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Pisces. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Slippery Scale Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1216,7 +1216,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28659" name="Evolved Agathion Pisces" additionalName="Lv. 2" type="Armor">
+	<item id="28659" name="進化的Pis壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Pisces. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Slippery Scale Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1237,7 +1237,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28660" name="Evolved Agathion Pisces" additionalName="Lv. 3" type="Armor">
+	<item id="28660" name="進化的Pis壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Pisces. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Slippery Scale Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1258,7 +1258,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28661" name="Evolved Agathion Pisces" additionalName="Lv. 4" type="Armor">
+	<item id="28661" name="進化的Pis壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Pisces. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Slippery Scale Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1279,7 +1279,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28662" name="Evolved Agathion Pisces" additionalName="Lv. 5" type="Armor">
+	<item id="28662" name="進化的Pis壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Pisces. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Slippery Scale Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1300,7 +1300,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28663" name="Evolved Agathion Sagittarius" additionalName="Lv. 1" type="Armor">
+	<item id="28663" name="進化的Sag壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Sagittarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Archer's Call Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1321,7 +1321,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28664" name="Evolved Agathion Sagittarius" additionalName="Lv. 2" type="Armor">
+	<item id="28664" name="進化的Sag壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Sagittarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Archer's Call Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1342,7 +1342,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28665" name="Evolved Agathion Sagittarius" additionalName="Lv. 3" type="Armor">
+	<item id="28665" name="進化的Sag壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Sagittarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Archer's Call Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1363,7 +1363,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28666" name="Evolved Agathion Sagittarius" additionalName="Lv. 4" type="Armor">
+	<item id="28666" name="進化的Sag壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Sagittarius. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Archer's Call Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1384,7 +1384,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28667" name="Evolved Agathion Sagittarius" additionalName="Lv. 5" type="Armor">
+	<item id="28667" name="進化的Sag壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Sagittarius. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Archer's Call Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1405,7 +1405,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28668" name="Evolved Agathion Cancer" additionalName="Lv. 1" type="Armor">
+	<item id="28668" name="進化的Can壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Cancer. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Exoskeletal Shield Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1426,7 +1426,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28669" name="Evolved Agathion Cancer" additionalName="Lv. 2" type="Armor">
+	<item id="28669" name="進化的Can壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Cancer. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Exoskeletal Shield Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1447,7 +1447,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28670" name="Evolved Agathion Cancer" additionalName="Lv. 3" type="Armor">
+	<item id="28670" name="進化的Can壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Cancer. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Exoskeletal Shield Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1468,7 +1468,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28671" name="Evolved Agathion Cancer" additionalName="Lv. 4" type="Armor">
+	<item id="28671" name="進化的Can壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Cancer. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Exoskeletal Shield Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1489,7 +1489,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28672" name="Evolved Agathion Cancer" additionalName="Lv. 5" type="Armor">
+	<item id="28672" name="進化的Can壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Cancer. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Exoskeletal Shield Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1510,7 +1510,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28673" name="Evolved Agathion Virgo" additionalName="Lv. 1" type="Armor">
+	<item id="28673" name="進化的Virgo壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1532,7 +1532,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28674" name="Evolved Agathion Virgo" additionalName="Lv. 2" type="Armor">
+	<item id="28674" name="進化的Virgo壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1554,7 +1554,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28675" name="Evolved Agathion Virgo" additionalName="Lv. 3" type="Armor">
+	<item id="28675" name="進化的Virgo壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1576,7 +1576,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28676" name="Evolved Agathion Virgo" additionalName="Lv. 4" type="Armor">
+	<item id="28676" name="進化的Virgo壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1598,7 +1598,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28677" name="Evolved Agathion Virgo" additionalName="Lv. 5" type="Armor">
+	<item id="28677" name="進化的Virgo壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Virgo. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Healing Light Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1620,7 +1620,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28678" name="Evolved Agathion Capricorn" additionalName="Lv. 1" type="Armor">
+	<item id="28678" name="進化的Capri壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1642,7 +1642,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28679" name="Evolved Agathion Capricorn" additionalName="Lv. 2" type="Armor">
+	<item id="28679" name="進化的Capri壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1664,7 +1664,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28680" name="Evolved Agathion Capricorn" additionalName="Lv. 3" type="Armor">
+	<item id="28680" name="進化的Capri壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1686,7 +1686,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28681" name="Evolved Agathion Capricorn" additionalName="Lv. 4" type="Armor">
+	<item id="28681" name="進化的Capri壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1708,7 +1708,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28682" name="Evolved Agathion Capricorn" additionalName="Lv. 5" type="Armor">
+	<item id="28682" name="進化的Capri壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Capricorn. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Skipping Kid Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1730,7 +1730,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28683" name="Evolved Agathion Libra" additionalName="Lv. 1" type="Armor">
+	<item id="28683" name="進化的Lib壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1752,7 +1752,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28684" name="Evolved Agathion Libra" additionalName="Lv. 2" type="Armor">
+	<item id="28684" name="進化的Lib壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1774,7 +1774,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28685" name="Evolved Agathion Libra" additionalName="Lv. 3" type="Armor">
+	<item id="28685" name="進化的Lib壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1796,7 +1796,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28686" name="Evolved Agathion Libra" additionalName="Lv. 4" type="Armor">
+	<item id="28686" name="進化的Lib壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1818,7 +1818,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28687" name="Evolved Agathion Libra" additionalName="Lv. 5" type="Armor">
+	<item id="28687" name="進化的Lib壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Libra. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Scale of Life Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1840,7 +1840,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28688" name="Evolved Agathion Aries" additionalName="Lv. 1" type="Armor">
+	<item id="28688" name="進化的Aries壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1862,7 +1862,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28689" name="Evolved Agathion Aries" additionalName="Lv. 2" type="Armor">
+	<item id="28689" name="進化的Aries壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1884,7 +1884,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28690" name="Evolved Agathion Aries" additionalName="Lv. 3" type="Armor">
+	<item id="28690" name="進化的Aries壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1906,7 +1906,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28691" name="Evolved Agathion Aries" additionalName="Lv. 4" type="Armor">
+	<item id="28691" name="進化的Aries壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1928,7 +1928,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28692" name="Evolved Agathion Aries" additionalName="Lv. 5" type="Armor">
+	<item id="28692" name="進化的Aries壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Aries. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Rocky Camouflage Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1950,7 +1950,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28693" name="Evolved Agathion Taurus" additionalName="Lv. 1" type="Armor">
+	<item id="28693" name="進化的Tau壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1972,7 +1972,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28694" name="Evolved Agathion Taurus" additionalName="Lv. 2" type="Armor">
+	<item id="28694" name="進化的Tau壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1994,7 +1994,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28695" name="Evolved Agathion Taurus" additionalName="Lv. 3" type="Armor">
+	<item id="28695" name="進化的Tau壺精手鐲" additionalName="Lv. 3" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +20, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2016,7 +2016,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28696" name="Evolved Agathion Taurus" additionalName="Lv. 4" type="Armor">
+	<item id="28696" name="進化的Tau壺精手鐲" additionalName="Lv. 4" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 1 additional slot. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2038,7 +2038,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28697" name="Evolved Agathion Taurus" additionalName="Lv. 5" type="Armor">
+	<item id="28697" name="進化的Tau壺精手鐲" additionalName="Lv. 5" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Taurus. When equipped, unlocks an agathion's main slot and 2 additional slots. <Active skill>. Battle Rhapsody Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2060,7 +2060,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28698" name="Evolved Agathion Leo" additionalName="Lv. 1" type="Armor">
+	<item id="28698" name="進化的Leo壺精手鐲" additionalName="Lv. 1" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Leo. When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. Nemean Lion's Defense Lv. 12. <Passive effects>. 1. Fire/ Water/ Wind/ Earth/ Holy/ Dark Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2082,7 +2082,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="28699" name="Evolved Agathion Leo" additionalName="Lv. 2" type="Armor">
+	<item id="28699" name="進化的Leo壺精手鐲" additionalName="Lv. 2" type="Armor">
 		<!-- An upgraded bracelet for summoning Agathion Leo. When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. Nemean Lion's Defense Lv. 12. <Passive effects>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +10, Attribute Resistance +40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="16000" name="Jade Claw {PvP} - Health" type="Weapon">
+	<item id="16000" name="傑特曼戰爪 {對戰用}-強健" type="Weapon">
 		<!-- <Special properties>. Max HP +25%. Deals additional PvP damage. With a certain chance, removes buffs from the target and decreases their Shield Defense on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -35,7 +35,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16001" name="Demitelum {PvP} - Haste" type="Weapon">
+	<item id="16001" name="幽魂掃蕩者 {對戰用}-速度激發" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +11%. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -69,7 +69,7 @@
 			<skill id="3601" level="10" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="16002" name="Demitelum {PvP} - Health" type="Weapon">
+	<item id="16002" name="幽魂掃蕩者 {對戰用}-強健" type="Weapon">
 		<!-- <Special properties>. Max HP +25%. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -103,7 +103,7 @@
 			<skill id="3013" level="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16003" name="Demitelum {PvP} - Guidance" type="Weapon">
+	<item id="16003" name="幽魂掃蕩者 {對戰用}-導引" type="Weapon">
 		<!-- <Special properties>. P. Accuracy +8. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -137,7 +137,7 @@
 			<skill id="3602" level="10" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="16004" name="Sacredium {PvP} - Mana Up" type="Weapon">
+	<item id="16004" name="神聖痕跡 {對戰用}-魔力上升" type="Weapon">
 		<!-- <Special properties>. Max MP +30%. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -172,7 +172,7 @@
 			<skill id="3014" level="3" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="16005" name="Sacredium {PvP} - Acumen" type="Weapon">
+	<item id="16005" name="神聖痕跡 {對戰用}-靈活思緒" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -207,7 +207,7 @@
 			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="16006" name="Sacredium {PvP} - MP Regeneration" type="Weapon">
+	<item id="16006" name="神聖痕跡 {對戰用}-魔力再生" type="Weapon">
 		<!-- <Special properties>. Increases MP Recovery Rate. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -242,7 +242,7 @@
 			<skill id="3576" level="4" /> <!-- Special Property: MP Regeneration -->
 		</skills>
 	</item>
-	<item id="16007" name="Cyclic Cane {PvP} - Magic Hold" type="Weapon">
+	<item id="16007" name="靈識權杖 {對戰用}-魔法束縛" type="Weapon">
 		<!-- <Special properties>. With a 20% chance, applies Dryad Root on the target when using a debuff. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -277,7 +277,7 @@
 			<skill id="3577" level="2" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Property: Magic Hold -->
 		</skills>
 	</item>
-	<item id="16008" name="Cyclic Cane {PvP} - Empower" type="Weapon">
+	<item id="16008" name="靈識權杖 {對戰用}-魔力催化" type="Weapon">
 		<!-- <Special properties>. M. Atk. +177. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -312,7 +312,7 @@
 			<skill id="3575" level="4" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="16009" name="Cyclic Cane {PvP} - MP Regeneration" type="Weapon">
+	<item id="16009" name="靈識權杖 {對戰用}-魔力再生" type="Weapon">
 		<!-- <Special properties>. Increases MP Recovery Rate. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -347,7 +347,7 @@
 			<skill id="3576" level="4" /> <!-- Special Property: MP Regeneration -->
 		</skills>
 	</item>
-	<item id="16010" name="Archangel Sword {PvP} - Magic Hold" type="Weapon">
+	<item id="16010" name="天使長之劍 {對戰用}-魔法束縛" type="Weapon">
 		<!-- <Special properties>. With a 20% chance, applies Dryad Root on the target when using a debuff. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
@@ -381,7 +381,7 @@
 			<skill id="3577" level="2" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Property: Magic Hold -->
 		</skills>
 	</item>
-	<item id="16011" name="Archangel Sword {PvP} - Mana Up" type="Weapon">
+	<item id="16011" name="天使長之劍 {對戰用}-魔力上升" type="Weapon">
 		<!-- <Special properties>. Max MP +30%. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
@@ -415,7 +415,7 @@
 			<skill id="3014" level="3" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="16012" name="Archangel Sword {PvP} - Acumen" type="Weapon">
+	<item id="16012" name="天使長之劍 {對戰用}-靈活思緒" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. With a certain chance, increases Casting Spd. when hit. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
@@ -449,7 +449,7 @@
 			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="16013" name="Recurve Thorne Bow {PvP} - Critical Slow" type="Weapon">
+	<item id="16013" name="曲刺靈弓 {對戰用}-Crt.緩速" type="Weapon">
 		<!-- <Special properties>. With a 44% chance, applies Slow on a critical attack. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -485,7 +485,7 @@
 			<skill id="3655" level="1" /> <!-- PvP Weapon - Rapid Fire -->
 		</skills>
 	</item>
-	<item id="16014" name="Recurve Thorne Bow {PvP} - Cheap Shot" type="Weapon">
+	<item id="16014" name="曲刺靈弓 {對戰用}-節射" type="Weapon">
 		<!-- <Special properties>. With an 8% chance, decreases MP Consumption to 1 on a basic attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -521,7 +521,7 @@
 			<skill id="8312" level="2" /> <!-- Special Property: Cheap Shot -->
 		</skills>
 	</item>
-	<item id="16015" name="Recurve Thorne Bow {PvP} - Focus" type="Weapon">
+	<item id="16015" name="曲刺靈弓 {對戰用}-偵測" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +139. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -557,7 +557,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="16016" name="Heavenstare Rapier {PvP} - Focus" type="Weapon">
+	<item id="16016" name="天階細劍 {對戰用}-偵測" type="Weapon">
 		<!-- Kamael-exclusive weapon: Eternal Core Sword conversion. <Special properties>. P. Critical Rate +134. Deals additional PvP damage. With a certain chance, recovers CP when hit. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -595,7 +595,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="16017" name="Heavenstare Rapier {PvP} - Haste" type="Weapon">
+	<item id="16017" name="天階細劍 {對戰用}-速度激發" type="Weapon">
 		<!-- Kamael-exclusive weapon: Eternal Core Sword conversion. <Special properties>. Atk. Spd. +11%. Deals additional PvP damage. With a certain chance, recovers CP on attack. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -633,7 +633,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="16018" name="Heavenstare Rapier {PvP} - Health" type="Weapon">
+	<item id="16018" name="天階細劍 {對戰用}-強健" type="Weapon">
 		<!-- Kamael-exclusive weapon: Eternal Core Sword conversion. <Special properties>. Max HP +25%. Deals additional PvP damage. With a certain chance, recovers CP when hit. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -671,7 +671,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="16019" name="Pyseal Blade {PvP} - Focus" type="Weapon">
+	<item id="16019" name="賽席爾巨刃 {對戰用}-偵測" type="Weapon">
 		<!-- Kamael-exclusive weapon: Lava Saw conversion. <Special properties>. P. Critical Rate +134. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -708,7 +708,7 @@
 			<skill id="3566" level="5" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16020" name="Pyseal Blade {PvP} - Haste" type="Weapon">
+	<item id="16020" name="賽席爾巨刃 {對戰用}-速度激發" type="Weapon">
 		<!-- Kamael-exclusive weapon: Lava Saw conversion. <Special properties>. Atk. Spd. +11%. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -745,7 +745,7 @@
 			<skill id="3564" level="3" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="16021" name="Pyseal Blade {PvP} - Health" type="Weapon">
+	<item id="16021" name="賽席爾巨刃 {對戰用}-強健" type="Weapon">
 		<!-- Kamael-exclusive weapon: Lava Saw conversion. <Special properties>. Max HP +25%. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -782,7 +782,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16022" name="Thorne Crossbow {PvP} - Critical Slow" type="Weapon">
+	<item id="16022" name="聖威十字弓 {對戰用}-Crt.緩速" type="Weapon">
 		<!-- Kamael-exclusive weapon: Recurve Thorn Bow conversion. <Special properties>. With a 24% chance, applies Slow on a critical attack. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -820,7 +820,7 @@
 			<skill id="3655" level="1" /> <!-- PvP Weapon - Rapid Fire -->
 		</skills>
 	</item>
-	<item id="16023" name="Thorne Crossbow {PvP} - Cheap Shot" type="Weapon">
+	<item id="16023" name="聖威十字弓 {對戰用}-節射" type="Weapon">
 		<!-- Kamael-exclusive weapon: Recurve Thorn Bow conversion. <Special properties>. With a 12% chance, decreases MP Consumption to 1 on a basic attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -858,7 +858,7 @@
 			<skill id="3360" level="1" /> <!-- Special Property: Cheap Shot -->
 		</skills>
 	</item>
-	<item id="16024" name="Thorne Crossbow {PvP} - Focus" type="Weapon">
+	<item id="16024" name="聖威十字弓 {對戰用}-偵測" type="Weapon">
 		<!-- Kamael-exclusive weapon: Recurve Thorn Bow conversion. <Special properties>. P. Critical Rate +139. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -896,7 +896,7 @@
 			<skill id="3567" level="5" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16025" name="Freya's Necklace" type="Armor">
+	<item id="16025" name="芙蕾雅項鍊" type="Armor">
 		<!-- Water Resistance +10, Infection Resistance +20, Confusion Resistance +15, Stupor Resistance +15, M. Skill Cooldown -5%. Reflects 4% of damage, Max MP +50, MP Recovery +0.23. Can be crystallized to obtain Selenite. -->
 		<set name="icon" val="icon.accessary_queen_of_ice_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -917,7 +917,7 @@
 			<skill id="8459" level="1" /> <!-- Freya's Necklace -->
 		</skills>
 	</item>
-	<item id="16026" name="Blessed Freya's Necklace" type="Armor">
+	<item id="16026" name="祝福的芙蕾雅項鍊" type="Armor">
 		<!-- Water Resistance +15, Infection Resistance +25, Confusion/ Stupor Resistance +20, M. Skill Cooldown -5%. Reflects 4% of damage. Max MP +50, MP Regeneration +0.46, Healing Power +15.6, MEN +2, CON +1, STR -1, M. Skill MP Consumption -5%. Can be crystallized to obtain Selenite. -->
 		<set name="icon" val="icon.accessary_queen_of_ice_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -938,7 +938,7 @@
 			<skill id="8460" level="1" /> <!-- Freya's Blessed Necklace -->
 		</skills>
 	</item>
-	<item id="16027" name="Bottle of Freya's Soul" type="EtcItem">
+	<item id="16027" name="裝有芙蕾雅靈魂之瓶" type="EtcItem">
 		<!-- Take it to Denign to imbue Freya's Necklace with Freya's Soul. -->
 		<set name="icon" val="icon.etc_recovery_set_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -949,7 +949,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="16028" name="Chaotic Vesper Cutter" type="EtcItem">
+	<item id="16028" name="渾沌的薄暮切刃" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="immediate_effect" val="true" />
@@ -972,7 +972,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16029" name="Chaotic Vesper Slasher" type="EtcItem">
+	<item id="16029" name="渾沌的薄暮殺刃" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="immediate_effect" val="true" />
@@ -995,7 +995,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16030" name="Chaotic Vesper Buster" type="EtcItem">
+	<item id="16030" name="渾沌的薄暮爆刃" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1018,7 +1018,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16031" name="Chaotic Vesper Shaper" type="EtcItem">
+	<item id="16031" name="渾沌的薄暮鉋刀" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1041,7 +1041,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16032" name="Chaotic Vesper Fighter" type="EtcItem">
+	<item id="16032" name="渾沌的薄暮戰爪" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1064,7 +1064,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16033" name="Chaotic Vesper Stormer" type="EtcItem">
+	<item id="16033" name="渾沌的薄暮風暴者" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1087,7 +1087,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16034" name="Chaotic Vesper Avenger" type="EtcItem">
+	<item id="16034" name="渾沌的薄暮復仇者" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1110,7 +1110,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16035" name="Chaotic Vesper Retributer" type="EtcItem">
+	<item id="16035" name="渾沌的薄暮報恨者" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1133,7 +1133,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16036" name="Chaotic Vesper Caster" type="EtcItem">
+	<item id="16036" name="渾沌的薄暮術杖" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1156,7 +1156,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16037" name="Chaotic Vesper Singer" type="EtcItem">
+	<item id="16037" name="渾沌的薄暮詩杖" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1179,7 +1179,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16038" name="Chaotic Vesper Thrower" type="EtcItem">
+	<item id="16038" name="渾沌的薄暮投弓" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1202,7 +1202,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16039" name="Chaotic Vesper Pincer" type="EtcItem">
+	<item id="16039" name="渾沌的薄暮螯針" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1225,7 +1225,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16040" name="Chaotic Vesper Guardian" type="EtcItem">
+	<item id="16040" name="渾沌的薄暮射靈" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1251,7 +1251,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16041" name="Chaotic Vesper Nagan" type="EtcItem">
+	<item id="16041" name="渾沌的薄暮槍刃" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1274,7 +1274,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16042" name="Vesper Cutter - Thunder" type="Weapon">
+	<item id="16042" name="薄暮切刃-雷鳴" type="Weapon">
 		<!-- A masterwork item that increases Critical Rate for basic attacks. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1308,7 +1308,7 @@
 			<skill id="3828" level="1" /> <!-- Sword of Critical Rate -->
 		</skills>
 	</item>
-	<item id="16043" name="Vesper Slasher - Great Gale" type="Weapon">
+	<item id="16043" name="薄暮殺刃-疾風" type="Weapon">
 		<!-- A masterwork item that increases Atk. Spd. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1342,7 +1342,7 @@
 			<skill id="3840" level="2" /> <!-- Two-handed Sword of Haste -->
 		</skills>
 	</item>
-	<item id="16044" name="Vesper Buster - Cleverness" type="Weapon">
+	<item id="16044" name="薄暮爆刃-聰明" type="Weapon">
 		<!-- A masterwork item that increases MP Recovery Rate. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1376,7 +1376,7 @@
 			<skill id="3853" level="2" /> <!-- Sword of Mana Regeneration -->
 		</skills>
 	</item>
-	<item id="16045" name="Vesper Shaper - Great Gale" type="Weapon">
+	<item id="16045" name="薄暮鉋刀-疾風" type="Weapon">
 		<!-- A masterwork item that increases Atk. Spd. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1410,7 +1410,7 @@
 			<skill id="3859" level="2" /> <!-- Dagger of Haste -->
 		</skills>
 	</item>
-	<item id="16046" name="Vesper Fighter - Great Gale" type="Weapon">
+	<item id="16046" name="薄暮戰爪-疾風" type="Weapon">
 		<!-- A masterwork item that increases Atk. Spd. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1444,7 +1444,7 @@
 			<skill id="3880" level="2" /> <!-- Fist Weapon of Haste -->
 		</skills>
 	</item>
-	<item id="16047" name="Vesper Stormer - Thunder" type="Weapon">
+	<item id="16047" name="薄暮風暴者-雷鳴" type="Weapon">
 		<!-- A masterwork item that increases Critical Rate for basic attacks. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1479,7 +1479,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="16048" name="Vesper Avenger - Landslide" type="Weapon">
+	<item id="16048" name="薄暮復仇者-山崩" type="Weapon">
 		<!-- A masterwork item that stuns on attack with a certain chance. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1513,7 +1513,7 @@
 			<skill id="3885" level="2" /> <!-- Blunt Weapon of Stun -->
 		</skills>
 	</item>
-	<item id="16049" name="Vesper Retributer - Great Gale" type="Weapon">
+	<item id="16049" name="薄暮報恨者-疾風" type="Weapon">
 		<!-- A masterwork item that increases Atk. Spd. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1547,7 +1547,7 @@
 			<skill id="3896" level="2" /> <!-- Two-handed Blunt Weapon of Haste -->
 		</skills>
 	</item>
-	<item id="16050" name="Vesper Caster - Cleverness" type="Weapon">
+	<item id="16050" name="薄暮術杖-聰明" type="Weapon">
 		<!-- A masterwork item that increases MP Recovery Rate. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1582,7 +1582,7 @@
 			<skill id="3853" level="2" /> <!-- Sword of Mana Regeneration -->
 		</skills>
 	</item>
-	<item id="16051" name="Vesper Singer - Hail" type="Weapon">
+	<item id="16051" name="薄暮詩杖-海嘯" type="Weapon">
 		<!-- A masterwork item that increases M. Atk. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1617,7 +1617,7 @@
 			<skill id="3899" level="3" /> <!-- Staff of Empower -->
 		</skills>
 	</item>
-	<item id="16052" name="Vesper Thrower - Clairvoyance" type="Weapon">
+	<item id="16052" name="薄暮投弓-千里眼" type="Weapon">
 		<!-- A masterwork item that increases attack range. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1654,7 +1654,7 @@
 			<skill id="3865" level="1" /> <!-- Bow of Long Shot -->
 		</skills>
 	</item>
-	<item id="16053" name="Vesper Pincer - Thunder" type="Weapon">
+	<item id="16053" name="薄暮螯針-雷鳴" type="Weapon">
 		<!-- A masterwork item that increases Critical Rate for basic attacks. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1693,7 +1693,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="16054" name="Vesper Guardian - Clairvoyance" type="Weapon">
+	<item id="16054" name="薄暮射靈-千里眼" type="Weapon">
 		<!-- A masterwork item that increases attack range. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1732,7 +1732,7 @@
 			<skill id="3870" level="1" /> <!-- Crossbow of Long Shot -->
 		</skills>
 	</item>
-	<item id="16055" name="Vesper Nagan - Great Gale" type="Weapon">
+	<item id="16055" name="薄暮槍刃-疾風" type="Weapon">
 		<!-- A masterwork item that increases Atk. Spd. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1770,7 +1770,7 @@
 			<skill id="3846" level="2" /> <!-- Ancient Sword of Haste -->
 		</skills>
 	</item>
-	<item id="16056" name="Vesper Cutter - Thunder" additionalName="Haste" type="Weapon">
+	<item id="16056" name="薄暮切刃-雷鳴" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1805,7 +1805,7 @@
 			<skill id="3564" level="3" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="16057" name="Vesper Cutter - Thunder" additionalName="Health" type="Weapon">
+	<item id="16057" name="薄暮切刃-雷鳴" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1840,7 +1840,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16058" name="Vesper Cutter - Thunder" additionalName="Focus" type="Weapon">
+	<item id="16058" name="薄暮切刃-雷鳴" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1875,7 +1875,7 @@
 			<skill id="3566" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16059" name="Vesper Slasher - Great Gale" additionalName="Haste" type="Weapon">
+	<item id="16059" name="薄暮殺刃-疾風" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1910,7 +1910,7 @@
 			<skill id="3564" level="3" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="16060" name="Vesper Slasher - Great Gale" additionalName="Health" type="Weapon">
+	<item id="16060" name="薄暮殺刃-疾風" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1945,7 +1945,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16061" name="Vesper Slasher - Great Gale" additionalName="Focus" type="Weapon">
+	<item id="16061" name="薄暮殺刃-疾風" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1980,7 +1980,7 @@
 			<skill id="3566" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16062" name="Vesper Buster - Cleverness" additionalName="Mana Up" type="Weapon">
+	<item id="16062" name="薄暮爆刃-聰明" additionalName="Mana Up" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2015,7 +2015,7 @@
 			<skill id="3014" level="2" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="16063" name="Vesper Buster - Cleverness" additionalName="Acumen" type="Weapon">
+	<item id="16063" name="薄暮爆刃-聰明" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2050,7 +2050,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="16064" name="Vesper Buster - Cleverness" additionalName="Magic Hold" type="Weapon">
+	<item id="16064" name="薄暮爆刃-聰明" additionalName="Magic Hold" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2086,7 +2086,7 @@
 			<skill id="3577" level="2" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Property: Magic Hold -->
 		</skills>
 	</item>
-	<item id="16065" name="Vesper Shaper - Great Gale" additionalName="Critical Damage" type="Weapon">
+	<item id="16065" name="薄暮鉋刀-疾風" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2121,7 +2121,7 @@
 			<skill id="3572" level="2" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="16066" name="Vesper Shaper - Great Gale" additionalName="HP Drain" type="Weapon">
+	<item id="16066" name="薄暮鉋刀-疾風" additionalName="HP Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2156,7 +2156,7 @@
 			<skill id="3568" level="2" /> <!-- Special Property: HP Drain -->
 		</skills>
 	</item>
-	<item id="16067" name="Vesper Shaper - Great Gale" additionalName="Haste" type="Weapon">
+	<item id="16067" name="薄暮鉋刀-疾風" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2191,7 +2191,7 @@
 			<skill id="3564" level="3" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="16068" name="Vesper Fighter - Great Gale" additionalName="Focus" type="Weapon">
+	<item id="16068" name="薄暮戰爪-疾風" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2226,7 +2226,7 @@
 			<skill id="3565" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16069" name="Vesper Fighter - Great Gale" additionalName="Health" type="Weapon">
+	<item id="16069" name="薄暮戰爪-疾風" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2261,7 +2261,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16070" name="Vesper Fighter - Great Gale" additionalName="Critical Stun" type="Weapon">
+	<item id="16070" name="薄暮戰爪-疾風" additionalName="Critical Stun" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2297,7 +2297,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="16071" name="Vesper Stormer - Thunder" additionalName="Health" type="Weapon">
+	<item id="16071" name="薄暮風暴者-雷鳴" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2332,7 +2332,7 @@
 			<skill id="3013" level="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16072" name="Vesper Stormer - Thunder" additionalName="Guidance" type="Weapon">
+	<item id="16072" name="薄暮風暴者-雷鳴" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2367,7 +2367,7 @@
 			<skill id="3602" level="10" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="16073" name="Vesper Stormer - Thunder" additionalName="Haste" type="Weapon">
+	<item id="16073" name="薄暮風暴者-雷鳴" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2402,7 +2402,7 @@
 			<skill id="3601" level="10" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="16074" name="Vesper Avenger - Landslide" additionalName="HP Drain" type="Weapon">
+	<item id="16074" name="薄暮復仇者-山崩" additionalName="HP Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2437,7 +2437,7 @@
 			<skill id="3568" level="2" /> <!-- Special Property: HP Drain -->
 		</skills>
 	</item>
-	<item id="16075" name="Vesper Avenger - Landslide" additionalName="Health" type="Weapon">
+	<item id="16075" name="薄暮復仇者-山崩" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2472,7 +2472,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16076" name="Vesper Avenger - Landslide" additionalName="HP Regeneration" type="Weapon">
+	<item id="16076" name="薄暮復仇者-山崩" additionalName="HP Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2507,7 +2507,7 @@
 			<skill id="3569" level="2" /> <!-- Special Property: HP Regeneration -->
 		</skills>
 	</item>
-	<item id="16077" name="Vesper Retributer - Great Gale" additionalName="HP Regeneration" type="Weapon">
+	<item id="16077" name="薄暮報恨者-疾風" additionalName="HP Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2542,7 +2542,7 @@
 			<skill id="3569" level="2" /> <!-- Special Property: HP Regeneration -->
 		</skills>
 	</item>
-	<item id="16078" name="Vesper Retributer - Great Gale" additionalName="Health" type="Weapon">
+	<item id="16078" name="薄暮報恨者-疾風" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2577,7 +2577,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16079" name="Vesper Retributer - Great Gale" additionalName="HP Drain" type="Weapon">
+	<item id="16079" name="薄暮報恨者-疾風" additionalName="HP Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2612,7 +2612,7 @@
 			<skill id="3568" level="2" /> <!-- Special Property: HP Drain -->
 		</skills>
 	</item>
-	<item id="16080" name="Vesper Caster - Cleverness" additionalName="Acumen" type="Weapon">
+	<item id="16080" name="薄暮術杖-聰明" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2648,7 +2648,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="16081" name="Vesper Caster - Cleverness" additionalName="MP Regeneration" type="Weapon">
+	<item id="16081" name="薄暮術杖-聰明" additionalName="MP Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2684,7 +2684,7 @@
 			<skill id="3576" level="2" /> <!-- Special Property: MP Regeneration -->
 		</skills>
 	</item>
-	<item id="16082" name="Vesper Caster - Cleverness" additionalName="Mana Up" type="Weapon">
+	<item id="16082" name="薄暮術杖-聰明" additionalName="Mana Up" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2720,7 +2720,7 @@
 			<skill id="3014" level="2" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="16083" name="Vesper Singer - Hail" additionalName="Empower" type="Weapon">
+	<item id="16083" name="薄暮詩杖-海嘯" additionalName="Empower" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2756,7 +2756,7 @@
 			<skill id="3575" level="2" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="16084" name="Vesper Singer - Hail" additionalName="MP Regeneration" type="Weapon">
+	<item id="16084" name="薄暮詩杖-海嘯" additionalName="MP Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2792,7 +2792,7 @@
 			<skill id="3576" level="2" /> <!-- Special Property: MP Regeneration -->
 		</skills>
 	</item>
-	<item id="16085" name="Vesper Singer - Hail" additionalName="Magic Hold" type="Weapon">
+	<item id="16085" name="薄暮詩杖-海嘯" additionalName="Magic Hold" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2829,7 +2829,7 @@
 			<skill id="3577" level="2" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Property: Magic Hold -->
 		</skills>
 	</item>
-	<item id="16086" name="Vesper Thrower - Clairvoyance" additionalName="Cheap Shot" type="Weapon">
+	<item id="16086" name="薄暮投弓-千里眼" additionalName="Cheap Shot" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2868,7 +2868,7 @@
 			<skill id="8312" level="2" /> <!-- Special Property: Cheap Shot -->
 		</skills>
 	</item>
-	<item id="16087" name="Vesper Thrower - Clairvoyance" additionalName="Focus" type="Weapon">
+	<item id="16087" name="薄暮投弓-千里眼" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2906,7 +2906,7 @@
 			<skill id="3567" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16088" name="Vesper Thrower - Clairvoyance" additionalName="Critical Slow" type="Weapon">
+	<item id="16088" name="薄暮投弓-千里眼" additionalName="Critical Slow" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2945,7 +2945,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="16089" name="Vesper Pincer - Thunder" additionalName="Haste" type="Weapon">
+	<item id="16089" name="薄暮螯針-雷鳴" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2985,7 +2985,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="16090" name="Vesper Pincer - Thunder" additionalName="Health" type="Weapon">
+	<item id="16090" name="薄暮螯針-雷鳴" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3025,7 +3025,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="16091" name="Vesper Pincer - Thunder" additionalName="Focus" type="Weapon">
+	<item id="16091" name="薄暮螯針-雷鳴" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3065,7 +3065,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="16092" name="Vesper Guardian - Clairvoyance" additionalName="Cheap Shot" type="Weapon">
+	<item id="16092" name="薄暮射靈-千里眼" additionalName="Cheap Shot" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3106,7 +3106,7 @@
 			<skill id="3360" level="1" /> <!-- Special Property: Cheap Shot -->
 		</skills>
 	</item>
-	<item id="16093" name="Vesper Guardian - Clairvoyance" additionalName="Focus" type="Weapon">
+	<item id="16093" name="薄暮射靈-千里眼" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3146,7 +3146,7 @@
 			<skill id="3567" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16094" name="Vesper Guardian - Clairvoyance" additionalName="Critical Slow" type="Weapon">
+	<item id="16094" name="薄暮射靈-千里眼" additionalName="Critical Slow" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3187,7 +3187,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="16095" name="Vesper Nagan - Great Gale" additionalName="Haste" type="Weapon">
+	<item id="16095" name="薄暮槍刃-疾風" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3226,7 +3226,7 @@
 			<skill id="3564" level="3" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="16096" name="Vesper Nagan - Great Gale" additionalName="Health" type="Weapon">
+	<item id="16096" name="薄暮槍刃-疾風" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3265,7 +3265,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="16097" name="Vesper Nagan - Great Gale" additionalName="Focus" type="Weapon">
+	<item id="16097" name="薄暮槍刃-疾風" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3304,7 +3304,7 @@
 			<skill id="3566" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="16098" name="Refined Black Skeleton Circlet" type="Armor">
+	<item id="16098" name="時髦黑色骷髏頭箍" type="Armor">
 		<!-- Refined Black Skeleton Circlet. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.accessory_animal_skeleton_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3317,7 +3317,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="6000000" />
 	</item>
-	<item id="16099" name="Refined Orange Skeleton Circlet" type="Armor">
+	<item id="16099" name="時髦橙色骷髏頭箍" type="Armor">
 		<!-- Refined Orange Skeleton Circlet. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.accessory_animal_feather_skeleton_circlet_i00" />
 		<set name="default_action" val="EQUIP" />

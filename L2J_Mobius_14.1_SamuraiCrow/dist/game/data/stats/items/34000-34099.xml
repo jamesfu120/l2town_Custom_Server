@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34000" name="Legendary MEN Dye Lv. 5" additionalName="MEN +5/ INT +1/ Holy Resistance +25 (Event)" type="EtcItem">
+	<item id="34000" name="5階段傳說精神紋章染料" additionalName="MEN +5/ INT +1/ Holy Resistance +25 (Event)" type="EtcItem">
 		<!-- Legendary MEN Dye Lv. 5 (MEN +5, INT +1, Holy Resistance +25). Collect 10 units and take them to the Dye Merchant to get a tattoo that boosts your stats. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_men" />
 		<set name="weight" val="150" />
@@ -11,7 +11,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34001" name="High-grade R-grade Life Stone" additionalName="Event" type="EtcItem">
+	<item id="34001" name="高級生命石-R級" additionalName="Event" type="EtcItem">
 		<!-- A high-grade mineral. Required level: 85+. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="weight" val="2" />
@@ -22,7 +22,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34002" name="Top-grade R-grade Life Stone" additionalName="Event" type="EtcItem">
+	<item id="34002" name="特級生命石-R級" additionalName="Event" type="EtcItem">
 		<!-- A top-grade mineral. Required level: 85+. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="weight" val="2" />
@@ -33,7 +33,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34003" name="High-grade R95-grade Life Stone" additionalName="Event" type="EtcItem">
+	<item id="34003" name="高級生命石-R95級" additionalName="Event" type="EtcItem">
 		<!-- A high-grade mineral. Required level: 95+. -->
 		<set name="icon" val="icon.r95_mineral_rare_i00" />
 		<set name="weight" val="2" />
@@ -44,7 +44,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34004" name="Top-grade R95-grade Life Stone" additionalName="Event" type="EtcItem">
+	<item id="34004" name="特級生命石-R95級" additionalName="Event" type="EtcItem">
 		<!-- A top-grade mineral. Required level: 95+. -->
 		<set name="icon" val="icon.r95_mineral_unique_i00" />
 		<set name="weight" val="2" />
@@ -55,7 +55,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34005" name="Seal Scroll" additionalName="Event" type="EtcItem">
+	<item id="34005" name="封印卷軸" additionalName="Event" type="EtcItem">
 		<!-- Unusable item. Item cannot be exposed in the game. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -69,7 +69,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34006" name="Lute Melody Scroll" additionalName="Event" type="EtcItem">
+	<item id="34006" name="琵琶之詩卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying a 9% Vampiric Rage Effect. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -86,7 +86,7 @@
 			<skill id="9200" level="1" /> <!-- Lute Melody - Elixir -->
 		</skills>
 	</item>
-	<item id="34007" name="Harp Melody Scroll" additionalName="Event" type="EtcItem">
+	<item id="34007" name="豎琴之詩卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., P. Accuracy +5, P./ M. Evasion +5, Speed +34, received Critical Damage from basic attacks -30%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -103,7 +103,7 @@
 			<skill id="9203" level="1" /> <!-- Harp Melody - Elixir -->
 		</skills>
 	</item>
-	<item id="34008" name="Drum Melody Scroll" additionalName="Event" type="EtcItem">
+	<item id="34008" name="戰鼓之詩卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Max MP +20%, HP Recovery Rate +20%, Critical Rate for basic attacks +2%, M. Skill Critical Rate +2%, Critical Damage for basic attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Decreases received Critical Damage from basic attacks. Speed -15%. Additionally, increases Critical Damage for basic attacks when you receive a certain amount of damage. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -120,7 +120,7 @@
 			<skill id="39758" level="1" /> <!-- Musician's Melody - Elixir -->
 		</skills>
 	</item>
-	<item id="34009" name="Pipe Organ Melody Scroll" additionalName="Event" type="EtcItem">
+	<item id="34009" name="風琴之詩卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Max HP +37%, Max MP +37%, Max CP +37%, HP Recovery Rate +20%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -137,7 +137,7 @@
 			<skill id="39758" level="1" /> <!-- Musician's Melody - Elixir -->
 		</skills>
 	</item>
-	<item id="34010" name="Guitar Melody Scroll" additionalName="Event" type="EtcItem">
+	<item id="34010" name="吉他之詩卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Critical Rate for basic attacks +32%, P. Critical Damage +35%, M. Critical Rate +2%, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -154,7 +154,7 @@
 			<skill id="39758" level="1" /> <!-- Musician's Melody - Elixir -->
 		</skills>
 	</item>
-	<item id="34011" name="Horn Melody Scroll" additionalName="Event" type="EtcItem">
+	<item id="34011" name="角笛之詩卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., P. Atk. +17%, P. Def. +15%, M. Atk. +79%, M. Def. +30%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -171,7 +171,7 @@
 			<skill id="9198" level="1" /> <!-- Horn Melody - Elixir -->
 		</skills>
 	</item>
-	<item id="34012" name="Elixir of Life - Tersi event" additionalName="Event" type="EtcItem">
+	<item id="34012" name="生命靈藥-泰爾錫活動" additionalName="Event" type="EtcItem">
 		<!-- Recovers HP. Required level: 85+. Can only be used on yourself. Cooldown: 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
@@ -191,7 +191,7 @@
 			<skill id="2860" level="7" /> <!-- Great R-grade Elixir of Life -->
 		</skills>
 	</item>
-	<item id="34013" name="Elixir of Mind - Tersi event" additionalName="Event" type="EtcItem">
+	<item id="34013" name="精神靈藥-泰爾錫活動" additionalName="Event" type="EtcItem">
 		<!-- Recovers MP. Required level: 85+. Can only be used on yourself. Cooldown: 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
@@ -211,7 +211,7 @@
 			<skill id="2861" level="7" /> <!-- Great R-grade Elixir of Mind -->
 		</skills>
 	</item>
-	<item id="34014" name="Elixir of CP - Tersi event" additionalName="Event" type="EtcItem">
+	<item id="34014" name="鬥志靈藥-泰爾錫活動" additionalName="Event" type="EtcItem">
 		<!-- Recovers CP Required level: 85+. Can only be used on yourself. Cooldown: 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />
@@ -231,7 +231,7 @@
 			<skill id="2862" level="7" /> <!-- Great R-grade Elixir of CP -->
 		</skills>
 	</item>
-	<item id="34015" name="Scroll: Seal D-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34015" name="武器封印卷軸-D" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_d" />
 		<set name="weight" val="120" />
@@ -245,7 +245,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34016" name="Scroll: Seal C-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34016" name="武器封印卷軸-C" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_c" />
 		<set name="weight" val="120" />
@@ -259,7 +259,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34017" name="Scroll: Seal B-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34017" name="武器封印卷軸-B" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_b" />
 		<set name="weight" val="120" />
@@ -273,7 +273,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34018" name="Scroll: Seal A-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34018" name="武器封印卷軸-A" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_a" />
 		<set name="weight" val="120" />
@@ -287,7 +287,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34019" name="Scroll: Seal S-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34019" name="武器封印卷軸-S" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_s" />
 		<set name="weight" val="120" />
@@ -301,7 +301,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34020" name="Scroll: Seal Weapon (S80-grade)" additionalName="Event" type="EtcItem">
+	<item id="34020" name="武器封印卷軸-S80" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_s" />
 		<set name="weight" val="120" />
@@ -315,7 +315,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34021" name="Scroll: Seal R-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34021" name="武器封印卷軸-R" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
@@ -329,7 +329,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34022" name="Scroll: Seal R95-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34022" name="武器封印卷軸-R95" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
@@ -343,7 +343,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34023" name="Scroll: Seal R99-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34023" name="武器封印卷軸-R99" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
@@ -357,7 +357,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34024" name="Scroll: Seal D-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34024" name="防具封印卷軸-D" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
 		<set name="weight" val="120" />
@@ -371,7 +371,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34025" name="Scroll: Seal C-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34025" name="防具封印卷軸-C" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_c" />
 		<set name="weight" val="120" />
@@ -385,7 +385,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34026" name="Scroll: Seal B-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34026" name="防具封印卷軸-B" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_b" />
 		<set name="weight" val="120" />
@@ -399,7 +399,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34027" name="Scroll: Seal A-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34027" name="防具封印卷軸-A" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_a" />
 		<set name="weight" val="120" />
@@ -413,7 +413,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34028" name="Scroll: Seal S-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34028" name="防具封印卷軸-S" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_s" />
 		<set name="weight" val="120" />
@@ -427,7 +427,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34029" name="Scroll: Seal Armor (S80-grade)" additionalName="Event" type="EtcItem">
+	<item id="34029" name="防具封印卷軸-S80" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_s" />
 		<set name="weight" val="120" />
@@ -441,7 +441,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34030" name="Scroll: Seal R-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34030" name="防具封印卷軸-R" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
@@ -455,7 +455,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34031" name="Scroll: Seal R95-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34031" name="防具封印卷軸-R95" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
@@ -469,7 +469,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34032" name="Scroll: Seal R99-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34032" name="防具封印卷軸-R99" additionalName="Event" type="EtcItem">
 		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
@@ -483,7 +483,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34033" name="Old Roll of Paper" type="EtcItem">
+	<item id="34033" name="老舊的卷軸" type="EtcItem">
 		<!-- Old-looking roll of paper. Try Double-clicking. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_tradable" val="false" />
@@ -496,7 +496,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34034" name="Fortuna Map" type="EtcItem">
+	<item id="34034" name="幸運地圖" type="EtcItem">
 		<!-- Map that reveals the resting place of the heroes who rebelled against the gods. Go and seek out Josephina's Companion Izael in the Ancient City Arcan. -->
 		<set name="icon" val="icon.fortuna_enter" />
 		<set name="is_tradable" val="false" />
@@ -508,7 +508,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34035" name="Nevit's Rune 100% (3-hour)" type="EtcItem">
+	<item id="34035" name="奈比特古文100%-3小時" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -523,7 +523,7 @@
 			<skill id="9240" level="1" /> <!-- Nevit's Rune -->
 		</skills>
 	</item>
-	<item id="34036" name="Nevit's Rune 100% (5-hour)" type="EtcItem">
+	<item id="34036" name="奈比特古文100%-5小時" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -538,7 +538,7 @@
 			<skill id="9240" level="1" /> <!-- Nevit's Rune -->
 		</skills>
 	</item>
-	<item id="34037" name="Nevit's Rune 100% (7-hour)" type="EtcItem">
+	<item id="34037" name="奈比特古文100%-7日" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -553,7 +553,7 @@
 			<skill id="9240" level="1" /> <!-- Nevit's Rune -->
 		</skills>
 	</item>
-	<item id="34038" name="Nevit's Rune 200% (3-hour)" type="EtcItem">
+	<item id="34038" name="奈比特古文200%-3小時" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +200%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -568,7 +568,7 @@
 			<skill id="9240" level="2" /> <!-- Nevit's Rune -->
 		</skills>
 	</item>
-	<item id="34039" name="Nevit's Rune 200% (5-hour)" type="EtcItem">
+	<item id="34039" name="奈比特古文200%-5小時" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +200%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -583,7 +583,7 @@
 			<skill id="9240" level="2" /> <!-- Nevit's Rune -->
 		</skills>
 	</item>
-	<item id="34040" name="Nevit's Rune 200% (7-hour)" type="EtcItem">
+	<item id="34040" name="奈比特古文200%-7日" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +200%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -598,7 +598,7 @@
 			<skill id="9240" level="2" /> <!-- Nevit's Rune -->
 		</skills>
 	</item>
-	<item id="34041" name="Nevit's Rune Box 100% (3-hour)" type="EtcItem">
+	<item id="34041" name="奈比特古文100%-3小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -614,7 +614,7 @@
 			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34042" name="Nevit's Rune Box 100% (5-hour)" type="EtcItem">
+	<item id="34042" name="奈比特古文100%-5小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -630,7 +630,7 @@
 			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34043" name="Nevit's Rune Box 100% (7-day)" type="EtcItem">
+	<item id="34043" name="奈比特古文100%-7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -646,7 +646,7 @@
 			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34044" name="Nevit's Rune Box 200% (3-hour)" type="EtcItem">
+	<item id="34044" name="奈比特古文200%-3小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -662,7 +662,7 @@
 			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34045" name="Nevit's Rune Box 200% (5-hour)" type="EtcItem">
+	<item id="34045" name="奈比特古文200%-5小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -678,7 +678,7 @@
 			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34046" name="Nevit's Rune Box 200% (7-day)" type="EtcItem">
+	<item id="34046" name="奈比特古文200%-7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -694,7 +694,7 @@
 			<item id="34040" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="34047" name="Nevit's Rune Box 100% (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="34047" name="奈比特古文100%-3小時禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -712,7 +712,7 @@
 			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34048" name="Nevit's Rune Box 100% (5-hour)" additionalName="Event" type="EtcItem">
+	<item id="34048" name="奈比特古文100%-5小時禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -730,7 +730,7 @@
 			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34049" name="Nevit's Rune Box 100% (7-day)" additionalName="Event" type="EtcItem">
+	<item id="34049" name="奈比特古文100%-7日禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -748,7 +748,7 @@
 			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34050" name="Nevit's Rune Box 200% (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="34050" name="奈比特古文200%-3小時禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -766,7 +766,7 @@
 			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34051" name="Nevit's Rune Box 200% (5-hour)" additionalName="Event" type="EtcItem">
+	<item id="34051" name="奈比特古文200%-5小時禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -784,7 +784,7 @@
 			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34052" name="Nevit's Rune Box 200% (7-day)" additionalName="Event" type="EtcItem">
+	<item id="34052" name="奈比特古文200%-7日禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -802,7 +802,7 @@
 			<item id="34040" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="34053" name="Blessed Specter Weapon Pack" type="EtcItem">
+	<item id="34053" name="祝福的幻靈武器禮盒" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -828,7 +828,7 @@
 			<item id="18048" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Blunt Weapons -->
 		</capsuled_items>
 	</item>
-	<item id="34054" name="Blessed Seraph Heavy Armor Pack" type="EtcItem">
+	<item id="34054" name="祝福的卡戴拉重裝防具禮盒" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -846,7 +846,7 @@
 			<item id="18054" min="1" max="1" chance="100" /> <!-- Blessed Seraph Shield -->
 		</capsuled_items>
 	</item>
-	<item id="34055" name="Blessed Seraph Light Armor Pack" type="EtcItem">
+	<item id="34055" name="祝福的卡戴拉輕裝防具禮盒" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -863,7 +863,7 @@
 			<item id="18059" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="34056" name="Blessed Seraph Robe Armor Pack" type="EtcItem">
+	<item id="34056" name="祝福的卡戴拉長袍防具禮盒" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -881,7 +881,7 @@
 			<item id="18065" min="1" max="1" chance="100" /> <!-- Blessed Seraph Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="34057" name="Blessed Seraph Accessory Pack" type="EtcItem">
+	<item id="34057" name="祝福的卡戴拉飾品禮盒" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -896,7 +896,7 @@
 			<item id="18068" min="2" max="2" chance="100" /> <!-- Blessed Seraph Ring -->
 		</capsuled_items>
 	</item>
-	<item id="34058" name="Rare Accessory Pack" type="EtcItem">
+	<item id="34058" name="稀有飾品禮盒" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -912,7 +912,7 @@
 			<item id="6660" min="1" max="1" chance="100" /> <!-- Queen Ant's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="34059" name="Putrefied Extract" type="EtcItem">
+	<item id="34059" name="腐敗汁液" type="EtcItem">
 		<!-- Putrefied Extract that Trade Vollodos in the Bloody Swampland asks you to collect. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="is_depositable" val="false" />
@@ -924,7 +924,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34060" name="Rotten Blood" type="EtcItem">
+	<item id="34060" name="腐臭的血" type="EtcItem">
 		<!-- Rotten Blood that Trade Vollodos in the Bloody Swampland asks you to collect. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="is_depositable" val="false" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34061" name="Mentor's Qualification" type="EtcItem">
+	<item id="34061" name="導師資格" type="EtcItem">
 		<!-- Certificate that prove mentorship. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -946,7 +946,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="34062" name="Giant's Box" additionalName="Event" type="EtcItem">
+	<item id="34062" name="巨人禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Giant's Enchant Scroll, Scroll: Enchant Head Accessory and Spirit Stone - Head Accessory with a certain chance. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -961,7 +961,7 @@
 			<skill id="9241" level="1" /> <!-- Giant's Box -->
 		</skills>
 	</item>
-	<item id="34063" name="Bound Box" additionalName="Event" type="EtcItem">
+	<item id="34063" name="束縛禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Unbind Scroll, Enchant Stone, or Superior Giant's Codex. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -976,7 +976,7 @@
 			<skill id="9242" level="1" /> <!-- Bound Box -->
 		</skills>
 	</item>
-	<item id="34064" name="Box of Destruction" additionalName="Event" type="EtcItem">
+	<item id="34064" name="破滅禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Scroll of Destruction, Soul Crystal Change Stone and Attribute Change Crystal with a certain chance. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -991,7 +991,7 @@
 			<skill id="9243" level="1" /> <!-- Box of Destruction -->
 		</skills>
 	</item>
-	<item id="34065" name="Echo Crystal - To the Brilliant You" type="EtcItem">
+	<item id="34065" name="回聲水晶-耀眼的你" type="EtcItem">
 		<!-- An Echo Crystal that plays Gi-sung Bae's 'To the Brilliant You'. Disappears when used. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="weight" val="10" />
@@ -1008,7 +1008,7 @@
 			<skill id="16032" level="1" /> <!-- Gi-Sung Bae's Lineage II -->
 		</skills>
 	</item>
-	<item id="34066" name="Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34066" name="武器強化卷軸-A級" additionalName="Event" type="EtcItem">
 		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunt weapons/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunt weapons/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is safe up to +3. Cannot be used with weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
@@ -1026,7 +1026,7 @@
 			<skill id="9263" level="1" /> <!-- Mentor's Scroll: Enchant A-grade Weapon -->
 		</skills>
 	</item>
-	<item id="34067" name="Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34067" name="防具強化卷軸-A級" additionalName="Event" type="EtcItem">
 		<!-- For A-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
@@ -1044,7 +1044,7 @@
 			<skill id="9264" level="1" /> <!-- Mentor's Scroll: Enchant A-grade Armor -->
 		</skills>
 	</item>
-	<item id="34068" name="Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34068" name="武器強化卷軸-B級" additionalName="Event" type="EtcItem">
 		<!-- For B-grade weapons. One-handed sword/ blunt weapon/ staff, dagger, spear: P. Atk. +3. Two-handed sword/ blunt weapon/ staff, dual daggers, dual swords, fist weapon: P. Atk. +4. Bow: P. Atk. +6. All weapons: M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is safe up to +3. Cannot be used with weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="weight" val="10" />
@@ -1062,7 +1062,7 @@
 			<skill id="9261" level="1" /> <!-- Mentor's Scroll: Enchant B-grade Weapon -->
 		</skills>
 	</item>
-	<item id="34069" name="Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34069" name="防具強化卷軸-B級" additionalName="Event" type="EtcItem">
 		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="weight" val="10" />
@@ -1080,7 +1080,7 @@
 			<skill id="9262" level="1" /> <!-- Mentor's Scroll: Enchant B-grade Armor -->
 		</skills>
 	</item>
-	<item id="34070" name="Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34070" name="武器強化卷軸-C級" additionalName="Event" type="EtcItem">
 		<!-- For C-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +3. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +4. Bow: P. Atk. +6. All weapons: M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is safe up to +3. Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="weight" val="10" />
@@ -1098,7 +1098,7 @@
 			<skill id="9259" level="1" /> <!-- Mentor's Scroll: Enchant C-grade Weapon -->
 		</skills>
 	</item>
-	<item id="34071" name="Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34071" name="防具強化卷軸-C級" additionalName="Event" type="EtcItem">
 		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="weight" val="10" />
@@ -1116,7 +1116,7 @@
 			<skill id="9260" level="1" /> <!-- Mentor's Scroll: Enchant C-grade Armor -->
 		</skills>
 	</item>
-	<item id="34072" name="Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34072" name="武器強化卷軸-D級" additionalName="Event" type="EtcItem">
 		<!-- For D-grade weapons. P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual daggers, dual swords, and fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="weight" val="10" />
@@ -1134,7 +1134,7 @@
 			<skill id="9257" level="1" /> <!-- Mentor's Scroll: Enchant D-grade Weapon -->
 		</skills>
 	</item>
-	<item id="34073" name="Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34073" name="防具強化卷軸-D級" additionalName="Event" type="EtcItem">
 		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="weight" val="10" />
@@ -1152,7 +1152,7 @@
 			<skill id="9258" level="1" /> <!-- Mentor's Scroll: Enchant D-grade Armor -->
 		</skills>
 	</item>
-	<item id="34074" name="Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34074" name="武器強化卷軸-S級" additionalName="Event" type="EtcItem">
 		<!-- For S-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +5. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +6. Bow: P. Atk. +10. All weapons: M. Atk. +4. Starting from +4, P./ M. Atk. bonus is doubled. Cannot be used with weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
@@ -1170,7 +1170,7 @@
 			<skill id="9265" level="1" /> <!-- Mentor's Scroll: Enchant S-grade Weapon -->
 		</skills>
 	</item>
-	<item id="34075" name="Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34075" name="防具強化卷軸-S級" additionalName="Event" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
@@ -1188,7 +1188,7 @@
 			<skill id="9266" level="1" /> <!-- Mentor's Scroll: Enchant S-grade Armor -->
 		</skills>
 	</item>
-	<item id="34076" name="Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="34076" name="武器強化卷軸-R級" additionalName="Event" type="EtcItem">
 		<!-- For R-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +6. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists, crossbow: P. Atk. +7. Bow: P. Atk. +12. All weapons: M. Atk. +5. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
@@ -1206,7 +1206,7 @@
 			<skill id="9267" level="1" /> <!-- Mentor's Scroll: Enchant R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="34077" name="Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="34077" name="防具強化卷軸-R級" additionalName="Event" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. is greatly increased, HP is increased with each enchant value. Enchanting is safe up to +3. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
@@ -1224,7 +1224,7 @@
 			<skill id="9268" level="1" /> <!-- Mentor's Scroll: Enchant R-grade Armor -->
 		</skills>
 	</item>
-	<item id="34078" name="Improved Giant's Box" additionalName="Event" type="EtcItem">
+	<item id="34078" name="改良型巨人禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Giant's Enchant Scroll, Scroll: Enchant Head Accessory and Spirit Stone - R-grade Head Accessory with a certain chance. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1239,7 +1239,7 @@
 			<skill id="9269" level="1" /> <!-- Improved Giant's Box -->
 		</skills>
 	</item>
-	<item id="34079" name="Improved Bound Box" additionalName="Event" type="EtcItem">
+	<item id="34079" name="改良型束縛禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain R-grade Unbind Scroll, R-grade Enchant Stone, R-grade Superior Giant's Codex, or Scroll: Enchant R-grade Weapon/ Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1254,7 +1254,7 @@
 			<skill id="9270" level="1" /> <!-- Improved Bound Box -->
 		</skills>
 	</item>
-	<item id="34080" name="Improved Box of Destruction" additionalName="Event" type="EtcItem">
+	<item id="34080" name="改良型破滅禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain R-grade Scroll of Destruction, R-grade Soul Crystal Change Stone, Attribute Change Crystal: R-grade or Scroll: Enchant R-grade Weapon/ Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1269,7 +1269,7 @@
 			<skill id="9271" level="1" /> <!-- Improved Box of Destruction -->
 		</skills>
 	</item>
-	<item id="34081" name="Mentor's Surprise Box" additionalName="Event" type="EtcItem">
+	<item id="34081" name="導師禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Improved Giant's Box, Improved Bound Box, or Improved Box of Destruction. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1284,7 +1284,7 @@
 			<skill id="9272" level="1" /> <!-- Mentor's Surprise Box -->
 		</skills>
 	</item>
-	<item id="34082" name="Heavenly Cocktail" type="EtcItem">
+	<item id="34082" name="天堂雞尾酒" type="EtcItem">
 		<!-- For 60 min., applies the effects of Musician's Melody Lv. 2. Cooldown: 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_sellable" val="false" />
@@ -1301,7 +1301,7 @@
 			<skill id="39760" level="2" /> <!-- Musician's Melody - Heavenly Cocktail -->
 		</skills>
 	</item>
-	<item id="34083" name="PA - Grand Épée (Earth)" additionalName="PA exclusive" type="Weapon">
+	<item id="34083" name="活動用-巨銳劍 (大地)" additionalName="PA exclusive" type="Weapon">
 		<!-- Grand Épée (Earth), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1335,7 +1335,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="34084" name="PA - Grand Épée (Water)" additionalName="PA exclusive" type="Weapon">
+	<item id="34084" name="活動用-巨銳劍 (水)" additionalName="PA exclusive" type="Weapon">
 		<!-- Grand Épée (Water), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1369,7 +1369,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="34085" name="PA - Grand Épée (Wind)" additionalName="PA exclusive" type="Weapon">
+	<item id="34085" name="活動用-巨銳劍 (風)" additionalName="PA exclusive" type="Weapon">
 		<!-- Grand Épée (Wind), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1403,7 +1403,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="34086" name="PA - Grand Épée (Fire)" additionalName="PA exclusive" type="Weapon">
+	<item id="34086" name="活動用-巨銳劍 (火)" additionalName="PA exclusive" type="Weapon">
 		<!-- Grand Épée (Fire), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1437,7 +1437,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="34087" name="PA - Grand Épée (Holy)" additionalName="PA exclusive" type="Weapon">
+	<item id="34087" name="活動用-巨銳劍 (神聖)" additionalName="PA exclusive" type="Weapon">
 		<!-- Grand Épée (Holy), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1471,7 +1471,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="34088" name="PA - Grand Épée (Dark)" additionalName="PA exclusive" type="Weapon">
+	<item id="34088" name="活動用-巨銳劍 (黑暗)" additionalName="PA exclusive" type="Weapon">
 		<!-- Grand Épée (Dark), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1505,7 +1505,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="34089" name="PA - Glaive (Earth)" additionalName="PA exclusive" type="Weapon">
+	<item id="34089" name="活動用-闊矛 (大地)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Earth), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1539,7 +1539,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="34090" name="PA - Glaive (Water)" additionalName="PA exclusive" type="Weapon">
+	<item id="34090" name="活動用-闊矛 (水)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Water), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1573,7 +1573,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="34091" name="PA - Glaive (Wind)" additionalName="PA exclusive" type="Weapon">
+	<item id="34091" name="活動用-闊矛 (風)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Wind), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1607,7 +1607,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="34092" name="PA - Glaive (Fire)" additionalName="PA exclusive" type="Weapon">
+	<item id="34092" name="活動用-闊矛 (火)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Fire), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1641,7 +1641,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="34093" name="PA - Glaive (Holy)" additionalName="PA exclusive" type="Weapon">
+	<item id="34093" name="活動用-闊矛 (神聖)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Holy), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1675,7 +1675,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="34094" name="PA - Glaive (Dark)" additionalName="PA exclusive" type="Weapon">
+	<item id="34094" name="活動用-闊矛 (黑暗)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Dark), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1709,7 +1709,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="34095" name="PA - Mithril Dagger (Earth)" additionalName="PA exclusive" type="Weapon">
+	<item id="34095" name="活動用-米索莉匕首 (大地)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Earth), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1740,7 +1740,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34096" name="PA - Mithril Dagger (Water)" additionalName="PA exclusive" type="Weapon">
+	<item id="34096" name="活動用-米索莉匕首 (水)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Water), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1771,7 +1771,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34097" name="PA - Mithril Dagger (Wind)" additionalName="PA exclusive" type="Weapon">
+	<item id="34097" name="活動用-米索莉匕首 (風)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Wind), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1802,7 +1802,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34098" name="PA - Mithril Dagger (Fire)" additionalName="PA exclusive" type="Weapon">
+	<item id="34098" name="活動用-米索莉匕首 (火)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Fire), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1833,7 +1833,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34099" name="PA - Mithril Dagger (Holy)" additionalName="PA exclusive" type="Weapon">
+	<item id="34099" name="活動用-米索莉匕首 (神聖)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Holy), upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />

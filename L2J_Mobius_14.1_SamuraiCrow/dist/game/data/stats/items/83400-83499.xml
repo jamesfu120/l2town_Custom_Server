@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="83400" name="Atuba Chief's Certificate" type="EtcItem">
+	<item id="83400" name="阿吐巴首領認證書" type="EtcItem">
 		<!-- A special document signed by Atuba Chief Varkees. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -12,7 +12,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83401" name="Urutu Chief's Certificate" type="EtcItem">
+	<item id="83401" name="烏魯吐首領認證書" type="EtcItem">
 		<!-- A special document signed by Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -24,7 +24,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83402" name="Neruga Chief's Certificate" type="EtcItem">
+	<item id="83402" name="那魯加首領認證書" type="EtcItem">
 		<!-- A special document signed by Neruga Chief Tantus. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -36,7 +36,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83403" name="Flame Certificate" type="EtcItem">
+	<item id="83403" name="火焰認證書" type="EtcItem">
 		<!-- A special document signed by Flame Successor Akkan. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -48,7 +48,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83404" name="Hero's Certificate" type="EtcItem">
+	<item id="83404" name="英雄認證書" type="EtcItem">
 		<!-- A special document signed by Tarkai Zu Duda-Mara. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -60,7 +60,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83405" name="Gran Kain's Scroll: Enchant Silvery Accessory" type="EtcItem">
+	<item id="83405" name="格蘭肯的艾勒傑特強化卷軸" type="EtcItem">
 		<!-- For Silvery Accessory. In case of failure, the item's enchant value remains the same. <Items for enchanting>. Silvery Circlet. Silvery Shirt. Silvery Brooch. Silvery Bracelet. Silvery Seed Bracelet. Silvery Artifact Book. Cannot be used with Silvery Shirt enchanted to +10 or higher. -->
 		<set name="icon" val="icon.bm_shilen_scrl_of_argent" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -74,7 +74,7 @@
 			<skill id="39905" level="1" /> <!-- Scroll: Enchant Silvery Accessory -->
 		</skills>
 	</item>
-	<item id="83406" name="Annie's 21st Anniversary Gift Box" additionalName="Event" type="EtcItem">
+	<item id="83406" name="安妮的21週年禮盒" additionalName="Event" type="EtcItem">
 		<!-- A special gift from Annie for the Lineage 2 21st anniversary. Double-click to obtain various rewards. -->
 		<set name="icon" val="icon.ev_21th_giftbox3" />
 		<set name="default_action" val="PEEL" />
@@ -93,7 +93,7 @@
 			<item id="81646" min="1" max="1" chance="100" /> <!-- Festive Agathion Charm: Guardian Angel Chuchu - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83407" name="21st Anniversary Aether Pack" additionalName="Event" type="EtcItem">
+	<item id="83407" name="21週年乙醚禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Aether (1 pc.) and 21st Anniversary Coins. -->
 		<set name="icon" val="icon.ev_21th_giftbox1" />
 		<set name="default_action" val="PEEL" />
@@ -104,7 +104,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83408" name="Large 21st Anniversary Pack" additionalName="Event" type="EtcItem">
+	<item id="83408" name="21週年崇高禮盒" additionalName="Event" type="EtcItem">
 		<!-- A pack obtained in the 21st Anniversary Snowmen Defense. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_21th_giftbox2" />
 		<set name="default_action" val="PEEL" />
@@ -153,7 +153,7 @@
 			<item id="80335" min="1" max="1" chance="3.030303" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="83409" name="21st Anniversary Coin" additionalName="Event" type="EtcItem">
+	<item id="83409" name="21週年紀念幣" additionalName="Event" type="EtcItem">
 		<!-- A coin for the 21st Lineage 2 anniversary. <How to use>. Can be exchanged for various items through the 21st Anniversary Event Manager Annie at the 21st Anniversary Coin Store or through the Red Libra Guild merchants. -->
 		<set name="icon" val="icon.ev_21th_coin" />
 		<set name="immediate_effect" val="true" />
@@ -161,7 +161,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83410" name="21st Anniversary Medal" additionalName="Event" type="EtcItem">
+	<item id="83410" name="21週年紀念勳章" additionalName="Event" type="EtcItem">
 		<!-- A gold medal dedicated to the 21st Lineage 2 anniversary. Can be added to the event collection. <Acquisition>. Can be purchased from the 21st Anniversary Event Manager Annie at the 21st Anniversary Coin Store. -->
 		<set name="icon" val="icon.ev_21th_medal" />
 		<set name="immediate_effect" val="true" />
@@ -171,7 +171,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83411" name="21st Anniversary Chestnut Cookie" additionalName="Event" type="EtcItem">
+	<item id="83411" name="21週年栗子蛋糕" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Attribute Attack/ Resistance +100, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +5%, received Critical Damage from basic attacks and P./ M. skills -5%. -->
 		<set name="icon" val="icon.ev_21th_cake" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -182,7 +182,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83412" name="Chestnut Scroll" additionalName="Event" type="EtcItem">
+	<item id="83412" name="栗子卷軸" additionalName="Event" type="EtcItem">
 		<!-- Lets you collect Chestnuts from the Miraculous Chestnut Tree in Giran's garden. If you are lucky, you will be able to get Golden Chestnut. Note!. Duration: 30 sec. Can only be used on the Miraculous Chestnut Tree in Giran's garden. Chestnuts, Rotten Chestnuts, and Golden Chestnuts obtained with Chestnut Scroll can be exchanged for various rewards through the special sections of the event craft. <Acquisition>. 1. Completing daily event clan missions. 2. Killing a boss in the daily solo/ party instance zone. -->
 		<set name="icon" val="icon.ev_21th_chestnut_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -193,7 +193,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83413" name="Raw Chestnut" additionalName="Event" type="EtcItem">
+	<item id="83413" name="毛栗子" additionalName="Event" type="EtcItem">
 		<!-- A chestnut from the Miraculous Chestnut Tree. It is very prickly, so be careful while handling it!. Double-click to obtain Chestnut. -->
 		<set name="icon" val="icon.ev_21th_chestnutburr" />
 		<set name="default_action" val="PEEL" />
@@ -204,7 +204,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83414" name="Chestnut" additionalName="Event" type="EtcItem">
+	<item id="83414" name="去殼栗子" additionalName="Event" type="EtcItem">
 		<!-- A chestnut from the Miraculous Chestnut Tree. Very delicious as well as good for your health. <How to use>. Can be exchanged for a reward in the 'Chestnuts' section of the event craft. -->
 		<set name="icon" val="icon.ev_21th_chestnut_01" />
 		<set name="immediate_effect" val="true" />
@@ -214,7 +214,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83415" name="Golden Chestnut" additionalName="Event" type="EtcItem">
+	<item id="83415" name="黃金栗子" additionalName="Event" type="EtcItem">
 		<!-- A rare chestnut from the Miraculous Chestnut Tree. They say, it brings luck to the one who finds it!. <How to use>. Can be exchanged for a reward in the 'Golden Chestnuts' section of the event craft. -->
 		<set name="icon" val="icon.ev_21th_chestnut_02" />
 		<set name="immediate_effect" val="true" />
@@ -224,7 +224,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83416" name="Rotten Chestnut" additionalName="Event" type="EtcItem">
+	<item id="83416" name="腐爛栗子" additionalName="Event" type="EtcItem">
 		<!-- A rotten chestnut from the Miraculous Chestnut Tree. Smells really bad. <How to use>. Can be exchanged for a reward in the 'Rotten Chestnuts' section of the event craft. -->
 		<set name="icon" val="icon.ev_21th_chestnut_03" />
 		<set name="immediate_effect" val="true" />
@@ -234,7 +234,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83417" name="Snowmen Defense Ticket" additionalName="Event" type="EtcItem">
+	<item id="83417" name="雪人攻防入場券" additionalName="Event" type="EtcItem">
 		<!-- A ticket for participating in the Snowmen Defense. <How to use>. Talk to the 21st Anniversary Event Manager Annie. <Acquisition>. 1. Completing daily/ weekly clan missions. 2. The 'Rotten Chestnuts' section of the event craft. -->
 		<set name="icon" val="icon.ticket_of_additional_pledge_raid" />
 		<set name="immediate_effect" val="true" />
@@ -244,7 +244,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83418" name="Kasha Orc Victory Certificate - Rescue the Captives" type="EtcItem">
+	<item id="83418" name="卡沙獸人攻略憑證-救出半獸人村莊人質" type="EtcItem">
 		<!-- Verifies that you have completed the main quest 'Rescue the Captives'. <Acquisition>. Complete the main quest 'Rescue the Captives'. -->
 		<set name="icon" val="icon.etc_coins_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -256,7 +256,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83419" name="Kasha Orc Victory Certificate - Totem Spirits' Trial" type="EtcItem">
+	<item id="83419" name="卡沙獸人攻略憑證-圖騰靈試驗" type="EtcItem">
 		<!-- Verifies that you have completed the main quest 'Totem Spirits' Trial'. <Acquisition>. Complete the main quest 'Totem Spirits' Trial'. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -268,7 +268,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83420" name="Kasha Orc Victory Certificate - Kasha Orcs' Secret Base" type="EtcItem">
+	<item id="83420" name="卡沙獸人攻略憑證-潛入卡沙獸人秘密基地" type="EtcItem">
 		<!-- Verifies that you have completed the 'Kasha Orcs' Secret Base' main quest. <Acquisition>. Complete the 'Kasha Orcs' Secret Base' main quest. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -280,7 +280,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83421" name="Freya's Cloak" additionalName="Event" type="EtcItem">
+	<item id="83421" name="芙蕾雅斗篷" additionalName="Event" type="EtcItem">
 		<!-- A frost-covered cloak of Ice Queen Freya. A long time ago Elder Sayan's crystal ball shattered. Its power was released and turned Princess Maliss into the Ice Queen. Since then she has been calling herself Freya, the Ice Queen. -->
 		<set name="icon" val="icon.freya_cape" />
 		<set name="immediate_effect" val="true" />
@@ -290,7 +290,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83422" name="Freya's Necklace" additionalName="Event" type="EtcItem">
+	<item id="83422" name="芙蕾雅項鍊" additionalName="Event" type="EtcItem">
 		<!-- A frost-covered necklace of Ice Queen Freya. Kanna's knights swore to turn the Ice Queen back into Maliss and renamed themselves into Jinia Guild. After that, throughout the ages every guild leader changed their name to Jinia. -->
 		<set name="icon" val="icon.freya_necklace" />
 		<set name="immediate_effect" val="true" />
@@ -300,7 +300,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83423" name="Freya's Staff" additionalName="Event" type="EtcItem">
+	<item id="83423" name="芙蕾雅魔杖" additionalName="Event" type="EtcItem">
 		<!-- A frost-covered staff of Ice Queen Freya. The Ice Queen's real name is Maliss. She is from the Elmoreden's imperial dynasty. Even as a child, the princess showed strong magic potential. -->
 		<set name="icon" val="icon.freya_stick" />
 		<set name="immediate_effect" val="true" />
@@ -310,7 +310,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83424" name="Freya's Crown" additionalName="Event" type="EtcItem">
+	<item id="83424" name="芙蕾雅王冠" additionalName="Event" type="EtcItem">
 		<!-- A frost-covered crown of Ice Queen Freya. After being exiled from the Ivory Tower, Maliss settled in the Summer Labyrinth with her loyal Kanna's knights. -->
 		<set name="icon" val="icon.freya_crown" />
 		<set name="immediate_effect" val="true" />
@@ -320,7 +320,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83425" name="Freya's Shining Jewelry Box" additionalName="Event" type="EtcItem">
+	<item id="83425" name="芙蕾雅閃耀寶石盒" additionalName="Event" type="EtcItem">
 		<!-- A frost-covered jewelry box with Freya's treasures. Double-click to obtain Freya's Cloak, Freya's Necklace, Freya's Staff, and Freya's Crown. -->
 		<set name="icon" val="icon.ev_icebox_02" />
 		<set name="default_action" val="PEEL" />
@@ -338,7 +338,7 @@
 			<item id="83424" min="1" max="1" chance="100" /> <!-- Freya's Crown - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83426" name="21st Anniversary Kit" additionalName="Event" type="EtcItem">
+	<item id="83426" name="21週年紀念包裹" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Swift Growth Cookie (300 pcs.), Sealed Fire Source Pack (25 pcs.) (5 pcs.), Divine Fire Pack (10 pcs.) (5 pcs.), Fire Orb Pack (100 pcs.) (5 pcs.), Homunculus' Shiny Hourglass (15 pcs.), Solaris (25 pcs.), Shining Relic Summon Coupon - 11-time (3 pcs.), Augmenting Stone Pack (10 pcs.), Chaos Crystal (1 pc.), Tales of Dimensions (300 pcs.). -->
 		<set name="icon" val="icon.etc_candy_basket_i04_1" />
 		<set name="default_action" val="PEEL" />
@@ -349,7 +349,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83427" name="Chaos Crystal" additionalName="Event" type="EtcItem">
+	<item id="83427" name="渾沌結晶" additionalName="Event" type="EtcItem">
 		<!-- A 21st anniversary mark. Can be added to a collection. -->
 		<set name="icon" val="icon.energy_condenser_i01" />
 		<set name="immediate_effect" val="true" />
@@ -359,7 +359,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83428" name="Freya's Shopping Bag" type="EtcItem">
+	<item id="83428" name="芙蕾雅的禮物袋" type="EtcItem">
 		<!-- Double-click to obtain Freya's Scroll of Blessing and Freya's Lucky Pack (1 pc.). -->
 		<set name="icon" val="icon.bm_freya_bag" />
 		<set name="default_action" val="PEEL" />
@@ -378,7 +378,7 @@
 			<item id="82295" min="2" max="2" chance="20" /> <!-- Freya's Scroll of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="83429" name="Freya's Lucky Pack" type="EtcItem">
+	<item id="83429" name="芙蕾雅幸運箱" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -444,7 +444,7 @@
 			<item id="81444" min="1" max="1" chance="1.923077" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83430" name="Freya Shaper" type="Weapon">
+	<item id="83430" name="芙蕾雅鉋刀" type="Weapon">
 		<!-- Freya Shaper -->
 		<set name="icon" val="icon.frozen_weapon_dagger" />
 		<set name="default_action" val="EQUIP" />
@@ -469,7 +469,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83431" name="Freya Cutter" type="Weapon">
+	<item id="83431" name="芙蕾雅切刃" type="Weapon">
 		<!-- Freya Cutter -->
 		<set name="icon" val="icon.frozen_weapon_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -495,7 +495,7 @@
 			<stat type="rEvas">4E-08</stat>
 		</stats>
 	</item>
-	<item id="83432" name="Freya Slasher" type="Weapon">
+	<item id="83432" name="芙蕾雅殺刃" type="Weapon">
 		<!-- Freya Slasher -->
 		<set name="icon" val="icon.frozen_weapon_two_hand_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -521,7 +521,7 @@
 			<stat type="rEvas">4E-08</stat>
 		</stats>
 	</item>
-	<item id="83433" name="Freya Avenger" type="Weapon">
+	<item id="83433" name="芙蕾雅復仇者" type="Weapon">
 		<!-- Freya Avenger -->
 		<set name="icon" val="icon.frozen_weapon_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -547,7 +547,7 @@
 			<stat type="rEvas">8E-08</stat>
 		</stats>
 	</item>
-	<item id="83434" name="Freya Fighter" type="Weapon">
+	<item id="83434" name="芙蕾雅戰爪" type="Weapon">
 		<!-- Freya Fighter -->
 		<set name="icon" val="icon.frozen_weapon_dualfist" />
 		<set name="default_action" val="EQUIP" />
@@ -573,7 +573,7 @@
 			<stat type="rEvas">8E-08</stat>
 		</stats>
 	</item>
-	<item id="83435" name="Freya Stormer" type="Weapon">
+	<item id="83435" name="芙蕾雅風暴者" type="Weapon">
 		<!-- Freya Stormer -->
 		<set name="icon" val="icon.frozen_weapon_pole" />
 		<set name="default_action" val="EQUIP" />
@@ -602,7 +602,7 @@
 			<stat type="rEvas">4E-08</stat>
 		</stats>
 	</item>
-	<item id="83436" name="Freya Thrower" type="Weapon">
+	<item id="83436" name="芙蕾雅投弓" type="Weapon">
 		<!-- Freya Thrower -->
 		<set name="icon" val="icon.frozen_weapon_bow" />
 		<set name="default_action" val="EQUIP" />
@@ -627,7 +627,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="83437" name="Freya Guardian" type="Weapon">
+	<item id="83437" name="芙蕾雅射靈" type="Weapon">
 		<!-- Freya Guardian -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -652,7 +652,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="83438" name="Freya Buster" type="Weapon">
+	<item id="83438" name="芙蕾雅爆刃" type="Weapon">
 		<!-- Freya Buster -->
 		<set name="icon" val="icon.frozen_weapon_rapier" />
 		<set name="default_action" val="EQUIP" />
@@ -679,7 +679,7 @@
 			<stat type="rEvas">4E-08</stat>
 		</stats>
 	</item>
-	<item id="83439" name="Freya Caster" type="Weapon">
+	<item id="83439" name="芙蕾雅術杖" type="Weapon">
 		<!-- Freya Caster -->
 		<set name="icon" val="icon.frozen_weapon_staff" />
 		<set name="default_action" val="EQUIP" />
@@ -706,7 +706,7 @@
 			<stat type="rEvas">8E-08</stat>
 		</stats>
 	</item>
-	<item id="83440" name="Freya Retributer" type="Weapon">
+	<item id="83440" name="芙蕾雅報恨者" type="Weapon">
 		<!-- Freya Retributer -->
 		<set name="icon" val="icon.frozen_weapon_two_hand_staff" />
 		<set name="default_action" val="EQUIP" />
@@ -733,7 +733,7 @@
 			<stat type="rEvas">8E-08</stat>
 		</stats>
 	</item>
-	<item id="83441" name="Freya Dual Swords" type="Weapon">
+	<item id="83441" name="芙蕾雅雙刀" type="Weapon">
 		<!-- Freya Dual Swords -->
 		<set name="icon" val="icon.frozen_weapon_dual_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -759,7 +759,7 @@
 			<stat type="rEvas">4E-08</stat>
 		</stats>
 	</item>
-	<item id="83442" name="Freya Dual Daggers" type="Weapon">
+	<item id="83442" name="芙蕾雅雙匕首" type="Weapon">
 		<!-- Freya Dual Daggers -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -784,7 +784,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83443" name="Freya Dual Blunt Weapons" type="Weapon">
+	<item id="83443" name="芙蕾雅雙鈍器" type="Weapon">
 		<!-- Freya Dual Blunt Weapons -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -810,7 +810,7 @@
 			<stat type="rEvas">8E-08</stat>
 		</stats>
 	</item>
-	<item id="83444" name="Relic Summon Coupon - Freya Shaper/ Dual Daggers (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83444" name="芙蕾雅殺刃/雙匕首遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Shaper/ Dual Daggers (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -821,7 +821,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83445" name="Relic Summon Coupon - Freya Cutter (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83445" name="芙蕾雅切刃遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Cutter (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -832,7 +832,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83446" name="Relic Summon Coupon - Freya Slasher (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83446" name="芙蕾雅殺刃遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Slasher (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -843,7 +843,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83447" name="Relic Summon Coupon - Freya Avenger (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83447" name="芙蕾雅復仇者遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Avenger (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -854,7 +854,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83448" name="Relic Summon Coupon - Freya Fighter (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83448" name="芙蕾雅戰爪遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Fighter (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -865,7 +865,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83449" name="Relic Summon Coupon - Freya Stormer (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83449" name="芙蕾雅風暴者遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Stormer (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -876,7 +876,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83450" name="Relic Summon Coupon - Freya Thrower/ Guardian (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83450" name="芙蕾雅投弓/射靈遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Thrower/ Guardian (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -887,7 +887,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83451" name="Relic Summon Coupon - Freya Buster (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83451" name="芙蕾雅爆刃遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Buster (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -898,7 +898,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83452" name="Relic Summon Coupon - Freya Caster (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83452" name="芙蕾雅術杖遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Caster (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -909,7 +909,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83453" name="Relic Summon Coupon - Freya Retributer (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83453" name="芙蕾雅報恨者遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Retributer (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -920,7 +920,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83454" name="Relic Summon Coupon - Freya Dual Swords/ Dual Blunt Weapons (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83454" name="芙蕾雅雙刀/雙鈍器遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- <font color=ff6666><Cannot be sold></font>. Double-click to obtain Relic - Freya Dual Swords/ Dual Blunt Weapons (A-grade). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -931,7 +931,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83455" name="Freya's Relic Coupon" type="EtcItem">
+	<item id="83455" name="芙蕾雅遺物交換券" type="EtcItem">
 		<!-- Can be exchanged for a Freya relic of your choice. <Items for exchange>. Relic Summon Coupon - Freya Shaper/ Dual Daggers (1-time). Relic Summon Coupon - Freya Cutter (1-time). Relic Summon Coupon - Freya Slasher (1-time). Relic Summon Coupon - Freya Avenger (1-time). Relic Summon Coupon - Freya Fighter (1-time). Relic Summon Coupon - Freya Stormer (1-time). Relic Summon Coupon - Freya Thrower/ Guardian (1-time). Relic Summon Coupon - Freya Buster (1-time). Relic Summon Coupon - Freya Caster (1-time). Relic Summon Coupon - Freya Retributer (1-time). Relic Summon Coupon - Freya Dual Swords/ Dual Blunt Weapons (1-time) -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="immediate_effect" val="true" />
@@ -941,7 +941,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83456" name="Supply Coupon" type="EtcItem">
+	<item id="83456" name="消耗品交換券" type="EtcItem">
 		<!-- Can be exchanged for the following items (at choice). <Items for exchange>. Freya's Ice Rose. Glowing Dragon's Attribute Potion. Honey Dark Beer. Nevit's Shining Gold Hourglass. Freya's Scroll of Storm. Wondrous Cocktail. Freya's Royal Ice Rose. Glowing Royal Dragon's Attribute Potion. Royal Honey Dark Beer. Nevit's Shining Royal Gold Hourglass -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
@@ -950,7 +950,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83457" name="Tower of Insolence's Time Stone" additionalName="Event" type="EtcItem">
+	<item id="83457" name="傲慢之塔時間充能石" additionalName="Event" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time in the Tower of Insolence. Required level: 110+. -->
 		<set name="icon" val="icon.timezone_refill_oman_a_60" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -961,7 +961,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83458" name="Challenge Pack: Enhanced Rune Stone" additionalName="Event" type="EtcItem">
+	<item id="83458" name="高級古文石挑戰禮盒" additionalName="Event" type="EtcItem">
 		<!-- When used, there is a low chance to obtain Enhanced Rune Stone. Success rate:. Enhanced Rune Stone (1 pc.) - 1%. Aether (500 pcs.) - 99% -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -979,7 +979,7 @@
 			<item id="82356" min="1" max="1" chance="50" /> <!-- Enhanced Rune Stone -->
 		</capsuled_items>
 	</item>
-	<item id="83459" name="Challenge Pack: Golden Orb" additionalName="Event" type="EtcItem">
+	<item id="83459" name="黃金珠挑戰禮盒" additionalName="Event" type="EtcItem">
 		<!-- When used, there is a low chance to obtain Golden Orb. Success rate:. Golden Orb (1 pc.) - 2%. Aether (500 pcs.) - 98% -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -997,7 +997,7 @@
 			<item id="82766" min="1" max="1" chance="50" /> <!-- Golden Orb - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83460" name="Chaos Augmenting Stone: Weapon/ Armor" type="EtcItem">
+	<item id="83460" name="渾沌武器/防具精煉石" type="EtcItem">
 		<!-- A rare mineral imbued with the power of Chaos. Key material for augmenting Dragon/ Bloodstained Zariche and Akamanah/ Trinity weapons. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_L_grade_wp_am" />
 		<set name="immediate_effect" val="true" />
@@ -1005,7 +1005,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83461" name="Chaos Augmenting Stone: Weapon/ Armor" additionalName="Event" type="EtcItem">
+	<item id="83461" name="渾沌武器/防具精煉石" additionalName="Event" type="EtcItem">
 		<!-- A rare mineral imbued with the power of Chaos. Key material for augmenting Dragon/ Bloodstained Zariche and Akamanah/ Trinity weapons. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_L_grade_wp_am" />
 		<set name="immediate_effect" val="true" />
@@ -1015,7 +1015,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83462" name="Chaos Augmenting Stone: Accessory" type="EtcItem">
+	<item id="83462" name="渾沌飾品精煉石" type="EtcItem">
 		<!-- Will be added later. -->
 		<set name="icon" val="icon.renewal_mineral_L_grade_acc" />
 		<set name="immediate_effect" val="true" />
@@ -1023,7 +1023,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83463" name="Chaos Augmenting Stone: Accessory" additionalName="Event" type="EtcItem">
+	<item id="83463" name="渾沌飾品精煉石" additionalName="Event" type="EtcItem">
 		<!-- Will be added later. -->
 		<set name="icon" val="icon.renewal_mineral_L_grade_acc" />
 		<set name="immediate_effect" val="true" />
@@ -1033,7 +1033,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83464" name="Chaos Augmenting Stone: Silvery Accessory" type="EtcItem">
+	<item id="83464" name="渾沌艾勒傑特精煉石" type="EtcItem">
 		<!-- Will be added later. -->
 		<set name="icon" val="icon.renewal_mineral_L_grade_argent" />
 		<set name="immediate_effect" val="true" />
@@ -1041,7 +1041,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83465" name="Chaos Augmenting Stone: Silvery Accessory" additionalName="Event" type="EtcItem">
+	<item id="83465" name="渾沌艾勒傑特精煉石" additionalName="Event" type="EtcItem">
 		<!-- Will be added later. -->
 		<set name="icon" val="icon.renewal_mineral_L_grade_argent" />
 		<set name="immediate_effect" val="true" />
@@ -1051,7 +1051,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83466" name="Pack of Triumph over Kasha's Avatar Atrus" type="EtcItem">
+	<item id="83466" name="擊倒卡沙賢臣 亞特魯斯的功勞禮盒" type="EtcItem">
 		<!-- A trophy for characters that have dealt enough damage during the Kasha's Avatar Atrus raid. Double-click to obtain Chaos Aether (5 pcs.), Orc's Blood Tainted by Chaos (10 pcs.), and Sinister Energy Speck (80 pcs.) with a 100% chance. You may also get Atrus Dual Blunt Weapons and Atrus Stormer with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="PEEL" />
@@ -1073,7 +1073,7 @@
 			<item id="83392" min="80" max="80" chance="100" /> <!-- Sinister Energy Speck -->
 		</capsuled_items>
 	</item>
-	<item id="83467" name="Kasha's Avatar Atrus' Final Blow Reward Pack" type="EtcItem">
+	<item id="83467" name="卡沙賢臣 亞特魯斯最後一擊獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has landed the last hit on Kasha's Avatar Atrus among those that are eligible for the contribution reward. Double-click to obtain Chaos Aether (3 pcs.), Orc's Blood Tainted by Chaos (10 pcs.), Sinister Energy Speck (80 pcs.) with a 100% chance. You may also get Atrus Dual Blunt Weapons, Atrus Stormer, and Atrus' Heart with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1096,7 +1096,7 @@
 			<item id="83392" min="80" max="80" chance="100" /> <!-- Sinister Energy Speck -->
 		</capsuled_items>
 	</item>
-	<item id="83468" name="Kasha's Avatar Atrus' Damage Reward Pack - 1st Place" type="EtcItem">
+	<item id="83468" name="卡沙賢臣 亞特魯斯傷害量第1名功勞禮盒" type="EtcItem">
 		<!-- A trophy for the character that has dealt the most damage among those that are eligible for the contribution reward. Double-click to obtain Chaos Aether (5 pcs.), Orc's Blood Tainted by Chaos (30 pcs.), Sinister Energy Speck (240 pcs.) with a 100% chance as well as Atrus Dual Blunt Weapons, Atrus Stormer, and Atrus' Heart with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1119,7 +1119,7 @@
 			<item id="83392" min="240" max="240" chance="100" /> <!-- Sinister Energy Speck -->
 		</capsuled_items>
 	</item>
-	<item id="83469" name="Kasha's Avatar Atrus' Damage Reward Pack - 2nd Place" type="EtcItem">
+	<item id="83469" name="卡沙賢臣 亞特魯斯傷害量第2名功勞禮盒" type="EtcItem">
 		<!-- A trophy for the character that has dealt the second-most damage among those that are eligible for the contribution reward. Double-click to obtain Chaos Aether (4 pcs.), Orc's Blood Tainted by Chaos (20 pcs.), Sinister Energy Speck (160 pcs.) with a 100% chance as well as Atrus Dual Blunt Weapons, Atrus Stormer, and Atrus' Heart with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1142,7 +1142,7 @@
 			<item id="83392" min="160" max="160" chance="100" /> <!-- Sinister Energy Speck -->
 		</capsuled_items>
 	</item>
-	<item id="83470" name="Kasha's Avatar Atrus' Damage Reward Pack - 3rd-10th Place" type="EtcItem">
+	<item id="83470" name="卡沙賢臣 亞特魯斯傷害量第3~10名功勞禮盒" type="EtcItem">
 		<!-- A trophy for characters that have dealt the third-most to tenth-most damage among those that are eligible for the contribution reward. Double-click to obtain Chaos Aether (3 pcs.), Orc's Blood Tainted by Chaos (10 pcs.), Sinister Energy Speck (80 pcs.) with a 100% chance as well as Atrus Dual Blunt Weapons, Atrus Stormer, and Atrus' Heart with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1165,7 +1165,7 @@
 			<item id="83392" min="80" max="80" chance="100" /> <!-- Sinister Energy Speck -->
 		</capsuled_items>
 	</item>
-	<item id="83471" name="Blood Rune Tainted by Chaos" type="EtcItem">
+	<item id="83471" name="被渾沌蠶食的血古文" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. You feel no energy from it. <font color=EEAA22><Upgrade></font>. Compound with Condensed Energy Speck. <font color=ECECEC><Acquisition></font>. Craft - Content -->
 		<set name="icon" val="icon.kasha_boss_reward_lune" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1176,7 +1176,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83472" name="Blood Rune Tainted by Chaos" additionalName="Lv. 1" type="EtcItem">
+	<item id="83472" name="被渾沌蠶食的血古文" additionalName="Lv. 1" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. You feel no energy from it. <font color=EEAA22><Upgrade></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1187,7 +1187,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83473" name="Blood Rune Tainted by Chaos" additionalName="Lv. 2" type="EtcItem">
+	<item id="83473" name="被渾沌蠶食的血古文" additionalName="Lv. 2" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. You feel no energy from it. <font color=EEAA22><Upgrade></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1198,7 +1198,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83474" name="Blood Rune Tainted by Chaos" additionalName="Lv. 3" type="EtcItem">
+	<item id="83474" name="被渾沌蠶食的血古文" additionalName="Lv. 3" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><Effect against monsters when in inventory></font>. When fighting Kasha Orcs and Baluan's creatures, acquired XP/ SP +10%. <font color=EEAA22><Upgrade></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_3" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1213,7 +1213,7 @@
 			<skill id="37156" level="1" /> <!-- Blood Energy Filled with Freed Chaos Lv. 1 -->
 		</skills>
 	</item>
-	<item id="83475" name="Blood Rune Tainted by Chaos" additionalName="Lv. 4" type="EtcItem">
+	<item id="83475" name="被渾沌蠶食的血古文" additionalName="Lv. 4" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><Effect against monsters when in inventory></font>. When fighting Kasha Orcs and Baluan's creatures, acquired XP/ SP +10%. <font color=EEAA22><Upgrade></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_3" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1228,7 +1228,7 @@
 			<skill id="37156" level="1" /> <!-- Blood Energy Filled with Freed Chaos Lv. 1 -->
 		</skills>
 	</item>
-	<item id="83476" name="Blood Rune Tainted by Chaos" additionalName="Lv. 5" type="EtcItem">
+	<item id="83476" name="被渾沌蠶食的血古文" additionalName="Lv. 5" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><When in inventory, against certain monsters></font>. When fighting Kasha Orcs and Baluan's Creatures, acquired XP/ SP +10%, damage +10%, received damage -10%. <font color=ff6666><When in inventory, when undergoing a certain quest></font>. When attacking the targets of the 'Kasha Orcs - Ancient War Spirits' quest, all Critical Rate +20%, damage +30%, received damage -10%. <font color=EEAA22><Enhancing></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_5" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1243,7 +1243,7 @@
 			<skill id="37156" level="2" /> <!-- Blood Energy Filled with Freed Chaos Lv. 2 -->
 		</skills>
 	</item>
-	<item id="83477" name="Blood Rune Tainted by Chaos" additionalName="Lv. 6" type="EtcItem">
+	<item id="83477" name="被渾沌蠶食的血古文" additionalName="Lv. 6" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><When in inventory, against certain monsters></font>. When fighting Kasha Orcs and Baluan's Creatures, acquired XP/ SP +10%, damage +10%, received damage -10%. <font color=ff6666><When in inventory, when undergoing a certain quest></font>. When attacking the targets of the 'Kasha Orcs - Ancient War Spirits' quest, all Critical Rate +20%, damage +30%, received damage -10%. <font color=EEAA22><Enhancing></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_5" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1258,7 +1258,7 @@
 			<skill id="37156" level="2" /> <!-- Blood Energy Filled with Freed Chaos Lv. 2 -->
 		</skills>
 	</item>
-	<item id="83478" name="Blood Rune Tainted by Chaos" additionalName="Lv. 7" type="EtcItem">
+	<item id="83478" name="被渾沌蠶食的血古文" additionalName="Lv. 7" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><When in inventory, against certain monsters></font>. When fighting Kasha Orcs and Baluan's Creatures, acquired XP/ SP +20%, damage +10%, received damage -10%. <font color=ff6666><When in inventory></font>. All attack power +5%. <font color=ff6666><When in inventory, when undergoing a certain quest></font>. When attacking the targets of the 'Kasha Orcs - Ancient War Spirits' quest, all Critical Rate +30%, damage +40%, received damage -20%. <font color=EEAA22><Enhancing></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_7" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1273,7 +1273,7 @@
 			<skill id="37156" level="3" /> <!-- Blood Energy Filled with Freed Chaos Lv. 3 -->
 		</skills>
 	</item>
-	<item id="83479" name="Blood Rune Tainted by Chaos" additionalName="Lv. 8" type="EtcItem">
+	<item id="83479" name="被渾沌蠶食的血古文" additionalName="Lv. 8" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><When in inventory, against certain monsters></font>. When fighting Kasha Orcs and Baluan's Creatures, acquired XP/ SP +20%, damage +10%, received damage -10%. <font color=ff6666><When in inventory></font>. All attack power +5%. <font color=ff6666><When in inventory, when undergoing a certain quest></font>. When attacking the targets of the 'Kasha Orcs - Ancient War Spirits' quest, all Critical Rate +30%, damage +40%, received damage -20%. <font color=EEAA22><Enhancing></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_7" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1288,7 +1288,7 @@
 			<skill id="37156" level="3" /> <!-- Blood Energy Filled with Freed Chaos Lv. 3 -->
 		</skills>
 	</item>
-	<item id="83480" name="Blood Rune Tainted by Chaos" additionalName="Lv. 9" type="EtcItem">
+	<item id="83480" name="被渾沌蠶食的血古文" additionalName="Lv. 9" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><When in inventory, against certain monsters></font>. When fighting Kasha Orcs and Baluan's Creatures, acquired XP/ SP +35%, damage +15%, received damage -15%. <font color=ff6666><When in inventory></font>. All attack power +7%. <font color=ff6666><When in inventory, when undergoing a certain quest></font>. When attacking the targets of the 'Kasha Orcs - Ancient War Spirits' quest, all Critical Rate +40%, damage +50%, received damage -30%. <font color=EEAA22><Enhancing></font>. Compound with Condensed Energy Speck. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_9" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1303,7 +1303,7 @@
 			<skill id="37156" level="4" /> <!-- Blood Energy Filled with Freed Chaos Lv. 4 -->
 		</skills>
 	</item>
-	<item id="83481" name="Blood Rune Tainted by Chaos" additionalName="Lv. 10" type="EtcItem">
+	<item id="83481" name="被渾沌蠶食的血古文" additionalName="Lv. 10" type="EtcItem">
 		<!-- A rune soaked in the blood of creatures corrupted by Chaos. <font color=ff6666><When in inventory, against certain monsters></font>. When fighting Kasha Orcs and Baluan's Creatures, acquired XP/ SP +50%, damage +20%, received damage -20%. <font color=ff6666><When in inventory></font>. All attack power +10%. <font color=ff6666><When in inventory, when undergoing a certain quest></font>. When attacking the targets of the 'Kasha Orcs - Ancient War Spirits' quest, all Critical Rate +40%, damage +50%, received damage -30%. -->
 		<set name="icon" val="icon.kasha_boss_reward_lune_10" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1318,7 +1318,7 @@
 			<skill id="37156" level="5" /> <!-- Blood Energy Filled with Freed Chaos Lv. 5 -->
 		</skills>
 	</item>
-	<item id="83482" name="Atrus Dual Blunt Weapons" type="EtcItem">
+	<item id="83482" name="亞特魯斯雙鈍器" type="EtcItem">
 		<!-- Kasha's Avatar Atrus' weapon. Can be added to a collection. <Acquisition>. Defeat the field boss Atrus. -->
 		<set name="icon" val="icon.kasha_boss_dual_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -1326,7 +1326,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83483" name="Atrus Stormer" type="EtcItem">
+	<item id="83483" name="亞特魯斯風暴者" type="EtcItem">
 		<!-- Kasha's Avatar Atrus' weapon. Can be added to a collection. <Acquisition>. Defeat the field boss Atrus. -->
 		<set name="icon" val="icon.kasha_boss_dual_stomer" />
 		<set name="immediate_effect" val="true" />
@@ -1334,7 +1334,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83484" name="Atrus' Heart" type="EtcItem">
+	<item id="83484" name="亞特魯斯之心" type="EtcItem">
 		<!-- Kasha's Avatar Atrus' heart filled with the energy of Chaos. Can be added to a collection. <Acquisition>. Defeat the field boss Atrus. -->
 		<set name="icon" val="icon.kasha_boss_heart" />
 		<set name="immediate_effect" val="true" />
@@ -1342,7 +1342,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83485" name="Condensed Energy Speck" type="EtcItem">
+	<item id="83485" name="凝聚氣息的破片" type="EtcItem">
 		<!-- Emanates the powerful energy of Chaos. <How to use>. Can be used for upgrading Blood Rune Tainted by Chaos. <Acquisition>. Craft - Content -->
 		<set name="icon" val="icon.etc_piece_of_power_01" />
 		<set name="immediate_effect" val="true" />
@@ -1350,7 +1350,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83486" name="Superior Ruby Lv. 10" additionalName="10-day" type="Armor">
+	<item id="83486" name="最高級紅寶石10階段" additionalName="10-day" type="Armor">
 		<!-- Soulshot/ Beast Soulshot damage +23%, P. Atk. +25%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1364,7 +1364,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="14400" />
 	</item>
-	<item id="83487" name="Superior Sapphire Lv. 10" additionalName="10-day" type="Armor">
+	<item id="83487" name="最高級藍寶石10階段" additionalName="10-day" type="Armor">
 		<!-- Spiritshot/ Blessed Spiritshot damage +23%, M. Atk. +30%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1378,7 +1378,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="14400" />
 	</item>
-	<item id="83488" name="Superior Red Cat's Eye Lv. 10" additionalName="10-day" type="Armor">
+	<item id="83488" name="最高級緋金綠寶石10階段" additionalName="10-day" type="Armor">
 		<!-- Critical Damage for basic attacks +25%, P. Skill Critical Damage +25%, Power of basic attacks and P. skills +10%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1392,7 +1392,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="14400" />
 	</item>
-	<item id="83489" name="Superior Blue Cat's Eye Lv. 10" additionalName="10-day" type="Armor">
+	<item id="83489" name="最高級靛金綠寶石10階段" additionalName="10-day" type="Armor">
 		<!-- M. Skill Critical Damage +25%, M. Skill Power +10%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1406,7 +1406,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="14400" />
 	</item>
-	<item id="83490" name="Christmas Snowball" additionalName="Event" type="EtcItem">
+	<item id="83490" name="聖誕雪球" additionalName="Event" type="EtcItem">
 		<!-- Happy New Year!. <How to use>. Throw this Snowball at Santa Claus to get New Year gifts. -->
 		<set name="icon" val="icon.ev_2023_christmas_gift" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1418,7 +1418,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83491" name="Blue Snake's Rune" additionalName="Event" type="EtcItem">
+	<item id="83491" name="藍蛇古文" additionalName="Event" type="EtcItem">
 		<!-- A rune filled with the energy of Blue Snake, the symbol of 2025. Acquired XP/ SP +20%. With a certain chance, summons Blue Snake with a reward on killing a common monster. <Blue Snake's rewards>. Mutant Stakato Crog's Unidentified Fang. Unidentified Stakato Tooth. Stakato Queen's Unidentified Heart. Selenite. Tales of Aden. Blue Snake's Scroll -->
 		<set name="icon" val="icon.ev_2025_newyear_rune" />
 		<set name="immediate_effect" val="true" />
@@ -1428,7 +1428,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83492" name="Blue Snake's Coin" additionalName="Event" type="EtcItem">
+	<item id="83492" name="藍蛇鑄幣" additionalName="Event" type="EtcItem">
 		<!-- A coin filled with the energy of Blue Snake, the symbol of 2025. <How to use>. Can be exchanged for various items through Blue Snake or used as a material for the event craft. -->
 		<set name="icon" val="icon.ev_2025_newyear_coin" />
 		<set name="immediate_effect" val="true" />
@@ -1436,7 +1436,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83493" name="Blue Snake Doll" additionalName="Event" type="EtcItem">
+	<item id="83493" name="藍蛇人偶" additionalName="Event" type="EtcItem">
 		<!-- A doll filled with the energy of Blue Snake, the symbol of 2025. <How to use>. Can be used as a material for the event craft. -->
 		<set name="icon" val="icon.blue_snake_doll_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1446,7 +1446,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83494" name="Einhasad's Blessing Pack" type="EtcItem">
+	<item id="83494" name="殷海薩祝福禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1519,7 +1519,7 @@
 			<item id="81444" min="1" max="1" chance="1.694915" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83495" name="Sinister Totem" type="EtcItem">
+	<item id="83495" name="不吉的圖騰" type="EtcItem">
 		<!-- A totem carried around by Kasha Orcs from the Kasha Orc Fortress. It is imbued with evil energy. -->
 		<set name="icon" val="icon.etc_ominous_totem" />
 		<set name="immediate_effect" val="true" />
@@ -1532,7 +1532,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="83496" name="Faded Legendary Orc Rune" type="EtcItem">
+	<item id="83496" name="褪色的半獸人傳說古文" type="EtcItem">
 		<!-- A special rune revered by all of the Orc tribes. A legendary rune can be enhanced with Scarlet Crystals that started to appear after the whole Aden has been shrouded in the Scarlet Aura. Many think that it has something to do with the returning of Akkan. <font color=ff6666><When in inventory></font>. No effect. <font color=EEAA22><Enhancement></font>. Compound with Scarlet Crystals. -->
 		<set name="icon" val="icon.ev_season_orc_legend_lune" />
 		<set name="immediate_effect" val="true" />
@@ -1542,7 +1542,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="83497" name="Faded Legendary Orc Rune" additionalName="Lv. 1" type="EtcItem">
+	<item id="83497" name="褪色的半獸人傳說古文" additionalName="Lv. 1" type="EtcItem">
 		<!-- A special rune revered by all of the Orc tribes. A legendary rune can be enhanced with Scarlet Crystals that started to appear after the whole Aden has been shrouded in the Scarlet Aura. Many think that it has something to do with the returning of Akkan. <font color=ff6666><When in inventory></font>. Weapon P. Atk. +3. Weapon M. Atk. +3. <font color=EEAA22><Enhancement></font>. Compound with Scarlet Crystals. -->
 		<set name="icon" val="icon.ev_season_orc_legend_lune" />
 		<set name="immediate_effect" val="true" />
@@ -1553,7 +1553,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="83498" name="Faded Legendary Orc Rune" additionalName="Lv. 2" type="EtcItem">
+	<item id="83498" name="褪色的半獸人傳說古文" additionalName="Lv. 2" type="EtcItem">
 		<!-- A special rune revered by all of the Orc tribes. A legendary rune can be enhanced with Scarlet Crystals that started to appear after the whole Aden has been shrouded in the Scarlet Aura. Many think that it has something to do with the returning of Akkan. <font color=ff6666><When in inventory></font>. Weapon P. Atk. +6. Weapon M. Atk. +6. <font color=EEAA22><Enhancement></font>. Compound with Scarlet Crystals. -->
 		<set name="icon" val="icon.ev_season_orc_legend_lune" />
 		<set name="immediate_effect" val="true" />
@@ -1564,7 +1564,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="83499" name="Faded Legendary Orc Rune" additionalName="Lv. 3" type="EtcItem">
+	<item id="83499" name="褪色的半獸人傳說古文" additionalName="Lv. 3" type="EtcItem">
 		<!-- A special rune revered by all of the Orc tribes. A legendary rune can be enhanced with Scarlet Crystals that started to appear after the whole Aden has been shrouded in the Scarlet Aura. Many think that it has something to do with the returning of Akkan. <font color=ff6666><When in inventory></font>. Weapon P. Atk. +9. Weapon M. Atk. +9. <font color=EEAA22><Enhancement></font>. Compound with Scarlet Crystals. -->
 		<set name="icon" val="icon.ev_season_orc_legend_lune" />
 		<set name="immediate_effect" val="true" />

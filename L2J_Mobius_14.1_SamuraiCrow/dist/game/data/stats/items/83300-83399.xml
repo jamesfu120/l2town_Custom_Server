@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="83300" name="Colorful Summer Slushie" additionalName="Event" type="EtcItem">
+	<item id="83300" name="彩色冰凍刨冰" additionalName="Event" type="EtcItem">
 		<!-- A refreshing drink made by the Shaved Ice Master with the Mysterious Ice Knife. Double-click to obtain various items. -->
 		<set name="icon" val="icon.etc_candy_basket_i00" />
 		<set name="default_action" val="PEEL" />
@@ -20,7 +20,7 @@
 			<item id="80797" min="8" max="8" chance="25" /> <!-- Nevit's Shining Gold Hourglass - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83301" name="Guaranteed C-grade Relic Summon Coupon - 1-time" additionalName="Event" type="EtcItem">
+	<item id="83301" name="C級遺物確定召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one C-grade relic. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv3" />
 		<set name="immediate_effect" val="true" />
@@ -31,7 +31,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83302" name="Guaranteed B-grade Relic Summon Coupon - 1-time" additionalName="Official Broadcast" type="EtcItem">
+	<item id="83302" name="B級遺物確定召喚券-1次" additionalName="Official Broadcast" type="EtcItem">
 		<!-- Double-click to obtain one B-grade relic. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv4" />
 		<set name="immediate_effect" val="true" />
@@ -42,7 +42,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83303" name="Guaranteed A-grade Relic Summon Coupon - 1-time" additionalName="Official Broadcast" type="EtcItem">
+	<item id="83303" name="A級遺物確定召喚券-1次" additionalName="Official Broadcast" type="EtcItem">
 		<!-- Double-click to obtain one A-grade relic. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -53,7 +53,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83304" name="Black Coupon Pack" additionalName="Event" type="EtcItem">
+	<item id="83304" name="黑色禮券禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive the following items. <How to get>. Black Coupon - Item Restoration (1 pc.). Black Coupon - Relic Restoration (1 pc.). Vitality Sustaining Rune (1 pc.). Freya's Scroll of Storm (300 pcs.). Solaris (10 pcs.). Homunculus' Shiny Hourglass (3 pcs.). Archangel's Grace (300 pcs.) -->
 		<set name="icon" val="icon.figure_box" />
 		<set name="default_action" val="PEEL" />
@@ -74,7 +74,7 @@
 			<item id="82903" min="10" max="10" chance="100" /> <!-- Solaris -->
 		</capsuled_items>
 	</item>
-	<item id="83305" name="Black Coupon" additionalName="Relic Compound" type="EtcItem">
+	<item id="83305" name="黑色禮券" additionalName="Relic Compound" type="EtcItem">
 		<!-- Double-click to retry a <font color=EEAA22>C-grade or B-grade</font> relic compounding. You can also <font color=EEAA22>exchange</font> the Black Coupon for other items. <font color=ff6666><Compounding></font>. C-grade Relic. B-grade Relic. <font color=ff6666><Exchange></font>. C-grade Relic Summon Coupon - 1-time -->
 		<set name="icon" val="icon.black_save_r" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -85,7 +85,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83306" name="B-grade Relic Compound Retry Coupon" additionalName="Event" type="EtcItem">
+	<item id="83306" name="B級遺物合成再挑戰券" additionalName="Event" type="EtcItem">
 		<!-- Double-click to retry a B-grade relic compounding. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv3" />
 		<set name="immediate_effect" val="true" />
@@ -95,7 +95,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83307" name="A-grade Relic Compound Retry Coupon" additionalName="Event" type="EtcItem">
+	<item id="83307" name="A級遺物合成再挑戰券" additionalName="Event" type="EtcItem">
 		<!-- Double-click to retry an A-grade relic compounding. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv4" />
 		<set name="immediate_effect" val="true" />
@@ -105,7 +105,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83308" name="Omega's Fishing Rod" type="Weapon">
+	<item id="83308" name="歐沬卡釣竿" type="Weapon">
 		<!-- A fishing rod that belongs to the host of the fishing competition Omega. Cannot be used with a Fishing Shot. Consumes Omega's Fishing Shot (1 pc.) when used. -->
 		<set name="icon" val="icon.fishing_rod04" />
 		<set name="default_action" val="EQUIP" />
@@ -127,7 +127,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="83309" name="Omega's Fishing Shot" type="EtcItem">
+	<item id="83309" name="歐沬卡漁靈彈" type="EtcItem">
 		<!-- A rare fishing shot that is consumed when using Omega's Fishing Rod. Almost guarantees a successful fishing. You can only get a limited amount of these shots so use them sparingly. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i01" />
 		<set name="default_action" val="FISHINGSHOT" />
@@ -140,7 +140,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83310" name="Jouri's Bait" type="EtcItem">
+	<item id="83310" name="丘里魚餌" type="EtcItem">
 		<!-- Simple bait prepared by Jouri for the competition. Fishing time: around 5 sec. Fishing cooldown: 15 sec. Fishing basic success rate: 40%. Success rate is almost 100% when using Omega's Fishing Shot. -->
 		<set name="icon" val="icon.ev_2024_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -151,7 +151,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83311" name="Omega's Magic Bait" type="EtcItem">
+	<item id="83311" name="歐沬卡神祕魚餌" type="EtcItem">
 		<!-- Excellent bait prepared by Omega for the competition. Fishing time: around 5 sec. Fishing cooldown: 15 sec. Fishing basic success rate: 40%. Success rate is almost 100% when using Omega's Fishing Shot. -->
 		<set name="icon" val="icon.ev_2024_lure_high" />
 		<set name="default_action" val="EQUIP" />
@@ -162,7 +162,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83312" name="Blue Stone - Session Zone" additionalName="Event" type="EtcItem">
+	<item id="83312" name="藍色石頭-時間制獵場" additionalName="Event" type="EtcItem">
 		<!-- A blue stone imbued with the power of blue water. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="immediate_effect" val="true" />
@@ -174,7 +174,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83313" name="Blue Stone - Solo Instance Zone" additionalName="Event" type="EtcItem">
+	<item id="83313" name="藍色石頭-單人即時地區" additionalName="Event" type="EtcItem">
 		<!-- A blue stone imbued with the power of blue water. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="immediate_effect" val="true" />
@@ -186,7 +186,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83314" name="Blue Stone - Party Instance Zone" additionalName="Event" type="EtcItem">
+	<item id="83314" name="藍色石頭-隊伍即時地區" additionalName="Event" type="EtcItem">
 		<!-- A blue stone imbued with the power of blue water. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="immediate_effect" val="true" />
@@ -198,7 +198,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83315" name="Blue Stone - Field Hunting Zone" additionalName="Event" type="EtcItem">
+	<item id="83315" name="藍色石頭-原野獵場" additionalName="Event" type="EtcItem">
 		<!-- A blue stone imbued with the power of blue water. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="immediate_effect" val="true" />
@@ -210,7 +210,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83316" name="Blue Stone - Tower of Insolence" additionalName="Event" type="EtcItem">
+	<item id="83316" name="藍色石頭-傲慢之塔" additionalName="Event" type="EtcItem">
 		<!-- A blue stone imbued with the power of blue water. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="immediate_effect" val="true" />
@@ -222,7 +222,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83317" name="Blue Stone - Time Rift" additionalName="Event" type="EtcItem">
+	<item id="83317" name="藍色石頭-時間龜裂" additionalName="Event" type="EtcItem">
 		<!-- A blue stone imbued with the power of blue water. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="immediate_effect" val="true" />
@@ -234,7 +234,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83318" name="Blue Energy - Swamp of Screams" additionalName="Event" type="EtcItem">
+	<item id="83318" name="藍色石頭-悲鳴的沼澤" additionalName="Event" type="EtcItem">
 		<!-- The energy of blue water. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
 		<set name="immediate_effect" val="true" />
@@ -246,7 +246,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83319" name="Blue Energy - Field Raid" additionalName="Event" type="EtcItem">
+	<item id="83319" name="藍色能量-原野獵場" additionalName="Event" type="EtcItem">
 		<!-- The energy of blue water. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
 		<set name="immediate_effect" val="true" />
@@ -258,7 +258,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83320" name="Blue Energy - Ice Queen's Castle" additionalName="Event" type="EtcItem">
+	<item id="83320" name="藍色能量-冰雪女王之城" additionalName="Event" type="EtcItem">
 		<!-- The energy of blue water. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
 		<set name="immediate_effect" val="true" />
@@ -270,7 +270,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83321" name="Blue Energy - Empress' Palace" additionalName="Event" type="EtcItem">
+	<item id="83321" name="藍色能量-皇后居所" additionalName="Event" type="EtcItem">
 		<!-- The energy of blue water. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
 		<set name="immediate_effect" val="true" />
@@ -282,7 +282,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83322" name="Blue Energy - Tower of Insolence" additionalName="Event" type="EtcItem">
+	<item id="83322" name="藍色能量-傲慢之塔" additionalName="Event" type="EtcItem">
 		<!-- The energy of blue water. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
 		<set name="immediate_effect" val="true" />
@@ -294,7 +294,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83323" name="Blue Energy - Time Rift" additionalName="Event" type="EtcItem">
+	<item id="83323" name="藍色能量-時間龜裂" additionalName="Event" type="EtcItem">
 		<!-- The energy of blue water. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
 		<set name="immediate_effect" val="true" />
@@ -306,7 +306,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83324" name="Rockfish" additionalName="Event" type="EtcItem">
+	<item id="83324" name="黑鱸魚" additionalName="Event" type="EtcItem">
 		<!-- A very tasty sea fish. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.fish_normal_i08" />
 		<set name="immediate_effect" val="true" />
@@ -316,7 +316,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83325" name="Flatfish" additionalName="Event" type="EtcItem">
+	<item id="83325" name="鰈魚" additionalName="Event" type="EtcItem">
 		<!-- A soft flatfish. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.fish_normal_i06" />
 		<set name="immediate_effect" val="true" />
@@ -326,7 +326,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83326" name="Blue Mackerel" additionalName="Event" type="EtcItem">
+	<item id="83326" name="青花魚" additionalName="Event" type="EtcItem">
 		<!-- A fish that is very good for you. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.fish_normal_i04" />
 		<set name="immediate_effect" val="true" />
@@ -336,7 +336,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83327" name="Bass" additionalName="Event" type="EtcItem">
+	<item id="83327" name="鱸魚" additionalName="Event" type="EtcItem">
 		<!-- A sea fish that is especially popular in the summer. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.fish_normal_i07" />
 		<set name="immediate_effect" val="true" />
@@ -346,7 +346,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83328" name="Mackerel Pike" additionalName="Event" type="EtcItem">
+	<item id="83328" name="秋刀魚" additionalName="Event" type="EtcItem">
 		<!-- A very agile fish that is hard to catch. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.wp_fishing1" />
 		<set name="immediate_effect" val="true" />
@@ -356,7 +356,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83329" name="Red Pargo" additionalName="Event" type="EtcItem">
+	<item id="83329" name="真鯛" additionalName="Event" type="EtcItem">
 		<!-- A red sea fish. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +366,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83330" name="Octopus" additionalName="Event" type="EtcItem">
+	<item id="83330" name="章魚" additionalName="Event" type="EtcItem">
 		<!-- The master of disguise. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.ev_2024_fish_low_01" />
 		<set name="immediate_effect" val="true" />
@@ -376,7 +376,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83331" name="Barred Knifejaw" additionalName="Event" type="EtcItem">
+	<item id="83331" name="條石鯛" additionalName="Event" type="EtcItem">
 		<!-- A beautiful striped sea fish. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.ev_2024_fish_low_02" />
 		<set name="immediate_effect" val="true" />
@@ -386,7 +386,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83332" name="Pufferfish" additionalName="Event" type="EtcItem">
+	<item id="83332" name="六班刺河豚" additionalName="Event" type="EtcItem">
 		<!-- A fish that inflates to ward off predators. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.ev_2024_fish_high_02" />
 		<set name="immediate_effect" val="true" />
@@ -396,7 +396,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83333" name="Sun-fish" additionalName="Event" type="EtcItem">
+	<item id="83333" name="曼波魚" additionalName="Event" type="EtcItem">
 		<!-- An amazing sea fish. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.ev_2024_fish_high_03" />
 		<set name="immediate_effect" val="true" />
@@ -406,7 +406,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83334" name="Piranha" additionalName="Event" type="EtcItem">
+	<item id="83334" name="食人魚" additionalName="Event" type="EtcItem">
 		<!-- A very dangerous freshwater fish. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. Note!. If piranha bites Jouri, you won't receive points, rewards, XP, and SP. -->
 		<set name="icon" val="icon.ev_2024_fish_high_04" />
 		<set name="immediate_effect" val="true" />
@@ -416,7 +416,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83335" name="Napoleon Fish" additionalName="Event" type="EtcItem">
+	<item id="83335" name="拿破崙魚" additionalName="Event" type="EtcItem">
 		<!-- One of the biggest fish to live in the coral reef. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.ev_2024_fish_high_01" />
 		<set name="immediate_effect" val="true" />
@@ -426,7 +426,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83336" name="Whale Shark" additionalName="Event" type="EtcItem">
+	<item id="83336" name="豆腐鯊" additionalName="Event" type="EtcItem">
 		<!-- The largest fish in the sea. <How to use>. Can be exchanged for competition points, rewards, XP, and SP by talking to Jouri at the event fishing dock in Giran. -->
 		<set name="icon" val="icon.ev_2024_fish_high_05" />
 		<set name="immediate_effect" val="true" />
@@ -436,7 +436,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83337" name="Watermelon" additionalName="Event" type="EtcItem">
+	<item id="83337" name="西瓜" additionalName="Event" type="EtcItem">
 		<!-- A watermelon caught while fishing. Double-click to throw a watermelon party. <Watermelon Party>. The watermelon explodes after 10 sec. and all surrounding party members get the Yes! Watermelon Party buff: all Critical Rate +10%, damage +10%, received damage -10%. -->
 		<set name="icon" val="icon.watermelon_doll_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -447,7 +447,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83338" name="Einhasad's Treasure Chest" type="EtcItem">
+	<item id="83338" name="殷海薩寶箱" type="EtcItem">
 		<!-- A chest with Einhasad's treasures. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -502,7 +502,7 @@
 			<item id="81444" min="1" max="1" chance="2.439024" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83339" name="Kasha Orc Warrior's Elite Blunt Weapon" additionalName="For NPC." type="Weapon">
+	<item id="83339" name="卡布獸人鬥士上級鈍器" additionalName="For NPC." type="Weapon">
 		<!-- Kasha Orc Warrior's Elite Blunt Weapon -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -525,7 +525,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83340" name="Kasha Orc Warrior's Elite Fists" additionalName="For NPC." type="Weapon">
+	<item id="83340" name="卡布獸人鬥士上級格鬥兵器" additionalName="For NPC." type="Weapon">
 		<!-- Kasha Orc Warrior's Elite Fists -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -548,7 +548,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="83341" name="Kasha Orc General's Elite Two-handed Sword" additionalName="For NPC." type="Weapon">
+	<item id="83341" name="卡布獸人將軍上級大劍" additionalName="For NPC." type="Weapon">
 		<!-- Kasha Orc General's Elite Two-handed Sword -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -571,7 +571,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83342" name="Kasha Orc General's Elite Spear" additionalName="For NPC." type="Weapon">
+	<item id="83342" name="卡布獸人將軍上級槍戟" additionalName="For NPC." type="Weapon">
 		<!-- Kasha Orc General's Elite Spear -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="83343" name="Kasha Orc Boss' Elite Avenger" additionalName="For NPC." type="Weapon">
+	<item id="83343" name="卡布獸人首領上級復仇者" additionalName="For NPC." type="Weapon">
 		<!-- Kasha Orc Boss' Elite Avenger -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -620,7 +620,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83344" name="Kasha Orc Boss' Elite Stormer" additionalName="For NPC." type="Weapon">
+	<item id="83344" name="卡布獸人首領上級風暴者" additionalName="For NPC." type="Weapon">
 		<!-- Kasha Orc Boss' Elite Stormer -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -646,7 +646,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="83345" name="Akkan's Blunt Weapon" additionalName="For NPC." type="Weapon">
+	<item id="83345" name="瓦肯獸人鈍器" additionalName="For NPC." type="Weapon">
 		<!-- Akkan's Blunt Weapon -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -669,7 +669,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83346" name="Damar's Staff" additionalName="For NPC." type="Weapon">
+	<item id="83346" name="雙頭獸人魔杖" additionalName="For NPC." type="Weapon">
 		<!-- Damar's Staff -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -692,7 +692,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83347" name="Mysterious Dragon Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="83347" name="謎樣龍戰爪禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Dragon Weapon Pack or one of the other rewards. Additionally, you may receive Heart Scroll of Heavenly Light (1 pc.). -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -716,7 +716,7 @@
 			<item id="83146" min="1" max="1" chance="100" /> <!-- Heart Scroll of Heavenly Light - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83348" name="Mysterious Guaranteed A-grade Relic Summon Coupon - 1-time" additionalName="Event" type="EtcItem">
+	<item id="83348" name="謎樣A級遺物確定召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Guaranteed A-grade Relic Summon Coupon - 1-time or one of the other rewards. Additionally, you may receive Heart Scroll of Heavenly Light (1 pc.). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="default_action" val="PEEL" />
@@ -740,7 +740,7 @@
 			<item id="83146" min="1" max="1" chance="100" /> <!-- Heart Scroll of Heavenly Light - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83349" name="Mysterious Enhanced Rune Stone" additionalName="Event" type="EtcItem">
+	<item id="83349" name="謎樣高級古文石" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Enhanced Rune Stone or one of the other rewards. Additionally, you may receive Heart Scroll of Heavenly Light (1 pc.). -->
 		<set name="icon" val="icon.skill_acquire_book_a2" />
 		<set name="default_action" val="PEEL" />
@@ -763,7 +763,7 @@
 			<item id="83146" min="1" max="1" chance="100" /> <!-- Heart Scroll of Heavenly Light - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83350" name="Mysterious Top-grade Homunculus' Hourglass" additionalName="Event" type="EtcItem">
+	<item id="83350" name="謎樣最上級何門奎思沙漏" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Top-grade Homunculus' Hourglass or one of the other rewards. Additionally, you may receive Heart Scroll of Heavenly Light (1 pc.). -->
 		<set name="icon" val="icon.homun_coupon_l" />
 		<set name="default_action" val="PEEL" />
@@ -784,7 +784,7 @@
 			<item id="83146" min="1" max="1" chance="100" /> <!-- Heart Scroll of Heavenly Light - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83351" name="Mysterious 10 Billion Adena Pack" additionalName="Event" type="EtcItem">
+	<item id="83351" name="謎樣100億金幣禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain up to 10 billion adena. Additionally, you may receive Heart Scroll of Heavenly Light (1 pc.). -->
 		<set name="icon" val="icon.adena_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -799,7 +799,7 @@
 			<item id="83146" min="1" max="1" chance="100" /> <!-- Heart Scroll of Heavenly Light - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83352" name="Artificial Amber" type="Armor">
+	<item id="83352" name="人造蜜蠟琥珀" type="Armor">
 		<!-- A beautiful gem that appeared when Mysterious Stone was washed with High Priest's Holy Water. Looks just like natural amber. When enchanted, applies the Amber's Mysterious Energy effect. <Enchanting>. Other - Scroll Crafting. Use Scroll: Enchant Amber. -->
 		<set name="icon" val="icon.chaotic_imitation_amber" />
 		<set name="default_action" val="EQUIP" />
@@ -829,7 +829,7 @@
 			<skill id="37082" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Amber's Mysterious Energy Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83353" name="Natural Yellow Amber" type="Armor">
+	<item id="83353" name="天然金貝琥珀" type="Armor">
 		<!-- A beautiful gem that appeared when Mysterious Stone was washed with High Priest's Holy Water. When you look closer, you can see prehistoric insects trapped inside. Applies the Amber's Mysterious Energy Lv. 3 effect. <Enchanting>. Other - Scroll Crafting. Use Scroll: Enchant Amber. -->
 		<set name="icon" val="icon.chaotic_amber" />
 		<set name="default_action" val="EQUIP" />
@@ -859,7 +859,7 @@
 			<skill id="37082" level="13" type="ON_ENCHANT" type_value="10" /> <!-- Amber's Mysterious Energy Lv. 13 -->
 		</skills>
 	</item>
-	<item id="83354" name="Natural Blue Amber" type="Armor">
+	<item id="83354" name="天然蔚藍琥珀" type="Armor">
 		<!-- A beautiful gem that appeared when Mysterious Stone was washed with High Priest's Holy Water. The most valuable and rare type of natural amber. Applies the Amber's Mysterious Energy Lv. 5 effect. <Enchanting>. Other - Scroll Crafting. Use Scroll: Enchant Amber. -->
 		<set name="icon" val="icon.chaotic_blue_amber" />
 		<set name="default_action" val="EQUIP" />
@@ -889,7 +889,7 @@
 			<skill id="37082" level="15" type="ON_ENCHANT" type_value="10" /> <!-- Amber's Mysterious Energy Lv. 15 -->
 		</skills>
 	</item>
-	<item id="83355" name="Scroll: Enchant Amber" type="EtcItem">
+	<item id="83355" name="琥珀強化卷軸" type="EtcItem">
 		<!-- For Amber only. The maximum enchant value is +10. In case of failure, Amber will be destroyed and you will receive Amber Shard (1 pc.) and Crystal (1 pc.). <Acquisition>. Craft > Other -->
 		<set name="icon" val="icon.scrl_of_ench_amber" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -907,7 +907,7 @@
 			<skill id="39901" level="1" /> <!-- Scroll: Enchant Amber -->
 		</skills>
 	</item>
-	<item id="83356" name="Mysterious Stone" type="EtcItem">
+	<item id="83356" name="神秘小石塊" type="EtcItem">
 		<!-- A smooth glistening stone that emits mysterious energy. Double-click to obtain one of the following items: Artificial Amber, Natural Yellow Amber, Natural Blue Amber. -->
 		<set name="icon" val="icon.chaotic_mystery_stone" />
 		<set name="default_action" val="PEEL" />
@@ -926,7 +926,7 @@
 			<item id="83354" min="1" max="1" chance="33.333333" /> <!-- Natural Blue Amber -->
 		</capsuled_items>
 	</item>
-	<item id="83357" name="Amber Shard" type="EtcItem">
+	<item id="83357" name="破損的琥珀破片" type="EtcItem">
 		<!-- A shard left after failing Amber enchantment. <How to use>. Can be used to craft Amber. <Acquisition>. Failed Amber enchantment -->
 		<set name="icon" val="icon.chaotic_amber_spall" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +936,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83358" name="Orb of Fire" additionalName="Elysia" type="Armor">
+	<item id="83358" name="火礦石" additionalName="Elysia" type="Armor">
 		<!-- An orb that has the power of Ruby, Sapphire, Diamond, and Pearl. <font color=EEAA22>Equip effect</font>. Soulshot/ Spiritshot/ Beast Soulshot/ Blessed Spiritshot damage +23%, P. Atk. +25%, M. Atk. +30%, P. Def. +6690, M. Def. +4210, received Critical Damage from basic attacks and M. skills -20%. Additionally, P./ M. Def. +15%. Effects of jewels and orbs of the same type do not stack -->
 		<set name="icon" val="icon.bm_dmg_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -961,7 +961,7 @@
 			<skill id="37384" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Orb of Fire Lv. 5 -->
 		</skills>
 	</item>
-	<item id="83359" name="Orb of Water" type="Armor">
+	<item id="83359" name="水礦石" type="Armor">
 		<!-- An orb that has the power of Red Cat's Eye and Blue Cat's Eye. <font color=EEAA22>Equip effect</font>. Critical Damage for basic attacks and P./ M. skills +25%, power of basic attacks and P./ M. skills +10%. Effects of jewels and orbs of the same type do not stack -->
 		<set name="icon" val="icon.bm_critical_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -977,7 +977,7 @@
 			<skill id="18714" level="20" /> <!-- Superior Blue Cat's Eye Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83360" name="Orb of Air" additionalName="Elysia" type="Armor">
+	<item id="83360" name="風礦石" additionalName="Elysia" type="Armor">
 		<!-- An orb that has the power of Garnet, Aquamarine, Vital Stone, and Tanzanite. <font color=EEAA22>Equip skills</font>. <font color="ECECEC"><Garnet></font>. When used, removes debuffs from you, and grants immunity to all debuffs for 7 sec. <font color="ECECEC"><Tanzanite></font>. For 15 sec., creates a barrier that absorbs 115,000 damage. Momentarily recovers 20% of Max HP. <font color="ECECEC"><Vital Stone></font>. When used while hunting, Vitality Consumption +100%, acquired XP/ SP +150% for 30 sec. <font color=EEAA22>Equip effect</font>. With a 15% chance, recovers 180 MP when using skills. In PvP, removes Confusion (Stun)/ Obstruction (Silence) debuffs when hit. Skill cooldown -5%, Max HP/ MP +20%, Debuff Resistance +35%, Damage Reflection Resistance +25%, Vitality bonus +70%, acquired XP +15%, Vitality Consumption -20%. Effects of jewels and orbs of the same type do not stack -->
 		<set name="icon" val="icon.bm_utility_jewel_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1005,7 +1005,7 @@
 			<skill id="37385" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Orb of Air Lv. 5 -->
 		</skills>
 	</item>
-	<item id="83361" name="Orb of Earth" type="Armor">
+	<item id="83361" name="大地礦石" type="Armor">
 		<!-- An orb that has the power of Obsidian, Opal, Emerald, and Topaz. <font color=EEAA22>Equip skills</font>. <font color="ECECEC"><Topaz skill></font>. When used, interrupts the target's skill casting. In PvP ignores the enemy's CP and deals fixed 43,223 damage. A low chance of killing the enemy instantly. <font color=EEAA22>Equip effect</font>. Attribute Attack +300, Attribute Resistance +300, all stats +7, Skill Mastery Rate +40%, P./ M. Def. +15%, received PvP damage -18%. Cancels the enemy's target when hit. Effects of jewels and orbs of the same type do not stack -->
 		<set name="icon" val="icon.bm_utility_jewel_2" />
 		<set name="default_action" val="EQUIP" />
@@ -1024,7 +1024,7 @@
 			<skill id="18814" level="20" /> <!-- Superior Topaz Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83362" name="Orb of Elements" type="Armor">
+	<item id="83362" name="元素礦石" type="Armor">
 		<!-- Available for 30 days. Can be equipped in the brooch slot. By harnessing the power of the elements, damage +10%, acquired XP/ SP +30%, received damage -10%. -->
 		<set name="icon" val="icon.bm_utility_jewel_3" />
 		<set name="default_action" val="EQUIP" />
@@ -1042,14 +1042,14 @@
 			<skill id="37084" level="1" /> <!-- Orb of Elements -->
 		</skills>
 	</item>
-	<item id="83363" name="Wisdom Crystal" type="EtcItem">
+	<item id="83363" name="智慧結晶" type="EtcItem">
 		<!-- Glows softly. Can be used to upgrade gems through crafting. -->
 		<set name="icon" val="icon.jewel_upgrade_crystal" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83364" name="Chaos Golem Victory Certificate" type="EtcItem">
+	<item id="83364" name="卡歐斯高崙討伐證書" type="EtcItem">
 		<!-- A document confirming that you contributed to the victory over Chaos Golems. Can be added to a collection. <Acquisition>. Weekly quest Field Raid: Defeat the Chaos Golems. -->
 		<set name="icon" val="icon.prophets_paper_of_tobald_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1061,7 +1061,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83365" name="Chaos Golem #17's Core" type="EtcItem">
+	<item id="83365" name="卡歐斯高崙17號之核" type="EtcItem">
 		<!-- A rare trophy that can be obtained with a low chance from the Pack of Triumph over Chaos Golems. <Acquisition>. Chaos Golems field raid -->
 		<set name="icon" val="icon.aden_rune_high_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1069,7 +1069,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83366" name="Chaos Golem #18's Core" type="EtcItem">
+	<item id="83366" name="卡歐斯高崙18號之核" type="EtcItem">
 		<!-- A rare trophy that can be obtained with a low chance from the Pack of Triumph over Chaos Golems. <Acquisition>. Chaos Golems field raid -->
 		<set name="icon" val="icon.aden_rune_high_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1077,7 +1077,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83367" name="Pack of Triumph over Chaos Golems" type="EtcItem">
+	<item id="83367" name="擊倒卡歐斯高崙的功勞禮盒" type="EtcItem">
 		<!-- A reward that is given to 100 characters that dealt the most damage during the Chaos Golems raid. Double-click to obtain Chaos Aether with a 100% chance. You may also get Chaos Golem #17's Core or Chaos Golem #18's Core with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="PEEL" />
@@ -1097,7 +1097,7 @@
 			<item id="83182" min="1" max="1" chance="100" /> <!-- Chaos Aether -->
 		</capsuled_items>
 	</item>
-	<item id="83368" name="Full Moon Gift for Harvest Festival" additionalName="Event" type="EtcItem">
+	<item id="83368" name="滿月中秋禮物" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1117,7 +1117,7 @@
 			<item id="81460" min="150" max="150" chance="100" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83369" name="Blue Paper" additionalName="Event" type="EtcItem">
+	<item id="83369" name="青紙" additionalName="Event" type="EtcItem">
 		<!-- Blue paper that can be used to make a Sky Lantern. <How to use>. Event craft -->
 		<set name="icon" val="icon.etc_color_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1128,7 +1128,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83370" name="White Paper" additionalName="Event" type="EtcItem">
+	<item id="83370" name="白紙" additionalName="Event" type="EtcItem">
 		<!-- White paper that can be used to make a Sky Lantern. <How to use>. Event craft -->
 		<set name="icon" val="icon.etc_color_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1139,7 +1139,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83371" name="Yellow Paper" additionalName="Event" type="EtcItem">
+	<item id="83371" name="黃紙" additionalName="Event" type="EtcItem">
 		<!-- Yellow paper that can be used to make a Sky Lantern. <How to use>. Event craft -->
 		<set name="icon" val="icon.etc_color_paper_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1150,7 +1150,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83372" name="Einhasad's Treasure Chest" type="EtcItem">
+	<item id="83372" name="殷海薩寶箱" type="EtcItem">
 		<!-- A chest with Einhasad's treasures. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1212,7 +1212,7 @@
 			<item id="81444" min="1" max="1" chance="2.083333" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83373" name="Red Maple Leaf" additionalName="Event" type="EtcItem">
+	<item id="83373" name="紅楓葉葉子" additionalName="Event" type="EtcItem">
 		<!-- A maple leaf that turned red with the coming of autumn. <Acquisition>. Can be obtained for completing clan missions. <How to use>. Event craft -->
 		<set name="icon" val="icon.maple_leaf_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1222,7 +1222,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83374" name="Red Maple Scroll" additionalName="Event" type="EtcItem">
+	<item id="83374" name="紅楓葉卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Critical Rate for basic attacks and P./ M. skills +5%, power of basic attacks and P./ M. skills +10%, P./ M. Def. +10%, acquired XP/ SP +30%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.bless_of_maple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1233,7 +1233,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83375" name="Mutant Stakato Crog's Unidentified Fang" additionalName="Event" type="EtcItem">
+	<item id="83375" name="未確認的突變的司塔卡拓克洛庫尖牙" additionalName="Event" type="EtcItem">
 		<!-- Double click +30 ~ +32 Mutant Stakato Crog's Fang. <Acquisition rate>. +30: 50%. +31: 30%. +32: 20% -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1252,7 +1252,7 @@
 			<item id="83172" min="1" max="1" minEnchant="32" maxEnchant="32" chance="33.333333" /> <!-- Mutant Stakato Crog's Fang -->
 		</capsuled_items>
 	</item>
-	<item id="83376" name="Unidentified Stakato Tooth" additionalName="Event" type="EtcItem">
+	<item id="83376" name="未確認的司塔卡拓之牙" additionalName="Event" type="EtcItem">
 		<!-- Double click +30 ~ +32 Stakato Tooth. <Acquisition rate>. +30: 50%. +31: 30%. +32: 20% -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1271,7 +1271,7 @@
 			<item id="83173" min="1" max="1" minEnchant="32" maxEnchant="32" chance="33.333333" /> <!-- Stakato Tooth -->
 		</capsuled_items>
 	</item>
-	<item id="83377" name="Stakato Queen's Unidentified Heart" additionalName="Event" type="EtcItem">
+	<item id="83377" name="未確認的司塔卡拓女王的心臟" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 1-3 Stakato Queen's Hearts. <Acquisition rate>. 1 pc.: 50%. 2 pcs.: 30%. 3 pcs.: 20% -->
 		<set name="icon" val="icon.stakato_queen_heart" />
 		<set name="default_action" val="PEEL" />
@@ -1290,7 +1290,7 @@
 			<item id="82792" min="3" max="3" chance="33.333333" /> <!-- Stakato Queen's Heart -->
 		</capsuled_items>
 	</item>
-	<item id="83378" name="Orc's Blood Tainted by Chaos" type="EtcItem">
+	<item id="83378" name="被渾沌蠶食的血" type="EtcItem">
 		<!-- Hot blood from a creature tainted by Chaos. Can be obtained in the following hunting zones:. Immortal PlateauKasha Orcs' Logging SiteKasha Orc Fortress. Snowy Volcano/ Baluan Battleground -->
 		<set name="icon" val="icon.dragon_blood" />
 		<set name="immediate_effect" val="true" />
@@ -1298,7 +1298,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83379" name="Hestui Totem Spirit's Stone" type="EtcItem">
+	<item id="83379" name="失去名譽的靈石" type="EtcItem">
 		<!-- A rare crystal that contains a forgotten hero's honor sealed by Chaos. Can be obtained in the following hunting zones:. Immortal Plateau/ Kasha Orcs' Logging Site/ Kasha Orc Fortress. Snowy Volcano/ Baluan Battleground -->
 		<set name="icon" val="icon.queen_ant_crystal" />
 		<set name="immediate_effect" val="true" />
@@ -1306,7 +1306,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83380" name="Gandi Totem Spirit's Stone" type="EtcItem">
+	<item id="83380" name="墮落精神的靈石" type="EtcItem">
 		<!-- A rare crystal that contains a forgotten hero's disordered mind sealed by Chaos. Can be obtained in the following hunting zones:. Immortal PlateauKasha Orcs' Logging SiteKasha Orc Fortress. Snowy Volcano/ Baluan Battleground -->
 		<set name="icon" val="icon.crystal_of_overlord_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1314,7 +1314,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83381" name="Duda-Mara Totem Spirit's Stone" type="EtcItem">
+	<item id="83381" name="無盡絕望的靈石" type="EtcItem">
 		<!-- A rare crystal that contains a forgotten hero's black despair sealed by Chaos. Can be obtained in the following hunting zones:. Immortal PlateauKasha Orcs' Logging SiteKasha Orc Fortress. Snowy Volcano/ Baluan Battleground -->
 		<set name="icon" val="icon.orfen_crystal" />
 		<set name="immediate_effect" val="true" />
@@ -1322,7 +1322,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83382" name="Mysterious Soul Sphere" additionalName="Lv. 1" type="EtcItem">
+	<item id="83382" name="神祕靈魂珠" additionalName="Lv. 1" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Cannot be activated at the moment. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_a" />
 		<set name="immediate_effect" val="true" />
@@ -1332,7 +1332,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83383" name="Mysterious Soul Sphere" additionalName="Lv. 2" type="EtcItem">
+	<item id="83383" name="神祕靈魂珠" additionalName="Lv. 2" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Cannot be activated at the moment. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_a" />
 		<set name="immediate_effect" val="true" />
@@ -1342,7 +1342,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83384" name="Mysterious Soul Sphere" additionalName="Lv. 3" type="EtcItem">
+	<item id="83384" name="神祕靈魂珠" additionalName="Lv. 3" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Cannot be activated at the moment. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_a" />
 		<set name="immediate_effect" val="true" />
@@ -1352,7 +1352,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83385" name="Mysterious Soul Sphere" additionalName="Lv. 4" type="EtcItem">
+	<item id="83385" name="神祕靈魂珠" additionalName="Lv. 4" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Shines with a weak blue light. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_b" />
 		<set name="immediate_effect" val="true" />
@@ -1362,7 +1362,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83386" name="Mysterious Soul Sphere" additionalName="Lv. 5" type="EtcItem">
+	<item id="83386" name="神祕靈魂珠" additionalName="Lv. 5" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Shines with a weak blue light. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_b" />
 		<set name="immediate_effect" val="true" />
@@ -1372,7 +1372,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83387" name="Mysterious Soul Sphere" additionalName="Lv. 6" type="EtcItem">
+	<item id="83387" name="神祕靈魂珠" additionalName="Lv. 6" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Shines with a weak blue light. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_b" />
 		<set name="immediate_effect" val="true" />
@@ -1382,7 +1382,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83388" name="Mysterious Soul Sphere" additionalName="Lv. 7" type="EtcItem">
+	<item id="83388" name="神祕靈魂珠" additionalName="Lv. 7" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Shines with a bright blue light. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_c" />
 		<set name="immediate_effect" val="true" />
@@ -1392,7 +1392,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83389" name="Mysterious Soul Sphere" additionalName="Lv. 8" type="EtcItem">
+	<item id="83389" name="神祕靈魂珠" additionalName="Lv. 8" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Shines with a bright blue light. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_c" />
 		<set name="immediate_effect" val="true" />
@@ -1402,7 +1402,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83390" name="Mysterious Soul Sphere" additionalName="Lv. 9" type="EtcItem">
+	<item id="83390" name="神祕靈魂珠" additionalName="Lv. 9" type="EtcItem">
 		<!-- An orb that contains Kasha Orcs' power. Shines with a bright blue light. <Upgrade>. Compound with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_c" />
 		<set name="immediate_effect" val="true" />
@@ -1412,7 +1412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83391" name="Soul Orb Imbued with Chaos" additionalName="Lv. 10" type="EtcItem">
+	<item id="83391" name="被渾沌蠶食的靈魂珠" additionalName="Lv. 10" type="EtcItem">
 		<!-- A dazzling soul orb imbued with the energy of Chaos. It contains enormous powers. <Acquisition>. Compound Mysterious Soul Sphere with Sinister Energy Speck. -->
 		<set name="icon" val="icon.kasha_orc_spirit_marble_d" />
 		<set name="immediate_effect" val="true" />
@@ -1422,7 +1422,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83392" name="Sinister Energy Speck" type="EtcItem">
+	<item id="83392" name="陰森森的氣息破片" type="EtcItem">
 		<!-- A bundle of energy surrounded by a weak Chaos aura. <How to use>. Compound with Mysterious Soul Sphere. Can be obtained in the following hunting zones:. Immortal PlateauKasha Orcs' Logging SiteKasha Orc Fortress. Snowy Volcano/ Baluan Battleground -->
 		<set name="icon" val="icon.soul_bead_fragment" />
 		<set name="immediate_effect" val="true" />
@@ -1430,7 +1430,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83393" name="Offerings Box" type="EtcItem">
+	<item id="83393" name="貢品禮盒" type="EtcItem">
 		<!-- A box with offerings stolen by Kasha Orcs on the Immortal Plateau. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1443,7 +1443,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="83394" name="Construction Materials" type="EtcItem">
+	<item id="83394" name="要塞建築材料" type="EtcItem">
 		<!-- A box with construction materials, obtained for killing Kasha Orcs at the Kasha Orcs' Logging Site. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1456,7 +1456,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="83395" name="Kasha Orcs' Order" type="EtcItem">
+	<item id="83395" name="卡沙獸人指令" type="EtcItem">
 		<!-- Obtained for killing Kasha Orcs in the Kasha Orc Fortress. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1469,7 +1469,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="83396" name="Small Mark of Trust" type="EtcItem">
+	<item id="83396" name="信賴標章-下級" type="EtcItem">
 		<!-- A mark given to you by High Orcs for your help in fighting Kasha Orcs. High Orcs are beginning to trust you. -->
 		<set name="icon" val="icon.etc_ketra_friendship_1_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1481,7 +1481,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83397" name="Common Mark of Trust" type="EtcItem">
+	<item id="83397" name="信賴標章-中級" type="EtcItem">
 		<!-- A mark given to you by High Orcs for your help in fighting Kasha Orcs. High Orcs are trusting you more now. -->
 		<set name="icon" val="icon.etc_ketra_friendship_3_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1493,7 +1493,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83398" name="Full Mark of Trust" type="EtcItem">
+	<item id="83398" name="信賴標章-高級" type="EtcItem">
 		<!-- A mark given to you by High Orcs for your help in fighting Kasha Orcs. You have a complete trust of High Orcs. -->
 		<set name="icon" val="icon.etc_summon_wolf_r_02" />
 		<set name="immediate_effect" val="true" />
@@ -1505,7 +1505,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83399" name="High Orcs' Mystic Wine" type="EtcItem">
+	<item id="83399" name="貴族獸人的魂靈酒" type="EtcItem">
 		<!-- A special drink for the trials of the Totem Spirits. They say, it's very dangerous to drink. -->
 		<set name="icon" val="icon.etc_holy_grail_i01" />
 		<set name="immediate_effect" val="true" />

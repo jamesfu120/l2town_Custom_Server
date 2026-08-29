@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="60000" name="Freya's Ice Rose" additionalName="Event" type="EtcItem">
+	<item id="60000" name="芙蕾雅冰凍玫瑰" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -10%, Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -20,7 +20,7 @@
 			<skill id="29440" level="1" /> <!-- Freya's Ice Rose - Event -->
 		</skills>
 	</item>
-	<item id="60001" name="Lovely Chocolate Box" type="EtcItem">
+	<item id="60001" name="可愛巧克力禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1-5 Valentine's Bouquets. Additionally, you can get 1 useful item. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
 		<set name="default_action" val="PEEL" />
@@ -29,7 +29,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60002" name="Lovely Chocolate Box Set" type="EtcItem">
+	<item id="60002" name="可愛巧克力禮盒組" type="EtcItem">
 		<!-- Double-click to obtain Lovely Chocolate Box (70 pcs.) and Valentine's Bouquet (25 pcs.). -->
 		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
 		<set name="default_action" val="PEEL" />
@@ -42,7 +42,7 @@
 			<item id="29999" min="25" max="25" chance="100" /> <!-- Valentine's Bouquet -->
 		</capsuled_items>
 	</item>
-	<item id="60003" name="Alchemist's Treasure Chest" type="EtcItem">
+	<item id="60003" name="煉金術士的寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="BranchSys.icon.br_fire_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -90,7 +90,7 @@
 			<item id="36946" min="1" max="1" chance="2.941176" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60004" name="Boys' Surprise Lucky Pouch" type="EtcItem">
+	<item id="60004" name="牛年驚喜大紅包" type="EtcItem">
 		<!-- Double-click to obtain a random item. Additionally you can get Christmas Gift Lucky Pouch. -->
 		<set name="icon" val="BranchIcon.Icon.newyear_lucky_bag3" />
 		<set name="default_action" val="PEEL" />
@@ -99,7 +99,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60005" name="Christmas Gift Lucky Pouch" type="EtcItem">
+	<item id="60005" name="開運壓歲錢袋" type="EtcItem">
 		<!-- Double-click to obtain 1 to 2000 Boys' Lucky Coins. -->
 		<set name="icon" val="BranchSys.icon.br_otoshidama_i00" />
 		<set name="default_action" val="PEEL" />
@@ -123,7 +123,7 @@
 			<item id="60006" min="2000" max="2000" chance="10" /> <!-- Boys' Lucky Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60006" name="Boys' Lucky Coin" type="EtcItem">
+	<item id="60006" name="牛年開運錢幣" type="EtcItem">
 		<!-- Take it to the Game Assistant to obtain a useful item. -->
 		<set name="icon" val="icon.bm_goblin_coin" />
 		<set name="immediate_effect" val="true" />
@@ -131,7 +131,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60007" name="Siege Attack Box" type="EtcItem">
+	<item id="60007" name="攻城動作禮盒" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="PEEL" />
@@ -154,7 +154,7 @@
 			<item id="80641" min="1" max="1" chance="14.285714" /> <!-- Talisman of Protection Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="60008" name="Siege Support Box" type="EtcItem">
+	<item id="60008" name="攻城支援禮盒" type="EtcItem">
 		<!-- Double-click to obtain various supplies. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -172,7 +172,7 @@
 			<item id="22889" min="50000" max="50000" chance="100" /> <!-- Mysterious Spiritshot -->
 		</capsuled_items>
 	</item>
-	<item id="60009" name="Festival Fairy's Lucky Ticket" type="EtcItem">
+	<item id="60009" name="秋蓉幸運彩券" type="EtcItem">
 		<!-- Allows to take part in the raffle for 1 h. after using the ticket. Required level: 105+. The effect is removed when switching to a subclass/ dual class. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -193,7 +193,7 @@
 			<skill id="29441" level="1" /> <!-- Lucky Gift Coupon (1-hour) -->
 		</skills>
 	</item>
-	<item id="60010" name="Pantheon's Protection Box" type="EtcItem">
+	<item id="60010" name="潘提翁守護禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
@@ -237,7 +237,7 @@
 			<item id="80335" min="1" max="1" chance="3.333333" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60011" name="Festival Fairy's Good Luck Bag" additionalName="Event" type="EtcItem">
+	<item id="60011" name="秋蓉幸運袋" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 3 Festival Fairy's Lucky Tickets (1-hour). -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="is_tradable" val="false" />
@@ -254,7 +254,7 @@
 			<skill id="29442" level="1" /> <!-- Freya's Lucky Pouch -->
 		</skills>
 	</item>
-	<item id="60012" name="Barter Package" type="EtcItem">
+	<item id="60012" name="以物易物組" type="EtcItem">
 		<!-- Double-click to obtain rare items. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
@@ -292,7 +292,7 @@
 			<item id="29978" min="1" max="1" chance="100" /> <!-- Barter Coin Chest -->
 		</capsuled_items>
 	</item>
-	<item id="60013" name="Partner Help Cube" type="EtcItem">
+	<item id="60013" name="夥伴協助晶體" type="EtcItem">
 		<!-- Double-click to obtain Emperor's Special Cocktail (3 pcs.). 10 d. - Ice Rose (50 pcs.). 20 d. - Glowing Dragon's Attribute Potion (50 pcs.). 30 d. - Nevit's Shining Gold Hourglass (20 pcs.). (Can only be used once a day.) -->
 		<set name="icon" val="icon.etc_11th_event_group" />
 		<set name="immediate_effect" val="true" />
@@ -302,7 +302,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60014" name="Lulu's Gratitude Box" additionalName="Event" type="EtcItem">
+	<item id="60014" name="藏有努路謝意之箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Freya's Scroll of Storm (1008 pcs.), Emperor's Special Cocktail (168 pcs.), Freya's Ice Rose (336 pcs.), Glowing Dragon's Attribute Potion (336 pcs.), Honey Dark Beer (336 pcs.), Nevit's Shining Gold Hourglass (336 pcs.). -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
@@ -322,7 +322,7 @@
 			<item id="81460" min="336" max="336" chance="100" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60015" name="Spellbook: Create Mysterious Soulshots" type="EtcItem">
+	<item id="60015" name="魔法書-召喚秘術靈魂彈" type="EtcItem">
 		<!-- A spellbook for learning the Create Mysterious R-grade Soulshots skill. Note!. The skill is deleted when changing class with Stone of Destiny. -->
 		<set name="icon" val="BranchIcon.Icon.g_book_summonsoulshot_r" />
 		<set name="is_depositable" val="true" />
@@ -336,7 +336,7 @@
 			<skill id="29443" level="1" /> <!-- Spellbook: Create Mysterious Soulshots -->
 		</skills>
 	</item>
-	<item id="60016" name="Spellbook: Create Mysterious Spiritshots" type="EtcItem">
+	<item id="60016" name="魔法書-召喚秘術魂靈箭" type="EtcItem">
 		<!-- A spellbook for learning the Create Mysterious R-grade Spiritshots skill. Note!. The skill is deleted when changing class with Stone of Destiny. -->
 		<set name="icon" val="BranchIcon.Icon.g_book_summonspiritshot_r" />
 		<set name="is_depositable" val="true" />
@@ -350,7 +350,7 @@
 			<skill id="29444" level="1" /> <!-- Spellbook: Create Mysterious Spiritshots -->
 		</skills>
 	</item>
-	<item id="60017" name="Shiny Vault" type="EtcItem">
+	<item id="60017" name="閃耀的金庫" type="EtcItem">
 		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -406,7 +406,7 @@
 			<item id="80317" min="1" max="1" chance="2.380952" /> <!-- Fafurion Dual Daggers - Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="60018" name="Night Goblin's Jewel Box" type="EtcItem">
+	<item id="60018" name="夜貓子寶石禮盒" type="EtcItem">
 		<!-- Double-click to obtain Freya's Glittering Scroll of Storm and Freya's Glittering Ice Rose. Additionally, you can get 1 useful item. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
@@ -415,7 +415,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60019" name="zaken" type="Armor">
+	<item id="60019" name="札肯" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken" />
 		<set name="default_action" val="EQUIP" />
@@ -427,7 +427,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60020" name="lilith" type="Armor">
+	<item id="60020" name="莉莉絲" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith" />
 		<set name="default_action" val="EQUIP" />
@@ -439,7 +439,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60021" name="Admiral" type="Armor">
+	<item id="60021" name="海軍提督" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
 		<set name="default_action" val="EQUIP" />
@@ -451,7 +451,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60022" name="skeleton" type="Armor">
+	<item id="60022" name="骷髏" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_skeleton" />
 		<set name="default_action" val="EQUIP" />
@@ -463,7 +463,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60023" name="Demon" type="Armor">
+	<item id="60023" name="惡魔" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
 		<set name="default_action" val="EQUIP" />
@@ -475,7 +475,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60024" name="Nymph" type="Armor">
+	<item id="60024" name="寧芙" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
 		<set name="default_action" val="EQUIP" />
@@ -487,7 +487,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60025" name="Jester" type="Armor">
+	<item id="60025" name="小丑" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="icon.ev_new_clothes_05" />
 		<set name="default_action" val="EQUIP" />
@@ -499,7 +499,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60026" name="Dragon Berserker" type="Armor">
+	<item id="60026" name="龍狂戰士" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="icon.bm2018_dragon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -511,7 +511,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60027" name="Zaken Outfit Appearance Stone" type="EtcItem">
+	<item id="60027" name="札肯衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Zaken Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -525,7 +525,7 @@
 			<skill id="29447" level="1" /> <!-- Appearance Stone: Zaken Outfit -->
 		</skills>
 	</item>
-	<item id="60028" name="Lilith Outfit Appearance Stone" type="EtcItem">
+	<item id="60028" name="莉莉絲衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Lilith Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -539,7 +539,7 @@
 			<skill id="29448" level="1" /> <!-- Appearance Stone: Lilith Outfit -->
 		</skills>
 	</item>
-	<item id="60029" name="Admiral Outfit Appearance Stone" type="EtcItem">
+	<item id="60029" name="海軍提督衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Admiral Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -553,7 +553,7 @@
 			<skill id="29449" level="1" /> <!-- Appearance Stone: Admiral Outfit -->
 		</skills>
 	</item>
-	<item id="60030" name="Skeleton Outfit Appearance Stone" type="EtcItem">
+	<item id="60030" name="骷髏衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Skeleton Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -567,7 +567,7 @@
 			<skill id="29450" level="1" /> <!-- Appearance Stone: Skeleton Outfit -->
 		</skills>
 	</item>
-	<item id="60031" name="Demon Outfit Appearance Stone" type="EtcItem">
+	<item id="60031" name="惡魔衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Demon Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -581,7 +581,7 @@
 			<skill id="29451" level="1" /> <!-- Appearance Stone: Demon Outfit -->
 		</skills>
 	</item>
-	<item id="60032" name="Nymph Outfit Appearance Stone" type="EtcItem">
+	<item id="60032" name="寧芙衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Nymph Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -595,7 +595,7 @@
 			<skill id="29452" level="1" /> <!-- Appearance Stone: Nymph Outfit -->
 		</skills>
 	</item>
-	<item id="60033" name="Jester Outfit Appearance Stone" type="EtcItem">
+	<item id="60033" name="小丑衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Jester Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -609,7 +609,7 @@
 			<skill id="29453" level="1" /> <!-- Appearance Stone: Jester Outfit -->
 		</skills>
 	</item>
-	<item id="60034" name="Dragon Berserker Outfit Appearance Stone" type="EtcItem">
+	<item id="60034" name="龍狂戰士衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Dragon Berserker Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -623,7 +623,7 @@
 			<skill id="29454" level="1" /> <!-- Appearance Stone: Dragon Berserker Outfit -->
 		</skills>
 	</item>
-	<item id="60035" name="Watermelon Hat" additionalName="14-day" type="Armor">
+	<item id="60035" name="西瓜帽" additionalName="14-day" type="Armor">
 		<!-- A hat that looks like a watermelon. Just looking at it is refreshing. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -636,7 +636,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 	</item>
-	<item id="60036" name="Forgotten Treasure" type="EtcItem">
+	<item id="60036" name="遺忘的寶物" type="EtcItem">
 		<!-- Double-click to obtain rare items. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
@@ -678,7 +678,7 @@
 			<item id="29529" min="1" max="1" chance="100" /> <!-- Shiny Gold Bar Box -->
 		</capsuled_items>
 	</item>
-	<item id="60037" name="Lucky Coin" type="EtcItem">
+	<item id="60037" name="幸運幣" type="EtcItem">
 		<!-- Double-click to apply a buff. Also, can be used as a craft material. <Effect>. For 30 min., acquired XP/ SP +50%, Vitality bonus +50%, P. Atk./ P. Def./ M. Atk./ M. Def. +15%, Critical Damage for basic attacks +15%, P./ M. Skill Power +15%. The effect does not stack with Peeves' Purple/ Red Potion. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
 		<set name="immediate_effect" val="true" />
@@ -690,7 +690,7 @@
 			<skill id="29655" level="1" /> <!-- Lucky Coin -->
 		</skills>
 	</item>
-	<item id="60038" name="Kingdom's Treasure Chest" type="EtcItem">
+	<item id="60038" name="王國寶箱" type="EtcItem">
 		<!-- Double-click to obtain Kingdom's Shiny Golden Key. Also, there is a chance to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -699,7 +699,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60039" name="Shiny Golden Kingdom's Key" type="EtcItem">
+	<item id="60039" name="閃耀的王國黃金鑰匙" type="EtcItem">
 		<!-- A skillfully crafted golden key. Can be exchanged for various items or added to a collection. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="immediate_effect" val="true" />
@@ -707,7 +707,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60040" name="Orc's Special Medium Vitality Tonic" type="EtcItem">
+	<item id="60040" name="半獸人特別的中型活力水" type="EtcItem">
 		<!-- Recovers 2 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -725,7 +725,7 @@
 			<skill id="29455" level="1" /> <!-- Red Libra Specialty - Vitality Tonic -->
 		</skills>
 	</item>
-	<item id="60041" name="Dragon's Relic" type="EtcItem">
+	<item id="60041" name="龍之遺物" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Enchant Miraculous Weapon, a random item from the list and another one of various items. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="PEEL" />
@@ -764,7 +764,7 @@
 			<item id="19440" min="10" max="10" chance="4" /> <!-- Jewel -->
 		</capsuled_items>
 	</item>
-	<item id="60042" name="Kingdom's Treasure Chest" type="EtcItem">
+	<item id="60042" name="王國寶箱" type="EtcItem">
 		<!-- Double-click to obtain Kingdom's Shiny Golden Key. Also, there is a chance to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -834,7 +834,7 @@
 			<item id="60039" min="1" max="1" chance="100" /> <!-- Kingdom's Shiny Golden Key -->
 		</capsuled_items>
 	</item>
-	<item id="60043" name="Returning Hero's Welcome Gift" additionalName="THE HERO" type="EtcItem">
+	<item id="60043" name="英雄回歸歡迎禮物" additionalName="THE HERO" type="EtcItem">
 		<!-- A special gift for returning adventurers who still remember the glory of the past. Double-click to obtain the following. -->
 		<set name="icon" val="icon.bm_2018_special_box" />
 		<set name="default_action" val="PEEL" />
@@ -862,7 +862,7 @@
 			<item id="46710" min="1" max="1" chance="100" /> <!-- Lindvior's Earring - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="60044" name="THE HERO RETURNS Coin" type="EtcItem">
+	<item id="60044" name="THE HERO RETURNS幣" type="EtcItem">
 		<!-- A coin that can be obtained for completing the 'THE HERO RETURNS' event quest. Can be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_field_special_coin_i00" />
 		<set name="immediate_effect" val="true" />
@@ -872,7 +872,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60045" name="Hero's Symbol" additionalName="THE HERO" type="EtcItem">
+	<item id="60045" name="英雄的象徵" additionalName="THE HERO" type="EtcItem">
 		<!-- A special gift for returning adventurers. Bonuses will be available after adding to a collection. -->
 		<set name="icon" val="icon.etc_london_olympic_gold" />
 		<set name="immediate_effect" val="true" />
@@ -883,7 +883,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60046" name="God's Accessory Enhancement Stone" additionalName="THE HERO" type="EtcItem">
+	<item id="60046" name="神之飾品強化石" additionalName="THE HERO" type="EtcItem">
 		<!-- An upgrade stone imbued with a god's energy. Only for returning adventurers. Can be used to enhance god's accessories from THE HERO RETURNS event through compounding. -->
 		<set name="icon" val="BranchSys.Icon.br_spirit_skill_i00" />
 		<set name="immediate_effect" val="true" />
@@ -894,7 +894,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60047" name="Gran Kain's Necklace Lv. 1" additionalName="Event" type="Armor">
+	<item id="60047" name="格蘭肯項鍊-階段1" additionalName="Event" type="Armor">
 		<!-- MP +107. STR +3, INT +3, CON +3. P. Atk. +15%, M. Atk. +10%. Skill cooldown -10%. P./ M. Skill Power +15%. Damage Reflection +5%. Max HP +3%, Max MP +5%. <Debuff resistance>. Confusion/ Obstruction +25. Stupor +15. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -914,7 +914,7 @@
 			<skill id="27634" level="1" /> <!-- Gran Kain's Necklace -->
 		</skills>
 	</item>
-	<item id="60048" name="Gran Kain's Necklace Lv. 2" additionalName="Event" type="Armor">
+	<item id="60048" name="格蘭肯項鍊-階段2" additionalName="Event" type="Armor">
 		<!-- MP +114. STR +3, INT +3, CON +3. P. Atk. +16%, M. Atk. +11%. Skill cooldown -11%. P./ M. Skill Power +17%. Damage Reflection +6%. Max HP +3%, Max MP +5%. <Debuff resistance>. Confusion/ Obstruction +26. Stupor +16. <Active skill effect>. For 7 sec., ignores the target's invincibility. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -935,7 +935,7 @@
 			<skill id="27634" level="2" /> <!-- Gran Kain's Necklace -->
 		</skills>
 	</item>
-	<item id="60049" name="Gran Kain's Necklace Lv. 3" additionalName="Event" type="Armor">
+	<item id="60049" name="格蘭肯項鍊-階段3" additionalName="Event" type="Armor">
 		<!-- MP +121. STR +4, INT +4, CON +4. P. Atk. +17%, M. Atk. +12%. Skill cooldown -12%. P./ M. Skill Power +25%. Damage Reflection +7%. Max HP +5%, Max MP +7%. <Debuff resistance>. Confusion/ Obstruction +27. Stupor +17. <Active skill effect>. For 8 sec., ignores the target's invincibility. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -956,7 +956,7 @@
 			<skill id="27634" level="3" /> <!-- Gran Kain's Necklace -->
 		</skills>
 	</item>
-	<item id="60050" name="Einhasad's Necklace Lv. 1" additionalName="Event" type="Armor">
+	<item id="60050" name="殷海薩項鍊-階段1" additionalName="Event" type="Armor">
 		<!-- MP +107. STR +3, INT +3, CON +3. P. Atk. +10%, M. Atk. +15%. Skill cooldown -10%. P./ M. Skill Power +15%. Damage Reflection +5%. Max HP +5%, Max MP +3%. <Debuff resistance>. Confusion/ Obstruction +25. Stupor +15. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -976,7 +976,7 @@
 			<skill id="27640" level="1" /> <!-- Einhasad's Necklace -->
 		</skills>
 	</item>
-	<item id="60051" name="Einhasad's Necklace Lv. 2" additionalName="Event" type="Armor">
+	<item id="60051" name="殷海薩項鍊-階段2" additionalName="Event" type="Armor">
 		<!-- MP +114. STR +3, INT +3, CON +3. P. Atk. +11%, M. Atk. +16%. Skill cooldown -11%. P./ M. Skill Power +17%. Damage Reflection +6%. Max HP +5%, Max MP +3%. <Debuff resistance>. Confusion/ Obstruction +26. Stupor +16. <Active skill effect>. For 30 sec., Damage Reflection Resistance +20%. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -997,7 +997,7 @@
 			<skill id="27640" level="2" /> <!-- Einhasad's Necklace -->
 		</skills>
 	</item>
-	<item id="60052" name="Einhasad's Necklace Lv. 3" additionalName="Event" type="Armor">
+	<item id="60052" name="殷海薩項鍊-階段3" additionalName="Event" type="Armor">
 		<!-- MP +121. STR +4, INT +4, CON +4. P. Atk. +12%, M. Atk. +17%. Skill cooldown -12%. P./ M. Skill Power +25%. Damage Reflection +7%. Max HP +7%, Max MP +5%. <Debuff resistance>. Confusion/ Obstruction +27. Stupor +17. <Active skill effect>. For 30 sec., Damage Reflection Resistance +35%. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1018,7 +1018,7 @@
 			<skill id="27640" level="3" /> <!-- Einhasad's Necklace -->
 		</skills>
 	</item>
-	<item id="60053" name="Pa'agrio's Earring Lv. 1" additionalName="Event" type="Armor">
+	<item id="60053" name="帕格立歐耳環-階段1" additionalName="Event" type="Armor">
 		<!-- MP +80. DEX +3, WIT +3, MEN +3. P. Def. +15%, M. Def. +10%. P. Skill Power +2%. Healing Power +80. P./ M. Debuff Reflection Rate +13%. M. Damage Reflection Rate +13%. P. Skill Evasion +5%. Vampiric Rage +5%. MP Consumption -5%. Received Healing +10%. Speed +2. <Debuff resistance>. Obstruction/ Stupor +10. Confusion/ Danger Zone +30. Petrification/ Infection +40. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1038,7 +1038,7 @@
 			<skill id="27646" level="1" /> <!-- Pa'agrio's Earring -->
 		</skills>
 	</item>
-	<item id="60054" name="Pa'agrio's Earring Lv. 2" additionalName="Event" type="Armor">
+	<item id="60054" name="帕格立歐耳環-階段2" additionalName="Event" type="Armor">
 		<!-- MP +86. DEX +3, WIT +3, MEN +3. P. Def. +16%, M. Def. +11%. P. Skill Power +3%. Healing Power +88. P./ M. Debuff Reflection Rate +14%. M. Damage Reflection Rate +14%. P. Skill Evasion +6%. Vampiric Rage +5%. MP Consumption -5%. Received Healing +12%. Speed +3. <Debuff resistance>. Obstruction/ Stupor +12. Confusion/ Danger Zone +32. Petrification/ Infection +42. <Triggered skill effect>. Deals fixed damage with a 1% chance on a basic attack, with a 2% chance when using skills. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1059,7 +1059,7 @@
 			<skill id="27646" level="2" /> <!-- Pa'agrio's Earring -->
 		</skills>
 	</item>
-	<item id="60055" name="Pa'agrio's Earring Lv. 3" additionalName="Event" type="Armor">
+	<item id="60055" name="帕格立歐耳環-階段3" additionalName="Event" type="Armor">
 		<!-- MP +91. DEX +4, WIT +4, MEN +4. P. Def. +17%, M. Def. +12%. P. Skill Power +3%. Healing Power +96. P./ M. Debuff Reflection Rate +15%. M. Damage Reflection Rate +15%. P. Skill Evasion Rate +7%. Vampiric Rage +6%. MP Consumption -6%. Received Healing +14%. Speed +3. <Debuff resistance>. Obstruction/ Stupor +14. Confusion/ Danger Zone +34. Petrification/ Infection +44. <Triggered skill effect>. Deals fixed damage with a 2% chance on a basic attack, with a 3% chance when using skills. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1080,7 +1080,7 @@
 			<skill id="27646" level="3" /> <!-- Pa'agrio's Earring -->
 		</skills>
 	</item>
-	<item id="60056" name="Eva's Earring Lv. 1" additionalName="Event" type="Armor">
+	<item id="60056" name="伊娃耳環-階段1" additionalName="Event" type="Armor">
 		<!-- MP +80. DEX +3, WIT +3, MEN +3. P. Def. +10%, M. Def. +15%. P. Skill Power +2%. Healing Power +160. P./ M. Debuff Reflection Rate +13%. M. Damage Reflection Rate +13%. P. Skill Evasion +5%. Vampiric Rage +5%. MP Consumption -5%. Received Healing +5%. Speed +2. <Debuff resistance>. Obstruction/ Stupor +10. Confusion/ Danger Zone +30. Petrification/ Infection +40. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1100,7 +1100,7 @@
 			<skill id="27652" level="1" /> <!-- Eva's Earring -->
 		</skills>
 	</item>
-	<item id="60057" name="Eva's Earring Lv. 2" additionalName="Event" type="Armor">
+	<item id="60057" name="伊娃耳環-階段2" additionalName="Event" type="Armor">
 		<!-- MP +86. DEX +3, WIT +3, MEN +3. P. Def. +11%, M. Def. +16%. P. Skill Power +3%. Healing Power +168. P./ M. Debuff Reflection Rate +14%. M. Damage Reflection Rate +14%. P. Skill Evasion +6%. Vampiric Rage +5%. MP Consumption -5%. Received Healing +7%. Speed +3. <Debuff resistance>. Obstruction/ Stupor +12. Confusion/ Danger Zone +32. Petrification/ Infection +42. <Active skill effect>. For 40 sec., the target's P./ M. Def. -20%. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1121,7 +1121,7 @@
 			<skill id="27652" level="2" /> <!-- Eva's Earring -->
 		</skills>
 	</item>
-	<item id="60058" name="Eva's Earring Lv. 3" additionalName="Event" type="Armor">
+	<item id="60058" name="伊娃耳環-階段3" additionalName="Event" type="Armor">
 		<!-- MP +91. DEX +4, WIT +4, MEN +4. P. Def. +12%, M. Def. +17%. P. Skill Power +3%. Healing Power +176. P./ M. Debuff Reflection Rate +15%. M. Damage Reflection Rate +15%. P. Skill Evasion Rate 7%. Vampiric Rage +6%. MP Consumption -6%. Received Healing +9%. Speed +3. <Debuff resistance>. Obstruction/ Stupor +14. Confusion/ Danger Zone +34. Petrification/ Infection +44. <Active skill effect>. For 40 sec., the target's P./ M. Def. -25%, PvP Def. -10%. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1142,7 +1142,7 @@
 			<skill id="27652" level="3" /> <!-- Eva's Earring -->
 		</skills>
 	</item>
-	<item id="60059" name="Sayha's Ring Lv. 1" additionalName="Event" type="Armor">
+	<item id="60059" name="沙哈戒指-階段1" additionalName="Event" type="Armor">
 		<!-- MP +53. CHA +3, LUC +3. Critical Damage for basic attacks and M. skills +20%. Atk. Spd. +6%, Casting Spd. +6%. P./ M. Skill Power +5%. Damage Reflection Resistance +30%. Fixed Damage Resistance +5%. Physical/ Mental Attack Resistance +10. Speed +2. HP Recovery +10%. Accuracy +2. <Debuff resistance>. Confusion +20, Obstruction +12, Petrification +10. Infection +40, Danger Zone +10. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1162,7 +1162,7 @@
 			<skill id="27658" level="1" /> <!-- Sayha's Ring -->
 		</skills>
 	</item>
-	<item id="60060" name="Sayha's Ring Lv. 2" additionalName="Event" type="Armor">
+	<item id="60060" name="沙哈戒指-階段2" additionalName="Event" type="Armor">
 		<!-- MP +57. CHA +3, LUC +3. Critical Damage for basic attacks and M. skills +20%. Atk. Spd. +6%, Casting Spd. +6%. P./ M. Skill Power +9%. Damage Reflection Resistance +33%. Fixed Damage Resistance +6%. Physical/ Mental Attack Resistance +11. Speed +2. HP Recovery +15%. Accuracy +3. <Debuff resistance>. Confusion +22, Obstruction +14, Petrification +11. Infection +42, Danger Zone +12. <Triggered skill effect>. Blocks the target's P./ M. skills with a 1% chance on a basic attack and a 2% chance when using skills. <Toggled skill effect>. Speed +7, P. Atk. in PvP +4%, P./ M. Atk. +12%, Critical Rate for basic attacks -55, P./ M. Def. -18%, nearby enemies' Speed/ Atk. Spd./ Casting Spd. -10%. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1183,7 +1183,7 @@
 			<skill id="27658" level="2" /> <!-- Sayha's Ring -->
 		</skills>
 	</item>
-	<item id="60061" name="Sayha's Ring Lv. 3" additionalName="Event" type="Armor">
+	<item id="60061" name="沙哈戒指-階段3" additionalName="Event" type="Armor">
 		<!-- MP +60. CHA +4, LUC +4. Critical Damage for basic attacks and M. skills +21%. Atk. Spd. +7%, Casting Spd. +7%. P./ M. Skill Power +12%. Damage Reflection Resistance +35%. Fixed Damage Resistance +7%. Physical/ Mental Attack Resistance +12. Speed +3. HP Recovery +18%. Accuracy +4. <Debuff resistance>. Confusion +24, Obstruction +16, Petrification +12. Infection +44, Danger Zone +14. <Triggered skill effect>. Blocks the target's P./ M. skills with a 2% chance on a basic attack and a 3% chance when using skills. <Toggled skill effect>. Speed +10, P. Atk. in PvP +6%, P./ M. Atk. +15%, Critical Rate for basic attacks -50, P./ M. Def. -16%, nearby enemies' Speed/ Atk. Spd./ Casting Spd. -15%. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1204,7 +1204,7 @@
 			<skill id="27658" level="3" /> <!-- Sayha's Ring -->
 		</skills>
 	</item>
-	<item id="60062" name="Maphr's Ring Lv. 1" additionalName="Event" type="Armor">
+	<item id="60062" name="梅芙戒指-階段1" additionalName="Event" type="Armor">
 		<!-- MP +53. CHA +3, LUC +3. Critical Damage for basic attacks and M. skills +20%. Atk. Spd. +6%, Casting Spd. +6%. P./ M. Skill Power +5%. Damage Reflection Resistance +30%. Fixed Damage Resistance +5%. P./ M. Debuff Resistance +10. Speed +2. M. Accuracy +2. MP Recovery +10%. <Debuff resistance>. Confusion +20, Obstruction +12, Petrification +10. Infection +40, Danger Zone +10. Cannot be enchanted or upgraded. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1224,7 +1224,7 @@
 			<skill id="27664" level="1" /> <!-- Maphr's Ring -->
 		</skills>
 	</item>
-	<item id="60063" name="Maphr's Ring Lv. 2" additionalName="Event" type="Armor">
+	<item id="60063" name="梅芙戒指-階段2" additionalName="Event" type="Armor">
 		<!-- MP +57. CHA +3, LUC +3. Critical Damage for basic attacks and M. skills +20%. Atk. Spd. +6%, Casting Spd. +6%. P./ M. Skill Power +9%. Damage Reflection Resistance +33%. Fixed Damage Resistance +6%. P./ M. Debuff Resistance +11. Speed +2. M. Accuracy +3. MP Recovery +15%. <Debuff resistance>. Confusion +22, Obstruction +14, Petrification +11. Infection +42, Danger Zone +12. <Triggered skill effect>. Blinds the target with a 1% chance on a basic attack and a 2% chance when using skills. <Toggled skill effect>. P. Def. in PvP +4%, received P./ M. Critical Damage -6%, Fixed Damage Resistance +22%, Shield Defense +930, Shield Defense Rate +22%, Speed -28% -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1245,7 +1245,7 @@
 			<skill id="27664" level="2" /> <!-- Maphr's Ring -->
 		</skills>
 	</item>
-	<item id="60064" name="Maphr's Ring Lv. 3" additionalName="Event" type="Armor">
+	<item id="60064" name="梅芙戒指-階段3" additionalName="Event" type="Armor">
 		<!-- MP +60. CHA +4, LUC +4. Critical Damage for basic attacks and M. skills +21%. Atk. Spd. +7%, Casting Spd. +7%. P./ M. Skill Power +12%. Damage Reflection Resistance +35%. Fixed Damage Resistance +7%. P./ M. Debuff Resistance +12. Speed +3. M. Accuracy +4. MP Recovery +18%. <Debuff resistance>. Confusion +24, Obstruction +16, Petrification +12. Infection +44, Danger Zone +14. <Triggered skill effect>. Blinds the target with a 2% chance on a basic attack and a 3% chance when using skills. <Toggled skill effect>. P. Def. in PvP +5%, received P./ M. Critical Damage -12%, Fixed Damage Resistance +24%, Shield Defense +1000, Shield Defense Rate +24%, Speed -26% -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1266,7 +1266,7 @@
 			<skill id="27664" level="3" /> <!-- Maphr's Ring -->
 		</skills>
 	</item>
-	<item id="60065" name="Isolation Luck Charm Box" type="EtcItem">
+	<item id="60065" name="防禦平安幸運符禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 to 15,000 Isolation Luck Charm. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1290,7 +1290,7 @@
 			<item id="60066" min="15000" max="15000" chance="10" /> <!-- Isolation Luck Charm Box -->
 		</capsuled_items>
 	</item>
-	<item id="60066" name="Isolation Luck Charm Box" type="EtcItem">
+	<item id="60066" name="防禦平安幸運符" type="EtcItem">
 		<!-- Take it to the Game Assistant to obtain a useful item. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
 		<set name="immediate_effect" val="true" />
@@ -1298,7 +1298,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60067" name="Suspicious Vault" type="EtcItem">
+	<item id="60067" name="可疑的金庫" type="EtcItem">
 		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="PEEL" />
@@ -1307,7 +1307,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60068" name="Mythic Dragon Pack" type="EtcItem">
+	<item id="60068" name="神話龍禮盒" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Enchant Miraculous Weapon (5 pcs.) and a random item from the list. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="PEEL" />
@@ -1355,7 +1355,7 @@
 			<item id="48502" min="5" max="5" chance="100" /> <!-- Scroll: Enchant Miraculous Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="60069" name="Lineage 2 PA Support Kit" additionalName="Event" type="EtcItem">
+	<item id="60069" name="天堂II優質應援組合包" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1374,7 +1374,7 @@
 			<item id="81460" min="200" max="200" chance="100" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60070" name="Heavenly Accessory Pack Lv. 1" type="EtcItem">
+	<item id="60070" name="神之飾品1階段箱" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 1 heavenly accessory. -->
 		<set name="icon" val="br_L2Icon.etc_i.Event_TreasureChest" />
 		<set name="default_action" val="PEEL" />
@@ -1394,7 +1394,7 @@
 			<item id="27708" min="1" max="1" chance="16.666667" /> <!-- Maphr's Ring Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60071" name="Growth Cookie" type="EtcItem">
+	<item id="60071" name="成長餅乾" type="EtcItem">
 		<!-- When used for 30 min., Vitality bonus +50%, acquired XP/ SP +300%. Required level: 1-117. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1409,7 +1409,7 @@
 			<skill id="29457" level="1" /> <!-- Growth Cookie -->
 		</skills>
 	</item>
-	<item id="60072" name="Growth Cookie Box" type="EtcItem">
+	<item id="60072" name="成長餅乾禮盒" type="EtcItem">
 		<!-- Double-click to obtain Growth Cookie (50 pcs.). Required level: 1-117. Note!. Growth Cookie cannot be traded and can only be used if your level is lower than 118. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1422,7 +1422,7 @@
 			<item id="60071" min="50" max="50" chance="100" /> <!-- Growth Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60073" name="Freya's Ice Crystal" additionalName="Event" type="EtcItem">
+	<item id="60073" name="芙蕾雅的冰晶" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged by Freya in any town for Freya's Marks and various supplies. -->
 		<set name="icon" val="icon.bm_freya_crystal" />
 		<set name="immediate_effect" val="true" />
@@ -1432,14 +1432,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60074" name="Freya's Mark" additionalName="Event" type="EtcItem">
+	<item id="60074" name="芙蕾雅的證據" additionalName="Event" type="EtcItem">
 		<!-- Freya's special gift filled with her kindness and love. Bonuses will be available after adding to a collection. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60075" name="Freya's Glowing Potion" additionalName="Event" type="EtcItem">
+	<item id="60075" name="芙蕾雅閃耀藥水" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +20%, Vitality bonus +15%, P. Atk./ P. Def./ M. Atk./ M. Def. +5%. Cooldown: 5 min. -->
 		<set name="icon" val="icon.giant_blue_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1455,7 +1455,7 @@
 			<skill id="29461" level="1" /> <!-- Freya's Glowing Potion -->
 		</skills>
 	</item>
-	<item id="60076" name="Charming Mermaid's Pack" type="EtcItem">
+	<item id="60076" name="類美人魚禮盒" type="EtcItem">
 		<!-- Double-click to obtain Freya's Glittering Ice Rose, 2 Freya's Glittering Scrolls of Storm and a random item from the list. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1508,7 +1508,7 @@
 			<item id="80817" min="2" max="2" chance="2.564103" /> <!-- Wondrous Cocktail -->
 		</capsuled_items>
 	</item>
-	<item id="60077" name="Clan Rewards" type="EtcItem">
+	<item id="60077" name="血盟獎勵" type="EtcItem">
 		<!-- Double-click to obtain one of the following rewards: Freya's Ice Rose (8 pcs.), Glowing Dragon's Attribute Potion (8 pcs.), Honey Dark Beer (8 pcs.), Wondrous Cocktail (4 pcs.), Nevit's Shining Gold Hourglass (8 pcs.). -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="PEEL" />
@@ -1529,7 +1529,7 @@
 			<item id="81013" min="8" max="8" chance="20" /> <!-- Nevit's Shining Gold Hourglass - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60078" name="Water Dragon's Scroll Bundle" type="EtcItem">
+	<item id="60078" name="水龍軍團卷軸冊" type="EtcItem">
 		<!-- A bundle of scrolls used by the warriors of the Water Dragon's legion that live in the Ravaged Innadril. Double-click to obtain a random Scroll of Storm. -->
 		<set name="icon" val="br_cashtex.item.br_cash_fighter_buff_set_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1552,7 +1552,7 @@
 			<item id="81054" min="24" max="24" chance="14.285714" /> <!-- Freya's Scroll of Storm - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60079" name="17th Anniversary Treasure Chest" type="EtcItem">
+	<item id="60079" name="17週年紀念寶箱" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1561,7 +1561,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60080" name="17th Anniversary Mysterious Treasure Chest" type="EtcItem">
+	<item id="60080" name="奇蹟的17週年神秘寶箱" type="EtcItem">
 		<!-- Double-click to obtain 1 special item. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1570,7 +1570,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60081" name="Mysterious Sphere" type="EtcItem">
+	<item id="60081" name="奇蹟寶珠" type="EtcItem">
 		<!-- Take it to the Game Assistant to obtain a useful item. -->
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1578,7 +1578,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60082" name="Maphr's Fortune Box" type="EtcItem">
+	<item id="60082" name="梅芙幸運箱" type="EtcItem">
 		<!-- Double-click to obtain one of the following items with a certain chance. -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -1620,7 +1620,7 @@
 			<item id="81908" min="1" max="1" chance="3.571429" /> <!-- Gran Kain's Shining Scroll: Enchant La Vie En Rose's Brooch -->
 		</capsuled_items>
 	</item>
-	<item id="60083" name="Dwarf's Gold Chest" type="EtcItem">
+	<item id="60083" name="矮人黃金禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shiny Gold Bar Box and a useful item. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1664,7 +1664,7 @@
 			<item id="29529" min="1" max="1" chance="100" /> <!-- Shiny Gold Bar Box -->
 		</capsuled_items>
 	</item>
-	<item id="60084" name="Swift Attack Cookie Pack" type="EtcItem">
+	<item id="60084" name="真實鬥志餅乾禮盒" type="EtcItem">
 		<!-- Double-click to obtain Swift Attack Cookie (50 pcs.). Note!. Received cookies cannot be traded. -->
 		<set name="icon" val="br_L2Icon.stromshirt_box_i00_cn" />
 		<set name="default_action" val="PEEL" />
@@ -1677,7 +1677,7 @@
 			<item id="82172" min="50" max="50" chance="100" /> <!-- Swift Attack Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60085" name="Ancient War Relic" type="EtcItem">
+	<item id="60085" name="春節戰利品禮盒" type="EtcItem">
 		<!-- Double-click to obtain a treasure chest. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
@@ -1693,7 +1693,7 @@
 			<item id="60088" min="1" max="1" chance="50" /> <!-- Aunt's Treasure Chest -->
 		</capsuled_items>
 	</item>
-	<item id="60086" name="Golden Labirinth Pack" type="EtcItem">
+	<item id="60086" name="奶奶的寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1702,7 +1702,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60087" name="Silver Labirinth Pack" type="EtcItem">
+	<item id="60087" name="爸爸的寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1731,7 +1731,7 @@
 			<item id="36946" min="1" max="1" chance="6.666667" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60088" name="Red Labirinth Pack" type="EtcItem">
+	<item id="60088" name="阿姨的寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -1760,7 +1760,7 @@
 			<item id="81931" min="1" max="1" chance="6.666667" /> <!-- Augmenting Stone: Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="60089" name="Blue Labirinth Pack" type="EtcItem">
+	<item id="60089" name="哥哥的寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1769,7 +1769,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60090" name="Oren Treasure" type="EtcItem">
+	<item id="60090" name="歐瑞寶物" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.sayha2017_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -1816,7 +1816,7 @@
 			<item id="80335" min="1" max="1" chance="3.030303" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60091" name="Abundance Mark" type="EtcItem">
+	<item id="60091" name="褪色的豐饒憑證" type="EtcItem">
 		<!-- A mark that symbolizes abundance. Required for creating High-grade Talisman of Abundance. -->
 		<set name="icon" val="BranchSys2.icon.g_dawn_gem" />
 		<set name="immediate_effect" val="true" />
@@ -1826,7 +1826,7 @@
 		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60092" name="Autumn Festival's Mooncake Box" type="EtcItem">
+	<item id="60092" name="中秋節月餅禮盒" type="EtcItem">
 		<!-- Double-click to obtain 3 Mooncake Lucky Messages. Also, there is a chance to obtain 1 useful item. -->
 		<set name="icon" val="icon.event_steamed_rice_cake_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1835,7 +1835,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60093" name="Mooncake Lucky Message" type="EtcItem">
+	<item id="60093" name="月餅裡的幸運訊息" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1843,7 +1843,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60094" name="God's Spirit Bottle" type="EtcItem">
+	<item id="60094" name="裝有神靈魂之瓶" type="EtcItem">
 		<!-- Required for creating and upgrading god's accessories (6 types). -->
 		<set name="icon" val="BranchIcon.icon.energy_of_shilen_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1851,7 +1851,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60095" name="Transcendent Treasure Chest" type="EtcItem">
+	<item id="60095" name="超越寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random item from the list and another one of various items. Can also be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1897,7 +1897,7 @@
 			<item id="60084" min="1" max="1" chance="3.125" /> <!-- Swift Attack Cookie Pack -->
 		</capsuled_items>
 	</item>
-	<item id="60096" name="Heir's Radiance Lv. 8" additionalName="PvE/PvP" type="Armor">
+	<item id="60096" name="繼承者光輝-8階段" additionalName="PvE/PvP" type="Armor">
 		<!-- Attribute Attack +60. Attribute Resistance +60. Debuff Resistance +15%. Max HP +7000. Received AoE damage/ skill critical damage -15%. P./ M. Skill Power +5%. All Critical Damage +5%. STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5, CHA +5, LUC +5. PvP/ PvE damage +10%. Received damage from Dragon weapons -15%. Enables the Heir's Radiance - PvP/ PvE Lv. 1 skill. <When equipped with Knight's/ Wizard's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +15%. Warrior's Circlet: P. Atk. +15%. Wizard's Circlet: M. Atk. +15%. No set effect when equipped with Silvery Circlet. Cannot be enchanted. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
 		<set name="default_action" val="EQUIP" />
@@ -1912,7 +1912,7 @@
 			<skill id="29463" level="1" /> <!-- Heir's Radiance Lv. 8 -->
 		</skills>
 	</item>
-	<item id="60097" name="Heir's Radiance Lv. 9" additionalName="PvE/PvP" type="Armor">
+	<item id="60097" name="繼承者光輝-9階段" additionalName="PvE/PvP" type="Armor">
 		<!-- Attribute Attack +70. Attribute Resistance +70. Debuff Resistance +20%. Max HP +9000. Received AoE damage/ skill critical damage -17%. P./ M. Skill Power +10%. All Critical Damage +10%. STR +6, DEX +6, CON +6, INT +6, WIT +6, MEN +6, CHA +6, LUC +6. PvP/ PvE damage +12%. Received damage from Dragon weapons -17%. Enables the Heir's Radiance - PvP/ PvE Lv. 2 skill. <When equipped with Knight's/ Wizard's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +20%. Warrior's Circlet: P. Atk. +20%. Wizard's Circlet: M. Atk. +20%. No set effect when equipped with Silvery Circlet. Cannot be enchanted. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
 		<set name="default_action" val="EQUIP" />
@@ -1927,7 +1927,7 @@
 			<skill id="29464" level="1" /> <!-- Heir's Radiance Lv. 9 -->
 		</skills>
 	</item>
-	<item id="60098" name="Heir's Radiance Lv. 10" additionalName="PvE/PvP" type="Armor">
+	<item id="60098" name="繼承者光輝-10階段" additionalName="PvE/PvP" type="Armor">
 		<!-- Attribute Attack +80. Attribute Resistance +80. Debuff Resistance +25%. Max HP +10,000. Received AoE damage/ skill critical damage -20%. P./ M. Skill Power +20%. All Critical Damage +20%. STR +7, DEX +7, CON +7, INT +7, WIT +7, MEN +7, CHA +7, LUC +7. PvP/ PvE damage +15%. Received damage from Dragon weapons -20%. Enables the Heir's Radiance - PvP/ PvE Lv. 3 skill. <When equipped with Knight's/ Wizard's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +25%. Warrior's Circlet: P. Atk. +25%. Wizard's Circlet: M. Atk. +25%. No set effect when equipped with Silvery Circlet. Cannot be enchanted. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
 		<set name="default_action" val="EQUIP" />
@@ -1943,7 +1943,7 @@
 			<skill id="29465" level="1" /> <!-- Heir's Radiance Lv. 10 -->
 		</skills>
 	</item>
-	<item id="60099" name="+8 Artifact Pack - P. Atk. (Attack)" type="EtcItem">
+	<item id="60099" name="+8聖紋石物理攻擊力(鬥志)禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Artifact - P. Atk. (attack). -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="PEEL" />

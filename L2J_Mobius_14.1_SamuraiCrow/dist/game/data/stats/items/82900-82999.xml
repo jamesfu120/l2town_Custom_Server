@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="82900" name="Fafurion Dual Swords" additionalName="Lv. 4" type="Weapon">
+	<item id="82900" name="法利昂雙刀" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. Fafurion's Howl -->
 		<set name="icon" val="Icon.weapon_i.fafurion_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -33,7 +33,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82901" name="Fafurion Dual Daggers" additionalName="Lv. 4" type="Weapon">
+	<item id="82901" name="法利昂雙匕首" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. Fafurion's Howl -->
 		<set name="icon" val="Icon.weapon_i.fafurion_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -66,7 +66,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82902" name="Lunarium" type="EtcItem">
+	<item id="82902" name="銀扇草" type="EtcItem">
 		<!-- Bright light that illuminates the darkness. Required for upgrading Dragon weapons up to Lv. 4 and Silvery equipment. -->
 		<set name="icon" val="icon.dragon_weapon_upgrade_stone" />
 		<set name="immediate_effect" val="true" />
@@ -75,7 +75,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82903" name="Solaris" type="EtcItem">
+	<item id="82903" name="太陽粒" type="EtcItem">
 		<!-- A blazing source of light. Required for upgrading L-grade weapons and armor. -->
 		<set name="icon" val="icon.L_weapon_upgrade_stone" />
 		<set name="immediate_effect" val="true" />
@@ -85,7 +85,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82904" name="Homunculus' Shiny Hourglass" type="EtcItem">
+	<item id="82904" name="燦爛的何門奎思沙漏" type="EtcItem">
 		<!-- A homunculus' hourglass that is shining brightly. Required for awakening an expert/ top-grade homunculus sleeping in the Cradle of Time. Click the Create icon in the Homunculi UI or double-click the item to get to the Cradle of Time. Can be purchased for Einhasad's Golden Coins at the store (Misc. tab). Einhasad's Messenger Pegasus is in deep slumber. -->
 		<set name="icon" val="icon.homun_coupon_etc" />
 		<set name="default_action" val="PEEL" />
@@ -98,7 +98,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="HomunculusHourglass" />
 	</item>
-	<item id="82905" name="Shining Crystal of Determination Pack" type="EtcItem">
+	<item id="82905" name="閃耀的鬥志結晶禮盒" type="EtcItem">
 		<!-- Double-click to obtain Crystal of Determination (1 pc.) and 1 useful item. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="PEEL" />
@@ -112,7 +112,7 @@
 			<item id="47951" min="1" max="1" chance="100" /> <!-- Crystal of Determination -->
 		</capsuled_items>
 	</item>
-	<item id="82906" name="Shining Crystal of Protection Pack" type="EtcItem">
+	<item id="82906" name="閃耀的守護結晶禮盒" type="EtcItem">
 		<!-- Double-click to obtain Crystal of Protection (1 pc.) and 1 useful item. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -126,7 +126,7 @@
 			<item id="47952" min="1" max="1" chance="100" /> <!-- Crystal of Protection -->
 		</capsuled_items>
 	</item>
-	<item id="82907" name="Scroll: Modify Weapon" type="EtcItem">
+	<item id="82907" name="武器加工卷軸" type="EtcItem">
 		<!-- Changes the appearance of a weapon. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="icon.weapon_change_i06" />
 		<set name="is_stackable" val="true" />
@@ -142,7 +142,7 @@
 			<skill id="39851" level="1" /> <!-- Appearance Stone: Weapon -->
 		</skills>
 	</item>
-	<item id="82908" name="Blessed Scroll: Modify Weapon" type="EtcItem">
+	<item id="82908" name="祝福的武器加工卷軸" type="EtcItem">
 		<!-- Changes the appearance of a weapon. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i06" />
 		<set name="is_stackable" val="true" />
@@ -158,7 +158,7 @@
 			<skill id="39852" level="1" /> <!-- Blessed Appearance Stone: Weapon -->
 		</skills>
 	</item>
-	<item id="82909" name="Scroll: Modify Armor" type="EtcItem">
+	<item id="82909" name="防具加工卷軸" type="EtcItem">
 		<!-- Changes the appearance of a armor. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="icon.armor_change_i06" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
@@ -174,7 +174,7 @@
 			<skill id="39853" level="1" /> <!-- Appearance Stone: Armor -->
 		</skills>
 	</item>
-	<item id="82910" name="Blessed Scroll: Modify Armor" type="EtcItem">
+	<item id="82910" name="祝福的防具加工卷軸" type="EtcItem">
 		<!-- Changes the appearance of a armor. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i06" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
@@ -191,7 +191,7 @@
 			<skill id="39854" level="1" /> <!-- Blessed Appearance Stone: Armor -->
 		</skills>
 	</item>
-	<item id="82911" name="Scroll: Restore Equipment" type="EtcItem">
+	<item id="82911" name="裝備外型復原卷軸" type="EtcItem">
 		<!-- Double-click to restore the default appearance of equipment (weapons/ armor). -->
 		<set name="icon" val="icon.change_restore_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -206,7 +206,7 @@
 			<skill id="39850" level="1" /> <!-- Restoration Stone: Restore Equipment -->
 		</skills>
 	</item>
-	<item id="82912" name="Attribute Change Crystal: L-grade Weapon" type="EtcItem">
+	<item id="82912" name="武器屬性變更水晶-L級" type="EtcItem">
 		<!-- Double-click to change the attribute of an L-grade weapon. The weapon imbued with an attribute must be in your inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="crystal_type" val="L" />
@@ -223,7 +223,7 @@
 			<skill id="12881" level="1" /> <!-- Change Property -->
 		</skills>
 	</item>
-	<item id="82913" name="Gran Kain's Enchant Scroll Pack" type="EtcItem">
+	<item id="82913" name="格蘭肯強化卷軸禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Gran Kain's enchant scroll. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
@@ -250,7 +250,7 @@
 			<item id="82666" min="1" max="1" chance="8.333333" /> <!-- Gran Kain's Scroll: Enchant Angel's Accessories -->
 		</capsuled_items>
 	</item>
-	<item id="82914" name="Dragon Weapon Pack (Lv. 3)" additionalName="Event" type="EtcItem">
+	<item id="82914" name="龍戰爪禮盒(3階段)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one Antharas/ Valakas/ Lindvior/ Fafurion weapon of Lv. 3. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -298,7 +298,7 @@
 			<item id="80318" min="1" max="1" chance="3.225806" /> <!-- Fafurion Dual Daggers - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="82915" name="Green Sprout Energy" additionalName="Event" type="EtcItem">
+	<item id="82915" name="粉綠幼苗的氣息" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., damage +10%, acquired XP/ SP +10%, received damage -10%. -->
 		<set name="icon" val="icon.ev_green_energy" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -312,7 +312,7 @@
 			<skill id="39841" level="1" /> <!-- Green Sprout Energy -->
 		</skills>
 	</item>
-	<item id="82916" name="Is that Dragon Weapon?" additionalName="Event" type="EtcItem">
+	<item id="82916" name="是龍戰爪嗎？" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Dragon Weapon Pack (1 pc.) or Aether (1500 pcs.). Chance to obtain Dragon Weapon Pack: 14%. Chance to obtain Aether (1500 pcs.): 86%. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -329,7 +329,7 @@
 			<item id="81215" min="1500" max="1500" chance="50" /> <!-- Aether -->
 		</capsuled_items>
 	</item>
-	<item id="82917" name="Aether Pack" additionalName="Event" type="EtcItem">
+	<item id="82917" name="乙醚禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Aether (1 pc.) and Shining Aether Pack (1 pc.). -->
 		<set name="icon" val="icon.etc_crystal_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
@@ -346,7 +346,7 @@
 			<item id="81215" min="1" max="1" chance="100" /> <!-- Aether -->
 		</capsuled_items>
 	</item>
-	<item id="82918" name="Shining Aether Pack" additionalName="Event" type="EtcItem">
+	<item id="82918" name="閃耀的乙醚禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain some Aether. <Surprise Secret Shop>. Can be used as a ticket in the Surprise Secret Shop. -->
 		<set name="icon" val="BranchSys.icon.br_fire_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -360,7 +360,7 @@
 			<item id="81215" min="2" max="20" chance="100" /> <!-- Aether -->
 		</capsuled_items>
 	</item>
-	<item id="82919" name="Is that Dragon Weapon?" additionalName="Event" type="EtcItem">
+	<item id="82919" name="是龍戰爪嗎？" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Dragon Weapon Pack (1 pc.) or Aether (1000 pcs.). Chance to obtain Dragon Weapon Pack: 9%. Chance to obtain Aether (1000 pcs.): 91%. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -377,7 +377,7 @@
 			<item id="81215" min="1000" max="1000" chance="50" /> <!-- Aether -->
 		</capsuled_items>
 	</item>
-	<item id="82920" name="Is that Dragon Weapon?" additionalName="Event" type="EtcItem">
+	<item id="82920" name="是龍戰爪嗎？" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Dragon Weapon Pack (1 pc.) or Aether (500 pcs.). Chance to obtain Dragon Weapon Pack: 7%. Chance to obtain Aether (500 pcs.): 93%. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -394,7 +394,7 @@
 			<item id="81215" min="500" max="500" chance="50" /> <!-- Aether -->
 		</capsuled_items>
 	</item>
-	<item id="82921" name="Dragon's Treasure Chest" type="EtcItem">
+	<item id="82921" name="龍之寶箱" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
@@ -440,7 +440,7 @@
 			<item id="81444" min="1" max="1" chance="3.225806" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="82922" name="Blessed Antharas' Earring Pack" additionalName="Event" type="EtcItem">
+	<item id="82922" name="祝福的安塔瑞斯耳環禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Antharas' Blessed Earring (1 pc.). -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -456,7 +456,7 @@
 			<item id="19463" min="1" max="1" chance="100" /> <!-- Antharas' Blessed Earring -->
 		</capsuled_items>
 	</item>
-	<item id="82923" name="Blessed Valakas' Necklace Pack" additionalName="Event" type="EtcItem">
+	<item id="82923" name="祝福的巴拉卡斯項鍊禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Valakas' Blessed Necklace (1 pc.). -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -472,7 +472,7 @@
 			<item id="19464" min="1" max="1" chance="100" /> <!-- Valakas' Blessed Necklace -->
 		</capsuled_items>
 	</item>
-	<item id="82924" name="Lindvior's Earring Pack" additionalName="Event" type="EtcItem">
+	<item id="82924" name="林德拜爾耳環禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 1 Lindvior's Earring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -490,7 +490,7 @@
 			<item id="36946" min="1" max="1" chance="100" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="82925" name="Benusta's Reward Box" additionalName="Lv. 4" type="EtcItem">
+	<item id="82925" name="貝努斯塔報酬箱" additionalName="Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain one of the available rewards: a superior jewel Lv. 1, various items or adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -534,7 +534,7 @@
 			<item id="81625" min="1" max="1" chance="3.703704" /> <!-- Superior Blue Cat's Eye Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82926" name="Golden Certificate L2" additionalName="Lionna/Erica" type="EtcItem">
+	<item id="82926" name="散發金色光芒的L2證明書" additionalName="Lionna/Erica" type="EtcItem">
 		<!-- A rare document signed by the heads of all six Dwarven guilds. A real catch for any collector. An exclusive item for the new server. Can be purchased at Einhasad's Store once a week. <How to use>. Can be added to the event collection 'Golden Life (7-day)'. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
@@ -544,7 +544,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82927" name="Gran Kain's Scroll: Enchant L-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="82927" name="格蘭肯的武器強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade weapons. In case of failure, the enchant value remains the same. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_shilen_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -561,7 +561,7 @@
 			<skill id="39848" level="1" /> <!-- Gran Kain's Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82928" name="Gran Kain's Scroll: Enchant L-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="82928" name="格蘭肯的防具強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade armor. In case of failure, the enchant value remains the same. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_shilen_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -578,7 +578,7 @@
 			<skill id="39849" level="1" /> <!-- Gran Kain's Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82929" name="Dwarven Magic-imbued Cloak" additionalName="R110" type="Armor">
+	<item id="82929" name="矮人魔劍士專用斗篷" additionalName="R110" type="Armor">
 		<!-- An R110-grade cloak imbued with Dwarven magic. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -594,7 +594,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="82930" name="Dwarven Magic-imbued Armor" additionalName="R110" type="Armor">
+	<item id="82930" name="矮人魔劍士專用防具" additionalName="R110" type="Armor">
 		<!-- R110-grade armor imbued with Dwarven magic. alldress -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -606,7 +606,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="82931" name="C-grade Relic Summon Coupon - 1-time" type="EtcItem">
+	<item id="82931" name="C級遺物確定召喚券-1次" type="EtcItem">
 		<!-- A shining coupon that can be used for summoning a relic lost in the Aden continent. To summon a relic, choose the summoning material in the Summon tab of the Relics UI. Double-click to summon a C-grade relic. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv3" />
 		<set name="immediate_effect" val="true" />
@@ -617,7 +617,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="82932" name="B-grade Relic Summon Coupon - 1-time" type="EtcItem">
+	<item id="82932" name="B級遺物確定召喚券-1次" type="EtcItem">
 		<!-- A shining coupon that can be used for summoning a relic lost in the Aden continent. To summon a relic, choose the summoning material in the Summon tab of the Relics UI. Double-click to summon a B-grade relic. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv4" />
 		<set name="immediate_effect" val="true" />
@@ -628,7 +628,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="82933" name="A-grade Relic Summon Coupon - 1-time" type="EtcItem">
+	<item id="82933" name="A級遺物確定召喚券-1次" type="EtcItem">
 		<!-- A shining coupon that can be used for summoning a relic lost in the Aden continent. To summon a relic, choose the summoning material in the Summon tab of the Relics UI. Double-click to summon an A-grade relic. -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv5" />
 		<set name="immediate_effect" val="true" />
@@ -639,7 +639,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="82934" name="Shining Artifact Pack" type="EtcItem">
+	<item id="82934" name="閃耀的聖紋石箱" type="EtcItem">
 		<!-- Double-click to obtain Artifact Crystal, Artifact Fragment and a rare item. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -680,7 +680,7 @@
 			<item id="81444" min="1" max="1" chance="3.703704" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="82935" name="Blue Seal Stone" type="EtcItem">
+	<item id="82935" name="藍色封印石" type="EtcItem">
 		<!-- A part of an ancient seal. Double-click to obtain various items. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="PEEL" />
@@ -703,7 +703,7 @@
 			<item id="36946" min="1" max="1" chance="14.285714" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="82936" name="Green Seal Stone" type="EtcItem">
+	<item id="82936" name="綠色封印石" type="EtcItem">
 		<!-- A part of an ancient seal. Double-click to obtain various items. -->
 		<set name="icon" val="icon.etc_wind_rune_i00" />
 		<set name="default_action" val="PEEL" />
@@ -726,7 +726,7 @@
 			<item id="36946" min="1" max="1" chance="14.285714" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="82937" name="Red Seal Stone" type="EtcItem">
+	<item id="82937" name="紅色封印石" type="EtcItem">
 		<!-- A part of an ancient seal. Double-click to obtain various items. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="PEEL" />
@@ -749,7 +749,7 @@
 			<item id="36946" min="1" max="1" chance="14.285714" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="82938" name="Shining Energy Pack" type="EtcItem">
+	<item id="82938" name="閃耀的氣息禮盒" type="EtcItem">
 		<!-- Double-click to obtain Energy of Protection, Sayha's Energy, and a rare item. -->
 		<set name="icon" val="icon.bm_special_jewelbox_lv4" />
 		<set name="default_action" val="PEEL" />
@@ -796,7 +796,7 @@
 			<item id="81444" min="1" max="1" chance="3.030303" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="82939" name="Bellra's Green Chest" type="EtcItem">
+	<item id="82939" name="安塔瑞斯獎勵禮盒" type="EtcItem">
 		<!-- A reward from Bellra for defeating Antharas in a command channel. Double-click to obtain rare items. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="PEEL" />
@@ -895,7 +895,7 @@
 			<item id="80120" min="1" max="1" chance="1.219512" /> <!-- Leviathan Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="82940" name="Level" type="EtcItem">
+	<item id="82940" name="等級" type="EtcItem">
 		<!-- Level up as a reward. -->
 		<set name="icon" val="icon.lv_point" />
 		<set name="immediate_effect" val="true" />
@@ -907,7 +907,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82941" name="1st Class Change Token" type="EtcItem">
+	<item id="82941" name="一次轉職憑證" type="EtcItem">
 		<!-- Proves that you have completed the 1st class change. -->
 		<set name="icon" val="icon.voucher_lev_85" />
 		<set name="immediate_effect" val="true" />
@@ -920,7 +920,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82942" name="2nd Class Change Token" type="EtcItem">
+	<item id="82942" name="二次轉職憑證" type="EtcItem">
 		<!-- Proves that you have completed the 2nd class change. -->
 		<set name="icon" val="icon.voucher_lev_90" />
 		<set name="immediate_effect" val="true" />
@@ -933,7 +933,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82943" name="3rd Class Change Token" type="EtcItem">
+	<item id="82943" name="三次轉職憑證" type="EtcItem">
 		<!-- Proves that you have completed the 3rd class change. -->
 		<set name="icon" val="icon.voucher_lev_95" />
 		<set name="immediate_effect" val="true" />
@@ -946,7 +946,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82944" name="Awakening Token" type="EtcItem">
+	<item id="82944" name="覺醒憑證" type="EtcItem">
 		<!-- Proves that you have completed the Awakening. -->
 		<set name="icon" val="icon.voucher_lev_97" />
 		<set name="immediate_effect" val="true" />
@@ -959,7 +959,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82945" name="1st Liberation Token" type="EtcItem">
+	<item id="82945" name="一次能力解放憑證" type="EtcItem">
 		<!-- Proves that you have completed the 1st Liberation. -->
 		<set name="icon" val="icon.voucher_lev_90" />
 		<set name="immediate_effect" val="true" />
@@ -972,7 +972,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82946" name="2nd Liberation Token" type="EtcItem">
+	<item id="82946" name="二次能力解放憑證" type="EtcItem">
 		<!-- Proves that you have completed the 2nd Liberation. -->
 		<set name="icon" val="icon.voucher_lev_95" />
 		<set name="immediate_effect" val="true" />
@@ -985,7 +985,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82947" name="3rd Liberation Token" type="EtcItem">
+	<item id="82947" name="三次能力解放憑證" type="EtcItem">
 		<!-- Proves that you have completed the 3rd Liberation. -->
 		<set name="icon" val="icon.voucher_lev_97" />
 		<set name="immediate_effect" val="true" />
@@ -998,7 +998,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82948" name="Teleportation Guide - Training Assistant Tarti" type="EtcItem">
+	<item id="82948" name="移動指南-訓練幫手 塔勒媞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to the training zone to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1011,7 +1011,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82949" name="Teleportation Guide - Training Assistant Tarti" type="EtcItem">
+	<item id="82949" name="移動指南-訓練幫手 塔勒媞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to the training zone to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1024,7 +1024,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82950" name="Teleportation Guide - Training Assistant Tarti" type="EtcItem">
+	<item id="82950" name="移動指南-訓練幫手 塔勒媞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to the training zone to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1037,7 +1037,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82951" name="Teleportation Guide - Training Assistant Tarti" type="EtcItem">
+	<item id="82951" name="移動指南-訓練幫手 塔勒媞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to the training zone to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1050,7 +1050,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82952" name="Teleportation Guide - High Priest Raymond" type="EtcItem">
+	<item id="82952" name="移動指南-大神官 雷門德" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to High Priest Raymond to complete your mission'. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1063,7 +1063,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82953" name="Teleportation Guide - High Priest Raymond" type="EtcItem">
+	<item id="82953" name="移動指南-大神官 雷門德" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to High Priest Raymond to complete your mission'. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1076,7 +1076,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82954" name="Teleportation Guide - Growth Assistant Tarti" type="EtcItem">
+	<item id="82954" name="移動指南-成長助手 塔勒媞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Growth Assistant Tarti to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1089,7 +1089,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82955" name="Teleportation Guide - High Priest Raymond" type="EtcItem">
+	<item id="82955" name="移動指南-大神官 雷門德" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to High Priest Raymond to complete your mission'. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1102,7 +1102,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82956" name="Teleportation Guide - High Priest Raymond" type="EtcItem">
+	<item id="82956" name="移動指南-大神官 雷門德" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to High Priest Raymond to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1114,7 +1114,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82957" name="Teleportation Guide - Gereth" type="EtcItem">
+	<item id="82957" name="移動指南-克列尼歐斯" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Gereth to complete your mission'. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1126,7 +1126,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82958" name="Teleportation Guide - Growth Assistant Tarti" type="EtcItem">
+	<item id="82958" name="移動指南-成長助手 塔勒媞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Growth Assistant Tarti to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1139,7 +1139,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82959" name="Teleportation Guide - Herphah" type="EtcItem">
+	<item id="82959" name="移動指南-海勒芙雅" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Herphah to complete your mission'. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1152,7 +1152,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82960" name="Teleportation Guide - Vollodos" type="EtcItem">
+	<item id="82960" name="移動指南-勃羅多斯" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Vollodos to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1165,7 +1165,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82961" name="Teleportation Guide - Lapathia" type="EtcItem">
+	<item id="82961" name="移動指南-拉芙拉希亞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Lapathia to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1178,7 +1178,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82962" name="Teleportation Guide - Evan Graham" type="EtcItem">
+	<item id="82962" name="移動指南-伊班 格萊歐姆" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Evan Graham to complete your mission'. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1191,7 +1191,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82963" name="Teleportation Guide - Harp Zu Hestui" type="EtcItem">
+	<item id="82963" name="移動指南-夏勒普 蘇 黑斯吐伊" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Harp Zu Hestui to complete your mission'. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1204,7 +1204,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82964" name="Teleportation Guide - Lionel Hunter" type="EtcItem">
+	<item id="82964" name="移動指南-利歐納爾 杭特" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to Lionel Hunter to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
@@ -1217,7 +1217,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82965" name="Scroll: Summon Sin Eater" type="EtcItem">
+	<item id="82965" name="噬罪者召喚卷軸" type="EtcItem">
 		<!-- A scroll for summoning Sin Eater. Take it to Dark Judge to start the mission to decrease your PK counter. -->
 		<set name="icon" val="icon.etc_scroll_chalik_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1230,7 +1230,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="82966" name="+5 Circlet Box Coupon" type="EtcItem">
+	<item id="82966" name="+5頭箍禮盒交換券" type="EtcItem">
 		<!-- Can be exchanged for +5 Knight's/ Wizard's/ Warrior's Circlet Box (of your choice). -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -1243,7 +1243,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82967" name="Mystic Maker's Power Pack" type="EtcItem">
+	<item id="82967" name="蘊含奧秘魔法使之力的禮盒" type="EtcItem">
 		<!-- A pack filled with Mystic Maker's powers. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1260,7 +1260,7 @@
 			<item chance="100" id="46782" max="1" min="1" /> <!-- Graduation Gift -->
 		</capsuled_items>
 	</item>
-	<item id="82968" name="Dwarven Magic-imbued Cloak" additionalName="R99 and lower" type="Armor">
+	<item id="82968" name="矮人魔劍士專用斗篷" additionalName="R99 and lower" type="Armor">
 		<!-- A cloak of R99-grade or lower, imbued with Dwarven magic. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1276,7 +1276,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="82969" name="Dwarven Magic-imbued Armor" additionalName="R99 and lower" type="Armor">
+	<item id="82969" name="矮人魔劍士專用防具" additionalName="R99 and lower" type="Armor">
 		<!-- Armor of R99-grade or lower, imbued with Dwarven magic. alldress -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -1291,7 +1291,7 @@
 			<skill id="36942" level="1" /> <!-- +0 Silvery Artifact Book -->
 		</skills>
 	</item>
-	<item id="82970" name="Dwarven Magic-imbued Cloak" additionalName="L-grade" type="Armor">
+	<item id="82970" name="矮人魔劍士專用斗篷" additionalName="L-grade" type="Armor">
 		<!-- An L-grade cloak imbued with Dwarven magic. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1307,7 +1307,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="82971" name="Dwarven Magic-imbued Armor" additionalName="L-grade" type="Armor">
+	<item id="82971" name="矮人魔劍士專用防具" additionalName="L-grade" type="Armor">
 		<!-- L-grade armor imbued with Dwarven magic. alldress -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -1323,7 +1323,7 @@
 			<skill id="36941" level="1" /> <!-- Kaliel's Divine Protection -->
 		</skills>
 	</item>
-	<item id="82972" name="Dwarven Magic-imbued Cloak of Light Dragon" type="Armor">
+	<item id="82972" name="矮人魔劍士專用光之龍斗篷" type="Armor">
 		<!-- Light Dragon's Cloak imbued with Dwarven magic. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1339,7 +1339,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="82973" name="Superior Ruby/ Red Cat's Eye Pack Lv. 10" additionalName="Event" type="EtcItem">
+	<item id="82973" name="最高級紅寶石/緋金綠寶石10階段禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Superior Ruby Lv. 10 - Event and Superior Red Cat's Eye Lv. 10 - Event. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
@@ -1355,7 +1355,7 @@
 			<item id="81871" min="1" max="1" chance="100" /> <!-- Superior Red Cat's Eye Lv. 10 - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82974" name="Superior Sapphire/ Blue Cat's Eye Pack Lv. 10" additionalName="Event" type="EtcItem">
+	<item id="82974" name="最高級藍寶石/靛金綠寶石10階段禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Superior Sapphire Lv. 10 - Event and Superior Blue Cat's Eye Lv. 10 - Event. -->
 		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
@@ -1371,7 +1371,7 @@
 			<item id="81872" min="1" max="1" chance="100" /> <!-- Superior Blue Cat's Eye Lv. 10 - Event -->
 		</capsuled_items>
 	</item>
-	<item id="82975" name="Maker Symbol Cloak" type="Armor">
+	<item id="82975" name="魔法使徽章斗篷" type="Armor">
 		<!-- When equipped, changes your cloak appearance to that of the cloak that unleashes Maker's abilities. Only for Shine Makers. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1388,7 +1388,7 @@
 			<player class_id_restriction="231, 232, 233, 234, 235" />
 		</conditions>
 	</item>
-	<item id="82976" name="Seo's Radiant Lucky Pouch" additionalName="Event" type="EtcItem">
+	<item id="82976" name="賽歐的燦爛福袋" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain valuable items. -->
 		<set name="icon" val="icon.ev_230111_newyear_box03" />
 		<set name="default_action" val="PEEL" />
@@ -1437,7 +1437,7 @@
 			<item id="80335" min="1" max="1" chance="3.030303" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82977" name="Shine Maker's Star Candy" additionalName="Event" type="EtcItem">
+	<item id="82977" name="狂狼覺醒者精隨" additionalName="Event" type="EtcItem">
 		<!-- Mysterious energy granted for completing a party instance zone together with Warg. For 30 min., acquired XP/ SP +200%. -->
 		<set name="icon" val="icon.aden_essence_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1452,7 +1452,7 @@
 			<skill id="39858" level="1" /> <!-- Essence of Warg -->
 		</skills>
 	</item>
-	<item id="82978" name="Pink's Heart Scroll" additionalName="Event" type="EtcItem">
+	<item id="82978" name="粉粉愛心卷軸" additionalName="Event" type="EtcItem">
 		<!-- A scroll filled with Pink's love. For 30 min., Power of basic attacks and P./ M. skills +10%, P./ M. Def. +10%, acquired XP/ SP +10%, Vitality bonus +10%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1467,7 +1467,7 @@
 			<skill id="39859" level="1" /> <!-- Pink's Heart Scroll -->
 		</skills>
 	</item>
-	<item id="82979" name="Soul Crystal Box Lv. 9" additionalName="Event" type="EtcItem">
+	<item id="82979" name="搜魂石9階段禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Lionel's, Leona's, Pantheon's, Mermoden's or Kain's Soul Crystal Lv. 9. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
@@ -1486,7 +1486,7 @@
 			<item id="46512" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 9 - Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="82980" name="Soul Crystal Box Lv. 10" additionalName="Event" type="EtcItem">
+	<item id="82980" name="搜魂石10階段禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Lionel's, Leona's, Pantheon's, Mermoden's or Kain's Soul Crystal Lv. 10. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
@@ -1505,7 +1505,7 @@
 			<item id="46513" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 10 - Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="82981" name="Dragon Weapon Pack (Lv. 4)" additionalName="Event" type="EtcItem">
+	<item id="82981" name="龍戰爪禮盒(4階段)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one Antharas/ Valakas/ Lindvior/ Fafurion weapon of Lv. 4. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -1552,7 +1552,7 @@
 			<item id="82901" min="1" max="1" chance="3.225806" /> <!-- Fafurion Dual Daggers - Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="82982" name="Einhasad's Red Pack" additionalName="Lv. 1" type="EtcItem">
+	<item id="82982" name="殷海薩紅光禮盒" additionalName="Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -1588,7 +1588,7 @@
 			<item id="35564" min="1" max="1" chance="4.545455" /> <!-- Ruler's Authority - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="82983" name="Einhasad's Silver Pack" additionalName="Lv. 2" type="EtcItem">
+	<item id="82983" name="殷海薩銀光禮盒" additionalName="Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1633,7 +1633,7 @@
 			<item id="82391" min="1" max="1" chance="3.225806" /> <!-- Augmenting Stone: Mask -->
 		</capsuled_items>
 	</item>
-	<item id="82984" name="Einhasad's Golden Pack" additionalName="Lv. 3" type="EtcItem">
+	<item id="82984" name="殷海薩金光禮盒" additionalName="Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1673,7 +1673,7 @@
 			<item id="80335" min="1" max="1" chance="3.846154" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82985" name="Shiny Golden Craft Coupon" type="EtcItem">
+	<item id="82985" name="皇家製作券" type="EtcItem">
 		<!-- Required for crafting rare items. -->
 		<set name="icon" val="icon.ev_2021_thanksgiving_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -1681,7 +1681,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82986" name="Silvery Shirt" type="Armor">
+	<item id="82986" name="艾勒傑特襯衫" type="Armor">
 		<!-- Can be augmented. -->
 		<set name="icon" val="icon.bm_argent_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1730,7 +1730,7 @@
 			<skill id="37097" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Silvery Combat -->
 		</skills>
 	</item>
-	<item id="82987" name="Silvery Circlet" type="Armor">
+	<item id="82987" name="艾勒傑特頭箍" type="Armor">
 		<!-- Can be augmented. -->
 		<set name="icon" val="icon.bm_argent_circlet" />
 		<set name="default_action" val="EQUIP" />
@@ -1758,7 +1758,7 @@
 			<skill id="36859" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Silvery Circlet -->
 		</skills>
 	</item>
-	<item id="82988" name="Silvery Circlet" type="Armor">
+	<item id="82988" name="艾勒傑特頭箍" type="Armor">
 		<!-- Can be augmented. -->
 		<set name="icon" val="icon.bm_argent_circlet" />
 		<set name="default_action" val="EQUIP" />
@@ -1788,7 +1788,7 @@
 			<skill id="36859" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Silvery Circlet -->
 		</skills>
 	</item>
-	<item id="82989" name="Silvery Brooch" type="Armor">
+	<item id="82989" name="艾勒傑特胸針" type="Armor">
 		<!-- Can be augmented. -->
 		<set name="icon" val="icon.bm_argent_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1816,7 +1816,7 @@
 			<skill id="36872" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Silvery Brooch -->
 		</skills>
 	</item>
-	<item id="82990" name="Silvery Bracelet" type="Armor">
+	<item id="82990" name="艾勒傑特手鐲" type="Armor">
 		<!-- Can be augmented. -->
 		<set name="icon" val="icon.bm_argent_rbracelet" />
 		<set name="default_action" val="EQUIP" />
@@ -1842,7 +1842,7 @@
 			<skill id="36941" level="1" /> <!-- Kaliel's Divine Protection -->
 		</skills>
 	</item>
-	<item id="82991" name="Silvery Seed Bracelet" type="Armor">
+	<item id="82991" name="艾勒傑特種子手鐲" type="Armor">
 		<!-- When equipped, unlocks the main agathion slot and 4 additional slots. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +50. 3. Vitality bonus +20%. Can be augmented. -->
 		<set name="icon" val="icon.bm_argent_lbracelet_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -1873,7 +1873,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="82992" name="Silvery Artifact Book" type="Armor">
+	<item id="82992" name="艾勒傑特聖紋石書" type="Armor">
 		<!-- Can be augmented. -->
 		<set name="icon" val="icon.bm_argent_artifact_book" />
 		<set name="default_action" val="EQUIP" />
@@ -1898,7 +1898,7 @@
 			<skill id="36942" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Silvery Artifact Book -->
 		</skills>
 	</item>
-	<item id="82993" name="Contest Certificate" type="EtcItem">
+	<item id="82993" name="預賽參加資格證" type="EtcItem">
 		<!-- A certificate that grants you the right to gather Crystals of Purity during the preparations to the Clan Hall War. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1910,7 +1910,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82994" name="Main/ Dual Class Switch Certificate" type="EtcItem">
+	<item id="82994" name="主-雙職業分離證明書" type="EtcItem">
 		<!-- Given to an adventurer who has made a main/ dual class switch and has found a new destiny. Opens up a special mission. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1922,7 +1922,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82995" name="Royal Coupon" additionalName="Event" type="EtcItem">
+	<item id="82995" name="特級禮券" additionalName="Event" type="EtcItem">
 		<!-- Can be <font color=EEAA22>exchanged for various items</font>. <font color=ff6666><Items for exchange></font>. Valakas' Blessed Necklace - Spirit (1 pc.). Antharas' Blessed Earring - Shield (1 pc.). Lindvior's Earring - Shield (1 pc.). Ring of Truth-seeker - INT (1 pc.). Ruler's Ring of Authority - STR (1 pc.). Vitality Sustaining Rune (30-day) (1 pc.). Tales of Dimensions (1000 pcs.). Golden Orb (1 pc.). Top-grade Homunculus' Hourglass (1 pc.). Aether (1200 pcs.). Augmenting Stone Pack (100 pcs.) -->
 		<set name="icon" val="icon.ev_2021_thanksgiving_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -1932,7 +1932,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82996" name="Acorus" additionalName="Event" type="EtcItem">
+	<item id="82996" name="菖蒲" additionalName="Event" type="EtcItem">
 		<!-- Acorus grows in humid soil on the shores of lakes and ponds. <Event craft>. Collect Acorus to create Clear Acorus Water, Wheel Rice Cake and Red Bean Rice Cake. If you are lucky, you will get Golden Acorus. -->
 		<set name="icon" val="icon.ev_2023_dano_flora1" />
 		<set name="immediate_effect" val="true" />
@@ -1940,7 +1940,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82997" name="Golden Acorus" additionalName="Event" type="EtcItem">
+	<item id="82997" name="黃金菖蒲" additionalName="Event" type="EtcItem">
 		<!-- A gold-colored acorus. <Event craft>. Can be used to create Golden Acorus Hairpin through the event craft. -->
 		<set name="icon" val="icon.ev_2023_dano_flora2" />
 		<set name="immediate_effect" val="true" />
@@ -1948,7 +1948,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82998" name="Golden Acorus Hairpin" additionalName="Event" type="EtcItem">
+	<item id="82998" name="黃金菖蒲簪" additionalName="Event" type="EtcItem">
 		<!-- A hairpin decorated with Golden Acorus. It is used for decorating hair on special occasions. <Event craft>. Can be used as a material for the event craft and exchanged for various items. <Server-limited weekend craft>. Can be used to create various items through the limited craft from 12:00 on Saturday till 00:00 on Sunday. -->
 		<set name="icon" val="icon.ev_2023_dano_binyeo" />
 		<set name="immediate_effect" val="true" />
@@ -1956,7 +1956,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82999" name="Clear Acorus Water" additionalName="Event" type="EtcItem">
+	<item id="82999" name="清澈的菖蒲水" additionalName="Event" type="EtcItem">
 		<!-- Pure water received from boiling acorus. It is used for washing hair on special occasions. <How to use>. If you wash your hair with this water by the well near the event stage, something good happens. -->
 		<set name="icon" val="icon.ev_2023_dano_florawater" />
 		<set name="immediate_effect" val="true" />

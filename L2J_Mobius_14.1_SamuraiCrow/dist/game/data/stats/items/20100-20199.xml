@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20100" name="Rock-Paper-Scissors Santa Hat" additionalName="24-hour" type="Armor">
+	<item id="20100" name="剪刀-石頭-布聖誕帽" additionalName="24-hour" type="Armor">
 		<!-- Santa's hat created for celebrating the holidays. Allows you to participate in the Rock-Paper-Scissors game. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_gawibawibo_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -20,7 +20,7 @@
 			<skill id="21016" level="1" /> <!-- Paper -->
 		</skills>
 	</item>
-	<item id="20101" name="Santa's Gift Set" type="EtcItem">
+	<item id="20101" name="聖誕老人的禮物組" type="EtcItem">
 		<!-- Gift set given by Santa Claus to show his appreciation. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
 		<set name="default_action" val="PEEL" />
@@ -36,7 +36,7 @@
 			<item id="20077" min="1" max="1" chance="100" /> <!-- Santa's Gift - Luck - 4-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20102" name="Santa's Gift Set" type="EtcItem">
+	<item id="20102" name="聖誕老人的禮物組" type="EtcItem">
 		<!-- Gift set given by Santa Claus to show his appreciation. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
 		<set name="default_action" val="PEEL" />
@@ -52,7 +52,7 @@
 			<item id="20078" min="1" max="1" chance="100" /> <!-- Santa's Gift - Luck - 4-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20103" name="Holiday Scroll: Heavy Armor Warrior" additionalName="8-hour" type="EtcItem">
+	<item id="20103" name="聖誕慶典卷軸-重裝戰士" additionalName="8-hour" type="EtcItem">
 		<!-- A scroll for warriors who use heavy armor. Can be used once an hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -71,7 +71,7 @@
 			<skill id="22013" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20104" name="Holiday Scroll: Light Armor Warrior" additionalName="8-hour" type="EtcItem">
+	<item id="20104" name="聖誕慶典卷軸-輕裝戰士" additionalName="8-hour" type="EtcItem">
 		<!-- A scroll for warriors who use light armor. Can be used once an hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -90,7 +90,7 @@
 			<skill id="22014" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20105" name="Holiday Scroll: Healer" additionalName="8-hour" type="EtcItem">
+	<item id="20105" name="聖誕慶典卷軸-牧師" additionalName="8-hour" type="EtcItem">
 		<!-- A scroll for healers. Can be used once an hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -109,7 +109,7 @@
 			<skill id="22015" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20106" name="Holiday Scroll: Mage" additionalName="8-hour" type="EtcItem">
+	<item id="20106" name="聖誕慶典卷軸-巫師" additionalName="8-hour" type="EtcItem">
 		<!-- A scroll for mages. Can be used once an hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -128,7 +128,7 @@
 			<skill id="22016" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20107" name="Santa's Weapon Coupon" additionalName="12-hour" type="EtcItem">
+	<item id="20107" name="聖誕老人的武器交換券" additionalName="12-hour" type="EtcItem">
 		<!-- Allows you to potentially receive a powerful item from one of Santa's Helpers in the village. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
@@ -140,7 +140,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="time" val="720" />
 	</item>
-	<item id="20108" name="Santa's Weapon Coupon" additionalName="12-hour" type="EtcItem">
+	<item id="20108" name="聖誕老人的武器交換券" additionalName="12-hour" type="EtcItem">
 		<!-- Allows you to potentially receive a powerful item from one of Santa's Helpers in the village. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
@@ -152,7 +152,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="time" val="720" />
 	</item>
-	<item id="20109" name="Sword of Revolution (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20109" name="革命劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Sword of Revolution for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -184,7 +184,7 @@
 			<skill id="21017" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20110" name="Lesser Giant's Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20110" name="下巨人之劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Lesser Giant's Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_giants_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -215,7 +215,7 @@
 			<skill id="21018" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20111" name="Maingauche (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20111" name="突刺刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Maingauche for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -247,7 +247,7 @@
 			<skill id="21019" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20112" name="Tarbar (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20112" name="塔巴曲刃斧-活動" additionalName="4-hour" type="Weapon">
 		<!-- Tarbar for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tarbar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -279,7 +279,7 @@
 			<skill id="21020" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20113" name="Lesser Giant's Hammer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20113" name="下巨人之鎚-活動" additionalName="4-hour" type="Weapon">
 		<!-- Lesser Giant's Hammer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_giants_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -311,7 +311,7 @@
 			<skill id="21021" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20114" name="Priest Mace (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20114" name="祭司釘鎚-活動" additionalName="4-hour" type="Weapon">
 		<!-- Priest Mace for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_mace_of_priest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -344,7 +344,7 @@
 			<skill id="21022" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20115" name="Goat Head Staff (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20115" name="山羊頭之杖-活動" additionalName="4-hour" type="Weapon">
 		<!-- Goat Head Staff for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -377,7 +377,7 @@
 			<skill id="21023" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20116" name="Bich'Hwa (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20116" name="拳套刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Bich'Hwa for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bichhwa_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -409,7 +409,7 @@
 			<skill id="21024" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20117" name="Reinforced Longbow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20117" name="強化長弓-活動" additionalName="4-hour" type="Weapon">
 		<!-- Reinforced Longbow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -443,7 +443,7 @@
 			<skill id="21025" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20118" name="Winged Spear (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20118" name="翼之矛-活動" additionalName="4-hour" type="Weapon">
 		<!-- Event Winged Spear. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -476,7 +476,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="20119" name="Artisan's Sword*Artisan's Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20119" name="工匠之劍*工匠之劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Artisan's Sword*Artisan's Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 			<skill id="21027" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20120" name="Épée (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20120" name="銳劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Épée for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -543,7 +543,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="20121" name="Katzbalger (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20121" name="格鬥劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Katzbalger for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -578,7 +578,7 @@
 			<skill id="21029" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20122" name="Arm Breaker (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20122" name="爆破之臂-活動" additionalName="4-hour" type="Weapon">
 		<!-- Arm Breaker for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -614,7 +614,7 @@
 			<skill id="21030" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20123" name="Samurai Long Sword - Event" additionalName="4-hour" type="Weapon">
+	<item id="20123" name="瑟魯基長劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Samurai Long Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -645,7 +645,7 @@
 			<skill id="21017" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20124" name="Berserker Blade - Event" additionalName="4-hour" type="Weapon">
+	<item id="20124" name="狂戰士之刃-活動" additionalName="4-hour" type="Weapon">
 		<!-- Berserker Blade for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -676,7 +676,7 @@
 			<skill id="21018" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20125" name="Crystal Dagger (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20125" name="水晶匕首-活動" additionalName="4-hour" type="Weapon">
 		<!-- Crystal Dagger for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -708,7 +708,7 @@
 			<skill id="21019" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20126" name="Yaksa Mace (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20126" name="夜叉釘鎚-活動" additionalName="4-hour" type="Weapon">
 		<!-- Yaksa Mace for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -740,7 +740,7 @@
 			<skill id="21020" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20127" name="Dwarven Hammer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20127" name="矮人巨鎚-活動" additionalName="4-hour" type="Weapon">
 		<!-- Dwarven Hammer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -772,7 +772,7 @@
 			<skill id="21021" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20128" name="Ecliptic Axe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20128" name="月蝕斧-活動" additionalName="4-hour" type="Weapon">
 		<!-- Ecliptic Axe for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -805,7 +805,7 @@
 			<skill id="21022" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20129" name="Demon's Staff (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20129" name="惡魔魔杖-活動" additionalName="4-hour" type="Weapon">
 		<!-- Demon's Staff for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -838,7 +838,7 @@
 			<skill id="21023" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20130" name="Great Pata (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20130" name="巨型帕塔拳刃-活動" additionalName="4-hour" type="Weapon">
 		<!-- Great Pata for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -870,7 +870,7 @@
 			<skill id="21024" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20131" name="Eminence Bow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20131" name="卓越弓-活動" additionalName="4-hour" type="Weapon">
 		<!-- Eminence Bow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -904,7 +904,7 @@
 			<skill id="21025" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20132" name="Orcish Poleaxe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20132" name="歐西斯戰斧-活動" additionalName="4-hour" type="Weapon">
 		<!-- Orcish Poleaxe for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -937,7 +937,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="20133" name="Katana*Katana (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20133" name="武士刀*武士刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Katana*Katana for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -969,7 +969,7 @@
 			<skill id="3045" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="20134" name="Admiral's Estoc (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20134" name="上將刺劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Admiral's Estoc for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1005,7 +1005,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="20135" name="Saber Tooth (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20135" name="劍齒虎-活動" additionalName="4-hour" type="Weapon">
 		<!-- Saber Tooth for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1040,7 +1040,7 @@
 			<skill id="21029" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20136" name="Sharpshooter (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20136" name="滅形弩-活動" additionalName="4-hour" type="Weapon">
 		<!-- Sharpshooter for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1076,7 +1076,7 @@
 			<skill id="21030" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20137" name="Damascus Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20137" name="大馬士革刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Damascus Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1107,7 +1107,7 @@
 			<skill id="21017" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20138" name="Guardian's Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20138" name="守護神之劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Guardian's Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1138,7 +1138,7 @@
 			<skill id="21018" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20139" name="Demon's Dagger (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20139" name="惡魔短劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Demon's Dagger for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1170,7 +1170,7 @@
 			<skill id="21019" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20140" name="Art of Battle Axe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20140" name="工藝戰斧-活動" additionalName="4-hour" type="Weapon">
 		<!-- Event Battle Art Axe. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1202,7 +1202,7 @@
 			<skill id="21020" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20141" name="Star Buster (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20141" name="星爆-活動" additionalName="4-hour" type="Weapon">
 		<!-- Star Buster for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1234,7 +1234,7 @@
 			<skill id="21021" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20142" name="Kaim Vanul's Bones (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20142" name="卡倚巴奴之骨-活動" additionalName="4-hour" type="Weapon">
 		<!-- Kaim Vanul's Bones for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1267,7 +1267,7 @@
 			<skill id="21022" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20143" name="Staff of Evil Spirits (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20143" name="邪靈魔杖-活動" additionalName="4-hour" type="Weapon">
 		<!-- Staff of Evil Spirits for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1300,7 +1300,7 @@
 			<skill id="21023" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20144" name="Bellion Cestus (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20144" name="博利恩拳套-活動" additionalName="4-hour" type="Weapon">
 		<!-- Bellion Cestus for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1332,7 +1332,7 @@
 			<skill id="21024" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20145" name="Bow of Peril (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20145" name="冒險弓-活動" additionalName="4-hour" type="Weapon">
 		<!-- Bow of Peril for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1366,7 +1366,7 @@
 			<skill id="21025" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20146" name="Lance (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20146" name="長槍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Lance for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1399,7 +1399,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="20147" name="Samurai Long Sword*Samurai Long Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20147" name="瑟魯基長劍*瑟魯基長劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1431,7 +1431,7 @@
 			<skill id="3045" level="14" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="20148" name="Colichemarde (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20148" name="華麗細劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Colichemarde for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1467,7 +1467,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="20149" name="Dismantler (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20149" name="裂解劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Dismantler for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1502,7 +1502,7 @@
 			<skill id="21029" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20150" name="Hell Hound (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20150" name="冥犬之牙-活動" additionalName="4-hour" type="Weapon">
 		<!-- Hell Hound for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1538,7 +1538,7 @@
 			<skill id="21030" level="1" /> <!-- Holiday Dream Weapon -->
 		</skills>
 	</item>
-	<item id="20151" name="Dark Legion's Edge (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20151" name="黑暗軍刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Dark Legion's Edge for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1570,7 +1570,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20152" name="Dragon Slayer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20152" name="斬龍刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Dragon Slayer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1602,7 +1602,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20153" name="Soul Separator (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20153" name="魂體分離器-活動" additionalName="4-hour" type="Weapon">
 		<!-- Soul Separator for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1635,7 +1635,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20154" name="Elysian (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20154" name="樂園-活動" additionalName="4-hour" type="Weapon">
 		<!-- Elysian for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1668,7 +1668,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20155" name="Doom Crusher (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20155" name="末日毀滅者-活動" additionalName="4-hour" type="Weapon">
 		<!-- Doom Crusher for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1701,7 +1701,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20156" name="Flaming Dragon Skull (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20156" name="火龍之首-活動" additionalName="4-hour" type="Weapon">
 		<!-- Flaming Dragon Skull for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1735,7 +1735,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20157" name="Branch of the Mother Tree (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20157" name="世界樹樹枝-活動" additionalName="4-hour" type="Weapon">
 		<!-- Branch of the Mother Tree for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1769,7 +1769,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20158" name="Dragon Grinder (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20158" name="龍牙-活動" additionalName="4-hour" type="Weapon">
 		<!-- Dragon Grinder for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1802,7 +1802,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20159" name="Soul Bow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20159" name="靈魂弓-活動" additionalName="4-hour" type="Weapon">
 		<!-- Soul Bow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1837,7 +1837,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20160" name="Tallum Glaive (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20160" name="塔魯闊矛-活動" additionalName="4-hour" type="Weapon">
 		<!-- Tallum Glaive for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1871,7 +1871,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="20161" name="Damascus*Damascus (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20161" name="大馬士革刀*大馬士革刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Damascus*Damascus for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1903,7 +1903,7 @@
 			<skill id="3046" level="20" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="20162" name="Lacerator (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20162" name="貪婪刺劍-活動" additionalName="4-hour" type="Weapon">
 		<!-- Lacerator for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1940,7 +1940,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="20163" name="Undertaker (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20163" name="死神使者-活動" additionalName="4-hour" type="Weapon">
 		<!-- Undertaker for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1976,7 +1976,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20164" name="Reaper (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20164" name="靈魂弩-活動" additionalName="4-hour" type="Weapon">
 		<!-- Reaper for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2013,7 +2013,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20165" name="Forgotten Blade (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20165" name="忘卻之刃-活動" additionalName="4-hour" type="Weapon">
 		<!-- Forgotten Blade for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2045,7 +2045,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20166" name="Heaven's Divider (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20166" name="天國審判-活動" additionalName="4-hour" type="Weapon">
 		<!-- Heaven's Divider for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2077,7 +2077,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20167" name="Angel Slayer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20167" name="天使殺手-活動" additionalName="4-hour" type="Weapon">
 		<!-- Angel Slayer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2110,7 +2110,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20168" name="Basalt Battlehammer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20168" name="玄武岩戰鎚-活動" additionalName="4-hour" type="Weapon">
 		<!-- Basalt Battlehammer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2143,7 +2143,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20169" name="Dragon Hunter Axe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20169" name="狩龍之斧-活動" additionalName="4-hour" type="Weapon">
 		<!-- Dragon Hunter Axe for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2176,7 +2176,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20170" name="Arcana Mace (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20170" name="祕儀權杖-活動" additionalName="4-hour" type="Weapon">
 		<!-- Arcana Mace for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2210,7 +2210,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20171" name="Imperial Staff (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20171" name="帝國權杖-活動" additionalName="4-hour" type="Weapon">
 		<!-- Imperial Staff for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2244,7 +2244,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20172" name="Demon Splinter (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20172" name="惡魔獵爪-活動" additionalName="4-hour" type="Weapon">
 		<!-- Demon Splinter for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2277,7 +2277,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20173" name="Draconic Bow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20173" name="紅龍之弓-活動" additionalName="4-hour" type="Weapon">
 		<!-- Draconic Bow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2312,7 +2312,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20174" name="Saint Spear (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20174" name="聖者之矛-活動" additionalName="4-hour" type="Weapon">
 		<!-- Saint Spear for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2346,7 +2346,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="20175" name="Tallum Blade*Dark Legion's Edge (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20175" name="塔魯刀*黑暗軍刀-活動" additionalName="4-hour" type="Weapon">
 		<!-- Tallum Blade*Dark Legion's Edge for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2378,7 +2378,7 @@
 			<skill id="3570" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Great Health -->
 		</skills>
 	</item>
-	<item id="20176" name="Laevateinn (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20176" name="烈焚天-活動" additionalName="4-hour" type="Weapon">
 		<!-- Laevateinn for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2415,7 +2415,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="20177" name="Gram (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20177" name="勝利之劍格蘭-活動" additionalName="4-hour" type="Weapon">
 		<!-- Gram for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2451,7 +2451,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20178" name="Sarunga (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20178" name="薩倫伽神弩-活動" additionalName="4-hour" type="Weapon">
 		<!-- Sarunga for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2488,7 +2488,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="20179" name="Package: Extra Pass: Near Kamaloka (5 pcs.)" type="EtcItem">
+	<item id="20179" name="追加入場券-近緣欲界 5張/組" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2504,7 +2504,7 @@
 			<item id="20027" min="5" max="5" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
 	</item>
-	<item id="20180" name="Package: Extra Pass: Near Kamaloka (10 pcs.)" type="EtcItem">
+	<item id="20180" name="追加入場券-近緣欲界 10張/組" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2520,7 +2520,7 @@
 			<item id="20027" min="10" max="10" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
 	</item>
-	<item id="20181" name="Package: My Teleport Scroll (5 pcs.)" type="EtcItem">
+	<item id="20181" name="自由傳送卷軸 5張/組" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2536,7 +2536,7 @@
 			<item id="13016" min="5" max="5" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="20182" name="Package: My Teleport Scroll (10 pcs.)" type="EtcItem">
+	<item id="20182" name="自由傳送卷軸 10張/組" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2552,7 +2552,7 @@
 			<item id="13016" min="10" max="10" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="20183" name="Package: My Teleport Flag (5 pcs.)" type="EtcItem">
+	<item id="20183" name="自由傳送旗 5張/組" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Flag. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2568,7 +2568,7 @@
 			<item id="20033" min="5" max="5" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
 	</item>
-	<item id="20184" name="Package: My Teleport Flag (10 pcs.)" type="EtcItem">
+	<item id="20184" name="自由傳送旗 10張/組" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Flag. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2584,7 +2584,7 @@
 			<item id="20033" min="10" max="10" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
 	</item>
-	<item id="20185" name="Package: Extra Pass: Kamaloka (Hall of the Abyss) (5 pcs.)" type="EtcItem">
+	<item id="20185" name="追加入場券-欲界(深淵之廳) 5張/組" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2600,7 +2600,7 @@
 			<item id="20026" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20186" name="Package: Extra Pass: Kamaloka (Labyrinth of the Abyss) (5 pcs.)" type="EtcItem">
+	<item id="20186" name="追加入場券-欲界(深淵迷宮) 5張/組" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2616,7 +2616,7 @@
 			<item id="20028" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20187" name="Package: Extra Pass: Kamaloka (Hall of the Abyss) (10 pcs.)" type="EtcItem">
+	<item id="20187" name="追加入場券-欲界(深淵之廳) 10張/組" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2632,7 +2632,7 @@
 			<item id="20026" min="10" max="10" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20188" name="Package: Extra Pass: Kamaloka (Labyrinth of the Abyss) (10 pcs.)" type="EtcItem">
+	<item id="20188" name="追加入場券-欲界(深淵迷宮) 10張/組" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2648,7 +2648,7 @@
 			<item id="20028" min="10" max="10" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20189" name="Package: Miraculous Valentine Cake: Special Ingredient" type="EtcItem">
+	<item id="20189" name="情人節裝飾品組" type="EtcItem">
 		<!-- Double-click to obtain Miraculous Valentine Cake: Special Ingredient. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2666,7 +2666,7 @@
 			<item id="20190" min="1" max="1" chance="100" /> <!-- Miraculous Valentine Cake: Special Ingredient - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="20190" name="Miraculous Valentine Cake: Special Ingredient" additionalName="15-day" type="EtcItem">
+	<item id="20190" name="情人節裝飾品" additionalName="15-day" type="EtcItem">
 		<!-- Take this along with a Decadent Valentine Cake to Valentine Messenger Queen of Hearts, and she will create a Heavenly Valentine Cake just for you. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
 		<set name="immediate_effect" val="true" />
@@ -2678,7 +2678,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="21600" />
 	</item>
-	<item id="20191" name="Valentine Cake Recipe" type="EtcItem">
+	<item id="20191" name="情人節祕密咒語" type="EtcItem">
 		<!-- Recipe for making a Simple Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_recipe_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -2693,7 +2693,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="20192" name="Valentine Dark Chocolate" type="EtcItem">
+	<item id="20192" name="情人節黑巧克力" type="EtcItem">
 		<!-- Ingredient for making a Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="immediate_effect" val="true" />
@@ -2702,7 +2702,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20193" name="Valentine White Chocolate" type="EtcItem">
+	<item id="20193" name="情人節白巧克力" type="EtcItem">
 		<!-- Ingredient for making a Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_whitechoco_i00" />
 		<set name="immediate_effect" val="true" />
@@ -2711,7 +2711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20194" name="Valentine Fresh Cream" type="EtcItem">
+	<item id="20194" name="情人節鮮奶油" type="EtcItem">
 		<!-- Ingredient for making a Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
 		<set name="immediate_effect" val="true" />
@@ -2720,7 +2720,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20195" name="Simple Valentine Cake" type="EtcItem">
+	<item id="20195" name="平淡的情人節蛋糕" type="EtcItem">
 		<!-- The Valentine Cake that is not finished. Add more ingredients to get Simple Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -2735,7 +2735,7 @@
 			<skill id="22023" level="1" /> <!-- Simple Valentine Cake -->
 		</skills>
 	</item>
-	<item id="20196" name="Velvety Valentine Cake" type="EtcItem">
+	<item id="20196" name="普通的情人節蛋糕" type="EtcItem">
 		<!-- The Valentine Cake that is not quite finished. Add more ingredients to get Delicious Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -2750,7 +2750,7 @@
 			<skill id="22024" level="1" /> <!-- Velvety Valentine Cake -->
 		</skills>
 	</item>
-	<item id="20197" name="Delicious Valentine Cake" type="EtcItem">
+	<item id="20197" name="美味的情人節蛋糕" type="EtcItem">
 		<!-- The Valentine Cake that is almost finished. Add more ingredients to get Perfect Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -2765,7 +2765,7 @@
 			<skill id="22025" level="1" /> <!-- Delicious Valentine Cake -->
 		</skills>
 	</item>
-	<item id="20198" name="Decadent Valentine Cake" type="EtcItem">
+	<item id="20198" name="完美的情人節蛋糕" type="EtcItem">
 		<!-- This is a perfect Valentine delicacy. Double-clicking this item will yield a special Valentine treat. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_4_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -2780,7 +2780,7 @@
 			<skill id="22026" level="1" /> <!-- Decadent Valentine Cake -->
 		</skills>
 	</item>
-	<item id="20199" name="Heavenly Valentine Cake" additionalName="30-day" type="EtcItem">
+	<item id="20199" name="夢幻的情人節蛋糕" additionalName="30-day" type="EtcItem">
 		<!-- Divine confection made with love and care. Double-click to transform into a fabulous reward. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_5_i00" />
 		<set name="default_action" val="CAPSULE" />

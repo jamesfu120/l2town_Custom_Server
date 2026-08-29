@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="60400" name="Adventurer's Coin" type="EtcItem">
+	<item id="60400" name="冒險家鑄幣" type="EtcItem">
 		<!-- Add to a collection to enable its hidden powers. -->
 		<set name="icon" val="icon.bm_nebit_coin" />
 		<set name="immediate_effect" val="true" />
@@ -10,7 +10,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60401" name="Red Oath' Mark" additionalName="Event" type="EtcItem">
+	<item id="60401" name="紅色盟誓的憑證" additionalName="Event" type="EtcItem">
 		<!-- A mark for true heroes who have been in Lineage II from the very beginning. Can be added to a collection. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -21,7 +21,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60402" name="Forgotten Spellbook Chest (Chapter 1)" type="EtcItem">
+	<item id="60402" name="遺忘的魔法書1章禮盒" type="EtcItem">
 		<!-- Double-click to obtain 100 Forgotten Spellbooks - Chapter 1. -->
 		<set name="icon" val="icon.bm_2018_special_box" />
 		<set name="default_action" val="PEEL" />
@@ -34,7 +34,7 @@
 			<item id="48876" min="100" max="100" chance="100" /> <!-- Forgotten Spellbook - Chapter 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60403" name="Dragons' Treasure Chest" type="EtcItem">
+	<item id="60403" name="龍族寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="PEEL" />
@@ -87,7 +87,7 @@
 			<item id="81751" min="1" max="1" chance="2.564103" /> <!-- Ruler's Authority - Chaos - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="60404" name="Dragons' Collection Coin" type="EtcItem">
+	<item id="60404" name="龍之收藏紀念幣" type="EtcItem">
 		<!-- A coin imbued with the dragons' power. Can be added to a collection. -->
 		<set name="icon" val="icon.bm_goblin_coin" />
 		<set name="immediate_effect" val="true" />
@@ -97,7 +97,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60405" name="Festival Coin" type="EtcItem">
+	<item id="60405" name="慶典幣" type="EtcItem">
 		<!-- A coin received for participating in the festival. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_premium_coin_i00" />
 		<set name="immediate_effect" val="true" />
@@ -107,7 +107,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60406" name="Ranking Festival Chest" type="EtcItem">
+	<item id="60406" name="排名慶典禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -172,7 +172,7 @@
 			<item id="80335" min="1" max="1" chance="1.960784" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60407" name="Magic Zaken Doll" additionalName="30-day" type="EtcItem">
+	<item id="60407" name="札肯咒術人偶" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, applies the following effects:. Vitality bonus +16%. Acquired XP/ SP +11%. PvE damage +10%. Vitality sustention for characters of Lv. 1-110. Vitality sustention in the Conquest world for all characters -->
 		<set name="icon" val="icon.bm_zaken_doll_30d_01" />
 		<set name="immediate_effect" val="true" />
@@ -187,7 +187,7 @@
 			<skill id="29665" level="1" /> <!-- Magic Zaken Doll -->
 		</skills>
 	</item>
-	<item id="60408" name="Giran Supply Pack" type="EtcItem">
+	<item id="60408" name="奇岩消耗品箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -258,7 +258,7 @@
 			<item id="80334" min="1" max="1" chance="1.754386" /> <!-- Dragon's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60409" name="Giran Supply Kit Lv. 1" type="EtcItem">
+	<item id="60409" name="奇岩消耗品組合包Lv1" type="EtcItem">
 		<!-- Double-click to obtain Giran Supply Pack (100 pcs.), Collectors' Pennant (2 pcs.), Swift Growth Cookie (20 pcs.), Relic Summon Coupon - 11-time (4 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -277,7 +277,7 @@
 			<item id="83006" min="4" max="4" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="60410" name="Giran Supply Kit Lv. 2" type="EtcItem">
+	<item id="60410" name="奇岩消耗品組合包Lv2" type="EtcItem">
 		<!-- Double-click to obtain Giran Supply Pack (150 pcs.), Collectors' Pennant (2 pcs.), Swift Growth Cookie (40 pcs.), Shining Relic Summon Coupon - 11-time (2 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -296,7 +296,7 @@
 			<item id="83004" min="2" max="2" chance="100" /> <!-- Shining Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="60411" name="Giran Supply Kit Lv. 3" type="EtcItem">
+	<item id="60411" name="奇岩消耗品組合包Lv3" type="EtcItem">
 		<!-- Double-click to obtain Giran Supply Pack (150 pcs.), Collectors' Pennant (4 pcs.), Swift Growth Cookie (80 pcs.), Magic Zaken Doll (30-day) (1 pc.), Shining Relic Summon Coupon - 11-time (2 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -316,7 +316,7 @@
 			<item id="83004" min="2" max="2" chance="100" /> <!-- Shining Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="60412" name="Summer Festival Coin I" additionalName="Event" type="EtcItem">
+	<item id="60412" name="夏日慶典幣-I" additionalName="Event" type="EtcItem">
 		<!-- A commemorative coin of the Summer Festival. Can be used for creating Artifact Crystal with a certain chance through the Event Craft. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="immediate_effect" val="true" />
@@ -327,7 +327,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60413" name="Summer Festival Coin II" additionalName="Event" type="EtcItem">
+	<item id="60413" name="夏日慶典幣-II" additionalName="Event" type="EtcItem">
 		<!-- A commemorative coin of the Summer Festival. Can be used for creating Augmenting Stone: Artifact Book with a certain chance through the Event Craft. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="immediate_effect" val="true" />
@@ -338,7 +338,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60414" name="Summer Festival Coin III" additionalName="Event" type="EtcItem">
+	<item id="60414" name="夏日慶典幣-III" additionalName="Event" type="EtcItem">
 		<!-- A commemorative coin of the Summer Festival. Can be used for creating Augmenting Stone: Kaliel's Bracelet with a certain chance through the Event Craft. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="immediate_effect" val="true" />
@@ -349,7 +349,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60415" name="Tencent Video's Souvenir Coin" additionalName="Event" type="EtcItem">
+	<item id="60415" name="騰訊視頻紀念幣" additionalName="Event" type="EtcItem">
 		<!-- Can be added to a collection. -->
 		<set name="icon" val="BranchIcon.Icon.ev_item_tencent_video_cn" />
 		<set name="immediate_effect" val="true" />
@@ -360,7 +360,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60416" name="QQ Participant's Souvenir Coin" additionalName="Event" type="EtcItem">
+	<item id="60416" name="QQ超級會員紀念幣" additionalName="Event" type="EtcItem">
 		<!-- Can be added to a collection. -->
 		<set name="icon" val="BranchIcon.Icon.ev_item_qq_superuser_cn" />
 		<set name="immediate_effect" val="true" />
@@ -371,7 +371,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60417" name="Long-time Participant's Souvenir Coin" additionalName="Event" type="EtcItem">
+	<item id="60417" name="心悅會員紀念幣" additionalName="Event" type="EtcItem">
 		<!-- Can be added to a collection. -->
 		<set name="icon" val="BranchIcon.Icon.ev_item_tencent_happyuser_cn" />
 		<set name="immediate_effect" val="true" />
@@ -382,7 +382,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60418" name="Dragon's Treasure Chest" type="EtcItem">
+	<item id="60418" name="龍之寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
@@ -435,7 +435,7 @@
 			<item id="60419" min="5" max="5" chance="100" /> <!-- Dragon's Golden Key -->
 		</capsuled_items>
 	</item>
-	<item id="60419" name="Dragon's Golden Key" type="EtcItem">
+	<item id="60419" name="龍之黃金寶箱" type="EtcItem">
 		<!-- A key filled with dragon's breath. Can be exchanged for various items through the Game Assistant or used as a craft material. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="immediate_effect" val="true" />
@@ -443,7 +443,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60420" name="Forgotten Lord's Pack with Crystals of Dyes" type="EtcItem">
+	<item id="60420" name="被遺忘的君主染料結晶禮盒" type="EtcItem">
 		<!-- Double-click to obtain Forgotten Lord's Crystal of Dyes (100 pcs.). -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -456,7 +456,7 @@
 			<item id="60319" min="100" max="100" chance="100" /> <!-- Forgotten Lord's Crystal of Dyes -->
 		</capsuled_items>
 	</item>
-	<item id="60421" name="Sunken Treasure Chest" type="EtcItem">
+	<item id="60421" name="沈船秘寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -508,7 +508,7 @@
 			<item id="82171" min="1" max="1" chance="100" /> <!-- Swift Growth Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60422" name="Ruby Lv. 4" additionalName="30-day" type="Armor">
+	<item id="60422" name="紅寶石4階段" additionalName="30-day" type="Armor">
 		<!-- Soulshot/ Beast Soulshot damage +12.5%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -524,7 +524,7 @@
 			<skill id="18717" level="4" /> <!-- Ruby -->
 		</skills>
 	</item>
-	<item id="60423" name="Sapphire Lv. 4" additionalName="30-day" type="Armor">
+	<item id="60423" name="藍寶石4階段" additionalName="30-day" type="Armor">
 		<!-- Spiritshot/ Blessed Spiritshot damage +12.5%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -540,7 +540,7 @@
 			<skill id="18719" level="4" /> <!-- Sapphire -->
 		</skills>
 	</item>
-	<item id="60424" name="Opal Lv. 4" additionalName="30-day" type="Armor">
+	<item id="60424" name="貓眼石4階段" additionalName="30-day" type="Armor">
 		<!-- Attribute Attack +70. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -556,7 +556,7 @@
 			<skill id="17705" level="4" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="60425" name="Diamond Lv. 4" additionalName="30-day" type="Armor">
+	<item id="60425" name="鑽石4階段" additionalName="30-day" type="Armor">
 		<!-- P. Def. +1418, received Critical Damage from basic attacks -4%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -572,7 +572,7 @@
 			<skill id="17708" level="4" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="60426" name="Pearl Lv. 4" additionalName="30-day" type="Armor">
+	<item id="60426" name="珍珠4階段" additionalName="30-day" type="Armor">
 		<!-- M. Def. +821, received M. Skill Critical Damage -4%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -588,7 +588,7 @@
 			<skill id="17709" level="4" /> <!-- Pearl -->
 		</skills>
 	</item>
-	<item id="60427" name="Vital Stone Lv. 4" additionalName="30-day" type="Armor">
+	<item id="60427" name="活力石4階段" additionalName="30-day" type="Armor">
 		<!-- Vitality bonus +25%, Vitality Consumption -7%. Enables the Vital Wind skill. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -605,7 +605,7 @@
 			<skill id="18568" level="4" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="60428" name="Jewel Support Pack" type="EtcItem">
+	<item id="60428" name="寶石支援禮盒" type="EtcItem">
 		<!-- Double-click to obtain Ruby Lv. 4, Sapphire Lv. 4, Diamond Lv. 4, Pearl Lv. 4, Opal Lv. 4, Vital Stone Lv. 4 for 30 d. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
 		<set name="default_action" val="PEEL" />
@@ -625,7 +625,7 @@
 			<item id="60427" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="60429" name="Water Dragon's Treasures" type="EtcItem">
+	<item id="60429" name="水龍寶藏" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -685,7 +685,7 @@
 			<item id="81444" min="1" max="1" chance="2.173913" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60430" name="Water Dragon's Shiny Treasure Kit" type="EtcItem">
+	<item id="60430" name="閃亮的水龍寶箱組合包" type="EtcItem">
 		<!-- Double-click to obtain Water Dragon's Treasures (100 pcs.), Dragon-engraved Golden Coin (1 pc.), Nevit's Shining Gold Hourglass (100 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -702,7 +702,7 @@
 			<item id="81013" min="100" max="100" chance="100" /> <!-- Nevit's Shining Gold Hourglass - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60431" name="Water Dragon's Shining Treasure Kit" type="EtcItem">
+	<item id="60431" name="閃耀的水龍寶箱組合包" type="EtcItem">
 		<!-- Double-click to obtain Water Dragon's Treasures (100 pcs.), Glowing Dragon's Attribute Potion (XP) (100 pcs.), Nevit's Shining Gold Hourglass (100 pcs.). -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -719,7 +719,7 @@
 			<item id="81013" min="100" max="100" chance="100" /> <!-- Nevit's Shining Gold Hourglass - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60432" name="Dragon-engraved Golden Coin" type="EtcItem">
+	<item id="60432" name="龍碎片金幣" type="EtcItem">
 		<!-- A coin engraved with a dragon. Merchants have no interest in it, though it seems to emanate some magic power. Try to add it to a collection. -->
 		<set name="icon" val="icon.bm_goblin_coin" />
 		<set name="immediate_effect" val="true" />
@@ -729,7 +729,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60433" name="Summer Festival Coin IV" additionalName="Event" type="EtcItem">
+	<item id="60433" name="夏日慶典幣-IV" additionalName="Event" type="EtcItem">
 		<!-- A commemorative coin of the Summer Festival. Can be used for creating Forgotten Spellbook with a certain chance through the Event Craft. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="immediate_effect" val="true" />
@@ -740,7 +740,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60434" name="Summer Festival Coin V" additionalName="Event" type="EtcItem">
+	<item id="60434" name="夏日慶典幣-V" additionalName="Event" type="EtcItem">
 		<!-- A commemorative coin of the Summer Festival. Can be used for creating Artifact Fragment with a certain chance through the Event Craft. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="immediate_effect" val="true" />
@@ -751,7 +751,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60435" name="Summer Festival Coin VI" additionalName="Event" type="EtcItem">
+	<item id="60435" name="夏日慶典幣-VI" additionalName="Event" type="EtcItem">
 		<!-- A commemorative coin of the Summer Festival. Can be used for creating Tersi's Soul Crystal Pack with a certain chance through the Event Craft. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="immediate_effect" val="true" />
@@ -782,7 +782,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60438" name="Augmenting Stone: Brooch" type="EtcItem">
+	<item id="60438" name="胸針精煉石" type="EtcItem">
 		<!-- Increases stats of La Vie En Rose's Brooch Lv. 4. Double-click the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="immediate_effect" val="true" />
@@ -792,7 +792,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60439" name="Augmenting Stone: Brooch" additionalName="Rare" type="EtcItem">
+	<item id="60439" name="胸針精煉石" additionalName="Rare" type="EtcItem">
 		<!-- Increases stats of La Vie En Rose's Brooch Lv. 4 and higher. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="immediate_effect" val="true" />
@@ -802,7 +802,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60440" name="Augmenting Stone: Cloak - Ancient Kingdom" type="EtcItem">
+	<item id="60440" name="斗篷精煉石-古代王國" type="EtcItem">
 		<!-- High-grade Life Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Double-click on the item or speak to a blacksmith to augment what you need. Once augmented, it cannot be cancelled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
 		<set name="immediate_effect" val="true" />
@@ -812,7 +812,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60441" name="Augmenting Stone: Cloak - Elmoreden" type="EtcItem">
+	<item id="60441" name="斗篷精煉石-艾爾摩亞丁" type="EtcItem">
 		<!-- Required for augmenting Legendary Elmoreden Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be cancelled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
 		<set name="immediate_effect" val="true" />
@@ -822,7 +822,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60442" name="Augmenting Stone: Cloak - Aden" type="EtcItem">
+	<item id="60442" name="斗篷精煉石-亞丁" type="EtcItem">
 		<!-- Required for augmenting Legendary Aden Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be cancelled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
 		<set name="immediate_effect" val="true" />
@@ -832,7 +832,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60443" name="Augmenting Stone: Cloak - Elmore" type="EtcItem">
+	<item id="60443" name="斗篷精煉石-艾爾摩" type="EtcItem">
 		<!-- Required for augmenting Legendary Elmore Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be cancelled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="immediate_effect" val="true" />
@@ -842,7 +842,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60444" name="Augmenting Stone: Cloak - Ferios" type="EtcItem">
+	<item id="60444" name="斗篷精煉石-貝里歐斯" type="EtcItem">
 		<!-- Required for augmenting Legendary Ferios Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be cancelled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
 		<set name="immediate_effect" val="true" />
@@ -852,7 +852,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60445" name="Autumn Festival's Mooncake" additionalName="Event" type="EtcItem">
+	<item id="60445" name="中秋節紀念月餅" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +50%, Vitality bonus +50%, P. Atk./ P. Def./ M. Atk./ M. Def., Critical Damage for basic attacks, P./ M. Skill Power +15%. The effect does not stack with that of Peeves' Purple/ Red Potion. -->
 		<set name="icon" val="br_L2Icon.etc_i.filled_moonlight_milk_mooncake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -868,7 +868,7 @@
 			<skill id="29537" level="1" /> <!-- Autumn Festival's Mooncake -->
 		</skills>
 	</item>
-	<item id="60446" name="Dragon's Golden Key" type="EtcItem">
+	<item id="60446" name="龍之黃金寶箱" type="EtcItem">
 		<!-- A golden key that radiates dragon power. Take part in the World Ranking Festival to receive a Dragon's Treasure Chest. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="immediate_effect" val="true" />
@@ -879,7 +879,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60447" name="Emperor's Rare Treasure Chest" type="EtcItem">
+	<item id="60447" name="皇家珍藏寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="BranchSys.icon.br_fire_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -929,7 +929,7 @@
 			<item id="82171" min="2" max="2" chance="100" /> <!-- Swift Growth Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60448" name="Holiday Festival Kit (30-day)" type="EtcItem">
+	<item id="60448" name="30日紀念慶典組合包" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="PEEL" />
@@ -951,7 +951,7 @@
 			<item id="82305" min="100" max="100" chance="100" /> <!-- Beora's Ancient Energy -->
 		</capsuled_items>
 	</item>
-	<item id="60449" name="Pa'agrio's Treasure Chest" type="EtcItem">
+	<item id="60449" name="帕格立歐寶箱" type="EtcItem">
 		<!-- Double-click to obtain Orc Tribe Coin Pack (1 pc.) and various other items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1010,7 +1010,7 @@
 			<item id="60457" min="1" max="1" chance="100" /> <!-- Orc Tribe Coin Pack -->
 		</capsuled_items>
 	</item>
-	<item id="60450" name="Pa'agrio's Silver Treasure Chest" type="EtcItem">
+	<item id="60450" name="銀光帕格立歐寶箱" type="EtcItem">
 		<!-- Double-click to obtain Orc Tribe Coin (10 pcs.) and various other items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1044,7 +1044,7 @@
 			<item id="60457" min="10" max="10" chance="100" /> <!-- Orc Tribe Coin Pack -->
 		</capsuled_items>
 	</item>
-	<item id="60451" name="Pa'aagrio's Golden Treasure Chest" type="EtcItem">
+	<item id="60451" name="金光帕格立歐寶箱" type="EtcItem">
 		<!-- Double-click to obtain Orc Tribe Coin (20 pcs.) and various other items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1080,7 +1080,7 @@
 			<item id="60457" min="20" max="20" chance="100" /> <!-- Orc Tribe Coin Pack -->
 		</capsuled_items>
 	</item>
-	<item id="60452" name="Pa'agrio's Treasure Kit Lv. 1" type="EtcItem">
+	<item id="60452" name="帕格立歐寶物組-1級" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Treasure Chest (100 pcs.), Divine Fire Essence (2 pcs.), Swift Growth Cookie (40 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -1098,7 +1098,7 @@
 			<item id="60455" min="2" max="2" chance="100" /> <!-- Divine Fire Essence -->
 		</capsuled_items>
 	</item>
-	<item id="60453" name="Pa'agrio's Treasure Kit Lv. 2" type="EtcItem">
+	<item id="60453" name="帕格立歐寶物組-2級" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Treasure Chest (100 pcs.), Divine Fire Essence (2 pcs.), Swift Growth Cookie (40 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -1116,7 +1116,7 @@
 			<item id="60455" min="2" max="2" chance="100" /> <!-- Divine Fire Essence -->
 		</capsuled_items>
 	</item>
-	<item id="60454" name="Pa'agrio's Treasure Kit Lv. 3" type="EtcItem">
+	<item id="60454" name="帕格立歐寶物組-3級" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Treasure Chest (150 pcs.), Chronicle Token Box (30-day) (1 pc.), Swift Growth Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -1134,7 +1134,7 @@
 			<item id="82171" min="80" max="80" chance="100" /> <!-- Swift Growth Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60455" name="Divine Fire Essence" type="EtcItem">
+	<item id="60455" name="神聖火之精髓" type="EtcItem">
 		<!-- This sphere contains a fraction of divine Pa'agrio's power. Add a number of them to the corresponding collection to increase your stats. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
 		<set name="immediate_effect" val="true" />
@@ -1145,7 +1145,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60456" name="Orc Tribe Coin" type="EtcItem">
+	<item id="60456" name="半獸人種族鑄幣" type="EtcItem">
 		<!-- A special currency used in far-away Orc settlements where no strangers are allowed. Fortunately, you can now use these strange coins to craft various items. -->
 		<set name="icon" val="icon.bm_gold_bar" />
 		<set name="immediate_effect" val="true" />
@@ -1153,7 +1153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60457" name="Orc Tribe Coin Pack" type="EtcItem">
+	<item id="60457" name="半獸人種族鑄幣禮盒" type="EtcItem">
 		<!-- Double-click to obtain 3 to 1000 Orc Tribe Coins. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
@@ -1177,7 +1177,7 @@
 			<item id="60456" min="1000" max="1000" chance="10" /> <!-- Orc Tribe Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60458" name="Royal Honey Dark Beer" type="EtcItem">
+	<item id="60458" name="皇家蜂蜜黑啤酒" type="EtcItem">
 		<!-- For 30 min., all stats +3, Vitality bonus +50%, P./ M. Def. +15%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1195,7 +1195,7 @@
 			<skill id="29538" level="1" /> <!-- Royal Honey Dark Beer -->
 		</skills>
 	</item>
-	<item id="60459" name="Glowing Royal Dragon's Attribute Potion" additionalName="XP" type="EtcItem">
+	<item id="60459" name="閃耀皇家龍之屬性水" additionalName="XP" type="EtcItem">
 		<!-- When used, Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +50% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1213,7 +1213,7 @@
 			<skill id="29539" level="1" /> <!-- Glowing Royal Dragon's Attribute Potion -->
 		</skills>
 	</item>
-	<item id="60460" name="Shining Royal Nevit's Gold Hourglass" type="EtcItem">
+	<item id="60460" name="閃耀皇家奈比特黃金沙漏" type="EtcItem">
 		<!-- For 30 min. while hunting, acquired XP/ SP +120%, damage +5%, received damage -7%. The effect does not stack with Nevit's Shining Gold Hourglass, Fall of the Dragon and Dandy's Home Run Ball. The effect is removed upon entering the Olympiad or the Ceremony of Chaos. Cooldown: 10 sec. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1232,7 +1232,7 @@
 			<skill id="29540" level="1" /> <!-- Nevit's Shining Royal Gold Hourglass -->
 		</skills>
 	</item>
-	<item id="60461" name="Aden Hero's Soul Crystal Box" type="EtcItem">
+	<item id="60461" name="亞丁英雄搜魂禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -1286,7 +1286,7 @@
 			<item id="36946" min="1" max="1" chance="2.5" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60462" name="Moonlight Treasure Chest" type="EtcItem">
+	<item id="60462" name="星光寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1341,7 +1341,7 @@
 			<item id="82171" min="2" max="2" chance="100" /> <!-- Swift Growth Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60463" name="Low-grade Energy Kit" type="EtcItem">
+	<item id="60463" name="活力水下級組合包" type="EtcItem">
 		<!-- Double-click to obtain Beora's Ancient Energy (10 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1356,7 +1356,7 @@
 			<item id="82305" min="10" max="10" chance="100" /> <!-- Beora's Ancient Energy -->
 		</capsuled_items>
 	</item>
-	<item id="60464" name="Mid-grade Energy Kit" type="EtcItem">
+	<item id="60464" name="活力水中級組合包" type="EtcItem">
 		<!-- Double-click to obtain Beora's Ancient Energy (30 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1371,7 +1371,7 @@
 			<item id="82305" min="30" max="30" chance="100" /> <!-- Beora's Ancient Energy -->
 		</capsuled_items>
 	</item>
-	<item id="60465" name="High-grade Energy Kit" type="EtcItem">
+	<item id="60465" name="活力水高級組合包" type="EtcItem">
 		<!-- Double-click to obtain Beora's Ancient Energy (60 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1386,7 +1386,7 @@
 			<item id="82305" min="60" max="60" chance="100" /> <!-- Beora's Ancient Energy -->
 		</capsuled_items>
 	</item>
-	<item id="60466" name="Superior Energy Kit" type="EtcItem">
+	<item id="60466" name="活力水最高級組合包" type="EtcItem">
 		<!-- Double-click to obtain Beora's Ancient Energy (100 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1401,7 +1401,7 @@
 			<item id="82305" min="100" max="100" chance="100" /> <!-- Beora's Ancient Energy -->
 		</capsuled_items>
 	</item>
-	<item id="60467" name="Mary Reed's Treasures" type="EtcItem">
+	<item id="60467" name="梅里里德寶藏" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_elmoaden_gold_box" />
 		<set name="default_action" val="PEEL" />
@@ -1461,7 +1461,7 @@
 			<item id="81444" min="1" max="1" chance="2.173913" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60468" name="Mary Reed's Shining Treasure Chest" type="EtcItem">
+	<item id="60468" name="閃耀的梅里里德寶箱" type="EtcItem">
 		<!-- Double-click to obtain Mary Reed's Treasures (150 pcs.), Mary Reed's Pistol (1 pc.), Swift Attack Cookie (20 pcs.), Swift Defense Cookie (20 pcs.). -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -1480,7 +1480,7 @@
 			<item id="60469" min="1" max="1" chance="100" /> <!-- Mary Reed's Pistol -->
 		</capsuled_items>
 	</item>
-	<item id="60469" name="Mary Reed's Pistol" type="EtcItem">
+	<item id="60469" name="梅里里德短槍" type="EtcItem">
 		<!-- A pistol that once belonged to the dreadful pirate Mary Reed. Can be added to a collection. -->
 		<set name="icon" val="icon.shooter_none" />
 		<set name="immediate_effect" val="true" />
@@ -1491,7 +1491,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60470" name="Dancing Cat's Gift Cube" additionalName="Event" type="EtcItem">
+	<item id="60470" name="跳舞貓禮物晶體" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a gift from Dancing Cat. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1500,7 +1500,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60471" name="Dancing Cat's Gift" additionalName="Event" type="EtcItem">
+	<item id="60471" name="跳舞貓支援品" additionalName="Event" type="EtcItem">
 		<!-- A box with supplies from Dancing Cat. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
@@ -1519,12 +1519,12 @@
 			<item id="81054" min="24" max="24" chance="100" /> <!-- Freya's Scroll of Storm - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60472" name="Vitality Sustaining Potion" type="EtcItem">
+	<item id="60472" name="活力維持藥草" type="EtcItem">
 		<set name="icon" val="icon.etc_recovery_set_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="60473" name="Dancing Cat's Hidden Treasure" additionalName="Event" type="EtcItem">
+	<item id="60473" name="跳舞貓隱藏的寶物" additionalName="Event" type="EtcItem">
 		<!-- A treasure chest hidden by Dancing Cat. Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1550,7 +1550,7 @@
 			<item id="80335" min="1" max="1" chance="10" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60474" name="Crystal of Guard" type="EtcItem">
+	<item id="60474" name="守護結晶" type="EtcItem">
 		<!-- A crystal that grants protection. Can be added to a collection. -->
 		<set name="icon" val="icon.bm_ensoul_stone_PvE_empty" />
 		<set name="immediate_effect" val="true" />
@@ -1558,7 +1558,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60475" name="Crystal of Power" type="EtcItem">
+	<item id="60475" name="力之結晶" type="EtcItem">
 		<!-- A crystal that grants strength. Can be added to a collection. -->
 		<set name="icon" val="icon.bm_ensoul_stone_PvP_empty" />
 		<set name="immediate_effect" val="true" />
@@ -1566,7 +1566,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60476" name="Third Chapter Kit" type="EtcItem">
+	<item id="60476" name="更新紀念禮物" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="Branchsys2.icon2.g_alegra_box" />
 		<set name="default_action" val="PEEL" />
@@ -1609,7 +1609,7 @@
 			<item id="48685" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Skill Cooldown - P./M. Def. -->
 		</capsuled_items>
 	</item>
-	<item id="60477" name="Hunting Support Kit" additionalName="Event" type="EtcItem">
+	<item id="60477" name="狩獵支援組合包" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_green_box_01" />
 		<set name="default_action" val="PEEL" />
@@ -1632,7 +1632,7 @@
 			<item id="81054" min="200" max="200" chance="100" /> <!-- Freya's Scroll of Storm - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60478" name="Jewel Box" type="EtcItem">
+	<item id="60478" name="古文典藏禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -1687,7 +1687,7 @@
 			<item id="82378" min="1" max="1" chance="100" /> <!-- Shining Tales of Einhasad -->
 		</capsuled_items>
 	</item>
-	<item id="60479" name="Autumn Update Coin" type="EtcItem">
+	<item id="60479" name="秋季改版紀念幣" type="EtcItem">
 		<!-- A reward for reaching Lv. 10 of the Tales of Hero during the Autumn Update festivities. Can be added to a collection. -->
 		<set name="icon" val="icon.etc_ancient_adena_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1697,7 +1697,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60480" name="Holiday Festival Kit (60-day)" type="EtcItem">
+	<item id="60480" name="60日紀念慶典組合包" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="PEEL" />
@@ -1720,7 +1720,7 @@
 			<item id="47917" min="1" max="1" chance="100" /> <!-- Nevit's Cloak of Light - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="60481" name="Night Goblin's Coin Cube" type="EtcItem">
+	<item id="60481" name="夜貓子幣晶體" type="EtcItem">
 		<!-- Double-click to obtain Night Goblin's Coin. Can be used once a day. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1729,7 +1729,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60482" name="Archaeologist's Box" type="EtcItem">
+	<item id="60482" name="考古學家禮盒" type="EtcItem">
 		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="PEEL" />
@@ -1793,7 +1793,7 @@
 			<item id="29529" min="1" max="1" chance="100" /> <!-- Shiny Gold Bar Box -->
 		</capsuled_items>
 	</item>
-	<item id="60483" name="Spirit Gift Box" type="EtcItem">
+	<item id="60483" name="靈魂禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1851,7 +1851,7 @@
 			<item id="82172" min="3" max="3" chance="100" /> <!-- Swift Attack Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60484" name="Purge Mark" additionalName="Event" type="EtcItem">
+	<item id="60484" name="討伐憑證" additionalName="Event" type="EtcItem">
 		<!-- Bonuses will be available after adding to a collection. -->
 		<set name="icon" val="icon.campaign_high_rank_reward" />
 		<set name="immediate_effect" val="true" />
@@ -1861,7 +1861,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60485" name="Hunter's Equipment" additionalName="Event" type="EtcItem">
+	<item id="60485" name="獵者配發品" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_blue" />
 		<set name="default_action" val="PEEL" />
@@ -1882,7 +1882,7 @@
 			<item id="81460" min="14" max="14" chance="100" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60486" name="Freya's Glowing Potion" additionalName="Event" type="EtcItem">
+	<item id="60486" name="芙蕾雅閃耀藥水" additionalName="Event" type="EtcItem">
 		<!-- When used, acquired XP/ SP +10%, P./ M. Atk. +5% for 30 min. Cooldown: 5 min. -->
 		<set name="icon" val="icon.giant_blue_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1897,7 +1897,7 @@
 			<skill id="29553" level="1" /> <!-- Freya's Glowing Potion -->
 		</skills>
 	</item>
-	<item id="60487" name="High-grade Purge Mark" additionalName="Event" type="EtcItem">
+	<item id="60487" name="上級討伐憑證" additionalName="Event" type="EtcItem">
 		<!-- Bonuses will be available after adding to a collection. -->
 		<set name="icon" val="icon.campaign_public_reward" />
 		<set name="immediate_effect" val="true" />
@@ -1907,7 +1907,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60488" name="Hunter's Supplies" additionalName="Event" type="EtcItem">
+	<item id="60488" name="獵者補給品" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="default_action" val="PEEL" />
@@ -1927,7 +1927,7 @@
 			<item id="81054" min="15" max="15" chance="100" /> <!-- Freya's Scroll of Storm - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60489" name="Oren Treasure Chest" type="EtcItem">
+	<item id="60489" name="歐瑞寶箱" type="EtcItem">
 		<!-- Double-click to obtain Lord's Casket and various items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_silver" />
 		<set name="default_action" val="PEEL" />
@@ -1997,7 +1997,7 @@
 			<item id="60334" min="1" max="1" chance="100" /> <!-- Lord's Casket -->
 		</capsuled_items>
 	</item>
-	<item id="60490" name="Oren Supply Kit Lv. 1" type="EtcItem">
+	<item id="60490" name="歐瑞消耗品組-1級" type="EtcItem">
 		<!-- Double-click to obtain Oren Treasure Chest (100 pcs.), Collectors' Pennant (2 pcs.), Swift Growth Cookie (20 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -2015,7 +2015,7 @@
 			<item id="60336" min="2" max="2" chance="100" /> <!-- Collectors' Pennant -->
 		</capsuled_items>
 	</item>
-	<item id="60491" name="Oren Supply Kit Lv. 2" type="EtcItem">
+	<item id="60491" name="歐瑞消耗品組-2級" type="EtcItem">
 		<!-- Double-click to obtain Oren Treasure Chest (150 pcs.), Collectors' Pennant (2 pcs.), Swift Growth Cookie (40 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -2033,7 +2033,7 @@
 			<item id="60336" min="2" max="2" chance="100" /> <!-- Collectors' Pennant -->
 		</capsuled_items>
 	</item>
-	<item id="60492" name="Oren Supply Kit Lv. 3" type="EtcItem">
+	<item id="60492" name="歐瑞消耗品組-3級" type="EtcItem">
 		<!-- Double-click to obtain Oren Treasure Chest (150 pcs.), Collectors' Pennant (4 pcs.), Swift Growth Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -2051,7 +2051,7 @@
 			<item id="60336" min="4" max="4" chance="100" /> <!-- Collectors' Pennant -->
 		</capsuled_items>
 	</item>
-	<item id="60493" name="Oren Supply Kit Lv. 4" type="EtcItem">
+	<item id="60493" name="歐瑞消耗品組-4級" type="EtcItem">
 		<!-- Double-click to obtain Oren Treasure Chest (150 pcs.), Lord's Lucky Ticket (2 pcs.), Swift Growth Cookie (20 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -2069,7 +2069,7 @@
 			<item id="60337" min="2" max="2" chance="100" /> <!-- Lord's Lucky Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60494" name="Oren Supply Kit Lv. 5" type="EtcItem">
+	<item id="60494" name="歐瑞消耗品組-5級" type="EtcItem">
 		<!-- Double-click to obtain Oren Treasure Chest (150 pcs.), Lord's Lucky Ticket (2 pcs.), Swift Growth Cookie (40 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -2087,7 +2087,7 @@
 			<item id="60337" min="2" max="2" chance="100" /> <!-- Lord's Lucky Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60495" name="Oren Supply Kit Lv. 6" type="EtcItem">
+	<item id="60495" name="歐瑞消耗品組-6級" type="EtcItem">
 		<!-- Double-click to obtain Oren Treasure Chest (150 pcs.), Lord's Lucky Ticket (4 pcs.), Swift Growth Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -2105,7 +2105,7 @@
 			<item id="60337" min="4" max="4" chance="100" /> <!-- Lord's Lucky Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60496" name="Reward: Week 1" type="EtcItem">
+	<item id="60496" name="第1週獎勵" type="EtcItem">
 		<!-- A gift box for playing the game for 5 days in a row. But why stop? There's more ahead! -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2126,7 +2126,7 @@
 			<item id="81897" min="1" max="1" chance="100" /> <!-- 17th Anniversary Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60497" name="Reward: Week 2" type="EtcItem">
+	<item id="60497" name="第2週獎勵" type="EtcItem">
 		<!-- A gift box for playing the game for 10 days in a row. Now you have an awesome Iron Dragon! -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2147,7 +2147,7 @@
 			<item id="81897" min="1" max="1" chance="100" /> <!-- 17th Anniversary Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60498" name="Reward: Week 3" type="EtcItem">
+	<item id="60498" name="第3週獎勵" type="EtcItem">
 		<!-- A gift box for playing the game for 15 days in a row. You are almost there, don't lose pace! -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2168,7 +2168,7 @@
 			<item id="81897" min="1" max="1" chance="100" /> <!-- 17th Anniversary Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60499" name="Reward: Week 4" type="EtcItem">
+	<item id="60499" name="第4週獎勵" type="EtcItem">
 		<!-- And this 20-day marathon is over! You did it! Please accept your well-deserved reward. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />

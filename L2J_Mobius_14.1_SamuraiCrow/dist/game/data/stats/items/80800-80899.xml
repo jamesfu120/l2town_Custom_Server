@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="80800" name="Ruler's Authority" additionalName="Event" type="Armor">
+	<item id="80800" name="支配者權能" additionalName="Event" type="Armor">
 		<!-- When equipped, Max HP/ MP/ CP +1000, weight limit +25,600, damage +8%, received damage -9%, Damage Reflection Resistance +5%, inventory slots +36, Attribute Resistance +15. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="default_action" val="EQUIP" />
@@ -25,7 +25,7 @@
 			<skill id="35523" level="1" /> <!-- Ruler's Authority -->
 		</skills>
 	</item>
-	<item id="80801" name="Golden Pig's Lucky Coin" type="EtcItem">
+	<item id="80801" name="黃金豬豬幸運幣" type="EtcItem">
 		<!-- A lucky coin from the year's symbol - Golden Pig. Can be exchanged for various items in any town. -->
 		<set name="icon" val="icon.etc_pig_adena_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -33,7 +33,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80802" name="Lucky Pouch" type="EtcItem">
+	<item id="80802" name="福袋" type="EtcItem">
 		<!-- A gift from Lakfi-Lakfi to celebrate the year of the Golden Pig. Double-click to obtain Lakfi-Lakfi's Oink Scroll and the event reward. -->
 		<set name="icon" val="icon.christmas_card_box2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -47,7 +47,7 @@
 			<skill id="39508" level="1" /> <!-- Buff Pouch -->
 		</skills>
 	</item>
-	<item id="80803" name="Golden Lucky Pouch" type="EtcItem">
+	<item id="80803" name="黃金福袋" type="EtcItem">
 		<!-- A gift from Lakfi-Lakfi to celebrate the year of the Golden Pig. Double-click to obtain Lakfi-Lakfi's Oink Scroll, Lakfi-Lakfi's Special Energy and the event reward. -->
 		<set name="icon" val="icon.christmas_card_box1" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -61,7 +61,7 @@
 			<skill id="39508" level="1" /> <!-- Buff Pouch -->
 		</skills>
 	</item>
-	<item id="80804" name="Retired Legend's Scroll" additionalName="Event" type="EtcItem">
+	<item id="80804" name="傳說中的卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +15%, P./ M. Atk., Basic Attack Power and P./ M. Skill Power +10%, P./ M. Def. +20%. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -76,7 +76,7 @@
 			<skill id="39511" level="1" /> <!-- Retired Legend's Scroll -->
 		</skills>
 	</item>
-	<item id="80805" name="17th Anniversary Cake" additionalName="Event" type="EtcItem">
+	<item id="80805" name="17週年紀念活力蛋糕" additionalName="Event" type="EtcItem">
 		<!-- A special cake baked for the 17th anniversary festivities. Recovers 1 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_4_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -90,7 +90,7 @@
 			<skill id="39509" level="1" /> <!-- New Year Energy of Hope -->
 		</skills>
 	</item>
-	<item id="80806" name="Lucky Pig Special Vitality Tonic" type="EtcItem">
+	<item id="80806" name="樂比樂比特殊活力水" type="EtcItem">
 		<!-- Recovers all 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -108,7 +108,7 @@
 			<skill id="39510" level="1" /> <!-- Lakfi-Lakfi's Special Energy -->
 		</skills>
 	</item>
-	<item id="80807" name="Gran Kain's Cube" type="EtcItem">
+	<item id="80807" name="格蘭肯晶體" type="EtcItem">
 		<!-- Double-click to obtain Gran Kain's Gift Box. Grants Gran Kain's Cube Special Support Items on the 1st and 10th use. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_2019_cube_lv1" />
 		<set name="immediate_effect" val="true" />
@@ -117,7 +117,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80808" name="Gran Kain's Greater Cube" type="EtcItem">
+	<item id="80808" name="格蘭肯上級晶體" type="EtcItem">
 		<!-- Double-click to obtain Gran Kain's Gift Box. Grants Royal Black Save Ticket on the 1st use, and Royal Gold Save Ticket on the 10th use. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_2019_cube_lv2" />
 		<set name="immediate_effect" val="true" />
@@ -126,7 +126,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80809" name="Gran Kain's Top-grade Cube" type="EtcItem">
+	<item id="80809" name="格蘭肯最上級晶體" type="EtcItem">
 		<!-- Double-click to obtain Gran Kain's Top-grade Gift Box. Grants Gran Kain's Scroll: Enchant R-grade Armor on the 1st use, and Gran Kain's Scroll: Enchant R-grade Weapon on the 10th use. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_2019_cube_lv3" />
 		<set name="immediate_effect" val="true" />
@@ -135,7 +135,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80810" name="Gran Kain's Cube Special Supply" type="EtcItem">
+	<item id="80810" name="格蘭肯晶體特殊支援品" type="EtcItem">
 		<!-- Double-click to obtain Glowing Dragon's Attribute Potions of each type (6 pcs.), Honey Vitality Beer (18 pcs.), Fallen Angel's Ring Pack (2 pcs.). -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -153,7 +153,7 @@
 			<item id="48860" min="2" max="2" chance="100" /> <!-- Fallen Angel's Ring Pack -->
 		</capsuled_items>
 	</item>
-	<item id="80811" name="Gran Kain's Gift Box" type="EtcItem">
+	<item id="80811" name="格蘭肯支援品" type="EtcItem">
 		<!-- Double-click to obtain Glowing Dragon's Attribute Potions of each type (6 pcs.), Honey Vitality Beer (18 pcs.). -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -170,7 +170,7 @@
 			<item id="48317" min="18" max="18" chance="100" /> <!-- Honey Vitality Beer -->
 		</capsuled_items>
 	</item>
-	<item id="80812" name="Gran Kain's High-grade Gift Box" type="EtcItem">
+	<item id="80812" name="格蘭肯上級支援品" type="EtcItem">
 		<!-- Double-click to obtain Glowing Dragon's Attribute Potions of each type (12 pcs.), Honey Vitality Beer (36 pcs.), Fallen Angel's Ring Pack (2 pcs.). -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -188,7 +188,7 @@
 			<item id="48860" min="2" max="2" chance="100" /> <!-- Fallen Angel's Ring Pack -->
 		</capsuled_items>
 	</item>
-	<item id="80813" name="Gran Kain's Top-grade Gift Box" type="EtcItem">
+	<item id="80813" name="格蘭肯最上級支援品" type="EtcItem">
 		<!-- Double-click to obtain Glowing Dragon's Attribute Potions of each type (24 pcs.), Honey Vitality Beer (72 pcs.), Forgotten Spellbook Chapter 1. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -206,7 +206,7 @@
 			<item id="48876" min="1" max="1" chance="100" /> <!-- Forgotten Spellbook - Chapter 1 -->
 		</capsuled_items>
 	</item>
-	<item id="80814" name="Gran Kain's Cube Box" type="EtcItem">
+	<item id="80814" name="格蘭肯晶體禮盒" type="EtcItem">
 		<!-- Double-click to obtain Gran Kain's Cube. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -219,7 +219,7 @@
 			<item id="80807" min="1" max="1" chance="100" /> <!-- Gran Kain's Cube -->
 		</capsuled_items>
 	</item>
-	<item id="80815" name="Heavenly Fantasia Cookie" type="EtcItem">
+	<item id="80815" name="天堂幻想曲餅乾" type="EtcItem">
 		<!-- For 1 h., P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +30%, Shield Defense +50%, skill cooldown -20%, M. Skill MP Consumption -15%. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_sonata_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -233,7 +233,7 @@
 			<skill id="39512" level="1" /> <!-- Heavenly Fantasia Cookie -->
 		</skills>
 	</item>
-	<item id="80816" name="GM's Buff Scroll" type="EtcItem">
+	<item id="80816" name="GM輔助魔法卷軸" type="EtcItem">
 		<!-- When used, grants the effects of Musician's Melody and Sonata Performance Lv. 4, including Fantasia Harmony, for 60 min. Cannot be used in the Olympiad or the Ceremony of Chaos. Cooldown: 2 min. -->
 		<set name="icon" val="icon.buff_scroll_gm_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -250,7 +250,7 @@
 			<skill id="39767" level="1" /> <!-- Sonata Performance - GM's Blessing -->
 		</skills>
 	</item>
-	<item id="80817" name="Emperor's Special Cocktail" type="EtcItem">
+	<item id="80817" name="天國雞尾酒" type="EtcItem">
 		<!-- For 60 min., applies the following effects: Fever Melody Lv. 2, Drumbeat of Serenity Lv. 2, and Fantasia Harmony Lv. 2. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.renewal_cocktail_lv2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -267,7 +267,7 @@
 			<skill id="39520" level="1" /> <!-- Wondrous Cocktail -->
 		</skills>
 	</item>
-	<item id="80818" name="Emperor's Special Cocktail" additionalName="4-hour" type="EtcItem">
+	<item id="80818" name="天國雞尾酒" additionalName="4-hour" type="EtcItem">
 		<!-- For 4 h., applies the following effects: Fever Melody Lv. 2, Drumbeat of Serenity Lv. 2, and Fantasia Harmony Lv. 2. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.renewal_cocktail_lv2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -284,7 +284,7 @@
 			<skill id="39520" level="2" /> <!-- Wondrous Cocktail -->
 		</skills>
 	</item>
-	<item id="80819" name="Emperor's Special Cocktail" additionalName="8-hour" type="EtcItem">
+	<item id="80819" name="天國雞尾酒" additionalName="8-hour" type="EtcItem">
 		<!-- For 8 h., applies the following effects: Fever Melody Lv. 2, Drumbeat of Serenity Lv. 2, and Fantasia Harmony Lv. 2. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.renewal_cocktail_lv2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -301,7 +301,7 @@
 			<skill id="39520" level="3" /> <!-- Wondrous Cocktail -->
 		</skills>
 	</item>
-	<item id="80820" name="PA Emperor's Special Cocktail" type="EtcItem">
+	<item id="80820" name="活動專用天國雞尾酒" type="EtcItem">
 		<!-- For PA. For 60 min., applies the following effects: Fever Melody Lv. 2, Drumbeat of Serenity Lv. 2, and Fantasia Harmony Lv. 2. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.renewal_cocktail_lv2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -321,7 +321,7 @@
 			<skill id="39521" level="1" /> <!-- Wondrous Cocktail - PA -->
 		</skills>
 	</item>
-	<item id="80821" name="Ceremony of Chaos" type="EtcItem">
+	<item id="80821" name="渾沌祭典" type="EtcItem">
 		<!-- Can only be used in the Ceremony of Chaos. For 7 min., applies the effects of Fever Melody Lv. 2, Drumbeat of Serenity Lv. 2, and Fantasia Harmony Lv. 2. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -346,7 +346,7 @@
 			<skill id="39515" level="1" /> <!-- Fantasia Harmony - Ceremony of Chaos -->
 		</skills>
 	</item>
-	<item id="80822" name="Elixir of Harmony" type="EtcItem">
+	<item id="80822" name="和聲靈藥" type="EtcItem">
 		<!-- For 30 min., enables the Fantasia Harmony effect. Required level: 85+. Cooldown: 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -358,7 +358,7 @@
 			<skill id="39516" level="1" /> <!-- Elixir of Harmony -->
 		</skills>
 	</item>
-	<item id="80823" name="Proof of Resistance" type="EtcItem">
+	<item id="80823" name="對抗的證據" type="EtcItem">
 		<!-- A proof of killing monsters, collected for Eva's Knight Lionel Hunter from Heine. Take it to Lionel Hunter. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="material" val="PAPER" />
@@ -370,7 +370,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80824" name="Proof of Preparation" type="EtcItem">
+	<item id="80824" name="準備的證據" type="EtcItem">
 		<!-- A proof of killing monsters, collected for Eva's Knight Lionel Hunter from Heine. Take it to Lionel Hunter. -->
 		<set name="icon" val="icon.low_energy_condense_i05" />
 		<set name="material" val="PAPER" />
@@ -382,7 +382,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80825" name="Proof of Settlement" type="EtcItem">
+	<item id="80825" name="決斷的證據" type="EtcItem">
 		<!-- Item received as proof of having participated in the Olympiad or the Ceremony of Chaos. Take it to the Captain Kurtiz in the Town of Aden to receive the certificate for finishing the mission. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i02" />
 		<set name="material" val="PAPER" />
@@ -394,7 +394,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80826" name="Proof of Reputation" type="EtcItem">
+	<item id="80826" name="聲望的證據" type="EtcItem">
 		<!-- A proof of killing monsters, collected for Eva's Knight Lionel Hunter from Heine. Take it to Lionel Hunter. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="material" val="PAPER" />
@@ -406,7 +406,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80827" name="Proof of Pride" type="EtcItem">
+	<item id="80827" name="自豪的證據" type="EtcItem">
 		<!-- A proof of killing monsters, collected for Eva's Knight Lionel Hunter from Heine. Take it to Lionel Hunter. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="material" val="PAPER" />
@@ -418,7 +418,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80828" name="Sylvain's Certificate" type="EtcItem">
+	<item id="80828" name="錫爾巴銀的證明書" type="EtcItem">
 		<!-- A certificate for completing High Priest Sylvain's mission. Take all your certificates to Lionel Hunter in Heine to get new abilities. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
@@ -429,7 +429,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80829" name="Seresin's Certificate" type="EtcItem">
+	<item id="80829" name="瑟瑞辛的證明書" type="EtcItem">
 		<!-- A certificate for completing Cardinal Seresin's mission. Take all your certificates to Lionel Hunter in Heine to get new abilities. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="material" val="PAPER" />
@@ -440,7 +440,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80830" name="Nevit's Treasure Chest" type="EtcItem">
+	<item id="80830" name="奈比特寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -452,7 +452,7 @@
 			<skill id="39518" level="1" /> <!-- Nevit's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="80831" name="Nevit's Growth Support Box" type="EtcItem">
+	<item id="80831" name="奈比特成長支援禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Shining Gold Hourglass, Freya's Ice Rose or a random material. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -464,7 +464,7 @@
 			<skill id="39519" level="1" /> <!-- Nevit's Growth Support Box -->
 		</skills>
 	</item>
-	<item id="80832" name="Emperor's Special Cocktail" additionalName="Event" type="EtcItem">
+	<item id="80832" name="天國雞尾酒" additionalName="Event" type="EtcItem">
 		<!-- For 60 min., applies the following effects: Fever Melody Lv. 2, Drumbeat of Serenity Lv. 2, and Fantasia Harmony Lv. 2. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.renewal_cocktail_lv2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -484,7 +484,7 @@
 			<skill id="39522" level="1" /> <!-- Wondrous Cocktail -->
 		</skills>
 	</item>
-	<item id="80833" name="Golden Pig's Medium Vitality Tonic" type="EtcItem">
+	<item id="80833" name="黃金豬豬的中型活力水" type="EtcItem">
 		<!-- A medium Vitality tonic prepared to celebrate the year of the Golden Pig. Recovers 2 out of 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -502,7 +502,7 @@
 			<skill id="39523" level="1" /> <!-- Golden Pig's Medium Vitality Tonic -->
 		</skills>
 	</item>
-	<item id="80834" name="Jackpot Wish Lucky Pouch" type="EtcItem">
+	<item id="80834" name="恭喜發財福袋" type="EtcItem">
 		<!-- Lucky Pouch received as a gift from the Golden Pig. Double-click to obtain Lindvior's Earring/ Valakas' Blessed Necklace/ Antharas' Blessed Earring or various materials. -->
 		<set name="icon" val="icon.christmas_card_box1" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -516,7 +516,7 @@
 			<skill id="39524" level="1" /> <!-- Jackpot Wish Lucky Pouch -->
 		</skills>
 	</item>
-	<item id="80835" name="Kaliel's Bracelet" type="Armor">
+	<item id="80835" name="卡利艾手鐲" type="Armor">
 		<!-- Unlocks 5 talisman slots. <Enchanting>. Use Blessed Scroll: Enchant Bracelet. <Upgrade>. Take the bracelet enchanted to +5 and Crystal of Dawn to the Head Blacksmith in any town to get Kaliel's Refined Bracelet. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -538,7 +538,7 @@
 			<skill id="35524" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Kaliel's Bracelet: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="80836" name="Kaliel's Greater Bracelet" type="Armor">
+	<item id="80836" name="高級卡利艾手鐲" type="Armor">
 		<!-- Unlocks 6 talisman slots. <Enchanting>. Use Blessed Scroll: Enchant Bracelet. <Upgrade>. Take the bracelet enchanted to +5 and Crystal of Dawn to the Head Blacksmith in any town to get Kaliel's Superior Bracelet. Can be augmented. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -557,7 +557,7 @@
 			<skill id="35525" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Kaliel's Refined Bracelet: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="80837" name="Superior Kaliel's Bracelet" type="Armor">
+	<item id="80837" name="最高級卡利艾手鐲" type="Armor">
 		<!-- Unlocks 6 talisman slots. <Enchanting>. Use Blessed Scroll: Enchant Bracelet. Can be augmented. <Upgrade>. Take the bracelet enchanted to +10 to the Head Blacksmith in any town to get Silvery Bracelet (Crystals of Dawn are required). -->
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -587,7 +587,7 @@
 			<skill id="30818" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Kaliel's Protection -->
 		</skills>
 	</item>
-	<item id="80838" name="Blessed Scroll: Enchant Kaliel's Bracelet" type="EtcItem">
+	<item id="80838" name="祝福的卡利艾手鐲強化卷軸" type="EtcItem">
 		<!-- A scroll for enchanting Kaliel's Bracelet. In case of failure, the item's enchant value is reset. -->
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
@@ -606,13 +606,13 @@
 			<skill id="39527" level="1" /> <!-- Blessed Scroll: Enchant Bracelet -->
 		</skills>
 	</item>
-	<item id="80839" name="Crystal of Dawn" type="EtcItem">
+	<item id="80839" name="黎明的結晶" type="EtcItem">
 		<!-- A crystal infused with spirit energy. Can be used for upgrading accessories. -->
 		<set name="icon" val="icon.accessary_upgrade_crystal" />
 		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80840" name="PA Event Box" type="EtcItem">
+	<item id="80840" name="活動寶箱" type="EtcItem">
 		<!-- A box that can be purchased for PA points. Double-click to obtain +8 Angel Accessory, My Teleport Scroll, Shining Platinum Ornament and supplies for PA. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -637,7 +637,7 @@
 			<item id="81347" min="1" max="1" chance="10" /> <!-- Shining Platinum Ornament -->
 		</capsuled_items>
 	</item>
-	<item id="80841" name="Appearance Stone Box" type="EtcItem">
+	<item id="80841" name="外型加工石寶箱" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Appearance Stone: Dark/ Light Assassin Outfit, Appearance Stone: Vampiric Style, Appearance Stone: Formal Wear. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -670,7 +670,7 @@
 			<item id="48028" min="1" max="1" chance="5" /> <!-- Appearance Stone: Valkyrie Costume -->
 		</capsuled_items>
 	</item>
-	<item id="80842" name="Honey Dark Beer" type="EtcItem">
+	<item id="80842" name="蜂蜜黑啤酒" type="EtcItem">
 		<!-- For 30 min., all stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -685,7 +685,7 @@
 			<skill id="39526" level="1" /> <!-- Honey Dark Beer -->
 		</skills>
 	</item>
-	<item id="80843" name="Shiny Gold Bar Box" type="EtcItem">
+	<item id="80843" name="閃亮的金塊禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 to 15,000 Shiny Gold Bars. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
@@ -708,7 +708,7 @@
 			<item id="48315" min="10000" max="10000" chance="10" /> <!-- Shiny Gold Bar -->
 		</capsuled_items>
 	</item>
-	<item id="80844" name="Lucy's Valentine's Day Chocolate Box" type="EtcItem">
+	<item id="80844" name="露西的情人節巧克力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Sweet Chocolate. Take it and something else to Rok. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="START_QUEST" />
@@ -721,7 +721,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80845" name="Lucy's Valentine's Day Chocolate Box" type="EtcItem">
+	<item id="80845" name="露西的情人節巧克力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Sweet Chocolate and a letter. Take them to Rok. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="material" val="PAPER" />
@@ -731,7 +731,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80846" name="Lucy's Opened Letter" type="EtcItem">
+	<item id="80846" name="撕破的露西的信" type="EtcItem">
 		<!-- A letter from Lucy to Rok. Its wax seal is broken, but the text is legible, so you can still give it to Rok. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -743,7 +743,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80847" name="Lucy's Return Present" type="EtcItem">
+	<item id="80847" name="露西的回禮" type="EtcItem">
 		<!-- A reward box from Lucy. Double-click to obtain 120 Golden Pig's Lucky Coins. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -757,7 +757,7 @@
 			<skill id="39531" level="1" /> <!-- Lucy's Return Present -->
 		</skills>
 	</item>
-	<item id="80848" name="Shining Nevit's Treasure Chest" type="EtcItem">
+	<item id="80848" name="閃耀的奈比特寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -769,7 +769,7 @@
 			<skill id="39532" level="1" /> <!-- Nevit's Shining Treasure Chest -->
 		</skills>
 	</item>
-	<item id="80849" name="PA Event Staff" type="Weapon">
+	<item id="80849" name="活動魔杖" type="Weapon">
 		<!-- A weapon for enchanting during the PA event. The higher its enchant value is, the greater your reward will be. -->
 		<set name="icon" val="icon.yogi_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -794,7 +794,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80850" name="PA Event Enchant Scroll" type="EtcItem">
+	<item id="80850" name="活動強化卷軸" type="EtcItem">
 		<!-- Required for enchanting PA Event Staff. Cannot be used with items that increase enchant success rate. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -810,7 +810,7 @@
 			<skill id="35527" level="1" /> <!-- Enchant Scroll: PA Challenge -->
 		</skills>
 	</item>
-	<item id="80851" name="+10 Agathion Pack" additionalName="Event" type="EtcItem">
+	<item id="80851" name="+10壺精禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a random agathion charm enchanted to +10. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -825,7 +825,7 @@
 			<skill id="35528" level="1" /> <!-- +10 Agathion Pack -->
 		</skills>
 	</item>
-	<item id="80852" name="PA Shining Nevit's Gold Hourglass" type="EtcItem">
+	<item id="80852" name="活動專用閃耀的奈比特黃金沙漏" type="EtcItem">
 		<!-- For PA. For 30 min., acquired XP/ SP while hunting +100%. Does not stack with Fall of the Dragon and Dandy's Home Run Ball. Cooldown: 5 min. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -843,7 +843,7 @@
 			<skill id="39533" level="1" /> <!-- Nevit's Shining Hourglass - PA -->
 		</skills>
 	</item>
-	<item id="80853" name="Undead Blood" type="EtcItem">
+	<item id="80853" name="不死生物的血" type="EtcItem">
 		<!-- Item obtained as proof of having defeated the monsters in Altar of Evil at the request of Grocer Vollodos. Collect these and take them to Herphah in the Town of Aden. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="material" val="PAPER" />
@@ -855,7 +855,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80854" name="Vampire's Ichor" type="EtcItem">
+	<item id="80854" name="吸血鬼體液" type="EtcItem">
 		<!-- Item obtained as proof of having defeated the monsters in Bloody Swampland at the request of Black Wizard Lapathia. Take it to Dual Class Master Joachim in the Town of Aden. -->
 		<set name="icon" val="icon.item_canuse28" />
 		<set name="material" val="PAPER" />
@@ -867,7 +867,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80855" name="Energy of Mysterious Power" type="EtcItem">
+	<item id="80855" name="可疑力量的氣息" type="EtcItem">
 		<!-- Mysterious energy found from a vampire's fluids. An unknown power can be felt. -->
 		<set name="icon" val="icon.etc_ertheia_astatine" />
 		<set name="material" val="PAPER" />
@@ -878,7 +878,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80856" name="Hot Energy" type="EtcItem">
+	<item id="80856" name="灼熱氣息" type="EtcItem">
 		<!-- Item obtained as proof of having defeated the monsters in Blazing Swamp or War-Torn Plains. Take it to Dual Class Master Joachim in the Town of Aden. -->
 		<set name="icon" val="icon.etc_torch_on_i09" />
 		<set name="material" val="PAPER" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="80857" name="Scroll of Escape: Herphah" type="EtcItem">
+	<item id="80857" name="移動卷軸-海勒芙雅" type="EtcItem">
 		<!-- Teleports you to where Herphah is. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -906,7 +906,7 @@
 			<skill id="39535" level="1" /> <!-- Scroll of Escape: Herphah -->
 		</skills>
 	</item>
-	<item id="80858" name="Scroll of Escape: Joachim" type="EtcItem">
+	<item id="80858" name="移動卷軸-尤雅金" type="EtcItem">
 		<!-- Teleports you to where Joachim is. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -922,7 +922,7 @@
 			<skill id="39536" level="1" /> <!-- Scroll of Escape: Joachim -->
 		</skills>
 	</item>
-	<item id="80859" name="Bloodthirsty Akamanah Shaper" type="Weapon">
+	<item id="80859" name="嗜血阿卡瑪那夫鉋刀" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_shaper_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -947,7 +947,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80860" name="Bloodthirsty Akamanah Cutter" type="Weapon">
+	<item id="80860" name="嗜血阿卡瑪那夫切刃" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_cutter_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -971,7 +971,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80861" name="Bloodthirsty Akamanah Slasher" type="Weapon">
+	<item id="80861" name="嗜血阿卡瑪那夫殺刃" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_slasher_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -995,7 +995,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80862" name="Bloodthirsty Akamanah Avenger" type="Weapon">
+	<item id="80862" name="嗜血阿卡瑪那夫復仇者" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_onehand_blunt_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1019,7 +1019,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="80863" name="Bloodthirsty Akamanah Fighter" type="Weapon">
+	<item id="80863" name="嗜血阿卡瑪那夫戰爪" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_fist_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1044,7 +1044,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80864" name="Bloodthirsty Akamanah Stormer" type="Weapon">
+	<item id="80864" name="嗜血阿卡瑪那夫風暴者" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_spear_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1072,7 +1072,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="80865" name="Bloodthirsty Akamanah Thrower" type="Weapon">
+	<item id="80865" name="嗜血阿卡瑪那夫投弓" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_bow_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1097,7 +1097,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="80866" name="Bloodthirsty Akamanah Guardian" type="Weapon">
+	<item id="80866" name="嗜血阿卡瑪那夫射靈" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_crossbow_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1122,7 +1122,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="80867" name="Bloodthirsty Akamanah Buster" type="Weapon">
+	<item id="80867" name="嗜血阿卡瑪那夫爆刃" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_onehane_magic_sword_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1146,7 +1146,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="80868" name="Bloodthirsty Akamanah Caster" type="Weapon">
+	<item id="80868" name="嗜血阿卡瑪那夫術杖" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_onehand_magic_blunt_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1172,7 +1172,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="80869" name="Bloodthirsty Akamanah Retributer" type="Weapon">
+	<item id="80869" name="嗜血阿卡瑪那夫報恨者" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_twohand_magic_blunt_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1198,7 +1198,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80870" name="Bloodthirsty Akamanah Dual Swords" type="Weapon">
+	<item id="80870" name="嗜血阿卡瑪那夫雙刀" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_dual_sword_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1222,7 +1222,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80871" name="Bloodthirsty Akamanah Dual Daggers" type="Weapon">
+	<item id="80871" name="嗜血阿卡瑪那夫雙匕首" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_dual_dagger_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1247,7 +1247,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80872" name="Bloodthirsty Akamanah Dual Blunt Weapon" type="Weapon">
+	<item id="80872" name="嗜血阿卡瑪那夫雙鈍器" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 250,000. The item's appearance cannot be modified. Cannot be crystallized, augmented, enchanted or imbued with an attribute. No soul crystal can be inserted. <Upgrade>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_dual_blunt_1" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1272,7 +1272,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80873" name="Bloodstained Zariche Shaper" type="Weapon">
+	<item id="80873" name="染血薩雷奇鉋刀" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_shaper_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1307,7 +1307,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80874" name="Bloodstained Zariche Cutter" type="Weapon">
+	<item id="80874" name="染血薩雷奇切刃" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_cutter_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1341,7 +1341,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80875" name="Bloodstained Zariche Slasher" type="Weapon">
+	<item id="80875" name="染血薩雷奇殺刃" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_slasher_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1375,7 +1375,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80876" name="Bloodstained Zariche Avenger" type="Weapon">
+	<item id="80876" name="染血薩雷奇復仇者" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_onehand_blunt_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1409,7 +1409,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80877" name="Bloodstained Zariche Fighter" type="Weapon">
+	<item id="80877" name="染血薩雷奇戰爪" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_fist_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1444,7 +1444,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80878" name="Bloodstained Zariche Stormer" type="Weapon">
+	<item id="80878" name="染血薩雷奇風暴者" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_spear_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1480,7 +1480,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80879" name="Bloodstained Zariche Thrower" type="Weapon">
+	<item id="80879" name="染血薩雷奇投弓" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_bow_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1515,7 +1515,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80880" name="Bloodstained Zariche Guardian" type="Weapon">
+	<item id="80880" name="染血薩雷奇射靈" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_crossbow_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1550,7 +1550,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80881" name="Bloodstained Zariche Buster" type="Weapon">
+	<item id="80881" name="染血薩雷奇爆刃" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_onehane_magic_sword_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1584,7 +1584,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80882" name="Bloodstained Zariche Caster" type="Weapon">
+	<item id="80882" name="染血薩雷奇術杖" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_onehand_magic_blunt_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1619,7 +1619,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80883" name="Bloodstained Zariche Retributer" type="Weapon">
+	<item id="80883" name="染血薩雷奇報恨者" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_twohand_magic_blunt_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1655,7 +1655,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80884" name="Bloodstained Zariche Dual Swords" type="Weapon">
+	<item id="80884" name="染血薩雷奇雙刀" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_dual_sword_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1689,7 +1689,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80885" name="Bloodstained Zariche Dual Daggers" type="Weapon">
+	<item id="80885" name="染血薩雷奇雙匕首" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_dual_dagger_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1724,7 +1724,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80886" name="Bloodstained Zariche Dual Blunt Weapon" type="Weapon">
+	<item id="80886" name="染血薩雷奇雙鈍器" type="Weapon">
 		<!-- A Zariche weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.zariche_dual_blunt_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1759,7 +1759,7 @@
 			<skill id="36617" level="1" /> <!-- Bloodstained Zariche -->
 		</skills>
 	</item>
-	<item id="80887" name="Bloodstained Akamanah Shaper" type="Weapon">
+	<item id="80887" name="染血阿卡瑪那夫鉋刀" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_shaper_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1794,7 +1794,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80888" name="Bloodstained Akamanah Cutter" type="Weapon">
+	<item id="80888" name="染血阿卡瑪那夫切刃" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_cutter_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1828,7 +1828,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80889" name="Bloodstained Akamanah Slasher" type="Weapon">
+	<item id="80889" name="染血阿卡瑪那夫殺刃" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_slasher_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1862,7 +1862,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80890" name="Bloodstained Akamanah Avenger" type="Weapon">
+	<item id="80890" name="染血阿卡瑪那夫復仇者" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_onehand_blunt_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1896,7 +1896,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80891" name="Bloodstained Akamanah Fighter" type="Weapon">
+	<item id="80891" name="染血阿卡瑪那夫戰爪" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_fist_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1931,7 +1931,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80892" name="Bloodstained Akamanah Stormer" type="Weapon">
+	<item id="80892" name="染血阿卡瑪那夫風暴者" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_spear_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -1967,7 +1967,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80893" name="Bloodstained Akamanah Thrower" type="Weapon">
+	<item id="80893" name="染血阿卡瑪那夫投弓" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_bow_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -2002,7 +2002,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80894" name="Bloodstained Akamanah Guardian" type="Weapon">
+	<item id="80894" name="染血阿卡瑪那夫射靈" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_crossbow_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -2037,7 +2037,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80895" name="Bloodstained Akamanah Buster" type="Weapon">
+	<item id="80895" name="染血阿卡瑪那夫爆刃" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_onehane_magic_sword_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -2071,7 +2071,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80896" name="Bloodstained Akamanah Caster" type="Weapon">
+	<item id="80896" name="染血阿卡瑪那夫術杖" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_onehand_magic_blunt_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -2106,7 +2106,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80897" name="Bloodstained Akamanah Retributer" type="Weapon">
+	<item id="80897" name="染血阿卡瑪那夫報恨者" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_twohand_magic_blunt_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -2142,7 +2142,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80898" name="Bloodstained Akamanah Dual Swords" type="Weapon">
+	<item id="80898" name="染血阿卡瑪那夫雙刀" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_dual_sword_2" />
 		<set name="is_cursed_weapon" val="true" />
@@ -2176,7 +2176,7 @@
 			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
 		</skills>
 	</item>
-	<item id="80899" name="Bloodstained Akamanah Dual Daggers" type="Weapon">
+	<item id="80899" name="染血阿卡瑪那夫雙匕首" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. When equipped, PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +30%, all Critical Rate +30%, Critical Damage for basic attacks and P./ M. skills +30%, Perfection trigger rate +50, Soulshot/ Spiritshot damage +15%. Enables Soul's Insanity, Soul's Confinement, and Soul's Release. Max HP can be more than 250,000. Cannot be enchanted, crystallized, or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.aka_manaf_dual_dagger_2" />
 		<set name="is_cursed_weapon" val="true" />

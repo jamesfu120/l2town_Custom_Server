@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="26400" name="Sealed Shadow Thrower" type="EtcItem">
+	<item id="26400" name="封印的暗影投弓" type="EtcItem">
 		<!-- Double-click to obtain Shadow Thrower. The received weapon cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.weapon_shadow_bow" />
 		<set name="is_sellable" val="false" />
@@ -11,7 +11,7 @@
 			<item id="46322" min="1" max="1" chance="100" /> <!-- Shadow Thrower -->
 		</capsuled_items>
 	</item>
-	<item id="26401" name="Sealed Shadow Guardian" type="EtcItem">
+	<item id="26401" name="封印的暗影射靈" type="EtcItem">
 		<!-- Double-click to obtain Shadow Guardian. The acquired item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="is_sellable" val="false" />
@@ -22,7 +22,7 @@
 			<item id="46323" min="1" max="1" chance="100" /> <!-- Shadow Guardian -->
 		</capsuled_items>
 	</item>
-	<item id="26402" name="Sealed Shadow Buster" type="EtcItem">
+	<item id="26402" name="封印的暗影爆刃" type="EtcItem">
 		<!-- Double-click to get a Shadow Buster. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
 		<set name="is_sellable" val="false" />
@@ -33,7 +33,7 @@
 			<item id="46324" min="1" max="1" chance="100" /> <!-- Shadow Buster -->
 		</capsuled_items>
 	</item>
-	<item id="26403" name="Sealed Shadow Retributer" type="EtcItem">
+	<item id="26403" name="封印的暗影報恨者" type="EtcItem">
 		<!-- Double-click to get a Shadow Retributer. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
 		<set name="is_sellable" val="false" />
@@ -44,7 +44,7 @@
 			<item id="46325" min="1" max="1" chance="100" /> <!-- Shadow Retributer -->
 		</capsuled_items>
 	</item>
-	<item id="26404" name="Sealed Shadow Dual Sword" type="EtcItem">
+	<item id="26404" name="封印的暗影雙刀" type="EtcItem">
 		<!-- Double-click to get a Shadow Dual Sword. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="is_sellable" val="false" />
@@ -55,7 +55,7 @@
 			<item id="46326" min="1" max="1" chance="100" /> <!-- Shadow Dual Swords -->
 		</capsuled_items>
 	</item>
-	<item id="26405" name="Alien's Ingredient Box" additionalName="Event" type="EtcItem">
+	<item id="26405" name="外星人的材料箱子" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain either Destructive Energy, or its crafting materials. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -67,7 +67,7 @@
 			<skill id="27421" level="1" /> <!-- Alien's Material Box -->
 		</skills>
 	</item>
-	<item id="26406" name="Nevit's Rune Box (Dragon's Ascension) (1-hour)" type="EtcItem">
+	<item id="26406" name="奈比特古文(龍之昇天)1小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) (1-hour) -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -78,7 +78,7 @@
 			<item id="26408" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon's Ascension) - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="26407" name="Nevit's Rune Box (Dragon's Ascension) (1-hour)" type="EtcItem">
+	<item id="26407" name="奈比特古文(龍之昇天)1小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) (1-hour) -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -94,7 +94,7 @@
 			<item chance="100" id="26408" max="1" min="1" /> <!-- XP Rune IV (Lv. 1-99) 100% (1-hr) -->
 		</capsuled_items>
 	</item>
-	<item id="26408" name="Nevit's Rune (Dragon's Ascension)" additionalName="1-hour" type="EtcItem">
+	<item id="26408" name="奈比特古文(龍之昇天)" additionalName="1-hour" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-99. Duration: 1 h. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -106,7 +106,7 @@
 			<skill id="27422" level="1" /> <!-- Nevit's Rune (Dragon's Ascension) -->
 		</skills>
 	</item>
-	<item id="26409" name="Nevit's Rune Box (Dragon's Ascension) - 1-day" type="EtcItem">
+	<item id="26409" name="奈比特古文(龍之昇天)1日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) - 1 day -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -117,7 +117,7 @@
 			<item id="26411" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon's Ascension) - 1-day -->
 		</capsuled_items>
 	</item>
-	<item id="26410" name="Nevit's Rune Box (Dragon's Ascension) - 1-day" type="EtcItem">
+	<item id="26410" name="奈比特古文(龍之昇天)1日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) - 1 day -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -131,7 +131,7 @@
 			<item id="26411" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon's Ascension) - 1-day -->
 		</capsuled_items>
 	</item>
-	<item id="26411" name="Nevit's Rune (Dragon's Ascension)" additionalName="1-day" type="EtcItem">
+	<item id="26411" name="奈比特古文(龍之昇天)" additionalName="1-day" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-99. Available for 1 d. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -144,7 +144,7 @@
 			<skill id="27422" level="1" /> <!-- Nevit's Rune (Dragon's Ascension) -->
 		</skills>
 	</item>
-	<item id="26412" name="Nevit's Rune Box (Dragon's Ascension) - 7-day" type="EtcItem">
+	<item id="26412" name="奈比特古文(龍之昇天)7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) - 7 days -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -155,7 +155,7 @@
 			<item id="26414" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon's Ascension) - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="26413" name="Nevit's Rune Box (Dragon's Ascension) - 7-day" type="EtcItem">
+	<item id="26413" name="奈比特古文(龍之昇天)7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) - 7 days. Only for characters of level 1-99. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -172,7 +172,7 @@
 			<item id="26414" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon's Ascension) - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="26414" name="Nevit's Rune (Dragon's Ascension)" additionalName="7-day" type="EtcItem">
+	<item id="26414" name="奈比特古文(龍之昇天)" additionalName="7-day" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-99. Available for 7 d. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -185,7 +185,7 @@
 			<skill id="27422" level="1" /> <!-- Nevit's Rune (Dragon's Ascension) -->
 		</skills>
 	</item>
-	<item id="26415" name="Nevit's Rune Box (Dragon's Ascension) - 30-day" type="EtcItem">
+	<item id="26415" name="奈比特古文(龍之昇天)30日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -196,7 +196,7 @@
 			<item id="26417" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon's Ascension) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="26416" name="Nevit's Rune Box (Dragon's Ascension) - 30-day" type="EtcItem">
+	<item id="26416" name="奈比特古文(龍之昇天)30日禮盒" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon's Ascension) (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -210,7 +210,7 @@
 			<item id="26417" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon's Ascension) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="26417" name="Nevit's Rune (Dragon's Ascension)" additionalName="30-day" type="EtcItem">
+	<item id="26417" name="奈比特古文(龍之昇天)" additionalName="30-day" type="EtcItem">
 		<!-- When in the inventory, acquired XP/ SP +100%. Required level: 1-99. Available for 30 d. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -223,7 +223,7 @@
 			<skill id="27422" level="1" /> <!-- Nevit's Rune (Dragon's Ascension) -->
 		</skills>
 	</item>
-	<item id="26418" name="Recipe: High-grade Talisman of Abundance Lv. 1" type="EtcItem">
+	<item id="26418" name="製作卷軸(褪色的上級豐饒護身符-階段1)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -235,7 +235,7 @@
 		<set name="recipe_id" val="5004" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26419" name="Recipe: High-grade Talisman of Abundance Lv. 2" type="EtcItem">
+	<item id="26419" name="製作卷軸(褪色的上級豐饒護身符-階段2)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -247,7 +247,7 @@
 		<set name="recipe_id" val="5005" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26420" name="Recipe: High-grade Talisman of Abundance Lv. 3" type="EtcItem">
+	<item id="26420" name="製作卷軸(褪色的上級豐饒護身符-階段3)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -259,7 +259,7 @@
 		<set name="recipe_id" val="5006" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26421" name="Recipe: High-grade Talisman of Abundance Lv. 4" type="EtcItem">
+	<item id="26421" name="製作卷軸(褪色的上級豐饒護身符-階段4)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -271,7 +271,7 @@
 		<set name="recipe_id" val="5007" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26422" name="Wondrous Casket" additionalName="Journey's Prelude" type="EtcItem">
+	<item id="26422" name="幸運盒1" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Recipe: High-grade Talisman of Abundance Lv. 1-4, Talisman of Hunter/ Slaughterer/ Conqueror/ Outlaw, Valakas' Necklace, Istina's Necklace, Octavis' Necklace, Antharas' Earring, Istina's Earring, Octavis' Earring, Baium's Ring, Queen Ant's Ring, Istina's Ring, Octavis' Ring, Talisman of Lilith, Talisman of Anakim, Orfen's Earring, Elcyum Crystal (5 pcs.), Elcyum (2 pcs.), Giant's Power (10 pcs.), Heavy Air Stone, Legendary Dye Box Lv. 5, Fortune Pocket Lv. 5, Gemstone (30 pcs.). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -283,7 +283,7 @@
 			<skill id="27423" level="1" /> <!-- Peculiar Casket -->
 		</skills>
 	</item>
-	<item id="26423" name="Vintage Casket" additionalName="Journey's Prelude" type="EtcItem">
+	<item id="26423" name="幸運盒2" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Energy of Seven Signs, Freya's Stone: Enchant R-grade Armor/ Weapon, Windy Stone: Enchant R-grade Armor/ Weapon, Package: Blessed Giant's Stone: Enchant R-grade Armor/ Weapon, Giant's Scroll: Enchant R-grade Weapon, Package: Blessed Stone: Enchant R-grade Armor/ Weapon, Blessed High-grade Stone: Enchant R-grade Armor/ Weapon, Package: Lesser Giant's Stone: Enchant R-grade Armor/ Weapon, Antharas'/ Valakas'/ Queen Ant's/ Orfen's/ Baium's Soul Bottle, Blessed Scroll: Enchant R-grade Armor/ Weapon, High-grade Stone: Enchant R-grade Weapon/ Armor, Giant's Scroll: Enchant R-grade Armor, Package: Scroll: Enchant R-grade Weapon, Package: Scroll: Enchant R-grade Armor (3 pcs.), Peculiar Casket. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -295,7 +295,7 @@
 			<skill id="27424" level="1" /> <!-- Vintage Casket -->
 		</skills>
 	</item>
-	<item id="26424" name="Shabby Casket" additionalName="Journey's Prelude" type="EtcItem">
+	<item id="26424" name="幸運盒3" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Package: Talisman of Annihilation Crafting, Package: Hellfire/ Desire/ Longing/ Insanity Talisman Upgrade, Package: XP Rune 100% (30-day), Package: Maphr's High-grade Rune 100% (30-day), Package: Pa'agrio's Warm Breeze (1-hour), Ghost Potion, Emperor's Growth Scroll (2 pcs.), 3 Packages: Feather of Blessing (1 pc.), Letter Collector's Gift (2 pcs.), Gemstone (10 pcs.), Heavenly Recovery Potion (30 pcs.), Life Stone: Giant's Power, Immortal Scroll Manuscript, Codex of Consistency - Chapter 1, Elcyum Powder, Wondrous Casket, Vintage Casket. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -307,7 +307,7 @@
 			<skill id="27425" level="1" /> <!-- Shabby Casket -->
 		</skills>
 	</item>
-	<item id="26425" name="Package: Talisman of Annihilation Crafting" type="EtcItem">
+	<item id="26425" name="殄滅的護身符直升製作組" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy required for crafting Talisman of Annihilation. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -321,7 +321,7 @@
 			<item id="35562" min="75" max="75" chance="100" /> <!-- Destructive Energy -->
 		</capsuled_items>
 	</item>
-	<item id="26426" name="Package: Talisman of Hellfire Upgrade" type="EtcItem">
+	<item id="26426" name="業火的護身符升級組" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy and Kaliel's Energy for upgrading Talisman of Annihilation to Talisman of Hellfire. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -336,7 +336,7 @@
 			<item id="36184" min="1" max="1" chance="100" /> <!-- Energy of Annihilation -->
 		</capsuled_items>
 	</item>
-	<item id="26427" name="Package: Talisman of Desire Upgrade" type="EtcItem">
+	<item id="26427" name="想願的護身符升級組" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy and Kaliel's Energy for upgrading Talisman of Hellfire to Talisman of Desire. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -351,7 +351,7 @@
 			<item id="36185" min="1" max="1" chance="100" /> <!-- Energy of Hellfire -->
 		</capsuled_items>
 	</item>
-	<item id="26428" name="Package: Talisman of Longing Upgrade" type="EtcItem">
+	<item id="26428" name="憧憬的護身符升級組" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy and Kaliel's Energy for upgrading Talisman of Desire to Talisman of Longing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -366,7 +366,7 @@
 			<item id="36186" min="1" max="1" chance="100" /> <!-- Energy of Desire -->
 		</capsuled_items>
 	</item>
-	<item id="26429" name="Package: Talisman of Insanity Upgrade" type="EtcItem">
+	<item id="26429" name="禁墓的護身符升級組" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy and Kaliel's Energy for upgrading Talisman of Longing to Talisman of Insanity. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -381,7 +381,7 @@
 			<item id="26291" min="1" max="1" chance="100" /> <!-- Kaliel's Energy - Longing -->
 		</capsuled_items>
 	</item>
-	<item id="26430" name="Immortal Scroll" type="EtcItem">
+	<item id="26430" name="不變的祕傳書序章" type="EtcItem">
 		<!-- Enchants a +1 ~ +10 skill to the next level with a 100% success rate without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
@@ -389,7 +389,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26431" name="Immortal Scroll Chapter 1" type="EtcItem">
+	<item id="26431" name="不變的祕傳書第1章" type="EtcItem">
 		<!-- Enchants a +11 ~ +20 skill to the next level with a 100% success rate without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
@@ -397,7 +397,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26432" name="Immortal Scroll Chapter 2" type="EtcItem">
+	<item id="26432" name="不變的祕傳書第2章" type="EtcItem">
 		<!-- Enchants a +21 ~ +30 skill to the next level with a 100% success rate without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
@@ -405,7 +405,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26433" name="Star Bottle For Testing" additionalName="Test" type="EtcItem">
+	<item id="26433" name="滿星之瓶-測試用" additionalName="Test" type="EtcItem">
 		<!-- Test -->
 		<set name="icon" val="BranchIcon.Icon.etc_sign_agathion_feed_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -415,7 +415,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="26434" name="Test Card - Talisman" type="Armor">
+	<item id="26434" name="測試用卡片-護身符" type="Armor">
 		<set name="icon" val="icon.card2_event_giyotine" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_tradable" val="false" />
@@ -429,7 +429,7 @@
 			<skill id="8864" level="6" /> <!-- Talisman of Longing -->
 		</skills>
 	</item>
-	<item id="26435" name="Test Card - Bracelet" type="Armor">
+	<item id="26435" name="測試用卡片-手鐲" type="Armor">
 		<set name="icon" val="icon.card2_event_giyotine" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -441,7 +441,7 @@
 			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
 		</skills>
 	</item>
-	<item id="26436" name="Test Card - Rune" type="EtcItem">
+	<item id="26436" name="測試用卡片-古文" type="EtcItem">
 		<set name="icon" val="icon.card2_event_giyotine" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -452,7 +452,7 @@
 			<skill id="26217" level="1" /> <!-- Sayha's Rune -->
 		</skills>
 	</item>
-	<item id="26437" name="Shadow Shaper Pack" type="EtcItem">
+	<item id="26437" name="暗影鉋刀禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shadow Shaper enchanted to +1~9. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -465,7 +465,7 @@
 			<skill id="27426" level="1" /> <!-- Shadow Shaper Pack -->
 		</skills>
 	</item>
-	<item id="26438" name="Shadow Cutter Pack" type="EtcItem">
+	<item id="26438" name="暗影切刃禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shadow Cutter enchanted to +1~9. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -478,7 +478,7 @@
 			<skill id="27427" level="1" /> <!-- Shadow Cutter Pack -->
 		</skills>
 	</item>
-	<item id="26439" name="Shadow Slasher Pack" type="EtcItem">
+	<item id="26439" name="暗影殺刃禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shadow Slasher enchanted from +1 to +9. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -491,7 +491,7 @@
 			<skill id="27428" level="1" /> <!-- Shadow Slasher Pack -->
 		</skills>
 	</item>
-	<item id="26440" name="Shadow Fighter Pack" type="EtcItem">
+	<item id="26440" name="暗影戰爪禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shadow Fighter enchanted from +1 to +9. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -504,7 +504,7 @@
 			<skill id="27429" level="1" /> <!-- Shadow Fighter Pack -->
 		</skills>
 	</item>
-	<item id="26441" name="Shadow Stormer Box" type="EtcItem">
+	<item id="26441" name="暗影風暴者禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shadow Stormer enchanted from +1 to +9. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -517,7 +517,7 @@
 			<skill id="27430" level="1" /> <!-- Shadow Stormer Box -->
 		</skills>
 	</item>
-	<item id="26442" name="Shadow Thrower Pack" type="EtcItem">
+	<item id="26442" name="暗影投弓禮盒" type="EtcItem">
 		<!-- Double-click to get a +1 ~ +9 Shadow Thrower. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -530,7 +530,7 @@
 			<skill id="27431" level="1" /> <!-- Shadow Thrower Pack -->
 		</skills>
 	</item>
-	<item id="26443" name="Shadow Guardian Pack" type="EtcItem">
+	<item id="26443" name="暗影射靈禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shadow Guardian enchanted from +1 to +9. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -543,7 +543,7 @@
 			<skill id="27432" level="1" /> <!-- Shadow Guardian Pack -->
 		</skills>
 	</item>
-	<item id="26444" name="Shadow Buster Box" type="EtcItem">
+	<item id="26444" name="暗影爆刃禮盒" type="EtcItem">
 		<!-- Double-click to get a +1 ~ +9 Shadow Buster. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -556,7 +556,7 @@
 			<skill id="27433" level="1" /> <!-- Shadow Buster Box -->
 		</skills>
 	</item>
-	<item id="26445" name="Shadow Retributer Box" type="EtcItem">
+	<item id="26445" name="暗影報恨者禮盒" type="EtcItem">
 		<!-- Double-click to get a +1 ~ +9 Shadow Retributer. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -569,7 +569,7 @@
 			<skill id="27434" level="1" /> <!-- Shadow Retributer Box -->
 		</skills>
 	</item>
-	<item id="26446" name="Shadow Dual Swords Pack" type="EtcItem">
+	<item id="26446" name="暗影雙刀禮盒" type="EtcItem">
 		<!-- Double-click to get a +1 ~ +9 Shadow Dual Sword. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -582,7 +582,7 @@
 			<skill id="27435" level="1" /> <!-- Shadow Dual Swords Pack -->
 		</skills>
 	</item>
-	<item id="26447" name="Talisman of Abundance" additionalName="War" type="Armor">
+	<item id="26447" name="褪色的豐饒護身符" additionalName="War" type="Armor">
 		<!-- P. Atk. +154, M. Atk. +181, P./ M. Evasion +4. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -595,7 +595,7 @@
 			<skill id="21364" level="1" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26448" name="Talisman of Abundance" additionalName="Tactics" type="Armor">
+	<item id="26448" name="褪色的豐饒護身符" additionalName="Tactics" type="Armor">
 		<!-- 6 Attribute Resistance +10, Debuff Resistance +10%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -608,7 +608,7 @@
 			<skill id="21364" level="1" subLevel="2001" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26449" name="Talisman of Abundance" additionalName="Esprit" type="Armor">
+	<item id="26449" name="褪色的豐饒護身符" additionalName="Esprit" type="Armor">
 		<!-- P./ M. Critical Rate +8%, received Critical Damage -10%, received skill damage in PvP -10%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -621,7 +621,7 @@
 			<skill id="21364" level="1" subLevel="3001" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26450" name="Talisman of Abundance" additionalName="Body" type="Armor">
+	<item id="26450" name="褪色的豐饒護身符" additionalName="Body" type="Armor">
 		<!-- Max HP/ MP/ CP +325, HP/ MP/ CP Recovery Rate +5. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -634,7 +634,7 @@
 			<skill id="21364" level="1" subLevel="4001" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26451" name="Talisman of Hunter" additionalName="Hunter" type="Armor">
+	<item id="26451" name="追擊者護身符" additionalName="Hunter" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, 6 Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%, received Critical Damage -15%, received skill damage in PvP -15%. Additionally, decreases received PvP damage. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -647,7 +647,7 @@
 			<skill id="21364" level="1" subLevel="5001" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26452" name="Talisman of Slaughterer" additionalName="Slaughterer" type="Armor">
+	<item id="26452" name="虐殺者護身符" additionalName="Slaughterer" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, 6 Attribute Resistance +15, Debuff Resistance +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -660,7 +660,7 @@
 			<skill id="21364" level="1" subLevel="6001" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26453" name="Talisman of Conquerer" additionalName="Conquerer" type="Armor">
+	<item id="26453" name="征服者護身符" additionalName="Conquerer" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7, received Critical Damage -15%, received skill damage in PvP -15%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -673,7 +673,7 @@
 			<skill id="21364" level="1" subLevel="7001" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26454" name="Talisman of Outlaw" additionalName="Outlaw" type="Armor">
+	<item id="26454" name="無法者護身符" additionalName="Outlaw" type="Armor">
 		<!-- 6 Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7, received Critical Damage -15%, received skill damage in PvP -15%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -686,7 +686,7 @@
 			<skill id="21364" level="1" subLevel="8001" /> <!-- Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="26455" name="High-grade Talisman of Abundance Lv. 1" type="Armor">
+	<item id="26455" name="褪色的上級豐饒護身符-階段1" type="Armor">
 		<!-- Max HP/ MP/ CP +510, P. Def. +971, M. Def. +552, P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +15%, received Critical Damage from basic attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +15%, M. Atk. +15%, Skill Power +15%, Skill Critical Rate +15%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -700,7 +700,7 @@
 			<skill id="21477" level="1" /> <!-- Power of Abundance -->
 		</skills>
 	</item>
-	<item id="26456" name="High-grade Talisman of Abundance Lv. 2" type="Armor">
+	<item id="26456" name="褪色的上級豐饒護身符-階段2" type="Armor">
 		<!-- Max HP/ MP/ CP +531, P. Def. +1051, M. Def. +609, P./ M. Evasion +8, Attribute Resistance +17, Debuff Resistance +15%, received Critical Damage from basic attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +16%, M. Atk. +16%, Skill Power +16%, Skill Critical Rate +16%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -714,7 +714,7 @@
 			<skill id="21477" level="2" /> <!-- Power of Abundance -->
 		</skills>
 	</item>
-	<item id="26457" name="High-grade Talisman of Abundance Lv. 3" type="Armor">
+	<item id="26457" name="褪色的上級豐饒護身符-階段3" type="Armor">
 		<!-- Max HP/ MP/ CP +563, P. Def. +1184, M. Def. +706, P./ M. Evasion +9, Attribute Resistance +20, Debuff Resistance +15%, received Critical Damage from basic attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +17%, M. Atk. +17%, Skill Power +17%, Skill Critical Rate +17%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -728,7 +728,7 @@
 			<skill id="21477" level="3" /> <!-- Power of Abundance -->
 		</skills>
 	</item>
-	<item id="26458" name="High-grade Talisman of Abundance Lv. 4" type="Armor">
+	<item id="26458" name="褪色的上級豐饒護身符-階段4" type="Armor">
 		<!-- Max HP/ MP/ CP +591, P. Def. +1307, M. Def. +799, P./ M. Evasion +10, Attribute Resistance +25, Debuff Resistance +15%, received Critical Damage from basic attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +20%, M. Atk. +20%, Skill Power +20%, Skill Critical Rate +20%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -742,7 +742,7 @@
 			<skill id="21477" level="4" /> <!-- Power of Abundance -->
 		</skills>
 	</item>
-	<item id="26459" name="Recipe: High-grade Talisman of Abundance Lv. 1" type="EtcItem">
+	<item id="26459" name="製作卷軸(上級豐饒護身符-階段1)" type="EtcItem">
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -753,7 +753,7 @@
 		<set name="recipe_id" val="5008" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26460" name="Recipe: High-grade Talisman of Abundance Lv. 2" type="EtcItem">
+	<item id="26460" name="製作卷軸(上級豐饒護身符-階段2)" type="EtcItem">
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -764,7 +764,7 @@
 		<set name="recipe_id" val="5009" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26461" name="Recipe: High-grade Talisman of Abundance Lv. 3" type="EtcItem">
+	<item id="26461" name="製作卷軸(上級豐饒護身符-階段3)" type="EtcItem">
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -775,7 +775,7 @@
 		<set name="recipe_id" val="5010" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26462" name="Recipe: High-grade Talisman of Abundance Lv. 4" type="EtcItem">
+	<item id="26462" name="製作卷軸(上級豐饒護身符-階段4)" type="EtcItem">
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -786,7 +786,7 @@
 		<set name="recipe_id" val="5011" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26463" name="Recipe: High-grade Talisman of Abundance Lv. 1" type="EtcItem">
+	<item id="26463" name="製作卷軸(褪色的上級豐饒護身符-階段1)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -798,7 +798,7 @@
 		<set name="recipe_id" val="5012" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26464" name="Recipe: High-grade Talisman of Abundance Lv. 2" type="EtcItem">
+	<item id="26464" name="製作卷軸(褪色的上級豐饒護身符-階段2)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -810,7 +810,7 @@
 		<set name="recipe_id" val="5013" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26465" name="Recipe: High-grade Talisman of Abundance Lv. 3" type="EtcItem">
+	<item id="26465" name="製作卷軸(褪色的上級豐饒護身符-階段3)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -822,7 +822,7 @@
 		<set name="recipe_id" val="5014" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26466" name="Recipe: High-grade Talisman of Abundance Lv. 4" type="EtcItem">
+	<item id="26466" name="製作卷軸(褪色的上級豐饒護身符-階段4)" type="EtcItem">
 		<!-- A recipe for creating Faded High-grade Talisman of Abundance Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -834,7 +834,7 @@
 		<set name="recipe_id" val="5015" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26467" name="Abundance Box" type="EtcItem">
+	<item id="26467" name="豐饒禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Talisman of Abundance, Energy of Seven Signs, Antharas' Earring, Talisman of Lilith, Talisman of Anakim, Baium's Soul Ring, Valakas' Necklace, Valakas'/ Antharas' Soul Bottle, Baium's Ring, Octavis' Ring, Queen Ant's Soul Bottle, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Orfen's Soul Bottle, Octavis' Earring, Istina's Ring, Octavis' Necklace, Codex of Consistency - Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Legendary Dye Box Lv. 5, Elcyum (2 pcs.), Superior Giant's Codex - Discipline Chapter 1, Giant's Power (10 pcs.), Orfen's Earring, Elcyum Crystal (8 pcs.), Heavy Air Stone, R-grade Gemstone (30 pcs.), Fortune Pocket Lv. 5 (2 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_sellable" val="false" />
@@ -845,7 +845,7 @@
 			<skill id="27436" level="1" /> <!-- Abundance Box -->
 		</skills>
 	</item>
-	<item id="26468" name="Lindvior's Earring" additionalName="3-day" type="Armor">
+	<item id="26468" name="林德拜爾耳環" additionalName="3-day" type="Armor">
 		<!-- Time-limited item. MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Confusion debuff and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -866,7 +866,7 @@
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 		</skills>
 	</item>
-	<item id="26469" name="Lindvior's Earring" additionalName="7-day" type="Armor">
+	<item id="26469" name="林德拜爾耳環" additionalName="7-day" type="Armor">
 		<!-- Time-limited item. MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Confusion debuff and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -887,7 +887,7 @@
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 		</skills>
 	</item>
-	<item id="26470" name="Lindvior's Earring" additionalName="15-day" type="Armor">
+	<item id="26470" name="林德拜爾耳環" additionalName="15-day" type="Armor">
 		<!-- Time-limited item. MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Confusion debuff and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -908,7 +908,7 @@
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 		</skills>
 	</item>
-	<item id="26471" name="Lindvior's Earring" additionalName="30-day" type="Armor">
+	<item id="26471" name="林德拜爾耳環" additionalName="30-day" type="Armor">
 		<!-- Time-limited item. MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Confusion debuff and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -929,7 +929,7 @@
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 		</skills>
 	</item>
-	<item id="26472" name="Lindvior's Earring Random Box" type="EtcItem">
+	<item id="26472" name="林德拜爾耳環隨機箱" type="EtcItem">
 		<!-- Double-click to obtain Lindvior's Earring (3-day, 7-day, 15-day or 30-day). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -945,7 +945,7 @@
 			<skill id="27437" level="1" /> <!-- Lindvior's Earring Random Box -->
 		</skills>
 	</item>
-	<item id="26473" name="Lindvior's Earring Random Box" type="EtcItem">
+	<item id="26473" name="林德拜爾耳環隨機箱" type="EtcItem">
 		<!-- Double-click to obtain Lindvior's Earring (3-day, 7-day, 15-day or 30-day). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -958,7 +958,7 @@
 			<skill id="27438" level="1" /> <!-- Lindvior's Earring Random Box -->
 		</skills>
 	</item>
-	<item id="26474" name="La Vie En Rose's Brooch Lv. 2" type="Armor">
+	<item id="26474" name="拉菲安洛茲的胸針2階段" type="Armor">
 		<!-- Unlocks 5 jewel/ orb slots. Inventory slots +12. <Upgrade>. Can be upgraded to La Vie En Rose's Brooch Lv. 3 through Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -976,14 +976,14 @@
 			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
 	</item>
-	<item id="26475" name="Radiant Gemstone Fragment" type="EtcItem">
+	<item id="26475" name="繽紛的寶石碎片" type="EtcItem">
 		<!-- Key material for making La Vie En Rose's Brooch Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="26476" name="Vital Stone Lv. 1" additionalName="Not Available" type="Armor">
+	<item id="26476" name="活力石1階段" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +3%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -997,7 +997,7 @@
 			<skill id="18568" level="1" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="26477" name="Vital Stone Lv. 2" additionalName="Not Available" type="Armor">
+	<item id="26477" name="活力石2階段" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +6%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1011,7 +1011,7 @@
 			<skill id="18568" level="2" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="26478" name="Vital Stone Lv. 3" additionalName="Not Available" type="Armor">
+	<item id="26478" name="活力石3階段" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +12%. Enables the Vital Wind skill. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1026,7 +1026,7 @@
 			<skill id="18568" level="3" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="26479" name="Vital Stone Lv. 4" additionalName="Not Available" type="Armor">
+	<item id="26479" name="活力石4階段" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +20%, Vitality Consumption -7%. Enables the Vital Wind skill. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1041,7 +1041,7 @@
 			<skill id="18568" level="4" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="26480" name="Vital Stone Lv. 5" additionalName="Not Available" type="Armor">
+	<item id="26480" name="活力石5階段" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +30%, Vitality Consumption -15%. Enables the Vital Wind skill. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1054,7 +1054,7 @@
 			<skill id="18568" level="5" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="26481" name="Garnet Lv. 1" additionalName="Not Available" type="Armor">
+	<item id="26481" name="深紅寶石1階段" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +3%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1068,7 +1068,7 @@
 			<skill id="18566" level="1" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="26482" name="Garnet Lv. 2" additionalName="Not Available" type="Armor">
+	<item id="26482" name="深紅寶石2階段" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +6%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1082,7 +1082,7 @@
 			<skill id="18566" level="2" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="26483" name="Garnet Lv. 3" additionalName="Not Available" type="Armor">
+	<item id="26483" name="深紅寶石3階段" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +12%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1096,7 +1096,7 @@
 			<skill id="18566" level="3" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="26484" name="Garnet Lv. 4" additionalName="Not Available" type="Armor">
+	<item id="26484" name="深紅寶石4階段" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +20%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1110,7 +1110,7 @@
 			<skill id="18566" level="4" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="26485" name="Garnet Lv. 5" additionalName="Not Available" type="Armor">
+	<item id="26485" name="深紅寶石5階段" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%. Removes debuffs. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1123,7 +1123,7 @@
 			<skill id="18566" level="5" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="26486" name="Tanzanite Lv. 1" additionalName="Not Available" type="Armor">
+	<item id="26486" name="丹泉寶石1階段" additionalName="Not Available" type="Armor">
 		<!-- Creates a barrier that absorbs 5000 damage for 5 sec. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1138,7 +1138,7 @@
 			<skill id="18815" level="1" /> <!-- Tanzanite -->
 		</skills>
 	</item>
-	<item id="26487" name="Tanzanite Lv. 2" additionalName="Not Available" type="Armor">
+	<item id="26487" name="丹泉寶石2階段" additionalName="Not Available" type="Armor">
 		<!-- Creates a barrier that absorbs 10,000 damage for 5 sec. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1153,7 +1153,7 @@
 			<skill id="18815" level="2" /> <!-- Tanzanite -->
 		</skills>
 	</item>
-	<item id="26488" name="Tanzanite Lv. 3" additionalName="Not Available" type="Armor">
+	<item id="26488" name="丹泉寶石3階段" additionalName="Not Available" type="Armor">
 		<!-- Creates a barrier that absorbs 15,000 damage for 10 sec. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1168,7 +1168,7 @@
 			<skill id="18815" level="3" /> <!-- Tanzanite -->
 		</skills>
 	</item>
-	<item id="26489" name="Tanzanite Lv. 4" additionalName="Not Available" type="Armor">
+	<item id="26489" name="丹泉寶石4階段" additionalName="Not Available" type="Armor">
 		<!-- Creates a barrier that absorbs 30,000 damage for 10 sec. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1183,7 +1183,7 @@
 			<skill id="18815" level="4" /> <!-- Tanzanite -->
 		</skills>
 	</item>
-	<item id="26490" name="Tanzanite Lv. 5" additionalName="Not Available" type="Armor">
+	<item id="26490" name="丹泉寶石5階段" additionalName="Not Available" type="Armor">
 		<!-- Creates a barrier that absorbs 50,000 damage for 15 sec. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1196,7 +1196,7 @@
 			<skill id="18815" level="5" /> <!-- Tanzanite -->
 		</skills>
 	</item>
-	<item id="26491" name="La Vie En Rose's Vital Stone Box" type="EtcItem">
+	<item id="26491" name="拉菲安洛茲的活力石盒子" type="EtcItem">
 		<!-- Double-click to obtain Vital Stone Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
@@ -1210,7 +1210,7 @@
 			<item id="26476" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 1 - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="26492" name="La Vie En Rose's Garnet Box" type="EtcItem">
+	<item id="26492" name="拉菲安洛茲的深紅寶石盒子" type="EtcItem">
 		<!-- Double-click to obtain Garnet Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="PEEL" />
@@ -1224,7 +1224,7 @@
 			<item id="46675" min="1" max="1" chance="100" /> <!-- Garnet Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="26493" name="La Vie En Rose's Tanzanite Box" type="EtcItem">
+	<item id="26493" name="拉菲安洛茲的丹泉寶石盒子" type="EtcItem">
 		<!-- Double-click to obtain Tanzanite Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
@@ -1238,7 +1238,7 @@
 			<item id="26486" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 1 - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="26494" name="Kit: La Vie En Rose's Brooch Lv. 2" type="EtcItem">
+	<item id="26494" name="拉菲安洛茲的胸針2階段組合包" type="EtcItem">
 		<!-- Double-click to obtain La Vie En Rose's Brooch Lv. 2. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
@@ -1252,21 +1252,21 @@
 			<item id="26474" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Brooch Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="26495" name="Shadai's Jewelry Box" type="EtcItem">
+	<item id="26495" name="夏代的寶石盒" type="EtcItem">
 		<!-- Double-click to obtain one of La Vie En Rose's Jewel Packs. There is also a low chance to obtain La Vie En Rose's Brooch Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="26496" name="Shiny Gemstone Fragment" type="EtcItem">
+	<item id="26496" name="閃耀的寶石碎片" type="EtcItem">
 		<!-- Key material for making La Vie En Rose's Brooch Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="26497" name="Cat's Eye Lv. 1" type="Armor">
+	<item id="26497" name="金綠寶石1階段" type="Armor">
 		<!-- Damage Reflection Resistance +10%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1280,7 +1280,7 @@
 			<skill id="27440" level="1" /> <!-- Cat's Eye -->
 		</skills>
 	</item>
-	<item id="26498" name="Cat's Eye Lv. 2" type="Armor">
+	<item id="26498" name="金綠寶石2階段" type="Armor">
 		<!-- Damage Reflection Resistance +20%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1294,7 +1294,7 @@
 			<skill id="27440" level="2" /> <!-- Cat's Eye -->
 		</skills>
 	</item>
-	<item id="26499" name="Cat's Eye Lv. 3" type="Armor">
+	<item id="26499" name="金綠寶石3階段" type="Armor">
 		<!-- Damage Reflection Resistance +30%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />

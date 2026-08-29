@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="81900" name="Scroll: 2,000,000,000 SP" additionalName="Event" type="EtcItem">
+	<item id="81900" name="20萬 SP卷軸" additionalName="Event" type="EtcItem">
 		<!-- SP +200,000. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -15,7 +15,7 @@
 			<skill id="18102" level="2" /> <!-- SP Scroll: 200,000 -->
 		</skills>
 	</item>
-	<item id="81901" name="PA Growing Guide" type="EtcItem">
+	<item id="81901" name="活動成長指南書" type="EtcItem">
 		<!-- A unique item that can be bought in the PA Store. After adding in the collection, makes additional features available. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -25,7 +25,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81902" name="Giran Shining Luxury Box" type="EtcItem">
+	<item id="81902" name="閃耀奇岩精品禮盒" type="EtcItem">
 		<!-- A beautiful box made by Alexandria in the souvenir shop of Giran. Double-click to obtain 1 rare item (excluding Artifact Crystal). -->
 		<set name="icon" val="icon.bm_artifact_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -78,7 +78,7 @@
 			<item id="80335" min="1" max="1" chance="2.564103" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81903" name="Shining Crystal of Dyes" type="EtcItem">
+	<item id="81903" name="閃耀的染料結晶" type="EtcItem">
 		<!-- Required for creating Legendary dyes. Can be compounded with Eraton's Dye or a Legendary dye of Lv. 7+. In case of failure, the dyes do not disappear, but a Legendary dye's level drops to 7, and Eraton's Dye's level remains the same. -->
 		<set name="icon" val="icon.bm_dye_stone_upgrade" />
 		<set name="material" val="LIQUID" />
@@ -86,7 +86,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81904" name="Prophecy Fragment" additionalName="Event" type="EtcItem">
+	<item id="81904" name="預言書破片" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged to Legend's Mark or Prophecy Chest. You can do it through the Dreamer of the Legend Title in any town. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="material" val="LIQUID" />
@@ -94,7 +94,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81905" name="Legend's Mark" additionalName="Event" type="EtcItem">
+	<item id="81905" name="傳說憑證" additionalName="Event" type="EtcItem">
 		<!-- A proof of completing the collection. Allows to take part in the Dark Elf's Figurine raffle after completing the collection. P. Atk./ M. Atk./ P. Def./ M. Def. +5%. -->
 		<set name="icon" val="icon.ev_darkelf_soul_ore" />
 		<set name="material" val="LIQUID" />
@@ -102,7 +102,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81906" name="Prophecy Chest" additionalName="Event" type="EtcItem">
+	<item id="81906" name="預言箱" additionalName="Event" type="EtcItem">
 		<!-- Contains Prophecy Fragments. Double-click to obtain various random items and a Retired Legend's Scroll. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -167,7 +167,7 @@
 			<item id="80120" min="1" max="1" chance="2.12766" /> <!-- Leviathan Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="81906" name="Prophecy Chest" additionalName="Event" type="EtcItem">
+	<item id="81906" name="預言箱" additionalName="Event" type="EtcItem">
 		<!-- Contains Prophecy Fragments. Double-click to obtain various random items and a Retired Legend's Scroll. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="material" val="LIQUID" />
@@ -225,7 +225,7 @@
 			<item id="80120" min="1" max="1" chance="100" /> <!-- Leviathan Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="81907" name="Heine Shining Luxury Box" type="EtcItem">
+	<item id="81907" name="閃耀的海音斯精品禮盒" type="EtcItem">
 		<!-- A luxury box made by Shadai from Heine. Double-click to obtain 1 rare item (excluding Blessed Scroll: Enchant Brooch). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
 		<set name="default_action" val="PEEL" />
@@ -274,7 +274,7 @@
 			<item id="80335" min="1" max="1" chance="2.857143" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81908" name="Gran Kain's Scroll: Enchant La Vie En Rose's Brooch" type="EtcItem">
+	<item id="81908" name="閃耀的格蘭肯拉菲安洛茲的胸針強化卷軸" type="EtcItem">
 		<!-- For La Vie En Rose's Enhanced Brooch and La Vie En Rose's Superior Brooch. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
 		<set name="icon" val="icon.bm_shilen_scrl_of_brooch_6slot_lavianrose" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -287,7 +287,7 @@
 			<skill id="39727" level="1" /> <!-- Gran Kain's Scroll: Enchant La Vie En Rose's Superior Brooch -->
 		</skills>
 	</item>
-	<item id="81909" name="Winner's Trophy" additionalName="V1" type="EtcItem">
+	<item id="81909" name="優勝紀念盃" additionalName="V1" type="EtcItem">
 		<!-- Granted to Aden's warriors as a token of appreciation for their support. Double-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
 		<set name="icon" val="icon.ev_2018_soccer_box" />
 		<set name="default_action" val="PEEL" />
@@ -299,7 +299,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81910" name="Official League Winner's Trophy" additionalName="Event" type="EtcItem">
+	<item id="81910" name="聯賽優勝紀念盃" additionalName="Event" type="EtcItem">
 		<!-- Granted to Aden's warriors as a token of appreciation for their support. Double-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
 		<set name="icon" val="icon.ev_2018_soccer_box" />
 		<set name="default_action" val="PEEL" />
@@ -311,7 +311,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81911" name="Belt of Fortitude" additionalName="V1" type="Armor">
+	<item id="81911" name="意志腰帶" additionalName="V1" type="Armor">
 		<!-- When equipped, Max HP/ MP/ CP +3%, weight limit +25,600, damage +12%, received damage -14%, Damage Reflection Resistance +15%, Fixed Damage Resistance +15%, all received Critical Damage -15%, inventory slots +36, Attribute Resistance +30. -->
 		<set name="icon" val="icon.ev_dinos_v1" />
 		<set name="default_action" val="EQUIP" />
@@ -332,7 +332,7 @@
 			<skill id="15145" level="5" /> <!-- Belt of Fortitude -->
 		</skills>
 	</item>
-	<item id="81912" name="Belt of Fortitude" additionalName="Event" type="Armor">
+	<item id="81912" name="意志腰帶" additionalName="Event" type="Armor">
 		<!-- When equipped, Max HP/ MP/ CP +3%, weight limit +25,600, damage +12%, received damage -14%, Damage Reflection Resistance +15%, Fixed Damage Resistance +15%, all received Critical Damage -15%, inventory slots +36, Attribute Resistance +30. -->
 		<set name="icon" val="icon.ev_dinos_v1" />
 		<set name="default_action" val="EQUIP" />
@@ -353,7 +353,7 @@
 			<skill id="15145" level="4" /> <!-- Belt of Fortitude -->
 		</skills>
 	</item>
-	<item id="81913" name="No Doubt" additionalName="Event" type="EtcItem">
+	<item id="81913" name="無所畏懼的走吧" additionalName="Event" type="EtcItem">
 		<!-- A symbol of those who go only forward without hesitation. When in inventory, maintains your Vitality level. Available for 7 d. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +366,7 @@
 			<skill id="39728" level="1" /> <!-- No Doubt -->
 		</skills>
 	</item>
-	<item id="81914" name="Blessed Fallen Angel's Ring" type="Armor">
+	<item id="81914" name="祝福的墮天使戒指" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. When enchanted, increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Critical Damage for basic attacks and P./ M. skills and damage to immobilized targets. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
@@ -395,7 +395,7 @@
 			<skill id="35217" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Fallen Angel's Ring: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="81915" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 1" type="Armor">
+	<item id="81915" name="祝福的墮天使戒指" additionalName="Charisma Lv. 1" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. When enchanted, increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Critical Damage for basic attacks and P./ M. skills and damage to immobilized targets. Effects of two identical rings do not stack. <Special effect>. CHA +1. <Enchanting>. Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
@@ -425,7 +425,7 @@
 			<skill id="35217" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Fallen Angel's Ring: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="81916" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 2" type="Armor">
+	<item id="81916" name="祝福的墮天使戒指" additionalName="Charisma Lv. 2" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. When enchanted, increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Critical Damage for basic attacks and P./ M. skills and damage to immobilized targets. Effects of two identical rings do not stack. <Special effect>. CHA +2. <Enchanting>. Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
@@ -454,7 +454,7 @@
 			<skill id="35217" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Fallen Angel's Ring: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="81917" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 3" type="Armor">
+	<item id="81917" name="祝福的墮天使戒指" additionalName="Charisma Lv. 3" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. When enchanted, increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Critical Damage for basic attacks and P./ M. skills and damage to immobilized targets. Effects of two identical rings do not stack. <Special effect>. CHA +3. <Enchanting>. Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
@@ -484,7 +484,7 @@
 			<skill id="35217" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Fallen Angel's Ring: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="81918" name="+6 Fallen Angel's Ring Pack" type="EtcItem">
+	<item id="81918" name="+6墮天使戒指禮盒" type="EtcItem">
 		<!-- Double-click to obtain +6 Fallen Angel's Ring. -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -502,7 +502,7 @@
 			<skill id="39357" level="3" /> <!-- +6 Fallen Angel's Ring Pack -->
 		</skills>
 	</item>
-	<item id="81919" name="Fallen Angel's Shining Chest" type="EtcItem">
+	<item id="81919" name="閃耀的墮天使禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items (excluding Fallen Angel's Ring Pack). -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="PEEL" />
@@ -548,7 +548,7 @@
 			<item id="80335" min="1" max="1" chance="3.125" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81920" name="+9 Blessed Fallen Angel's Ring Pack" type="EtcItem">
+	<item id="81920" name="+9祝福的墮天使戒指禮盒" type="EtcItem">
 		<!-- Double-click to obtain +9 Fallen Angel's Blessed Ring. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -566,7 +566,7 @@
 			<skill id="39357" level="4" /> <!-- +9 Fallen Angel's Blessed Ring Pack -->
 		</skills>
 	</item>
-	<item id="81921" name="+10 Blessed Fallen Angel's Ring Pack" type="EtcItem">
+	<item id="81921" name="+10祝福的墮天使戒指禮盒" type="EtcItem">
 		<!-- Double-click to obtain +10 Fallen Angel's Blessed Ring. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -584,7 +584,7 @@
 			<skill id="39357" level="5" /> <!-- +10 Fallen Angel's Blessed Ring Pack -->
 		</skills>
 	</item>
-	<item id="81922" name="Ultimate Death Knight A" additionalName="Not Available" type="Armor">
+	<item id="81922" name="未供給-真死亡騎士-A" additionalName="Not Available" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81923" name="Ultimate Death Knight B" additionalName="Not Available" type="Armor">
+	<item id="81923" name="未供給-真死亡騎士-B" additionalName="Not Available" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -608,7 +608,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81924" name="Ultimate Death Knight C" additionalName="Not Available" type="Armor">
+	<item id="81924" name="未供給-真死亡騎士-C" additionalName="Not Available" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -620,7 +620,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81925" name="Ultimate Death Knight D" additionalName="Not Available" type="Armor">
+	<item id="81925" name="未供給-真死亡騎士-D" additionalName="Not Available" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -632,7 +632,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81926" name="Ultimate Death Knight E" additionalName="Not Available" type="Armor">
+	<item id="81926" name="未供給-真死亡騎士-E" additionalName="Not Available" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -644,7 +644,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81927" name="New Year Gift" additionalName="Event" type="EtcItem">
+	<item id="81927" name="聖誕禮物" additionalName="Event" type="EtcItem">
 		<!-- A gift box for the New Year. Double-click to obtain various items (excluding Snowman's Icy Candy). -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="default_action" val="PEEL" />
@@ -679,7 +679,7 @@
 			<item id="80335" min="1" max="1" chance="4.761905" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81928" name="Snowman's Icy Candy" additionalName="Event" type="EtcItem">
+	<item id="81928" name="雪人冰糖" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., P. Atk./ M. Atk./ P. Def./ M. Def. +5%. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -696,7 +696,7 @@
 			<skill id="39729" level="1" /> <!-- Snowman's Icy Candy -->
 		</skills>
 	</item>
-	<item id="81929" name="New Year Gift Set" additionalName="Event" type="EtcItem">
+	<item id="81929" name="秋蓉新年禮物組" additionalName="Event" type="EtcItem">
 		<!-- Happy New Year!. Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -721,7 +721,7 @@
 			<item id="83006" min="3" max="3" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="81930" name="Golden Dragon Pack" type="EtcItem">
+	<item id="81930" name="龍之黃金寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items (excluding Augmenting Stone: Dragon Skin Shirt and Blessed Scroll: Enchant Artifact Book). -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="PEEL" />
@@ -769,7 +769,7 @@
 			<item id="80335" min="1" max="1" chance="2.941176" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81931" name="Augmenting Stone: Shirt" type="EtcItem">
+	<item id="81931" name="襯衫精煉石" type="EtcItem">
 		<!-- A mineral that has been petrified by some kind of physical or magical damage and dimensional anomalies. Required for augmenting shirts. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_dragon_rind_leather_shirt" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -779,7 +779,7 @@
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81932" name="Death Knight's Cloak R99" type="Armor">
+	<item id="81932" name="死亡騎士斗篷R99" type="Armor">
 		<!-- Changes your appearance to that of a Death Knight. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -795,7 +795,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="81933" name="Death Knight's Cloak R110" type="Armor">
+	<item id="81933" name="死亡騎士斗篷R110" type="Armor">
 		<!-- Changes your appearance to that of a Death Knight. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -811,7 +811,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="81934" name="Lucky Pouch of Growth" additionalName="Event" type="EtcItem">
+	<item id="81934" name="成長福袋" additionalName="Event" type="EtcItem">
 		<!-- Lucky Pouch that contains the sunlight energy. When in inventory, acquired XP/ SP +5%. -->
 		<set name="icon" val="icon.ev_2021_newyear_rune2" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -827,7 +827,7 @@
 			<skill id="39734" level="1" /> <!-- Lucky Pouch of Growth -->
 		</skills>
 	</item>
-	<item id="81935" name="Lucky Pouch of Prosperity" additionalName="Event" type="EtcItem">
+	<item id="81935" name="豐饒福袋" additionalName="Event" type="EtcItem">
 		<!-- Lucky Pouch that contains the moonlight energy. When in inventory, adena drop rate +5%. -->
 		<set name="icon" val="icon.ev_2021_newyear_rune3" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -843,7 +843,7 @@
 			<skill id="39734" level="2" /> <!-- Lucky Pouch of Prosperity -->
 		</skills>
 	</item>
-	<item id="81936" name="Lucky Pouch of Harmony" additionalName="Event" type="EtcItem">
+	<item id="81936" name="和睦福袋" additionalName="Event" type="EtcItem">
 		<!-- Lucky Pouch that contains the plant energy. When in inventory, Vitality bonus +7%. -->
 		<set name="icon" val="icon.ev_2021_newyear_rune4" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -859,7 +859,7 @@
 			<skill id="39734" level="3" /> <!-- Lucky Pouch of Harmony -->
 		</skills>
 	</item>
-	<item id="81937" name="Shiny Agathion Growth Cube" type="EtcItem">
+	<item id="81937" name="閃耀的壺精成長晶體" type="EtcItem">
 		<!-- Double-click to obtain various items (excluding Shiny Star Shard and Greater Zodiac Agathion's Book of Growth). -->
 		<set name="icon" val="icon.bless_star_agathion_upgrade_cube" />
 		<set name="default_action" val="PEEL" />
@@ -906,7 +906,7 @@
 			<item id="80335" min="1" max="1" chance="3.030303" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81938" name="Greater Zodiac Agathion's Sacred Book of Growth" type="EtcItem">
+	<item id="81938" name="神聖高級星座壺精成長書" type="EtcItem">
 		<!-- Required for upgrading Greater Zodiac Agathion Charms. Can be used with Greater Zodiac agathions enchanted to +5 and higher. In case of failure, the enchant value remains the same. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -919,7 +919,7 @@
 			<skill id="39735" level="1" /> <!-- Greater Zodiac Agathion's Sacred Book of Growth -->
 		</skills>
 	</item>
-	<item id="81939" name="Shiny Star Shard" type="EtcItem">
+	<item id="81939" name="閃耀的星之破片" type="EtcItem">
 		<!-- Can be exchanged for Book of Growth: Zodiac Agathion through the Game Assistant. -->
 		<set name="icon" val="icon.bm_star_agathion_mineral" />
 		<set name="immediate_effect" val="true" />
@@ -927,7 +927,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81940" name="Woeful Sword Eigis" type="Weapon">
+	<item id="81940" name="鬼劍 亞伊基斯" type="Weapon">
 		<!-- Shillien's sword imbued with the power to create and destroy worlds. The embodiment of the goddess' sorrow and despair. It can enslave one's soul by turning it into an evil spirit. The item is not available after the server transfer. -->
 		<set name="icon" val="icon.aegis_cutter" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81941" name="Woeful Sword Eigis" additionalName="Appearance Modification" type="Armor">
+	<item id="81941" name="鬼劍 亞伊基斯" additionalName="Appearance Modification" type="Armor">
 		<!-- Woeful Sword Eigis changes the armor appearance. Available only for those who has taken the 1st place in the Conquest rankings. -->
 		<set name="icon" val="icon.uq_sword_aegis" />
 		<set name="default_action" val="EQUIP" />
@@ -969,7 +969,7 @@
 			<stat type="pAtkSpd">325</stat>
 		</stats>
 	</item>
-	<item id="81942" name="Eigis Shaper" type="Weapon">
+	<item id="81942" name="亞伊基斯鉋刀" type="Weapon">
 		<!-- Changes a dagger's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_shaper" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81943" name="Eigis Cutter" type="Weapon">
+	<item id="81943" name="亞伊基斯切刃" type="Weapon">
 		<!-- Changes a one-handed sword's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_cutter" />
 		<set name="default_action" val="EQUIP" />
@@ -1013,7 +1013,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81944" name="Eigis Slasher" type="Weapon">
+	<item id="81944" name="亞伊基斯殺刃" type="Weapon">
 		<!-- Changes a two-handed sword's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_slasher" />
 		<set name="default_action" val="EQUIP" />
@@ -1035,7 +1035,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81945" name="Eigis Avenger" type="Weapon">
+	<item id="81945" name="亞伊基斯復仇者" type="Weapon">
 		<!-- Changes a one-handed blunt weapon's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_onehand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1057,7 +1057,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81946" name="Eigis Fighter" type="Weapon">
+	<item id="81946" name="亞伊基斯戰爪" type="Weapon">
 		<!-- Changes a fist weapon's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_fist" />
 		<set name="default_action" val="EQUIP" />
@@ -1079,7 +1079,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81947" name="Eigis Stormer" type="Weapon">
+	<item id="81947" name="亞伊基斯風暴者" type="Weapon">
 		<!-- Changes a spear's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_spear" />
 		<set name="default_action" val="EQUIP" />
@@ -1101,7 +1101,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81948" name="Eigis Thrower" type="Weapon">
+	<item id="81948" name="亞伊基斯投弓" type="Weapon">
 		<!-- Changes a bow's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_bow" />
 		<set name="default_action" val="EQUIP" />
@@ -1123,7 +1123,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="81949" name="Eigis Guardian" type="Weapon">
+	<item id="81949" name="亞伊基斯射靈" type="Weapon">
 		<!-- Changes a crossbow's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_crossbow" />
 		<set name="default_action" val="EQUIP" />
@@ -1145,7 +1145,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="81950" name="Eigis Buster" type="Weapon">
+	<item id="81950" name="亞伊基斯爆刃" type="Weapon">
 		<!-- Changes a one-handed magic sword's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_onehane_magic_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -1168,7 +1168,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81951" name="Eigis Caster" type="Weapon">
+	<item id="81951" name="亞伊基斯術杖" type="Weapon">
 		<!-- Changes a one-handed staff's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1191,7 +1191,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81952" name="Eigis Retributer" type="Weapon">
+	<item id="81952" name="亞伊基斯報恨者" type="Weapon">
 		<!-- Changes a two-handed staff's appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1214,7 +1214,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81953" name="Eigis Dual Swords" type="Weapon">
+	<item id="81953" name="亞伊基斯雙刀" type="Weapon">
 		<!-- Changes dual swords' appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_dual_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -1236,7 +1236,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81954" name="Eigis Dual Daggers" type="Weapon">
+	<item id="81954" name="亞伊基斯雙匕首" type="Weapon">
 		<!-- Changes dual daggers' appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
@@ -1258,7 +1258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81955" name="Eigis Dual Blunt Weapons" type="Weapon">
+	<item id="81955" name="亞伊基斯雙鈍器" type="Weapon">
 		<!-- Changes dual blunt weapons' appearance to that of Eigis. -->
 		<set name="icon" val="icon.aegis_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1280,7 +1280,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81956" name="Eigis Shield" type="Armor">
+	<item id="81956" name="亞伊基斯盾" type="Armor">
 		<!-- Changes a shield's appearance to that of Eigis. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1300,7 +1300,7 @@
 			<stat type="sDef">546</stat>
 		</stats>
 	</item>
-	<item id="81957" name="Eigis Sigil" type="Armor">
+	<item id="81957" name="亞伊基斯符印" type="Armor">
 		<!-- Changes a sigil's appearance to that of Eigis. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1320,7 +1320,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81958" name="Lindvior's Throne Usurper - Upper Armor" additionalName="Appearance Modification" type="Armor">
+	<item id="81958" name="林德拜爾迪斯倫-上衣" additionalName="Appearance Modification" type="Armor">
 		<!-- Changes your upper armor's appearance to that of Lindvior heavy armor. Available to characters from the Conqueror server. -->
 		<set name="icon" val="icon.honors_light_upbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1339,7 +1339,7 @@
 			<stat type="pDef">360</stat>
 		</stats>
 	</item>
-	<item id="81959" name="Lindvior's Throne Usurper - Lower Armor" additionalName="Appearance Modification" type="Armor">
+	<item id="81959" name="林德拜爾迪斯倫-下衣" additionalName="Appearance Modification" type="Armor">
 		<!-- Changes your lower armor's appearance to that of Lindvior heavy armor. Available to characters from the Conqueror server. -->
 		<set name="icon" val="icon.honors_light_downbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1358,7 +1358,7 @@
 			<stat type="pDef">225</stat>
 		</stats>
 	</item>
-	<item id="81960" name="Lindvior's Throne Usurper - Gloves" additionalName="Appearance Modification" type="Armor">
+	<item id="81960" name="林德拜爾迪斯倫-手套" additionalName="Appearance Modification" type="Armor">
 		<!-- Changes your gloves' appearance to that of Lindvior heavy armor. Available to characters from the Conqueror server. -->
 		<set name="icon" val="icon.honors_light_gloves_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1377,7 +1377,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81961" name="Lindvior's Throne Usurper - Boots" additionalName="Appearance Modification" type="Armor">
+	<item id="81961" name="林德拜爾迪斯倫-長靴" additionalName="Appearance Modification" type="Armor">
 		<!-- Changes your boots' appearance to that of Lindvior heavy armor. Available to characters from the Conqueror server. -->
 		<set name="icon" val="icon.honors_light_shoes_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1396,7 +1396,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81962" name="Usurper's Cloak" additionalName="Appearance Modification" type="Armor">
+	<item id="81962" name="迪斯倫斗篷" additionalName="Appearance Modification" type="Armor">
 		<!-- Changes the appearance of characters from the Conqueror server. -->
 		<set name="icon" val="icon.cloak_noblesse2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1414,7 +1414,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="81963" name="Frozen Shaper" type="Weapon">
+	<item id="81963" name="冰凍武器鉋刀" type="Weapon">
 		<!-- Changes a dagger's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1436,7 +1436,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81964" name="Frozen Cutter" type="Weapon">
+	<item id="81964" name="冰凍武器切刃" type="Weapon">
 		<!-- Changes a one-handed sword's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1458,7 +1458,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81965" name="Frozen Slasher" type="Weapon">
+	<item id="81965" name="冰凍武器殺刃" type="Weapon">
 		<!-- Changes a two-handed sword's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1480,7 +1480,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81966" name="Frozen Avenger" type="Weapon">
+	<item id="81966" name="冰凍武器復仇者" type="Weapon">
 		<!-- Changes a one-handed blunt weapon's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1502,7 +1502,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81967" name="Frozen Fighter" type="Weapon">
+	<item id="81967" name="冰凍武器戰爪" type="Weapon">
 		<!-- Changes a fist weapon's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1524,7 +1524,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81968" name="Frozen Stormer" type="Weapon">
+	<item id="81968" name="冰凍武器風暴者" type="Weapon">
 		<!-- Changes a spear's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1546,7 +1546,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81969" name="Frozen Thrower" type="Weapon">
+	<item id="81969" name="冰凍武器投弓" type="Weapon">
 		<!-- Changes a bow's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1568,7 +1568,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="81970" name="Frozen Guardian" type="Weapon">
+	<item id="81970" name="冰凍武器射靈" type="Weapon">
 		<!-- Changes a crossbow's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1590,7 +1590,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="81971" name="Frozen Buster" type="Weapon">
+	<item id="81971" name="冰凍武器爆刃" type="Weapon">
 		<!-- Changes a one-handed magic sword's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1613,7 +1613,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81972" name="Frozen Caster" type="Weapon">
+	<item id="81972" name="冰凍武器術杖" type="Weapon">
 		<!-- Changes a one-handed staff's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1636,7 +1636,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81973" name="Frozen Retributer" type="Weapon">
+	<item id="81973" name="冰凍武器報恨者" type="Weapon">
 		<!-- Changes a two-handed staff's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1659,7 +1659,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81974" name="Frozen Dual Swords" type="Weapon">
+	<item id="81974" name="冰凍武器雙刀" type="Weapon">
 		<!-- Changes dual swords' appearance so that they look like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1681,7 +1681,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81975" name="Frozen Dual Daggers" type="Weapon">
+	<item id="81975" name="冰凍武器雙匕首" type="Weapon">
 		<!-- Changes dual daggers' appearance so that they look like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1703,7 +1703,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81976" name="Frozen Dual Blunt Weapons" type="Weapon">
+	<item id="81976" name="冰凍武器雙鈍器" type="Weapon">
 		<!-- Changes dual blunt weapons' appearance so that they look like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1725,7 +1725,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81977" name="Frozen Shield" type="Armor">
+	<item id="81977" name="冰凍武器盾" type="Armor">
 		<!-- Changes a shield's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1746,7 +1746,7 @@
 			<stat type="sDef">546</stat>
 		</stats>
 	</item>
-	<item id="81978" name="Frozen Sigil" type="Armor">
+	<item id="81978" name="冰凍武器符印" type="Armor">
 		<!-- Changes a sigil's appearance so that it looks like being made of ice. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1767,7 +1767,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81979" name="Conquest Name Change Coupon" type="EtcItem">
+	<item id="81979" name="迪斯倫名字變更券" type="EtcItem">
 		<!-- Required for changing a name used in the Conquest. In order to do it, use the Conquest UI before entering the Conquest world. -->
 		<set name="icon" val="icon.dethrone_name_change" />
 		<set name="immediate_effect" val="true" />
@@ -1779,7 +1779,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81980" name="Soul Orb" type="EtcItem">
+	<item id="81980" name="靈魂之珠" type="EtcItem">
 		<!-- At first glance, looks like an ordinary glass bead. However, if you take a closer look, you will see a soul trapped inside. Listen closely, and you will hear its whisper: 'Here, in the depths of darkness filled with horror and despair, one may acquire special powers, and that will let them rule the world.'. It's time to go to the Conquest world. -->
 		<set name="icon" val="icon.soul_bead" />
 		<set name="immediate_effect" val="true" />
@@ -1791,7 +1791,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81981" name="Dimensional Chain" type="EtcItem">
+	<item id="81981" name="次元鎖鍊" type="EtcItem">
 		<!-- A chain that connects our world with the Conquest one. Only the Aden Castle lord can open or close the path between the worlds. -->
 		<set name="icon" val="icon.dethrone_aden_link" />
 		<set name="immediate_effect" val="true" />
@@ -1803,7 +1803,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81982" name="Woeful Sword Eigis's Cloak" additionalName="Appearance Modification" type="Armor">
+	<item id="81982" name="鬼劍亞伊基斯斗篷" additionalName="Appearance Modification" type="Armor">
 		<!-- Changes the cloak appearance. Available only for those who has taken the 1st place in the Conquest rankings. -->
 		<set name="icon" val="icon.cloak_noblesse2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1821,7 +1821,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="81983" name="Giran Castle's Pack" additionalName="Lv. 1" type="EtcItem">
+	<item id="81983" name="奇岩城禮盒" additionalName="Lv. 1" type="EtcItem">
 		<!-- Contains supplies from the Giran Castle. Double-click to obtain 1 useful item (excluding Rune Castle's Silver Pack). -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -1856,7 +1856,7 @@
 			<item id="35564" min="1" max="1" chance="4.761905" /> <!-- Ruler's Authority - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="81984" name="Rune Castle's Silver Pack" additionalName="Lv. 2" type="EtcItem">
+	<item id="81984" name="魯因城銀光禮盒" additionalName="Lv. 2" type="EtcItem">
 		<!-- Contains supplies from the Rune Castle. Double-click to obtain 1 useful item (excluding Aden Castle's Silver Pack). -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1897,7 +1897,7 @@
 			<item id="81729" min="3" max="3" chance="3.703704" /> <!-- Augmenting Stone: Accessory -->
 		</capsuled_items>
 	</item>
-	<item id="81985" name="Aden Castle's Golden Pack" additionalName="Lv. 3" type="EtcItem">
+	<item id="81985" name="亞丁城金光禮盒" additionalName="Lv. 3" type="EtcItem">
 		<!-- A gilded pack from the Aden Castle. Double-click to obtain 1 rare item with a certain chance. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1939,7 +1939,7 @@
 			<item id="80335" min="1" max="1" chance="3.571429" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81986" name="Bloodthirsty Eigis Shaper" type="Weapon">
+	<item id="81986" name="嗜血亞伊基斯鉋刀" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_shaper_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1958,7 +1958,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81987" name="Bloodthirsty Eigis Cutter" type="Weapon">
+	<item id="81987" name="嗜血亞伊基斯切刃" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_cutter_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1977,7 +1977,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81988" name="Bloodthirsty Eigis Slasher" type="Weapon">
+	<item id="81988" name="嗜血亞伊基斯殺刃" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_slasher_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1996,7 +1996,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81989" name="Bloodthirsty Eigis Avenger" type="Weapon">
+	<item id="81989" name="嗜血亞伊基斯復仇者" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_onehand_blunt_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2015,7 +2015,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81990" name="Bloodthirsty Eigis Fighter" type="Weapon">
+	<item id="81990" name="嗜血亞伊基斯戰爪" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_fist_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2034,7 +2034,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81991" name="Bloodthirsty Eigis Stormer" type="Weapon">
+	<item id="81991" name="嗜血亞伊基斯風暴者" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_spear_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2053,7 +2053,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81992" name="Bloodthirsty Eigis Thrower" type="Weapon">
+	<item id="81992" name="嗜血亞伊基斯投弓" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_bow_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2072,7 +2072,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="81993" name="Bloodthirsty Eigis Guardian" type="Weapon">
+	<item id="81993" name="嗜血亞伊基斯射靈" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_crossbow_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2091,7 +2091,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="81994" name="Bloodthirsty Eigis Buster" type="Weapon">
+	<item id="81994" name="嗜血亞伊基斯爆刃" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_onehane_magic_sword_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2111,7 +2111,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81995" name="Bloodthirsty Eigis Caster" type="Weapon">
+	<item id="81995" name="嗜血亞伊基斯術杖" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_onehand_magic_blunt_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2131,7 +2131,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81996" name="Bloodthirsty Eigis Retributer" type="Weapon">
+	<item id="81996" name="嗜血亞伊基斯報恨者" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_twohand_magic_blunt_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2151,7 +2151,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81997" name="Bloodthirsty Eigis Dual Swords" type="Weapon">
+	<item id="81997" name="嗜血亞伊基斯雙刀" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_dual_sword_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2170,7 +2170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81998" name="Bloodthirsty Eigis Dual Daggers" type="Weapon">
+	<item id="81998" name="嗜血亞伊基斯雙匕首" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_dual_dagger_1" />
 		<set name="default_action" val="EQUIP" />
@@ -2189,7 +2189,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="81999" name="Bloodthirsty Eigis Dual Blunt Weapons" type="Weapon">
+	<item id="81999" name="嗜血亞伊基斯雙鈍器" type="Weapon">
 		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be crystallized, augmented, enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. <Upgrade>. Unknown -->
 		<set name="icon" val="icon.aegis_dual_blunt_1" />
 		<set name="default_action" val="EQUIP" />

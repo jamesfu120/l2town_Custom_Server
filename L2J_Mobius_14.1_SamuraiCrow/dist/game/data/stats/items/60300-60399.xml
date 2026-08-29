@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="60300" name="Earth Dragon's Large Treasure Chest Lv. 1" type="EtcItem">
+	<item id="60300" name="地龍的寶藏大套組 Lv1" type="EtcItem">
 		<!-- Double-click to obtain Earth Dragon's Treasures (200 pcs.), Swift Attack Cookie (50 pcs.), Swift Defense Cookie (50 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -18,7 +18,7 @@
 			<item id="82187" min="50" max="50" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60301" name="Earth Dragon's Large Treasure Chest Lv. 2" type="EtcItem">
+	<item id="60301" name="地龍的寶藏大套組Lv2" type="EtcItem">
 		<!-- Double-click to obtain Earth Dragon's Treasures (200 pcs.), Swift Attack Cookie (50 pcs.), Swift Defense Cookie (50 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -36,7 +36,7 @@
 			<item id="82187" min="50" max="50" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60302" name="Earth Dragon's Large Treasure Chest Lv. 3" type="EtcItem">
+	<item id="60302" name="地龍的寶藏大套組Lv3" type="EtcItem">
 		<!-- Double-click to obtain Magic Antharas Doll (30-day), Swift Attack Cookie (50 pcs.), Swift Defense Cookie (50 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -54,7 +54,7 @@
 			<item id="82187" min="50" max="50" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60303" name="Treasure Chest with Ancient Artifacts" type="EtcItem">
+	<item id="60303" name="古代聖紋石寶箱" type="EtcItem">
 		<!-- Double-click to obtain Swift Attack Cookie (2 pcs.) and a useful item. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
@@ -106,7 +106,7 @@
 			<item id="82172" min="2" max="2" chance="100" /> <!-- Swift Attack Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60304" name="Hunt Pass - Additional Rewards" type="EtcItem">
+	<item id="60304" name="狩獵PASS優質服務" type="EtcItem">
 		<!-- Can be purchased once per account. -->
 		<set name="icon" val="BranchIcon.icon.g_pass_hunting_premium_00" />
 		<set name="immediate_effect" val="true" />
@@ -116,7 +116,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60305" name="Enchantment Pass - Additional Rewards" type="EtcItem">
+	<item id="60305" name="強化PASS優質服務" type="EtcItem">
 		<!-- Can be purchased once per account. -->
 		<set name="icon" val="BranchIcon.icon.g_pass_advance_premium_00" />
 		<set name="immediate_effect" val="true" />
@@ -126,7 +126,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60306" name="Vitality Sustention Points" type="EtcItem">
+	<item id="60306" name="活力維持點數" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.g_pass_sayha_grace_point_01" />
 		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
@@ -134,19 +134,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60307" name="Game Assistant's Exchange" type="EtcItem">
+	<item id="60307" name="百貨小舖交換" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.g_pass_advance_type_multisell_00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60308" name="Item Exchange/ Enhancement" type="EtcItem">
+	<item id="60308" name="道具交換/強化" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.g_pass_advance_type_multisell_01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60309" name="Hunt Pass - Additional Reward Coupon" type="EtcItem">
+	<item id="60309" name="狩獵PASS優質券" type="EtcItem">
 		<!-- A coupon for the Season Pass. Can be used for activating additional rewards for Hunt Pass. -->
 		<set name="icon" val="BranchIcon.icon.g_pass_hunting_premium_ticket_00" />
 		<set name="immediate_effect" val="true" />
@@ -156,7 +156,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60310" name="Enchantment Pass - Additional Reward Coupon" type="EtcItem">
+	<item id="60310" name="強化PASS優質券" type="EtcItem">
 		<!-- A coupon for the Season Pass. Can be used for activating additional rewards for Enchantment Pass. -->
 		<set name="icon" val="BranchIcon.icon.g_pass_advance_premium_ticket_00" />
 		<set name="immediate_effect" val="true" />
@@ -166,7 +166,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60311" name="Mysterious Crystal" type="EtcItem">
+	<item id="60311" name="神祕結晶" type="EtcItem">
 		<!-- A crystal imbued with powerful magic energy. It seems to have belonged to one of the kingdom's greatest wizards. Can be used in the Craft. -->
 		<set name="icon" val="icon.etc_bm_jewel_piece" />
 		<set name="immediate_effect" val="true" />
@@ -174,7 +174,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60312" name="Mysterious Crystal Casket" type="EtcItem">
+	<item id="60312" name="奧秘結晶禮盒" type="EtcItem">
 		<!-- Double-click to obtain 3 to 1000 Mysterious Crystals. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -198,7 +198,7 @@
 			<item id="60311" min="1000" max="1000" chance="10" /> <!-- Mysterious Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="60313" name="Beleth' Treasure Chest" type="EtcItem">
+	<item id="60313" name="巴列斯寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -258,7 +258,7 @@
 			<item id="60312" min="1" max="1" chance="100" /> <!-- Mysterious Crystal Casket -->
 		</capsuled_items>
 	</item>
-	<item id="60314" name="Beleth' Treasure Kit Lv. 1" type="EtcItem">
+	<item id="60314" name="巴列斯寶箱組合包Lv1" type="EtcItem">
 		<!-- Double-click to obtain Beleth's Treasure Chest (100 pcs.), Swift Attack Cookie (20 pcs.), Swift Defense Cookie (20 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -276,7 +276,7 @@
 			<item id="82187" min="20" max="20" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60315" name="Beleth' Treasure Kit Lv. 2" type="EtcItem">
+	<item id="60315" name="巴列斯寶箱組合包Lv2" type="EtcItem">
 		<!-- Double-click to obtain Beleth's Treasure Chest (100 pcs.), Swift Attack Cookie (40 pcs.), Swift Defense Cookie (40 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -294,7 +294,7 @@
 			<item id="82187" min="40" max="40" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60316" name="Beleth' Treasure Kit Lv. 3" type="EtcItem">
+	<item id="60316" name="巴列斯寶箱組合包Lv3" type="EtcItem">
 		<!-- Double-click to obtain Beleth's Treasure Chest (100 pcs.), Swift Attack Cookie (80 pcs.), Swift Defense Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -312,7 +312,7 @@
 			<item id="82187" min="80" max="80" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60317" name="Magic Kit" type="EtcItem">
+	<item id="60317" name="魔法組合包" type="EtcItem">
 		<!-- Double-click to obtain Freya's Glittering Ice Rose (50 pcs.), Glowing Royal Dragon's Attribute Potion (50 pcs.), Royal Honey Dark Beer (50 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -330,7 +330,7 @@
 			<item id="60182" min="50" max="50" chance="100" /> <!-- Glowing Royal Dragon's Attribute Potion - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60318" name="Magic Mark" type="EtcItem">
+	<item id="60318" name="魔法憑證" type="EtcItem">
 		<!-- A mark created by a great wizard. Special bonuses will be available after adding to a collection. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -341,7 +341,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60319" name="Forgotten Lord's Crystal of Dyes" type="EtcItem">
+	<item id="60319" name="被遺忘的君主染料結晶" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 1 can be bought through Dye Merchant in any town. Forgotten Lord's dyes can be upgraded through compounding. -->
 		<set name="icon" val="branchicon.bm_g_dye_stone" />
 		<set name="immediate_effect" val="true" />
@@ -350,7 +350,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60320" name="Forgotten Lord's Shining Crystal of Dyes" type="EtcItem">
+	<item id="60320" name="被遺忘君主閃耀的染料結晶" type="EtcItem">
 		<!-- Required for creating Forgotten Lord's dyes. Can be compounded with a dye of Lv. 7+. In case of failure, the dye does not disappear, but its level drops to 7. -->
 		<set name="icon" val="branchicon.bm_g_dye_stone_upgrade" />
 		<set name="immediate_effect" val="true" />
@@ -359,77 +359,77 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60321" name="Forgotten Lord's Tattoo Lv. 1" additionalName="CON +1" type="EtcItem">
+	<item id="60321" name="被遺忘的君主染料 - 階段1" additionalName="CON +1" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 1 (CON +1). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60322" name="Forgotten Lord's Tattoo Lv. 2" additionalName="CON +1 DEX +1 WIT +1" type="EtcItem">
+	<item id="60322" name="被遺忘的君主染料 - 階段2" additionalName="CON +1 DEX +1 WIT +1" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 2 (CON +1, DEX +1, WIT +1). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60323" name="Forgotten Lord's Tattoo Lv. 3" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1" type="EtcItem">
+	<item id="60323" name="被遺忘的君主染料 - 階段3" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 3 (CON +1, DEX +1, WIT +1, STR +1, INT +1). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60324" name="Forgotten Lord's Tattoo Lv. 4" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1 CHA +1" type="EtcItem">
+	<item id="60324" name="被遺忘的君主染料 - 階段4" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1 CHA +1" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 4 (CON +1, DEX +1, WIT +1, STR +1, INT +1, CHA +1). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60325" name="Forgotten Lord's Tattoo Lv. 5" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1 CHA +1" type="EtcItem">
+	<item id="60325" name="被遺忘的君主染料 - 階段5" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1 CHA +1" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 5 (CON +1, DEX +1, WIT +1, STR +1, INT +1, CHA +1). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60326" name="Forgotten Lord's Tattoo Lv. 6" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1 CHA +1" type="EtcItem">
+	<item id="60326" name="被遺忘的君主染料 - 階段6" additionalName="CON +1 DEX +1 WIT +1 STR +1 INT +1 CHA +1" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 6 (CON +1, DEX +1, WIT +1, STR +1, INT +1, CHA +1). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -3%, damage +1%, P. Atk. +400, M. Atk. +200, P. Def. +380, M. Def. +320, Vitality bonus +1%, acquired XP/ SP +1%. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60327" name="Forgotten Lord's Tattoo Lv. 7" additionalName="CON +2 DEX +2 WIT +2 STR +1 INT +1 CHA +1" type="EtcItem">
+	<item id="60327" name="被遺忘的君主染料 - 階段7" additionalName="CON +2 DEX +2 WIT +2 STR +1 INT +1 CHA +1" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 7 (CON +2, DEX +2, WIT +2, STR +1, INT +1, CHA +1). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -3%, damage +2%, P. Atk. +520, M. Atk. +240, P. Def. +494, M. Def. +416, Vitality bonus +2%, acquired XP/ SP +2%. Enables an active skill: Forgotten Lord's Ability Lv. 1. Requirements: all classes after the Awakening and the 3rd Liberation. <Active skill>. Forgotten Lord's Ability Lv. 1. <Effect>. With a 30% chance, removes the target's invincibility in PvP. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60328" name="Forgotten Lord's Tattoo Lv. 8" additionalName="CON +2 DEX +2 WIT +2 STR +2 INT +2 CHA +2" type="EtcItem">
+	<item id="60328" name="被遺忘的君主染料 - 階段8" additionalName="CON +2 DEX +2 WIT +2 STR +2 INT +2 CHA +2" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 8 (CON +2, DEX +2, WIT +2, STR +2, INT +2, CHA +2). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -4%, damage +2%, P. Atk. +728, M. Atk. +336, P. Def. +692, M. Def. +582, Vitality bonus +2%, acquired XP/ SP +2%. Enables an active skill: Forgotten Lord's Ability Lv. 2. Requirements: all classes after the Awakening and the 3rd Liberation. <Active skill>. Forgotten Lord's Ability Lv. 2. <Effect>. With a 50% chance, removes the target's invincibility in PvP. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60329" name="Forgotten Lord's Tattoo Lv. 9" additionalName="CON +3 DEX +3 WIT +3 STR +2 INT +2 CHA +2" type="EtcItem">
+	<item id="60329" name="被遺忘的君主染料 - 階段9" additionalName="CON +3 DEX +3 WIT +3 STR +2 INT +2 CHA +2" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 9 (CON +3, DEX +3, WIT +3, STR +2, INT +2, CHA +2). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -4%, damage +3%, P. Atk. +1056, M. Atk. +504, P. Def. +1003, M. Def. +844, Vitality bonus +3%, acquired XP/ SP +3%. Enables an active skill: Forgotten Lord's Ability Lv. 3. Requirements: all classes after the Awakening and the 3rd Liberation. <Active skill>. Forgotten Lord's Ability Lv. 3. <Effect>. With an 80% chance, removes the target's invincibility in PvP. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60330" name="Forgotten Lord's Tattoo Lv. 10" additionalName="CON +3 DEX +3 WIT +3 STR +3 INT +3 CHA +3" type="EtcItem">
+	<item id="60330" name="被遺忘的君主染料 - 階段10" additionalName="CON +3 DEX +3 WIT +3 STR +3 INT +3 CHA +3" type="EtcItem">
 		<!-- Forgotten Lord's Dye Lv. 10 (CON +3, DEX +3, WIT +3, STR +2, INT +2, CHA +2). Collect 1 unit and take it to Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -5%, damage +3%, P. Atk. +1636, M. Atk. +806, P. Def. +1554, M. Def. +1309, Vitality bonus +3%, acquired XP/ SP +3%. Enables active skills: Forgotten Lord's Ability Lv. 4, Forgotten Lord's Curse. Requirements: all classes after the Awakening and the 3rd Liberation. <Active skill>. Forgotten Lord's Ability Lv. 4. <Effect>. With a 100% chance, removes the target's invincibility in PvP. <Active skill>. Forgotten Lord's Curse Lv. 1. <Effect>. When used, removes buffs from the target for 30 sec. -->
 		<set name="icon" val="branchicon.bm_dye_monarch" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60331" name="Treasure Chest with Ancient Agathions" type="EtcItem">
+	<item id="60331" name="古代壺精寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -479,7 +479,7 @@
 			<item id="81443" min="1" max="1" chance="2.777778" /> <!-- Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60332" name="Thank-you Gift Set" type="EtcItem">
+	<item id="60332" name="感謝禮物組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -503,7 +503,7 @@
 			<item id="81897" min="1" max="1" chance="100" /> <!-- 17th Anniversary Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60333" name="Mark of Lords" type="EtcItem">
+	<item id="60333" name="領主的標章" type="EtcItem">
 		<!-- A mark that can be received when trading with the local lord. Can be used in Special Craft. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -511,7 +511,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60334" name="Lord's Casket" type="EtcItem">
+	<item id="60334" name="領主的標章禮盒" type="EtcItem">
 		<!-- Double-click to obtain 3 to 1000 Lord's Marks. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -535,7 +535,7 @@
 			<item id="60333" min="1000" max="1000" chance="10" /> <!-- Lord's Mark -->
 		</capsuled_items>
 	</item>
-	<item id="60335" name="Aden Supply Pack" type="EtcItem">
+	<item id="60335" name="亞丁消耗品箱" type="EtcItem">
 		<!-- Double-click to obtain Lord's Casket and various items. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -609,7 +609,7 @@
 			<item id="60334" min="1" max="1" chance="100" /> <!-- Lord's Casket -->
 		</capsuled_items>
 	</item>
-	<item id="60336" name="Collectors' Pennant" type="EtcItem">
+	<item id="60336" name="收藏品旗幟" type="EtcItem">
 		<!-- A pennant gifted by the local lord. Its special bonuses will be available after you add it to the collection. -->
 		<set name="icon" val="icon.campaign_high_rank_reward" />
 		<set name="immediate_effect" val="true" />
@@ -620,7 +620,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60337" name="Lord's Lucky Ticket" type="EtcItem">
+	<item id="60337" name="領主的幸運券" type="EtcItem">
 		<!-- Allows you to test your luck in the special craft. -->
 		<set name="icon" val="icon.ev_2021_thanksgiving_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -631,7 +631,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60338" name="Aden Supply Kit Lv. 1" type="EtcItem">
+	<item id="60338" name="亞丁消耗品組合包 Lv1" type="EtcItem">
 		<!-- Double-click to obtain Aden Supply Pack (100 pcs.), Collectors' Pennant (2 pcs.), Swift Growth Cookie (20 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -649,7 +649,7 @@
 			<item id="60336" min="2" max="2" chance="100" /> <!-- Collectors' Pennant -->
 		</capsuled_items>
 	</item>
-	<item id="60339" name="Aden Supply Kit Lv. 2" type="EtcItem">
+	<item id="60339" name="亞丁消耗品組合包 Lv2" type="EtcItem">
 		<!-- Double-click to obtain Aden Supply Pack (100 pcs.), Collectors' Pennant (2 pcs.), Swift Growth Cookie (40 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -667,7 +667,7 @@
 			<item id="60336" min="2" max="2" chance="100" /> <!-- Collectors' Pennant -->
 		</capsuled_items>
 	</item>
-	<item id="60340" name="Aden Supply Kit Lv. 3" type="EtcItem">
+	<item id="60340" name="亞丁消耗品組合包 Lv3" type="EtcItem">
 		<!-- Double-click to obtain Aden Supply Pack (150 pcs.), Collectors' Pennant (4 pcs.), Swift Growth Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -685,7 +685,7 @@
 			<item id="60336" min="4" max="4" chance="100" /> <!-- Collectors' Pennant -->
 		</capsuled_items>
 	</item>
-	<item id="60341" name="Aden Supply Kit Lv. 4" type="EtcItem">
+	<item id="60341" name="亞丁消耗品組合包 Lv4" type="EtcItem">
 		<!-- Double-click to obtain Aden Supply Pack (100 pcs.), Lord's Lucky Ticket (1 pc.), Swift Growth Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -703,7 +703,7 @@
 			<item id="60337" min="1" max="1" chance="100" /> <!-- Lord's Lucky Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60342" name="Aden Supply Kit Lv. 5" type="EtcItem">
+	<item id="60342" name="亞丁消耗品組合包 Lv5" type="EtcItem">
 		<!-- Double-click to obtain Aden Supply Pack (100 pcs.), Lord's Lucky Ticket (1 pc.), Swift Growth Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -721,7 +721,7 @@
 			<item id="60337" min="1" max="1" chance="100" /> <!-- Lord's Lucky Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60343" name="Aden Supply Kit Lv. 6" type="EtcItem">
+	<item id="60343" name="亞丁消耗品組合包 Lv6" type="EtcItem">
 		<!-- Double-click to obtain Aden Supply Pack (150 pcs.), Lord's Lucky Ticket (1 pc.), Swift Growth Cookie (80 pcs.), Zaken Doll (1 pc.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -740,7 +740,7 @@
 			<item id="60337" min="1" max="1" chance="100" /> <!-- Lord's Lucky Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60344" name="Gableena's Doll's Fragment" additionalName="Event" type="EtcItem">
+	<item id="60344" name="小丑蕾娜的人偶碎片" additionalName="Event" type="EtcItem">
 		<!-- Can be used in the Special Craft to obtain various items. -->
 		<set name="icon" val="icon.wind_agathion_breath" />
 		<set name="immediate_effect" val="true" />
@@ -748,7 +748,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60345" name="Dream Spell Potion" additionalName="Event" type="EtcItem">
+	<item id="60345" name="夢幻魔法藥劑" additionalName="Event" type="EtcItem">
 		<!-- When used, acquired XP/ SP +10%, CHA +2, P./ M. Def. +15% for 30 min. The effect is removed upon entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.elixir" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -763,7 +763,7 @@
 			<skill id="29512" level="1" /> <!-- Dream Spell Potion -->
 		</skills>
 	</item>
-	<item id="60346" name="Kaliel's Blessing Pack" type="EtcItem">
+	<item id="60346" name="卡利艾祝福禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -824,7 +824,7 @@
 			<item id="80335" min="1" max="1" chance="2.12766" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60347" name="Novice Companion Charm (30-day)" type="Armor">
+	<item id="60347" name="新手同伴幸運符-限時30日" type="Armor">
 		<!-- Summons Agathion Novice Companion for 30 d. Cannot be used in the Olympiad. <Item skill>. Companion's Magic: For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -10%, Skill MP Consumption -15%. The effect remains after death. Does not stack with Art of Seduction and Pa'agrio's Blessing. -->
 		<set name="icon" val="icon.bm_agathion_base" />
 		<set name="default_action" val="EQUIP" />
@@ -840,7 +840,7 @@
 			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
 		</skills>
 	</item>
-	<item id="60348" name="Companion Help Cube" type="EtcItem">
+	<item id="60348" name="夥伴支援晶體" type="EtcItem">
 		<!-- Double-click to obtain Wondrous Cocktail (3 pcs.) or the items listed below according to the day of use:. 1st day - Novice Companion Charm (30-day). 10th day - Honey Dark Beer (50 pcs.). 20th day - Glowing Dragon's Attribute Potion (50 pcs.). 30th day - Nevit's Shining Gold Hourglass (50 pcs.). (Can only be used once a day.) -->
 		<set name="icon" val="icon.etc_11th_event_group" />
 		<set name="immediate_effect" val="true" />
@@ -849,7 +849,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60349" name="Ultimate Death Knight A" additionalName="Not Available" type="Armor">
+	<item id="60349" name="未供給-真死亡騎士-A" additionalName="Not Available" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -861,7 +861,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60350" name="Ultimate Death Knight B" additionalName="Not Available" type="Armor">
+	<item id="60350" name="未供給-真死亡騎士-B" additionalName="Not Available" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -873,7 +873,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60351" name="Ultimate Death Knight C - Not Available" additionalName="Red" type="Armor">
+	<item id="60351" name="未供給-真死亡騎士-C" additionalName="Red" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -885,7 +885,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60352" name="Ultimate Death Knight C - Not Available" additionalName="Blue" type="Armor">
+	<item id="60352" name="未供給-真死亡騎士-C" additionalName="Blue" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -897,7 +897,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60353" name="Ultimate Death Knight C - Not Available" additionalName="Phiolet" type="Armor">
+	<item id="60353" name="未供給-真死亡騎士-C" additionalName="Phiolet" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -909,7 +909,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60354" name="Ultimate Death Knight D - Not Available" additionalName="Red" type="Armor">
+	<item id="60354" name="未供給-真死亡騎士-D" additionalName="Red" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -921,7 +921,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60355" name="Ultimate Death Knight D - Not Available" additionalName="Blue" type="Armor">
+	<item id="60355" name="未供給-真死亡騎士-D" additionalName="Blue" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -933,7 +933,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60356" name="Ultimate Death Knight D - Not Available" additionalName="Phiolet" type="Armor">
+	<item id="60356" name="未供給-真死亡騎士-D" additionalName="Phiolet" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -945,20 +945,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60357" name="Ultimate Death Knight E - Not Available" additionalName="Red" type="Armor">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="alldress" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R110" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-	</item>
-	<item id="60358" name="Ultimate Death Knight E - Not Available" additionalName="Blue" type="Armor">
+	<item id="60357" name="未供給-真死亡騎士-E" additionalName="Red" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -971,7 +958,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60359" name="Ultimate Death Knight E - Not Available" additionalName="Phiolet" type="Armor">
+	<item id="60358" name="未供給-真死亡騎士-E" additionalName="Blue" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -984,7 +971,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60360" name="Jewel Energy Chest" type="EtcItem">
+	<item id="60359" name="未供給-真死亡騎士-E" additionalName="Phiolet" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60360" name="寶石氣息禮盒" type="EtcItem">
 		<!-- Double-click to obtain Jewel Energy (500 pcs.). -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
@@ -997,7 +997,7 @@
 			<item id="48831" min="500" max="500" chance="100" /> <!-- Jewel Energy -->
 		</capsuled_items>
 	</item>
-	<item id="60361" name="Common Jewelry Box Lv. 5" type="EtcItem">
+	<item id="60361" name="一般階段5寶石盒" type="EtcItem">
 		<!-- Double-click to obtain a common Lv. 5 jewel. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1027,7 +1027,7 @@
 			<item id="47686" min="1" max="1" chance="6.25" /> <!-- Blue Cat's Eye Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="60362" name="Rare Jewelry Box" type="EtcItem">
+	<item id="60362" name="珍貴的寶石盒" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -1078,7 +1078,7 @@
 			<item id="36946" min="1" max="1" chance="2.702703" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60363" name="Sayha's Blessing Pack" type="EtcItem">
+	<item id="60363" name="沙哈的祝福禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item (excluding Sayha's Talisman Pack, Sayha's Energy and Sayha's Blessing). -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1136,7 +1136,7 @@
 			<item id="36946" min="1" max="1" chance="2.272727" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60364" name="Steampunk" type="Armor">
+	<item id="60364" name="蒸汽龐克" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_steampunk" />
 		<set name="default_action" val="EQUIP" />
@@ -1147,7 +1147,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60365" name="Magician" type="Armor">
+	<item id="60365" name="魔術師" type="Armor">
 		<!-- Changes your appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_magician" />
 		<set name="default_action" val="EQUIP" />
@@ -1161,7 +1161,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="60366" name="Appearance Stone: Steampunk Outfit" type="EtcItem">
+	<item id="60366" name="蒸汽龐克衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Steampunk Outfit. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1174,7 +1174,7 @@
 			<skill id="29519" level="1" /> <!-- Appearance Stone: Steampunk Outfit -->
 		</skills>
 	</item>
-	<item id="60367" name="Appearance Stone: Magician Garment" type="EtcItem">
+	<item id="60367" name="魔術師衣裳加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Jester Garment. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1187,7 +1187,7 @@
 			<skill id="29520" level="1" /> <!-- Appearance Stone: Magician Garment -->
 		</skills>
 	</item>
-	<item id="60368" name="Season Pass Bonus" type="EtcItem">
+	<item id="60368" name="L2Pass的加護" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +5%, P. Atk./ M. Atk./ P. Def./ M. Def. +5%, Vitality bonus +5%, all stats +1, Attribute Attack/ Resistance +30. The effect is removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.super_elixir_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1206,7 +1206,7 @@
 			<skill id="29521" level="1" /> <!-- Season Pass Bonus -->
 		</skills>
 	</item>
-	<item id="60369" name="Coral" type="EtcItem">
+	<item id="60369" name="珊瑚" type="EtcItem">
 		<!-- The Lucky Game's bonus item. Required for crafting various items during the Lucky Game. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1214,7 +1214,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60370" name="Full Chest with 100 Tersi's Soul Crystals" type="EtcItem">
+	<item id="60370" name="泰爾錫搜魂石100個組禮盒" type="EtcItem">
 		<!-- Double-click to obtain Tersi's Soul Crystal Pack (100 pcs.). -->
 		<set name="icon" val="icon.bm_2018_special_box" />
 		<set name="default_action" val="PEEL" />
@@ -1227,7 +1227,7 @@
 			<item id="82288" min="100" max="100" chance="100" /> <!-- Tersi's Soul Crystal Pack -->
 		</capsuled_items>
 	</item>
-	<item id="60371" name="Radiant Accessory Pack" type="EtcItem">
+	<item id="60371" name="彩虹飾品禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1283,7 +1283,7 @@
 			<item id="48417" min="1" max="1" chance="2.380952" /> <!-- Ruler's Authority - Genesis - Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="60372" name="Festival's Gift Box" type="EtcItem">
+	<item id="60372" name="慶典禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. There is a chance to obtain an additional reward for the Festival rankings. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1342,7 +1342,7 @@
 			<item id="36946" min="1" max="1" chance="2.222222" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60373" name="+6 Superior La Vie En Rose's Brooch Pack" type="EtcItem">
+	<item id="60373" name="+6最高級拉菲安洛茲的胸針禮盒" type="EtcItem">
 		<!-- Double-click to obtain +6 La Vie En Rose's Superior Brooch. -->
 		<set name="icon" val="icon.sayha2017_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1355,7 +1355,7 @@
 			<item id="29547" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- La Vie En Rose's Superior Brooch -->
 		</capsuled_items>
 	</item>
-	<item id="60374" name="Wind Dragon's Treasures" type="EtcItem">
+	<item id="60374" name="風龍的寶藏" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -1414,7 +1414,7 @@
 			<item id="81444" min="1" max="1" chance="2.222222" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60375" name="Attendance Gift Box" type="EtcItem">
+	<item id="60375" name="出席禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_gold" />
 		<set name="default_action" val="PEEL" />
@@ -1436,7 +1436,7 @@
 			<item id="81815" min="20" max="20" chance="100" /> <!-- Common Homunculus' Hourglass -->
 		</capsuled_items>
 	</item>
-	<item id="60376" name="Crystal of Dyes Pack (100 pcs.)" type="EtcItem">
+	<item id="60376" name="染料結晶100個/箱" type="EtcItem">
 		<!-- Double-click to obtain Crystal of Dyes (100 pcs.). -->
 		<set name="icon" val="icon.bm_2018_special_box" />
 		<set name="default_action" val="PEEL" />
@@ -1449,7 +1449,7 @@
 			<item id="81134" min="100" max="100" chance="100" /> <!-- Crystal of Dyes -->
 		</capsuled_items>
 	</item>
-	<item id="60377" name="Freya's Ice Pack" type="EtcItem">
+	<item id="60377" name="芙蕾雅冰凍禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -1499,7 +1499,7 @@
 			<item id="81751" min="1" max="1" chance="2.777778" /> <!-- Ruler's Authority - Chaos - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="60378" name="Final Reward Chest" type="EtcItem">
+	<item id="60378" name="最終獎勵禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="default_action" val="CAPSULE" />
@@ -1520,7 +1520,7 @@
 			<item id="82344" min="100" max="100" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="60379" name="Season Reward Chest" type="EtcItem">
+	<item id="60379" name="賽季獎勵禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1551,7 +1551,7 @@
 			<item id="39573" min="1" max="1" chance="7.1" /> <!-- Sealed Talisman of Insanity -->
 		</capsuled_items>
 	</item>
-	<item id="60380" name="Anakim's Blessing Rune" additionalName="30-day" type="EtcItem">
+	<item id="60380" name="亞納祝福古文" additionalName="30-day" type="EtcItem">
 		<!-- An exclusive item that can only be crafted on servers blessed by Anakim. When in inventory, PvE damage +10%. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="immediate_effect" val="true" />
@@ -1564,7 +1564,7 @@
 			<skill id="29527" level="1" /> <!-- Anakim's Blessing Rune -->
 		</skills>
 	</item>
-	<item id="60381" name="Soulshot Supplies" additionalName="Event" type="EtcItem">
+	<item id="60381" name="裝有靈魂彈的補給品" additionalName="Event" type="EtcItem">
 		<!-- An exclusive item that can only be crafted on servers blessed by Anakim. Double-click to obtain Soulshot (30,000 pcs.). -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1579,7 +1579,7 @@
 			<item id="33780" min="30000" max="30000" chance="100" /> <!-- Soulshot - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60382" name="Spiritshot Supplies" additionalName="Event" type="EtcItem">
+	<item id="60382" name="裝有魔靈彈的補給品" additionalName="Event" type="EtcItem">
 		<!-- An exclusive item that can only be crafted on servers blessed by Anakim. Double-click to obtain Spiritshot (30,000 pcs.). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1594,7 +1594,7 @@
 			<item id="33794" min="30000" max="30000" chance="100" /> <!-- Spiritshot - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60383" name="Anakim's Growth Support Box" additionalName="Event" type="EtcItem">
+	<item id="60383" name="亞納成長支援禮盒" additionalName="Event" type="EtcItem">
 		<!-- An exclusive item that can only be crafted on servers blessed by Anakim. Double-click to obtain Emperor's Special Cocktail (12 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Honey Dark Beer (24 pcs.). -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="PEEL" />
@@ -1612,7 +1612,7 @@
 			<item id="81012" min="12" max="12" chance="100" /> <!-- Wondrous Cocktail - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60384" name="Cool Summer Slushie" additionalName="Event" type="EtcItem">
+	<item id="60384" name="涼爽的刨冰" additionalName="Event" type="EtcItem">
 		<!-- When used, acquired XP/ SP +10%, P./ M. Atk. +10% for 30 min. The effect is removed upon entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sweet_icewater" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1627,7 +1627,7 @@
 			<skill id="29528" level="1" /> <!-- Cool Summer Slushie -->
 		</skills>
 	</item>
-	<item id="60385" name="Soulshot/ Spiritshot Ticket" additionalName="Event" type="EtcItem">
+	<item id="60385" name="靈魂彈/魔靈彈交換券" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for 50,000 Soulshots or Spiritshots through the Game Assistant. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1637,7 +1637,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60386" name="Hunter's Coin" type="EtcItem">
+	<item id="60386" name="獵者標章" type="EtcItem">
 		<!-- Filled with power of thousands of slain monsters. Add to a collection to enable its effect. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
 		<set name="immediate_effect" val="true" />
@@ -1647,7 +1647,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60387" name="Hardin's Treasure Chest" type="EtcItem">
+	<item id="60387" name="哈汀寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1711,7 +1711,7 @@
 			<item id="60312" min="1" max="1" chance="100" /> <!-- Mysterious Crystal Casket -->
 		</capsuled_items>
 	</item>
-	<item id="60388" name="Hardin's Treasure Kit Lv. 1" type="EtcItem">
+	<item id="60388" name="哈汀寶箱組合包 Lv1" type="EtcItem">
 		<!-- Double-click to obtain Hardin's Treasure Chest (100 pcs.), Swift Attack Cookie (20 pcs.), Swift Defense Cookie (20 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -1729,7 +1729,7 @@
 			<item id="82187" min="20" max="20" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60389" name="Hardin's Treasure Kit Lv. 2" type="EtcItem">
+	<item id="60389" name="哈汀寶箱組合包 Lv2" type="EtcItem">
 		<!-- Double-click to obtain Hardin's Treasure Chest (100 pcs.), Swift Attack Cookie (40 pcs.), Swift Defense Cookie (40 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -1747,7 +1747,7 @@
 			<item id="82187" min="40" max="40" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60390" name="Hardin's Treasure Kit Lv. 3" type="EtcItem">
+	<item id="60390" name="哈汀寶箱組合包 Lv3" type="EtcItem">
 		<!-- Double-click to obtain Hardin's Treasure Chest (100 pcs.), Swift Attack Cookie (80 pcs.), Swift Defense Cookie (80 pcs.). -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
@@ -1765,7 +1765,7 @@
 			<item id="82187" min="80" max="80" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60391" name="Kit: Einhasad's Golden Coin (90 pcs.)" type="EtcItem">
+	<item id="60391" name="殷海薩金幣90個禮盒" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Golden Coin (90 pcs.). -->
 		<set name="icon" val="BranchIcon.Icon.bm_coin_pack_90" />
 		<set name="default_action" val="PEEL" />
@@ -1778,7 +1778,7 @@
 			<item id="48472" min="90" max="90" chance="100" /> <!-- Einhasad's Golden Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60392" name="Kit: Einhasad's Golden Coin (400 pcs.)" type="EtcItem">
+	<item id="60392" name="殷海薩金幣400個禮盒" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Golden Coin (400 pcs.). -->
 		<set name="icon" val="BranchIcon.Icon.bm_coin_pack_400" />
 		<set name="default_action" val="PEEL" />
@@ -1791,7 +1791,7 @@
 			<item id="48472" min="400" max="400" chance="100" /> <!-- Einhasad's Golden Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60393" name="Season Pass Pack of Forgotten Spellbook" type="EtcItem">
+	<item id="60393" name="L2Pass被遺忘的魔法書禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -1811,7 +1811,7 @@
 			<item id="48876" min="1" max="1" chance="25" /> <!-- Forgotten Spellbook - Chapter 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60394" name="Season Pass Box" type="EtcItem">
+	<item id="60394" name="L2Pass結晶禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1833,7 +1833,7 @@
 			<item id="80839" min="2" max="2" chance="16.666667" /> <!-- Crystal of Dawn -->
 		</capsuled_items>
 	</item>
-	<item id="60395" name="Season Pass Pack of Augmenting Stone" type="EtcItem">
+	<item id="60395" name="L2Pass精煉石禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1862,7 +1862,7 @@
 			<item id="82343" min="1" max="1" chance="7.692308" /> <!-- Augmenting Stone: Artifact Book -->
 		</capsuled_items>
 	</item>
-	<item id="60396" name="Season Pass Pack of Energy" type="EtcItem">
+	<item id="60396" name="L2Pass氣息禮盒" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1882,7 +1882,7 @@
 			<item id="80964" min="1" max="1" chance="25" /> <!-- Energy of Protection -->
 		</capsuled_items>
 	</item>
-	<item id="60397" name="Season Pass Pack of Supplies" type="EtcItem">
+	<item id="60397" name="L2Pass消耗品箱" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1900,7 +1900,7 @@
 			<item id="80842" min="100" max="100" chance="100" /> <!-- Honey Dark Beer -->
 		</capsuled_items>
 	</item>
-	<item id="60398" name="Lord's Red Cloak" additionalName="Event" type="Armor">
+	<item id="60398" name="火紅君主斗篷" additionalName="Event" type="Armor">
 		<!-- A cloak for true heroes who have been in Lineage II from the very beginning. Cannot be enchanted, augmented or assigned an attribute. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1917,7 +1917,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="60399" name="Mermaid's Chest" type="EtcItem">
+	<item id="60399" name="美人魚禮盒" type="EtcItem">
 		<!-- Double-click to obtain Swift Defense Cookie and one of various items. -->
 		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="default_action" val="PEEL" />

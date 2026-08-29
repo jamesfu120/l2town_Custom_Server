@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23600" name="Stone: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="23600" name="防具用強化輔助石-R級" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +15% for R-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for full-body armor). -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -15,7 +15,7 @@
 			<skill id="9208" level="1" /> <!-- R-grade Lucky Clover -->
 		</skills>
 	</item>
-	<item id="23601" name="PA - Gift Box" additionalName="Event" type="EtcItem">
+	<item id="23601" name="活動禮物箱" additionalName="Event" type="EtcItem">
 		<!-- A gift that can be received after playing with active PA for 1 h. Double-click to open and get a gift. PA only. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -30,7 +30,7 @@
 			<item id="23490" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="23602" name="Hussar's Wing" type="Armor">
+	<item id="23602" name="輕騎之翼" type="Armor">
 		<!-- A unique armor piece used first by the Polish army between the XVI-XVIII centuries. Equipped in the cloak slot. -->
 		<set name="icon" val="BranchSys3.icon1.g_agathion_hussar_pl" />
 		<set name="default_action" val="EQUIP" />
@@ -55,7 +55,7 @@
 			<stat type="darkRes">7</stat>
 		</stats>
 	</item>
-	<item id="23603" name="Automatic Appearance: Emerald Weapon" type="EtcItem">
+	<item id="23603" name="光束武器自動轉換" type="EtcItem">
 		<!-- Double-click to change your weapon appearance into that of an Emerald one (including shields and sigils). Note!. Using the Conversion skill resets the change (e.g., one-handed sword -> two-handed sword). -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
 		<set name="is_tradable" val="false" />
@@ -66,7 +66,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="material" val="COTTON" />
 	</item>
-	<item id="23604" name="Automatic Appearance: Japanese Weapon" type="EtcItem">
+	<item id="23604" name="和風武器自動轉換" type="EtcItem">
 		<!-- Double-click to change your weapon appearance into that of a Japanese one (including shields and sigils). Note!. Using the Conversion skill resets the change (e.g., one-handed sword -> two-handed sword). -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
 		<set name="is_tradable" val="false" />
@@ -77,7 +77,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="material" val="COTTON" />
 	</item>
-	<item id="23605" name="Package: SP Rune 50% (1-hour) (1 pc.)" type="EtcItem">
+	<item id="23605" name="SP古文 50% (1小時) 1個/組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 50% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -92,7 +92,7 @@
 			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23606" name="Extra Pass: Kartia's Labyrinth Lv. 85 (Solo)" type="EtcItem">
+	<item id="23606" name="卡爾提亞迷宮入場券-等級85單人" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth solo dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -106,7 +106,7 @@
 			<skill id="22842" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 85 -->
 		</skills>
 	</item>
-	<item id="23607" name="Extra Pass: Kartia's Labyrinth Lv. 90 (Solo)" type="EtcItem">
+	<item id="23607" name="卡爾提亞迷宮入場券-等級90單人" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth solo dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -120,7 +120,7 @@
 			<skill id="22843" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 90 -->
 		</skills>
 	</item>
-	<item id="23608" name="Extra Pass: Kartia's Labyrinth Lv. 95 (Solo)" type="EtcItem">
+	<item id="23608" name="卡爾提亞迷宮入場券-等級95單人" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth solo dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -134,7 +134,7 @@
 			<skill id="22844" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 95 -->
 		</skills>
 	</item>
-	<item id="23609" name="Extra Pass: Kartia's Labyrinth Lv. 85 (Party)" type="EtcItem">
+	<item id="23609" name="卡爾提亞迷宮入場券-等級85隊伍" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth party dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -148,7 +148,7 @@
 			<skill id="22845" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 85 -->
 		</skills>
 	</item>
-	<item id="23610" name="Extra Pass: Kartia's Labyrinth Lv. 90 (Party)" type="EtcItem">
+	<item id="23610" name="卡爾提亞迷宮入場券-等級90隊伍" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth party dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -162,7 +162,7 @@
 			<skill id="22846" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 90 -->
 		</skills>
 	</item>
-	<item id="23611" name="Extra Pass: Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
+	<item id="23611" name="卡爾提亞迷宮入場券-等級95隊伍" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth party dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -176,7 +176,7 @@
 			<skill id="22847" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 95 -->
 		</skills>
 	</item>
-	<item id="23612" name="Elixir of Life (Novice)" type="EtcItem">
+	<item id="23612" name="生命靈藥-初學者用" type="EtcItem">
 		<!-- Recovers 50% HP. Required level: 1-83. Can only be used on yourself. Cooldown: 5 min. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_s_i00" />
 		<set name="weight" val="5" />
@@ -197,7 +197,7 @@
 			<skill id="22044" level="7" /> <!-- Elixir of Life (Novice) -->
 		</skills>
 	</item>
-	<item id="23613" name="2012 Tournament Winner's Crown - Cain" type="Armor">
+	<item id="23613" name="2012錦標賽的優勝者王冠-凱因" type="Armor">
 		<!-- Crown bestowed upon the winner of the tournament. The hero's name will be forever engraved in server history. -->
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -211,7 +211,7 @@
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23614" name="Vitality Maintaining Potion (10-min.)" additionalName="Unlimited per Week" type="EtcItem">
+	<item id="23614" name="活力維持藥水-10分" additionalName="Unlimited per Week" type="EtcItem">
 		<!-- Sustains Vitality for 10 min. Cooldown: 30 min. Can be used more than 5 times a week. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
@@ -232,7 +232,7 @@
 			<skill id="22848" level="1" /> <!-- Vitality Sustaining Potion -->
 		</skills>
 	</item>
-	<item id="23615" name="Black Gem Mask" additionalName="Vitality / 7-day / Unlimited per Week" type="Armor">
+	<item id="23615" name="黑寶石面具" additionalName="Vitality / 7-day / Unlimited per Week" type="Armor">
 		<!-- A mask decorated with black gemstones. -->
 		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -249,7 +249,7 @@
 			<skill id="21353" level="1" /> <!-- Vitality Recovery -->
 		</skills>
 	</item>
-	<item id="23616" name="Artisan's Goggles" additionalName="Vitality / 7-day / Unlimited per Week" type="Armor">
+	<item id="23616" name="工匠的護目鏡" additionalName="Vitality / 7-day / Unlimited per Week" type="Armor">
 		<!-- Large round goggles to protect your eyes. Uses 2 accessory slots. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -266,7 +266,7 @@
 			<skill id="21354" level="1" /> <!-- Vitality Recovery -->
 		</skills>
 	</item>
-	<item id="23617" name="Package: Vitality Maintaining Potion" additionalName="Unlimited per Week" type="EtcItem">
+	<item id="23617" name="活力維持藥水組" additionalName="Unlimited per Week" type="EtcItem">
 		<!-- A package with a prize. Double-click to obtain Vitality Sustaining Potion that can be used more than 5 times a week. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -282,7 +282,7 @@
 			<item id="23614" min="1" max="1" chance="100" /> <!-- Vitality Sustaining Potion (10-min.) - Unlimited per Week -->
 		</capsuled_items>
 	</item>
-	<item id="23618" name="Package: Black Gem Mask (7-day)" additionalName="Vitality / Unlimited per Week" type="EtcItem">
+	<item id="23618" name="黑寶石面具 7日/組" additionalName="Vitality / Unlimited per Week" type="EtcItem">
 		<!-- Double-click to obtain Black Gem Mask (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -298,7 +298,7 @@
 			<item id="23615" min="1" max="1" chance="100" /> <!-- Black Gem Mask - Vitality / 7-day / Unlimited per Week -->
 		</capsuled_items>
 	</item>
-	<item id="23619" name="Package: Artisan's Goggles (7-day)" additionalName="Vitality / Unlimited per Week" type="EtcItem">
+	<item id="23619" name="工匠的護目鏡 7日/組" additionalName="Vitality / Unlimited per Week" type="EtcItem">
 		<!-- Double-click to obtain Artisan's Goggles (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -314,7 +314,7 @@
 			<item id="23616" min="1" max="1" chance="100" /> <!-- Artisan's Goggles - Vitality / 7-day / Unlimited per Week -->
 		</capsuled_items>
 	</item>
-	<item id="23620" name="Dragon Vitality Replenishing Potion" additionalName="Unlimited per Week" type="EtcItem">
+	<item id="23620" name="龍之氣息充能藥水" additionalName="Unlimited per Week" type="EtcItem">
 		<!-- Recovers a certain amount of Vitality. A Vitality item with unlimited usage. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="is_tradable" val="false" />
@@ -333,7 +333,7 @@
 			<skill id="22849" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="23621" name="Vitality Suspending Potion (30-min.)" additionalName="Unlimited per Week" type="EtcItem">
+	<item id="23621" name="活力停滯藥水-30分" additionalName="Unlimited per Week" type="EtcItem">
 		<!-- A magic potion that sustains Vitality. Duration: 30 min. When used, sustains Vitality, but no Vitality bonus is applied. Cooldown: 60 min. Can be used more than 5 times a week. -->
 		<set name="icon" val="BranchSys3.lcon.g_vitality_potion_stop" />
 		<set name="weight" val="36" />
@@ -355,7 +355,7 @@
 			<skill id="22850" level="1" /> <!-- Vitality Suspending Potion -->
 		</skills>
 	</item>
-	<item id="23622" name="Name Change Ticket" type="EtcItem">
+	<item id="23622" name="姓名變更" type="EtcItem">
 		<!-- To change your character's name, follow these steps:. 1. Create a new character with the desired name on your account. 2. Submit a ticket to our Support team with 'Rename Character' in the title and indicate the new nickname. 3. The character with the item in the inventory will be renamed. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="100" />
@@ -368,7 +368,7 @@
 		<set name="default_action" val="START_QUEST" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="23623" name="Gender Change Ticket" type="EtcItem">
+	<item id="23623" name="性別變更" type="EtcItem">
 		<!-- To change the appearance of your character, follow these steps:. 1. Submit a ticket to our Support team from your account. 2. Put 'Change Appearance' in the ticket title. The appearance of the character with this item in the inventory will be changed. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="weight" val="100" />
@@ -381,7 +381,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="23624" name="Gorale Hat" type="Armor">
+	<item id="23624" name="區拉雷高地帽" type="Armor">
 		<!-- A hat worn by mountain dwellers. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys3.icon1.g_hair_gorale_hat_pl" />
 		<set name="default_action" val="EQUIP" />
@@ -395,7 +395,7 @@
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23625" name="Fancy Hat" type="Armor">
+	<item id="23625" name="別緻羽毛帽" type="Armor">
 		<!-- A fashionable hat worn by the Polish aristocracy in the 17th century. Decorated with feathers. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys3.icon1.g_hair_fancy_hat_pl" />
 		<set name="default_action" val="EQUIP" />
@@ -409,7 +409,7 @@
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23626" name="Hat of Cheers" type="Armor">
+	<item id="23626" name="應援帽" type="Armor">
 		<!-- A red-and-white hat worn by Polish fans at soccer games. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys3.icon1.g_hair_jester_hat_pl" />
 		<set name="default_action" val="EQUIP" />
@@ -423,7 +423,7 @@
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23627" name="Chocolate Doughnut" type="EtcItem">
+	<item id="23627" name="巧克力甜甜圈" type="EtcItem">
 		<!-- The famous Polish chocolate doughnut. Sustains Vitality for 30 min. Cooldown: 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys3.icon1.g_chocolate_doughnut_pl" />
 		<set name="is_sellable" val="false" />
@@ -438,7 +438,7 @@
 			<skill id="22851" level="2" /> <!-- Chocolate Doughnut - Maintain Vitality -->
 		</skills>
 	</item>
-	<item id="23628" name="Piroscki" type="EtcItem">
+	<item id="23628" name="俄羅斯餡餅" type="EtcItem">
 		<!-- Famous Polish dish. Restores vitality upon XP gain through hunting for 30 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys3.icon1.g_dumpling_pl" />
 		<set name="is_sellable" val="false" />
@@ -453,7 +453,7 @@
 			<skill id="22852" level="1" /> <!-- Piroscki - Replenish Vitality -->
 		</skills>
 	</item>
-	<item id="23629" name="Torun Gingerbread" additionalName="1-hour" type="EtcItem">
+	<item id="23629" name="托倫生薑麵包" additionalName="1-hour" type="EtcItem">
 		<!-- Polish bread. Acquired XP +50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -469,7 +469,7 @@
 			<skill id="22853" level="1" /> <!-- Torun Gingerbread (1-h.) -->
 		</skills>
 	</item>
-	<item id="23630" name="Torun Gingerbread" additionalName="1.5-hour" type="EtcItem">
+	<item id="23630" name="托倫生薑麵包" additionalName="1.5-hour" type="EtcItem">
 		<!-- Polish bread. Acquired XP +50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -487,7 +487,7 @@
 			<skill id="22854" level="1" /> <!-- Torun Gingerbread (1.5-h.) -->
 		</skills>
 	</item>
-	<item id="23631" name="Torun Gingerbread" additionalName="2-hour" type="EtcItem">
+	<item id="23631" name="托倫生薑麵包" additionalName="2-hour" type="EtcItem">
 		<!-- Polish bread. Acquired XP +50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -503,7 +503,7 @@
 			<skill id="22855" level="1" /> <!-- Torun Gingerbread (2-h.) -->
 		</skills>
 	</item>
-	<item id="23632" name="Torun Gingerbread" additionalName="2.5-hour" type="EtcItem">
+	<item id="23632" name="托倫生薑麵包" additionalName="2.5-hour" type="EtcItem">
 		<!-- Polish bread. Acquired XP +50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -521,7 +521,7 @@
 			<skill id="22856" level="1" /> <!-- Torun Gingerbread (2.5-h.) -->
 		</skills>
 	</item>
-	<item id="23633" name="Torun Gingerbread" additionalName="3-hour" type="EtcItem">
+	<item id="23633" name="托倫生薑麵包" additionalName="3-hour" type="EtcItem">
 		<!-- Polish bread. Acquired XP +50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -539,7 +539,7 @@
 			<skill id="22857" level="1" /> <!-- Torun Gingerbread (3-h.) -->
 		</skills>
 	</item>
-	<item id="23634" name="Torun Gingerbread" additionalName="4-hour" type="EtcItem">
+	<item id="23634" name="托倫生薑麵包" additionalName="4-hour" type="EtcItem">
 		<!-- Polish bread. Acquired XP +50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -557,7 +557,7 @@
 			<skill id="22858" level="1" /> <!-- Torun Gingerbread (4-h.) -->
 		</skills>
 	</item>
-	<item id="23635" name="flint" type="EtcItem">
+	<item id="23635" name="燃燒的火堆用打火石" type="EtcItem">
 		<!-- Creates a campfire that lasts for 30 min. The warmth of the bonfire reduces the amount of MP consumption during skill use, and increases HP/ MP/ CP Recovery Rate. The closer you sit to the fire, the better the effect. All members. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
 		<set name="is_oly_restricted" val="true" />
@@ -573,7 +573,7 @@
 			<skill id="22860" level="1" /> <!-- Summon Roaring Campfire -->
 		</skills>
 	</item>
-	<item id="23636" name="Polish Cloak" type="Armor">
+	<item id="23636" name="波蘭專用斗篷" type="Armor">
 		<!-- Cloak for Poland only. Elaborately embroidered. -->
 		<set name="icon" val="BranchSys3.icon1.g_pl_cape" />
 		<set name="default_action" val="EQUIP" />
@@ -599,7 +599,7 @@
 			<stat type="darkRes">7</stat>
 		</stats>
 	</item>
-	<item id="23637" name="Blessed Antharas' Earring" additionalName="3-day" type="Armor">
+	<item id="23637" name="祝福的安塔瑞斯耳環" additionalName="3-day" type="Armor">
 		<!-- Time-limited item. MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -621,7 +621,7 @@
 			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
 		</skills>
 	</item>
-	<item id="23638" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
+	<item id="23638" name="祝福的安塔瑞斯耳環" additionalName="7-day" type="Armor">
 		<!-- Time-limited item. MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -643,7 +643,7 @@
 			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
 		</skills>
 	</item>
-	<item id="23639" name="Blessed Valakas' Necklace" additionalName="3-day" type="Armor">
+	<item id="23639" name="祝福的巴拉卡斯項鍊" additionalName="3-day" type="Armor">
 		<!-- Time-limited item. MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold, and grants immunity to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -665,7 +665,7 @@
 			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
 		</skills>
 	</item>
-	<item id="23640" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
+	<item id="23640" name="祝福的巴拉卡斯項鍊" additionalName="7-day" type="Armor">
 		<!-- Time-limited item. MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold, and grants immunity to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -687,7 +687,7 @@
 			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
 		</skills>
 	</item>
-	<item id="23641" name="Star Agathion Pack" type="EtcItem">
+	<item id="23641" name="巨星壺精禮盒" type="EtcItem">
 		<!-- Double-click to obtain a random agathion (7-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="weight" val="100" />
@@ -703,7 +703,7 @@
 			<skill id="9632" level="1" /> <!-- Star Agathion Pack -->
 		</skills>
 	</item>
-	<item id="23642" name="Vitality Replenishing Star Candy" type="EtcItem">
+	<item id="23642" name="活力充能星星糖" type="EtcItem">
 		<!-- Recharges a certain amount of Vitality when used. No limitations on use. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
 		<set name="is_sellable" val="false" />
@@ -721,7 +721,7 @@
 			<skill id="22991" level="1" /> <!-- Vitality Replenishing Star Candy -->
 		</skills>
 	</item>
-	<item id="23643" name="Vitality Recovering Star Candy" type="EtcItem">
+	<item id="23643" name="活力恢復星星糖" type="EtcItem">
 		<!-- When used, recovers Vitality for 10 min. A Vitality item with unlimited usage. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
 		<set name="weight" val="1" />
@@ -737,7 +737,7 @@
 			<skill id="22992" level="1" /> <!-- Vitality Recovering Star Candy -->
 		</skills>
 	</item>
-	<item id="23644" name="Vitality Maintaining Star Candy" type="EtcItem">
+	<item id="23644" name="活力維持星星糖" type="EtcItem">
 		<!-- When used, sustains Vitality for 10 min. Vitality item with unlimited usage. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
 		<set name="weight" val="36" />
@@ -753,7 +753,7 @@
 			<skill id="22993" level="1" /> <!-- Vitality Sustaining Star Candy -->
 		</skills>
 	</item>
-	<item id="23645" name="MP Recovery Potion" type="EtcItem">
+	<item id="23645" name="MP恢復藥水" type="EtcItem">
 		<!-- A magic potion that instantly recovers 50% MP when used. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="5" />
@@ -770,7 +770,7 @@
 			<skill id="22214" level="2" /> <!-- MP Recovery Potion -->
 		</skills>
 	</item>
-	<item id="23646" name="High-grade Stone: Enchant R-grade Weapon" type="EtcItem">
+	<item id="23646" name="武器用高級強化輔助石-R級" type="EtcItem">
 		<!-- Enchant success rate +20% for R-grade weapons. Only for items enchanted from +3 to +9. Cannot be used with items enchanted to +10 and higher. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -785,7 +785,7 @@
 			<skill id="9573" level="1" /> <!-- High-grade Stone: Enchant R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23647" name="High-grade Stone: Enchant R-grade Armor" type="EtcItem">
+	<item id="23647" name="防具用高級強化輔助石-R級" type="EtcItem">
 		<!-- Enchant success rate +30% for R-grade armor. Only for items enchanted from +3 to +9. Cannot be used with items enchanted to +10 and higher. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -800,7 +800,7 @@
 			<skill id="9574" level="1" /> <!-- High-grade Stone: Enchant R-grade Armor -->
 		</skills>
 	</item>
-	<item id="23648" name="Knighthood's Fortune Box" type="EtcItem">
+	<item id="23648" name="騎士團的幸運禮盒" type="EtcItem">
 		<!-- Double-click to obtain supplies used by knights, such as Nevit's Rune Box, various Vitailty Star Candies and firecrackers. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
 		<set name="is_sellable" val="false" />
@@ -815,7 +815,7 @@
 			<skill id="22861" level="1" /> <!-- Knight Order's Lucky Pack -->
 		</skills>
 	</item>
-	<item id="23649" name="Royal Guard's Fortune Box" type="EtcItem">
+	<item id="23649" name="親衛隊的幸運禮盒" type="EtcItem">
 		<!-- Double-click to obtain supplies used by royal guards, such as Scrolls of Blessing of any grade, Unbind Scrolls of any grade, various Enchant Scrolls and Enchant Stones. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="is_sellable" val="false" />
@@ -829,7 +829,7 @@
 			<skill id="22862" level="1" /> <!-- Royal Guard's Lucky Pack -->
 		</skills>
 	</item>
-	<item id="23650" name="Blessed R-grade Weapon Appearance Stone" additionalName="1-day" type="EtcItem">
+	<item id="23650" name="祝福的武器加工石-R級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -847,7 +847,7 @@
 			<skill id="22863" level="1" /> <!-- Blessed Appearance Stone: R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23651" name="Blessed S-grade Weapon Appearance Stone" additionalName="1-day" type="EtcItem">
+	<item id="23651" name="祝福的武器加工石-S級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -865,7 +865,7 @@
 			<skill id="22864" level="1" /> <!-- Blessed Appearance Stone: S-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23652" name="Blessed A-grade Weapon Appearance Stone" additionalName="1-day" type="EtcItem">
+	<item id="23652" name="祝福的武器加工石-A級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -883,7 +883,7 @@
 			<skill id="22865" level="1" /> <!-- Blessed Appearance Stone: A-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23653" name="Blessed B-grade Weapon Appearance Stone" additionalName="1-day" type="EtcItem">
+	<item id="23653" name="祝福的武器加工石-B級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -901,7 +901,7 @@
 			<skill id="22866" level="1" /> <!-- Blessed Appearance Stone: B-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23654" name="Blessed C-grade Weapon Appearance Stone" additionalName="1-day" type="EtcItem">
+	<item id="23654" name="祝福的武器加工石-C級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -919,7 +919,7 @@
 			<skill id="22867" level="1" /> <!-- Blessed Appearance Stone: C-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23655" name="Blessed D-grade Weapon Appearance Stone" additionalName="1-day" type="EtcItem">
+	<item id="23655" name="祝福的武器加工石-D級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -937,7 +937,7 @@
 			<skill id="22868" level="1" /> <!-- Blessed Appearance Stone: D-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23656" name="Blessed R-grade Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23656" name="祝福的武器加工石-R級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -955,7 +955,7 @@
 			<skill id="22869" level="1" /> <!-- Blessed Appearance Stone: R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23657" name="Blessed S-grade Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23657" name="祝福的武器加工石-S級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -973,7 +973,7 @@
 			<skill id="22870" level="1" /> <!-- Blessed Appearance Stone: S-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23658" name="Blessed A-grade Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23658" name="祝福的武器加工石-A級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -991,7 +991,7 @@
 			<skill id="22871" level="1" /> <!-- Blessed Appearance Stone: A-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23659" name="Blessed B-grade Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23659" name="祝福的武器加工石-B級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1009,7 +1009,7 @@
 			<skill id="22872" level="1" /> <!-- Blessed Appearance Stone: B-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23660" name="Blessed C-grade Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23660" name="祝福的武器加工石-C級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1027,7 +1027,7 @@
 			<skill id="22873" level="1" /> <!-- Blessed Appearance Stone: C-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23661" name="Blessed D-grade Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23661" name="祝福的武器加工石-D級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1045,7 +1045,7 @@
 			<skill id="22874" level="1" /> <!-- Blessed Appearance Stone: D-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23662" name="Blessed R-grade Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="23662" name="祝福的武器加工石-R級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1063,7 +1063,7 @@
 			<skill id="22875" level="1" /> <!-- Blessed Appearance Stone: R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23663" name="Blessed S-grade Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="23663" name="祝福的武器加工石-S級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1081,7 +1081,7 @@
 			<skill id="22876" level="1" /> <!-- Blessed Appearance Stone: S-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23664" name="Blessed A-grade Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="23664" name="祝福的武器加工石-A級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1099,7 +1099,7 @@
 			<skill id="22877" level="1" /> <!-- Blessed Appearance Stone: A-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23665" name="Blessed B-grade Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="23665" name="祝福的武器加工石-B級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1117,7 +1117,7 @@
 			<skill id="22878" level="1" /> <!-- Blessed Appearance Stone: B-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23666" name="Blessed C-grade Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="23666" name="祝福的武器加工石-C級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1135,7 +1135,7 @@
 			<skill id="22879" level="1" /> <!-- Blessed Appearance Stone: C-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23667" name="Blessed D-grade Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="23667" name="祝福的武器加工石-D級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1153,7 +1153,7 @@
 			<skill id="22880" level="1" /> <!-- Blessed Appearance Stone: D-grade Weapon -->
 		</skills>
 	</item>
-	<item id="23668" name="Blessed Appearance Stone: R-grade Armor" additionalName="1-day" type="EtcItem">
+	<item id="23668" name="祝福的防具加工石-R級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1170,7 +1170,7 @@
 			<skill id="22881" level="1" /> <!-- Blessed Scroll: Modify R-grade Armor -->
 		</skills>
 	</item>
-	<item id="23669" name="Blessed Appearance Stone: S-grade Armor" additionalName="1-day" type="EtcItem">
+	<item id="23669" name="祝福的防具加工石-S級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1187,7 +1187,7 @@
 			<skill id="22882" level="1" /> <!-- Blessed Scroll: Modify S-grade Armor -->
 		</skills>
 	</item>
-	<item id="23670" name="Blessed Appearance Stone: A-grade Armor" additionalName="1-day" type="EtcItem">
+	<item id="23670" name="祝福的防具加工石-A級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1204,7 +1204,7 @@
 			<skill id="22883" level="1" /> <!-- Blessed Scroll: Modify A-grade Armor -->
 		</skills>
 	</item>
-	<item id="23671" name="Blessed Appearance Stone: B-grade Armor" additionalName="1-day" type="EtcItem">
+	<item id="23671" name="祝福的防具加工石-B級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1221,7 +1221,7 @@
 			<skill id="22884" level="1" /> <!-- Blessed Scroll: Modify B-grade Armor -->
 		</skills>
 	</item>
-	<item id="23672" name="Blessed Appearance Stone: C-grade Armor" additionalName="1-day" type="EtcItem">
+	<item id="23672" name="祝福的防具加工石-C級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1238,7 +1238,7 @@
 			<skill id="22885" level="1" /> <!-- Blessed Scroll: Modify C-grade Armor -->
 		</skills>
 	</item>
-	<item id="23673" name="Blessed Appearance Stone: D-grade Armor" additionalName="1-day" type="EtcItem">
+	<item id="23673" name="祝福的防具加工石-D級" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1255,7 +1255,7 @@
 			<skill id="22886" level="1" /> <!-- Blessed Scroll: Modify D-grade Armor -->
 		</skills>
 	</item>
-	<item id="23674" name="Blessed Appearance Stone: R-grade Armor" additionalName="7-day" type="EtcItem">
+	<item id="23674" name="祝福的防具加工石-R級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1272,7 +1272,7 @@
 			<skill id="22887" level="1" /> <!-- Blessed Scroll: Modify R-grade Armor -->
 		</skills>
 	</item>
-	<item id="23675" name="Blessed Appearance Stone: S-grade Armor" additionalName="7-day" type="EtcItem">
+	<item id="23675" name="祝福的防具加工石-S級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1289,7 +1289,7 @@
 			<skill id="22888" level="1" /> <!-- Blessed Scroll: Modify S-grade Armor -->
 		</skills>
 	</item>
-	<item id="23676" name="Blessed Appearance Stone: A-grade Armor" additionalName="7-day" type="EtcItem">
+	<item id="23676" name="祝福的防具加工石-A級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1306,7 +1306,7 @@
 			<skill id="22889" level="1" /> <!-- Blessed Scroll: Modify A-grade Armor -->
 		</skills>
 	</item>
-	<item id="23677" name="Blessed Appearance Stone: B-grade Armor" additionalName="7-day" type="EtcItem">
+	<item id="23677" name="祝福的防具加工石-B級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1323,7 +1323,7 @@
 			<skill id="22890" level="1" /> <!-- Blessed Scroll: Modify B-grade Armor -->
 		</skills>
 	</item>
-	<item id="23678" name="Blessed Appearance Stone: C-grade Armor" additionalName="7-day" type="EtcItem">
+	<item id="23678" name="祝福的防具加工石-C級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1340,7 +1340,7 @@
 			<skill id="22891" level="1" /> <!-- Blessed Scroll: Modify C-grade Armor -->
 		</skills>
 	</item>
-	<item id="23679" name="Blessed Appearance Stone: D-grade Armor" additionalName="7-day" type="EtcItem">
+	<item id="23679" name="祝福的防具加工石-D級" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1357,7 +1357,7 @@
 			<skill id="22892" level="1" /> <!-- Blessed Scroll: Modify D-grade Armor -->
 		</skills>
 	</item>
-	<item id="23680" name="Blessed Appearance Stone: R-grade Armor" additionalName="30-day" type="EtcItem">
+	<item id="23680" name="祝福的防具加工石-R級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1374,7 +1374,7 @@
 			<skill id="22893" level="1" /> <!-- Blessed Scroll: Modify R-grade Armor -->
 		</skills>
 	</item>
-	<item id="23681" name="Blessed Appearance Stone: S-grade Armor" additionalName="30-day" type="EtcItem">
+	<item id="23681" name="祝福的防具加工石-S級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1391,7 +1391,7 @@
 			<skill id="22894" level="1" /> <!-- Blessed Scroll: Modify S-grade Armor -->
 		</skills>
 	</item>
-	<item id="23682" name="Blessed Appearance Stone: A-grade Armor" additionalName="30-day" type="EtcItem">
+	<item id="23682" name="祝福的防具加工石-A級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1408,7 +1408,7 @@
 			<skill id="22895" level="1" /> <!-- Blessed Scroll: Modify A-grade Armor -->
 		</skills>
 	</item>
-	<item id="23683" name="Blessed Appearance Stone: B-grade Armor" additionalName="30-day" type="EtcItem">
+	<item id="23683" name="祝福的防具加工石-B級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1425,7 +1425,7 @@
 			<skill id="22896" level="1" /> <!-- Blessed Scroll: Modify B-grade Armor -->
 		</skills>
 	</item>
-	<item id="23684" name="Blessed Appearance Stone: C-grade Armor" additionalName="30-day" type="EtcItem">
+	<item id="23684" name="祝福的防具加工石-C級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1442,7 +1442,7 @@
 			<skill id="22897" level="1" /> <!-- Blessed Scroll: Modify C-grade Armor -->
 		</skills>
 	</item>
-	<item id="23685" name="Blessed Appearance Stone: D-grade Armor" additionalName="30-day" type="EtcItem">
+	<item id="23685" name="祝福的防具加工石-D級" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. No change in stats. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1459,7 +1459,7 @@
 			<skill id="22898" level="1" /> <!-- Blessed Scroll: Modify D-grade Armor -->
 		</skills>
 	</item>
-	<item id="23686" name="Dimension Traveler's Red Vitality Potion" type="EtcItem">
+	<item id="23686" name="次元旅行者紅色活力飲料" type="EtcItem">
 		<!-- A potion given as a reward from the Aden Kingdom for clearing Kartia's Labyrinth. Recovers a small amount of Vitality. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="is_sellable" val="false" />
@@ -1472,7 +1472,7 @@
 			<skill id="15465" level="3" /> <!-- Vitality - Quest Reward (Lv. 3) -->
 		</skills>
 	</item>
-	<item id="23687" name="Dimension Traveler's Blue Vitality Potion" type="EtcItem">
+	<item id="23687" name="次元旅行者藍色活力飲料" type="EtcItem">
 		<!-- A potion given as a reward from the Aden Kingdom for clearing Kartia's Labyrinth. Recovers more Vitality than Dimension Traveler's Red Vitality Potion. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="is_sellable" val="false" />
@@ -1485,7 +1485,7 @@
 			<skill id="15465" level="5" /> <!-- Vitality - Quest Reward (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="23688" name="Dimension Traveler's Gold Vitality Potion" type="EtcItem">
+	<item id="23688" name="次元旅行者金色活力飲料" type="EtcItem">
 		<!-- A potion given as a reward from the Aden Kingdom for clearing Kartia's Labyrinth. Recovers more Vitality than Dimension Traveler's Blue Vitality Potion. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="is_sellable" val="false" />
@@ -1498,7 +1498,7 @@
 			<skill id="15465" level="8" /> <!-- Vitality - Quest Reward (Lv. 8) -->
 		</skills>
 	</item>
-	<item id="23689" name="Dimension Protector's Red Vitality Potion" type="EtcItem">
+	<item id="23689" name="次元守護者紅色活力飲料" type="EtcItem">
 		<!-- A potion given as a reward from the Aden Kingdom for clearing Kartia's Labyrinth. Recovers a small amount of Vitality. -->
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="is_sellable" val="false" />
@@ -1511,7 +1511,7 @@
 			<skill id="15465" level="5" /> <!-- Vitality - Quest Reward (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="23690" name="Dimension Protector's Blue Vitality Potion" type="EtcItem">
+	<item id="23690" name="次元守護者藍色活力飲料" type="EtcItem">
 		<!-- A potion given as a reward from the Aden Kingdom for clearing Kartia's Labyrinth. Recovers more Vitality than Dimension Protector's Red Vitality Potion. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="is_sellable" val="false" />
@@ -1524,7 +1524,7 @@
 			<skill id="15465" level="8" /> <!-- Vitality - Quest Reward (Lv. 8) -->
 		</skills>
 	</item>
-	<item id="23691" name="Dimension Protector's Gold Vitality Potion" type="EtcItem">
+	<item id="23691" name="次元守護者金色活力飲料" type="EtcItem">
 		<!-- A potion given as a reward from the Aden Kingdom for clearing Kartia's Labyrinth. Recovers more Vitality than Dimension Protector's Blue Vitality Potion. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="is_sellable" val="false" />
@@ -1537,7 +1537,7 @@
 			<skill id="15465" level="10" /> <!-- Vitality - Quest Reward (Lv. 10) -->
 		</skills>
 	</item>
-	<item id="23692" name="Ninja Top" additionalName="Modified Set" type="Armor">
+	<item id="23692" name="忍者衣裳上衣" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Top. Part of a costume. Modifying the full set creates a new skill. Note!. Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_u" />
 		<set name="is_tradable" val="false" />
@@ -1550,7 +1550,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="23693" name="Ninja Pants" additionalName="Modified Set" type="Armor">
+	<item id="23693" name="忍者衣裳下衣" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Pants. Part of a costume. Modifying the full set creates a new skill. Note!. Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_l" />
 		<set name="is_tradable" val="false" />
@@ -1563,7 +1563,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="23694" name="Ninja Gloves" additionalName="Modified Set" type="Armor">
+	<item id="23694" name="忍者衣裳手套" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Gloves. Part of a costume. Modifying the full set creates a new skill. Note!. Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_g" />
 		<set name="is_tradable" val="false" />
@@ -1576,7 +1576,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="23695" name="Ninja Shoes" additionalName="Modified Set" type="Armor">
+	<item id="23695" name="忍者衣裳鞋" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Shoes. Part of a costume. Modifying the full set creates a new skill. Note!. Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_b" />
 		<set name="is_tradable" val="false" />
@@ -1589,7 +1589,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="23696" name="Ninja Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
+	<item id="23696" name="忍者衣裳上衣加工石" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Ninja Top. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -1605,7 +1605,7 @@
 			<skill id="22900" level="1" /> <!-- Appearance Stone: Ninja Top -->
 		</skills>
 	</item>
-	<item id="23697" name="Appearance Stone: Ninja Pants" additionalName="Modified Set" type="EtcItem">
+	<item id="23697" name="忍者衣裳下衣加工石" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of pants to that of Ninja Pants. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -1621,7 +1621,7 @@
 			<skill id="22901" level="1" /> <!-- Appearance Stone: Ninja Pants -->
 		</skills>
 	</item>
-	<item id="23698" name="Appearance Stone: Ninja Gloves" additionalName="Modified Set" type="EtcItem">
+	<item id="23698" name="忍者衣裳手套加工石" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of Ninja Gloves. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1637,7 +1637,7 @@
 			<skill id="22902" level="1" /> <!-- Appearance Stone: Ninja Gloves -->
 		</skills>
 	</item>
-	<item id="23699" name="Appearance Stone: Ninja Shoes" additionalName="Modified Set" type="EtcItem">
+	<item id="23699" name="忍者衣裳鞋加工石" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of Ninja Shoes. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />

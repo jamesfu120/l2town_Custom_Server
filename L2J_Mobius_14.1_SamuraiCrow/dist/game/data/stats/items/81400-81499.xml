@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="81400" name="Demon Priest Outfit" type="Armor">
+	<item id="81400" name="暗黑祭司衣裳" type="Armor">
 		<set name="icon" val="icon.king_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -10,7 +10,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81401" name="Festival Fairy's Potion - Red Assassin" type="EtcItem">
+	<item id="81401" name="秋蓉的風格藥劑-緋紅刺客" type="EtcItem">
 		<!-- Changes appearance by wearing Red Assassin Suit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -24,7 +24,7 @@
 			<skill id="39649" level="1" /> <!-- Festival Fairy's Potion - Red Assassin -->
 		</skills>
 	</item>
-	<item id="81402" name="Festival Fairy's Potion - Blue Assassin" type="EtcItem">
+	<item id="81402" name="秋蓉的風格藥劑-湛藍刺客" type="EtcItem">
 		<!-- Changes armor appearance to that of Blue Assassin Suit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -38,7 +38,7 @@
 			<skill id="39650" level="1" /> <!-- Festival Fairy's Potion - Blue Assassin -->
 		</skills>
 	</item>
-	<item id="81403" name="Festival Fairy's Potion - Pink Assassin" type="EtcItem">
+	<item id="81403" name="秋蓉的風格藥劑-粉紅刺客" type="EtcItem">
 		<!-- Changes armor appearance to that of Pink Assassin Suit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -52,7 +52,7 @@
 			<skill id="39651" level="1" /> <!-- Festival Fairy's Potion - Pink Assassin -->
 		</skills>
 	</item>
-	<item id="81404" name="Festival Fairy's Potion - Demon Priest" type="EtcItem">
+	<item id="81404" name="秋蓉的風格藥劑-暗黑祭司" type="EtcItem">
 		<!-- Changes appearance by wearing Demon Priest Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -66,7 +66,7 @@
 			<skill id="39652" level="1" /> <!-- Festival Fairy's Potion - Demon Priest -->
 		</skills>
 	</item>
-	<item id="81405" name="+8 Blessed Eternal Heavy Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="81405" name="+8祝福的艾迪奧斯重裝防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Blessed Eternal heavy armor set (no shield) enchanted to +8. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -81,7 +81,7 @@
 			<skill id="39629" level="1" /> <!-- +8 Blessed Eternal Heavy Armor Set Pack -->
 		</skills>
 	</item>
-	<item id="81406" name="+8 Blessed Eternal Light Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="81406" name="+8祝福的艾迪奧斯輕裝防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Blessed Eternal light armor set enchanted to +8. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -96,7 +96,7 @@
 			<skill id="39630" level="1" /> <!-- +8 Blessed Eternal Light Armor Set Pack -->
 		</skills>
 	</item>
-	<item id="81407" name="+8 Blessed Eternal Robe Pack" additionalName="Event" type="EtcItem">
+	<item id="81407" name="+8祝福的艾迪奧斯長袍防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +8 Blessed Eternal Robe set (no sigil). -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -111,7 +111,7 @@
 			<skill id="39631" level="1" /> <!-- +8 Blessed Eternal Robe Set Pack -->
 		</skills>
 	</item>
-	<item id="81408" name="+10 Blessed Eternal Heavy Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="81408" name="+10祝福的艾迪奧斯重裝防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Blessed Eternal heavy armor set (no shield) enchanted to +10. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -126,7 +126,7 @@
 			<skill id="39632" level="1" /> <!-- +10 Blessed Eternal Heavy Armor Set Pack -->
 		</skills>
 	</item>
-	<item id="81409" name="+10 Blessed Eternal Light Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="81409" name="+10祝福的艾迪奧斯輕裝防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Blessed Eternal light armor set enchanted to +10. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -141,7 +141,7 @@
 			<skill id="39633" level="1" /> <!-- +10 Blessed Eternal Light Armor Set Pack -->
 		</skills>
 	</item>
-	<item id="81410" name="+10 Blessed Eternal Robe Pack" additionalName="Event" type="EtcItem">
+	<item id="81410" name="+10祝福的艾迪奧斯長袍防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +10 Blessed Eternal Robe set (no sigil). -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -156,7 +156,7 @@
 			<skill id="39634" level="1" /> <!-- +10 Blessed Eternal Robe Set Pack -->
 		</skills>
 	</item>
-	<item id="81411" name="+14 Blessed Helios Shaper Pack" additionalName="Event" type="EtcItem">
+	<item id="81411" name="+14祝福的赫利奧斯鉋刀禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Shaper. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -171,7 +171,7 @@
 			<skill id="39635" level="1" /> <!-- +14 Blessed Helios Shaper Pack -->
 		</skills>
 	</item>
-	<item id="81412" name="+14 Blessed Helios Cutter Pack" additionalName="Event" type="EtcItem">
+	<item id="81412" name="+14祝福的赫利奧斯切刃禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Cutter. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -186,7 +186,7 @@
 			<skill id="39636" level="1" /> <!-- +14 Blessed Helios Cutter Pack -->
 		</skills>
 	</item>
-	<item id="81413" name="+14 Blessed Helios Slasher Pack" additionalName="Event" type="EtcItem">
+	<item id="81413" name="+14祝福的赫利奧斯殺刃禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Slasher. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -201,7 +201,7 @@
 			<skill id="39637" level="1" /> <!-- +14 Blessed Helios Slasher Pack -->
 		</skills>
 	</item>
-	<item id="81414" name="+14 Blessed Helios Avenger Pack" additionalName="Event" type="EtcItem">
+	<item id="81414" name="+14祝福的赫利奧斯復仇者禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Avenger. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -216,7 +216,7 @@
 			<skill id="39638" level="1" /> <!-- +14 Blessed Helios Avenger Pack -->
 		</skills>
 	</item>
-	<item id="81415" name="+14 Blessed Helios Fighter Pack" additionalName="Event" type="EtcItem">
+	<item id="81415" name="+14祝福的赫利奧斯戰爪禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Fighter. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -231,7 +231,7 @@
 			<skill id="39639" level="1" /> <!-- +14 Blessed Helios Fighter Pack -->
 		</skills>
 	</item>
-	<item id="81416" name="+14 Blessed Helios Stormer Pack" additionalName="Event" type="EtcItem">
+	<item id="81416" name="+14祝福的赫利奧斯風暴者禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Stormer. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -246,7 +246,7 @@
 			<skill id="39640" level="1" /> <!-- +14 Blessed Helios Stormer Pack -->
 		</skills>
 	</item>
-	<item id="81417" name="+14 Blessed Helios Thrower Pack" additionalName="Event" type="EtcItem">
+	<item id="81417" name="+14祝福的赫利奧斯投弓禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Thrower. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -261,7 +261,7 @@
 			<skill id="39641" level="1" /> <!-- +14 Blessed Helios Thrower Pack -->
 		</skills>
 	</item>
-	<item id="81418" name="+14 Blessed Helios Guardian Pack" additionalName="Event" type="EtcItem">
+	<item id="81418" name="+14祝福的赫利奧斯射靈禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Blessed Helios Guardian enchanted to +14. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -276,7 +276,7 @@
 			<skill id="39642" level="1" /> <!-- +14 Blessed Helios Guardian Pack -->
 		</skills>
 	</item>
-	<item id="81419" name="+14 Blessed Helios Buster Pack" additionalName="Event" type="EtcItem">
+	<item id="81419" name="+14祝福的赫利奧斯爆刃禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Buster. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -291,7 +291,7 @@
 			<skill id="39643" level="1" /> <!-- +14 Blessed Helios Buster Pack -->
 		</skills>
 	</item>
-	<item id="81420" name="+14 Blessed Helios Caster Pack" additionalName="Event" type="EtcItem">
+	<item id="81420" name="+14祝福的赫利奧斯術杖禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Caster. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -306,7 +306,7 @@
 			<skill id="39644" level="1" /> <!-- +14 Blessed Helios Caster Pack -->
 		</skills>
 	</item>
-	<item id="81421" name="+14 Blessed Helios Retributer Pack" additionalName="Event" type="EtcItem">
+	<item id="81421" name="+14祝福的赫利奧斯報恨者禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Retributer. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -321,7 +321,7 @@
 			<skill id="39645" level="1" /> <!-- +14 Blessed Helios Retributer Pack -->
 		</skills>
 	</item>
-	<item id="81422" name="+14 Blessed Helios Dual Swords Pack" additionalName="Event" type="EtcItem">
+	<item id="81422" name="+14祝福的赫利奧斯雙刀禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Dual Swords. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -336,7 +336,7 @@
 			<skill id="39646" level="1" /> <!-- +14 Blessed Helios Dual Swords Pack -->
 		</skills>
 	</item>
-	<item id="81423" name="+14 Blessed Helios Dual Daggers Pack" additionalName="Event" type="EtcItem">
+	<item id="81423" name="+14祝福的赫利奧斯雙匕首禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Dual Daggers. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -351,7 +351,7 @@
 			<skill id="39647" level="1" /> <!-- +14 Blessed Helios Dual Daggers Pack -->
 		</skills>
 	</item>
-	<item id="81424" name="+14 Blessed Helios Dual Blunt Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="81424" name="+14祝福的赫利奧斯雙鈍器禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Dual Blunt Weapon. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -366,28 +366,28 @@
 			<skill id="39648" level="1" /> <!-- +14 Blessed Helios Dual Blunt Weapon Pack -->
 		</skills>
 	</item>
-	<item id="81425" name="+8 Blessed Eternal Armor Coupon" additionalName="Event" type="EtcItem">
+	<item id="81425" name="+8祝福的艾迪奧斯防具交換券" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for +8 Blessed Eternal armor set (at your choice) through Festival Fairy. -->
 		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81426" name="+10 Blessed Eternal Armor Coupon" additionalName="Event" type="EtcItem">
+	<item id="81426" name="+10祝福的艾迪奧斯防具交換券" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for +10 Blessed Eternal armor set (at your choice) through Festival Fairy. -->
 		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81427" name="+14 Blessed Helios Weapon Coupon" additionalName="Event" type="EtcItem">
+	<item id="81427" name="+14祝福的赫利奧斯武器交換券" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for +14 Blessed Helios weapon through Festival Fairy. -->
 		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81428" name="Festival Fairy's Huge Gift" additionalName="Event" type="EtcItem">
+	<item id="81428" name="秋蓉的巨大禮物" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Shillien's Soul Crystal Lv. 10, Dragon's Ring/ Necklace/ Earring, Ruler's Authority - Genesis, Bloody Weapon Upgrade Stone, +5 Greater Agathion Charm Box, Dragon Rind Leather Shirt, Radiant Circlet, Superior Seed Bracelet Lv. 3, Ruby/ Sapphire Jewelry Box Lv. 5, Nevit's Cloak of Light Pack, Artifact Crystal, Crystal of Dyes, Rune Stone. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -421,7 +421,7 @@
 			<item id="80335" min="1" max="1" chance="5.555556" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81429" name="Festival Fairy's Box: Superior Talisman" additionalName="Event" type="EtcItem">
+	<item id="81429" name="秋蓉最高級護身符禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of many items: Sealed Talisman of Insanity, Talisman of Seven Signs, Sealed Heavenly Talisman, Epic Talisman. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -441,7 +441,7 @@
 			<item id="80959" min="1" max="1" chance="25" /> <!-- Epic Talisman -->
 		</capsuled_items>
 	</item>
-	<item id="81430" name="Artifact - Attribute Attack" additionalName="Attack" type="Armor">
+	<item id="81430" name="聖紋石攻擊屬性" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases Attribute Attack. Can be equipped in an attack artifact slot. When enchanted, increases the Attribute Attack bonus. Can be enhanced only with attack artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_b_attribute_att_up" />
 		<set name="default_action" val="EQUIP" />
@@ -461,7 +461,7 @@
 			<skill id="35367" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Attribute Attack -->
 		</skills>
 	</item>
-	<item id="81431" name="Artifact - P. Skill Power" additionalName="Attack" type="Armor">
+	<item id="81431" name="聖紋石物理技能威力" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases P. Skill Power. Can be equipped in an attack artifact slot. When enchanted, increases the P. Skill Power bonus. Can be enhanced only with attack artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_b_skill_power" />
 		<set name="default_action" val="EQUIP" />
@@ -481,7 +481,7 @@
 			<skill id="35368" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - P. Skill Power -->
 		</skills>
 	</item>
-	<item id="81432" name="Artifact - M. Skill Power" additionalName="Attack" type="Armor">
+	<item id="81432" name="聖紋石魔法技能威力" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases M. Skill Power. Can be equipped in an attack artifact slot. When enchanted, increases the M. Skill Power bonus. Can be enhanced only with attack artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_b_spell_power" />
 		<set name="default_action" val="EQUIP" />
@@ -501,7 +501,7 @@
 			<skill id="35369" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - M. Skill Power -->
 		</skills>
 	</item>
-	<item id="81433" name="Artifact - Attribute Resistance" additionalName="Defense" type="Armor">
+	<item id="81433" name="聖紋石所有防禦屬性" additionalName="Defense" type="Armor">
 		<!-- An artifact that increases Attribute Resistance. Can be equipped in a defense artifact slot. When enhanced, increases the Attribute Resistance bonus. Can be enhanced only with defense artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_c_attribute_def_up" />
 		<set name="default_action" val="EQUIP" />
@@ -521,7 +521,7 @@
 			<skill id="35373" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Attribute Resistance -->
 		</skills>
 	</item>
-	<item id="81434" name="Artifact - Received Damage When Immobilized" additionalName="Defense" type="Armor">
+	<item id="81434" name="聖紋石無法行動時被擊傷害減少" additionalName="Defense" type="Armor">
 		<!-- An artifact that decreases received damage when immobilized. Can be equipped in a defense artifact slot. When enhanced, decreases received damage when immobilized more. Can be enhanced only with defense artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_c_block_act_dmg" />
 		<set name="default_action" val="EQUIP" />
@@ -541,7 +541,7 @@
 			<skill id="35374" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Received Damage When Immobilized -->
 		</skills>
 	</item>
-	<item id="81435" name="Artifact - Received P. Critical Damage" additionalName="Defense" type="Armor">
+	<item id="81435" name="減少聖紋石被擊致命攻擊傷害" additionalName="Defense" type="Armor">
 		<!-- An artifact that decreases received Critical Damage. Can be equipped in a defense artifact slot. When enchanted, increased reduction to all received Critical Damage. Can only be enchanted with defense artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_c_receive_crt_dmg" />
 		<set name="default_action" val="EQUIP" />
@@ -561,7 +561,7 @@
 			<skill id="35629" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Received Critical Damage -->
 		</skills>
 	</item>
-	<item id="81436" name="Artifact - Recovery Potions' Effect" additionalName="Support" type="Armor">
+	<item id="81436" name="聖紋石恢復藥水/靈藥額外效果" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Recovery Potions' Effect. Can be equipped in a support artifact slot. When enchanted, increases the Recovery Potions' Effect bonus. Can be enhanced only with support artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_d_hp_special" />
 		<set name="default_action" val="EQUIP" />
@@ -581,7 +581,7 @@
 			<skill id="35380" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Recovery Potions' Effect -->
 		</skills>
 	</item>
-	<item id="81437" name="Artifact - Fixed Damage Resistance" additionalName="Support" type="Armor">
+	<item id="81437" name="聖紋石固定傷害減少" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Fixed Damage Resistance. Can be equipped in a support artifact slot. When enchanted, decreases received fixed damage. Can be enhanced only with support artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_d_dmg_by_atk" />
 		<set name="default_action" val="EQUIP" />
@@ -601,7 +601,7 @@
 			<skill id="35381" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Fixed Damage Resistance -->
 		</skills>
 	</item>
-	<item id="81438" name="Artifact - Damage Reflection Resistance" additionalName="Support" type="Armor">
+	<item id="81438" name="聖紋石傷害反射抗性" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Damage Reflection Resistance. Can be equipped in a support artifact slot. When enchanted, increases the Damage Reflection Resistance bonus. Can be enhanced only with support artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_d_dmg_shield_resist" />
 		<set name="default_action" val="EQUIP" />
@@ -621,7 +621,7 @@
 			<skill id="35630" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Damage Reflection Resistance -->
 		</skills>
 	</item>
-	<item id="81439" name="Artifact - Vitality Bonus" additionalName="Balance" type="Armor">
+	<item id="81439" name="聖紋石活力紅利" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Vitality bonus. Can be equipped in a balance artifact slot. When enchanted, increases Vitality bonus. Can be enhanced only with balance artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_a_vital_bonus" />
 		<set name="default_action" val="EQUIP" />
@@ -641,7 +641,7 @@
 			<skill id="35391" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Vitality Bonus -->
 		</skills>
 	</item>
-	<item id="81440" name="Artifact - Received Healing" additionalName="Balance" type="Armor">
+	<item id="81440" name="聖紋石所受治癒量增加" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Received Healing. Can be equipped in a balance artifact slot. When enchanted, increases the Received Healing bonus. Can be enhanced only with balance artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_a_heal_effect" />
 		<set name="default_action" val="EQUIP" />
@@ -661,7 +661,7 @@
 			<skill id="35394" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Received Healing -->
 		</skills>
 	</item>
-	<item id="81441" name="Artifact - Skill MP Consumption" additionalName="Balance" type="Armor">
+	<item id="81441" name="聖紋石技能MP消耗減少" additionalName="Balance" type="Armor">
 		<!-- An artifact that decreases Skill MP Consumption. Can be equipped in a balance artifact slot. When enchanted, decreases Skill MP Consumption. Can be enhanced only with balance artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_a_skill_mp_cost" />
 		<set name="default_action" val="EQUIP" />
@@ -681,7 +681,7 @@
 			<skill id="35395" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - MP Consumption -->
 		</skills>
 	</item>
-	<item id="81442" name="Artifact - Received P. Critical Rate" additionalName="Balance" type="Armor">
+	<item id="81442" name="聖紋石致命攻擊被擊率減少" additionalName="Balance" type="Armor">
 		<!-- An artifact that decreases received P. Critical Rate Can be equipped in a balance artifact slot. When enhanced, decreases received P. Critical Rate more. Can be enhanced only with balance artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_a_receive_crt_per" />
 		<set name="default_action" val="EQUIP" />
@@ -701,7 +701,7 @@
 			<skill id="35631" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Received P. Critical Rate -->
 		</skills>
 	</item>
-	<item id="81443" name="Agathion Fire Dragon Charm" type="Armor">
+	<item id="81443" name="火龍壺精幸運符" type="Armor">
 		<!-- Contains the power of Agathion Fire Dragon. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Divine Book of Growth: Agathion Dragon. <Upgrade>. +10 Agathion can be upgraded to a Greater agathion through the Fishing Guild Leader Santiago in Heine. -->
 		<set name="icon" val="icon.agathion_fire_dragon_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -731,7 +731,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="81444" name="Grater Agathion Fire Dragon Charm" type="Armor">
+	<item id="81444" name="高級火龍壺精幸運符" type="Armor">
 		<!-- Contains the power of Greater Agathion Fire Dragon. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_fire_dragon_star_2" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="81445" name="Divine Book of Growth: Agathion Dragon" type="EtcItem">
+	<item id="81445" name="神聖的龍壺精成長書" type="EtcItem">
 		<!-- Required for enchanting Agathion Fire Dragon. In case of failure, the enchant value remains the same. -->
 		<set name="icon" val="icon.star_destruction_of_ench_dragon_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -775,14 +775,14 @@
 			<skill id="39653" level="1" /> <!-- Divine Book of Growth: Agathion Dragon -->
 		</skills>
 	</item>
-	<item id="81446" name="Dragon Essence" type="EtcItem">
+	<item id="81446" name="龍之精髓" type="EtcItem">
 		<!-- A crystal imbued with the dragon power. -->
 		<set name="icon" val="icon.essense_of_dragon" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81447" name="Valakas Treasure Chest" type="EtcItem">
+	<item id="81447" name="巴拉卡斯寶箱" type="EtcItem">
 		<!-- A treasure chest obtained for the raid against Valakas. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="PEEL" />
@@ -791,7 +791,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81448" name="Angel's Necklace Pack" type="EtcItem">
+	<item id="81448" name="天使項鍊禮盒" type="EtcItem">
 		<!-- Double-click to obtain Angel's Necklace. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -804,7 +804,7 @@
 			<item id="48669" min="1" max="1" chance="100" /> <!-- Angel's Necklace -->
 		</capsuled_items>
 	</item>
-	<item id="81449" name="Angel's Earring Pack" type="EtcItem">
+	<item id="81449" name="天使耳環禮盒" type="EtcItem">
 		<!-- Double-click to obtain Angel's Earring. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -817,7 +817,7 @@
 			<item id="48841" min="1" max="1" chance="100" /> <!-- Angel's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="81450" name="Angel's Ring Pack" type="EtcItem">
+	<item id="81450" name="天使戒指禮盒" type="EtcItem">
 		<!-- Double-click to obtain Angel's Ring. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -830,7 +830,7 @@
 			<item id="81154" min="1" max="1" chance="100" /> <!-- Angel's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="81451" name="Jack O'Lantern's Potion" type="EtcItem">
+	<item id="81451" name="傑-克-南瓜藥草" type="EtcItem">
 		<!-- You can feel the powerful energy of Jack O'Lantern. This energy might have caused the growth of monsters. -->
 		<set name="icon" val="icon.ev_jack_ghost_i00" />
 		<set name="material" val="PAPER" />
@@ -838,7 +838,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81452" name="Benusta's Shining Reward Box" type="EtcItem">
+	<item id="81452" name="褪色的貝努斯塔報酬箱" type="EtcItem">
 		<!-- Double-click to obtain one of the following rewards: adena, a rare item, an R99-/ R110-grade armor or weapon. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -926,14 +926,14 @@
 			<item id="80120" min="1" max="1" chance="1.388889" /> <!-- Leviathan Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="81453" name="Enhanced Rune Stone" type="EtcItem">
+	<item id="81453" name="高級古文石" type="EtcItem">
 		<!-- A stone that contains Einhasad's wisdom. Required for learning some skills for each class. -->
 		<set name="icon" val="icon.skill_acquire_book_a2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81454" name="Atlas' Earring" additionalName="Vitality" type="Armor">
+	<item id="81454" name="雅特拿斯耳環" additionalName="Vitality" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A special earring for mentors. When enchanted, increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Atk. Rate and Resistance, Attribute Resistance, Vampiric Rage effect, Critical Damage for basic attacks and P./ M. skills, and decreases MP Consumption. Effects of two identical earrings do not stack. <Special effect>. Vitality bonus +3%. <Enchanting>. Use Scroll: Enchant Atlas' Earring. <Upgrade>. Upgrade is available after enchanting to +12 -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
 		<set name="default_action" val="EQUIP" />
@@ -967,7 +967,7 @@
 			<skill id="35625" level="12" type="ON_ENCHANT" type_value="12" /> <!-- Atlas' Earring: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="81455" name="Special Clan Reward Lv. 1" type="EtcItem">
+	<item id="81455" name="特別血盟獎勵1階段" type="EtcItem">
 		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose, Emperor's Special Cocktail, Special Clan Reward Lv. 2. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="PEEL" />
@@ -986,7 +986,7 @@
 			<item id="81456" min="1" max="1" chance="33.333333" /> <!-- Special Clan Reward Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="81456" name="Special Clan Reward Lv. 2" type="EtcItem">
+	<item id="81456" name="特別血盟獎勵2階段" type="EtcItem">
 		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose, Emperor's Special Cocktail, Freya's Scroll of Storm (3 pcs.), Honey Dark Beer, Special Clan Reward Lv. 3. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="PEEL" />
@@ -1007,7 +1007,7 @@
 			<item id="81460" min="1" max="1" chance="20" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="81457" name="Special Clan Reward Lv. 3" type="EtcItem">
+	<item id="81457" name="特別血盟獎勵3階段" type="EtcItem">
 		<!-- Double-click to obtain one of the following rewards: Freya's Ice Rose (2 pcs.), Emperor's Special Cocktail, Freya's Scroll of Storm (6 pcs.), Honey Dark Beer (2 pcs.), Glowing Dragon's Attribute Potion (2 pcs.), Nevit's Shining Gold Hourglass (2 pcs.), Special Clan Reward Lv. 4. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="PEEL" />
@@ -1030,7 +1030,7 @@
 			<item id="81460" min="2" max="2" chance="14.285714" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="81458" name="Special Clan Reward Lv. 4" type="EtcItem">
+	<item id="81458" name="特別血盟獎勵4階段" type="EtcItem">
 		<!-- Double-click to obtain one of the following rewards: Freya's Ice Rose (4 pcs.), Emperor's Special Cocktail (2 pcs.), Freya's Scroll of Storm (12 pcs.), Honey Dark Beer (4 pcs.), Glowing Dragon's Attribute Potion (4 pcs.), Nevit's Shining Gold Hourglass (4 pcs.), Special Clan Reward Lv. 5. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="PEEL" />
@@ -1053,7 +1053,7 @@
 			<item id="81460" min="4" max="4" chance="14.285714" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="81459" name="Special Clan Reward Lv. 5" type="EtcItem">
+	<item id="81459" name="特別血盟獎勵5階段" type="EtcItem">
 		<!-- Double-click to obtain one of the following rewards: Freya's Ice Rose (8 pcs.), Emperor's Special Cocktail (4 pcs.), Freya's Scroll of Storm (24 pcs.), Honey Dark Beer (8 pcs.), Glowing Dragon's Attribute Potion (8 pcs.), Nevit's Shining Gold Hourglass (8 pcs.), Energy of Longing, Sealed Talisman of Longing, Bloody Weapon Upgrade Stone, Dark Weapon Upgrade Stone. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="PEEL" />
@@ -1079,7 +1079,7 @@
 			<item id="35568" min="1" max="1" chance="10" /> <!-- Bloody Weapon Upgrade Stone -->
 		</capsuled_items>
 	</item>
-	<item id="81460" name="Honey Dark Beer" additionalName="Event" type="EtcItem">
+	<item id="81460" name="蜂蜜黑啤酒" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., all stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1097,7 +1097,7 @@
 			<skill id="39656" level="1" /> <!-- Honey Dark Beer -->
 		</skills>
 	</item>
-	<item id="81461" name="Common Dice" type="EtcItem">
+	<item id="81461" name="一般骰子" type="EtcItem">
 		<!-- Dice for the 'Aden Adventure' game. Dice roll value range is from 1 to 6. -->
 		<set name="icon" val="icon.normal_dice" />
 		<set name="material" val="PAPER" />
@@ -1106,7 +1106,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81462" name="Enhanced Dice" type="EtcItem">
+	<item id="81462" name="高級骰子" type="EtcItem">
 		<!-- Special dice for the 'Aden Adventure' game. Dice roll value range is from 5 to 6. -->
 		<set name="icon" val="icon.special_dice" />
 		<set name="material" val="PAPER" />
@@ -1115,7 +1115,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81463" name="Tower of Insolence's Time Stone (Lower Floor)" type="EtcItem">
+	<item id="81463" name="傲慢之塔下層部時間充能石" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time in the Tower of Insolence (Lower Floors). Required level: 110+. -->
 		<set name="icon" val="icon.timezone_refill_oman_a_60" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1131,7 +1131,7 @@
 			<skill id="39657" level="1" /> <!-- Tower of Insolence's Time Stone -->
 		</skills>
 	</item>
-	<item id="81464" name="Freya's Vital Rune" additionalName="30-day" type="EtcItem">
+	<item id="81464" name="芙蕾雅的活力古文" additionalName="30-day" type="EtcItem">
 		<!-- If stored in the inventory, increases Bonus XP gain in Vitality state by 50% (excludes boss monsters) and decreases Vitality Consumption Spd. by 15%. -->
 		<set name="icon" val="icon.bm_freya_vital_rune" />
 		<set name="material" val="PAPER" />
@@ -1143,7 +1143,7 @@
 			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
 		</skills>
 	</item>
-	<item id="81465" name="Kastia's Pack" additionalName="Lv. 4" type="EtcItem">
+	<item id="81465" name="卡斯提雅禮盒" additionalName="Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Wondrous Cocktail (2 pcs.), Freya's Ice Rose (4 pcs.), Glowing Dragon's Attribute Potion (4 pcs.), Honey Dark Beer (4 pcs.). -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1162,7 +1162,7 @@
 			<item id="81012" min="2" max="2" chance="100" /> <!-- Wondrous Cocktail - Event -->
 		</capsuled_items>
 	</item>
-	<item id="81466" name="Kastia's Pack" additionalName="Lv. 5" type="EtcItem">
+	<item id="81466" name="卡斯提雅禮盒" additionalName="Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Wondrous Cocktail (4 pcs.), Freya's Ice Rose (8 pcs.), Glowing Dragon's Attribute Potion (8 pcs.), Honey Dark Beer (8 pcs.). -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1181,7 +1181,7 @@
 			<item id="81012" min="4" max="4" chance="100" /> <!-- Wondrous Cocktail - Event -->
 		</capsuled_items>
 	</item>
-	<item id="81467" name="Blessed Exalted Helmet" additionalName="Heavy armor" type="Armor">
+	<item id="81467" name="祝福的榮耀貴族頭盔" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_heavy_helmet_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1201,7 +1201,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="81468" name="Blessed Exalted Breastplate" additionalName="Heavy armor" type="Armor">
+	<item id="81468" name="祝福的榮耀貴族胸甲" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_heavy_upbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1221,7 +1221,7 @@
 			<stat type="pDef">451</stat>
 		</stats>
 	</item>
-	<item id="81469" name="Blessed Exalted Gaiters" additionalName="Heavy armor" type="Armor">
+	<item id="81469" name="祝福的榮耀貴族脛甲" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_heavy_downbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1241,7 +1241,7 @@
 			<stat type="pDef">282</stat>
 		</stats>
 	</item>
-	<item id="81470" name="Blessed Exalted Gauntlets" additionalName="Heavy armor" type="Armor">
+	<item id="81470" name="祝福的榮耀貴族長手套" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_heavy_gloves_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1261,7 +1261,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81471" name="Blessed Exalted Boots" additionalName="Heavy armor" type="Armor">
+	<item id="81471" name="祝福的榮耀貴族長靴" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_heavy_shoes_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1281,7 +1281,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81472" name="Blessed Exalted Shield" type="Armor">
+	<item id="81472" name="祝福的榮耀貴族盾" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_heavy_shield_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1302,7 +1302,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="81473" name="Blessed Exalted Leather Helmet" additionalName="Light armor" type="Armor">
+	<item id="81473" name="祝福的榮耀貴族皮頭盔" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_light_helmet_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1322,7 +1322,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="81474" name="Blessed Exalted Leather Armor" additionalName="Light armor" type="Armor">
+	<item id="81474" name="祝福的榮耀貴族皮甲" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_light_upbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1342,7 +1342,7 @@
 			<stat type="pDef">360</stat>
 		</stats>
 	</item>
-	<item id="81475" name="Blessed Exalted Leather Leggings" additionalName="Light armor" type="Armor">
+	<item id="81475" name="祝福的榮耀貴族皮脛甲" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_light_downbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1362,7 +1362,7 @@
 			<stat type="pDef">225</stat>
 		</stats>
 	</item>
-	<item id="81476" name="Blessed Exalted Leather Gloves" additionalName="Light armor" type="Armor">
+	<item id="81476" name="祝福的榮耀貴族皮手套" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_light_gloves_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1382,7 +1382,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81477" name="Blessed Exalted Leather Boots" additionalName="Light armor" type="Armor">
+	<item id="81477" name="祝福的榮耀貴族皮靴" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_light_shoes_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1402,7 +1402,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81478" name="Blessed Exalted Circlet" additionalName="Robe" type="Armor">
+	<item id="81478" name="祝福的榮耀貴族頭箍" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_robe_helmet_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1422,7 +1422,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="81479" name="Blessed Exalted Tunic" additionalName="Robe" type="Armor">
+	<item id="81479" name="祝福的榮耀貴族外衣" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_robe_upbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1444,7 +1444,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="81480" name="Blessed Exalted Stockings" additionalName="Robe" type="Armor">
+	<item id="81480" name="祝福的榮耀貴族長襪" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_robe_downbody_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1466,7 +1466,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="81481" name="Blessed Exalted Gloves" additionalName="Robe" type="Armor">
+	<item id="81481" name="祝福的榮耀貴族手套" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_robe_gloves_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1486,7 +1486,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81482" name="Blessed Exalted Shoes" additionalName="Robe" type="Armor">
+	<item id="81482" name="祝福的榮耀貴族鞋" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_robe_shoes_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1506,7 +1506,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81483" name="Blessed Exalted Sigil" type="Armor">
+	<item id="81483" name="祝福的榮耀貴族符印" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. A part of Exalted armor blessed by Lionel Hunter. Cannot be crystallized, imbued with an attribute or augmented. The item's appearance cannot be modified. <Enchanting>. Use Scroll: Enchant Blessed Exalted Armor. -->
 		<set name="icon" val="icon.honors_robe_sigil_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1528,7 +1528,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="81484" name="Blessed Exalted Circlet" type="Armor">
+	<item id="81484" name="祝福的榮耀貴族頭箍" type="Armor">
 		<!-- Exalted Circlet blessed by Lionel Hunter. LUC/ CHA +1, STR/ INT/ CON +3, Attribute Attack/ Resistance +30, Vitality bonus +10%, P. Atk./ M. Atk./ P. Def./ M. Def. +5%, Critical Rate for basic attacks +5%, M. Skill Critical Rate +5%, Debuff Resistance +3%, acquired XP/ SP +10%. Cannot be enchanted, augmented, crystallized, imbued with an attribute, and its appearance cannot be modified. -->
 		<set name="icon" val="BranchSys.icon.br_circlet_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1543,7 +1543,7 @@
 			<skill id="35653" level="1" /> <!-- Exalted Circlet -->
 		</skills>
 	</item>
-	<item id="81485" name="Exalted Soul Crystal" type="EtcItem">
+	<item id="81485" name="榮耀貴族搜魂石" type="EtcItem">
 		<!-- A special crystal imbued with the power of the Exalted. Adds a special effect to a weapon. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1554,7 +1554,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 	</item>
-	<item id="81486" name="Talisman of Longing" additionalName="Exalted" type="Armor">
+	<item id="81486" name="憧憬的護身符" additionalName="Exalted" type="Armor">
 		<!-- Talisman of Longing imbued with the power of the Exalted. Max HP/ MP/ CP +600, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +50, Critical Rate for basic attacks +3%, M. Skill Critical Rate +1%, P. Atk. +303, M. Atk. +356, all attack power +4%, Damage Reflection Resistance +30%, P./ M. Def. +60, STR/ INT/ CON/ MEN/ DEX/ WIT +2, Skill MP Consumption -3%. The effect does not stack with that of another Talisman of Longing. Cannot be sealed or upgraded. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1571,7 +1571,7 @@
 			<skill id="8864" level="6" /> <!-- Talisman of Longing -->
 		</skills>
 	</item>
-	<item id="81487" name="Sayha's Talisman" additionalName="Exalted" type="Armor">
+	<item id="81487" name="沙哈護身符" additionalName="Exalted" type="Armor">
 		<!-- When equipped, grants the Exalted power: P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If equipped with Venir's Talisman Lv. 12+, Skill Power +2%, skill cooldown -2%. Effects of two identical talismans do not stack -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1586,7 +1586,7 @@
 			<skill id="27787" level="4" /> <!-- Sayha's Talisman -->
 		</skills>
 	</item>
-	<item id="81488" name="Blessed Exalted Seed Bracelet" type="Armor">
+	<item id="81488" name="祝福的榮耀貴族種子手鐲" type="Armor">
 		<!-- Seed Bracelet blessed by Lionel Hunter. Unlocks the main agathion slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack and Resistance +30. 3. P. Atk./ M. Atk./ P. Def./ M. Def. +5%. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -1605,7 +1605,7 @@
 			<skill id="35644" level="1" /> <!-- Blessed Exalted Seed Bracelet -->
 		</skills>
 	</item>
-	<item id="81489" name="Exalted Weapon Augmenting Stone" type="EtcItem">
+	<item id="81489" name="榮耀貴族武器精煉石" type="EtcItem">
 		<!-- A special mineral for augmenting Exalted weapons. After the augmentation, the following bonuses are applied: P. Atk./ M. Atk./ P. Def./ M. Def. and Max HP/ MP/ CP +10%, Critical Damage for basic attacks and P./ M. skills +5%. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_r99" />
 		<set name="material" val="LIQUID" />
@@ -1615,7 +1615,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81490" name="Blessed Exalted Necklace" additionalName="Skill Cooldown" type="Armor">
+	<item id="81490" name="祝福的榮耀貴族項鍊" additionalName="Skill Cooldown" type="Armor">
 		<!-- A necklace blessed by Lionel Hunter. MP +65, P./ M. Atk. +5%, Damage Reflection +3%, skill cooldown -10%. Cannot be enchanted, crystallized, or augmented. -->
 		<set name="icon" val="icon.honors_necklace" />
 		<set name="default_action" val="EQUIP" />
@@ -1635,7 +1635,7 @@
 			<skill id="35639" level="1" /> <!-- Blessed Exalted Necklace - Cooldown -->
 		</skills>
 	</item>
-	<item id="81491" name="Blessed Exalted Earring" additionalName="MP Consumption" type="Armor">
+	<item id="81491" name="祝福的榮耀貴族耳環" additionalName="MP Consumption" type="Armor">
 		<!-- An earring blessed by Lionel Hunter. MP +49, Confusion Atk. Rate and Resistance +30, Vampiric Rage effect +3%, Received Healing +10%, Skill MP Consumption -5%. Cannot be enchanted, crystallized or augmented. -->
 		<set name="icon" val="icon.honors_earing" />
 		<set name="default_action" val="EQUIP" />
@@ -1655,7 +1655,7 @@
 			<skill id="35640" level="1" /> <!-- Blessed Exalted Earring - MP Consumption -->
 		</skills>
 	</item>
-	<item id="81492" name="Blessed Exalted Earring" additionalName="Vampiric Rage" type="Armor">
+	<item id="81492" name="祝福的榮耀貴族耳環" additionalName="Vampiric Rage" type="Armor">
 		<!-- An earring blessed by Lionel Hunter. MP +49, Obstruction Atk. Rate and Resistance +30, Vampiric Rage effect +5%, Attribute Resistance +10. Cannot be enchanted, crystallized or augmented. -->
 		<set name="icon" val="icon.honors_earing" />
 		<set name="default_action" val="EQUIP" />
@@ -1675,7 +1675,7 @@
 			<skill id="35641" level="1" /> <!-- Blessed Exalted Earring - Vampiric Rage -->
 		</skills>
 	</item>
-	<item id="81493" name="Blessed Exalted Ring" additionalName="Critical Rate" type="Armor">
+	<item id="81493" name="祝福的榮耀貴族戒指" additionalName="Critical Rate" type="Armor">
 		<!-- A ring blessed by Lionel Hunter. MP +33, Stupor Atk. Rate and Resistance +20, Critical Rate for basic attacks +5%, M. Skill Critical Rate +5%, Critical Damage for basic attacks and M. skills +10%. Cannot be enchanted, crystallized or augmented. -->
 		<set name="icon" val="icon.honors_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -1695,7 +1695,7 @@
 			<skill id="35642" level="1" /> <!-- Blessed Exalted Ring - Critical Rate -->
 		</skills>
 	</item>
-	<item id="81494" name="Blessed Exalted Ring" additionalName="Critical Damage" type="Armor">
+	<item id="81494" name="祝福的榮耀貴族戒指" additionalName="Critical Damage" type="Armor">
 		<!-- A ring blessed by Lionel Hunter. Max MP +33, Infection Atk. Rate and Resistance +20, Critical Damage for basic attacks and P./ M. skills +15%. Cannot be enchanted, crystallized or augmented. -->
 		<set name="icon" val="icon.honors_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -1715,7 +1715,7 @@
 			<skill id="35643" level="1" /> <!-- Blessed Exalted Ring - Critical Damage -->
 		</skills>
 	</item>
-	<item id="81495" name="Superior Topaz Lv. 1" type="Armor">
+	<item id="81495" name="最高級黃寶石1階段" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals 22,005 fixed damage. With a low chance, deals a lethal strike to the enemy. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1729,7 +1729,7 @@
 			<skill id="18814" level="11" /> <!-- Superior Topaz Lv. 1 -->
 		</skills>
 	</item>
-	<item id="81496" name="Superior Topaz Lv. 2" type="Armor">
+	<item id="81496" name="最高級黃寶石2階段" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals 24,362 fixed damage. With a low chance, deals a lethal strike to the enemy. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1743,7 +1743,7 @@
 			<skill id="18814" level="12" /> <!-- Superior Topaz Lv. 2 -->
 		</skills>
 	</item>
-	<item id="81497" name="Superior Topaz Lv. 3" type="Armor">
+	<item id="81497" name="最高級黃寶石3階段" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals 26,720 fixed damage. With a low chance, deals a lethal strike to the enemy. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1757,7 +1757,7 @@
 			<skill id="18814" level="13" /> <!-- Superior Topaz Lv. 3 -->
 		</skills>
 	</item>
-	<item id="81498" name="Superior Topaz Lv. 4" type="Armor">
+	<item id="81498" name="最高級黃寶石4階段" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals 29,078 fixed damage. With a low chance, deals a lethal strike to the enemy. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -1771,7 +1771,7 @@
 			<skill id="18814" level="14" /> <!-- Superior Topaz Lv. 4 -->
 		</skills>
 	</item>
-	<item id="81499" name="Superior Topaz Lv. 5" type="Armor">
+	<item id="81499" name="最高級黃寶石5階段" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals 31,435 fixed damage. With a low chance, deals a lethal strike to the enemy. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />

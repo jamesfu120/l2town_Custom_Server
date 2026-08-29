@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37600" name="A-grade Weapon Coupon" type="EtcItem">
+	<item id="37600" name="武器交換券-A" type="EtcItem">
 		<!-- Take it to Snake to obtain an A-grade weapon for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37601" name="R-grade Armor Coupon" type="EtcItem">
+	<item id="37601" name="防具交換券-R" type="EtcItem">
 		<!-- Take it to Snake to obtain an R-grade armor for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37602" name="R95-grade Armor Coupon" type="EtcItem">
+	<item id="37602" name="防具交換券-R95" type="EtcItem">
 		<!-- Take it to Snake to obtain an R95-grade armor for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37603" name="R99-grade Armor Coupon" type="EtcItem">
+	<item id="37603" name="防具交換券-R99" type="EtcItem">
 		<!-- Take it to Snake to obtain an R99-grade armor for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37604" name="S-grade Armor Coupon" type="EtcItem">
+	<item id="37604" name="防具交換券-S" type="EtcItem">
 		<!-- Take this to Snake in town to obtain S-grade armor for a small fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37605" name="A-grade Armor Coupon" type="EtcItem">
+	<item id="37605" name="防具交換券-A" type="EtcItem">
 		<!-- Take it to Snake to obtain an A-grade weapon for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37606" name="Promise Cube Pack" additionalName="Event" type="EtcItem">
+	<item id="37606" name="諾言晶體禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Promise Cube (100-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="is_tradable" val="false" />
@@ -57,7 +57,7 @@
 			<item id="37556" min="1" max="1" chance="100" /> <!-- Promise Cube - 100-day -->
 		</capsuled_items>
 	</item>
-	<item id="37607" name="Treasure Chest" additionalName="Western Winds" type="EtcItem">
+	<item id="37607" name="寶箱" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Head Accessory Pack, Locket Box, Enchant Scroll Box, Attribute Stone Box, Material Box. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -81,7 +81,7 @@
 			<skill id="17131" level="1" /> <!-- Treasure Chest -->
 		</skills>
 	</item>
-	<item id="37608" name="Hair Accessory Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37608" name="頭飾禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a head accessory enhanced with a locket. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -111,7 +111,7 @@
 			<skill id="17132" level="1" /> <!-- Head Accessory Box -->
 		</skills>
 	</item>
-	<item id="37609" name="Pendant Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37609" name="墜子禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a locket. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -143,7 +143,7 @@
 			<skill id="17133" level="1" /> <!-- Locket Box -->
 		</skills>
 	</item>
-	<item id="37610" name="Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37610" name="強化卷軸禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Enchant Scroll (S- or R-grade). There is a low chance to obtain Blessed Enchant Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -169,7 +169,7 @@
 			<skill id="17134" level="1" /> <!-- Enchant Scroll Pack -->
 		</skills>
 	</item>
-	<item id="37611" name="Attribute Stone Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37611" name="屬性石禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Attribute Stone/ Crystal. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -199,7 +199,7 @@
 			<skill id="17135" level="1" /> <!-- Attribute Stone Box -->
 		</skills>
 	</item>
-	<item id="37612" name="Ingredient Box" additionalName="Western Winds" type="EtcItem">
+	<item id="37612" name="材料箱子" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either Destructive Energy, or its crafting materials. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -230,7 +230,7 @@
 			<skill id="17136" level="1" /> <!-- Material Box -->
 		</skills>
 	</item>
-	<item id="37613" name="Hero's Treasure Chest" additionalName="Western Winds" type="EtcItem">
+	<item id="37613" name="英雄的寶箱" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Hero's Enchant Stone Pack, Hero's Giant Enchant Scroll Pack, Hero's Blessed Enchant Scroll Pack, Hero's Unbind Scroll Pack, Hero's Attribute Crystal Pack, PK Pack, Reputation Pack, Mysterious Shot Box, Kaliel's Energy Box, Box: Soul Bottle, Spirit Stone Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -260,7 +260,7 @@
 			<skill id="17137" level="1" /> <!-- Hero's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="37614" name="Hero's Enchant Stone Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37614" name="英雄的強化輔助石禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an S-/ R-grade Enchant Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -282,7 +282,7 @@
 			<skill id="17138" level="1" /> <!-- Hero's Enchant Stone Pack -->
 		</skills>
 	</item>
-	<item id="37615" name="Hero's Giant Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37615" name="英雄的巨人強化卷軸禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Giant's Enchant Scroll (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -304,7 +304,7 @@
 			<skill id="17139" level="1" /> <!-- Hero's Giant Enchant Scroll Pack -->
 		</skills>
 	</item>
-	<item id="37616" name="Hero's Blessed Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37616" name="英雄的祝福強化卷軸禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Enchant Scroll (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -326,7 +326,7 @@
 			<skill id="17140" level="1" /> <!-- Hero's Blessed Enchant Scroll Pack -->
 		</skills>
 	</item>
-	<item id="37617" name="Hero's Unbind Scroll Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37617" name="英雄的束縛解除卷軸禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Unbind Scroll (R, R95 or R99-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -347,7 +347,7 @@
 			<skill id="17141" level="1" /> <!-- Hero's Unbind Scroll Pack -->
 		</skills>
 	</item>
-	<item id="37618" name="Hero's Attribute Crystal Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37618" name="英雄的屬性水晶禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an attribute crystal, or either a Super 60 or Super 150 attribute Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -383,7 +383,7 @@
 			<skill id="17142" level="1" /> <!-- Hero's Attribute Crystal Pack -->
 		</skills>
 	</item>
-	<item id="37619" name="PK Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37619" name="重啟禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a random Scroll: PK. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -405,7 +405,7 @@
 			<skill id="17143" level="1" /> <!-- PK Pack -->
 		</skills>
 	</item>
-	<item id="37620" name="Reputation Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37620" name="淨化禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a random Scroll: Reputation. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -427,7 +427,7 @@
 			<skill id="17144" level="1" /> <!-- Reputation Pack -->
 		</skills>
 	</item>
-	<item id="37621" name="Mysterious Shot Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37621" name="神祕彈禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Soulshot or Mysterious Blessed Spiritshot. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -447,7 +447,7 @@
 			<skill id="17145" level="1" /> <!-- Mysterious Shot Box -->
 		</skills>
 	</item>
-	<item id="37622" name="Kaliel's Energy Box" additionalName="Western Winds" type="EtcItem">
+	<item id="37622" name="卡利艾之力禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain one of Kaliel's Energies. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -468,7 +468,7 @@
 			<skill id="17146" level="1" /> <!-- Kaliel's Energy Pack -->
 		</skills>
 	</item>
-	<item id="37623" name="Soul Bottle Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37623" name="靈魂之瓶禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain Antharas' Soul Bottle or Valakas' Soul Bottle. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -488,7 +488,7 @@
 			<skill id="17147" level="1" /> <!-- Box: Soul Bottle -->
 		</skills>
 	</item>
-	<item id="37624" name="Top-grade Life Stone Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37624" name="特級精煉石禮盒" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain Spirit Stone or Life Stone: Giant's Power. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -509,14 +509,14 @@
 			<skill id="17148" level="1" /> <!-- Top-grade Life Stone Pack -->
 		</skills>
 	</item>
-	<item id="37625" name="Legendary Card: Frintezza" type="EtcItem">
+	<item id="37625" name="傳說的卡片-芙琳泰沙" type="EtcItem">
 		<set name="icon" val="icon.card_devil_frintessa" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37626" name="Package: Mysterious Blessed R-grade Spiritshots" type="EtcItem">
+	<item id="37626" name="神祕的魔靈彈組" type="EtcItem">
 		<!-- Double-click to obtain 10,000 Mysterious Spiritshots. Used with weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="default_action" val="PEEL" />
@@ -535,7 +535,7 @@
 			<item id="46083" min="10000" max="10000" chance="100" /> <!-- Mysterious Spiritshot -->
 		</capsuled_items>
 	</item>
-	<item id="37627" name="Package: Mysterious R-grade Soulshots" type="EtcItem">
+	<item id="37627" name="神祕的靈魂彈組" type="EtcItem">
 		<!-- Double-click to obtain 20,000 Mysterious Soulshots. Used with weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="default_action" val="PEEL" />
@@ -554,7 +554,7 @@
 			<item id="46082" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot -->
 		</capsuled_items>
 	</item>
-	<item id="37628" name="Cupid's Bow" type="Weapon">
+	<item id="37628" name="邱比特之弓" type="Weapon">
 		<!-- Throws a love-filled heart. Allows to use the Heart Shot active skill. Note!. Using the bow to attack a monster, you can be attacked by other players. -->
 		<set name="icon" val="icon.bm_krono_bow" />
 		<set name="weapon_type" val="BOW" />
@@ -584,7 +584,7 @@
 			<skill id="3261" level="1" /> <!-- Forgiveness -->
 		</skills>
 	</item>
-	<item id="37629" name="Pig Lollipop" type="Weapon">
+	<item id="37629" name="豬豬塔糖" type="Weapon">
 		<!-- Magic lollipop with a cute piggy drawing on it. It makes a piggy squeal upon a strike. Can transform into a cute piggy for a certain amount of time. -->
 		<set name="icon" val="icon.bm_pig_candy" />
 		<set name="weapon_type" val="SWORD" />
@@ -610,7 +610,7 @@
 			<skill id="3418" level="1" /> <!-- Active Skill: Transform Pig -->
 		</skills>
 	</item>
-	<item id="37630" name="Mysterious Shaper" additionalName="7-day" type="Weapon">
+	<item id="37630" name="神秘的鉋刀" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero" />
 		<set name="weapon_type" val="DAGGER" />
@@ -640,7 +640,7 @@
 			<skill id="13547" level="1" /> <!-- Mysterious Shaper -->
 		</skills>
 	</item>
-	<item id="37631" name="Mysterious Cutter" additionalName="7-day" type="Weapon">
+	<item id="37631" name="神秘的切刃" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -669,7 +669,7 @@
 			<skill id="13548" level="1" /> <!-- Mysterious Cutter -->
 		</skills>
 	</item>
-	<item id="37632" name="Mysterious Slasher" additionalName="7-day" type="Weapon">
+	<item id="37632" name="神秘的殺刃" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -698,7 +698,7 @@
 			<skill id="13549" level="1" /> <!-- Mysterious Slasher -->
 		</skills>
 	</item>
-	<item id="37633" name="Mysterious Avenger" additionalName="7-day" type="Weapon">
+	<item id="37633" name="神秘的復仇者" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -728,7 +728,7 @@
 			<skill id="13550" level="1" /> <!-- Mysterious Avenger -->
 		</skills>
 	</item>
-	<item id="37634" name="Mysterious Fighter" additionalName="7-day" type="Weapon">
+	<item id="37634" name="神秘的戰爪" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -758,7 +758,7 @@
 			<skill id="13551" level="1" /> <!-- Mysterious Fighter -->
 		</skills>
 	</item>
-	<item id="37635" name="Mysterious Stormer" additionalName="7-day" type="Weapon">
+	<item id="37635" name="神秘的風暴者" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero" />
 		<set name="weapon_type" val="POLE" />
@@ -788,7 +788,7 @@
 			<skill id="13552" level="1" /> <!-- Mysterious Stormer -->
 		</skills>
 	</item>
-	<item id="37636" name="Mysterious Thrower" additionalName="7-day" type="Weapon">
+	<item id="37636" name="神秘的投弓" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero" />
 		<set name="weapon_type" val="BOW" />
@@ -818,7 +818,7 @@
 			<skill id="13553" level="1" /> <!-- Mysterious Thrower -->
 		</skills>
 	</item>
-	<item id="37637" name="Mysterious Guardian" additionalName="7-day" type="Weapon">
+	<item id="37637" name="神秘的射靈" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -848,7 +848,7 @@
 			<skill id="13554" level="1" /> <!-- Mysterious Guardian -->
 		</skills>
 	</item>
-	<item id="37638" name="Mysterious Buster" additionalName="7-day" type="Weapon">
+	<item id="37638" name="神秘的爆刃" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -878,7 +878,7 @@
 			<skill id="13555" level="1" /> <!-- Mysterious Buster -->
 		</skills>
 	</item>
-	<item id="37639" name="Mysterious Caster" additionalName="7-day" type="Weapon">
+	<item id="37639" name="神秘的術杖" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -908,7 +908,7 @@
 			<skill id="13556" level="1" /> <!-- Mysterious Caster -->
 		</skills>
 	</item>
-	<item id="37640" name="Mysterious Retributer" additionalName="7-day" type="Weapon">
+	<item id="37640" name="神秘的報恨者" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -940,7 +940,7 @@
 			<skill id="13557" level="1" /> <!-- Mysterious Retributer -->
 		</skills>
 	</item>
-	<item id="37641" name="Mysterious Dual Sword" additionalName="7-day" type="Weapon">
+	<item id="37641" name="神秘的雙刀" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -969,7 +969,7 @@
 			<skill id="13558" level="1" /> <!-- Mysterious Dual Sword -->
 		</skills>
 	</item>
-	<item id="37642" name="Mysterious Dual Dagger" additionalName="7-day" type="Weapon">
+	<item id="37642" name="神秘的雙匕首" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualdagger" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -998,7 +998,7 @@
 			<skill id="13559" level="1" /> <!-- Mysterious Dual Dagger -->
 		</skills>
 	</item>
-	<item id="37643" name="Mysterious Dual Blunt Weapon" additionalName="7-day" type="Weapon">
+	<item id="37643" name="神秘的雙鈍器" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1028,7 +1028,7 @@
 			<skill id="13560" level="1" /> <!-- Dual Blunt Weapons Imbued With Mysterious Energy -->
 		</skills>
 	</item>
-	<item id="37644" name="Mysterious Shaper" additionalName="30-day" type="Weapon">
+	<item id="37644" name="神秘的鉋刀" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1058,7 +1058,7 @@
 			<skill id="13547" level="1" /> <!-- Mysterious Shaper -->
 		</skills>
 	</item>
-	<item id="37645" name="Mysterious Cutter" additionalName="30-day" type="Weapon">
+	<item id="37645" name="神秘的切刃" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -1087,7 +1087,7 @@
 			<skill id="13548" level="1" /> <!-- Mysterious Cutter -->
 		</skills>
 	</item>
-	<item id="37646" name="Mysterious Slasher" additionalName="30-day" type="Weapon">
+	<item id="37646" name="神秘的殺刃" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -1116,7 +1116,7 @@
 			<skill id="13549" level="1" /> <!-- Mysterious Slasher -->
 		</skills>
 	</item>
-	<item id="37647" name="Mysterious Avenger" additionalName="30-day" type="Weapon">
+	<item id="37647" name="神秘的復仇者" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1146,7 +1146,7 @@
 			<skill id="13550" level="1" /> <!-- Mysterious Avenger -->
 		</skills>
 	</item>
-	<item id="37648" name="Mysterious Fighter" additionalName="30-day" type="Weapon">
+	<item id="37648" name="神秘的戰爪" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1176,7 +1176,7 @@
 			<skill id="13551" level="1" /> <!-- Mysterious Fighter -->
 		</skills>
 	</item>
-	<item id="37649" name="Mysterious Stormer" additionalName="30-day" type="Weapon">
+	<item id="37649" name="神秘的風暴者" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero" />
 		<set name="weapon_type" val="POLE" />
@@ -1206,7 +1206,7 @@
 			<skill id="13552" level="1" /> <!-- Mysterious Stormer -->
 		</skills>
 	</item>
-	<item id="37650" name="Mysterious Thrower" additionalName="30-day" type="Weapon">
+	<item id="37650" name="神秘的投弓" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero" />
 		<set name="weapon_type" val="BOW" />
@@ -1236,7 +1236,7 @@
 			<skill id="13553" level="1" /> <!-- Mysterious Thrower -->
 		</skills>
 	</item>
-	<item id="37651" name="Mysterious Guardian" additionalName="30-day" type="Weapon">
+	<item id="37651" name="神秘的射靈" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1266,7 +1266,7 @@
 			<skill id="13554" level="1" /> <!-- Mysterious Guardian -->
 		</skills>
 	</item>
-	<item id="37652" name="Mysterious Buster" additionalName="30-day" type="Weapon">
+	<item id="37652" name="神秘的爆刃" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -1296,7 +1296,7 @@
 			<skill id="13555" level="1" /> <!-- Mysterious Buster -->
 		</skills>
 	</item>
-	<item id="37653" name="Mysterious Caster" additionalName="30-day" type="Weapon">
+	<item id="37653" name="神秘的術杖" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1327,7 +1327,7 @@
 			<skill id="13556" level="1" /> <!-- Mysterious Caster -->
 		</skills>
 	</item>
-	<item id="37654" name="Mysterious Retributer" additionalName="30-day" type="Weapon">
+	<item id="37654" name="神秘的報恨者" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1359,7 +1359,7 @@
 			<skill id="13557" level="1" /> <!-- Mysterious Retributer -->
 		</skills>
 	</item>
-	<item id="37655" name="Mysterious Dual Sword" additionalName="30-day" type="Weapon">
+	<item id="37655" name="神秘的雙刀" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1388,7 +1388,7 @@
 			<skill id="13558" level="1" /> <!-- Mysterious Dual Sword -->
 		</skills>
 	</item>
-	<item id="37656" name="Mysterious Dual Dagger" additionalName="30-day" type="Weapon">
+	<item id="37656" name="神秘的雙匕首" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualdagger" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1418,7 +1418,7 @@
 			<skill id="13559" level="1" /> <!-- Mysterious Dual Dagger -->
 		</skills>
 	</item>
-	<item id="37657" name="Mysterious Dual Blunt Weapon" additionalName="30-day" type="Weapon">
+	<item id="37657" name="神秘的雙鈍器" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1448,7 +1448,7 @@
 			<skill id="13560" level="1" /> <!-- Dual Blunt Weapons Imbued With Mysterious Energy -->
 		</skills>
 	</item>
-	<item id="37658" name="Package: Mysterious Healthy Juice (HP/CP)" type="EtcItem">
+	<item id="37658" name="神秘的健康果汁(HP/CP)組" type="EtcItem">
 		<!-- Double-click to obtain Miraculous Healthy Juice (HP/ CP) (3 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1463,7 +1463,7 @@
 			<item id="37659" min="3" max="3" chance="100" /> <!-- Miraculous Healthy Juice (HP/ CP) -->
 		</capsuled_items>
 	</item>
-	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" type="EtcItem">
+	<item id="37659" name="神秘的健康果汁(HP/CP)" type="EtcItem">
 		<!-- Miraculous juice that momentarily recovers 30,000 HP/ CP. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.bm_health_juice_violet" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1489,7 +1489,7 @@
 			<skill id="17152" level="1" /> <!-- Miraculous Healthy Juice -->
 		</skills>
 	</item>
-	<item id="37660" name="Magmeld's Instrument" type="Weapon">
+	<item id="37660" name="瑪格門樂器" type="Weapon">
 		<!-- Magmeld's special musical instrument. Allows you to play lively melodies. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1510,7 +1510,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37661" name="Refined Romantic Chapeau: Blue" type="Armor">
+	<item id="37661" name="時髦藍浪漫圓帽" type="Armor">
 		<!-- Refined Blue Romantic Chapeau. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_blue" />
 		<set name="default_action" val="EQUIP" />
@@ -1523,7 +1523,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="37662" name="Refined Romantic Chapeau: Gold" type="Armor">
+	<item id="37662" name="時髦金浪漫圓帽" type="Armor">
 		<!-- Refined Gold Romantic Chapeau. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
 		<set name="default_action" val="EQUIP" />
@@ -1536,7 +1536,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="37663" name="Refined Romantic Chapeau: Green" type="Armor">
+	<item id="37663" name="時髦綠浪漫圓帽" type="Armor">
 		<!-- Refined Green Romantic Chapeau. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_green" />
 		<set name="default_action" val="EQUIP" />
@@ -1549,7 +1549,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="37664" name="Refined Romantic Chapeau: Red" type="Armor">
+	<item id="37664" name="時髦紅浪漫圓帽" type="Armor">
 		<!-- Refined Red Romantic Chapeau. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_red" />
 		<set name="default_action" val="EQUIP" />
@@ -1562,7 +1562,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="37665" name="Refined Romantic Chapeau: Yellow" type="Armor">
+	<item id="37665" name="時髦黃浪漫圓帽" type="Armor">
 		<!-- Refined Yellow Romantic Chapeau. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
 		<set name="default_action" val="EQUIP" />
@@ -1575,7 +1575,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="37666" name="Rare Accessory Pack" type="EtcItem">
+	<item id="37666" name="稀有飾品禮盒" type="EtcItem">
 		<!-- Double-click to obtain the following 30-day items: Antharas' Blessed Earring, Valakas' Blessed Necklace, Tauti's Ring, Earth Wyrm's Ring. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_tradable" val="false" />
@@ -1592,7 +1592,7 @@
 			<item id="37670" min="1" max="1" chance="100" /> <!-- Earth Wyrm's Ring - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="37667" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
+	<item id="37667" name="祝福的安塔瑞斯耳環" additionalName="30-day" type="Armor">
 		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
@@ -1612,7 +1612,7 @@
 			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
 		</skills>
 	</item>
-	<item id="37668" name="Blessed Valakas' Necklace" additionalName="30-day" type="Armor">
+	<item id="37668" name="祝福的巴拉卡斯項鍊" additionalName="30-day" type="Armor">
 		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold and grants immunity to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
@@ -1632,7 +1632,7 @@
 			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
 		</skills>
 	</item>
-	<item id="37669" name="Tauti's Ring" additionalName="30-day" type="Armor">
+	<item id="37669" name="塔武提戒指" additionalName="30-day" type="Armor">
 		<!-- Fire/ Dark Resistance +25, MP +38, Critical Damage for basic attacks +15%, P. Skill Power +5%, PvP damage +5%, Confusion/ Obstruction Resistance +10, Damage Reflection Resistance +5, Blood Siphon Resistance +5, received PvP damage -5%. When using a blunt weapon, Critical Rate for basic attacks +5.4%. Effects of two identical rings do not stack (excluding M. Def. and Attribute Resistance). -->
 		<set name="icon" val="icon.bm_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -1651,7 +1651,7 @@
 			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
 		</skills>
 	</item>
-	<item id="37670" name="Earth Wyrm's Heart Ring" additionalName="30-day" type="Armor">
+	<item id="37670" name="地蟲心臟戒指" additionalName="30-day" type="Armor">
 		<!-- MP +38, MP Recovery Rate +3, Critical Damage for basic attacks +20%, P. Accuracy +5, Infection Atk. Rate and Resistance +50, Confusion/ Danger Zone Resistance +20, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Pure Blood: Removes Infection debuffs (cooldown: 2 h.). -->
 		<set name="icon" val="icon.bm_ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -1675,7 +1675,7 @@
 			<skill id="13317" level="1" /> <!-- Earth Wyrm's Ring -->
 		</skills>
 	</item>
-	<item id="37671" name="Heavenly Recovery Potion" type="EtcItem">
+	<item id="37671" name="天堂恢復藥水" type="EtcItem">
 		<!-- When used, recovers 2500 HP. If HP is full, recovers CP. No cooldown. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion2" />
 		<set name="is_sellable" val="false" />
@@ -1691,7 +1691,7 @@
 			<skill id="17153" level="1" /> <!-- Heavenly Recovery Potion -->
 		</skills>
 	</item>
-	<item id="37672" name="Mysterious Friend Summon Bracelet" additionalName="30-day" type="Armor">
+	<item id="37672" name="神祕的好友召喚手鐲" additionalName="30-day" type="Armor">
 		<!-- A bracelet that allows you to summon other players. Both the summoner and the one being summoned must be in a party and have these bracelets equipped. Available for 30 d. Cooldown: 60 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_ring_of_friendship" />
 		<set name="default_action" val="EQUIP" />
@@ -1706,7 +1706,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="37673" name="Package: Mysterious Friend Summon Bracelet (30-day)" type="EtcItem">
+	<item id="37673" name="神祕的好友召喚手鐲 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Miraculous Friend Summon Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1721,7 +1721,7 @@
 			<item id="37672" min="1" max="1" chance="100" /> <!-- Miraculous Friend Summon Bracelet - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="37674" name="Scroll: Modify Demonic Sword Zariche" type="EtcItem">
+	<item id="37674" name="魔劍‧薩雷奇加工卷軸" type="EtcItem">
 		<!-- A scroll that changes the appearance of a two-handed sword to that of Demonic Sword Zariche. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_zariche_i00" />
 		<set name="weight" val="10" />
@@ -1736,7 +1736,7 @@
 			<skill id="17164" level="1" /> <!-- Scroll: Modify Demonic Sword Zariche -->
 		</skills>
 	</item>
-	<item id="37675" name="Scroll: Modify Blood Sword Akamanah" type="EtcItem">
+	<item id="37675" name="血劍‧阿卡瑪那夫加工卷軸" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of a Blood Sword Akamanah. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_aka_manaf_i00" />
 		<set name="weight" val="10" />
@@ -1751,7 +1751,7 @@
 			<skill id="17165" level="1" /> <!-- Scroll: Modify Blood Sword Akamanah -->
 		</skills>
 	</item>
-	<item id="37676" name="Coin of Knowledge" type="EtcItem">
+	<item id="37676" name="知識之幣" type="EtcItem">
 		<!-- You are full of knowledge!. You can purchase useful items through the Adventurers' Guide. -->
 		<set name="icon" val="icon.int_coin_gm_i00" />
 		<set name="is_tradable" val="false" />
@@ -1760,7 +1760,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="37677" name="GM's Buff Scroll" additionalName="P. Def." type="EtcItem">
+	<item id="37677" name="GM輔助魔法卷軸" additionalName="P. Def." type="EtcItem">
 		<!-- When used, grants the effects of Musician's Melody and Sonata Performance Lv. 4, including Knight's Harmony, for 60 min. Cannot be used in the Olympiad or the Ceremony of Chaos. Cooldown: 2 min. -->
 		<set name="icon" val="icon.buff_scroll_gm_i00" />
 		<set name="weight" val="120" />
@@ -1778,7 +1778,7 @@
 			<skill id="39767" level="1" /> <!-- Sonata Performance - GM's Blessing -->
 		</skills>
 	</item>
-	<item id="37678" name="GM's Buff Scroll" additionalName="P. Atk." type="EtcItem">
+	<item id="37678" name="GM輔助魔法卷軸" additionalName="P. Atk." type="EtcItem">
 		<!-- When used, grants the effects of Musician's Melody and Sonata Performance Lv. 4, including Warrior's Harmony, for 60 min. Cannot be used in the Olympiad or the Ceremony of Chaos. Cooldown: 2 min. -->
 		<set name="icon" val="icon.buff_scroll_gm_i00" />
 		<set name="weight" val="120" />
@@ -1796,7 +1796,7 @@
 			<skill id="39767" level="1" /> <!-- Sonata Performance - GM's Blessing -->
 		</skills>
 	</item>
-	<item id="37679" name="GM's Buff Scroll" additionalName="M. Atk." type="EtcItem">
+	<item id="37679" name="GM輔助魔法卷軸" additionalName="M. Atk." type="EtcItem">
 		<!-- When used, grants the effects of Musician's Melody and Sonata Performance Lv. 4, including Wizard's Harmony, for 60 min. Cannot be used in the Olympiad or the Ceremony of Chaos. Cooldown: 2 min. -->
 		<set name="icon" val="icon.buff_scroll_gm_i00" />
 		<set name="weight" val="120" />
@@ -1814,7 +1814,7 @@
 			<skill id="39767" level="1" /> <!-- Sonata Performance - GM's Blessing -->
 		</skills>
 	</item>
-	<item id="37680" name="Transformation Scroll: Makeshift Bat" type="EtcItem">
+	<item id="37680" name="土偶變身卷軸" type="EtcItem">
 		<!-- Transforms into Clay Statue for 30 min. Keep in mind that it's quite cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -1828,7 +1828,7 @@
 			<skill id="17178" level="1" /> <!-- Transformation Scroll: Clay Statue -->
 		</skills>
 	</item>
-	<item id="37681" name="Theamo's Talisman" additionalName="Not used" type="Armor">
+	<item id="37681" name="提莫護身符" additionalName="Not used" type="Armor">
 		<!-- Test Item. Do not open to public. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="is_dropable" val="false" />
@@ -1844,7 +1844,7 @@
 			<skill id="3271" level="1" /> <!-- Blue Talisman - P. Atk. -->
 		</skills>
 	</item>
-	<item id="37682" name="Theamo's Rune" additionalName="Not used" type="EtcItem">
+	<item id="37682" name="提莫古文" additionalName="Not used" type="EtcItem">
 		<!-- Test Item. Do not open to public. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_dropable" val="false" />
@@ -1860,7 +1860,7 @@
 			<skill id="9240" level="1" /> <!-- Nevit's Rune -->
 		</skills>
 	</item>
-	<item id="37683" name="Demonic Sword Zariche" additionalName="Appearance Modification" type="Weapon">
+	<item id="37683" name="魔劍‧薩雷奇" additionalName="Appearance Modification" type="Weapon">
 		<!-- Demonic Sword Zariche skin. -->
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -1883,7 +1883,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37684" name="Blood Sword Akamanah" additionalName="Appearance Modification" type="Weapon">
+	<item id="37684" name="血劍‧阿卡瑪那夫" additionalName="Appearance Modification" type="Weapon">
 		<!-- Blood Sword Akamanah skin. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1906,7 +1906,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37685" name="Transformation Scroll: Lady Tow" type="EtcItem">
+	<item id="37685" name="誘餌土偶變身卷軸" type="EtcItem">
 		<!-- Transforms into Beautiful Clay Statue for 30 min. Keep in mind that it's quite cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -1920,7 +1920,7 @@
 			<skill id="17179" level="1" /> <!-- Transformation Scroll: Beautiful Clay Statue -->
 		</skills>
 	</item>
-	<item id="37686" name="Transformation Scroll: Angry Tow" type="EtcItem">
+	<item id="37686" name="沉重土偶變身卷軸" type="EtcItem">
 		<!-- Transforms into Solid Clay Statue for 30 min. Keep in mind that it's quite cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -1934,7 +1934,7 @@
 			<skill id="17180" level="1" /> <!-- Transformation Scroll: Solid Clay Statue -->
 		</skills>
 	</item>
-	<item id="37687" name="Transformation Scroll: Sleepy Tow" type="EtcItem">
+	<item id="37687" name="膽怯土偶變身卷軸" type="EtcItem">
 		<!-- Transforms into Old Clay Statue for 30 min. Keep in mind that it's quite cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -1948,7 +1948,7 @@
 			<skill id="17181" level="1" /> <!-- Transformation Scroll: Old Clay Statue -->
 		</skills>
 	</item>
-	<item id="37688" name="Valentine Dagger" type="Weapon">
+	<item id="37688" name="白色情人節匕首" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Dagger form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1975,7 +1975,7 @@
 			<skill id="13413" level="1" /> <!-- Sealed Hero's Power Shaper -->
 		</skills>
 	</item>
-	<item id="37689" name="Valentine One-handed Sword" type="Weapon">
+	<item id="37689" name="白色情人節單手刀劍" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine One-handed Sword form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -2001,7 +2001,7 @@
 			<skill id="13414" level="1" /> <!-- Sealed Hero's Power Cutter -->
 		</skills>
 	</item>
-	<item id="37690" name="Valentine Two-handed Sword" type="Weapon">
+	<item id="37690" name="白色情人節戰士雙手刀劍" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine two-handed sword type. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -2027,7 +2027,7 @@
 			<skill id="13415" level="1" /> <!-- Sealed Hero's Power Slasher -->
 		</skills>
 	</item>
-	<item id="37691" name="Valentine One-handed Club" type="Weapon">
+	<item id="37691" name="白色情人節戰士單手鈍器" type="Weapon">
 		<!-- Can be used for changing a weapon's appearance to that of Valentine One-handed Club. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2054,7 +2054,7 @@
 			<skill id="13416" level="1" /> <!-- Sealed Hero's Power Avenger -->
 		</skills>
 	</item>
-	<item id="37692" name="Valentine Fist Weapon" type="Weapon">
+	<item id="37692" name="白色情人節格鬥兵器" type="Weapon">
 		<!-- Can be used for changing a weapon's appearance to that of Valentine Fist. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2081,7 +2081,7 @@
 			<skill id="13417" level="1" /> <!-- Sealed Hero's Power Fighter -->
 		</skills>
 	</item>
-	<item id="37693" name="Valentine Spear" type="Weapon">
+	<item id="37693" name="白色情人節槍" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="POLE" />
@@ -2109,7 +2109,7 @@
 			<skill id="13418" level="1" /> <!-- Sealed Hero's Power Stormer -->
 		</skills>
 	</item>
-	<item id="37694" name="Valentine Bow" type="Weapon">
+	<item id="37694" name="白色情人節弓" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Bow form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BOW" />
@@ -2136,7 +2136,7 @@
 			<skill id="13419" level="1" /> <!-- Sealed Hero's Power Thrower -->
 		</skills>
 	</item>
-	<item id="37695" name="Valentine Crossbow" type="Weapon">
+	<item id="37695" name="白色情人節弩弓" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Crossbow form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -2163,7 +2163,7 @@
 			<skill id="13420" level="1" /> <!-- Sealed Hero's Power Guardian -->
 		</skills>
 	</item>
-	<item id="37696" name="Valentine Magic Sword" type="Weapon">
+	<item id="37696" name="白色情人節魔法劍" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine magic sword type. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -2190,7 +2190,7 @@
 			<skill id="13421" level="1" /> <!-- Sealed Hero's Power Buster -->
 		</skills>
 	</item>
-	<item id="37697" name="Valentine One-handed Staff" type="Weapon">
+	<item id="37697" name="白色情人節單手魔杖" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine one-handed staff type. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2218,7 +2218,7 @@
 			<skill id="13422" level="1" /> <!-- Sealed Hero's Power Caster -->
 		</skills>
 	</item>
-	<item id="37698" name="Valentine Two-handed Staff" type="Weapon">
+	<item id="37698" name="白色情人節雙手魔杖" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine two-handed staff type. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2246,7 +2246,7 @@
 			<skill id="13423" level="1" /> <!-- Sealed Hero's Power Retributer -->
 		</skills>
 	</item>
-	<item id="37699" name="Valentine Dual Sword" type="Weapon">
+	<item id="37699" name="白色情人節雙刀" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Dual Sword form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUAL" />

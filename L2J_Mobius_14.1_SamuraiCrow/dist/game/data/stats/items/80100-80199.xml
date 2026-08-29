@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="80100" name="Krishna Retributer" type="Weapon">
+	<item id="80100" name="克里修納報恨者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Atk. +3%, M. Skill Critical Damage +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -36,7 +36,7 @@
 			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Retributer - Special Property -->
 		</skills>
 	</item>
-	<item id="80101" name="Krishna Dual Swords" type="Weapon">
+	<item id="80101" name="克里修納雙刀" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -69,7 +69,7 @@
 			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Swords - Special Property -->
 		</skills>
 	</item>
-	<item id="80102" name="Krishna Dual Daggers" type="Weapon">
+	<item id="80102" name="克里修納雙匕首" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -103,7 +103,7 @@
 			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Daggers - Special Property -->
 		</skills>
 	</item>
-	<item id="80103" name="Krishna Dual Blunt Weapons" type="Weapon">
+	<item id="80103" name="克里修納雙鈍器" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Max HP +4%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -137,7 +137,7 @@
 			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Blunt Weapons - Special Property -->
 		</skills>
 	</item>
-	<item id="80104" name="Leviathan Helmet" additionalName="Heavy armor" type="Armor">
+	<item id="80104" name="利維坦頭盔" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Heavy armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -158,7 +158,7 @@
 			<stat type="pDef">175</stat>
 		</stats>
 	</item>
-	<item id="80105" name="Leviathan Breastplate" additionalName="Heavy armor" type="Armor">
+	<item id="80105" name="利維坦胸甲" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Heavy armor, can be upgraded by the Blacksmith in any town. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -183,7 +183,7 @@
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
 		</skills>
 	</item>
-	<item id="80106" name="Leviathan Gaiters" additionalName="Heavy armor" type="Armor">
+	<item id="80106" name="利維坦脛甲" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Heavy armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -205,7 +205,7 @@
 			<stat type="pDef">293</stat>
 		</stats>
 	</item>
-	<item id="80107" name="Leviathan Gauntlets" additionalName="Heavy armor" type="Armor">
+	<item id="80107" name="利維坦手套" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Heavy armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -227,7 +227,7 @@
 			<stat type="pDef">117</stat>
 		</stats>
 	</item>
-	<item id="80108" name="Leviathan Boots" additionalName="Heavy armor" type="Armor">
+	<item id="80108" name="利維坦靴" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Heavy armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -249,7 +249,7 @@
 			<stat type="pDef">117</stat>
 		</stats>
 	</item>
-	<item id="80109" name="Leviathan Shield" type="Armor">
+	<item id="80109" name="利維坦盾" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Light armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 			<skill id="8785" level="1" /> <!-- Equip Shield -->
 		</skills>
 	</item>
-	<item id="80110" name="Leviathan Leather Helmet" additionalName="Light armor" type="Armor">
+	<item id="80110" name="利維坦皮頭盔" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Light armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -296,7 +296,7 @@
 			<stat type="pDef">175</stat>
 		</stats>
 	</item>
-	<item id="80111" name="Leviathan Leather Armor" additionalName="Light armor" type="Armor">
+	<item id="80111" name="利維坦皮甲" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Light armor, can be upgraded by the Blacksmith in any town. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -323,7 +323,7 @@
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
 		</skills>
 	</item>
-	<item id="80112" name="Leviathan Leather Leggings" additionalName="Light armor" type="Armor">
+	<item id="80112" name="利維坦皮脛甲" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Light armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -347,7 +347,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="80113" name="Leviathan Leather Gloves" additionalName="Light armor" type="Armor">
+	<item id="80113" name="利維坦皮手套" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Light armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t902_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -369,7 +369,7 @@
 			<stat type="pDef">117</stat>
 		</stats>
 	</item>
-	<item id="80114" name="Leviathan Leather Boots" additionalName="Light armor" type="Armor">
+	<item id="80114" name="利維坦皮靴" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Light armor, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t902_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -391,7 +391,7 @@
 			<stat type="pDef">117</stat>
 		</stats>
 	</item>
-	<item id="80115" name="Leviathan Circlet" additionalName="Robe" type="Armor">
+	<item id="80115" name="利維坦頭箍" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Robe, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -412,7 +412,7 @@
 			<stat type="pDef">175</stat>
 		</stats>
 	</item>
-	<item id="80116" name="Leviathan Tunic" additionalName="Robe" type="Armor">
+	<item id="80116" name="利維坦外衣" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Robe, can be upgraded by the Blacksmith in any town. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t903_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -439,7 +439,7 @@
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
 		</skills>
 	</item>
-	<item id="80117" name="Leviathan Stockings" additionalName="Robe" type="Armor">
+	<item id="80117" name="利維坦長襪" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Robe, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t903_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -463,7 +463,7 @@
 			<stat type="maxMp">1065</stat>
 		</stats>
 	</item>
-	<item id="80118" name="Leviathan Gloves" additionalName="Robe" type="Armor">
+	<item id="80118" name="利維坦手套" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Robe, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t903_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -485,7 +485,7 @@
 			<stat type="pDef">117</stat>
 		</stats>
 	</item>
-	<item id="80119" name="Leviathan Shoes" additionalName="Robe" type="Armor">
+	<item id="80119" name="利維坦鞋" additionalName="Robe" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Robe, can be upgraded by the Blacksmith in any town. <Enchanting>. Use Scroll: Enchant R-grade Armor. Can be augmented. -->
 		<set name="icon" val="icon.armor_t903_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 			<stat type="pDef">117</stat>
 		</stats>
 	</item>
-	<item id="80120" name="Leviathan Sigil" type="Armor">
+	<item id="80120" name="利維坦符印" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.weapon_r110_sigil" />
 		<set name="default_action" val="EQUIP" />
@@ -531,7 +531,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="80121" name="Eva's Summer Light Box" type="EtcItem">
+	<item id="80121" name="伊娃曙光禮盒" type="EtcItem">
 		<!-- Double-click to obtain Eva's Summer Fishing Pouch. -->
 		<set name="icon" val="icon.sayha2017_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -543,7 +543,7 @@
 			<skill id="39420" level="1" /> <!-- Eva's Summer Light Box -->
 		</skills>
 	</item>
-	<item id="80122" name="Eva's Summer Fishing Pouch" type="EtcItem">
+	<item id="80122" name="伊娃夏季釣魚袋" type="EtcItem">
 		<!-- Double-click to obtain Fishing Dock Pass Box (1-hour), Secret Embryo Bait Coupon (120 pcs.), and Master Fisherman's Blessing (1-hour). -->
 		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="PEEL" />
@@ -558,7 +558,7 @@
 			<item id="48634" min="1" max="1" chance="100" /> <!-- Fishing Dock Pass Box (1-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="80123" name="Eva's Glittering Treasure Chest" type="EtcItem">
+	<item id="80123" name="伊娃的燦爛寶箱" type="EtcItem">
 		<!-- Double-click to obtain rare items. -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -570,7 +570,7 @@
 			<skill id="39420" level="2" /> <!-- Eva's Radiant Treasure Chest -->
 		</skills>
 	</item>
-	<item id="80124" name="High-grade Skill Power Talisman" additionalName="Skill Critical Damage" type="Armor">
+	<item id="80124" name="上級技能威力護身符" additionalName="Skill Critical Damage" type="Armor">
 		<!-- P./ M. Skill Power +5%, P./ M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -586,7 +586,7 @@
 			<skill id="13959" level="2" /> <!-- High-grade Talisman of Skill Power - Skill Critical Damage -->
 		</skills>
 	</item>
-	<item id="80125" name="High-grade Talisman of Attribute Attack" additionalName="Critical Damage for basic attacks" type="Armor">
+	<item id="80125" name="上級攻擊屬性護身符" additionalName="Critical Damage for basic attacks" type="Armor">
 		<!-- Attribute Attack +70, Critical Damage for basic attacks +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -602,7 +602,7 @@
 			<skill id="13960" level="2" /> <!-- High-grade Talisman of Attribute Attack - Critical Damage for Basic Attacks -->
 		</skills>
 	</item>
-	<item id="80126" name="High-grade Skill Cooldown Talisman" additionalName="P./M. Def." type="Armor">
+	<item id="80126" name="上級技能再使用時間護身符" additionalName="P./M. Def." type="Armor">
 		<!-- Skill cooldown -5%, P./ M. Def. +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -618,7 +618,7 @@
 			<skill id="13961" level="2" /> <!-- High-grade Talisman of Skill Cooldown - P./ M. Def. -->
 		</skills>
 	</item>
-	<item id="80127" name="High-grade Skill Power Talisman Pack" additionalName="Skill Critical Damage" type="EtcItem">
+	<item id="80127" name="上級技能威力護身符禮盒" additionalName="Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain High-grade Talisman of Skill Power (2-hour). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="is_stackable" val="true" />
@@ -632,7 +632,7 @@
 			<item id="80124" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Skill Power - Skill Critical Damage -->
 		</capsuled_items>
 	</item>
-	<item id="80128" name="High-grade Talisman of Attribute Attack Pack" additionalName="Critical Damage for basic attacks" type="EtcItem">
+	<item id="80128" name="上級攻擊屬性護身符禮盒" additionalName="Critical Damage for basic attacks" type="EtcItem">
 		<!-- Double-click to obtain High-grade Talisman of Attribute Attack (2-hour). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="is_stackable" val="true" />
@@ -646,7 +646,7 @@
 			<item id="80125" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Attribute Attack - Critical Damage for basic attacks -->
 		</capsuled_items>
 	</item>
-	<item id="80129" name="High-grade Skill Cooldown Talisman Pack" additionalName="P./M. Def." type="EtcItem">
+	<item id="80129" name="上級技能再使用時間護身符禮盒" additionalName="P./M. Def." type="EtcItem">
 		<!-- Double-click to obtain High-grade Talisman of Skill Cooldown (2-hour). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="is_stackable" val="true" />
@@ -660,7 +660,7 @@
 			<item id="80126" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Skill Cooldown - P./M. Def. -->
 		</capsuled_items>
 	</item>
-	<item id="80130" name="Superior Weapon Augmenting Stone" type="EtcItem">
+	<item id="80130" name="最高級武器精煉石" type="EtcItem">
 		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting R110- and L-grade weapons. The higher the Augmenting Stone's level, the higher the augmentation value. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_r110_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -670,7 +670,7 @@
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80131" name="R110-grade Accessory Augmenting Stone" type="EtcItem">
+	<item id="80131" name="R110 飾品精煉石" type="EtcItem">
 		<!-- A mineral solidified by shock from physical and magical strikes and dimensional anomalies. Can be used as a material for augmenting R110-grade accessories. -->
 		<set name="icon" val="icon.renewal_mineral_r99" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -680,7 +680,7 @@
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80132" name="R110-grade Weapon Attribute Change Crystal" type="EtcItem">
+	<item id="80132" name="武器屬性變更水晶-R110級" type="EtcItem">
 		<!-- Double-click to change the attribute of an R110-grade weapon. The R110-grade weapon imbued with an attribute must be in your inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="crystal_type" val="R110" />
@@ -697,7 +697,7 @@
 			<skill id="12881" level="1" /> <!-- Change Property -->
 		</skills>
 	</item>
-	<item id="80133" name="Enhanced Krishna Shaper" type="Weapon">
+	<item id="80133" name="強化克里修納鉋刀" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P. Skill Critical Damage +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -733,7 +733,7 @@
 			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Shaper - Special Property -->
 		</skills>
 	</item>
-	<item id="80134" name="Enhanced Krishna Cutter" type="Weapon">
+	<item id="80134" name="強化克里修納切刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, Critical Rate for basic attacks +3%. Enhancement effect: P. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -768,7 +768,7 @@
 			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Cutter - Special Property -->
 		</skills>
 	</item>
-	<item id="80135" name="Enhanced Krishna Slasher" type="Weapon">
+	<item id="80135" name="強化克里修納殺刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +5%. Enhancement effect: P./ M. Skill Critical Damage +3%, P./ M. Atk. +3%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -803,7 +803,7 @@
 			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Slasher - Special Property -->
 		</skills>
 	</item>
-	<item id="80136" name="Enhanced Krishna Avenger" type="Weapon">
+	<item id="80136" name="強化克里修納復仇者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P./ M. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -839,7 +839,7 @@
 			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Avenger - Special Property -->
 		</skills>
 	</item>
-	<item id="80137" name="Enhanced Krishna Fighter" type="Weapon">
+	<item id="80137" name="強化克里修納戰爪" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Critical Damage for basic attacks +2%. Enhancement effect: Critical Damage for basic attacks +3%, Attribute Attack +50. -->
 		<set name="icon" val="icon.weapon_r110_fist_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -875,7 +875,7 @@
 			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Fighter - Special Property -->
 		</skills>
 	</item>
-	<item id="80138" name="Enhanced Krishna Stormer" type="Weapon">
+	<item id="80138" name="強化克里修納風暴者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -912,7 +912,7 @@
 			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Stormer - Special Property -->
 		</skills>
 	</item>
-	<item id="80139" name="Enhanced Krishna Thrower" type="Weapon">
+	<item id="80139" name="強化克里修納投弓" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +2%, Atk. Spd./ Casting Spd. +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%. -->
 		<set name="icon" val="icon.weapon_r110_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Thrower - Special Property -->
 		</skills>
 	</item>
-	<item id="80140" name="Enhanced Krishna Guardian" type="Weapon">
+	<item id="80140" name="強化克里修納射靈" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -986,7 +986,7 @@
 			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Guardian - Special Property -->
 		</skills>
 	</item>
-	<item id="80141" name="Enhanced Krishna Buster" type="Weapon">
+	<item id="80141" name="強化克里修納爆刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, M. Skill Power +2%. Enhancement effect: M. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1022,7 +1022,7 @@
 			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Buster - Special Property -->
 		</skills>
 	</item>
-	<item id="80142" name="Enhanced Krishna Caster" type="Weapon">
+	<item id="80142" name="強化克里修納術杖" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, Casting Spd. +2%. Enhancement effect: M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1059,7 +1059,7 @@
 			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Caster - Special Property -->
 		</skills>
 	</item>
-	<item id="80143" name="Enhanced Krishna Retributer" type="Weapon">
+	<item id="80143" name="強化克里修納報恨者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Atk. +3%, M. Skill Critical Damage +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1097,7 +1097,7 @@
 			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Retributer - Special Property -->
 		</skills>
 	</item>
-	<item id="80144" name="Enhanced Krishna Dual Swords" type="Weapon">
+	<item id="80144" name="強化克里修納雙刀" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1132,7 +1132,7 @@
 			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Swords - Special Property -->
 		</skills>
 	</item>
-	<item id="80145" name="Enhanced Krishna Dual Daggers" type="Weapon">
+	<item id="80145" name="強化克里修納雙匕首" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1168,7 +1168,7 @@
 			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Daggers - Special Property -->
 		</skills>
 	</item>
-	<item id="80146" name="Enhanced Krishna Dual Blunt Weapons" type="Weapon">
+	<item id="80146" name="強化克里修納雙鈍器" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Max HP +4%. Enhancement effect: P. Skill Critical Damage +3%, skill cooldown -3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1204,7 +1204,7 @@
 			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Blunt Weapons - Special Property -->
 		</skills>
 	</item>
-	<item id="80147" name="Bloody Krishna Shaper" type="Weapon">
+	<item id="80147" name="血腥克里修納鉋刀" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P. Skill Critical Damage +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1243,7 +1243,7 @@
 			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Shaper - Special Property -->
 		</skills>
 	</item>
-	<item id="80148" name="Bloody Krishna Cutter" type="Weapon">
+	<item id="80148" name="血腥克里修納切刃" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, Critical Rate for basic attacks +3%. Enhancement effect: P. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1280,7 +1280,7 @@
 			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Cutter - Special Property -->
 		</skills>
 	</item>
-	<item id="80149" name="Bloody Krishna Slasher" type="Weapon">
+	<item id="80149" name="血腥克里修納殺刃" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +5%. Enhancement effect: P./ M. Skill Critical Damage +3%, P./ M. Atk. +3%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1317,7 +1317,7 @@
 			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Slasher - Special Property -->
 		</skills>
 	</item>
-	<item id="80150" name="Bloody Krishna Avenger" type="Weapon">
+	<item id="80150" name="血腥克里修納復仇者" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P./ M. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1355,7 +1355,7 @@
 			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Avenger - Special Property -->
 		</skills>
 	</item>
-	<item id="80151" name="Bloody Krishna Fighter" type="Weapon">
+	<item id="80151" name="血腥克里修納戰爪" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Critical Damage for basic attacks +2%. Enhancement effect: Critical Damage for basic attacks +3%, Attribute Attack +50. -->
 		<set name="icon" val="icon.weapon_r110_fist_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1393,7 +1393,7 @@
 			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Fighter - Special Property -->
 		</skills>
 	</item>
-	<item id="80152" name="Bloody Krishna Stormer" type="Weapon">
+	<item id="80152" name="血腥克里修納風暴者" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1432,7 +1432,7 @@
 			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Stormer - Special Property -->
 		</skills>
 	</item>
-	<item id="80153" name="Bloody Krishna Thrower" type="Weapon">
+	<item id="80153" name="血腥克里修納投弓" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +2%, Atk. Spd./ Casting Spd. +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%. -->
 		<set name="icon" val="icon.weapon_r110_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1471,7 +1471,7 @@
 			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Thrower - Special Property -->
 		</skills>
 	</item>
-	<item id="80154" name="Bloody Krishna Guardian" type="Weapon">
+	<item id="80154" name="血腥克里修納射靈" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1510,7 +1510,7 @@
 			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Guardian - Special Property -->
 		</skills>
 	</item>
-	<item id="80155" name="Bloody Krishna Buster" type="Weapon">
+	<item id="80155" name="血腥克里修納爆刃" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, M. Skill Power +2%. Enhancement effect: M. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1548,7 +1548,7 @@
 			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Buster - Special Property -->
 		</skills>
 	</item>
-	<item id="80156" name="Bloody Krishna Caster" type="Weapon">
+	<item id="80156" name="血腥克里修納術杖" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, Casting Spd. +2%. Enhancement effect: M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1587,7 +1587,7 @@
 			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Caster - Special Property -->
 		</skills>
 	</item>
-	<item id="80157" name="Bloody Krishna Retributer" type="Weapon">
+	<item id="80157" name="血腥克里修納報恨者" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Atk. +3%, M. Skill Critical Damage +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1627,7 +1627,7 @@
 			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Retributer - Special Property -->
 		</skills>
 	</item>
-	<item id="80158" name="Bloody Krishna Dual Swords" type="Weapon">
+	<item id="80158" name="血腥克里修納雙刀" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, P. Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1664,7 +1664,7 @@
 			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Swords - Special Property -->
 		</skills>
 	</item>
-	<item id="80159" name="Bloody Krishna Dual Daggers" type="Weapon">
+	<item id="80159" name="血腥克里修納雙匕首" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1702,7 +1702,7 @@
 			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Daggers - Special Property -->
 		</skills>
 	</item>
-	<item id="80160" name="Bloody Krishna Dual Blunt Weapons" type="Weapon">
+	<item id="80160" name="血腥克里修納雙鈍器" type="Weapon">
 		<!-- When equipped, PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Max HP +4%. Enhancement effect: P. Skill Critical Damage +3%, skill cooldown -3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1740,7 +1740,7 @@
 			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Blunt Weapons - Special Property -->
 		</skills>
 	</item>
-	<item id="80161" name="Dark Krishna Shaper" type="Weapon">
+	<item id="80161" name="黑暗克里修納鉋刀" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P. Skill Critical Damage +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1779,7 +1779,7 @@
 			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Shaper - Special Property -->
 		</skills>
 	</item>
-	<item id="80162" name="Dark Krishna Cutter" type="Weapon">
+	<item id="80162" name="黑暗克里修納切刃" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, Critical Rate for basic attacks +3%. Enhancement effect: P. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1816,7 +1816,7 @@
 			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Cutter - Special Property -->
 		</skills>
 	</item>
-	<item id="80163" name="Dark Krishna Slasher" type="Weapon">
+	<item id="80163" name="黑暗克里修納殺刃" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +5%. Enhancement effect: P./ M. Skill Critical Damage +3%, P./ M. Atk. +3%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1853,7 +1853,7 @@
 			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Slasher - Special Property -->
 		</skills>
 	</item>
-	<item id="80164" name="Dark Krishna Avenger" type="Weapon">
+	<item id="80164" name="黑暗克里修納復仇者" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P./ M. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1891,7 +1891,7 @@
 			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Avenger - Special Property -->
 		</skills>
 	</item>
-	<item id="80165" name="Dark Krishna Fighter" type="Weapon">
+	<item id="80165" name="黑暗克里修納戰爪" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Critical Damage for basic attacks +2%. Enhancement effect: Critical Damage for basic attacks +3%, Attribute Attack +50. -->
 		<set name="icon" val="icon.weapon_r110_fist_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1929,7 +1929,7 @@
 			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Fighter - Special Property -->
 		</skills>
 	</item>
-	<item id="80166" name="Dark Krishna Stormer" type="Weapon">
+	<item id="80166" name="黑暗克里修納風暴者" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1968,7 +1968,7 @@
 			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Stormer - Special Property -->
 		</skills>
 	</item>
-	<item id="80167" name="Dark Krishna Thrower" type="Weapon">
+	<item id="80167" name="黑暗克里修納投弓" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +2%, Atk. Spd./ Casting Spd. +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%. -->
 		<set name="icon" val="icon.weapon_r110_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2007,7 +2007,7 @@
 			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Thrower - Special Property -->
 		</skills>
 	</item>
-	<item id="80168" name="Dark Krishna Guardian" type="Weapon">
+	<item id="80168" name="黑暗克里修納射靈" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2046,7 +2046,7 @@
 			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Guardian - Special Property -->
 		</skills>
 	</item>
-	<item id="80169" name="Dark Krishna Buster" type="Weapon">
+	<item id="80169" name="黑暗克里修納爆刃" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, M. Skill Power +2%. Enhancement effect: M. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2084,7 +2084,7 @@
 			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Buster - Special Property -->
 		</skills>
 	</item>
-	<item id="80170" name="Dark Krishna Caster" type="Weapon">
+	<item id="80170" name="黑暗克里修納術杖" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, Casting Spd. +2%. Enhancement effect: M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2123,7 +2123,7 @@
 			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Caster - Special Property -->
 		</skills>
 	</item>
-	<item id="80171" name="Dark Krishna Retributer" type="Weapon">
+	<item id="80171" name="黑暗克里修納報恨者" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Atk. +3%, M. Skill Critical Damage +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2163,7 +2163,7 @@
 			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Retributer - Special Property -->
 		</skills>
 	</item>
-	<item id="80172" name="Dark Krishna Dual Swords" type="Weapon">
+	<item id="80172" name="黑暗克里修納雙刀" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2200,7 +2200,7 @@
 			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Swords - Special Property -->
 		</skills>
 	</item>
-	<item id="80173" name="Dark Krishna Dual Daggers" type="Weapon">
+	<item id="80173" name="黑暗克里修納雙匕首" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2238,7 +2238,7 @@
 			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Daggers - Special Property -->
 		</skills>
 	</item>
-	<item id="80174" name="Dark Krishna Dual Blunt Weapons" type="Weapon">
+	<item id="80174" name="黑暗克里修納雙鈍器" type="Weapon">
 		<!-- When equipped, PvP damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Max HP +4%. Enhancement effect: P. Skill Critical Damage +3%, skill cooldown -3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2276,7 +2276,7 @@
 			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Blunt Weapons - Special Property -->
 		</skills>
 	</item>
-	<item id="80175" name="Supreme Krishna Shaper" type="Weapon">
+	<item id="80175" name="限定克里修納鉋刀" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P. Skill Critical Damage +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2315,7 +2315,7 @@
 			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Shaper - Special Property -->
 		</skills>
 	</item>
-	<item id="80176" name="Supreme Krishna Cutter" type="Weapon">
+	<item id="80176" name="限定克里修納切刃" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, Critical Rate for basic attacks +3%. Enhancement effect: P. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2353,7 +2353,7 @@
 			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Cutter - Special Property -->
 		</skills>
 	</item>
-	<item id="80177" name="Supreme Krishna Slasher" type="Weapon">
+	<item id="80177" name="限定克里修納殺刃" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +5%. Enhancement effect: P./ M. Skill Critical Damage +3%, P./ M. Atk. +3%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2391,7 +2391,7 @@
 			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Slasher - Special Property -->
 		</skills>
 	</item>
-	<item id="80178" name="Supreme Krishna Avenger" type="Weapon">
+	<item id="80178" name="限定克里修納復仇者" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P./ M. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2430,7 +2430,7 @@
 			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Avenger - Special Property -->
 		</skills>
 	</item>
-	<item id="80179" name="Supreme Krishna Fighter" type="Weapon">
+	<item id="80179" name="限定克里修納戰爪" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Critical Damage for basic attacks +2%. Enhancement effect: Critical Damage for basic attacks +3%, Attribute Attack +50. -->
 		<set name="icon" val="icon.weapon_r110_fist_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2469,7 +2469,7 @@
 			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Fighter - Special Property -->
 		</skills>
 	</item>
-	<item id="80180" name="Supreme Krishna Stormer" type="Weapon">
+	<item id="80180" name="限定克里修納風暴者" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2509,7 +2509,7 @@
 			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Stormer - Special Property -->
 		</skills>
 	</item>
-	<item id="80181" name="Supreme Krishna Thrower" type="Weapon">
+	<item id="80181" name="限定克里修納投弓" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +2%, Atk. Spd./ Casting Spd. +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%. -->
 		<set name="icon" val="icon.weapon_r110_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2549,7 +2549,7 @@
 			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Thrower - Special Property -->
 		</skills>
 	</item>
-	<item id="80182" name="Supreme Krishna Guardian" type="Weapon">
+	<item id="80182" name="限定克里修納射靈" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, P. Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2589,7 +2589,7 @@
 			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Guardian - Special Property -->
 		</skills>
 	</item>
-	<item id="80183" name="Supreme Krishna Buster" type="Weapon">
+	<item id="80183" name="限定克里修納爆刃" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, M. Skill Power +2%. Enhancement effect: M. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2628,7 +2628,7 @@
 			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Buster - Special Property -->
 		</skills>
 	</item>
-	<item id="80184" name="Supreme Krishna Caster" type="Weapon">
+	<item id="80184" name="限定克里修納術杖" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, Casting Spd. +2%. Enhancement effect: M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2668,7 +2668,7 @@
 			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Caster - Special Property -->
 		</skills>
 	</item>
-	<item id="80185" name="Supreme Krishna Retributer" type="Weapon">
+	<item id="80185" name="限定克里修納報恨者" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Atk. +3%, M. Skill Critical Damage +2%. Enhancement effect: Critical Damage for basic attacks and P./ M. skills +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2709,7 +2709,7 @@
 			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Retributer - Special Property -->
 		</skills>
 	</item>
-	<item id="80186" name="Supreme Krishna Dual Swords" type="Weapon">
+	<item id="80186" name="限定克里修納雙刀" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. Enhancement effect: P. Skill Critical Damage +3%, P. Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2747,7 +2747,7 @@
 			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Swords - Special Property -->
 		</skills>
 	</item>
-	<item id="80187" name="Supreme Krishna Dual Daggers" type="Weapon">
+	<item id="80187" name="限定克里修納雙匕首" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2786,7 +2786,7 @@
 			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Daggers - Special Property -->
 		</skills>
 	</item>
-	<item id="80188" name="Supreme Krishna Dual Blunt Weapons" type="Weapon">
+	<item id="80188" name="限定克里修納雙鈍器" type="Weapon">
 		<!-- When equipped, PvP/ PvE damage +15%, Max HP/ MP/ CP +10%. 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Max HP +4%. Enhancement effect: P. Skill Critical Damage +3%, skill cooldown -3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2825,7 +2825,7 @@
 			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Dual Blunt Weapons - Special Property -->
 		</skills>
 	</item>
-	<item id="80189" name="Enchanted Leviathan Helmet" additionalName="Heavy armor" type="Armor">
+	<item id="80189" name="強化利維坦頭盔" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2847,7 +2847,7 @@
 			<stat type="pDef">179</stat>
 		</stats>
 	</item>
-	<item id="80190" name="Enchanted Leviathan Breastplate" additionalName="Heavy armor" type="Armor">
+	<item id="80190" name="強化利維坦胸甲" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2873,7 +2873,7 @@
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
 		</skills>
 	</item>
-	<item id="80191" name="Enchanted Leviathan Gaiters" additionalName="Heavy armor" type="Armor">
+	<item id="80191" name="強化利維坦脛甲" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2896,7 +2896,7 @@
 			<stat type="pDef">299</stat>
 		</stats>
 	</item>
-	<item id="80192" name="Enchanted Leviathan Gauntlets" additionalName="Heavy armor" type="Armor">
+	<item id="80192" name="強化利維坦手套" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2919,7 +2919,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="80193" name="Enchanted Leviathan Boots" additionalName="Heavy armor" type="Armor">
+	<item id="80193" name="強化利維坦靴" additionalName="Heavy armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_t901_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2942,7 +2942,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="80194" name="Enchanted Leviathan Shield" type="Armor">
+	<item id="80194" name="強化利維坦盾" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Additionally increases Shield Defense. Enhancement effect: Atk. Spd. +5%, P. Atk. +3%, P./ M. Def. +3%. -->
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -2971,7 +2971,7 @@
 			<skill id="35294" level="1" /> <!-- Enhancement Effect: Leviathan Shield -->
 		</skills>
 	</item>
-	<item id="80195" name="Enchanted Leviathan Leather Helmet" additionalName="Light armor" type="Armor">
+	<item id="80195" name="強化利維坦皮頭盔" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2993,7 +2993,7 @@
 			<stat type="pDef">179</stat>
 		</stats>
 	</item>
-	<item id="80196" name="Enchanted Leviathan Leather Armor" additionalName="Light armor" type="Armor">
+	<item id="80196" name="強化利維坦皮甲" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3021,7 +3021,7 @@
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
 		</skills>
 	</item>
-	<item id="80197" name="Enchanted Leviathan Leather Leggings" additionalName="Light armor" type="Armor">
+	<item id="80197" name="強化利維坦皮脛甲" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3046,7 +3046,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="80198" name="Enchanted Leviathan Leather Gloves" additionalName="Light armor" type="Armor">
+	<item id="80198" name="強化利維坦皮手套" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_t902_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3069,7 +3069,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="80199" name="Enchanted Leviathan Leather Boots" additionalName="Light armor" type="Armor">
+	<item id="80199" name="強化利維坦皮靴" additionalName="Light armor" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Can be augmented. -->
 		<set name="icon" val="icon.armor_t902_b_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23200" name="Package: Appearance Stone: Tribal Warrior Costume" type="EtcItem">
+	<item id="23200" name="台灣傳統衣裳加工石組" type="EtcItem">
 		<!-- Double-click to obtain Appearance Stone: Tribal Warrior Top/ Pants/ Gloves/ Shoes/ Head Accessory. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -20,7 +20,7 @@
 			<item id="23198" min="1" max="1" chance="100" /> <!-- Appearance Stone: Tribal Warrior Head Accessory -->
 		</capsuled_items>
 	</item>
-	<item id="23201" name="Dark Accessory Pack" additionalName="Event" type="EtcItem">
+	<item id="23201" name="黑暗飾品箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Antharas' Earring, Valakas' Necklace, Earth Wyrm's Ring, Antharas' Soul Bottle, Valakas' Soul Bottle. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -35,7 +35,7 @@
 			<skill id="9512" level="1" /> <!-- Draco's Accessory Gift Box -->
 		</skills>
 	</item>
-	<item id="23202" name="Shiny Alien Mask" type="Armor">
+	<item id="23202" name="閃耀的X235行星面具" type="Armor">
 		<!-- Shiny Alien X235 Mask. CON +1, MEN +1, INT +1. Duration: 3 d. -->
 		<set name="icon" val="icon.ev_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -52,7 +52,7 @@
 			<skill id="22645" level="1" /> <!-- Alien X235 Mask -->
 		</skills>
 	</item>
-	<item id="23203" name="Shiny Reanimated Corpse Mask" type="Armor">
+	<item id="23203" name="閃耀的科學怪人面具" type="Armor">
 		<!-- Shiny Reanimated Corpse Mask. CON +1, STR +1, DEX +1. Duration: 3 d. -->
 		<set name="icon" val="icon.ev_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -69,7 +69,7 @@
 			<skill id="22646" level="1" /> <!-- Reanimated Corpse Mask -->
 		</skills>
 	</item>
-	<item id="23204" name="Shiny Shriek Mask" type="Armor">
+	<item id="23204" name="閃耀的驚聲尖叫面具" type="Armor">
 		<!-- Shiny Shriek Mask. CON +1, DEX +1, WIT +1. Duration: 3 d. -->
 		<set name="icon" val="icon.ev_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -86,7 +86,7 @@
 			<skill id="22647" level="1" /> <!-- Shriek Mask -->
 		</skills>
 	</item>
-	<item id="23205" name="Shiny Red Devil Mask" type="Armor">
+	<item id="23205" name="閃耀的憤怒精靈面具" type="Armor">
 		<!-- Shiny Red Devil Mask. INT +1, MEN +1, WIT +1. Available for 3 d. -->
 		<set name="icon" val="icon.ev_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -103,7 +103,7 @@
 			<skill id="22648" level="1" /> <!-- Red Devil Mask -->
 		</skills>
 	</item>
-	<item id="23206" name="Shiny Mummy Mask" type="Armor">
+	<item id="23206" name="閃耀的不朽骸骨面具" type="Armor">
 		<!-- STR +1, DEX +1 and WIT +1. 3-day. -->
 		<set name="icon" val="icon.ev_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -120,7 +120,7 @@
 			<skill id="22649" level="1" /> <!-- Mummy Mask -->
 		</skills>
 	</item>
-	<item id="23207" name="Playful Hair Accessory Pack" type="EtcItem">
+	<item id="23207" name="調皮頭飾禮盒" type="EtcItem">
 		<!-- Double-click to obtain a playful head accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -135,7 +135,7 @@
 			<skill id="22651" level="1" /> <!-- Playful Head Accessory Box -->
 		</skills>
 	</item>
-	<item id="23208" name="Red Potion of Regeneration" type="EtcItem">
+	<item id="23208" name="再生的紅色藥水" type="EtcItem">
 		<!-- Recovers 3000 HP. If HP is full, recovers CP. No cooldown. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="weight" val="10" />
@@ -154,7 +154,7 @@
 			<skill id="9513" level="1" /> <!-- Draco's Health Potion -->
 		</skills>
 	</item>
-	<item id="23209" name="Blue Potion of Recovery" type="EtcItem">
+	<item id="23209" name="恢復的藍色藥水" type="EtcItem">
 		<!-- A magic potion that recovers MP. No cooldown. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
@@ -174,7 +174,7 @@
 			<skill id="9514" level="1" /> <!-- Draco's Mana Potion -->
 		</skills>
 	</item>
-	<item id="23210" name="Transformation Scroll: Zombie" type="EtcItem">
+	<item id="23210" name="殭屍變身卷軸" type="EtcItem">
 		<!-- Transforms you into a Festering Zombie for 30 min. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="10" />
@@ -191,7 +191,7 @@
 			<skill id="22650" level="1" /> <!-- Transformation Scroll: Zombie -->
 		</skills>
 	</item>
-	<item id="23211" name="Appearance Stone: Drake Maul" type="EtcItem">
+	<item id="23211" name="龍獸衝槌加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of Drake Maul. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -209,7 +209,7 @@
 			<skill id="22652" level="1" /> <!-- Appearance Stone: Drake Maul -->
 		</skills>
 	</item>
-	<item id="23212" name="Appearance Stone: Freya's Staff" type="EtcItem">
+	<item id="23212" name="芙蕾雅魔杖加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Freya's Staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -227,7 +227,7 @@
 			<skill id="22653" level="1" /> <!-- Appearance Stone: Freya's Staff -->
 		</skills>
 	</item>
-	<item id="23213" name="Appearance Stone: Spezion's Claw" type="EtcItem">
+	<item id="23213" name="斯佩席亞戰爪加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="immediate_effect" val="true" />
@@ -245,7 +245,7 @@
 			<skill id="22654" level="1" /> <!-- Appearance Stone: Spezion's Claw -->
 		</skills>
 	</item>
-	<item id="23214" name="Appearance Stone: Maliss Stormer" type="EtcItem">
+	<item id="23214" name="梅莉莎風暴者加工石" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="immediate_effect" val="true" />
@@ -263,7 +263,7 @@
 			<skill id="22655" level="1" /> <!-- Appearance Stone: Maliss Stormer -->
 		</skills>
 	</item>
-	<item id="23215" name="Appearance Stone: Steregos' Dagger" type="EtcItem">
+	<item id="23215" name="斯泰里格斯匕首加工石" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of Steregos' Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="immediate_effect" val="true" />
@@ -281,7 +281,7 @@
 			<skill id="22656" level="1" /> <!-- Appearance Stone: Steregos' Dagger -->
 		</skills>
 	</item>
-	<item id="23216" name="Appearance Stone: Ron's Dual Blunt Weapons" type="EtcItem">
+	<item id="23216" name="普倫雙鈍器加工石" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapons to that of Ron's Dual Blunt Weapons. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
@@ -299,7 +299,7 @@
 			<skill id="22657" level="1" /> <!-- Appearance Stone: Ron's Dual Blunt Weapons -->
 		</skills>
 	</item>
-	<item id="23217" name="Appearance Stone: Darion's Hellblade" type="EtcItem">
+	<item id="23217" name="達里昂的貫雷劍加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Darion's Hellblade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
@@ -317,7 +317,7 @@
 			<skill id="22658" level="1" /> <!-- Appearance Stone: Darion's Hellblade -->
 		</skills>
 	</item>
-	<item id="23218" name="Appearance Stone: Butcher Blades" type="EtcItem">
+	<item id="23218" name="人偶刀手的庖刀加工石" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Doll Blader's Butcher Blade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="immediate_effect" val="true" />
@@ -335,7 +335,7 @@
 			<skill id="22659" level="1" /> <!-- Appearance Stone: Butcher Blades -->
 		</skills>
 	</item>
-	<item id="23219" name="Appearance Stone: Tiat's Tiatenon" type="EtcItem">
+	<item id="23219" name="蒂雅特的蒂雅堤諾加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of Tiat's Tiatenon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -353,7 +353,7 @@
 			<skill id="22660" level="1" /> <!-- Appearance Stone: Tiat's Tiatenon -->
 		</skills>
 	</item>
-	<item id="23220" name="Appearance Stone: Aenkinel's Astaroth" type="EtcItem">
+	<item id="23220" name="亞恩奇奈爾的阿斯塔洛特加工石" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of Aenkinel's Astaroth. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
@@ -371,7 +371,7 @@
 			<skill id="22661" level="1" /> <!-- Appearance Stone: Aenkinel's Astaroth -->
 		</skills>
 	</item>
-	<item id="23221" name="Appearance Stone: Yehan Klanikus' Tirbing" type="EtcItem">
+	<item id="23221" name="艾罕 克蘭尼庫斯的提爾鋒加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of the Yehan Klanikus' Tirbing. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
@@ -389,7 +389,7 @@
 			<skill id="22662" level="1" /> <!-- Appearance Stone: Yehan Klanikus' Tirbing -->
 		</skills>
 	</item>
-	<item id="23222" name="Appearance Stone: Mardil's Wind" type="EtcItem">
+	<item id="23222" name="瑪蒂之風的加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Mardil's Wind. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
@@ -407,7 +407,7 @@
 			<skill id="22663" level="1" /> <!-- Appearance Stone: Mardil's Wind -->
 		</skills>
 	</item>
-	<item id="23223" name="Monster Weapon Appearance Stone Pack A" type="EtcItem">
+	<item id="23223" name="怪物武器加工石禮盒A" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Drake Maul, Spezion's Claw, Steregos' Dagger, Darion's Hellblade, Tiat's Tiatenon, Yehan Klanikus' Tirbing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -422,7 +422,7 @@
 			<skill id="22664" level="1" /> <!-- Monster Weapon Appearance Stone Pack A -->
 		</skills>
 	</item>
-	<item id="23224" name="Monster Weapon Appearance Stone Pack B" type="EtcItem">
+	<item id="23224" name="怪物武器加工石禮盒B" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Freya's Staff, Maliss Stormer, Ron's Dual Blunt Weapons, Butcher Blades, Aenkinel's Astaroth, Mardil's Wind. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -437,7 +437,7 @@
 			<skill id="22665" level="1" /> <!-- Monster Weapon Appearance Stone Pack B -->
 		</skills>
 	</item>
-	<item id="23225" name="Soul Avatar's Giant Placid" type="EtcItem">
+	<item id="23225" name="靈魂具現體用超大型能量種子" type="EtcItem">
 		<!-- Restores full Soul Avatar Energy (up to 200,000) when used. Can be replenished only when the Soul Avatar is equipped and 10,000 or more energy has been consumed. -->
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i01" />
 		<set name="is_tradable" val="false" />
@@ -453,7 +453,7 @@
 			<skill id="22666" level="1" /> <!-- Soul Avatar's Giant Placid -->
 		</skills>
 	</item>
-	<item id="23226" name="Seductive Swimsuit" type="Armor">
+	<item id="23226" name="誘人泳裝" type="Armor">
 		<!-- Seductive swimsuit with exquisite prints. Note!. Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_03" />
 		<set name="armor_type" val="HEAVY" />
@@ -466,7 +466,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
 	</item>
-	<item id="23227" name="Apple Spritzer" type="EtcItem">
+	<item id="23227" name="蘋果氣泡水" type="EtcItem">
 		<!-- Refreshing apple juice. Sustains Vitality for 30 min. Cooldown: 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys3.icon1.g_apfelschorle_germany" />
 		<set name="is_tradable" val="false" />
@@ -483,7 +483,7 @@
 			<skill id="22667" level="2" /> <!-- Apple Spritzer -->
 		</skills>
 	</item>
-	<item id="23228" name="Roasted Sausage" type="EtcItem">
+	<item id="23228" name="烤香腸" type="EtcItem">
 		<!-- A delicious grilled sausage that recovers Vitality when acquiring XP while hunting. Time-limited Vitality item. -->
 		<set name="icon" val="BranchSys3.icon1.g_bratwurst_germany" />
 		<set name="is_tradable" val="false" />
@@ -500,7 +500,7 @@
 			<skill id="22668" level="1" /> <!-- Roasted Sausage -->
 		</skills>
 	</item>
-	<item id="23229" name="Pretzel" type="EtcItem">
+	<item id="23229" name="德國麵包" type="EtcItem">
 		<!-- A nutritious pretzel. For 1 h., acquired XP +50%. -->
 		<set name="icon" val="BranchSys3.icon1.g_brezel_germany" />
 		<set name="is_tradable" val="false" />
@@ -517,7 +517,7 @@
 			<skill id="22669" level="1" /> <!-- Pretzel -->
 		</skills>
 	</item>
-	<item id="23230" name="Snack Mix" type="EtcItem">
+	<item id="23230" name="綜合點心" type="EtcItem">
 		<!-- Recovers 500 HP and 200 MP. Cooldown: 60 sec. Use this right away if you are feeling tired! -->
 		<set name="icon" val="BranchSys3.icon1.g_studentenfutter_germany" />
 		<set name="is_tradable" val="false" />
@@ -538,7 +538,7 @@
 			<skill id="22670" level="1" /> <!-- Snack Mix -->
 		</skills>
 	</item>
-	<item id="23231" name="Aria's Warrior Helmet" type="Armor">
+	<item id="23231" name="亞利亞戰士的頭盔" type="Armor">
 		<!-- A helmet for brave warriors on the Aria server. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
 		<set name="is_tradable" val="false" />
@@ -554,7 +554,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23232" name="Traces of Ancient Kartia's Labyrinth" type="EtcItem">
+	<item id="23232" name="遠古卡爾提亞迷宮的痕跡" type="EtcItem">
 		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps, a Kartia Researcher may know more about it. -->
 		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
 		<set name="weight" val="10" />
@@ -567,7 +567,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23233" name="Traces of Ancient Kartia's Labyrinth" additionalName="Event" type="EtcItem">
+	<item id="23233" name="遠古卡爾提亞迷宮的痕跡" additionalName="Event" type="EtcItem">
 		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps, a Kartia Researcher may know more about it. -->
 		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
 		<set name="weight" val="10" />
@@ -582,7 +582,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23234" name="Appearance Stone: Alluring Swimsuit" type="EtcItem">
+	<item id="23234" name="艷麗泳裝加工石" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of an Alluring Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -600,7 +600,7 @@
 			<skill id="22671" level="1" /> <!-- Appearance Stone: Alluring Swimsuit -->
 		</skills>
 	</item>
-	<item id="23235" name="Appearance Stone: Seductive Swimsuit" type="EtcItem">
+	<item id="23235" name="誘人泳裝加工石" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of a Seductive Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -618,7 +618,7 @@
 			<skill id="22672" level="1" /> <!-- Seductive Swimsuit -->
 		</skills>
 	</item>
-	<item id="23236" name="Scroll of Escape: Uthanka's Tomb" type="EtcItem">
+	<item id="23236" name="海賊王 烏山卡之墓回歸卷軸" type="EtcItem">
 		<!-- Scroll of Escape dropped by Pirate Captain Uthanka's spirit. Use it to return to his tomb. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="is_sellable" val="false" />
@@ -631,7 +631,7 @@
 			<skill id="21285" level="1" /> <!-- Pirate Captain Uthanka's Tombstone - Teleport -->
 		</skills>
 	</item>
-	<item id="23237" name="Agathion Pirate Captain Uthanka" type="Armor">
+	<item id="23237" name="壺精封印手鐲-海賊王 烏山卡" type="Armor">
 		<!-- Given to those who mourn for Pirate Captain Uthanka's spirit. Summons Agathion Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="is_sellable" val="false" />
@@ -649,7 +649,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="23238" name="Package: Blessed Scroll: Enchant Elemental Shirt" additionalName="Pa'agrio" type="EtcItem">
+	<item id="23238" name="祝福的殷海薩襯衫強化卷軸禮盒" additionalName="Pa'agrio" type="EtcItem">
 		<!-- Double-click to obtain Blessed Scroll: Enchant Shirt (30 pcs.). There is a very low chance to obtain +7 Pa'agrio's Shirt. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -665,7 +665,7 @@
 			<skill id="22675" level="1" /> <!-- Package: Blessed Scroll: Enchant Elemental Shirt -->
 		</skills>
 	</item>
-	<item id="23239" name="Package: Enchanted Pa'agrio's Shirt" type="EtcItem">
+	<item id="23239" name="強化的帕格立歐襯衫組" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Shirt enchanted to +7. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -681,7 +681,7 @@
 			<item id="23240" min="1" max="1" chance="100" /> <!-- Pa'agrio's Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="23240" name="Pa'agrio's Shirt" type="Armor">
+	<item id="23240" name="帕格立歐襯衫" type="Armor">
 		<!-- A magic shirt filled with the power of Pa'agrio, the God of Fire. Can be enchanted up to +10 with Scroll: Enchant Shirt. Starting from +7, removes debuffs and grants invincibility for some time. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_fire" />
 		<set name="default_action" val="EQUIP" />
@@ -708,7 +708,7 @@
 			<skill id="9367" level="2" type="ON_ENCHANT" type_value="10" /> <!-- Pa'agrio's Help -->
 		</skills>
 	</item>
-	<item id="23241" name="Blessed Scroll: Enchant Elemental Shirt" type="EtcItem">
+	<item id="23241" name="祝福的殷海薩襯衫強化卷軸" type="EtcItem">
 		<!-- An enchant scroll for Sayha's/ Eva's/ Maphr's/ Pa'agrio's Shirt, Shiny Elemental Shirt, and Physical/ Magical Reflect Shirt. When enchanted, P./ M. Def. +1. Starting from +3, increases resistance to the corresponding attribute. Starting from +4, P. Def. +3 -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_tradable" val="false" />
@@ -726,7 +726,7 @@
 			<skill id="22674" level="1" /> <!-- Blessed Scroll: Enchant Shirt -->
 		</skills>
 	</item>
-	<item id="23242" name="D-grade Weapon Pack Blessed by Light" type="EtcItem">
+	<item id="23242" name="蘊含光之祝福的武器禮盒-D" type="EtcItem">
 		<!-- Obtained for defeating a raid boss. Double-click to obtain a common or blessed D-grade weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -742,7 +742,7 @@
 			<skill id="22676" level="1" /> <!-- Weapon Pack -->
 		</skills>
 	</item>
-	<item id="23243" name="C-grade Weapon Pack Blessed by Light" type="EtcItem">
+	<item id="23243" name="蘊含光之祝福的武器禮盒-C" type="EtcItem">
 		<!-- Obtained for defeating a raid boss. Double-click to obtain a common or blessed C-grade weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -758,7 +758,7 @@
 			<skill id="22677" level="1" /> <!-- Weapon Pack -->
 		</skills>
 	</item>
-	<item id="23244" name="B-grade Weapon Pack Blessed by Light" type="EtcItem">
+	<item id="23244" name="蘊含光之祝福的武器禮盒-B" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains a standard or blessed B-grade weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -774,7 +774,7 @@
 			<skill id="22678" level="1" /> <!-- Weapon Pack -->
 		</skills>
 	</item>
-	<item id="23245" name="A-grade Weapon Box Blessed by Light" type="EtcItem">
+	<item id="23245" name="蘊含光之祝福的武器禮盒-A" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains a standard or blessed A-grade weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -790,7 +790,7 @@
 			<skill id="22679" level="1" /> <!-- Weapon Pack -->
 		</skills>
 	</item>
-	<item id="23246" name="S-grade Weapon Pack Blessed by Light" type="EtcItem">
+	<item id="23246" name="蘊含光之祝福的武器禮盒-S" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains a standard or blessed S-grade weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -806,7 +806,7 @@
 			<skill id="22680" level="1" /> <!-- Weapon Pack -->
 		</skills>
 	</item>
-	<item id="23247" name="D-grade Armor Pack Blessed by Light" type="EtcItem">
+	<item id="23247" name="蘊含光之祝福的防具禮盒-D" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains standard or blessed D-grade armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -822,7 +822,7 @@
 			<skill id="22681" level="1" /> <!-- Armor Pack -->
 		</skills>
 	</item>
-	<item id="23248" name="C-grade Armor Pack Blessed by Light" type="EtcItem">
+	<item id="23248" name="蘊含光之祝福的防具禮盒-C" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains standard or blessed C-grade armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -838,7 +838,7 @@
 			<skill id="22682" level="1" /> <!-- Armor Pack -->
 		</skills>
 	</item>
-	<item id="23249" name="B-grade Armor Pack Blessed by Light" type="EtcItem">
+	<item id="23249" name="蘊含光之祝福的防具禮盒-B" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains standard or blessed B-grade armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -854,7 +854,7 @@
 			<skill id="22683" level="1" /> <!-- Armor Pack -->
 		</skills>
 	</item>
-	<item id="23250" name="A-grade Armor Box Blessed by Light" type="EtcItem">
+	<item id="23250" name="蘊含光之祝福的防具禮盒-A" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains standard or blessed A-grade armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -870,7 +870,7 @@
 			<skill id="22684" level="1" /> <!-- Armor Pack -->
 		</skills>
 	</item>
-	<item id="23251" name="S-grade Armor Pack Blessed by Light" type="EtcItem">
+	<item id="23251" name="蘊含光之祝福的防具禮盒-S" type="EtcItem">
 		<!-- Obtained by defeating a raid boss. Contains standard or blessed S-grade armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -886,7 +886,7 @@
 			<skill id="22685" level="1" /> <!-- Armor Pack -->
 		</skills>
 	</item>
-	<item id="23252" name="Pledge Token" type="EtcItem">
+	<item id="23252" name="盟約憑證" type="EtcItem">
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -895,7 +895,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="23253" name="XP Rune 50%" additionalName="30-day" type="EtcItem">
+	<item id="23253" name="EXP古文 50%" additionalName="30-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired XP +50%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_tradable" val="false" />
@@ -910,7 +910,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune 50% -->
 		</skills>
 	</item>
-	<item id="23254" name="XP Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="23254" name="EXP古文 100%" additionalName="1-hour" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired XP +100%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_tradable" val="false" />
@@ -925,7 +925,7 @@
 			<skill id="26046" level="6" /> <!-- XP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23255" name="XP Rune 100%" additionalName="7-day" type="EtcItem">
+	<item id="23255" name="EXP古文 100%" additionalName="7-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired XP +100%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_tradable" val="false" />
@@ -940,7 +940,7 @@
 			<skill id="26046" level="6" /> <!-- XP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23256" name="XP Rune 100%" additionalName="30-day" type="EtcItem">
+	<item id="23256" name="EXP古文 100%" additionalName="30-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired XP +100%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_tradable" val="false" />
@@ -955,7 +955,7 @@
 			<skill id="26046" level="6" /> <!-- XP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23257" name="XP Rune 200%" additionalName="1-hour" type="EtcItem">
+	<item id="23257" name="EXP古文 200%" additionalName="1-hour" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired XP +200%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_tradable" val="false" />
@@ -970,7 +970,7 @@
 			<skill id="26046" level="7" /> <!-- XP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23258" name="XP Rune 200%" additionalName="7-day" type="EtcItem">
+	<item id="23258" name="EXP古文 200%" additionalName="7-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired XP +200%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_tradable" val="false" />
@@ -985,7 +985,7 @@
 			<skill id="26046" level="7" /> <!-- XP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23259" name="XP Rune 200%" additionalName="30-day" type="EtcItem">
+	<item id="23259" name="EXP古文 200%" additionalName="30-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired XP +200%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1000,7 +1000,7 @@
 			<skill id="26046" level="7" /> <!-- XP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23260" name="SP Rune 50%" additionalName="30-day" type="EtcItem">
+	<item id="23260" name="SP古文 50%" additionalName="30-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired SP +50%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1015,7 +1015,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="23261" name="SP Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="23261" name="SP古文 100%" additionalName="1-hour" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired SP +100%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1030,7 +1030,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23262" name="SP Rune 100%" additionalName="7-day" type="EtcItem">
+	<item id="23262" name="SP古文 100%" additionalName="7-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired SP +100%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1045,7 +1045,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23263" name="SP Rune 100%" additionalName="30-day" type="EtcItem">
+	<item id="23263" name="SP古文 100%" additionalName="30-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired SP +100%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1060,7 +1060,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23264" name="SP Rune 200%" additionalName="1-hour" type="EtcItem">
+	<item id="23264" name="SP古文 200%" additionalName="1-hour" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired SP +200%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1075,7 +1075,7 @@
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23265" name="SP Rune 200%" additionalName="7-day" type="EtcItem">
+	<item id="23265" name="SP古文 200%" additionalName="7-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired SP +200%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1090,7 +1090,7 @@
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23266" name="SP Rune 200%" additionalName="30-day" type="EtcItem">
+	<item id="23266" name="SP古文 200%" additionalName="30-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, acquired SP +200%. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_tradable" val="false" />
@@ -1105,7 +1105,7 @@
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23267" name="Eva's Rune" additionalName="1-hour" type="EtcItem">
+	<item id="23267" name="伊娃古文" additionalName="1-hour" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, grants Eva's special powers to its owner. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="is_tradable" val="false" />
@@ -1120,7 +1120,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="23268" name="Eva's Rune" additionalName="7-day" type="EtcItem">
+	<item id="23268" name="伊娃古文" additionalName="7-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, grants Eva's special powers to its owner. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="is_tradable" val="false" />
@@ -1135,7 +1135,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="23269" name="Eva's Rune" additionalName="30-day" type="EtcItem">
+	<item id="23269" name="伊娃古文" additionalName="30-day" type="EtcItem">
 		<!-- An ancient rune imbued with mystical powers. When in inventory, grants Eva's special powers to its owner. The remaining time is spent even if you are offline. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="is_tradable" val="false" />
@@ -1151,7 +1151,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="23270" name="Maphr's Rune 50%" additionalName="1-hour" type="EtcItem">
+	<item id="23270" name="梅芙古文 50%" additionalName="1-hour" type="EtcItem">
 		<!-- When in inventory, item drop rate +50% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1165,7 +1165,7 @@
 			<skill id="22587" level="2" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="23271" name="Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="23271" name="梅芙古文 100%" additionalName="1-hour" type="EtcItem">
 		<!-- When in inventory, item drop rate +100% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1179,7 +1179,7 @@
 			<skill id="22587" level="3" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="23272" name="Maphr's Rune 200%" additionalName="1-hour" type="EtcItem">
+	<item id="23272" name="梅芙古文 200%" additionalName="1-hour" type="EtcItem">
 		<!-- When in inventory, item drop rate +200% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1193,7 +1193,7 @@
 			<skill id="22587" level="4" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="23273" name="Maphr's Rune 50%" additionalName="30-day" type="EtcItem">
+	<item id="23273" name="梅芙古文 50%" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, item drop rate +50% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1207,7 +1207,7 @@
 			<skill id="22587" level="2" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="23274" name="Maphr's Rune 100%" additionalName="30-day" type="EtcItem">
+	<item id="23274" name="梅芙古文 100%" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, item drop rate +100% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1221,7 +1221,7 @@
 			<skill id="22587" level="3" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="23275" name="Maphr's Rune 200%" additionalName="30-day" type="EtcItem">
+	<item id="23275" name="梅芙古文 200%" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, item drop rate +200% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1235,7 +1235,7 @@
 			<skill id="22587" level="4" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="23276" name="Package: XP Rune 50% (30-day)" type="EtcItem">
+	<item id="23276" name="EXP古文 50%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain XP Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1251,7 +1251,7 @@
 			<item id="23253" min="1" max="1" chance="100" /> <!-- XP Rune 50% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23277" name="Package: XP Rune 100% (1-hour)" type="EtcItem">
+	<item id="23277" name="EXP古文 100%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain XP Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1267,7 +1267,7 @@
 			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23278" name="Package: XP Rune 100% (7-day)" type="EtcItem">
+	<item id="23278" name="EXP古文 100%(7日)組" type="EtcItem">
 		<!-- Double-click to obtain XP Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1283,7 +1283,7 @@
 			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="23279" name="Package: XP Rune 100% (30-day)" type="EtcItem">
+	<item id="23279" name="EXP古文 100%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain XP Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1299,7 +1299,7 @@
 			<item id="23256" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23280" name="Package: XP Rune 200% (1-hour)" type="EtcItem">
+	<item id="23280" name="EXP古文 200%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain XP Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1315,7 +1315,7 @@
 			<item id="23257" min="1" max="1" chance="100" /> <!-- XP Rune 200% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23281" name="Package: XP Rune 200% (7-day)" type="EtcItem">
+	<item id="23281" name="EXP古文 200%(7日)組" type="EtcItem">
 		<!-- Double-click to obtain XP Rune 200% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1331,7 +1331,7 @@
 			<item id="23258" min="1" max="1" chance="100" /> <!-- XP Rune 200% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="23282" name="Package: XP Rune 200% (30-day)" type="EtcItem">
+	<item id="23282" name="EXP古文 200%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain XP Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1347,7 +1347,7 @@
 			<item id="23259" min="1" max="1" chance="100" /> <!-- XP Rune 200% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23283" name="Package: SP Rune 50% (30-day)" type="EtcItem">
+	<item id="23283" name="SP古文 50%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1363,7 +1363,7 @@
 			<item id="23260" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23284" name="Package: SP Rune 100% (1-hour)" type="EtcItem">
+	<item id="23284" name="SP古文 100%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1379,7 +1379,7 @@
 			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23285" name="Package: SP Rune 100% (7-day)" type="EtcItem">
+	<item id="23285" name="SP古文 100%(7日)組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1395,7 +1395,7 @@
 			<item id="23262" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="23286" name="Package: SP Rune 100% (30-day)" type="EtcItem">
+	<item id="23286" name="SP古文 100%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1411,7 +1411,7 @@
 			<item id="23263" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23287" name="Package: SP Rune 200% (1-hour)" type="EtcItem">
+	<item id="23287" name="SP古文 200%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1427,7 +1427,7 @@
 			<item id="23264" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23288" name="Package: SP Rune 200% (7-day)" type="EtcItem">
+	<item id="23288" name="SP古文 200%(7日)組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 200% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1443,7 +1443,7 @@
 			<item id="23265" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="23289" name="Package: SP Rune 200% (30-day)" type="EtcItem">
+	<item id="23289" name="SP古文 200%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain SP Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1459,7 +1459,7 @@
 			<item id="23266" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23290" name="Package: Eva's Rune (1-hour)" type="EtcItem">
+	<item id="23290" name="伊娃古文(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain Eva's Rune (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1475,7 +1475,7 @@
 			<item id="23267" min="1" max="1" chance="100" /> <!-- Eva's Rune - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23291" name="Package: Eva's Rune (7-day)" type="EtcItem">
+	<item id="23291" name="伊娃古文(7日)組" type="EtcItem">
 		<!-- Double-click to obtain Eva's Rune (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1491,7 +1491,7 @@
 			<item id="23268" min="1" max="1" chance="100" /> <!-- Eva's Rune - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="23292" name="Package: Eva's Rune (30-day)" type="EtcItem">
+	<item id="23292" name="伊娃古文(30日)組" type="EtcItem">
 		<!-- Double-click to obtain Eva's Rune (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1507,7 +1507,7 @@
 			<item id="23269" min="1" max="1" chance="100" /> <!-- Eva's Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23293" name="Package: Maphr's Rune 50% (1-hour)" type="EtcItem">
+	<item id="23293" name="梅芙古文 50%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 50% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1523,7 +1523,7 @@
 			<item id="23270" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23294" name="Package: Maphr's Rune 100% (1-hour)" type="EtcItem">
+	<item id="23294" name="梅芙古文 100%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1539,7 +1539,7 @@
 			<item id="23271" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23295" name="Package: Maphr's Rune 200% (1-hour)" type="EtcItem">
+	<item id="23295" name="梅芙古文 200%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1555,7 +1555,7 @@
 			<item id="23272" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23296" name="Package: Maphr's Rune 50% (30-day)" type="EtcItem">
+	<item id="23296" name="梅芙古文 50%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1571,7 +1571,7 @@
 			<item id="23273" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23297" name="Package: Maphr's Rune 100% (30-day)" type="EtcItem">
+	<item id="23297" name="梅芙古文 100%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1587,7 +1587,7 @@
 			<item id="23274" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23298" name="Package: Maphr's Rune 200% (30-day)" type="EtcItem">
+	<item id="23298" name="梅芙古文 200%(30日)組" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1603,7 +1603,7 @@
 			<item id="23275" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23299" name="Package: Blessed Scroll: Enchant Elemental Shirt" additionalName="Sayha" type="EtcItem">
+	<item id="23299" name="祝福的殷海薩襯衫強化卷軸禮盒" additionalName="Sayha" type="EtcItem">
 		<!-- Double-click to obtain Blessed Scroll: Enchant Shirt (30 pcs.). There is a very low chance to obtain +7 Sayha's Shirt. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />

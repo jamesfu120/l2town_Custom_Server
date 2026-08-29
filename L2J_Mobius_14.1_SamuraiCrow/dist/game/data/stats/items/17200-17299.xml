@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="17200" name="Olympic Athlete's Earring" type="Armor">
+	<item id="17200" name="國家代表勇士的耳環" type="Armor">
 		<!-- MP +31, Mental/ Shock Resistance +20%, Mental/ Shock Atk. Rate +20%. Enables Vampiric Rage effect. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -19,7 +19,7 @@
 			<skill id="8293" level="1" /> <!-- Olympiad Hero's Earring -->
 		</skills>
 	</item>
-	<item id="17201" name="Mark of Cheers" type="EtcItem">
+	<item id="17201" name="聲援的憑證" type="EtcItem">
 		<!-- A mark required for using the following skills: Olympic Athlete's Will, Spell of Blessing, Energy of Victory. -->
 		<set name="icon" val="BranchSys2.icon.br_cheer_symbol_i00" />
 		<set name="material" val="PAPER" />
@@ -30,7 +30,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
-	<item id="17202" name="Package: Mark of Cheers (10 pcs.)" type="EtcItem">
+	<item id="17202" name="聲援的憑證10個/組" type="EtcItem">
 		<!-- Double-click to obtain 10 Marks of Cheers. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -45,7 +45,7 @@
 			<item id="17201" min="10" max="10" chance="100" /> <!-- Token of Cheers -->
 		</capsuled_items>
 	</item>
-	<item id="17203" name="Agathion Ball Trapping Gnosian" type="Armor">
+	<item id="17203" name="壺精封印手鐲-格諾席安控球" type="Armor">
 		<!-- A bracelet for summoning Ball-trapping Gnosian that wears a red uniform. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -67,7 +67,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="17204" name="Agathion Ball Trapping Orodriel" type="Armor">
+	<item id="17204" name="壺精封印手鐲-奧羅德利爾控球" type="Armor">
 		<!-- A bracelet for summoning Ball-trapping Orodriel that wears a red uniform. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -89,7 +89,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="17205" name="Agathion Penalty Kick" type="Armor">
+	<item id="17205" name="壺精封印手鐲-十二碼罰球" type="Armor">
 		<!-- A bracelet for summoning Gnosian or Orodriel who is practising penalty kicks. The agathions wear a red uniform. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -111,7 +111,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="17206" name="Nevit's Hourglass (1-hour)" type="EtcItem">
+	<item id="17206" name="奈比特沙漏-1小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for a certain amount of time. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -129,7 +129,7 @@
 			<skill id="9167" level="1" /> <!-- Nevit's Hourglass (1-hour) -->
 		</skills>
 	</item>
-	<item id="17207" name="Nevit's Hourglass - 1.5 hour" type="EtcItem">
+	<item id="17207" name="奈比特沙漏-1.5小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for a certain amount of time. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -147,7 +147,7 @@
 			<skill id="9168" level="1" /> <!-- Nevit's Hourglass (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17208" name="Nevit's Hourglass (2-hour)" type="EtcItem">
+	<item id="17208" name="奈比特沙漏-2小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for a certain amount of time. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -165,7 +165,7 @@
 			<skill id="9169" level="1" /> <!-- Nevit's Hourglass (2-hour) -->
 		</skills>
 	</item>
-	<item id="17209" name="Nevit's Hourglass (2.5-hour)" type="EtcItem">
+	<item id="17209" name="奈比特沙漏-2.5小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for a certain amount of time. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -183,7 +183,7 @@
 			<skill id="9170" level="1" /> <!-- Nevit's Hourglass (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17210" name="Nevit's Hourglass (3-hour)" type="EtcItem">
+	<item id="17210" name="奈比特沙漏-3小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for a certain amount of time. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -201,7 +201,7 @@
 			<skill id="9171" level="1" /> <!-- Nevit's Hourglass (3-hour) -->
 		</skills>
 	</item>
-	<item id="17211" name="Nevit's Hourglass - 4 h." type="EtcItem">
+	<item id="17211" name="奈比特沙漏-4小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for a certain amount of time. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -219,7 +219,7 @@
 			<skill id="9172" level="1" /> <!-- Nevit's Hourglass (4-hour) -->
 		</skills>
 	</item>
-	<item id="17212" name="Nevit's Voice" type="EtcItem">
+	<item id="17212" name="奈比特之聲" type="EtcItem">
 		<!-- A seashell that contains Nevit's voice. Recommendations +10. Double-click to obtain 100,000 adena. -->
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="material" val="LIQUID" />
@@ -234,7 +234,7 @@
 			<skill id="9173" level="1" /> <!-- Nevit's Voice -->
 		</skills>
 	</item>
-	<item id="17213" name="Solina's Biography" type="EtcItem">
+	<item id="17213" name="索黎那評傳" type="EtcItem">
 		<!-- Biography containing the life story of Solina, a saintess of the Elmoreden kingdom. The text has been banned throughout the kingdom and is incredibly difficult to obtain. Double-click for more information. -->
 		<set name="icon" val="icon.etc_old_evil_book_i00" />
 		<set name="material" val="LIQUID" />
@@ -248,7 +248,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17214" name="Kaerun's Memoir" type="EtcItem">
+	<item id="17214" name="卡艾崙的手記" type="EtcItem">
 		<!-- Complete copy of Kaerun's Memoir. It is a detailed look at Solina's life written by Kaerun from his perspective. This book was never circulated but it's original print Has been archived inside the monastery. Double-click for more information. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="material" val="LIQUID" />
@@ -261,7 +261,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17215" name="Kaerun's Memoir Part 1" type="EtcItem">
+	<item id="17215" name="卡艾崙的記錄 第一部" type="EtcItem">
 		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="LIQUID" />
@@ -274,7 +274,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17216" name="Kaerun's Memoir Part 2" type="EtcItem">
+	<item id="17216" name="卡艾崙的記錄 第二部" type="EtcItem">
 		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="LIQUID" />
@@ -287,7 +287,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17217" name="Kaerun's Memoir Part 3" type="EtcItem">
+	<item id="17217" name="卡艾崙的記錄 第三部" type="EtcItem">
 		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="LIQUID" />
@@ -300,7 +300,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17218" name="Kaerun's Memoir Part 4" type="EtcItem">
+	<item id="17218" name="卡艾崙的記錄 第四部" type="EtcItem">
 		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="LIQUID" />
@@ -313,7 +313,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17219" name="Eris' Chronicle" type="EtcItem">
+	<item id="17219" name="艾利絲的記錄" type="EtcItem">
 		<!-- A book about Solina's last days, written by Elise, the abbess of the Monastery of Silence. Double-click to learn more. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="material" val="LIQUID" />
@@ -326,7 +326,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17220" name="Catalog Card" type="EtcItem">
+	<item id="17220" name="圖書館長的紙條" type="EtcItem">
 		<!-- Librarian Sophia Has given the catalog card containing the location of the book. Double-click for more information. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="material" val="LIQUID" />
@@ -339,7 +339,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17221" name="Key to the Passageway" type="EtcItem">
+	<item id="17221" name="通道之鑰" type="EtcItem">
 		<!-- Key that opens the passageway gate to the Seal of the Saintess entrance. You can enter the passageway with this key. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="is_tradable" val="false" />
@@ -350,7 +350,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17222" name="Key to the Tomb" type="EtcItem">
+	<item id="17222" name="墓地之鑰" type="EtcItem">
 		<!-- A key that opens the door to the Shrine inside the Relic Safehouse of the Seal of the Saintess. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="is_tradable" val="false" />
@@ -361,7 +361,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17223" name="Key to the Library" type="EtcItem">
+	<item id="17223" name="書庫之鑰" type="EtcItem">
 		<!-- Key that opens the door to the Library inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Library without this key. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="is_tradable" val="false" />
@@ -372,7 +372,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17224" name="Key to the Warehouse" type="EtcItem">
+	<item id="17224" name="倉庫之鑰" type="EtcItem">
 		<!-- Key that opens the door to the Warehouse inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Warehouse without this key. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="is_tradable" val="false" />
@@ -383,7 +383,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17225" name="Key to the Armory" type="EtcItem">
+	<item id="17225" name="武器庫之鑰" type="EtcItem">
 		<!-- Key that opens the door to the Armory inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Armory without this key. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="is_tradable" val="false" />
@@ -394,7 +394,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17226" name="Elcadia's Mark" type="EtcItem">
+	<item id="17226" name="艾卡迪雅的憑證" type="EtcItem">
 		<!-- A magic rune mark required for Elcadia's trial. -->
 		<set name="icon" val="icon.etc_fire_mantra_i00" />
 		<set name="immediate_effect" val="true" />
@@ -407,7 +407,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17227" name="Elcadia's Mark" type="EtcItem">
+	<item id="17227" name="艾卡迪雅的憑證" type="EtcItem">
 		<!-- A magic rune mark required for Elcadia's trial. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="material" val="PAPER" />
@@ -419,7 +419,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
-	<item id="17228" name="Scroll of Abstinence" type="EtcItem">
+	<item id="17228" name="禁慾之書" type="EtcItem">
 		<!-- One of the relics stored inside the Seal of the Saintess. This scroll emanates an unusual energy. The scroll is very old and worn. It must be handled with care. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="is_tradable" val="false" />
@@ -430,7 +430,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17229" name="Shield of Sacrifice" type="EtcItem">
+	<item id="17229" name="犧牲之盾" type="EtcItem">
 		<!-- One of the relics stored inside the Seal of the Saintess. This shield emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="is_tradable" val="false" />
@@ -441,7 +441,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17230" name="Sword of Holy Spirit" type="EtcItem">
+	<item id="17230" name="聖靈之劍" type="EtcItem">
 		<!-- One of the relics stored inside the Seal of the Saintess. The sword emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="is_tradable" val="false" />
@@ -452,7 +452,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17231" name="Staff of Blessing" type="EtcItem">
+	<item id="17231" name="祝福之杖" type="EtcItem">
 		<!-- One of the relics stored inside the Seal of the Saintess. This staff emanates an unusual energy. But it is very worn and heavy. It is fragile cannot be used in battle. -->
 		<set name="icon" val="icon.weapon_mace_of_prayer_i01" />
 		<set name="is_tradable" val="false" />
@@ -463,7 +463,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17232" name="Package: Agathion Ball Trapping Gnosian" type="EtcItem">
+	<item id="17232" name="格諾席安控球壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Ball Trapping Gnosian. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -478,7 +478,7 @@
 			<item id="17203" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Ball-trapping Gnosian -->
 		</capsuled_items>
 	</item>
-	<item id="17233" name="Package: Agathion Ball Trapping Orodriel" type="EtcItem">
+	<item id="17233" name="奧羅德利爾控球壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Ball-trapping Orodriel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -493,7 +493,7 @@
 			<item id="17204" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Ball-trapping Orodriel -->
 		</capsuled_items>
 	</item>
-	<item id="17234" name="Package: Agathion Penalty Kick" type="EtcItem">
+	<item id="17234" name="十二碼罰球壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Penalty Kick. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -508,7 +508,7 @@
 			<item id="17205" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Penalty Kick -->
 		</capsuled_items>
 	</item>
-	<item id="17235" name="World Cup Special Gift" type="EtcItem">
+	<item id="17235" name="世界盃特別禮物" type="EtcItem">
 		<!-- Special gift in commemoration of the World Cup. Can obtain various items by using it. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -522,7 +522,7 @@
 			<skill id="9176" level="1" /> <!-- Provided gift of cheers -->
 		</skills>
 	</item>
-	<item id="17236" name="Gift of Victory Box" type="EtcItem">
+	<item id="17236" name="勝利的禮盒" type="EtcItem">
 		<!-- A gift in commemoration of the victory. Double-click to obtain Nevit's Voice and Nevit's Hourglass. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -538,7 +538,7 @@
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
 		</capsuled_items>
 	</item>
-	<item id="17237" name="Luxury Gift of Victory Box" type="EtcItem">
+	<item id="17237" name="勝利的高級禮盒" type="EtcItem">
 		<!-- A gift in commemoration of the victory. Double-click to obtain Nevit's Voice and Nevit's Hourglass. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -554,7 +554,7 @@
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
 		</capsuled_items>
 	</item>
-	<item id="17238" name="Olympiad Match 3 Participation Certificate" type="EtcItem">
+	<item id="17238" name="奧林匹亞3場競賽參加證書" type="EtcItem">
 		<!-- A document that proves participation in three Olympiad matches. Take it to the Olympiad Manager to get a small reward. -->
 		<set name="icon" val="icon.mercenary_certification_i00" />
 		<set name="material" val="PAPER" />
@@ -566,7 +566,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17239" name="Olympiad Match 5 Participation Certificate" type="EtcItem">
+	<item id="17239" name="奧林匹亞5場競賽參加證書" type="EtcItem">
 		<!-- A document that proves participation in five Olympiad matches. Take it to the Olympiad Manager to get a small reward. -->
 		<set name="icon" val="icon.mercenary_certification_i00" />
 		<set name="material" val="PAPER" />
@@ -578,7 +578,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17240" name="Olympiad Match 10 Participation Certificate" type="EtcItem">
+	<item id="17240" name="奧林匹亞10場競賽參加證書" type="EtcItem">
 		<!-- A document that proves participation in ten Olympiad matches. Take it to the Olympiad Manager to get a reward. -->
 		<set name="icon" val="icon.mercenary_certification_i01" />
 		<set name="material" val="PAPER" />
@@ -590,7 +590,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17241" name="Olympiad Team Event Certificate" type="EtcItem">
+	<item id="17241" name="奧林匹亞隊伍競賽認證書" type="EtcItem">
 		<!-- A certificate that proves participation in five Olympiad team matches. Take it to the Olympiad Manager. If you also bring Olympiad All-Class Battle Certificate and Olympiad Class Battle Certificate, you will get a large reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="material" val="PAPER" />
@@ -602,7 +602,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17242" name="Olympiad All-Class Battle Certificate" type="EtcItem">
+	<item id="17242" name="奧林匹亞不限職業競賽認證書" type="EtcItem">
 		<!-- A certificate that proves participation in five Olympiad all-class battle matches. Take it to the Olympiad Manager. If you also bring Olympiad Team Event Certificate and Olympiad Class Battle Certificate, you will get a large reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="material" val="PAPER" />
@@ -614,7 +614,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17243" name="Olympiad Class Battle Certificate" type="EtcItem">
+	<item id="17243" name="奧林匹亞職業競賽認證書" type="EtcItem">
 		<!-- A certificate that proves participation in five Olympiad class battle matches. Take it to the Olympiad Manager. If you also bring Olympiad All-Class Battle Certificate and Olympiad Team Event Certificate, you will get a large reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="material" val="PAPER" />
@@ -626,7 +626,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17244" name="Olympiad 2 Consecutive Wins Confirmation" type="EtcItem">
+	<item id="17244" name="奧林匹亞2連勝確認書" type="EtcItem">
 		<!-- A document that proves two consecutive wins in the Olympiad. Take it to the Olympiad Manager to get a small reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i01" />
 		<set name="material" val="PAPER" />
@@ -638,7 +638,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17245" name="Olympiad 5 Consecutive Wins Confirmation" type="EtcItem">
+	<item id="17245" name="奧林匹亞5連勝確認書" type="EtcItem">
 		<!-- A document that proves five consecutive wins in the Olympiad. Take it to the Olympiad Manager to get a reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i02" />
 		<set name="material" val="PAPER" />
@@ -650,7 +650,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17246" name="Olympiad 10 Consecutive Wins Confirmation" type="EtcItem">
+	<item id="17246" name="奧林匹亞10連勝確認書" type="EtcItem">
 		<!-- A document that proves ten consecutive wins in the Olympiad. Take it to the Olympiad Manager to get a large reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i03" />
 		<set name="material" val="PAPER" />
@@ -662,7 +662,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17247" name="Vitality Recovering Potion (Party)" type="EtcItem">
+	<item id="17247" name="隊伍活力充能藥草" type="EtcItem">
 		<!-- Herb that recovers Vitality for 5 min. upon use. The effect applies to all party members. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -675,7 +675,7 @@
 			<skill id="6883" level="1" /> <!-- Vitality Recovery Effect -->
 		</skills>
 	</item>
-	<item id="17248" name="Large Dragon Bone" type="EtcItem">
+	<item id="17248" name="龐大的龍骨碎片" type="EtcItem">
 		<!-- Summoning item, you can call a raid monster at a certain location in the Dragon Valley. If the raid monster has already been summoned, it cannot be called. -->
 		<set name="icon" val="icon.big_dragon_bone_summon" />
 		<set name="material" val="PAPER" />
@@ -684,7 +684,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="17249" name="Large Dragon Skull" type="EtcItem">
+	<item id="17249" name="巨大的龍骨" type="EtcItem">
 		<!-- Remains of a unique beast from the Dragon Valley. Collect remains of seven various dragons and take them to Gilmore. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="material" val="PAPER" />
@@ -696,7 +696,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17250" name="Large Baby Dragon" type="EtcItem">
+	<item id="17250" name="巨大的龍牙" type="EtcItem">
 		<!-- Baby Dragon obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the baby dragon, bring it to the separated soul in the Dragon Valley. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="material" val="PAPER" />
@@ -707,7 +707,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
-	<item id="17251" name="Drake Lord's Essence" type="EtcItem">
+	<item id="17251" name="龍獸之王的精髓" type="EtcItem">
 		<!-- Drake Lord's essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="is_tradable" val="false" />
@@ -717,7 +717,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17252" name="Behemoth Leader's Essence" type="EtcItem">
+	<item id="17252" name="貝希莫斯首領的精髓" type="EtcItem">
 		<!-- Behemoth Leader's Essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_green_i00" />
 		<set name="is_tradable" val="false" />
@@ -727,7 +727,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17253" name="Dragon Beast's Essence" type="EtcItem">
+	<item id="17253" name="猛龍獸的精髓" type="EtcItem">
 		<!-- Dragon Beast's Essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -737,7 +737,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17254" name="Box of Theodric" type="EtcItem">
+	<item id="17254" name="靈魂的禮物" type="EtcItem">
 		<!-- Old and tattered box. You can hear a rattling sound when you shake it. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="LIQUID" />
@@ -752,7 +752,7 @@
 			<skill id="9178" level="1" /> <!-- Theodric's Box -->
 		</skills>
 	</item>
-	<item id="17255" name="Blessed Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="17255" name="祝福的武器強化卷軸-A級" additionalName="Event" type="EtcItem">
 		<!-- For A-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +4. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +5. Bow: P. Atk. +8. All weapons: M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used with weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="material" val="PAPER" />
@@ -768,7 +768,7 @@
 			<skill id="2027" level="1" /> <!-- Blessed Scroll: Enchant A-grade Weapon -->
 		</skills>
 	</item>
-	<item id="17256" name="Blessed Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="17256" name="祝福的防具強化卷軸-A級" additionalName="Event" type="EtcItem">
 		<!-- For A-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. In case of failure, the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="PAPER" />
@@ -784,7 +784,7 @@
 			<skill id="2209" level="1" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
 		</skills>
 	</item>
-	<item id="17257" name="Blessed Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="17257" name="祝福的武器強化卷軸-B級" additionalName="Event" type="EtcItem">
 		<!-- For B-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +3. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +4. Bow: P. Atk. +6. All weapons: M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure, the item is not crystallized, but its enchant value is reset to 0. Cannot be used with weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="material" val="PAPER" />
@@ -800,7 +800,7 @@
 			<skill id="2028" level="1" /> <!-- Blessed Scroll: Enchant B-grade Weapon -->
 		</skills>
 	</item>
-	<item id="17258" name="Blessed Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="17258" name="祝福的防具強化卷軸-B級" additionalName="Event" type="EtcItem">
 		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. In case of failure, the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="PAPER" />
@@ -816,7 +816,7 @@
 			<skill id="2210" level="1" /> <!-- Blessed Scroll: Enchant B-grade Armor -->
 		</skills>
 	</item>
-	<item id="17259" name="Blessed Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="17259" name="祝福的武器強化卷軸-C級" additionalName="Event" type="EtcItem">
 		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value drops to 0. Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="material" val="PAPER" />
@@ -832,7 +832,7 @@
 			<skill id="2029" level="1" /> <!-- Blessed Scroll: Enchant C-grade Weapon -->
 		</skills>
 	</item>
-	<item id="17260" name="Blessed Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="17260" name="祝福的防具強化卷軸-C級" additionalName="Event" type="EtcItem">
 		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. In case of failure, the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="material" val="PAPER" />
@@ -848,7 +848,7 @@
 			<skill id="2211" level="1" /> <!-- Blessed Scroll: Enchant C-grade Armor -->
 		</skills>
 	</item>
-	<item id="17261" name="Blessed Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="17261" name="祝福的武器強化卷軸-D級" additionalName="Event" type="EtcItem">
 		<!-- For D-grade weapons. P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual daggers, dual swords, fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value resets to 0. Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="material" val="PAPER" />
@@ -864,7 +864,7 @@
 			<skill id="2030" level="1" /> <!-- Blessed Scroll: Enchant D-grade Weapon -->
 		</skills>
 	</item>
-	<item id="17262" name="Blessed Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="17262" name="祝福的防具強化卷軸-D級" additionalName="Event" type="EtcItem">
 		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. In case of failure, the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="material" val="PAPER" />
@@ -880,7 +880,7 @@
 			<skill id="2212" level="1" /> <!-- Blessed Scroll: Enchant D-grade Armor -->
 		</skills>
 	</item>
-	<item id="17263" name="Blessed Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="17263" name="祝福的武器強化卷軸-S級" additionalName="Event" type="EtcItem">
 		<!-- For S-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +5. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +6. Bow: P. Atk. +10. All weapons: M. Atk. +4. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure, the item is not crystallized, but its enchant value is reset to 0. Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="material" val="PAPER" />
@@ -896,7 +896,7 @@
 			<skill id="2026" level="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 		</skills>
 	</item>
-	<item id="17264" name="Blessed Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="17264" name="祝福的防具強化卷軸-S級" additionalName="Event" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. In case of failure, the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="PAPER" />
@@ -912,7 +912,7 @@
 			<skill id="2208" level="1" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 		</skills>
 	</item>
-	<item id="17265" name="Certificate of Dawn" type="EtcItem">
+	<item id="17265" name="黎明的證書" type="EtcItem">
 		<!-- Certificate received from the Witness of Dawn Franz. No longer used. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="is_tradable" val="false" />
@@ -922,7 +922,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17266" name="Will of Antharas" type="EtcItem">
+	<item id="17266" name="安塔瑞斯的意志" type="EtcItem">
 		<!-- Command stone made by Antharas embedded in his high commanding minions so he will always have control over them. Used to create Antharas Blood Crystal. Bring it to a Separated Soul. -->
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="material" val="PAPER" />
@@ -930,7 +930,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="17267" name="Sealed Blood Crystal" type="EtcItem">
+	<item id="17267" name="封印的血之結晶" type="EtcItem">
 		<!-- Small crystal particles made from the blood of Antharas. After his blood was spilt, the land absorbed the blood and acted as a filter that separated the Poison from the blood creating a pure form of his blood that crystallized over time. Used to create an Antharas' Blood Crystal. Bring it to a Separated Soul. -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="material" val="PAPER" />
@@ -938,7 +938,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="17268" name="Antharas Blood Crystal" type="EtcItem">
+	<item id="17268" name="安塔瑞斯血之結晶" type="EtcItem">
 		<!-- Uses Antharas' power to resurrect all dead allies. Can only be used in Antharas' Nest. Can only be used once an hour. -->
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -957,7 +957,7 @@
 			<skill id="9179" level="1" /> <!-- Antharas' Blood Crystal -->
 		</skills>
 	</item>
-	<item id="17269" name="Agathion Antharas" type="Armor">
+	<item id="17269" name="壺精封印手鐲-安塔瑞斯" type="Armor">
 		<!-- A bracelet for summoning Agathion Antharas. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -975,7 +975,7 @@
 			<skill id="6916" level="1" /> <!-- Antharas' Cute Tricks -->
 		</skills>
 	</item>
-	<item id="17270" name="Agathion Nevit's Messenger Kanna" type="Armor">
+	<item id="17270" name="壺精封印手鐲-奈比特的傳令 康娜" type="Armor">
 		<!-- A bracelet for summoning Agathion Nevit's Herald Kanna. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -993,7 +993,7 @@
 			<skill id="6917" level="1" /> <!-- Kanna's Splendor -->
 		</skills>
 	</item>
-	<item id="17271" name="Agathion Guardian of Dawn Kallesin" type="Armor">
+	<item id="17271" name="壺精封印手鐲-黎明的守護者 凱雷辛" type="Armor">
 		<!-- A bracelet for summoning Agathion Guardian of Dawn Kallesin. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1011,7 +1011,7 @@
 			<skill id="6918" level="1" /> <!-- Kallesin's Splendor -->
 		</skills>
 	</item>
-	<item id="17272" name="Package: Agathion Antharas" type="EtcItem">
+	<item id="17272" name="安塔瑞斯壺精組" type="EtcItem">
 		<!-- A special gift given for conquering the Dragon Valley. Double-click to obtain Agathion Antharas Charm. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1026,7 +1026,7 @@
 			<item id="17269" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Antharas -->
 		</capsuled_items>
 	</item>
-	<item id="17273" name="Package: Agathion Nevit's Messenger Kanna" type="EtcItem">
+	<item id="17273" name="奈比特的傳令 康娜壺精組" type="EtcItem">
 		<!-- A special gift given for completing the Seven Signs quest. Double-click to obtain Agathion Nevit's Messenger Kanna Charm. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1041,7 +1041,7 @@
 			<item id="17270" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Nevit's Messenger Kanna -->
 		</capsuled_items>
 	</item>
-	<item id="17274" name="Package: Agathion Guardian of Dawn Kallesin" type="EtcItem">
+	<item id="17274" name="黎明的守護者 凱雷辛壺精組" type="EtcItem">
 		<!-- A special gift given for completing the Seven Signs quest. Double-click to obtain Agathion Seal Bracelet - Guardian of Dawn Kallesin. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1056,7 +1056,7 @@
 			<item id="17271" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Guardian of Dawn Kallesin -->
 		</capsuled_items>
 	</item>
-	<item id="17275" name="Strider Pet Coupon" type="EtcItem">
+	<item id="17275" name="座龍寵物交換券" type="EtcItem">
 		<!-- Certificate that shows receipt of a Strider pet. You can exchange the coupon for the Strider pet through the News Informer. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -1066,7 +1066,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17276" name="Scroll: 50,000 SP" type="EtcItem">
+	<item id="17276" name="5 SP卷軸" type="EtcItem">
 		<!-- SP +5. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1081,7 +1081,7 @@
 			<skill id="9180" level="1" /> <!-- SP Scroll: 5 -->
 		</skills>
 	</item>
-	<item id="17277" name="Scroll: 100,000 SP" type="EtcItem">
+	<item id="17277" name="10 SP卷軸" type="EtcItem">
 		<!-- SP +10. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1096,7 +1096,7 @@
 			<skill id="9180" level="2" /> <!-- SP Scroll: 10 -->
 		</skills>
 	</item>
-	<item id="17278" name="Package: Strider Pet Coupon" type="EtcItem">
+	<item id="17278" name="座龍寵物交換券組" type="EtcItem">
 		<!-- Double-click to obtain Strider Pet Coupon. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1111,7 +1111,7 @@
 			<item id="17275" min="1" max="1" chance="100" /> <!-- Strider Pet Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="17279" name="Package: Transformation Scroll: Anakim" type="EtcItem">
+	<item id="17279" name="變身卷軸-亞納組" type="EtcItem">
 		<!-- A gift box that contains 1 Transformation Scroll: Anakim. Double-click to obtain Transformation Scroll: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1126,7 +1126,7 @@
 			<item id="17139" min="1" max="1" chance="100" /> <!-- Transformation Scroll: Anakim -->
 		</capsuled_items>
 	</item>
-	<item id="17280" name="Package: Transformation Sealbook: Anakim" type="EtcItem">
+	<item id="17280" name="變身刻印書-亞納組" type="EtcItem">
 		<!-- A gift box that contains 1 Transformation Sealbook: Anakim. Double-click to obtain Transformation Sealbook: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1141,7 +1141,7 @@
 			<item id="10296" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Anakim -->
 		</capsuled_items>
 	</item>
-	<item id="17281" name="Delivery Box" type="EtcItem">
+	<item id="17281" name="送貨箱" type="EtcItem">
 		<!-- Box that Isabel Silvershadow in Hunter's Village asks you to deliver. Bring it to Valley Trader Kitzka in Dragon's Valley. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="PAPER" />
@@ -1153,7 +1153,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17282" name="2010 Summer Special Package" type="EtcItem">
+	<item id="17282" name="2010夏季特殊禮盒組" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Hourglass, Freya's Refreshing Breeze and Ice Watermelon Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1171,7 +1171,7 @@
 			<item id="17289" min="1" max="1" chance="100" /> <!-- Ice Watermelon Hat -->
 		</capsuled_items>
 	</item>
-	<item id="17283" name="Nevit's Hourglass (4-hour)" type="EtcItem">
+	<item id="17283" name="奈比特沙漏-4小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for 4 h. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -1191,7 +1191,7 @@
 			<skill id="9181" level="1" /> <!-- Nevit's Hourglass (4-hour) -->
 		</skills>
 	</item>
-	<item id="17284" name="Nevit's Hourglass (4-hour)" additionalName="Event" type="EtcItem">
+	<item id="17284" name="奈比特沙漏-4小時" additionalName="Event" type="EtcItem">
 		<!-- When used, acquired XP +50% for 4 h. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -1211,7 +1211,7 @@
 			<skill id="9182" level="1" /> <!-- Nevit's Hourglass (4-hour) -->
 		</skills>
 	</item>
-	<item id="17285" name="Freya's Refreshing Breeze" type="EtcItem">
+	<item id="17285" name="芙蕾雅的涼風" type="EtcItem">
 		<!-- When used, recovers Vitality for 4 h. Cannot be used while the Birthday buff is active. Cooldown: 60 min. Vitality item with limited usage. The effect remains after death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
@@ -1230,7 +1230,7 @@
 			<skill id="9183" level="1" /> <!-- Freya's Refreshing Breeze (4-hour) -->
 		</skills>
 	</item>
-	<item id="17286" name="Freya's Refreshing Breeze" additionalName="Event" type="EtcItem">
+	<item id="17286" name="芙蕾雅的涼風" additionalName="Event" type="EtcItem">
 		<!-- When used, recovers Vitality for 4 h. Cannot be used while the Birthday buff is active. Cooldown: 60 min. Vitality item with limited usage. The effect remains after death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
@@ -1249,7 +1249,7 @@
 			<skill id="9184" level="1" /> <!-- Freya's Refreshing Breeze (4-hour) (Event) -->
 		</skills>
 	</item>
-	<item id="17287" name="2010 Summer Special Package" additionalName="Event" type="EtcItem">
+	<item id="17287" name="2010夏季特殊禮盒組" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Hourglass, Freya's Refreshing Breeze and Ice Watermelon Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1267,7 +1267,7 @@
 			<item id="17288" min="1" max="1" chance="100" /> <!-- Ice Watermelon Hat - Event -->
 		</capsuled_items>
 	</item>
-	<item id="17288" name="Ice Watermelon Hat" additionalName="Event" type="Armor">
+	<item id="17288" name="冰涼西瓜帽" additionalName="Event" type="Armor">
 		<!-- A hat that looks like a watermelon. Just looking at it is refreshing. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1283,7 +1283,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
-	<item id="17289" name="Ice Watermelon Hat" type="Armor">
+	<item id="17289" name="冰涼西瓜帽" type="Armor">
 		<!-- A hat that looks like a watermelon. Just looking at it is refreshing. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1299,7 +1299,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
-	<item id="17290" name="Requiem Shaper" type="Weapon">
+	<item id="17290" name="鎮魂鉋刀" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1333,7 +1333,7 @@
 			<skill id="13279" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dagger -->
 		</skills>
 	</item>
-	<item id="17291" name="Requiem Cutter" type="Weapon">
+	<item id="17291" name="鎮魂切刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, P. Accuracy and Critical Rate for basic attacks. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1366,7 +1366,7 @@
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Sword -->
 		</skills>
 	</item>
-	<item id="17292" name="Requiem Slasher" type="Weapon">
+	<item id="17292" name="鎮魂殺刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1399,7 +1399,7 @@
 			<skill id="13258" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Sword -->
 		</skills>
 	</item>
-	<item id="17293" name="Requiem Avenger" type="Weapon">
+	<item id="17293" name="鎮魂復仇者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1433,7 +1433,7 @@
 			<skill id="13253" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Blunt Weapon -->
 		</skills>
 	</item>
-	<item id="17294" name="Requiem Fighter" type="Weapon">
+	<item id="17294" name="鎮魂戰爪" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, Atk. Spd. and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1467,7 +1467,7 @@
 			<skill id="13264" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Fist Weapon -->
 		</skills>
 	</item>
-	<item id="17295" name="Requiem Stormer" type="Weapon">
+	<item id="17295" name="鎮魂風暴者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and the number of targets hit on attack. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1502,7 +1502,7 @@
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Spear -->
 		</skills>
 	</item>
-	<item id="17296" name="Requiem Thrower" type="Weapon">
+	<item id="17296" name="鎮魂投弓" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and P. Skill Power. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_grabathus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1537,7 +1537,7 @@
 			<skill id="13289" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Bow -->
 		</skills>
 	</item>
-	<item id="17297" name="Requiem Guardian" type="Weapon">
+	<item id="17297" name="鎮魂射靈" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and Atk. Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1572,7 +1572,7 @@
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Crossbow -->
 		</skills>
 	</item>
-	<item id="17298" name="Requiem Buster" type="Weapon">
+	<item id="17298" name="鎮魂爆刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy and M. Skill Critical Rate. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1606,7 +1606,7 @@
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Magic Sword -->
 		</skills>
 	</item>
-	<item id="17299" name="Requiem Caster" type="Weapon">
+	<item id="17299" name="鎮魂術杖" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy and M. Skill Critical Damage. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Upgrade>. Take Scroll of Blessing - R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_anatrian_i00" />
 		<set name="default_action" val="EQUIP" />

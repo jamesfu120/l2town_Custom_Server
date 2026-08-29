@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="60200" name="Freya's Fortune Wand 2022" type="EtcItem">
+	<item id="60200" name="2022芙蕾雅幸運魔杖" type="EtcItem">
 		<!-- Double-click to obtain 3 Freya's Glittering Scrolls of Storm and Freya's Glittering Ice Rose. Additionally, you can get one of the following items: Supply Pack/ Enchant Pack/ Treasure Chest. -->
 		<set name="icon" val="icon.bm_freya_wand" />
 		<set name="default_action" val="CAPSULE" />
@@ -19,7 +19,7 @@
 			<item id="60203" min="1" max="1" chance="33" /> <!-- Freya's Treasure Chest 2022 -->
 		</capsuled_items>
 	</item>
-	<item id="60201" name="Freya's Supply Pack 2022" type="EtcItem">
+	<item id="60201" name="2022芙蕾雅消耗品箱" type="EtcItem">
 		<!-- Double-click to obtain rare supplies. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -44,7 +44,7 @@
 			<item id="81892" min="1" max="1" chance="11" /> <!-- Nevit's Shining Royal Gold Hourglass -->
 		</capsuled_items>
 	</item>
-	<item id="60202" name="Rare Treasure Chest 2022" type="EtcItem">
+	<item id="60202" name="2022芙蕾雅強化禮盒" type="EtcItem">
 		<!-- Double-click to obtain items for enchanting equipment. -->
 		<set name="icon" val="icon.bm_freya_snowman_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -78,7 +78,7 @@
 			<item id="82049" min="1" max="1" chance="5" /> <!-- Sayha's Shining Energy -->
 		</capsuled_items>
 	</item>
-	<item id="60203" name="Freya's Treasure Chest 2022" type="EtcItem">
+	<item id="60203" name="2022芙蕾雅寶箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.sa_cube" />
 		<set name="default_action" val="CAPSULE" />
@@ -112,7 +112,7 @@
 			<item id="80335" min="1" max="1" chance="5" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60204" name="Santa's Lavish Pouch" type="EtcItem">
+	<item id="60204" name="聖誕老人豪華禮物袋" type="EtcItem">
 		<!-- Double-click to obtain Lush Christmas Tree. Also, there is a chance to obtain 1 useful item. -->
 		<set name="icon" val="BranchSys.Icon.Br_santa_gift_click_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -125,7 +125,7 @@
 			<item id="60205" min="1" max="1" chance="100" /> <!-- Lush Christmas Tree -->
 		</capsuled_items>
 	</item>
-	<item id="60205" name="Lush Christmas Tree" type="EtcItem">
+	<item id="60205" name="華麗聖誕樹" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="immediate_effect" val="true" />
@@ -133,7 +133,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60206" name="Gran Kain's Scroll: Enchant R-grade Weapon" type="EtcItem">
+	<item id="60206" name="格蘭肯的武器強化卷軸-R級" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Through Gran Kain's power, in case of failure the item is not crystallized, and its enchant value remains the same. Cannot be used with weapons enchanted to +20 and higher. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -148,7 +148,7 @@
 			<skill id="29485" level="1" /> <!-- Gran Kain's Scroll: Enchant Weapon -->
 		</skills>
 	</item>
-	<item id="60207" name="Gran Kain's Scroll: Enchant R-grade Armor" type="EtcItem">
+	<item id="60207" name="格蘭肯的防具強化卷軸-R級" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. bonus is greatly increased, HP is increased with each enchant value. Enchanting is safe up to +3. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used with equipment enchanted to +12 and higher. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -163,7 +163,7 @@
 			<skill id="29486" level="1" /> <!-- Gran Kain's Scroll: Enchant Armor -->
 		</skills>
 	</item>
-	<item id="60208" name="Anakim Server's Support Pack" additionalName="Event" type="EtcItem">
+	<item id="60208" name="黃金週禮物" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Emperor's Special Cocktail (12 pcs.), Freya's Ice Rose (24 pcs.), Glowing Dragon's Attribute Potion (XP) (24 pcs.), Honey Dark Beer (24 pcs.), Soulshot/ Spiritshot Ticket. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -181,7 +181,7 @@
 			<item id="81460" min="24" max="24" chance="100" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60209" name="Dragon's Treasure Chest" type="EtcItem">
+	<item id="60209" name="龍之寶箱" type="EtcItem">
 		<!-- Double-click to obtain 1 special item. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="CAPSULE" />
@@ -236,7 +236,7 @@
 			<item id="80335" min="1" max="1" chance="2.5" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60210" name="Dragon Coin Sack" type="EtcItem">
+	<item id="60210" name="龍之幣小袋" type="EtcItem">
 		<!-- Double-click to obtain 3 to 1000 Dragon Coins. -->
 		<set name="icon" val="icon.bm_dragon_present_poket" />
 		<set name="default_action" val="CAPSULE" />
@@ -260,7 +260,7 @@
 			<item id="29792" min="1000" max="1000" chance="10" /> <!-- Dragon Coin -->
 		</capsuled_items>
 	</item>
-	<item id="60211" name="Dragon's Relic" type="EtcItem">
+	<item id="60211" name="龍之遺物" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Enchant Miraculous Weapon, a random item from the list and another one of various items. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="CAPSULE" />
@@ -315,7 +315,7 @@
 			<item id="29676" min="2" max="2" chance="2.5" /> <!-- Freya's Glittering Scroll of Storm -->
 		</capsuled_items>
 	</item>
-	<item id="60212" name="Improved Scroll: Enchant Mysterious Weapon" additionalName="Event" type="EtcItem">
+	<item id="60212" name="神秘的高級武器強化卷軸" additionalName="Event" type="EtcItem">
 		<!-- Required for enchanting Mysterious Dragon Slayer. Enchanting is random from +1 to +3. Can be used for enchanting up to +22 -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -330,7 +330,7 @@
 			<skill id="29489" level="1" /> <!-- Scroll: Enchant Miraculous Special Weapon -->
 		</skills>
 	</item>
-	<item id="60213" name="Bloodthirsty Weapon Coupon" additionalName="Event" type="EtcItem">
+	<item id="60213" name="嗜血武器交換券" additionalName="Event" type="EtcItem">
 		<!-- Granted for enchanting Mysterious Dragon Slayer to +25. Can be exchanged for a desired reward via a request to GM. -->
 		<set name="icon" val="icon.bm_payback_ticket_01" />
 		<set name="immediate_effect" val="true" />
@@ -340,7 +340,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60214" name="Sweet Dalgona" additionalName="Event" type="EtcItem">
+	<item id="60214" name="香甜椪糖" additionalName="Event" type="EtcItem">
 		<!-- P. Atk./ M. Atk./ P. Def./ M. Def. +15%, Attribute Attack/ Resistance +100, acquired XP/ SP +5%. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="BranchIcon.icon.g_ev_dalgona_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -353,7 +353,7 @@
 			<skill id="29490" level="1" /> <!-- Sweet Dalgona -->
 		</skills>
 	</item>
-	<item id="60215" name="Anakim Server's Special Support Pack" additionalName="Event" type="EtcItem">
+	<item id="60215" name="亞納伺服器特級支援禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain various items for players on the Anakim server. -->
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
@@ -364,7 +364,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60216" name="Love Box" type="EtcItem">
+	<item id="60216" name="LOVE BOX" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="PEEL" />
@@ -510,7 +510,7 @@
 			<item id="80838" min="1" max="1" chance="1.785714" /> <!-- Blessed Scroll: Enchant Kaliel's Bracelet -->
 		</capsuled_items>
 	</item>
-	<item id="60218" name="Attendance Gift Rune: P./ M. Atk." additionalName="6-hour" type="EtcItem">
+	<item id="60218" name="出席禮物古文：物理攻擊力/魔法攻擊力" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, P./ M. Atk. +10%. -->
 		<set name="icon" val="BranchSys3.icon1.g_rune_of_half_power" />
 		<set name="immediate_effect" val="true" />
@@ -525,7 +525,7 @@
 			<skill id="29492" level="1" /> <!-- Attendance Gift Rune: P./ M. Atk. -->
 		</skills>
 	</item>
-	<item id="60219" name="Attendance Gift Rune: Acquired XP" additionalName="6-hour" type="EtcItem">
+	<item id="60219" name="出席禮物古文：EXP紅利" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +30%. -->
 		<set name="icon" val="icon.bm_sayha_rune" />
 		<set name="immediate_effect" val="true" />
@@ -540,7 +540,7 @@
 			<skill id="29493" level="1" /> <!-- Attendance Gift Rune: Acquired XP -->
 		</skills>
 	</item>
-	<item id="60220" name="Attendance Gift Rune: Vitality Bonus" additionalName="6-hour" type="EtcItem">
+	<item id="60220" name="出席禮物古文：活力紅利" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, Vitality bonus +50%. -->
 		<set name="icon" val="Branchsys2.icon.br_life_rune_i00" />
 		<set name="immediate_effect" val="true" />
@@ -555,7 +555,7 @@
 			<skill id="29494" level="1" /> <!-- Attendance Gift Rune: Vitality Bonus -->
 		</skills>
 	</item>
-	<item id="60221" name="Attendance Gift Rune: PvE" additionalName="6-hour" type="EtcItem">
+	<item id="60221" name="出席禮物古文：PVE" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, PvE damage +15%, acquired XP/ SP +30%. -->
 		<set name="icon" val="icon.gc_rune_of_lucien" />
 		<set name="immediate_effect" val="true" />
@@ -570,7 +570,7 @@
 			<skill id="29495" level="1" /> <!-- Attendance Gift Rune: PvE -->
 		</skills>
 	</item>
-	<item id="60222" name="Attendance Gift Rune: P./ M. Def." additionalName="6-hour" type="EtcItem">
+	<item id="60222" name="出席禮物古文：物理防禦力/魔法防禦力" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, P./ M. Def. +10%. -->
 		<set name="icon" val="BranchSys3.icon1.g_rune_of_flint_will" />
 		<set name="immediate_effect" val="true" />
@@ -585,7 +585,7 @@
 			<skill id="29496" level="1" /> <!-- Attendance Gift Rune: P./ M. Def. -->
 		</skills>
 	</item>
-	<item id="60223" name="Attendance Gift Rune: All Stats" additionalName="6-hour" type="EtcItem">
+	<item id="60223" name="出席禮物古文：ALL STAT" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, STR/ DEX/ CON/ INT/ WIT/ MEN/ CHA/ LUC +1. -->
 		<set name="icon" val="Branchsys2.icon.br_spirit_rune_i00" />
 		<set name="immediate_effect" val="true" />
@@ -600,7 +600,7 @@
 			<skill id="29497" level="1" /> <!-- Attendance Gift Rune: All Stats -->
 		</skills>
 	</item>
-	<item id="60224" name="Attendance Gift Rune Craft Coupon" additionalName="Event" type="EtcItem">
+	<item id="60224" name="出席禮物製作券" additionalName="Event" type="EtcItem">
 		<!-- A coupon for adventurers who frequently come to Aden. Can be used for crafting special items. Note!. Required level for using Craft Coupons: 105+. -->
 		<set name="icon" val="icon.ev_2021_thanksgiving_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -610,7 +610,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60225" name="Special Exalted Weapon Coupon" additionalName="Event" type="EtcItem">
+	<item id="60225" name="榮耀貴族武器特殊交換券" additionalName="Event" type="EtcItem">
 		<!-- Required for crafting Enhanced Exalted and Krishna weapons. Note!. Required level for using Craft Coupons: 105+. -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -620,7 +620,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60226" name="Anakim's Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="60226" name="亞納武器強化卷軸-R級" additionalName="Event" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Through Anakim's power, in case of failure the item is not crystallized, and its enchant value remains the same. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -637,7 +637,7 @@
 			<skill id="29498" level="1" /> <!-- Anakim's Scroll: Enchant R-grade Weapon -->
 		</skills>
 	</item>
-	<item id="60227" name="Anakim's Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="60227" name="亞納防具強化卷軸-R級" additionalName="Event" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. bonus is greatly increased, HP is increased with each enchant value. Enchanting is safe up to +3. Through Anakim's power, in case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used with equipment enchanted to +6 and higher. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -654,7 +654,7 @@
 			<skill id="29499" level="1" /> <!-- Anakim's Scroll: Enchant R-grade Armor -->
 		</skills>
 	</item>
-	<item id="60228" name="Attendance Gift Box" additionalName="Event" type="EtcItem">
+	<item id="60228" name="出席禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.event_hero_treasure_box_gold" />
 		<set name="default_action" val="PEEL" />
@@ -684,7 +684,7 @@
 			<item id="81931" min="1" max="1" chance="6.25" /> <!-- Augmenting Stone: Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="60229" name="Attendance Gift Supply Box" additionalName="Event" type="EtcItem">
+	<item id="60229" name="出席禮物消耗品箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Adventurer's Luck Scroll (12 pcs.), Freya's Ice Rose (6 pcs.), Freya's Scroll of Storm (6 pcs.), Honey Dark Beer (6 pcs.), Glowing Dragon's Attribute Potion (XP) (6 pcs.). -->
 		<set name="icon" val="icon.event_hero_treasure_box_silver" />
 		<set name="default_action" val="PEEL" />
@@ -703,7 +703,7 @@
 			<item id="82155" min="12" max="12" chance="100" /> <!-- Adventurer's Luck Scroll - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60230" name="Anakim's Support Pack: Attendance Gift" additionalName="Event" type="EtcItem">
+	<item id="60230" name="亞納出席禮物支援禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Anakim's Scroll: Enchant Weapon, Anakim's Scroll: Enchant Armor, Adventurer's Luck Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_blue" />
 		<set name="default_action" val="PEEL" />
@@ -722,7 +722,7 @@
 			<item id="82155" min="6" max="6" chance="33.333333" /> <!-- Adventurer's Luck Scroll - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60231" name="Enhanced Leviathan Heavy Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="60231" name="強化利維坦重裝防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Enhanced Leviathan Helmet/ Enhanced Leviathan Breastplate/ Enhanced Leviathan Gaiters/ Enhanced Leviathan Gauntlets/ Enhanced Leviathan Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_gold" />
 		<set name="default_action" val="PEEL" />
@@ -743,7 +743,7 @@
 			<item id="80193" min="1" max="1" chance="20" /> <!-- Enhanced Leviathan Boots - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="60232" name="Enhanced Leviathan Light Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="60232" name="強化利維坦輕裝防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Enhanced Leviathan Leather Helmet/ Enhanced Leviathan Leather Armor/ Enhanced Leviathan Leather Leggings/ Enhanced Leviathan Leather Gloves/ Enhanced Leviathan Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_gold" />
 		<set name="default_action" val="PEEL" />
@@ -764,7 +764,7 @@
 			<item id="80199" min="1" max="1" chance="20" /> <!-- Enhanced Leviathan Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="60233" name="Enhanced Leviathan Robe Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="60233" name="強化利維坦長袍防具禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Enhanced Leviathan Circlet/ Enhanced Leviathan Tunic/ Enhanced Leviathan Stockings/ Enhanced Leviathan Gloves/ Enhanced Leviathan Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_gold" />
 		<set name="default_action" val="PEEL" />
@@ -785,7 +785,7 @@
 			<item id="80204" min="1" max="1" chance="20" /> <!-- Enhanced Leviathan Shoes - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="60234" name="Enhanced Krishna Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="60234" name="強化克里修納武器禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an Enhanced Krishna weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_gold" />
 		<set name="default_action" val="PEEL" />
@@ -815,7 +815,7 @@
 			<item id="80146" min="1" max="1" chance="7.142857" /> <!-- Enhanced Krishna Dual Blunt Weapons -->
 		</capsuled_items>
 	</item>
-	<item id="60235" name="+6 Enhanced Leviathan Helmet Pack" additionalName="Heavy armor" type="EtcItem">
+	<item id="60235" name="+6強化利維坦頭盔禮盒" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Helmet. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -830,7 +830,7 @@
 			<item id="80189" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Helmet - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="60236" name="+6 Enhanced Leviathan Breastplate Pack" additionalName="Heavy armor" type="EtcItem">
+	<item id="60236" name="+6強化利維坦胸甲禮盒" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Breastplate. -->
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -845,7 +845,7 @@
 			<item id="80190" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Breastplate - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="60237" name="+6 Enhanced Leviathan Gaiters Pack" additionalName="Heavy armor" type="EtcItem">
+	<item id="60237" name="+6強化利維坦脛甲禮盒" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Gaiters. -->
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -860,7 +860,7 @@
 			<item id="80191" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Gaiters - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="60238" name="+6 Enhanced Leviathan Gauntlets Pack" additionalName="Heavy armor" type="EtcItem">
+	<item id="60238" name="6+強化利維坦手套禮盒" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Gauntlets. -->
 		<set name="icon" val="icon.armor_t901_g_i00" />
 		<set name="default_action" val="PEEL" />
@@ -875,7 +875,7 @@
 			<item id="80192" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Gauntlets - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="60239" name="+6 Enhanced Leviathan Boots Pack" additionalName="Heavy armor" type="EtcItem">
+	<item id="60239" name="+6強化利維坦靴禮盒" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Boots. -->
 		<set name="icon" val="icon.armor_t901_b_i00" />
 		<set name="default_action" val="PEEL" />
@@ -890,7 +890,7 @@
 			<item id="80193" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Boots - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="60240" name="+6 Enhanced Leviathan Leather Helmet Pack" additionalName="Light armor" type="EtcItem">
+	<item id="60240" name="+6強化利維坦皮頭盔禮盒" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Leather Helmet. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -905,7 +905,7 @@
 			<item id="80195" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Leather Helmet - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="60241" name="+6 Enhanced Leviathan Leather Armor Pack" additionalName="Light armor" type="EtcItem">
+	<item id="60241" name="+6強化利維坦皮甲禮盒" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Leather Armor. -->
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -920,7 +920,7 @@
 			<item id="80196" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Leather Armor - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="60242" name="+6 Enhanced Leviathan Leather Leggings Pack" additionalName="Light armor" type="EtcItem">
+	<item id="60242" name="+6強化利維坦皮脛甲禮盒" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Leather Leggings. -->
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -935,7 +935,7 @@
 			<item id="80197" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Leather Leggings - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="60243" name="+6 Enhanced Leviathan Leather Gloves Pack" additionalName="Light armor" type="EtcItem">
+	<item id="60243" name="+6強化利維坦皮手套禮盒" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Leather Gloves. -->
 		<set name="icon" val="icon.armor_t902_g_i00" />
 		<set name="default_action" val="PEEL" />
@@ -950,7 +950,7 @@
 			<item id="80198" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Leather Gloves - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="60244" name="+6 Enhanced Leviathan Leather Boots Pack" additionalName="Light armor" type="EtcItem">
+	<item id="60244" name="+6強化利維坦皮靴禮盒" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Leather Boots. -->
 		<set name="icon" val="icon.armor_t902_b_i00" />
 		<set name="default_action" val="PEEL" />
@@ -965,7 +965,7 @@
 			<item id="80199" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="60245" name="+6 Enhanced Leviathan Circlet Pack" additionalName="Robe" type="EtcItem">
+	<item id="60245" name="+6強化利維坦頭箍禮盒" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Circlet. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -980,7 +980,7 @@
 			<item id="80200" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Circlet - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="60246" name="+6 Enhanced Leviathan Tunic Pack" additionalName="Robe" type="EtcItem">
+	<item id="60246" name="+6強化利維坦外衣禮盒" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Tunic. -->
 		<set name="icon" val="icon.armor_t903_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -995,7 +995,7 @@
 			<item id="80201" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Tunic - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="60247" name="+6 Enhanced Leviathan Stockings Pack" additionalName="Robe" type="EtcItem">
+	<item id="60247" name="+6強化利維坦長襪禮盒" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Stockings. -->
 		<set name="icon" val="icon.armor_t903_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1010,7 +1010,7 @@
 			<item id="80202" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Stockings - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="60248" name="+6 Enhanced Leviathan Gloves Pack" additionalName="Robe" type="EtcItem">
+	<item id="60248" name="+6強化利維坦手套禮盒" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Gloves. -->
 		<set name="icon" val="icon.armor_t903_g_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1025,7 +1025,7 @@
 			<item id="80203" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Gloves - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="60249" name="+6 Enhanced Leviathan Shoes Pack" additionalName="Robe" type="EtcItem">
+	<item id="60249" name="+6強化利維坦鞋禮盒" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain +6 Enhanced Leviathan Shoes. -->
 		<set name="icon" val="icon.armor_t903_b_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1040,7 +1040,7 @@
 			<item id="80204" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Enhanced Leviathan Shoes - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="60250" name="+8 Enhanced Krishna Shaper Pack" type="EtcItem">
+	<item id="60250" name="+8強化克里修納鉋刀禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Shaper. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1055,7 +1055,7 @@
 			<item id="80133" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Shaper -->
 		</capsuled_items>
 	</item>
-	<item id="60251" name="+8 Enhanced Krishna Cutter Pack" type="EtcItem">
+	<item id="60251" name="+8強化克里修納切刃禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Cutter. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1070,7 +1070,7 @@
 			<item id="80134" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Cutter -->
 		</capsuled_items>
 	</item>
-	<item id="60252" name="+8 Enhanced Krishna Slasher Pack" type="EtcItem">
+	<item id="60252" name="+8強化克里修納殺刃禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Slasher. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1085,7 +1085,7 @@
 			<item id="80135" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Slasher -->
 		</capsuled_items>
 	</item>
-	<item id="60253" name="+8 Enhanced Krishna Avenger Pack" type="EtcItem">
+	<item id="60253" name="+8強化克里修納復仇者禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Avenger. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1100,7 +1100,7 @@
 			<item id="80136" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Avenger -->
 		</capsuled_items>
 	</item>
-	<item id="60254" name="+8 Enhanced Krishna Fighter Pack" type="EtcItem">
+	<item id="60254" name="+8強化克里修納戰爪禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Fighter. -->
 		<set name="icon" val="icon.weapon_r110_fist_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1115,7 +1115,7 @@
 			<item id="80137" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Fighter -->
 		</capsuled_items>
 	</item>
-	<item id="60255" name="+8 Enhanced Krishna Stormer Pack" type="EtcItem">
+	<item id="60255" name="+8強化克里修納風暴者禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Stormer. -->
 		<set name="icon" val="icon.weapon_r110_spear_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1130,7 +1130,7 @@
 			<item id="80138" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Stormer -->
 		</capsuled_items>
 	</item>
-	<item id="60256" name="+8 Enhanced Krishna Thrower Pack" type="EtcItem">
+	<item id="60256" name="+8強化克里修納投弓禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Thrower. -->
 		<set name="icon" val="icon.weapon_r110_bow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1145,7 +1145,7 @@
 			<item id="80139" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Thrower -->
 		</capsuled_items>
 	</item>
-	<item id="60257" name="+8 Enhanced Krishna Guardian Pack" type="EtcItem">
+	<item id="60257" name="+8強化克里修納射靈禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Guardian. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1160,7 +1160,7 @@
 			<item id="80140" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Guardian -->
 		</capsuled_items>
 	</item>
-	<item id="60258" name="+8 Enhanced Krishna Buster Pack" type="EtcItem">
+	<item id="60258" name="+8強化克里修納爆刃禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Buster. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1175,7 +1175,7 @@
 			<item id="80141" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Buster -->
 		</capsuled_items>
 	</item>
-	<item id="60259" name="+8 Enhanced Krishna Caster Pack" type="EtcItem">
+	<item id="60259" name="+8強化克里修納術杖禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Caster. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1190,7 +1190,7 @@
 			<item id="80142" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Caster -->
 		</capsuled_items>
 	</item>
-	<item id="60260" name="+8 Enhanced Krishna Retributer Pack" type="EtcItem">
+	<item id="60260" name="+8強化克里修納報恨者禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Retributer. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1205,7 +1205,7 @@
 			<item id="80143" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Retributer -->
 		</capsuled_items>
 	</item>
-	<item id="60261" name="+8 Enhanced Krishna Dual Swords Pack" type="EtcItem">
+	<item id="60261" name="+8強化克里修納雙刀禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Dual Swords. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1220,7 +1220,7 @@
 			<item id="80144" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Dual Swords -->
 		</capsuled_items>
 	</item>
-	<item id="60262" name="+8 Enhanced Krishna Dual Daggers Pack" type="EtcItem">
+	<item id="60262" name="+8強化克里修納雙匕首禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Dual Daggers. -->
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1235,7 +1235,7 @@
 			<item id="80145" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Dual Daggers -->
 		</capsuled_items>
 	</item>
-	<item id="60263" name="+8 Krishna Dual Blunt Weapons Pack" type="EtcItem">
+	<item id="60263" name="+8強化克里修納雙鈍器禮盒" type="EtcItem">
 		<!-- Double-click to obtain +8 Enhanced Krishna Dual Blunt Weapons. -->
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1250,7 +1250,7 @@
 			<item id="80146" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Enhanced Krishna Dual Blunt Weapons -->
 		</capsuled_items>
 	</item>
-	<item id="60264" name="+7 Superior Seed Bracelet Pack Lv. 4" type="EtcItem">
+	<item id="60264" name="+7最高級種子手鐲4階段禮盒" type="EtcItem">
 		<!-- Double-click to obtain +7 Superior Seed Bracelet Lv. 4. -->
 		<set name="icon" val="icon.sayha2017_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1263,7 +1263,7 @@
 			<item id="48577" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Superior Seed Bracelet Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="60265" name="Scalding Cold Chest" type="EtcItem">
+	<item id="60265" name="極凍禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of various items and Freya's Ice Crystal Pouch. -->
 		<set name="icon" val="icon.freya_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1315,7 +1315,7 @@
 			<item id="80335" min="1" max="1" chance="2.8" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60266" name="Freya's Ice Crystal" type="EtcItem">
+	<item id="60266" name="芙蕾雅的冰晶" type="EtcItem">
 		<!-- Imbued with Freya's power. Can be used through the Craft function. -->
 		<set name="icon" val="icon.bm_freya_crystal" />
 		<set name="immediate_effect" val="true" />
@@ -1323,7 +1323,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60267" name="Freya's Ice Crystal Pouch" type="EtcItem">
+	<item id="60267" name="芙蕾雅的冰晶袋" type="EtcItem">
 		<!-- Double-click to obtain 3 to 1000 Freya's Ice Crystals. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="CAPSULE" />
@@ -1347,7 +1347,7 @@
 			<item id="60266" min="1000" max="1000" chance="10" /> <!-- Freya's Ice Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="60268" name="Big Kit of Winter Delights" type="EtcItem">
+	<item id="60268" name="冬季歡樂大套組" type="EtcItem">
 		<!-- Double-click to obtain Scalding Cold Chest (200 pcs.), Swift Growth Cookie (50 pcs.), Swift Defense Cookie (100 pcs.) and Swift Attack Cookie (100 pcs.). -->
 		<set name="icon" val="icon.npoint_valakas_30day_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -1365,7 +1365,7 @@
 			<item id="82187" min="100" max="100" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60269" name="Small Kit of Winter Delights" type="EtcItem">
+	<item id="60269" name="冬季歡樂小套組" type="EtcItem">
 		<!-- Double-click to obtain Scalding Cold Chest (50 pcs.), Swift Growth Cookie (10 pcs.), Swift Defense Cookie (25 pcs.) and Swift Attack Cookie (25 pcs.). -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -1383,7 +1383,7 @@
 			<item id="82187" min="25" max="25" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60270" name="Antharas Weapon Pack" additionalName="Standard" type="EtcItem">
+	<item id="60270" name="安塔瑞斯武器禮盒" additionalName="Standard" type="EtcItem">
 		<!-- Double-click to obtain a common Antharas weapon. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="PEEL" />
@@ -1407,7 +1407,7 @@
 			<item id="36450" min="1" max="1" chance="10" /> <!-- Antharas Dual Swords - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60271" name="Valakas Weapon Pack" additionalName="Standard" type="EtcItem">
+	<item id="60271" name="巴拉卡斯武器禮盒" additionalName="Standard" type="EtcItem">
 		<!-- Double-click to obtain a common Valakas weapon. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="PEEL" />
@@ -1428,7 +1428,7 @@
 			<item id="36457" min="1" max="1" chance="14.285714" /> <!-- Valakas Retributer - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60272" name="Lindvior Weapon Pack" additionalName="Standard" type="EtcItem">
+	<item id="60272" name="林德拜爾武器禮盒" additionalName="Standard" type="EtcItem">
 		<!-- Double-click to obtain a common Lindvior weapon. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="PEEL" />
@@ -1449,7 +1449,7 @@
 			<item id="36464" min="1" max="1" chance="14.285714" /> <!-- Lindvior Dual Daggers - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60273" name="Fafurion Weapon Pack" additionalName="Standard" type="EtcItem">
+	<item id="60273" name="法利昂武器禮盒" additionalName="Standard" type="EtcItem">
 		<!-- Double-click to obtain a common Fafurion weapon. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -1470,7 +1470,7 @@
 			<item id="80316" min="1" max="1" chance="14.285714" /> <!-- Fafurion Dual Daggers - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60274" name="Antharas Weapon Pack" additionalName="High-grade" type="EtcItem">
+	<item id="60274" name="安塔瑞斯武器禮盒" additionalName="High-grade" type="EtcItem">
 		<!-- Double-click to obtain a high-grade Antharas weapon. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="PEEL" />
@@ -1494,7 +1494,7 @@
 			<item id="36474" min="1" max="1" chance="10" /> <!-- Antharas Dual Swords - Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="60275" name="Valakas Weapon Pack" additionalName="High-grade" type="EtcItem">
+	<item id="60275" name="巴拉卡斯武器禮盒" additionalName="High-grade" type="EtcItem">
 		<!-- Double-click to obtain a high-grade Valakas weapon. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="PEEL" />
@@ -1515,7 +1515,7 @@
 			<item id="36481" min="1" max="1" chance="14.285714" /> <!-- Valakas Retributer - Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="60276" name="Lindvior Weapon Pack" additionalName="High-grade" type="EtcItem">
+	<item id="60276" name="林德拜爾武器禮盒" additionalName="High-grade" type="EtcItem">
 		<!-- Double-click to obtain a high-grade Lindvior weapon. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="PEEL" />
@@ -1536,7 +1536,7 @@
 			<item id="36488" min="1" max="1" chance="14.285714" /> <!-- Lindvior Dual Daggers - Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="60277" name="Fafurion Weapon Pack" additionalName="High-grade" type="EtcItem">
+	<item id="60277" name="法利昂武器禮盒" additionalName="High-grade" type="EtcItem">
 		<!-- Double-click to obtain a high-grade Fafurion weapon. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -1557,7 +1557,7 @@
 			<item id="80317" min="1" max="1" chance="14.285714" /> <!-- Fafurion Dual Daggers - Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="60278" name="+7 Superior La Vie En Rose's Brooch Pack" type="EtcItem">
+	<item id="60278" name="+7最高級拉菲安洛茲的胸針禮盒" type="EtcItem">
 		<!-- Double-click to obtain +7 La Vie En Rose's Superior Brooch. -->
 		<set name="icon" val="icon.sayha2017_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1570,7 +1570,7 @@
 			<item id="29547" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- La Vie En Rose's Superior Brooch -->
 		</capsuled_items>
 	</item>
-	<item id="60279" name="La Vie En Rose's Treasure Box Lv. 1" type="EtcItem">
+	<item id="60279" name="拉菲安洛茲的寶物寶石盒Lv1" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -1598,7 +1598,7 @@
 			<item id="81759" min="1" max="1" chance="7.142857" /> <!-- Glowing Royal Dragon's Attribute Potion - XP -->
 		</capsuled_items>
 	</item>
-	<item id="60280" name="La Vie En Rose's Treasure Box Lv. 2" type="EtcItem">
+	<item id="60280" name="拉菲安洛茲的寶物寶石盒Lv2" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -1623,7 +1623,7 @@
 			<item id="36515" min="3" max="3" chance="9.090909" /> <!-- Elcyum -->
 		</capsuled_items>
 	</item>
-	<item id="60281" name="La Vie En Rose's Treasure Box Lv. 3" type="EtcItem">
+	<item id="60281" name="拉菲安洛茲的寶物寶石盒Lv3" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -1650,7 +1650,7 @@
 			<item id="80839" min="1" max="1" chance="7.692308" /> <!-- Crystal of Dawn -->
 		</capsuled_items>
 	</item>
-	<item id="60282" name="New Server's Supply Pack" type="EtcItem">
+	<item id="60282" name="新世界支援禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1687,7 +1687,7 @@
 			<item id="48685" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Skill Cooldown - P./M. Def. -->
 		</capsuled_items>
 	</item>
-	<item id="60283" name="Commemorable Update Coin" type="EtcItem">
+	<item id="60283" name="更新紀念幣" type="EtcItem">
 		<!-- A coin for commemorating the update launch. Special bonuses will be available after adding to a collection. -->
 		<set name="icon" val="icon.bm_nebit_coin" />
 		<set name="immediate_effect" val="true" />
@@ -1697,7 +1697,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60284" name="Magic Antharas Doll" additionalName="30-day" type="EtcItem">
+	<item id="60284" name="安塔瑞斯咒術人偶" additionalName="30-day" type="EtcItem">
 		<!-- When in inventory, applies the following effects:. Vitality bonus +16%. Acquired XP/ SP +11%. PvE damage +10%. Vitality sustention for characters of Lv. 1-110. Vitality sustention in the Conquest world for all characters -->
 		<set name="icon" val="icon.bm_antaras_doll_30d_01" />
 		<set name="immediate_effect" val="true" />
@@ -1713,7 +1713,7 @@
 			<skill id="29504" level="1" /> <!-- Magic Antharas Doll -->
 		</skills>
 	</item>
-	<item id="60285" name="Eva's Fortune Box" additionalName="Lv. 1" type="EtcItem">
+	<item id="60285" name="伊娃幸運箱" additionalName="Lv. 1" type="EtcItem">
 		<!-- A box imbued with the power of the Goddess of Water Eva. Double-click to obtain 1 useful item or Eva's Silver Pack. -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1748,7 +1748,7 @@
 			<item id="35564" min="1" max="1" chance="4.761905" /> <!-- Ruler's Authority - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60286" name="Eva's Silver Pack" additionalName="Lv. 2" type="EtcItem">
+	<item id="60286" name="伊娃銀光禮盒" additionalName="Lv. 2" type="EtcItem">
 		<!-- A box imbued with the power of the Goddess of Water Eva. Double-click to obtain 1 useful item or Eva's Golden Pack. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1790,7 +1790,7 @@
 			<item id="81729" min="1" max="1" chance="3.571429" /> <!-- Augmenting Stone: Accessory -->
 		</capsuled_items>
 	</item>
-	<item id="60287" name="Eva's Golden Pack" additionalName="Lv. 3" type="EtcItem">
+	<item id="60287" name="伊娃金光禮盒" additionalName="Lv. 3" type="EtcItem">
 		<!-- A shining Eva's golden pack. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1832,7 +1832,7 @@
 			<item id="81444" min="1" max="1" chance="3.571429" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60288" name="Archaeologist's Box" type="EtcItem">
+	<item id="60288" name="考古學家禮盒" type="EtcItem">
 		<!-- Double-click to obtain a rare item. -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="PEEL" />
@@ -1889,7 +1889,7 @@
 			<item id="29529" min="1" max="1" chance="100" /> <!-- Shiny Gold Bar Box -->
 		</capsuled_items>
 	</item>
-	<item id="60289" name="Kaliel's Treasure Chest" type="EtcItem">
+	<item id="60289" name="卡利艾寶箱" type="EtcItem">
 		<!-- Double-click to obtain Swift Attack Cookie (3 pcs.) and a useful item. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1949,7 +1949,7 @@
 			<item id="82172" min="3" max="3" chance="100" /> <!-- Swift Attack Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60290" name="Leaf of Appreciation" type="EtcItem">
+	<item id="60290" name="幼苗的氣息" type="EtcItem">
 		<!-- A special gift for brave warriors ready for new adventures on the continent. Its additional effects become available after adding the item to collections. -->
 		<set name="icon" val="icon.s_dormant_user_display" />
 		<set name="immediate_effect" val="true" />
@@ -1959,7 +1959,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="60291" name="Festival's Gift Box" additionalName="Event" type="EtcItem">
+	<item id="60291" name="慶典禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain various items. There is a chance to obtain an additional reward for the Festival rankings. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2036,7 +2036,7 @@
 			<item id="80335" min="1" max="1" chance="1.587302" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="60292" name="Swift Defense Cookie Pack" type="EtcItem">
+	<item id="60292" name="真實守護餅乾禮盒" type="EtcItem">
 		<!-- Double-click to obtain Swift Defense Cookie (50 pcs.). Note!. Received cookies cannot be traded. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2049,7 +2049,7 @@
 			<item id="82187" min="50" max="50" chance="100" /> <!-- Swift Defense Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60293" name="Lucky Craft Coupon" type="EtcItem">
+	<item id="60293" name="幸運製作券" type="EtcItem">
 		<!-- Required for crafting various items during the Lucky Game. -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -2059,7 +2059,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60294" name="Collection - Kaliel's Blessing" type="EtcItem">
+	<item id="60294" name="收藏品 - 卡利艾的祝福" type="EtcItem">
 		<!-- An item for the Kaliel's Blessing collection. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -2067,7 +2067,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60295" name="Cherry Petal" additionalName="Event" type="EtcItem">
+	<item id="60295" name="櫻花瓣" additionalName="Event" type="EtcItem">
 		<!-- Can be added to a collection to get additional bonuses or exchanged for various supplies via Lilly who can be found in any town. -->
 		<set name="icon" val="BranchIcon.icon.g_ev_sakura_piece_i00" />
 		<set name="immediate_effect" val="true" />
@@ -2077,7 +2077,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60296" name="Kaliel's Blessed Treasure Chest" type="EtcItem">
+	<item id="60296" name="卡利艾祝福寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items (excluding Augmenting Stone: Kaliel's Bracelet). -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -2126,7 +2126,7 @@
 			<item id="36946" min="1" max="1" chance="2.857143" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60297" name="Festival Coin" type="EtcItem">
+	<item id="60297" name="慶典幣" type="EtcItem">
 		<!-- A coin for participating in the Ranking Festival. Can be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_premium_coin_i00" />
 		<set name="immediate_effect" val="true" />
@@ -2136,7 +2136,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60298" name="Earth Dragon's Treasures" type="EtcItem">
+	<item id="60298" name="地龍的寶藏" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="PEEL" />
@@ -2198,7 +2198,7 @@
 			<item id="60210" min="1" max="1" chance="100" /> <!-- Dragon Coin Sack -->
 		</capsuled_items>
 	</item>
-	<item id="60299" name="Earth Dragon's Small Treasure Chest" type="EtcItem">
+	<item id="60299" name="地龍的寶藏小套組" type="EtcItem">
 		<!-- Double-click to obtain Earth Dragon's Treasures (50 pcs.), Swift Attack Cookie (25 pcs.), Swift Defense Cookie (25 pcs.). -->
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />

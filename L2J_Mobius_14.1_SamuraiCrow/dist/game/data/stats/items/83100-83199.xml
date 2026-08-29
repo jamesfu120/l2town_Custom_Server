@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="83100" name="Purple Orb" additionalName="Event" type="EtcItem">
+	<item id="83100" name="憤怒之珠禮盒" additionalName="Event" type="EtcItem">
 		<!-- Acquired in the Tower of Insolence. Double-click to obtain Orb of Anger (1st-9th Floor) with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -25,7 +25,7 @@
 			<item id="82020" min="1" max="1" chance="11.111111" /> <!-- Orb of Anger - 9th Floor -->
 		</capsuled_items>
 	</item>
-	<item id="83101" name="20th Anniversary Pack" additionalName="Event" type="EtcItem">
+	<item id="83101" name="20週年紀念禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 20th Anniversary Shining Relic Summon Coupon - 11-time (5 pcs.), Solaris (20 pcs.), Aether (200 pcs.) and Hero's Mark (1 pc.). -->
 		<set name="icon" val="icon.bm_20th_giftbox" />
 		<set name="default_action" val="PEEL" />
@@ -43,7 +43,7 @@
 			<item id="83102" min="1" max="1" chance="100" /> <!-- Hero's Mark - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83102" name="Hero's Mark" additionalName="Event" type="EtcItem">
+	<item id="83102" name="英雄憑證" additionalName="Event" type="EtcItem">
 		<!-- A 20th anniversary mark. Can be added to a collection. -->
 		<set name="icon" val="icon.seal_lev_85" />
 		<set name="immediate_effect" val="true" />
@@ -53,7 +53,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83103" name="Sacred Fire Element" type="EtcItem">
+	<item id="83103" name="神聖火破片" type="EtcItem">
 		<!-- A trophy obtained for defeating Fire Spirit Queen Callor. Can be added to a collection. -->
 		<set name="icon" val="icon.collection_fire_boss" />
 		<set name="immediate_effect" val="true" />
@@ -63,7 +63,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83104" name="Sacred Water Element" type="EtcItem">
+	<item id="83104" name="神聖水破片" type="EtcItem">
 		<!-- A trophy obtained for defeating Water Spirit Queen Marea. Can be added to a collection. -->
 		<set name="icon" val="icon.collection_water_boss" />
 		<set name="immediate_effect" val="true" />
@@ -73,7 +73,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83105" name="Sacred Wind Element" type="EtcItem">
+	<item id="83105" name="神聖風破片" type="EtcItem">
 		<!-- A trophy obtained for defeating Wind Spirit King Vertex. Can be added to a collection. -->
 		<set name="icon" val="icon.collection_wind_boss" />
 		<set name="immediate_effect" val="true" />
@@ -83,7 +83,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83106" name="Sacred Earth Element" type="EtcItem">
+	<item id="83106" name="神聖地破片" type="EtcItem">
 		<!-- A trophy obtained for defeating Earth Spirit King Rufes. Can be added to a collection. -->
 		<set name="icon" val="icon.collection_earth_boss" />
 		<set name="immediate_effect" val="true" />
@@ -93,7 +93,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83107" name="Hero's Golden Pack" type="EtcItem">
+	<item id="83107" name="英雄金光禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -189,7 +189,7 @@
 			<item id="80335" min="1" max="1" chance="1.219512" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="83108" name="Sleep Cannon" additionalName="Only against Beast Ravagers" type="Weapon">
+	<item id="83108" name="睡眠槍" additionalName="Only against Beast Ravagers" type="Weapon">
 		<!-- A weapon for putting to sleep Beast Ravagers at the Beast Farm. When equipped, enables the 'Sleep Cannonball Shot' skill. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="default_action" val="EQUIP" />
@@ -216,7 +216,7 @@
 			<skill id="39869" level="1" /> <!-- Sleep Cannonball Shot -->
 		</skills>
 	</item>
-	<item id="83109" name="20th Anniversary Relic Summon Coupon - Green Toy Hammer (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83109" name="20週年綠色玩具錘遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 20th Anniversary Green Toy Hammer (1 pc.). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv2" />
 		<set name="immediate_effect" val="true" />
@@ -227,7 +227,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83110" name="20th Anniversary Relic Summon Coupon - Blue Toy Hammer (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83110" name="20週年藍色玩具錘遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 20th Anniversary Blue Toy Hammer (1 pc.). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv3" />
 		<set name="immediate_effect" val="true" />
@@ -238,7 +238,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83111" name="20th Anniversary Relic Summon Coupon - Red Toy Hammer (1-time)" additionalName="Event" type="EtcItem">
+	<item id="83111" name="20週年紅色玩具錘遺物召喚券-1次" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 20th Anniversary Red Toy Hammer (1 pc.). -->
 		<set name="icon" val="icon.bless_relics_summon_1_ticket_lv4" />
 		<set name="immediate_effect" val="true" />
@@ -249,7 +249,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83112" name="Keeper's Treasure Chest" type="EtcItem">
+	<item id="83112" name="守護者寶箱" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -306,7 +306,7 @@
 			<item id="81444" min="1" max="1" chance="2.325581" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83113" name="Freya's Shopping Bag" type="EtcItem">
+	<item id="83113" name="芙蕾雅的禮物袋" type="EtcItem">
 		<!-- Double-click to obtain Freya's Scroll of Blessing and Freya's Lucky Pack (1 pc.). -->
 		<set name="icon" val="icon.bm_freya_bag" />
 		<set name="default_action" val="PEEL" />
@@ -325,7 +325,7 @@
 			<item id="82295" min="1" max="1" chance="20" /> <!-- Freya's Scroll of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="83114" name="Appearance Stone: Magician Garment" additionalName="Event" type="EtcItem">
+	<item id="83114" name="魔術師衣裳加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the armor appearance to that of Magician Garment. Applied on upper armor as well as on full-body armor. Use Scroll: Restore Equipment to restore the default appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -340,7 +340,7 @@
 			<skill id="39875" level="1" /> <!-- Appearance Stone: Magician Garment -->
 		</skills>
 	</item>
-	<item id="83115" name="Appearance Stone: Teddy Bear Costume" additionalName="Event" type="EtcItem">
+	<item id="83115" name="熊熊娃衣裳外型加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the armor appearance to that of Teddy Bear Costume. Applied on upper armor as well as on full-body armor. Use Scroll: Restore Equipment to restore the default appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -355,7 +355,7 @@
 			<skill id="39876" level="1" /> <!-- Appearance Stone: Teddy Bear Costume -->
 		</skills>
 	</item>
-	<item id="83116" name="Appearance Stone: Cat Costume" additionalName="Event" type="EtcItem">
+	<item id="83116" name="貓衣裳加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the armor appearance to that of Cat Costume. Applied on upper armor as well as on full-body armor. Use Scroll: Restore Equipment to restore the default appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -370,7 +370,7 @@
 			<skill id="39877" level="1" /> <!-- Appearance Stone: Cat Costume -->
 		</skills>
 	</item>
-	<item id="83117" name="Appearance Stone: Panda Costume" additionalName="Event" type="EtcItem">
+	<item id="83117" name="熊貓衣裳加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the armor appearance to that of Panda Costume. Applied on upper armor as well as on full-body armor. Use Scroll: Restore Equipment to restore the default appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -385,7 +385,7 @@
 			<skill id="39878" level="1" /> <!-- Appearance Stone: Panda Costume -->
 		</skills>
 	</item>
-	<item id="83118" name="Appearance Stone: Rudolph Costume" additionalName="Event" type="EtcItem">
+	<item id="83118" name="魯道夫衣裳加工石" additionalName="Event" type="EtcItem">
 		<!-- Changes the armor appearance to that of Rudolph Costume. Applied on upper armor as well as on full-body armor. Use Scroll: Restore Equipment to restore the default appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -400,7 +400,7 @@
 			<skill id="39879" level="1" /> <!-- Appearance Stone: Rudolph Costume -->
 		</skills>
 	</item>
-	<item id="83119" name="Golden Pie Coupon" additionalName="Event" type="EtcItem">
+	<item id="83119" name="黃金鯛魚燒票券" additionalName="Event" type="EtcItem">
 		<!-- Can be used as a material in the event server-limited craft. -->
 		<set name="icon" val="icon.ev_2023_winter_ticket1" />
 		<set name="immediate_effect" val="true" />
@@ -408,7 +408,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83120" name="Appearance Stone Coupon: Winter Outfit" additionalName="Event" type="EtcItem">
+	<item id="83120" name="冬季服裝加工石交換券" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for one of the six Appearance Stone: Winter Outfit (of your choice). -->
 		<set name="icon" val="icon.ev_2023_winter_ticket2" />
 		<set name="immediate_effect" val="true" />
@@ -418,7 +418,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83121" name="Freya's Lucky Pack" type="EtcItem">
+	<item id="83121" name="芙蕾雅幸運箱" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -483,7 +483,7 @@
 			<item id="81444" min="1" max="1" chance="1.960784" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83122" name="New Year Cake" additionalName="Event" type="EtcItem">
+	<item id="83122" name="聖誕蛋糕" additionalName="Event" type="EtcItem">
 		<!-- Happy New Year!. A cute cake baked for the New Year. For 30 min., all Critical Rate +5%, all attack power +10%, P./ M. Def. +10%, damage +5%, acquired XP/ SP +10%, Vitality bonus +10%, received damage -5%. -->
 		<set name="icon" val="icon.ev_2023_christmas_cake" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -498,7 +498,7 @@
 			<skill id="39880" level="1" /> <!-- New Year Cake -->
 		</skills>
 	</item>
-	<item id="83123" name="Christmas Snowball" additionalName="Event" type="EtcItem">
+	<item id="83123" name="聖誕雪球" additionalName="Event" type="EtcItem">
 		<!-- Merry Christmas!. A new-year snowball obtained during the Snowmen Defense event. Can be used for getting various rewards. -->
 		<set name="icon" val="icon.ev_2023_christmas_gift" />
 		<set name="default_action" val="PEEL" />
@@ -547,7 +547,7 @@
 			<item id="81444" min="1" max="1" chance="3.030303" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83124" name="Snowman's Christmas Staff" additionalName="Event" type="Weapon">
+	<item id="83124" name="21週年雪人杖" additionalName="Event" type="Weapon">
 		<!-- Required for participating in the Snowmen Defense. Enables the Throw Snowball and Snow Fiesta skills required for defeating Snowmen. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -570,7 +570,7 @@
 			<skill id="39881" level="1" /> <!-- Throw Snowball -->
 		</skills>
 	</item>
-	<item id="83125" name="Christmas Tree" additionalName="Event" type="EtcItem">
+	<item id="83125" name="聖誕樹" additionalName="Event" type="EtcItem">
 		<!-- Merry Christmas!. A Christmas Tree decorated with colorful ornaments. Double-click to obtain valuable items. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="default_action" val="PEEL" />
@@ -593,7 +593,7 @@
 			<item id="83008" min="1" max="1" chance="100" /> <!-- C-grade Relic Ticket - 1-time -->
 		</capsuled_items>
 	</item>
-	<item id="83126" name="Fafurion's Blue Box" type="EtcItem">
+	<item id="83126" name="法利昂藍光禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -652,7 +652,7 @@
 			<item id="81444" min="1" max="1" chance="2.222222" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83127" name="Fafurion's Blessing Pack" type="EtcItem">
+	<item id="83127" name="法利昂祝福禮盒" type="EtcItem">
 		<!-- Double-click to obtain Shining Relic Summon Coupon - 11-time (4 pcs.), Freya's Ice Rose (50 pcs.), Glowing Dragon's Attribute Potion (XP) (50 pcs.), Emperor's Special Cocktail (50 pcs.), Honey Dark Beer (50 pcs.), Nevit's Shining Gold Hourglass (50 pcs.), Swift Growth Cookie (50 pcs.), Sealed Fire Source (5 pcs.), Solaris (10 pcs.), Aether (250 pcs.), Tales of Dimensions (200 pcs.) and Fafurion's Craft Coupon (1 pc.). -->
 		<set name="icon" val="BranchSys.br_gold_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -678,7 +678,7 @@
 			<item id="83128" min="1" max="1" chance="100" /> <!-- Gold Bar -->
 		</capsuled_items>
 	</item>
-	<item id="83128" name="Fafurion's Craft Coupon" type="EtcItem">
+	<item id="83128" name="金塊" type="EtcItem">
 		<!-- Obtained from Gold Bar Pack. <How to use>. Common craft -->
 		<set name="icon" val="icon.bm_gold_bar" />
 		<set name="immediate_effect" val="true" />
@@ -688,7 +688,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83129" name="+30 Ruler's Authority - Chaos Pack" type="EtcItem">
+	<item id="83129" name="+30支配者權能-卡歐斯禮盒" type="EtcItem">
 		<!-- Double-click to obtain +30 Ruler's Authority - Chaos. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -703,7 +703,7 @@
 			<item id="81751" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Ruler's Authority - Chaos - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="83130" name="+10 Heavenly Talisman Pack" type="EtcItem">
+	<item id="83130" name="+10天堂護身符禮盒" type="EtcItem">
 		<!-- Double-click to obtain +10 Heavenly Talisman. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -718,7 +718,7 @@
 			<item id="80957" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Heavenly Talisman -->
 		</capsuled_items>
 	</item>
-	<item id="83131" name="+10 Epic Talisman Pack" type="EtcItem">
+	<item id="83131" name="+10史詩護身符禮盒" type="EtcItem">
 		<!-- Double-click to obtain +10 Epic Talisman. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -733,7 +733,7 @@
 			<item id="80959" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Epic Talisman -->
 		</capsuled_items>
 	</item>
-	<item id="83132" name="Greater Agathion Charm: Fire Dragon" additionalName="Event" type="Armor">
+	<item id="83132" name="高級火龍壺精幸運符" additionalName="Event" type="Armor">
 		<!-- Contains the power of Greater Agathion Fire Dragon. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_fire_dragon_star_2" />
 		<set name="default_action" val="EQUIP" />
@@ -753,7 +753,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="83133" name="Enhanced Sayha's Talisman Lv. 10" additionalName="Event" type="Armor">
+	<item id="83133" name="高級沙哈護身符階段10" additionalName="Event" type="Armor">
 		<!-- When equipped, grants Sayha's power. P. Def. +4277 and +10%, M. Def. +2795 and +10%, acquired XP/ SP +40%, Recovery Potions' Effect +3000 (except percentage-recovery items). If equipped with Venir's Talisman Lv. 10+ or Soul Talisman Lv. 1+, all attack power +18%, skill cooldown -5%. <Active skills>. Sayha's Grace Lv. 8. Sayha's Encouragement Lv. 8. Sayha's Anger Lv. 8. Effects of two identical talismans do not stack -->
 		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -770,7 +770,7 @@
 			<skill id="13970" level="20" /> <!-- Sayha's Enhanced Talisman Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83134" name="Ruler's Authority - Genesis" additionalName="Event" type="Armor">
+	<item id="83134" name="支配者權能-創世紀" additionalName="Event" type="Armor">
 		<!-- The energy of the sun, the moon, stars, light and darkness. When equipped, Max HP/ MP/ CP +1000, weight limit +25,600, damage +10%, received damage -10%, Damage Reflection Resistance +10%, Fixed Damage Resistance +10%, inventory slots +36, Attribute Resistance +20. -->
 		<set name="icon" val="icon.grankain_powerbelt2" />
 		<set name="default_action" val="EQUIP" />
@@ -791,7 +791,7 @@
 			<skill id="15145" level="2" /> <!-- Ruler's Authority - Genesis -->
 		</skills>
 	</item>
-	<item id="83135" name="Ruler's Authority - Chaos" additionalName="Event" type="Armor">
+	<item id="83135" name="支配者權能-混亂" additionalName="Event" type="Armor">
 		<!-- The energy of chaos that consumes light. When equipped, Max HP/ MP/ CP +3%, weight limit +25,600, damage +12%, received damage -14%, Damage Reflection Resistance +15%, Fixed Damage Resistance +15%, All received Critical Damage -15%, inventory slots +36, Attribute Resistance +30. -->
 		<set name="icon" val="icon.grankain_powerbelt3" />
 		<set name="default_action" val="EQUIP" />
@@ -812,7 +812,7 @@
 			<skill id="15145" level="3" /> <!-- Ruler's Authority - Chaos -->
 		</skills>
 	</item>
-	<item id="83136" name="+10 Blessed Fallen Angel's Ring Pack" additionalName="Event" type="EtcItem">
+	<item id="83136" name="+10祝福的墮天使戒指禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +10 Fallen Angel's Blessed Ring. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -827,7 +827,7 @@
 			<item id="82538" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Fallen Angel's Blessed Ring -->
 		</capsuled_items>
 	</item>
-	<item id="83137" name="+10 Blessed Fallen Angel's Earring Pack" additionalName="Event" type="EtcItem">
+	<item id="83137" name="+10祝福的墮天使耳環禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +10 Fallen Angel's Blessed Earring. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -842,7 +842,7 @@
 			<item id="82546" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Fallen Angel's Blessed Earring -->
 		</capsuled_items>
 	</item>
-	<item id="83138" name="Superior Ruby Lv. 10" additionalName="Event" type="Armor">
+	<item id="83138" name="最高級紅寶石10階段" additionalName="Event" type="Armor">
 		<!-- Soulshot/ Beast Soulshot damage +23%, P. Atk. +25%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -857,7 +857,7 @@
 			<skill id="18717" level="20" /> <!-- Superior Ruby Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83139" name="Superior Sapphire Lv. 10" additionalName="Event" type="Armor">
+	<item id="83139" name="最高級藍寶石10階段" additionalName="Event" type="Armor">
 		<!-- Spiritshot/ Blessed Spiritshot damage +23%, M. Atk. +30%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -872,7 +872,7 @@
 			<skill id="18719" level="20" /> <!-- Superior Sapphire Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83140" name="Superior Red Cat's Eye Lv. 10" additionalName="Event" type="Armor">
+	<item id="83140" name="最高級緋金綠寶石10階段" additionalName="Event" type="Armor">
 		<!-- Critical Damage for basic attacks +25%, P. Skill Critical Damage +25%, Power of basic attacks and P. skills +10%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -887,7 +887,7 @@
 			<skill id="18713" level="20" /> <!-- Superior Red Cat's Eye Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83141" name="Superior Blue Cat's Eye Lv. 10" additionalName="Event" type="Armor">
+	<item id="83141" name="最高級靛金綠寶石10階段" additionalName="Event" type="Armor">
 		<!-- M. Skill Critical Damage +25%, M. Skill Power +10%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
@@ -902,7 +902,7 @@
 			<skill id="18714" level="20" /> <!-- Superior Blue Cat's Eye Lv. 10 -->
 		</skills>
 	</item>
-	<item id="83142" name="Superior Cat's Eye Coupon Lv. 10" additionalName="Event" type="EtcItem">
+	<item id="83142" name="最高級金綠寶石10階段" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for Superior Red Cat's Eye Lv. 10 or Superior Blue Cat's Eye Lv. 10 (of your choice). -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -911,7 +911,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83143" name="Superior Ruby/ Sapphire Coupon Lv. 10" additionalName="Event" type="EtcItem">
+	<item id="83143" name="最高級紅寶石/藍寶石10階段交換券" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for Superior Ruby Lv. 10 or Superior Sapphire Lv. 10 (of your choice). -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -920,7 +920,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83144" name="Freya's Royal Ice Rose" type="EtcItem">
+	<item id="83144" name="皇家芙蕾雅冰凍玫瑰" type="EtcItem">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +20%, all attack power +10%, acquired XP/ SP +50%, received damage -20%, Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction, Pa'agrio's Blessing and Freya's Ice Rose. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -933,7 +933,7 @@
 			<skill id="39350" level="4" /> <!-- Freya's Royal Ice Rose -->
 		</skills>
 	</item>
-	<item id="83145" name="Blessed Royal Pack" type="EtcItem">
+	<item id="83145" name="祝福的皇家禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 to 5 Royal Craft Coupons, Royal Honey Dark Beer (1 pc.), Glowing Royal Dragon's Attribute Potion (1 pc.), Nevit's Shining Royal Gold Hourglass (1 pc.), Freya's Royal Ice Rose (1 pc.) and Tales of Einhasad (15 pcs.). -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="PEEL" />
@@ -952,7 +952,7 @@
 			<item id="82985" min="5" max="5" chance="20" /> <!-- Royal Craft Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="83146" name="Blue Draco's Heart Scroll" additionalName="Event" type="EtcItem">
+	<item id="83146" name="藍光愛心卷軸" additionalName="Event" type="EtcItem">
 		<!-- A heart-shaped scroll filled with the blue light of Aden's sky. For 30 min., Power of basic attacks and P./ M. skills +10%, P./ M. Def. +10%, acquired XP/ SP +10%, Vitality bonus +10%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -971,7 +971,7 @@
 			<skill id="39883" level="1" /> <!-- Heart Scroll of Heavenly Light -->
 		</skills>
 	</item>
-	<item id="83147" name="Blue Draco's Drawing Fragment (1)" additionalName="2" type="EtcItem">
+	<item id="83147" name="藍龍的圖紙碎片(1)" additionalName="2" type="EtcItem">
 		<!-- The first fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part1" />
 		<set name="immediate_effect" val="true" />
@@ -979,7 +979,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83148" name="Blue Draco's Drawing Fragment (2)" additionalName="02" type="EtcItem">
+	<item id="83148" name="藍龍的圖紙碎片(2)" additionalName="02" type="EtcItem">
 		<!-- The second fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part2" />
 		<set name="immediate_effect" val="true" />
@@ -987,7 +987,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83149" name="Blue Draco's Drawing Fragment (3)" additionalName="4" type="EtcItem">
+	<item id="83149" name="藍龍的圖紙碎片(3)" additionalName="4" type="EtcItem">
 		<!-- The third fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part3" />
 		<set name="immediate_effect" val="true" />
@@ -995,7 +995,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83150" name="Blue Draco's Drawing Fragment (4)" additionalName="H" type="EtcItem">
+	<item id="83150" name="藍龍的圖紙碎片(4)" additionalName="H" type="EtcItem">
 		<!-- The fourth fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part4" />
 		<set name="immediate_effect" val="true" />
@@ -1003,7 +1003,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83151" name="Blue Draco's Drawing Fragment (5)" additionalName="APP" type="EtcItem">
+	<item id="83151" name="藍龍的圖紙碎片(5)" additionalName="APP" type="EtcItem">
 		<!-- The fifth fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part5" />
 		<set name="immediate_effect" val="true" />
@@ -1011,7 +1011,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83152" name="Blue Draco's Drawing Fragment (6)" additionalName="Y" type="EtcItem">
+	<item id="83152" name="藍龍的圖紙碎片(6)" additionalName="Y" type="EtcItem">
 		<!-- The sixth fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part6" />
 		<set name="immediate_effect" val="true" />
@@ -1019,7 +1019,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83153" name="Blue Draco's Drawing Fragment (7)" additionalName="NE" type="EtcItem">
+	<item id="83153" name="藍龍的圖紙碎片(7)" additionalName="NE" type="EtcItem">
 		<!-- The seventh fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part7" />
 		<set name="immediate_effect" val="true" />
@@ -1027,7 +1027,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83154" name="Blue Draco's Drawing Fragment (8)" additionalName="W Y" type="EtcItem">
+	<item id="83154" name="藍龍的圖紙碎片(8)" additionalName="W Y" type="EtcItem">
 		<!-- The eighth fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part8" />
 		<set name="immediate_effect" val="true" />
@@ -1035,7 +1035,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83155" name="Blue Draco's Drawing Fragment (9)" additionalName="EAR" type="EtcItem">
+	<item id="83155" name="藍龍的圖紙碎片(9)" additionalName="EAR" type="EtcItem">
 		<!-- The ninth fragment of Blue Draco's drawing with New Year wishes. Collect all fragments and read Draco's message to have a lot of luck!. <How to use>. Fragments can be combined and exchanged for rewards in the Blue Draco's Wishes menu. -->
 		<set name="icon" val="icon.ev_2024_newyear_part9" />
 		<set name="immediate_effect" val="true" />
@@ -1043,7 +1043,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83156" name="Glowing Golden Chest" type="EtcItem">
+	<item id="83156" name="閃亮的金光禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Gold Bar Pack and a rare item. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1098,7 +1098,7 @@
 			<item id="81444" min="1" max="1" chance="2.439024" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83157" name="Gold Bar Pack" type="EtcItem">
+	<item id="83157" name="金塊禮盒" type="EtcItem">
 		<!-- Double-click to obtain 2 to 10 Gold Bars. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
@@ -1117,7 +1117,7 @@
 			<item id="83128" min="10" max="10" chance="20" /> <!-- Gold Bar -->
 		</capsuled_items>
 	</item>
-	<item id="83158" name="Magic Yut Stick Set" additionalName="Event" type="EtcItem">
+	<item id="83158" name="心想事成擲柶套組" additionalName="Event" type="EtcItem">
 		<!-- A set of Yut sticks that can fulfill your wishes in the new year. Double-click to summon Lyn Draco, throw the sticks or learn the result. -->
 		<set name="icon" val="icon.ev_new_year_yut_set" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1128,7 +1128,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83159" name="Valentine's Day Chocolate" additionalName="Event" type="EtcItem">
+	<item id="83159" name="情人節巧克力" additionalName="Event" type="EtcItem">
 		<!-- A holiday chocolate with 99% cocoa. <How to use>. Target Festival Fairy and use Chocolate to give it to her as a gift. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1139,7 +1139,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83160" name="Blue Dragon's Lucky Coin" additionalName="Event" type="EtcItem">
+	<item id="83160" name="蔚龍幸運鑄幣" additionalName="Event" type="EtcItem">
 		<!-- A Lucky Coin given by Blue Dragon during the Yut game. <How to use>. Can be exchanged for various items at the Festival Fairy's shop. -->
 		<set name="icon" val="icon.ev_2024_newyear_coin" />
 		<set name="immediate_effect" val="true" />
@@ -1147,7 +1147,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83161" name="Kit: Crystal of Dawn" type="EtcItem">
+	<item id="83161" name="高級襯衫升級組合包" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Cloak of Light Pack (1 pc.), Aether (400 pcs.) or Solaris (10 pcs.). Note!. Aether and Solaris from this kit cannot be sold. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1164,7 +1164,7 @@
 			<item id="47916" min="1" max="1" chance="100" /> <!-- Nevit's Cloak of Light Pack - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="83162" name="Radiant Relic Summon Coupon - 11-time" type="EtcItem">
+	<item id="83162" name="繽紛遺物召喚券-11次" type="EtcItem">
 		<!-- A shining coupon that can be used for summoning a relic lost in the Aden continent. Double-click to obtain 11 relics of No-grade/ D-grade/ C-grade/ B-grade. -->
 		<set name="icon" val="icon.bless_relics_summon_11_ticket_lv1_2" />
 		<set name="immediate_effect" val="true" />
@@ -1175,7 +1175,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="RelicSummonCoupon" />
 	</item>
-	<item id="83163" name="Kit: Radiant Relic" type="EtcItem">
+	<item id="83163" name="繽紛遺物組合包" type="EtcItem">
 		<!-- Double-click to obtain Radiant Relic Summon Coupon - 11-time (1 pc.) and Radiant Exchange Coupon (1 pc.). Note!. Items from this kit cannot be sold. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -1186,7 +1186,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83164" name="Radiant Exchange Coupon" type="EtcItem">
+	<item id="83164" name="繽紛交換券" type="EtcItem">
 		<!-- Can be exchanged for various items of your choice. <Items for exchange>. A-grade Relic Shard. B-grade Relic Shard. Radiant Relic Summon Coupon - 11-time. Aether. Solaris -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -1197,7 +1197,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83165" name="Intact Stakato Shell" type="EtcItem">
+	<item id="83165" name="司塔卡拓完整的甲殼" type="EtcItem">
 		<!-- Usually a dead Stakato's shell is quick to tarnish and disappear, but in certain circumstances it can remain intact. Such shells are highly valued by the Golden Ram Army, as studying them may expose the Stakato's hidden weaknesses. The mercenaries are currently preparing their counterattack and are willing to pay a lot money for these shells. <How to acquire>. Kill monsters in the Swamp of Screams and field raids. -->
 		<set name="icon" val="icon.etc_seed_of_evil_i05" />
 		<set name="immediate_effect" val="true" />
@@ -1210,7 +1210,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questusable" val="true" />
 	</item>
-	<item id="83166" name="Golden Ram Army's Reward" type="EtcItem">
+	<item id="83166" name="黃金羊傭兵團表揚狀" type="EtcItem">
 		<!-- A reward given to warriors who took part in the Golden Ram Army's counterattack. <Acquisition>. Awarded for completing the Swamp of Screams: Restoration of Honor side quest. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="immediate_effect" val="true" />
@@ -1221,7 +1221,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83167" name="Seed of Spring" additionalName="Event" type="EtcItem">
+	<item id="83167" name="春之種子" additionalName="Event" type="EtcItem">
 		<!-- A small seed that represents green spring in the world of Aden. <How to use>. Material for crafting the Spring Energy event item. -->
 		<set name="icon" val="icon.etc_seed_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1231,7 +1231,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83168" name="Spring Energy" additionalName="Event" type="EtcItem">
+	<item id="83168" name="春之氣息" additionalName="Event" type="EtcItem">
 		<!-- Spring Energy created from Spring Seed. <How to use>. Spring Energy can be used to infuse the Spring Flower Seed in the Giran Garden. -->
 		<set name="icon" val="icon.ev_green_energy" />
 		<set name="immediate_effect" val="true" />
@@ -1241,7 +1241,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83169" name="Blue Earth Chest Lv. 1" additionalName="Event" type="EtcItem">
+	<item id="83169" name="碧藍大地禮盒-1階段" additionalName="Event" type="EtcItem">
 		<!-- A chest imbued with the power of earth that begets new life. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_green_box_01" />
 		<set name="default_action" val="PEEL" />
@@ -1262,7 +1262,7 @@
 			<item id="82903" min="3" max="3" chance="100" /> <!-- Solaris -->
 		</capsuled_items>
 	</item>
-	<item id="83170" name="Blue Earth Chest Lv. 2" additionalName="Event" type="EtcItem">
+	<item id="83170" name="碧藍大地禮盒-2階段" additionalName="Event" type="EtcItem">
 		<!-- A chest imbued with the power of earth that begets new life. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_green_box_02" />
 		<set name="default_action" val="PEEL" />
@@ -1284,7 +1284,7 @@
 			<item id="83006" min="1" max="1" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="83171" name="Blue Earth Chest Lv. 3" additionalName="Event" type="EtcItem">
+	<item id="83171" name="碧藍大地禮盒-3階段" additionalName="Event" type="EtcItem">
 		<!-- A chest imbued with the power of earth that begets new life. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_green_box_03" />
 		<set name="default_action" val="PEEL" />
@@ -1307,7 +1307,7 @@
 			<item id="83006" min="2" max="2" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="83172" name="Mutant Stakato Crog's Fang" type="Weapon">
+	<item id="83172" name="突變的司塔卡拓克洛庫尖牙" type="Weapon">
 		<!-- A trophy captured during the Golden Ram Army's counterattack. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Acquisition>. Complete the field raid in the Swamp of Screams. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1327,7 +1327,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83173" name="Stakato Tooth" type="Weapon">
+	<item id="83173" name="司塔卡拓之牙" type="Weapon">
 		<!-- Golden Ram Army soldiers sometimes use captured Stakato Teeth as weapons to assert dominance. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Acquisition>. Kill monsters and complete the field raid in the Swamp of Screams. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1347,14 +1347,14 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="83174" name="Stakato Wing" type="EtcItem">
+	<item id="83174" name="司塔卡拓羽翼" type="EtcItem">
 		<!-- A trophy obtained during a fight with Stakato. <Acquisition>. Kill monsters and complete the field raid in the Swamp of Screams. -->
 		<set name="icon" val="icon.etc_feather_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83175" name="Mutant Stakato Crog's Defeat Contribution Reward Pack" type="EtcItem">
+	<item id="83175" name="擊倒突變的司塔卡拓克洛庫的貢獻獎勵禮盒  " type="EtcItem">
 		<!-- A trophy for the characters that have dealt enough damage during the Mutant Stakato Crog raid. Double-click to obtain Stakato Cocoon and Stakato Wing with a 100% chance as well as Stakato Tooth with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="PEEL" />
@@ -1374,7 +1374,7 @@
 			<item id="82791" min="5" max="5" chance="100" /> <!-- Stakato Cocoon -->
 		</capsuled_items>
 	</item>
-	<item id="83176" name="Mutant Stakato Crog's First Hit Reward Pack" type="EtcItem">
+	<item id="83176" name="突變的司塔卡拓克洛庫的首攻獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has landed the first hit on Mutant Stakato Crog among those that are eligible for the contribution reward. Double-click to obtain Stakato Cocoon and Stakato Wing with a 100% chance as well as Stakato Tooth and Mutant Stakato Crog's Fang with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1395,7 +1395,7 @@
 			<item id="82791" min="5" max="5" chance="100" /> <!-- Stakato Cocoon -->
 		</capsuled_items>
 	</item>
-	<item id="83177" name="Mutant Stakato Crog's Final Blow Reward Pack" type="EtcItem">
+	<item id="83177" name="突變的司塔卡拓克洛庫的最後一擊獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has landed the last hit on Mutant Stakato Crog among those that are eligible for the contribution reward. Double-click to obtain Stakato Cocoon and Stakato Wing with a 100% chance as well as Stakato Tooth and Mutant Stakato Crog's Fang with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1416,7 +1416,7 @@
 			<item id="82791" min="5" max="5" chance="100" /> <!-- Stakato Cocoon -->
 		</capsuled_items>
 	</item>
-	<item id="83178" name="Mutant Stakato Crog Damage Reward Pack - 1st Place" type="EtcItem">
+	<item id="83178" name="突變的司塔卡拓克洛庫的傷害量第1名獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has dealt the most damage among those that are eligible for the contribution reward. Double-click to obtain Stakato Cocoon and Stakato Wing with a 100% chance as well as Stakato Tooth and Mutant Stakato Crog's Fang with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1437,7 +1437,7 @@
 			<item id="82791" min="5" max="5" chance="100" /> <!-- Stakato Cocoon -->
 		</capsuled_items>
 	</item>
-	<item id="83179" name="Mutant Stakato Crog Damage Reward Pack - 2nd Place" type="EtcItem">
+	<item id="83179" name="突變的司塔卡拓克洛庫的傷害量第2名獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has dealt the second-most damage among those that are eligible for the contribution reward. Double-click to obtain Stakato Cocoon and Stakato Wing with a 100% chance as well as Stakato Tooth and Mutant Stakato Crog's Fang with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1458,7 +1458,7 @@
 			<item id="82791" min="5" max="5" chance="100" /> <!-- Stakato Cocoon -->
 		</capsuled_items>
 	</item>
-	<item id="83180" name="Mutant Stakato Crog Damage Reward Pack - 3rd Place" type="EtcItem">
+	<item id="83180" name="突變的司塔卡拓克洛庫的傷害量第3名獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has dealt the third-most damage among those that are eligible for the contribution reward. Double-click to obtain Stakato Cocoon and Stakato Wing with a 100% chance as well as Stakato Tooth and Mutant Stakato Crog's Fang with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1479,7 +1479,7 @@
 			<item id="82791" min="5" max="5" chance="100" /> <!-- Stakato Cocoon -->
 		</capsuled_items>
 	</item>
-	<item id="83181" name="Gran Kain's Treasure Chest" type="EtcItem">
+	<item id="83181" name="格蘭肯寶箱" type="EtcItem">
 		<!-- A precious treasure chest of Gran Kain. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
@@ -1531,7 +1531,7 @@
 			<item id="81444" min="1" max="1" chance="2.631579" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83182" name="Chaos Aether" type="EtcItem">
+	<item id="83182" name="渾沌的乙醚" type="EtcItem">
 		<!-- A crystal that emanates mysterious energy that is neither good nor bad. Can be obtained by killing monsters imbued with Chaos Power. <How to use>. Can be used to craft special items. -->
 		<set name="icon" val="icon.chaotic_ether" />
 		<set name="immediate_effect" val="true" />
@@ -1541,7 +1541,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83183" name="Mysterious Energy Crystal" type="EtcItem">
+	<item id="83183" name="可疑的能量結晶" type="EtcItem">
 		<!-- A crystal obtained by killing angels imbued with Chaos Power at the Tower of Insolence. You can feel strange energy emanating from it. -->
 		<set name="icon" val="icon.chaotic_ether" />
 		<set name="immediate_effect" val="true" />
@@ -1553,7 +1553,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83184" name="Broken Energy Crystal Shard" type="EtcItem">
+	<item id="83184" name="破碎的能量破片碎片" type="EtcItem">
 		<!-- It used to be filled with energy but now there is almost none left. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1565,7 +1565,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83185" name="Shining Gold Bar Pack" type="EtcItem">
+	<item id="83185" name="閃耀的金塊禮盒" type="EtcItem">
 		<!-- Double-click to obtain Gold Bar (1 pc.) or Gold Bar (2 pcs.) and Aether (60 pcs.) or Solaris (1 pc.). Note!. Aether and Solaris from this pack cannot be sold. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -1583,7 +1583,7 @@
 			<item id="83128" min="2" max="2" chance="25" /> <!-- Gold Bar -->
 		</capsuled_items>
 	</item>
-	<item id="83186" name="Bloodstained Zariche Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="83186" name="染血薩雷奇武器禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Bloodstained Zariche weapon. -->
 		<set name="icon" val="icon.zariche_box" />
 		<set name="default_action" val="PEEL" />
@@ -1613,7 +1613,7 @@
 			<item id="80886" min="1" max="1" chance="7.142857" /> <!-- Bloodstained Zariche Dual Blunt Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="83187" name="Bloodstained Akamanah Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="83187" name="染血阿卡瑪那夫武器禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_box" />
 		<set name="default_action" val="PEEL" />
@@ -1643,7 +1643,7 @@
 			<item id="80900" min="1" max="1" chance="7.142857" /> <!-- Bloodstained Akamanah Dual Blunt Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="83188" name="+10 Greater Agathion Charm Box" additionalName="Event" type="EtcItem">
+	<item id="83188" name="+10高級壺精幸運符禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Greater Zodiac Agathion Charm enchanted to +10. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -1671,7 +1671,7 @@
 			<item id="80947" min="1" max="1" minEnchant="10" maxEnchant="10" chance="8.333333" /> <!-- Greater Agathion Charm: Cancer -->
 		</capsuled_items>
 	</item>
-	<item id="83189" name="Growth Manager Key" additionalName="Event" type="EtcItem">
+	<item id="83189" name="成長管理者的鑰匙" additionalName="Event" type="EtcItem">
 		<!-- The key that the Growth Manager lost while traveling around Aden. <How to use>. Can be exchanged for various rewards via the event crafting or weekly limited crafting. -->
 		<set name="icon" val="icon.aphros_key" />
 		<set name="immediate_effect" val="true" />
@@ -1681,7 +1681,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83190" name="Vitality Sustaining Rune" additionalName="Event" type="EtcItem">
+	<item id="83190" name="活力維持古文" additionalName="Event" type="EtcItem">
 		<!-- When in inventory, sustains Vitality. -->
 		<set name="icon" val="icon.ev_charge_run" />
 		<set name="immediate_effect" val="true" />
@@ -1691,7 +1691,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83191" name="Sealed Fire Source Pack (25 pcs.)" type="EtcItem">
+	<item id="83191" name="封印的火之根源25個/箱" type="EtcItem">
 		<!-- Double-click to obtain Sealed Fire Source (25 pcs.). -->
 		<set name="icon" val="icon.dethrone_fire_source" />
 		<set name="default_action" val="PEEL" />
@@ -1707,7 +1707,7 @@
 			<item id="82658" min="25" max="25" chance="100" /> <!-- Sealed Fire Source -->
 		</capsuled_items>
 	</item>
-	<item id="83192" name="Divine Fire Pack (10 pcs.)" type="EtcItem">
+	<item id="83192" name="聖潔之火10個/箱" type="EtcItem">
 		<!-- Double-click to obtain Divine Fire (10 pcs.). -->
 		<set name="icon" val="icon.saintly_fire" />
 		<set name="default_action" val="PEEL" />
@@ -1723,7 +1723,7 @@
 			<item id="82615" min="10" max="10" chance="100" /> <!-- Divine Fire -->
 		</capsuled_items>
 	</item>
-	<item id="83193" name="Fire Orb Pack (100 pcs.)" type="EtcItem">
+	<item id="83193" name="火珠100個/箱" type="EtcItem">
 		<!-- Double-click to obtain Fire Orb (100 pcs.). -->
 		<set name="icon" val="icon.dethrone_nextlevel_ticket" />
 		<set name="default_action" val="PEEL" />
@@ -1739,7 +1739,7 @@
 			<item id="82617" min="100" max="100" chance="100" /> <!-- Fire Orb -->
 		</capsuled_items>
 	</item>
-	<item id="83194" name="Einhasad's Treasure Chest" type="EtcItem">
+	<item id="83194" name="殷海薩寶箱" type="EtcItem">
 		<!-- A chest with Einhasad's treasures. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1787,7 +1787,7 @@
 			<item id="81444" min="1" max="1" chance="2.941176" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83195" name="Demonic Venom's Defeat Contribution Reward Pack" type="EtcItem">
+	<item id="83195" name="擊倒惡魔貝諾瑪的貢獻獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the characters that have dealt enough damage during the Demonic Venom raid. Double-click to obtain Chaos Aether and Demonic Venom's Skull with a 100% chance. You may also get Demonic Venom's Arm or Demonic Venom's Cape with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="PEEL" />
@@ -1808,7 +1808,7 @@
 			<item id="83219" min="1" max="1" chance="100" /> <!-- Demonic Venom's Skull -->
 		</capsuled_items>
 	</item>
-	<item id="83196" name="Demonic Venom's First Hit Reward Pack" type="EtcItem">
+	<item id="83196" name="惡魔貝諾瑪首攻獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has landed the first hit on Demonic Venom among those that are eligible for the contribution reward. Double-click to obtain Demonic Venom's Skull with a 100% chance. You may also get Demonic Venom's Head, Demonic Venom's Arm, or Demonic Venom's Cape with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1829,7 +1829,7 @@
 			<item id="83219" min="1" max="1" chance="100" /> <!-- Demonic Venom's Skull -->
 		</capsuled_items>
 	</item>
-	<item id="83197" name="Demonic Venom's Final Blow Reward Pack" type="EtcItem">
+	<item id="83197" name="惡魔貝諾瑪最後一擊獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has landed the last hit on Demonic Venom among those that are eligible for the contribution reward. Double-click to obtain Demonic Venom's Skull with a 100% chance. You may also get Demonic Venom's Head, Demonic Venom's Arm, or Demonic Venom's Cape with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1850,7 +1850,7 @@
 			<item id="83219" min="1" max="1" chance="100" /> <!-- Demonic Venom's Skull -->
 		</capsuled_items>
 	</item>
-	<item id="83198" name="Demonic Venom's Damage Reward Pack - 1st Place" type="EtcItem">
+	<item id="83198" name="惡魔貝諾瑪傷害量第1名獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has dealt the most damage among those that are eligible for the contribution reward. Double-click to obtain Demonic Venom's Skull with a 100% chance. You may also get Demonic Venom's Head, Demonic Venom's Arm, or Demonic Venom's Cape with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1871,7 +1871,7 @@
 			<item id="83219" min="1" max="1" chance="100" /> <!-- Demonic Venom's Skull -->
 		</capsuled_items>
 	</item>
-	<item id="83199" name="Demonic Venom's Damage Reward Pack - 2nd Place" type="EtcItem">
+	<item id="83199" name="惡魔貝諾瑪傷害量第2名獎勵禮盒" type="EtcItem">
 		<!-- A trophy for the character that has dealt the second-most damage among those that are eligible for the contribution reward. Double-click to obtain Demonic Venom's Skull with a 100% chance. You may also get Demonic Venom's Head, Demonic Venom's Arm, or Demonic Venom's Cape with a certain chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />

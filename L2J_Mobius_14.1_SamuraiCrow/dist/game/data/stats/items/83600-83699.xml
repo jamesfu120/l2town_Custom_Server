@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="83600" name="Dark Dragon's Radiant Cloak" type="Armor">
+	<item id="83600" name="燦爛的蘊黑龍斗篷" type="Armor">
 		<!-- A dragon cloak imbued with the power of darkness. When damage is taken, for 10 sec. P./ M. Def. +15%. (Fixed cooldown is 30 sec.). <font color=ff6666><Equipment effect></font>. All stats +5. Received damage -20%. Max HP and Max HP limit +50,000. Vitality bonus +50%. Damage Reflection +10%. Fixed Damage Resistance +10%. Damage +5% -->
 		<set name="icon" val="icon.cloak_antaras" />
 		<set name="default_action" val="EQUIP" />
@@ -19,7 +19,7 @@
 			<skill id="37211" level="1" /> <!-- +0 Dark Dragon's Radiant Cloak: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="83601" name="Antharas' Cloak (Death Knight)" type="Armor">
+	<item id="83601" name="死亡騎士專用安塔瑞斯斗篷" type="Armor">
 		<!-- Antharas' Cloak for the Death Knight class. -->
 		<set name="icon" val="icon.cloak_antaras" />
 		<set name="default_action" val="EQUIP" />
@@ -31,7 +31,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83602" name="Antharas' Cloak (Shine Maker)" type="Armor">
+	<item id="83602" name="光輝魔法使安塔瑞斯斗篷" type="Armor">
 		<!-- Antharas' Cloak for the Shine Maker class. -->
 		<set name="icon" val="icon.cloak_antaras" />
 		<set name="default_action" val="EQUIP" />
@@ -43,7 +43,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83603" name="Antharas' Cloak (Warg)" type="Armor">
+	<item id="83603" name="覺醒者安塔瑞斯斗篷" type="Armor">
 		<!-- Antharas' Cloak for the Warg class. -->
 		<set name="icon" val="icon.cloak_antaras" />
 		<set name="default_action" val="EQUIP" />
@@ -55,7 +55,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83604" name="Stone of Destiny" additionalName="Dual Class" type="EtcItem">
+	<item id="83604" name="命運之石" additionalName="Dual Class" type="EtcItem">
 		<!-- When you change your destiny, everything around changes as well. All class skills will be deleted. -->
 		<set name="icon" val="icon.destiny_stone" />
 		<set name="immediate_effect" val="true" />
@@ -64,7 +64,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83605" name="Sealed Unknown Wanderer's Rune" type="EtcItem">
+	<item id="83605" name="封印的無名者古文" type="EtcItem">
 		<!-- Double-click to obtain Unknown Wanderer's Rune (1 pc.). -->
 		<set name="icon" val="icon.hero_book_c_lune" />
 		<set name="default_action" val="PEEL" />
@@ -79,7 +79,7 @@
 			<item id="83579" min="1" max="1" chance="100" /> <!-- Unknown Wanderer's Rune - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="83606" name="Sealed Demonic Venom's Head" type="EtcItem">
+	<item id="83606" name="封印的惡魔貝諾瑪的頭" type="EtcItem">
 		<!-- Double-click to obtain Demonic Venom's Head (1 pc.). -->
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="PEEL" />
@@ -94,7 +94,7 @@
 			<item id="83223" min="1" max="1" chance="100" /> <!-- Demonic Venom's Head -->
 		</capsuled_items>
 	</item>
-	<item id="83607" name="Sealed Avenger Graff's Necklace" type="EtcItem">
+	<item id="83607" name="封印的復仇者可拉弗項鍊" type="EtcItem">
 		<!-- Double-click to obtain Avenger Graff's Necklace (1 pc.). -->
 		<set name="icon" val="icon.accessary_necklace_of_assistance_i00" />
 		<set name="default_action" val="PEEL" />
@@ -109,7 +109,7 @@
 			<item id="83224" min="1" max="1" chance="100" /> <!-- Avenger Graff's Necklace -->
 		</capsuled_items>
 	</item>
-	<item id="83608" name="Sealed Mad Cullan's Ring" type="EtcItem">
+	<item id="83608" name="封印的狂人克藍戒指" type="EtcItem">
 		<!-- Double-click to obtain Mad Cullan's Ring (1 pc.). -->
 		<set name="icon" val="icon.accessary_ring_of_grace_i00" />
 		<set name="default_action" val="PEEL" />
@@ -124,7 +124,7 @@
 			<item id="83225" min="1" max="1" chance="100" /> <!-- Mad Cullan's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="83609" name="Sealed Arrogant Lebruum's Wing" type="EtcItem">
+	<item id="83609" name="封印的傲氣的勒布路之翼" type="EtcItem">
 		<!-- Double-click to obtain Arrogant Lebruum's Wing (1 pc.). -->
 		<set name="icon" val="icon.q466_fairy_wing" />
 		<set name="default_action" val="PEEL" />
@@ -139,7 +139,7 @@
 			<item id="83226" min="1" max="1" chance="100" /> <!-- Arrogant Lebruum's Wing -->
 		</capsuled_items>
 	</item>
-	<item id="83610" name="Sealed Blood Rune Tainted by Chaos" type="EtcItem">
+	<item id="83610" name="封印的被渾沌蠶食的血古文" type="EtcItem">
 		<!-- Double-click to obtain Blood Rune Tainted by Chaos (1 pc.). -->
 		<set name="icon" val="icon.kasha_boss_reward_lune" />
 		<set name="default_action" val="PEEL" />
@@ -154,7 +154,7 @@
 			<item id="83471" min="1" max="1" chance="100" /> <!-- Blood Rune Tainted by Chaos -->
 		</capsuled_items>
 	</item>
-	<item id="83611" name="Purple Orb" type="EtcItem">
+	<item id="83611" name="紫珠" type="EtcItem">
 		<!-- Can be added to a collection instead of other items. <Items that can be replaced>. Royal Gold Save Ticket. Royal Black Save Ticket -->
 		<set name="icon" val="icon.purple_bead" />
 		<set name="immediate_effect" val="true" />
@@ -164,7 +164,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83612" name="+5 Attack Artifact Pack" additionalName="Event" type="EtcItem">
+	<item id="83612" name="+5鬥志聖紋石箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +5. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -191,7 +191,7 @@
 			<item id="83616" min="1" max="1" minEnchant="5" maxEnchant="5" chance="9.090909" /> <!-- Artifact - Basic Attack Power - Attack -->
 		</capsuled_items>
 	</item>
-	<item id="83613" name="+5 Defense Artifact Pack" additionalName="Event" type="EtcItem">
+	<item id="83613" name="+5守護聖紋石箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a defense artifact enchanted to +5. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -217,7 +217,7 @@
 			<item id="81435" min="1" max="1" minEnchant="5" maxEnchant="5" chance="10" /> <!-- Artifact - Received Critical Damage - Defense -->
 		</capsuled_items>
 	</item>
-	<item id="83614" name="+5 Support Artifact Pack" additionalName="Event" type="EtcItem">
+	<item id="83614" name="+5支援聖紋石箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a support artifact enchanted to +5. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -243,7 +243,7 @@
 			<item id="81438" min="1" max="1" minEnchant="5" maxEnchant="5" chance="10" /> <!-- Artifact - Damage Reflection Resistance - Support -->
 		</capsuled_items>
 	</item>
-	<item id="83615" name="+5 Balance Artifact Pack" additionalName="Event" type="EtcItem">
+	<item id="83615" name="+5均衡聖紋石箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a balance artifact enchanted to +5. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -280,7 +280,7 @@
 			<item id="81442" min="1" max="1" minEnchant="5" maxEnchant="5" chance="4.761905" /> <!-- Artifact - Received P. Critical Rate - Balance -->
 		</capsuled_items>
 	</item>
-	<item id="83616" name="Artifact - Basic Attack Power" additionalName="Attack" type="Armor">
+	<item id="83616" name="聖紋石一般攻擊威力" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases Basic Attack Power. Can be equipped in an attack artifact slot. When enchanted, increases the Basic Attack Power bonus. Can only be enhanced with attack artifacts. Max enchant value: +15. -->
 		<set name="icon" val="icon.artifact_d_spell_crt_dmg" />
 		<set name="default_action" val="EQUIP" />
@@ -309,7 +309,7 @@
 			<skill id="37210" level="16" type="ON_ENCHANT" type_value="15" /> <!-- Artifact - Basic Attack Power -->
 		</skills>
 	</item>
-	<item id="83617" name="Supply Pack (2-hour)" type="EtcItem">
+	<item id="83617" name="消耗品2小時箱" type="EtcItem">
 		<!-- Double-click to obtain supplies that <font color=EEAA22>cannot be sold</font>. <Supplies>. Freya's Ice Rose (4 pcs.). Glowing Dragon's Attribute Potion (4 pcs.). Honey Dark Beer (4 pcs.). Wondrous Cocktail (2 pcs.) -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -327,7 +327,7 @@
 			<item id="81012" min="2" max="2" chance="100" /> <!-- Wondrous Cocktail - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83618" name="Einhasad's Treasure Chest" type="EtcItem">
+	<item id="83618" name="殷海薩寶箱" type="EtcItem">
 		<!-- A chest with Einhasad's treasures. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -400,7 +400,7 @@
 			<item id="81444" min="1" max="1" chance="1.694915" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83619" name="Ice Box" additionalName="Event" type="EtcItem">
+	<item id="83619" name="保冰箱" additionalName="Event" type="EtcItem">
 		<!-- An ice box created with Freya's Ice Doll. Double-click to obtain Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Honey Dark Beer (6 pcs.), Wondrous Cocktail (3 pcs.), Tales of Aden (4 pcs.). -->
 		<set name="icon" val="icon.ev_2020_summer_box" />
 		<set name="default_action" val="PEEL" />
@@ -419,7 +419,7 @@
 			<item id="82345" min="4" max="4" chance="100" /> <!-- Tales of Aden - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83620" name="Shining Ice Box" additionalName="Event" type="EtcItem">
+	<item id="83620" name="閃耀保冰箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Augmenting Stone Pack (1 pc.), Freya's Ice Rose (12 pcs.), Glowing Dragon's Attribute Potion (XP) (12 pcs.), Wondrous Cocktail (6 pcs.), Honey Dark Beer (12 pcs.), Tales of Aden (6 pcs.). -->
 		<set name="icon" val="icon.ev_2020_summer_box" />
 		<set name="default_action" val="PEEL" />
@@ -439,7 +439,7 @@
 			<item id="82345" min="6" max="6" chance="100" /> <!-- Tales of Aden - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83621" name="Kasha Orc Victory Certificate - Kasha's Avatar" type="EtcItem">
+	<item id="83621" name="卡沙獸人攻略憑證-阻止卡沙現身" type="EtcItem">
 		<!-- Verifies that you have completed the main quest 'Kasha's Avatar'. <Acquisition>. Complete the main quest 'Kasha's Avatar'. -->
 		<set name="icon" val="icon.etc_coins_red_i00" />
 		<set name="default_action" val="NONE" />
@@ -452,7 +452,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83622" name="Snowy Volcano's Boss Weapon" additionalName="For NPC." type="Weapon">
+	<item id="83622" name="火山雪原首領武器" additionalName="For NPC." type="Weapon">
 		<!-- An exclusive weapon from Baluan, the Snowy Volcano's boss. -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -475,7 +475,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83623" name="Snowy Volcano's Monster Weapon" additionalName="For NPC." type="Weapon">
+	<item id="83623" name="火山雪原怪物武器" additionalName="For NPC." type="Weapon">
 		<!-- The Snowy Volcano's monster weapon. -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -498,7 +498,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83624" name="Frog Flute" additionalName="Event" type="EtcItem">
+	<item id="83624" name="青蛙笛" additionalName="Event" type="EtcItem">
 		<!-- A flute that sounds like a sorrowful frog piping. Play it to awaken memories of the prince turned into a frog, and lift his curse. Note!. Can only be used by the pond in Giran's garden. -->
 		<set name="icon" val="icon.etc_dragon_flute_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -509,7 +509,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83625" name="Kit: Crystal of Dawn" type="EtcItem">
+	<item id="83625" name="黎明的結晶組合包" type="EtcItem">
 		<!-- Double-click to obtain 1 to 3 Crystals of Dawn with a certain chance. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
@@ -526,7 +526,7 @@
 			<item id="80839" min="3" max="3" chance="33.333333" /> <!-- Crystal of Dawn -->
 		</capsuled_items>
 	</item>
-	<item id="83626" name="Memory Crystal" type="EtcItem">
+	<item id="83626" name="記憶水晶" type="EtcItem">
 		<!-- A special crystal that contains memories of the dead. Use it to learn what happened with Investigators who perished at the Snowy Volcano. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="default_action" val="NONE" />
@@ -540,7 +540,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="83627" name="Chaotic Fire Energy" type="EtcItem">
+	<item id="83627" name="蘊含渾沌之力的火焰氣息" type="EtcItem">
 		<!-- A special Fire Energy obtained for killing Baluan's minions. Can be used for neutralizing the Altar of Dissent on the Baluan Battleground. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="default_action" val="NONE" />
@@ -554,7 +554,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="83628" name="Chaotic Cold Energy" type="EtcItem">
+	<item id="83628" name="蘊含渾沌之力的寒冷氣息" type="EtcItem">
 		<!-- A special Cold Energy obtained for killing Baluan's minions. Can be used for neutralizing the Altar of Dissent on the Baluan Battleground. -->
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 		<set name="default_action" val="NONE" />
@@ -567,7 +567,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83629" name="Gran Kain's Treasure Chest" type="EtcItem">
+	<item id="83629" name="格蘭肯寶箱" type="EtcItem">
 		<!-- A precious treasure chest of Gran Kain. Double-click to obtain 1 rare item. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -639,7 +639,7 @@
 			<item id="81444" min="1" max="1" chance="1.724138" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="83630" name="Baluan Battle Contribution Certificate" additionalName="Event" type="EtcItem">
+	<item id="83630" name="討伐奧秘帕洛安貢獻證書" additionalName="Event" type="EtcItem">
 		<!-- This certificate shows your contribution to the victory over the Arbiter Baluan. -->
 		<set name="icon" val="icon.special_scrl_of_ench_oman_ring_i00" />
 		<set name="default_action" val="NONE" />
@@ -652,7 +652,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83631" name="Arbiter Baluan's Core" additionalName="Event" type="EtcItem">
+	<item id="83631" name="奧秘帕洛安之核" additionalName="Event" type="EtcItem">
 		<!-- It's what is left of the Arbiter Baluan. The core is imbued with energy of ice and fire that fight constantly. <How to use>. Can be exchanged for any reward through the event craft. -->
 		<set name="icon" val="icon.ev_fire_ice_crystal" />
 		<set name="default_action" val="NONE" />
@@ -663,7 +663,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83632" name="Arbiter's Supply Pack" additionalName="Event" type="EtcItem">
+	<item id="83632" name="奧祕消耗品箱" additionalName="Event" type="EtcItem">
 		<!-- The Arbiter Baluan's Core was used to create the pack. -->
 		<set name="icon" val="icon.dethrone_box_tier1" />
 		<set name="default_action" val="PEEL" />
@@ -683,7 +683,7 @@
 			<item id="81460" min="10" max="10" chance="100" /> <!-- Honey Dark Beer - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83633" name="Talisman of Glory" type="Armor">
+	<item id="83633" name="光榮護身符" type="Armor">
 		<!-- <font color=EEAA22>When equipped</font>. Heavenly Talisman main effect. +10 Heavenly Talisman enchant effect. Enhanced Talisman of Protection Lv. 10. <font color=EEAA22>Heavenly Talisman main effect</font>. Max HP/ MP/ CP +7%. P./ M. Accuracy +2. P./ M. Evasion +2. Vampiric Rage +5%. Atk. Spd./ Casting Spd. +70. Critical Rate for basic attacks +3%. M. Critical Rate +1%. P./ M. Atk. +3%. all attack power +7%. Damage Reflection Resistance +40. Fixed Damage Resistance +15%. P./ M. Def. +750. All stats +3. Skill MP Consumption -3%. Skill cooldown -3%. <font color=EEAA22>+10 Heavenly Talisman enchant effect</font>. Fixed Damage/ Damage Reflection Resistance +10%. P. Atk./ M. Atk./ P. Def./ M. Def. +7%. Adena drop rate +5%. All attack power +7%. <font color=EEAA22>Enhanced Talisman of Protection Lv. 10</font>. P. Def. +14,600. M. Def. +9491. Attribute Resistance +300. Received M. damage -7%. Dagger/ Bow/ Crossbow/ Sword/ Spear/ Fists Resistance +7%. All received Critical Rate -15%. All received Critical Damage -15%. The effect doesn't apply if the following items equipped:. Heavenly Talisman. Enhanced Talisman of Protection. Talisman of Protection -->
 		<set name="icon" val="icon.final_seed_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -705,7 +705,7 @@
 			<skill id="35553" level="2" type="ON_UNEQUIP" /> <!-- Remove Talisman of Glory -->
 		</skills>
 	</item>
-	<item id="83634" name="Talisman of Abundance" additionalName="Not for foreign partners" type="Armor">
+	<item id="83634" name="豐饒護身符" additionalName="Not for foreign partners" type="Armor">
 		<!-- Talisman of Abundance. <font color=EEAA22>Equip effect</font>. Epic Talisman's base effect. +10 Heavenly Talisman's enchant effect. Enhanced Talisman of Protection Lv. 10. <font color=EEAA22>Epic Talisman's base effect</font>. P./ M. Def. +1500. MP Recovery Rate +4. HP Recovery Rate +8. Attribute Resistance +30. Damage Reflection Resistance +20. All received Critical Rate -15%. All received Critical Damage -15%. <font color=EEAA22>+10 Heavenly Talisman's enchant effect</font>. HP/ MP/ CP +10%. All Critical Rate +7%. All received Critical Damage -7%. All Critical Damage +5%. <font color=EEAA22>Enhanced Talisman of Protection Lv. 10</font>. P. Def. +4277, +10%. M. Def. +2795, +10%. Acquired XP/ SP +40%. Recovery Potions' Effect +3000. <font color=EEAA22>When equipped simultaneously</font>. Talisman Energy Lv. 3: When equipped with Talisman of Longing/ Talisman of Insanity/ Heavenly Talisman/ Talisman of Abundance. Attribute Attack +200. Resistance to All Weapons +7%. Received M. damage -7%. When equipped with Venir's Talisman Lv. 10 or Soul Talisman Lv. 1. All attack power +18%. Skill cooldown -5%. <Active skills>. Sayha's Grace Lv. 8. Sayha's Encouragement Lv. 8. Sayha's Anger Lv. 8. The effect is not applied when the following items are equipped:. Epic Talisman. Sayha's Enhanced Talisman. Sayha's Talisman -->
 		<set name="icon" val="icon.final_sevensign_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -729,7 +729,7 @@
 			<skill id="37219" level="1" type="ON_UNEQUIP" /> <!-- Remove Talisman of Abundance -->
 		</skills>
 	</item>
-	<item id="83635" name="Talisman of Radiance" additionalName="Elysia" type="Armor">
+	<item id="83635" name="光輝護身符" additionalName="Elysia" type="Armor">
 		<!-- A talisman that glows with a mild inner light. <Enchanting>. Use Gran Kain's Scroll: Enchant Elysia's Accessories. -->
 		<set name="icon" val="icon.bm_sheen_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -759,7 +759,7 @@
 			<skill id="37217" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Talisman of Radiance: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="83636" name="Gran Kain's Scroll: Enchant Elysia's Accessories" type="EtcItem">
+	<item id="83636" name="格蘭肯的艾利西亞強化卷軸" type="EtcItem">
 		<!-- For enchanting Elysia's accessories. In case of failure, the item's enchant value remains the same. <Items for enchanting>. Orb of Fire. Orb of Air. Talisman of Radiance - Elysia. Cannot be used with Elysia's accessories enchanted to +10 or higher. -->
 		<set name="icon" val="icon.L_shilen_scrl_of_ench_elysia" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -773,7 +773,7 @@
 			<skill id="39919" level="1" /> <!-- Gran Kain's Scroll: Enchant Talisman Elysia -->
 		</skills>
 	</item>
-	<item id="83637" name="Ring of Sweet and Sour Candies" additionalName="Event" type="Armor">
+	<item id="83637" name="酸酸甜甜的棒棒糖戒指" additionalName="Event" type="Armor">
 		<!-- A sweet-tasting ring made by Lollipop Lover Candy. <Upgrade>. Use Scroll: Enchant Sweet Accessory. -->
 		<set name="icon" val="icon.ev_lollipop_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -788,7 +788,7 @@
 		<stats>
 		</stats>
 	</item>
-	<item id="83638" name="Refreshing Candy Earring" additionalName="Event" type="Armor">
+	<item id="83638" name="酸甜清爽的棒棒糖耳環" additionalName="Event" type="Armor">
 		<!-- A sweet-tasting earring made by Lollipop Lover Candy. <Upgrade>. Use Scroll: Enchant Sweet Accessory. -->
 		<set name="icon" val="icon.ev_lollipop_ear" />
 		<set name="default_action" val="EQUIP" />
@@ -803,7 +803,7 @@
 		<stats>
 		</stats>
 	</item>
-	<item id="83639" name="Colorful Candy Necklace" additionalName="Event" type="Armor">
+	<item id="83639" name="刺刺香辣棒棒糖項鍊" additionalName="Event" type="Armor">
 		<!-- A sweet-tasting necklace made by Lollipop Lover Candy. <Upgrade>. Use Scroll: Enchant Sweet Accessory. -->
 		<set name="icon" val="icon.ev_lollipop_neck" />
 		<set name="default_action" val="EQUIP" />
@@ -818,7 +818,7 @@
 		<stats>
 		</stats>
 	</item>
-	<item id="83640" name="Scroll: Enchant Sweet Accessory" additionalName="Event" type="EtcItem">
+	<item id="83640" name="棒棒糖商品強化卷軸" additionalName="Event" type="EtcItem">
 		<!-- Enchants sweet-tasting accessories. Max enchant value: +7. In case of failure the item is destroyed. <Acquisition>. Event NPC Candy -->
 		<set name="icon" val="icon.ev_scrl_of_lollipop_1" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -834,7 +834,7 @@
 			<skill id="39917" level="1" /> <!-- Scroll: Enchant Sweet Accessory -->
 		</skills>
 	</item>
-	<item id="83641" name="Gran Kain's Scroll: Enchant Sweet Accessory" additionalName="Event" type="EtcItem">
+	<item id="83641" name="格蘭肯棒棒糖商品強化卷軸" additionalName="Event" type="EtcItem">
 		<!-- Enchants sweet-tasting accessories. Max enchant value: +7. Gran Kain's power protects the item, so in case of failure it's not destroyed and its enchant value remains the same. <Acquisition>. There's a small chance to get it from a Sweet Accessory Pack. -->
 		<set name="icon" val="icon.ev_scrl_of_lollipop_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -848,7 +848,7 @@
 			<skill id="39918" level="1" /> <!-- Gran Kain's Scroll: Enchant Sweet Accessory -->
 		</skills>
 	</item>
-	<item id="83642" name="Sweet Accessory Pack" additionalName="Event" type="EtcItem">
+	<item id="83642" name="柔柔軟軟棒棒糖商品禮盒" additionalName="Event" type="EtcItem">
 		<!-- Candy has made sweet accessories for you! Double-click to obtain on of the following items with a certain chance: Ring of Sweet and Sour Candies, Refreshing Candy Earring, Colorful Candy Necklace, Gran Kain's Scroll: Enchant Sweet Accessory. -->
 		<set name="icon" val="icon.ev_lollipop_box" />
 		<set name="default_action" val="PEEL" />
@@ -866,7 +866,7 @@
 			<item id="83639" min="1" max="1" chance="25" /> <!-- Colorful Candy Necklace - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83643" name="Fairy's Brush" additionalName="Event" type="Weapon">
+	<item id="83643" name="庭園妖精塗色工具" additionalName="Event" type="Weapon">
 		<!-- Art is grand, and this brush just proves it!. <font color=EEAA22><How to use></font>. Use in the Nymph Garden instance zone where you can get after talking to Event Manager Annie. <font color=ff6666><Skills available when equipped></font>. Yellow Color Splash. Red Color Splash. Autumn Tapestry -->
 		<set name="icon" val="icon.ev_watercolorbrush" />
 		<set name="default_action" val="EQUIP" />
@@ -890,7 +890,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="83644" name="Witch's Brush" additionalName="Event" type="Weapon">
+	<item id="83644" name="庭園魔女塗色工具" additionalName="Event" type="Weapon">
 		<!-- Art is grand, and this brush just proves it!. <font color=EEAA22><How to use></font>. Use in the Nymph Garden instance zone where you can get after talking to Event Manager Annie. <font color=ff6666><Skills available when equipped></font>. Yellow Color Splash. Red Color Splash. Autumn Tapestry -->
 		<set name="icon" val="icon.ev_22nd_weapon" />
 		<set name="default_action" val="EQUIP" />
@@ -914,7 +914,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="83645" name="Selection Coupon: Brush" additionalName="Event" type="EtcItem">
+	<item id="83645" name="塗色工具選擇券" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for Fairy's/ Witch's Brush (of your choice). -->
 		<set name="icon" val="icon.bm_weapon_ticket_a" />
 		<set name="immediate_effect" val="true" />
@@ -924,7 +924,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83646" name="Annie's Gift" additionalName="Event" type="EtcItem">
+	<item id="83646" name="安妮禮盒" additionalName="Event" type="EtcItem">
 		<!-- Annie had no proper box at hand, but that does not diminish the value of her gift. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_chicken_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -940,7 +940,7 @@
 			<item id="81646" min="1" max="1" chance="100" /> <!-- Festive Agathion Charm: Guardian Angel Chuchu - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83647" name="Green Nymph's Crate" additionalName="Event" type="EtcItem">
+	<item id="83647" name="樹葉禮盒" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained if you have colored Green Nymph in the Nymph Garden. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_green_box_01" />
 		<set name="default_action" val="PEEL" />
@@ -965,7 +965,7 @@
 			<item id="83575" min="10" max="10" chance="11.111111" /> <!-- Novice Wanderer's Tales -->
 		</capsuled_items>
 	</item>
-	<item id="83648" name="Yellow Nymph's Crate" additionalName="Event" type="EtcItem">
+	<item id="83648" name="銀杏葉禮盒" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained if you have colored Yellow Nymph in the Nymph Garden. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_yellow_box01" />
 		<set name="default_action" val="PEEL" />
@@ -990,7 +990,7 @@
 			<item id="83575" min="20" max="20" chance="11.111111" /> <!-- Novice Wanderer's Tales -->
 		</capsuled_items>
 	</item>
-	<item id="83649" name="Red Nymph's Crate" additionalName="Event" type="EtcItem">
+	<item id="83649" name="楓葉葉子禮盒" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained if you have colored Red Nymph in the Nymph Garden. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_red_box01" />
 		<set name="default_action" val="PEEL" />
@@ -1018,7 +1018,7 @@
 			<item id="83576" min="20" max="20" chance="8.333333" /> <!-- Experienced Wanderer's Tales -->
 		</capsuled_items>
 	</item>
-	<item id="83650" name="Green Nymph's Pack" additionalName="Event" type="EtcItem">
+	<item id="83650" name="清新樹葉禮盒" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained with a small chance if you have colored Green Nymph in the Nymph Garden. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_green_box_03" />
 		<set name="default_action" val="PEEL" />
@@ -1043,7 +1043,7 @@
 			<item id="83575" min="20" max="20" chance="11.111111" /> <!-- Novice Wanderer's Tales -->
 		</capsuled_items>
 	</item>
-	<item id="83651" name="Yellow Nymph's Pack" additionalName="Event" type="EtcItem">
+	<item id="83651" name="清新銀杏葉禮盒" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained with a small chance if you have colored Yellow Nymph in the Nymph Garden. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_yellow_box03" />
 		<set name="default_action" val="PEEL" />
@@ -1068,7 +1068,7 @@
 			<item id="83575" min="40" max="40" chance="11.111111" /> <!-- Novice Wanderer's Tales -->
 		</capsuled_items>
 	</item>
-	<item id="83652" name="Red Nymph's Pack" additionalName="Event" type="EtcItem">
+	<item id="83652" name="清新楓葉葉子禮盒" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained with a small chance if you have colored Red Nymph in the Nymph Garden. Double-click to obtain various items. -->
 		<set name="icon" val="icon.ev_red_box03" />
 		<set name="default_action" val="PEEL" />
@@ -1100,7 +1100,7 @@
 			<item id="83576" min="40" max="40" chance="6.25" /> <!-- Experienced Wanderer's Tales -->
 		</capsuled_items>
 	</item>
-	<item id="83653" name="Lineage 2 Birthday Commemoration Coin" additionalName="Event" type="EtcItem">
+	<item id="83653" name="天堂II生日紀念幣" additionalName="Event" type="EtcItem">
 		<!-- Heads or tails?. <font color=EEAA22><How to use></font>. Can be exchanged for various items through Event Manager Annie at the Coin Store or through the Red Libra Guild merchants. -->
 		<set name="icon" val="icon.bm_goblin_coin" />
 		<set name="default_action" val="NONE" />
@@ -1109,7 +1109,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83654" name="Lineage 2 Birthday Medal" additionalName="Event" type="EtcItem">
+	<item id="83654" name="天堂II生日紀念勳章" additionalName="Event" type="EtcItem">
 		<!-- Fasten it on your chest, hang around your neck, or just add to the event collection 'Lineage 2 Birthday Party'. <font color=EEAA22><Acquisition></font>. Can be purchased from Event Manager Annie at the Coin Store. -->
 		<set name="icon" val="icon.etc_event_glitter_medal_i00" />
 		<set name="default_action" val="NONE" />
@@ -1120,7 +1120,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83655" name="Maple Cake" additionalName="Event" type="EtcItem">
+	<item id="83655" name="晚霞光芒楓葉蛋糕" additionalName="Event" type="EtcItem">
 		<!-- Happy birthday, Lineage 2! Happy birthday to you!. For 30 min., Attribute Attack/ Resistance +100, all Critical Rate +5%, all Critical Damage +5%, all received Critical Damage -5%. Note!. The effect remains after death, after switching to a dual class, or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="BranchIcon.icon.g_ev_22nd_cake" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1131,7 +1131,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83656" name="Samurai Special Armor" additionalName="Basic" type="Armor">
+	<item id="83656" name="闇鴉武士專用防具" additionalName="Basic" type="Armor">
 		<!-- Exclusive armor for the Samurai class. -->
 		<set name="icon" val="icon.armor_t02_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1146,7 +1146,7 @@
 		<stats>
 		</stats>
 	</item>
-	<item id="83657" name="Samurai Special Armor" additionalName="Defense" type="Armor">
+	<item id="83657" name="闇鴉武士專用防具" additionalName="Defense" type="Armor">
 		<!-- Exclusive armor for the Samurai class. -->
 		<set name="icon" val="icon.armor_t02_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1161,7 +1161,7 @@
 		<stats>
 		</stats>
 	</item>
-	<item id="83658" name="Samurai Special Armor" additionalName="Activation" type="Armor">
+	<item id="83658" name="闇鴉武士專用防具" additionalName="Activation" type="Armor">
 		<!-- Exclusive armor for the Samurai class. -->
 		<set name="icon" val="icon.armor_t02_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1176,7 +1176,7 @@
 		<stats>
 		</stats>
 	</item>
-	<item id="83659" name="Samurai Special Armor" additionalName="Dignity" type="Armor">
+	<item id="83659" name="闇鴉武士專用防具" additionalName="Dignity" type="Armor">
 		<!-- Exclusive armor for the Samurai class. -->
 		<set name="icon" val="icon.armor_t02_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1191,7 +1191,7 @@
 		<stats>
 		</stats>
 	</item>
-	<item id="83660" name="Samurai Cloak" additionalName="Basic" type="Armor">
+	<item id="83660" name="闇鴉武士專用斗篷" additionalName="Basic" type="Armor">
 		<!-- An exclusive cloak for the Samurai class. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1208,7 +1208,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="83661" name="Samurai Cloak" additionalName="Defense" type="Armor">
+	<item id="83661" name="闇鴉武士專用斗篷" additionalName="Defense" type="Armor">
 		<!-- An exclusive cloak for the Samurai class. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1225,7 +1225,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="83662" name="Samurai Cloak" additionalName="Activation" type="Armor">
+	<item id="83662" name="闇鴉武士專用斗篷" additionalName="Activation" type="Armor">
 		<!-- An exclusive cloak for the Samurai class. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="83663" name="Samurai Cloak" additionalName="Dignity" type="Armor">
+	<item id="83663" name="闇鴉武士專用斗篷" additionalName="Dignity" type="Armor">
 		<!-- An exclusive cloak for the Samurai class. -->
 		<set name="icon" val="icon.nobless_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1259,7 +1259,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="83664" name="Samurai's Special Weapon" additionalName="Samurai" type="Weapon">
+	<item id="83664" name="闇鴉武士專用武器" additionalName="Samurai" type="Weapon">
 		<!-- Samurai's Special Weapon, R110 -->
 		<set name="icon" val="icon.crow_katana_normal" />
 		<set name="default_action" val="EQUIP" />
@@ -1282,7 +1282,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83665" name="Samurai's Special Dragon Weapon - Lv. 0" additionalName="Fafurion" type="Weapon">
+	<item id="83665" name="闇鴉武士專用武器-0階段" additionalName="Fafurion" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_water" />
 		<set name="default_action" val="EQUIP" />
@@ -1305,7 +1305,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83666" name="Samurai's Special Dragon Weapon - Lv. 0" additionalName="Lindvior" type="Weapon">
+	<item id="83666" name="闇鴉武士專用武器-0階段" additionalName="Lindvior" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_wind" />
 		<set name="default_action" val="EQUIP" />
@@ -1328,7 +1328,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83667" name="Samurai's Special Dragon Weapon - Lv. 0" additionalName="Valakas" type="Weapon">
+	<item id="83667" name="闇鴉武士專用龍武器-0階段" additionalName="Valakas" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_fire" />
 		<set name="default_action" val="EQUIP" />
@@ -1351,7 +1351,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83668" name="Samurai's Special Dragon Weapon - Lv. 0" additionalName="Antharas" type="Weapon">
+	<item id="83668" name="闇鴉武士專用龍武器-0階段" additionalName="Antharas" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_earth" />
 		<set name="default_action" val="EQUIP" />
@@ -1374,7 +1374,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83669" name="Talisman of Dawn" additionalName="Not for foreign partners" type="Armor">
+	<item id="83669" name="曙光護身符" additionalName="Not for foreign partners" type="Armor">
 		<!-- A talisman that glows with a mild red light. <Enchanting>. Use Gran Kain's Scroll: Enchant Elysia's Accessories. -->
 		<set name="icon" val="icon.bm_dusk_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1403,7 +1403,7 @@
 			<skill id="37220" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Talisman of Dawn: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="83670" name="Exalted Contribution Certificate - I" type="EtcItem">
+	<item id="83670" name="榮耀貢獻認證書- I" type="EtcItem">
 		<!-- A certificate signed by Lionel Hunter that confirms your Exalted contribution. When in inventory, grants 1 glory point for the ability system. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="default_action" val="NONE" />
@@ -1416,7 +1416,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83671" name="Exalted Contribution Certificate - II" type="EtcItem">
+	<item id="83671" name="榮耀貢獻認證書- II" type="EtcItem">
 		<!-- A certificate signed by Lionel Hunter that confirms your Exalted contribution. When in inventory, grants 2 glory points for the ability system. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="default_action" val="NONE" />
@@ -1429,7 +1429,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83672" name="Exalted Spellbook Chest" type="EtcItem">
+	<item id="83672" name="榮耀魔法書禮盒" type="EtcItem">
 		<!-- Contains 5 unique Exalted spellbooks. Double-click to obtain 5 Exalted spellbooks. Spellbook: Dignity of the Exalted Lv. 3. Spellbook: Fate of the Exalted. Spellbook: Favor of the Exalted Lv. 2. Spellbook: Blessing of the Exalted. Spellbook: Summon Battle Potion -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
@@ -1449,7 +1449,7 @@
 			<item id="46036" min="1" max="1" chance="100" /> <!-- Spellbook: Fate of the Exalted -->
 		</capsuled_items>
 	</item>
-	<item id="83673" name="Samurai's Special Weapon" additionalName="Low-grade" type="Weapon">
+	<item id="83673" name="闇鴉武士專用武器" additionalName="Low-grade" type="Weapon">
 		<!-- Samurai's Special Weapon, No-grade ~ R99 -->
 		<set name="icon" val="icon.crow_katana_low" />
 		<set name="default_action" val="EQUIP" />
@@ -1472,7 +1472,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83674" name="Samurai's Special Weapon" additionalName="Immortal Life" type="Weapon">
+	<item id="83674" name="闇鴉武士專用武器" additionalName="Immortal Life" type="Weapon">
 		<!-- Samurai's Special Weapon, L -->
 		<set name="icon" val="icon.weapon_L_katana" />
 		<set name="default_action" val="EQUIP" />
@@ -1495,7 +1495,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83675" name="Samurai's Special Weapon" additionalName="Ice" type="Weapon">
+	<item id="83675" name="闇鴉武士專用武器" additionalName="Ice" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_ice" />
 		<set name="default_action" val="EQUIP" />
@@ -1518,7 +1518,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83676" name="Callax's Common Supply Pack" additionalName="115" type="EtcItem">
+	<item id="83676" name="卡拉克斯一般補給箱" additionalName="115" type="EtcItem">
 		<!-- A supply pack that belonged to Callax's followers. Items to be obtained. Santiago's Royal Soup (3 pcs.). Dye Powder (1 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv1" />
 		<set name="default_action" val="PEEL" />
@@ -1536,7 +1536,7 @@
 			<item id="83025" min="3" max="3" chance="100" /> <!-- Santiago's Royal Soup - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83677" name="Callax's Common Supply Pack" additionalName="120" type="EtcItem">
+	<item id="83677" name="卡拉克斯一般補給箱" additionalName="120" type="EtcItem">
 		<!-- A supply pack that belonged to Callax's followers. Items to be obtained. Santiago's Royal Soup (6 pcs.). Dye Powder (2 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv1" />
 		<set name="default_action" val="PEEL" />
@@ -1554,7 +1554,7 @@
 			<item id="83025" min="6" max="6" chance="100" /> <!-- Santiago's Royal Soup - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83678" name="Callax's Common Supply Pack" additionalName="125" type="EtcItem">
+	<item id="83678" name="卡拉克斯一般補給箱" additionalName="125" type="EtcItem">
 		<!-- A supply pack that belonged to Callax's followers. Items to be obtained. Santiago's Royal Soup (9 pcs.). Dye Powder (3 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv1" />
 		<set name="default_action" val="PEEL" />
@@ -1572,7 +1572,7 @@
 			<item id="83025" min="9" max="9" chance="100" /> <!-- Santiago's Royal Soup - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83679" name="Callax's Common Supply Pack" additionalName="130" type="EtcItem">
+	<item id="83679" name="卡拉克斯一般補給箱" additionalName="130" type="EtcItem">
 		<!-- A supply pack that belonged to Callax's followers. Items to be obtained. Santiago's Royal Soup (12 pcs.). Dye Powder (4 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv1" />
 		<set name="default_action" val="PEEL" />
@@ -1590,7 +1590,7 @@
 			<item id="83025" min="12" max="12" chance="100" /> <!-- Santiago's Royal Soup - Event -->
 		</capsuled_items>
 	</item>
-	<item id="83680" name="Callax's Large Supply Pack" additionalName="115" type="EtcItem">
+	<item id="83680" name="卡拉克斯高級補給箱" additionalName="115" type="EtcItem">
 		<!-- A large supply pack that belonged to Callax's followers. Approximate contents. Crystal of Determination (10 pcs.). Crystal of Protection (25 pcs.). Crystal of Dawn (1 pc.). Wisdom Crystal (1 pc.). Nevit's Shining Gold Hourglass (1 pc.). Freya's Scroll of Storm (1 pc.). Aether (20 pcs.). Solaris (1 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv2" />
 		<set name="default_action" val="PEEL" />
@@ -1616,7 +1616,7 @@
 			<item id="83363" min="1" max="1" chance="12.5" /> <!-- Wisdom Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="83681" name="Callax's Large Supply Pack" additionalName="120" type="EtcItem">
+	<item id="83681" name="卡拉克斯高級補給箱" additionalName="120" type="EtcItem">
 		<!-- A large supply pack that belonged to Callax's followers. Approximate contents. A-grade Relic Ticket - 1-time (1 pc.). B-grade Relic Ticket - 1-time (1 pc.). C-grade Relic Ticket - 1-time (1 pc.). Relic Summon Coupon - 11-time (1 pc.). Relic Summon Coupon - 1-time (1 pc.). Nevit's Shining Gold Hourglass (1 pc.). Freya's Scroll of Storm (1 pc.). Aether (20 pcs.). Solaris (1 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv2" />
 		<set name="default_action" val="PEEL" />
@@ -1647,7 +1647,7 @@
 			<item id="83363" min="1" max="1" chance="7.692308" /> <!-- Wisdom Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="83682" name="Callax's Large Supply Pack" additionalName="125" type="EtcItem">
+	<item id="83682" name="卡拉克斯高級補給箱" additionalName="125" type="EtcItem">
 		<!-- A large supply pack that belonged to Callax's followers. Approximate contents. Golden Orb (1 pc.). Silvery Shirt (1 pc.). Silvery Circlet (1 pc.). Silvery Brooch (1 pc.). Silvery Bracelet (1 pc.). Silvery Seed Bracelet (1 pc.). Silvery Artifact Book (1 pc.). A-grade Relic Ticket - 1-time (1 pc.). B-grade Relic Ticket - 1-time (1 pc.). C-grade Relic Ticket - 1-time (1 pc.). Nevit's Shining Gold Hourglass (1 pc.). Freya's Scroll of Storm (1 pc.). Aether (20 pcs.). Solaris (1 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv2" />
 		<set name="default_action" val="PEEL" />
@@ -1685,7 +1685,7 @@
 			<item id="82992" min="1" max="1" chance="5" /> <!-- Silvery Artifact Book -->
 		</capsuled_items>
 	</item>
-	<item id="83683" name="Callax's Large Supply Pack" additionalName="130" type="EtcItem">
+	<item id="83683" name="卡拉克斯高級補給箱" additionalName="130" type="EtcItem">
 		<!-- A large supply pack that belonged to Callax's followers. Approximate contents. Golden Orb (1 pc.). Talisman of Glory (1 pc.). Talisman of Radiance (1 pc.). Silvery Shirt (1 pc.). Silvery Circlet (1 pc.). Silvery Brooch (1 pc.). Silvery Bracelet (1 pc.). Silvery Seed Bracelet (1 pc.). Silvery Artifact Book (1 pc.). Nevit's Shining Gold Hourglass (1 pc.). Freya's Scroll of Storm (1 pc.). Aether (20 pcs.). Solaris (1 pc.) -->
 		<set name="icon" val="icon.kalaks_box_lv2" />
 		<set name="default_action" val="PEEL" />
@@ -1725,7 +1725,7 @@
 			<item id="83635" min="1" max="1" chance="4.545455" /> <!-- Talisman of Radiance - Elysia -->
 		</capsuled_items>
 	</item>
-	<item id="83684" name="Enhanced Rune Stone" additionalName="Event" type="EtcItem">
+	<item id="83684" name="高級古文石" additionalName="Event" type="EtcItem">
 		<!-- A stone that contains Einhasad's wisdom. Required for learning some skills for each class. -->
 		<set name="icon" val="icon.skill_acquire_book_a2" />
 		<set name="default_action" val="NONE" />
@@ -1737,7 +1737,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83685" name="Selection Coupon: Forgotten Hero's Stone" additionalName="Event" type="EtcItem">
+	<item id="83685" name="古老英雄的靈石選擇券" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Stone of Dishonor, Stone of Distorted Mind, or Stone of Black Despair (of your choice). -->
 		<set name="icon" val="icon.level_reward_talisman_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -1747,7 +1747,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="83686" name="Forgotten Hero's Stone Pack" additionalName="Event" type="EtcItem">
+	<item id="83686" name="古老英雄的靈石禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Stone of Dishonor, Stone of Distorted Mind, or Stone of Black Despair. -->
 		<set name="icon" val="icon.bm_elmoaden_gold_box" />
 		<set name="default_action" val="PEEL" />
@@ -1767,7 +1767,7 @@
 			<item id="83381" min="1" max="1" chance="33.333333" /> <!-- Stone of Black Despair -->
 		</capsuled_items>
 	</item>
-	<item id="83687" name="Chaos Golem's Core Pack" additionalName="Event" type="EtcItem">
+	<item id="83687" name="渾沌高崙核禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Chaos Golem #17's Core or Chaos Golem #18's Core. -->
 		<set name="icon" val="icon.bm_elmoaden_silver_box" />
 		<set name="default_action" val="PEEL" />
@@ -1786,7 +1786,7 @@
 			<item id="83366" min="1" max="1" chance="50" /> <!-- Chaos Golem #18's Core -->
 		</capsuled_items>
 	</item>
-	<item id="83688" name="Enhanced Artifact - Received Damage When Immobilized" additionalName="Balance" type="Armor">
+	<item id="83688" name="高級聖紋石無法行動時減少被擊傷害" additionalName="Balance" type="Armor">
 		<!-- An enhanced artifact that decreases received damage when immobilized. Can be equipped in a balance artifact slot. Received damage when immobilized -16%. Cannot be upgraded. -->
 		<set name="icon" val="icon.level2_artifact_a1_block_act_dmg" />
 		<set name="default_action" val="EQUIP" />
@@ -1800,7 +1800,7 @@
 			<skill id="35255" level="2" /> <!-- Enhanced Artifact - Received Damage When Immobilized -->
 		</skills>
 	</item>
-	<item id="83689" name="Enhanced Artifact - P. Skill Power" additionalName="Balance" type="Armor">
+	<item id="83689" name="高級聖紋石物理技能威力" additionalName="Balance" type="Armor">
 		<!-- An enhanced artifact that increases P. Skill Power. Can be equipped in a balance artifact slot. P. Skill Power +16%. Cannot be upgraded. -->
 		<set name="icon" val="icon.level2_artifact_a_skill_power" />
 		<set name="default_action" val="EQUIP" />
@@ -1814,7 +1814,7 @@
 			<skill id="35256" level="2" /> <!-- Enhanced Artifact - P. Skill Power -->
 		</skills>
 	</item>
-	<item id="83690" name="Enhanced Artifact - M. Skill Power" additionalName="Balance" type="Armor">
+	<item id="83690" name="高級聖紋石魔法技能威力" additionalName="Balance" type="Armor">
 		<!-- An enhanced artifact that increases M. Skill Power. Can be equipped in a balance artifact slot. M. Skill Power +16%. Cannot be upgraded. -->
 		<set name="icon" val="icon.level2_artifact_a_spell_power" />
 		<set name="default_action" val="EQUIP" />
@@ -1828,7 +1828,7 @@
 			<skill id="36179" level="2" /> <!-- Enhanced Artifact - M. Skill Power -->
 		</skills>
 	</item>
-	<item id="83691" name="Enhanced Artifact - Basic Attack Power" additionalName="Balance" type="Armor">
+	<item id="83691" name="高級聖紋石一般攻擊威力" additionalName="Balance" type="Armor">
 		<!-- An enhanced artifact that increases Basic Attack Power. Can be equipped in a balance artifact slot. Basic Attack Power +16%. Cannot be upgraded. -->
 		<set name="icon" val="icon.level2_artifact_a_normal_att_power" />
 		<set name="default_action" val="EQUIP" />
@@ -1842,7 +1842,7 @@
 			<skill id="36181" level="2" /> <!-- Enhanced Artifact - Basic Attack Power -->
 		</skills>
 	</item>
-	<item id="83692" name="Enhanced Artifact - P./ M. Def." additionalName="Balance" type="Armor">
+	<item id="83692" name="高級聖紋石物理防禦力/魔法防禦力" additionalName="Balance" type="Armor">
 		<!-- An enhanced artifact that increases P./ M. Def. Can be equipped in a balance artifact slot. P./ M. Def. +16%. Cannot be upgraded. -->
 		<set name="icon" val="icon.level2_artifact_a_def_mdef" />
 		<set name="default_action" val="EQUIP" />
@@ -1856,7 +1856,7 @@
 			<skill id="35254" level="2" /> <!-- Enhanced Artifact - P./ M. Def. -->
 		</skills>
 	</item>
-	<item id="83693" name="Gran Kain's Shining Pack" type="EtcItem">
+	<item id="83693" name="閃耀的格蘭肯禮盒" type="EtcItem">
 		<!-- Double-click to obtain Artifact Fragment (1 pc.) and Royal Craft Coupon (1 pc.) with a 100% chance. Also, there is a chance to obtain other useful items. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
@@ -1908,7 +1908,7 @@
 			<item id="82985" min="1" max="1" chance="100" /> <!-- Royal Craft Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="83694" name="Samurai's Special Weapon" additionalName="When triggered" type="Weapon">
+	<item id="83694" name="闇鴉武士專用武器" additionalName="When triggered" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_boss" />
 		<set name="default_action" val="EQUIP" />
@@ -1931,7 +1931,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83695" name="Samurai's Special Weapon" additionalName="Zariche" type="Weapon">
+	<item id="83695" name="闇鴉武士專用武器" additionalName="Zariche" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_devil" />
 		<set name="default_action" val="EQUIP" />
@@ -1954,7 +1954,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83696" name="Teleportation Guide - Training Assistant Tarti" type="EtcItem">
+	<item id="83696" name="移動指南-訓練幫手 塔勒媞" type="EtcItem">
 		<!-- A guidebook with instructions on how to teleport to a quest location. It reads: 'Go to the training zone to complete your mission'. -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="default_action" val="NONE" />
@@ -1967,7 +1967,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="83697" name="Samurai's Special Dragon Weapon - Lv. 1" additionalName="Lindvior" type="Weapon">
+	<item id="83697" name="闇鴉武士專用龍武器-1階段" additionalName="Lindvior" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_wind" />
 		<set name="default_action" val="EQUIP" />
@@ -1990,7 +1990,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83698" name="Samurai's Special Dragon Weapon - Lv. 1" additionalName="Valakas" type="Weapon">
+	<item id="83698" name="闇鴉武士專用龍武器-1階段" additionalName="Valakas" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_fire" />
 		<set name="default_action" val="EQUIP" />
@@ -2013,7 +2013,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="83699" name="Samurai's Special Dragon Weapon - Lv. 1" additionalName="Antharas" type="Weapon">
+	<item id="83699" name="闇鴉武士專用龍武器-1階段" additionalName="Antharas" type="Weapon">
 		<!-- Samurai's Special Weapon -->
 		<set name="icon" val="icon.crow_katana_earth" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13100" name="Recipe: Sealed Arcana Sigil (60%)" type="EtcItem">
+	<item id="13100" name="製作卷軸(封印的祕儀符印60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Arcana Sigil. Requires Create Item Lv. 9. The success rate is 60%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -14,7 +14,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13101" name="Recipe: Sealed Arcana Sigil" type="EtcItem">
+	<item id="13101" name="製作卷軸(封印的祕儀符印100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Arcana Sigil. Requires Create Item Lv. 9. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -28,7 +28,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13102" name="Chaotic Sealed Arcana Sigil" type="EtcItem">
+	<item id="13102" name="渾沌的封印的祕儀符印" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="immediate_effect" val="true" />
@@ -42,7 +42,7 @@
 			<stat type="rShld">20</stat>
 		</stats>
 	</item>
-	<item id="13103" name="Package: My Teleport Book (1 pc.)" type="EtcItem">
+	<item id="13103" name="自由傳送書 1張/組" type="EtcItem">
 		<!-- Double-click to obtain 1 My Teleport Book. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -59,7 +59,7 @@
 			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="13104" name="Package: My Teleport Scroll (30 pcs.)" type="EtcItem">
+	<item id="13104" name="自由傳送卷軸 30張/組" type="EtcItem">
 		<!-- Double-click to obtain 30 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -76,7 +76,7 @@
 			<item id="13016" min="30" max="30" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="13105" name="Package: Extra Pass: Kamaloka (3 pcs.)" type="EtcItem">
+	<item id="13105" name="欲界入場券  3種組" type="EtcItem">
 		<!-- Double-click to obtain Extra Passes: Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -95,7 +95,7 @@
 			<item id="13012" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="13106" name="Package: Feather of Blessing (3 pcs.)" type="EtcItem">
+	<item id="13106" name="祝福的羽毛 3張/組" type="EtcItem">
 		<!-- Double-click to obtain 3 Feathers of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -112,7 +112,7 @@
 			<item id="10649" min="3" max="3" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="13107" name="Package: Agathion Love (30-day)" type="EtcItem">
+	<item id="13107" name="愛心壺精 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Love Charm (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -129,7 +129,7 @@
 			<item id="13023" min="1" max="1" chance="100" /> <!-- Agathion Love - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13108" name="Package: Pumpkin Transformation Stick (30-day)" type="EtcItem">
+	<item id="13108" name="南瓜變身魔杖 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Pumpkin Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -146,7 +146,7 @@
 			<item id="12800" min="1" max="1" chance="100" /> <!-- Pumpkin Transformation Stick - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13109" name="Package: Extra Pass: Kamaloka (3 pcs.)" type="EtcItem">
+	<item id="13109" name="欲界入場券 3種組" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka - Hall of the Abyss (5 pcs.), Rim Kamaloka (5 pcs.), Kamaloka - Labyrinth of the Abyss (5 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -165,7 +165,7 @@
 			<item id="13012" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="13110" name="Package: Kat the Cat Hat (30-day)" type="EtcItem">
+	<item id="13110" name="戰鬥貓帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Kat the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -182,7 +182,7 @@
 			<item id="12782" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13111" name="Package: Feline Queen Hat (30-day)" type="EtcItem">
+	<item id="13111" name="皇后貓帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Feline Queen Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -199,7 +199,7 @@
 			<item id="12783" min="1" max="1" chance="100" /> <!-- Feline Queen Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13112" name="Package: Monster Eye Hat (30-day)" type="EtcItem">
+	<item id="13112" name="眼怪帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Monster Eye Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -216,7 +216,7 @@
 			<item id="12786" min="1" max="1" chance="100" /> <!-- Monster Eye Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13113" name="Package: Brown Bear Hat (30-day)" type="EtcItem">
+	<item id="13113" name="棕熊帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Brown Bear Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -233,7 +233,7 @@
 			<item id="12787" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13114" name="Package: Fungus Hat (30-day)" type="EtcItem">
+	<item id="13114" name="蘑菇帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Fungus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -250,7 +250,7 @@
 			<item id="12788" min="1" max="1" chance="100" /> <!-- Fungus Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13115" name="Package: Skull Hat (30-day)" type="EtcItem">
+	<item id="13115" name="骷髏帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Skull Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -267,7 +267,7 @@
 			<item id="12789" min="1" max="1" chance="100" /> <!-- Skull Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13116" name="Package: Ornithomimus Hat (30-day)" type="EtcItem">
+	<item id="13116" name="似鳥龍帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -284,7 +284,7 @@
 			<item id="12790" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13117" name="Package: Feline King Hat (30-day)" type="EtcItem">
+	<item id="13117" name="國王貓帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Feline King Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -301,7 +301,7 @@
 			<item id="12791" min="1" max="1" chance="100" /> <!-- Feline King Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13118" name="Package: Kai the Cat Hat (30-day)" type="EtcItem">
+	<item id="13118" name="銀色貓帽 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Kai the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -318,7 +318,7 @@
 			<item id="12792" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13119" name="Package: OX Stick (30-day)" type="EtcItem">
+	<item id="13119" name="O/X 魔杖 30日/組" type="EtcItem">
 		<!-- Double-click to obtain OX Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -336,7 +336,7 @@
 			<item id="12794" min="1" max="1" chance="100" /> <!-- X Stick - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13120" name="Package: Rock-Paper-Scissors Stick (30-day)" type="EtcItem">
+	<item id="13120" name="剪刀/石頭/布魔杖 30日/組" type="EtcItem">
 		<!-- Double-click to obtain Rock, Paper and Scissors Sticks (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -355,7 +355,7 @@
 			<item id="12797" min="1" max="1" chance="100" /> <!-- Paper - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13121" name="Package: Darkmane Pacer (7-day)" type="EtcItem">
+	<item id="13121" name="淡紫鬃馬 7日/組" type="EtcItem">
 		<!-- Double-click to obtain Darkmane Pacer Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -372,7 +372,7 @@
 			<item id="13022" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13122" name="Package: Color Title (3 pcs.)" type="EtcItem">
+	<item id="13122" name="彩色稱號 3張/組" type="EtcItem">
 		<!-- Double-click to obtain Color Title (3 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -389,7 +389,7 @@
 			<item id="13021" min="3" max="3" chance="100" /> <!-- Color Title -->
 		</capsuled_items>
 	</item>
-	<item id="13123" name="Package: My Teleport Book" type="EtcItem">
+	<item id="13123" name="自由傳送書組" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Book. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +398,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13124" name="Package: Color Title (1 pc.)" type="EtcItem">
+	<item id="13124" name="彩色稱號 1張/組" type="EtcItem">
 		<!-- Double-click to obtain Color Title (1 pc.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -415,7 +415,7 @@
 			<item id="13021" min="1" max="1" chance="100" /> <!-- Color Title -->
 		</capsuled_items>
 	</item>
-	<item id="13125" name="Package: My Teleport Scroll (10 pcs.)" type="EtcItem">
+	<item id="13125" name="自由傳送卷軸 10張/組" type="EtcItem">
 		<!-- Double-click to obtain 10 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -432,7 +432,7 @@
 			<item id="13016" min="10" max="10" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="13126" name="Game Assistant's Package - Event" type="EtcItem">
+	<item id="13126" name="維他命體驗組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 1 My Teleport Book - Event, 10 My Teleport Scrolls - Event, and 1 Color Title - Event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -451,7 +451,7 @@
 			<item id="13307" min="1" max="1" chance="100" /> <!-- Color Title - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13127" name="Promotional Parcel 2" type="EtcItem">
+	<item id="13127" name="促銷用組2" type="EtcItem">
 		<!-- A wrapped pack. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -463,7 +463,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="13128" name="Phoenix Feather" type="EtcItem">
+	<item id="13128" name="不死鳥之羽" type="EtcItem">
 		<!-- Resurrects you on the spot. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -481,7 +481,7 @@
 			<skill id="2013" level="1" /> <!-- Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="13129" name="Scroll of Escape: Pailaka" type="EtcItem">
+	<item id="13129" name="菲拉卡返回卷軸" type="EtcItem">
 		<!-- Teleports to any village from Pailaka. Can be used only in the Pailaka instance zone. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -502,7 +502,7 @@
 			<skill id="2594" level="1" /> <!-- Scroll of Escape: Pailaka -->
 		</skills>
 	</item>
-	<item id="13130" name="Temple Book of Secrets" type="EtcItem">
+	<item id="13130" name="神殿的祕冊" type="EtcItem">
 		<!-- A book that reveals Hillas' secrets. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -517,7 +517,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="13131" name="Temple Book of Secrets" type="EtcItem">
+	<item id="13131" name="神殿的祕冊" type="EtcItem">
 		<!-- Book containing the secrets of the Spirit's Sword -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -532,7 +532,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="13132" name="Temple Book of Secrets" type="EtcItem">
+	<item id="13132" name="神殿的祕冊" type="EtcItem">
 		<!-- Book containing the secrets of Papion -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -547,7 +547,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="13133" name="Temple Book of Secrets" type="EtcItem">
+	<item id="13133" name="神殿的祕冊" type="EtcItem">
 		<!-- Book containing the secrets of Kinsus -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -562,7 +562,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="13134" name="Temple Book of Secrets" type="EtcItem">
+	<item id="13134" name="神殿的祕冊" type="EtcItem">
 		<!-- Book containing the secrets of the Reinforced Spirit's Sword -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -577,7 +577,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="13135" name="Temple Book of Secrets" type="EtcItem">
+	<item id="13135" name="神殿的祕冊" type="EtcItem">
 		<!-- Book containing the secrets of Gargos -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -592,7 +592,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="13136" name="Temple Book of Secrets" type="EtcItem">
+	<item id="13136" name="神殿的祕冊" type="EtcItem">
 		<!-- Book containing the secrets of Adiantum -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -607,7 +607,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="13137" name="Vesper Helmet" type="Armor">
+	<item id="13137" name="薄暮頭盔" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -624,7 +624,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13138" name="Vesper Leather Helmet" type="Armor">
+	<item id="13138" name="薄暮皮頭盔" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -641,7 +641,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13139" name="Vesper Circlet" type="Armor">
+	<item id="13139" name="薄暮頭箍" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -658,7 +658,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13140" name="Vesper Noble Helmet" type="Armor">
+	<item id="13140" name="薄暮貴族頭盔" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -675,7 +675,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13141" name="Vesper Noble Leather Helmet" type="Armor">
+	<item id="13141" name="薄暮貴族皮頭盔" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -692,7 +692,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13142" name="Vesper Noble Circlet" type="Armor">
+	<item id="13142" name="薄暮貴族頭箍" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -709,7 +709,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13143" name="Sealed Vesper Helmet" type="Armor">
+	<item id="13143" name="封印的薄暮頭盔" type="Armor">
 		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -727,7 +727,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13144" name="Sealed Vesper Leather Helmet" type="Armor">
+	<item id="13144" name="封印的薄暮皮頭盔" type="Armor">
 		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -745,7 +745,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13145" name="Sealed Vesper Circlet" type="Armor">
+	<item id="13145" name="封印的薄暮頭箍" type="Armor">
 		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -763,7 +763,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13146" name="Sealed Vesper Noble Helmet" type="Armor">
+	<item id="13146" name="封印的薄暮貴族頭盔" type="Armor">
 		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -781,7 +781,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13147" name="Sealed Vesper Noble Leather Helmet" type="Armor">
+	<item id="13147" name="封印的薄暮貴族皮頭盔" type="Armor">
 		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -799,7 +799,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13148" name="Sealed Vesper Noble Circlet" type="Armor">
+	<item id="13148" name="封印的薄暮貴族頭箍" type="Armor">
 		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -817,7 +817,7 @@
 			<stat type="pDef">101</stat>
 		</stats>
 	</item>
-	<item id="13149" name="Pailaka Final Key" type="EtcItem">
+	<item id="13149" name="菲拉卡最終鑰匙" type="EtcItem">
 		<!-- A key that opens the secret of Pailaka. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="true" />
@@ -831,7 +831,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="13150" name="Pailaka All-purpose Key" type="EtcItem">
+	<item id="13150" name="菲拉卡萬能鑰匙" type="EtcItem">
 		<!-- Key that opens all the doors on Pailaka Devil's Isle. Once used, it will turn to dust and disappear. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -851,7 +851,7 @@
 			<skill id="2607" level="1" /> <!-- Pailaka's Door Key -->
 		</skills>
 	</item>
-	<item id="13151" name="Pailaka Vitality Replenishing Potion (100%)" type="EtcItem">
+	<item id="13151" name="菲拉卡活力充能藥水(100%)" type="EtcItem">
 		<!-- Pailaka's reward. Recovers a certain amount of Vitality. Cooldown: 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -874,7 +874,7 @@
 			<skill id="2586" level="2" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="13152" name="Pailaka Vitality Replenishing Potion (50%)" type="EtcItem">
+	<item id="13152" name="菲拉卡活力充能藥水(50%)" type="EtcItem">
 		<!-- Pailaka's reward. Recovers a certain amount of Vitality. Cooldown: 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -897,7 +897,7 @@
 			<skill id="2586" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="13153" name="PA - Great Spear" additionalName="PA" type="Weapon">
+	<item id="13153" name="活動用-長矛" additionalName="PA" type="Weapon">
 		<!-- Great Spear, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -928,7 +928,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="13154" name="PA - Falchion" additionalName="PA" type="Weapon">
+	<item id="13154" name="活動用-彎刃大刀" additionalName="PA" type="Weapon">
 		<!-- Falchion, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -954,7 +954,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13155" name="PA - Iron Hammer" additionalName="PA" type="Weapon">
+	<item id="13155" name="活動用-鋼鎚" additionalName="PA" type="Weapon">
 		<!-- Iron Hammer, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -981,7 +981,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13156" name="PA - Voodoo Doll" additionalName="PA" type="Weapon">
+	<item id="13156" name="活動用-巫毒人偶" additionalName="PA" type="Weapon">
 		<!-- Voodoo Doll, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1008,7 +1008,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13157" name="PA - Flanged Mace" additionalName="PA" type="Weapon">
+	<item id="13157" name="活動用-魔鎚" additionalName="PA" type="Weapon">
 		<!-- Flanged Mace, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1035,7 +1035,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13158" name="PA - Mage Staff" additionalName="PA" type="Weapon">
+	<item id="13158" name="活動用-法師魔杖" additionalName="PA" type="Weapon">
 		<!-- Mage Staff, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1063,7 +1063,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13159" name="PA - Sword Breaker" additionalName="PA" type="Weapon">
+	<item id="13159" name="活動用-碎劍者" additionalName="PA" type="Weapon">
 		<!-- Sword Breaker, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1090,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13160" name="PA - Viper Fang" additionalName="PA" type="Weapon">
+	<item id="13160" name="活動用-毒蛇之牙" additionalName="PA" type="Weapon">
 		<!-- Viper Fang, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1117,7 +1117,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13161" name="PA - Compound Bow" additionalName="PA" type="Weapon">
+	<item id="13161" name="活動用-合金弓" additionalName="PA" type="Weapon">
 		<!-- Compound Bow, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1146,7 +1146,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13162" name="PA - Crucifix of Blessing" additionalName="PA" type="Weapon">
+	<item id="13162" name="活動用-祝福的十字架" additionalName="PA" type="Weapon">
 		<!-- Crucifix of Blessing, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_crucifix_of_blessing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1173,7 +1173,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13163" name="PA - Bastard Sword*Crimson Sword" additionalName="PA" type="Weapon">
+	<item id="13163" name="活動用-重劍*緋紅劍" additionalName="PA" type="Weapon">
 		<!-- Bastard Sword*Crimson Sword, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1201,7 +1201,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13164" name="PA - Claymore" additionalName="PA" type="Weapon">
+	<item id="13164" name="活動用-雙刃大砍刀" additionalName="PA" type="Weapon">
 		<!-- Claymore, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1229,7 +1229,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13165" name="PA - Bonebreaker" additionalName="PA" type="Weapon">
+	<item id="13165" name="活動用-碎骨者" additionalName="PA" type="Weapon">
 		<!-- Bonebreaker, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1258,7 +1258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13166" name="PA - Atuba Hammer" additionalName="PA" type="Weapon">
+	<item id="13166" name="活動用-阿吐巴鎚" additionalName="PA" type="Weapon">
 		<!-- Atuba Hammer, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1288,7 +1288,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13167" name="PA - Ghost Staff" additionalName="PA" type="Weapon">
+	<item id="13167" name="活動用-魂靈魔杖" additionalName="PA" type="Weapon">
 		<!-- Ghost Staff, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1318,7 +1318,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13168" name="PA - Staff of Life" additionalName="PA" type="Weapon">
+	<item id="13168" name="活動用-生命手杖" additionalName="PA" type="Weapon">
 		<!-- Staff of Life, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1348,7 +1348,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13169" name="PA - Atuba Mace" additionalName="PA" type="Weapon">
+	<item id="13169" name="活動用-阿吐巴釘鎚" additionalName="PA" type="Weapon">
 		<!-- Atuba Mace, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1378,7 +1378,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13170" name="PA - Mithril Dagger" additionalName="PA" type="Weapon">
+	<item id="13170" name="活動用-米索莉匕首" additionalName="PA" type="Weapon">
 		<!-- Mithril Dagger, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1407,7 +1407,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13171" name="PA - Scallop Jamadhr" additionalName="PA" type="Weapon">
+	<item id="13171" name="活動用-波浪刀" additionalName="PA" type="Weapon">
 		<!-- Scallop Jamadhr, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1436,7 +1436,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13172" name="PA - Light Bow" additionalName="PA" type="Weapon">
+	<item id="13172" name="活動用-風暴弓" additionalName="PA" type="Weapon">
 		<!-- Light Bow, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1467,7 +1467,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13173" name="PA - Glaive" additionalName="PA" type="Weapon">
+	<item id="13173" name="活動用-闊矛" additionalName="PA" type="Weapon">
 		<!-- Glaive, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1500,7 +1500,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="13174" name="PA - Elven Long Sword" additionalName="PA" type="Weapon">
+	<item id="13174" name="活動用-精靈長劍" additionalName="PA" type="Weapon">
 		<!-- Elven Long Sword, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1528,7 +1528,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13175" name="PA - Grand Épée" additionalName="PA" type="Weapon">
+	<item id="13175" name="活動用-巨銳劍" additionalName="PA" type="Weapon">
 		<!-- Grand Épée, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1563,7 +1563,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="13176" name="PA - General's Katzbalger" additionalName="PA" type="Weapon">
+	<item id="13176" name="活動用-將軍格鬥劍" additionalName="PA" type="Weapon">
 		<!-- General's Katzbalger, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1595,7 +1595,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13177" name="PA - Cranequin" additionalName="PA" type="Weapon">
+	<item id="13177" name="活動用-齒輪弩" additionalName="PA" type="Weapon">
 		<!-- Cranequin, upgrade options are limited. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1628,7 +1628,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="13178" name="PA - Samurai Long Sword" additionalName="PA" type="Weapon">
+	<item id="13178" name="活動用-瑟魯基長劍" additionalName="PA" type="Weapon">
 		<!-- Samurai Long Sword, upgrade options are limited. <Special properties>. P. Critical Rate +73. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1660,7 +1660,7 @@
 			<skill id="3010" level="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="13179" name="PA - Deadman's Staff" additionalName="PA" type="Weapon">
+	<item id="13179" name="活動用-亡者魔杖" additionalName="PA" type="Weapon">
 		<!-- Deadman's Staff, upgrade options are limited. <Special properties>. With a 30% chance, applies Regeneration on the target when using a buff. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1694,7 +1694,7 @@
 			<skill id="1044" level="2" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
 		</skills>
 	</item>
-	<item id="13180" name="PA - Ghoul's Staff" additionalName="PA" type="Weapon">
+	<item id="13180" name="活動用-食屍鬼魔杖" additionalName="PA" type="Weapon">
 		<!-- Ghoul's Staff, upgrade options are limited. <Special properties>. Max MP +30%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1728,7 +1728,7 @@
 			<skill id="3014" level="1" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="13181" name="PA - Demon's Staff" additionalName="PA" type="Weapon">
+	<item id="13181" name="活動用-惡魔魔杖" additionalName="PA" type="Weapon">
 		<!-- Demon's Staff, upgrade options are limited. <Special properties>. With a 7% chance, uses Curse of Weakness on applying a debuff on the target. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1762,7 +1762,7 @@
 			<skill id="1164" level="10" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse of Weakness -->
 		</skills>
 	</item>
-	<item id="13182" name="PA - Crystal Dagger" additionalName="PA" type="Weapon">
+	<item id="13182" name="活動用-水晶匕首" additionalName="PA" type="Weapon">
 		<!-- Crystal Dagger, upgrade options are limited. <Special properties>. P. Atk. +140 on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1795,7 +1795,7 @@
 			<skill id="3043" level="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="13183" name="PA - Great Pata" additionalName="PA" type="Weapon">
+	<item id="13183" name="活動用-巨型帕塔拳刃" additionalName="PA" type="Weapon">
 		<!-- Great Pata, upgrade options are limited. <Special properties>. Atk. Spd. +11% if HP is lower than 60%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1828,7 +1828,7 @@
 			<skill id="3034" level="4" /> <!-- Special Property: Rsk. Haste -->
 		</skills>
 	</item>
-	<item id="13184" name="PA - Eminence Bow" additionalName="PA" type="Weapon">
+	<item id="13184" name="活動用-卓越弓" additionalName="PA" type="Weapon">
 		<!-- Eminence Bow, upgrade options are limited. <Special properties>. With a 42% chance, decreases MP Consumption to 1 on a basic attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1861,7 +1861,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13185" name="PA - Orcish Poleaxe" additionalName="PA" type="Weapon">
+	<item id="13185" name="活動用-歐西斯戰斧" additionalName="PA" type="Weapon">
 		<!-- Orcish Poleaxe, upgrade options are limited. <Special properties>. Widens attack angle. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1894,7 +1894,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="13186" name="PA - Yaksa Mace" additionalName="PA" type="Weapon">
+	<item id="13186" name="活動用-夜叉釘鎚" additionalName="PA" type="Weapon">
 		<!-- Yaksa Mace, upgrade options are limited. <Special properties>. Max HP +25%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1927,7 +1927,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="13187" name="PA - Shamshir*Shamshir" additionalName="PA" type="Weapon">
+	<item id="13187" name="活動用-彎刀*彎刀" additionalName="PA" type="Weapon">
 		<!-- Shamshir*Shamshir, upgrade options are limited. When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, P. Accuracy +2. Cannot be crystallized or enhanced with additional features. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1959,7 +1959,7 @@
 			<skill id="3046" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="13188" name="PA - Admiral's Estoc" additionalName="PA" type="Weapon">
+	<item id="13188" name="活動用-上將刺劍" additionalName="PA" type="Weapon">
 		<!-- Admiral's Estoc, upgrade options are limited. <Special properties>. Atk. Spd. +7%. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1996,7 +1996,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="13189" name="PA - Saber Tooth" additionalName="PA" type="Weapon">
+	<item id="13189" name="活動用-劍齒虎" additionalName="PA" type="Weapon">
 		<!-- Saber Tooth, upgrade options are limited. <Special properties>. P. Critical Rate +73. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2032,7 +2032,7 @@
 			<skill id="3010" level="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="13190" name="PA - Sharpshooter" additionalName="PA" type="Weapon">
+	<item id="13190" name="活動用-滅形弩" additionalName="PA" type="Weapon">
 		<!-- Sharpshooter, upgrade options are limited. <Special properties>. P. Accuracy +4. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2069,7 +2069,7 @@
 			<skill id="3008" level="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="13191" name="PA - Ecliptic Sword" additionalName="PA" type="Weapon">
+	<item id="13191" name="活動用-日蝕劍" additionalName="PA" type="Weapon">
 		<!-- Ecliptic Sword, upgrade options are limited. <Special properties>. M. Atk. +26. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2102,7 +2102,7 @@
 			<skill id="3076" level="4" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="13192" name="PA - Ecliptic Axe" additionalName="PA" type="Weapon">
+	<item id="13192" name="活動用-月蝕斧" additionalName="PA" type="Weapon">
 		<!-- Ecliptic Axe, upgrade options are limited. <Special properties>. With a 10% chance, uses Dryad Root when applying a debuff on the target. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2136,7 +2136,7 @@
 			<skill id="1201" level="23" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="13193" name="PA - Dwarven Hammer" additionalName="PA" type="Weapon">
+	<item id="13193" name="活動用-矮人巨鎚" additionalName="PA" type="Weapon">
 		<!-- Dwarven Hammer, upgrade options are limited. <Special properties>. With a 42% chance, inflicts Bleed on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2169,7 +2169,7 @@
 			<skill id="3021" level="4" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Bleed -->
 		</skills>
 	</item>
-	<item id="13194" name="PA - Damascus Sword" additionalName="PA" type="Weapon">
+	<item id="13194" name="活動用-大馬士革刀" additionalName="PA" type="Weapon">
 		<!-- Damascus Sword, upgrade options are limited. <Special properties>. P. Critical Rate +64. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2201,7 +2201,7 @@
 			<skill id="3010" level="6" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="13195" name="PA - Lance" additionalName="PA" type="Weapon">
+	<item id="13195" name="活動用-長槍" additionalName="PA" type="Weapon">
 		<!-- Lance, upgrade options are limited. <Special properties>. With a 25% chance, stuns the target on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2235,7 +2235,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="13196" name="PA - Deadman's Glory" additionalName="PA" type="Weapon">
+	<item id="13196" name="活動用-亡者榮譽" additionalName="PA" type="Weapon">
 		<!-- Deadman's Glory, upgrade options are limited. <Special properties>. Atk. Spd. +6%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2268,7 +2268,7 @@
 			<skill id="3036" level="6" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="13197" name="PA - Art of Battle Axe" additionalName="PA" type="Weapon">
+	<item id="13197" name="活動用-工藝戰斧" additionalName="PA" type="Weapon">
 		<!-- Battle Art Axe, upgrade options are limited. <Special properties>. Max HP +25%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2301,7 +2301,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="13198" name="PA - Staff of Evil Spirits" additionalName="PA" type="Weapon">
+	<item id="13198" name="活動用-邪靈魔杖" additionalName="PA" type="Weapon">
 		<!-- Staff of Evil Spirits, upgrade options are limited. <Special properties>. With a 20% chance, uses Blessed Body when applying a buff on the target. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2335,7 +2335,7 @@
 			<skill id="1045" level="5" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Blessed Body -->
 		</skills>
 	</item>
-	<item id="13199" name="PA - Demon's Dagger" additionalName="PA" type="Weapon">
+	<item id="13199" name="活動用-惡魔短劍" additionalName="PA" type="Weapon">
 		<!-- Demon's Dagger, upgrade options are limited. <Special properties>. P. Atk. +160 on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />

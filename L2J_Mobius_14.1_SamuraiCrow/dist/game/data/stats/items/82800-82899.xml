@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="82800" name="Eva's Soul Crystal - Lv. 5" additionalName="Accessories" type="EtcItem">
+	<item id="82800" name="伊娃搜魂石-5階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Eva's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_eva" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -12,7 +12,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82801" name="Eva's Soul Crystal - Lv. 6" additionalName="Accessories" type="EtcItem">
+	<item id="82801" name="伊娃搜魂石-6階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Eva's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_eva" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -24,7 +24,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82802" name="Eva's Soul Crystal - Lv. 7" additionalName="Accessories" type="EtcItem">
+	<item id="82802" name="伊娃搜魂石-7階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Eva's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_eva" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -36,7 +36,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82803" name="Eva's Soul Crystal - Lv. 8" additionalName="Accessories" type="EtcItem">
+	<item id="82803" name="伊娃搜魂石-8階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Eva's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_eva" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -48,7 +48,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82804" name="Eva's Soul Crystal - Lv. 9" additionalName="Accessories" type="EtcItem">
+	<item id="82804" name="伊娃搜魂石-9階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Eva's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compound with Light's Soul. -->
 		<set name="icon" val="icon.ensoul_stone_eva" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -60,7 +60,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82805" name="Eva's Soul Crystal - Lv. 10" additionalName="Accessories" type="EtcItem">
+	<item id="82805" name="伊娃搜魂石-10階段" additionalName="Accessories" type="EtcItem">
 		<!-- A special crystal that contains Eva's soul. Adds a special effect to accessories. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
 		<set name="icon" val="icon.ensoul_stone_eva" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -72,7 +72,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82806" name="Mysterious Treasure Chest" additionalName="Event" type="EtcItem">
+	<item id="82806" name="謎樣的寶箱" additionalName="Event" type="EtcItem">
 		<!-- A reward for those who have managed to find Mimic. Double-click to obtain valuable items. -->
 		<set name="icon" val="icon.ev_2023_mimic_box" />
 		<set name="default_action" val="PEEL" />
@@ -113,7 +113,7 @@
 			<item id="82807" min="1" max="1" chance="4.166667" /> <!-- Mysterious Artifact - Balance -->
 		</capsuled_items>
 	</item>
-	<item id="82807" name="Mysterious Artifact" additionalName="Balance" type="Armor">
+	<item id="82807" name="謎樣的聖紋石" additionalName="Balance" type="Armor">
 		<!-- An artifact full of mysterious power. Can be equipped in a balance artifact slot. Damage +7%, acquired XP/ SP +10%, received damage -7%. Cannot be upgraded. -->
 		<set name="icon" val="icon.ev_artifact_a1" />
 		<set name="default_action" val="EQUIP" />
@@ -127,7 +127,7 @@
 			<skill id="36545" level="1" /> <!-- Mysterious Artifact -->
 		</skills>
 	</item>
-	<item id="82808" name="Dark Leviathan Shield" type="Armor">
+	<item id="82808" name="黑暗利維坦盾" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Received PvP damage -5%. Additionally increases Shield Defense. Enhancement effect: Atk. Spd. +5%, P. Atk. +3%, P./ M. Def. +3%. -->
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -157,7 +157,7 @@
 			<skill id="35294" level="1" /> <!-- Enhancement Effect: Leviathan Shield -->
 		</skills>
 	</item>
-	<item id="82809" name="Dark Leviathan Sigil" type="Armor">
+	<item id="82809" name="黑暗利維坦符印" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Received PvP damage -5%. Enhancement effect: Atk. Spd./ Casting Spd. +5%, P. Atk. +2%, M. Skill Power +2%. -->
 		<set name="icon" val="icon.weapon_r110_sigil" />
 		<set name="default_action" val="EQUIP" />
@@ -184,7 +184,7 @@
 			<skill id="35295" level="1" /> <!-- Enhancement Effect: Leviathan Sigil -->
 		</skills>
 	</item>
-	<item id="82810" name="Bloody Leviathan Shield" type="Armor">
+	<item id="82810" name="血腥利維坦盾" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Received PvE damage -5%. Additionally increases Shield Defense. Enhancement effect: Atk. Spd. +5%, P. Atk. +3%, P./ M. Def. +3%. -->
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -214,7 +214,7 @@
 			<skill id="35294" level="1" /> <!-- Enhancement Effect: Leviathan Shield -->
 		</skills>
 	</item>
-	<item id="82811" name="Bloody Leviathan Sigil" type="Armor">
+	<item id="82811" name="血腥利維坦符印" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Received PvE damage -5%. Enhancement effect: Atk. Spd./ Casting Spd. +5%, P. Atk. +2%, M. Skill Power +2%. -->
 		<set name="icon" val="icon.weapon_r110_sigil" />
 		<set name="default_action" val="EQUIP" />
@@ -241,7 +241,7 @@
 			<skill id="35295" level="1" /> <!-- Enhancement Effect: Leviathan Sigil -->
 		</skills>
 	</item>
-	<item id="82812" name="Supreme Leviathan Shield" type="Armor">
+	<item id="82812" name="限定利維坦盾" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Received PvP/ PvE damage -5%. Additionally, increases Shield Defense. Enhancement effect: Atk. Spd. +5%, P. Atk. +3%, P./ M. Def. +3%. -->
 		<set name="icon" val="icon.weapon_R110_heavy_shield_blessed" />
 		<set name="default_action" val="EQUIP" />
@@ -272,7 +272,7 @@
 			<skill id="35294" level="1" /> <!-- Enhancement Effect: Leviathan Shield -->
 		</skills>
 	</item>
-	<item id="82813" name="Supreme Leviathan Sigil" type="Armor">
+	<item id="82813" name="限定利維坦符印" type="Armor">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Received PvP/ PvE damage -5%. Enhancement effect: Atk. Spd./ Casting Spd. +5%, P. Atk. +2%, M. Skill Power +2%. -->
 		<set name="icon" val="icon.weapon_R110_robe_sigil_blessed" />
 		<set name="default_action" val="EQUIP" />
@@ -300,7 +300,7 @@
 			<skill id="35295" level="1" /> <!-- Enhancement Effect: Leviathan Sigil -->
 		</skills>
 	</item>
-	<item id="82814" name="Dragon Weapon Pack (Lv. 3)" type="EtcItem">
+	<item id="82814" name="龍戰爪禮盒(3階段)" type="EtcItem">
 		<!-- Double-click to obtain one Antharas/ Valakas/ Lindvior/ Fafurion weapon of Lv. 3. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="PEEL" />
@@ -345,7 +345,7 @@
 			<item id="80089" min="1" max="1" chance="3.333333" /> <!-- Fafurion Dual Swords - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="82815" name="Memory of Spring" additionalName="Event" type="EtcItem">
+	<item id="82815" name="春之記憶" additionalName="Event" type="EtcItem">
 		<!-- A fresh wind blows. First you feel a winter chill, but second after second the wind changes becoming warmer and warmer. Its gentle touch is full of spring promises of sun beams and marvelous blossom. You can hear trees, weary of snow and dreaming of warmth and light, they are swinging their branches slightly and murmuring happily. Ah, welcome Spring! We're waiting for you so long. Double-click to obtain various items. (We wish you luck that lasts for whole your life. Lineage 2) -->
 		<set name="icon" val="icon.ev_2023_whiteday_box" />
 		<set name="default_action" val="PEEL" />
@@ -392,7 +392,7 @@
 			<item id="80335" min="1" max="1" minEnchant="3" maxEnchant="3" chance="3.125" /> <!-- Dragon's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="82816" name="Sweet and Sour Candy" additionalName="Event" type="EtcItem">
+	<item id="82816" name="酸甜棒棒糖" additionalName="Event" type="EtcItem">
 		<!-- Sweets prepared by Spring's Messenger Coco Breeze for men. Full of mysterious energy. Double-click to experience sweet-and-sour memories of spring. Applies a spring buff on all party members. The effect becomes stronger if another party member has Sweet Candy. -->
 		<set name="icon" val="icon.ev_2023_whiteday_boy_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -407,7 +407,7 @@
 			<skill id="39836" level="1" /> <!-- My Heart Skips a Beat Because of Your Sweet Smile -->
 		</skills>
 	</item>
-	<item id="82817" name="Sweet Candy" additionalName="Event" type="EtcItem">
+	<item id="82817" name="香甜棒棒糖" additionalName="Event" type="EtcItem">
 		<!-- Sweets prepared by Spring's Messenger Coco Breeze for women. Full of mysterious energy. Double-click to experience sweet memories of spring. Applies a spring buff on all party members. The effect becomes stronger if another party member has Sweet and Sour Candy. -->
 		<set name="icon" val="icon.ev_2023_whiteday_girl_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -422,7 +422,7 @@
 			<skill id="39837" level="1" /> <!-- My Tender Love Swept Away Like Flower Petals -->
 		</skills>
 	</item>
-	<item id="82818" name="Sweet and Sour and Bitter Herbs" additionalName="Event" type="EtcItem">
+	<item id="82818" name="酸甜的成長藥草" additionalName="Event" type="EtcItem">
 		<!-- A herb drink for party growth. Strange to the taste. -->
 		<set name="icon" val="BranchSys2.icon.etc_vampiric_rage_herb_i01" />
 		<set name="immediate_effect" val="true" />
@@ -431,7 +431,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82819" name="La Vie En Rose's Jewel Pack" type="EtcItem">
+	<item id="82819" name="拉菲安洛茲的寶石禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
@@ -476,7 +476,7 @@
 			<item id="81444" min="1" max="1" chance="3.333333" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="82820" name="Craft Coupon: La Vie En Rose's Jewel" type="EtcItem">
+	<item id="82820" name="拉菲安洛茲寶石製作券" type="EtcItem">
 		<!-- Double-click to obtain Greater Jewels Lv. 5 through the craft. -->
 		<set name="icon" val="icon.ev_2021_thanksgiving_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -485,7 +485,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="82821" name="Trinity Shaper" type="Weapon">
+	<item id="82821" name="三位一體鉋刀" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +20%, P. Skill Critical Damage +5%, P. Accuracy +4, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. P. Skill Critical Damage +2%, Max HP/ MP/ CP +2%, P. Accuracy +2, damage +2% -->
 		<set name="icon" val="icon.weapon_L_dagger" />
 		<set name="default_action" val="EQUIP" />
@@ -523,7 +523,7 @@
 			<skill id="36585" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Shaper Special Buff -->
 		</skills>
 	</item>
-	<item id="82822" name="Trinity Cutter" type="Weapon">
+	<item id="82822" name="三位一體切刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, P. Skill Critical Damage +3%, P. Skill Critical Rate +3%, P. Def. +5%, P. Accuracy +4, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. P. Skill Critical Damage +2%, P. Skill Critical Rate +2%, P. Def. +2%, P. Accuracy +2, damage +2% -->
 		<set name="icon" val="icon.weapon_L_onehand_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -560,7 +560,7 @@
 			<skill id="36586" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Cutter Special Buff -->
 		</skills>
 	</item>
-	<item id="82823" name="Trinity Slasher" type="Weapon">
+	<item id="82823" name="三位一體殺刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, P./ M. Skill Critical Damage +3%, P./ M. Atk. +8%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. P./ M. Skill Critical Damage +2%, P./ M. Atk. +2%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 			<skill id="36587" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Cutter Slasher Buff -->
 		</skills>
 	</item>
-	<item id="82824" name="Trinity Avenger" type="Weapon">
+	<item id="82824" name="三位一體復仇者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +20%, P. Skill Critical Damage +3%, P. Accuracy +4, P./ M. Skill Power +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. P. Skill Critical Damage +2%, Max HP/ MP/ CP +2%, P. Accuracy +2, P./ M. Skill Power +2%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_onehand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -634,7 +634,7 @@
 			<skill id="36588" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Avenger Special Buff -->
 		</skills>
 	</item>
-	<item id="82825" name="Trinity Fighter" type="Weapon">
+	<item id="82825" name="三位一體戰爪" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, Critical Damage for basic attacks +5%, Attribute Attack +50, P. Atk. +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. Critical Damage for basic attacks +2%, P. Atk. +4%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_fist" />
 		<set name="default_action" val="EQUIP" />
@@ -672,7 +672,7 @@
 			<skill id="36589" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Fighter Special Buff -->
 		</skills>
 	</item>
-	<item id="82826" name="Trinity Stormer" type="Weapon">
+	<item id="82826" name="三位一體風暴者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, Critical Damage for basic attacks +3%, P. Atk. +2%, number of targets hit on attack +4, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50 -->
 		<set name="icon" val="icon.weapon_L_spear" />
 		<set name="default_action" val="EQUIP" />
@@ -711,7 +711,7 @@
 			<skill id="36590" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Stormer Special Buff -->
 		</skills>
 	</item>
-	<item id="82827" name="Trinity Thrower" type="Weapon">
+	<item id="82827" name="三位一體投弓" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, Critical Damage for basic attacks and P./ M. skills +3%, P./ M. Atk. +2%, Atk. Spd./ Casting Spd. +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. Critical Damage for basic attacks and P./ M. skills +2%, P./ M. Atk. +2%, Atk. Spd./ Casting Spd. +2%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_bow" />
 		<set name="default_action" val="EQUIP" />
@@ -750,7 +750,7 @@
 			<skill id="36591" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Thrower Special Buff -->
 		</skills>
 	</item>
-	<item id="82828" name="Trinity Guardian" type="Weapon">
+	<item id="82828" name="三位一體射靈" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, P. Skill Critical Damage +3%, P. Skill Power +5%, P. Atk. +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. P. Skill Critical Damage +2%, P. Skill Power +2%, P. Atk. +4%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_crossbow" />
 		<set name="default_action" val="EQUIP" />
@@ -789,7 +789,7 @@
 			<skill id="36592" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Guardian Special Buff -->
 		</skills>
 	</item>
-	<item id="82829" name="Trinity Buster" type="Weapon">
+	<item id="82829" name="三位一體爆刃" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, M. Skill Critical Damage +3%, P. Def. +5%, M. Accuracy +4, M. Skill Power +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. M. Skill Critical Damage +2%, P. Def. +2%, M. Accuracy +2, M. Skill Power +2%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_onehand_magic_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -827,7 +827,7 @@
 			<skill id="36593" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Buster Special Buff -->
 		</skills>
 	</item>
-	<item id="82830" name="Trinity Caster" type="Weapon">
+	<item id="82830" name="三位一體術杖" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +20%, M. Skill Critical Damage +3%, M. Accuracy +4, Casting Spd. +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. M. Skill Critical Damage +2%, Max HP/ MP/ CP +2%, M. Accuracy +2, Casting Spd. +2%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -866,7 +866,7 @@
 			<skill id="36594" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Caster Special Buff -->
 		</skills>
 	</item>
-	<item id="82831" name="Trinity Retributer" type="Weapon">
+	<item id="82831" name="三位一體報恨者" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +20%, Critical Damage for basic attacks and P./ M. skills +3%, M. Atk. +3%, M. Critical Damage +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. Critical Damage for basic attacks and P./ M. skills +2%, Max HP/ MP/ CP +2%, M. Atk. +2%, M. Critical Damage +2%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -905,7 +905,7 @@
 			<skill id="36595" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Retributer Special Buff -->
 		</skills>
 	</item>
-	<item id="82832" name="Trinity Dual Swords" type="Weapon">
+	<item id="82832" name="三位一體雙刀" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, P. Skill Critical Damage +3%, P. Skill Power +5%, P. Atk. +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. P. Skill Critical Damage +2%, P. Skill Power +2%, P. Atk. +4%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_dual_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -942,7 +942,7 @@
 			<skill id="36596" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Dual Sword Special Buff -->
 		</skills>
 	</item>
-	<item id="82833" name="Trinity Dual Daggers" type="Weapon">
+	<item id="82833" name="三位一體雙匕首" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP/ MP/ CP +13%, P. Skill Critical Damage +3%, Critical Damage for basic attacks +3%, P. Atk. +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50, Vampiric Rage +2%. <font color=ff6666><Additional effects starting from +4></font>. P. Skill Critical Damage +2%, Critical Damage for basic attacks +2%, P. Atk. +4%, damage +2%, Vampiric Rage +4% -->
 		<set name="icon" val="icon.weapon_L_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
@@ -980,7 +980,7 @@
 			<skill id="36597" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Dual Dagger Special Buff -->
 		</skills>
 	</item>
-	<item id="82834" name="Trinity Dual Blunt Weapons" type="Weapon">
+	<item id="82834" name="三位一體雙鈍器" type="Weapon">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented, and imbued with an attribute. <font color=ff6666><Additional effects when equipped></font>. PvP/ PvE damage +18%, Max HP +17%, Max MP/ CP +13%, P. Skill Critical Damage +3%, skill cooldown -3%. P. Atk. +2%, damage +3%, Soulshot/ Spiritshot damage +40%, Perfection trigger rate +50. <font color=ff6666><Additional effects starting from +4></font>. P. Skill Critical Damage +2%, skill cooldown -5%. P. Atk. +4%, Max HP +2%, damage +2% -->
 		<set name="icon" val="icon.weapon_L_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1018,7 +1018,7 @@
 			<skill id="36598" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Dual Blunt Weapon Special Buff -->
 		</skills>
 	</item>
-	<item id="82835" name="Supremacy Helmet" additionalName="Heavy armor" type="Armor">
+	<item id="82835" name="尊貴頭盔" additionalName="Heavy armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -4%. P./ M. Evasion +18, all attack power +3%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. All attack power +2% -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1045,7 +1045,7 @@
 			<skill id="36599" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Helmet Special Buff -->
 		</skills>
 	</item>
-	<item id="82836" name="Supremacy Breastplate" additionalName="Heavy armor" type="Armor">
+	<item id="82836" name="尊貴胸甲" additionalName="Heavy armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -9%. All received Critical Damage -5%. Weapon P. Atk. +152, Weapon M. Atk. +102, P./ M. Def. +3%, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. P./ M. Def. +2% -->
 		<set name="icon" val="icon.armor_L_heavy_upbody" />
 		<set name="default_action" val="EQUIP" />
@@ -1073,7 +1073,7 @@
 			<skill id="36600" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Upper Armor Special Buff -->
 		</skills>
 	</item>
-	<item id="82837" name="Supremacy Gaiters" additionalName="Heavy armor" type="Armor">
+	<item id="82837" name="尊貴脛甲" additionalName="Heavy armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -6%. Critical Rate for basic attacks +3%, M. Skill Critical Rate +3%, Attribute Attack +50, Attribute Resistance +50, P. Debuff Resistance +5, M. Debuff Resistance +5, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. Attribute Attack +30, Attribute Resistance +30 -->
 		<set name="icon" val="icon.armor_L_heavy_downbody" />
 		<set name="default_action" val="EQUIP" />
@@ -1101,7 +1101,7 @@
 			<skill id="36601" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Lower Armor Special Buff -->
 		</skills>
 	</item>
-	<item id="82838" name="Supremacy Gauntlets" additionalName="Heavy armor" type="Armor">
+	<item id="82838" name="尊貴護手" additionalName="Heavy armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -3%. P./ M. Accuracy +15, all Critical Damage +3%, all received Critical Rate -4%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. All Critical Damage +2%, all received Critical Rate -3% -->
 		<set name="icon" val="icon.armor_L_heavy_gloves" />
 		<set name="default_action" val="EQUIP" />
@@ -1129,7 +1129,7 @@
 			<skill id="36602" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Glove Special Buff -->
 		</skills>
 	</item>
-	<item id="82839" name="Supremacy Boots" additionalName="Heavy armor" type="Armor">
+	<item id="82839" name="尊貴靴" additionalName="Heavy armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -3%. Speed +54, P./ M. Atk. +3%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. P./ M. Atk. +2% -->
 		<set name="icon" val="icon.armor_L_heavy_shoes" />
 		<set name="default_action" val="EQUIP" />
@@ -1157,7 +1157,7 @@
 			<skill id="36603" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Shoe Special Buff -->
 		</skills>
 	</item>
-	<item id="82840" name="Supremacy Shield" type="Armor">
+	<item id="82840" name="尊貴盾" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. Received PvP/ PvE damage -6%. Received damage -3%. Atk. Spd. +5%, P. Atk. +3%, P./ M. Def. +3%, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. Received damage -2% -->
 		<set name="icon" val="icon.armor_L_heavy_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -1184,7 +1184,7 @@
 			<skill id="36604" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Shield Special Buff -->
 		</skills>
 	</item>
-	<item id="82841" name="Supremacy Leather Helmet" additionalName="Light armor" type="Armor">
+	<item id="82841" name="尊貴頭盔" additionalName="Light armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -4%. P./ M. Evasion +18, all attack power +3%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. All attack power +2% -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1211,7 +1211,7 @@
 			<skill id="36599" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Helmet Special Buff -->
 		</skills>
 	</item>
-	<item id="82842" name="Supremacy Leather Armor" additionalName="Light armor" type="Armor">
+	<item id="82842" name="尊貴皮甲" additionalName="Light armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -9%. All received Critical Damage -5%. Weapon P. Atk. +152, Weapon M. Atk. +102, P./ M. Def. +3%, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. P./ M. Def. +2% -->
 		<set name="icon" val="icon.armor_L_light_upbody" />
 		<set name="default_action" val="EQUIP" />
@@ -1239,7 +1239,7 @@
 			<skill id="36600" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Upper Armor Special Buff -->
 		</skills>
 	</item>
-	<item id="82843" name="Supremacy Leather Leggings" additionalName="Light armor" type="Armor">
+	<item id="82843" name="尊貴皮脛甲" additionalName="Light armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -6%. Critical Rate for basic attacks +3%, M. Skill Critical Rate +3%, Attribute Attack +50, Attribute Resistance +50, P. Debuff Resistance +5, M. Debuff Resistance +5, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. Attribute Attack +30, Attribute Resistance +30 -->
 		<set name="icon" val="icon.armor_L_light_downbody" />
 		<set name="default_action" val="EQUIP" />
@@ -1267,7 +1267,7 @@
 			<skill id="36601" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Lower Armor Special Buff -->
 		</skills>
 	</item>
-	<item id="82844" name="Supremacy Leather Gloves" additionalName="Light armor" type="Armor">
+	<item id="82844" name="尊貴皮手套" additionalName="Light armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -3%. P./ M. Accuracy +15, all Critical Damage +3%, all received Critical Rate -4%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. All Critical Damage +2%, all received Critical Rate -3% -->
 		<set name="icon" val="icon.armor_L_light_gloves" />
 		<set name="default_action" val="EQUIP" />
@@ -1295,7 +1295,7 @@
 			<skill id="36602" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Glove Special Buff -->
 		</skills>
 	</item>
-	<item id="82845" name="Supremacy Leather Boots" additionalName="Light armor" type="Armor">
+	<item id="82845" name="尊貴皮靴" additionalName="Light armor" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -3%. Speed +54, P./ M. Atk. +3%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. P./ M. Atk. +2% -->
 		<set name="icon" val="icon.armor_L_light_shoes" />
 		<set name="default_action" val="EQUIP" />
@@ -1323,7 +1323,7 @@
 			<skill id="36603" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Shoe Special Buff -->
 		</skills>
 	</item>
-	<item id="82846" name="Supremacy Circlet" additionalName="Robe" type="Armor">
+	<item id="82846" name="尊貴頭箍" additionalName="Robe" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -4%. P./ M. Evasion +18, all attack power +3%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. All attack power +2% -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1350,7 +1350,7 @@
 			<skill id="36599" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Helmet Special Buff -->
 		</skills>
 	</item>
-	<item id="82847" name="Supremacy Tunic" additionalName="Robe" type="Armor">
+	<item id="82847" name="尊貴外衣" additionalName="Robe" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -9%. All received Critical Damage -5%. Weapon P. Atk. +152, Weapon M. Atk. +102, P./ M. Def. +3%, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. P./ M. Def. +2% -->
 		<set name="icon" val="icon.armor_L_robe_upbody" />
 		<set name="default_action" val="EQUIP" />
@@ -1380,7 +1380,7 @@
 			<skill id="36600" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Upper Armor Special Buff -->
 		</skills>
 	</item>
-	<item id="82848" name="Supremacy Stockings" additionalName="Robe" type="Armor">
+	<item id="82848" name="尊貴長襪" additionalName="Robe" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -6%. Critical Rate for basic attacks +3%, M. Skill Critical Rate +3%, Attribute Attack +50, Attribute Resistance +50, P. Debuff Resistance +5, M. Debuff Resistance +5, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. Attribute Attack +30, Attribute Resistance +30 -->
 		<set name="icon" val="icon.armor_L_robe_downbody" />
 		<set name="default_action" val="EQUIP" />
@@ -1410,7 +1410,7 @@
 			<skill id="36601" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Lower Armor Special Buff -->
 		</skills>
 	</item>
-	<item id="82849" name="Supremacy Gloves" additionalName="Robe" type="Armor">
+	<item id="82849" name="尊貴手套" additionalName="Robe" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -3%. P./ M. Accuracy +15, all Critical Damage +3%, all received Critical Rate -4%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. All Critical Damage +2%, all received Critical Rate -3% -->
 		<set name="icon" val="icon.armor_L_robe_gloves" />
 		<set name="default_action" val="EQUIP" />
@@ -1438,7 +1438,7 @@
 			<skill id="36602" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Glove Special Buff -->
 		</skills>
 	</item>
-	<item id="82850" name="Supremacy Shoes" additionalName="Robe" type="Armor">
+	<item id="82850" name="尊貴鞋" additionalName="Robe" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. PvP/ PvE damage +2%, received PvP/ PvE damage -3%. Speed +54, P./ M. Atk. +3%, Perfection trigger rate +20. <font color=ff6666><Additional effect starting from +4></font>. P./ M. Atk. +2% -->
 		<set name="icon" val="icon.armor_L_robe_shoes" />
 		<set name="default_action" val="EQUIP" />
@@ -1466,7 +1466,7 @@
 			<skill id="36603" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Shoe Special Buff -->
 		</skills>
 	</item>
-	<item id="82851" name="Supremacy Sigil" type="Armor">
+	<item id="82851" name="尊貴符印" type="Armor">
 		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Can be enchanted, augmented and imbued with an attribute. <font color=ff6666><Additional effect when equipped></font>. Received PvP/ PvE damage -6%. Received damage -3%. Atk. Spd./ Casting Spd. +5%, P. Atk. +2%, M. Skill Power +2%, Perfection trigger rate +30. <font color=ff6666><Additional effect starting from +4></font>. Received damage -2% -->
 		<set name="icon" val="icon.armor_L_robe_sigil" />
 		<set name="default_action" val="EQUIP" />
@@ -1493,7 +1493,7 @@
 			<skill id="36605" level="2" type="ON_ENCHANT" type_value="4" /> <!-- L-grade Sigil Special Buff -->
 		</skills>
 	</item>
-	<item id="82852" name="Ultimate Death Knight - C - L - Not Available" additionalName="Red" type="Armor">
+	<item id="82852" name="未供給-真死亡騎士 - C - L" additionalName="Red" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -1505,7 +1505,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="82853" name="Ultimate Death Knight - D - L - Not Available" additionalName="Blue" type="Armor">
+	<item id="82853" name="未供給-真死亡騎士 - D - L" additionalName="Blue" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -1517,7 +1517,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="82854" name="Ultimate Death Knight - E - L - Not Available" additionalName="Phiolet" type="Armor">
+	<item id="82854" name="未供給-真死亡騎士 - E - L" additionalName="Phiolet" type="Armor">
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
@@ -1529,7 +1529,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="82855" name="Scroll: Enchant L-grade Weapon" type="EtcItem">
+	<item id="82855" name="武器強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade weapons. In case of failure the item disappears. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1545,7 +1545,7 @@
 			<skill id="39842" level="1" /> <!-- Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82856" name="Blessed Scroll: Enchant L-grade Weapon" type="EtcItem">
+	<item id="82856" name="祝福的武器強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade weapons. In case of failure, the enchant value is reset. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1562,7 +1562,7 @@
 			<skill id="39844" level="1" /> <!-- Blessed Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82857" name="Scroll: Enchant L-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="82857" name="武器強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade weapons. In case of failure the item disappears. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1581,7 +1581,7 @@
 			<skill id="39842" level="1" /> <!-- Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82858" name="Blessed Scroll: Enchant L-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="82858" name="祝福的武器強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade weapons. In case of failure, the enchant value is reset. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1601,7 +1601,7 @@
 			<skill id="39844" level="1" /> <!-- Blessed Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82859" name="Giant's Scroll: Enchant L-grade Weapon" type="EtcItem">
+	<item id="82859" name="巨人武器強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade weapons. In case of success, enchant value increases by +1, +2 or +3 at random. In case of failure, the item disappears. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
 		<set name="icon" val="icon.L_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1617,7 +1617,7 @@
 			<skill id="39846" level="1" /> <!-- Giant's Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82860" name="Gran Kain's Scroll: Enchant L-grade Weapon" type="EtcItem">
+	<item id="82860" name="格蘭肯的武器強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade weapons. In case of failure, the enchant value remains the same. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_shilen_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1632,7 +1632,7 @@
 			<skill id="39848" level="1" /> <!-- Gran Kain's Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82861" name="Giant's Scroll: Enchant L-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="82861" name="巨人武器強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade weapons. In case of success, enchant value increases by +1, +2 or +3 at random. In case of failure, the item disappears. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
 		<set name="icon" val="icon.L_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1651,7 +1651,7 @@
 			<skill id="39846" level="1" /> <!-- Giant's Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82862" name="Gran Kain's Scroll: Enchant L-grade Weapon" additionalName="Event" type="EtcItem">
+	<item id="82862" name="格蘭肯的武器強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade weapons. In case of failure, the enchant value remains the same. <font color=ff6666>Shaper, Cutter, Avenger, Stormer, Buster, Caster</font>. 1-3: Weapon P./ M. Atk. +30. 4-6: Weapon P./ M. Atk. +60. 7-9: Weapon P./ M. Atk. +90. 10: Weapon P./ M. Atk. +120. <font color=ff6666>Slasher, Fighter, Dual Swords, Dual Daggers, Dual Blunt Weapons, Retributer</font>. 1-3: Weapon P. Atk. +37, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +74, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +111, Weapon M. Atk. +90. 10: Weapon P. Atk. +148, Weapon M. Atk. +120. <font color=ff6666>Thrower, Guardian</font>. 1-3: Weapon P. Atk. +60, Weapon M. Atk. +30. 4-6: Weapon P. Atk. +120, Weapon M. Atk. +60. 7-9: Weapon P. Atk. +180, Weapon M. Atk. +90. 10: Weapon P. Atk. +240, Weapon M. Atk. +120. Cannot be used with weapons enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_shilen_scrl_of_ench_wp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1669,7 +1669,7 @@
 			<skill id="39848" level="1" /> <!-- Gran Kain's Scroll: Enchant L-grade Weapon -->
 		</skills>
 	</item>
-	<item id="82863" name="Scroll: Enchant L-grade Armor" type="EtcItem">
+	<item id="82863" name="防具強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade armor. In case of failure, the item disappears. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1686,7 +1686,7 @@
 			<skill id="39843" level="1" /> <!-- Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82864" name="Blessed Scroll: Enchant L-grade Armor" type="EtcItem">
+	<item id="82864" name="祝福的防具強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade armor. In case of failure, the enchant value is reset. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1703,7 +1703,7 @@
 			<skill id="39845" level="1" /> <!-- Blessed Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82865" name="Scroll: Enchant L-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="82865" name="防具強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade armor. In case of failure, the item disappears. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1723,7 +1723,7 @@
 			<skill id="39843" level="1" /> <!-- Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82866" name="Blessed Scroll: Enchant L-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="82866" name="祝福的防具強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade armor. In case of failure, the enchant value is reset. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1743,7 +1743,7 @@
 			<skill id="39845" level="1" /> <!-- Blessed Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82867" name="Giant's Scroll: Enchant L-grade Armor" type="EtcItem">
+	<item id="82867" name="巨人防具強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade armor. In case of success, enchant value increases by +1, +2 or +3 at random. In case of failure, the item disappears. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
 		<set name="icon" val="icon.L_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1760,7 +1760,7 @@
 			<skill id="39847" level="1" /> <!-- Giant's Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82868" name="Gran Kain's Scroll: Enchant L-grade Armor" type="EtcItem">
+	<item id="82868" name="格蘭肯的防具強化卷軸-L級" type="EtcItem">
 		<!-- For L-grade armor. In case of failure, the enchant value remains the same. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_shilen_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1776,7 +1776,7 @@
 			<skill id="39849" level="1" /> <!-- Gran Kain's Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82869" name="Giant's Scroll: Enchant L-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="82869" name="巨人防具強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade armor. In case of success, enchant value increases by +1, +2 or +3 at random. In case of failure, the item disappears. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
 		<set name="icon" val="icon.L_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1796,7 +1796,7 @@
 			<skill id="39847" level="1" /> <!-- Giant's Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82870" name="Gran Kain's Scroll: Enchant L-grade Armor" additionalName="Event" type="EtcItem">
+	<item id="82870" name="格蘭肯的防具強化卷軸-L級" additionalName="Event" type="EtcItem">
 		<!-- For L-grade armor. In case of failure, the enchant value remains the same. <font color=ff6666>Upper armor, lower armor, helmet, gloves, boots, shield, sigil</font>. 1-3: P. Def. +5. 4-6: P. Def. +10. 7-9: P. Def. +15. 10: P. Def. +20. Cannot be used with armor enchanted to +10 and higher. -->
 		<set name="icon" val="icon.L_shilen_scrl_of_ench_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1815,7 +1815,7 @@
 			<skill id="39849" level="1" /> <!-- Gran Kain's Scroll: Enchant L-grade Armor -->
 		</skills>
 	</item>
-	<item id="82871" name="Antharas Shaper" additionalName="Lv. 4" type="Weapon">
+	<item id="82871" name="安塔瑞斯鉋刀" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -1848,7 +1848,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82872" name="Antharas Slasher" additionalName="Lv. 4" type="Weapon">
+	<item id="82872" name="安塔瑞斯殺刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -1881,7 +1881,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82873" name="Antharas Thrower" additionalName="Lv. 4" type="Weapon">
+	<item id="82873" name="安塔瑞斯投弓" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -1914,7 +1914,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82874" name="Antharas Buster" additionalName="Lv. 4" type="Weapon">
+	<item id="82874" name="安塔瑞斯爆刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -1948,7 +1948,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82875" name="Antharas Cutter" additionalName="Lv. 4" type="Weapon">
+	<item id="82875" name="安塔瑞斯切刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -1981,7 +1981,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82876" name="Antharas Stormer" additionalName="Lv. 4" type="Weapon">
+	<item id="82876" name="安塔瑞斯風暴者" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2018,7 +2018,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82877" name="Antharas Fighter" additionalName="Lv. 4" type="Weapon">
+	<item id="82877" name="安塔瑞斯戰爪" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2051,7 +2051,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82878" name="Antharas Avenger" additionalName="Lv. 4" type="Weapon">
+	<item id="82878" name="安塔瑞斯復仇者" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2084,7 +2084,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82879" name="Antharas Dual Blunt Weapons" additionalName="Lv. 4" type="Weapon">
+	<item id="82879" name="安塔瑞斯雙鈍器" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2117,7 +2117,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82880" name="Antharas Dual Swords" additionalName="Lv. 4" type="Weapon">
+	<item id="82880" name="安塔瑞斯雙刀" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. Antharas' Howl -->
 		<set name="icon" val="Icon.weapon_i.antaras_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2150,7 +2150,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82881" name="Valakas Shaper" additionalName="Lv. 4" type="Weapon">
+	<item id="82881" name="巴拉卡斯鉋刀" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. Valakas' Howl -->
 		<set name="icon" val="Icon.weapon_i.valrakas_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2183,7 +2183,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82882" name="Valakas Cutter" additionalName="Lv. 4" type="Weapon">
+	<item id="82882" name="巴拉卡斯切刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. Valakas' Howl -->
 		<set name="icon" val="Icon.weapon_i.valrakas_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2216,7 +2216,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82883" name="Valakas Slasher" additionalName="Lv. 4" type="Weapon">
+	<item id="82883" name="巴拉卡斯殺刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. Valakas' Howl -->
 		<set name="icon" val="Icon.weapon_i.valrakas_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2249,7 +2249,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82884" name="Valakas Thrower" additionalName="Lv. 4" type="Weapon">
+	<item id="82884" name="巴拉卡斯投弓" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. Valakas' Howl -->
 		<set name="icon" val="Icon.weapon_i.valrakas_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2282,7 +2282,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82885" name="Valakas Buster" additionalName="Lv. 4" type="Weapon">
+	<item id="82885" name="巴拉卡斯爆刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. Valakas' Howl -->
 		<set name="icon" val="Icon.weapon_i.valrakas_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2316,7 +2316,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82886" name="Valakas Caster" additionalName="Lv. 4" type="Weapon">
+	<item id="82886" name="巴拉卡斯術杖" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. Valakas' Howl -->
 		<set name="icon" val="Icon.weapon_i.valrakas_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2350,7 +2350,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82887" name="Valakas Retributer" additionalName="Lv. 4" type="Weapon">
+	<item id="82887" name="巴拉卡斯報恨者" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. Valakas' Howl -->
 		<set name="icon" val="Icon.weapon_i.valrakas_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2384,7 +2384,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82888" name="Lindvior Shaper" additionalName="Lv. 4" type="Weapon">
+	<item id="82888" name="林德拜爾鉋刀" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. Lindvior's Breath. Lindvior's Howl -->
 		<set name="icon" val="Icon.weapon_i.lind_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2417,7 +2417,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82889" name="Lindvior Thrower" additionalName="Lv. 4" type="Weapon">
+	<item id="82889" name="林德拜爾投弓" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. Lindvior's Breath. Lindvior's Howl -->
 		<set name="icon" val="Icon.weapon_i.lind_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2450,7 +2450,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82890" name="Lindvior Slasher" additionalName="Lv. 4" type="Weapon">
+	<item id="82890" name="林德拜爾殺刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. Lindvior's Breath. Lindvior's Howl -->
 		<set name="icon" val="Icon.weapon_i.lind_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2483,7 +2483,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82891" name="Lindvior Caster" additionalName="Lv. 4" type="Weapon">
+	<item id="82891" name="林德拜爾術杖" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. Lindvior's Breath. Lindvior's Howl -->
 		<set name="icon" val="Icon.weapon_i.lind_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2517,7 +2517,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82892" name="Lindvior Cutter" additionalName="Lv. 4" type="Weapon">
+	<item id="82892" name="林德拜爾切刃" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. Lindvior's Breath. Lindvior's Howl -->
 		<set name="icon" val="Icon.weapon_i.lind_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2550,7 +2550,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82893" name="Lindvior Guardian" additionalName="Lv. 4" type="Weapon">
+	<item id="82893" name="林德拜爾射靈" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. Lindvior's Breath. Lindvior's Howl -->
 		<set name="icon" val="Icon.weapon_i.lind_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2583,7 +2583,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82894" name="Lindvior Dual Daggers" additionalName="Lv. 4" type="Weapon">
+	<item id="82894" name="林德拜爾雙匕首" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. Lindvior's Breath. Lindvior's Howl -->
 		<set name="icon" val="Icon.weapon_i.lind_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2616,7 +2616,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82895" name="Fafurion Avenger" additionalName="Lv. 4" type="Weapon">
+	<item id="82895" name="法利昂復仇者" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. Fafurion's Howl -->
 		<set name="icon" val="Icon.weapon_i.fafurion_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2649,7 +2649,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82896" name="Fafurion Fighter" additionalName="Lv. 4" type="Weapon">
+	<item id="82896" name="法利昂戰爪" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. Fafurion's Howl -->
 		<set name="icon" val="Icon.weapon_i.fafurion_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2682,7 +2682,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82897" name="Fafurion Stormer" additionalName="Lv. 4" type="Weapon">
+	<item id="82897" name="法利昂風暴者" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. Fafurion's Howl -->
 		<set name="icon" val="Icon.weapon_i.fafurion_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2716,7 +2716,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82898" name="Fafurion Retributer" additionalName="Lv. 4" type="Weapon">
+	<item id="82898" name="法利昂報恨者" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. Fafurion's Howl -->
 		<set name="icon" val="Icon.weapon_i.fafurion_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />
@@ -2750,7 +2750,7 @@
 			<skill id="36616" level="3" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="82899" name="Fafurion Dual Blunt Weapon" additionalName="Lv. 4" type="Weapon">
+	<item id="82899" name="法利昂雙鈍器" additionalName="Lv. 4" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. Can be augmented. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Damage to dragons +300%. All attack power +30%. Soulshot/ Spiritshot damage +40%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. Fafurion's Howl -->
 		<set name="icon" val="Icon.weapon_i.fafurion_weapon_bg0000" />
 		<set name="default_action" val="EQUIP" />

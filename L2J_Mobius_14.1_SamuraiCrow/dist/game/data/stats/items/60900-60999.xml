@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="60900" name="Forgotten Temple's Treasure Chest" type="EtcItem">
+	<item id="60900" name="遺忘神殿寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -51,7 +51,7 @@
 			<item id="82172" min="3" max="3" chance="100" /> <!-- Swift Attack Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="60901" name="Package: +10 Unique Artifact Book" type="EtcItem">
+	<item id="60901" name="+10最高級聖紋石書組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.artifact_book_02" />
 		<set name="default_action" val="PEEL" />
@@ -64,7 +64,7 @@
 			<item id="81696" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Unique Artifact Book - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="60902" name="Package: +10 Kaliel's Superior Bracelet" type="EtcItem">
+	<item id="60902" name="+10最高級卡利艾手鐲組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_kalie_rbracelet03" />
 		<set name="default_action" val="PEEL" />
@@ -77,7 +77,7 @@
 			<item id="80837" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Kaliel's Superior Bracelet -->
 		</capsuled_items>
 	</item>
-	<item id="60903" name="Cherry Blossom's Energy" type="EtcItem">
+	<item id="60903" name="櫻花氣息" type="EtcItem">
 		<!-- The energy of cherry blossoms that bloomed from the spring warmth. Can be used for crafting rare items. -->
 		<set name="icon" val="BranchIcon.icon.g_ev_sakura_piece_i00" />
 		<set name="immediate_effect" val="true" />
@@ -85,7 +85,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60904" name="Package: +10 Superior Seed Bracelet Lv. 4" type="EtcItem">
+	<item id="60904" name="+10最高級種子手鐲4階段組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="PEEL" />
@@ -98,7 +98,7 @@
 			<item id="48577" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Superior Seed Bracelet Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="60905" name="Update Kit" type="EtcItem">
+	<item id="60905" name="更新紀念組合包" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="default_action" val="PEEL" />
@@ -119,7 +119,7 @@
 			<item id="83006" min="2" max="2" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="60906" name="Hunting Kit" type="EtcItem">
+	<item id="60906" name="狩獵組合包" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
 		<set name="default_action" val="PEEL" />
@@ -139,7 +139,7 @@
 			<item id="48685" min="1" max="1" chance="100" /> <!-- High-grade Talisman of Skill Cooldown - P./M. Def. -->
 		</capsuled_items>
 	</item>
-	<item id="60907" name="Kit: Illusory Equipment Assist" type="EtcItem">
+	<item id="60907" name="幻想裝備支援組合包" type="EtcItem">
 		<!-- Double-click to obtain various items. <font color=ff6666>Note!</font>. Deleted after the illusory equipment season. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
@@ -155,7 +155,7 @@
 			<item id="60894" min="1" max="1" chance="100" /> <!-- Illusory Equipment Points Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="60908" name="Blessed Royal Pack" type="EtcItem">
+	<item id="60908" name="祝福的皇家禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="PEEL" />
@@ -201,7 +201,7 @@
 			<item id="83144" min="1" max="1" chance="100" /> <!-- Freya's Royal Ice Rose -->
 		</capsuled_items>
 	</item>
-	<item id="60909" name="Illusory Equipment Points - 30" type="EtcItem">
+	<item id="60909" name="幻想裝備點數-30" type="EtcItem">
 		<!-- Double-click to obtain 30 illusory equipment points. <font color=ff6666>Note!</font>. The item will be removed after the scheduled maintenance. -->
 		<set name="icon" val="BranchIcon.icon.g_ev_virtual_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -212,7 +212,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60910" name="+10 Artifact Craft Coupon" type="EtcItem">
+	<item id="60910" name="+10聖紋石製作券" type="EtcItem">
 		<!-- Required for making +10 artifact through the special craft. -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -220,7 +220,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60911" name="+18 Legendary Cloak Craft Coupon" type="EtcItem">
+	<item id="60911" name="+18傳說斗篷製作券" type="EtcItem">
 		<!-- Required for making +18 Legendary Cloak through the special craft. -->
 		<set name="icon" val="icon.bm_challenger_wp_ench_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60912" name="Aden's Shining Treasure Sack" additionalName="Lv. 1" type="EtcItem">
+	<item id="60912" name="閃耀的亞丁寶物袋" additionalName="Lv. 1" type="EtcItem">
 		<!-- Given as a reward for killing Lv. 120+ monsters in session zones. Double-click to obtain various upgrade materials. -->
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="PEEL" />
@@ -249,7 +249,7 @@
 			<item id="82903" min="1" max="1" chance="20" /> <!-- Solaris -->
 		</capsuled_items>
 	</item>
-	<item id="60913" name="Appearance Stone: Eritros Saber Outfit" type="EtcItem">
+	<item id="60913" name="艾莉特洛斯軍刀服裝加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Eritros Saber. The default appearance can be restored with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -260,7 +260,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60914" name="20th Anniversary Supply Pack" type="EtcItem">
+	<item id="60914" name="20週年消耗品箱" type="EtcItem">
 		<!-- Double-click to obtain Freya's Ice Rose (40 pcs.), Honey Dark Beer (40 pcs.), Glowing Dragon's Attribute Potion (XP) (40 pcs.), Nevit's Shining Gold Hourglass (40 pcs.), Emperor's Special Cocktail (20 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -279,7 +279,7 @@
 			<item id="81013" min="40" max="40" chance="100" /> <!-- Nevit's Shining Gold Hourglass - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60915" name="Eritros Saber Outfit" type="Armor">
+	<item id="60915" name="艾莉特洛斯軍刀服裝" type="Armor">
 		<!-- Eritros Saber Outfit -->
 		<set name="icon" val="BranchIcon.Icon.g_saber_dress_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -292,7 +292,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60916" name="Gran Kain's Treasure Chest" type="EtcItem">
+	<item id="60916" name="格蘭肯寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="PEEL" />
@@ -346,7 +346,7 @@
 			<item id="35564" min="1" max="1" chance="2.5" /> <!-- Ruler's Authority - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60917" name="Gran Kain's Craft Coupon" type="EtcItem">
+	<item id="60917" name="格蘭肯製作券" type="EtcItem">
 		<!-- Required for crafting rare items. -->
 		<set name="icon" val="icon.hardin_sb_trade_ticket_i02" />
 		<set name="immediate_effect" val="true" />
@@ -354,7 +354,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60918" name="Kit: Crystal of Dawn" type="EtcItem">
+	<item id="60918" name="黎明的結晶組合包" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="PEEL" />
@@ -374,7 +374,7 @@
 			<item id="80839" min="15" max="15" chance="100" /> <!-- Crystal of Dawn -->
 		</capsuled_items>
 	</item>
-	<item id="60919" name="Craft Save Ticket" type="EtcItem">
+	<item id="60919" name="幸運製作券" type="EtcItem">
 		<!-- Required for crafting rare items. -->
 		<set name="icon" val="icon.hardin_sb_trade_ticket_i02" />
 		<set name="immediate_effect" val="true" />
@@ -384,7 +384,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60920" name="Maphr's Treasure Chest" type="EtcItem">
+	<item id="60920" name="梅芙寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -437,7 +437,7 @@
 			<item id="81751" min="1" max="1" chance="2.564103" /> <!-- Ruler's Authority - Chaos - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="60921" name="Goddess' Mark" type="EtcItem">
+	<item id="60921" name="女神的信物" type="EtcItem">
 		<!-- A special mark imbued with Maphr's power. Used for crafting rare items. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -445,7 +445,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60922" name="Goddess' Gift" type="EtcItem">
+	<item id="60922" name="女神的恩賜" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.sa_cube" />
 		<set name="default_action" val="PEEL" />
@@ -462,7 +462,7 @@
 			<item id="81892" min="2" max="2" chance="100" /> <!-- Nevit's Shining Royal Gold Hourglass -->
 		</capsuled_items>
 	</item>
-	<item id="60923" name="Circlet Upgrade Kit" type="EtcItem">
+	<item id="60923" name="頭箍升級組合包" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -479,7 +479,7 @@
 			<item id="48211" min="30" max="30" chance="100" /> <!-- Blessed Scroll: Enchant Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="60924" name="Dragon Leather Shirt Upgrade Kit" type="EtcItem">
+	<item id="60924" name="龍襯衫升級組合包" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -496,7 +496,7 @@
 			<item id="48498" min="30" max="30" chance="100" /> <!-- Blessed Scroll: Enchant Dragon Leather Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="60925" name="Ice Queen's Treasure" type="EtcItem">
+	<item id="60925" name="冰雪女王的寶物" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -552,7 +552,7 @@
 			<item id="81444" min="1" max="1" chance="2.380952" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60926" name="Alexandria's Artifact Pack" type="EtcItem">
+	<item id="60926" name="亞歷珊卓聖紋石箱" type="EtcItem">
 		<!-- Contains Artifact Crystals collected by Artifact Merchant Alexandria. Double-click to obtain various items. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="default_action" val="PEEL" />
@@ -573,7 +573,7 @@
 			<item id="83594" min="1" max="1" chance="14.285714" /> <!-- Eraton's Dye Lv. 5 (Basic Attack Power) - STR +6, DEX +7, CHA +6 -->
 		</capsuled_items>
 	</item>
-	<item id="60927" name="Alexandria's Artifact Fragment Pack" type="EtcItem">
+	<item id="60927" name="亞歷珊卓收藏品禮盒" type="EtcItem">
 		<!-- Contains special items collected by Artifact Merchant Alexandria. Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -627,7 +627,7 @@
 			<item id="81751" min="1" max="1" chance="2.5" /> <!-- Ruler's Authority - Chaos - Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="60928" name="Mysterious Dragon Slayer" type="Weapon">
+	<item id="60928" name="神秘的斬龍刀" type="Weapon">
 		<!-- Imbued with the power of ancient dragons. Based on the enchant value, can be used for crafting special rewards. -->
 		<set name="icon" val="icon.npoint_weapon_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -649,7 +649,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="60929" name="Scroll: Enchant Mysterious Dragon Slayer" type="EtcItem">
+	<item id="60929" name="神秘的斬龍刀強化卷軸" type="EtcItem">
 		<!-- For Mysterious Dragon Slayer. In case of failure, the item disappears. Maximum enchant value: +25 -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -661,7 +661,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60930" name="Giant's Scroll: Enchant Mysterious Dragon Slayer" type="EtcItem">
+	<item id="60930" name="巨人神秘的斬龍刀強化卷軸" type="EtcItem">
 		<!-- For Mysterious Dragon Slayer. In case of success, enchant value increases from +1 to +3 at random. In case of failure, the item disappears. Cannot be used with Dragon Slayer enchanted to +22 and higher. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -673,7 +673,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60931" name="Gran Kain's Scroll Coupon" type="EtcItem">
+	<item id="60931" name="格蘭肯卷軸交換券" type="EtcItem">
 		<!-- Can be exchanged for Gran Kain's enchant scroll of your choice. -->
 		<set name="icon" val="icon.bm_agathion_ticket_i00" />
 		<set name="immediate_effect" val="true" />
@@ -681,7 +681,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60932" name="Dragon's Relic" type="EtcItem">
+	<item id="60932" name="龍之遺物" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_poket" />
 		<set name="default_action" val="PEEL" />
@@ -733,7 +733,7 @@
 			<item id="60929" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Mysterious Dragon Slayer -->
 		</capsuled_items>
 	</item>
-	<item id="60933" name="Kit: Dragon's Relic" type="EtcItem">
+	<item id="60933" name="龍之遺物組合包" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_poket" />
 		<set name="default_action" val="PEEL" />
@@ -749,7 +749,7 @@
 			<item id="60932" min="200" max="200" chance="100" /> <!-- Dragon's Relic -->
 		</capsuled_items>
 	</item>
-	<item id="60934" name="Bright Macaron" type="EtcItem">
+	<item id="60934" name="華麗的馬卡龍" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="BranchIcon.icon.macaroon_i00" />
 		<set name="default_action" val="PEEL" />
@@ -787,7 +787,7 @@
 			<item id="81012" min="8" max="8" chance="100" /> <!-- Wondrous Cocktail - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60935" name="Ivory Tower's Spellbook Chest" type="EtcItem">
+	<item id="60935" name="象牙塔魔法書禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_special_box" />
 		<set name="default_action" val="PEEL" />
@@ -825,7 +825,7 @@
 			<item id="48876" min="1" max="1" chance="100" /> <!-- Forgotten Spellbook - Chapter 1 -->
 		</capsuled_items>
 	</item>
-	<item id="60936" name="Ivory Tower's Scroll" type="EtcItem">
+	<item id="60936" name="象牙塔卷軸" type="EtcItem">
 		<!-- A scroll written by a wizard from the Ivory Tower a long time ago. Most of its contents has already faded, that is why no one can read it anymore. Can be used for crafting special items. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="true" />
@@ -833,7 +833,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60937" name="Black Royal Pack" type="EtcItem">
+	<item id="60937" name="皇家黑色禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
@@ -851,7 +851,7 @@
 			<item id="80449" min="5" max="5" chance="100" /> <!-- Royal Black Save Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60938" name="Golden Royal Pack" type="EtcItem">
+	<item id="60938" name="皇家金色禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_2018_jewelbox_random" />
 		<set name="default_action" val="PEEL" />
@@ -869,7 +869,7 @@
 			<item id="80501" min="5" max="5" chance="100" /> <!-- Royal Gold Save Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="60939" name="Kit: Shining Relic - Lv. 1" type="EtcItem">
+	<item id="60939" name="閃耀遺物組合包-1階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -887,7 +887,7 @@
 			<item id="83006" min="1" max="1" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="60940" name="Kit: Shining Relic - Lv. 2" type="EtcItem">
+	<item id="60940" name="閃耀遺物組合包-2階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -906,7 +906,7 @@
 			<item id="83006" min="2" max="2" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="60941" name="Kit: Shining Relic - Lv. 3" type="EtcItem">
+	<item id="60941" name="閃耀遺物組合包-3階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -927,7 +927,7 @@
 			<item id="83006" min="5" max="5" chance="100" /> <!-- Relic Summon Coupon - 11-time -->
 		</capsuled_items>
 	</item>
-	<item id="60942" name="Kit: Forgotten Spellbook Lv. 1" type="EtcItem">
+	<item id="60942" name="遺忘的魔法書組合包-1階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -945,7 +945,7 @@
 			<item id="82344" min="50" max="50" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="60943" name="Kit: Forgotten Spellbook Lv. 2" type="EtcItem">
+	<item id="60943" name="遺忘的魔法書組合包-2階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -964,7 +964,7 @@
 			<item id="82344" min="500" max="500" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="60944" name="Kit: Forgotten Spellbook Lv. 3" type="EtcItem">
+	<item id="60944" name="遺忘的魔法書組合包-3階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -984,7 +984,7 @@
 			<item id="82344" min="500" max="500" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="60945" name="Jewelry Kit Lv. 1" type="EtcItem">
+	<item id="60945" name="寶石組合包-1階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1002,7 +1002,7 @@
 			<item id="82344" min="50" max="50" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="60946" name="Jewelry Kit Lv. 2" type="EtcItem">
+	<item id="60946" name="寶石組合包-2階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1021,7 +1021,7 @@
 			<item id="82344" min="500" max="500" chance="100" /> <!-- Tales of Dimensions -->
 		</capsuled_items>
 	</item>
-	<item id="60947" name="Jewelry Kit Lv. 3" type="EtcItem">
+	<item id="60947" name="寶石組合包-3階段" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1042,7 +1042,7 @@
 			<item id="82658" min="20" max="20" chance="100" /> <!-- Sealed Fire Source -->
 		</capsuled_items>
 	</item>
-	<item id="60948" name="Package: +10 La Vie En Rose's Superior Brooch" type="EtcItem">
+	<item id="60948" name="+10最高級拉菲安洛茲的胸針組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_brooch_6slot_lavianrose_5" />
 		<set name="default_action" val="PEEL" />
@@ -1055,7 +1055,7 @@
 			<item id="29547" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- La Vie En Rose's Superior Brooch -->
 		</capsuled_items>
 	</item>
-	<item id="60949" name="Shining Artifact Pack" type="EtcItem">
+	<item id="60949" name="閃耀的聖紋石箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -1115,7 +1115,7 @@
 			<item id="83633" min="1" max="1" chance="2.173913" /> <!-- Talisman of Glory -->
 		</capsuled_items>
 	</item>
-	<item id="60950" name="Master's Elite Coupon" type="EtcItem">
+	<item id="60950" name="覺醒憑證" type="EtcItem">
 		<!-- A mark that can be exchanged for Weapon of Awakening, Sack of Awakening, or Supplies of Awakening (at choice). -->
 		<set name="icon" val="icon.ev_2021_teasing_part2_1" />
 		<set name="immediate_effect" val="true" />
@@ -1123,7 +1123,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60951" name="Master's Crafting Box" type="EtcItem">
+	<item id="60951" name="覺醒者的武器庫" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="default_action" val="PEEL" />
@@ -1170,7 +1170,7 @@
 			<item id="82343" min="2" max="2" chance="3.225806" /> <!-- Augmenting Stone: Artifact Book -->
 		</capsuled_items>
 	</item>
-	<item id="60952" name="Master's Creativity Box" type="EtcItem">
+	<item id="60952" name="覺醒者的百寶袋" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1227,7 +1227,7 @@
 			<item id="81444" min="1" max="1" chance="2.439024" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60953" name="Master's Supplies" type="EtcItem">
+	<item id="60953" name="覺醒者的補給品" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
@@ -1246,7 +1246,7 @@
 			<item id="80842" min="3" max="3" chance="100" /> <!-- Honey Dark Beer -->
 		</capsuled_items>
 	</item>
-	<item id="60954" name="Einhasad's Treasure Chest" type="EtcItem">
+	<item id="60954" name="殷海薩寶箱" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_nebit_angel_box" />
 		<set name="default_action" val="PEEL" />
@@ -1296,7 +1296,7 @@
 			<item id="36946" min="1" max="1" chance="2.777778" /> <!-- Lindvior's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="60955" name="Einhasad's Mark" type="EtcItem">
+	<item id="60955" name="殷海薩憑證" type="EtcItem">
 		<!-- Can be added to a collection to get an additional effect, or used for crafting rare items. -->
 		<set name="icon" val="icon.shield_another_worlds_shield_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1304,7 +1304,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60956" name="Package: +30 Supreme Krishna Shaper" type="EtcItem">
+	<item id="60956" name="+30限定克里修納鉋刀組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1319,7 +1319,7 @@
 			<item id="80175" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Shaper -->
 		</capsuled_items>
 	</item>
-	<item id="60957" name="Package: +30 Supreme Krishna Cutter" type="EtcItem">
+	<item id="60957" name="+30限定克里修納切刃組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1334,7 +1334,7 @@
 			<item id="80176" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Cutter -->
 		</capsuled_items>
 	</item>
-	<item id="60958" name="Package: +30 Supreme Krishna Slasher" type="EtcItem">
+	<item id="60958" name="+30限定克里修納殺刃組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1349,7 +1349,7 @@
 			<item id="80177" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Slasher -->
 		</capsuled_items>
 	</item>
-	<item id="60959" name="Package: +30 Supreme Krishna Avenger" type="EtcItem">
+	<item id="60959" name="+30限定克里修納復仇者組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1364,7 +1364,7 @@
 			<item id="80178" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Avenger -->
 		</capsuled_items>
 	</item>
-	<item id="60960" name="Package: +30 Supreme Krishna Fighter" type="EtcItem">
+	<item id="60960" name="+30限定克里修納戰爪組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_fist_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1379,7 +1379,7 @@
 			<item id="80179" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Fighter -->
 		</capsuled_items>
 	</item>
-	<item id="60961" name="Package: +30 Supreme Krishna Stormer" type="EtcItem">
+	<item id="60961" name="+30限定克里修納風暴者組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_spear_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1394,7 +1394,7 @@
 			<item id="80180" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Stormer -->
 		</capsuled_items>
 	</item>
-	<item id="60962" name="Package: +30 Supreme Krishna Thrower" type="EtcItem">
+	<item id="60962" name="+30限定克里修納投弓組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_bow_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1409,7 +1409,7 @@
 			<item id="80181" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Thrower -->
 		</capsuled_items>
 	</item>
-	<item id="60963" name="Package: +30 Supreme Krishna Guardian" type="EtcItem">
+	<item id="60963" name="+30限定克里修納射靈組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1424,7 +1424,7 @@
 			<item id="80182" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Guardian -->
 		</capsuled_items>
 	</item>
-	<item id="60964" name="Package: +30 Supreme Krishna Buster" type="EtcItem">
+	<item id="60964" name="+30限定克里修納爆刃組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1439,7 +1439,7 @@
 			<item id="80183" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Buster -->
 		</capsuled_items>
 	</item>
-	<item id="60965" name="Package: +30 Supreme Krishna Caster" type="EtcItem">
+	<item id="60965" name="+30限定克里修納術杖組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1454,7 +1454,7 @@
 			<item id="80184" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Caster -->
 		</capsuled_items>
 	</item>
-	<item id="60966" name="Package: +30 Supreme Krishna Retributer" type="EtcItem">
+	<item id="60966" name="+30限定克里修納報恨者組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1469,7 +1469,7 @@
 			<item id="80185" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Retributer -->
 		</capsuled_items>
 	</item>
-	<item id="60967" name="Package: +30 Supreme Krishna Dual Swords" type="EtcItem">
+	<item id="60967" name="+30限定克里修納雙刀組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1484,7 +1484,7 @@
 			<item id="80186" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Dual Swords -->
 		</capsuled_items>
 	</item>
-	<item id="60968" name="Package: +30 Supreme Krishna Dual Daggers" type="EtcItem">
+	<item id="60968" name="+30限定克里修納雙匕首組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1499,7 +1499,7 @@
 			<item id="80187" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Dual Daggers -->
 		</capsuled_items>
 	</item>
-	<item id="60969" name="Package: +30 Supreme Krishna Dual Blunt Weapons" type="EtcItem">
+	<item id="60969" name="+30限定克里修納雙鈍器組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1514,7 +1514,7 @@
 			<item id="80188" min="1" max="1" minEnchant="30" maxEnchant="30" chance="100" /> <!-- Supreme Krishna Dual Blunt Weapons -->
 		</capsuled_items>
 	</item>
-	<item id="60970" name="Aden Ruler's Shield" type="EtcItem">
+	<item id="60970" name="亞丁支配者之盾" type="EtcItem">
 		<!-- An ancient shield forged by the best blacksmiths of Aden as a gift to their king Amadeo Cadmus. The engravings are almost gone but it still makes a strong impression. -->
 		<set name="icon" val="icon.weapon_tysandy_shield_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1524,7 +1524,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="60971" name="Heine's Treasure Chest" type="EtcItem">
+	<item id="60971" name="海音斯寶箱" type="EtcItem">
 		<!-- A mysterious treasure chest found by Heine's fishermen. Double-click to obtain Heine's Medal (5 pcs.) and one item from the list. -->
 		<set name="icon" val="icon.event_hero_treasure_box_silver" />
 		<set name="default_action" val="PEEL" />
@@ -1568,7 +1568,7 @@
 			<item id="60972" min="5" max="5" chance="100" /> <!-- Heine's Medal -->
 		</capsuled_items>
 	</item>
-	<item id="60972" name="Heine's Medal" type="EtcItem">
+	<item id="60972" name="海音斯勳章" type="EtcItem">
 		<!-- A special medal that is highly valued among Heine's merchants. Can be used for crafting special items. -->
 		<set name="icon" val="icon.bm_nebit_coin" />
 		<set name="immediate_effect" val="true" />
@@ -1576,7 +1576,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60973" name="Fire Dragon's Pack" type="EtcItem">
+	<item id="60973" name=" 火龍禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -1639,7 +1639,7 @@
 			<item id="81444" min="1" max="1" chance="2.040816" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60974" name="Fire Dragon's Treasure Kit" type="EtcItem">
+	<item id="60974" name="火龍寶物組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -1656,7 +1656,7 @@
 			<item id="81013" min="50" max="50" chance="100" /> <!-- Nevit's Shining Gold Hourglass - Event -->
 		</capsuled_items>
 	</item>
-	<item id="60975" name="Kingdom Kit: Upgrade Materials" type="EtcItem">
+	<item id="60975" name="王國升級材料組合包" type="EtcItem">
 		<!-- Double-click to obtain upgrade materials. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1671,7 +1671,7 @@
 			<item id="82903" min="10" max="10" chance="100" /> <!-- Solaris -->
 		</capsuled_items>
 	</item>
-	<item id="60976" name="La Vie En Rose's Ornament Pack" type="EtcItem">
+	<item id="60976" name="拉菲安洛茲的珠寶禮盒" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1689,7 +1689,7 @@
 			<item id="81361" min="30" max="30" chance="100" /> <!-- Blessed Scroll: Enchant Brooch -->
 		</capsuled_items>
 	</item>
-	<item id="60977" name="Watermelon Painting Fragment" additionalName="1" type="EtcItem">
+	<item id="60977" name="西瓜圖紙碎片" additionalName="1" type="EtcItem">
 		<!-- The first fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part1" />
 		<set name="immediate_effect" val="true" />
@@ -1697,7 +1697,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60978" name="Watermelon Painting Fragment" additionalName="2" type="EtcItem">
+	<item id="60978" name="西瓜圖紙碎片" additionalName="2" type="EtcItem">
 		<!-- The second fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part2" />
 		<set name="immediate_effect" val="true" />
@@ -1705,7 +1705,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60979" name="Watermelon Painting Fragment" additionalName="3" type="EtcItem">
+	<item id="60979" name="西瓜圖紙碎片" additionalName="3" type="EtcItem">
 		<!-- The third fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part3" />
 		<set name="immediate_effect" val="true" />
@@ -1713,7 +1713,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60980" name="Watermelon Painting Fragment" additionalName="4" type="EtcItem">
+	<item id="60980" name="西瓜圖紙碎片" additionalName="4" type="EtcItem">
 		<!-- The fourth fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part4" />
 		<set name="immediate_effect" val="true" />
@@ -1721,7 +1721,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60981" name="Watermelon Painting Fragment" additionalName="5" type="EtcItem">
+	<item id="60981" name="西瓜圖紙碎片" additionalName="5" type="EtcItem">
 		<!-- The fifth fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part5" />
 		<set name="immediate_effect" val="true" />
@@ -1729,7 +1729,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60982" name="Watermelon Painting Fragment" additionalName="6" type="EtcItem">
+	<item id="60982" name="西瓜圖紙碎片" additionalName="6" type="EtcItem">
 		<!-- The sixth fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part6" />
 		<set name="immediate_effect" val="true" />
@@ -1737,7 +1737,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60983" name="Watermelon Painting Fragment" additionalName="7" type="EtcItem">
+	<item id="60983" name="西瓜圖紙碎片" additionalName="7" type="EtcItem">
 		<!-- The seventh fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part7" />
 		<set name="immediate_effect" val="true" />
@@ -1745,7 +1745,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60984" name="Watermelon Painting Fragment" additionalName="8" type="EtcItem">
+	<item id="60984" name="西瓜圖紙碎片" additionalName="8" type="EtcItem">
 		<!-- The eighth fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part8" />
 		<set name="immediate_effect" val="true" />
@@ -1753,7 +1753,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60985" name="Watermelon Painting Fragment" additionalName="9" type="EtcItem">
+	<item id="60985" name="西瓜圖紙碎片" additionalName="9" type="EtcItem">
 		<!-- The ninth fragment of a painting with watermelons. If you collect all fragments, you are sure to get lucky!. <How to use>. The fragments can be combined and exchanged for rewards. -->
 		<set name="icon" val="BranchIcon.icon.ev_watermelon_Part9" />
 		<set name="immediate_effect" val="true" />
@@ -1761,7 +1761,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60986" name="'Bartz: Fight for Freedom' Comic Book's Mark" type="EtcItem">
+	<item id="60986" name="巴茨解放戰爭的證據" type="EtcItem">
 		<!-- Can be added to a collection. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1771,7 +1771,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60987" name="Package: +5 Radiant Warrior's Circlet" type="EtcItem">
+	<item id="60987" name="+5繽紛權威頭箍組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_pattack_circlet_03" />
 		<set name="default_action" val="PEEL" />
@@ -1784,7 +1784,7 @@
 			<item id="48204" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Radiant Warrior's Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="60988" name="Package: +5 Radiant Wizard's Circlet" type="EtcItem">
+	<item id="60988" name="+5繽紛睿智頭箍組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_mattack_circlet_03" />
 		<set name="default_action" val="PEEL" />
@@ -1797,7 +1797,7 @@
 			<item id="48207" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Radiant Wizard's Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="60989" name="Package: +5 Radiant Knight's Circlet" type="EtcItem">
+	<item id="60989" name="+5繽紛加護頭箍組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_defense_circlet_03" />
 		<set name="default_action" val="PEEL" />
@@ -1810,7 +1810,7 @@
 			<item id="48210" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Radiant Knight's Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="60990" name="Package: +5 Dragon Rind Leather Shirt" type="EtcItem">
+	<item id="60990" name="+5龍紋皮襯衫組" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_dragon_rind_leather_shirt" />
 		<set name="default_action" val="PEEL" />
@@ -1823,7 +1823,7 @@
 			<item id="48493" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Dragon Rind Leather Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="60991" name="Festival Bar Pack" type="EtcItem">
+	<item id="60991" name="慶典計量表禮盒" type="EtcItem">
 		<!-- Can be obtained for filling the Lucky Game bar during the Starlight Festival. Double-click to obtain 1 random item from the list. -->
 		<set name="icon" val="icon.bm_month_package" />
 		<set name="default_action" val="PEEL" />
@@ -1864,7 +1864,7 @@
 			<item id="81444" min="1" max="1" chance="4" /> <!-- Greater Agathion Charm: Fire Dragon -->
 		</capsuled_items>
 	</item>
-	<item id="60992" name="Festival Bar Coupon" type="EtcItem">
+	<item id="60992" name="慶典計量表票券" type="EtcItem">
 		<!-- Can be obtained for filling the Lucky Game bar during the Starlight Festival. Double-click to obtain 1 random item from the list. -->
 		<set name="icon" val="BranchIcon.Icon.rp_ring_of_maphr_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1874,7 +1874,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60993" name="Festival Star" type="EtcItem">
+	<item id="60993" name="慶典星星" type="EtcItem">
 		<!-- Can be obtained for the Lucky Game marks during the Starlight Festival. Can be used for crafting various items during the Festival. -->
 		<set name="icon" val="icon.etc_deco_star_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1884,7 +1884,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60994" name="Winner's Fireworks" type="EtcItem">
+	<item id="60994" name="勝利者煙火" type="EtcItem">
 		<!-- A special gift for the winners of the "Player of the Year" contest. Double-click to launch spectacular fireworks into the sky. -->
 		<set name="icon" val="BranchIcon.icon.ev_firecracker_20th_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -1895,7 +1895,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="60995" name="Winner's Fireworks" type="EtcItem">
+	<item id="60995" name="勝利者煙火" type="EtcItem">
 		<!-- A special gift for the winners of the "Player of the Year" contest. Double-click to launch spectacular fireworks into the sky. -->
 		<set name="icon" val="BranchIcon.icon.ev_firecracker_20th_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -1906,7 +1906,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="60996" name="Fire Dragon's Sphere" type="EtcItem">
+	<item id="60996" name="火龍的寶玉" type="EtcItem">
 		<!-- A sphere imbued with the furious power of the Fire Dragon. Can be used for crafting special items. Double-click to obtain the Fire Dragon's Protection buff for 10 min. <Fire Dragon's Protection>. Acquired XP/ SP +50%. Vitality bonus +50%. P. Atk./ P. Def./ M. Atk./ M. Def. +15%. Power of basic attacks and P./ M. skills +15%. PvP/ PvE damage +10% -->
 		<set name="icon" val="BranchIcon.icon.g_bm_valakas_bead" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1915,7 +1915,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60997" name="Fire Dragon's Amulet" type="EtcItem">
+	<item id="60997" name="火龍符咒" type="EtcItem">
 		<!-- An amulet imbued with the Fire Dragon's power. Required for crafting and enhancing Fire Dragon's Runes. -->
 		<set name="icon" val="BranchSys2.icon.call_of_fire_dragon" />
 		<set name="immediate_effect" val="true" />
@@ -1925,7 +1925,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="60998" name="Fire Dragon's Rune" additionalName="Lv. 1" type="EtcItem">
+	<item id="60998" name="火龍古文" additionalName="Lv. 1" type="EtcItem">
 		<!-- When in inventory, Attribute Resistance +10. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_valakas_rune" />
 		<set name="immediate_effect" val="true" />
@@ -1934,7 +1934,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="60999" name="Fire Dragon's Rune" additionalName="Lv. 2" type="EtcItem">
+	<item id="60999" name="火龍古文" additionalName="Lv. 2" type="EtcItem">
 		<!-- When in inventory, Attribute Resistance +20. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_valakas_rune" />
 		<set name="immediate_effect" val="true" />

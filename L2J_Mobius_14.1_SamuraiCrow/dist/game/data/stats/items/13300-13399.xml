@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13300" name="Feather of Blessing (Event)" type="EtcItem">
+	<item id="13300" name="祝福的羽毛" type="EtcItem">
 		<!-- Allows you to resurrect immediately after death at the same spot. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="material" val="LIQUID" />
@@ -11,7 +11,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="allow_self_resurrection" val="true" />
 	</item>
-	<item id="13301" name="My Teleport Book Lv. 1 (Event)" type="EtcItem">
+	<item id="13301" name="自由傳送之書-活動用1階段" type="EtcItem">
 		<!-- My Teleport locations +3 (maximum - 18 slots). -->
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -27,7 +27,7 @@
 			<skill id="2610" level="1" /> <!-- My Teleport Book Lv. 1 - Event -->
 		</skills>
 	</item>
-	<item id="13302" name="My Teleport Scroll - Event" type="EtcItem">
+	<item id="13302" name="自由傳送卷軸-活動用" type="EtcItem">
 		<!-- Item that teleports to the remembered location. -->
 		<set name="icon" val="icon.bookmark_scroll_i00" />
 		<set name="immediate_effect" val="true" />
@@ -40,7 +40,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="13303" name="Pet Necklace: White Weasel - Event" type="EtcItem">
+	<item id="13303" name="白鼬鼠狩獵幫手項鍊-活動用" type="EtcItem">
 		<!-- An item that lets you summon a pet that uses buffs for warriors. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -60,7 +60,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13304" name="Pet Necklace: Fairy Princess - Event" type="EtcItem">
+	<item id="13304" name="妖精公主狩獵幫手項鍊-活動用" type="EtcItem">
 		<!-- An item that lets you summon a pet that uses buffs for mages. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -80,7 +80,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13305" name="Pet Necklace: Wild Beast Fighter - Event" type="EtcItem">
+	<item id="13305" name="野獸鬥士狩獵幫手項鍊-活動用" type="EtcItem">
 		<!-- An item that lets you summon a warrior-type pet. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -100,7 +100,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13306" name="Pet Necklace: Fox Shaman - Event" type="EtcItem">
+	<item id="13306" name="狐狸術士狩獵幫手項鍊-活動用" type="EtcItem">
 		<!-- An item that lets you summon a magic-type pet. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -120,7 +120,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13307" name="Color Title (Event)" type="EtcItem">
+	<item id="13307" name="彩色稱號-活動用" type="EtcItem">
 		<!-- Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/ resetname'. If there was no original title, the title disappears. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
@@ -134,7 +134,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13308" name="Darkmane Pacer Bracelet (Event)" additionalName="7-day" type="Armor">
+	<item id="13308" name="淡紫鬃馬騎乘手鐲-活動用" additionalName="7-day" type="Armor">
 		<!-- Allows to mount Darkmane Pacer. Available for 7 d. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -154,7 +154,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="13309" name="Agathion Love - Event" additionalName="30-day" type="Armor">
+	<item id="13309" name="愛心壺精-活動用" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Love. Available for 30 d. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -174,7 +174,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="13310" name="Kat the Cat Hat - Event" additionalName="30-day" type="Armor">
+	<item id="13310" name="戰鬥貓帽-活動用" additionalName="30-day" type="Armor">
 		<!-- Kat the Cat Hat. Available for 30 d. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -189,7 +189,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13311" name="Feline Queen Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13311" name="皇后貓帽-活動用" additionalName="30-day" type="Armor">
 		<!-- Feline Queen Hat. Available for 30 d. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -204,7 +204,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13312" name="Monster Eye Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13312" name="眼怪帽-活動用" additionalName="30-day" type="Armor">
 		<!-- Hat that looks like a Monster Eye. 30-day. -->
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -219,7 +219,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13313" name="Brown Bear Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13313" name="棕熊帽-活動用" additionalName="30-day" type="Armor">
 		<!-- Brown Bear Hat. Available for 30 d. -->
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -234,7 +234,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13314" name="Fungus Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13314" name="蘑菇帽-活動用" additionalName="30-day" type="Armor">
 		<!-- A hat that looks like Fungus. Available for 30 d. -->
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -249,7 +249,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13315" name="Skull Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13315" name="骷髏帽-活動用" additionalName="30-day" type="Armor">
 		<!-- A head accessory that looks like a skull. Available for 30 d. -->
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -264,7 +264,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13316" name="Ornithomimus Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13316" name="似鳥龍帽-活動用" additionalName="30-day" type="Armor">
 		<!-- Hat that looks like a Ornithomimus. 30-day. -->
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -279,7 +279,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13317" name="Feline King Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13317" name="國王貓帽-活動用" additionalName="30-day" type="Armor">
 		<!-- Feline King Hat. Available for 30 d. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -294,7 +294,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13318" name="Kai the Cat Hat (Event)" additionalName="30-day" type="Armor">
+	<item id="13318" name="銀色貓帽-活動用" additionalName="30-day" type="Armor">
 		<!-- Hat that looks like Kai the Cat. 30-day. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -309,7 +309,7 @@
 		<set name="time" val="43200" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13319" name="O Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="13319" name="O形魔杖-活動用" additionalName="30-day" type="Weapon">
 		<!-- O-type stick. 30-day. -->
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -333,7 +333,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13320" name="X Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="13320" name="X形魔杖-活動用" additionalName="30-day" type="Weapon">
 		<!-- X-type stick. 30-day. -->
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -357,7 +357,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13321" name="Scissors Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="13321" name="剪刀魔杖-活動用" additionalName="30-day" type="Weapon">
 		<!-- Scissor stick. 30-day. -->
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -381,7 +381,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13322" name="Rock Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="13322" name="石頭魔杖-活動用" additionalName="30-day" type="Weapon">
 		<!-- Rock stick. 30-day. -->
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -405,7 +405,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13323" name="Paper Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="13323" name="布魔杖-活動用" additionalName="30-day" type="Weapon">
 		<!-- Paper stick. 30-day. -->
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -429,7 +429,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13324" name="Pumpkin Transformation Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="13324" name="南瓜變身魔杖-活動用" additionalName="30-day" type="Weapon">
 		<!-- Transformation stick that turns you into a pumpkin. 30-day. -->
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -457,7 +457,7 @@
 			<skill id="8246" level="1" /> <!-- Transform Pumpkin Ghost -->
 		</skills>
 	</item>
-	<item id="13325" name="Kat the Cat Hat - Event" additionalName="7-day" type="Armor">
+	<item id="13325" name="戰鬥貓帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Kat the Cat Hat. Available for 7 d. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -472,7 +472,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13326" name="Feline Queen Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13326" name="皇后貓帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Feline Queen Hat. Available for 7 d. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -487,7 +487,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13327" name="Monster Eye Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13327" name="眼怪帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like a Monster Eye. 7-day. -->
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -502,7 +502,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13328" name="Brown Bear Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13328" name="棕熊帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Brown Bear Hat. Available for 7 d. -->
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -517,7 +517,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13329" name="Fungus Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13329" name="蘑菇帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like Fungus. 7-day. -->
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -532,7 +532,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13330" name="Skull Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13330" name="骷髏帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like a Skull. 7-day. -->
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -547,7 +547,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13331" name="Ornithomimus Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13331" name="似鳥龍帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like a Ornithomimus. 7-day. -->
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -562,7 +562,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13332" name="Feline King Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13332" name="國王貓帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Feline King Hat. Available for 7 d. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -577,7 +577,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13333" name="Kai the Cat Hat (Event)" additionalName="7-day" type="Armor">
+	<item id="13333" name="銀色貓帽-活動用" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like Kai the Cat. 7-day. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -592,7 +592,7 @@
 		<set name="time" val="10080" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="13334" name="O Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="13334" name="O形魔杖-活動用" additionalName="7-day" type="Weapon">
 		<!-- O-type stick. 7-day. -->
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -616,7 +616,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13335" name="X Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="13335" name="X形魔杖-活動用" additionalName="7-day" type="Weapon">
 		<!-- X-type stick. 7-day. -->
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -640,7 +640,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13336" name="Scissors Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="13336" name="剪刀魔杖-活動用" additionalName="7-day" type="Weapon">
 		<!-- Scissor stick. 7-day. -->
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -664,7 +664,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13337" name="Rock Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="13337" name="石頭魔杖-活動用" additionalName="7-day" type="Weapon">
 		<!-- Rock stick. 7-day. -->
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13338" name="Paper Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="13338" name="布魔杖-活動用" additionalName="7-day" type="Weapon">
 		<!-- Paper stick. 7-day. -->
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -712,7 +712,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13339" name="Pumpkin Transformation Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="13339" name="南瓜變身魔杖-活動用" additionalName="7-day" type="Weapon">
 		<!-- Pumpkin transformation stick. 7-day. -->
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -740,7 +740,7 @@
 			<skill id="8246" level="1" /> <!-- Transform Pumpkin Ghost -->
 		</skills>
 	</item>
-	<item id="13340" name="Agathion Love - Event" additionalName="7-day" type="Armor">
+	<item id="13340" name="愛心壺精-活動用" additionalName="7-day" type="Armor">
 		<!-- Available for 7 days. Summons Agathion Love. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
 		</skills>
 	</item>
-	<item id="13341" name="Package: My Teleport Book (1 pc.) - Event" type="EtcItem">
+	<item id="13341" name="自由傳送書 1張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 1 My Teleport Book. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -777,7 +777,7 @@
 			<item id="13301" min="1" max="1" chance="100" /> <!-- My Teleport Book Lv. 1 - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13342" name="Package: My Teleport Scroll (30 pcs.) - Event" type="EtcItem">
+	<item id="13342" name="自由傳送卷軸 30張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 30 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -794,7 +794,7 @@
 			<item id="13302" min="30" max="30" chance="100" /> <!-- My Teleport Scroll - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13343" name="Package: Feather of Blessing (3 pcs.) - Event" type="EtcItem">
+	<item id="13343" name="祝福的羽毛 3張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 3 Feathers of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -811,7 +811,7 @@
 			<item id="13300" min="3" max="3" chance="100" /> <!-- Feather of Blessing - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13344" name="Package: Agathion Love (30-day) - Event" type="EtcItem">
+	<item id="13344" name="愛心壺精 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Agathion Love Charm (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -828,7 +828,7 @@
 			<item id="13309" min="1" max="1" chance="100" /> <!-- Agathion Love - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13345" name="Package: Pumpkin Transformation Stick (30-day) - Event" type="EtcItem">
+	<item id="13345" name="南瓜變身魔杖 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Pumpkin Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -845,7 +845,7 @@
 			<item id="13324" min="1" max="1" chance="100" /> <!-- Pumpkin Transformation Stick - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13346" name="Package: Extra Pass: Kamaloka (3 pcs.) - Event" type="EtcItem">
+	<item id="13346" name="欲界入場券 3種組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka - Hall of the Abyss (5 pcs.), Rim Kamaloka (5 pcs.), Kamaloka - Labyrinth of the Abyss (5 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -864,7 +864,7 @@
 			<item id="13299" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13347" name="Package: Kat the Cat Hat (30-day) - Event" type="EtcItem">
+	<item id="13347" name="戰鬥貓帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Kat the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -881,7 +881,7 @@
 			<item id="13310" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13348" name="Package: Feline Queen Hat (30-day) - Event" type="EtcItem">
+	<item id="13348" name="皇后貓帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Feline Queen Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -898,7 +898,7 @@
 			<item id="13311" min="1" max="1" chance="100" /> <!-- Feline Queen Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13349" name="Package: Monster Eye Hat (30-day) - Event" type="EtcItem">
+	<item id="13349" name="眼怪帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Monster Eye Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -915,7 +915,7 @@
 			<item id="13312" min="1" max="1" chance="100" /> <!-- Monster Eye Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13350" name="Package: Brown Bear Hat (30-day) - Event" type="EtcItem">
+	<item id="13350" name="棕熊帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Brown Bear Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -932,7 +932,7 @@
 			<item id="13313" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13351" name="Package: Fungus Hat (30-day) - Event" type="EtcItem">
+	<item id="13351" name="蘑菇帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Fungus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -949,7 +949,7 @@
 			<item id="13314" min="1" max="1" chance="100" /> <!-- Fungus Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13352" name="Package: Skull Hat (30-day) - Event" type="EtcItem">
+	<item id="13352" name="骷髏帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Skull Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -966,7 +966,7 @@
 			<item id="13315" min="1" max="1" chance="100" /> <!-- Skull Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13353" name="Package: Ornithomimus Hat (30-day) - Event" type="EtcItem">
+	<item id="13353" name="似鳥龍帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -983,7 +983,7 @@
 			<item id="13316" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13354" name="Package: Feline King Hat (30-day) - Event" type="EtcItem">
+	<item id="13354" name="國王貓帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Feline King Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1000,7 +1000,7 @@
 			<item id="13317" min="1" max="1" chance="100" /> <!-- Feline King Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13355" name="Package: Kai the Cat Hat (30-day) - Event" type="EtcItem">
+	<item id="13355" name="銀色貓帽 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Kai the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1017,7 +1017,7 @@
 			<item id="13318" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13356" name="Package: OX Stick (30-day) - Event" type="EtcItem">
+	<item id="13356" name="O/X 魔杖 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain OX Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1035,7 +1035,7 @@
 			<item id="13320" min="1" max="1" chance="100" /> <!-- X Stick - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13357" name="Package: Rock-Paper-Scissors Stick (30-day) - Event" type="EtcItem">
+	<item id="13357" name="剪刀/石頭/布魔杖 30日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Rock, Paper and Scissors Sticks (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1054,7 +1054,7 @@
 			<item id="13323" min="1" max="1" chance="100" /> <!-- Paper Stick - Event - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13358" name="Package: Darkmane Pacer (7-day) - Event" type="EtcItem">
+	<item id="13358" name="淡紫鬃馬 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Darkmane Pacer Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1071,7 +1071,7 @@
 			<item id="13308" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13359" name="Package: Color Title (3 pcs.) - Event" type="EtcItem">
+	<item id="13359" name="彩色稱號 3張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Color Title (3 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1088,7 +1088,7 @@
 			<item id="13307" min="3" max="3" chance="100" /> <!-- Color Title - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13360" name="Package: Color Title (1 pc.) - Event" type="EtcItem">
+	<item id="13360" name="彩色稱號 1張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Color Title (1 pc.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1105,7 +1105,7 @@
 			<item id="13307" min="1" max="1" chance="100" /> <!-- Color Title - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13361" name="Package: My Teleport Scroll (10 pcs.) - Event" type="EtcItem">
+	<item id="13361" name="自由傳送卷軸 10張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 10 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1122,7 +1122,7 @@
 			<item id="13016" min="10" max="10" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="13362" name="Package: Extra Pass: Kamaloka (Hall of the Abyss) (15 pcs.) - Event" type="EtcItem">
+	<item id="13362" name="欲界(深淵之廳) 15張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 15 Extra Passes: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1139,7 +1139,7 @@
 			<item id="13297" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13363" name="Package: Extra Pass: Near Kamaloka (15 pcs.) - Event" type="EtcItem">
+	<item id="13363" name="近緣欲界15張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 15 Extra Passes: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1156,7 +1156,7 @@
 			<item id="13298" min="15" max="15" chance="100" /> <!-- Extra Pass: Near Kamaloka - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13364" name="Package: Extra Pass: Kamaloka (Labyrinth of the Abyss) (15 pcs.) - Event" type="EtcItem">
+	<item id="13364" name="欲界(深淵迷宮) 15張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 15 Extra Passes: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1173,7 +1173,7 @@
 			<item id="13299" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13365" name="Package: Extra Pass: Kamaloka (Hall of the Abyss) (5 pcs.) - Event" type="EtcItem">
+	<item id="13365" name="欲界(深淵之廳) 5張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 5 Extra Passes: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1190,7 +1190,7 @@
 			<item id="13297" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13366" name="Package: Extra Pass: Near Kamaloka (5 pcs.) - Event" type="EtcItem">
+	<item id="13366" name="近緣欲界5張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 5 Extra Passes: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1207,7 +1207,7 @@
 			<item id="13298" min="5" max="5" chance="100" /> <!-- Extra Pass: Near Kamaloka - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13367" name="Package: Extra Pass: Kamaloka (Labyrinth of the Abyss) (5 pcs.) - Event" type="EtcItem">
+	<item id="13367" name="欲界(深淵迷宮) 5張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 5 Extra Passes: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1224,7 +1224,7 @@
 			<item id="13299" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13368" name="Package: Feather of Blessing (1 pc.) - Event" type="EtcItem">
+	<item id="13368" name="祝福的羽毛 1張/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain 1 Feather of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1241,7 +1241,7 @@
 			<item id="13300" min="1" max="1" chance="100" /> <!-- Feather of Blessing - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13369" name="Package: Agathion Love (7-day) - Event" type="EtcItem">
+	<item id="13369" name="愛心壺精 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Agathion Love Charm (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1258,7 +1258,7 @@
 			<item id="13340" min="1" max="1" chance="100" /> <!-- Agathion Love - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13370" name="Package: Pumpkin Transformation Stick (7-day) - Event" type="EtcItem">
+	<item id="13370" name="南瓜變身魔杖 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Pumpkin Transformation Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1275,7 +1275,7 @@
 			<item id="13339" min="1" max="1" chance="100" /> <!-- Pumpkin Transformation Stick - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13371" name="Package: Kat the Cat Hat (7-day) - Event" type="EtcItem">
+	<item id="13371" name="戰鬥貓帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Kat the Cat Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1292,7 +1292,7 @@
 			<item id="13325" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13372" name="Package: Feline Queen Hat (7-day) - Event" type="EtcItem">
+	<item id="13372" name="皇后貓帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Feline Queen Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1309,7 +1309,7 @@
 			<item id="13326" min="1" max="1" chance="100" /> <!-- Feline Queen Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13373" name="Package: Monster Eye Hat (7-day) - Event" type="EtcItem">
+	<item id="13373" name="眼怪帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Monster Eye Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1326,7 +1326,7 @@
 			<item id="13327" min="1" max="1" chance="100" /> <!-- Monster Eye Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13374" name="Package: Brown Bear Hat (7-day) - Event" type="EtcItem">
+	<item id="13374" name="棕熊帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Brown Bear Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1343,7 +1343,7 @@
 			<item id="13328" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13375" name="Package: Fungus Hat (7-day) - Event" type="EtcItem">
+	<item id="13375" name="蘑菇帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Fungus Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1360,7 +1360,7 @@
 			<item id="13329" min="1" max="1" chance="100" /> <!-- Fungus Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13376" name="Package: Skull Hat (7-day) - Event" type="EtcItem">
+	<item id="13376" name="骷髏帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Skull Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1377,7 +1377,7 @@
 			<item id="13330" min="1" max="1" chance="100" /> <!-- Skull Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13377" name="Package: Ornithomimus Hat (7-day) - Event" type="EtcItem">
+	<item id="13377" name="似鳥龍帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Ornithomimus Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1394,7 +1394,7 @@
 			<item id="13331" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13378" name="Package: Feline King Hat (7-day) - Event" type="EtcItem">
+	<item id="13378" name="國王貓帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Feline King Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1411,7 +1411,7 @@
 			<item id="13332" min="1" max="1" chance="100" /> <!-- Feline King Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13379" name="Package: Kai the Cat Hat (7-day) - Event" type="EtcItem">
+	<item id="13379" name="銀色貓帽 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Kai the Cat Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1428,7 +1428,7 @@
 			<item id="13333" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13380" name="Package: OX Stick (7-day) - Event" type="EtcItem">
+	<item id="13380" name="OX 魔杖 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain OX Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1446,7 +1446,7 @@
 			<item id="13335" min="1" max="1" chance="100" /> <!-- X Stick - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13381" name="Package: Rock-Paper-Scissors Stick (7-day) - Event" type="EtcItem">
+	<item id="13381" name="剪刀石頭布魔杖 7日/組-活動用" type="EtcItem">
 		<!-- Double-click to obtain Rock, Paper and Scissors Sticks (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1465,7 +1465,7 @@
 			<item id="13338" min="1" max="1" chance="100" /> <!-- Paper Stick - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13382" name="Gran Kain's Gift Box - Event" additionalName="30-day" type="EtcItem">
+	<item id="13382" name="格蘭肯的禮盒-活動用" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a free item once a day. Available for 30 d. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1482,7 +1482,7 @@
 			<skill id="2606" level="1" /> <!-- Gran Kain's Gift Box -->
 		</skills>
 	</item>
-	<item id="13383" name="Pet Necklace Coupon (5-hour) - Event" type="EtcItem">
+	<item id="13383" name="狩獵幫手交換券-5小時-活動用" type="EtcItem">
 		<!-- A coupon that can be exchanged for Pet Necklace (5-hour) through the Game Assistant. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1494,7 +1494,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="13384" name="Package: Pet Necklace Coupon (3 pcs.) - Event" type="EtcItem">
+	<item id="13384" name="狩獵幫手交換券 3張/組-活動用" type="EtcItem">
 		<!-- Game Assistant's pack. Double-click to obtain a coupon that can be exchanged for Pet Necklace (5-hour) through the Game Assistant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1511,7 +1511,7 @@
 			<item id="13383" min="3" max="3" chance="100" /> <!-- Pet Necklace Coupon (5-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13385" name="Package: Pet Necklace Coupon (1 pc.) - Event" type="EtcItem">
+	<item id="13385" name="狩獵幫手交換券 1張/組-活動用" type="EtcItem">
 		<!-- Game Assistant's pack. Double-click to obtain a coupon that can be exchanged for Pet Necklace (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1528,7 +1528,7 @@
 			<item id="13383" min="1" max="1" chance="100" /> <!-- Pet Necklace Coupon (5-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="13386" name="Blue Crystal of Fantasy" type="EtcItem">
+	<item id="13386" name="夢幻的藍色水晶" type="EtcItem">
 		<!-- Recovers 1 SP. Required level: 76+. -->
 		<set name="icon" val="icon.etc_sp_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1546,7 +1546,7 @@
 			<skill id="2608" level="1" /> <!-- Blue Crystal of Fantasy -->
 		</skills>
 	</item>
-	<item id="13387" name="Fantasy Green Crystal" type="EtcItem">
+	<item id="13387" name="夢幻的綠色水晶" type="EtcItem">
 		<!-- Recovers 1 SP. Required level: 76+. -->
 		<set name="icon" val="icon.etc_sp_crystal_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1564,7 +1564,7 @@
 			<skill id="2608" level="2" /> <!-- Fantasy Green Crystal -->
 		</skills>
 	</item>
-	<item id="13388" name="Fantasy Red Crystal" type="EtcItem">
+	<item id="13388" name="夢幻的紅色水晶" type="EtcItem">
 		<!-- Recovers 1 SP. Required level: 76+. -->
 		<set name="icon" val="icon.etc_sp_crystal_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1582,7 +1582,7 @@
 			<skill id="2608" level="3" /> <!-- Fantasy Red Crystal -->
 		</skills>
 	</item>
-	<item id="13389" name="Kratei Scale Shirt" additionalName="CP" type="Armor">
+	<item id="13389" name="柯雷塔鱗片襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +516. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
@@ -1602,7 +1602,7 @@
 			<skill id="3453" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Scale Shirt -->
 		</skills>
 	</item>
-	<item id="13390" name="Kratei Mithril Shirt" additionalName="CP" type="Armor">
+	<item id="13390" name="柯雷塔米索莉襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +672. -->
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
@@ -1622,7 +1622,7 @@
 			<skill id="3459" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Mithril Shirt -->
 		</skills>
 	</item>
-	<item id="13391" name="Kratei Striped Scale Shirt" additionalName="CP" type="Armor">
+	<item id="13391" name="柯雷塔條紋鱗片襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +564. -->
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
@@ -1642,7 +1642,7 @@
 			<skill id="3477" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Striped Scale Shirt -->
 		</skills>
 	</item>
-	<item id="13392" name="Kratei Striped Mithril Shirt" additionalName="CP" type="Armor">
+	<item id="13392" name="柯雷塔條紋米索莉襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +744. -->
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
@@ -1662,7 +1662,7 @@
 			<skill id="3483" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Striped Mithril Shirt -->
 		</skills>
 	</item>
-	<item id="13393" name="Shadow Item: Monkey Hat" type="Armor">
+	<item id="13393" name="幻象裝備-猴子帽" type="Armor">
 		<!-- A cute monkey hat. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.monkey_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1675,7 +1675,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="100" />
 	</item>
-	<item id="13394" name="Shadow Item: Pig Hat" type="Armor">
+	<item id="13394" name="幻象裝備-豬仔帽" type="Armor">
 		<!-- A cute piggy hat. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.event_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1688,7 +1688,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="100" />
 	</item>
-	<item id="13395" name="Scroll of Escape: Talking Island Village" type="EtcItem">
+	<item id="13395" name="返回卷軸-說話之島" type="EtcItem">
 		<!-- A magic scroll for teleporting to the Talking Island Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1707,7 +1707,7 @@
 			<skill id="2609" level="1" /> <!-- Scroll of Escape: Talking Island Village -->
 		</skills>
 	</item>
-	<item id="13396" name="Scroll of Escape: Elven Village" type="EtcItem">
+	<item id="13396" name="返回卷軸-精靈村莊" type="EtcItem">
 		<!-- A magic scroll for teleporting to the Elven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1726,7 +1726,7 @@
 			<skill id="2609" level="2" /> <!-- Scroll of Escape: Elven Village -->
 		</skills>
 	</item>
-	<item id="13397" name="Scroll of Escape: Dark Elf Village" type="EtcItem">
+	<item id="13397" name="返回卷軸-黑暗精靈村莊" type="EtcItem">
 		<!-- A magic scroll for teleporting to the Dark Elf Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1745,7 +1745,7 @@
 			<skill id="2609" level="3" /> <!-- Scroll of Escape: Dark Elf Village -->
 		</skills>
 	</item>
-	<item id="13398" name="Scroll of Escape: Orc Village" type="EtcItem">
+	<item id="13398" name="返回卷軸-半獸人村莊" type="EtcItem">
 		<!-- A magic scroll for teleporting to the Orc Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1764,7 +1764,7 @@
 			<skill id="2609" level="4" /> <!-- Scroll of Escape: Orc Village -->
 		</skills>
 	</item>
-	<item id="13399" name="Scroll of Escape: Dwarven Village" type="EtcItem">
+	<item id="13399" name="返回卷軸-矮人村莊" type="EtcItem">
 		<!-- A magic scroll for teleporting to the Dwarven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

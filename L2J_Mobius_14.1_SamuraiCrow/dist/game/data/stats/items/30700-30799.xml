@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="30700" name="Bound Karmian Stockings" type="Armor">
+	<item id="30700" name="束縛的卡勒米安長襪" type="Armor">
 		<!-- Bound Karmian Stockings. -->
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -21,7 +21,7 @@
 			<stat type="pDef">37</stat>
 		</stats>
 	</item>
-	<item id="30701" name="Bound Karmian Tunic" type="Armor">
+	<item id="30701" name="束縛的卡勒米安外衣" type="Armor">
 		<!-- Bound Karmian Tunic. -->
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -42,7 +42,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="30702" name="Bound Karmian Boots" type="Armor">
+	<item id="30702" name="束縛的卡勒米安長靴" type="Armor">
 		<!-- Bound Karmian Boots. -->
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -62,7 +62,7 @@
 			<stat type="pDef">32</stat>
 		</stats>
 	</item>
-	<item id="30703" name="Bound Karmian Gloves" type="Armor">
+	<item id="30703" name="束縛的卡勒米安手套" type="Armor">
 		<!-- Bound Karmian Gloves. -->
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -82,7 +82,7 @@
 			<stat type="pDef">32</stat>
 		</stats>
 	</item>
-	<item id="30704" name="Bound Carnage Bow" type="Weapon">
+	<item id="30704" name="束縛的顱之弓" type="Weapon">
 		<!-- Bound item. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -113,7 +113,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30705" name="Bound Carnage Bow - Decrease Weight" type="Weapon">
+	<item id="30705" name="束縛的顱之弓-輕裝" type="Weapon">
 		<!-- Bound item. <Special properties>. Weight limit +20%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -148,7 +148,7 @@
 			<skill id="3498" level="1" /> <!-- Special Property: Decrease Weight -->
 		</skills>
 	</item>
-	<item id="30706" name="Bound Carnage Bow - Critical Bleed" type="Weapon">
+	<item id="30706" name="束縛的顱之弓-Crt.出血" type="Weapon">
 		<!-- Bound item. <Special properties>. With a 35% chance, inflicts Bleed on the target on a critical attack. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -183,7 +183,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="30707" name="Bound Carnage Bow - Mana Up" type="Weapon">
+	<item id="30707" name="束縛的顱之弓-魔力上升" type="Weapon">
 		<!-- Bound item. <Special properties>. Max MP +30%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -217,7 +217,7 @@
 			<skill id="3014" level="2" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="30708" name="Bound Tsurugi" type="Weapon">
+	<item id="30708" name="束縛的大和劍" type="Weapon">
 		<!-- Bound Tsurugi. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tsurugi_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -246,7 +246,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30709" name="Bound Tsurugi - Focus" type="Weapon">
+	<item id="30709" name="束縛的大和劍-偵測" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +77. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -277,7 +277,7 @@
 			<skill id="3010" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="30710" name="Bound Tsurugi - Critical Damage" type="Weapon">
+	<item id="30710" name="束縛的大和劍-Crt.傷害" type="Weapon">
 		<!-- <Special properties>. P. Atk. +213 on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -308,7 +308,7 @@
 			<skill id="3023" level="3" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="30711" name="Bound Tsurugi - Haste" type="Weapon">
+	<item id="30711" name="束縛的大和劍-速度激發" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +7%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -339,7 +339,7 @@
 			<skill id="3036" level="3" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="30712" name="Bound Chain Shield" type="Armor">
+	<item id="30712" name="束縛的鏈盾" type="Armor">
 		<!-- Bound Chain Shield. -->
 		<set name="icon" val="icon.shield_chain_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -360,7 +360,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="30713" name="Bound Chain Mail Shirt" type="Armor">
+	<item id="30713" name="束縛的鏈甲衫" type="Armor">
 		<!-- Bound Chain Mail Shirt. -->
 		<set name="icon" val="icon.armor_t48_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -381,7 +381,7 @@
 			<stat type="pDef">120</stat>
 		</stats>
 	</item>
-	<item id="30714" name="Bound Chain Gaiters" type="Armor">
+	<item id="30714" name="束縛的鏈脛甲" type="Armor">
 		<!-- Bound Chain Gaiters. -->
 		<set name="icon" val="icon.armor_t48_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -402,7 +402,7 @@
 			<stat type="pDef">75</stat>
 		</stats>
 	</item>
-	<item id="30715" name="Bound Chain Boots" type="Armor">
+	<item id="30715" name="束縛的鏈甲靴" type="Armor">
 		<!-- Bound Chain Boots. -->
 		<set name="icon" val="icon.armor_t48_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -422,7 +422,7 @@
 			<stat type="pDef">32</stat>
 		</stats>
 	</item>
-	<item id="30716" name="Bound Chain Gloves" type="Armor">
+	<item id="30716" name="束縛的鏈手套" type="Armor">
 		<!-- Bound Chain Gloves. -->
 		<set name="icon" val="icon.armor_t48_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -442,7 +442,7 @@
 			<stat type="pDef">32</stat>
 		</stats>
 	</item>
-	<item id="30717" name="Bound Bronze Helmet" type="Armor">
+	<item id="30717" name="束縛的青銅頭盔" type="Armor">
 		<!-- Bound Bronze Helmet. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -461,7 +461,7 @@
 			<stat type="pDef">33</stat>
 		</stats>
 	</item>
-	<item id="30718" name="Bound Bronze Shield" type="Armor">
+	<item id="30718" name="束縛的青銅盾" type="Armor">
 		<!-- Bound Bronze Shield. -->
 		<set name="icon" val="icon.shield_bronze_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -482,7 +482,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="30719" name="Bound Iron Plate Gaiters" type="Armor">
+	<item id="30719" name="束縛的鋼鐵脛甲" type="Armor">
 		<!-- Bound Iron Plate Gaiters. -->
 		<set name="icon" val="icon.armor_t12_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -503,7 +503,7 @@
 			<stat type="pDef">48</stat>
 		</stats>
 	</item>
-	<item id="30720" name="Bound Chakram" type="Weapon">
+	<item id="30720" name="束縛的圓月輪" type="Weapon">
 		<!-- Bound Chakram. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_chakram_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -533,7 +533,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30721" name="Bound Chakram - Critical Drain" type="Weapon">
+	<item id="30721" name="束縛的圓月輪-Crt.吸收" type="Weapon">
 		<!-- <Special properties>. Absorbs 6 HP from the target on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -565,7 +565,7 @@
 			<skill id="3039" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical HP Drain -->
 		</skills>
 	</item>
-	<item id="30722" name="Bound Chakram - Critical Poison" type="Weapon">
+	<item id="30722" name="束縛的圓月輪-Crt.施毒" type="Weapon">
 		<!-- <Special properties>. With a 17% chance, poisons the target on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 			<skill id="3040" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Poison -->
 		</skills>
 	</item>
-	<item id="30723" name="Bound Chakram - Rsk. Haste" type="Weapon">
+	<item id="30723" name="束縛的圓月輪-Rsk.速度激發" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +13% when HP < 60%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -629,7 +629,7 @@
 			<skill id="3034" level="1" /> <!-- Special Property: Rsk. Haste -->
 		</skills>
 	</item>
-	<item id="30724" name="Bound Crimson Boots" type="Armor">
+	<item id="30724" name="束縛的緋紅靴" type="Armor">
 		<!-- Bound Crimson Boots. -->
 		<set name="icon" val="icon.armor_t57_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -649,7 +649,7 @@
 			<stat type="pDef">34</stat>
 		</stats>
 	</item>
-	<item id="30725" name="Bound Rip Gauntlets" type="Armor">
+	<item id="30725" name="束縛的安魂長手套" type="Armor">
 		<!-- Bound Rip Gauntlets. -->
 		<set name="icon" val="icon.armor_t40_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -669,7 +669,7 @@
 			<stat type="pDef">27</stat>
 		</stats>
 	</item>
-	<item id="30726" name="Bound Scroll of Wisdom" type="Weapon">
+	<item id="30726" name="束縛的智慧卷軸" type="Weapon">
 		<!-- Bound Scroll of Wisdom. -->
 		<set name="icon" val="icon.weapon_scroll_of_wisdom_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -699,7 +699,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30727" name="Bound Stockings of Knowledge" type="Armor">
+	<item id="30727" name="束縛的知識長襪" type="Armor">
 		<!-- Bound Stockings of Knowledge. -->
 		<set name="icon" val="icon.armor_t41_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -720,7 +720,7 @@
 			<stat type="pDef">30</stat>
 		</stats>
 	</item>
-	<item id="30728" name="Bound Tunic of Knowledge" type="Armor">
+	<item id="30728" name="束縛的知識外衣" type="Armor">
 		<!-- Bound Tunic of Knowledge. -->
 		<set name="icon" val="icon.armor_t41_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -741,7 +741,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="30729" name="Bound Gloves of Knowledge" type="Armor">
+	<item id="30729" name="束縛的知識手套" type="Armor">
 		<!-- Bound Gloves of Knowledge. -->
 		<set name="icon" val="icon.armor_t41_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -761,7 +761,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="30730" name="Bound Boots of Knowledge" type="Armor">
+	<item id="30730" name="束縛的知識長靴" type="Armor">
 		<!-- Bound Boots of Knowledge. -->
 		<set name="icon" val="icon.armor_t41_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -781,7 +781,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="30731" name="Bound Striped Silk Shirt" type="Armor">
+	<item id="30731" name="束縛的條紋絲質襯衫" type="Armor">
 		<!-- Bound Striped Silk Shirt. -->
 		<set name="icon" val="icon.etc_stripe_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -800,7 +800,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="30732" name="Bound Striped Linen Shirt" type="Armor">
+	<item id="30732" name="束縛的條紋棉質襯衫" type="Armor">
 		<!-- Bound Striped Linen Shirt. -->
 		<set name="icon" val="icon.etc_stripe_shirts_d_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -819,7 +819,7 @@
 			<stat type="pDef">14</stat>
 		</stats>
 	</item>
-	<item id="30733" name="Bound General's Katzbalger" type="Weapon">
+	<item id="30733" name="束縛的將軍格鬥劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Claymore conversion, Bound General's Katzbalger. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -849,7 +849,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30734" name="Bound Ghost Staff" type="Weapon">
+	<item id="30734" name="束縛的精靈魔杖" type="Weapon">
 		<!-- Bound item. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -879,7 +879,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30735" name="Bound Ghost Staff - Magic Regeneration" type="Weapon">
+	<item id="30735" name="束縛的精靈魔杖-魔法強癒" type="Weapon">
 		<!-- Bound item. <Special properties>. With a 30% chance, applies Regeneration on the target when using a buff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -912,7 +912,7 @@
 			<skill id="1044" level="3" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
 		</skills>
 	</item>
-	<item id="30736" name="Bound Ghost Staff - Mental Shield" type="Weapon">
+	<item id="30736" name="束縛的精靈魔杖-魔法心靈防護" type="Weapon">
 		<!-- Bound item. <Special properties>. With a 50% chance, applies Mental Shield on the target when using a buff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -945,7 +945,7 @@
 			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 		</skills>
 	</item>
-	<item id="30737" name="Bound Ghost Staff - Magic Hold" type="Weapon">
+	<item id="30737" name="束縛的精靈魔杖-魔法束縛" type="Weapon">
 		<!-- Bound item. <Special properties>. With a 10% chance, applies Dryad Root on the target when using a debuff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -978,7 +978,7 @@
 			<skill id="1201" level="25" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="30738" name="Bound Cursed Maingauche" type="Weapon">
+	<item id="30738" name="束縛的受詛咒的突刺刀" type="Weapon">
 		<!-- Bound Cursed Maingauche. -->
 		<set name="icon" val="icon.weapon_maingauche_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1011,7 +1011,7 @@
 			<skill id="3005" level="1" type="ON_CRITICAL_SKILL" /> <!-- Bleed -->
 		</skills>
 	</item>
-	<item id="30739" name="Bound Cursed Dagger" type="Weapon">
+	<item id="30739" name="束縛的受詛咒的匕首" type="Weapon">
 		<!-- Bound Cursed Dagger. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1041,7 +1041,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30740" name="Bound Cursed Dagger - Critical Bleed" type="Weapon">
+	<item id="30740" name="束縛的受詛咒的匕首-Crt.出血" type="Weapon">
 		<!-- <Special properties>. With a 17% chance, inflicts Bleed on the target on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1073,7 +1073,7 @@
 			<skill id="3020" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Bleed -->
 		</skills>
 	</item>
-	<item id="30741" name="Bound Cursed Dagger - Critical Poison" type="Weapon">
+	<item id="30741" name="束縛的受詛咒的匕首-Crt.施毒" type="Weapon">
 		<!-- <Special properties>. With a 9% chance, poisons the target on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1105,7 +1105,7 @@
 			<skill id="3041" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Poison -->
 		</skills>
 	</item>
-	<item id="30742" name="Bound Cursed Dagger - Rsk. Haste" type="Weapon">
+	<item id="30742" name="束縛的受詛咒的匕首-Rsk.速度激發" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +13% when HP < 60%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1137,7 +1137,7 @@
 			<skill id="3033" level="1" /> <!-- Special Property: Rsk. Haste -->
 		</skills>
 	</item>
-	<item id="30743" name="Bound Cursed Stockings" type="Armor">
+	<item id="30743" name="束縛的受詛咒的長襪" type="Armor">
 		<!-- Bound Cursed Stockings. -->
 		<set name="icon" val="icon.armor_t14_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1158,7 +1158,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="30744" name="Bound Cursed Tunic" type="Armor">
+	<item id="30744" name="束縛的受詛咒的外衣" type="Armor">
 		<!-- Bound Cursed Tunic. -->
 		<set name="icon" val="icon.armor_t14_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1179,7 +1179,7 @@
 			<stat type="pDef">39</stat>
 		</stats>
 	</item>
-	<item id="30745" name="Bound Cursed Staff" type="Weapon">
+	<item id="30745" name="束縛的受詛咒的魔杖" type="Weapon">
 		<!-- Bound Cursed Staff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1210,7 +1210,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30746" name="Bound Cursed Staff - Magic Hold" type="Weapon">
+	<item id="30746" name="束縛的受詛咒的魔杖-魔法束縛" type="Weapon">
 		<!-- <Special properties>. With a 10% chance, applies Dryad Root on the target when using a debuff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1243,7 +1243,7 @@
 			<skill id="1201" level="18" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="30747" name="Bound Cursed Staff - Poison" type="Weapon">
+	<item id="30747" name="束縛的受詛咒的魔杖-魔法毒咒" type="Weapon">
 		<!-- <Special properties>. With an 8% chance, applies Poison on the target when using a debuff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1276,7 +1276,7 @@
 			<skill id="1168" level="6" type_chance="8" type="ON_MAGIC_SKILL" /> <!-- Curse Poison -->
 		</skills>
 	</item>
-	<item id="30748" name="Bound Cursed Staff - Magic Weakness" type="Weapon">
+	<item id="30748" name="束縛的受詛咒的魔杖-魔法弱化" type="Weapon">
 		<!-- <Special properties>. With an 8% chance, applies Weakness on the target when using a debuff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1309,7 +1309,7 @@
 			<skill id="1164" level="8" type_chance="8" type="ON_MAGIC_SKILL" /> <!-- Curse of Weakness -->
 		</skills>
 	</item>
-	<item id="30749" name="Bound Artisan's Sword*Sword of Revolution" type="Weapon">
+	<item id="30749" name="束縛的工匠之劍*革命劍" type="Weapon">
 		<!-- Bound Artisan's Sword*Sword of Revolution. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1338,7 +1338,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30750" name="Bound Artisan's Sword*Crimson Sword" type="Weapon">
+	<item id="30750" name="束縛的工匠之劍*緋紅劍" type="Weapon">
 		<!-- Bound Artisan's Sword*Crimson Sword. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1367,7 +1367,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30751" name="Bound Artisan's Sword*Artisan's Sword" type="Weapon">
+	<item id="30751" name="束縛的工匠之劍*工匠之劍" type="Weapon">
 		<!-- Bound Artisan's Sword*Artisan's Sword. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1396,7 +1396,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30752" name="Bound Artisan's Sword*Elven Sword" type="Weapon">
+	<item id="30752" name="束縛的工匠之劍*精靈劍" type="Weapon">
 		<!-- Bound Artisan's Sword*Elven Sword. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1425,7 +1425,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30753" name="Bound Artisan's Sword*Elven Long Sword" type="Weapon">
+	<item id="30753" name="束縛的工匠之劍*精靈長劍" type="Weapon">
 		<!-- Bound Artisan's Sword*Elven Long Sword. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1454,7 +1454,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30754" name="Bound Artisan's Sword*Knight's Sword" type="Weapon">
+	<item id="30754" name="束縛的工匠之劍*騎士劍" type="Weapon">
 		<!-- Bound Artisan's Sword*Knight's Sword. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1483,7 +1483,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30755" name="Bound Artisan's Sword" type="Weapon">
+	<item id="30755" name="束縛的工匠之劍" type="Weapon">
 		<!-- Bound Artisan's Sword. -->
 		<set name="icon" val="icon.weapon_artisans_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1512,7 +1512,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30756" name="Bound Work Hammer" type="Weapon">
+	<item id="30756" name="束縛的工作鎚" type="Weapon">
 		<!-- Bound Work Hammer. -->
 		<set name="icon" val="icon.weapon_work_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1542,7 +1542,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30757" name="Bound Imperial Crusader Breastplate" type="Armor">
+	<item id="30757" name="束縛的帝國聖軍胸甲" type="Armor">
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1562,7 +1562,7 @@
 			<stat type="pDef">205</stat>
 		</stats>
 	</item>
-	<item id="30758" name="Bound Imperial Crusader Helmet" type="Armor">
+	<item id="30758" name="束縛的帝國聖軍頭盔" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1580,7 +1580,7 @@
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="30759" name="Bound Imperial Crusader Shield" type="Armor">
+	<item id="30759" name="束縛的帝國聖軍盾" type="Armor">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1600,7 +1600,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="30760" name="Bound Imperial Crusader Boots" type="Armor">
+	<item id="30760" name="束縛的帝國聖軍長靴" type="Armor">
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1619,7 +1619,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="30761" name="Bound Imperial Crusader Gauntlets" type="Armor">
+	<item id="30761" name="束縛的帝國聖軍長手套" type="Armor">
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1638,7 +1638,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="30762" name="Bound Imperial Crusader Gaiters" type="Armor">
+	<item id="30762" name="束縛的帝國聖軍脛甲" type="Armor">
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1658,7 +1658,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="30763" name="Bound Imperial Staff" type="Weapon">
+	<item id="30763" name="束縛的帝國權杖" type="Weapon">
 		<!-- Bound item. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1689,7 +1689,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30764" name="Bound Imperial Staff - Empower" type="Weapon">
+	<item id="30764" name="束縛的帝國權杖-魔力催化" type="Weapon">
 		<!-- Bound item. <Special properties>. M. Atk. +60. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1723,7 +1723,7 @@
 			<skill id="3575" level="1" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="30765" name="Bound Imperial Staff - MP Regeneration" type="Weapon">
+	<item id="30765" name="束縛的帝國權杖-魔力再生" type="Weapon">
 		<!-- Bound item. <Special properties>. Increases MP Recovery Rate. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1757,7 +1757,7 @@
 			<skill id="3576" level="1" /> <!-- Special Property: MP Regeneration -->
 		</skills>
 	</item>
-	<item id="30766" name="Bound Imperial Staff - Magic Hold" type="Weapon">
+	<item id="30766" name="束縛的帝國權杖-魔法束縛" type="Weapon">
 		<!-- Bound item. <Special properties>. With a 20% chance, applies Dryad Root on the target when using a debuff. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1792,7 +1792,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="30767" name="Bound Inferno Staff" type="Weapon">
+	<item id="30767" name="束縛的地獄魔杖" type="Weapon">
 		<!-- Bound Inferno Staff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1823,7 +1823,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30768" name="Bound Inferno Staff - Acumen" type="Weapon">
+	<item id="30768" name="束縛的地獄魔杖-靈活思緒" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1856,7 +1856,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="30769" name="Bound Inferno Staff - Magic Silence" type="Weapon">
+	<item id="30769" name="束縛的地獄魔杖-魔法沉默" type="Weapon">
 		<!-- <Special properties>. With a 10% chance, applies Silence on the target when using a debuff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1889,7 +1889,7 @@
 			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Property: Silence -->
 		</skills>
 	</item>
-	<item id="30770" name="Bound Inferno Staff - Paralysis" type="Weapon">
+	<item id="30770" name="束縛的地獄魔杖-魔法麻痺" type="Weapon">
 		<!-- <Special properties>. With a 5% chance, applies Paralysis on the target when using a debuff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1922,7 +1922,7 @@
 			<skill id="3079" level="3" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Property: Paralysis -->
 		</skills>
 	</item>
-	<item id="30771" name="Bound Infernal Master" type="Weapon">
+	<item id="30771" name="束縛的煉獄之主" type="Weapon">
 		<!-- Bound item. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1950,7 +1950,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30772" name="Bound Infernal Master - Haste" type="Weapon">
+	<item id="30772" name="束縛的煉獄之主-速度激發" type="Weapon">
 		<!-- Bound item. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1981,7 +1981,7 @@
 			<skill id="3068" level="2" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="30773" name="Bound Infernal Master - Critical Damage" type="Weapon">
+	<item id="30773" name="束縛的煉獄之主-Crt.傷害" type="Weapon">
 		<!-- Bound item. <Special properties>. P. Atk. +297 on a critical attack. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2012,7 +2012,7 @@
 			<skill id="3067" level="1" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="30774" name="Bound Infernal Master - Focus" type="Weapon">
+	<item id="30774" name="束縛的煉獄之主-偵測" type="Weapon">
 		<!-- Bound item. <Special properties>. Critical Rate for basic attacks +6.1%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2043,7 +2043,7 @@
 			<skill id="3050" level="1" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="30775" name="Bound Necklace of Mermaid" type="Armor">
+	<item id="30775" name="束縛的人魚之淚" type="Armor">
 		<!-- Bound Necklace of Mermaid. -->
 		<set name="icon" val="icon.accessary_necklace_of_mermaid_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2062,7 +2062,7 @@
 			<stat type="mDef">60</stat>
 		</stats>
 	</item>
-	<item id="30776" name="Bound Necklace of Mermaid" type="Armor">
+	<item id="30776" name="束縛的人魚之淚" type="Armor">
 		<set name="icon" val="icon.accessary_necklace_of_mermaid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2079,7 +2079,7 @@
 			<stat type="mDef">60</stat>
 		</stats>
 	</item>
-	<item id="30777" name="Bound Immortal Edge" type="Weapon">
+	<item id="30777" name="束縛的莫北巨刃" type="Weapon">
 		<!-- Kamael-exclusive weapon: Pa'agrio Sword conversion, Bound Immortal Edge. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2109,7 +2109,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30778" name="Bound Immortal Edge - Focus" type="Weapon">
+	<item id="30778" name="束縛的莫北巨刃-偵測" type="Weapon">
 		<!-- Kamael-exclusive weapon: Pa'agrio Sword. <Special properties>. P. Critical Rate +77. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2141,7 +2141,7 @@
 			<skill id="3010" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="30779" name="Bound Immortal Edge - Health" type="Weapon">
+	<item id="30779" name="束縛的莫北巨刃-強健" type="Weapon">
 		<!-- Kamael-exclusive weapon: Pa'agrio Sword. <Special properties>. Max HP +25%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2173,7 +2173,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="30780" name="Bound Immortal Edge - Critical Drain" type="Weapon">
+	<item id="30780" name="束縛的莫北巨刃-Crt.吸收" type="Weapon">
 		<!-- Kamael-exclusive weapon: Pa'agrio Sword. <Special properties>. Absorbs 9 HP from the target on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2205,7 +2205,7 @@
 			<skill id="3022" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical HP Drain -->
 		</skills>
 	</item>
-	<item id="30781" name="Bound Ecliptic Axe" type="Weapon">
+	<item id="30781" name="束縛的月蝕斧" type="Weapon">
 		<!-- Bound Ecliptic Axe. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2236,7 +2236,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30782" name="Bound Ecliptic Axe - Conversion" type="Weapon">
+	<item id="30782" name="束縛的月蝕斧-魂體轉換" type="Weapon">
 		<!-- <Special properties>. Max MP +60%, Max HP -40%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2269,7 +2269,7 @@
 			<skill id="3048" level="1" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="30783" name="Bound Ecliptic Axe - M. Atk." type="Weapon">
+	<item id="30783" name="束縛的月蝕斧-魔法之力" type="Weapon">
 		<!-- <Special properties>. M. Skill MP Consumption +15%, M. Atk. +112. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2302,7 +2302,7 @@
 			<skill id="3077" level="4" /> <!-- Special Property: M. Power -->
 		</skills>
 	</item>
-	<item id="30784" name="Bound Ecliptic Axe - Magic Hold" type="Weapon">
+	<item id="30784" name="束縛的月蝕斧-魔法束縛" type="Weapon">
 		<!-- <Special properties>. With a 10% chance, applies Dryad Root on the target when using a debuff. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2335,7 +2335,7 @@
 			<skill id="1201" level="23" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="30785" name="Bound Icarus Dual Sword" type="Weapon">
+	<item id="30785" name="束縛的伊克魯斯雙刀" type="Weapon">
 		<!-- Bound item. When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for basic attacks +10.9%, Max HP +10%. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2368,7 +2368,7 @@
 			<skill id="3411" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="30786" name="Bound Icarus Dual Dagger" type="Weapon">
+	<item id="30786" name="束縛的伊克魯斯雙匕首" type="Weapon">
 		<!-- Bound item. Dual daggers. Enchanting increases P. Atk. Starting from +4, Critical Rate for basic attacks +10.9%. Can be equipped by dagger wielders of Lv. 81+. Deals additional PvP damage. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2402,7 +2402,7 @@
 			<skill id="8296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="30787" name="Bound Heathen's Book" type="Weapon">
+	<item id="30787" name="束縛的異教徒之書" type="Weapon">
 		<!-- Bound Heathen's Book. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_heathens_book_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2432,7 +2432,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30788" name="Bound Winged Spear" type="Weapon">
+	<item id="30788" name="束縛的翼之矛" type="Weapon">
 		<!-- Bound Winged Spear. -->
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2465,7 +2465,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="30789" name="Bound Widow Maker" type="Weapon">
+	<item id="30789" name="束縛的黑寡婦" type="Weapon">
 		<!-- Bound Widow Maker. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_widow_maker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2498,7 +2498,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="30790" name="Bound Widow Maker - Critical Stun" type="Weapon">
+	<item id="30790" name="束縛的黑寡婦-Crt.衝擊" type="Weapon">
 		<!-- <Special properties>. With a 31% chance, stuns the target on a critical attack. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2531,7 +2531,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="30791" name="Bound Widow Maker - Long Blow" type="Weapon">
+	<item id="30791" name="束縛的黑寡婦-遠程打擊" type="Weapon">
 		<!-- <Special properties>. Increases attack range. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2563,7 +2563,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="30792" name="Bound Widow Maker - Wide Blow" type="Weapon">
+	<item id="30792" name="束縛的黑寡婦-寬幅打擊" type="Weapon">
 		<!-- <Special properties>. Increases attack angle. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2595,7 +2595,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="30793" name="Bound Silver Axe" type="Weapon">
+	<item id="30793" name="束縛的戰錐" type="Weapon">
 		<!-- Bound Silver Axe. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_war_pick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2625,7 +2625,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30794" name="Bound Silver Axe - Anger" type="Weapon">
+	<item id="30794" name="束縛的戰錐-怒擊" type="Weapon">
 		<!-- <Special properties>. Max HP -15%, P. Atk. +20. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_war_pick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2657,7 +2657,7 @@
 			<skill id="3012" level="1" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="30795" name="Bound Silver Axe - Rsk. Focus" type="Weapon">
+	<item id="30795" name="束縛的戰錐-Rsk.偵測" type="Weapon">
 		<!-- <Special properties>. Critical Rate for basic attacks +13.8% when HP < 60%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_war_pick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2689,7 +2689,7 @@
 			<skill id="3027" level="1" /> <!-- Special Property: Rsk. Focus -->
 		</skills>
 	</item>
-	<item id="30796" name="Bound Silver Axe - Haste" type="Weapon">
+	<item id="30796" name="束縛的戰錐-速度激發" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +8%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_war_pick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2721,7 +2721,7 @@
 			<skill id="3036" level="1" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="30797" name="Bound War Axe" type="Weapon">
+	<item id="30797" name="束縛的巨戰斧" type="Weapon">
 		<!-- Bound War Axe. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2751,7 +2751,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30798" name="Bound War Axe - Anger" type="Weapon">
+	<item id="30798" name="束縛的巨戰斧-怒擊" type="Weapon">
 		<!-- <Special properties>. Max HP -15%, P. Atk. +24. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_war_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2783,7 +2783,7 @@
 			<skill id="3012" level="3" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="30799" name="Bound War Axe - Health" type="Weapon">
+	<item id="30799" name="束縛的巨戰斧-強健" type="Weapon">
 		<!-- <Special properties>. Max HP +25%. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_war_axe_i01" />
 		<set name="default_action" val="EQUIP" />

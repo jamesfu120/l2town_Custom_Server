@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="32600" name="Fantasy Vesper Leather Helmet" additionalName="Not used" type="Armor">
+	<item id="32600" name="夢幻的薄暮皮頭盔" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -15,7 +15,7 @@
 			<stat type="pDef">116</stat>
 		</stats>
 	</item>
-	<item id="32601" name="Fantasy Vesper Helmet" additionalName="Not used" type="Armor">
+	<item id="32601" name="夢幻的薄暮頭盔" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -30,7 +30,7 @@
 			<stat type="pDef">116</stat>
 		</stats>
 	</item>
-	<item id="32602" name="Fantasy Vesper Shield" additionalName="Not used" type="Armor">
+	<item id="32602" name="夢幻的薄暮衛盾" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -48,7 +48,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="32603" name="Fantasy Vesper Sigil" additionalName="Not used" type="Armor">
+	<item id="32603" name="夢幻的薄暮符印" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -66,7 +66,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="32604" name="Orbis Reward Box (Support)" type="EtcItem">
+	<item id="32604" name="支援用奧爾比斯獎勵箱" type="EtcItem">
 		<!-- Orbis' Support Reward Box -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="price" val="100000" />
@@ -91,7 +91,7 @@
 			<item id="32316" min="2" max="2" chance="100" /> <!-- Elixir of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="32605" name="High-grade Orbis Reward Box" type="EtcItem">
+	<item id="32605" name="上級奧爾比斯獎勵箱" type="EtcItem">
 		<!-- Orbis' High-grade Reward Box -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="price" val="5554218" />
@@ -110,7 +110,7 @@
 			<item id="45935" min="1" max="1" chance="21.25" /> <!-- High-grade Spirit Stone: Accessory -->
 		</capsuled_items>
 	</item>
-	<item id="32606" name="Orbis Reward Box (Luxury-grade)" type="EtcItem">
+	<item id="32606" name="高級奧爾比斯獎勵箱" type="EtcItem">
 		<!-- Orbis' Elite Reward Box -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="price" val="7926800" />
@@ -131,7 +131,7 @@
 			<item id="45935" min="1" max="1" chance="14.166667" /> <!-- High-grade Spirit Stone: Accessory -->
 		</capsuled_items>
 	</item>
-	<item id="32607" name="Top-grade Orbis Reward Box" type="EtcItem">
+	<item id="32607" name="特級奧爾比斯獎勵箱" type="EtcItem">
 		<!-- Orbis' Top-grade Reward Box -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="price" val="1948100" />
@@ -152,7 +152,7 @@
 			<item id="45935" min="1" max="1" chance="14.166667" /> <!-- High-grade Spirit Stone: Accessory -->
 		</capsuled_items>
 	</item>
-	<item id="32608" name="Immortal Shirt" additionalName="HP" type="Armor">
+	<item id="32608" name="永生襯衫" additionalName="HP" type="Armor">
 		<!-- Starting from +4, Max HP +301. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -172,7 +172,7 @@
 			<skill id="13240" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Immortal Shirt -->
 		</skills>
 	</item>
-	<item id="32609" name="Immortal Shirt" additionalName="MP" type="Armor">
+	<item id="32609" name="永生襯衫" additionalName="MP" type="Armor">
 		<!-- Starting from +4, Max MP +148. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -192,7 +192,7 @@
 			<skill id="13241" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Immortal Shirt -->
 		</skills>
 	</item>
-	<item id="32610" name="Immortal Shirt" additionalName="CP" type="Armor">
+	<item id="32610" name="永生襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +811. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -212,7 +212,7 @@
 			<skill id="13242" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Immortal Shirt -->
 		</skills>
 	</item>
-	<item id="32611" name="Twilight Shirt" additionalName="HP" type="Armor">
+	<item id="32611" name="煉獄襯衫" additionalName="HP" type="Armor">
 		<!-- Starting from +4, Max CP +316. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -232,7 +232,7 @@
 			<skill id="13243" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Twilight Shirt -->
 		</skills>
 	</item>
-	<item id="32612" name="Twilight Shirt" additionalName="MP" type="Armor">
+	<item id="32612" name="煉獄襯衫" additionalName="MP" type="Armor">
 		<!-- Starting from +4, Max MP +162. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -252,7 +252,7 @@
 			<skill id="13244" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Twilight Shirt -->
 		</skills>
 	</item>
-	<item id="32613" name="Twilight Shirt" additionalName="CP" type="Armor">
+	<item id="32613" name="煉獄襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +851. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -272,7 +272,7 @@
 			<skill id="13245" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Twilight Shirt -->
 		</skills>
 	</item>
-	<item id="32614" name="Seraph Shirt" additionalName="HP" type="Armor">
+	<item id="32614" name="卡戴拉襯衫" additionalName="HP" type="Armor">
 		<!-- Starting from +4, Max HP +332. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -292,7 +292,7 @@
 			<skill id="13246" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Seraph Shirt -->
 		</skills>
 	</item>
-	<item id="32615" name="Seraph Shirt" additionalName="MP" type="Armor">
+	<item id="32615" name="卡戴拉襯衫" additionalName="MP" type="Armor">
 		<!-- Starting from +4, Max MP +176. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -312,7 +312,7 @@
 			<skill id="13247" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Seraph Shirt -->
 		</skills>
 	</item>
-	<item id="32616" name="Seraph Shirt" additionalName="CP" type="Armor">
+	<item id="32616" name="卡戴拉襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +894. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -332,7 +332,7 @@
 			<skill id="13248" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Seraph Shirt -->
 		</skills>
 	</item>
-	<item id="32617" name="Eternal Shirt" additionalName="HP" type="Armor">
+	<item id="32617" name="艾迪奧斯襯衫" additionalName="HP" type="Armor">
 		<!-- Starting from +4, Max HP +339. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -352,7 +352,7 @@
 			<skill id="13249" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Eternal Shirt -->
 		</skills>
 	</item>
-	<item id="32618" name="Eternal Shirt" additionalName="MP" type="Armor">
+	<item id="32618" name="艾迪奧斯襯衫" additionalName="MP" type="Armor">
 		<!-- Starting from +4, Max MP +182. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -372,7 +372,7 @@
 			<skill id="13250" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Eternal Shirt -->
 		</skills>
 	</item>
-	<item id="32619" name="Eternal Shirt" additionalName="CP" type="Armor">
+	<item id="32619" name="艾迪奧斯襯衫" additionalName="CP" type="Armor">
 		<!-- Starting from +4, Max CP +912. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -392,7 +392,7 @@
 			<skill id="13251" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Eternal Shirt -->
 		</skills>
 	</item>
-	<item id="32620" name="Low-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32620" name="下級魔法古文夾永生腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -413,7 +413,7 @@
 			<skill id="13160" level="1" /> <!-- Immortal Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32621" name="Mid-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32621" name="普通魔法古文夾永生腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -434,7 +434,7 @@
 			<skill id="13161" level="2" /> <!-- Immortal Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32622" name="High-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32622" name="上級魔法古文夾永生腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -455,7 +455,7 @@
 			<skill id="13162" level="3" /> <!-- Immortal Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32623" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32623" name="特級魔法古文夾永生腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -476,7 +476,7 @@
 			<skill id="13163" level="4" /> <!-- Immortal Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32624" name="Low-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32624" name="下級魔法古文夾永生腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -497,7 +497,7 @@
 			<skill id="13164" level="1" /> <!-- Immortal Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32625" name="Mid-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32625" name="普通魔法古文夾永生腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -518,7 +518,7 @@
 			<skill id="13165" level="2" /> <!-- Immortal Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32626" name="High-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32626" name="上級魔法古文夾永生腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -539,7 +539,7 @@
 			<skill id="13166" level="3" /> <!-- Immortal Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32627" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32627" name="特級魔法古文夾永生腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -560,7 +560,7 @@
 			<skill id="13167" level="4" /> <!-- Immortal Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32628" name="Low-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32628" name="下級魔法飾品永生腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -581,7 +581,7 @@
 			<skill id="13168" level="1" /> <!-- Immortal Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32629" name="Mid-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32629" name="普通魔法飾品永生腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -602,7 +602,7 @@
 			<skill id="13169" level="2" /> <!-- Immortal Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32630" name="High-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32630" name="上級魔法飾品永生腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -623,7 +623,7 @@
 			<skill id="13170" level="3" /> <!-- Immortal Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32631" name="Top-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32631" name="特級魔法飾品永生腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -644,7 +644,7 @@
 			<skill id="13171" level="4" /> <!-- Immortal Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32632" name="Low-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32632" name="下級魔法飾品永生腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -665,7 +665,7 @@
 			<skill id="13172" level="1" /> <!-- Immortal Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32633" name="Mid-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32633" name="普通魔法飾品永生腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -686,7 +686,7 @@
 			<skill id="13173" level="2" /> <!-- Immortal Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32634" name="High-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32634" name="上級魔法飾品永生腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -707,7 +707,7 @@
 			<skill id="13174" level="3" /> <!-- Immortal Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32635" name="Top-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32635" name="特級魔法飾品永生腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -728,7 +728,7 @@
 			<skill id="13175" level="4" /> <!-- Immortal Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32636" name="Low-grade Magic Ornament Immortal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32636" name="下級魔法飾品永生腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -749,7 +749,7 @@
 			<skill id="13176" level="1" /> <!-- Immortal Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32637" name="Mid-grade Magic Ornament Immortal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32637" name="普通魔法飾品永生腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -770,7 +770,7 @@
 			<skill id="13177" level="2" /> <!-- Immortal Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32638" name="High-grade Magic Ornament Immortal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32638" name="上級魔法飾品永生腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -791,7 +791,7 @@
 			<skill id="13178" level="3" /> <!-- Immortal Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32639" name="Top-grade Magic Ornament Immortal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32639" name="特級魔法飾品永生腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -812,7 +812,7 @@
 			<skill id="13179" level="4" /> <!-- Immortal Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32640" name="Low-grade Magic Rune Clip Twilight Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32640" name="下級魔法古文夾煉獄腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -833,7 +833,7 @@
 			<skill id="13180" level="1" /> <!-- Twilight Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32641" name="Mid-grade Magic Rune Clip Twilight Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32641" name="普通魔法古文夾煉獄腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -854,7 +854,7 @@
 			<skill id="13181" level="2" /> <!-- Twilight Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32642" name="High-grade Magic Rune Clip Twilight Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32642" name="上級魔法古文夾煉獄腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -875,7 +875,7 @@
 			<skill id="13182" level="3" /> <!-- Twilight Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32643" name="Top-grade Magic Rune Clip Twilight Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32643" name="特級魔法古文夾煉獄腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -896,7 +896,7 @@
 			<skill id="13183" level="4" /> <!-- Twilight Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32644" name="Low-grade Magic Rune Clip Twilight Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32644" name="下級魔法古文夾煉獄腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -917,7 +917,7 @@
 			<skill id="13184" level="1" /> <!-- Twilight Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32645" name="Mid-grade Magic Rune Clip Twilight Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32645" name="普通魔法古文夾煉獄腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -938,7 +938,7 @@
 			<skill id="13185" level="2" /> <!-- Twilight Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32646" name="High-grade Magic Rune Clip Twilight Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32646" name="上級魔法古文夾煉獄腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -959,7 +959,7 @@
 			<skill id="13186" level="3" /> <!-- Twilight Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32647" name="Top-grade Magic Rune Clip Twilight Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32647" name="特級魔法古文夾煉獄腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -980,7 +980,7 @@
 			<skill id="13187" level="4" /> <!-- Twilight Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32648" name="Low-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32648" name="下級魔法飾品煉獄腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1001,7 +1001,7 @@
 			<skill id="13188" level="1" /> <!-- Twilight Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32649" name="Mid-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32649" name="普通魔法飾品煉獄腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1022,7 +1022,7 @@
 			<skill id="13189" level="2" /> <!-- Twilight Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32650" name="High-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32650" name="上級魔法飾品煉獄腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1043,7 +1043,7 @@
 			<skill id="13190" level="3" /> <!-- Twilight Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32651" name="Top-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32651" name="特級魔法飾品煉獄腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1064,7 +1064,7 @@
 			<skill id="13191" level="4" /> <!-- Twilight Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32652" name="Low-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32652" name="下級魔法飾品煉獄腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1085,7 +1085,7 @@
 			<skill id="13192" level="1" /> <!-- Twilight Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32653" name="Mid-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32653" name="普通魔法飾品煉獄腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1106,7 +1106,7 @@
 			<skill id="13193" level="2" /> <!-- Twilight Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32654" name="High-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32654" name="上級魔法飾品煉獄腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1127,7 +1127,7 @@
 			<skill id="13194" level="3" /> <!-- Twilight Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32655" name="Top-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32655" name="特級魔法飾品煉獄腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1148,7 +1148,7 @@
 			<skill id="13195" level="4" /> <!-- Twilight Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32656" name="Low-grade Magic Ornament Twilight Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32656" name="下級魔法飾品煉獄腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1169,7 +1169,7 @@
 			<skill id="13196" level="1" /> <!-- Twilight Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32657" name="Mid-grade Magic Ornament Twilight Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32657" name="普通魔法飾品煉獄腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1190,7 +1190,7 @@
 			<skill id="13197" level="2" /> <!-- Twilight Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32658" name="High-grade Magic Ornament Twilight Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32658" name="上級魔法飾品煉獄腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1211,7 +1211,7 @@
 			<skill id="13198" level="3" /> <!-- Twilight Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32659" name="Top-grade Magic Ornament Twilight Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32659" name="特級魔法飾品煉獄腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1232,7 +1232,7 @@
 			<skill id="13199" level="4" /> <!-- Twilight Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32660" name="Low-grade Magic Rune Clip Seraph Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32660" name="下級魔法古文夾卡戴拉腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1253,7 +1253,7 @@
 			<skill id="13200" level="1" /> <!-- Seraph Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32661" name="Mid-grade Magic Rune Clip Seraph Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32661" name="普通魔法古文夾卡戴拉腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1274,7 +1274,7 @@
 			<skill id="13201" level="2" /> <!-- Seraph Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32662" name="High-grade Magic Rune Clip Seraph Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32662" name="上級魔法古文夾卡戴拉腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1295,7 +1295,7 @@
 			<skill id="13202" level="3" /> <!-- Seraph Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32663" name="Top-grade Magic Rune Clip Seraph Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32663" name="特級魔法古文夾卡戴拉腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1316,7 +1316,7 @@
 			<skill id="13203" level="4" /> <!-- Seraph Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32664" name="Low-grade Magic Rune Clip Seraph Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32664" name="下級魔法古文夾卡戴拉腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1337,7 +1337,7 @@
 			<skill id="13204" level="1" /> <!-- Seraph Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32665" name="Mid-grade Magic Rune Clip Seraph Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32665" name="普通魔法古文夾卡戴拉腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1358,7 +1358,7 @@
 			<skill id="13205" level="2" /> <!-- Seraph Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32666" name="High-grade Magic Rune Clip Seraph Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32666" name="上級魔法古文夾卡戴拉腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1379,7 +1379,7 @@
 			<skill id="13206" level="3" /> <!-- Seraph Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32667" name="Top-grade Magic Rune Clip Seraph Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32667" name="特級魔法古文夾卡戴拉腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1400,7 +1400,7 @@
 			<skill id="13207" level="4" /> <!-- Seraph Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32668" name="Low-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32668" name="下級魔法飾品卡戴拉腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1421,7 +1421,7 @@
 			<skill id="13208" level="1" /> <!-- Seraph Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32669" name="Mid-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32669" name="普通魔法飾品卡戴拉腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1442,7 +1442,7 @@
 			<skill id="13209" level="2" /> <!-- Seraph Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32670" name="High-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32670" name="上級魔法飾品卡戴拉腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1463,7 +1463,7 @@
 			<skill id="13210" level="3" /> <!-- Seraph Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32671" name="Top-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32671" name="特級魔法飾品卡戴拉腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1484,7 +1484,7 @@
 			<skill id="13211" level="4" /> <!-- Seraph Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32672" name="Low-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32672" name="下級魔法飾品卡戴拉腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1505,7 +1505,7 @@
 			<skill id="13212" level="1" /> <!-- Seraph Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32673" name="Mid-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32673" name="普通魔法飾品卡戴拉腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1526,7 +1526,7 @@
 			<skill id="13213" level="2" /> <!-- Seraph Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32674" name="High-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32674" name="上級魔法飾品卡戴拉腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1547,7 +1547,7 @@
 			<skill id="13214" level="3" /> <!-- Seraph Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32675" name="Top-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32675" name="特級魔法飾品卡戴拉腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1568,7 +1568,7 @@
 			<skill id="13215" level="4" /> <!-- Seraph Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32676" name="Low-grade Magic Ornament Seraph Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32676" name="下級魔法飾品卡戴拉腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1589,7 +1589,7 @@
 			<skill id="13216" level="1" /> <!-- Seraph Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32677" name="Mid-grade Magic Ornament Seraph Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32677" name="普通魔法飾品卡戴拉腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1610,7 +1610,7 @@
 			<skill id="13217" level="2" /> <!-- Seraph Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32678" name="High-grade Magic Ornament Seraph Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32678" name="上級魔法飾品卡戴拉腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1631,7 +1631,7 @@
 			<skill id="13218" level="3" /> <!-- Seraph Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32679" name="Top-grade Magic Ornament Seraph Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32679" name="特級魔法飾品卡戴拉腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1652,7 +1652,7 @@
 			<skill id="13219" level="4" /> <!-- Seraph Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32680" name="Low-grade Magic Rune Clip Eternal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32680" name="下級魔法古文夾艾迪奧斯腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1673,7 +1673,7 @@
 			<skill id="13220" level="1" /> <!-- Eternal Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32681" name="Mid-grade Magic Rune Clip Eternal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32681" name="普通魔法古文夾艾迪奧斯腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1694,7 +1694,7 @@
 			<skill id="13221" level="2" /> <!-- Eternal Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32682" name="High-grade Magic Rune Clip Eternal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32682" name="上級魔法古文夾艾迪奧斯腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1715,7 +1715,7 @@
 			<skill id="13222" level="3" /> <!-- Eternal Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32683" name="Top-grade Magic Rune Clip Eternal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32683" name="特級魔法古文夾艾迪奧斯腰帶" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1736,7 +1736,7 @@
 			<skill id="13223" level="4" /> <!-- Eternal Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32684" name="Low-grade Magic Rune Clip Eternal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32684" name="下級魔法古文夾艾迪奧斯腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1757,7 +1757,7 @@
 			<skill id="13224" level="1" /> <!-- Eternal Belt - Low-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32685" name="Mid-grade Magic Rune Clip Eternal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32685" name="普通魔法古文夾艾迪奧斯腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1778,7 +1778,7 @@
 			<skill id="13225" level="2" /> <!-- Eternal Belt - Mid-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32686" name="High-grade Magic Rune Clip Eternal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32686" name="上級魔法古文夾艾迪奧斯腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1799,7 +1799,7 @@
 			<skill id="13226" level="3" /> <!-- Eternal Belt - High-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32687" name="Top-grade Magic Rune Clip Eternal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32687" name="特級魔法古文夾艾迪奧斯腰帶" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1820,7 +1820,7 @@
 			<skill id="13227" level="4" /> <!-- Eternal Belt - Top-grade Magic Rune Clip -->
 		</skills>
 	</item>
-	<item id="32688" name="Low-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32688" name="下級魔法飾品艾迪奧斯腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1841,7 +1841,7 @@
 			<skill id="13228" level="1" /> <!-- Eternal Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32689" name="Mid-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32689" name="普通魔法飾品艾迪奧斯腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1862,7 +1862,7 @@
 			<skill id="13229" level="2" /> <!-- Eternal Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32690" name="High-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32690" name="上級魔法飾品艾迪奧斯腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1883,7 +1883,7 @@
 			<skill id="13230" level="3" /> <!-- Eternal Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32691" name="Top-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
+	<item id="32691" name="特級魔法飾品艾迪奧斯腰帶" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Deals additional PvP damage on a basic attack. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1904,7 +1904,7 @@
 			<skill id="13231" level="4" /> <!-- Eternal Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32692" name="Low-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32692" name="下級魔法飾品艾迪奧斯腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1925,7 +1925,7 @@
 			<skill id="13232" level="1" /> <!-- Eternal Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32693" name="Mid-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32693" name="普通魔法飾品艾迪奧斯腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1946,7 +1946,7 @@
 			<skill id="13233" level="2" /> <!-- Eternal Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32694" name="High-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32694" name="上級魔法飾品艾迪奧斯腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1967,7 +1967,7 @@
 			<skill id="13234" level="3" /> <!-- Eternal Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32695" name="Top-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
+	<item id="32695" name="特級魔法飾品艾迪奧斯腰帶" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Deals additional PvP damage when using skills. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1988,7 +1988,7 @@
 			<skill id="13235" level="4" /> <!-- Eternal Belt - Top-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32696" name="Low-grade Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32696" name="下級魔法飾品艾迪奧斯腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2009,7 +2009,7 @@
 			<skill id="13236" level="1" /> <!-- Eternal Belt - Low-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32697" name="Mid-grade Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32697" name="普通魔法飾品艾迪奧斯腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2030,7 +2030,7 @@
 			<skill id="13237" level="2" /> <!-- Eternal Belt - Mid-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32698" name="High-grade Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32698" name="上級魔法飾品艾迪奧斯腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2051,7 +2051,7 @@
 			<skill id="13238" level="3" /> <!-- Eternal Belt - High-grade Magic Ornament -->
 		</skills>
 	</item>
-	<item id="32699" name="Top-grade Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32699" name="特級魔法飾品艾迪奧斯腰帶" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />

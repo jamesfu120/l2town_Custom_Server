@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="22700" name="R-grade Equipment Restoration Stone" type="EtcItem">
+	<item id="22700" name="裝備外型復原石-R級" type="EtcItem">
 		<!-- Double-click to restore the default appearance of R-grade equipment (weapons/ armor). -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="immediate_effect" val="true" />
@@ -18,7 +18,7 @@
 			<skill id="22556" level="1" /> <!-- Restoration Stone: R-grade Equipment -->
 		</skills>
 	</item>
-	<item id="22701" name="S-grade Equipment Restoration Stone" type="EtcItem">
+	<item id="22701" name="裝備外型復原石-S級" type="EtcItem">
 		<!-- Double-click to restore the default appearance of S-grade equipment (weapons/ armor). -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="immediate_effect" val="true" />
@@ -36,7 +36,7 @@
 			<skill id="22557" level="1" /> <!-- Restoration Stone: S-grade Equipment -->
 		</skills>
 	</item>
-	<item id="22702" name="A-grade Equipment Restoration Stone" type="EtcItem">
+	<item id="22702" name="裝備外型復原石-A級" type="EtcItem">
 		<!-- Double-click to restore the default appearance of A-grade equipment (weapons/ armor). -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="immediate_effect" val="true" />
@@ -54,7 +54,7 @@
 			<skill id="22558" level="1" /> <!-- Restoration Stone: A-grade Equipment -->
 		</skills>
 	</item>
-	<item id="22703" name="B-grade Equipment Restoration Stone" type="EtcItem">
+	<item id="22703" name="裝備外型復原石-B級" type="EtcItem">
 		<!-- Double-click to restore the default appearance of B-grade equipment (weapons/ armor). -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="immediate_effect" val="true" />
@@ -72,7 +72,7 @@
 			<skill id="22559" level="1" /> <!-- Restoration Stone: B-grade Equipment -->
 		</skills>
 	</item>
-	<item id="22704" name="C-grade Equipment Restoration Stone" type="EtcItem">
+	<item id="22704" name="裝備外型復原石-C級" type="EtcItem">
 		<!-- Double-click to restore the default appearance of C-grade equipment (weapons/ armor). -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="immediate_effect" val="true" />
@@ -90,7 +90,7 @@
 			<skill id="22560" level="1" /> <!-- Restoration Stone: C-grade Equipment -->
 		</skills>
 	</item>
-	<item id="22705" name="D-grade Equipment Restoration Stone" type="EtcItem">
+	<item id="22705" name="裝備外型復原石-D級" type="EtcItem">
 		<!-- Double-click to restore the default appearance of D-grade equipment (weapons/ armor). -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
@@ -108,7 +108,7 @@
 			<skill id="22561" level="1" /> <!-- Restoration Stone: D-grade Equipment -->
 		</skills>
 	</item>
-	<item id="22706" name="(Test) Appearance Stone: Formal Wear" type="EtcItem">
+	<item id="22706" name="(測試用)禮服變換加工石" type="EtcItem">
 		<!-- For test use. Changes the armor appearance to that of Formal Wear. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
@@ -126,7 +126,7 @@
 			<skill id="22562" level="1" /> <!-- (Test) Appearance Stone: Formal Wear -->
 		</skills>
 	</item>
-	<item id="22707" name="(Test) Appearance Stone: Immortal Cloak" type="EtcItem">
+	<item id="22707" name="(測試用)永生上衣加工石" type="EtcItem">
 		<!-- For test use. Top only. Immortal heavy armor. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
@@ -144,7 +144,7 @@
 			<skill id="22563" level="1" /> <!-- (Test) Appearance Stone: Immortal Cloak -->
 		</skills>
 	</item>
-	<item id="22708" name="Appearance Stone: Hair Accessory" type="EtcItem">
+	<item id="22708" name="頭飾加工石" type="EtcItem">
 		<!-- Double-click to change a head accessory's appearance. Can be used with items equipped in the same number of slots. An appearance item is destroyed after its appearance is extracted. An appearance-modified item's effects do not change. The fee is 125,000 adena for a 1-slot head accessory and 200,000 adena for a 2-slot head accessory. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
@@ -162,7 +162,7 @@
 			<skill id="22564" level="1" /> <!-- Appearance Stone: Head Accessory -->
 		</skills>
 	</item>
-	<item id="22709" name="Blessed Appearance Stone: Hair Accessory" type="EtcItem">
+	<item id="22709" name="祝福的頭飾加工石" type="EtcItem">
 		<!-- Double-click to change a head accessory's appearance. Can be used with items equipped in the same number of slots. An appearance item is required, it is not destroyed after the appearance extraction. An appearance-modified item's effects do not change. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="immediate_effect" val="true" />
@@ -180,7 +180,7 @@
 			<skill id="22565" level="1" /> <!-- Blessed Appearance Stone: Head Accessory -->
 		</skills>
 	</item>
-	<item id="22710" name="Vitality Suspending Potion" type="EtcItem">
+	<item id="22710" name="活力停滯藥水" type="EtcItem">
 		<!-- A magic potion that sustains Vitality. When used, sustains Vitality, but you do not receive Vitality bonus. Cooldown: 30 min. -->
 		<set name="icon" val="BranchSys3.lcon.g_vitality_potion_stop" />
 		<set name="weight" val="36" />
@@ -201,7 +201,7 @@
 			<skill id="22566" level="1" /> <!-- Vitality Suspending Potion -->
 		</skills>
 	</item>
-	<item id="22711" name="Japanese Sword" type="Weapon">
+	<item id="22711" name="和風刀" type="Weapon">
 		<!-- A Japanese weapon. Type: one-handed sword. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -228,7 +228,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22712" name="Japanese Dagger" type="Weapon">
+	<item id="22712" name="和風匕首" type="Weapon">
 		<!-- A Japanese weapon. Type: dagger. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dagger" />
 		<set name="default_action" val="EQUIP" />
@@ -256,7 +256,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22713" name="Japanese Long Sword" type="Weapon">
+	<item id="22713" name="和風長刀" type="Weapon">
 		<!-- A Japanese weapon. Type: two-handed sword. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -283,7 +283,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22714" name="Japanese Fist Weapon" type="Weapon">
+	<item id="22714" name="和風格鬥兵器" type="Weapon">
 		<!-- A Japanese weapon. Type: fist weapon. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dualfist" />
 		<set name="default_action" val="EQUIP" />
@@ -311,7 +311,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22715" name="Japanese Great Spear" type="Weapon">
+	<item id="22715" name="和風長矛" type="Weapon">
 		<!-- A Japanese weapon. Type: spear. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_pole" />
 		<set name="default_action" val="EQUIP" />
@@ -339,7 +339,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22716" name="Japanese Bow" type="Weapon">
+	<item id="22716" name="和風弓" type="Weapon">
 		<!-- A Japanese weapon. Type: bow. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_bow" />
 		<set name="default_action" val="EQUIP" />
@@ -369,7 +369,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="22717" name="Japanese Crossbow" type="Weapon">
+	<item id="22717" name="和風弩弓" type="Weapon">
 		<!-- A Japanese weapon. Type: crossbow. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_crossbow" />
 		<set name="default_action" val="EQUIP" />
@@ -398,7 +398,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="22718" name="Japanese One-handed Blunt Weapon" type="Weapon">
+	<item id="22718" name="和風單手鈍器" type="Weapon">
 		<!-- A Japanese weapon. Type: one-handed blunt weapon. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -426,7 +426,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22719" name="Japanese Giant Blunt Weapon" type="Weapon">
+	<item id="22719" name="和風巨大鈍器" type="Weapon">
 		<!-- A Japanese weapon. Type: two-handed blunt weapon. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -455,7 +455,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22720" name="Japanese One-handed Staff" type="Weapon">
+	<item id="22720" name="和風單手魔杖" type="Weapon">
 		<!-- A Japanese weapon. Type: one-handed staff. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -483,7 +483,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22721" name="Japanese Giant Staff" type="Weapon">
+	<item id="22721" name="和風巨大雙手魔杖" type="Weapon">
 		<!-- A Japanese weapon. Type: two-handed staff. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -512,7 +512,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22722" name="Japanese Dual Swords" type="Weapon">
+	<item id="22722" name="和風雙刀" type="Weapon">
 		<!-- A Japanese weapon. Type: dual swords. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dual" />
 		<set name="default_action" val="EQUIP" />
@@ -539,7 +539,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22723" name="Japanese Dual Daggers" type="Weapon">
+	<item id="22723" name="和風雙匕首" type="Weapon">
 		<!-- A Japanese weapon. Type: dual daggers. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dualdagger" />
 		<set name="default_action" val="EQUIP" />
@@ -567,7 +567,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22724" name="Japanese Dual Blunt Weapons" type="Weapon">
+	<item id="22724" name="和風雙鈍器" type="Weapon">
 		<!-- A Japanese weapon. Type: dual blunt weapons. An item for changing a weapon's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dualblunt" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22725" name="Japanese Shield" type="Armor">
+	<item id="22725" name="和風盾牌" type="Armor">
 		<!-- A Japanese shield. Type: shield. An item for changing a shield's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -618,7 +618,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="22726" name="Japanese Sigil" type="Armor">
+	<item id="22726" name="和風符印" type="Armor">
 		<!-- A Japanese sigil. Type: sigil. An item for changing a sigil's appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_sigil" />
 		<set name="armor_type" val="SIGIL" />
@@ -638,7 +638,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="22727" name="Appearance Stone: Japanese Sword" type="EtcItem">
+	<item id="22727" name="和風刀加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Japanese sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
@@ -656,7 +656,7 @@
 			<skill id="22567" level="1" /> <!-- Appearance Stone: Japanese Sword -->
 		</skills>
 	</item>
-	<item id="22728" name="Appearance Stone: Japanese Dagger" type="EtcItem">
+	<item id="22728" name="和風匕首加工石" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Japanese dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="immediate_effect" val="true" />
@@ -674,7 +674,7 @@
 			<skill id="22568" level="1" /> <!-- Appearance Stone: Japanese Dagger -->
 		</skills>
 	</item>
-	<item id="22729" name="Appearance Stone: Japanese Long Sword" type="EtcItem">
+	<item id="22729" name="和風長刀加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Japanese long sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +692,7 @@
 			<skill id="22569" level="1" /> <!-- Appearance Stone: Japanese Long Sword -->
 		</skills>
 	</item>
-	<item id="22730" name="Appearance Stone: Japanese Fist Weapon" type="EtcItem">
+	<item id="22730" name="和風格鬥兵器加工石" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Japanese fist weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="immediate_effect" val="true" />
@@ -710,7 +710,7 @@
 			<skill id="22570" level="1" /> <!-- Appearance Stone: Japanese Fist Weapon -->
 		</skills>
 	</item>
-	<item id="22731" name="Appearance Stone: Japanese Great Spear" type="EtcItem">
+	<item id="22731" name="和風長矛加工石" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Japanese great spear. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="immediate_effect" val="true" />
@@ -728,7 +728,7 @@
 			<skill id="22571" level="1" /> <!-- Appearance Stone: Japanese Great Spear -->
 		</skills>
 	</item>
-	<item id="22732" name="Appearance Stone: Japanese Bow" type="EtcItem">
+	<item id="22732" name="和風弓加工石" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Japanese bow. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="immediate_effect" val="true" />
@@ -746,7 +746,7 @@
 			<skill id="22572" level="1" /> <!-- Appearance Stone: Japanese Bow -->
 		</skills>
 	</item>
-	<item id="22733" name="Appearance Stone: Japanese Crossbow" type="EtcItem">
+	<item id="22733" name="和風弩弓加工石" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Japanese crossbow. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
 		<set name="immediate_effect" val="true" />
@@ -764,7 +764,7 @@
 			<skill id="22573" level="1" /> <!-- Appearance Stone: Japanese Crossbow -->
 		</skills>
 	</item>
-	<item id="22734" name="Appearance Stone: Japanese One-handed Blunt Weapon" type="EtcItem">
+	<item id="22734" name="和風單手鈍器加工石" type="EtcItem">
 		<!-- Changes the appearance of a blunt weapon to that of a Japanese blunt weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -782,7 +782,7 @@
 			<skill id="22574" level="1" /> <!-- Appearance Stone: Japanese One-handed Blunt Weapon -->
 		</skills>
 	</item>
-	<item id="22735" name="Appearance Stone: Japanese Giant Blunt Weapon" type="EtcItem">
+	<item id="22735" name="和風巨大鈍器加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of a Japanese giant blunt weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -800,7 +800,7 @@
 			<skill id="22575" level="1" /> <!-- Appearance Stone: Japanese Giant Blunt Weapon -->
 		</skills>
 	</item>
-	<item id="22736" name="Appearance Stone: Japanese One-handed Staff" type="EtcItem">
+	<item id="22736" name="和風單手魔杖加工石" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of a Japanese one-handed staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -818,7 +818,7 @@
 			<skill id="22576" level="1" /> <!-- Appearance Stone: Japanese One-handed Staff -->
 		</skills>
 	</item>
-	<item id="22737" name="Appearance Stone: Japanese Giant Staff" type="EtcItem">
+	<item id="22737" name="和風巨大雙手魔杖加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of a Japanese giant two-handed staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -836,7 +836,7 @@
 			<skill id="22577" level="1" /> <!-- Appearance Stone: Japanese Giant Staff -->
 		</skills>
 	</item>
-	<item id="22738" name="Appearance Stone: Japanese Dual Swords" type="EtcItem">
+	<item id="22738" name="和風雙刀加工石" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of a Japanese dual swords. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
@@ -854,7 +854,7 @@
 			<skill id="22578" level="1" /> <!-- Appearance Stone: Japanese Dual Swords -->
 		</skills>
 	</item>
-	<item id="22739" name="Appearance Stone: Japanese Dual Daggers" type="EtcItem">
+	<item id="22739" name="和風雙匕首加工石" type="EtcItem">
 		<!-- Changes the appearance of dual daggers to that of a Japanese dual daggers. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="immediate_effect" val="true" />
@@ -872,7 +872,7 @@
 			<skill id="22579" level="1" /> <!-- Appearance Stone: Japanese Dual Daggers -->
 		</skills>
 	</item>
-	<item id="22740" name="Appearance Stone: Japanese Dual Blunt Weapons" type="EtcItem">
+	<item id="22740" name="和風雙鈍器加工石" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapon to that of a Japanese weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
@@ -890,7 +890,7 @@
 			<skill id="22580" level="1" /> <!-- Appearance Stone: Japanese Dual Blunt Weapons -->
 		</skills>
 	</item>
-	<item id="22741" name="Appearance Stone: Japanese Shield" type="EtcItem">
+	<item id="22741" name="和風盾牌加工石" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Japanese shield. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
 		<set name="immediate_effect" val="true" />
@@ -908,7 +908,7 @@
 			<skill id="22581" level="1" /> <!-- Appearance Stone: Japanese Shield -->
 		</skills>
 	</item>
-	<item id="22742" name="Appearance Stone: Japanese Sigil" type="EtcItem">
+	<item id="22742" name="和風符印加工石" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Japanese sigil. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="immediate_effect" val="true" />
@@ -926,7 +926,7 @@
 			<skill id="22582" level="1" /> <!-- Appearance Stone: Japanese Sigil -->
 		</skills>
 	</item>
-	<item id="22743" name="Transformation Scroll: Fairweather Borna" type="EtcItem">
+	<item id="22743" name="變身卷軸-晴空之伯盧那" type="EtcItem">
 		<!-- For 30 min., transform into a Fairweather Borna, who has the abilities of the Feoh Wizard and Aeore Healer and can also use the Escape: Clan Hall skill. Required level: 80+. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="is_tradable" val="false" />
@@ -942,7 +942,7 @@
 			<skill id="22583" level="1" /> <!-- Transformation Scroll: Borna -->
 		</skills>
 	</item>
-	<item id="22744" name="Package: Vitality Suspending Potion" type="EtcItem">
+	<item id="22744" name="活力停滯藥水組" type="EtcItem">
 		<!-- Double-click to obtain Vitality Suspending Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="36" />
@@ -960,7 +960,7 @@
 			<item id="22710" min="1" max="1" chance="100" /> <!-- Vitality Suspending Potion -->
 		</capsuled_items>
 	</item>
-	<item id="22745" name="Scroll: Increase Vitality" type="EtcItem">
+	<item id="22745" name="活力提升卷軸" type="EtcItem">
 		<!-- Increases the number of Vitality items that can be used per week by 1. Cooldown: 3 d. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up" />
 		<set name="weight" val="30" />
@@ -979,7 +979,7 @@
 			<skill id="22584" level="1" /> <!-- Scroll: Increase Vitality -->
 		</skills>
 	</item>
-	<item id="22746" name="Package: Scroll: Increase Vitality" type="EtcItem">
+	<item id="22746" name="活力提升卷軸組" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
@@ -997,7 +997,7 @@
 			<item id="22745" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality -->
 		</capsuled_items>
 	</item>
-	<item id="22747" name="High-grade Scroll: Increase Vitality" type="EtcItem">
+	<item id="22747" name="上級活力提升卷軸" type="EtcItem">
 		<!-- Increases the number of Vitality items that can be used per week by 2. Cooldown: 3 d. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up_2" />
 		<set name="weight" val="30" />
@@ -1016,7 +1016,7 @@
 			<skill id="22584" level="2" /> <!-- Scroll: Increase Vitality -->
 		</skills>
 	</item>
-	<item id="22748" name="Package: High-grade Scroll: Increase Vitality" type="EtcItem">
+	<item id="22748" name="上級活力提升卷軸組" type="EtcItem">
 		<!-- Double-click to obtain High-grade Scroll: Increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
@@ -1034,7 +1034,7 @@
 			<item id="22747" min="1" max="1" chance="100" /> <!-- High-grade Scroll: Increase Vitality -->
 		</capsuled_items>
 	</item>
-	<item id="22749" name="Top-grade Scroll: Increase Vitality" type="EtcItem">
+	<item id="22749" name="特級活力提升卷軸" type="EtcItem">
 		<!-- Increases the number of Vitality items that can be used per week by 3. Cooldown: 3 d. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up_3" />
 		<set name="weight" val="30" />
@@ -1053,7 +1053,7 @@
 			<skill id="22584" level="3" /> <!-- Scroll: Increase Vitality -->
 		</skills>
 	</item>
-	<item id="22750" name="Package: Top-grade Scroll: Increase Vitality" type="EtcItem">
+	<item id="22750" name="特級活力提升卷軸組" type="EtcItem">
 		<!-- Double-click to obtain Top-grade Scroll: Increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
@@ -1071,7 +1071,7 @@
 			<item id="22749" min="1" max="1" chance="100" /> <!-- Top-grade Scroll: Increase Vitality -->
 		</capsuled_items>
 	</item>
-	<item id="22751" name="Maphr's Rune 30% (3-hour)" type="EtcItem">
+	<item id="22751" name="梅芙古文30%-3小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +30% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1085,7 +1085,7 @@
 			<skill id="22587" level="1" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22752" name="Maphr's Rune 30% (5-hour)" type="EtcItem">
+	<item id="22752" name="梅芙古文30%-5小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +30% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1099,7 +1099,7 @@
 			<skill id="22587" level="1" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22753" name="Maphr's Rune 30% (7-day)" type="EtcItem">
+	<item id="22753" name="梅芙古文30%-7日" type="EtcItem">
 		<!-- When in inventory, item drop rate +30% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1113,7 +1113,7 @@
 			<skill id="22587" level="1" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22754" name="Maphr's Rune 50% (3-hour)" type="EtcItem">
+	<item id="22754" name="梅芙古文50%-3小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +50% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1127,7 +1127,7 @@
 			<skill id="22587" level="2" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22755" name="Maphr's Rune 50% (5-hour)" type="EtcItem">
+	<item id="22755" name="梅芙古文50%-5小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +50% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1141,7 +1141,7 @@
 			<skill id="22587" level="2" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22756" name="Maphr's Rune 50% (7-day)" type="EtcItem">
+	<item id="22756" name="梅芙古文50%-7日" type="EtcItem">
 		<!-- When in inventory, item drop rate +50% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1155,7 +1155,7 @@
 			<skill id="22587" level="2" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22757" name="Maphr's Rune 100% (3-hour)" type="EtcItem">
+	<item id="22757" name="梅芙古文100%-3小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +100% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1169,7 +1169,7 @@
 			<skill id="22587" level="3" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22758" name="Maphr's Rune 100% (5-hour)" type="EtcItem">
+	<item id="22758" name="梅芙古文100%-5小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +100% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1183,7 +1183,7 @@
 			<skill id="22587" level="3" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22759" name="Maphr's Rune 100% (7-day)" type="EtcItem">
+	<item id="22759" name="梅芙古文100%-7日" type="EtcItem">
 		<!-- When in inventory, item drop rate +100% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1197,7 +1197,7 @@
 			<skill id="22587" level="3" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22760" name="Maphr's Rune 200% (3-hour)" type="EtcItem">
+	<item id="22760" name="梅芙古文200%-3小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +200% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1211,7 +1211,7 @@
 			<skill id="22587" level="4" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22761" name="Maphr's Rune 200% (5-hour)" type="EtcItem">
+	<item id="22761" name="梅芙古文200%-5小時" type="EtcItem">
 		<!-- When in inventory, item drop rate +200% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1225,7 +1225,7 @@
 			<skill id="22587" level="4" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22762" name="Maphr's Rune 200% (7-day)" type="EtcItem">
+	<item id="22762" name="梅芙古文200%-7日" type="EtcItem">
 		<!-- When in inventory, item drop rate +200% when killing common monsters. The effect stacks with Maphr's High-grade Rune. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -1239,7 +1239,7 @@
 			<skill id="22587" level="4" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="22763" name="Maphr's Rune 30% Pack (3-hour)" type="EtcItem">
+	<item id="22763" name="梅芙古文30%-3小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 30% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1257,7 +1257,7 @@
 			<item id="22751" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22764" name="Maphr's Rune 30% Pack (5-hour)" type="EtcItem">
+	<item id="22764" name="梅芙古文30%-5小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 30% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1275,7 +1275,7 @@
 			<item id="22752" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22765" name="Maphr's Rune 30% Pack (7-day)" type="EtcItem">
+	<item id="22765" name="梅芙古文30%-7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 30% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1293,7 +1293,7 @@
 			<item id="22753" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="22766" name="Maphr's Rune 50% Pack (3-hour)" type="EtcItem">
+	<item id="22766" name="梅芙古文50%-3小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 50% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1311,7 +1311,7 @@
 			<item id="22754" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22767" name="Maphr's Rune 50% Pack (5-hour)" type="EtcItem">
+	<item id="22767" name="梅芙古文50%-5小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 50% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1329,7 +1329,7 @@
 			<item id="22755" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22768" name="Maphr's Rune 50% Pack (7-day)" type="EtcItem">
+	<item id="22768" name="梅芙古文50%-7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 50% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1347,7 +1347,7 @@
 			<item id="22756" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="22769" name="Maphr's Rune 100% Pack (3-hour)" type="EtcItem">
+	<item id="22769" name="梅芙古文100%-3小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1365,7 +1365,7 @@
 			<item id="22757" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22770" name="Maphr's Rune 100% Pack (5-hour)" type="EtcItem">
+	<item id="22770" name="梅芙古文100%-5小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1383,7 +1383,7 @@
 			<item id="22758" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22771" name="Maphr's Rune 100% Pack (7-day)" type="EtcItem">
+	<item id="22771" name="梅芙古文100%-7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1401,7 +1401,7 @@
 			<item id="22759" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="22772" name="Maphr's Rune 200% Pack (3-hour)" type="EtcItem">
+	<item id="22772" name="梅芙古文200%-3小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1419,7 +1419,7 @@
 			<item id="22760" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22773" name="Maphr's Rune 200% Pack (5-hour)" type="EtcItem">
+	<item id="22773" name="梅芙古文200%-5小時禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1437,7 +1437,7 @@
 			<item id="22761" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22774" name="Maphr's Rune 200% Pack (7-day)" type="EtcItem">
+	<item id="22774" name="梅芙古文200%-7日禮盒" type="EtcItem">
 		<!-- Double-click to obtain 1 Maphr's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1455,7 +1455,7 @@
 			<item id="22762" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="22775" name="Drake Maul" type="Weapon">
+	<item id="22775" name="龍獸衝槌" type="Weapon">
 		<!-- Drake Lord's two-handed blunt weapon. Bestows a special power upon its owner. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1489,7 +1489,7 @@
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
 	</item>
-	<item id="22776" name="Drake Maul" additionalName="HP Drain" type="Weapon">
+	<item id="22776" name="龍獸衝槌" additionalName="HP Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1524,7 +1524,7 @@
 			<skill id="3568" level="2" /> <!-- Special Property: HP Drain -->
 		</skills>
 	</item>
-	<item id="22777" name="Drake Maul" additionalName="HP Regeneration" type="Weapon">
+	<item id="22777" name="龍獸衝槌" additionalName="HP Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1559,7 +1559,7 @@
 			<skill id="3569" level="4" /> <!-- Special Property: HP Regeneration -->
 		</skills>
 	</item>
-	<item id="22778" name="Drake Maul" additionalName="Health" type="Weapon">
+	<item id="22778" name="龍獸衝槌" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1594,7 +1594,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="22779" name="Drake Maul {PvP}" type="Weapon">
+	<item id="22779" name="龍獸衝槌 {對戰用}" type="Weapon">
 		<!-- Drake Lord's two-handed mace. Bestows a special power on its owner. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1628,7 +1628,7 @@
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
 	</item>
-	<item id="22780" name="Drake Maul {PvP} - HP Drain" type="Weapon">
+	<item id="22780" name="龍獸衝槌 {對戰用}-HP吸收" type="Weapon">
 		<!-- <Special properties>. Drake Lord's two-handed mace. Bestows a special power on its owner. With a certain chance, absorbs 4% of inflicted melee damage as HP. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1663,7 +1663,7 @@
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
 	</item>
-	<item id="22781" name="Drake Maul {PvP} - HP Regeneration" type="Weapon">
+	<item id="22781" name="龍獸衝槌 {對戰用}-體力再生" type="Weapon">
 		<!-- <Special properties>. Drake Lord's two-handed mace. Bestows a special power on its owner. Increases HP Recovery Rate. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1698,7 +1698,7 @@
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
 	</item>
-	<item id="22782" name="Drake Maul {PvP} - Health" type="Weapon">
+	<item id="22782" name="龍獸衝槌 {對戰用}-強健" type="Weapon">
 		<!-- <Special properties>. Drake Lord's two-handed mace. Bestows a special power on its owner. Max HP +25%. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1733,7 +1733,7 @@
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
 	</item>
-	<item id="22783" name="Drake Maul - Evil Spirit" type="Weapon">
+	<item id="22783" name="龍獸衝槌-惡靈" type="Weapon">
 		<!-- A masterwork item that absorbs HP on attack with a certain chance. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1768,7 +1768,7 @@
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
 	</item>
-	<item id="22784" name="Drake Maul - Evil Spirit" additionalName="HP Drain" type="Weapon">
+	<item id="22784" name="龍獸衝槌-惡靈" additionalName="HP Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1804,7 +1804,7 @@
 			<skill id="3568" level="2" /> <!-- Special Property: HP Drain -->
 		</skills>
 	</item>
-	<item id="22785" name="Drake Maul - Evil Spirit" additionalName="HP Regeneration" type="Weapon">
+	<item id="22785" name="龍獸衝槌-惡靈" additionalName="HP Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1840,7 +1840,7 @@
 			<skill id="3569" level="4" /> <!-- Special Property: HP Regeneration -->
 		</skills>
 	</item>
-	<item id="22786" name="Drake Maul - Evil Spirit" additionalName="Health" type="Weapon">
+	<item id="22786" name="龍獸衝槌-惡靈" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1876,7 +1876,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="22787" name="Drake Maul - Evil Spirit {PvP}" type="Weapon">
+	<item id="22787" name="龍獸衝槌-惡靈 {對戰用}" type="Weapon">
 		<!-- A masterwork item that absorbs HP on attack with a certain chance. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1911,7 +1911,7 @@
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
 	</item>
-	<item id="22788" name="Drake Maul - Evil Spirit {PvP} - HP Drain" type="Weapon">
+	<item id="22788" name="龍獸衝槌-惡靈 {對戰用}-HP吸收" type="Weapon">
 		<!-- A masterwork item that absorbs HP on attack. <Special properties>. Drake Lord's two-handed mace. Bestows a special power on its owner. With a certain chance, absorbs 4% of inflicted melee damage as HP. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1947,7 +1947,7 @@
 			<skill id="3568" level="2" /> <!-- Special Property: HP Drain -->
 		</skills>
 	</item>
-	<item id="22789" name="Drake Maul - Evil Spirit {PvP} - HP Regeneration" type="Weapon">
+	<item id="22789" name="龍獸衝槌-惡靈 {對戰用}-體力再生" type="Weapon">
 		<!-- A masterwork item that absorbs HP on attack with a certain chance. <Special properties>. Drake Lord's two-handed mace. Bestows a special power on its owner. Increases HP Recovery Rate. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1983,7 +1983,7 @@
 			<skill id="3569" level="4" /> <!-- Special Property: HP Regeneration -->
 		</skills>
 	</item>
-	<item id="22790" name="Drake Maul - Evil Spirit {PvP} - Health" type="Weapon">
+	<item id="22790" name="龍獸衝槌-惡靈 {對戰用}-強健" type="Weapon">
 		<!-- A masterwork item that absorbs HP on attack with a certain chance. <Special properties>. Drake Lord's two-handed mace. Bestows a special power on its owner. Max HP +25%. Deals additional PvP damage. With a certain chance, increases damage on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2019,7 +2019,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="22791" name="Freya's Staff" type="Weapon">
+	<item id="22791" name="芙蕾雅魔杖" type="Weapon">
 		<!-- Freya's two-handed staff. Bestows a special power upon its owner. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2054,7 +2054,7 @@
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 		</skills>
 	</item>
-	<item id="22792" name="Freya's Staff" additionalName="Magic Hold" type="Weapon">
+	<item id="22792" name="芙蕾雅魔杖" additionalName="Magic Hold" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2091,7 +2091,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="22793" name="Freya's Staff" additionalName="Empower" type="Weapon">
+	<item id="22793" name="芙蕾雅魔杖" additionalName="Empower" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2127,7 +2127,7 @@
 			<skill id="3575" level="4" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="22794" name="Freya's Staff" additionalName="MP Regeneration" type="Weapon">
+	<item id="22794" name="芙蕾雅魔杖" additionalName="MP Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2163,7 +2163,7 @@
 			<skill id="3576" level="4" /> <!-- Special Property: MP Regeneration -->
 		</skills>
 	</item>
-	<item id="22795" name="Freya's Staff {PvP}" type="Weapon">
+	<item id="22795" name="芙蕾雅魔杖 {對戰用}" type="Weapon">
 		<!-- Freya's two-handed staff. Bestows a special power on its owner. Deals additional PvP damage. With a certain chance, recovers CP on attack. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2198,7 +2198,7 @@
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 		</skills>
 	</item>
-	<item id="22796" name="Freya's Staff {PvP} - Magic Hold" type="Weapon">
+	<item id="22796" name="芙蕾雅魔杖 {對戰用}-魔法束縛" type="Weapon">
 		<!-- <Special properties>. Freya's two-handed staff. Bestows a special power on its owner. With a 20% chance, applies Dryad Root when using M. skills. Deals additional PvP damage. With a certain chance, increases Casting Spd. when reflecting damage. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2234,7 +2234,7 @@
 			<skill id="3577" level="2" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Property: Magic Hold -->
 		</skills>
 	</item>
-	<item id="22797" name="Freya's Staff {PvP} - Empower" type="Weapon">
+	<item id="22797" name="芙蕾雅魔杖 {對戰用}-魔力催化" type="Weapon">
 		<!-- <Special properties>. Freya's two-handed staff. Bestows a special power on its owner. M. Atk. +177. Deals additional PvP damage. With a certain chance, increases Casting Spd. when reflecting damage. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2270,7 +2270,7 @@
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 		</skills>
 	</item>
-	<item id="22798" name="Freya's Staff {PvP} - MP Regeneration" type="Weapon">
+	<item id="22798" name="芙蕾雅魔杖 {對戰用}-魔力再生" type="Weapon">
 		<!-- <Special properties>. Freya's two-handed staff. Bestows a special power on its owner. Increases MP Recovery Rate. Deals additional PvP damage. With a certain chance, increases Casting Spd. when reflecting damage. No soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2306,7 +2306,7 @@
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 		</skills>
 	</item>
-	<item id="22799" name="Freya's Staff - Cleverness" type="Weapon">
+	<item id="22799" name="芙蕾雅魔杖-聰明" type="Weapon">
 		<!-- A masterwork item that increases MP Recovery Rate. Freya's two-handed staff. Bestows a special power upon its owner. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />

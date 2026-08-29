@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="40200" name="Sayha's Cloak" additionalName="Eviscerator" type="Armor">
+	<item id="40200" name="沙哈斗篷" additionalName="Eviscerator" type="Armor">
 		<!-- A cloak for those who carry the power of Sayha. M. Def. +40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -21,7 +21,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40201" name="Sayha's Cloak" additionalName="Sayha's Seer" type="Armor">
+	<item id="40201" name="沙哈斗篷" additionalName="Sayha's Seer" type="Armor">
 		<!-- A cloak for those who carry the power of Sayha. M. Def. +40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -42,7 +42,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40202" name="R-grade Equipment Pack" type="EtcItem">
+	<item id="40202" name="R級裝備禮盒" type="EtcItem">
 		<!-- Double-click to obtain either a normal/ blessed R-grade weapon, armor, or accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="crystal_type" val="R" />
@@ -56,7 +56,7 @@
 			<skill id="18120" level="1" /> <!-- R-grade Equipment Pack -->
 		</skills>
 	</item>
-	<item id="40203" name="R95-grade Equipment Pack" type="EtcItem">
+	<item id="40203" name="R95級裝備禮盒" type="EtcItem">
 		<!-- Double-click to obtain either a normal/ blessed R95-grade weapon, armor, accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="crystal_type" val="R" />
@@ -70,7 +70,7 @@
 			<skill id="18121" level="1" /> <!-- R95-grade Equipment Pack -->
 		</skills>
 	</item>
-	<item id="40204" name="R99-grade Equipment Pack" type="EtcItem">
+	<item id="40204" name="R級斗篷欄位開啟" type="EtcItem">
 		<!-- Double-click to obtain a normal or blessed R99-grade weapon/ armor/ accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="crystal_type" val="R" />
@@ -84,7 +84,7 @@
 			<skill id="18122" level="1" /> <!-- R99-grade Equipment Pack -->
 		</skills>
 	</item>
-	<item id="40205" name="Requiem Fragment" type="EtcItem">
+	<item id="40205" name="鎮魂碎片" type="EtcItem">
 		<!-- Key material for making a random R-grade item. -->
 		<set name="icon" val="icon.weapon_aspeda_i00_piece" />
 		<set name="weight" val="60" />
@@ -94,7 +94,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40206" name="Specter Fragment" type="EtcItem">
+	<item id="40206" name="幻靈碎片" type="EtcItem">
 		<!-- Key material for making a random R95-grade item. -->
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
 		<set name="weight" val="60" />
@@ -104,7 +104,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40207" name="Helios Fragment" type="EtcItem">
+	<item id="40207" name="赫利奧斯碎片" type="EtcItem">
 		<!-- Key material for making a random R99-grade item. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
 		<set name="weight" val="60" />
@@ -113,7 +113,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40208" name="Throwaway Item 1" additionalName="Not used" type="EtcItem">
+	<item id="40208" name="丟棄的道具1" additionalName="Not used" type="EtcItem">
 		<!-- An unidentified Helios weapon. Double-click to obtain either a standard or a blessed weapon. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="crystal_type" val="R" />
@@ -123,7 +123,7 @@
 			<skill id="12012" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="40209" name="Throwaway Item 1" additionalName="Not used" type="EtcItem">
+	<item id="40209" name="丟棄的道具2" additionalName="Not used" type="EtcItem">
 		<!-- Unidentified Eternal armor. Double-click to obtain either a standard or a blessed armor. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="crystal_type" val="R" />
@@ -133,7 +133,7 @@
 			<skill id="12012" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="40210" name="Recipe: R (100%)" type="EtcItem">
+	<item id="40210" name="製作卷軸(R100%)" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for R-grade equipment. Results vary. A very high chance of obtaining Blessed equipment. Requires Create Item Lv. 12. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -145,7 +145,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40211" name="Recipe: R95 (100%)" type="EtcItem">
+	<item id="40211" name="製作卷軸(R95100%)" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for R95-grade equipment. Results vary. A very high chance of obtaining Blessed equipment. Requires Create Item Lv. 13. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -157,7 +157,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40212" name="Recipe: R99 (100%)" type="EtcItem">
+	<item id="40212" name="製作卷軸(R99100%)" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for R99-grade equipment. Results vary. A very high chance of obtaining Blessed equipment. Requires Create Item Lv. 14. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -168,7 +168,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40213" name="Ertheia's Rare Accessory Pack" additionalName="7-day" type="EtcItem">
+	<item id="40213" name="翼人稀有飾品禮盒" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain the following 7-day accessories: Antharas' Blessed Earring, Valakas' Blessed Necklace, Tauti's Ring, Earth Wyrm's Ring, Immortal Zaken's Earring. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -187,7 +187,7 @@
 			<item id="40218" min="1" max="1" chance="100" /> <!-- Immortal Zaken's Earring Pack - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="40214" name="Blessed Antharas' Earring Pack" additionalName="7-day" type="EtcItem">
+	<item id="40214" name="祝福的安塔瑞斯耳環禮盒" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Blessed Antharas Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="is_stackable" val="true" />
@@ -202,7 +202,7 @@
 			<item id="37732" min="1" max="1" chance="100" /> <!-- Antharas' Blessed Earring - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="40215" name="Blessed Valakas' Necklace Pack" additionalName="7-day" type="EtcItem">
+	<item id="40215" name="祝福的巴拉卡斯項鍊禮盒" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Valakas' Blessed Necklace (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_stackable" val="true" />
@@ -217,7 +217,7 @@
 			<item id="37733" min="1" max="1" chance="100" /> <!-- Valakas' Blessed Necklace - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="40216" name="Tauti's Ring Pack" additionalName="7-day" type="EtcItem">
+	<item id="40216" name="塔武提戒指禮盒" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Tauti's Ring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_stackable" val="true" />
@@ -232,7 +232,7 @@
 			<item id="37734" min="1" max="1" chance="100" /> <!-- Tauti's Ring - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="40217" name="Earth Wyrm Heart Ring Pack" additionalName="7-day" type="EtcItem">
+	<item id="40217" name="地蟲心臟戒指禮盒" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Earth Wyrm's Ring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_stackable" val="true" />
@@ -247,7 +247,7 @@
 			<item id="37735" min="1" max="1" chance="100" /> <!-- Earth Wyrm's Ring - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="40218" name="Blessed Zaken's Earring Pack" additionalName="7-day" type="EtcItem">
+	<item id="40218" name="不滅的札肯耳環禮盒" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Immortal Zaken's Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_stackable" val="true" />
@@ -262,7 +262,7 @@
 			<item id="37736" min="1" max="1" chance="100" /> <!-- Immortal Zaken's Earring - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="40219" name="Appearance Stone: Cat Fighter (Ertheia Only)" additionalName="90-day" type="EtcItem">
+	<item id="40219" name="貓戰爪加工石-翼人專用" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter for 90 days. Note!. Modified items can be equipped by Ertheia only. Choose new appearance carefully. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="immediate_effect" val="true" />
@@ -279,7 +279,7 @@
 			<skill id="18118" level="1" /> <!-- Appearance Stone: Cat Fighter (90-day) -->
 		</skills>
 	</item>
-	<item id="40220" name="Appearance Stone: Cat Staff (Ertheia Only)" additionalName="90-day" type="EtcItem">
+	<item id="40220" name="貓魔杖加工石-翼人專用" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of a Cat Staff for 90 days. Note!. Modified items can be equipped by Ertheia only. Choose new appearance carefully. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="immediate_effect" val="true" />
@@ -296,7 +296,7 @@
 			<skill id="18119" level="1" /> <!-- Appearance Stone: Cat Staff (90-day) -->
 		</skills>
 	</item>
-	<item id="40221" name="Ertheia's Attribute Stone Pack (+60)" type="EtcItem">
+	<item id="40221" name="翼人Super(60)原石禮盒" type="EtcItem">
 		<!-- Double-click to obtain an Attribute Stone (+60). -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_sellable" val="false" />
@@ -308,7 +308,7 @@
 			<skill id="18115" level="1" /> <!-- Ertheia's Attribute Stone Pack (+60) -->
 		</skills>
 	</item>
-	<item id="40222" name="Ertheia's Attribute Stone Pack (+150)" type="EtcItem">
+	<item id="40222" name="翼人Super(150)原石禮盒" type="EtcItem">
 		<!-- Double-click to obtain an Attribute Stone (+150). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -320,7 +320,7 @@
 			<skill id="18116" level="1" /> <!-- Ertheia's Attribute Stone Pack (+150) -->
 		</skills>
 	</item>
-	<item id="40223" name="Ertheia's Attribute Crystal Pack - Super" type="EtcItem">
+	<item id="40223" name="翼人Super水晶禮盒" type="EtcItem">
 		<!-- Double-click to obtain an Attribute Crystal - Super. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="is_sellable" val="false" />
@@ -332,7 +332,7 @@
 			<skill id="18117" level="1" /> <!-- Ertheia's Attribute Crystal Pack - Super -->
 		</skills>
 	</item>
-	<item id="40224" name="Minstrel's Scroll of Escape: Aden" type="EtcItem">
+	<item id="40224" name="吟遊詩人的移動卷軸-亞丁城鎮" type="EtcItem">
 		<!-- A scroll given as a gift. Takes you to Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -347,7 +347,7 @@
 			<skill id="18123" level="1" /> <!-- Scroll of Escape: Aden -->
 		</skills>
 	</item>
-	<item id="40225" name="Scroll of Escape: Pagan Temple" type="EtcItem">
+	<item id="40225" name="邪教神殿關聯傳送卷軸" type="EtcItem">
 		<!-- Teleports you to Knight Captain Kargos, who is related to the Pagan Temple. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -362,7 +362,7 @@
 			<skill id="18124" level="1" /> <!-- Scroll of Escape: Pagan Temple -->
 		</skills>
 	</item>
-	<item id="40226" name="Freya's Frozen Lamp" type="EtcItem">
+	<item id="40226" name="芙蕾雅冰凍油燈" type="EtcItem">
 		<!-- Double-click to obtain 1 Freya's Frozen Scroll and 1 Freya's Recovery Potion. There is a chance to obtain one of the following items: Freya's Wish Box, Sirra's Wish Box, Snowman's Wish Box. -->
 		<set name="icon" val="icon.freya_lamp" />
 		<set name="is_sellable" val="false" />
@@ -375,7 +375,7 @@
 			<skill id="18125" level="1" /> <!-- Freya's Frozen Lamp -->
 		</skills>
 	</item>
-	<item id="40227" name="Freya's Frozen Scroll" type="EtcItem">
+	<item id="40227" name="芙蕾雅的風之卷軸" type="EtcItem">
 		<!-- For 10 min. while hunting, Vitality Consumption +100%, acquired XP/ SP +100%. The effect remains after death. Cooldown: 9 min. Available if 1 or more Vitality bar is full. Cannot be used in the Olympiad. Does not stack with Freya's Scroll of Blessing, Freya's Scroll of Storm and Maphr's Scroll of Storm. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_sellable" val="false" />
@@ -391,7 +391,7 @@
 			<skill id="18126" level="1" /> <!-- Freya's Frozen Scroll -->
 		</skills>
 	</item>
-	<item id="40228" name="Freya's Wish Box" type="EtcItem">
+	<item id="40228" name="芙蕾雅願望禮盒" type="EtcItem">
 		<!-- Double-click to obtain a rare and valuable item. -->
 		<set name="icon" val="icon.freya_box_i01" />
 		<set name="is_sellable" val="false" />
@@ -404,7 +404,7 @@
 			<skill id="18127" level="1" /> <!-- Freya's Wish Box -->
 		</skills>
 	</item>
-	<item id="40229" name="Sirra's Wish Box" type="EtcItem">
+	<item id="40229" name="希露願望禮盒" type="EtcItem">
 		<!-- Double-click to obtain various Enchant Stones and Dark/ Bloody Helios Upgrade Stone. -->
 		<set name="icon" val="icon.freya_box_i02" />
 		<set name="is_sellable" val="false" />
@@ -417,7 +417,7 @@
 			<skill id="18128" level="1" /> <!-- Sirra's Wish Box -->
 		</skills>
 	</item>
-	<item id="40230" name="Snowman's Wish Box" type="EtcItem">
+	<item id="40230" name="雪人願望禮盒" type="EtcItem">
 		<!-- Double-click to obtain a random item for Talisman. -->
 		<set name="icon" val="icon.freya_box_i03" />
 		<set name="is_sellable" val="false" />
@@ -430,7 +430,7 @@
 			<skill id="18129" level="1" /> <!-- Snowman's Wish Box -->
 		</skills>
 	</item>
-	<item id="40231" name="Freya's Frozen Scroll" additionalName="Event" type="EtcItem">
+	<item id="40231" name="芙蕾雅的風之卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 10 min. while hunting, Vitality Consumption +100%, acquired XP/ SP +100%. The effect remains after death. Cooldown: 9 min. Available if 1 or more Vitality bar is full. Cannot be used in the Olympiad. Does not stack with Freya's Scroll of Blessing, Freya's Scroll of Storm and Maphr's Scroll of Storm. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_tradable" val="false" />
@@ -447,7 +447,7 @@
 			<skill id="18130" level="1" /> <!-- Freya's Frozen Scroll -->
 		</skills>
 	</item>
-	<item id="40232" name="Freya's Stone: Enchant R-grade Weapon" type="EtcItem">
+	<item id="40232" name="芙蕾雅武器強化輔助石-R級" type="EtcItem">
 		<!-- Enchant success rate +20% for R-grade weapons when using Blessed Scroll: Enchant Weapon. Only for items enchanted between +3 and +15. If enchanting fails, the enchant value will drop by 1. -->
 		<set name="icon" val="icon.freya_stone_i01" />
 		<set name="is_sellable" val="false" />
@@ -461,7 +461,7 @@
 			<skill id="18131" level="1" /> <!-- Freya's Stone: Enchant Weapon -->
 		</skills>
 	</item>
-	<item id="40233" name="Freya's Stone: Enchant R-grade Armor" type="EtcItem">
+	<item id="40233" name="芙蕾雅防具強化輔助石-R級" type="EtcItem">
 		<!-- Enchant success rate +30% for R-grade armor when using Blessed Scroll: Enchant Armor. Only for items enchanted between +3 and +15. If enchanting fails, the enchant value will drop by 1. -->
 		<set name="icon" val="icon.freya_stone_i02" />
 		<set name="is_sellable" val="false" />
@@ -475,7 +475,7 @@
 			<skill id="18132" level="1" /> <!-- Freya's Stone: Enchant Armor -->
 		</skills>
 	</item>
-	<item id="40234" name="Giant's Energy 3-unit Pack" type="EtcItem">
+	<item id="40234" name="巨人之力3個/箱" type="EtcItem">
 		<!-- Double-click to obtain Giant's Power (3 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -490,7 +490,7 @@
 			<item id="35563" min="3" max="3" chance="100" /> <!-- Giant's Power -->
 		</capsuled_items>
 	</item>
-	<item id="40235" name="Giant's Energy 20-unit Pack" type="EtcItem">
+	<item id="40235" name="巨人之力20個/箱" type="EtcItem">
 		<!-- Double-click to obtain Giant's Power (20 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -505,7 +505,7 @@
 			<item id="35563" min="20" max="20" chance="100" /> <!-- Giant's Power -->
 		</capsuled_items>
 	</item>
-	<item id="40236" name="Giant's Energy 100-unit Pack" type="EtcItem">
+	<item id="40236" name="巨人之力100個/箱" type="EtcItem">
 		<!-- Double-click to obtain Giant's Power (100 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -520,7 +520,7 @@
 			<item id="35563" min="100" max="100" chance="100" /> <!-- Giant's Power -->
 		</capsuled_items>
 	</item>
-	<item id="40237" name="Agathion Freya" additionalName="30-day" type="Armor">
+	<item id="40237" name="芙蕾雅壺精手鐲" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Freya. Available for 30 d. Cannot be used in the Olympiad. <Active skill>. 1. Freya's Teleport: Teleports to Aden/ Rune/ Talking Island (cooldown: 30 min.). <Item skills>. 2. Freya's Mind: Confusion Resistance +10, Water Resistance +10. 2. Freya's Strength: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 3. Freya's Magic: When equipped, P./ M. Skill MP Consumption -3%. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -543,7 +543,7 @@
 			<skill id="18141" level="1" /> <!-- Freya's Magic -->
 		</skills>
 	</item>
-	<item id="40238" name="Freya's Supply Box" type="EtcItem">
+	<item id="40238" name="芙蕾雅補給箱" type="EtcItem">
 		<!-- Double-click to obtain one of the Transformation Scrolls: Anakim/ Zaken/ Kechi/ Saber-toothed Tiger/ Doll Blader. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_cube_box" />
 		<set name="is_tradable" val="false" />
@@ -557,7 +557,7 @@
 			<skill id="18142" level="1" /> <!-- Freya's Supply Box -->
 		</skills>
 	</item>
-	<item id="40239" name="Freya's Heart" type="EtcItem">
+	<item id="40239" name="芙蕾雅之心" type="EtcItem">
 		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, acquired XP/ SP while hunting +50%. The effect does not stack with Letter Collector's Gift. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -571,7 +571,7 @@
 			<skill id="18143" level="1" /> <!-- Freya's Heart -->
 		</skills>
 	</item>
-	<item id="40240" name="Dark Assassin Suit" type="Armor">
+	<item id="40240" name="黑暗刺客套裝" type="Armor">
 		<!-- Dark Assassin Suit. Equipped instead of armor. Head accessories, weapons, and accessories remain equipped. -->
 		<set name="icon" val="icon.dark_assassin" />
 		<set name="armor_type" val="HEAVY" />
@@ -584,7 +584,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="40241" name="Freya's Frozen Lamp" additionalName="Event" type="EtcItem">
+	<item id="40241" name="芙蕾雅冰凍油燈" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Freya's Frozen Scroll - Event. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_lamp" />
 		<set name="is_tradable" val="false" />
@@ -598,7 +598,7 @@
 			<item id="40231" min="1" max="1" chance="100" /> <!-- Freya's Frozen Scroll - Event -->
 		</capsuled_items>
 	</item>
-	<item id="40242" name="Agathion Freya Pack" type="EtcItem">
+	<item id="40242" name="芙蕾雅壺精禮盒" type="EtcItem">
 		<!-- Double-click to obtain Agathion Charm: Freya (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="is_sellable" val="false" />
@@ -611,7 +611,7 @@
 			<item id="40237" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Freya - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="40243" name="Greater Abelius Cloak (20-day)" additionalName="Sigel Knight" type="Armor">
+	<item id="40243" name="上級亞貝里烏斯斗篷-限時20日" additionalName="Sigel Knight" type="Armor">
 		<!-- A cloak of Ancient Giant Abelius' successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -635,7 +635,7 @@
 			<skill id="16426" level="1" /> <!-- Greater Abelius Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40244" name="Greater Sapyros Cloak (20-day)" additionalName="Tyrr Warrior" type="Armor">
+	<item id="40244" name="上級薩菲洛斯斗篷-限時20日" additionalName="Tyrr Warrior" type="Armor">
 		<!-- A cloak of Ancient Giant Sapyros' successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -659,7 +659,7 @@
 			<skill id="16427" level="1" /> <!-- Greater Sapyros Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40245" name="Greater Ashagen Cloak (20-day)" additionalName="Othell Rogue" type="Armor">
+	<item id="40245" name="上級凱修納格斗篷-限時20日" additionalName="Othell Rogue" type="Armor">
 		<!-- A cloak of Ancient Giant Ashagen's successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -683,7 +683,7 @@
 			<skill id="16428" level="1" /> <!-- Greater Ashagen Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40246" name="Greater Cranigg Cloak (20-day)" additionalName="Yul Archer" type="Armor">
+	<item id="40246" name="上級克倫畢斯特斗篷-限時20日" additionalName="Yul Archer" type="Armor">
 		<!-- A cloak of Ancient Giant Cranigg's successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -707,7 +707,7 @@
 			<skill id="16429" level="1" /> <!-- Greater Cranigg Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40247" name="Greater Soltkreig Cloak (20-day)" additionalName="Feoh Wizard" type="Armor">
+	<item id="40247" name="上級索特克里格斗篷-限時20日" additionalName="Feoh Wizard" type="Armor">
 		<!-- A cloak of Ancient Giant Soltkreig's successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -731,7 +731,7 @@
 			<skill id="16430" level="1" /> <!-- Greater Soltkreig Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40248" name="Greater Naviarope Cloak (20-day)" additionalName="Wynn Summoner" type="Armor">
+	<item id="40248" name="上級納比亞羅普斗篷-限時20日" additionalName="Wynn Summoner" type="Armor">
 		<!-- A cloak of Ancient Giant Naviarope's successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -755,7 +755,7 @@
 			<skill id="16431" level="1" /> <!-- Greater Naviarope Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40249" name="Greater Leister Cloak (20-day)" additionalName="Iss Enchanter" type="Armor">
+	<item id="40249" name="上級拉伊斯特斗篷-限時20日" additionalName="Iss Enchanter" type="Armor">
 		<!-- A cloak of Ancient Giant Leister's successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -779,7 +779,7 @@
 			<skill id="16432" level="1" /> <!-- Greater Leister Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40250" name="Greater Lakcis Cloak (20-day)" additionalName="Aeore Healer" type="Armor">
+	<item id="40250" name="上級拉奇西斯斗篷-限時20日" additionalName="Aeore Healer" type="Armor">
 		<!-- A cloak of Ancient Giant Lakcis' successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -803,7 +803,7 @@
 			<skill id="16433" level="1" /> <!-- Greater Lakcis Cloak - 20 d. -->
 		</skills>
 	</item>
-	<item id="40251" name="Greater Sayha Cloak (20-day)" additionalName="Eviscerator" type="Armor">
+	<item id="40251" name="上級沙哈斗篷-限時20日" additionalName="Eviscerator" type="Armor">
 		<!-- A cloak of Sayha's successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -827,7 +827,7 @@
 			<skill id="16434" level="1" /> <!-- Sayha's Cloak (20-day) -->
 		</skills>
 	</item>
-	<item id="40252" name="Greater Sayha Cloak (20-day)" additionalName="Sayha's Seer" type="Armor">
+	<item id="40252" name="上級沙哈斗篷-限時20日" additionalName="Sayha's Seer" type="Armor">
 		<!-- A cloak of Sayha's successor. When equipped, M. Def. +40, STR +1, INT +1, CON +1, MEN +1. Available for 20 d. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -851,7 +851,7 @@
 			<skill id="16435" level="1" /> <!-- Sayha's Cloak (20-day) -->
 		</skills>
 	</item>
-	<item id="40253" name="Potion of Protection: Confusion" type="EtcItem">
+	<item id="40253" name="守護藥水-混亂" type="EtcItem">
 		<!-- When used, Confusion Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="weight" val="10" />
@@ -866,7 +866,7 @@
 			<skill id="18156" level="1" /> <!-- Potion of Protection - Stun -->
 		</skills>
 	</item>
-	<item id="40254" name="Potion of Protection: Obstruction" type="EtcItem">
+	<item id="40254" name="守護藥水-猛擊" type="EtcItem">
 		<!-- When used, Obstruction Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="weight" val="10" />
@@ -881,7 +881,7 @@
 			<skill id="18157" level="1" /> <!-- Potion of Protection - Hold -->
 		</skills>
 	</item>
-	<item id="40255" name="Potion of Protection: Infection" type="EtcItem">
+	<item id="40255" name="守護藥水-感染" type="EtcItem">
 		<!-- When used, Infection Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -896,7 +896,7 @@
 			<skill id="18158" level="1" /> <!-- Potion of Protection - Bleed -->
 		</skills>
 	</item>
-	<item id="40256" name="Potion of Protection: Confusion" type="EtcItem">
+	<item id="40256" name="守護藥水-混亂" type="EtcItem">
 		<!-- When used, Confusion Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
 		<set name="weight" val="10" />
@@ -911,7 +911,7 @@
 			<skill id="18159" level="1" /> <!-- Potion of Protection - Paralysis -->
 		</skills>
 	</item>
-	<item id="40257" name="Potion of Protection: Confusion" type="EtcItem">
+	<item id="40257" name="守護藥水-混亂" type="EtcItem">
 		<!-- When used, Confusion Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
 		<set name="weight" val="10" />
@@ -926,7 +926,7 @@
 			<skill id="18160" level="1" /> <!-- Potion of Protection - Mental Power -->
 		</skills>
 	</item>
-	<item id="40258" name="Potion of Protection: Stupor" type="EtcItem">
+	<item id="40258" name="守護藥水-僵化" type="EtcItem">
 		<!-- When used, Stupor Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="weight" val="10" />
@@ -941,7 +941,7 @@
 			<skill id="18161" level="1" /> <!-- Potion of Protection - Sleep -->
 		</skills>
 	</item>
-	<item id="40259" name="Potion of Protection: Infection" type="EtcItem">
+	<item id="40259" name="守護藥水-感染" type="EtcItem">
 		<!-- When used, Infection Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="weight" val="10" />
@@ -956,7 +956,7 @@
 			<skill id="18162" level="1" /> <!-- Potion of Protection - Poison -->
 		</skills>
 	</item>
-	<item id="40260" name="Potion of Protection: Confusion" type="EtcItem">
+	<item id="40260" name="守護藥水-混亂" type="EtcItem">
 		<!-- When used, Confusion Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="weight" val="10" />
@@ -971,7 +971,7 @@
 			<skill id="18163" level="1" /> <!-- Potion of Protection - Knockback/ Knockdown -->
 		</skills>
 	</item>
-	<item id="40261" name="Potion of Protection: Confusion" type="EtcItem">
+	<item id="40261" name="守護藥水-混亂" type="EtcItem">
 		<!-- When used, Confusion Resistance +5, received PvP damage -3%. Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="weight" val="10" />
@@ -986,7 +986,7 @@
 			<skill id="18164" level="1" /> <!-- Potion of Protection - Aerial Yoke -->
 		</skills>
 	</item>
-	<item id="40262" name="Faeron Support Box" additionalName="Ertheia Fighter" type="EtcItem">
+	<item id="40262" name="貝農支援禮盒" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -1004,7 +1004,7 @@
 			<item chance="100" id="12079" max="1" min="1" /> <!-- Common Item - Plate Helmet -->
 		</capsuled_items>
 	</item>
-	<item id="40263" name="Faeron Support Box" additionalName="Ertheia Wizard" type="EtcItem">
+	<item id="40263" name="貝農支援禮盒" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -1022,7 +1022,7 @@
 			<item chance="100" id="12082" max="1" min="1" /> <!-- Common Item - Sage's Worn Gloves -->
 		</capsuled_items>
 	</item>
-	<item id="40264" name="Emissary's Support Box" additionalName="Ertheia Fighter" type="EtcItem">
+	<item id="40264" name="使節團支援禮盒" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -1041,7 +1041,7 @@
 			<item chance="100" id="22082" max="1500" min="1500" /> <!-- Soulshot (D-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40265" name="Emissary's Support Box" additionalName="Ertheia Wizard" type="EtcItem">
+	<item id="40265" name="使節團支援禮盒" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -1060,7 +1060,7 @@
 			<item chance="100" id="22072" max="500" min="500" /> <!-- Blessed Spiritshot (D-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40266" name="Navari's Support Box" additionalName="Marauder" type="EtcItem">
+	<item id="40266" name="瑟芮妮雅支援禮盒" additionalName="Marauder" type="EtcItem">
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -1084,7 +1084,7 @@
 			<item chance="100" id="22083" max="1500" min="1500" /> <!-- Soulshot (C-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40267" name="Navari's Support Box" additionalName="Cloud Breaker" type="EtcItem">
+	<item id="40267" name="瑟芮妮雅支援禮盒" additionalName="Cloud Breaker" type="EtcItem">
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -1107,7 +1107,7 @@
 			<item chance="100" id="22073" max="500" min="500" /> <!-- Blessed Spiritshot (C-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40268" name="Sayha's Box" additionalName="Eviscerator" type="EtcItem">
+	<item id="40268" name="內含沙哈力量的禮盒" additionalName="Eviscerator" type="EtcItem">
 		<!-- Double-click to obtain Sayha's power. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_tradable" val="false" />
@@ -1126,7 +1126,7 @@
 			<item chance="100" id="46782" max="1" min="1" /> <!-- Graduation Gift -->
 		</capsuled_items>
 	</item>
-	<item id="40269" name="Sayha's Box" additionalName="Sayha's Seer" type="EtcItem">
+	<item id="40269" name="內含沙哈力量的禮盒" additionalName="Sayha's Seer" type="EtcItem">
 		<!-- Double-click to obtain Sayha's power. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_tradable" val="false" />
@@ -1145,7 +1145,7 @@
 			<item chance="100" id="46782" max="1" min="1" /> <!-- Graduation Gift -->
 		</capsuled_items>
 	</item>
-	<item id="40270" name="Appearance Stone: Dark Assassin Suit" type="EtcItem">
+	<item id="40270" name="黑暗刺客套裝加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Dark Assassin Suit. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -1159,7 +1159,7 @@
 			<skill id="18144" level="1" /> <!-- Appearance Stone: Dark Assassin Suit -->
 		</skills>
 	</item>
-	<item id="40271" name="Orc's Normal Old Box" type="EtcItem">
+	<item id="40271" name="半獸人留下的老舊箱子-一般" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_sellable" val="false" />
@@ -1170,7 +1170,7 @@
 			<skill id="18145" level="1" /> <!-- Orc's Normal Old Box -->
 		</skills>
 	</item>
-	<item id="40272" name="Orc's Luxury Old Box" type="EtcItem">
+	<item id="40272" name="半獸人留下的老舊箱子-優質" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_sellable" val="false" />
@@ -1181,7 +1181,7 @@
 			<skill id="18146" level="1" /> <!-- Orc's Luxury Old Box -->
 		</skills>
 	</item>
-	<item id="40273" name="Ertheia's Boost Scroll" type="EtcItem">
+	<item id="40273" name="翼人力量提升卷軸" type="EtcItem">
 		<!-- When used, for 30 min., P. Atk. +30%, M. Atk. +30%, Critical Damage for basic attacks +15%, P. Skill Critical Damage +15%, M. Skill Critical Damage +15%, Speed +20, MP Consumption -15%. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="is_tradable" val="false" />
@@ -1195,7 +1195,7 @@
 			<skill id="18147" level="1" /> <!-- Ertheia's Boost Scroll -->
 		</skills>
 	</item>
-	<item id="40274" name="Buff Helmet" type="Armor">
+	<item id="40274" name="Buff 頭盔" type="Armor">
 		<!-- Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1205,7 +1205,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="40275" name="Buff Helmet" additionalName="STR" type="Armor">
+	<item id="40275" name="Buff頭盔 " additionalName="STR" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, STR +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1218,7 +1218,7 @@
 			<skill id="9554" level="1" /> <!-- Head Accessory: STR -->
 		</skills>
 	</item>
-	<item id="40276" name="Buff Helmet" additionalName="DEX" type="Armor">
+	<item id="40276" name="Buff頭盔 " additionalName="DEX" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, DEX +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1231,7 +1231,7 @@
 			<skill id="9555" level="1" /> <!-- Head Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="40277" name="Buff Helmet" additionalName="CON" type="Armor">
+	<item id="40277" name="Buff頭盔" additionalName="CON" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, CON +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1244,7 +1244,7 @@
 			<skill id="9556" level="1" /> <!-- Head Accessory: CON -->
 		</skills>
 	</item>
-	<item id="40278" name="Buff Helmet" additionalName="MEN" type="Armor">
+	<item id="40278" name="Buff頭盔" additionalName="MEN" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, MEN +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1257,7 +1257,7 @@
 			<skill id="9557" level="1" /> <!-- Head Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="40279" name="Buff Helmet" additionalName="INT" type="Armor">
+	<item id="40279" name="Buff頭盔" additionalName="INT" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, INT +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1270,7 +1270,7 @@
 			<skill id="9558" level="1" /> <!-- Head Accessory: INT -->
 		</skills>
 	</item>
-	<item id="40280" name="Buff Helmet" additionalName="WIT" type="Armor">
+	<item id="40280" name="Buff頭盔" additionalName="WIT" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, WIT +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1283,7 +1283,7 @@
 			<skill id="9559" level="1" /> <!-- Head Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="40281" name="Buff Helmet" additionalName="Critical Rate" type="Armor">
+	<item id="40281" name="Buff頭盔" additionalName="Critical Rate" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, Critical Rate for basic attacks +5%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1296,7 +1296,7 @@
 			<skill id="9560" level="1" /> <!-- Head Accessory: P. Critical Rate -->
 		</skills>
 	</item>
-	<item id="40282" name="Buff Helmet" additionalName="Critical Damage" type="Armor">
+	<item id="40282" name="Buff頭盔" additionalName="Critical Damage" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, Critical Damage for basic attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1309,7 +1309,7 @@
 			<skill id="9561" level="1" /> <!-- Head Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="40283" name="Buff Helmet" additionalName="P. Def." type="Armor">
+	<item id="40283" name="Buff頭盔" additionalName="P. Def." type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, P. Def. +5%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1322,7 +1322,7 @@
 			<skill id="9562" level="1" /> <!-- Head Accessory: P. Def. -->
 		</skills>
 	</item>
-	<item id="40284" name="Buff Helmet" additionalName="M. Def." type="Armor">
+	<item id="40284" name="Buff頭盔" additionalName="M. Def." type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, M. Def. +5%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1335,7 +1335,7 @@
 			<skill id="9563" level="1" /> <!-- Head Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="40285" name="Buff Helmet" additionalName="Evasion" type="Armor">
+	<item id="40285" name="Buff頭盔" additionalName="Evasion" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, Evasion +5. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1348,7 +1348,7 @@
 			<skill id="9564" level="1" /> <!-- Head Accessory: P. Evasion -->
 		</skills>
 	</item>
-	<item id="40286" name="Buff Helmet" additionalName="P. Atk." type="Armor">
+	<item id="40286" name="Buff頭盔" additionalName="P. Atk." type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, P. Atk. +5%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1361,7 +1361,7 @@
 			<skill id="9565" level="1" /> <!-- Head Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="40287" name="Buff Helmet" additionalName="M. Atk." type="Armor">
+	<item id="40287" name="Buff頭盔" additionalName="M. Atk." type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, M. Atk. +10%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1374,7 +1374,7 @@
 			<skill id="9566" level="1" /> <!-- Head Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="40288" name="Buff Helmet" additionalName="Accuracy" type="Armor">
+	<item id="40288" name="Buff頭盔" additionalName="Accuracy" type="Armor">
 		<!-- Equipped in 2 head accessory slots. When equipped, P. Accuracy +5. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1387,7 +1387,7 @@
 			<skill id="9567" level="1" /> <!-- Head Accessory: P. Accuracy -->
 		</skills>
 	</item>
-	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
+	<item id="40289" name="NC雜誌" additionalName="Event" type="EtcItem">
 		<!-- Go to Tiffany in town for a special gift. -->
 		<set name="icon" val="icon.nc_magazine" />
 		<set name="is_tradable" val="false" />
@@ -1398,7 +1398,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40290" name="Lara's Key Card Pack" additionalName="Normal" type="EtcItem">
+	<item id="40290" name="拉拉貓的卡片鑰匙串" additionalName="Normal" type="EtcItem">
 		<!-- Double-click to obtain Rarra the Cat's Key Card. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_tradable" val="false" />
@@ -1412,7 +1412,7 @@
 			<item id="38750" min="1" max="1" chance="100" /> <!-- Rarra the Cat's Key Card -->
 		</capsuled_items>
 	</item>
-	<item id="40291" name="Steel Demon's Staff - Magic Chaos" type="Weapon">
+	<item id="40291" name="鋼鐵惡魔魔杖-魔法混亂" type="Weapon">
 		<!-- <Special properties>. With a 7% chance, inflicts Curse of Chaos when applying a debuff on the target. Cannot be augmented. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1438,7 +1438,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="40292" name="Steel Spirit's Staff - Mental Shield" type="Weapon">
+	<item id="40292" name="鋼鐵精靈魔杖-魔法心靈防護" type="Weapon">
 		<!-- <Special properties>. With a 50% chance, applies Mental Shield on the target when using a buff. Cannot be augmented. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1464,7 +1464,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="40293" name="Steel Dasparion's Staff - Acumen" type="Weapon">
+	<item id="40293" name="鋼鐵帕黎恩魔杖-靈活思緒" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. Cannot be augmented. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1493,7 +1493,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="40294" name="Steel Imperial Staff - Empower" type="Weapon">
+	<item id="40294" name="鋼鐵帝國權杖-魔力催化" type="Weapon">
 		<!-- <Special properties>. M. Atk. +60. Deals additional PvP damage. Cannot be augmented. No soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1522,7 +1522,7 @@
 			<skill id="3575" level="1" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="40295" name="Steel Dynasty Staff - Acumen" type="Weapon">
+	<item id="40295" name="鋼鐵王朝魔杖-靈活思緒" type="Weapon">
 		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. Cannot be augmented. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1551,7 +1551,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="40296" name="Monster Weapon Appearance Stone: Turikki's Blunt Weapon" type="EtcItem">
+	<item id="40296" name="怪物武器專用加工石-闇丁獸人圖拉克提恩的鈍器" type="EtcItem">
 		<!-- An Appearance Stone that changes the appearance of a one-handed blunt weapon to that of Turikki's Blunt Weapon. It does not affect the item's stats. Double-click to use. -->
 		<set name="icon" val="icon.shape_shifting_blunt_i00" />
 		<set name="is_sellable" val="false" />
@@ -1563,7 +1563,7 @@
 			<skill id="18149" level="1" /> <!-- Appearance Stone: Monster Weapon - Turikki's Blunt Weapon -->
 		</skills>
 	</item>
-	<item id="40297" name="Monster Weapon Appearance Stone: Tayga Archer's Bow" type="EtcItem">
+	<item id="40297" name="怪物武器專用加工石-泰伊卡弓箭手之弓" type="EtcItem">
 		<!-- An Appearance Stone that changes the appearance of a bow to that of Tayga Archer's Bow. It does not affect the item's stats. Double-click to use. -->
 		<set name="icon" val="icon.shape_shifting_bow_i00" />
 		<set name="is_sellable" val="false" />
@@ -1575,7 +1575,7 @@
 			<skill id="18150" level="1" /> <!-- Appearance Stone: Monster Weapon - Tayga Archer's Bow -->
 		</skills>
 	</item>
-	<item id="40298" name="Turikki's Blunt Weapon" type="Weapon">
+	<item id="40298" name="闇丁獸人圖拉克提恩的鈍器" type="Weapon">
 		<!-- Monster weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualblunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1599,7 +1599,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="40299" name="Tiger Bow" type="Weapon">
+	<item id="40299" name="泰伊卡弓箭手之弓" type="Weapon">
 		<!-- Monster weapon. -->
 		<set name="icon" val="icon.pailaka_invader_bow_wp_i00" />
 		<set name="default_action" val="EQUIP" />

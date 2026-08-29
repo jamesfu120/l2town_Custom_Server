@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20600" name="Twilight Staff" additionalName="Dance of Shadow / 7-day" type="Weapon">
+	<item id="20600" name="招魂杖" additionalName="Dance of Shadow / 7-day" type="Weapon">
 		<!-- A staff that summons souls. The special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -27,7 +27,7 @@
 			<skill id="21089" level="1" /> <!-- Dance of Shadows -->
 		</skills>
 	</item>
-	<item id="20601" name="Anniversary Hat" additionalName="Soul of Phoenix / 7-day" type="Armor">
+	<item id="20601" name="回魂帽" additionalName="Soul of Phoenix / 7-day" type="Armor">
 		<!-- Anniversary Hat. Equipped in 2 head accessory slots. Cooldown: 24 h. -->
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -45,7 +45,7 @@
 			<skill id="21090" level="1" /> <!-- Soul of Phoenix -->
 		</skills>
 	</item>
-	<item id="20602" name="Soul Silver Foil (Event)" type="EtcItem">
+	<item id="20602" name="靈魂銀紙-活動" type="EtcItem">
 		<!-- Silver foil for comforting a monster spirit. Used when a monster is dead. For 2 min., Max HP/ MP/ CP +60%, P. Def. +30%, M. Def. +30%, Speed +30, P. Atk. +20%, Skill MP Consumption -10%. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_silverpaper_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -60,7 +60,7 @@
 			<skill id="22099" level="1" /> <!-- Soul Silver Foil -->
 		</skills>
 	</item>
-	<item id="20603" name="Soul Scent (Event)" type="EtcItem">
+	<item id="20603" name="靈魂香-活動" type="EtcItem">
 		<!-- Scent for comforting a monster spirit. Used when a monster is dead. For 2 min., Max HP/ CP +40%, P. Def. +30%, M. Def. +30%, Speed +20, M. Atk. +45%, Skill MP Consumption -10%. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -75,7 +75,7 @@
 			<skill id="22100" level="1" /> <!-- Soul Scent -->
 		</skills>
 	</item>
-	<item id="20604" name="Low-Class Certificate (Event)" type="EtcItem">
+	<item id="20604" name="初級證明書-活動" type="EtcItem">
 		<!-- Event item. A certificate for receiving an item. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
@@ -87,7 +87,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="20605" name="Mid-grade Certificate (Event)" type="EtcItem">
+	<item id="20605" name="中級證明書-活動" type="EtcItem">
 		<!-- Event item. A certificate for receiving an item. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
@@ -99,7 +99,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="20606" name="High-class Certificate (Event)" additionalName="8-hour" type="EtcItem">
+	<item id="20606" name="高級證明書-活動" additionalName="8-hour" type="EtcItem">
 		<!-- Event item. A certificate for receiving an item. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
@@ -112,7 +112,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="time" val="480" />
 	</item>
-	<item id="20607" name="Package: Headphone" additionalName="Town Theme" type="EtcItem">
+	<item id="20607" name="耳機組" additionalName="Town Theme" type="EtcItem">
 		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -130,7 +130,7 @@
 			<item id="20613" min="1" max="1" chance="100" /> <!-- Headphone - Town Theme -->
 		</capsuled_items>
 	</item>
-	<item id="20608" name="Package: Headphone" additionalName="Hero Theme" type="EtcItem">
+	<item id="20608" name="耳機組" additionalName="Hero Theme" type="EtcItem">
 		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -148,7 +148,7 @@
 			<item id="20614" min="1" max="1" chance="100" /> <!-- Headphone - Hero Theme -->
 		</capsuled_items>
 	</item>
-	<item id="20609" name="Package: Headphone" additionalName="Theme Park" type="EtcItem">
+	<item id="20609" name="耳機組" additionalName="Theme Park" type="EtcItem">
 		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -166,7 +166,7 @@
 			<item id="20615" min="1" max="1" chance="100" /> <!-- Headphone - Theme Park -->
 		</capsuled_items>
 	</item>
-	<item id="20610" name="Package: Headphone (7-day)" additionalName="Town Theme: Great Adventurer's Soul Power" type="EtcItem">
+	<item id="20610" name="耳機 7日/組" additionalName="Town Theme: Great Adventurer's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Headphone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -184,7 +184,7 @@
 			<item id="20616" min="1" max="1" chance="100" /> <!-- Headphone - Town Theme: Great Adventurer's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20611" name="Package: Headphone (7-day)" additionalName="Hero Theme: Brave Warrior's Soul Power" type="EtcItem">
+	<item id="20611" name="耳機 7日/組" additionalName="Hero Theme: Brave Warrior's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Headphone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -202,7 +202,7 @@
 			<item id="20617" min="1" max="1" chance="100" /> <!-- Headphone - Hero Theme: Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20612" name="Package: Headphone (7-day)" additionalName="Theme Park: Great Wizard's Soul Power" type="EtcItem">
+	<item id="20612" name="耳機 7日/組" additionalName="Theme Park: Great Wizard's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Headphone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -220,7 +220,7 @@
 			<item id="20618" min="1" max="1" chance="100" /> <!-- Headphone - Theme Park: Great Wizard's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20613" name="Headphone" additionalName="Town Theme" type="Armor">
+	<item id="20613" name="耳機" additionalName="Town Theme" type="Armor">
 		<!-- Magic headphones that play town theme music. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -239,7 +239,7 @@
 			<skill id="21092" level="1" /> <!-- Theme - Town -->
 		</skills>
 	</item>
-	<item id="20614" name="Headphone" additionalName="Hero Theme" type="Armor">
+	<item id="20614" name="耳機" additionalName="Hero Theme" type="Armor">
 		<!-- Magic headphones that play hero theme music. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -258,7 +258,7 @@
 			<skill id="21093" level="1" /> <!-- Theme - Hero -->
 		</skills>
 	</item>
-	<item id="20615" name="Headphone" additionalName="Theme Park" type="Armor">
+	<item id="20615" name="耳機" additionalName="Theme Park" type="Armor">
 		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -277,7 +277,7 @@
 			<skill id="21094" level="1" /> <!-- Theme - Theme Park -->
 		</skills>
 	</item>
-	<item id="20616" name="Headphone" additionalName="Town Theme: Great Adventurer's Soul Power / 7-day" type="Armor">
+	<item id="20616" name="耳機" additionalName="Town Theme: Great Adventurer's Soul Power / 7-day" type="Armor">
 		<!-- Magic headphones that play town theme music. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -296,7 +296,7 @@
 			<skill id="21092" level="1" /> <!-- Theme - Town -->
 		</skills>
 	</item>
-	<item id="20617" name="Headphone" additionalName="Hero Theme: Brave Warrior's Soul Power / 7-day" type="Armor">
+	<item id="20617" name="耳機" additionalName="Hero Theme: Brave Warrior's Soul Power / 7-day" type="Armor">
 		<!-- Magic headphones that play hero theme music. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -315,7 +315,7 @@
 			<skill id="21093" level="1" /> <!-- Theme - Hero -->
 		</skills>
 	</item>
-	<item id="20618" name="Headphone" additionalName="Theme Park: Great Wizard's Soul Power / 7-day" type="Armor">
+	<item id="20618" name="耳機" additionalName="Theme Park: Great Wizard's Soul Power / 7-day" type="Armor">
 		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -334,7 +334,7 @@
 			<skill id="21094" level="1" /> <!-- Theme - Theme Park -->
 		</skills>
 	</item>
-	<item id="20619" name="Package: Agathion Weaver (24-hour)" additionalName="Flute Sound" type="EtcItem">
+	<item id="20619" name="織女壺精 24小時/組" additionalName="Flute Sound" type="EtcItem">
 		<!-- Double-click to obtain Agathion Weaver (24-hour). Cannot be sold. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -351,7 +351,7 @@
 			<item id="20621" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Weaver - Flute Sound / 24-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20620" name="Package: Agathion Weaver (3-day)" additionalName="Flute Sound" type="EtcItem">
+	<item id="20620" name="織女壺精 3日/組" additionalName="Flute Sound" type="EtcItem">
 		<!-- Double-click to obtain Agathion Weaver (3-day). Cannot be sold. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -368,7 +368,7 @@
 			<item id="20622" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Weaver - Flute Sound / 3-day -->
 		</capsuled_items>
 	</item>
-	<item id="20621" name="Agathion Weaver" additionalName="Flute Sound / 24-hour" type="Armor">
+	<item id="20621" name="壺精封印手鐲-織女" additionalName="Flute Sound / 24-hour" type="Armor">
 		<!-- A bracelet for summoning Agathion Weaver. -->
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -389,7 +389,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20622" name="Agathion Weaver" additionalName="Flute Sound / 3-day" type="Armor">
+	<item id="20622" name="壺精封印手鐲-織女" additionalName="Flute Sound / 3-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Weaver. -->
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -410,7 +410,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20623" name="Package: Soul Silver Foil / Scent" type="EtcItem">
+	<item id="20623" name="靈魂銀紙-香組" type="EtcItem">
 		<!-- Double-click to obtain Soul Silver Foil and Scent. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -427,7 +427,7 @@
 			<item id="20603" min="100" max="100" chance="100" /> <!-- Soul Scent - Event -->
 		</capsuled_items>
 	</item>
-	<item id="20624" name="Package: Soul Scent (100 pcs.)" type="EtcItem">
+	<item id="20624" name="靈魂香 100支/組 " type="EtcItem">
 		<!-- Double-click to obtain Soul Scent. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -443,7 +443,7 @@
 			<item id="20603" min="100" max="100" chance="100" /> <!-- Soul Scent - Event -->
 		</capsuled_items>
 	</item>
-	<item id="20625" name="Package: Anniversary Hat (7-day)" additionalName="Resurrection" type="EtcItem">
+	<item id="20625" name="回魂帽 7日/組" additionalName="Resurrection" type="EtcItem">
 		<!-- Double-click to obtain Anniversary Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -461,7 +461,7 @@
 			<item id="20626" min="1" max="1" chance="100" /> <!-- Anniversary Hat - Resurrection / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20626" name="Anniversary Hat" additionalName="Resurrection / 7-day" type="Armor">
+	<item id="20626" name="回魂帽" additionalName="Resurrection / 7-day" type="Armor">
 		<!-- Anniversary Hat. Equipped in 2 head accessory slots. Cooldown: 12 h. -->
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -479,7 +479,7 @@
 			<skill id="21095" level="1" /> <!-- Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="20627" name="Package: Summon of Love Bracelet (7-day)" type="EtcItem">
+	<item id="20627" name="愛的召喚手鐲 7日/組" type="EtcItem">
 		<!-- Double-click to obtain Summon of Love Bracelet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -497,7 +497,7 @@
 			<item id="20628" min="1" max="1" chance="100" /> <!-- Love Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20628" name="Summon of Love Bracelet" additionalName="7-day" type="Armor">
+	<item id="20628" name="愛的召喚手鐲" additionalName="7-day" type="Armor">
 		<!-- A bracelet that allows you to summon your friend to you. Both characters should be in the same party and have Love Bracelet equipped. -->
 		<set name="icon" val="BranchSys.icon.br_ring_of_friendship_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -516,7 +516,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20629" name="Love Box - Event" type="EtcItem">
+	<item id="20629" name="愛的幸運箱-活動" type="EtcItem">
 		<!-- Double-click to obtain Love Bracelet with a certain chance. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -529,7 +529,7 @@
 			<skill id="22101" level="1" /> <!-- Love Box -->
 		</skills>
 	</item>
-	<item id="20630" name="Soul Magic Box" type="EtcItem">
+	<item id="20630" name="靈魂魔法箱" type="EtcItem">
 		<!-- Double-click to create Soul Silver Foil/ Soul Scent. (Can be used once a day.) -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -544,7 +544,7 @@
 			<skill id="22102" level="1" /> <!-- Soul Magic Box -->
 		</skills>
 	</item>
-	<item id="20631" name="Package: Watermelon Hat (7-day)" type="EtcItem">
+	<item id="20631" name="西瓜帽 7日/組" type="EtcItem">
 		<!-- Double-click to obtain Watermelon Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -562,7 +562,7 @@
 			<item id="20633" min="1" max="1" chance="100" /> <!-- Watermelon Hat - Cool Watermelon / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20632" name="Package: Watermelon Hat" type="EtcItem">
+	<item id="20632" name="西瓜帽組" type="EtcItem">
 		<!-- Double-click to obtain Watermelon Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -580,7 +580,7 @@
 			<item id="20634" min="1" max="1" chance="100" /> <!-- Watermelon Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20633" name="Watermelon Hat" additionalName="Cool Watermelon / 7-day" type="Armor">
+	<item id="20633" name="西瓜帽" additionalName="Cool Watermelon / 7-day" type="Armor">
 		<!-- A hat that looks like a watermelon. Just looking at it is refreshing. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -598,7 +598,7 @@
 			<skill id="21096" level="1" /> <!-- Fresh Watermelon's Property -->
 		</skills>
 	</item>
-	<item id="20634" name="Watermelon Hat" type="Armor">
+	<item id="20634" name="西瓜帽" type="Armor">
 		<!-- A hat that looks like a watermelon. Just looking at it is refreshing. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -615,7 +615,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="20635" name="Package: Newbie's No-grade Equipment Set" type="EtcItem">
+	<item id="20635" name="新手冒險者支援組-普通" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains No-grade items and cocktail drinks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -640,7 +640,7 @@
 			<item id="21094" min="3" max="3" chance="100" /> <!-- Fresh Fruit Cocktail -->
 		</capsuled_items>
 	</item>
-	<item id="20636" name="Package: Warrior's D-grade Equipment Set" type="EtcItem">
+	<item id="20636" name="戰士支援組-D級" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains a D-grade Fighter item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -665,7 +665,7 @@
 			<item id="20648" min="1" max="1" chance="100" /> <!-- Common Item - Salamander Skin Mail -->
 		</capsuled_items>
 	</item>
-	<item id="20637" name="Package: Wizard's D-grade Equipment Set" type="EtcItem">
+	<item id="20637" name="法師支援組-D級" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains a D-grade Mage item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -686,7 +686,7 @@
 			<item id="20645" min="1" max="1" chance="100" /> <!-- Common Item - Plate Helmet -->
 		</capsuled_items>
 	</item>
-	<item id="20638" name="Package: Newbie's Support" type="EtcItem">
+	<item id="20638" name="新手冒險者聲援組" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains useful items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -705,7 +705,7 @@
 			<item id="20415" min="1" max="1" chance="100" /> <!-- Afro Hairstyle - Big Head / Firework / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20639" name="Common Item - Elven Long Sword" type="Weapon">
+	<item id="20639" name="基本型-精靈長劍" type="Weapon">
 		<!-- Elven Long Sword, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -731,7 +731,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20640" name="Common Item - Light Bow" type="Weapon">
+	<item id="20640" name="基本型-風暴弓" type="Weapon">
 		<!-- Light Bow, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="20641" name="Common Item - Knight's Sword*Elven Sword" type="Weapon">
+	<item id="20641" name="基本型-騎士劍*精靈劍" type="Weapon">
 		<!-- Knight's Sword*Elven Sword, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -786,7 +786,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20642" name="Common Item - Mithril Gloves" type="Armor">
+	<item id="20642" name="基本型-米索莉手套" type="Armor">
 		<!-- Mithril Gloves, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -802,7 +802,7 @@
 			<stat type="pDef">29</stat>
 		</stats>
 	</item>
-	<item id="20643" name="Common Item - Plate Boots" type="Armor">
+	<item id="20643" name="基本型-金屬靴" type="Armor">
 		<!-- Plate Boots, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t46_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -818,7 +818,7 @@
 			<stat type="pDef">29</stat>
 		</stats>
 	</item>
-	<item id="20644" name="Common Item - Plate Shield" type="Armor">
+	<item id="20644" name="基本型-金屬盾" type="Armor">
 		<!-- Plate Shield, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.shield_plate_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -836,7 +836,7 @@
 			<stat type="sDef">154</stat>
 		</stats>
 	</item>
-	<item id="20645" name="Common Item - Plate Helmet" type="Armor">
+	<item id="20645" name="基本型-金屬板頭盔" type="Armor">
 		<!-- Plate Helmet, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -852,7 +852,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="20646" name="Common Item - Plate Gaiters" type="Armor">
+	<item id="20646" name="基本型-金屬脛甲" type="Armor">
 		<!-- Plate Gaiters, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t46_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -869,7 +869,7 @@
 			<stat type="pDef">70</stat>
 		</stats>
 	</item>
-	<item id="20647" name="Common Item - Half Plate Armor" type="Armor">
+	<item id="20647" name="基本型-半身盔甲" type="Armor">
 		<!-- Half Plate Armor, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t46_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -886,7 +886,7 @@
 			<stat type="pDef">111</stat>
 		</stats>
 	</item>
-	<item id="20648" name="Common Item - Salamander Skin Mail" type="Armor">
+	<item id="20648" name="基本型-火蜥蜴皮甲" type="Armor">
 		<!-- Salamander Skin Mail, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -903,7 +903,7 @@
 			<stat type="pDef">136</stat>
 		</stats>
 	</item>
-	<item id="20649" name="Common Item - Ghost Staff" type="Weapon">
+	<item id="20649" name="基本型-魂靈魔杖" type="Weapon">
 		<!-- Ghost Staff of Mana, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -931,7 +931,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20650" name="Common Item - Mithril Tunic" type="Armor">
+	<item id="20650" name="基本型-米索莉外衣" type="Armor">
 		<!-- Mithril Tunic, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 			<stat type="maxMp">169</stat>
 		</stats>
 	</item>
-	<item id="20651" name="Common Item - Mithril Stockings" type="Armor">
+	<item id="20651" name="基本型-米索莉長襪" type="Armor">
 		<!-- Mithril Stockings, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -967,7 +967,7 @@
 			<stat type="maxMp">105</stat>
 		</stats>
 	</item>
-	<item id="20652" name="Common Item - Salamander Skin Boots" type="Armor">
+	<item id="20652" name="基本型-火蜥蜴皮靴" type="Armor">
 		<!-- Salamander Skin Boots, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -983,7 +983,7 @@
 			<stat type="pDef">29</stat>
 		</stats>
 	</item>
-	<item id="20653" name="Common Item - Ogre Power Gauntlets" type="Armor">
+	<item id="20653" name="基本型-食人魔力量長手套" type="Armor">
 		<!-- Ogre Power Gauntlets, upgrade options are limited. Cannot be enchanted, augmented or imbued with a special property. -->
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -999,7 +999,7 @@
 			<stat type="pDef">29</stat>
 		</stats>
 	</item>
-	<item id="20654" name="Agathion Lucky Girl" type="Armor">
+	<item id="20654" name="壺精封印手鐲-芊芊" type="Armor">
 		<!-- A bracelet for summoning Agathion Lucky Girl. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1020,7 +1020,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20655" name="Agathion Lucky Girl" additionalName="Brave Warrior's Soul Power / 7-day" type="Armor">
+	<item id="20655" name="壺精封印手鐲-芊芊" additionalName="Brave Warrior's Soul Power / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Lucky Girl. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1041,7 +1041,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20656" name="Agathion Lucky Boy" type="Armor">
+	<item id="20656" name="壺精封印手鐲-堂堂" type="Armor">
 		<!-- A bracelet for summoning Agathion Lucky Boy. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1062,7 +1062,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20657" name="Agathion Lucky Boy" additionalName="Great Wizard's Soul Power / 7-day" type="Armor">
+	<item id="20657" name="壺精封印手鐲-堂堂" additionalName="Great Wizard's Soul Power / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Lucky Boy. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1083,7 +1083,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20658" name="Agathion Dancing Lucky Kid" type="Armor">
+	<item id="20658" name="壺精封印手鐲-舞動幸運兒" type="Armor">
 		<!-- A bracelet for summoning Agathion Dancing Lucky Kid. -->
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1104,7 +1104,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20659" name="Agathion Dancing Lucky Kid" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
+	<item id="20659" name="壺精封印手鐲-舞動幸運兒" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Dancing Lucky Kid. -->
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1125,7 +1125,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20660" name="Agathion Monkey King" type="Armor">
+	<item id="20660" name="壺精封印手鐲-齊天大聖" type="Armor">
 		<!-- A bracelet for summoning Agathion Monkey King. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1146,7 +1146,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20661" name="Agathion Monkey King" additionalName="Great Wizard's Soul Power / 7-day" type="Armor">
+	<item id="20661" name="壺精封印手鐲-齊天大聖" additionalName="Great Wizard's Soul Power / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Monkey King. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1167,7 +1167,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20662" name="Agathion Uthanka" type="Armor">
+	<item id="20662" name="壺精封印手鐲-烏山卡壺精" type="Armor">
 		<!-- A bracelet for summoning Agathion Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1188,7 +1188,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20663" name="Agathion Uthanka" additionalName="Brave Warrior's Soul Power / 7-day" type="Armor">
+	<item id="20663" name="壺精封印手鐲-烏山卡壺精" additionalName="Brave Warrior's Soul Power / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1209,7 +1209,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20664" name="Agathion Bonus B" type="Armor">
+	<item id="20664" name="壺精封印手鐲-紅利小娃壺精" type="Armor">
 		<!-- A bracelet for summoning Agathion Bonus B. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1230,7 +1230,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20665" name="Agathion Bonus B" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
+	<item id="20665" name="壺精封印手鐲-紅利小娃壺精" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Bonus B. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1251,7 +1251,7 @@
 			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
-	<item id="20666" name="Valkyrie Hat" type="Armor">
+	<item id="20666" name="女武神帽" type="Armor">
 		<!-- A hat endowed with the Valkyrie's power. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1268,7 +1268,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20667" name="Valkyrie Hat" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
+	<item id="20667" name="女武神帽" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
 		<!-- A hat endowed with the Valkyrie's power. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1286,7 +1286,7 @@
 			<skill id="21098" level="1" /> <!-- Great Adventurer's Soul Power -->
 		</skills>
 	</item>
-	<item id="20668" name="Tiger Hat" type="Armor">
+	<item id="20668" name="老虎帽" type="Armor">
 		<!-- A head accessory that looks like a tiger head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_tiger_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1303,7 +1303,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20669" name="Tiger Hat" additionalName="Brave Warrior's Soul Power / 7-day" type="Armor">
+	<item id="20669" name="老虎帽" additionalName="Brave Warrior's Soul Power / 7-day" type="Armor">
 		<!-- A head accessory that looks like a tiger head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_tiger_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1321,7 +1321,7 @@
 			<skill id="21099" level="1" /> <!-- Brave Warrior's Soul Power -->
 		</skills>
 	</item>
-	<item id="20670" name="Maid Hairband" type="Armor">
+	<item id="20670" name="女僕髮飾" type="Armor">
 		<!-- A cute head accessory. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1338,7 +1338,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20671" name="Maid Hairband" additionalName="Great Wizard's Soul Power / 7-day" type="Armor">
+	<item id="20671" name="女僕髮飾" additionalName="Great Wizard's Soul Power / 7-day" type="Armor">
 		<!-- A cute head accessory. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1356,7 +1356,7 @@
 			<skill id="21100" level="1" /> <!-- Great Wizard's Soul Power -->
 		</skills>
 	</item>
-	<item id="20672" name="Baby Panda Hat" type="Armor">
+	<item id="20672" name="寶寶貓熊帽" type="Armor">
 		<!-- A head accessory that looks like a baby panda head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20673" name="Baby Panda Hat" additionalName="Blessed Escape / 7-day" type="Armor">
+	<item id="20673" name="寶寶貓熊帽" additionalName="Blessed Escape / 7-day" type="Armor">
 		<!-- A head accessory that looks like a baby panda head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1391,7 +1391,7 @@
 			<skill id="21101" level="1" /> <!-- Blessed Escape -->
 		</skills>
 	</item>
-	<item id="20674" name="Bamboo Panda Hat" type="Armor">
+	<item id="20674" name="團團貓熊帽" type="Armor">
 		<!-- A head accessory that looks like a panda head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1408,7 +1408,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20675" name="Bamboo Panda Hat" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
+	<item id="20675" name="團團貓熊帽" additionalName="Great Adventurer's Soul Power / 7-day" type="Armor">
 		<!-- A head accessory that looks like a panda head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1426,7 +1426,7 @@
 			<skill id="21103" level="1" /> <!-- Great Adventurer's Soul Power -->
 		</skills>
 	</item>
-	<item id="20676" name="Sexy Panda Hat" type="Armor">
+	<item id="20676" name="圓圓貓熊帽" type="Armor">
 		<!-- A head accessory that looks like a panda head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1443,7 +1443,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20677" name="Sexy Panda Hat" additionalName="Blessed Resurrection / 7-day" type="Armor">
+	<item id="20677" name="圓圓貓熊帽" additionalName="Blessed Resurrection / 7-day" type="Armor">
 		<!-- A head accessory that looks like a panda head. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1461,7 +1461,7 @@
 			<skill id="21102" level="1" /> <!-- Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="20678" name="Gatekeeper Hat" type="Armor">
+	<item id="20678" name="守門人帽" type="Armor">
 		<!-- A hat worn by Gatekeepers. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1478,7 +1478,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20679" name="Gatekeeper Hat" additionalName="Appetite for Destruction / 7-day" type="Armor">
+	<item id="20679" name="守門人帽" additionalName="Appetite for Destruction / 7-day" type="Armor">
 		<!-- A hat worn by Gatekeepers. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1496,7 +1496,7 @@
 			<skill id="21104" level="1" /> <!-- Appetite for Destruction -->
 		</skills>
 	</item>
-	<item id="20680" name="Package: Agathion Lucky Girl" type="EtcItem">
+	<item id="20680" name="芊芊壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Lucky Girl. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1514,7 +1514,7 @@
 			<item id="20654" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Lucky Girl -->
 		</capsuled_items>
 	</item>
-	<item id="20681" name="Package: Agathion Lucky Girl (7-day)" additionalName="Brave Warrior's Soul Power" type="EtcItem">
+	<item id="20681" name="芊芊壺精 7日/組" additionalName="Brave Warrior's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Agathion Lucky Girl (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1532,7 +1532,7 @@
 			<item id="20655" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Lucky Girl - Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20682" name="Package: Agathion Lucky Boy" type="EtcItem">
+	<item id="20682" name="堂堂壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Lucky Boy. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1550,7 +1550,7 @@
 			<item id="20656" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Lucky Boy -->
 		</capsuled_items>
 	</item>
-	<item id="20683" name="Package: Agathion Lucky Boy (7-day)" additionalName="Great Wizard's Soul Power" type="EtcItem">
+	<item id="20683" name="堂堂壺精 7日/組" additionalName="Great Wizard's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Agathion Lucky Boy (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1568,7 +1568,7 @@
 			<item id="20657" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Lucky Boy - Great Mystic's Soul Power: Water / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20684" name="Package: Agathion Dancing Lucky Kid" type="EtcItem">
+	<item id="20684" name="舞動幸運兒壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Dancing Lucky Kid. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1586,7 +1586,7 @@
 			<item id="20658" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Dancing Lucky Kid -->
 		</capsuled_items>
 	</item>
-	<item id="20685" name="Package: Agathion Dancing Lucky Kid (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
+	<item id="20685" name="舞動幸運兒壺精 7日/組" additionalName="Great Adventurer's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Agathion Dancing Lucky Kid (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1604,7 +1604,7 @@
 			<item id="20659" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Dancing Lucky Kid - Great Adventurer's Soul Power: Water / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20686" name="Package: Agathion Monkey King" type="EtcItem">
+	<item id="20686" name="齊天大聖壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Monkey King. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1622,7 +1622,7 @@
 			<item id="20660" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Monkey King -->
 		</capsuled_items>
 	</item>
-	<item id="20687" name="Package: Agathion Monkey King (7-day)" additionalName="Great Wizard's Soul Power" type="EtcItem">
+	<item id="20687" name="齊天大聖壺精 7日/組" additionalName="Great Wizard's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Agathion Monkey King (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1640,7 +1640,7 @@
 			<item id="20661" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Monkey King - Great Mystic's Soul Power: Water / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20688" name="Package: Agathion Uthanka" type="EtcItem">
+	<item id="20688" name="烏山卡壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1658,7 +1658,7 @@
 			<item id="20662" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Uthanka -->
 		</capsuled_items>
 	</item>
-	<item id="20689" name="Package: Agathion Uthanka (7-day)" additionalName="Brave Warrior's Soul Power" type="EtcItem">
+	<item id="20689" name="烏山卡壺精 7日/組" additionalName="Brave Warrior's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Agathion Uthanka (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1676,7 +1676,7 @@
 			<item id="20663" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Uthanka - Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20690" name="Package: Agathion Bonus B" type="EtcItem">
+	<item id="20690" name="紅利小娃壺精組" type="EtcItem">
 		<!-- Double-click to obtain Agathion Bonus B. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1694,7 +1694,7 @@
 			<item id="20664" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Bonus B -->
 		</capsuled_items>
 	</item>
-	<item id="20691" name="Package: Agathion Bonus B (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
+	<item id="20691" name="紅利小娃壺精 7日/組" additionalName="Great Adventurer's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Agathion Bonus B (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1712,7 +1712,7 @@
 			<item id="20665" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Bonus B - Great Adventurer's Soul Power: Water / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20692" name="Package: Valkyrie Hat" type="EtcItem">
+	<item id="20692" name="女武神帽組" type="EtcItem">
 		<!-- Double-click to obtain Valkyrie Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1730,7 +1730,7 @@
 			<item id="20666" min="1" max="1" chance="100" /> <!-- Valkyrie Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20693" name="Package: Valkyrie Hat (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
+	<item id="20693" name="女武神帽 7日/組" additionalName="Great Adventurer's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Valkyrie Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1748,7 +1748,7 @@
 			<item id="20667" min="1" max="1" chance="100" /> <!-- Valkyrie Hat - Great Adventurer's Soul Power: Fire / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20694" name="Package: Tiger Hat" type="EtcItem">
+	<item id="20694" name="老虎帽組" type="EtcItem">
 		<!-- Double-click to obtain Tiger Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1766,7 +1766,7 @@
 			<item id="20668" min="1" max="1" chance="100" /> <!-- Tiger Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20695" name="Package: Tiger Hat (7-day)" additionalName="Brave Warrior's Soul Power" type="EtcItem">
+	<item id="20695" name="老虎帽 7日/組" additionalName="Brave Warrior's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Tiger Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1784,7 +1784,7 @@
 			<item id="20669" min="1" max="1" chance="100" /> <!-- Tiger Hat - Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20696" name="Package: Maid Hairband" type="EtcItem">
+	<item id="20696" name="女僕髮飾組" type="EtcItem">
 		<!-- Double-click to obtain Maid Hairband. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1802,7 +1802,7 @@
 			<item id="20670" min="1" max="1" chance="100" /> <!-- Maid Hairband -->
 		</capsuled_items>
 	</item>
-	<item id="20697" name="Package: Maid Hairband (7-day)" additionalName="Great Wizard's Soul Power" type="EtcItem">
+	<item id="20697" name="女僕髮飾 7日/組" additionalName="Great Wizard's Soul Power" type="EtcItem">
 		<!-- Double-click to obtain Maid Hairband (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1820,7 +1820,7 @@
 			<item id="20671" min="1" max="1" chance="100" /> <!-- Maid Hairband - Great Mystic's Soul Power: Fire / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20698" name="Package: Baby Panda Hat" type="EtcItem">
+	<item id="20698" name="寶寶貓熊帽組" type="EtcItem">
 		<!-- Double-click to obtain Baby Panda Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1838,7 +1838,7 @@
 			<item id="20672" min="1" max="1" chance="100" /> <!-- Baby Panda Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20699" name="Package: Baby Panda Hat (7-day)" additionalName="Blessed Escape" type="EtcItem">
+	<item id="20699" name="寶寶貓熊帽 7日/組" additionalName="Blessed Escape" type="EtcItem">
 		<!-- Double-click to obtain Baby Panda Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />

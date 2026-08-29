@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35700" name="Santa Girl's Golden Gift Box" additionalName="Event" type="EtcItem">
+	<item id="35700" name="聖誕少女黃金禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak Box and Hat Box (3-day). If you are lucky, you can acquire an additional reward. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -23,7 +23,7 @@
 			<item id="18576" min="1" max="1" chance="5.6" /> <!-- Top-grade R99-grade Life Stone -->
 		</capsuled_items>
 	</item>
-	<item id="35701" name="Santa Girl's Red Stockings" additionalName="Event" type="EtcItem">
+	<item id="35701" name="聖誕少女紅色襪子" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Gift Box. If you are lucky, you can acquire Santa Girl's Golden Gift Box. -->
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="is_sellable" val="false" />
@@ -39,7 +39,7 @@
 			<item id="35700" min="1" max="1" chance="0.0617" /> <!-- Santa Girl's Golden Gift Box - Event -->
 		</capsuled_items>
 	</item>
-	<item id="35702" name="Zahak's Petra" type="EtcItem">
+	<item id="35702" name="扎哈克的佩特拉" type="EtcItem">
 		<!-- Petra obtained after defeating Zahak in the Seed of Hellfire. You can find out about the quest by clicking on it. Quest start item. -->
 		<set name="icon" val="icon.etc_torch_on_i00" />
 		<set name="is_depositable" val="false" />
@@ -51,7 +51,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="35703" name="Top-quality Petra" type="EtcItem">
+	<item id="35703" name="特級佩特拉" type="EtcItem">
 		<!-- Petra obtained after defeating Zahak in the Seed of Hellfire. It feels stronger than the Petra obtained from the Zofans. Bring it to Aku. -->
 		<set name="icon" val="icon.etc_torch_on_i00" />
 		<set name="is_depositable" val="false" />
@@ -63,7 +63,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="35704" name="Expedition Volunteer's Crystal Pouch" type="EtcItem">
+	<item id="35704" name="遠征隊支援水晶小袋" type="EtcItem">
 		<!-- Crystal pouch given to those who support the Antharas Expedition. Open the pouch to acquire a crystal. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -79,7 +79,7 @@
 			<skill id="9499" level="1" /> <!-- Antharas Pocket -->
 		</skills>
 	</item>
-	<item id="35705" name="Echo Crystal - Eternal Adventures (5th Fan Pic Award)" type="EtcItem">
+	<item id="35705" name="回聲水晶-永遠的冒險(第5屆 Fantic  Award)" type="EtcItem">
 		<!-- The 5th Lineage II Fan Pick Award overall winner. It was created by Orange Elf on the Teon server. Its light and cheerful melody lets you feel the adventure of Lineage II. -->
 		<set name="icon" val="icon.etc_echo_crystal_i03" />
 		<set name="weight" val="10" />
@@ -95,7 +95,7 @@
 			<skill id="9500" level="1" /> <!-- Echo Crystal - Eternal Adventures -->
 		</skills>
 	</item>
-	<item id="35706" name="Echo Crystal - The Stirrings of War (5th Fan Pick Award)" type="EtcItem">
+	<item id="35706" name="回聲水晶-戰爭的開端(第5屆 Fantic  Award)" type="EtcItem">
 		<!-- The 5th Lineage II Fan Pick Award best composition winner. It was created by Changsul on the Starice server. The music expresses the fantastic world of Lineage II. -->
 		<set name="icon" val="icon.etc_echo_crystal_i04" />
 		<set name="weight" val="10" />
@@ -111,7 +111,7 @@
 			<skill id="9501" level="1" /> <!-- Echo Crystal - The Stirrings of War -->
 		</skills>
 	</item>
-	<item id="35707" name="Echo Crystal - Reload (5th Fan Pick Award)" type="EtcItem">
+	<item id="35707" name="回聲水晶-Reload(第5屆 Fantic  Award)" type="EtcItem">
 		<!-- A prize for the 5th Lineage 2 fanfic contest won by Suhr21 from the Leona server. The music is full of lively guitar riffs. -->
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="weight" val="10" />
@@ -127,7 +127,7 @@
 			<skill id="9502" level="1" /> <!-- Echo Crystal - Reload -->
 		</skills>
 	</item>
-	<item id="35708" name="Lumi Exclusive Weapon" type="Weapon">
+	<item id="35708" name="精靈專用武器" type="Weapon">
 		<!-- Lumi's Weapon -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -154,7 +154,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35709" name="Zofan's Supply Box" type="EtcItem">
+	<item id="35709" name="蘇波補給箱" type="EtcItem">
 		<!-- Box obtaining after completing the Destroy the Machine Device mission on the 2nd floor of the Seed of Hellfire. Double-click to check for more information. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -169,7 +169,7 @@
 			<skill id="9503" level="1" /> <!-- Zofan's Supplies -->
 		</skills>
 	</item>
-	<item id="35710" name="Santa Girl's Cloak Box" additionalName="1-day / Event" type="EtcItem">
+	<item id="35710" name="聖誕少女斗篷禮盒" additionalName="1-day / Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (1-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -184,7 +184,7 @@
 			<item id="35693" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 1-day / Event -->
 		</capsuled_items>
 	</item>
-	<item id="35711" name="Santa Girl's Cloak Box" additionalName="3-day / Event" type="EtcItem">
+	<item id="35711" name="聖誕少女斗篷禮盒" additionalName="3-day / Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (3-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -199,7 +199,7 @@
 			<item id="35694" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 3-day / Event -->
 		</capsuled_items>
 	</item>
-	<item id="35712" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Warrior" type="Armor">
+	<item id="35712" name="充滿GM真誠的時髦浪漫圓帽" additionalName="Warrior" type="Armor">
 		<!-- Refined Romantic Chapeau filled with GM's sincerity. Equipped in 2 head accessory slots. When equipped, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -218,7 +218,7 @@
 			<skill id="8872" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Wizard" type="Armor">
+	<item id="35713" name="充滿GM真誠的時髦浪漫圓帽" additionalName="Wizard" type="Armor">
 		<!-- Refined Romantic Chapeau filled with GM's sincerity. Equipped in 2 head accessory slots. When equipped, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -237,7 +237,7 @@
 			<skill id="8873" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35714" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Healer" type="Armor">
+	<item id="35714" name="充滿GM真誠的時髦浪漫圓帽" additionalName="Healer" type="Armor">
 		<!-- Refined Romantic Chapeau filled with GM's sincerity. Equipped in 2 head accessory slots. When equipped, WIT +3. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -256,7 +256,7 @@
 			<skill id="8874" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Warrior" type="Armor">
+	<item id="35715" name="充滿GM祝福的時髦浪漫圓帽" additionalName="Warrior" type="Armor">
 		<!-- Refined Romantic Chapeau filled with GM's blessing. Equipped in 2 head accessory slots. When equipped, P. Atk. +5%, Critical Rate for basic attacks +50. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 			<skill id="8875" level="1" /> <!-- Refined Romantic Chapeau - GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Wizard" type="Armor">
+	<item id="35716" name="充滿GM祝福的時髦浪漫圓帽" additionalName="Wizard" type="Armor">
 		<!-- Refined Romantic Chapeau filled with GM's blessing. Equipped in 2 head accessory slots. When equipped, M. Atk. +10%, INT +3. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -294,7 +294,7 @@
 			<skill id="8876" level="1" /> <!-- Refined Romantic Chapeau - GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35717" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Healer" type="Armor">
+	<item id="35717" name="充滿GM祝福的時髦浪漫圓帽" additionalName="Healer" type="Armor">
 		<!-- Refined Romantic Chapeau filled with GM's blessing. Equipped in 2 head accessory slots. When equipped, WIT +3, MEN +3. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -313,7 +313,7 @@
 			<skill id="8877" level="1" /> <!-- Refined Romantic Chapeau - GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35718" name="Santa Hat" additionalName="1-day / Event" type="Armor">
+	<item id="35718" name="聖誕帽" additionalName="1-day / Event" type="Armor">
 		<!-- The hat brings Christmas cheer. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -327,7 +327,7 @@
 		<set name="time" val="1440" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="35719" name="Santa Hat" additionalName="3-day / Event" type="Armor">
+	<item id="35719" name="聖誕帽" additionalName="3-day / Event" type="Armor">
 		<!-- The hat brings Christmas cheer. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -341,7 +341,7 @@
 		<set name="time" val="4320" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="35720" name="Santa Girl's Hat Box" additionalName="1-day / Event" type="EtcItem">
+	<item id="35720" name="聖誕少女帽禮盒" additionalName="1-day / Event" type="EtcItem">
 		<!-- Double-click to obtain Santa Girl's Hat (1-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -356,7 +356,7 @@
 			<item id="35718" min="1" max="1" chance="100" /> <!-- Santa Hat - 1-day / Event -->
 		</capsuled_items>
 	</item>
-	<item id="35721" name="Santa Girl's Hat Box" additionalName="3-day / Event" type="EtcItem">
+	<item id="35721" name="聖誕少女帽禮盒" additionalName="3-day / Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Hat (3-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -371,7 +371,7 @@
 			<item id="35719" min="1" max="1" chance="100" /> <!-- Santa Hat - 3-day / Event -->
 		</capsuled_items>
 	</item>
-	<item id="35722" name="Draco's Hat" additionalName="Event" type="Armor">
+	<item id="35722" name="紅龍帽" additionalName="Event" type="Armor">
 		<!-- Draco's Hat -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -385,7 +385,7 @@
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="35723" name="Specter Weapon Pack" type="EtcItem">
+	<item id="35723" name="幻靈武器禮盒" type="EtcItem">
 		<!-- Double-click to obtain an unidentified Specter weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -415,7 +415,7 @@
 			<item id="18184" min="1" max="1" chance="100" /> <!-- Unidentified Specter Dual Blunt Weapons -->
 		</capsuled_items>
 	</item>
-	<item id="35724" name="Seraph Armor Pack" type="EtcItem">
+	<item id="35724" name="卡戴拉盔甲禮盒" type="EtcItem">
 		<!-- Double-click to obtain unidentified Seraph armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -448,7 +448,7 @@
 			<item id="18201" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="35725" name="Seraph Accessory Pack" type="EtcItem">
+	<item id="35725" name="卡戴拉飾品禮盒" type="EtcItem">
 		<!-- Double-click to obtain an unidentified Seraph accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -467,7 +467,7 @@
 			<item id="18204" min="2" max="2" chance="100" /> <!-- Unidentified Seraph Ring -->
 		</capsuled_items>
 	</item>
-	<item id="35726" name="R-grade Enchantment Box" type="EtcItem">
+	<item id="35726" name="R級強化箱子" type="EtcItem">
 		<!-- Double-click to obtain R-grade Hardener. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -491,7 +491,7 @@
 			<item id="18571" min="5" max="5" chance="100" /> <!-- Top-grade R95-grade Life Stone -->
 		</capsuled_items>
 	</item>
-	<item id="35727" name="Seed Talisman Ingredient Box" type="EtcItem">
+	<item id="35727" name="護身符種子的材料箱子" type="EtcItem">
 		<!-- Box containing Seed Talisman ingredient. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -510,7 +510,7 @@
 			<item id="19477" min="1" max="1" chance="100" /> <!-- Seraph Bracelet -->
 		</capsuled_items>
 	</item>
-	<item id="35728" name="Hero's Support Box" type="EtcItem">
+	<item id="35728" name="英雄支援禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Specter Weapon Pack, Seraph Accessory Pack, R-grade Enchant Pack, Seed Talisman Pack, adena, Soulshots, Blessed Spiritshots, SP Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -530,7 +530,7 @@
 			<item id="57" min="300000000" max="300000000" chance="100" /> <!-- Adena -->
 		</capsuled_items>
 	</item>
-	<item id="35729" name="Fire Stone (+60)" additionalName="Event" type="EtcItem">
+	<item id="35729" name="火之原石-Super 60" additionalName="Event" type="EtcItem">
 		<!-- Fire Attribute +60. Additional resistance increase is unavailable. Up to three attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -546,7 +546,7 @@
 			<skill id="12875" level="3" /> <!-- Fire Stone -->
 		</skills>
 	</item>
-	<item id="35730" name="Water Stone (+60)" additionalName="Event" type="EtcItem">
+	<item id="35730" name="水之原石-Super 60" additionalName="Event" type="EtcItem">
 		<!-- Water Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -562,7 +562,7 @@
 			<skill id="12876" level="3" /> <!-- Water Stone -->
 		</skills>
 	</item>
-	<item id="35731" name="Earth Stone (+60)" additionalName="Event" type="EtcItem">
+	<item id="35731" name="地之原石-Super 60" additionalName="Event" type="EtcItem">
 		<!-- Earth Attribute +60. Additional resistance increase is unavailable. Up to three attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -578,7 +578,7 @@
 			<skill id="12878" level="3" /> <!-- Earth Stone -->
 		</skills>
 	</item>
-	<item id="35732" name="Wind Stone (+60)" additionalName="Event" type="EtcItem">
+	<item id="35732" name="風之原石-Super 60" additionalName="Event" type="EtcItem">
 		<!-- Wind Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -594,7 +594,7 @@
 			<skill id="12877" level="3" /> <!-- Wind Stone -->
 		</skills>
 	</item>
-	<item id="35733" name="Dark Stone (+60)" additionalName="Event" type="EtcItem">
+	<item id="35733" name="暗之原石-Super 60" additionalName="Event" type="EtcItem">
 		<!-- Dark Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -610,7 +610,7 @@
 			<skill id="12880" level="3" /> <!-- Dark Stone -->
 		</skills>
 	</item>
-	<item id="35734" name="Holy Stone (+60)" additionalName="Event" type="EtcItem">
+	<item id="35734" name="聖之原石-Super 60" additionalName="Event" type="EtcItem">
 		<!-- Holy Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -626,7 +626,7 @@
 			<skill id="12879" level="3" /> <!-- Holy Stone -->
 		</skills>
 	</item>
-	<item id="35735" name="Fire Stone (+150)" additionalName="Event" type="EtcItem">
+	<item id="35735" name="火之原石-Super 150" additionalName="Event" type="EtcItem">
 		<!-- Enhances the Fire attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -642,7 +642,7 @@
 			<skill id="12875" level="1" /> <!-- Fire Stone -->
 		</skills>
 	</item>
-	<item id="35736" name="Water Stone (+150)" additionalName="Event" type="EtcItem">
+	<item id="35736" name="水之原石-Super 150" additionalName="Event" type="EtcItem">
 		<!-- Enhances the Water attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -658,7 +658,7 @@
 			<skill id="12876" level="1" /> <!-- Water Stone -->
 		</skills>
 	</item>
-	<item id="35737" name="Earth Stone (+150)" additionalName="Event" type="EtcItem">
+	<item id="35737" name="地之原石-Super 150" additionalName="Event" type="EtcItem">
 		<!-- Enhances the Earth attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -674,7 +674,7 @@
 			<skill id="12878" level="1" /> <!-- Earth Stone -->
 		</skills>
 	</item>
-	<item id="35738" name="Wind Stone (+150)" additionalName="Event" type="EtcItem">
+	<item id="35738" name="風之原石-Super 150" additionalName="Event" type="EtcItem">
 		<!-- Enhances the Wind attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -690,7 +690,7 @@
 			<skill id="12877" level="1" /> <!-- Wind Stone -->
 		</skills>
 	</item>
-	<item id="35739" name="Dark Stone (+150)" additionalName="Event" type="EtcItem">
+	<item id="35739" name="暗之原石-Super 150" additionalName="Event" type="EtcItem">
 		<!-- Enhances the Dark attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -706,7 +706,7 @@
 			<skill id="12880" level="1" /> <!-- Dark Stone -->
 		</skills>
 	</item>
-	<item id="35740" name="Holy Stone (+150)" additionalName="Event" type="EtcItem">
+	<item id="35740" name="聖之原石-Super 150" additionalName="Event" type="EtcItem">
 		<!-- Enhances the Holy attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -722,7 +722,7 @@
 			<skill id="12879" level="1" /> <!-- Holy Stone -->
 		</skills>
 	</item>
-	<item id="35741" name="Low-grade Scroll: PK" type="EtcItem">
+	<item id="35741" name="重啟卷軸(下級)" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 1. Can only be used in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -742,7 +742,7 @@
 			<skill id="9504" level="1" /> <!-- Scroll: PK (Low-grade) -->
 		</skills>
 	</item>
-	<item id="35742" name="Low-grade Scroll: Reputation" type="EtcItem">
+	<item id="35742" name="淨化卷軸(下級)" type="EtcItem">
 		<!-- Double-click to add 1000 reputation points. Can only be used in Floran Village. Can only be used when in the chaotic state (the reputation is below zero). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
@@ -758,7 +758,7 @@
 			<skill id="9508" level="1" /> <!-- Scroll: Reputation (Low-grade) -->
 		</skills>
 	</item>
-	<item id="35743" name="Draco's Health Potion" additionalName="Event" type="EtcItem">
+	<item id="35743" name="紅龍的紅色藥瓶" additionalName="Event" type="EtcItem">
 		<!-- Recovers 3000 HP. If HP is full, recovers CP. No cooldown. -->
 		<set name="icon" val="icon.etc_ev_draco_hp_bottle" />
 		<set name="weight" val="10" />
@@ -778,7 +778,7 @@
 			<skill id="9513" level="1" /> <!-- Draco's Health Potion -->
 		</skills>
 	</item>
-	<item id="35744" name="Draco's Mana Potion" additionalName="Event" type="EtcItem">
+	<item id="35744" name="紅龍的藍色藥瓶" additionalName="Event" type="EtcItem">
 		<!-- Momentarily recovers 100 MP. No cooldown. Cannot be used when MP is 100%. -->
 		<set name="icon" val="icon.etc_ev_draco_mp_bottle" />
 		<set name="weight" val="10" />
@@ -798,7 +798,7 @@
 			<skill id="9514" level="1" /> <!-- Draco's Mana Potion -->
 		</skills>
 	</item>
-	<item id="35745" name="Draco's Hat Box" additionalName="Event (Not used)" type="EtcItem">
+	<item id="35745" name="紅龍帽箱" additionalName="Event (Not used)" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -808,7 +808,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="35746" name="Draco's Hat - Warrior (7-day)" additionalName="Event" type="Armor">
+	<item id="35746" name="紅龍帽-戰士(限時7日)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. For 7 d., STR +2, DEX +2, CON +2. Enables Blessed Resurrection (cooldown: 1 h.). Cannot be used in the Olympiad. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -825,7 +825,7 @@
 			<skill id="9515" level="1" /> <!-- Draco's Hat: Warrior -->
 		</skills>
 	</item>
-	<item id="35747" name="Draco's Hat - Wizard (7-day)" additionalName="Event" type="Armor">
+	<item id="35747" name="紅龍帽-法師(限時7日)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. For 7 d., INT +2, WIT +2, MEN +2. Enables Blessed Resurrection (cooldown: 1 h.). Cannot be used in the Olympiad. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -842,7 +842,7 @@
 			<skill id="9516" level="1" /> <!-- Draco's Hat: Wizard -->
 		</skills>
 	</item>
-	<item id="35748" name="Draco's Hat" additionalName="Event" type="Armor">
+	<item id="35748" name="紅龍帽" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -855,7 +855,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="35749" name="R-grade Weapon Attribute Change Crystal" additionalName="Event" type="EtcItem">
+	<item id="35749" name="武器屬性變更水晶-R級" additionalName="Event" type="EtcItem">
 		<!-- Double-click to change the attribute of an R-/ R95-/ R99-/ R110-grade weapon. The weapon imbued with an attribute must be in your inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="crystal_type" val="R" />
@@ -872,7 +872,7 @@
 			<skill id="12881" level="1" /> <!-- Change Property -->
 		</skills>
 	</item>
-	<item id="35750" name="Draco's Blessing (30-min.)" additionalName="Event" type="EtcItem">
+	<item id="35750" name="紅龍的祝福(30分鐘)" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP while hunting +200%. Required level: 85-90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
@@ -887,7 +887,7 @@
 			<skill id="9518" level="1" /> <!-- Draco's Blessing (30 min.) -->
 		</skills>
 	</item>
-	<item id="35751" name="Draco's Shiny Accessory Pack" additionalName="Event" type="EtcItem">
+	<item id="35751" name="閃耀的紅龍的飾品箱" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Antharas' Earring, Valakas' Necklace, Earth Wyrm's Ring, Antharas' Soul Bottle, Valakas' Soul Bottle. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_sellable" val="false" />
@@ -902,7 +902,7 @@
 			<skill id="9512" level="1" /> <!-- Draco's Accessory Gift Box -->
 		</skills>
 	</item>
-	<item id="35752" name="Mid-grade Scroll: PK" type="EtcItem">
+	<item id="35752" name="重啟卷軸(中級)" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 3. Can only be used in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -922,7 +922,7 @@
 			<skill id="9505" level="1" /> <!-- Scroll: PK (Mid-grade) -->
 		</skills>
 	</item>
-	<item id="35753" name="High-grade Scroll: PK" type="EtcItem">
+	<item id="35753" name="重啟卷軸(上級)" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 5. Can only be used in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -942,7 +942,7 @@
 			<skill id="9506" level="1" /> <!-- Scroll: PK (High-grade) -->
 		</skills>
 	</item>
-	<item id="35754" name="Top-grade Scroll: PK" type="EtcItem">
+	<item id="35754" name="重啟卷軸(特級)" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 10. Can only be used in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -962,7 +962,7 @@
 			<skill id="9507" level="1" /> <!-- Scroll: PK (Top-grade) -->
 		</skills>
 	</item>
-	<item id="35755" name="Mid-grade Scroll: Reputation" type="EtcItem">
+	<item id="35755" name="淨化卷軸(中級)" type="EtcItem">
 		<!-- Double-click to add 5000 reputation points. Can only be used in Floran Village. Can only be used when in the chaotic state (the reputation is below zero). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
@@ -978,7 +978,7 @@
 			<skill id="9509" level="1" /> <!-- Scroll: Reputation (Mid-grade) -->
 		</skills>
 	</item>
-	<item id="35756" name="High-grade Scroll: Reputation" type="EtcItem">
+	<item id="35756" name="淨化卷軸(上級)" type="EtcItem">
 		<!-- Double-click to add 30,000 reputation points. Can only be used when in the chaotic state (the reputation is below zero). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. Can only be used in Floran Village. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
@@ -994,7 +994,7 @@
 			<skill id="9510" level="1" /> <!-- High-grade Scroll: Reputation -->
 		</skills>
 	</item>
-	<item id="35757" name="Top-grade Scroll: Reputation" type="EtcItem">
+	<item id="35757" name="淨化卷軸(特級)" type="EtcItem">
 		<!-- Double-click to reset your reputation points. Can only be used when in the chaotic state (the reputation is below zero). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. Can only be used in Floran Village. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
@@ -1010,7 +1010,7 @@
 			<skill id="9511" level="1" /> <!-- Scroll: Reputation (Top-grade) -->
 		</skills>
 	</item>
-	<item id="35758" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35758" name="紅龍的祝福(1小時)" additionalName="Event" type="EtcItem">
 		<!-- For 1 h., acquired XP/ SP while hunting +200%. Required level: 85-90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
@@ -1025,7 +1025,7 @@
 			<skill id="9519" level="1" /> <!-- Draco's Blessing (1-h.) -->
 		</skills>
 	</item>
-	<item id="35759" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35759" name="紅龍的祝福(1小時)" additionalName="Event" type="EtcItem">
 		<!-- For 1 h., acquired XP/ SP while hunting +100%. Required level: 1-95. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_stackable" val="true" />
@@ -1040,7 +1040,7 @@
 			<skill id="9520" level="1" /> <!-- Draco's Blessing (1-h.) -->
 		</skills>
 	</item>
-	<item id="35760" name="Draco's Blessing (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="35760" name="紅龍的祝福(3小時)" additionalName="Event" type="EtcItem">
 		<!-- For 3 h., acquired XP/ SP while hunting +200%. Required level: 85-90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
@@ -1055,7 +1055,7 @@
 			<skill id="9521" level="1" /> <!-- Draco's Blessing (3-hour) -->
 		</skills>
 	</item>
-	<item id="35761" name="Rabbit Ears" additionalName="CON" type="Armor">
+	<item id="35761" name="兔耳" additionalName="CON" type="Armor">
 		<!-- When equipped, CON +3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1070,7 +1070,7 @@
 			<skill id="9556" level="1" /> <!-- Head Accessory: CON -->
 		</skills>
 	</item>
-	<item id="35762" name="Rabbit Ears" additionalName="MEN" type="Armor">
+	<item id="35762" name="兔耳" additionalName="MEN" type="Armor">
 		<!-- When equipped, MEN +3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1085,7 +1085,7 @@
 			<skill id="9557" level="1" /> <!-- Head Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="35763" name="Rabbit Ears" additionalName="INT" type="Armor">
+	<item id="35763" name="兔耳" additionalName="INT" type="Armor">
 		<!-- When equipped, INT +3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1100,7 +1100,7 @@
 			<skill id="9558" level="1" /> <!-- Head Accessory: INT -->
 		</skills>
 	</item>
-	<item id="35764" name="Rabbit Ears" additionalName="WIT" type="Armor">
+	<item id="35764" name="兔耳" additionalName="WIT" type="Armor">
 		<!-- When equipped, WIT +3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1115,7 +1115,7 @@
 			<skill id="9559" level="1" /> <!-- Head Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="35765" name="Rabbit Ears" additionalName="Critical Rate" type="Armor">
+	<item id="35765" name="兔耳" additionalName="Critical Rate" type="Armor">
 		<!-- When equipped, Critical Rate for basic attacks +5%. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1130,7 +1130,7 @@
 			<skill id="9560" level="1" /> <!-- Head Accessory: P. Critical Rate -->
 		</skills>
 	</item>
-	<item id="35766" name="Rabbit Ears" additionalName="Critical Damage" type="Armor">
+	<item id="35766" name="兔耳" additionalName="Critical Damage" type="Armor">
 		<!-- When equipped, Critical Damage for basic attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1145,7 +1145,7 @@
 			<skill id="9561" level="1" /> <!-- Head Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="35767" name="Rabbit Ears" additionalName="P. Def." type="Armor">
+	<item id="35767" name="兔耳" additionalName="P. Def." type="Armor">
 		<!-- When equipped, P. Def. +5%. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1160,7 +1160,7 @@
 			<skill id="9562" level="1" /> <!-- Head Accessory: P. Def. -->
 		</skills>
 	</item>
-	<item id="35768" name="Rabbit Ears" additionalName="M. Def." type="Armor">
+	<item id="35768" name="兔耳" additionalName="M. Def." type="Armor">
 		<!-- When equipped, M. Def. +5%. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1175,7 +1175,7 @@
 			<skill id="9563" level="1" /> <!-- Head Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="35769" name="Rabbit Ears" additionalName="Evasion" type="Armor">
+	<item id="35769" name="兔耳" additionalName="Evasion" type="Armor">
 		<!-- When equipped, Evasion +5. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1190,7 +1190,7 @@
 			<skill id="9564" level="1" /> <!-- Head Accessory: P. Evasion -->
 		</skills>
 	</item>
-	<item id="35770" name="Rabbit Ears" additionalName="P. Atk." type="Armor">
+	<item id="35770" name="兔耳" additionalName="P. Atk." type="Armor">
 		<!-- When equipped, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1205,7 +1205,7 @@
 			<skill id="9565" level="1" /> <!-- Head Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="35771" name="Rabbit Ears" additionalName="M. Atk." type="Armor">
+	<item id="35771" name="兔耳" additionalName="M. Atk." type="Armor">
 		<!-- When equipped, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1220,7 +1220,7 @@
 			<skill id="9566" level="1" /> <!-- Head Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="35772" name="Rabbit Ears" additionalName="Accuracy" type="Armor">
+	<item id="35772" name="兔耳" additionalName="Accuracy" type="Armor">
 		<!-- When equipped, P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1235,7 +1235,7 @@
 			<skill id="9567" level="1" /> <!-- Head Accessory: P. Accuracy -->
 		</skills>
 	</item>
-	<item id="35773" name="Raccoon Ears" additionalName="STR" type="Armor">
+	<item id="35773" name="狸耳" additionalName="STR" type="Armor">
 		<!-- When equipped, STR +3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1250,7 +1250,7 @@
 			<skill id="9554" level="1" /> <!-- Head Accessory: STR -->
 		</skills>
 	</item>
-	<item id="35774" name="Raccoon Ears" additionalName="DEX" type="Armor">
+	<item id="35774" name="狸耳" additionalName="DEX" type="Armor">
 		<!-- DEX +3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1265,7 +1265,7 @@
 			<skill id="9555" level="1" /> <!-- Head Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="35775" name="Raccoon Ears" additionalName="INT" type="Armor">
+	<item id="35775" name="狸耳" additionalName="INT" type="Armor">
 		<!-- When equipped, INT +3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1280,7 +1280,7 @@
 			<skill id="9558" level="1" /> <!-- Head Accessory: INT -->
 		</skills>
 	</item>
-	<item id="35776" name="Raccoon Ears" additionalName="WIT" type="Armor">
+	<item id="35776" name="狸耳" additionalName="WIT" type="Armor">
 		<!-- When equipped, WIT +3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1295,7 +1295,7 @@
 			<skill id="9559" level="1" /> <!-- Head Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="35777" name="Raccoon Ears" additionalName="Critical Rate" type="Armor">
+	<item id="35777" name="狸耳" additionalName="Critical Rate" type="Armor">
 		<!-- When equipped, Critical Rate for basic attacks +5%. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1310,7 +1310,7 @@
 			<skill id="9560" level="1" /> <!-- Head Accessory: P. Critical Rate -->
 		</skills>
 	</item>
-	<item id="35778" name="Raccoon Ears" additionalName="Critical Damage" type="Armor">
+	<item id="35778" name="狸耳" additionalName="Critical Damage" type="Armor">
 		<!-- When equipped, Critical Damage for basic attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1325,7 +1325,7 @@
 			<skill id="9561" level="1" /> <!-- Head Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="35779" name="Raccoon Ears" additionalName="P. Def." type="Armor">
+	<item id="35779" name="狸耳" additionalName="P. Def." type="Armor">
 		<!-- When equipped, P. Def. +5%. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1340,7 +1340,7 @@
 			<skill id="9562" level="1" /> <!-- Head Accessory: P. Def. -->
 		</skills>
 	</item>
-	<item id="35780" name="Raccoon Ears" additionalName="M. Def." type="Armor">
+	<item id="35780" name="狸耳" additionalName="M. Def." type="Armor">
 		<!-- When equipped, M. Def. +5%. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1355,7 +1355,7 @@
 			<skill id="9563" level="1" /> <!-- Head Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="35781" name="Raccoon Ears" additionalName="Evasion" type="Armor">
+	<item id="35781" name="狸耳" additionalName="Evasion" type="Armor">
 		<!-- When equipped, Evasion +5. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1370,7 +1370,7 @@
 			<skill id="9564" level="1" /> <!-- Head Accessory: P. Evasion -->
 		</skills>
 	</item>
-	<item id="35782" name="Raccoon Ears" additionalName="P. Atk." type="Armor">
+	<item id="35782" name="狸耳" additionalName="P. Atk." type="Armor">
 		<!-- When equipped, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1385,7 +1385,7 @@
 			<skill id="9565" level="1" /> <!-- Head Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="35783" name="Raccoon Ears" additionalName="M. Atk." type="Armor">
+	<item id="35783" name="狸耳" additionalName="M. Atk." type="Armor">
 		<!-- When equipped, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1400,7 +1400,7 @@
 			<skill id="9566" level="1" /> <!-- Head Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="35784" name="Raccoon Ears" additionalName="Accuracy" type="Armor">
+	<item id="35784" name="狸耳" additionalName="Accuracy" type="Armor">
 		<!-- When equipped, P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1415,7 +1415,7 @@
 			<skill id="9567" level="1" /> <!-- Head Accessory: P. Accuracy -->
 		</skills>
 	</item>
-	<item id="35785" name="Cat Ears" additionalName="STR" type="Armor">
+	<item id="35785" name="貓耳" additionalName="STR" type="Armor">
 		<!-- When equipped, STR +3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1430,7 +1430,7 @@
 			<skill id="9554" level="1" /> <!-- Head Accessory: STR -->
 		</skills>
 	</item>
-	<item id="35786" name="Cat Ears" additionalName="DEX" type="Armor">
+	<item id="35786" name="貓耳" additionalName="DEX" type="Armor">
 		<!-- DEX +3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1445,7 +1445,7 @@
 			<skill id="9555" level="1" /> <!-- Head Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="35787" name="Cat Ears" additionalName="CON" type="Armor">
+	<item id="35787" name="貓耳" additionalName="CON" type="Armor">
 		<!-- When equipped, CON +3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1460,7 +1460,7 @@
 			<skill id="9556" level="1" /> <!-- Head Accessory: CON -->
 		</skills>
 	</item>
-	<item id="35788" name="Cat Ears" additionalName="MEN" type="Armor">
+	<item id="35788" name="貓耳" additionalName="MEN" type="Armor">
 		<!-- When equipped, MEN +3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1475,7 +1475,7 @@
 			<skill id="9557" level="1" /> <!-- Head Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="35789" name="Cat Ears" additionalName="Critical Rate" type="Armor">
+	<item id="35789" name="貓耳" additionalName="Critical Rate" type="Armor">
 		<!-- When equipped, Critical Rate for basic attacks +5%. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1490,7 +1490,7 @@
 			<skill id="9560" level="1" /> <!-- Head Accessory: P. Critical Rate -->
 		</skills>
 	</item>
-	<item id="35790" name="Cat Ears" additionalName="Critical Damage" type="Armor">
+	<item id="35790" name="貓耳" additionalName="Critical Damage" type="Armor">
 		<!-- When equipped, Critical Damage for basic attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1505,7 +1505,7 @@
 			<skill id="9561" level="1" /> <!-- Head Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="35791" name="Cat Ears" additionalName="P. Def." type="Armor">
+	<item id="35791" name="貓耳" additionalName="P. Def." type="Armor">
 		<!-- When equipped, P. Def. +5%. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1520,7 +1520,7 @@
 			<skill id="9562" level="1" /> <!-- Head Accessory: P. Def. -->
 		</skills>
 	</item>
-	<item id="35792" name="Cat Ears" additionalName="M. Def." type="Armor">
+	<item id="35792" name="貓耳" additionalName="M. Def." type="Armor">
 		<!-- When equipped, M. Def. +5%. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1535,7 +1535,7 @@
 			<skill id="9563" level="1" /> <!-- Head Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="35793" name="Cat Ears" additionalName="Evasion" type="Armor">
+	<item id="35793" name="貓耳" additionalName="Evasion" type="Armor">
 		<!-- When equipped, Evasion +5. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1550,7 +1550,7 @@
 			<skill id="9564" level="1" /> <!-- Head Accessory: P. Evasion -->
 		</skills>
 	</item>
-	<item id="35794" name="Cat Ears" additionalName="P. Atk." type="Armor">
+	<item id="35794" name="貓耳" additionalName="P. Atk." type="Armor">
 		<!-- When equipped, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1565,7 +1565,7 @@
 			<skill id="9565" level="1" /> <!-- Head Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="35795" name="Cat Ears" additionalName="M. Atk." type="Armor">
+	<item id="35795" name="貓耳" additionalName="M. Atk." type="Armor">
 		<!-- When equipped, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1580,7 +1580,7 @@
 			<skill id="9566" level="1" /> <!-- Head Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="35796" name="Cat Ears" additionalName="Accuracy" type="Armor">
+	<item id="35796" name="貓耳" additionalName="Accuracy" type="Armor">
 		<!-- When equipped, P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1595,7 +1595,7 @@
 			<skill id="9567" level="1" /> <!-- Head Accessory: P. Accuracy -->
 		</skills>
 	</item>
-	<item id="35797" name="Romantic Chapeau" additionalName="STR" type="Armor">
+	<item id="35797" name="浪漫圓帽" additionalName="STR" type="Armor">
 		<!-- When equipped, STR +3. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1610,7 +1610,7 @@
 			<skill id="9554" level="1" /> <!-- Head Accessory: STR -->
 		</skills>
 	</item>
-	<item id="35798" name="Romantic Chapeau" additionalName="DEX" type="Armor">
+	<item id="35798" name="浪漫圓帽" additionalName="DEX" type="Armor">
 		<!-- DEX +3. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1625,7 +1625,7 @@
 			<skill id="9555" level="1" /> <!-- Head Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="35799" name="Romantic Chapeau" additionalName="CON" type="Armor">
+	<item id="35799" name="浪漫圓帽" additionalName="CON" type="Armor">
 		<!-- When equipped, CON +3. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />

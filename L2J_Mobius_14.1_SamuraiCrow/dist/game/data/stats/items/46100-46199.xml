@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46100" name="Treasure Map - High Priest Raymond" additionalName="Not used" type="EtcItem">
+	<item id="46100" name="寶藏地圖-大神官 雷門德" additionalName="Not used" type="EtcItem">
 		<!-- A map showing the location of some treasure. It says "For the High Priest", so it's probably a gift for the temple. -->
 		<set name="icon" val="icon.etc_map_yellow_i04" />
 		<set name="is_depositable" val="false" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46101" name="Treasure Map - Turek Orc's Legacy" additionalName="Not used" type="EtcItem">
+	<item id="46101" name="寶藏地圖-土瑞克獸人的遺產" additionalName="Not used" type="EtcItem">
 		<!-- A map showing the location of some treasure. It says, "Glory to the Turek Orcs". It looks like it is related to the Turek Orcs. -->
 		<set name="icon" val="icon.etc_map_yellow_i05" />
 		<set name="is_depositable" val="false" />
@@ -20,7 +20,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46102" name="Zaken's Treasure Chest" type="EtcItem">
+	<item id="46102" name="札肯寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -31,7 +31,7 @@
 			<skill id="18398" level="1" /> <!-- Zaken's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="46103" name="Leona Blackbird's Treasure Chest" type="EtcItem">
+	<item id="46103" name="黎歐納 布拉克巴德寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -42,7 +42,7 @@
 			<skill id="18399" level="1" /> <!-- Leona Blackbird's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="46104" name="Beora's Treasure Chest" type="EtcItem">
+	<item id="46104" name="貝歐娜寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -53,7 +53,7 @@
 			<skill id="18400" level="1" /> <!-- Beora's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="46105" name="Gladiator's Treasure Chest" type="EtcItem">
+	<item id="46105" name="劍鬥士寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -64,7 +64,7 @@
 			<skill id="18401" level="1" /> <!-- Gladiator's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="46106" name="Raymond's Treasure Chest" type="EtcItem">
+	<item id="46106" name="雷門德寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -75,7 +75,7 @@
 			<skill id="18402" level="1" /> <!-- Raymond's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="46107" name="Turek Orc's Treasure Chest" type="EtcItem">
+	<item id="46107" name="土瑞克獸人寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -86,7 +86,7 @@
 			<skill id="18403" level="1" /> <!-- Turek Orc's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="46108" name="Appearance Stone: Drake Maul" additionalName="30-day" type="EtcItem">
+	<item id="46108" name="龍獸衝槌加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of Drake Maul for 30 d. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -99,7 +99,7 @@
 			<skill id="18404" level="1" /> <!-- Appearance Stone: Drake Maul (30-day) -->
 		</skills>
 	</item>
-	<item id="46109" name="Appearance Stone: Freya's Staff" additionalName="30-day" type="EtcItem">
+	<item id="46109" name="芙蕾雅魔杖加工石" additionalName="30-day" type="EtcItem">
 		<!-- An Appearance Stone that transforms a two-handed staff into Freya's Staff for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="immediate_effect" val="true" />
@@ -112,7 +112,7 @@
 			<skill id="18405" level="1" /> <!-- Appearance Stone: Freya's Staff (30-day) -->
 		</skills>
 	</item>
-	<item id="46110" name="Appearance Stone: Spezion's Claw" additionalName="30-day" type="EtcItem">
+	<item id="46110" name="斯佩席亞戰爪加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="immediate_effect" val="true" />
@@ -125,7 +125,7 @@
 			<skill id="18406" level="1" /> <!-- Appearance Stone: Spezion's Claw (30-day) -->
 		</skills>
 	</item>
-	<item id="46111" name="Appearance Stone: Maliss Stormer" additionalName="30-day" type="EtcItem">
+	<item id="46111" name="梅莉莎風暴者加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="immediate_effect" val="true" />
@@ -138,7 +138,7 @@
 			<skill id="18407" level="1" /> <!-- Appearance Stone: Maliss Stormer (30-day) -->
 		</skills>
 	</item>
-	<item id="46112" name="Appearance Stone: Steregos' Dagger" additionalName="30-day" type="EtcItem">
+	<item id="46112" name="斯泰里格斯匕首加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="immediate_effect" val="true" />
@@ -151,7 +151,7 @@
 			<skill id="18408" level="1" /> <!-- Appearance Stone: Steregos' Dagger (30-day) -->
 		</skills>
 	</item>
-	<item id="46113" name="Appearance Stone: Ron's Dual Blunt Weapons" additionalName="30-day" type="EtcItem">
+	<item id="46113" name="普倫雙鈍器加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapons to that of Ron's Dual Blunt Weapons for 30 d. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
@@ -164,7 +164,7 @@
 			<skill id="18409" level="1" /> <!-- Appearance Stone: Ron's Dual Blunt Weapons (30-day) -->
 		</skills>
 	</item>
-	<item id="46114" name="Appearance Stone: Drake Maul" type="EtcItem">
+	<item id="46114" name="龍獸衝槌加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of Drake Maul. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -177,7 +177,7 @@
 			<skill id="18420" level="1" /> <!-- Appearance Stone: Drake Maul -->
 		</skills>
 	</item>
-	<item id="46115" name="Appearance Stone: Freya's Staff" type="EtcItem">
+	<item id="46115" name="芙蕾雅魔杖加工石" type="EtcItem">
 		<!-- An Appearance Stone that transforms a two-handed staff into Freya's Staff. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="immediate_effect" val="true" />
@@ -190,7 +190,7 @@
 			<skill id="18421" level="1" /> <!-- Appearance Stone: Freya's Staff -->
 		</skills>
 	</item>
-	<item id="46116" name="Appearance Stone: Spezion's Claw" type="EtcItem">
+	<item id="46116" name="斯佩席亞戰爪加工石" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="immediate_effect" val="true" />
@@ -203,7 +203,7 @@
 			<skill id="18422" level="1" /> <!-- Appearance Stone: Spezion's Claw -->
 		</skills>
 	</item>
-	<item id="46117" name="Appearance Stone: Maliss Stormer" type="EtcItem">
+	<item id="46117" name="梅莉莎風暴者加工石" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="immediate_effect" val="true" />
@@ -216,7 +216,7 @@
 			<skill id="18423" level="1" /> <!-- Appearance Stone: Maliss Stormer -->
 		</skills>
 	</item>
-	<item id="46118" name="Appearance Stone: Steregos' Dagger" type="EtcItem">
+	<item id="46118" name="斯泰里格斯匕首加工石" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of Steregos' Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="immediate_effect" val="true" />
@@ -229,7 +229,7 @@
 			<skill id="18424" level="1" /> <!-- Appearance Stone: Steregos' Dagger -->
 		</skills>
 	</item>
-	<item id="46119" name="Appearance Stone: Ron's Dual Blunt Weapons" type="EtcItem">
+	<item id="46119" name="普倫雙鈍器加工石" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapons to that of Ron's Dual Blunt Weapons. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
@@ -242,7 +242,7 @@
 			<skill id="18425" level="1" /> <!-- Appearance Stone: Ron's Dual Blunt Weapons -->
 		</skills>
 	</item>
-	<item id="46120" name="Little Girls' Hat Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46120" name="兒童帽(小女生)加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a head accessory to that of Little Girl's Hat for 30 d. Can only be used on head accessories equipped in 2 head accessory slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -255,7 +255,7 @@
 			<skill id="18410" level="1" /> <!-- Appearance Stone: Little Girl's Hat -->
 		</skills>
 	</item>
-	<item id="46121" name="Little Boy's Hat Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46121" name="兒童帽(小男生)加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a head accessory to that of Little Boy's Hat for 30 d. Can only be used on head accessories equipped in 2 head accessory slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -268,7 +268,7 @@
 			<skill id="18411" level="1" /> <!-- Appearance Stone: Little Boy's Hat -->
 		</skills>
 	</item>
-	<item id="46122" name="Little Girls' Hat Appearance Stone" type="EtcItem">
+	<item id="46122" name="兒童帽(小女生)加工石" type="EtcItem">
 		<!-- Changes the appearance of a head accessory to that of Little Girl's Hat. Can only be used on head accessories equipped in 2 head accessory slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -281,7 +281,7 @@
 			<skill id="18412" level="1" /> <!-- Appearance Stone: Little Girl's Hat -->
 		</skills>
 	</item>
-	<item id="46123" name="Little Boy's Hat Appearance Stone" type="EtcItem">
+	<item id="46123" name="兒童帽(小男生)加工石" type="EtcItem">
 		<!-- Changes the appearance of a head accessory to that of Little Boy's Hat. Can only be used on head accessories equipped in 2 head accessory slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -294,7 +294,7 @@
 			<skill id="18413" level="1" /> <!-- Appearance Stone: Little Boy's Hat -->
 		</skills>
 	</item>
-	<item id="46124" name="Uniform Hat Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46124" name="制服帽加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a head accessory into that of Uniform Hat for 30 d. Can only be used on head accessories equipped in 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -307,7 +307,7 @@
 			<skill id="18417" level="1" /> <!-- Appearance Stone: Uniform Hat -->
 		</skills>
 	</item>
-	<item id="46125" name="Afro - Gold Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46125" name="爆炸頭-金色加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a head accessory into that of Golden Afro for 30 d. Can only be used on head accessories equipped in 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -320,7 +320,7 @@
 			<skill id="18418" level="1" /> <!-- Appearance Stone: Golden Afro Hairstyle -->
 		</skills>
 	</item>
-	<item id="46126" name="Afro - Pink Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46126" name="爆炸頭-粉紅色加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a head accessory into that of Pink Afro for 30 d. Can only be used on head accessories equipped in 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -333,7 +333,7 @@
 			<skill id="18419" level="1" /> <!-- Appearance Stone: Pink Afro Hairstyle -->
 		</skills>
 	</item>
-	<item id="46127" name="Uniform Hat Appearance Stone" type="EtcItem">
+	<item id="46127" name="制服帽加工石" type="EtcItem">
 		<!-- Changes the appearance of a head accessory into that of Uniform Hat. Can only be used on head accessories equipped in 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -346,7 +346,7 @@
 			<skill id="18414" level="1" /> <!-- Appearance Stone: Uniform Hat -->
 		</skills>
 	</item>
-	<item id="46128" name="Afro - Gold Appearance Stone" type="EtcItem">
+	<item id="46128" name="爆炸頭-金色加工石" type="EtcItem">
 		<!-- Changes the appearance of a head accessory into that of Golden Afro. Can only be used on head accessories equipped in 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -359,7 +359,7 @@
 			<skill id="18415" level="1" /> <!-- Appearance Stone: Golden Afro Hairstyle -->
 		</skills>
 	</item>
-	<item id="46129" name="Afro - Pink Appearance Stone" type="EtcItem">
+	<item id="46129" name="爆炸頭-粉紅色加工石" type="EtcItem">
 		<!-- Changes the appearance of a head accessory into that of Pink Afro. Can only be used on head accessories equipped in 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -372,7 +372,7 @@
 			<skill id="18416" level="1" /> <!-- Appearance Stone: Pink Afro Hairstyle -->
 		</skills>
 	</item>
-	<item id="46130" name="Spirit Evil Thought Piece" type="EtcItem">
+	<item id="46130" name="精靈的邪念碎片" type="EtcItem">
 		<!-- A piece of El Floato's evil thoughts. Use it to open the door to get to Harpe in the Garden of Spirits. -->
 		<set name="icon" val="icon.etc_ertheia_prophecy_device_piece" />
 		<set name="is_sellable" val="false" />
@@ -384,7 +384,7 @@
 			<skill id="13821" level="1" /> <!-- Spirit's Evil Thoughts -->
 		</skills>
 	</item>
-	<item id="46131" name="Kelbim Exclusive Weapon" type="Weapon">
+	<item id="46131" name="凱爾烈光專用武器" type="Weapon">
 		<!-- Kelbim's Weapon -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="weapon_type" val="BOW" />
@@ -406,7 +406,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="46132" name="Blackbird Seal" type="EtcItem">
+	<item id="46132" name="布拉克巴德印記" type="EtcItem">
 		<!-- Seal that proves that one is a member of the Blackbird Clan. The seal proves that one is a member of the clan or is someone trusted by the clan. -->
 		<set name="icon" val="icon.etc_piece_holy_light" />
 		<set name="is_tradable" val="false" />
@@ -417,7 +417,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46133" name="Dark Atelia Neutralizer" type="EtcItem">
+	<item id="46133" name="黑暗阿斯塔廷中和劑" type="EtcItem">
 		<!-- A neutralizer that prevents addiction of the by-product that is produced when creating Dark Atelia. All the Embryo in the Atelia Fortress carry this neutralizer. -->
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
 		<set name="is_tradable" val="false" />
@@ -429,7 +429,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46134" name="Blackbird Report - Glenkinchie" type="EtcItem">
+	<item id="46134" name="布拉克巴德報告書-葛萊肯齊" type="EtcItem">
 		<!-- Glenkinchie's report to Elikia. It presents information about the Embryo. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_tradable" val="false" />
@@ -440,7 +440,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46135" name="Blackbird Report - Hurak" type="EtcItem">
+	<item id="46135" name="布拉克巴德報告書-修拉克" type="EtcItem">
 		<!-- Hurak's report to Elikia. It presents information about the Embryo. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_tradable" val="false" />
@@ -451,7 +451,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46136" name="Blackbird Report - Laffian" type="EtcItem">
+	<item id="46136" name="布拉克巴德報告書-納匹昂" type="EtcItem">
 		<!-- Laffian's report to Elikia. It presents information about the Embryo. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_tradable" val="false" />
@@ -462,7 +462,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46137" name="Blackbird Report - Sherry" type="EtcItem">
+	<item id="46137" name="布拉克巴德報告書-夏利" type="EtcItem">
 		<!-- Sherry's report to Elikia. It presents information about the Embryo. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_tradable" val="false" />
@@ -473,7 +473,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46138" name="Low-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46138" name="下級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
 		<set name="icon" val="icon.etc_london_olympic_bronze" />
 		<set name="is_depositable" val="false" />
@@ -484,7 +484,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46139" name="Low-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46139" name="下級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
 		<set name="icon" val="icon.etc_london_olympic_bronze" />
 		<set name="is_depositable" val="false" />
@@ -495,7 +495,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46140" name="Low-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46140" name="下級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
 		<set name="icon" val="icon.etc_london_olympic_bronze" />
 		<set name="is_depositable" val="false" />
@@ -506,7 +506,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46141" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46141" name="中級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that identifies the honorary member of the Aden Vanguard. Not recognized by the Imperial Guard anymore and no longer used. Can be exchanged for a reward through Commissary Dinford in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
@@ -517,7 +517,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46142" name="Stronghold Flag Repair Supplies" type="EtcItem">
+	<item id="46142" name="據點旗幟修繕用物資" type="EtcItem">
 		<!-- A piece of cloth to fix the flag that represents the stronghold. Take it to the Aden Vanguard. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="is_tradable" val="false" />
@@ -529,7 +529,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46143" name="Stronghold Repair Tools" type="EtcItem">
+	<item id="46143" name="據點修繕道具" type="EtcItem">
 		<!-- Tools to repair the stronghold. Take it to the Aden Stronghold. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="is_tradable" val="false" />
@@ -540,7 +540,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46144" name="Kelbim's Armor Piece" type="EtcItem">
+	<item id="46144" name="凱爾烈光盔甲碎片" type="EtcItem">
 		<!-- A piece of the armor that Kelbim was wearing. Kaysia needs it in order to find out what the Embryo are using the Atelia for. Take it to Kaysia in the Town of Oren. -->
 		<set name="icon" val="icon.etc_plate_black_i00" />
 		<set name="is_tradable" val="false" />
@@ -551,7 +551,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46145" name="Black Atelia Powder" type="EtcItem">
+	<item id="46145" name="黑色阿斯塔廷粉末" type="EtcItem">
 		<!-- Powder from the Giant Atelia that turned black. It will be useful in finding out how it's different from the Atelia of the Wind Spirit Realm. Take it to Kaysia in the Town of Oren. -->
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="is_tradable" val="false" />
@@ -562,7 +562,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46146" name="Stronghold I Teleport Device" additionalName="24-hour" type="EtcItem">
+	<item id="46146" name="阿斯塔廷要塞第1據點移動裝置" additionalName="24-hour" type="EtcItem">
 		<!-- A device for teleporting to the 1st Stronghold. It was brought from Aden in order to facilitate movement. Due to the instability in the Atelia Fortress, it can only be used for 24 h. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -577,7 +577,7 @@
 			<skill id="13822" level="1" /> <!-- Teleport to the 1st Stronghold -->
 		</skills>
 	</item>
-	<item id="46147" name="Stronghold II Teleport Device" additionalName="24-hour" type="EtcItem">
+	<item id="46147" name="阿斯塔廷要塞第2據點移動裝置" additionalName="24-hour" type="EtcItem">
 		<!-- A device for teleporting to the 2nd Stronghold. It was brought from Aden in order to facilitate movement. Due to the instability in the Atelia Fortress, it can only be used for 24 h. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -592,7 +592,7 @@
 			<skill id="13823" level="1" /> <!-- Teleport to the 2nd Stronghold -->
 		</skills>
 	</item>
-	<item id="46148" name="Stronghold III Teleport Device" additionalName="24-hour" type="EtcItem">
+	<item id="46148" name="阿斯塔廷要塞第3據點移動裝置" additionalName="24-hour" type="EtcItem">
 		<!-- A device for teleporting to the 3rd Stronghold. It was brought from Aden in order to facilitate movement. Due to the instability in the Atelia Fortress, it can only be used for 24 h. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -607,7 +607,7 @@
 			<skill id="13824" level="1" /> <!-- Teleport to the 3rd Stronghold -->
 		</skills>
 	</item>
-	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hour" type="EtcItem">
+	<item id="46149" name="阿斯塔廷要塞第4據點移動裝置" additionalName="24-hour" type="EtcItem">
 		<!-- A device for teleporting to the 4th Stronghold. It was brought from Aden in order to facilitate movement. Due to the instability in the Atelia Fortress, it can only be used for 24 h. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -622,7 +622,7 @@
 			<skill id="13825" level="1" /> <!-- Teleport to the 4th Stronghold -->
 		</skills>
 	</item>
-	<item id="46150" name="Superior Giant's Codex - Chapter 1" type="EtcItem">
+	<item id="46150" name="刻印祕傳書第1章" type="EtcItem">
 		<!-- Superior Giant's Codex. Required for enchanting skills from +11 to +20 after the Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
@@ -630,7 +630,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46151" name="Superior Giant's Codex - Mastery Chapter 1" type="EtcItem">
+	<item id="46151" name="刻印祕傳書-熟練篇第1章" type="EtcItem">
 		<!-- Superior Giant's Codex. Required for blessed skill enchantment from +11 to +20 after the Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
@@ -638,7 +638,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46152" name="Superior Giant's Codex - Discipline Chapter 1" type="EtcItem">
+	<item id="46152" name="刻印祕傳書-訓練篇第1章" type="EtcItem">
 		<!-- Superior Giant's Codex. Required for changing an enchant path for skills from +11 to +20 after the Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
@@ -646,7 +646,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46153" name="Immortal Scroll Chapter 1" type="EtcItem">
+	<item id="46153" name="不變的祕傳書第1章" type="EtcItem">
 		<!-- Enchants a +11 ~ +20 skill to the next level with a 100% success rate without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
@@ -657,7 +657,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46154" name="Superior Giant's Codex - Chapter 2" type="EtcItem">
+	<item id="46154" name="刻印祕傳書第2章" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
@@ -665,7 +665,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46155" name="Superior Giant's Codex - Mastery Chapter 2" type="EtcItem">
+	<item id="46155" name="刻印祕傳書-熟練篇第2章" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for +21~+30 blessed skill enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
@@ -673,7 +673,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46156" name="Superior Giant's Codex - Discipline Chapter 2" type="EtcItem">
+	<item id="46156" name="刻印祕傳書-訓練篇第2章" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
@@ -681,7 +681,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46157" name="Immortal Scroll Chapter 2" type="EtcItem">
+	<item id="46157" name="不變的祕傳書第2章" type="EtcItem">
 		<!-- Enchants a +21 ~ +30 skill to the next level with a 100% success rate without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
@@ -692,7 +692,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46158" name="Scroll of Escape: Blackbird Campsite" type="EtcItem">
+	<item id="46158" name="移動卷軸-布拉克巴德兵營" type="EtcItem">
 		<!-- Scroll for teleporting to Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -709,7 +709,7 @@
 			<skill id="18426" level="1" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="46159" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46159" name="中級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that identifies the honorary member of the Aden Vanguard. Not recognized by the Imperial Guard anymore and no longer used. Can be exchanged for a reward through Commissary Dinford in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
@@ -720,7 +720,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46160" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46160" name="中級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that identifies the honorary member of the Aden Vanguard. Not recognized by the Imperial Guard anymore and no longer used. Can be exchanged for a reward through Commissary Dinford in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
@@ -731,7 +731,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46161" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46161" name="中級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that identifies the honorary member of the Aden Vanguard. Not recognized by the Imperial Guard anymore and no longer used. Can be exchanged for a reward through Commissary Dinford in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
@@ -742,7 +742,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46162" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46162" name="中級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that identifies the honorary member of the Aden Vanguard. Not recognized by the Imperial Guard anymore and no longer used. Can be exchanged for a reward through Commissary Dinford in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
@@ -753,7 +753,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46163" name="High-grade Honorary Member Certificate" type="EtcItem">
+	<item id="46163" name="上級榮譽隊員證書" type="EtcItem">
 		<!-- A certificate that identifies the honorary member of the Aden Vanguard. Not recognized by the Imperial Guard anymore and no longer used. Can be exchanged for a reward through Commissary Dinford in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_gold" />
 		<set name="is_depositable" val="false" />
@@ -764,7 +764,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46164" name="Aden Vanguard's Reward Pack" type="EtcItem">
+	<item id="46164" name="亞丁先鋒隊報酬箱" type="EtcItem">
 		<!-- A reward for finishing the missions as an honorary member of the Aden Vanguard. Double-click to use. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_tradable" val="false" />
@@ -777,7 +777,7 @@
 			<skill id="18427" level="1" /> <!-- Aden Vanguard's Reward Pack -->
 		</skills>
 	</item>
-	<item id="46165" name="Ferin's Reward Pack" type="EtcItem">
+	<item id="46165" name="愛琵樂報酬箱" type="EtcItem">
 		<!-- A reward for helping Ferin and her people. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_tradable" val="false" />
@@ -790,7 +790,7 @@
 			<skill id="18428" level="1" /> <!-- Ferin's Reward Pack -->
 		</skills>
 	</item>
-	<item id="46166" name="Barton's Letter" type="EtcItem">
+	<item id="46166" name="巴頓的書信" type="EtcItem">
 		<!-- A letter from the 1st Stronghold's Barton to Aden Vanguard Commandant Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="is_tradable" val="false" />
@@ -800,7 +800,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46167" name="Hayuk's Letter" type="EtcItem">
+	<item id="46167" name="哈優克的書信" type="EtcItem">
 		<!-- A letter from the 2nd Stronghold's Hayuk to Aden Vanguard Commandant Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="is_tradable" val="false" />
@@ -810,7 +810,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46168" name="Elise's Letter" type="EtcItem">
+	<item id="46168" name="愛莉絲的書信" type="EtcItem">
 		<!-- A letter from the 3rd Stronghold's Elise to Aden Vanguard Commandant Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="is_tradable" val="false" />
@@ -820,7 +820,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46169" name="Eliyah's Letter" type="EtcItem">
+	<item id="46169" name="艾里亞的書信" type="EtcItem">
 		<!-- A letter from the 4th Stronghold's Eliyah to Aden Vanguard Commandant Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="is_tradable" val="false" />
@@ -830,7 +830,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46170" name="Atelia Fortress Protection Box" additionalName="Event" type="EtcItem">
+	<item id="46170" name="阿斯塔廷要塞守護箱" additionalName="Event" type="EtcItem">
 		<!-- A reward for Drew's Golden Dice event. Will be removed on November 19, 2014. -->
 		<set name="icon" val="BranchSys.br_bright_gold_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -843,7 +843,7 @@
 			<skill id="18429" level="1" /> <!-- Atelia Fortress Protection Box -->
 		</skills>
 	</item>
-	<item id="46171" name="Garden of the Spirits Protection Box" additionalName="Event" type="EtcItem">
+	<item id="46171" name="精靈寺院守護箱" additionalName="Event" type="EtcItem">
 		<!-- A reward for Drew's Golden Dice event. Will be removed on November 19, 2014. -->
 		<set name="icon" val="BranchSys.br_gold_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -856,7 +856,7 @@
 			<skill id="18430" level="1" /> <!-- Garden of the Spirits Protection Box -->
 		</skills>
 	</item>
-	<item id="46172" name="Grand Fortune Pouch" additionalName="Event" type="EtcItem">
+	<item id="46172" name="福彈小袋" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Scroll: Enchant R-grade Weapon, Scroll: Enchant R-grade Armor, Destruction Scroll: Enchant S-grade Weapon, Scroll: Enchant S-grade Armor, Blessed Scroll of Escape, Blessed Scroll of Resurrection, R-grade Elixir Box. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="is_tradable" val="false" />
@@ -869,7 +869,7 @@
 			<skill id="18431" level="1" /> <!-- Nuke Pocket -->
 		</skills>
 	</item>
-	<item id="46173" name="Appearance Stone: Male Swimsuit No. 1" additionalName="30-day" type="EtcItem">
+	<item id="46173" name="男性泳裝No.1加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes your armor appearance to that of Male Swimwear No. 1. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -883,7 +883,7 @@
 			<skill id="18433" level="1" /> <!-- Appearance Stone: Male Swimsuit No. 1 -->
 		</skills>
 	</item>
-	<item id="46174" name="Appearance Stone: Male Swimsuit No. 2" additionalName="30-day" type="EtcItem">
+	<item id="46174" name="男性泳裝No.2加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes your armor appearance to that of Male Swimwear No. 2. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -897,7 +897,7 @@
 			<skill id="18434" level="1" /> <!-- Appearance Stone: Male Swimsuit No. 2 -->
 		</skills>
 	</item>
-	<item id="46175" name="Appearance Stone: Female Swimsuit No. 1" additionalName="30-day" type="EtcItem">
+	<item id="46175" name="女性泳裝No.1加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes your armor appearance to that of Female Swimwear No. 1. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -911,7 +911,7 @@
 			<skill id="18435" level="1" /> <!-- Appearance Stone: Female Swimsuit No. 1 -->
 		</skills>
 	</item>
-	<item id="46176" name="Appearance Stone: Female Swimsuit No. 2" additionalName="30-day" type="EtcItem">
+	<item id="46176" name="女性泳裝No.2加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes your armor appearance to that of Female Swimwear No. 2. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -925,7 +925,7 @@
 			<skill id="18436" level="1" /> <!-- Appearance Stone: Female Swimsuit No. 2 -->
 		</skills>
 	</item>
-	<item id="46177" name="Soul Bottle Pack" type="EtcItem">
+	<item id="46177" name="靈魂之瓶禮盒" type="EtcItem">
 		<!-- Double-click to obtain a bottle containing Antharas, Valakas, Queen Ant, Orfen, Frintezza, or Baium's soul. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -937,7 +937,7 @@
 			<skill id="18432" level="1" /> <!-- Soul Bottle Pack -->
 		</skills>
 	</item>
-	<item id="46178" name="Heavenly Cocktail" type="EtcItem">
+	<item id="46178" name="天堂雞尾酒" type="EtcItem">
 		<!-- For 60 min., applies the effects of Musician's Melody Lv. 2. Cooldown: 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_tradable" val="false" />
@@ -951,7 +951,7 @@
 			<skill id="39760" level="2" /> <!-- Musician's Melody - Heavenly Cocktail -->
 		</skills>
 	</item>
-	<item id="46179" name="Male Swimsuit No. 1" type="Armor">
+	<item id="46179" name="男性泳裝No.1" type="Armor">
 		<!-- Swimwear for male characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -961,7 +961,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46180" name="Male Swimsuit No. 2" type="Armor">
+	<item id="46180" name="男性泳裝No.2" type="Armor">
 		<!-- Swimwear for male characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -971,7 +971,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46181" name="Female Swimsuit No. 1" type="Armor">
+	<item id="46181" name="女性泳裝No.1" type="Armor">
 		<!-- Bikini for female characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -981,7 +981,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46182" name="Female Swimsuit No. 2" type="Armor">
+	<item id="46182" name="女性泳裝No.2" type="Armor">
 		<!-- Bikini for female characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -991,7 +991,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46183" name="Joyful Birthday Pack" type="EtcItem">
+	<item id="46183" name="喜悅生日禮盒" type="EtcItem">
 		<!-- A birthday gift from Alegria. Double-click to obtain Beora's Ancient Energy (30 pcs.) and Birthday Hat. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1006,7 +1006,7 @@
 			<item id="21594" min="1" max="1" chance="100" /> <!-- Birthday Hat -->
 		</capsuled_items>
 	</item>
-	<item id="46184" name="Happy Birthday Potion" type="EtcItem">
+	<item id="46184" name="生日快樂藥劑" type="EtcItem">
 		<!-- Recovers 3 out of 4 Vitality bars. Cooldown: 60 min. Cannot be used in the Olympiad. This item is exempt from the weekly Vitality item restrictions. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="weight" val="80" />
@@ -1021,7 +1021,7 @@
 			<skill id="18437" level="1" /> <!-- Happy Birthday Potion -->
 		</skills>
 	</item>
-	<item id="46185" name="Agathion Anakim Holy Barrier" type="Armor">
+	<item id="46185" name="壺精封印手鐲-亞納神聖屏障" type="Armor">
 		<!-- Summons Agathion Anakim's Holy Barrier that consists of five Anakim's spheres. <Skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enhanced Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30. 3. Anakim's Blessing: Acquired XP/ SP +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
@@ -1037,7 +1037,7 @@
 			<skill id="18442" level="1" /> <!-- Anakim's Blessing -->
 		</skills>
 	</item>
-	<item id="46186" name="Agathion Anakim Holy Barrier" additionalName="30-day" type="Armor">
+	<item id="46186" name="壺精封印手鐲-亞納神聖屏障" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Anakim's Holy Barrier that consists of five Anakim's spheres. <Skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enhanced Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +30. 3. Anakim's Blessing: Acquired XP/ SP +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
@@ -1056,7 +1056,7 @@
 			<skill id="18442" level="1" /> <!-- Anakim's Blessing -->
 		</skills>
 	</item>
-	<item id="46187" name="Agathion Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
+	<item id="46187" name="亞納神聖屏障壺精禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Agathion Charm: Anakim's Holy Barrier (30-day). -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1071,7 +1071,7 @@
 			<item id="46186" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Anakim's Holy Barrier - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46188" name="Agathion Anakim Holy Barrier Pack" type="EtcItem">
+	<item id="46188" name="亞納神聖屏障壺精禮盒" type="EtcItem">
 		<!-- Double-click to obtain Agathion Charm: Anakim's Holy Barrier (30-day) or, with a low chance, Agathion Charm: Anakim's Holy Barrier. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1085,7 +1085,7 @@
 			<skill id="18438" level="1" /> <!-- Agathion Pack: Anakim's Holy Barrier -->
 		</skills>
 	</item>
-	<item id="46189" name="Vampiric Style Appearance Stone" type="EtcItem">
+	<item id="46189" name="吸血鬼外型加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Vampiric Style. Used with upper or full-body armor. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -1099,7 +1099,7 @@
 			<skill id="18440" level="1" /> <!-- Appearance Stone: Vampiric Style -->
 		</skills>
 	</item>
-	<item id="46190" name="Vampiric Style Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46190" name="吸血鬼外型加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes your armor appearance to that of Vampiric Outif for 30 d. Used with upper or full-body armor. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -1113,7 +1113,7 @@
 			<skill id="18441" level="1" /> <!-- Appearance Stone: Vampiric Style (30-day) -->
 		</skills>
 	</item>
-	<item id="46191" name="Vampiric Style Appearance Stone Pack" type="EtcItem">
+	<item id="46191" name="吸血鬼外型加工石禮盒" type="EtcItem">
 		<!-- Double-click to obtain a Vampiric Style Appearance Stone (30-day) or a Vampiric Style Appearance Stone. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="weight" val="10" />
@@ -1125,7 +1125,7 @@
 			<skill id="18439" level="1" /> <!-- Vampiric Style Appearance Stone Pack -->
 		</skills>
 	</item>
-	<item id="46192" name="Vampiric Outfit" type="Armor">
+	<item id="46192" name="吸血鬼衣裳" type="Armor">
 		<!-- Vampiric outfit. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_u_i00" />
 		<set name="is_sellable" val="false" />
@@ -1133,7 +1133,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46193" name="Physical Reflect Shirt" type="Armor">
+	<item id="46193" name="反擊襯衫" type="Armor">
 		<!-- A special magic shirt that increases P. Def. Can be enchanted up to +10 with Scrolls: Enchant Shirt. Starting from +4 , increases passive stats. Starting from +5, adds various P. Def. effects. -->
 		<set name="icon" val="icon.reflect_attack_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1157,7 +1157,7 @@
 			<skill id="18444" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Physical Reflect Shirt: Unique Enchant Effect -->
 		</skills>
 	</item>
-	<item id="46194" name="Magical Reflect Shirt" type="Armor">
+	<item id="46194" name="反魔襯衫" type="Armor">
 		<!-- A special magic shirt that increases M. Def. Can be enchanted up to +10 with Scrolls: Enchant Shirt. Starting from +4 , increases passive stats. Starting from +5, adds various M. Def. effects. -->
 		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1181,7 +1181,7 @@
 			<skill id="18445" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Magical Reflect Shirt: Unique Enchant Effect -->
 		</skills>
 	</item>
-	<item id="46195" name="Shiny Elemental Shirt Bag" type="EtcItem">
+	<item id="46195" name="閃亮的殷海薩襯衫組" type="EtcItem">
 		<!-- Double-click to obtain Shiny Elemental Shirt (1 pc.) and Einhasad's Scroll: Enchant Shirt (10 pcs.). -->
 		<set name="icon" val="icon.ainharard_bac" />
 		<set name="is_sellable" val="false" />
@@ -1193,7 +1193,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46196" name="Physical Reflect Shirt Bag" type="EtcItem">
+	<item id="46196" name="反擊襯衫組" type="EtcItem">
 		<!-- Double-click to obtain Physical Reflect Shirt (1 pc.) and Einhasad's Scroll: Enchant Shirt (10 pcs.). -->
 		<set name="icon" val="icon.reflect_attack_bac" />
 		<set name="is_sellable" val="false" />
@@ -1205,7 +1205,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46197" name="Magical Reflect Shirt Bag" type="EtcItem">
+	<item id="46197" name="反魔襯衫組" type="EtcItem">
 		<!-- Double-click to obtain Magical Reflect Shirt (1 pc.) and Einhasad's Scroll: Enchant Shirt (10 pcs.). -->
 		<set name="icon" val="icon.reflect_magic_bac" />
 		<set name="is_sellable" val="false" />
@@ -1217,7 +1217,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46198" name="Gold Medal" type="EtcItem">
+	<item id="46198" name="黃金獎章" type="EtcItem">
 		<!-- A shiny medal. Can be sold at high price to any trader. -->
 		<set name="icon" val="icon.etc_event_medal_i00" />
 		<set name="price" val="2000000000" />
@@ -1226,7 +1226,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="46199" name="Halloween Outfit Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="46199" name="萬聖夜衣裳加工石" additionalName="7-day" type="EtcItem">
 		<!-- Changes your armor appearance to that of Halloween Outfit. Used with upper or full-body armor. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />

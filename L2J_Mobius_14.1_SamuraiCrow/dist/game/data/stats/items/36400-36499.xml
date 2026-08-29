@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36400" name="Nevit's Hourglass (1-hour)" type="EtcItem">
+	<item id="36400" name="奈比特沙漏-1小時" type="EtcItem">
 		<!-- When used, acquired XP +50% for 1 h. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="weight" val="1" />
@@ -17,7 +17,7 @@
 			<skill id="9828" level="1" /> <!-- Nevit's Hourglass (1-hour) -->
 		</skills>
 	</item>
-	<item id="36401" name="Lucky Pouch" additionalName="Event" type="EtcItem">
+	<item id="36401" name="幸運包" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 2 Scrolls: Midsummer Passion and 1 Beora's Ancient Energy. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -31,7 +31,7 @@
 			<item id="36094" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Star Candy -->
 		</capsuled_items>
 	</item>
-	<item id="36402" name="High-grade Lucky Pouch" additionalName="Event" type="EtcItem">
+	<item id="36402" name="高級幸運包" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Midsummer Passion (6 pcs.), Beora's Ancient Energy (1 pc.), Feather of Blessing (2 pcs.), Special Cocktail (2 pcs.), High-grade Stone: Enchant R-grade Armor (1 pc.). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -48,7 +48,7 @@
 			<item id="36009" min="1" max="1" chance="100" /> <!-- High-grade Stone: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
-	<item id="36403" name="Top-grade Lucky Pouch" additionalName="Event" type="EtcItem">
+	<item id="36403" name="特級幸運包" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Midsummer Passion (12 pcs.), Beora's Ancient Energy (1 pc.), Feather of Blessing (3 pcs.), Special Cocktail (2 pcs.), Destructive Energy (2 pcs.), Rare Accessory Pack (Time-limited). If you are very lucky, you might also get Rare Accessory Pack (Permanent), R99-grade Weapon Pack and Unbind Scroll Pack. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -69,7 +69,7 @@
 			<item id="36408" min="1" max="1" chance="0.1" /> <!-- Unbind Scroll - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36404" name="Scroll: Midsummer Passion" additionalName="Event" type="EtcItem">
+	<item id="36404" name="盛夏的熱情卷軸" additionalName="Event" type="EtcItem">
 		<!-- Acquired XP/ SP +30% for 1 h. The effect does not stack with those of Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Vital Wind, Bard's Wind. -->
 		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
 		<set name="is_tradable" val="false" />
@@ -83,7 +83,7 @@
 			<skill id="9832" level="1" /> <!-- Scroll: Midsummer Passion -->
 		</skills>
 	</item>
-	<item id="36405" name="Rare Accessory Pack (Expiratory)" additionalName="Event" type="EtcItem">
+	<item id="36405" name="稀有飾品禮盒(限時)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Antharas' Blessed Earring (14-day), Valakas' Blessed Necklace, Tauti's Ring, Earth Wyrm's Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -99,7 +99,7 @@
 			<item id="36412" min="1" max="1" chance="100" /> <!-- Earth Wyrm's Ring (14-day) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36406" name="Rare Accessory Pack (Permanent)" additionalName="Event" type="EtcItem">
+	<item id="36406" name="稀有飾品禮盒(永久)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Antharas' Blessed Earring (14-day), Valakas' Blessed Necklace, Tauti's Ring, Earth Wyrm's Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -111,7 +111,7 @@
 			<skill id="9829" level="1" /> <!-- Rare Accessory Pack (Permanent) -->
 		</skills>
 	</item>
-	<item id="36407" name="R99-grade Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="36407" name="R99級武器禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the unidentified Helios weapons. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -123,7 +123,7 @@
 			<skill id="9830" level="1" /> <!-- R99-grade Weapon Pack -->
 		</skills>
 	</item>
-	<item id="36408" name="Unbind Scroll Pack" additionalName="Event" type="EtcItem">
+	<item id="36408" name="束縛解除卷軸禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an Unbind Scroll for R-grade/ R95-grade/ R99-grade Weapon/ Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -135,7 +135,7 @@
 			<skill id="9831" level="1" /> <!-- Unbind Scroll Pack -->
 		</skills>
 	</item>
-	<item id="36409" name="Blessed Antharas' Earring" additionalName="14-day" type="Armor">
+	<item id="36409" name="祝福的安塔瑞斯耳環" additionalName="14-day" type="Armor">
 		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -155,7 +155,7 @@
 			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
 		</skills>
 	</item>
-	<item id="36410" name="Blessed Valakas' Necklace" additionalName="14-day" type="Armor">
+	<item id="36410" name="祝福的巴拉卡斯項鍊" additionalName="14-day" type="Armor">
 		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold and grants immunity to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -175,7 +175,7 @@
 			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
 		</skills>
 	</item>
-	<item id="36411" name="Tauti's Ring (14-day)" additionalName="Event" type="Armor">
+	<item id="36411" name="塔武提戒指(14日)" additionalName="Event" type="Armor">
 		<!-- Fire/ Dark Resistance +25, MP +38, Critical Damage for basic attacks +15%, P. Skill Power +5%, PvP damage +5%, Confusion/ Obstruction Resistance +10, Damage Reflection Resistance +5, Blood Siphon Resistance +5, received PvP damage -5%. When using a blunt weapon, P. Critical Rate +54. Effects of two identical rings do not stack (excluding M. Def. and Attribute Resistance). -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -194,7 +194,7 @@
 			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
 		</skills>
 	</item>
-	<item id="36412" name="Earth Wyrm's Heart Ring (14-day)" additionalName="Event" type="Armor">
+	<item id="36412" name="地蟲心臟戒指(14日)" additionalName="Event" type="Armor">
 		<!-- MP +38, MP Recovery Rate +3, Critical Damage for basic attacks +20%, P. Accuracy +5, Infection Atk. Rate and Resistance +50, Confusion/ Danger Zone Resistance +20, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Pure Blood: Removes Infection debuffs (cooldown: 2 h.). -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -215,7 +215,7 @@
 			<skill id="13317" level="1" /> <!-- Earth Wyrm's Ring -->
 		</skills>
 	</item>
-	<item id="36413" name="Single Mesh Armor" type="Armor">
+	<item id="36413" name="單網盔甲" type="Armor">
 		<!-- Changes into single mesh in a certain area. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -229,7 +229,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="36414" name="Dragon Claw" type="EtcItem">
+	<item id="36414" name="龍爪" type="EtcItem">
 		<!-- Required for making Dragon weapons. -->
 		<set name="icon" val="icon.etc_toenail_dragon" />
 		<set name="weight" val="2" />
@@ -237,7 +237,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36415" name="Dragon Blood" type="EtcItem">
+	<item id="36415" name="龍血" type="EtcItem">
 		<!-- Required for using dragon weapon's skills. -->
 		<set name="icon" val="icon.etc_blood_gragon" />
 		<set name="weight" val="2" />
@@ -246,7 +246,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="36416" name="Dragon Tooth" type="EtcItem">
+	<item id="36416" name="龍牙" type="EtcItem">
 		<!-- Required for using dragon weapon's skills. -->
 		<set name="icon" val="icon.etc_tooth_gragon" />
 		<set name="weight" val="2" />
@@ -254,7 +254,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36417" name="Antharas Shaper" type="Weapon">
+	<item id="36417" name="安塔瑞斯鉋刀" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -283,7 +283,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36418" name="Antharas Slasher" type="Weapon">
+	<item id="36418" name="安塔瑞斯殺刃" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -311,7 +311,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36419" name="Antharas Thrower" type="Weapon">
+	<item id="36419" name="安塔瑞斯投弓" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -342,7 +342,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36420" name="Antharas Buster" type="Weapon">
+	<item id="36420" name="安塔瑞斯爆刃" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -371,7 +371,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36421" name="Antharas Cutter" type="Weapon">
+	<item id="36421" name="安塔瑞斯切刃" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -399,7 +399,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36422" name="Antharas Stormer" type="Weapon">
+	<item id="36422" name="安塔瑞斯風暴者" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -431,7 +431,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="36423" name="Antharas Fighter" type="Weapon">
+	<item id="36423" name="安塔瑞斯戰爪" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -460,7 +460,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36424" name="Antharas Avenger" type="Weapon">
+	<item id="36424" name="安塔瑞斯復仇者" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -489,7 +489,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36425" name="Antharas Dual Blunt Weapon" type="Weapon">
+	<item id="36425" name="安塔瑞斯雙鈍器" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -518,7 +518,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36426" name="Antharas Dual Swords" type="Weapon">
+	<item id="36426" name="安塔瑞斯雙刀" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -546,7 +546,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36427" name="Valakas Shaper" type="Weapon">
+	<item id="36427" name="巴拉卡斯鉋刀" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -575,7 +575,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36428" name="Valakas Cutter" type="Weapon">
+	<item id="36428" name="巴拉卡斯切刃" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -603,7 +603,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36429" name="Valakas Slasher" type="Weapon">
+	<item id="36429" name="巴拉卡斯殺刃" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -631,7 +631,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36430" name="Valakas Thrower" type="Weapon">
+	<item id="36430" name="巴拉卡斯投弓" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -662,7 +662,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36431" name="Valakas Buster" type="Weapon">
+	<item id="36431" name="巴拉卡斯爆刃" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -691,7 +691,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36432" name="Valakas Caster" type="Weapon">
+	<item id="36432" name="巴拉卡斯術杖" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -721,7 +721,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36433" name="Valakas Retributer" type="Weapon">
+	<item id="36433" name="巴拉卡斯報恨者" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -752,7 +752,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36434" name="Lindvior Shaper" type="Weapon">
+	<item id="36434" name="林德拜爾鉋刀" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -781,7 +781,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36435" name="Lindvior Thrower" type="Weapon">
+	<item id="36435" name="林德拜爾投弓" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -812,7 +812,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36436" name="Lindvior Slasher" type="Weapon">
+	<item id="36436" name="林德拜爾殺刃" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -840,7 +840,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36437" name="Lindvior Caster" type="Weapon">
+	<item id="36437" name="林德拜爾術杖" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's apperance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -869,7 +869,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36438" name="Lindvior Cutter" type="Weapon">
+	<item id="36438" name="林德拜爾切刃" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -897,7 +897,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36439" name="Lindvior Guardian" type="Weapon">
+	<item id="36439" name="林德拜爾射靈" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -928,7 +928,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36440" name="Lindvior Dual Daggers" type="Weapon">
+	<item id="36440" name="林德拜爾雙匕首" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Max HP can be more than 250,000. Cannot be enchanted, augmented, imbued with an attribute. The item's appearance cannot be modified. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="is_dragon_weapon" val="true" />
@@ -957,7 +957,7 @@
 			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 	</item>
-	<item id="36441" name="Antharas Shaper" additionalName="Lv. 1" type="Weapon">
+	<item id="36441" name="安塔瑞斯鉋刀" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -989,7 +989,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36442" name="Antharas Slasher" additionalName="Lv. 1" type="Weapon">
+	<item id="36442" name="安塔瑞斯殺刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1020,7 +1020,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36443" name="Antharas Thrower" additionalName="Lv. 1" type="Weapon">
+	<item id="36443" name="安塔瑞斯投弓" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1053,7 +1053,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36444" name="Antharas Buster" additionalName="Lv. 1" type="Weapon">
+	<item id="36444" name="安塔瑞斯爆刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1085,7 +1085,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36445" name="Antharas Cutter" additionalName="Lv. 1" type="Weapon">
+	<item id="36445" name="安塔瑞斯切刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1116,7 +1116,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36446" name="Antharas Stormer" additionalName="Lv. 1" type="Weapon">
+	<item id="36446" name="安塔瑞斯風暴者" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1149,7 +1149,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36447" name="Antharas Fighter" additionalName="Lv. 1" type="Weapon">
+	<item id="36447" name="安塔瑞斯戰爪" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1181,7 +1181,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36448" name="Antharas Avenger" additionalName="Lv. 1" type="Weapon">
+	<item id="36448" name="安塔瑞斯復仇者" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1213,7 +1213,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36449" name="Antharas Dual Blunt Weapon" additionalName="Lv. 1" type="Weapon">
+	<item id="36449" name="安塔瑞斯雙鈍器" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1245,7 +1245,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36450" name="Antharas Dual Swords" additionalName="Lv. 1" type="Weapon">
+	<item id="36450" name="安塔瑞斯雙刀" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1277,7 +1277,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36451" name="Valakas Shaper" additionalName="Lv. 1" type="Weapon">
+	<item id="36451" name="巴拉卡斯鉋刀" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1310,7 +1310,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36452" name="Valakas Cutter" additionalName="Lv. 1" type="Weapon">
+	<item id="36452" name="巴拉卡斯切刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1341,7 +1341,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36453" name="Valakas Slasher" additionalName="Lv. 1" type="Weapon">
+	<item id="36453" name="巴拉卡斯殺刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1372,7 +1372,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36454" name="Valakas Thrower" additionalName="Lv. 1" type="Weapon">
+	<item id="36454" name="巴拉卡斯投弓" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1405,7 +1405,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36455" name="Valakas Buster" additionalName="Lv. 1" type="Weapon">
+	<item id="36455" name="巴拉卡斯爆刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1437,7 +1437,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36456" name="Valakas Caster" additionalName="Lv. 1" type="Weapon">
+	<item id="36456" name="巴拉卡斯術杖" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1470,7 +1470,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36457" name="Valakas Retributer" additionalName="Lv. 1" type="Weapon">
+	<item id="36457" name="巴拉卡斯報恨者" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1504,7 +1504,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36458" name="Lindvior Shaper" additionalName="Lv. 1" type="Weapon">
+	<item id="36458" name="林德拜爾鉋刀" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1536,7 +1536,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36459" name="Lindvior Thrower" additionalName="Lv. 1" type="Weapon">
+	<item id="36459" name="林德拜爾投弓" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1569,7 +1569,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36460" name="Lindvior Slasher" additionalName="Lv. 1" type="Weapon">
+	<item id="36460" name="林德拜爾殺刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1600,7 +1600,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36461" name="Lindvior Caster" additionalName="Lv. 1" type="Weapon">
+	<item id="36461" name="林德拜爾術杖" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1633,7 +1633,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36462" name="Lindvior Cutter" additionalName="Lv. 1" type="Weapon">
+	<item id="36462" name="林德拜爾切刃" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1664,7 +1664,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36463" name="Lindvior Guardian" additionalName="Lv. 1" type="Weapon">
+	<item id="36463" name="林德拜爾射靈" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1697,7 +1697,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36464" name="Lindvior Dual Daggers" additionalName="Lv. 1" type="Weapon">
+	<item id="36464" name="林德拜爾雙匕首" additionalName="Lv. 1" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1729,7 +1729,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36465" name="Antharas Shaper" additionalName="Lv. 2" type="Weapon">
+	<item id="36465" name="安塔瑞斯鉋刀" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1764,7 +1764,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36466" name="Antharas Slasher" additionalName="Lv. 2" type="Weapon">
+	<item id="36466" name="安塔瑞斯殺刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1798,7 +1798,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36467" name="Antharas Thrower" additionalName="Lv. 2" type="Weapon">
+	<item id="36467" name="安塔瑞斯投弓" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1834,7 +1834,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36468" name="Antharas Buster" additionalName="Lv. 2" type="Weapon">
+	<item id="36468" name="安塔瑞斯爆刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1869,7 +1869,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36469" name="Antharas Cutter" additionalName="Lv. 2" type="Weapon">
+	<item id="36469" name="安塔瑞斯切刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1903,7 +1903,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36470" name="Antharas Stormer" additionalName="Lv. 2" type="Weapon">
+	<item id="36470" name="安塔瑞斯風暴者" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1939,7 +1939,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36471" name="Antharas Fighter" additionalName="Lv. 2" type="Weapon">
+	<item id="36471" name="安塔瑞斯戰爪" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -1974,7 +1974,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36472" name="Antharas Avenger" additionalName="Lv. 2" type="Weapon">
+	<item id="36472" name="安塔瑞斯復仇者" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2009,7 +2009,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36473" name="Antharas Dual Blunt Weapon" additionalName="Lv. 2" type="Weapon">
+	<item id="36473" name="安塔瑞斯雙鈍器" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2044,7 +2044,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36474" name="Antharas Dual Swords" additionalName="Lv. 2" type="Weapon">
+	<item id="36474" name="安塔瑞斯雙刀" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2079,7 +2079,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36475" name="Valakas Shaper" additionalName="Lv. 2" type="Weapon">
+	<item id="36475" name="巴拉卡斯鉋刀" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2114,7 +2114,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36476" name="Valakas Cutter" additionalName="Lv. 2" type="Weapon">
+	<item id="36476" name="巴拉卡斯切刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2148,7 +2148,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36477" name="Valakas Slasher" additionalName="Lv. 2" type="Weapon">
+	<item id="36477" name="巴拉卡斯殺刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2182,7 +2182,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36478" name="Valakas Thrower" additionalName="Lv. 2" type="Weapon">
+	<item id="36478" name="巴拉卡斯投弓" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2218,7 +2218,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36479" name="Valakas Buster" additionalName="Lv. 2" type="Weapon">
+	<item id="36479" name="巴拉卡斯爆刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2253,7 +2253,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36480" name="Valakas Caster" additionalName="Lv. 2" type="Weapon">
+	<item id="36480" name="巴拉卡斯術杖" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2289,7 +2289,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36481" name="Valakas Retributer" additionalName="Lv. 2" type="Weapon">
+	<item id="36481" name="巴拉卡斯報恨者" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2326,7 +2326,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36482" name="Lindvior Shaper" additionalName="Lv. 2" type="Weapon">
+	<item id="36482" name="林德拜爾鉋刀" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2361,7 +2361,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36483" name="Lindvior Thrower" additionalName="Lv. 2" type="Weapon">
+	<item id="36483" name="林德拜爾投弓" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2397,7 +2397,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36484" name="Lindvior Slasher" additionalName="Lv. 2" type="Weapon">
+	<item id="36484" name="林德拜爾殺刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2431,7 +2431,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36485" name="Lindvior Caster" additionalName="Lv. 2" type="Weapon">
+	<item id="36485" name="林德拜爾術杖" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2467,7 +2467,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36486" name="Lindvior Cutter" additionalName="Lv. 2" type="Weapon">
+	<item id="36486" name="林德拜爾切刃" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2501,7 +2501,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36487" name="Lindvior Guardian" additionalName="Lv. 2" type="Weapon">
+	<item id="36487" name="林德拜爾射靈" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2537,7 +2537,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36488" name="Lindvior Dual Daggers" additionalName="Lv. 2" type="Weapon">
+	<item id="36488" name="林德拜爾雙匕首" additionalName="Lv. 2" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +30%. Max HP/ MP/ CP +30%. Atk. Spd./ Casting Spd. +30%. Critical Rate for basic attacks and P. skills +30%. M. Skill Critical Rate +10%. Critical Damage for basic attacks and P./ M. skills +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +100%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2572,7 +2572,7 @@
 			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36489" name="Antharas Shaper" additionalName="Lv. 3" type="Weapon">
+	<item id="36489" name="安塔瑞斯鉋刀" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2608,7 +2608,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36490" name="Antharas Slasher" additionalName="Lv. 3" type="Weapon">
+	<item id="36490" name="安塔瑞斯殺刃" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2643,7 +2643,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36491" name="Antharas Thrower" additionalName="Lv. 3" type="Weapon">
+	<item id="36491" name="安塔瑞斯投弓" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2680,7 +2680,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36492" name="Antharas Buster" additionalName="Lv. 3" type="Weapon">
+	<item id="36492" name="安塔瑞斯爆刃" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon wisdom. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2716,7 +2716,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36493" name="Antharas Cutter" additionalName="Lv. 3" type="Weapon">
+	<item id="36493" name="安塔瑞斯切刃" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2751,7 +2751,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36494" name="Antharas Stormer" additionalName="Lv. 3" type="Weapon">
+	<item id="36494" name="安塔瑞斯風暴者" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2788,7 +2788,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36495" name="Antharas Fighter" additionalName="Lv. 3" type="Weapon">
+	<item id="36495" name="安塔瑞斯戰爪" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2824,7 +2824,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36496" name="Antharas Avenger" additionalName="Lv. 3" type="Weapon">
+	<item id="36496" name="安塔瑞斯復仇者" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2860,7 +2860,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36497" name="Antharas Dual Blunt Weapon" additionalName="Lv. 3" type="Weapon">
+	<item id="36497" name="安塔瑞斯雙鈍器" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2896,7 +2896,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36498" name="Antharas Dual Swords" additionalName="Lv. 3" type="Weapon">
+	<item id="36498" name="安塔瑞斯雙刀" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="is_dragon_weapon" val="true" />
@@ -2932,7 +2932,7 @@
 			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
 		</skills>
 	</item>
-	<item id="36499" name="Valakas Shaper" additionalName="Lv. 3" type="Weapon">
+	<item id="36499" name="巴拉卡斯鉋刀" additionalName="Lv. 3" type="Weapon">
 		<!-- A weapon imbued with the dragon power. Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. <font color=ff6666><Additional effects when equipped></font>. PvP damage +50%. Max HP/ MP/ CP +100%. Atk. Spd./ Casting Spd. +100%. Critical Rate for basic attacks and P. skills +50%. M. Skill Critical Rate +30%. Critical Damage for basic attacks and P./ M. skills +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +15%. Damage to dragons +300%. Max HP can be more than 250,000. <font color=ff6666><Available skills when equipped></font>. Dignity. Valakas' Bite. Valakas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 4. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="is_dragon_weapon" val="true" />

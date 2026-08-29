@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="29500" name="Krishna Crafting Recipe Box" type="EtcItem">
+	<item id="29500" name="克里修納製作卷軸禮盒" type="EtcItem">
 		<!-- Double-click to obtain a Krishna equipment recipe. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -12,7 +12,7 @@
 			<skill id="28345" level="1" /> <!-- Krishna Crafting Recipe Box -->
 		</skills>
 	</item>
-	<item id="29501" name="Freya's Appearance" type="Armor">
+	<item id="29501" name="芙蕾雅外型" type="Armor">
 		<!-- Freya's Outfit -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_freya" />
 		<set name="default_action" val="EQUIP" />
@@ -26,7 +26,7 @@
 			<stat type="pDef">220</stat>
 		</stats>
 	</item>
-	<item id="29502" name="Freya's Appearance Stone" type="EtcItem">
+	<item id="29502" name="芙蕾雅外型加工石" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Freya's. Used with upper or full-body armor. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -41,7 +41,7 @@
 			<skill id="28346" level="1" /> <!-- Appearance Stone: Freya's Outfit -->
 		</skills>
 	</item>
-	<item id="29503" name="Freya's Ice Flower Appearance Stone" type="EtcItem">
+	<item id="29503" name="芙蕾雅的冰花加工石" type="EtcItem">
 		<!-- An appearance stone that gives a shield/ sigil Freya's Ice Flower Shield appearance. -->
 		<set name="icon" val="Icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -56,7 +56,7 @@
 			<skill id="28347" level="1" /> <!-- Appearance Stone: Freya's Ice Flower -->
 		</skills>
 	</item>
-	<item id="29504" name="Freya's Fortune Stick" type="EtcItem">
+	<item id="29504" name="芙蕾雅幸運魔杖" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Freya's Frozen Scroll, Freya's Recovery Potion, Freya's Art of Seduction - XP/ Barrier, Pa'agrio's Blessing - XP/ Barrier. Additionally, you can obtain one of the following items: Freya's/ Sirra's/ Snowman's Lucky Pack. -->
 		<set name="icon" val="icon.bm_freya_wand" />
 		<set name="default_action" val="PEEL" />
@@ -76,7 +76,7 @@
 			<item id="40227" min="1" max="1" chance="100" /> <!-- Freya's Frozen Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="29505" name="Freya's Fortune Box" type="EtcItem">
+	<item id="29505" name="芙蕾雅幸運箱" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Ultimate Jewelry Box Lv. 4/ 5, Lindvior's Earring, Valakas' Blessed Necklace, Antharas' Blessed Earring, Mysterious Soul Crystal, Sealed Talisman of Insanity/ Longing, Red Starlight Jar, Ancient Zodiac Agathion Charm Book of Growth, Mysterious Soul Crystal Fragment, Life Stone: Giant's Power, Royal R99-grade White Save Ticket, Package: Lesser Giant's Stone: Enchant R-grade Weapon/ Armor, Scroll of Blessing - R99-grade, Freya's Rune Box (30-day), Apparition Stone (All-purpose), Life Stone: Giant's Power, Giant's Power Pack (100 pcs.), Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Manuscript - Mastery (2 pcs.), Source of the Emperor, Package: Eva's Rune (3-day) - Event, Pa'agrio's Blessing - Might (5 pcs.), Freya's Art of Seduction - Barrier (5 pcs.). -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -88,7 +88,7 @@
 			<skill id="28348" level="1" /> <!-- Freya's Lucky Pack -->
 		</skills>
 	</item>
-	<item id="29506" name="Sirra's Fortune Box" type="EtcItem">
+	<item id="29506" name="希露幸運箱" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="PEEL" />
@@ -129,7 +129,7 @@
 			<item id="47889" min="1" max="1" chance="3.571429" /> <!-- Kelbim's Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="29507" name="Snowman's Fortune Box" type="EtcItem">
+	<item id="29507" name="雪人幸運箱" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_freya_snowman_box" />
 		<set name="default_action" val="PEEL" />
@@ -170,7 +170,7 @@
 			<item id="46151" min="1" max="1" chance="3.571429" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
 		</capsuled_items>
 	</item>
-	<item id="29508" name="Transformation Sealbook: Sales Part-timer" additionalName="Kat the Cat" type="EtcItem">
+	<item id="29508" name="打工小販變身刻印書" additionalName="Kat the Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into Kat the Cat. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -185,7 +185,7 @@
 			<skill id="28352" level="1" /> <!-- Transformation Scroll: Kat the Cat -->
 		</skills>
 	</item>
-	<item id="29509" name="Expertise Rune - ALL (7-day) Box" additionalName="Event" type="EtcItem">
+	<item id="29509" name="專家古文-ALL(7日)禮盒" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an Expertise Rune - ALL (7-day) Box. -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
@@ -200,7 +200,7 @@
 			<item id="29510" min="1" max="1" chance="100" /> <!-- Expertise Rune - All Equipment - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="29510" name="Expertise Rune - ALL" additionalName="7-day" type="EtcItem">
+	<item id="29510" name="專家古文-ALL" additionalName="7-day" type="EtcItem">
 		<!-- When stored in the inventory, it enables you equip all grade items without any penalty. -->
 		<set name="icon" val="icon.ev_charge_run" />
 		<set name="material" val="PAPER" />
@@ -223,7 +223,7 @@
 			<skill id="28353" level="1" /> <!-- Expertise Rune - All Equipment -->
 		</skills>
 	</item>
-	<item id="29511" name="Rookie Box" type="EtcItem">
+	<item id="29511" name="新手禮盒" type="EtcItem">
 		<!-- Double-click to obtain the following items: Nevit's Rune (Dragon's Ascension) (7-day), Freya's Art of Seduction - XP (10 pcs.), Dandy's Home Run Ball (3 pcs.), Hero's Mark (250 pcs.), Hero's Support Cube, Novice's Sprout (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -245,7 +245,7 @@
 			<item id="29369" min="250" max="250" chance="100" /> <!-- Hero's Mark -->
 		</capsuled_items>
 	</item>
-	<item id="29512" name="Angel Cat's Blessing" type="EtcItem">
+	<item id="29512" name="天使貓的祝福" type="EtcItem">
 		<!-- When used, P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, acquired XP/ SP +30%. Duration: 60 min. Cannot be used in the Olympiad. Does not stack with Letter Collector's Gift. -->
 		<set name="icon" val="BranchSys3.g_blessing_of_angel_cat_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -265,7 +265,7 @@
 			<skill id="28354" level="1" /> <!-- Angel Cat's Blessing -->
 		</skills>
 	</item>
-	<item id="29513" name="Passion Treasure Chest" type="EtcItem">
+	<item id="29513" name="熱血寶箱" type="EtcItem">
 		<!-- Treasure Chest with Pomona's gift. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -283,7 +283,7 @@
 			<skill id="28355" level="1" /> <!-- Passion Treasure Chest -->
 		</skills>
 	</item>
-	<item id="29514" name="Festival Ticket" type="EtcItem">
+	<item id="29514" name="慶典參加券" type="EtcItem">
 		<!-- Ticket to participate in the Festival. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -295,7 +295,7 @@
 			<item id="29515" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Magic Bait Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="29515" name="Golden Mermaid Bait Coupon" type="EtcItem">
+	<item id="29515" name="黃金人魚魚餌交換券" type="EtcItem">
 		<!-- Can be exchanged for any Golden Mermaid's Magic Bait Magic Bait through Peeves. -->
 		<set name="icon" val="icon.etc_bm_lure_special_ticket" />
 		<set name="material" val="LEATHER" />
@@ -307,7 +307,7 @@
 			<item id="29516" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Magic Bait (85) -->
 		</capsuled_items>
 	</item>
-	<item id="29516" name="Golden Mermaid Bait (85)" type="EtcItem">
+	<item id="29516" name="黃金人魚魔法魚餌(85)" type="EtcItem">
 		<!-- Fishing time: 45 sec. Fishing cooldown: 15 sec. A fishing bait. Allows to obtain Golden Treasure Chest. Required level: 85+. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -319,7 +319,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29517" name="Golden Mermaid Bait (95)" type="EtcItem">
+	<item id="29517" name="黃金人魚魔法魚餌(95)" type="EtcItem">
 		<!-- Fishing time: 45 sec. Fishing cooldown: 15 sec. A fishing bait. Allows to obtain Golden Treasure Chest. Required level: 95+. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -331,7 +331,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29518" name="Golden Mermaid Bait (99)" type="EtcItem">
+	<item id="29518" name="黃金人魚魔法魚餌(99)" type="EtcItem">
 		<!-- Fishing time: 45 sec. Fishing cooldown: 15 sec. A fishing bait. Allows to obtain Golden Treasure Chest. Required level: 99+. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -343,7 +343,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29519" name="Golden Mermaid Bait (105)" type="EtcItem">
+	<item id="29519" name="黃金人魚魔法魚餌(105)" type="EtcItem">
 		<!-- Fishing time: 45 sec. Fishing cooldown: 15 sec. A fishing bait. Allows to get Golden Treasure Chest. Required level: 105+. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -355,7 +355,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29520" name="Special Golden Treasure Chest" type="EtcItem">
+	<item id="29520" name="特殊金寶箱" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Sayha's Talisman Pack Lv. 8, Radiant Circlet Upgrade Stone, Radiant Rind Upgrade Stone, +7 Shirt Pack (Shiny Elemental/ Physical Reflect/ Magical Reflect), Red Starlight Jar, Dark/ Bloody Weapon Upgrade Stone, Royal R99-grade Purple/ Red/ White Save Ticket, High-grade/ Mid-grade/ Low-grade Zodiac Agathion Box, Destruction Scroll: Enchant Shirt, Stable/ Ancient Zodiac Agathion Charm Book of Growth, Soul Crystal Box Lv. 5-7, Dark/ Bloody Armor Upgrade Stone, Royal R95-grade Purple/ Red/ White Save Ticket, Ultimate Fortune Jewelry Box, Elcyum, Heavy Air Stone, Nevit's Shining Gold Hourglass, Blessed Scroll: Enchant R-grade Weapon, Gale Scroll, Giant's Scroll: Enchant R-grade Weapon, Energy of Destruction Pack (20 pcs.), Elcyum Crystal, R-grade Gemstone (7 pcs.). -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -400,7 +400,7 @@
 			<item id="48496" min="1" max="1" chance="3.125" /> <!-- Radiant Rind Upgrade Stone -->
 		</capsuled_items>
 	</item>
-	<item id="29521" name="Golden Treasure Chest" type="EtcItem">
+	<item id="29521" name="金寶箱" type="EtcItem">
 		<!-- Double-click to obtain 3 Heine Fishing Coins. There is also a chance to obtain Special Golden Treasure Chest. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -416,7 +416,7 @@
 			<item id="27640" min="3" max="3" chance="100" /> <!-- Heine's Fishing Coin -->
 		</capsuled_items>
 	</item>
-	<item id="29522" name="Maphr's Rune 300%" additionalName="1-hour" type="EtcItem">
+	<item id="29522" name="梅芙古文300%" additionalName="1-hour" type="EtcItem">
 		<!-- When in inventory, item drop rate +300% when killing common monsters. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -430,7 +430,7 @@
 			<skill id="22587" level="5" /> <!-- Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="29523" name="Package: Maphr's Rune 300% (1-hour)" type="EtcItem">
+	<item id="29523" name="梅芙古文300%(1小時)組" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 300% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -444,7 +444,7 @@
 			<item id="29522" min="1" max="1" chance="100" /> <!-- Maphr's Rune 300% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="29524" name="+3 Dragon Earring Box" type="EtcItem">
+	<item id="29524" name="+3龍之耳環禮盒" type="EtcItem">
 		<!-- Double-click to obtain Dragon's Earring enchanted to +3. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -461,7 +461,7 @@
 			<skill id="28358" level="1" /> <!-- +3 Dragon's Earring Pack -->
 		</skills>
 	</item>
-	<item id="29525" name="+3 Dragon Ring Box" type="EtcItem">
+	<item id="29525" name="+3龍之戒指禮盒" type="EtcItem">
 		<!-- Double-click to obtain Dragon's Ring enchanted to +3. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -478,7 +478,7 @@
 			<skill id="28359" level="1" /> <!-- +3 Dragon's Ring Pack -->
 		</skills>
 	</item>
-	<item id="29526" name="+3 Dragon Necklace Box" type="EtcItem">
+	<item id="29526" name="+3龍之項鍊禮盒" type="EtcItem">
 		<!-- Double-click to obtain Dragon's Necklace enchanted to +3. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="CAPSULE" />
@@ -495,7 +495,7 @@
 			<skill id="28360" level="1" /> <!-- +3 Dragon's Necklace Pack -->
 		</skills>
 	</item>
-	<item id="29527" name="Golden Mermaid Bait (102)" type="EtcItem">
+	<item id="29527" name="黃金人魚魔法魚餌(102)" type="EtcItem">
 		<!-- Fishing time: 45 sec. Fishing cooldown: 15 sec. A fishing bait. Allows to get Golden Treasure Chest. Required level: 102+. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29528" name="Archaeologist's Box" type="EtcItem">
+	<item id="29528" name="考古學家禮盒" type="EtcItem">
 		<!-- A mysterious chest with treasure of a long-missing archaeologist. Double-click to obtain Shiny Gold Bar Box. Additionally, you have a chance to get one of the following items:. Ring of Truth-seeker, Ruler's Ring of Authority, Ruler's Authority, Forgotten Spellbook - Chapter 3/ Chapter 2/ Chapter 1, Artifact Fragment (5 pcs./ 3 pcs./ 1 pc.), Dark Armor Upgrade Stone (3 pcs.), Bloody Armor Upgrade Stone (3 pcs.), Giant's Power Pack (100/ 20 pcs.), Energy of Destruction Pack (100 pcs.), Energy of Destruction Pack (20 pcs.) (2 pcs.), Elcyum, Balance/ Support/ Defense/ Attack Artifact Pack. -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="PEEL" />
@@ -566,7 +566,7 @@
 			<item id="29529" min="1" max="1" chance="100" /> <!-- Shiny Gold Bar Box -->
 		</capsuled_items>
 	</item>
-	<item id="29529" name="Shiny Gold Bar Box" type="EtcItem">
+	<item id="29529" name="閃亮的金塊禮盒" type="EtcItem">
 		<!-- Double-click to obtain 3 to 1000 Shiny Gold Bars. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
@@ -589,7 +589,7 @@
 			<item id="29204" min="1000" max="1000" chance="10" /> <!-- Shiny Gold Bar -->
 		</capsuled_items>
 	</item>
-	<item id="29530" name="Lucky Growth Scroll" additionalName="Event" type="EtcItem">
+	<item id="29530" name="幸運成長卷軸" additionalName="Event" type="EtcItem">
 		<!-- When used for 30 min., acquired XP/ SP +30%, Vitality bonus +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -609,7 +609,7 @@
 			<skill id="28363" level="1" /> <!-- Happy Growth Scroll -->
 		</skills>
 	</item>
-	<item id="29531" name="Anniversary Pitapat Box" type="EtcItem">
+	<item id="29531" name="15週年紀念撲通撲通禮盒" type="EtcItem">
 		<!-- A gift from Sno for the game anniversary. Double-click to obtain something valuable. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -627,7 +627,7 @@
 			<skill id="28364" level="1" /> <!-- Amazing Anniversary Gift -->
 		</skills>
 	</item>
-	<item id="29532" name="Anniversary Attendance Box" type="EtcItem">
+	<item id="29532" name="15週年紀念出席感謝禮盒" type="EtcItem">
 		<!-- A gift pack for logging in to the game for 5 days in a row during the event. Double-click to obtain gifts from Sno for the game anniversary. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -650,7 +650,7 @@
 			<item id="35569" min="1" max="1" chance="12.5" /> <!-- Bloody Armor Upgrade Stone -->
 		</capsuled_items>
 	</item>
-	<item id="29533" name="Anniversary Earring Gift Box" type="EtcItem">
+	<item id="29533" name="15週年紀念稀有耳環禮盒" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Earring, Lindvior's Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -670,7 +670,7 @@
 			<skill id="28366" level="1" /> <!-- Anniversary Earring Gift Box -->
 		</skills>
 	</item>
-	<item id="29534" name="Anniversary Ring Gift Box" type="EtcItem">
+	<item id="29534" name="15週年紀念稀有戒指禮盒" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Ring, Ring of Creation, Tauti's Ring, Earth Wyrm's Ring, Baium's Soul Ring, Core's Forgotten Ring, Mimir's Soul Ring, Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -690,7 +690,7 @@
 			<skill id="28367" level="1" /> <!-- Anniversary Ring Gift Box -->
 		</skills>
 	</item>
-	<item id="29535" name="Anniversary Necklace Gift Box" type="EtcItem">
+	<item id="29535" name="15週年紀念稀有項鍊禮盒" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Necklace, Valakas' Blessed Necklace, Harnak's Enhanced Necklace, Frintezza's Soul Necklace. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -710,7 +710,7 @@
 			<skill id="28368" level="1" /> <!-- Anniversary Necklace Gift Box -->
 		</skills>
 	</item>
-	<item id="29536" name="Blazing Sun Chest" type="EtcItem">
+	<item id="29536" name="夏日特別禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Ring of Truth-seeker, Ruler's Ring of Authority, +10 Fallen Angel's Ring Pack, +5 Dragon Rind Leather Shirt Box, Sayha's Talisman Pack Lv. 8, Talisman of Seven Signs, Radiant Circlet Upgrade Stone, Sayha's Talisman Pack Lv. 7, Radiant Rind Upgrade Stone, +8 Shiny Elemental Shirt Pack/ Physical Reflect Shirt Pack/ Magical Reflect Shirt Pack, Noble Circlet Upgrade Stone, Noble Leather Upgrade Stone, Sayha's Energy/ Blessing, Destruction Scroll: Enchant Shirt, Venir's Talisman Lv. 11, Giant's Power Pack (100/ 20 pcs.), Shiny Elemental Shirt Pack/ Physical Reflect Shirt Pack/ Magical Reflect Shirt Pack, Angel's Necklace/ Earring, Superior Giant's Codex - Mastery Chapter 1, Blessed Scroll: Enchant Shirt (3 pcs.), Circlet Spirit Stone, Shirt Package, Forgotten Spellbook Chapter 1, Rune Stone (2 pcs.), Superior Giant's Codex - Chapter 1, Superior Giant's Codex Manuscript - Mastery, Sayha's Talisman Pack, Energy of Destruction Pack (20 pcs.), Freya's Dark/ Bloody Rune Pack (2-hour), Elcyum Crystal. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
@@ -761,7 +761,7 @@
 			<item id="48841" min="1" max="1" chance="2.631579" /> <!-- Angel's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="29537" name="Hardin's Miracle Sack" type="EtcItem">
+	<item id="29537" name="哈汀魔法袋" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -769,7 +769,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29538" name="Cheer Pompoms from Don Quijote" additionalName="Event" type="Weapon">
+	<item id="29538" name="唐吉軻德限定合作應援雄花蕊" additionalName="Event" type="Weapon">
 		<!-- An item commemorating the collaboration with Don Quijote. Fulfill all your cherished dreams! Enables the Inspiring Crackers skill. -->
 		<set name="icon" val="BranchIcon.Icon.etc_ev_don_jp" />
 		<set name="default_action" val="EQUIP" />
@@ -797,14 +797,14 @@
 			<skill id="39169" level="1" /> <!-- Inspiring Crackers -->
 		</skills>
 	</item>
-	<item id="29539" name="Dragon Power Crystal" type="EtcItem">
+	<item id="29539" name="蘊含黑暗的水晶" type="EtcItem">
 		<!-- A rare crystal imbued with dark energy. Required for creating Dark Augmenting Stone. -->
 		<set name="icon" val="icon.bm_piece_of_ensoul_stone" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29540" name="Mammon's Treasure Chest" type="EtcItem">
+	<item id="29540" name="財富寶箱" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.bm_2018_special_box" />
 		<set name="default_action" val="PEEL" />
@@ -838,7 +838,7 @@
 			<item id="37522" min="1" max="1" chance="4.761905" /> <!-- Frintezza's Soul Necklace -->
 		</capsuled_items>
 	</item>
-	<item id="29541" name="Suspicious Vault" type="EtcItem">
+	<item id="29541" name="可疑的金庫" type="EtcItem">
 		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="PEEL" />
@@ -893,7 +893,7 @@
 			<item id="80817" min="2" max="2" chance="100" /> <!-- Wondrous Cocktail -->
 		</capsuled_items>
 	</item>
-	<item id="29542" name="Gold Bar Pouch" type="EtcItem">
+	<item id="29542" name="金條小袋" type="EtcItem">
 		<!-- Double-click to obtain Shiny Gold Bar Box and other rare items. -->
 		<set name="icon" val="icon.christmas_card_box1" />
 		<set name="default_action" val="PEEL" />
@@ -926,7 +926,7 @@
 			<item id="29529" min="1" max="1" chance="100" /> <!-- Shiny Gold Bar Box -->
 		</capsuled_items>
 	</item>
-	<item id="29543" name="Treasure Chest of Ancient Kingdom" type="EtcItem">
+	<item id="29543" name="古代王國寶箱" type="EtcItem">
 		<!-- Double-click to obtain a rare valuable item at random. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -938,7 +938,7 @@
 			<skill id="29373" level="1" /> <!-- Treasure Chest of Ancient Kingdom -->
 		</skills>
 	</item>
-	<item id="29544" name="Antharas Treasure Chest" type="EtcItem">
+	<item id="29544" name="安塔瑞斯的寶箱" type="EtcItem">
 		<!-- A treasure chest given for the campaign against Antharas. Double-click to obtain 1 rare item, Emperor's Special Cocktail and Freya's Ice Rose. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="PEEL" />
@@ -947,13 +947,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29545" name="Letter D" additionalName="Event" type="EtcItem">
+	<item id="29545" name="文字D" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_d_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29546" name="Enhanced La Vie En Rose's Brooch" type="Armor">
+	<item id="29546" name="高級拉菲安洛茲的胸針" type="Armor">
 		<!-- Unlocks 6 jewel/ orb slots. Inventory slots +12. <Enchanting>. Use Blessed Scroll: Enchant Brooch. <Upgrade>. Take +5 La Vie En Rose's Brooch to the Head Blacksmith in any town to get La Vie En Rose's Superior Brooch. Can be augmented. -->
 		<set name="icon" val="icon.bm_brooch_6slot_lavianrose_4" />
 		<set name="default_action" val="EQUIP" />
@@ -976,7 +976,7 @@
 			<skill id="35626" level="6" type="ON_ENCHANT" type_value="5" /> <!-- La Vie En Rose's Enhanced Brooch: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="29547" name="Superior La Vie En Rose's Brooch" type="Armor">
+	<item id="29547" name="最高級拉菲安洛茲的胸針" type="Armor">
 		<!-- Unlocks 6 jewel/ orb slots. Inventory slots +12. <Enchanting>. Use Blessed Scroll: Enchant Brooch. Can be augmented. <Upgrade>. Take the brooch enchanted to +10 to the Head Blacksmith in any town to get Silvery Brooch (Crystals of Dawn are required). -->
 		<set name="icon" val="icon.bm_brooch_6slot_lavianrose_5" />
 		<set name="default_action" val="EQUIP" />
@@ -1004,7 +1004,7 @@
 			<skill id="35627" level="11" type="ON_ENCHANT" type_value="10" /> <!-- La Vie En Rose's Superior Brooch: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="29548" name="Blessed Scroll: Enchant Brooch" type="EtcItem">
+	<item id="29548" name="祝福的胸針強化卷軸" type="EtcItem">
 		<!-- A scroll for enchanting La Vie En Rose's Enhanced Brooch and La Vie En Rose's Superior Brooch. In case of failure, the enchant value of La Vie En Rose's Brooch is reset, but its type remains the same. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_brooch" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1019,7 +1019,7 @@
 			<skill id="39619" level="1" /> <!-- Blessed Scroll: Enchant Brooch -->
 		</skills>
 	</item>
-	<item id="29549" name="Requiem Shaper Fortune Box" type="EtcItem">
+	<item id="29549" name="鎮魂鉋刀幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Shaper with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1034,7 +1034,7 @@
 			<item id="17290" min="1" max="1" chance="85" /> <!-- Requiem Shaper -->
 		</capsuled_items>
 	</item>
-	<item id="29550" name="Requiem Cutter Fortune Box" type="EtcItem">
+	<item id="29550" name="鎮魂切刃幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Cutter with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1049,7 +1049,7 @@
 			<item id="17291" min="1" max="1" chance="85" /> <!-- Requiem Cutter -->
 		</capsuled_items>
 	</item>
-	<item id="29551" name="Requiem Slasher Fortune Box" type="EtcItem">
+	<item id="29551" name="鎮魂殺刃幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Slasher with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1064,7 +1064,7 @@
 			<item id="17292" min="1" max="1" chance="85" /> <!-- Requiem Slasher -->
 		</capsuled_items>
 	</item>
-	<item id="29552" name="Requiem Avenger Fortune Box" type="EtcItem">
+	<item id="29552" name="鎮魂復仇者幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Avenger with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1079,7 +1079,7 @@
 			<item id="17293" min="1" max="1" chance="85" /> <!-- Requiem Avenger -->
 		</capsuled_items>
 	</item>
-	<item id="29553" name="Requiem Fighter Fortune Box" type="EtcItem">
+	<item id="29553" name="鎮魂戰爪幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Fighter with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1094,7 +1094,7 @@
 			<item id="17294" min="1" max="1" chance="85" /> <!-- Requiem Fighter -->
 		</capsuled_items>
 	</item>
-	<item id="29554" name="Requiem Stormer Fortune Box" type="EtcItem">
+	<item id="29554" name="鎮魂風暴者幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Stormer with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1109,7 +1109,7 @@
 			<item id="17295" min="1" max="1" chance="85" /> <!-- Requiem Stormer -->
 		</capsuled_items>
 	</item>
-	<item id="29555" name="Requiem Thrower Fortune Box" type="EtcItem">
+	<item id="29555" name="鎮魂投弓幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Thrower with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1124,7 +1124,7 @@
 			<item id="17296" min="1" max="1" chance="85" /> <!-- Requiem Thrower -->
 		</capsuled_items>
 	</item>
-	<item id="29556" name="Requiem Guardian Fortune Box" type="EtcItem">
+	<item id="29556" name="鎮魂射靈幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Guardian with a 60% chance. In case of failure, you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1139,7 +1139,7 @@
 			<item id="17297" min="1" max="1" chance="85" /> <!-- Requiem Guardian -->
 		</capsuled_items>
 	</item>
-	<item id="29557" name="Requiem Buster Fortune Box" type="EtcItem">
+	<item id="29557" name="鎮魂爆刃幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Buster with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1154,7 +1154,7 @@
 			<item id="17298" min="1" max="1" chance="85" /> <!-- Requiem Buster -->
 		</capsuled_items>
 	</item>
-	<item id="29558" name="Requiem Caster Fortune Box" type="EtcItem">
+	<item id="29558" name="鎮魂術杖幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Caster with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1169,7 +1169,7 @@
 			<item id="17299" min="1" max="1" chance="85" /> <!-- Requiem Caster -->
 		</capsuled_items>
 	</item>
-	<item id="29559" name="Requiem Retributer Fortune Box" type="EtcItem">
+	<item id="29559" name="鎮魂報恨者幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Requiem Retributer with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1184,7 +1184,7 @@
 			<item id="17300" min="1" max="1" chance="85" /> <!-- Requiem Retributer -->
 		</capsuled_items>
 	</item>
-	<item id="29560" name="Immortal Helmet Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29560" name="永生頭盔幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Helmet (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1199,7 +1199,7 @@
 			<item id="17304" min="1" max="1" chance="85" /> <!-- Immortal Helmet - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29561" name="Immortal Breastplate Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29561" name="永生胸甲幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Breastplate (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1214,7 +1214,7 @@
 			<item id="17305" min="1" max="1" chance="85" /> <!-- Immortal Breastplate - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29562" name="Immortal Gaiters Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29562" name="永生脛甲幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Gaiters (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1229,7 +1229,7 @@
 			<item id="17306" min="1" max="1" chance="85" /> <!-- Immortal Gaiters - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29563" name="Immortal Gauntlets Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29563" name="永生護手幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Gauntlets (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1244,7 +1244,7 @@
 			<item id="17307" min="1" max="1" chance="85" /> <!-- Immortal Gauntlets - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29564" name="Immortal Boots Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29564" name="永生靴幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Boots (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1259,7 +1259,7 @@
 			<item id="17308" min="1" max="1" chance="85" /> <!-- Immortal Boots - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29565" name="Immortal Shield Fortune Box" type="EtcItem">
+	<item id="29565" name="永生盾幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Immortal Shield with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1274,7 +1274,7 @@
 			<item id="17309" min="1" max="1" chance="85" /> <!-- Immortal Shield -->
 		</capsuled_items>
 	</item>
-	<item id="29566" name="Immortal Leather Helmet Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29566" name="永生皮頭盔幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Leather Helmet (Light) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1289,7 +1289,7 @@
 			<item id="17310" min="1" max="1" chance="85" /> <!-- Immortal Leather Helmet - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="29567" name="Immortal Leather Armor Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29567" name="永生皮甲幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Leather Armor (Light) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1304,7 +1304,7 @@
 			<item id="17311" min="1" max="1" chance="85" /> <!-- Immortal Leather Armor - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="29568" name="Immortal Leather Leggings Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29568" name="永生皮脛甲幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Leather Leggings with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1319,7 +1319,7 @@
 			<item id="17312" min="1" max="1" chance="85" /> <!-- Immortal Leather Leggings - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="29569" name="Immortal Leather Gloves Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29569" name="永生皮手套幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Leather Gloves (Light) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1334,7 +1334,7 @@
 			<item id="17313" min="1" max="1" chance="85" /> <!-- Immortal Leather Gloves - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="29570" name="Immortal Leather Boots Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29570" name="永生皮靴幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Immortal Leather Boots (Light) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1349,7 +1349,7 @@
 			<item id="17314" min="1" max="1" chance="85" /> <!-- Immortal Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="29571" name="Immortal Circlet Fortune Box" additionalName="Robe" type="EtcItem">
+	<item id="29571" name="永生頭箍幸運箱" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain Immortal Circlet (Robe) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1364,7 +1364,7 @@
 			<item id="17315" min="1" max="1" chance="85" /> <!-- Immortal Circlet - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="29572" name="Immortal Tunic Fortune Box" additionalName="Robe" type="EtcItem">
+	<item id="29572" name="永生外衣幸運箱" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain Immortal Tunic (Robe) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1379,7 +1379,7 @@
 			<item id="17316" min="1" max="1" chance="85" /> <!-- Immortal Tunic - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="29573" name="Immortal Stockings Fortune Box" additionalName="Robe" type="EtcItem">
+	<item id="29573" name="永生長襪幸運箱" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain Immortal Stockings (Robe) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1394,7 +1394,7 @@
 			<item id="17317" min="1" max="1" chance="85" /> <!-- Immortal Stockings - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="29574" name="Immortal Gloves Fortune Box" additionalName="Robe" type="EtcItem">
+	<item id="29574" name="永生手套幸運箱" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain Immortal Gloves (Robe) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1409,7 +1409,7 @@
 			<item id="17318" min="1" max="1" chance="85" /> <!-- Immortal Gloves - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="29575" name="Immortal Shoes Fortune Box" additionalName="Robe" type="EtcItem">
+	<item id="29575" name="永生鞋幸運箱" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain Immortal Shoes (Robe) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1424,7 +1424,7 @@
 			<item id="17319" min="1" max="1" chance="85" /> <!-- Immortal Shoes - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="29576" name="Immortal Sigil Fortune Box" type="EtcItem">
+	<item id="29576" name="永生符印幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Immortal Sigil with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1439,7 +1439,7 @@
 			<item id="17320" min="1" max="1" chance="85" /> <!-- Immortal Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="29577" name="Immortal Necklace Fortune Box" type="EtcItem">
+	<item id="29577" name="永生項鍊幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Immortal Necklace with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1454,7 +1454,7 @@
 			<item id="17321" min="1" max="1" chance="85" /> <!-- Immortal Necklace -->
 		</capsuled_items>
 	</item>
-	<item id="29578" name="Immortal Earring Fortune Box" type="EtcItem">
+	<item id="29578" name="永生耳環幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Immortal Earring with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1469,7 +1469,7 @@
 			<item id="17322" min="1" max="1" chance="85" /> <!-- Immortal Earring -->
 		</capsuled_items>
 	</item>
-	<item id="29579" name="Immortal Ring Fortune Box" type="EtcItem">
+	<item id="29579" name="永生戒指幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Immortal Ring with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1484,7 +1484,7 @@
 			<item id="17323" min="1" max="1" chance="85" /> <!-- Immortal Ring -->
 		</capsuled_items>
 	</item>
-	<item id="29580" name="Apocalypse Shaper Fortune Box" type="EtcItem">
+	<item id="29580" name="英啟鉋刀幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Shaper with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1499,7 +1499,7 @@
 			<item id="17324" min="1" max="1" chance="85" /> <!-- Apocalypse Shaper -->
 		</capsuled_items>
 	</item>
-	<item id="29581" name="Apocalypse Cutter Fortune Box" type="EtcItem">
+	<item id="29581" name="英啟切刃幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Cutter with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1514,7 +1514,7 @@
 			<item id="17325" min="1" max="1" chance="85" /> <!-- Apocalypse Cutter -->
 		</capsuled_items>
 	</item>
-	<item id="29582" name="Apocalypse Slasher Fortune Box" type="EtcItem">
+	<item id="29582" name="英啟殺刃幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Slasher with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1529,7 +1529,7 @@
 			<item id="17326" min="1" max="1" chance="85" /> <!-- Apocalypse Slasher -->
 		</capsuled_items>
 	</item>
-	<item id="29583" name="Apocalypse Avenger Fortune Box" type="EtcItem">
+	<item id="29583" name="英啟復仇者幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Avenger with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1544,7 +1544,7 @@
 			<item id="17327" min="1" max="1" chance="85" /> <!-- Apocalypse Avenger -->
 		</capsuled_items>
 	</item>
-	<item id="29584" name="Apocalypse Fighter Fortune Box" type="EtcItem">
+	<item id="29584" name="英啟戰爪幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Fighter with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1559,7 +1559,7 @@
 			<item id="17328" min="1" max="1" chance="85" /> <!-- Apocalypse Fighter -->
 		</capsuled_items>
 	</item>
-	<item id="29585" name="Apocalypse Stormer Fortune Box" type="EtcItem">
+	<item id="29585" name="英啟風暴者幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Stormer with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1574,7 +1574,7 @@
 			<item id="17329" min="1" max="1" chance="85" /> <!-- Apocalypse Stormer -->
 		</capsuled_items>
 	</item>
-	<item id="29586" name="Apocalypse Thrower Fortune Box" type="EtcItem">
+	<item id="29586" name="英啟投弓幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Thrower with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1589,7 +1589,7 @@
 			<item id="17330" min="1" max="1" chance="85" /> <!-- Apocalypse Thrower -->
 		</capsuled_items>
 	</item>
-	<item id="29587" name="Apocalypse Guardian Fortune Box" type="EtcItem">
+	<item id="29587" name="英啟射靈幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Guardian with a 60% chance. In case of failure, you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1604,7 +1604,7 @@
 			<item id="17331" min="1" max="1" chance="85" /> <!-- Apocalypse Guardian -->
 		</capsuled_items>
 	</item>
-	<item id="29588" name="Apocalypse Buster Fortune Box" type="EtcItem">
+	<item id="29588" name="英啟爆刃幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Buster with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1619,7 +1619,7 @@
 			<item id="17332" min="1" max="1" chance="85" /> <!-- Apocalypse Buster -->
 		</capsuled_items>
 	</item>
-	<item id="29589" name="Apocalypse Caster Fortune Box" type="EtcItem">
+	<item id="29589" name="英啟術杖幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Caster with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1634,7 +1634,7 @@
 			<item id="17333" min="1" max="1" chance="85" /> <!-- Apocalypse Caster -->
 		</capsuled_items>
 	</item>
-	<item id="29590" name="Apocalypse Retributer Fortune Box" type="EtcItem">
+	<item id="29590" name="英啟報恨者幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Retributer with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1649,7 +1649,7 @@
 			<item id="17334" min="1" max="1" chance="85" /> <!-- Apocalypse Retributer -->
 		</capsuled_items>
 	</item>
-	<item id="29591" name="Twilight Helmet Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29591" name="煉獄頭盔幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Helmet (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1664,7 +1664,7 @@
 			<item id="17338" min="1" max="1" chance="85" /> <!-- Twilight Helmet - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29592" name="Twilight Breastplate Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29592" name="煉獄胸甲幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Breastplate (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1679,7 +1679,7 @@
 			<item id="17339" min="1" max="1" chance="85" /> <!-- Twilight Breastplate - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29593" name="Twilight Gaiters Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29593" name="煉獄脛甲幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Gaiters (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1694,7 +1694,7 @@
 			<item id="17340" min="1" max="1" chance="85" /> <!-- Twilight Gaiters - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29594" name="Twilight Gauntlets Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29594" name="煉獄護手幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Gauntlets (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1709,7 +1709,7 @@
 			<item id="17341" min="1" max="1" chance="85" /> <!-- Twilight Gauntlets - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29595" name="Twilight Boots Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29595" name="煉獄靴幸運箱" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Boots (Heavy) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1724,7 +1724,7 @@
 			<item id="17342" min="1" max="1" chance="85" /> <!-- Twilight Boots - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="29596" name="Twilight Shield Fortune Box" type="EtcItem">
+	<item id="29596" name="煉獄盾幸運箱" type="EtcItem">
 		<!-- Double-click to obtain Twilight Shield with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1739,7 +1739,7 @@
 			<item id="17343" min="1" max="1" chance="85" /> <!-- Twilight Shield -->
 		</capsuled_items>
 	</item>
-	<item id="29597" name="Twilight Leather Helmet Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29597" name="煉獄皮頭盔幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Leather Helmet (Light) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1754,7 +1754,7 @@
 			<item id="17344" min="1" max="1" chance="85" /> <!-- Twilight Leather Helmet - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="29598" name="Twilight Leather Armor Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29598" name="煉獄皮甲幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Leather Armor (Light) with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1769,7 +1769,7 @@
 			<item id="17345" min="1" max="1" chance="85" /> <!-- Twilight Leather Armor - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="29599" name="Twilight Leather Leggings Fortune Box" additionalName="Light armor" type="EtcItem">
+	<item id="29599" name="煉獄皮脛甲幸運箱" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain Twilight Leather Leggings with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="81000" name="PA - Dragon Skin Shirt" additionalName="1-day" type="Armor">
+	<item id="81000" name="活動專用龍襯衫" additionalName="1-day" type="Armor">
 		<!-- For PA. Acquired XP/ SP +3%, P./ M. Def. +5%, Speed +7, STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3, LUC +3, CHA +3, received Critical Damage from basic attacks and M. skills -5%. -->
 		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -23,7 +23,7 @@
 			<skill id="35185" level="1" /> <!-- Dragon Skin Shirt: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="81001" name="PA - Emerald Lv. 5" additionalName="1-day" type="Armor">
+	<item id="81001" name="活動專用-綠寶石5階段" additionalName="1-day" type="Armor">
 		<!-- For PA. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -38,7 +38,7 @@
 			<skill id="17825" level="5" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="81002" name="PA - Diamond Lv. 5" additionalName="1-day" type="Armor">
+	<item id="81002" name="活動專用-鑽石5階段" additionalName="1-day" type="Armor">
 		<!-- For PA. P. Def. +1986, received Critical Damage from basic attacks -5%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -53,7 +53,7 @@
 			<skill id="17708" level="5" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="81003" name="PA - Opal Lv. 5" additionalName="1-day" type="Armor">
+	<item id="81003" name="活動專用-貓眼石5階段" additionalName="1-day" type="Armor">
 		<!-- For PA. Attribute Attack +120. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 			<skill id="17705" level="5" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="81004" name="PA - Vital Stone Lv. 5" additionalName="1-day" type="Armor">
+	<item id="81004" name="活動專用-活力石5階段" additionalName="1-day" type="Armor">
 		<!-- For PA. Vitality bonus +30%, Vitality Consumption -15%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -84,7 +84,7 @@
 			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
-	<item id="81005" name="PA - Red Cat's Eye Lv. 5" additionalName="1-day" type="Armor">
+	<item id="81005" name="活動專用-緋金綠寶石5階段" additionalName="1-day" type="Armor">
 		<!-- For PA. Critical Damage for basic attacks +12%, P. Skill Critical Damage +12%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
@@ -99,7 +99,7 @@
 			<skill id="18713" level="5" /> <!-- Red Cat's Eye -->
 		</skills>
 	</item>
-	<item id="81006" name="PA - Blue Cat's Eye Lv. 5" additionalName="1-day" type="Armor">
+	<item id="81006" name="活動專用-靛金綠寶石5階段" additionalName="1-day" type="Armor">
 		<!-- For PA. M. Skill Critical Damage +12%. Effects of two identical jewels do not stack -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="default_action" val="EQUIP" />
@@ -114,7 +114,7 @@
 			<skill id="18714" level="5" /> <!-- Blue Cat's Eye -->
 		</skills>
 	</item>
-	<item id="81007" name="PA - La Vie En Rose's Brooch" additionalName="1-day" type="Armor">
+	<item id="81007" name="活動專用-拉菲安洛茲的胸針" additionalName="1-day" type="Armor">
 		<!-- For PA. Made by Master Shadai who was inspired by Moon Voice Irene. Unlocks 5 jewel/ orb slots. Inventory slots +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -133,7 +133,7 @@
 			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
 	</item>
-	<item id="81008" name="Helios Dual Swords Crafting Pack" type="EtcItem">
+	<item id="81008" name="赫利奧斯雙刀製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain ingredients needed for crafting Helios Dual Swords. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -152,7 +152,7 @@
 			<item id="17371" min="8302" max="8302" chance="100" /> <!-- Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="81009" name="Helios Dual Daggers Crafting Pack" type="EtcItem">
+	<item id="81009" name="赫利奧斯雙匕首製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain ingredients needed for crafting Helios Dual Daggers. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -171,7 +171,7 @@
 			<item id="17371" min="8302" max="8302" chance="100" /> <!-- Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="81010" name="Helios Dual Blunt Weapon Crafting Pack" type="EtcItem">
+	<item id="81010" name="赫利奧斯雙鈍器製作禮盒" type="EtcItem">
 		<!-- Double-click to obtain ingredients needed for crafting Helios Dual Blunt Weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -190,7 +190,7 @@
 			<item id="17371" min="8302" max="8302" chance="100" /> <!-- Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="81011" name="Honey Dark Beer" additionalName="Event" type="EtcItem">
+	<item id="81011" name="蜂蜜黑啤酒" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., all stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -208,7 +208,7 @@
 			<skill id="39570" level="1" /> <!-- Honey Dark Beer -->
 		</skills>
 	</item>
-	<item id="81012" name="Emperor's Special Cocktail" additionalName="Event" type="EtcItem">
+	<item id="81012" name="天國雞尾酒" additionalName="Event" type="EtcItem">
 		<!-- For 60 min., applies the following effects: Fever Melody Lv. 2, Drumbeat of Serenity Lv. 2, and Fantasia Harmony Lv. 2. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.renewal_cocktail_lv2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -226,7 +226,7 @@
 			<skill id="39520" level="1" /> <!-- Wondrous Cocktail -->
 		</skills>
 	</item>
-	<item id="81013" name="Shining Nevit's Gold Hourglass" additionalName="Event" type="EtcItem">
+	<item id="81013" name="閃耀的奈比特黃金沙漏" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP while hunting +100%. Does not stack with Fall of the Dragon and Dandy's Home Run Ball. Cooldown: 5 min. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -243,7 +243,7 @@
 			<skill id="39503" level="1" /> <!-- Nevit's Shining Gold Hourglass -->
 		</skills>
 	</item>
-	<item id="81014" name="PA Event Appearance Potion - Bear" type="EtcItem">
+	<item id="81014" name="紅色天秤外型藥劑-熊熊" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Bear Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -257,7 +257,7 @@
 			<skill id="39578" level="1" /> <!-- Red Libra's Appearance Potion - Bear -->
 		</skills>
 	</item>
-	<item id="81015" name="Potion of Appearance for PA Event - Red Wizard" type="EtcItem">
+	<item id="81015" name="紅色天秤外型藥劑-魔法師紅色" type="EtcItem">
 		<!-- A potion made by the Red Libra Guild. Changes the armor appearance to that of Red Wizard Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -271,7 +271,7 @@
 			<skill id="39579" level="1" /> <!-- Red Libra's Appearance Potion - Red Wizard -->
 		</skills>
 	</item>
-	<item id="81016" name="Pink's Style Potion - Red Archer" type="EtcItem">
+	<item id="81016" name="粉粉的風格藥劑-弓手紅色" type="EtcItem">
 		<!-- Changes the armor appearance to that of Red Archer Garment for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -285,7 +285,7 @@
 			<skill id="39580" level="1" /> <!-- Pink's Potion - Red Archer -->
 		</skills>
 	</item>
-	<item id="81017" name="Pink's Style Potion - Green Archer" type="EtcItem">
+	<item id="81017" name="粉粉的風格藥劑-弓手綠色" type="EtcItem">
 		<!-- Changes the armor appearance to that of Green Archer Garment for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -296,7 +296,7 @@
 			<skill id="39581" level="1" /> <!-- Pink's Potion - Green Archer -->
 		</skills>
 	</item>
-	<item id="81018" name="PA Event Potion of Appearance - Samurai" type="EtcItem">
+	<item id="81018" name="紅色天秤外型藥劑-武士" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Samurai Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -310,7 +310,7 @@
 			<skill id="39582" level="1" /> <!-- Red Libra's Appearance Potion - Samurai -->
 		</skills>
 	</item>
-	<item id="81019" name="Potion of Appearance for PA Event - Plush Cat" type="EtcItem">
+	<item id="81019" name="紅色天秤外型藥劑-貓咪" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Plush Cat Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -324,7 +324,7 @@
 			<skill id="39583" level="1" /> <!-- Red Libra's Appearance Potion - Plush Cat -->
 		</skills>
 	</item>
-	<item id="81020" name="Potion of Appearance for PA Event - Dark Assassin Suit" type="EtcItem">
+	<item id="81020" name="紅色天秤外型藥劑-黑暗刺客" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Dark Assassin Suit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -338,7 +338,7 @@
 			<skill id="39584" level="1" /> <!-- Red Libra's Appearance Potion - Dark Assassin Suit -->
 		</skills>
 	</item>
-	<item id="81021" name="Potion of Appearance for PA Event - White Assassin Suit" type="EtcItem">
+	<item id="81021" name="紅色天秤外型藥劑-雪白刺客" type="EtcItem">
 		<!-- A potion made by the Red Libra Guild. Changes the armor appearance to that of Light Assassin Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -352,7 +352,7 @@
 			<skill id="39585" level="1" /> <!-- Red Libra's Appearance Potion - Light Assassin Outfit -->
 		</skills>
 	</item>
-	<item id="81022" name="Pink's Style Potion - Metal Suit" type="EtcItem">
+	<item id="81022" name="粉粉的風格藥劑-金屬套裝" type="EtcItem">
 		<!-- Changes the armor appearance to that of Metal Suit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -363,7 +363,7 @@
 			<skill id="39586" level="1" /> <!-- Pink's Potion - Metal Suit -->
 		</skills>
 	</item>
-	<item id="81023" name="Pink's Style Potion - Red Noblesse" type="EtcItem">
+	<item id="81023" name="粉粉的風格藥劑-紅色貴族" type="EtcItem">
 		<!-- Changes the armor appearance to that of Red Noblesse Garment for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -374,7 +374,7 @@
 			<skill id="39587" level="1" /> <!-- Pink's Potion - Red Noblesse -->
 		</skills>
 	</item>
-	<item id="81024" name="Potion of Appearance for PA Event - White Noblesse" type="EtcItem">
+	<item id="81024" name="紅色天秤外型藥劑-白色貴族" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of White Noblesse Garment for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -388,7 +388,7 @@
 			<skill id="39588" level="1" /> <!-- Red Libra's Appearance Potion - White Noblesse -->
 		</skills>
 	</item>
-	<item id="81025" name="Pink's Style Potion - Blue Musketeer" type="EtcItem">
+	<item id="81025" name="粉粉的風格藥劑-藍色步兵" type="EtcItem">
 		<!-- Changes the armor appearance to that of Blue Musketeer Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -399,7 +399,7 @@
 			<skill id="39589" level="1" /> <!-- Pink's Potion - Blue Musketeer -->
 		</skills>
 	</item>
-	<item id="81026" name="Pink's Style Potion - Red Musketeer" type="EtcItem">
+	<item id="81026" name="粉粉的風格藥劑-紅色步兵" type="EtcItem">
 		<!-- Changes the armor appearance to that of Red Musketeer Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -410,7 +410,7 @@
 			<skill id="39590" level="1" /> <!-- Pink's Potion - Red Musketeer -->
 		</skills>
 	</item>
-	<item id="81027" name="Pink's Style Potion - Pirate Captain" type="EtcItem">
+	<item id="81027" name="粉粉的風格藥劑-海盜紅色" type="EtcItem">
 		<!-- Changes the armor appearance to that of Pirate Captain Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -421,7 +421,7 @@
 			<skill id="39591" level="1" /> <!-- Pink's Potion - Red Pirate -->
 		</skills>
 	</item>
-	<item id="81028" name="Pink's Style Potion - Pirate" type="EtcItem">
+	<item id="81028" name="粉粉的風格藥劑-海盜船員" type="EtcItem">
 		<!-- Changes the armor appearance to that of Pirate Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -432,7 +432,7 @@
 			<skill id="39592" level="1" /> <!-- Pink's Potion - Pirate -->
 		</skills>
 	</item>
-	<item id="81029" name="Pink's Style Potion - Purple Cowboy" type="EtcItem">
+	<item id="81029" name="粉粉的風格藥劑-牛仔紫色" type="EtcItem">
 		<!-- Changes the armor appearance to that of Purple Cowboy Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -443,7 +443,7 @@
 			<skill id="39593" level="1" /> <!-- Pink's Potion - Purple Cowboy -->
 		</skills>
 	</item>
-	<item id="81030" name="PA Event Potion of Appearance - Healer" type="EtcItem">
+	<item id="81030" name="紅色天秤外型藥劑-牧師" type="EtcItem">
 		<!-- A potion made by the Red Libra Guild. Changes the armor appearance to that of Healer Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -457,7 +457,7 @@
 			<skill id="39594" level="1" /> <!-- Red Libra's Appearance Potion - Healer -->
 		</skills>
 	</item>
-	<item id="81031" name="Pink's Style Potion - Chevalier" type="EtcItem">
+	<item id="81031" name="粉粉的風格藥劑-騎兵" type="EtcItem">
 		<!-- Changes the armor appearance to that of Chevalier Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -468,7 +468,7 @@
 			<skill id="39595" level="1" /> <!-- Pink's Potion - Chevalier -->
 		</skills>
 	</item>
-	<item id="81032" name="Pink's Style Potion - Cat" type="EtcItem">
+	<item id="81032" name="粉粉的風格藥劑-戰鬥貓" type="EtcItem">
 		<!-- Changes the armor appearance to that of Cat Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -479,7 +479,7 @@
 			<skill id="39596" level="1" /> <!-- Pink's Potion - Kat the Cat -->
 		</skills>
 	</item>
-	<item id="81033" name="Pink's Style Potion - Barbarian Wolf" type="EtcItem">
+	<item id="81033" name="粉粉的風格藥劑-野蠻狼" type="EtcItem">
 		<!-- Changes the armor appearance to that of Barbarian Wolf Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -490,7 +490,7 @@
 			<skill id="39597" level="1" /> <!-- Pink's Potion - Wolf Barbarian -->
 		</skills>
 	</item>
-	<item id="81034" name="Pink's Style Potion - Valkyrie" type="EtcItem">
+	<item id="81034" name="粉粉的風格藥劑-女武神" type="EtcItem">
 		<!-- Changes the armor appearance to that of Valkyrie Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -501,7 +501,7 @@
 			<skill id="39598" level="1" /> <!-- Pink's Potion - Valkyrie -->
 		</skills>
 	</item>
-	<item id="81035" name="PA Event Potion of Appearance - Steward" type="EtcItem">
+	<item id="81035" name="紅色天秤外型藥劑-執事" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Steward Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -515,7 +515,7 @@
 			<skill id="39599" level="1" /> <!-- Red Libra's Appearance Potion - Steward -->
 		</skills>
 	</item>
-	<item id="81036" name="PA Event Potion of Appearance - Alice" type="EtcItem">
+	<item id="81036" name="紅色天秤外型藥劑-愛麗絲" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Alice's Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -529,7 +529,7 @@
 			<skill id="39600" level="1" /> <!-- Red Libra's Appearance Potion - Alice -->
 		</skills>
 	</item>
-	<item id="81037" name="PA Event Appearance Potion - Steampunk" type="EtcItem">
+	<item id="81037" name="紅色天秤外型藥劑-蒸汽龐克" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Alice's Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -543,7 +543,7 @@
 			<skill id="39601" level="1" /> <!-- Red Libra's Appearance Potion - Steampunk -->
 		</skills>
 	</item>
-	<item id="81038" name="Potion of Appearance for PA Event - Lovely Hanbok" type="EtcItem">
+	<item id="81038" name="紅色天秤外型藥劑-秀麗韓服" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Lovely Hanbok for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -560,7 +560,7 @@
 			<skill id="39602" level="1" /> <!-- Red Libra's Appearance Potion - Lovely Hanbok -->
 		</skills>
 	</item>
-	<item id="81039" name="PA Event Potion of Appearance - Jester" type="EtcItem">
+	<item id="81039" name="紅色天秤外型藥劑-小丑" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Jester Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -574,7 +574,7 @@
 			<skill id="39603" level="1" /> <!-- Red Libra's Appearance Potion - Jester -->
 		</skills>
 	</item>
-	<item id="81040" name="Pink's Style Potion - Elite Knight" type="EtcItem">
+	<item id="81040" name="粉粉的風格藥劑-紳士" type="EtcItem">
 		<!-- Changes the armor appearance to that of Elite Knight Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -585,7 +585,7 @@
 			<skill id="39604" level="1" /> <!-- Pink's Potion - Cavalier -->
 		</skills>
 	</item>
-	<item id="81041" name="Potion of Appearance for PA Event - Red Dragon Knight" type="EtcItem">
+	<item id="81041" name="紅色天秤外型藥劑-紅色龍騎士" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Red Dragon Knight Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -599,7 +599,7 @@
 			<skill id="39605" level="1" /> <!-- Red Libra's Appearance Potion - Red Dragon Knight -->
 		</skills>
 	</item>
-	<item id="81042" name="PA Event Potion of Appearance - Assassin" type="EtcItem">
+	<item id="81042" name="紅色天秤外型藥劑-暗殺者" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Assassin Suit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -613,7 +613,7 @@
 			<skill id="39606" level="1" /> <!-- Red Libra's Appearance Potion - Assassin -->
 		</skills>
 	</item>
-	<item id="81043" name="Potion of Appearance for PA Event - Yellow Nymph" type="EtcItem">
+	<item id="81043" name="紅色天秤外型藥劑-寧芙黃色" type="EtcItem">
 		<!-- A potion made in the Red Libra Guild. Changes the armor appearance to that of Yellow Nymph Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -627,7 +627,7 @@
 			<skill id="39607" level="1" /> <!-- Red Libra's Appearance Potion - Yellow Nymph -->
 		</skills>
 	</item>
-	<item id="81044" name="Steward Outfit" type="Armor">
+	<item id="81044" name="執事衣裳" type="Armor">
 		<set name="icon" val="icon.ev_new_clothes_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -636,7 +636,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81045" name="Alice's Costume" type="Armor">
+	<item id="81045" name="愛麗絲衣裳" type="Armor">
 		<set name="icon" val="icon.ev_new_clothes_02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -645,7 +645,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81046" name="Steampunk Outfit" type="Armor">
+	<item id="81046" name="蒸汽龐克衣裳" type="Armor">
 		<set name="icon" val="icon.king_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -654,7 +654,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81047" name="Lovely Hanbok" type="Armor">
+	<item id="81047" name="秀麗韓服衣裳" type="Armor">
 		<set name="icon" val="icon.ev_kr_traditional_dress2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -663,7 +663,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81048" name="Jester Outfit" type="Armor">
+	<item id="81048" name="小丑衣裳" type="Armor">
 		<set name="icon" val="icon.ev_new_clothes_05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -672,7 +672,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81049" name="Elite Knight Outfit" type="Armor">
+	<item id="81049" name="紳士衣裳" type="Armor">
 		<set name="icon" val="icon.king_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -681,7 +681,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81050" name="Red Dragon Knight Outfit" type="Armor">
+	<item id="81050" name="紅色龍騎士衣裳" type="Armor">
 		<set name="icon" val="icon.king_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -690,7 +690,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81051" name="Assassin Suit" type="Armor">
+	<item id="81051" name="暗殺者衣裳" type="Armor">
 		<set name="icon" val="icon.new_assassin_suit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -699,7 +699,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81052" name="Yellow Nymph Costume" type="Armor">
+	<item id="81052" name="寧芙黃色衣裳" type="Armor">
 		<set name="icon" val="icon.king_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -708,7 +708,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="81053" name="Vitality" type="EtcItem">
+	<item id="81053" name="活力水" type="EtcItem">
 		<!-- Double click to recover a certain amount of Vitality. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -726,7 +726,7 @@
 			<skill id="39577" level="1" /> <!-- Vitality -->
 		</skills>
 	</item>
-	<item id="81054" name="Freya's Scroll of Storm" additionalName="Event" type="EtcItem">
+	<item id="81054" name="芙蕾雅的暴風卷軸" additionalName="Event" type="EtcItem">
 		<!-- For 10 min. while hunting, Vitality Consumption +150%, acquired XP/ SP +150%. The effect remains after death. Cooldown: 9 min. Available if 1 or more Vitality bar is full. Cannot be used in the Olympiad. Does not stack with the Freya's Scroll of Blessing and Maphr's Scroll of Storm effects. -->
 		<set name="icon" val="icon.bm_freya_storm_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -746,315 +746,315 @@
 			<skill id="39608" level="1" /> <!-- Freya's Scroll of Storm -->
 		</skills>
 	</item>
-	<item id="81055" name="Legendary Dye Lv. 1 (P. Atk.)" additionalName="STR +3, DEX +3" type="EtcItem">
+	<item id="81055" name="傳說物理攻擊力染料-1階段" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 1 (P. Atk.) (STR +3, DEX +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81056" name="Legendary Dye Lv. 2 (P. Atk.)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+	<item id="81056" name="傳說物理攻擊力染料-2階段" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- Legendary Dye Lv. 2 (P. Atk.) (STR +3, DEX +3, CHA +1). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81057" name="Legendary Dye Lv. 3 (P. Atk.)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+	<item id="81057" name="傳說物理攻擊力染料-3階段" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- Legendary Dye Lv. 3 (P. Atk.) (STR +4, DEX +4, CHA +2). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81058" name="Legendary Dye Lv. 4 (P. Atk.)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+	<item id="81058" name="傳說物理攻擊力染料-4階段" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 4 (P. Atk.) (STR +4, DEX +5, CHA +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81059" name="Legendary Dye Lv. 5 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+	<item id="81059" name="傳說物理攻擊力染料-5階段" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- Legendary Dye Lv. 5 (P. Atk.) (STR +5, DEX +5, CHA +4). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Atk. +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81060" name="Legendary Dye Lv. 6 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81060" name="傳說物理攻擊力染料-6階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 6 (P. Atk.) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Atk. +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81061" name="Legendary Dye Lv. 7 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81061" name="傳說物理攻擊力染料-7階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 7 (P. Atk.) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Atk. +2%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81062" name="Legendary Dye Lv. 8 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81062" name="傳說物理攻擊力染料-8階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 8 (P. Atk.) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, P. Atk. +3%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81063" name="Legendary Dye Lv. 9 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81063" name="傳說物理攻擊力染料-9階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 9 (P. Atk.) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, P. Atk. +4%, damage +2%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81064" name="Legendary Dye Lv. 10 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81064" name="傳說物理攻擊力染料-10階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 10 (P. Atk.) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -3%, P. Atk. +5%, damage +3%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. <Upgrade>. Head Blacksmith in any town -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81065" name="Legendary Dye Lv. 1 (Standard Attack Critical Damage)" additionalName="STR +3, DEX +3" type="EtcItem">
+	<item id="81065" name="傳說一般攻擊致命攻擊傷害染料-1階段" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 1 (Critical Damage for Basic Attacks) (STR +3, DEX +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81066" name="Legendary Dye Lv. 2 (Standard Attack Critical Damage)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+	<item id="81066" name="傳說一般攻擊致命攻擊傷害染料-2階段" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- Legendary Dye Lv. 2 (Critical Damage for Basic Attacks) (STR +3, DEX +3, CHA +1). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81067" name="Legendary Dye Lv. 3 (Standard Attack Critical Damage)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+	<item id="81067" name="傳說一般攻擊致命攻擊傷害染料-3階段" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- Legendary Dye Lv. 3 (Critical Damage for Basic Attacks) (STR +4, DEX +4, CHA +2). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81068" name="Legendary Dye Lv. 4 (Standard Attack Critical Damage)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+	<item id="81068" name="傳說一般攻擊致命攻擊傷害染料-4階段" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 4 (Critical Damage for Basic Attacks) (STR +4, DEX +5, CHA +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81069" name="Legendary Dye Lv. 5 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+	<item id="81069" name="傳說一般攻擊致命攻擊傷害染料-5階段" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- Legendary Dye Lv. 5 (Critical Damage for Basic Attacks) (STR +5, DEX +5, CHA +4). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, Critical Damage for basic attacks +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81070" name="Legendary Dye Lv. 6 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81070" name="傳說一般攻擊致命攻擊傷害染料-6階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 6 (Critical Damage for Basic Attacks) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, Critical Damage for basic attacks +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81071" name="Legendary Dye Lv. 7 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81071" name="傳說一般攻擊致命攻擊傷害染料-7階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 7 (Critical Damage for Basic Attacks) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, Critical Damage for basic attacks +2%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81072" name="Legendary Dye Lv. 8 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81072" name="傳說一般攻擊致命攻擊傷害染料-8階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 8 (Critical Damage for Basic Attacks) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, Critical Damage for basic attacks +3%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81073" name="Legendary Dye Lv. 9 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81073" name="傳說一般攻擊致命攻擊傷害染料-9階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 9 (Critical Damage for Basic Attacks) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, Critical Damage for basic attacks +4%, damage +2%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81074" name="Legendary Dye Lv. 10 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81074" name="傳說一般攻擊致命攻擊傷害染料-10階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 10 (Critical Damage for Basic Attacks) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -3%, Critical Damage for basic attacks +5%, damage +3%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. <Upgrade>. Head Blacksmith in any town -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81075" name="Legendary Dye Lv. 1 (P. Skill Critical Damage)" additionalName="STR +3, DEX +3" type="EtcItem">
+	<item id="81075" name="傳說物理技能致命攻擊傷害染料-1階段" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 1 (P. Skill Critical Damage) (STR +3, DEX +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81076" name="Legendary Dye Lv. 2 (P. Skill Critical Damage)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+	<item id="81076" name="傳說物理技能致命攻擊傷害染料-2階段" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- Legendary Dye Lv. 2 (P. Skill Critical Damage) (STR +3, DEX +3, CHA +1). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81077" name="Legendary Dye Lv. 3 (P. Skill Critical Damage)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+	<item id="81077" name="傳說物理技能致命攻擊傷害染料-3階段" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- Legendary Dye Lv. 3 (P. Skill Critical Damage) (STR +4, DEX +4, CHA +2). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81078" name="Legendary Dye Lv. 4 (P. Skill Critical Damage)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+	<item id="81078" name="傳說物理技能致命攻擊傷害染料-4階段" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 4 (P. Skill Critical Damage) (STR +4, DEX +5, CHA +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81079" name="Legendary Dye Lv. 5 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+	<item id="81079" name="傳說物理技能致命攻擊傷害染料-5階段" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- Legendary Dye Lv. 5 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +4). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Skill Critical Damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81080" name="Legendary Dye Lv. 6 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81080" name="傳說物理技能致命攻擊傷害染料-6階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 6 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Skill Critical Damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81081" name="Legendary Dye Lv. 7 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81081" name="傳說物理技能致命攻擊傷害染料-7階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 7 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Skill Critical Damage +2%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81082" name="Legendary Dye Lv. 8 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81082" name="傳說物理技能致命攻擊傷害染料-8階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 8 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, P. Skill Critical Damage +3%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81083" name="Legendary Dye Lv. 9 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81083" name="傳說物理技能致命攻擊傷害染料-9階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 9 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, P. Skill Critical Damage +4%, damage +2%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81084" name="Legendary Dye Lv. 10 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81084" name="傳說物理技能致命攻擊傷害染料-10階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 10 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -3%, P. Skill Critical Damage +5%, damage +3%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. <Upgrade>. Head Blacksmith in any town -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81085" name="Legendary Dye Lv. 1 (P. Skill Power)" additionalName="STR +3, DEX +3" type="EtcItem">
+	<item id="81085" name="傳說物理技能威力染料-1階段" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 1 (P. Skill Power) (STR +3, DEX +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81086" name="Legendary Dye Lv. 2 (P. Skill Power)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+	<item id="81086" name="傳說物理技能威力染料-2階段" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- Legendary Dye Lv. 2 (P. Skill Power) (STR +3, DEX +3, CHA +1). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81087" name="Legendary Dye Lv. 3 (P. Skill Power)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+	<item id="81087" name="傳說物理技能威力染料-3階段" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- Legendary Dye Lv. 3 (P. Skill Power) (STR +4, DEX +4, CHA +2). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81088" name="Legendary Dye Lv. 4 (P. Skill Power)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+	<item id="81088" name="傳說物理技能威力染料-4階段" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 4 (P. Skill Power) (STR +4, DEX +5, CHA +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81089" name="Legendary Dye Lv. 5 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+	<item id="81089" name="傳說物理技能威力染料-5階段" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- Legendary Dye Lv. 5 (P. Skill Power) (STR +5, DEX +5, CHA +4). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Skill Power +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81090" name="Legendary Dye Lv. 6 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81090" name="傳說物理技能威力染料-6階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 6 (P. Skill Power) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Skill Power +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81091" name="Legendary Dye Lv. 7 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81091" name="傳說物理技能威力染料-7階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 7 (P. Skill Power) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, P. Skill Power +2%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81092" name="Legendary Dye Lv. 8 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81092" name="傳說物理技能威力染料-8階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 8 (P. Skill Power) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, P. Skill Power +3%, damage +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81093" name="Legendary Dye Lv. 9 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81093" name="傳說物理技能威力染料-9階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 9 (P. Skill Power) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -2%, P. Skill Power +4%, damage +2%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81094" name="Legendary Dye Lv. 10 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+	<item id="81094" name="傳說物理技能威力染料-10階段" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- Legendary Dye Lv. 10 (P. Skill Power) (STR +5, DEX +5, CHA +5). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -3%, P. Skill Power +5%, damage +3%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. <Upgrade>. Head Blacksmith in any town -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81095" name="Legendary Dye Lv. 1 (M. Atk.)" additionalName="INT +3, WIT +3" type="EtcItem">
+	<item id="81095" name="傳說魔法攻擊力染料-1階段" additionalName="INT +3, WIT +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 1 (M. Atk.) (INT +3, WIT +3). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81096" name="Legendary Dye Lv. 2 (M. Atk.)" additionalName="INT +3, WIT +3, CHA +1" type="EtcItem">
+	<item id="81096" name="傳說魔法攻擊力染料-2階段" additionalName="INT +3, WIT +3, CHA +1" type="EtcItem">
 		<!-- Legendary Dye Lv. 2 (M. Atk.) (INT +3, WIT +3, CHA +1). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81097" name="Legendary Dye Lv. 3 (M. Atk.)" additionalName="INT +4, WIT +4, CHA +2" type="EtcItem">
+	<item id="81097" name="傳說魔法攻擊力染料-3階段" additionalName="INT +4, WIT +4, CHA +2" type="EtcItem">
 		<!-- Legendary Dye Lv. 3 (M. Atk.) (INT +4, WIT +4, CHA +2). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81098" name="Legendary Dye Lv. 4 (M. Atk.)" additionalName="INT +4, WIT +5, CHA +3" type="EtcItem">
+	<item id="81098" name="傳說魔法攻擊力染料-4階段" additionalName="INT +4, WIT +5, CHA +3" type="EtcItem">
 		<!-- Legendary Dye Lv. 4 (M. Atk.) (INT +4, WIT +5, CHA +3). Take 1 unit and to the Dye Merchant to get a tattoo that boosts your stats. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81099" name="Legendary Dye Lv. 5 (M. Atk.)" additionalName="INT +5, WIT +5, CHA +4" type="EtcItem">
+	<item id="81099" name="傳說魔法攻擊力染料-5階段" additionalName="INT +5, WIT +5, CHA +4" type="EtcItem">
 		<!-- Legendary Dye Lv. 5 (M. Atk.) (INT +5, WIT +5, CHA +4). Take 1 unit to the Dye Merchant to get a tattoo that boosts your stats. The tattoo's effect: received damage -1%, M. Atk. +1%. Effects of two identical tattoos do not stack. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
 		<set name="material" val="LIQUID" />

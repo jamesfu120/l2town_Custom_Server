@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="48400" name="Items Seal Scroll" type="EtcItem">
+	<item id="48400" name="道具封印卷軸" type="EtcItem">
 		<!-- A scroll for sealing items. The sealed item cannot be augmented, exchanged, dropped, destroyed, or stored in the clan warehouse. Use Item Unseal Scroll to remove the seal. -->
 		<set name="icon" val="icon.scrl_item_lock" />
 		<set name="material" val="PAPER" />
@@ -13,7 +13,7 @@
 			<skill id="39193" level="1" /> <!-- Item Seal Scroll -->
 		</skills>
 	</item>
-	<item id="48401" name="Item Unseal Scroll" additionalName="15 min." type="EtcItem">
+	<item id="48401" name="道具封印解除卷軸" additionalName="15 min." type="EtcItem">
 		<!-- Use to unseal a sealed item. -->
 		<set name="icon" val="icon.scrl_item_unlock" />
 		<set name="material" val="PAPER" />
@@ -27,7 +27,7 @@
 			<skill id="39194" level="1" /> <!-- Scroll: Release Item Seal -->
 		</skills>
 	</item>
-	<item id="48402" name="Test_Count Items 1" type="EtcItem">
+	<item id="48402" name="Test_計數道具1" type="EtcItem">
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="immediate_effect" val="true" />
@@ -36,7 +36,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48403" name="Test_Count Items 2" type="EtcItem">
+	<item id="48403" name="Test_計數道具2" type="EtcItem">
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="immediate_effect" val="true" />
@@ -45,7 +45,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48404" name="Test_Count Items 3" type="EtcItem">
+	<item id="48404" name="Test_計數道具3" type="EtcItem">
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="immediate_effect" val="true" />
@@ -54,7 +54,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48405" name="Blackish Scarab" type="Weapon">
+	<item id="48405" name="醇紅聖甲蟲" type="Weapon">
 		<!-- Changes a shield's appearance to that of Blackish Scarab. -->
 		<set name="icon" val="icon.shapeshift_npc_shield19" />
 		<set name="default_action" val="EQUIP" />
@@ -71,7 +71,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="48406" name="Scarlet Scarab" type="Weapon">
+	<item id="48406" name="猩紅聖甲蟲" type="Weapon">
 		<!-- Changes a shield's appearance to that of Scarlet Scarab. -->
 		<set name="icon" val="icon.shapeshift_npc_shield20" />
 		<set name="default_action" val="EQUIP" />
@@ -88,7 +88,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="48407" name="Gold Scarab" type="Weapon">
+	<item id="48407" name="金聖甲蟲" type="Weapon">
 		<!-- Changes a shield's appearance to that of Gold Scarab. -->
 		<set name="icon" val="icon.shapeshift_npc_shield21" />
 		<set name="default_action" val="EQUIP" />
@@ -105,7 +105,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="48408" name="Blackish Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="48408" name="醇紅聖甲蟲加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes a shield's appearance to that of Blackish Scarab for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="Icon.shape_shifting_shield_i00" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -118,7 +118,7 @@
 			<skill id="39187" level="19" /> <!-- Appearance Stone: Blackish Scarab (30-day) -->
 		</skills>
 	</item>
-	<item id="48409" name="Scarlet Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="48409" name="猩紅聖甲蟲加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes a shield's appearance to that of Scarlet Scarab for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="Icon.shape_shifting_shield_i00" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -131,7 +131,7 @@
 			<skill id="39187" level="20" /> <!-- Appearance Stone: Scarlet Scarab (30-day) -->
 		</skills>
 	</item>
-	<item id="48410" name="Gold Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="48410" name="金聖甲蟲加工石" additionalName="30-day" type="EtcItem">
 		<!-- Changes a shield's appearance to that of Gold Scarab for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
 		<set name="icon" val="Icon.shape_shifting_shield_i00" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -144,7 +144,7 @@
 			<skill id="39187" level="21" /> <!-- Appearance Stone: Gold Scarab (30-day) -->
 		</skills>
 	</item>
-	<item id="48411" name="Item Unseal Scroll (15-min) Box" additionalName="15-min." type="EtcItem">
+	<item id="48411" name="道具封印解除卷軸(15分鐘)禮盒" additionalName="15-min." type="EtcItem">
 		<!-- Double-click to obtain 10 Scrolls: Release Item Seal (15-min.). -->
 		<set name="icon" val="BranchSys3.g_ev_invite_fantasy_box" />
 		<set name="default_action" val="PEEL" />
@@ -161,7 +161,7 @@
 			<item id="48401" min="10" max="10" chance="100" /> <!-- Scroll: Release Item Seal - 15-min. -->
 		</capsuled_items>
 	</item>
-	<item id="48412" name="Scroll of Escape: Aden" type="EtcItem">
+	<item id="48412" name="亞丁城鎮傳送卷軸" type="EtcItem">
 		<!-- Teleports to Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -181,7 +181,7 @@
 			<skill id="9993" level="2" /> <!-- Scroll of Escape: Aden -->
 		</skills>
 	</item>
-	<item id="48413" name="Scroll of Escape: Aden" type="EtcItem">
+	<item id="48413" name="亞丁城鎮傳送卷軸" type="EtcItem">
 		<!-- Teleports to Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -201,7 +201,7 @@
 			<skill id="9993" level="3" /> <!-- Scroll of Escape: Aden -->
 		</skills>
 	</item>
-	<item id="48414" name="GM Lassana's Present Box" additionalName="30-day" type="EtcItem">
+	<item id="48414" name="GM拉沙納禮盒" additionalName="30-day" type="EtcItem">
 		<!-- Prepared with care by GM Lassana. Double-click to obtain various supplies. If you are in luck, you may get a very good item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -215,7 +215,7 @@
 			<skill id="39190" level="1" /> <!-- GM Lassana's Present Box -->
 		</skills>
 	</item>
-	<item id="48415" name="Clan Hall Belt Lv. 1" type="Armor">
+	<item id="48415" name="根據地腰帶階段1" type="Armor">
 		<!-- A belt imbued with concentrated energies of Nurka, Gustav and Lidia. Max HP/ MP/ CP +500, damage +6%, received damage -6%, weight limit +12,800, inventory slots +18. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -232,7 +232,7 @@
 			<skill id="39189" level="1" /> <!-- Clan Hall Belt Lv. 1 -->
 		</skills>
 	</item>
-	<item id="48416" name="Clan Hall Belt Lv. 2" type="Armor">
+	<item id="48416" name="根據地腰帶階段2" type="Armor">
 		<!-- A belt imbued with concentrated energies of Nurka, Gustav and Lidia. Max HP/ MP/ CP +500, damage +7%, received damage -7%, weight limit +12,800, inventory slots +18, Attribute Resistance +10. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -249,7 +249,7 @@
 			<skill id="39189" level="2" /> <!-- Clan Hall Belt Lv. 2 -->
 		</skills>
 	</item>
-	<item id="48417" name="Ruler's Authority - Genesis" additionalName="Lv. 2" type="Armor">
+	<item id="48417" name="支配者權能-創世紀" additionalName="Lv. 2" type="Armor">
 		<!-- The energy of the sun, the moon, stars, light and darkness. When equipped, Max HP/ MP/ CP +1000, weight limit +25,600, damage +10%, received damage -10%, Damage Reflection Resistance +10%, Fixed Damage Resistance +10%, inventory slots +36, Attribute Resistance +20. -->
 		<set name="icon" val="icon.grankain_powerbelt2" />
 		<set name="armor_type" val="LIGHT" />
@@ -274,33 +274,33 @@
 			<skill id="15145" level="2" /> <!-- Ruler's Authority - Genesis -->
 		</skills>
 	</item>
-	<item id="48418" name="Authority Ornament" type="EtcItem">
+	<item id="48418" name="權能裝飾" type="EtcItem">
 		<!-- Take it to Ilia in Aden to enhance your Ruler's Authority. -->
 		<set name="icon" val="icon.grankain_powerbelt_deco" />
 		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48419" name="Clan Hall Belt Ornament" type="EtcItem">
+	<item id="48419" name="根據地腰帶裝飾" type="EtcItem">
 		<!-- A material for crafting Clan Hall Belt. Take it to Ilia in Aden. -->
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48420" name="Belt Crafting Scroll" type="EtcItem">
+	<item id="48420" name="腰帶製作書" type="EtcItem">
 		<!-- Take it to Ilia in Aden to craft Clan Hall Belt. -->
 		<set name="icon" val="icon.event_energy_enchant_scroll_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="50000000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48421" name="Belt Disassembly Scroll" type="EtcItem">
+	<item id="48421" name="腰帶分解書" type="EtcItem">
 		<!-- Required for disassembling Nurka/ Gustav/ Lidia's Belt. Take it to Ilia in Aden to disassemble a belt. There is also a small chance to obtain Authority Ornament required for upgrading Ruler's Authority. -->
 		<set name="icon" val="icon.combatagit_belt_disassemble" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="10000000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48422" name="Talisman of Wind Pack" type="EtcItem">
+	<item id="48422" name="風之護身符禮盒" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Wind (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_stackable" val="true" />
@@ -313,7 +313,7 @@
 			<skill id="39191" level="1" /> <!-- Talisman of Wind Pack -->
 		</skills>
 	</item>
-	<item id="48423" name="Talisman of Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
+	<item id="48423" name="風之護身符禮盒" additionalName="P. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Wind - P. Skill Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
@@ -326,7 +326,7 @@
 			<item id="48427" min="1" max="1" chance="100" /> <!-- Talisman of Wind - P. Skill Critical Damage - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48424" name="Talisman of Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
+	<item id="48424" name="風之護身符禮盒" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: M. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
@@ -339,7 +339,7 @@
 			<item id="48428" min="1" max="1" chance="100" /> <!-- Talisman of Wind - M. Skill Critical Damage - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48425" name="Talisman of Wind Pack" additionalName="Defense" type="EtcItem">
+	<item id="48425" name="風之護身符禮盒" additionalName="Defense" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Wind - Defense (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
@@ -352,7 +352,7 @@
 			<item id="48429" min="1" max="1" chance="100" /> <!-- Talisman of Wind - Defense - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48426" name="Talisman of Wind Pack" additionalName="Debuff Defense" type="EtcItem">
+	<item id="48426" name="風之護身符禮盒" additionalName="Debuff Defense" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Wind - Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
@@ -365,7 +365,7 @@
 			<item id="48430" min="1" max="1" chance="100" /> <!-- Talisman of Wind - Debuff Resistance - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48427" name="Talisman of Wind - P. Skill Critical Damage" additionalName="30-day" type="Armor">
+	<item id="48427" name="風之護身符-物理技能致命攻擊傷害" additionalName="30-day" type="Armor">
 		<!-- P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -381,7 +381,7 @@
 			<skill id="17973" level="1" /> <!-- Talisman of Wind - P. Skill Critical Damage -->
 		</skills>
 	</item>
-	<item id="48428" name="Talisman- Wind: M. Critical Damage" additionalName="30-day" type="Armor">
+	<item id="48428" name="風之護身符-魔法技能致命攻擊傷害" additionalName="30-day" type="Armor">
 		<!-- M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -397,7 +397,7 @@
 			<skill id="17974" level="1" /> <!-- Talisman of Wind - M. Skill Critical Damage -->
 		</skills>
 	</item>
-	<item id="48429" name="Talisman of Wind - Defense" additionalName="30-day" type="Armor">
+	<item id="48429" name="風之護身符-防禦" additionalName="30-day" type="Armor">
 		<!-- When used, for 15 sec., greatly increases P./ M. Def. Cooldown: 20 min. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -413,7 +413,7 @@
 			<skill id="17975" level="1" /> <!-- Talisman of Wind - Defense -->
 		</skills>
 	</item>
-	<item id="48430" name="Talisman of Wind - Debuff Resistance" additionalName="30-day" type="Armor">
+	<item id="48430" name="風之護身符-詛咒魔法防禦" additionalName="30-day" type="Armor">
 		<!-- When used, for 15 sec., increases Debuff Resistance. Cooldown: 20 min. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -429,7 +429,7 @@
 			<skill id="17976" level="1" /> <!-- Talisman of Wind - Debuff Resistance -->
 		</skills>
 	</item>
-	<item id="48431" name="PA Talisman - STR/P. Atk." additionalName="4-hour" type="Armor">
+	<item id="48431" name="活動專用護身符-STR/物理攻擊力" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, STR +5, P. Atk. +450. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -445,7 +445,7 @@
 			<skill id="18380" level="2" /> <!-- PA Talisman - STR -->
 		</skills>
 	</item>
-	<item id="48432" name="PA Talisman - INT/ M. Atk" additionalName="4-hour" type="Armor">
+	<item id="48432" name="活動專用護身符-INT/魔法攻擊力" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, INT +5, M. Atk. +260. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -461,7 +461,7 @@
 			<skill id="18381" level="2" /> <!-- PA Talisman - INT -->
 		</skills>
 	</item>
-	<item id="48433" name="PA Talisman - DEX/ Atk. Spd." additionalName="4-hour" type="Armor">
+	<item id="48433" name="活動專用護身符-DEX/攻擊速度" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, DEX +5, Atk. Spd. +25. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -477,7 +477,7 @@
 			<skill id="18382" level="2" /> <!-- PA Talisman - DEX -->
 		</skills>
 	</item>
-	<item id="48434" name="PA Talisman - WIT/ Casting Spd." additionalName="4-hour" type="Armor">
+	<item id="48434" name="活動專用護身符-WIT/魔法速度" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, WIT +5, Casting Spd. +25. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -493,7 +493,7 @@
 			<skill id="18383" level="2" /> <!-- PA Talisman - WIT -->
 		</skills>
 	</item>
-	<item id="48435" name="PA Talisman - CON/ HP" additionalName="4-hour" type="Armor">
+	<item id="48435" name="活動專用護身符-CON/HP" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, CON +5, Max HP +500. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -509,7 +509,7 @@
 			<skill id="18384" level="2" /> <!-- PA Talisman - CON -->
 		</skills>
 	</item>
-	<item id="48436" name="PA Talisman - MEN/ MP" additionalName="4-hour" type="Armor">
+	<item id="48436" name="活動專用護身符-MEN/MP" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, MEN +5, Max MP +250. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -525,7 +525,7 @@
 			<skill id="18385" level="2" /> <!-- PA Talisman - MEN -->
 		</skills>
 	</item>
-	<item id="48437" name="PA Talisman - Attribute Attack" additionalName="4-hour" type="Armor">
+	<item id="48437" name="活動專用護身符-攻擊速度增加" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, Attribute Attack +50. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -541,7 +541,7 @@
 			<skill id="18386" level="1" /> <!-- PA Talisman - Attribute Attack -->
 		</skills>
 	</item>
-	<item id="48438" name="PA Talisman - Attribute Resistance" additionalName="4-hour" type="Armor">
+	<item id="48438" name="活動專用護身符-屬性防禦增加" additionalName="4-hour" type="Armor">
 		<!-- When the talisman is equipped, Attribute Resistance +50. Effects of two identical talismans do not stack. The effect does not stack with a similar Miraculous Talisman. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -557,7 +557,7 @@
 			<skill id="18650" level="1" /> <!-- PA Talisman - Attribute Resistance -->
 		</skills>
 	</item>
-	<item id="48439" name="Fortress Talisman - Vitality" additionalName="15-day" type="Armor">
+	<item id="48439" name="要塞護身符-活力" additionalName="15-day" type="Armor">
 		<!-- Vitality bonus +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -574,7 +574,7 @@
 			<skill id="35167" level="1" /> <!-- Fortress Talisman - Vitality -->
 		</skills>
 	</item>
-	<item id="48440" name="Fortress Talisman - P. Skill Power" additionalName="15-day" type="Armor">
+	<item id="48440" name="要塞護身符-物理技能威力" additionalName="15-day" type="Armor">
 		<!-- P. Skill Power +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -591,7 +591,7 @@
 			<skill id="35168" level="1" /> <!-- Fortress Talisman - P. Skill Power -->
 		</skills>
 	</item>
-	<item id="48441" name="Fortress Talisman - M. Skill Power" additionalName="15-day" type="Armor">
+	<item id="48441" name="要塞護身符-魔法技能威力" additionalName="15-day" type="Armor">
 		<!-- M. Skill Power +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -608,7 +608,7 @@
 			<skill id="35169" level="1" /> <!-- Fortress Talisman - M. Skill Power -->
 		</skills>
 	</item>
-	<item id="48442" name="Fortress Talisman - P. Atk." additionalName="15-day" type="Armor">
+	<item id="48442" name="要塞護身符-物理攻擊力" additionalName="15-day" type="Armor">
 		<!-- P. Atk. +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -624,7 +624,7 @@
 			<skill id="35170" level="1" /> <!-- Fortress Talisman - P. Atk. -->
 		</skills>
 	</item>
-	<item id="48443" name="Fortress Talisman - M. Atk." additionalName="15-day" type="Armor">
+	<item id="48443" name="要塞護身符-魔法攻擊力" additionalName="15-day" type="Armor">
 		<!-- M. Atk. +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -641,7 +641,7 @@
 			<skill id="35171" level="1" /> <!-- Fortress Talisman - M. Atk. -->
 		</skills>
 	</item>
-	<item id="48444" name="Fortress Talisman - P. Def." additionalName="15-day" type="Armor">
+	<item id="48444" name="要塞護身符-物理防禦力" additionalName="15-day" type="Armor">
 		<!-- P. Def. +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -658,7 +658,7 @@
 			<skill id="35172" level="1" /> <!-- Fortress Talisman - P. Def. -->
 		</skills>
 	</item>
-	<item id="48445" name="Fortress Talisman - M. Def." additionalName="15-day" type="Armor">
+	<item id="48445" name="要塞護身符-魔法防禦力" additionalName="15-day" type="Armor">
 		<!-- M. Def. +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -675,7 +675,7 @@
 			<skill id="35173" level="1" /> <!-- Fortress Talisman - M. Def. -->
 		</skills>
 	</item>
-	<item id="48446" name="Fortress Talisman - Atk. Spd." additionalName="15-day" type="Armor">
+	<item id="48446" name="要塞護身符-攻擊速度" additionalName="15-day" type="Armor">
 		<!-- Atk. Spd. +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -692,7 +692,7 @@
 			<skill id="35174" level="1" /> <!-- Fortress Talisman - Atk. Spd. -->
 		</skills>
 	</item>
-	<item id="48447" name="Fortress Talisman - Casting Spd." additionalName="15-day" type="Armor">
+	<item id="48447" name="要塞護身符-施法速度" additionalName="15-day" type="Armor">
 		<!-- Casting Spd. +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -709,7 +709,7 @@
 			<skill id="35175" level="1" /> <!-- Fortress Talisman - Casting Spd. -->
 		</skills>
 	</item>
-	<item id="48448" name="Fortress Talisman - P. Accuracy" additionalName="15-day" type="Armor">
+	<item id="48448" name="要塞護身符-物理命中" additionalName="15-day" type="Armor">
 		<!-- P. Accuracy +16. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -726,7 +726,7 @@
 			<skill id="35176" level="1" /> <!-- Fortress Talisman - P. Accuracy -->
 		</skills>
 	</item>
-	<item id="48449" name="Fortress Talisman - M. Accuracy" additionalName="15-day" type="Armor">
+	<item id="48449" name="要塞 護身符 - 魔法命中" additionalName="15-day" type="Armor">
 		<!-- M. Accuracy +16. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -743,7 +743,7 @@
 			<skill id="35177" level="1" /> <!-- Fortress Talisman - M. Accuracy -->
 		</skills>
 	</item>
-	<item id="48450" name="Fortress Talisman - Shield Defense" additionalName="15-day" type="Armor">
+	<item id="48450" name="要塞護身符-盾牌防禦力" additionalName="15-day" type="Armor">
 		<!-- Shield Defense +50%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 			<skill id="35178" level="1" /> <!-- Fortress Talisman - Shield Defense -->
 		</skills>
 	</item>
-	<item id="48451" name="Fortress Talisman - Max HP" additionalName="15-day" type="Armor">
+	<item id="48451" name="要塞護身符-HP最大值" additionalName="15-day" type="Armor">
 		<!-- Max HP +10% -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -777,7 +777,7 @@
 			<skill id="35179" level="1" /> <!-- Fortress Talisman - Max HP -->
 		</skills>
 	</item>
-	<item id="48452" name="Fortress Talisman - Max MP" additionalName="15-day" type="Armor">
+	<item id="48452" name="要塞護身符-MP最大值" additionalName="15-day" type="Armor">
 		<!-- Max MP +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -795,7 +795,7 @@
 			<skill id="35180" level="1" /> <!-- Fortress Talisman - Max MP -->
 		</skills>
 	</item>
-	<item id="48453" name="Fortress Talisman - Speed" additionalName="15-day" type="Armor">
+	<item id="48453" name="要塞護身符-移動速度" additionalName="15-day" type="Armor">
 		<!-- Speed +15. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -813,7 +813,7 @@
 			<skill id="35181" level="1" /> <!-- Fortress Talisman - Speed -->
 		</skills>
 	</item>
-	<item id="48454" name="Fortress Talisman Box" type="EtcItem">
+	<item id="48454" name="要塞護身符禮盒" type="EtcItem">
 		<!-- Double-click to obtain one of Fortress Talismans (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -826,7 +826,7 @@
 			<skill id="39192" level="1" /> <!-- Fortress Talisman Pack -->
 		</skills>
 	</item>
-	<item id="48455" name="Fortress Talisman- Vitality Box" type="EtcItem">
+	<item id="48455" name="要塞護身符-活力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - Vitality (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -839,7 +839,7 @@
 			<item id="48439" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Vitality - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48456" name="Fortress Talisman - P. Skill Power Pack" type="EtcItem">
+	<item id="48456" name="要塞護身符-物理技能威力禮盒" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman- P. Skill Power (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -852,7 +852,7 @@
 			<item id="48440" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Skill Power - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48457" name="Fortress Talisman - M. Skill Power Pack" type="EtcItem">
+	<item id="48457" name="要塞護身符-魔法技能威力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - M. Skill Power (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -865,7 +865,7 @@
 			<item id="48441" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Skill Power - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48458" name="Fortress Talisman - P. Atk. Pack" type="EtcItem">
+	<item id="48458" name="要塞護身符-物理攻擊力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - P. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -878,7 +878,7 @@
 			<item id="48442" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Atk. - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48459" name="Fortress Talisman - M. Atk. Pack" type="EtcItem">
+	<item id="48459" name="要塞護身符-魔法攻擊力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - M. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -891,7 +891,7 @@
 			<item id="48443" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Atk. - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48460" name="Fortress Talisman - P. Def. Pack" type="EtcItem">
+	<item id="48460" name="要塞護身符-物理防禦力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - P. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -904,7 +904,7 @@
 			<item id="48444" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Def. - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48461" name="Fortress Talisman - M. Def. Pack" type="EtcItem">
+	<item id="48461" name="要塞護身符-魔法防禦力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - M. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -917,7 +917,7 @@
 			<item id="48445" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Def. - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48462" name="Fortress Talisman - Atk. Spd. Pack" type="EtcItem">
+	<item id="48462" name="要塞護身符-攻擊速度禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - Atk. Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -930,7 +930,7 @@
 			<item id="48446" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Atk. Spd. - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48463" name="Fortress Talisman - Casting Spd. Pack" type="EtcItem">
+	<item id="48463" name="要塞護身符-施法速度禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - Casting Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -943,7 +943,7 @@
 			<item id="48447" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Casting Spd. - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48464" name="Fortress Talisman - P. Accuracy Pack" type="EtcItem">
+	<item id="48464" name="要塞護身符-物理命中禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - P. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -956,7 +956,7 @@
 			<item id="48448" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Accuracy - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48465" name="Fortress Talisman - M. Accuracy Pack" type="EtcItem">
+	<item id="48465" name="要塞護身符-魔法命中禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - M. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -969,7 +969,7 @@
 			<item id="48449" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Accuracy - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48466" name="Fortress Talisman - Shield Defense Pack" type="EtcItem">
+	<item id="48466" name="要塞護身符-盾牌防禦力禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - Shield Defense (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -982,7 +982,7 @@
 			<item id="48450" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Shield Defense - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48467" name="Fortress Talisman - Max HP Pack" type="EtcItem">
+	<item id="48467" name="要塞護身符-HP最大值禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - Max HP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -995,7 +995,7 @@
 			<item id="48451" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Max HP - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48468" name="Fortress Talisman - Max MP Pack" type="EtcItem">
+	<item id="48468" name="要塞護身符-MP最大值禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - Max MP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -1008,7 +1008,7 @@
 			<item id="48452" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Max MP - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48469" name="Fortress Talisman - Speed Pack" type="EtcItem">
+	<item id="48469" name="要塞護身符-移動速度禮盒" type="EtcItem">
 		<!-- Double-click to obtain Fortress Talisman - Speed (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
@@ -1021,7 +1021,7 @@
 			<item id="48453" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Speed - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="48470" name="Adventure Guild Supply Box" type="EtcItem">
+	<item id="48470" name="冒險家公會補給箱" type="EtcItem">
 		<!-- Given by Herphah for completing the Adventurers' Guild's mission. Double-click to obtain what is inside. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1038,7 +1038,7 @@
 			<item id="39634" min="1" max="1" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="48471" name="Adventure Guild Supply Box" type="EtcItem">
+	<item id="48471" name="冒險家公會補給箱" type="EtcItem">
 		<!-- Given by Herphah for completing the Adventurers' Guild's mission. Double-click to obtain what is inside. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1055,14 +1055,14 @@
 			<item id="39634" min="1" max="1" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="48472" name="Einhasad's Golden Coin" type="EtcItem">
+	<item id="48472" name="殷海薩金幣" type="EtcItem">
 		<!-- A mysterious coin filled with Einhasad's light. -->
 		<set name="icon" val="icon.bm_einhasad_coin" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48473" name="Night Goblin's Coin (500) Box" additionalName="Event" type="EtcItem">
+	<item id="48473" name="夜貓子幣500個箱子" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 500 Night Goblin's Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
@@ -1077,7 +1077,7 @@
 			<item id="48472" min="500" max="500" chance="100" /> <!-- Einhasad's Golden Coin -->
 		</capsuled_items>
 	</item>
-	<item id="48474" name="Night Goblin's Coin (800) Box" additionalName="Event" type="EtcItem">
+	<item id="48474" name="夜貓子幣800個箱子" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 800 Night Goblin's Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i09" />
 		<set name="default_action" val="PEEL" />
@@ -1092,7 +1092,7 @@
 			<item id="48472" min="800" max="800" chance="100" /> <!-- Einhasad's Golden Coin -->
 		</capsuled_items>
 	</item>
-	<item id="48475" name="Night Goblin's Coin (2000) Box" additionalName="Event" type="EtcItem">
+	<item id="48475" name="夜貓子幣2000個箱子" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 2000 Night Goblin's Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
@@ -1107,7 +1107,7 @@
 			<item id="48472" min="2000" max="2000" chance="100" /> <!-- Einhasad's Golden Coin -->
 		</capsuled_items>
 	</item>
-	<item id="48476" name="Dark/ Bloody Weapon Enhancement Stone Pack" type="EtcItem">
+	<item id="48476" name="黑暗/血腥武器強化石禮盒" type="EtcItem">
 		<!-- Double-click to obtain Dark/ Bloody Weapon Upgrade Stone. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1121,7 +1121,7 @@
 			<skill id="39195" level="1" /> <!-- Dark/ Bloody Helios Enhancement Stone Box -->
 		</skills>
 	</item>
-	<item id="48477" name="Balthus Knight Cube" type="EtcItem">
+	<item id="48477" name="班卓斯騎士團晶體" type="EtcItem">
 		<!-- Special cube issued by the Balthus Knights to new or returning players. Use to obtain the Knights' Basic Supplies. Can obtain special items at the 5th, 10th, 15th, and 25th uses. Can obtain a Challenger's Weapon Exchange Ticket at the 20th use, and a Challenger's Weapon Enhancement Ticket at the 30th use. -->
 		<set name="icon" val="icon.bm_balthus_cube" />
 		<set name="immediate_effect" val="true" />
@@ -1130,7 +1130,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48478" name="Knights' Basic Supplies" additionalName="Event" type="EtcItem">
+	<item id="48478" name="騎士團基本補給品" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Beora's Ancient Energy (1 pc.) and PA Points Coupon (720 Points). Also, there is a chance to obtain one of the following items: PA - Enhanced Rosy Seduction, Freya's Art of Seduction, Freya's Art of Seduction - Barrier, Freya's Art of Seduction - XP. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1151,7 +1151,7 @@
 			<item id="82305" min="1" max="1" chance="100" /> <!-- Beora's Ancient Energy -->
 		</capsuled_items>
 	</item>
-	<item id="48479" name="Knights' Enchant Scroll Supply Items" additionalName="Event" type="EtcItem">
+	<item id="48479" name="騎士團強化卷軸補給品" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Enchant R-grade Weapon and Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
@@ -1167,7 +1167,7 @@
 			<item id="17527" min="1" max="1" chance="100" /> <!-- Scroll: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
-	<item id="48480" name="Package: +8 Shiny Elemental Shirt" type="EtcItem">
+	<item id="48480" name="+8閃亮的殷海薩襯衫組" type="EtcItem">
 		<!-- Double-click to obtain +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.ainhasard_shirt_box_1" />
 		<set name="default_action" val="CAPSULE" />
@@ -1183,7 +1183,7 @@
 			<skill id="39197" level="1" /> <!-- Package: +8 Shiny Elemental Shirt -->
 		</skills>
 	</item>
-	<item id="48481" name="Package: +8 Physical Reflect Shirt" type="EtcItem">
+	<item id="48481" name="+8反擊襯衫組" type="EtcItem">
 		<!-- Double-click to obtain +8 Physical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_attack_shirt_box_2" />
 		<set name="default_action" val="CAPSULE" />
@@ -1199,7 +1199,7 @@
 			<skill id="39198" level="1" /> <!-- Package: +8 Physical Reflect Shirt -->
 		</skills>
 	</item>
-	<item id="48482" name="Package: +8 Magical Reflect Shirt" type="EtcItem">
+	<item id="48482" name="+8反魔襯衫組" type="EtcItem">
 		<!-- Double-click to obtain +8 Magical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
 		<set name="default_action" val="CAPSULE" />
@@ -1215,7 +1215,7 @@
 			<skill id="39199" level="1" /> <!-- Package: +8 Magical Reflect Shirt -->
 		</skills>
 	</item>
-	<item id="48483" name="PA +7 Shiny Elemental Shirt" additionalName="2-hour" type="Armor">
+	<item id="48483" name="活動專用+7閃亮的殷海薩襯衫" additionalName="2-hour" type="Armor">
 		<!-- For PA. A shining magic shirt imbued with Einhasad's energy. <Item skills>. M. Def. +14. Speed +7. Max HP +536, Max MP +536, Skill MP Consumption -3%, Damage Reflection Resistance +5, Water/ Fire/ Wind/ Earth/ Holy/ Dark Resistance +24, STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. <Active skills>. Einhasad's Wrath/ Einhasad's Shelter. Cannot be enchanted. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1236,7 +1236,7 @@
 			<skill id="13562" level="7" /> <!-- Shiny Elemental Shirt: Enchant Effect -->
 		</skills>
 	</item>
-	<item id="48484" name="+7 Physical Reflect Shirt - PA" additionalName="2-hour" type="Armor">
+	<item id="48484" name="活動專用+7反擊襯衫組" additionalName="2-hour" type="Armor">
 		<!-- For PA. A special magic shirt that increases P. Def. <Item skills>. M. Def. +15. Speed +7. Max HP +536, Max MP +536, Water/ Fire/ Wind/ Earth/ Holy/ Dark Resistance +24, STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +8%, received Critical Damage from basic attacks -12%. With a 7% chance, reflects physical debuffs. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_attack_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1256,7 +1256,7 @@
 			<skill id="18444" level="3" /> <!-- Physical Reflect Shirt: Unique Enchant Effect -->
 		</skills>
 	</item>
-	<item id="48485" name="+7 Magical Reflect Shirt - PA" additionalName="2-hour" type="Armor">
+	<item id="48485" name="活動專用+7反魔襯衫組" additionalName="2-hour" type="Armor">
 		<!-- For PA. A special magic shirt that increases M. Def. <Item skills>. M. Def. +15. Speed +7. Max HP +536, Max MP +536, Water/ Fire/ Wind/ Earth/ Holy/ Dark Resistance +24, STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, received M. Skill Critical Damage -12%. With a 7% chance, reflects magic debuffs. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1276,7 +1276,7 @@
 			<skill id="18445" level="3" /> <!-- Magical Reflect Shirt: Unique Enchant Effect -->
 		</skills>
 	</item>
-	<item id="48486" name="Sayha Talisman Lv. 6" additionalName="Event" type="Armor">
+	<item id="48486" name="沙哈護身符階段6" additionalName="Event" type="Armor">
 		<!-- When equipped, grants Sayha's powers: P. Def. +1126, M. Def. +736, acquired XP/ SP +10%. If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, Skill Power +3%, skill cooldown -3%. Active skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Effects of two identical talismans do not stack -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1294,7 +1294,7 @@
 			<skill id="27787" level="6" /> <!-- Sayha's Talisman -->
 		</skills>
 	</item>
-	<item id="48487" name="Merlot's Promise" type="EtcItem">
+	<item id="48487" name="梅勒洛的約定" type="EtcItem">
 		<!-- A certificate stating Merlot's promise to help you during crisis. Take it to Merlot before facing a great challenge. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="material" val="PAPER" />
@@ -1305,7 +1305,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48488" name="Merlot's Special Order" type="EtcItem">
+	<item id="48488" name="梅勒洛特別指令書" type="EtcItem">
 		<!-- Merlot's special order that radiates the aura of Honor Force. Take it to Merlot in the Hunters Village. -->
 		<set name="icon" val="icon.fairy_encounter_letter" />
 		<set name="material" val="PAPER" />
@@ -1316,7 +1316,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48489" name="Herphah's Teleport Scroll" type="EtcItem">
+	<item id="48489" name="海勒芙雅移動卷軸" type="EtcItem">
 		<!-- Teleports to Herphah in Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1331,7 +1331,7 @@
 			<skill id="35100" level="2" /> <!-- Herphah's Teleport Scroll -->
 		</skills>
 	</item>
-	<item id="48490" name="Merlot's Gift" type="EtcItem">
+	<item id="48490" name="梅勒洛的禮物" type="EtcItem">
 		<!-- Merlot's gift that can be used for as long as it is imbued with power. Recovers 2 of the 4 Vitality bars. Can only be used 5 times a week. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1346,7 +1346,7 @@
 			<skill id="39200" level="1" /> <!-- Merlot's Gift -->
 		</skills>
 	</item>
-	<item id="48491" name="Dragon Skin Shirt" type="Armor">
+	<item id="48491" name="龍襯衫" type="Armor">
 		<!-- Dragon Skin Shirt. <Enchanting>. Use Blessed Scroll: Enchant Dragon Shirt. <Upgrade>. Take the shirt enchanted to +5 and Crystal of Dawn to the Head Blacksmith in any town to get Dragon Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 			<skill id="35182" level="1" /> <!-- Dragon Skin Shirt -->
 		</skills>
 	</item>
-	<item id="48492" name="Dragon Leather Shirt" type="Armor">
+	<item id="48492" name="龍皮襯衫" type="Armor">
 		<!-- Dragon Leather Shirt. <Enchanting>. Use Blessed Scroll: Enchant Dragon Shirt. <Upgrade>. Take the shirt enchanted to +5 and Crystal of Dawn to the Head Blacksmith in any town to get Dragon Rind Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1400,7 +1400,7 @@
 			<skill id="35183" level="1" /> <!-- Dragon Leather Shirt -->
 		</skills>
 	</item>
-	<item id="48493" name="Dragon Rind Leather Shirt" type="Armor">
+	<item id="48493" name="龍紋皮襯衫" type="Armor">
 		<!-- <Enchanting>. Use Blessed Scroll: Enchant Dragon Leather Shirt. Can be augmented. <Upgrade>. Take the shirt enchanted to +10 and Crystal of Dawn to the Head Blacksmith in any town to get Silvery Shirt. -->
 		<set name="icon" val="icon.bm_dragon_rind_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1427,7 +1427,7 @@
 			<skill id="35184" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rind Leather Shirt -->
 		</skills>
 	</item>
-	<item id="48494" name="Mysterious Dragon Slayer" type="Weapon">
+	<item id="48494" name="神秘的斬龍刀" type="Weapon">
 		<!-- Imbued with power of ancient dragons. Enchant it to a high value and take it to Luna to get a special reward. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="default_action" val="EQUIP" />
@@ -1449,7 +1449,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="48495" name="Noble Leather Upgrade Stone" type="EtcItem">
+	<item id="48495" name="高貴皮革升級石" type="EtcItem">
 		<!-- This item can no longer be used. Talk to the Game Assistant in any town to exchange it for Crystals of Dawn. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_1" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1457,7 +1457,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48496" name="Radiant Rind Upgrade Stone" type="EtcItem">
+	<item id="48496" name="繽紛紋路升級石" type="EtcItem">
 		<!-- This item can no longer be used. Talk to the Game Assistant in any town to exchange it for Crystals of Dawn. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_2" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1465,7 +1465,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48497" name="Glowing Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
+	<item id="48497" name="閃耀的龍之屬性水" additionalName="EXP" type="EtcItem">
 		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1483,7 +1483,7 @@
 			<skill id="39205" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
 		</skills>
 	</item>
-	<item id="48498" name="Blessed Scroll: Enchant Dragon Shirt" type="EtcItem">
+	<item id="48498" name="祝福的龍襯衫強化卷軸" type="EtcItem">
 		<!-- A scroll for enchanting Dragon Skin Shirt/ Dragon Leather Shirt/ Dragon Rind Leather Shirt. In case of failure, the shirt's enchant value is reset, but its type will not be changed. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1498,7 +1498,7 @@
 			<skill id="39203" level="1" /> <!-- Blessed Scroll: Enchant Dragon Leather Shirt -->
 		</skills>
 	</item>
-	<item id="48499" name="Dragon's Relic" type="EtcItem">
+	<item id="48499" name="龍之遺物" type="EtcItem">
 		<!-- Double-click to obtain 2 Dragon's Attribute Potions (XP). There is a certain chance to obtain Dragon's Relic Pack or Shining Dragon's Relic Pack. Scroll: Enchant Miraculous Weapon will be deleted after the event. -->
 		<set name="icon" val="icon.bm_dragon_present_poket" />
 		<set name="default_action" val="SKILL_REDUCE" />
