@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="100" toLevel="15" name="Stun Attack">
+	<skill id="100" toLevel="15" name="昏迷之擊">
 		<!-- Level 1: Attacks the enemy with 36 power stunning them for 9 sec. Requires a blunt weapon. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks the enemy with 39 power stunning them for 9 sec. Requires a blunt weapon. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks the enemy with 42 power stunning them for 9 sec. Requires a blunt weapon. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -120,7 +120,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="101" toLevel="40" name="Stun Shot">
+	<skill id="101" toLevel="40" name="衝擊箭">
 		<!-- Level 1: Fires arrows with 344 power stunning the enemy for 9 sec. Requires a bow. Cancels the enemy's target. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Fires arrows with 367 power stunning the enemy for 9 sec. Requires a bow. Cancels the enemy's target. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Fires arrows with 391 power stunning the enemy for 9 sec. Requires a bow. Cancels the enemy's target. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -397,7 +397,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="102" toLevel="16" name="Entangle">
+	<skill id="102" toLevel="16" name="纏繞之足">
 		<!-- Level 1: For 1 min., the enemy's Speed -20%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: For 1 min., the enemy's Speed -30%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: For 1 min., the enemy's Speed -30%. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -544,7 +544,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="103" toLevel="4" name="Corpse Plague">
+	<skill id="103" toLevel="4" name="屍疫">
 		<!-- Level 1: Causes a toxic cloud to pour out from a corpse. Poisons nearby enemies for 30 sec. making them lose 41 HP per sec. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Causes a toxic cloud to pour out from a corpse. Poisons nearby enemies for 30 sec. making them lose 50 HP per sec. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Causes a toxic cloud to pour out from a corpse. Poisons nearby enemies for 30 sec. making them lose 58 HP per sec. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
@@ -617,7 +617,7 @@
 			<effect name="ConsumeBody" />
 		</effects>
 	</skill>
-	<skill id="104" toLevel="1" name="Detect Plant Weakness">
+	<skill id="104" toLevel="1" name="植物剋星">
 		<!-- For 10 min., damage to plants +5%. -->
 		<icon>icon.skill0104</icon>
 		<operateType>A2</operateType>
@@ -639,7 +639,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="105" toLevel="24" name="Freezing Strike">
+	<skill id="105" toLevel="24" name="冰凍之擊">
 		<!-- Level 1: Freezes the enemy. For 1 min., the target's Speed -20%. Power 26. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Freezes the enemy. For 1 min., the target's Speed -20%. Power 28. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Freezes the enemy. For 1 min., the target's Speed -20%. Power 30. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -822,7 +822,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="106" toLevel="14" name="Veil">
+	<skill id="106" toLevel="14" name="視覺遮蔽">
 		<!-- Blurs the enemy's vision preventing them from targeting you for 2 min. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0106</icon>
 		<operateType>A2</operateType>
@@ -876,7 +876,7 @@
 			<effect name="Passive" />
 		</effects>
 	</skill>
-	<skill id="107" toLevel="9" name="Holy Aura">
+	<skill id="107" toLevel="9" name="神聖靈氣">
 		<!-- Immobilizes undead monsters for 10 sec. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0107</icon>
 		<operateType>A2</operateType>
@@ -937,7 +937,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
+	<skill id="109" toLevel="1" name="食人魔圖騰靈">
 		<!-- Summons an ogre's spirit. For 5 min., P. Atk. and P./ M. Def. +30%, Critical Damage for basic attacks +10%. Requires a fist weapon. -->
 		<icon>icon.skill0109</icon>
 		<operateType>A2</operateType>
@@ -985,7 +985,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="110" toLevel="2" name="Ultimate Defense">
+	<skill id="110" toLevel="2" name="極限防禦">
 		<!-- Level 1: For 30 sec., P. Def. +1800, M. Def. +1620, Buff Cancel Resistance +80%. Impossible to move while the skill is active. -->
 		<!-- Level 2: For 30 sec., P. Def. +3600, M. Def. +3240, Buff Cancel Resistance +80%. Impossible to move while the skill is active. -->
 		<icon>icon.skill0110</icon>
@@ -1037,7 +1037,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="111" toLevel="2" name="Ultimate Evasion">
+	<skill id="111" toLevel="2" name="極限迴避">
 		<!-- Level 1: For 30 sec., Evasion +20, P. Skill Evasion +25%, Buff Cancel Resistance +80. -->
 		<!-- Level 2: For 30 sec., Evasion +25, P. Skill Evasion +40%, Buff Cancel Resistance +80. -->
 		<icon>icon.skill0111</icon>
@@ -1087,7 +1087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="112" toLevel="4" name="Deflect Arrow">
+	<skill id="112" toLevel="4" name="禦箭術">
 		<!-- Level 1: For 20 min., Bow Resistance +16%, Crossbow Resistance +8%. -->
 		<!-- Level 2: For 20 min., Bow Resistance +24%, Crossbow Resistance +12%. -->
 		<!-- Level 3: For 20 min., Bow Resistance +32%, Crossbow Resistance +16%. -->
@@ -1149,7 +1149,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="113" toLevel="2" name="Long Shot">
+	<skill id="113" toLevel="2" name="遠箭術">
 		<!-- Level 1: Bow's range +200. -->
 		<!-- Level 2: Bow's range +400. -->
 		<icon>icon.skill0113</icon>
@@ -1172,7 +1172,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="115" toLevel="17" name="Power Break">
+	<skill id="115" toLevel="17" name="能量破壞">
 		<!-- Level 1: For 30 sec., the enemy's P. Atk. -20%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: For 30 sec., the enemy's P. Atk. -20%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: For 30 sec., the enemy's P. Atk. -23%. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -1326,7 +1326,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="116" toLevel="14" name="Howl">
+	<skill id="116" toLevel="14" name="怒嚎">
 		<!-- For 30 sec., nearby enemies' P. Atk. -23%. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill0116</icon>
 		<operateType>A2</operateType>
@@ -1400,7 +1400,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="118" toLevel="1" name="Magician's Movement">
+	<skill id="118" toLevel="1" name="法師迅捷術">
 		<!-- Increases Atk. Spd., when using robe. -->
 		<icon>icon.skill0118</icon>
 		<operateType>P</operateType>
@@ -1418,7 +1418,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="120" toLevel="15" name="Stunning Fist">
+	<skill id="120" toLevel="15" name="昏迷之拳">
 		<!-- Level 1: Attacks the enemy with 42 power stunning them for 9 sec. Requires a fist weapon. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks the enemy with 46 power stunning them for 9 sec. Requires a fist weapon. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks the enemy with 49 power stunning them for 9 sec. Requires a fist weapon. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1538,7 +1538,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="121" toLevel="6" name="Battle Roar">
+	<skill id="121" toLevel="6" name="戰鬥咆哮">
 		<!-- Level 1: Instantly restores 10% HP. For 10 min., Max HP +10%. -->
 		<!-- Level 2: Instantly restores 15% HP. For 10 min., Max HP +15%. -->
 		<!-- Level 3: Instantly restores 20% HP. For 10 min., Max HP +20%. -->
@@ -1602,7 +1602,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="122" toLevel="15" name="Hex">
+	<skill id="122" toLevel="15" name="衰弱術">
 		<!-- For 30 sec., the enemy's P. Def. -23%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
@@ -1696,7 +1696,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="123" toLevel="3" name="Spirit Barrier">
+	<skill id="123" toLevel="3" name="精神屏障">
 		<!-- Level 1: For 20 min., M. Def. +15%. -->
 		<!-- Level 2: For 20 min., M. Def. +23%. -->
 		<!-- Level 3: For 20 min., M. Def. +30%. -->
@@ -1747,7 +1747,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="127" toLevel="14" name="Hamstring">
+	<skill id="127" toLevel="14" name="遲緩術">
 		<!-- For 1 min., the enemy's Speed -30%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill0127</icon>
 		<operateType>A2</operateType>
@@ -1836,7 +1836,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="129" toLevel="5" name="Poison">
+	<skill id="129" toLevel="5" name="施毒術">
 		<!-- Level 1: Poisons the target making them lose 24 HP per sec. for 30 sec. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Poisons the target making them lose 41 HP per sec. for 30 sec. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Poisons the target making them lose 50 HP per sec. for 30 sec. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
@@ -1909,7 +1909,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="130" toLevel="2" name="Thrill Fight">
+	<skill id="130" toLevel="2" name="顫慄激戰">
 		<!-- Level 1: For 5 min., Speed -20%, Atk. Spd. +5%. -->
 		<!-- Level 2: For 5 min., Speed -20%, Atk. Spd. +10%. -->
 		<icon>icon.skill0130</icon>
@@ -1953,7 +1953,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="131" toLevel="3" name="Hawk Eye">
+	<skill id="131" toLevel="3" name="鷹之眼">
 		<!-- Level 1: For 5 min., P. Def. -10%, P. Accuracy +6. -->
 		<!-- Level 2: For 5 min., P. Def. -10%, P. Accuracy +8. -->
 		<!-- Level 3: For 5 min., P. Def. -10%, P. Accuracy +10. -->
@@ -2003,7 +2003,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="134" toLevel="1" name="Toughness">
+	<skill id="134" toLevel="1" name="強化意志">
 		<!-- Stupor/ Obstruction/ Infection Resistance +20 -->
 		<icon>icon.skill0134</icon>
 		<operateType>P</operateType>
@@ -2017,7 +2017,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="137" toLevel="4" name="Critical Rate">
+	<skill id="137" toLevel="4" name="致命機率">
 		<!-- Level 1: Critical Rate for basic attacks +20%. -->
 		<!-- Level 2: Critical Rate for basic attacks +30%. -->
 		<!-- Level 3: Critical Rate for basic attacks +40%. -->
@@ -2043,7 +2043,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="139" toLevel="10" name="Guts">
+	<skill id="139" toLevel="10" name="勇氣加護">
 		<!-- Level 1: For 60 sec., P. Def. +100%, Debuff Resistance +50%. Available when HP is 60% or lower. -->
 		<!-- Level 2: For 60 sec., P. Def. +110%, Debuff Resistance +55%. Available when HP is 60% or lower. -->
 		<!-- Level 3: For 60 sec., P. Def. +120%, Debuff Resistance +60%. Available when HP is 60% or lower. -->
@@ -2292,7 +2292,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="141" toLevel="3" name="Weapon Mastery">
+	<skill id="141" toLevel="3" name="精通武器">
 		<!-- Level 1: P. Atk. +8.5% and additionally +2. -->
 		<!-- Level 2: P. Atk. +8.5% and additionally +3. -->
 		<!-- Level 3: P. Atk. +8.5% and additionally +4. -->
@@ -2319,7 +2319,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="142" toLevel="5" name="Armor Mastery">
+	<skill id="142" toLevel="5" name="精通護甲">
 		<!-- Level 1: P. Def. +9, MP Recovery Rate +10%. -->
 		<!-- Level 2: P. Def. +11, MP Recovery Rate +10%. -->
 		<!-- Level 3: P. Def. +12, MP Recovery Rate +10%. -->
@@ -2365,7 +2365,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="143" toLevel="2" name="Cubic Mastery">
+	<skill id="143" toLevel="2" name="精通晶體召喚">
 		<!-- Level 1: Lets you summon up to 2 Cubics at once. -->
 		<!-- Level 2: Lets you summon up to 3 Cubics at once. -->
 		<icon>icon.skill0143</icon>
@@ -2384,7 +2384,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="144" toLevel="37" name="Dual Weapon Mastery">
+	<skill id="144" toLevel="37" name="精通二刀流">
 		<!-- Level 1: P. Atk. +23.7 when using dual swords. -->
 		<!-- Level 2: P. Atk. +25.4 when using dual swords. -->
 		<!-- Level 3: P. Atk. +27.1 when using dual swords. -->
@@ -2512,7 +2512,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="146" toLevel="45" name="Anti-magic">
+	<skill id="146" toLevel="45" name="抗魔術">
 		<!-- Level 1: P. Def. +10. -->
 		<!-- Level 2: P. Def. +12. -->
 		<!-- Level 3: M. Def. +14, Magic Damage Resistance +5%. -->
@@ -2711,7 +2711,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="147" toLevel="51" name="Magic Resistance">
+	<skill id="147" toLevel="51" name="魔法抵抗">
 		<!-- Level 1: M. Def. +22. -->
 		<!-- Level 2: M. Def. +24. -->
 		<!-- Level 3: M. Def. +26. -->
@@ -2934,7 +2934,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="148" toLevel="8" name="Vital Force">
+	<skill id="148" toLevel="8" name="生命之原">
 		<!-- Level 1: Lets you recover quicker while sitting. HP Recovery Rate +1.9, MP Recovery Rate +1.9. -->
 		<!-- Level 2: Lets you recover quicker while sitting. HP Recovery Rate +2.7, MP Recovery Rate +2.1. -->
 		<!-- Level 3: Lets you recover quicker while sitting. HP Recovery Rate +2.9, MP Recovery Rate +2.2. -->
@@ -2987,7 +2987,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="150" toLevel="3" name="Weight Limit">
+	<skill id="150" toLevel="3" name="負重強化">
 		<!-- Level 1: Weight limit x2. -->
 		<!-- Level 2: Weight limit x3. -->
 		<!-- Level 3: Weight limit x4. -->
@@ -3010,7 +3010,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="153" toLevel="4" name="Shield Mastery">
+	<skill id="153" toLevel="4" name="精通盾技">
 		<!-- Level 1: Shield Defense +30%, Shield Defense Rate +50%. -->
 		<!-- Level 2: Shield Defense +40%, Shield Defense Rate +70%. -->
 		<!-- Level 3: Shield Defense +50%, Shield Defense Rate +85%. Additionally P. Def. +81 when using heavy armor. -->
@@ -3057,7 +3057,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="163" toLevel="1" name="Spellcraft">
+	<skill id="163" toLevel="1" name="咒語吟唱">
 		<!-- Increases Casting Spd. when equipped with a robe jacket and robe pants. -->
 		<icon>icon.skill0163</icon>
 		<operateType>P</operateType>
@@ -3082,7 +3082,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="164" toLevel="3" name="Quick Recovery">
+	<skill id="164" toLevel="3" name="快速恢復">
 		<!-- Level 1: M. Skill Cooldown -10%. -->
 		<!-- Level 2: M. Skill Cooldown -15%. -->
 		<!-- Level 3: M. Skill Cooldown -20%. -->
@@ -3106,7 +3106,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="165" toLevel="5" name="Trade">
+	<skill id="165" toLevel="5" name="交易術">
 		<!-- Level 1: Enables you to purchase high quality weapons with a discount up to 5%. -->
 		<!-- Level 2: Enables you to purchase high quality weapons with a discount up to 10%. -->
 		<!-- Level 3: Receives 10% on grade Ds, 5% on No-grade s and allows you to sell at an expensive price. -->
@@ -3123,7 +3123,7 @@
 			<value level="5">49</value>
 		</magicLevel>
 	</skill>
-	<skill id="168" toLevel="3" name="Attack Speed Boost">
+	<skill id="168" toLevel="3" name="攻擊加速">
 		<!-- Level 1: Atk. Spd. +5%. -->
 		<!-- Level 2: Atk. Spd. +7%. -->
 		<!-- Level 3: Atk. Spd. +10%. -->
@@ -3146,7 +3146,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="169" toLevel="2" name="Quick Step">
+	<skill id="169" toLevel="2" name="移動加速">
 		<!-- Level 1: Speed +7 -->
 		<!-- Level 2: Speed +11 -->
 		<icon>icon.skill0169</icon>
@@ -3166,7 +3166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="171" toLevel="8" name="Esprit">
+	<skill id="171" toLevel="8" name="活躍生命">
 		<!-- Level 1: Lets you recover quicker while running. HP Recovery Rate +2.5, MP Recovery Rate +1.8. -->
 		<!-- Level 2: Lets you recover quicker while running. HP Recovery Rate +3, MP Recovery Rate +1.9. -->
 		<!-- Level 3: Lets you recover quicker while running. HP Recovery Rate +3.5, MP Recovery Rate +2. -->
@@ -3222,7 +3222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="172" toLevel="15" name="Create Item">
+	<skill id="172" toLevel="15" name="物品製作">
 		<!-- Level 1: Allows to craft items using Lv. 1 recipes. -->
 		<!-- Level 2: Allows to craft items using Lv. 2 recipes. -->
 		<!-- Level 3: Allows to craft items using Lv. 3 recipes. -->
@@ -3264,7 +3264,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="173" toLevel="2" name="Acrobatics">
+	<skill id="173" toLevel="2" name="特技精通">
 		<!-- Level 1: Maximum height user can fall without taking damage +60. -->
 		<!-- Level 2: Maximum height user can fall without taking damage +100. -->
 		<icon>icon.skill0173</icon>
@@ -3284,7 +3284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="176" toLevel="10" name="Frenzy">
+	<skill id="176" toLevel="10" name="狂暴加護">
 		<!-- Level 1: For 60 sec., P. Atk. +10%, Atk. Spd. +10%, Critical Rate for basic attacks +1%, Critical Damage for basic attacks +10%, Speed +10. When using a two-handed sword/ blunt weapon or a spear, P. Accuracy +8, P. Atk. +10%. Available when HP<60%. -->
 		<!-- Level 2: For 60 sec., P. Atk. +11%, Atk. Spd. +12%, Critical Rate for basic attacks +1.1%, Critical Damage for basic attacks +11%, Speed +11. When using a two-handed sword/ blunt weapon or a spear, P. Accuracy +8, P. Atk. +10%. Available when HP<60%. -->
 		<!-- Level 3: For 60 sec., P. Atk. +12%, Atk. Spd. +15%, Critical Rate for basic attacks +1.2%, Critical Damage for basic attacks +12%, Speed +12. When using a two-handed sword/ blunt weapon or a spear, P. Accuracy +8, P. Atk. +10%. Available when HP<60%. -->
@@ -3624,7 +3624,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="181" toLevel="1" name="Revival">
+	<skill id="181" toLevel="1" name="再生術">
 		<!-- Restores to full HP in an emergency. Only usable if HP is 10 percent or lower. -->
 		<icon>icon.skill0181</icon>
 		<operateType>A1</operateType>
@@ -3649,7 +3649,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="190" toLevel="37" name="Fatal Strike">
+	<skill id="190" toLevel="37" name="致命侵襲">
 		<!-- Level 1: Attacks the enemy with 738 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<!-- Level 2: Attacks the enemy with 784 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<!-- Level 3: Attacks the enemy with 833 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
@@ -3870,7 +3870,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="191" toLevel="6" name="Focus Mind">
+	<skill id="191" toLevel="6" name="精神凝聚">
 		<!-- Level 1: MP Recovery Rate +3.1. -->
 		<!-- Level 2: MP Recovery Rate +3.5. -->
 		<!-- Level 3: MP Recovery Rate +3.9. -->
@@ -3902,7 +3902,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="193" toLevel="7" name="Critical Damage">
+	<skill id="193" toLevel="7" name="致命威力">
 		<!-- Level 1: Critical Damage for basic attacks +32 -->
 		<!-- Level 2: Critical Damage for basic attacks +56 -->
 		<!-- Level 3: Critical Damage for basic attacks +93 -->
@@ -3937,7 +3937,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="194" toLevel="1" name="Lucky">
+	<skill id="194" toLevel="1" name="幸運之神">
 		<!-- Vitality points are not consumed below Lv. 9. Upon death, there is no XP decrease and no poisoning by Shillien's Breath. Cannot be triggered when PK > 1. -->
 		<icon>icon.skill0194</icon>
 		<operateType>P</operateType>
@@ -3947,7 +3947,7 @@
 			<effect name="Lucky" />
 		</effects>
 	</skill>
-	<skill id="195" toLevel="2" name="Boost Breath">
+	<skill id="195" toLevel="2" name="調息術">
 		<!-- Level 1: Breath gauge +180. -->
 		<!-- Level 2: Breath gauge +300. -->
 		<icon>icon.skill0195</icon>
@@ -3967,7 +3967,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="196" toLevel="1" name="Holy Blade">
+	<skill id="196" toLevel="1" name="神聖之刃">
 		<!-- Ability to deal holy damage. -->
 		<icon>icon.skill0196</icon>
 		<operateType>T</operateType>
@@ -3983,7 +3983,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="197" toLevel="2" name="Holy Armor">
+	<skill id="197" toLevel="2" name="神聖之衣">
 		<!-- Increases Dark Resistance. -->
 		<icon>icon.skill0197</icon>
 		<operateType>T</operateType>
@@ -4007,7 +4007,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="198" toLevel="3" name="Boost Evasion">
+	<skill id="198" toLevel="3" name="迴避提升">
 		<!-- Level 1: P. Evasion +2. -->
 		<!-- Level 2: P. Evasion +3. -->
 		<!-- Level 3: P. Evasion +4. -->

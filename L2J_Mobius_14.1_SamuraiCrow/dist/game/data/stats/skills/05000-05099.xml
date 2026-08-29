@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5000" toLevel="1" name="Alfred Strike">
+	<skill id="5000" toLevel="1" name="艾佛瑞德攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -19,7 +19,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5001" toLevel="1" name="Alfred: Life Drain">
+	<skill id="5001" toLevel="1" name="艾佛瑞德生命吸收">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -38,7 +38,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5002" toLevel="1" name="Giselle: Vampiric Rage">
+	<skill id="5002" toLevel="1" name="吉賽爾吸血怒擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -63,7 +63,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5003" toLevel="1" name="Giselle: Tempest">
+	<skill id="5003" toLevel="1" name="吉賽爾颶風術">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -86,7 +86,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5004" toLevel="1" name="Dimensional Shock">
+	<skill id="5004" toLevel="1" name="次元休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -118,7 +118,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5005" toLevel="1" name="Frintezza Pose">
+	<skill id="5005" toLevel="1" name="芙琳泰沙暫停">
 		<!-- Frintezza is in temporary state of paralysis. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -142,7 +142,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5006" toLevel="3" name="Frintezza Music">
+	<skill id="5006" toLevel="3" name="孤獨的迴旋曲">
 		<!-- Main performance. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -155,7 +155,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5007" toLevel="10" name="Frintezza Heal Music">
+	<skill id="5007" toLevel="10" name="魅惑的馬厝卡舞曲">
 		<!-- Level 1: Music to soothe one's soul. -->
 		<!-- Level 2: Consecutive Dash +Performance Replay -->
 		<!-- Level 3: Presentation - Attack/ Speed Performance -->
@@ -188,7 +188,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5008" toLevel="5" name="Frintezza Heal Music">
+	<skill id="5008" toLevel="5" name="魅惑的舞曲">
 		<!-- Level 1: Music to soothe the soul. -->
 		<!-- Level 2: Consecutive Dash +Performance Replay -->
 		<!-- Level 3: Attack/ Speed Performance -->
@@ -357,7 +357,7 @@
 			<effect name="BlockActions" fromLevel="5" toLevel="5" />
 		</effects>
 	</skill>
-	<skill id="5009" toLevel="2" name="Frintezza Ghost Fighter">
+	<skill id="5009" toLevel="2" name="鬼擊">
 		<!-- Level 1: A portrait ghost that can make physical attacks. -->
 		<!-- Level 2: A physical attack on a single target. -->
 		<icon>icon.skill0000</icon>
@@ -383,7 +383,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5010" toLevel="2" name="Frintezza Ghost Mage">
+	<skill id="5010" toLevel="2" name="鬼刺">
 		<!-- Level 1: A portrait ghost that can make magical attacks. -->
 		<!-- Level 2: A basic magic attack on a single target. -->
 		<icon>icon.skill0000</icon>
@@ -410,7 +410,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5011" toLevel="2" name="Frintezza: Ghost's Self-destruction">
+	<skill id="5011" toLevel="2" name="鬼靈炸彈">
 		<!-- Level 1: A portrait ghost who can create a suicide explosion. -->
 		<!-- Level 2: AoE on Nearby Targets -->
 		<icon>icon.skill0000</icon>
@@ -435,7 +435,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5012" toLevel="1" name="Scarlet's Breath">
+	<skill id="5012" toLevel="1" name="鮮紅的氣息">
 		<!-- Immobilizes the enemy for a moment. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill5012</icon>
 		<operateType>A2</operateType>
@@ -462,7 +462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5013" toLevel="1" name="Frintezza: Energy Drain">
+	<skill id="5013" toLevel="1" name="芙琳泰沙能量吸收">
 		<!-- Portrait ghost drains HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -484,7 +484,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5014" toLevel="5" name="Frintezza Demon Attack">
+	<skill id="5014" toLevel="5" name="芙琳泰沙惡魔攻擊">
 		<!-- Level 1: Demon 1 general attack. -->
 		<!-- Level 2: Demon 2 general attack. -->
 		<!-- Level 3: Demon 3 general attack. -->
@@ -537,7 +537,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5015" toLevel="6" name="Frintezza Charge">
+	<skill id="5015" toLevel="6" name="芙琳泰沙突擊">
 		<!-- Level 1: Demon 1 charge. -->
 		<!-- Level 2: Demon 2 charge. -->
 		<!-- Level 3: Demon 3 charge. -->
@@ -597,7 +597,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5016" toLevel="1" name="Scarlet's Hold">
+	<skill id="5016" toLevel="1" name="思卡雷特的束縛">
 		<!-- Immobilizes for a moment. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill5016</icon>
 		<operateType>A2</operateType>
@@ -627,7 +627,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5017" toLevel="1" name="Demons">
+	<skill id="5017" toLevel="1" name="魔族">
 		<!-- Demon Transformation -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -658,7 +658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5018" toLevel="2" name="Frintezza Demon Field">
+	<skill id="5018" toLevel="2" name="芙琳泰沙惡魔領域">
 		<!-- Level 1: Demon 2 magic field. -->
 		<!-- Level 2: Demon 3 magic field. -->
 		<icon>icon.skill0000</icon>
@@ -686,7 +686,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5019" toLevel="1" name="Frintezza: Demonic Energy Drain">
+	<skill id="5019" toLevel="1" name="芙琳泰沙惡魔領域">
 		<!-- Demon 3 HP drain range. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -708,7 +708,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5020" toLevel="1" name="Forced Action">
+	<skill id="5020" toLevel="1" name="強制行動">
 		<!-- Unknown power pins down to the ground. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -729,7 +729,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<trait>HOLD</trait>
 	</skill>
-	<skill id="5021" toLevel="12" name="Inspiration of Einhasad">
+	<skill id="5021" toLevel="12" name="殷海薩的感化">
 		<!-- State of dealing Holy attack. -->
 		<icon>icon.skill1043</icon>
 		<operateType>A2</operateType>
@@ -784,7 +784,7 @@
 		<reuseDelay>25000</reuseDelay>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="5022" toLevel="12" name="Decrease Speed">
+	<skill id="5022" toLevel="12" name="移動速度下降">
 		<!-- Level 1: Immediately decreases Speed. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Speed. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Speed. Effect 2.. Inflicted status: Debilitation. -->
@@ -859,7 +859,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5023" toLevel="12" name="Hold">
+	<skill id="5023" toLevel="12" name="束縛">
 		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -895,7 +895,7 @@
 		</magicLevel>
 		<trait>HOLD</trait>
 	</skill>
-	<skill id="5024" toLevel="12" name="Decrease Atk. Spd.">
+	<skill id="5024" toLevel="12" name="攻擊速度下降">
 		<!-- Level 1: Immediately decreases Atk. Spd. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Atk. Spd. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Atk. Spd. Effect 2.. Inflicted status: Debilitation. -->
@@ -970,91 +970,91 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5025" toLevel="1" name="Raid Boss (Lv. 30)">
+	<skill id="5025" toLevel="1" name="30級狩獵首領">
 		<!-- His exploits are famous among Wererats. After assigning the South to the Sukar Wererats, he and a group of followers journeyed north in search of wealth. Unlike other Wererats, he possesses an enterprising spirit and began plundering the tombs of Orc tribal chiefs. Chased away by vengeful spirits, now he and his band rob unwary travelers passing through the region. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5026" toLevel="1" name="Raid Boss (Lv. 39)">
+	<skill id="5026" toLevel="1" name="39級狩獵首領">
 		<!-- Once a human magician with an almost Dwarven interest in machinery, he heard about Lesser Giant Age Sky Wagon Relic and theorized that a combination of Dwarven skills and magic could reproduce the flying wagon. He died without succeeding in his goal, but his spirit still wanders the area. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5027" toLevel="1" name="Raid Boss (Lv. 37)">
+	<skill id="5027" toLevel="1" name="37級狩獵首領">
 		<!-- This villain preys on adventurers who travel between the Dwarven Village and the Town of Schuttgart. He summoned all the northern Goblin powers to create a great bandit force and rule over them, but he made a serious mistake by stealing tribute intended for Schuttgart. Hearing rumors that the lord was preparing an army to clear out the bandits, he and his followers fled to the mountains. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5028" toLevel="1" name="Raid Boss (Lv. 53)">
+	<skill id="5028" toLevel="1" name="53級狩獵首領">
 		<!-- A shaman who originally worshipped Pa'agrio, but then tried to rule Orcs and Elmoreden using the evil power of Kasha. He tried to expand his influence by using evil spirits, insects and the Ragna Orc tribe. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5029" toLevel="1" name="Raid Boss (Lv. 52)">
+	<skill id="5029" toLevel="1" name="52級狩獵首領">
 		<!-- This powerful Chaos Golem was made from Star Stones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal a blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the horrifying golem army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5030" toLevel="1" name="Raid Boss (Lv. 59)">
+	<skill id="5030" toLevel="1" name="59級狩獵首領">
 		<!-- This captain secretly loved the Princess Felicia. Saddened by her disappearance, he set out to learn her fate. Finding her transformed into the Ice Queen, Freya, he was turned into a Gargoyle and now protects the Frozen Labyrinth from interlopers. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5031" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5031" toLevel="1" name="80級狩獵首領">
 		<!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5032" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5032" toLevel="1" name="80級狩獵首領">
 		<!-- Looks like a mere human, but in reality he is a high-ranking angel that protects the Holy Grail. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5033" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="5033" toLevel="1" name="99級狩獵首領">
 		<!-- This aristocrat of Rune secretly worships Triol, even conducting the occasional bloody worship ceremony in the Temple. Despite her claims of nobility, much of her background is still unknown. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5034" toLevel="1" name="Raid Boss (Lv. 73)">
+	<skill id="5034" toLevel="1" name="73級狩獵首領">
 		<!-- This Golem was originally a follower of Argos during the war between Giants and Humans. He remained with his master after Argos' imprisonment by Einhasad into the cliff wall. He has devolved to the point that he no longer resembles a Lesser Giant and isn't sure why he is still there. Even Daimon the White-eyed cannot harm him in the Wall of Argos. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5035" toLevel="1" name="Raid Boss (Lv. 76)">
+	<skill id="5035" toLevel="1" name="76級狩獵首領">
 		<!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5036" toLevel="1" name="Raid Boss (Lv. 60)">
+	<skill id="5036" toLevel="1" name="60級狩獵首領">
 		<!-- The Ice Fairy who came to Freya after Princess Felicia was turned, she oversees everything in the Frozen Labyrinth on behalf of Freya. She has watched the movements of the Zinnia Guild ever since the Order of Canna Knights disappeared. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5037" toLevel="3" name="Decrease Casting Spd.">
+	<skill id="5037" toLevel="3" name="施法速度下降">
 		<!-- Level 1: Immediately decreases Casting Spd. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Casting Spd. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Casting Spd. Effect 3.. Inflicted status: Debilitation. -->
@@ -1080,7 +1080,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5038" toLevel="16" name="Servitor PvP Penalty">
+	<skill id="5038" toLevel="16" name="使魔PVP懲罰">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1151,7 +1151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5039" toLevel="1" name="Ultra Bomb">
+	<skill id="5039" toLevel="1" name="使魔PVP懲罰">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1162,7 +1162,7 @@
 		<magicLevel>1</magicLevel>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="5040" toLevel="12" name="Healing Potion">
+	<skill id="5040" toLevel="12" name="治癒藥水">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -1241,14 +1241,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5041" toLevel="1" name="Amulet of Courage">
+	<skill id="5041" toLevel="1" name="勇氣護符">
 		<!-- If you die on the battleground during a castle siege/ fortress siege/ clan hall siege, you can resurrect from the same stop. -->
 		<icon>icon.skill5041</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5042" toLevel="12" name="Bomb Dispel">
+	<skill id="5042" toLevel="12" name="炸彈解除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1310,7 +1310,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5043" toLevel="12" name="Supersonic Blaster">
+	<skill id="5043" toLevel="12" name="超級波動衝擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1368,7 +1368,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5044" toLevel="3" name="Ultimate Defense">
+	<skill id="5044" toLevel="3" name="極限防禦">
 		<!-- Increases P. Def., M. Def., Buff Cancel Resistance and immobilizes. -->
 		<icon>icon.skill0110</icon>
 		<operateType>A2</operateType>
@@ -1431,7 +1431,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5045" toLevel="12" name="Power Strike">
+	<skill id="5045" toLevel="12" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1490,7 +1490,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5046" toLevel="12" name="Power Shot">
+	<skill id="5046" toLevel="12" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1548,7 +1548,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5047" toLevel="12" name="Vortex">
+	<skill id="5047" toLevel="12" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1588,7 +1588,7 @@
 		</mpConsume>
 		<reuseDelay>15000</reuseDelay>
 	</skill>
-	<skill id="5048" toLevel="12" name="Burst Shot">
+	<skill id="5048" toLevel="12" name="爆射箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1631,7 +1631,7 @@
 		</mpConsume>
 		<reuseDelay>25000</reuseDelay>
 	</skill>
-	<skill id="5049" toLevel="12" name="Mortal Blow">
+	<skill id="5049" toLevel="12" name="致命爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1671,7 +1671,7 @@
 		</mpConsume>
 		<reuseDelay>6000</reuseDelay>
 	</skill>
-	<skill id="5050" toLevel="12" name="Blaze">
+	<skill id="5050" toLevel="12" name="赤焰燃燒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1727,7 +1727,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5051" toLevel="12" name="Blazing Circle">
+	<skill id="5051" toLevel="12" name="赤燄之輪">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1801,7 +1801,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5052" toLevel="12" name="Flame Strike">
+	<skill id="5052" toLevel="12" name="火焰狂襲">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1877,7 +1877,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5053" toLevel="12" name="Hydro Blast">
+	<skill id="5053" toLevel="12" name="水之爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1951,7 +1951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5054" toLevel="12" name="Aqua Splash">
+	<skill id="5054" toLevel="12" name="怒濤奔浪">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2007,7 +2007,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5055" toLevel="12" name="Aqua Splash">
+	<skill id="5055" toLevel="12" name="怒濤奔浪">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2065,7 +2065,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5056" toLevel="12" name="Hurricane">
+	<skill id="5056" toLevel="12" name="暴風雨">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2139,7 +2139,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5057" toLevel="12" name="Tempest">
+	<skill id="5057" toLevel="12" name="颶風術">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2195,7 +2195,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5058" toLevel="12" name="Tempest">
+	<skill id="5058" toLevel="12" name="颶風術">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2253,7 +2253,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5059" toLevel="12" name="Rock Strike">
+	<skill id="5059" toLevel="12" name="岩石之擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2309,7 +2309,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5060" toLevel="12" name="Earthquake">
+	<skill id="5060" toLevel="12" name="烈震閃">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2365,7 +2365,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5061" toLevel="12" name="Earthquake">
+	<skill id="5061" toLevel="12" name="烈震閃">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2423,7 +2423,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5062" toLevel="12" name="Holy Strike">
+	<skill id="5062" toLevel="12" name="神聖之擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2479,7 +2479,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5063" toLevel="12" name="Holy Circle">
+	<skill id="5063" toLevel="12" name="神聖之輪">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2535,7 +2535,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5064" toLevel="12" name="Holy Blast">
+	<skill id="5064" toLevel="12" name="神聖爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2593,7 +2593,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5065" toLevel="12" name="Unholy Strike">
+	<skill id="5065" toLevel="12" name="黑暗之擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2667,7 +2667,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5066" toLevel="12" name="Unholy Circle">
+	<skill id="5066" toLevel="12" name="黑暗之輪">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2723,7 +2723,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5067" toLevel="12" name="Unholy Blast">
+	<skill id="5067" toLevel="12" name="黑暗爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2781,7 +2781,7 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 	</skill>
-	<skill id="5068" toLevel="12" name="Decrease Speed">
+	<skill id="5068" toLevel="12" name="移動速度下降">
 		<!-- Immediately decreases Speed. Effect 3.. Inflicted status: Debilitation. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -2844,7 +2844,7 @@
 		</mpInitialConsume>
 		<reuseDelay>7000</reuseDelay>
 	</skill>
-	<skill id="5069" toLevel="12" name="Decrease Atk. Spd.">
+	<skill id="5069" toLevel="12" name="攻擊速度下降">
 		<!-- Immediately decreases Atk. Spd. Effect 3.. Inflicted status: Debilitation. -->
 		<icon>icon.skill4038</icon>
 		<operateType>A2</operateType>
@@ -2907,7 +2907,7 @@
 		</mpInitialConsume>
 		<reuseDelay>8000</reuseDelay>
 	</skill>
-	<skill id="5070" toLevel="12" name="Decrease Casting Spd.">
+	<skill id="5070" toLevel="12" name="施法速度下降">
 		<!-- Immediately decreases Casting Spd. Effect 3.. Inflicted status: Debilitation. -->
 		<icon>icon.skill1206</icon>
 		<operateType>A2</operateType>
@@ -2970,7 +2970,7 @@
 		</mpInitialConsume>
 		<reuseDelay>8000</reuseDelay>
 	</skill>
-	<skill id="5071" toLevel="12" name="Decrease P. Atk.">
+	<skill id="5071" toLevel="12" name="攻擊力下降">
 		<!-- Immediately decreases P. Atk. Effect 3.. Inflicted status: Debilitation. -->
 		<icon>icon.skill4037</icon>
 		<operateType>A2</operateType>
@@ -3039,7 +3039,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5072" toLevel="12" name="Decrease M. Atk.">
+	<skill id="5072" toLevel="12" name="魔法攻擊力下降">
 		<!-- Immediately decreases M. Atk. Effect 3.. Inflicted status: Debilitation. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -3102,7 +3102,7 @@
 		</mpInitialConsume>
 		<reuseDelay>8000</reuseDelay>
 	</skill>
-	<skill id="5073" toLevel="12" name="Power Shot">
+	<skill id="5073" toLevel="12" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3147,7 +3147,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5074" toLevel="1" name="The Victor of War">
+	<skill id="5074" toLevel="1" name="戰亂勝利者">
 		<!-- Maximum CP is increased. -->
 		<icon>icon.skill5074</icon>
 		<operateType>P</operateType>
@@ -3160,7 +3160,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5075" toLevel="1" name="The Vanquished of War">
+	<skill id="5075" toLevel="1" name="戰亂失敗者">
 		<!-- Maximum CP is decreased. -->
 		<icon>icon.skill5075</icon>
 		<operateType>P</operateType>
@@ -3173,7 +3173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5076" toLevel="15" name="Death Penalty">
+	<skill id="5076" toLevel="15" name="死亡後遺症">
 		<!-- Level 1: Combat ability is decreased due to death. Effect 1. -->
 		<!-- Level 2: Combat ability is decreased due to death. Effect 2. -->
 		<!-- Level 3: Combat ability is decreased due to death. Effect 3. -->
@@ -3392,7 +3392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5077" toLevel="1" name="Remove Death Penalty">
+	<skill id="5077" toLevel="1" name="移除死亡懲罰">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -3405,7 +3405,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5078" toLevel="1" name="Frintezza Critical Damage">
+	<skill id="5078" toLevel="1" name="芙琳泰沙致命攻擊威力">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3417,7 +3417,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5079" toLevel="1" name="Haste Focus">
+	<skill id="5079" toLevel="1" name="速度激發弱點偵測">
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -3447,7 +3447,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5080" toLevel="1" name="Haste Might">
+	<skill id="5080" toLevel="1" name="速度激發力量強化">
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -3477,7 +3477,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5081" toLevel="4" name="Silence">
+	<skill id="5081" toLevel="4" name="沉默術">
 		<!-- Blocks the ability to use physical skills. -->
 		<icon>icon.skill5081</icon>
 		<operateType>A2</operateType>
@@ -3522,7 +3522,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="5082" toLevel="4" name="Vortex">
+	<skill id="5082" toLevel="4" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3546,7 +3546,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5083" toLevel="4" name="Shock">
+	<skill id="5083" toLevel="4" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill5083</icon>
 		<operateType>A2</operateType>
@@ -3596,7 +3596,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5084" toLevel="4" name="Blinding Blow">
+	<skill id="5084" toLevel="4" name="昏眩爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A3</operateType>
 		<targetType>ENEMY</targetType>
@@ -3626,7 +3626,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5085" toLevel="1" name="Anesthesia">
+	<skill id="5085" toLevel="1" name="麻醉">
 		<!-- Temporarily immobilizes and stuns. Inflicted status: Debilitation. -->
 		<icon>icon.skill5085</icon>
 		<operateType>A2</operateType>
@@ -3653,7 +3653,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5086" toLevel="1" name="Deadly Poison">
+	<skill id="5086" toLevel="1" name="死亡之毒">
 		<!-- The target gradually loses HP because of poison. If HP falls to 0, the target is dead. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill5086</icon>
 		<operateType>A2</operateType>
@@ -3685,7 +3685,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5087" toLevel="2" name="Insanity">
+	<skill id="5087" toLevel="2" name="狂暴">
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
 		<targetType>SELF</targetType>
@@ -3715,7 +3715,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5088" toLevel="1" name="Signal">
+	<skill id="5088" toLevel="1" name="信號">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3728,7 +3728,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5089" toLevel="1" name="Presentation - Enter the Sailren Nest Quest">
+	<skill id="5089" toLevel="1" name="展示-賽爾蘭巢穴入場任務">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -3741,7 +3741,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5090" toLevel="1" name="Sailren's Presentation">
+	<skill id="5090" toLevel="1" name="賽爾蘭展示">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3752,7 +3752,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5091" toLevel="1" name="Sailren's Presentation">
+	<skill id="5091" toLevel="1" name="賽爾蘭展示">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3762,7 +3762,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5092" toLevel="1" name="Antharas Fear">
+	<skill id="5092" toLevel="1" name="安塔瑞斯畏懼">
 		<!-- The target runs away in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4108</icon>
 		<operateType>A2</operateType>
@@ -3791,7 +3791,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="5093" toLevel="1" name="Antharas: Meteor">
+	<skill id="5093" toLevel="1" name="安塔瑞斯流星雨">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -3812,7 +3812,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5094" toLevel="1" name="Suicide Bomb">
+	<skill id="5094" toLevel="1" name="自爆彈">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3833,7 +3833,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5095" toLevel="1" name="Dragon Strike">
+	<skill id="5095" toLevel="1" name="龍之強擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3851,7 +3851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5096" toLevel="1" name="Dragon's Power Shot">
+	<skill id="5096" toLevel="1" name="龍之能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3869,7 +3869,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5097" toLevel="1" name="Suicide Big Bomb">
+	<skill id="5097" toLevel="1" name="自爆巨彈">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3889,7 +3889,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5098" toLevel="2" name="Capture Penalty">
+	<skill id="5098" toLevel="2" name="獵捕懲罰">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -3917,7 +3917,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5099" toLevel="1" name="Cancel Capture A">
+	<skill id="5099" toLevel="1" name="獵捕A解除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>

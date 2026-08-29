@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="19300" toLevel="1" name="Reverse Mana Drain">
+	<skill id="19300" toLevel="1" name="反轉魔力奪取">
 		<icon>icon.skill19299</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -13,7 +13,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19301" toLevel="13" name="Istina's Acid Swarm">
+	<skill id="19301" toLevel="13" name="伊絲蒂娜腐蝕風暴">
 		<!-- Throws Istina's poison bottle creating a danger zone for 15 sec. to poison enemies. Within the area enemies' magic skills are blocked, P. Atk. -23%, P./ M. Def. -30%, Atk. Spd./ Speed/ Shield Defense -50%. Also cancels the enemy's invisibility blocking its recast. -->
 		<icon>icon.skill19301</icon>
 		<operateType>A2</operateType>
@@ -97,7 +97,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="19302" toLevel="13" name="Thrown Acid Swarm">
+	<skill id="19302" toLevel="13" name="浸染腐蝕風暴">
 		<!-- Level 1: Poisons the enemy. P. Atk. -23%, P./ M. Def. -30%, Atk. Spd./ Speed/ Shield Defense -50%. Blocks M. skills, HP -780 per sec. Also cancels the enemy's invisibility blocking its recast. Base success rate: 60%. Inflicted status: Danger Zone. -->
 		<!-- Level 2: Poisons the enemy. P. Atk. -23%, P./ M. Def. -30%, Atk. Spd./ Speed/ Shield Defense -50%. Blocks M. skills, HP -930 per sec. Also cancels the enemy's invisibility blocking its recast. Base success rate: 60%. Inflicted status: Danger Zone. -->
 		<!-- Level 3: Poisons the enemy. P. Atk. -23%, P./ M. Def. -30%, Atk. Spd./ Speed/ Shield Defense -50%. Blocks M. skills, HP -1180 per sec. Also cancels the enemy's invisibility blocking its recast. Base success rate: 60%. Inflicted status: Danger Zone. -->
@@ -208,7 +208,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19303" toLevel="11" name="Right Angle Reverse">
+	<skill id="19303" toLevel="11" name="光聚反轉">
 		<!-- Level 1: Moves to the right side of the target and attacks their vital point dealing damage equal to 105% of P. Atk. High Critical Rate. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 550. Requires a dagger or dual daggers. -->
 		<!-- Level 2: Moves to the right side of the target and attacks their vital point dealing damage equal to 106% of P. Atk. High Critical Rate. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 550. Requires a dagger or dual daggers. -->
 		<!-- Level 3: Moves to the right side of the target and attacks their vital point dealing damage equal to 107% of P. Atk. High Critical Rate. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 550. Requires a dagger or dual daggers. -->
@@ -310,7 +310,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19304" toLevel="2" name="Wind Riding">
+	<skill id="19304" toLevel="2" name="東風漸">
 		<!-- Level 1: <font color="ECECEC"><Additional Perfection effect></font>. For 5 sec., when Right Angle Reverse triggers Perfection, the cooldown of Easterly Wind Strike is reset. When Easterly Wind Strike triggers Perfection, the cooldown of Right Angle Reverse is reset. -->
 		<!-- Level 2: For 5 sec., when Right Angle Reverse triggers Perfection, the cooldown of Easterly Wind Strike is reset. When Easterly Wind Strike triggers Perfection, the cooldown of Right Angle Reverse is reset. -->
 		<icon>icon.skill10705</icon>
@@ -337,7 +337,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19305" toLevel="11" name="Shadow Reverse">
+	<skill id="19305" toLevel="11" name="暗影反轉">
 		<!-- Level 1: Moves behind the target to attack the enemy's vital point, dealing damage equal to 100% of P. Atk. and decreasing P. Accuracy by 5 for 3 sec. Does not remove the <font color="ECECEC">Preparation</font> effect. If the Shadow Hunter effect is active, applies <font color="ECECEC">Preparation Lv. 1</font> on you. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 200. <font color="ECECEC"><Preparation></font>. Greatly increases the Perfection trigger rate and power for the next vital point attack. Requires a dagger or dual daggers. -->
 		<!-- Level 2: Moves behind the target to attack the enemy's vital point, dealing damage equal to 101% of P. Atk. and decreasing P. Accuracy by 5 for 3 sec. Does not remove the <font color="ECECEC">Preparation</font> effect. If the Shadow Hunter effect is active, applies <font color="ECECEC">Preparation Lv. 1</font> on you. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 200. <font color="ECECEC"><Preparation></font>. Greatly increases the Perfection trigger rate and power for the next vital point attack. Requires a dagger or dual daggers. -->
 		<!-- Level 3: Moves behind the target to attack the enemy's vital point, dealing damage equal to 102% of P. Atk. and decreasing P. Accuracy by 5 for 3 sec. Does not remove the <font color="ECECEC">Preparation</font> effect. If the Shadow Hunter effect is active, applies <font color="ECECEC">Preparation Lv. 1</font> on you. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 200. <font color="ECECEC"><Preparation></font>. Greatly increases the Perfection trigger rate and power for the next vital point attack. Requires a dagger or dual daggers. -->
@@ -447,7 +447,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19306" toLevel="2" name="Coin Flip">
+	<skill id="19306" toLevel="2" name="梅芙之幣">
 		<!-- Flips a coin. Each party member will receive a random set of effects based on a coin flip. For party members who get heads, increases P./ M. Atk. and P./ M. Skill Power for 60 sec. For those who get tails, increases head size and P./ M. Def. for 60 sec. Consumes 7777 adena. Requires a dagger or dual daggers. -->
 		<icon>icon.skill19306</icon>
 		<operateType>A1</operateType>
@@ -480,7 +480,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19307" toLevel="3" name="Lucky Coin: Attack">
+	<skill id="19307" toLevel="3" name="幸運頂">
 		<!-- Level 1: Grants Maphr's blessing: for 60 sec., P. Atk. +7%, M. Atk. +14%, P./ M. Skill Power +5%. -->
 		<!-- Level 2: Maphr is smiling. -->
 		<!-- Level 3: Grants Maphr's blessing: for 60 sec., P. Atk. +9%, M. Atk. +16%, P./ M. Skill Power +7%. -->
@@ -531,7 +531,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19308" toLevel="2" name="Lucky Coin: Defense">
+	<skill id="19308" toLevel="2" name="熱情傳奇">
 		<!-- Level 1: Grants Lady Luck's blessing: for 60 sec., P./ M. Def. +10%, your head becomes larger. -->
 		<!-- Level 2: Grants Lady Luck's blessing: for 60 sec., P./ M. Def. +12%, your head becomes larger. -->
 		<icon>icon.skill19308</icon>
@@ -563,7 +563,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19309" toLevel="11" name="Reverse Plunder">
+	<skill id="19309" toLevel="11" name="反轉強奪">
 		<!-- Level 1: Swiftly attacks the enemy's vital point, deals damage equal to 105% of your P. Atk. and tries to steal an item. High Critical Rate. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 200. Additional Perfection power: 50. Requires a dagger or dual daggers. -->
 		<!-- Level 2: Swiftly attacks the enemy's vital point, deals damage equal to 106% of your P. Atk. and tries to steal an item. High Critical Rate. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 200. Additional Perfection power: 50. Requires a dagger or dual daggers. -->
 		<!-- Level 3: Swiftly attacks the enemy's vital point, deals damage equal to 107% of your P. Atk. and tries to steal an item. High Critical Rate. <font color="ECECEC"><Perfection effect></font>. Perfection trigger rate: 200. Additional Perfection power: 50. Requires a dagger or dual daggers. -->
@@ -654,7 +654,7 @@
 			<effect name="Plunder" />
 		</effects>
 	</skill>
-	<skill id="19311" toLevel="7" name="Dwarven Flare Bluff">
+	<skill id="19311" toLevel="7" name="矮人特殊光彈">
 		<!-- Fires a special flare charge that confuses enemies at the front for 3 sec. Requires a dagger or a dual dagger. Consumes 2 Soulstones. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0537</icon>
 		<operateType>A2</operateType>
@@ -716,7 +716,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19312" toLevel="1" name="Holy Stance">
+	<skill id="19312" toLevel="1" name="原始聖耀">
 		<!-- M. Skill Power +5%, Holy Resistance +100, received damage -5%. Applies Holy to attribute magic. -->
 		<icon>icon.skill19312</icon>
 		<operateType>TG</operateType>
@@ -778,7 +778,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19313" toLevel="1" name="Dark Stance">
+	<skill id="19313" toLevel="1" name="原始闇冥">
 		<!-- M. Skill Power +5%, M. Skill Critical Damage +5%, Dark Resistance +100. Applies Dark to attribute magic. -->
 		<icon>icon.skill19313</icon>
 		<operateType>TG</operateType>
@@ -809,7 +809,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19314" toLevel="15" name="Elemental Spike (Dark)">
+	<skill id="19314" toLevel="15" name="元素裂刺(黑暗)">
 		<!-- Level 1: Deals attribute damage to the target with 133 power, decreasing their Attribute Resistance. Over-hit. -->
 		<!-- Level 2: Deals attribute damage to the target with 134 power, decreasing their Attribute Resistance. Over-hit. -->
 		<!-- Level 3: Deals attribute damage to the target with 139 power, decreasing their Attribute Resistance. Over-hit. -->
@@ -1311,7 +1311,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19315" toLevel="4" name="Mana Burst">
+	<skill id="19315" toLevel="4" name="魔力爆裂">
 		<!-- Level 1: For 5 sec., M. Atk. +50%. When the effect expires, the Mana Burst's next level is activated, Arcane Comet Strike's cooldown -15 sec. Maximum 4 levels. -->
 		<!-- Level 2: For 5 sec., M. Atk. +60%, Casting Spd. +100. When the effect expires, the Mana Burst's next level is activated, Arcane Comet Strike's cooldown -15 sec. Maximum 4 levels. -->
 		<!-- Level 3: For 5 sec., M. Atk. +70%, Casting Spd. +200. When the effect expires, the Mana Burst's next level is activated, Arcane Comet Strike's cooldown -15 sec. Maximum 4 levels. -->
@@ -1372,7 +1372,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="19316" toLevel="8" name="Final Elemental Storm (Dark)">
+	<skill id="19316" toLevel="8" name="元素終極風暴(黑暗)">
 		<!-- Level 1: Deals M. Atk. of 262 power added with attribute damage on the target and the enemies near it. -->
 		<!-- Level 2: Deals M. Atk. of 270 power added with attribute damage on the target and the enemies near it. -->
 		<!-- Level 3: Deals M. Atk. of 277 power added with attribute damage on the target and the enemies near it. -->

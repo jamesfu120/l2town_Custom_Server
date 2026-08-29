@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="39800" toLevel="1" name="Christmas Buff Kit">
+	<skill id="39800" toLevel="1" name="聖誕禮物">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -51,7 +51,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39801" toLevel="11" name="Secondary Skill: Agathion Masia's Guardian">
+	<skill id="39801" toLevel="11" name="瑪斯亞守衛固有能力">
 		<!-- Level 1: <Requirements>. 1. When equipping an R-grade heavy armor set enchanted to +8 and higher. 2. When equipping an L-grade heavy armor set. <Effect>. Increases P. Def., decreases skill cooldown. -->
 		<!-- Level 2: <Requirements>. 1. When equipping an R-grade heavy armor set enchanted to +8 and higher. 2. When equipping an L-grade heavy armor set. <Effect>. P. Def. +321 -->
 		<!-- Level 3: <Requirements>. 1. When equipping an R-grade heavy armor set enchanted to +8 and higher. 2. When equipping an L-grade heavy armor set. <Effect>. P. Def. +377 -->
@@ -175,7 +175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39802" toLevel="11" name="Secondary Skill: Agathion Paulina's Guardian">
+	<skill id="39802" toLevel="11" name="波莉奈守衛固有能力">
 		<!-- Level 1: <Requirements>. 1. When equipping an R-grade light armor set enchanted to +8 and higher. 2. When equipping an L-grade light armor set. <Effect>. Increases P. Def. and Skill Power. -->
 		<!-- Level 2: <Requirements>. 1. When equipping an R-grade light armor set enchanted to +8 and higher. 2. When equipping an L-grade light armor set. <Effect>. P. Def. +321 -->
 		<!-- Level 3: <Requirements>. 1. When equipping an R-grade light armor set enchanted to +8 and higher. 2. When equipping an L-grade light armor set. <Effect>. P. Def. +377 -->
@@ -239,7 +239,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39803" toLevel="11" name="Secondary Skill: Agathion Tersi's Guardian">
+	<skill id="39803" toLevel="11" name="泰爾錫守衛固有能力">
 		<!-- Level 1: <Requirements>. 1. When equipping an R-grade robe set enchanted to +8 and higher. 2. When equipping an L-grade robe set. <Effect>. Increases P. Def. and Dagger/ Bow Resistance. -->
 		<!-- Level 2: <Requirements>. 1. When equipping an R-grade robe set enchanted to +8 and higher. 2. When equipping an L-grade robe set. <Effect>. P. Def. +321 -->
 		<!-- Level 3: <Requirements>. 1. When equipping an R-grade robe set enchanted to +8 and higher. 2. When equipping an L-grade robe set. <Effect>. P. Def. +377 -->
@@ -254,17 +254,17 @@
 		<icon>icon.agathion_tersi_guard_1</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39804" toLevel="1" name="Large Lollipop">
+	<skill id="39804" toLevel="1" name="巨大棒棒糖">
 		<!-- Changes your weapon appearance into that of a big lollipop. The effect can be removed with Alt + Left Mouse Button. -->
 		<icon>icon.etc_pig_candy_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39805" toLevel="1" name="White Day's Candy Basket">
+	<skill id="39805" toLevel="1" name="白色情人節糖果籃">
 		<!-- Sweets bestow special power. CHA +3, P./ M. Def. +10%, acquired XP/ SP +5%. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. The effect can be removed with Alt + Left Mouse Button. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39806" toLevel="1" name="Vitality Sustaining Rune (1-day)">
+	<skill id="39806" toLevel="1" name="活力維持古文(限時1日)">
 		<!-- When in inventory, sustains Vitality. -->
 		<icon>icon.ev_charge_run</icon>
 		<operateType>P</operateType>
@@ -274,7 +274,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39807" toLevel="1" name="Beora's Energy Rune">
+	<skill id="39807" toLevel="1" name="貝歐娜活力古文">
 		<!-- When in inventory, Vitality bonus +30%. -->
 		<icon>icon.bm_package_vitality_rune_30d</icon>
 		<operateType>P</operateType>
@@ -284,7 +284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39808" toLevel="1" name="Scroll: Enchant Light Dragon's Cloak">
+	<skill id="39808" toLevel="1" name="光之龍斗篷強化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -294,7 +294,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39809" toLevel="1" name="Freya's Charisma Potion">
+	<skill id="39809" toLevel="1" name="芙蕾雅魅力藥劑">
 		<!-- When used, CHA +5 for 30 min. The effect does not stack with Einhasad's Charisma Potion, Freya's Luck Potion, or Archangel's Grace. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_freya_charisma_potion1</icon>
 		<operateType>A2</operateType>
@@ -318,7 +318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39810" toLevel="1" name="Extra Pass: Ice Queen's Castle">
+	<skill id="39810" toLevel="1" name="冰雪女王之城追加入場券">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -336,19 +336,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39813" toLevel="1" name="Appearance Stone: Tempting Swimsuit">
+	<skill id="39813" toLevel="1" name="迷人泳衣加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39814" toLevel="1" name="Appearance Stone: Paradise Swimsuit">
+	<skill id="39814" toLevel="1" name="樂園泳裝加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39815" toLevel="1" name="Appearance Stone: Baby Shark">
+	<skill id="39815" toLevel="1" name="鯊嘟嘟鯊魚衣裳加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39816" toLevel="1" name="Extra Pass: Party Instance Zone">
+	<skill id="39816" toLevel="1" name="隊伍即時地區追加入場券">
 		<!-- Resets cooldown to Spirit Forest, Crystal Prison (Baylor), Ashen Shadow Camp, Nightmare Kamaloka, Krofin's Nest. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -367,7 +367,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39817" toLevel="1" name="Wishing Stone">
+	<skill id="39817" toLevel="1" name="願望石">
 		<!-- For 30 min., Weapon P./ M. Atk. +150, STR/ INT/ CON +3, Speed +7, acquired XP/ SP +10%. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.elemental_earth_stone_i00</icon>
 		<operateType>A2</operateType>
@@ -415,7 +415,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39818" toLevel="1" name="+6 Fallen Angel's Earring Pack (Cooldown Lv. 3)">
+	<skill id="39818" toLevel="1" name="+6墮天使耳環(減少階段3)禮盒">
 		<!-- Double-click to obtain +6 Fallen Angel's Earring (Cooldown Lv. 3). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -445,12 +445,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39819" toLevel="1" name="Growth Manager's Inspiring Potion">
+	<skill id="39819" toLevel="1" name="成長管理者應援藥水">
 		<!-- For 30 min., damage +5%, acquired XP/ SP +20%, received damage -5%. Additionally, acquired XP/ SP +100% if your level < 118. The effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_ev_invite_red_potion</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39820" toLevel="14" name="+11 Krishna Dagger Pack">
+	<skill id="39820" toLevel="14" name="+11克里修納雙鈍器禮盒">
 		<!-- Level 1: Double-click to obtain +11 Krishna Dagger. -->
 		<!-- Level 2: Double-click to obtain +11 Krishna Cutter. -->
 		<!-- Level 3: Double-click to obtain +11 Krishna Slasher. -->
@@ -599,7 +599,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39821" toLevel="14" name="+32 Krishna Dagger Pack">
+	<skill id="39821" toLevel="14" name="+32克里修納雙鈍器禮盒">
 		<!-- Level 1: Double-click to obtain +32 Krishna Dagger. -->
 		<!-- Level 2: Double-click to obtain +32 Krishna Cutter. -->
 		<!-- Level 3: Double-click to obtain +32 Krishna Slasher. -->
@@ -748,7 +748,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39822" toLevel="14" name="+32 Supreme Krishna Dagger Pack">
+	<skill id="39822" toLevel="14" name="+32限定克里修納雙鈍器禮盒">
 		<!-- Level 1: Double-click to obtain +32 Supreme Krishna Dagger. -->
 		<!-- Level 2: Double-click to obtain +32 Supreme Krishna Cutter. -->
 		<!-- Level 3: Double-click to obtain +32 Supreme Krishna Slasher. -->
@@ -897,13 +897,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39823" toLevel="1" name="Anniversary Cake">
+	<skill id="39823" toLevel="1" name="慶典Party蛋糕">
 		<!-- For 30 min., Weapon P./ M. Atk. +190, M. Atk./ M. Def. +19,000, acquired XP/ SP +19%. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_19th_cake</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39824" toLevel="1" name="Sealed Fire Source">
+	<skill id="39824" toLevel="1" name="封印的火之根源">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -919,30 +919,30 @@
 			<effect name="AddFireSourcePoints" />
 		</effects>
 	</skill>
-	<skill id="39825" toLevel="1" name="Burning Matchstick">
+	<skill id="39825" toLevel="1" name="燃燒的火柴棒">
 		<!-- If you look more closely, you can see something in the flame... -->
 		<icon>icon.s_item_ev_2022_winter_match1</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39826" toLevel="3" name="Burning Matchstick - Normal Reward">
+	<skill id="39826" toLevel="3" name="燃燒的火柴棒-超好運獎勵">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39827" toLevel="1" name="Hot Pie">
+	<skill id="39827" toLevel="1" name="熱騰騰鯛魚燒">
 		<!-- A nourishing treat. Recovers 1 Vitality bar. -->
 		<icon>icon.ev_2022_winter_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39828" toLevel="1" name="Big Golden Pie">
+	<skill id="39828" toLevel="1" name="巨大黃金鯛魚燒">
 		<!-- A pie fit for a king. For 30 min., all Critical Rate +5%, all attack power +10%, P./ M. Def. +10%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_2022_winter_buff2</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39829" toLevel="1" name="Vitality Sustaining Rune">
+	<skill id="39829" toLevel="1" name="活力維持古文">
 		<!-- When in inventory, sustains Vitality. -->
 		<icon>icon.ev_charge_run</icon>
 		<operateType>P</operateType>
@@ -952,7 +952,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39830" toLevel="1" name="Magic Dumpling Soup">
+	<skill id="39830" toLevel="1" name="月圓團圓麻糬湯">
 		<!-- Warm holiday soup. For 30 min., P. Atk./ M. Atk./ P. Def./ M. Def. +15%, acquired XP/ SP +15%. -->
 		<icon>icon.ev_stew_of_pray</icon>
 		<operateType>A1</operateType>
@@ -960,7 +960,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39831" toLevel="1" name="Rim Kamaloka Scroll">
+	<skill id="39831" toLevel="1" name="邊緣欲界卷軸">
 		<!-- For 30 min., Attribute Attack/ Resistance +200, acquired XP/ SP +30%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.etc_charm_of_luck_i01</icon>
 		<operateType>A1</operateType>
@@ -968,23 +968,23 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39832" toLevel="1" name="My Teleport Book Lv. 3">
+	<skill id="39832" toLevel="1" name="自由傳送書3階段">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39833" toLevel="1" name="Scroll: Enchant Badge of the Golden Ram Army">
+	<skill id="39833" toLevel="1" name="黃金羊傭兵團徽章強化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39834" toLevel="1" name="Test - Gran Kain's Armor/ Accessory Scroll">
+	<skill id="39834" toLevel="1" name="測試-格蘭肯卷軸防具/飾品">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39835" toLevel="1" name="Test - Gran Kain's Weapon Scroll">
+	<skill id="39835" toLevel="1" name="測試-格蘭肯卷軸武器">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39836" toLevel="1" name="My Heart Skips a Beat Because of Your Sweet Smile">
+	<skill id="39836" toLevel="1" name="因你甜蜜的微笑而心動不已">
 		<!-- Once you put Sweet and Sour Candy into your mouth, you feel breath of spring. For 4 min., all party members' Critical Damage for basic attacks and P./ M. skills +5%, P. Def. +10%, acquired XP/ SP +5%. The effect becomes stronger if a party member has Sweet Candy. The effect remains after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_2023_whiteday_boy_candy</icon>
 		<operateType>A1</operateType>
@@ -993,7 +993,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="39837" toLevel="1" name="My Tender Love Swept Away Like Flower Petals">
+	<skill id="39837" toLevel="1" name="迎來如花瓣般甜甜的愛情">
 		<!-- You put Sweet Candy into your mouth and feel breath of spring.. For 4 min., all party members' power of basic attacks and P./ M. skills +5%, M. Def. +10%, acquired XP/ SP +5%. The effect becomes stronger if a party member has Sweet and Sour Candy. The effect remains after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_2023_whiteday_girl_candy</icon>
 		<operateType>A1</operateType>
@@ -1002,27 +1002,27 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="39838" toLevel="1" name="Sweet and Sour Herb Drink of Growth">
+	<skill id="39838" toLevel="1" name="酸甜的成長藥草">
 		<!-- The energy of healing herbs makes you more powerful. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39839" toLevel="1" name="Sweet and Sour Herb Drink of Growth">
+	<skill id="39839" toLevel="1" name="酸甜的成長藥草">
 		<!-- The energy of healing herbs makes you more powerful. For 5 min., Power of basic attacks and P./ M. skills +10%, P./ M. Def. +10%, Critical Rate for basic attacks and P./ M. skills +15%, acquired XP/ SP +100%. Additionally, if you are Lv. 105-123, Vitality bonus +200%. The effect disappears on logout. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39840" toLevel="1" name="Ah, Spring Has Come to Me Too">
+	<skill id="39840" toLevel="1" name="啊，我的春天也來了">
 		<!-- Spring brings visions of the future where a new power rules Aden... Hero, now you and your friends have a mark of that power. For 2 min., damage +30%, received damage -30%. The effect disappears on logout. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39841" toLevel="1" name="Green Sprout Energy">
+	<skill id="39841" toLevel="1" name="粉綠幼苗的氣息">
 		<!-- For 30 min., damage +10%, acquired XP/ SP +10%, received damage -10%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. The effect is removed upon entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_green_energy</icon>
 		<operateType>A2</operateType>
@@ -1104,7 +1104,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39842" toLevel="1" name="Scroll: Enchant L-grade Weapon">
+	<skill id="39842" toLevel="1" name="武器強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1114,7 +1114,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39843" toLevel="1" name="Scroll: Enchant L-grade Armor">
+	<skill id="39843" toLevel="1" name="防具強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1124,7 +1124,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39844" toLevel="1" name="Blessed Scroll: Enchant L-grade Weapon">
+	<skill id="39844" toLevel="1" name="祝福的武器強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1134,7 +1134,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39845" toLevel="1" name="Blessed Scroll: Enchant L-grade Armor">
+	<skill id="39845" toLevel="1" name="祝福的防具強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1144,7 +1144,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39846" toLevel="1" name="Giant's Scroll: Enchant L-grade Weapon">
+	<skill id="39846" toLevel="1" name="巨人武器強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1154,7 +1154,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39847" toLevel="1" name="Giant's Scroll: Enchant L-grade Armor">
+	<skill id="39847" toLevel="1" name="巨人防具強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1164,7 +1164,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39848" toLevel="1" name="Gran Kain's Scroll: Enchant L-grade Weapon">
+	<skill id="39848" toLevel="1" name="格蘭肯的武器強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1174,7 +1174,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39849" toLevel="1" name="Gran Kain's Scroll: Enchant L-grade Armor">
+	<skill id="39849" toLevel="1" name="格蘭肯的防具強化卷軸-L級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1184,27 +1184,27 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39850" toLevel="1" name="Restoration Stone: Restore Equipment">
+	<skill id="39850" toLevel="1" name="裝備外型復原石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39851" toLevel="1" name="Appearance Stone: Weapon">
+	<skill id="39851" toLevel="1" name="武器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39852" toLevel="1" name="Blessed Appearance Stone: Weapon">
+	<skill id="39852" toLevel="1" name="祝福的武器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39853" toLevel="1" name="Appearance Stone: Armor">
+	<skill id="39853" toLevel="1" name="防具加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39854" toLevel="1" name="Blessed Appearance Stone: Armor">
+	<skill id="39854" toLevel="1" name="祝福的防具加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39855" toLevel="11" name="Secondary Skill: Agathion Masia's Guardian">
+	<skill id="39855" toLevel="11" name="瑪斯亞守衛固有能力">
 		<!-- Level 1: <Requirements>. 1. When equipping an R-grade heavy armor set enchanted to +8 and higher. 2. When equipping an L-grade heavy armor set. <Effect>. Increases P. Def., decreases skill cooldown. -->
 		<!-- Level 2: <Requirements>. 1. When equipping an R-grade heavy armor set enchanted to +8 and higher. 2. When equipping an L-grade heavy armor set. <Effect>. P. Def. +321 -->
 		<!-- Level 3: <Requirements>. 1. When equipping an R-grade heavy armor set enchanted to +8 and higher. 2. When equipping an L-grade heavy armor set. <Effect>. P. Def. +377 -->
@@ -1328,7 +1328,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39856" toLevel="11" name="Secondary Skill: Agathion Paulina's Guardian">
+	<skill id="39856" toLevel="11" name="波莉奈守衛固有能力">
 		<!-- Level 1: <Requirements>. 1. When equipping an R-grade light armor set enchanted to +8 and higher. 2. When equipping an L-grade light armor set. <Effect>. Increases P. Def. and Skill Power. -->
 		<!-- Level 2: <Requirements>. 1. When equipping an R-grade light armor set enchanted to +8 and higher. 2. When equipping an L-grade light armor set. <Effect>. P. Def. +321 -->
 		<!-- Level 3: <Requirements>. 1. When equipping an R-grade light armor set enchanted to +8 and higher. 2. When equipping an L-grade light armor set. <Effect>. P. Def. +377 -->
@@ -1392,7 +1392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39857" toLevel="11" name="Secondary Skill: Agathion Tersi's Guardian">
+	<skill id="39857" toLevel="11" name="泰爾錫守衛固有能力">
 		<!-- Level 1: <Requirements>. 1. When equipping an R-grade robe set enchanted to +8 and higher. 2. When equipping an L-grade robe set. <Effect>. Increases P. Def. and Dagger/ Bow Resistance. -->
 		<!-- Level 2: <Requirements>. 1. When equipping an R-grade robe set enchanted to +8 and higher. 2. When equipping an L-grade robe set. <Effect>. P. Def. +321 -->
 		<!-- Level 3: <Requirements>. 1. When equipping an R-grade robe set enchanted to +8 and higher. 2. When equipping an L-grade robe set. <Effect>. P. Def. +377 -->
@@ -1407,13 +1407,13 @@
 		<icon>icon.agathion_tersi_guard_1</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="39858" toLevel="1" name="Essence of Warg">
+	<skill id="39858" toLevel="1" name="狂狼覺醒者精髓">
 		<!-- Warg's indomitable spirit inspires you to do great things. For 30 min., acquired XP/ SP +200%. -->
 		<icon>BranchSys.br_rudolf_food_orange_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39859" toLevel="1" name="Pink's Heart Scroll">
+	<skill id="39859" toLevel="1" name="粉粉愛心卷軸">
 		<!-- For 30 min., Power of basic attacks and P./ M. skills +10%, P./ M. Def. +10%, acquired XP/ SP +10%, Vitality bonus +10%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.event_altair_enchant_scroll_i00</icon>
 		<operateType>A2</operateType>
@@ -1452,18 +1452,18 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39860" toLevel="1" name="Wheel Rice Cake">
+	<skill id="39860" toLevel="1" name="艾草糕">
 		<!-- The cake fills you with energy. When used, recovers 1 Vitality bar. Note!. Cannot be used in the Olympiad. -->
 		<icon>icon.ev_2023_dano_ricecake1</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39861" toLevel="1" name="Red Bean Rice Cake">
+	<skill id="39861" toLevel="1" name="茯苓糕">
 		<!-- A tasty and nutritious treat. They say, these cakes protect from evil spirits and prevent them from getting into our world. For 30 min., Critical Rate for basic attacks and P./ M. skills +5%, acquired XP/ SP +10%. Note!. The effect remains after death, switching to a dual class and entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_2023_dano_ricecake2</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39862" toLevel="1" name="High Priest's Grace">
+	<skill id="39862" toLevel="1" name="大神官恩寵">
 		<!-- For 30 min., Critical Rate for basic attacks and P./ M. skills +5%, power of basic attacks and P./ M. skills +5%, P./ M. Def. +5%, acquired XP/ SP +10%. The effect does not stack with Freya's Charisma Potion, Einhasad's Charisma Potion, Freya's Luck Potion, or Archangel's Grace. To remove the effect, press Alt + Left Mouse Button. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_hot_spring_mineral_i00</icon>
 		<operateType>A2</operateType>
@@ -1521,13 +1521,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39863" toLevel="1" name="Frost Grape">
+	<skill id="39863" toLevel="1" name="冰涼的葡萄">
 		<!-- Having eaten cool grapes, you feel refreshed and acute. For 30 min., P. Atk./ M. Atk./ P. Def./ M. Def. +5%, acquired XP/ SP +30%. The effect remains after death, after switching to a dual class or entering instance zones. The effect is removed upon entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_mysterious_grape</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39864" toLevel="1" name="Santiago's Royal Soup">
+	<skill id="39864" toLevel="1" name="聖地牙哥皇家濃湯">
 		<!-- For 10 min., P./ M. Atk., Atk. Spd./ Casting Spd., Max HP/ MP +4%. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A2</operateType>
@@ -1570,7 +1570,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39865" toLevel="1" name="Blue Sky Lantern">
+	<skill id="39865" toLevel="1" name="青色天燈">
 		<!-- Summons a Blue Sky Lantern. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1578,7 +1578,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39866" toLevel="1" name="White Sky Lantern">
+	<skill id="39866" toLevel="1" name="白色天燈">
 		<!-- Summons a White Sky Lantern. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1586,7 +1586,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39867" toLevel="1" name="Yellow Sky Lantern">
+	<skill id="39867" toLevel="1" name="黃色天燈">
 		<!-- Summons a Yellow Sky Lantern. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1594,7 +1594,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39868" toLevel="1" name="Homunculus Evolution Points - 10">
+	<skill id="39868" toLevel="1" name="何門奎思進化點數10">
 		<!-- Double-click to obtain 10 homunculus evolution points. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1612,7 +1612,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39869" toLevel="1" name="Sleep Cannonball Shot">
+	<skill id="39869" toLevel="1" name="發射催眠砲彈">
 		<!-- Puts Beast Ravager at the Beast Farm to sleep. Consumes 1 Sleep Cannonball. -->
 		<icon>icon.skill4046</icon>
 		<operateType>A1</operateType>
@@ -1623,7 +1623,7 @@
 		<itemConsumeId>83066</itemConsumeId> <!-- Sleep Cannonball -->
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39870" toLevel="1" name="Heart Attack - Rose">
+	<skill id="39870" toLevel="1" name="玫瑰色愛心蹦">
 		<!-- According to rumors, if you explode a Rose Heart next to the tree in the Garden of Genesis event session zone, the tree will sprout roses. Consumes 1 Pink Heart. -->
 		<icon>icon.s_item_ev_20th_weapon</icon>
 		<operateType>A1</operateType>
@@ -1632,12 +1632,12 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="39871" toLevel="1" name="Scroll: Enchant 20th Anniversary Toy Hammer">
+	<skill id="39871" toLevel="1" name="20週年玩具錘強化卷軸">
 		<!-- For the 20th Anniversary Toy Hammer event item. Can be enchanted up to +20. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39872" toLevel="1" name="Spellbook: Exalted Master Lv. 1">
+	<skill id="39872" toLevel="1" name="魔法書-榮耀大師Lv1">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1665,7 +1665,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39873" toLevel="1" name="Heart Explosion - Jackpot">
+	<skill id="39873" toLevel="1" name="大葫蘆王愛心蹦">
 		<!-- Rumor has it that whoever explodes a heart next to Jackpot in the weekly event instance zone will surely find luck. Only 20th Anniversary Jackpot can be selected as target. -->
 		<icon>icon.s_item_ev_20th_weapon</icon>
 		<operateType>A1</operateType>
@@ -1674,39 +1674,39 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39874" toLevel="1" name="20th Anniversary Cake">
+	<skill id="39874" toLevel="1" name="20週年慶祝蛋糕">
 		<!-- For 30 min., Attribute Attack/ Resistance +100, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +5%, received Critical Damage from basic attacks and P./ M. skills -5%. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>BranchSys.icon.br_birthday_cake_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39875" toLevel="1" name="Appearance Stone: Magician Garment">
+	<skill id="39875" toLevel="1" name="魔術師衣裳加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39876" toLevel="1" name="Appearance Stone: Teddy Bear Costume">
+	<skill id="39876" toLevel="1" name="熊熊娃衣裳外型加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39877" toLevel="1" name="Appearance Stone: Cat Costume">
+	<skill id="39877" toLevel="1" name="貓衣裳加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39878" toLevel="1" name="Appearance Stone: Panda Costume">
+	<skill id="39878" toLevel="1" name="熊貓衣裳加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39879" toLevel="1" name="Appearance Stone: Rudolph Costume">
+	<skill id="39879" toLevel="1" name="魯道夫衣裳加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39880" toLevel="1" name="New Year Cake">
+	<skill id="39880" toLevel="1" name="聖誕蛋糕">
 		<!-- Happy New Year!. For 30 min., all Critical Rate +5%, all attack power +10%, P./ M. Def. +10%, damage +5%, acquired XP/ SP +10%, Vitality bonus +10%, received damage -5%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.ev_2023_christmas_cake</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39881" toLevel="1" name="Throw Snowball">
+	<skill id="39881" toLevel="1" name="雪球擊">
 		<!-- Throws a snowball at the target. -->
 		<icon>icon.s_ev_christmas_snow1</icon>
 		<operateType>A1</operateType>
@@ -1715,7 +1715,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>200</reuseDelay>
 	</skill>
-	<skill id="39882" toLevel="1" name="Snow Fiesta">
+	<skill id="39882" toLevel="1" name="雪聖殤">
 		<!-- Attacks enemies with a blizzard. Use the skill when you're surrounded by Snowmen. Cooldown: 15 sec. -->
 		<icon>icon.s_ev_christmas_snow2</icon>
 		<operateType>A1</operateType>
@@ -1723,7 +1723,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>15000</reuseDelay>
 	</skill>
-	<skill id="39883" toLevel="1" name="Heart Scroll of Heavenly Light">
+	<skill id="39883" toLevel="1" name="藍光愛心卷軸">
 		<!-- For 30 min., Power of basic attacks and P./ M. skills +10%, P./ M. Def. +10%, acquired XP/ SP +10%, Vitality bonus +10%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.event_altair_enchant_scroll_i01</icon>
 		<operateType>A2</operateType>
@@ -1763,14 +1763,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39884" toLevel="1" name="Magic Yut Stick Set">
+	<skill id="39884" toLevel="1" name="心想事成擲柶套組">
 		<!-- Summons a helper for the yut game. -->
 		<icon>icon.ev_new_year_yut_set</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>7000</reuseDelay>
 	</skill>
-	<skill id="39885" toLevel="1" name="Valentine's Day Chocolate">
+	<skill id="39885" toLevel="1" name="情人節巧克力">
 		<!-- Use this item while targeting the Festival Fairy to get a Valentine's Day gift. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A1</operateType>
@@ -1779,27 +1779,27 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="39886" toLevel="1" name="C-grade Relic Compounding Point">
+	<skill id="39886" toLevel="1" name="C級遺物合成點數1">
 		<!-- Double-click to obtain 1 C-grade relic compounding point. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="39887" toLevel="1" name="B-grade Relic Compounding Point">
+	<skill id="39887" toLevel="1" name="B級遺物合成點數1">
 		<!-- Double-click to obtain 1 B-grade relic compounding point. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="39888" toLevel="1" name="Scroll: Enchant Trophies">
+	<skill id="39888" toLevel="1" name="戰利品強化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39889" toLevel="1" name="Gran Kain's Shining Scroll: Enchant Trophies">
+	<skill id="39889" toLevel="1" name="閃耀的格蘭肯戰利品強化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39890" toLevel="1" name="Special Cocktail">
+	<skill id="39890" toLevel="1" name="特殊雞尾酒">
 		<!-- For 60 min., applies Fever Melody, Drumbeat of Serenity and Fantasia Harmony Lv. 1. To remove the effect, press Alt + Left Mouse Button. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A2</operateType>
@@ -1844,7 +1844,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="39891" toLevel="1" name="Special Cocktail">
+	<skill id="39891" toLevel="1" name="特殊雞尾酒">
 		<!-- For 60 min., applies Fever Melody, Drumbeat of Serenity and Fantasia Harmony Lv. 1. To remove the effect, press Alt + Left Mouse Button. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A2</operateType>
@@ -1882,7 +1882,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39892" toLevel="1" name="Special Cocktail">
+	<skill id="39892" toLevel="1" name="特殊雞尾酒">
 		<!-- For 60 min., applies Fever Melody, Drumbeat of Serenity and Fantasia Harmony Lv. 1. To remove the effect, press Alt + Left Mouse Button. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A2</operateType>
@@ -1920,7 +1920,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39893" toLevel="1" name="Fever Melody - Special Cocktail">
+	<skill id="39893" toLevel="1" name="狂熱之詩-特殊雞尾酒">
 		<!-- <font color="ECECEC"><Effect></font>. <font color="A3A3A3">Duration:</font> <font color="B09B79">60 min.</font>. P. Atk. +100%. M. Atk. +280%. Attribute Attack +50. Atk. Spd. +150%. Casting Spd. +140%. Critical Rate for basic attacks +150%. M. Skill Critical Rate +107%. Critical Damage for basic attacks +130%. P./ M. Skill Critical Damage 60 min.0 -->
 		<icon>icon.renewal_cocktail_lv1_i01</icon>
 		<operateType>A2</operateType>
@@ -1991,7 +1991,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39894" toLevel="1" name="Drumbeat of Serenity - Special Cocktail">
+	<skill id="39894" toLevel="1" name="鼓和-特殊雞尾酒">
 		<!-- <font color="ECECEC"><Effect></font>. <font color="A3A3A3">Duration:</font> <font color="B09B79">60 min.</font>. Max HP/ MP/ CP +75%. P. Def. +80%. M. Def. +75%. Attribute Resistance +10. All received Critical Rate -15% -->
 		<icon>icon.renewal_cocktail_lv1_i03</icon>
 		<operateType>A2</operateType>
@@ -2080,7 +2080,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39895" toLevel="1" name="Fantasia Harmony - Special Cocktail">
+	<skill id="39895" toLevel="1" name="幻想曲和聲-特殊雞尾酒">
 		<!-- <font color="ECECEC"><Effect></font>. <font color="A3A3A3">Duration:</font> <font color="B09B79">60 min.</font>. HP/ MP Recovery Rate +90%. Vampiric Rage +9%. Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +50. Speed +10. Skill MP Consumption -30%. Skill cooldown -20%. <font color="ECECEC"><Additional effect - Critical Stroke></font>. With a certain chance, Critical Damage for basic attacks +100% for 8 sec. when hit. The cooldown is fixed at 15 sec. -->
 		<icon>icon.renewal_cocktail_lv1_i02</icon>
 		<operateType>A2</operateType>
@@ -2186,7 +2186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39896" toLevel="1" name="Drumbeat of Serenity - Ceremony of Chaos">
+	<skill id="39896" toLevel="1" name="鼓和-渾沌祭典">
 		<!-- The Ceremony of Chaos buff. <font color="ECECEC"><Effect></font>. <font color="A3A3A3">Duration:</font> <font color="B09B79">7 min.</font>. Max HP/ MP/ CP +85%. P. Def. +95%. M. Def. +90%. Attribute Resistance +50. All received Critical Rate -25% -->
 		<icon>icon.skill31001</icon>
 		<operateType>A2</operateType>
@@ -2315,7 +2315,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39897" toLevel="1" name="Superion War Fortress' Time Stone">
+	<skill id="39897" toLevel="1" name="決戰要塞修佩利歐時間充能石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2342,13 +2342,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39898" toLevel="1" name="Fantastic Summer Slushie">
+	<skill id="39898" toLevel="1" name="夢幻刨冰">
 		<!-- This shaved ice gives you an energy surge. For. 30 min., P. Atk./ M. Atk./ P. Def./ M. Def. +5%, all Critical Rate +5%, acquired XP/ SP +10%, Vitality bonus +10%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
 		<icon>BranchSys3.icon1.g_ev_sweet_icewater</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="39899" toLevel="1" name="Watermelon">
+	<skill id="39899" toLevel="1" name="西瓜">
 		<!-- Summons the Watermelon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

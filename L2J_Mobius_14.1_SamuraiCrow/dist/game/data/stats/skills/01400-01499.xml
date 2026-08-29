@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1400" toLevel="10" name="Turn Undead">
+	<skill id="1400" toLevel="10" name="破邪法">
 		<!-- Level 1: Frightens the undead causing them to flee for 20 sec. Consumes 3 Spirit Ore. -->
 		<!-- Level 2: Frightens the undead causing them to flee for 20 sec. Consumes 3 Spirit Ore. -->
 		<!-- Level 3: Frightens the undead causing them to flee for 20 sec. Consumes 4 Spirit Ore. -->
@@ -88,7 +88,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1401" toLevel="11" name="Major Heal">
+	<skill id="1401" toLevel="11" name="極大治癒術">
 		<!-- Level 1: Momentarily recovers the target's HP with 690 power. Consumes 1 Spirit Ore. -->
 		<!-- Level 2: Momentarily recovers the target's HP with 722 power. Consumes 1 Spirit Ore. -->
 		<!-- Level 3: Momentarily recovers the target's HP with 753 power. Consumes 1 Spirit Ore. -->
@@ -182,7 +182,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1402" toLevel="5" name="Major Group Heal">
+	<skill id="1402" toLevel="5" name="極大集體治癒術">
 		<!-- Level 1: Momentarily recovers all party members' HP with 902 power. Consumes 4 Spirit Ore. -->
 		<!-- Level 2: Momentarily recovers all party members' HP with 979 power. Consumes 4 Spirit Ore. -->
 		<!-- Level 3: Momentarily recovers all party members' HP with 1050 power. Consumes 4 Spirit Ore. -->
@@ -235,7 +235,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1403" toLevel="1" name="Summon Friend">
+	<skill id="1403" toLevel="1" name="召喚戰友">
 		<!-- Teleports a party member to the caster's current location. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1403</icon>
 		<operateType>A1</operateType>
@@ -263,7 +263,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1404" toLevel="1" name="Word of Invitation">
+	<skill id="1404" toLevel="1" name="招來咒言">
 		<!-- Teleports a party member to the caster's current location. Consumes 3 Spirit Ore. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1404</icon>
 		<operateType>A1</operateType>
@@ -293,7 +293,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1405" toLevel="6" name="Divine Inspiration">
+	<skill id="1405" toLevel="6" name="神威加持">
 		<!-- Level 1: Buff slots +1. -->
 		<!-- Level 2: Buff slots +2. -->
 		<!-- Level 3: Buff slots +3. -->
@@ -324,7 +324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1406" toLevel="1" name="Summon Feline King">
+	<skill id="1406" toLevel="1" name="召喚國王貓">
 		<!-- Summons Feline King. Consumes 4 Spirit Ore. -->
 		<icon>icon.skill1406</icon>
 		<operateType>A1</operateType>
@@ -351,7 +351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1407" toLevel="1" name="Summon Magnus the Unicorn">
+	<skill id="1407" toLevel="1" name="召喚輝煌獨角獸">
 		<!-- Summons Magnus the Unicorn. Requires 4 Spirit Ore. -->
 		<icon>icon.skill1407</icon>
 		<operateType>A1</operateType>
@@ -378,7 +378,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1408" toLevel="1" name="Summon Spectral Lord">
+	<skill id="1408" toLevel="1" name="召喚幽冥之主">
 		<!-- Summons Spectral Lord. Consumes 4 Spirit Ore. -->
 		<icon>icon.skill1408</icon>
 		<operateType>A1</operateType>
@@ -407,7 +407,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1409" toLevel="1" name="Cleanse">
+	<skill id="1409" toLevel="1" name="淨罪">
 		<!-- Removes debuffs from the target. Consumes Einhasad's Holy Water (1 pc.). -->
 		<icon>icon.skill1409</icon>
 		<operateType>A1</operateType>
@@ -433,7 +433,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1410" toLevel="1" name="Salvation">
+	<skill id="1410" toLevel="1" name="救贖">
 		<!-- Resurrects from death fully recovered. Maintains buffs and debuffs even after death. The Noblesse Blessing and the Lucky Charm disappear, however. Consumes 2 Einhasad's Holy Water. The skill cooldown is fixed. -->
 		<icon>icon.skill1410</icon>
 		<operateType>A2</operateType>
@@ -462,7 +462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1411" toLevel="1" name="Mystic Immunity">
+	<skill id="1411" toLevel="1" name="祕術免疫">
 		<!-- Becomes invincible to various debuffs for 10 sec. Usable only on party members. -->
 		<icon>icon.skill1411</icon>
 		<operateType>A2</operateType>
@@ -504,7 +504,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1412" toLevel="1" name="Spell Turning">
+	<skill id="1412" toLevel="1" name="咒文偏移">
 		<!-- Disrupts a nearby target's casting, disrupting their spell. -->
 		<icon>icon.skill1412</icon>
 		<operateType>A1</operateType>
@@ -526,7 +526,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1413" toLevel="1" name="Chant of Magnus">
+	<skill id="1413" toLevel="1" name="輝煌頌歌">
 		<!-- For 5 min., an ancient wizard's spirit possesses all party members. Their Max MP +15%, MP Recovery Rate +1.5 when using light/ heavy armor, MP Recovery Rate +4 when using robes, M. Def. +30%, M. Atk. +30%, Casting Spd. +20%, Attribute Resistance +10, Debuff Resistance +25, Buff Cancel Resistance +5 min.0. Consumes 5 min.1 Spirit Ore. -->
 		<icon>icon.skill1413</icon>
 		<operateType>A2</operateType>
@@ -613,7 +613,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1414" toLevel="1" name="Victories of Pa'agrio">
+	<skill id="1414" toLevel="1" name="帕格立歐必勝">
 		<!-- For 5 min., nearby clan members' Max CP +20%, CP Recovery Rate +20%, Max MP +20%, Critical Rate for basic attacks +20%, M. Skill Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +5 min.0, M. Def. +5 min.1, Casting Spd. +5 min.2, Debuff Resistance +5 min.3, Speed -5 min.4. Consumes 5 min.5 Spirit Ore. -->
 		<icon>icon.skill1414</icon>
 		<operateType>A2</operateType>
@@ -695,7 +695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1415" toLevel="1" name="Pa'agrio's Emblem">
+	<skill id="1415" toLevel="1" name="帕格立歐聖徽">
 		<!-- For 5 min., nearby clan members' Buff Cancel Resistance +30%, Debuff Resistance +20%. -->
 		<icon>icon.skill1415</icon>
 		<operateType>A2</operateType>
@@ -727,7 +727,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1416" toLevel="8" name="Pa'agrio's Fist">
+	<skill id="1416" toLevel="8" name="帕格立歐奮戰">
 		<!-- Level 1: For 30 sec., increases a clan member's Max CP, their CP +2%. Cannot be used in the Conquest world. -->
 		<!-- Level 2: For 30 sec., increases a clan member's Max CP, their CP +3%. Cannot be used in the Conquest world. -->
 		<!-- Level 3: For 30 sec., increases a clan member's Max CP, their CP +4%. Cannot be used in the Conquest world. -->
@@ -998,7 +998,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1417" toLevel="5" name="Aura Flash">
+	<skill id="1417" toLevel="5" name="靈氣閃光">
 		<!-- Level 1: Attacks enemies with 2 power cancelling their targets. Consumes 49 Spirit Ore. -->
 		<!-- Level 2: Attacks enemies with 2 power cancelling their targets. Consumes 53 Spirit Ore. -->
 		<!-- Level 3: Attacks enemies with 3 power cancelling their targets. Consumes 58 Spirit Ore. -->
@@ -1072,7 +1072,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1418" toLevel="1" name="Celestial Shield">
+	<skill id="1418" toLevel="1" name="天國聖盾">
 		<!-- Protects the target with the holy power making them invincible for 10 sec. The skill cooldown is fixed. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
@@ -1126,7 +1126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1419" toLevel="1" name="Volcano">
+	<skill id="1419" toLevel="1" name="魔法陣‧爆炎">
 		<!-- Continuously inflicts powerful Fire damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1419</icon>
 		<operateType>CA1</operateType>
@@ -1161,7 +1161,7 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="1420" toLevel="1" name="Cyclone">
+	<skill id="1420" toLevel="1" name="魔法陣‧烈風">
 		<!-- Continuously inflicts powerful Wind damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1420</icon>
 		<operateType>CA1</operateType>
@@ -1196,7 +1196,7 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="1421" toLevel="1" name="Raging Waves">
+	<skill id="1421" toLevel="1" name="魔法陣‧海嘯">
 		<!-- Continuously inflicts powerful Water damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1421</icon>
 		<operateType>CA1</operateType>
@@ -1231,7 +1231,7 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="1422" toLevel="1" name="Day of Doom">
+	<skill id="1422" toLevel="1" name="魔法陣‧末日">
 		<!-- Creates a seal that applies a powerful curse that decreases all stats of nearby enemies. The effect disappears upon leaving the skill range. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A1</operateType>
@@ -1274,7 +1274,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1423" toLevel="1" name="Gehenna">
+	<skill id="1423" toLevel="1" name="魔法陣‧煉獄">
 		<!-- Continuously inflicts powerful dark damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1423</icon>
 		<operateType>CA1</operateType>
@@ -1309,7 +1309,7 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="1424" toLevel="1" name="Anti-summoning Field">
+	<skill id="1424" toLevel="1" name="魔法陣‧次元裂縫">
 		<!-- Decreases all speeds of nearby enemies, gives speed-increasing buffs, and creates a seal that periodically banishes a servitor to another dimension. All characters and servitors in the area are affected. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1424</icon>
 		<operateType>A1</operateType>
@@ -1351,7 +1351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1425" toLevel="1" name="Purification Field">
+	<skill id="1425" toLevel="1" name="魔法陣‧純淨">
 		<!-- Removes all debuffs from nearby clan members and creates a protective barrier that absorbs 10,000 damage. The skill cooldown is fixed. Consumes 5 Spirit Ore. Does not stack with other barrier effects. -->
 		<!-- Level 1 - SubLevel 1001 (+1 sec. Recovery): Removes all debuffs from nearby clan members and creates a protective barrier that absorbs 10,000 damage. The skill cooldown is fixed. Consumes 5 Spirit Ore. Does not stack with other barrier effects. -->
 		<!-- Level 1 - SubLevel 1002 (+2 sec. Recovery): Removes all debuffs from nearby clan members and creates a protective barrier that absorbs 10,000 damage. The skill cooldown is fixed. Consumes 5 Spirit Ore. Does not stack with other barrier effects. -->
@@ -1397,7 +1397,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1426" toLevel="1" name="Miracle">
+	<skill id="1426" toLevel="1" name="魔法陣‧奇蹟">
 		<!-- Fully recovers HP of nearby clan members. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1426</icon>
 		<operateType>A1</operateType>
@@ -1423,7 +1423,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1427" toLevel="1" name="Flames of Invincibility">
+	<skill id="1427" toLevel="1" name="魔法陣‧不滅之火">
 		<!-- Calls down a blessing of flames on nearby clan members to make them invincible. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1427</icon>
 		<operateType>A2</operateType>
@@ -1483,7 +1483,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1428" toLevel="1" name="Mass Recharge">
+	<skill id="1428" toLevel="1" name="魔法陣‧魔力泉源">
 		<!-- Recovers MP for all party members. Consumes 1 Magic Symbol. The skill cooldown is fixed. -->
 		<icon>icon.skill1428</icon>
 		<operateType>A1</operateType>
@@ -1509,7 +1509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1429" toLevel="1" name="Chant of Gate">
+	<skill id="1429" toLevel="1" name="門扉頌歌">
 		<!-- Summons a party member. Consumes 4 Summoning Crystals. The skill cooldown is fixed. -->
 		<icon>icon.skill1429</icon>
 		<operateType>A1</operateType>
@@ -1538,7 +1538,7 @@
 			<effect name="CallParty" />
 		</effects>
 	</skill>
-	<skill id="1430" toLevel="5" name="Invocation">
+	<skill id="1430" toLevel="5" name="默禱">
 		<!-- Level 1: For 30 sec., P. Def. -90%. Recovers 54 MP per sec. The effect is cancelled when hit. The skill cooldown is fixed. -->
 		<!-- Level 2: For 30 sec., P. Def. -90%. Recovers 60 MP per sec. The effect is cancelled when hit. The skill cooldown is fixed. -->
 		<!-- Level 3: For 30 sec., P. Def. -90%. Recovers 68 MP per sec. The effect is cancelled when hit. The skill cooldown is fixed. -->
@@ -1601,7 +1601,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1431" toLevel="6" name="Fallen Arrow">
+	<skill id="1431" toLevel="6" name="墮落之箭">
 		<!-- Level 1: Imbues an arrow with dark energy and fires it with 13 power. Consumes up to 5 souls to increase power. -->
 		<!-- Level 2: Imbues an arrow with dark energy and fires it with 14 power. Consumes up to 5 souls to increase power. -->
 		<!-- Level 3: Imbues an arrow with dark energy and fires it with 16 power. Consumes up to 5 souls to increase power. -->
@@ -1673,7 +1673,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1432" toLevel="2" name="Increase Power">
+	<skill id="1432" toLevel="2" name="力量加持">
 		<!-- Level 1: For 20 min., P. Atk. +8%. -->
 		<!-- Level 2: For 20 min., P. Atk. +12%. -->
 		<icon>icon.skill1432</icon>
@@ -1717,7 +1717,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1433" toLevel="10" name="Abyssal Blaze">
+	<skill id="1433" toLevel="10" name="深淵赤焰">
 		<!-- Level 1: Fires a magical arrow with 5 power. Consumes 24 soul(s). -->
 		<!-- Level 2: Fires a magical arrow with 5 power. Consumes 26 soul(s). -->
 		<!-- Level 3: Fires a magical arrow with 5 power. Consumes 28 soul(s). -->
@@ -1806,7 +1806,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1434" toLevel="4" name="Dark Explosion">
+	<skill id="1434" toLevel="4" name="黑暗爆裂">
 		<!-- Level 1: Explodes souls and inflicts magical damage on nearby enemies with 5 power. Consumes 16 soul(s). -->
 		<!-- Level 2: Explodes souls and inflicts magical damage on nearby enemies with 5 power. Consumes 18 soul(s). -->
 		<!-- Level 3: Explodes souls and inflicts magical damage on nearby enemies with 5 power. Consumes 20 soul(s). -->
@@ -1862,7 +1862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1435" toLevel="10" name="Death Mark">
+	<skill id="1435" toLevel="10" name="死亡印記">
 		<!-- Level 1: Marks the enemy with a Death Mark. For 30 sec., their P./ M. Def. -20%, HP -24 per sec. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Marks the enemy with a Death Mark. For 30 sec., their P./ M. Def. -20%, HP -32 per sec. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Marks the enemy with a Death Mark. For 30 sec., their P./ M. Def. -23%, HP -41 per sec. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -1998,7 +1998,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1436" toLevel="30" name="Soul of Pain">
+	<skill id="1436" toLevel="30" name="劇痛靈魂">
 		<!-- Level 1: Unleashes a soul to inflict dark damage on the enemy with 50 power, cancelling their target. Consumes up to 5 souls to increase power. -->
 		<!-- Level 2: Unleashes a soul to inflict dark damage on the enemy with 52 power, cancelling their target. Consumes up to 5 souls to increase power. -->
 		<!-- Level 3: Unleashes a soul to inflict dark damage on the enemy with 55 power, cancelling their target. Consumes up to 5 souls to increase power. -->
@@ -2210,7 +2210,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1437" toLevel="26" name="Dark Flame">
+	<skill id="1437" toLevel="26" name="黑暗火焰">
 		<!-- Level 1: Uses dark arts on enemies at the front dealing additionally 42 M. damage. For 5 sec., their Speed -30%. Consumes up to 5 souls to increase power. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Uses dark arts on enemies at the front dealing additionally 43 M. damage. For 5 sec., their Speed -30%. Consumes up to 5 souls to increase power. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Uses dark arts on enemies at the front dealing additionally 45 M. damage. For 5 sec., their Speed -30%. Consumes up to 5 souls to increase power. Base success rate: 60%. Inflicted status: Debilitation. -->
@@ -2412,7 +2412,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1438" toLevel="9" name="Annihilation Circle">
+	<skill id="1438" toLevel="9" name="湮滅之輪">
 		<!-- Level 1: Attacks the target and enemies around them dealing 82 of Dark damage in addition to M. Atk. Consumes up to 5 souls to increase power. -->
 		<!-- Level 2: Attacks the target and enemies around them dealing 85 of Dark damage in addition to M. Atk. Consumes up to 5 souls to increase power. -->
 		<!-- Level 3: Attacks the target and enemies around them dealing 89 of Dark damage in addition to M. Atk. Consumes up to 5 souls to increase power. -->
@@ -2498,7 +2498,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1439" toLevel="5" name="Curse of Divinity">
+	<skill id="1439" toLevel="5" name="神威詛咒">
 		<!-- Level 1: Inflicts non-attribute damage on the enemy with 96 Power added to M. Atk. Power changes depending on the target's altered state condition. -->
 		<!-- Level 2: Inflicts non-attribute damage on the enemy with 99 Power added to M. Atk. Power changes depending on the target's altered state condition. -->
 		<!-- Level 3: Inflicts non-attribute damage on the enemy with 102 Power added to M. Atk. Power changes depending on the target's altered state condition. -->
@@ -2556,7 +2556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1440" toLevel="5" name="Steal Divinity">
+	<skill id="1440" toLevel="5" name="神威竊取">
 		<!-- Level 1: Steals up to 3 of the enemy's buffs. Cannot be used on monsters. -->
 		<!-- Level 2: Steals up to 4 of the enemy's buffs. Cannot be used on monsters. -->
 		<!-- Level 3: Steals up to 5 of the enemy's buffs. Cannot be used on monsters. -->
@@ -2617,7 +2617,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1441" toLevel="3" name="Soul to Empower">
+	<skill id="1441" toLevel="3" name="轉魂催化">
 		<!-- Level 1: For 20 min., M. Atk. +55%. -->
 		<!-- Level 2: For 20 min., M. Atk. +65%. -->
 		<!-- Level 3: For 20 min., M. Atk. +75%. -->
@@ -2668,7 +2668,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1442" toLevel="3" name="Darkness Protection">
+	<skill id="1442" toLevel="3" name="幽暗保護">
 		<!-- Level 1: For 20 min., the target's Dark Resistance +15. -->
 		<!-- Level 2: For 20 min., the target's Dark Resistance +23. -->
 		<!-- Level 3: For 20 min., the target's Dark Resistance +30. -->
@@ -2721,7 +2721,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1443" toLevel="1" name="Dark Weapon">
+	<skill id="1443" toLevel="1" name="黑暗武器">
 		<!-- For 20 min., Dark Attack +20. Can be used only on party members. -->
 		<icon>icon.skill1443</icon>
 		<operateType>A2</operateType>
@@ -2753,7 +2753,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1444" toLevel="1" name="Pride of Kamael">
+	<skill id="1444" toLevel="1" name="闇天使的驕傲">
 		<!-- For 5 min., P. Atk., M. Atk. and Vital Point Attack Rate +10% when using a Kamael-exclusive weapon. -->
 		<icon>icon.skill1444</icon>
 		<operateType>A2</operateType>
@@ -2793,7 +2793,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1445" toLevel="18" name="Surrender to Dark">
+	<skill id="1445" toLevel="18" name="臣服邪惡">
 		<!-- Level 1: For 30 sec., the enemy's Dark Resistance -25, Holy Resistance +12. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: For 30 sec., the enemy's Dark Resistance -25, Holy Resistance +12. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: For 30 sec., the enemy's Dark Resistance -25, Holy Resistance +12. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -3017,7 +3017,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1446" toLevel="11" name="Shadow Bind">
+	<skill id="1446" toLevel="11" name="縫影">
 		<!-- Catches the enemy's shadow and holds them for 15 sec. Base success rate: 70%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1446</icon>
 		<operateType>A2</operateType>
@@ -3073,7 +3073,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1447" toLevel="9" name="Voice Bind">
+	<skill id="1447" toLevel="9" name="絕音">
 		<!-- Blocks the enemy's M. skills for 20 sec. Base success rate: 70%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1447</icon>
 		<operateType>A2</operateType>
@@ -3122,7 +3122,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="1448" toLevel="1" name="Blink">
+	<skill id="1448" toLevel="1" name="閃逝">
 		<!-- Attacks nearby enemies with 1 power, stunning them for 2 sec. After that teleports back. Consumes up to 5 souls to increase power. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1448</icon>
 		<operateType>A2</operateType>
@@ -3172,7 +3172,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="1449" toLevel="1" name="Transfer Soul">
+	<skill id="1449" toLevel="1" name="靈魂轉移">
 		<!-- Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. -->
 		<icon>icon.skill1449</icon>
 		<operateType>A1</operateType>
@@ -3203,7 +3203,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1450" toLevel="1" name="Chain Lightning">
+	<skill id="1450" toLevel="1" name="連鎖閃電">
 		<!-- Strikes the target and enemies around them with a lightning dealing 200 of non-attribute damage in addition to M. Atk. Consumes up to 5 souls to increase power. -->
 		<icon>icon.skill1450</icon>
 		<operateType>A1</operateType>
@@ -3231,7 +3231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1451" toLevel="1" name="Fire Vortex Buster">
+	<skill id="1451" toLevel="1" name="炎旋爆破">
 		<!-- Summons a fire hurricane to attack the target with 195 power. -->
 		<icon>icon.skill1451</icon>
 		<operateType>A1</operateType>
@@ -3265,7 +3265,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1452" toLevel="1" name="Count of Fire">
+	<skill id="1452" toLevel="1" name="火焰計數">
 		<!-- Uses the power of Fire to burn the enemy for 10 sec. making them lose 173 HP per sec. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1452</icon>
 		<operateType>A2</operateType>
@@ -3299,7 +3299,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1453" toLevel="1" name="Ice Vortex Crusher">
+	<skill id="1453" toLevel="1" name="冰旋巨鎚">
 		<!-- Summons an ice hurricane to inflict water damage with 195 power. -->
 		<icon>icon.skill1453</icon>
 		<operateType>A1</operateType>
@@ -3333,7 +3333,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1454" toLevel="1" name="Diamond Dust">
+	<skill id="1454" toLevel="1" name="冰晶">
 		<!-- Summons an ice storm that inflicts Water damage on the enemy with 70 power. Nearby enemies' Speed -40% for 15 sec. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1454</icon>
 		<operateType>A2</operateType>
@@ -3369,7 +3369,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1455" toLevel="1" name="Throne of Ice">
+	<skill id="1455" toLevel="1" name="冰之霸權">
 		<!-- Attacks the enemy with icy air making them lose 173 HP per sec. for 10 sec. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1455</icon>
 		<operateType>A2</operateType>
@@ -3402,7 +3402,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1456" toLevel="1" name="Wind Vortex Slug">
+	<skill id="1456" toLevel="1" name="風旋重擊">
 		<!-- Summons a wind hurricane to deals wind damage with 195 power. -->
 		<icon>icon.skill1456</icon>
 		<operateType>A1</operateType>
@@ -3436,7 +3436,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1457" toLevel="2" name="Empowering Echo">
+	<skill id="1457" toLevel="2" name="回音魔力催化">
 		<!-- Level 1: For 20 min., MP Consumption +35%, M. Atk. +25%. -->
 		<!-- Level 2: For 30 min., MP Consumption +35%, M. Atk. +25%. -->
 		<!-- Level 2 - SubLevel 1001 (+90 sec. Time): For 30 min., MP Consumption +35%, M. Atk. +25%. -->
@@ -3522,7 +3522,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1458" toLevel="1" name="Throne of Wind">
+	<skill id="1458" toLevel="1" name="風之霸權">
 		<!-- Unleashes a hurricane at the enemy making them lose 173 HP per sec. for 10 sec. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1458</icon>
 		<operateType>A2</operateType>
@@ -3556,7 +3556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1459" toLevel="1" name="Divine Power">
+	<skill id="1459" toLevel="1" name="神聖之力">
 		<!-- For 15 sec., Healing Power +1000. -->
 		<icon>icon.skill1459</icon>
 		<operateType>A2</operateType>
@@ -3581,7 +3581,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1460" toLevel="1" name="Mana Gain">
+	<skill id="1460" toLevel="1" name="魔力回復">
 		<!-- For 20 min., increases the recharge power received by the target by 85. -->
 		<icon>icon.skill1460</icon>
 		<operateType>A2</operateType>
@@ -3620,7 +3620,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1461" toLevel="1" name="Chant of Protection">
+	<skill id="1461" toLevel="1" name="保護頌歌">
 		<!-- For 20 min., party members' received Critical Damage from basic attacks -30%. -->
 		<icon>icon.skill1461</icon>
 		<operateType>A2</operateType>
@@ -3654,7 +3654,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1462" toLevel="10" name="Seal of Blockade">
+	<skill id="1462" toLevel="10" name="阻絕封印">
 		<!-- For 10 sec., blocks basic attacks of the target and nearby enemies in PvP. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 6 - SubLevel 1001 (+1% Chance): For 10 sec., blocks basic attacks of the target and nearby enemies in PvP. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 6 - SubLevel 1002 (+2% Chance): For 10 sec., blocks basic attacks of the target and nearby enemies in PvP. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
@@ -4025,7 +4025,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1463" toLevel="1" name="Fire Weapon">
+	<skill id="1463" toLevel="1" name="火焰武器">
 		<!-- Adds Fire damage to a P. Atk. -->
 		<icon>icon.skill1463</icon>
 		<operateType>A2</operateType>
@@ -4053,7 +4053,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1464" toLevel="1" name="Ice Weapon">
+	<skill id="1464" toLevel="1" name="冰凍武器">
 		<!-- Adds Water damage to a P. Atk. -->
 		<icon>icon.skill1464</icon>
 		<operateType>A2</operateType>
@@ -4081,7 +4081,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1465" toLevel="1" name="Wind Weapon">
+	<skill id="1465" toLevel="1" name="狂風武器">
 		<!-- Adds Wind damage to a P. Atk. -->
 		<icon>icon.skill1465</icon>
 		<operateType>A2</operateType>
@@ -4109,7 +4109,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1466" toLevel="1" name="Earth Weapon">
+	<skill id="1466" toLevel="1" name="大地武器">
 		<!-- Bestows the Earth elemental to a P. Atk. -->
 		<icon>icon.skill1466</icon>
 		<operateType>A2</operateType>
@@ -4137,7 +4137,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1467" toLevel="1" name="Meteor">
+	<skill id="1467" toLevel="1" name="隕石術">
 		<!-- Drops a meteor that deals heavy damage to the enemies in the effect area. Inflicts Fire damage. Power 117. Additionally, deals Fire damage over time for 10 sec. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1467</icon>
 		<operateType>A2</operateType>
@@ -4175,7 +4175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1468" toLevel="1" name="Starfall">
+	<skill id="1468" toLevel="1" name="墜星術">
 		<!-- Drops a meteor that deals heavy damage to the enemies in the effect area. Power 117. Additionally, deals damage over time for 10 sec. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1468</icon>
 		<operateType>A2</operateType>
@@ -4211,7 +4211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1469" toLevel="1" name="Leopold">
+	<skill id="1469" toLevel="1" name="雷歐波爾德">
 		<!-- Summons the devastating Leopold's cannon to inflict fire damage with 5 power. Consumes 224 soul(s). -->
 		<icon>icon.skill1469</icon>
 		<operateType>A1</operateType>
@@ -4239,7 +4239,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1470" toLevel="1" name="Prahnah">
+	<skill id="1470" toLevel="1" name="弗萊格拉克">
 		<!-- For 30 sec., all party members' M. Def. +3000. -->
 		<icon>icon.skill1470</icon>
 		<operateType>A2</operateType>
@@ -4266,7 +4266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1471" toLevel="2" name="Death Beam">
+	<skill id="1471" toLevel="2" name="死光">
 		<!-- Level 1: Attacks enemies in front of you. Power 138. -->
 		<!-- Level 2: Attacks enemies in front of you. Power 139. -->
 		<icon>icon.skill1471</icon>
@@ -4301,7 +4301,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1472" toLevel="1" name="Soul Absorbing">
+	<skill id="1472" toLevel="1" name="靈魂抽取">
 		<!-- Continuously absorbs the enemy's soul. The skill cooldown is fixed. -->
 		<icon>icon.skill1472</icon>
 		<operateType>CA1</operateType>
@@ -4328,7 +4328,7 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="1473" toLevel="1" name="Change Weapon">
+	<skill id="1473" toLevel="1" name="轉換武器">
 		<!-- Changes a general weapon to a Kamael exclusive weapon. The weapon can be reverted back to a general weapon. Using the Change Weapon skill resets the weapon's appearance. -->
 		<icon>icon.skill1473</icon>
 		<operateType>A1</operateType>
@@ -4349,7 +4349,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="1474" toLevel="1" name="Abyssal Power">
+	<skill id="1474" toLevel="1" name="深淵的力量">
 		<!-- When using light armor, M. Atk. +10%. -->
 		<icon>icon.skill1474</icon>
 		<operateType>P</operateType>
@@ -4362,7 +4362,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1475" toLevel="3" name="Erase Mark">
+	<skill id="1475" toLevel="3" name="印記抹除">
 		<!-- Level 1: Removes minor Death Mark. -->
 		<!-- Level 2: Removes moderate Death Mark. -->
 		<!-- Level 3: Removes major Death Mark. -->
@@ -4406,7 +4406,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1476" toLevel="3" name="Appetite for Destruction">
+	<skill id="1476" toLevel="3" name="摧毀直覺">
 		<!-- Level 1: For 15 sec., awakens a party member's destructive instincts. P. Atk., Critical Rate/ Damage for basic attacks +30%. The skill cooldown is fixed. -->
 		<!-- Level 2: For 15 sec., awakens a party member's destructive instincts. P. Atk., Critical Rate/ Damage for basic attacks +40%. The skill cooldown is fixed. -->
 		<!-- Level 3: For 15 sec., awakens a party member's destructive instincts. P. Atk., Critical Rate/ Damage for basic attacks +50%. The skill cooldown is fixed. -->
@@ -4472,7 +4472,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1477" toLevel="3" name="Vampiric Impulse">
+	<skill id="1477" toLevel="3" name="吸血鬼動念">
 		<!-- Level 1: For 15 sec., stirs up the blood-siphoning urge and has a chance of giving all party members the ability to recover as HP 60% of the damage inflicted on the enemy. The skill cooldown is fixed. -->
 		<!-- Level 2: For 15 sec., stirs up the blood-siphoning urge and has a chance of giving all party members the ability to recover as HP 70% of the damage inflicted on the enemy. The skill cooldown is fixed. -->
 		<!-- Level 3: For 15 sec., stirs up the blood-siphoning urge and has a chance of giving all party members the ability to recover as HP 80% of the damage inflicted on the enemy. The skill cooldown is fixed. -->
@@ -4522,7 +4522,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1478" toLevel="2" name="Protective Instinct">
+	<skill id="1478" toLevel="2" name="保護直覺">
 		<!-- Level 1: Stirs up the defense instinct. P. Def. +1200, M. Def. +900 for 15 sec. The skill cooldown is fixed. -->
 		<!-- Level 2: Stirs up the defense instinct. P. Def. +1800, M. Def. +1350 for 15 sec. The skill cooldown is fixed. -->
 		<icon>icon.skill1478</icon>
@@ -4573,7 +4573,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1479" toLevel="3" name="Magic Impulse">
+	<skill id="1479" toLevel="3" name="魔法動念">
 		<!-- Level 1: Stirs up the magic in you. M. Atk. +75%, Casting Spd. +15%, M. Critical Rate +100% for 15 sec. The skill cooldown is fixed. -->
 		<!-- Level 2: Stirs up the magic in you. M. Atk. +85%, Casting Spd. +15%, M. Critical Rate +200% for 15 sec. The skill cooldown is fixed. -->
 		<!-- Level 3: Stirs up the magic in you. M. Atk. +95%, Casting Spd. +15%, M. Critical Rate +300% for 15 sec. The skill cooldown is fixed. -->
@@ -4635,7 +4635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1480" toLevel="1" name="Soul Harmony">
+	<skill id="1480" toLevel="1" name="靈魂和諧">
 		<!-- Empathizes with the souls of party members for 15 sec. to recover 200 MP per second, P. Def. -90%, and become unable to act. The skill cooldown is fixed. -->
 		<icon>icon.skill1480</icon>
 		<operateType>A2</operateType>
@@ -4671,7 +4671,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1481" toLevel="7" name="Oblivion">
+	<skill id="1481" toLevel="7" name="忘卻">
 		<!-- For 1 min., inflicts the curse of forgetfulness on the enemy and makes them cancel the target with a certain chance when hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1481</icon>
 		<operateType>A2</operateType>
@@ -4740,7 +4740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1482" toLevel="4" name="Weak Constitution">
+	<skill id="1482" toLevel="4" name="體質弱化">
 		<!-- For 1 min., inflicts the curse of weakness on the enemy and makes them faint with a certain chance when hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1482</icon>
 		<operateType>A2</operateType>
@@ -4797,7 +4797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1483" toLevel="7" name="Thin Skin">
+	<skill id="1483" toLevel="7" name="皮膚破損">
 		<!-- For 1 min., inflicts a curse that weakens the enemy's skin making them bleed when hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1483</icon>
 		<operateType>A2</operateType>
@@ -4866,7 +4866,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1484" toLevel="4" name="Disability">
+	<skill id="1484" toLevel="4" name="虛弱">
 		<!-- For 1 min., makes the enemy lose their ambition, decreasing their Speed/ Atk. Spd./ Casting Spd. with a certain chance when hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1484</icon>
 		<operateType>A2</operateType>
@@ -4923,7 +4923,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1485" toLevel="3" name="Spite">
+	<skill id="1485" toLevel="3" name="惡意">
 		<!-- For 1 min., inflicts a curse on the enemy that deals heavy critical damage with a certain chance when hit. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1485</icon>
 		<operateType>A2</operateType>
@@ -4975,7 +4975,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1486" toLevel="4" name="Mental Impoverish">
+	<skill id="1486" toLevel="4" name="心靈耗竭">
 		<!-- For 1 min., causes mental impoverishment on the enemy draining their MP with a certain chance when hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1486</icon>
 		<operateType>A2</operateType>
@@ -5032,7 +5032,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1487" toLevel="8" name="Restoration">
+	<skill id="1487" toLevel="8" name="修復術">
 		<!-- Level 1: For 15 sec., HP +15 per sec. -->
 		<!-- Level 2: For 15 sec., HP +18 per sec. -->
 		<!-- Level 3: For 15 sec., HP +22 per sec. -->
@@ -5112,7 +5112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1488" toLevel="3" name="Restoration Impact">
+	<skill id="1488" toLevel="3" name="壓縮修復術">
 		<!-- Level 1: Recovers 10% of Max HP by catalysis under restoration. Restoration will disappear. -->
 		<!-- Level 2: Recovers 15% of Max HP by catalysis under restoration. Restoration will disappear. -->
 		<!-- Level 3: Recovers 20% of Max HP by catalysis under restoration. Restoration will disappear. -->
@@ -5166,7 +5166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1489" toLevel="1" name="Summoner Ability - Attribute Resistance">
+	<skill id="1489" toLevel="1" name="召喚士能力-屬性抵抗">
 		<!-- Increases Attribute Resistance. -->
 		<icon>icon.skill0433</icon>
 		<operateType>P</operateType>
@@ -5192,7 +5192,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1490" toLevel="1" name="Healer Ability: Heal">
+	<skill id="1490" toLevel="1" name="牧師能力-治療">
 		<!-- With a certain chance, recovers HP when hit. -->
 		<icon>icon.skill1011</icon>
 		<operateType>P</operateType>
@@ -5211,7 +5211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1491" toLevel="1" name="Summoner Ability - Spirit">
+	<skill id="1491" toLevel="1" name="召喚士能力-魂靈">
 		<!-- Has a chance to channel the soul of an ancient spirit when being attacked. -->
 		<icon>icon.skill1349</icon>
 		<operateType>P</operateType>
@@ -5230,7 +5230,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1492" toLevel="1" name="Flaming Armor">
+	<skill id="1492" toLevel="1" name="火焰裝甲">
 		<!-- Engulfs the user with a protective coat of fire. For 20 min. Fire Resistance +60. Inflicts burn damage on attacking enemies. -->
 		<icon>icon.skill1492</icon>
 		<operateType>A2</operateType>
@@ -5264,7 +5264,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1493" toLevel="1" name="Frost Armor">
+	<skill id="1493" toLevel="1" name="寒霜裝甲">
 		<!-- Creates a glacier barrier that protects your body. Water Resistance +60. Slows the enemy down. -->
 		<icon>icon.skill1493</icon>
 		<operateType>A2</operateType>
@@ -5298,7 +5298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1494" toLevel="1" name="Hurricane Armor">
+	<skill id="1494" toLevel="1" name="風暴裝甲">
 		<!-- Creates a storm barrier that protects your body. Wind Resistance +60. Decreases the enemy's Atk. Spd. -->
 		<icon>icon.skill1494</icon>
 		<operateType>A2</operateType>
@@ -5332,7 +5332,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1495" toLevel="1" name="Vampiric Mist">
+	<skill id="1495" toLevel="1" name="吸血迷霧">
 		<!-- Summons deadly fog that deals dark damage to nearby enemies with 117 power. Absorbs 20% of inflicted damage as HP. For 10 sec., enemies' Speed/ P. Atk./ Atk. Spd. -50%, P. Accuracy -12. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1495</icon>
 		<operateType>A2</operateType>
@@ -5382,7 +5382,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1496" toLevel="1" name="Servitor Barrier">
+	<skill id="1496" toLevel="1" name="使魔屏障">
 		<!-- Temporarily makes the servitor invincible. Consumes 5 Spirit Ore. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<icon>icon.skill1496</icon>
 		<operateType>A2</operateType>
@@ -5437,7 +5437,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1497" toLevel="1" name="Excessive Loyalty">
+	<skill id="1497" toLevel="1" name="極度忠誠">
 		<!-- When the master incurs damage, the servitor's battle skills are increased. -->
 		<icon>icon.skill1497</icon>
 		<operateType>P</operateType>
@@ -5455,7 +5455,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1498" toLevel="1" name="Mutual Response">
+	<skill id="1498" toLevel="1" name="相互呼應">
 		<!-- Recovers a servitor's HP/ MP on attack. -->
 		<icon>icon.skill1498</icon>
 		<operateType>P</operateType>
@@ -5475,7 +5475,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1499" toLevel="1" name="Improve Combat">
+	<skill id="1499" toLevel="1" name="提升戰鬥">
 		<!-- Combines P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 min. P. Atk. +15% and P. Def. +15%. -->
 		<icon>icon.skill1499</icon>
 		<operateType>A2</operateType>

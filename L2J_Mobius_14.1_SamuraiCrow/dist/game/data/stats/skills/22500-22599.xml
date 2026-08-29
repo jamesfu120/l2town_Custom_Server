@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22500" toLevel="1" name="Blessed Three-headed Dragon's Egg">
+	<skill id="22500" toLevel="1" name="祝福的三頭龍的蛋">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -129,7 +129,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22501" toLevel="1" name="Blessed Scroll of Escape">
+	<skill id="22501" toLevel="1" name="祝福的返回卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -150,7 +150,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22502" toLevel="1" name="Blessed Scroll of Resurrection">
+	<skill id="22502" toLevel="1" name="祝福的復活卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>PC_BODY</targetType>
@@ -173,7 +173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22503" toLevel="7" name="Superior R-grade Elixir of Life">
+	<skill id="22503" toLevel="7" name="超強力生命靈藥-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -195,7 +195,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22504" toLevel="7" name="Superior R-grade Elixir of Mind">
+	<skill id="22504" toLevel="7" name="超強力精神靈藥-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -217,7 +217,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22505" toLevel="7" name="Superior R-grade Elixir of CP">
+	<skill id="22505" toLevel="7" name="超強力鬥志靈藥-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -239,7 +239,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22506" toLevel="1" name="Scroll: Enchant R-grade Weapon">
+	<skill id="22506" toLevel="1" name="武器強化卷軸-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -249,7 +249,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22507" toLevel="1" name="Scroll: Enchant R-grade Weapon">
+	<skill id="22507" toLevel="1" name="防具強化卷軸-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -259,7 +259,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22508" toLevel="1" name="Fire Stone">
+	<skill id="22508" toLevel="1" name="火之原石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -272,7 +272,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22509" toLevel="1" name="Water Stone">
+	<skill id="22509" toLevel="1" name="水之原石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -285,7 +285,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22510" toLevel="1" name="Wind Stone">
+	<skill id="22510" toLevel="1" name="風之原石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -298,7 +298,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22511" toLevel="1" name="Earth Stone">
+	<skill id="22511" toLevel="1" name="地之原石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -311,7 +311,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22512" toLevel="1" name="Holy Stone">
+	<skill id="22512" toLevel="1" name="聖之原石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -324,7 +324,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22513" toLevel="1" name="Dark Stone">
+	<skill id="22513" toLevel="1" name="暗之原石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -337,20 +337,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22514" toLevel="2" name="Fire Crystal">
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<isDebuff>false</isDebuff>
-		<isMagic>2</isMagic>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLevel>1</magicLevel>
-		<conditions>
-			<condition name="CanEnchantAttribute" />
-		</conditions>
-	</skill>
-	<skill id="22515" toLevel="2" name="Water Crystal">
+	<skill id="22514" toLevel="2" name="火之水晶">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -363,7 +350,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22516" toLevel="2" name="Wind Crystal">
+	<skill id="22515" toLevel="2" name="水之水晶">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -376,7 +363,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22517" toLevel="2" name="Earth Crystal">
+	<skill id="22516" toLevel="2" name="風之水晶">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -389,7 +376,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22518" toLevel="2" name="Holy Crystal">
+	<skill id="22517" toLevel="2" name="地之水晶">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -402,7 +389,7 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22519" toLevel="2" name="Dark Crystal">
+	<skill id="22518" toLevel="2" name="聖之水晶">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -415,7 +402,20 @@
 			<condition name="CanEnchantAttribute" />
 		</conditions>
 	</skill>
-	<skill id="22520" toLevel="1" name="Blessed Scroll: Enchant R-grade Weapon">
+	<skill id="22519" toLevel="2" name="暗之水晶">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>false</isDebuff>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CanEnchantAttribute" />
+		</conditions>
+	</skill>
+	<skill id="22520" toLevel="1" name="祝福的武器強化卷軸-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -425,7 +425,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22521" toLevel="1" name="Blessed Scroll: Enchant R-grade Armor">
+	<skill id="22521" toLevel="1" name="祝福的防具強化卷軸-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -435,7 +435,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22522" toLevel="1" name="Appearance Stone: Emerald Weapon - Sword">
+	<skill id="22522" toLevel="1" name="光束劍加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -445,7 +445,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22523" toLevel="1" name="Appearance Stone: Emerald Weapon - Dagger">
+	<skill id="22523" toLevel="1" name="光束匕首加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -455,7 +455,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22524" toLevel="1" name="Appearance Stone: Emerald Weapon - Two-handed Sword">
+	<skill id="22524" toLevel="1" name="光束雙手刀劍加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -465,7 +465,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22525" toLevel="1" name="Appearance Stone: Emerald Weapon - Fist Weapon">
+	<skill id="22525" toLevel="1" name="光束格鬥兵器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -475,7 +475,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22526" toLevel="1" name="Appearance Stone: Emerald Weapon - Spear">
+	<skill id="22526" toLevel="1" name="光束槍加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -485,7 +485,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22527" toLevel="1" name="Appearance Stone: Emerald Weapon - Bow">
+	<skill id="22527" toLevel="1" name="光束弓加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -495,7 +495,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22528" toLevel="1" name="Appearance Stone: Emerald Weapon - Crossbow">
+	<skill id="22528" toLevel="1" name="光束弩弓加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -505,7 +505,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22529" toLevel="1" name="Appearance Stone: Emerald Weapon - One-handed Blunt Weapon">
+	<skill id="22529" toLevel="1" name="光束單手鈍器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -515,7 +515,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22530" toLevel="1" name="Appearance Stone: Emerald Weapon - Two-handed Blunt Weapon">
+	<skill id="22530" toLevel="1" name="光束雙手鈍器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -525,7 +525,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22531" toLevel="1" name="Appearance Stone: Emerald Weapon - One-handed Staff">
+	<skill id="22531" toLevel="1" name="光束單手魔杖加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -535,7 +535,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22532" toLevel="1" name="Appearance Stone: Emerald Weapon - Two-handed Staff">
+	<skill id="22532" toLevel="1" name="光束雙手魔杖加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -545,7 +545,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22533" toLevel="1" name="Appearance Stone: Emerald Weapon - Dual Swords">
+	<skill id="22533" toLevel="1" name="光束雙刀加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -555,7 +555,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22534" toLevel="1" name="Appearance Stone: Emerald Weapon - Dual Daggers">
+	<skill id="22534" toLevel="1" name="光束雙匕首加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -565,7 +565,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22535" toLevel="1" name="Appearance Stone: Emerald Weapon - Dual Blunt Weapons">
+	<skill id="22535" toLevel="1" name="光束雙鈍器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -575,7 +575,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22536" toLevel="1" name="Appearance Stone: Emerald Weapon - Shield">
+	<skill id="22536" toLevel="1" name="光束武器加工石-盾牌">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -585,7 +585,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22537" toLevel="1" name="Appearance Stone: Emerald Weapon - Sigil">
+	<skill id="22537" toLevel="1" name="光束武器加工石-符印">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -595,7 +595,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22538" toLevel="1" name="Armor Modification - R-grade">
+	<skill id="22538" toLevel="1" name="防具加工-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -605,7 +605,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22539" toLevel="1" name="Armor Modification - S-grade">
+	<skill id="22539" toLevel="1" name="防具加工-S級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -615,7 +615,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22540" toLevel="1" name="Armor Modification - A-grade">
+	<skill id="22540" toLevel="1" name="防具加工-A級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -625,7 +625,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22541" toLevel="1" name="Armor Modification - B-grade">
+	<skill id="22541" toLevel="1" name="防具加工-B級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -635,7 +635,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22542" toLevel="1" name="Armor Modification - C-grade">
+	<skill id="22542" toLevel="1" name="防具加工-C級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -645,7 +645,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22543" toLevel="1" name="Armor Modification - D-grade">
+	<skill id="22543" toLevel="1" name="防具加工-D級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -655,7 +655,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22544" toLevel="1" name="Blessed Armor Modification - R-grade">
+	<skill id="22544" toLevel="1" name="祝福的防具加工-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -665,7 +665,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22545" toLevel="1" name="Blessed Armor Modification - S-grade">
+	<skill id="22545" toLevel="1" name="祝福的防具加工-S級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -675,7 +675,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22546" toLevel="1" name="Blessed Armor Modification - A-grade">
+	<skill id="22546" toLevel="1" name="祝福的防具加工-A級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -685,7 +685,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22547" toLevel="1" name="Blessed Armor Modification - B-grade">
+	<skill id="22547" toLevel="1" name="祝福的防具加工-B級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -695,7 +695,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22548" toLevel="1" name="Blessed Armor Modification - C-grade">
+	<skill id="22548" toLevel="1" name="祝福的防具加工-C級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -705,7 +705,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22549" toLevel="1" name="Blessed Armor Modification - D-grade">
+	<skill id="22549" toLevel="1" name="祝福的防具加工-D級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -715,7 +715,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22550" toLevel="1" name="Restoration Stone: R-grade Armor">
+	<skill id="22550" toLevel="1" name="防具外型復原石-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -725,7 +725,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22551" toLevel="1" name="Restoration Stone: S-grade Armor">
+	<skill id="22551" toLevel="1" name="防具外型復原石-S級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -735,7 +735,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22552" toLevel="1" name="Restoration Stone: A-grade Armor">
+	<skill id="22552" toLevel="1" name="防具外型復原石-A級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -745,7 +745,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22553" toLevel="1" name="Restoration Stone: B-grade Armor">
+	<skill id="22553" toLevel="1" name="防具外型復原石-B級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -755,7 +755,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22554" toLevel="1" name="Restoration Stone: C-grade Armor">
+	<skill id="22554" toLevel="1" name="防具外型復原石-C級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -765,7 +765,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22555" toLevel="1" name="Restoration Stone: D-grade Armor">
+	<skill id="22555" toLevel="1" name="防具外型復原石-D級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -775,7 +775,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22556" toLevel="1" name="Restoration Stone: R-grade Equipment">
+	<skill id="22556" toLevel="1" name="裝備外型復原石-R級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -785,7 +785,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22557" toLevel="1" name="Restoration Stone: S-grade Equipment">
+	<skill id="22557" toLevel="1" name="裝備外型復原石-S級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -795,7 +795,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22558" toLevel="1" name="Restoration Stone: A-grade Equipment">
+	<skill id="22558" toLevel="1" name="裝備外型復原石-A級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -805,7 +805,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22559" toLevel="1" name="Restoration Stone: B-grade Equipment">
+	<skill id="22559" toLevel="1" name="裝備外型復原石-B級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -815,7 +815,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22560" toLevel="1" name="Restoration Stone: C-grade Equipment">
+	<skill id="22560" toLevel="1" name="裝備外型復原石-C級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -825,7 +825,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22561" toLevel="1" name="Restoration Stone: D-grade Equipment">
+	<skill id="22561" toLevel="1" name="裝備外型復原石-D級">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -835,7 +835,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22562" toLevel="1" name="(Test) Appearance Stone: Formal Wear">
+	<skill id="22562" toLevel="1" name="(測試)禮服變換加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -845,7 +845,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22563" toLevel="1" name="(Test) Appearance Stone: Immortal Cloak">
+	<skill id="22563" toLevel="1" name="(測試)永生上衣加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -855,7 +855,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22564" toLevel="1" name="Appearance Stone: Head Accessory">
+	<skill id="22564" toLevel="1" name="頭飾加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -865,7 +865,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22565" toLevel="1" name="Blessed Appearance Stone: Head Accessory">
+	<skill id="22565" toLevel="1" name="祝福的頭飾加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -875,7 +875,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22566" toLevel="1" name="Vitality Suspending Potion">
+	<skill id="22566" toLevel="1" name="活力停滯藥水">
 		<!-- Sustains Vitality, but you do not receive Vitality bonus. -->
 		<icon>BranchSys3.lcon.g_vitality_potion_stop</icon>
 		<operateType>A2</operateType>
@@ -898,7 +898,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22567" toLevel="1" name="Appearance Stone: Japanese Sword">
+	<skill id="22567" toLevel="1" name="和風刀加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -908,7 +908,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22568" toLevel="1" name="Appearance Stone: Japanese Dagger">
+	<skill id="22568" toLevel="1" name="和風匕首加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -918,7 +918,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22569" toLevel="1" name="Appearance Stone: Japanese Long Sword">
+	<skill id="22569" toLevel="1" name="和風長刀加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -928,7 +928,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22570" toLevel="1" name="Appearance Stone: Japanese Fist Weapon">
+	<skill id="22570" toLevel="1" name="和風格鬥兵器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -938,7 +938,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22571" toLevel="1" name="Appearance Stone: Japanese Great Spear">
+	<skill id="22571" toLevel="1" name="和風長矛加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -948,7 +948,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22572" toLevel="1" name="Appearance Stone: Japanese Bow">
+	<skill id="22572" toLevel="1" name="和風弓加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -958,7 +958,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22573" toLevel="1" name="Appearance Stone: Japanese Crossbow">
+	<skill id="22573" toLevel="1" name="和風弩弓加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -968,7 +968,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22574" toLevel="1" name="Appearance Stone: Japanese One-handed Blunt Weapon">
+	<skill id="22574" toLevel="1" name="和風單手鈍器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -978,7 +978,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22575" toLevel="1" name="Appearance Stone: Japanese Giant Blunt Weapon">
+	<skill id="22575" toLevel="1" name="和風巨大鈍器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -988,7 +988,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22576" toLevel="1" name="Appearance Stone: Japanese One-handed Staff">
+	<skill id="22576" toLevel="1" name="和風魔杖加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -998,7 +998,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22577" toLevel="1" name="Appearance Stone: Japanese Giant Staff">
+	<skill id="22577" toLevel="1" name="和風巨大雙手魔杖加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1008,7 +1008,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22578" toLevel="1" name="Appearance Stone: Japanese Dual Swords">
+	<skill id="22578" toLevel="1" name="和風雙刀加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1018,7 +1018,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22579" toLevel="1" name="Appearance Stone: Japanese Dual Daggers">
+	<skill id="22579" toLevel="1" name="和風雙匕首加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1028,7 +1028,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22580" toLevel="1" name="Appearance Stone: Japanese Dual Blunt Weapons">
+	<skill id="22580" toLevel="1" name="和風雙鈍器加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1038,7 +1038,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22581" toLevel="1" name="Appearance Stone: Japanese Shield">
+	<skill id="22581" toLevel="1" name="和風盾牌加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1048,7 +1048,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22582" toLevel="1" name="Appearance Stone: Japanese Sigil">
+	<skill id="22582" toLevel="1" name="和風符印加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -1058,7 +1058,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22583" toLevel="1" name="Transformation Scroll: Borna">
+	<skill id="22583" toLevel="1" name="變身卷軸-伯盧那">
 		<!-- Transforms into Fairweather Borna. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1080,7 +1080,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22584" toLevel="3" name="Scroll: Increase Vitality">
+	<skill id="22584" toLevel="3" name="活力提升卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1095,7 +1095,7 @@
 			<condition name="CanChangeVitalItemCount" />
 		</conditions>
 	</skill>
-	<skill id="22587" toLevel="5" name="Maphr's Rune">
+	<skill id="22587" toLevel="5" name="梅芙古文">
 		<!-- Level 1: Item drop rate +30% when killing common monsters. -->
 		<!-- Level 2: Item drop rate +50% when killing common monsters. -->
 		<!-- Level 3: Item drop rate +100% when killing common monsters. -->
@@ -1118,7 +1118,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22588" toLevel="4" name="High-grade Maphr's Rune">
+	<skill id="22588" toLevel="4" name="梅芙上級古文">
 		<!-- Level 1: Spoil rate and adena drop rate +30%. Additionally, item drop rate +30% when killing common monsters. -->
 		<!-- Level 2: Spoil rate and adena drop rate +50%. Additionally, item drop rate +50% when killing common monsters. -->
 		<!-- Level 3: Spoil rate and adena drop rate +100%. Additionally, item drop rate +100% when killing common monsters. -->
@@ -1157,7 +1157,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22591" toLevel="1" name="Check Item">
+	<skill id="22591" toLevel="1" name="道具確認">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1253,7 +1253,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22592" toLevel="1" name="Check Item">
+	<skill id="22592" toLevel="1" name="道具確認">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1349,7 +1349,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22593" toLevel="1" name="Check Item">
+	<skill id="22593" toLevel="1" name="道具確認">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1445,7 +1445,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22594" toLevel="1" name="Check Item">
+	<skill id="22594" toLevel="1" name="道具確認">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1541,7 +1541,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22595" toLevel="1" name="Scroll: Replenish Vitality">
+	<skill id="22595" toLevel="1" name="活力充能卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1557,7 +1557,7 @@
 			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
-	<skill id="22596" toLevel="2" name="Scroll: Replenish Vitality">
+	<skill id="22596" toLevel="2" name="活力充能卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1573,7 +1573,7 @@
 			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
-	<skill id="22597" toLevel="3" name="Scroll: Replenish Vitality">
+	<skill id="22597" toLevel="3" name="活力充能卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1608,7 +1608,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22599" toLevel="1" name="Ancient Kartia's Labyrinth Origins">
+	<skill id="22599" toLevel="1" name="遠古卡爾提亞迷宮的根源">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>

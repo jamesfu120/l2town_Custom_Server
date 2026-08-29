@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="500" toLevel="2" name="True Berserker">
+	<skill id="500" toLevel="2" name="真 狂戰士">
 		<!-- Level 1: P. Def. +10%, P. Evasion -2. P. Atk./ Atk. Spd. +5%, P. Accuracy +2. MP Consumption depends on your level. -->
 		<!-- Level 2: P. Def. +10%, P. Evasion -4. P. Atk./ Atk. Spd. +8%, P. Accuracy +4. MP Consumption depends on your level. -->
 		<icon>icon.skill0500</icon>
@@ -50,7 +50,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="501" toLevel="12" name="Violent Temper">
+	<skill id="501" toLevel="12" name="暴戾之氣">
 		<!-- For 30 sec., the enemy's P. Def. -23%, Casting Spd. -15%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill0501</icon>
 		<operateType>A2</operateType>
@@ -121,7 +121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="502" toLevel="5" name="Life to Soul">
+	<skill id="502" toLevel="5" name="生命轉魂">
 		<!-- Level 1: Sacrifices your HP to recover 1 soul(s). -->
 		<!-- Level 2: Sacrifices your HP to recover 2 soul(s). -->
 		<!-- Level 3: Sacrifices your HP to recover 3 soul(s). -->
@@ -164,7 +164,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="503" toLevel="3" name="Scorn">
+	<skill id="503" toLevel="3" name="輕蔑">
 		<!-- Level 1: Provokes the enemies to the front with 1630 Power. -->
 		<!-- Level 2: Provokes the enemies to the front with 2089 Power. -->
 		<!-- Level 3: Provokes the enemies to the front with 2384 Power. -->
@@ -199,7 +199,7 @@
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>4000</reuseDelay>
 	</skill>
-	<skill id="504" toLevel="37" name="Triple Thrust">
+	<skill id="504" toLevel="37" name="三連刺">
 		<!-- Level 1: Rapidly jabs the enemy three times with 620 power. Consumes up to 5 souls to increase power. Requires a rapier. Over-hit. -->
 		<!-- Level 2: Rapidly jabs the enemy three times with 659 power. Consumes up to 5 souls to increase power. Requires a rapier. Over-hit. -->
 		<!-- Level 3: Rapidly jabs the enemy three times with 700 power. Consumes up to 5 souls to increase power. Requires a rapier. Over-hit. -->
@@ -418,7 +418,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="505" toLevel="28" name="Shining Edge">
+	<skill id="505" toLevel="28" name="閃耀之鋒">
 		<!-- Level 1: Attacks the target's vital points with 1853 power. Consumes up to 5 souls to increase power. Requires a rapier. Over-hit. -->
 		<!-- Level 2: Attacks the target's vital points with 1953 power. Consumes up to 5 souls to increase power. Requires a rapier. Over-hit. -->
 		<!-- Level 3: Attacks the target's vital points with 2057 power. Consumes up to 5 souls to increase power. Requires a rapier. Over-hit. -->
@@ -593,7 +593,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="506" toLevel="4" name="Checkmate">
+	<skill id="506" toLevel="4" name="擊潰">
 		<!-- Level 1: Attacks the enemy branded with a Death Mark with 2388 power. Consumes up to 5 souls to increase power. Requires a rapier. Ignores Shield Defense. Critical. -->
 		<!-- Level 2: Attacks the enemy branded with a Death Mark with 3408 power. Consumes up to 5 souls to increase power. Requires a rapier. Ignores Shield Defense. Critical. -->
 		<!-- Level 3: Attacks the enemy branded with a Death Mark with 4275 power. Consumes up to 5 souls to increase power. Requires a rapier. Ignores Shield Defense. Critical. -->
@@ -655,7 +655,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="507" toLevel="37" name="Twin Shot">
+	<skill id="507" toLevel="37" name="雙重射擊">
 		<!-- Level 1: Fires 2 powerful bolts dealing 984 damage. Consumes up to 5 souls to increase power. Requires a crossbow. Critical. Over-hit. -->
 		<!-- Level 2: Fires 2 powerful bolts dealing 1046 damage. Consumes up to 5 souls to increase power. Requires a crossbow. Critical. Over-hit. -->
 		<!-- Level 3: Fires 2 powerful bolts dealing 1110 damage. Consumes up to 5 souls to increase power. Requires a crossbow. Critical. Over-hit. -->
@@ -875,7 +875,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="508" toLevel="31" name="Rising Shot">
+	<skill id="508" toLevel="31" name="上衝射擊">
 		<!-- Level 1: Fires a soaring bolt at the target and nearby enemies with 350 power. Consumes up to 5 souls to increase power. Requires a crossbow. Over-hit. -->
 		<!-- Level 2: Fires a soaring bolt at the target and nearby enemies with 370 power. Consumes up to 5 souls to increase power. Requires a crossbow. Over-hit. -->
 		<!-- Level 3: Fires a soaring bolt at the target and nearby enemies with 391 power. Consumes up to 5 souls to increase power. Requires a crossbow. Over-hit. -->
@@ -1067,7 +1067,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="509" toLevel="34" name="Bleeding Shot">
+	<skill id="509" toLevel="34" name="出血射擊">
 		<!-- Level 1: Fires a special bolt with 530 power. Inflicts Bleed on the enemy for 20 sec. making them lose 44 HP per sec. Consumes up to 5 souls to increase power. Requires a crossbow. Consumes 1 special bolt(s). Over-hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Fires a special bolt with 562 power. Inflicts Bleed on the enemy for 20 sec. making them lose 44 HP per sec. Consumes up to 5 souls to increase power. Requires a crossbow. Consumes 1 special bolt(s). Over-hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Fires a special bolt with 595 power. Inflicts Bleed on the enemy for 20 sec. making them lose 44 HP per sec. Consumes up to 5 souls to increase power. Requires a crossbow. Consumes 1 special bolt(s). Over-hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
@@ -1323,7 +1323,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="510" toLevel="5" name="Deadly Roulette">
+	<skill id="510" toLevel="5" name="致命輪盤">
 		<!-- Initiates a deadly game of chance. Requires a crossbow. Consumes 1 special bolt. Can be used when HP is lower than 10%. -->
 		<icon>icon.skill0510</icon>
 		<operateType>A1</operateType>
@@ -1377,7 +1377,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="511" toLevel="1" name="Temptation">
+	<skill id="511" toLevel="1" name="誘惑">
 		<!-- Quietly lures the enemy. -->
 		<icon>icon.skill0511</icon>
 		<operateType>A1</operateType>
@@ -1397,7 +1397,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="512" toLevel="10" name="Create Bio Potion">
+	<skill id="512" toLevel="10" name="製作生物藥劑">
 		<!-- Level 1: Creates a potion that momentarily recovers 5% HP. Consumes 1 soul(s). -->
 		<!-- Level 2: Creates a potion that momentarily recovers 6% HP. Consumes 1 soul(s). -->
 		<!-- Level 3: Creates a potion that momentarily recovers 7% HP. Consumes 1 soul(s). -->
@@ -1438,7 +1438,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="513" toLevel="1" name="Create Dark Seed">
+	<skill id="513" toLevel="1" name="製作黑暗種子">
 		<!-- Transforms a soul into a Dark Seed. Consumes 1 soul. -->
 		<icon>icon.skill0513</icon>
 		<operateType>A1</operateType>
@@ -1468,7 +1468,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="514" toLevel="9" name="Fire Trap">
+	<skill id="514" toLevel="9" name="火陷阱">
 		<!-- Summon a trap that damages a single target. The skill cooldown is fixed. -->
 		<icon>icon.skill0514</icon>
 		<operateType>A1</operateType>
@@ -1543,7 +1543,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="515" toLevel="6" name="Poison Trap">
+	<skill id="515" toLevel="6" name="毒陷阱">
 		<!-- Summon a trap that sprays poison around. The skill cooldown is fixed. -->
 		<icon>icon.skill0515</icon>
 		<operateType>A1</operateType>
@@ -1603,7 +1603,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="516" toLevel="6" name="Slow Trap">
+	<skill id="516" toLevel="6" name="緩速陷阱">
 		<!-- Summons a trap that slows nearby enemies. The skill cooldown is fixed. -->
 		<icon>icon.skill0516</icon>
 		<operateType>A1</operateType>
@@ -1663,7 +1663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="517" toLevel="5" name="Flash Trap">
+	<skill id="517" toLevel="5" name="閃光陷阱">
 		<!-- Summons a Trap which Stuns nearby targets momentarily with intense light. Cancels target. The skill cooldown is fixed. -->
 		<icon>icon.skill0517</icon>
 		<operateType>A1</operateType>
@@ -1718,7 +1718,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="518" toLevel="8" name="Binding Trap">
+	<skill id="518" toLevel="8" name="約束陷阱">
 		<!-- Summons a trap to ensnare the enemy. The skill cooldown is fixed. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A1</operateType>
@@ -1788,7 +1788,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="519" toLevel="1" name="A-grade Quiver of Bolts">
+	<skill id="519" toLevel="1" name="弩箭筒-A級">
 		<!-- Summons between 700 and 2800 Mithril bolts. Consumes 1 A-grade Crystal. -->
 		<icon>icon.skill0519</icon>
 		<operateType>A1</operateType>
@@ -1825,7 +1825,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="520" toLevel="1" name="S-grade Quiver of Bolts">
+	<skill id="520" toLevel="1" name="弩箭筒-S級">
 		<!-- Summons between 900 and 3600 bolts of light. Consumes 1 S-grade Crystal. -->
 		<icon>icon.skill0520</icon>
 		<operateType>A1</operateType>
@@ -1862,7 +1862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="521" toLevel="8" name="Sharpshooting">
+	<skill id="521" toLevel="8" name="精銳射擊">
 		<!-- Level 1: For 2 min., P. Atk. +124, Critical Rate for basic attacks +20%, P. Accuracy +3, range +50. You cannot move while the skill is active. Requires a crossbow. -->
 		<!-- Level 2: For 2 min., P. Atk. +134, Critical Rate for basic attacks +20%, P. Accuracy +3, range +50. You cannot move while the skill is active. Requires a crossbow. -->
 		<!-- Level 3: For 2 min., P. Atk. +145, Critical Rate for basic attacks +20%, P. Accuracy +4, range +100. You cannot move while the skill is active. Requires a crossbow. -->
@@ -1992,7 +1992,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="522" toLevel="4" name="Real Target">
+	<skill id="522" toLevel="4" name="真實目標">
 		<!-- Level 1: For 30 sec., Bow Resistance -12%, Crossbow Resistance -16%. -->
 		<!-- Level 2: For 30 sec., Bow Resistance -16%, Crossbow Resistance -24%. -->
 		<!-- Level 3: For 30 sec., Bow Resistance -20%, Crossbow Resistance -32%. -->
@@ -2068,7 +2068,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="523" toLevel="7" name="Imbue Dark Seed">
+	<skill id="523" toLevel="7" name="植入黑暗種子">
 		<!-- Level 1: Plants a Dark Seed in the enemy's body making them lose 76 HP per sec. for 20 sec. Once fully grown, the seed paralyzes its host's body. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Plants a Dark Seed in the enemy's body making them lose 76 HP per sec. for 20 sec. Once fully grown, the seed paralyzes its host's body. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Plants a Dark Seed in the enemy's body making them lose 76 HP per sec. for 20 sec. Once fully grown, the seed paralyzes its host's body. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
@@ -2146,7 +2146,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="524" toLevel="1" name="Cure Dark Seed">
+	<skill id="524" toLevel="1" name="治療黑暗種子">
 		<!-- Eliminates the affliction caused by a dark seed. -->
 		<icon>icon.skill0524</icon>
 		<operateType>A1</operateType>
@@ -2164,7 +2164,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="525" toLevel="6" name="Decoy">
+	<skill id="525" toLevel="6" name="誘餌">
 		<!-- Summon a mirror image to take the damage. No effect if used in the Dimensional Space. -->
 		<icon>icon.skill0525</icon>
 		<operateType>A1</operateType>
@@ -2212,7 +2212,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="526" toLevel="1" name="Enuma Elish">
+	<skill id="526" toLevel="1" name="諸天之上">
 		<!-- Attacks enemies in the front using the Sword of Creation with 6060 power. Consumes up to 5 souls to increase damage. Over-hit. -->
 		<icon>icon.skill0526</icon>
 		<operateType>A1</operateType>
@@ -2240,7 +2240,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="527" toLevel="1" name="Iron Shield">
+	<skill id="527" toLevel="1" name="鐵之盾">
 		<!-- Increases Shield Defense with a certain chance when attacked. -->
 		<icon>icon.skill0527</icon>
 		<operateType>A2</operateType>
@@ -2271,7 +2271,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="528" toLevel="1" name="Shield of Faith">
+	<skill id="528" toLevel="1" name="信念之盾">
 		<!-- For 15 sec., party members' P. Def. +3600, M. Def. +2700. While the skill is active, absorbs 90% of any damage received by party members. -->
 		<icon>icon.skill0528</icon>
 		<operateType>A2</operateType>
@@ -2317,7 +2317,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="529" toLevel="1" name="Elemental Song">
+	<skill id="529" toLevel="1" name="元素之歌">
 		<!-- For 2 min., party members' Fire/ Water/ Wind/ Earth Resistance +30. Song/ Dance MP Consumption is increased if the skill is used when its effect is still active. -->
 		<icon>icon.skill0529</icon>
 		<operateType>A2</operateType>
@@ -2355,7 +2355,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="530" toLevel="1" name="Dance of Alignment">
+	<skill id="530" toLevel="1" name="團結之舞">
 		<!-- For 2 min., party members' Holy/ Dark Resistance +30. Song/ Dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0530</icon>
 		<operateType>A2</operateType>
@@ -2393,7 +2393,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="531" toLevel="9" name="Critical Wound">
+	<skill id="531" toLevel="9" name="爆擊之痕">
 		<!-- Level 1: For 30 sec., the target's received Critical Damage from basic attacks +30%. Requires a dagger or dual daggers. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: For 30 sec., the target's received Critical Damage from basic attacks +32%. Requires a dagger or dual daggers. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: For 30 sec., the target's received Critical Damage from basic attacks +33%. Requires a dagger or dual daggers. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -2705,7 +2705,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="532" toLevel="1" name="Counter Chance">
+	<skill id="532" toLevel="1" name="反擊契機">
 		<!-- When attacked, Casting Spd. -15% and MP Consumption -5% for 1 min. -->
 		<icon>icon.skill0532</icon>
 		<operateType>P</operateType>
@@ -2723,7 +2723,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="533" toLevel="1" name="Counter Rapid Shot">
+	<skill id="533" toLevel="1" name="反擊快速箭">
 		<!-- When attacked, party members' bow Atk. Spd.+15% for 1 min. -->
 		<icon>icon.skill0533</icon>
 		<operateType>P</operateType>
@@ -2741,7 +2741,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="534" toLevel="1" name="Counter Dash">
+	<skill id="534" toLevel="1" name="反擊衝刺">
 		<!-- When attacked, party members' Speed +40 for 1 min. -->
 		<icon>icon.skill0534</icon>
 		<operateType>P</operateType>
@@ -2759,7 +2759,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="535" toLevel="1" name="Counter Mind">
+	<skill id="535" toLevel="1" name="反擊心靈">
 		<!-- When attacked, recovers MP at a certain rate. -->
 		<icon>icon.skill0535</icon>
 		<operateType>P</operateType>
@@ -2777,7 +2777,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="536" toLevel="1" name="Over the Body">
+	<skill id="536" toLevel="1" name="超越之體">
 		<!-- Releases combat spirit. For 60 sec., Max HP +35%, HP Recovery Rate +15%, P. Atk. +25%, P. Def. +30%, Atk. Spd. +10%, Speed +10%. Can be used only when CP > 80%. -->
 		<icon>icon.skill0536</icon>
 		<operateType>A2</operateType>
@@ -2830,7 +2830,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="537" toLevel="1" name="Spoil Bomb">
+	<skill id="537" toLevel="1" name="變質炸彈">
 		<!-- The bomb's explosion deals damage in a set time. The afflicted enemies are affected with Spoil. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill0537</icon>
 		<operateType>A2</operateType>
@@ -2866,7 +2866,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="538" toLevel="1" name="Final Form">
+	<skill id="538" toLevel="1" name="最終型態">
 		<!-- Transforms into the final battle form. Consumes 20 souls. The skill cooldown is fixed. -->
 		<icon>icon.skill0538</icon>
 		<operateType>A2</operateType>
@@ -2918,7 +2918,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="539" toLevel="2" name="Nail Attack">
+	<skill id="539" toLevel="2" name="爪攻擊">
 		<!-- Level 1: A demonic clawed combo attack. Power 2583. -->
 		<!-- Level 2: A demonic clawed combo attack. Power 8772. -->
 		<icon>icon.skill0539</icon>
@@ -2949,7 +2949,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="540" toLevel="2" name="Wing Assault">
+	<skill id="540" toLevel="2" name="展翼強襲">
 		<!-- Level 1: Charges with outspread wings. Strikes around the attacking target. Power 2067. -->
 		<!-- Level 2: Charges with outspread wings. Strikes around the attacking target. Power 2112. -->
 		<icon>icon.skill0540</icon>
@@ -2988,7 +2988,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="541" toLevel="1" name="Transformation: Grail Apostle">
+	<skill id="541" toLevel="1" name="變身 門徒聖杯">
 		<!-- Transforms into Grail Apostle. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -3021,7 +3021,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="542" toLevel="1" name="Transformation: Grail Apostle">
+	<skill id="542" toLevel="1" name="變身 門徒聖杯">
 		<!-- Transforms into Grail Apostle. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform2</icon>
 		<operateType>A2</operateType>
@@ -3054,7 +3054,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="543" toLevel="1" name="Transformation: Grail Apostle">
+	<skill id="543" toLevel="1" name="變身 門徒聖杯">
 		<!-- Transforms into Grail Apostle. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -3087,7 +3087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="544" toLevel="1" name="Transformation: Unicorn">
+	<skill id="544" toLevel="1" name="變身 獨角獸">
 		<!-- Transforms into Unicorn. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -3120,7 +3120,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="545" toLevel="1" name="Transformation: Unicorn">
+	<skill id="545" toLevel="1" name="變身 獨角獸">
 		<!-- Transforms into Unicorn. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform2</icon>
 		<operateType>A2</operateType>
@@ -3153,7 +3153,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="546" toLevel="1" name="Transformation: Unicorn">
+	<skill id="546" toLevel="1" name="變身 獨角獸">
 		<!-- Transforms into Unicorn. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -3186,7 +3186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="547" toLevel="1" name="Transformation: Lilim's Knight">
+	<skill id="547" toLevel="1" name="變身 莉莉恩騎士">
 		<!-- Transforms into Lilim's Knight. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -3219,7 +3219,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="548" toLevel="1" name="Transformation: Lilim's Knight">
+	<skill id="548" toLevel="1" name="變身 莉莉恩騎士">
 		<!-- Transforms into Lilim's Knight. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform2</icon>
 		<operateType>A2</operateType>
@@ -3252,7 +3252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="549" toLevel="1" name="Transformation: Lilim's Knight">
+	<skill id="549" toLevel="1" name="變身 莉莉恩騎士">
 		<!-- Transforms into Lilim's Knight. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -3285,7 +3285,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="550" toLevel="1" name="Transformation: Golem Guardian">
+	<skill id="550" toLevel="1" name="變身 高崙守護者">
 		<!-- Transforms into Golem Guardian. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -3318,7 +3318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="551" toLevel="1" name="Transformation: Golem Guardian">
+	<skill id="551" toLevel="1" name="變身 高崙守護者">
 		<!-- Transforms into Golem Guardian. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform2</icon>
 		<operateType>A2</operateType>
@@ -3351,7 +3351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="552" toLevel="1" name="Transformation: Golem Guardian">
+	<skill id="552" toLevel="1" name="變身 高崙守護者">
 		<!-- Transforms into Golem Guardian. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -3384,7 +3384,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="553" toLevel="1" name="Transformation: Inferno Drake">
+	<skill id="553" toLevel="1" name="變身 煉獄龍獸">
 		<!-- Transforms into Inferno Drake. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -3417,7 +3417,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="554" toLevel="1" name="Transformation: Inferno Drake">
+	<skill id="554" toLevel="1" name="變身 煉獄龍獸">
 		<!-- Transforms into Inferno Drake. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform2</icon>
 		<operateType>A2</operateType>
@@ -3450,7 +3450,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="555" toLevel="1" name="Transformation: Inferno Drake">
+	<skill id="555" toLevel="1" name="變身 煉獄龍獸">
 		<!-- Transforms into Inferno Drake. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -3483,7 +3483,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="556" toLevel="1" name="Dragon Bomber Transformation">
+	<skill id="556" toLevel="1" name="變身 暴烈龍">
 		<!-- Transforms into Dragon Bomber. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -3516,7 +3516,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="557" toLevel="1" name="Dragon Bomber Transformation">
+	<skill id="557" toLevel="1" name="變身 暴烈龍">
 		<!-- Transforms into Dragon Bomber. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform2</icon>
 		<operateType>A2</operateType>
@@ -3549,7 +3549,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="558" toLevel="1" name="Dragon Bomber Transformation">
+	<skill id="558" toLevel="1" name="變身 暴烈龍">
 		<!-- Transforms into Dragon Bomber. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -3582,7 +3582,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="559" toLevel="4" name="Spear">
+	<skill id="559" toLevel="4" name="矛">
 		<!-- Level 1: Strikes the enemy with a spear making them bleed with a certain chance. Power 900. Effect 6. Over-hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Strikes the enemy with a spear making them bleed with a certain chance. Power 1013. Effect 6. Over-hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Strikes the enemy with a spear making them bleed with a certain chance. Power 1129. Effect 7. Over-hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
@@ -3647,7 +3647,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="560" toLevel="4" name="Power Slash">
+	<skill id="560" toLevel="4" name="強力斬">
 		<!-- Level 1: Powerful frontal attack that involves swinging a polearm to assault enemies. Power 1250. Over-hit. -->
 		<!-- Level 2: Powerful frontal attack that involves swinging a polearm to assault enemies. Power 1406. Over-hit. -->
 		<!-- Level 3: Powerful frontal attack that involves swinging a polearm to assault enemies. Power 1568. Over-hit. -->
@@ -3695,7 +3695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="561" toLevel="4" name="Angel's Blessing">
+	<skill id="561" toLevel="4" name="天使的祝福">
 		<!-- A divine blessing that increases P. Atk. of all party members. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A2</operateType>
@@ -3735,7 +3735,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="562" toLevel="4" name="Wind of Angel">
+	<skill id="562" toLevel="4" name="天使之風">
 		<!-- A divine wind that increases P. Evasion of all party members. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A2</operateType>
@@ -3775,7 +3775,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="563" toLevel="4" name="Horn of Doom">
+	<skill id="563" toLevel="4" name="末日之角">
 		<!-- Level 1: Uses a horn to charge at the enemy with a powerful ram attack. Power 1250. Over-hit. -->
 		<!-- Level 2: Uses a horn to charge at the enemy with a powerful ram attack. Power 1406. Over-hit. -->
 		<!-- Level 3: Uses a horn to charge at the enemy with a powerful ram attack. Power 1568. Over-hit. -->
@@ -3821,7 +3821,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="564" toLevel="4" name="Gravity Control">
+	<skill id="564" toLevel="4" name="重力控制">
 		<!-- Uses the horn to decrease Speed and Atk. Spd. of nearby enemies. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<operateType>A2</operateType>
@@ -3879,7 +3879,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="565" toLevel="4" name="Horn Assault">
+	<skill id="565" toLevel="4" name="強襲之角">
 		<!-- Level 1: Releases the energy of a horn to attack a distant enemy. Power 938. Over-hit. -->
 		<!-- Level 2: Releases the energy of a horn to attack a distant enemy. Power 1055. Over-hit. -->
 		<!-- Level 3: Releases the energy of a horn to attack a distant enemy. Power 1176. Over-hit. -->
@@ -3930,7 +3930,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="567" toLevel="4" name="Holy Cure">
+	<skill id="567" toLevel="4" name="治癒之光">
 		<!-- Level 1: Calls upon holy light to restore HP. Power 690. -->
 		<!-- Level 2: Calls upon holy light to restore HP. Power 731. -->
 		<!-- Level 3: Calls upon holy light to restore HP. Power 770. -->
@@ -3975,7 +3975,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="568" toLevel="4" name="Attack Buster">
+	<skill id="568" toLevel="4" name="攻擊爆破">
 		<!-- Level 1: Detonates a Momentum charge to attack the enemy. Requires level 2 Momentum charge. Power 1250. -->
 		<!-- Level 2: Detonates a Momentum charge to attack the enemy. Requires level 2 Momentum charge. Power 1406. -->
 		<!-- Level 3: Detonates a Momentum charge to attack the enemy. Requires level 2 Momentum charge. Power 1568. -->
@@ -4027,7 +4027,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="569" toLevel="4" name="Storm">
+	<skill id="569" toLevel="4" name="攻擊風暴">
 		<!-- Level 1: Unleash a magical attack on distant enemies. Requires level 3 Momentum charge. Power 625. -->
 		<!-- Level 2: Unleash a magical attack on distant enemies. Requires level 3 Momentum charge. Power 703. -->
 		<!-- Level 3: Unleash a magical attack on distant enemies. Requires level 3 Momentum charge. Power 784. -->
@@ -4080,7 +4080,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="570" toLevel="4" name="Attack Rage">
+	<skill id="570" toLevel="4" name="攻擊暴怒">
 		<!-- Level 1: Gathers force while attacking the enemy. Can be charged up to Level 1. Critical. Over-hit. -->
 		<!-- Level 2: Gathers force while attacking the enemy. Can be charged up to Level 2. Critical. Over-hit. -->
 		<!-- Level 3: Gathers force while attacking the enemy. Can be charged up to Level 3. Critical. Over-hit. -->
@@ -4125,7 +4125,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="571" toLevel="4" name="Poison Dust">
+	<skill id="571" toLevel="4" name="毒粉末">
 		<!-- Level 1: Sprays poisonous powder all over nearby enemies. Effect 6. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Sprays poisonous powder all over nearby enemies. Effect 6. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Sprays poisonous powder all over nearby enemies. Effect 7. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
@@ -4187,7 +4187,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="572" toLevel="4" name="Double Slasher">
+	<skill id="572" toLevel="4" name="雙斬">
 		<!-- Level 1: Attacks a distant enemy using Momentum. Over-hit. Power 938. -->
 		<!-- Level 2: Attacks a distant enemy using Momentum. Over-hit. Power 1055. -->
 		<!-- Level 3: Attacks a distant enemy using Momentum. Over-hit. Power 1176. -->
@@ -4232,7 +4232,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="573" toLevel="4" name="Earthquake">
+	<skill id="573" toLevel="4" name="烈震閃">
 		<!-- Level 1: Makes the earth shake stunning nearby enemies. Power 625. Over-hit. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Makes the earth shake stunning nearby enemies. Power 703. Over-hit. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Makes the earth shake stunning nearby enemies. Power 784. Over-hit. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -4292,7 +4292,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="574" toLevel="4" name="Bomb Installation">
+	<skill id="574" toLevel="4" name="安裝炸彈">
 		<!-- Installs a bomb in the ground. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
@@ -4321,7 +4321,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="575" toLevel="4" name="Steel Cutter">
+	<skill id="575" toLevel="4" name="鋼刃殺">
 		<!-- Level 1: Attacks with a sharp steel blade. Power 1250. Over-hit. -->
 		<!-- Level 2: Attacks with a sharp steel blade. Power 1406. Over-hit. -->
 		<!-- Level 3: Attacks with a sharp steel blade. Power 1568. Over-hit. -->
@@ -4367,7 +4367,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="576" toLevel="4" name="Paw Strike">
+	<skill id="576" toLevel="4" name="前腿強擊">
 		<!-- Level 1: Inflicts a powerful attack. Power 1250. Over-hit. -->
 		<!-- Level 2: Inflicts a powerful attack. Power 1406. Over-hit. -->
 		<!-- Level 3: Inflicts a powerful attack. Power 1568. Over-hit. -->
@@ -4413,7 +4413,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="577" toLevel="4" name="Fire Breath">
+	<skill id="577" toLevel="4" name="火焰氣息">
 		<!-- Level 1: Spouts out a fire attack that strikes enemies at the front. Power 875. Over-hit. -->
 		<!-- Level 2: Spouts out a fire attack that strikes enemies at the front. Power 984. Over-hit. -->
 		<!-- Level 3: Spouts out a fire attack that strikes enemies at the front. Power 1098. Over-hit. -->
@@ -4464,7 +4464,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="578" toLevel="4" name="Blaze Quake">
+	<skill id="578" toLevel="4" name="火焰震憾">
 		<!-- Level 1: Burns nearby enemies. Over-hit. Power 625. Effect 6. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Burns nearby enemies. Over-hit. Power 703. Effect 6. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Burns nearby enemies. Over-hit. Power 784. Effect 7. Base success rate: 60%. Inflicted status: Debilitation. -->
@@ -4533,7 +4533,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="579" toLevel="4" name="Fire Armor">
+	<skill id="579" toLevel="4" name="火焰裝甲">
 		<!-- An intense flame ignites and protects the body. Immobilized while in effect. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A2</operateType>
@@ -4597,7 +4597,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="580" toLevel="4" name="Death Blow">
+	<skill id="580" toLevel="4" name="死亡爆破">
 		<!-- Inflicts a deadly blow. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
@@ -4645,7 +4645,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="581" toLevel="4" name="Sand Cloud">
+	<skill id="581" toLevel="4" name="砂雲">
 		<!-- Uses blinding sand to decrease nearby enemies' P. Accuracy. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<operateType>A2</operateType>
@@ -4690,7 +4690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="582" toLevel="4" name="Scope Bleed">
+	<skill id="582" toLevel="4" name="領域出血">
 		<!-- Level 1: Attacks nearby enemies with a lethal blow making them bleed. Power 875. Effect 6. Over-hit. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Attacks nearby enemies with a lethal blow making them bleed. Power 984. Effect 6. Over-hit. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Attacks nearby enemies with a lethal blow making them bleed. Power 1098. Effect 7. Over-hit. Base success rate: 60%. Inflicted status: Infection (Bleed, Poison). -->
@@ -4757,7 +4757,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="583" toLevel="4" name="Assimilation">
+	<skill id="583" toLevel="4" name="同化">
 		<!-- Blend in with enemies to avoid detection. If you attack in this state, the entire party becomes exposed. Duration: 60 sec. The skill cooldown is fixed. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A2</operateType>
@@ -4823,7 +4823,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="584" toLevel="1" name="Power Claw">
+	<skill id="584" toLevel="1" name="強力之爪">
 		<!-- Strikes at the enemy with claws. Power 1008. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
@@ -4846,7 +4846,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="585" toLevel="1" name="Fast Moving">
+	<skill id="585" toLevel="1" name="快速移動">
 		<!-- Temporarily greatly increases Speed. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A2</operateType>
@@ -4869,7 +4869,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="586" toLevel="2" name="Rolling Attack">
+	<skill id="586" toLevel="2" name="旋轉攻擊">
 		<!-- Level 1: Quickly swings the polearm around, attacking nearby enemies. Power 840. Over-hit. -->
 		<!-- Level 2: Quickly swings the polearm around, attacking nearby enemies. Power 984. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
@@ -4902,7 +4902,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="587" toLevel="2" name="Earth Storm">
+	<skill id="587" toLevel="2" name="刺掘攻擊">
 		<!-- Level 1: Creates an earth vortex that physically attacks the target. Power 1200. Over-hit. -->
 		<!-- Level 2: Creates an earth vortex that physically attacks the target. Power 1406. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
@@ -4937,7 +4937,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="588" toLevel="2" name="Curse of Darkness">
+	<skill id="588" toLevel="2" name="幽暗咀咒">
 		<!-- Applies a powerful curse on enemies. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<operateType>A2</operateType>
@@ -4974,7 +4974,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="589" toLevel="2" name="Dark Energy Drain">
+	<skill id="589" toLevel="2" name="幽暗能量吸收">
 		<!-- Absorbs energy from corpses to recover HP. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
@@ -5006,7 +5006,7 @@
 			<effect name="ConsumeBody" />
 		</effects>
 	</skill>
-	<skill id="590" toLevel="1" name="Residence Body">
+	<skill id="590" toLevel="1" name="居所-體魄">
 		<!-- Clan members' Max HP +222 if your clan owns the clan hall. -->
 		<icon>icon.skill0370</icon>
 		<operateType>P</operateType>
@@ -5019,7 +5019,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="591" toLevel="1" name="Residence Spirit">
+	<skill id="591" toLevel="1" name="居所-精神">
 		<!-- Clan members' Max CP +444 if your clan owns the clan hall. -->
 		<icon>icon.skill0371</icon>
 		<operateType>P</operateType>
@@ -5032,7 +5032,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="592" toLevel="1" name="Residence Soul">
+	<skill id="592" toLevel="1" name="居所-靈魂">
 		<!-- Clan members' Max MP +168 if your clan owns the clan hall. -->
 		<icon>icon.skill0372</icon>
 		<operateType>P</operateType>
@@ -5045,7 +5045,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="593" toLevel="1" name="Residence Health">
+	<skill id="593" toLevel="1" name="居所-奮戰不懈">
 		<!-- Clan members' HP Recovery Rate +1.09, while your clan owns the clan hall. -->
 		<icon>icon.skill0373</icon>
 		<operateType>P</operateType>
@@ -5058,7 +5058,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="594" toLevel="1" name="Residence Moral">
+	<skill id="594" toLevel="1" name="居所-士氣高昂">
 		<!-- Clan members' CP Recovery Rate +1.09, while your clan owns the clan hall. -->
 		<icon>icon.skill0374</icon>
 		<operateType>P</operateType>
@@ -5071,7 +5071,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="595" toLevel="1" name="Residence Clarity">
+	<skill id="595" toLevel="1" name="居所-沉著冷靜">
 		<!-- Clan members' MP Recovery Rate +0.47, while your clan owns the clan hall. -->
 		<icon>icon.skill0375</icon>
 		<operateType>P</operateType>
@@ -5084,7 +5084,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="596" toLevel="1" name="Residence Might">
+	<skill id="596" toLevel="1" name="居所-威猛剛健">
 		<!-- P. Atk. of clan members in residence increases by 34.6. -->
 		<icon>icon.skill0376</icon>
 		<operateType>P</operateType>
@@ -5097,7 +5097,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="597" toLevel="1" name="Residence Shield">
+	<skill id="597" toLevel="1" name="居所-堅定不移">
 		<!-- P. Def. of clan members in residence increases by 54.7. -->
 		<icon>icon.skill0377</icon>
 		<operateType>P</operateType>
@@ -5110,7 +5110,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="598" toLevel="1" name="Residence Empower">
+	<skill id="598" toLevel="1" name="居所-英明睿智">
 		<!-- Clan members' M. Atk. +40.4, while your clan owns the clan hall. -->
 		<icon>icon.skill0378</icon>
 		<operateType>P</operateType>
@@ -5123,7 +5123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="599" toLevel="1" name="Hall's Magic Barrier">
+	<skill id="599" toLevel="1" name="居所-鋼鐵意志">
 		<!-- Clan members' M. Def. +44 if your clan owns the clan hall. -->
 		<icon>icon.skill0379</icon>
 		<operateType>P</operateType>

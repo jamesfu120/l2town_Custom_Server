@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="19001" toLevel="1" name="Test Bleed">
+	<skill id="19001" toLevel="1" name="測試出血">
 		<!-- Checking race. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0010509</icon>
 		<operateType>A2</operateType>
@@ -25,7 +25,7 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<trait>BLEED</trait>
 	</skill>
-	<skill id="19002" toLevel="1" name="Anchor">
+	<skill id="19002" toLevel="1" name="定身術">
 		<!-- Test of the items and skills that prevent movement. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10510</icon>
 		<operateType>A2</operateType>
@@ -48,7 +48,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<trait>PARALYZE</trait>
 	</skill>
-	<skill id="19003" toLevel="5" name="Clan Resistance Hall">
+	<skill id="19003" toLevel="5" name="血盟抵抗之力">
 		<!-- Level 1: Clan members' Holy/ Dark Resistance +3. The effect applies only to characters with the Elder rank or higher. -->
 		<!-- Level 2: Clan members' Holy/ Dark Resistance +4. The effect applies only to characters with the Elder rank or higher. -->
 		<!-- Level 3: Clan members' Holy/ Dark Resistance +5. The effect applies only to characters with the Elder rank or higher. -->
@@ -81,7 +81,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19004" toLevel="5" name="Clan Debuff Control">
+	<skill id="19004" toLevel="5" name="血盟詛咒控制">
 		<!-- Level 1: Increases clan members' Debuff Resistance by 10. It only affects those who are of a Elder rank or higher. -->
 		<!-- Level 2: Increases clan members' Debuff Resistance by 13. It only affects those who are of a Elder rank or higher. -->
 		<!-- Level 3: Increases clan members' Debuff Resistance by 16. It only affects those who are of a Elder rank or higher. -->
@@ -145,7 +145,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19005" toLevel="5" name="Clan Muzzle Control">
+	<skill id="19005" toLevel="5" name="血盟麻痺控制">
 		<!-- Level 1: Clan members' Confusion Resistance +12. Affects characters of Elder rank or higher. -->
 		<!-- Level 2: Clan members' Confusion Resistance +13. Affects characters of Elder rank or higher. -->
 		<!-- Level 3: Clan members' Confusion Resistance +14. Affects characters of Elder rank or higher. -->
@@ -167,7 +167,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19006" toLevel="5" name="Clan Mental Control">
+	<skill id="19006" toLevel="5" name="血盟心靈控制">
 		<!-- Level 1: Clan members' Confusion Resistance +12. Affects characters of Elder rank or higher. -->
 		<!-- Level 2: Clan members' Confusion Resistance +13. Affects characters of Elder rank or higher. -->
 		<!-- Level 3: Clan members' Confusion Resistance +14. Affects characters of Elder rank or higher. -->
@@ -189,7 +189,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19007" toLevel="1" name="Clan's Summon">
+	<skill id="19007" toLevel="1" name="血盟召喚">
 		<!-- Summons a clan member to the caster. Consumes 100 Spirit Ore. The skill cooldown is fixed. -->
 		<icon>icon.skill19007</icon>
 		<operateType>A1</operateType>
@@ -217,7 +217,7 @@
 			<effect name="CallPc" />
 		</effects>
 	</skill>
-	<skill id="19008" toLevel="1" name="Clan's Salvation">
+	<skill id="19008" toLevel="1" name="盟誓-釋放">
 		<!-- Uses the clan guardian's power to restore nearby clan members' HP/ MP/ CP. Consumes 1000 Spirit Ore. Available only to the clan leader. The skill cooldown is fixed. -->
 		<icon>icon.skill19008</icon>
 		<operateType>A1</operateType>
@@ -253,7 +253,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19009" toLevel="15" name="Clan's Advent">
+	<skill id="19009" toLevel="15" name="血盟強化">
 		<!-- Level 1: Clan members' acquired XP/ SP +10%, Vitality bonus +1%. The buff is active while the clan leader or a marquis is online. The higher the clan level, the stronger the Clan's Advent effect. -->
 		<!-- Level 2: Clan members' acquired XP/ SP +10%, Vitality bonus +1%, Recovery Potions' Effect +50. The buff is active while the clan leader or a marquis is online. The higher the clan level, the stronger the Clan's Advent effect. -->
 		<!-- Level 3: Clan members' acquired XP/ SP +10%, Vitality bonus +1%, Recovery Potions' Effect +50, Attribute Attack +5, Attribute Resistance +5. The buff is active while the clan leader or a marquis is online. The higher the clan level, the stronger the Clan's Advent effect. -->
@@ -532,7 +532,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19010" toLevel="1" name="Clan Copy">
+	<skill id="19010" toLevel="1" name="血盟分身">
 		<!-- Summons a copy of yourself to cause confusion among enemies. Consumes 30 Spirit Ore. Requires 1500 Reputation Points. Can be used by characters with the Marquis clan status or higher. -->
 		<icon>icon.skill19010</icon>
 		<operateType>A1</operateType>
@@ -554,7 +554,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19011" toLevel="1" name="Clan Legend">
+	<skill id="19011" toLevel="1" name="血盟傳奇">
 		<!-- Increases P. Atk. and P. Def., when HP < 30%. The effect applies only to characters with the King rank or higher. -->
 		<icon>icon.skill19011</icon>
 		<operateType>P</operateType>
@@ -577,7 +577,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19012" toLevel="1" name="Clan Hide">
+	<skill id="19012" toLevel="1" name="血盟隱身">
 		<!-- Hides nearby clan members, their Speed -50%. Consumes 150 Soulstones. Requires 1000 Clan Reputation Points. Can be used by characters with the King clan status. The skill cooldown is fixed. -->
 		<icon>icon.skill19012</icon>
 		<operateType>A2</operateType>
@@ -615,7 +615,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19013" toLevel="1" name="Clan's Purify">
+	<skill id="19013" toLevel="1" name="盟誓-淨化">
 		<!-- Removes all debuffs from nearby clan members. Consumes 300 Spirit Ore. Available only for the clan leader and elite clan members. The skill cooldown is fixed. -->
 		<icon>icon.skill19013</icon>
 		<operateType>A1</operateType>
@@ -643,7 +643,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19014" toLevel="1" name="Clan Defense">
+	<skill id="19014" toLevel="1" name="血盟防禦">
 		<!-- Makes nearby clan members invincible. Consumes 30 Spirit Ore. Requires 1000 clan reputation points. Can be used by characters with the King clan status. The skill cooldown is fixed. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<icon>icon.skill19014</icon>
 		<operateType>A2</operateType>
@@ -698,7 +698,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19015" toLevel="1" name="Clan Friendly">
+	<skill id="19015" toLevel="1" name="血盟善意">
 		<!-- Nearby clan members' Critical Rate for basic attacks +3%, M. Skill Critical Rate +2%. Consumes 50 Spirit Ore. Requires 3500 Reputation Points. Can be used by characters with the Marquis clan status or higher. -->
 		<icon>icon.skill19015</icon>
 		<operateType>A2</operateType>
@@ -733,7 +733,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19016" toLevel="1" name="Clan Boundary">
+	<skill id="19016" toLevel="1" name="血盟結界">
 		<!-- Nearby clan members' P. Atk. and P. Def. +3%. Consumes 50 Spirit Ore. Requires 3000 Reputation Points. Can be used by characters with the Count clan status or higher. -->
 		<icon>icon.skill19016</icon>
 		<operateType>A2</operateType>
@@ -767,7 +767,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19017" toLevel="1" name="Clan Prison">
+	<skill id="19017" toLevel="1" name="血盟囚禁">
 		<!-- For 60 sec., nearby enemies' Speed -23%. Prevents enemies from using teleportation. Consumes 30 Spirit Ore. Consumes 3000 personal reputation points. Available only to clan members of the Duke rank and higher. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill19017</icon>
 		<operateType>A2</operateType>
@@ -802,7 +802,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="19018" toLevel="1" name="Clan Guardian Recovery">
+	<skill id="19018" toLevel="1" name="血盟守護神治癒">
 		<!-- Recovers HP/ MP/ CP. -->
 		<icon>icon.skill19008</icon>
 		<operateType>A1</operateType>
@@ -829,7 +829,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19019" toLevel="1" name="Revolution Blade">
+	<skill id="19019" toLevel="1" name="革命之刃">
 		<!-- Inflicts physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill10013</icon>
 		<operateType>A1</operateType>
@@ -852,7 +852,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19020" toLevel="1" name="Revolution Eruption">
+	<skill id="19020" toLevel="1" name="革命爆發">
 		<!-- Attacks frontal targets to inflict physical damage. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill10265</icon>
 		<operateType>A1</operateType>
@@ -878,7 +878,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19021" toLevel="1" name="Revolution Strike">
+	<skill id="19021" toLevel="1" name="革命強擊">
 		<!-- Inflicts powerful physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill10260</icon>
 		<operateType>A1</operateType>
@@ -901,7 +901,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19022" toLevel="1" name="Revolution Shot">
+	<skill id="19022" toLevel="1" name="革命射擊">
 		<!-- Attacks distant enemies. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill10762</icon>
 		<operateType>A1</operateType>
@@ -924,7 +924,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19023" toLevel="1" name="Revolution Multi-Shot">
+	<skill id="19023" toLevel="1" name="革命多重射擊">
 		<!-- Does ranged attacks centered on frontal target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -950,7 +950,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19024" toLevel="1" name="Revolution Tornado Shot">
+	<skill id="19024" toLevel="1" name="革命龍捲射擊">
 		<!-- Inflicts a penetrating attack on enemies at the front. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill10760</icon>
 		<operateType>A1</operateType>
@@ -973,7 +973,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19025" toLevel="1" name="Revolution Spike">
+	<skill id="19025" toLevel="1" name="革命裂刺">
 		<!-- Inflicts a magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
@@ -996,7 +996,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19026" toLevel="1" name="Revolution Blast">
+	<skill id="19026" toLevel="1" name="革命爆裂">
 		<!-- Inflicts a magic attack on target and enemies near target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill11034</icon>
 		<operateType>A1</operateType>
@@ -1022,7 +1022,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19027" toLevel="1" name="Revolution Destruction">
+	<skill id="19027" toLevel="1" name="革命破散">
 		<!-- Inflicts a powerful magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill11023</icon>
 		<operateType>A1</operateType>
@@ -1045,7 +1045,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19028" toLevel="2" name="Revolution Spirit">
+	<skill id="19028" toLevel="2" name="革命精神">
 		<!-- Level 1: Increases Max CP by 10,000, P. Def. by 1000, and M. Def. by 1000 for 5 min. Can only be used in a castle siege area by characters between Lv. 40 -84. Soulshots and Spiritshots are not consumed. -->
 		<!-- Level 2: Increases Max CP by 15,000, P. Def. by 1000, and M. Def. by 1000 for 5 min. Can only be used in a castle siege area by characters between Lv. 40 -84. Soulshots and Spiritshots are not consumed. -->
 		<icon>BranchSys2.icon.skill20006</icon>
@@ -1077,7 +1077,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="19029" toLevel="1" name="Revolution Self CP Recovery">
+	<skill id="19029" toLevel="1" name="革命自我CP恢復">
 		<!-- Increases combat spirit to recover your own CP by 2000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill0440</icon>
 		<operateType>A1</operateType>
@@ -1104,7 +1104,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19030" toLevel="1" name="Revolution CP Recovery">
+	<skill id="19030" toLevel="1" name="革命CP恢復">
 		<!-- Increases combat spirit to recover target's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -1133,7 +1133,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19031" toLevel="1" name="Revolution Party CP Recovery">
+	<skill id="19031" toLevel="1" name="革命隊伍CP恢復">
 		<!-- Increases combat spirit to recover a party member's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed. -->
 		<icon>icon.skill11757</icon>
 		<operateType>A1</operateType>
@@ -1162,7 +1162,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19032" toLevel="1" name="Ability of Light">
+	<skill id="19032" toLevel="1" name="光之能力">
 		<!-- Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher. -->
 		<icon>icon.skill19008</icon>
 		<operateType>P</operateType>
@@ -1187,7 +1187,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19033" toLevel="1" name="Ability of Darkness">
+	<skill id="19033" toLevel="1" name="暗之能力">
 		<!-- Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher. -->
 		<icon>icon.skill19008</icon>
 		<operateType>P</operateType>
@@ -1212,7 +1212,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19034" toLevel="1" name="Seal of Light">
+	<skill id="19034" toLevel="1" name="光之封印">
 		<!-- Engraves the Seal of Light on the ancient relic that guards the castle. -->
 		<icon>icon.skill0246</icon>
 		<operateType>CA1</operateType>
@@ -1239,7 +1239,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19035" toLevel="1" name="Seal of Darkness">
+	<skill id="19035" toLevel="1" name="暗之封印">
 		<!-- Engraves the Seal of Darkness on the ancient relic that guards the castle. -->
 		<icon>icon.skill0246</icon>
 		<operateType>CA1</operateType>
@@ -1266,7 +1266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19036" toLevel="1" name="Blessing of Light">
+	<skill id="19036" toLevel="1" name="光之祝福">
 		<!-- Acquired XP/ SP +3% through the blessing of the Guardian of Light. The skill cooldown is fixed. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A2</operateType>
@@ -1291,7 +1291,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19037" toLevel="1" name="Cloak of Radiant Light">
+	<skill id="19037" toLevel="1" name="燦爛光之斗篷">
 		<!-- All stats +4, received damage -15%. Ineffective in Chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
 		<operateType>P</operateType>
@@ -1342,7 +1342,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19038" toLevel="1" name="Cloak of Cold Darkness">
+	<skill id="19038" toLevel="1" name="冷冽暗之斗篷">
 		<!-- All stats +4, received damage -15%. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<operateType>P</operateType>
@@ -1387,7 +1387,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19039" toLevel="1" name="Cloak of Light">
+	<skill id="19039" toLevel="1" name="光之斗篷">
 		<!-- All stats +2, received damage -5%. Ineffective in Chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
 		<operateType>P</operateType>
@@ -1438,7 +1438,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19040" toLevel="1" name="Cloak of Darkness">
+	<skill id="19040" toLevel="1" name="暗之斗篷">
 		<!-- All stats +2, received damage -5%. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<operateType>P</operateType>
@@ -1483,7 +1483,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19041" toLevel="1" name="King's Call">
+	<skill id="19041" toLevel="1" name="王的呼喚">
 		<!-- Teleports to the castle. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>A1</operateType>
@@ -1503,7 +1503,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19042" toLevel="1" name="King's Summon">
+	<skill id="19042" toLevel="1" name="王的返回">
 		<!-- Teleports to your castle immediately. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>A1</operateType>
@@ -1527,7 +1527,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19074" toLevel="2" name="Academy Precept">
+	<skill id="19074" toLevel="2" name="學院再生">
 		<!-- Level 1: For 60 min., the Academy members' P. Atk. +10%, M. Atk. +10%, Critical Rate for basic attacks +10%, M. Skill Critical Rate +10%. -->
 		<!-- Level 2: For 60 min., the Academy members' P. Atk. +20%, M. Atk. +20%, Critical Rate for basic attacks +10%, M. Skill Critical Rate +10%. -->
 		<icon>icon.skill19008</icon>
@@ -1557,13 +1557,13 @@
 			<value level="2">21600000</value>
 		</reuseDelay>
 	</skill>
-	<skill id="19075" toLevel="1" name="Clan Relation">
+	<skill id="19075" toLevel="1" name="血盟誓約">
 		<icon>icon.skill19008</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="19076" toLevel="1" name="Clan Academy Reward">
+	<skill id="19076" toLevel="1" name="血盟學院報酬">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1585,7 +1585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19080" toLevel="1" name="Sigel Ixion">
+	<skill id="19080" toLevel="1" name="席格爾化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1613,7 +1613,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19081" toLevel="1" name="Tyrr Ixion">
+	<skill id="19081" toLevel="1" name="提爾化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1641,7 +1641,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19082" toLevel="1" name="Othell Ixion">
+	<skill id="19082" toLevel="1" name="歐瑟化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1669,7 +1669,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19083" toLevel="1" name="Yul Ixion">
+	<skill id="19083" toLevel="1" name="尤爾化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1697,7 +1697,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19084" toLevel="1" name="Feoh Ixion">
+	<skill id="19084" toLevel="1" name="菲歐化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1725,7 +1725,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19085" toLevel="1" name="Iss Ixion">
+	<skill id="19085" toLevel="1" name="伊斯化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1753,7 +1753,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19086" toLevel="1" name="Wynn Ixion">
+	<skill id="19086" toLevel="1" name="維因化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1781,7 +1781,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19087" toLevel="1" name="Aeore Ixion">
+	<skill id="19087" toLevel="1" name="艾羅化身降臨">
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1809,7 +1809,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19088" toLevel="4" name="Summon Siege Golem">
+	<skill id="19088" toLevel="4" name="召喚攻城高崙">
 		<!-- Level 1: Summons a siege weapon. Requires 400 Crystals. Dwarves get the skill on the 85th level automatically. -->
 		<!-- Level 2: Summons a siege weapon. Requires 400 Crystals. Dwarves get the skill on the 90th level automatically. -->
 		<!-- Level 3: Summons a siege weapon. Requires 400 Crystals. Dwarves get the skill on the 95th level automatically. -->
@@ -1846,7 +1846,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19089" toLevel="4" name="Summon Wild Hog Cannon">
+	<skill id="19089" toLevel="4" name="召喚野豬加農砲">
 		<!-- Level 1: Summons a siege weapon. It can move only in the normal mode. When the siege mode is active, it cannot move, but attacks targets from a distance. Switching modes takes 30 sec. Requires 100 Crystals. Maestros get the skill on the 85th level automatically. The skill cooldown is fixed. -->
 		<!-- Level 2: Summons a siege weapon. It can move only in the normal mode. When the siege mode is active, it cannot move, but attacks targets from a distance. Switching modes takes 30 sec. Requires 100 Crystals. Maestros get the skill on the 90th level automatically. The skill cooldown is fixed. -->
 		<!-- Level 3: Summons a siege weapon. It can move only in the normal mode. When the siege mode is active, it cannot move, but attacks targets from a distance. Switching modes takes 30 sec. Requires 100 Crystals. Maestros get the skill on the 95th level automatically. The skill cooldown is fixed. -->
@@ -1883,7 +1883,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19090" toLevel="4" name="Summon Swoop Cannon">
+	<skill id="19090" toLevel="4" name="召喚奇襲加農砲">
 		<!-- Level 1: Summons an assault weapon. Requires 500 Crystals. Dwarves get the skill on the 85th level automatically. -->
 		<!-- Level 2: Summons an assault weapon. Requires 500 Crystals. Dwarves get the skill on the 90th level automatically. -->
 		<!-- Level 3: Summons an assault weapon. Requires 500 Crystals. Dwarves get the skill on the 95th level automatically. -->
@@ -1921,7 +1921,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19091" toLevel="1" name="Item Drop Rate Up">
+	<skill id="19091" toLevel="1" name="道具掉落率上升">
 		<!-- Increases the PK item drop rate. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
@@ -1945,7 +1945,7 @@
 		<mpConsume>1</mpConsume>
 		<trait>PARALYZE</trait>
 	</skill>
-	<skill id="19092" toLevel="2" name="Chat Prohibited">
+	<skill id="19092" toLevel="2" name="團體回歸">
 		<!-- Level 1: Restricts from chatting. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Teleports party members to the nearest village. -->
 		<icon>
@@ -2002,7 +2002,7 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="19093" toLevel="1" name="Additional Hit Quiver">
+	<skill id="19093" toLevel="1" name="追加攻擊箭筒">
 		<!-- Chance of inflicting damage again upon shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>T</operateType>
@@ -2013,7 +2013,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="19094" toLevel="1" name="Increased Damage Quiver">
+	<skill id="19094" toLevel="1" name="致命攻擊箭筒">
 		<!-- Increases Critical Damage while shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>T</operateType>
@@ -2024,7 +2024,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="19095" toLevel="1" name="Added Bleed Quiver">
+	<skill id="19095" toLevel="1" name="出血攻擊箭筒">
 		<!-- Chance of inflicting bleed if critical occurs while shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>T</operateType>
@@ -2035,7 +2035,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="19096" toLevel="1" name="Extra Hit">
+	<skill id="19096" toLevel="1" name="追加攻擊">
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2047,7 +2047,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>97</magicLevel>
 	</skill>
-	<skill id="19097" toLevel="1" name="Supreme Critical Hit">
+	<skill id="19097" toLevel="1" name="致命攻擊">
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2060,7 +2060,7 @@
 		<magicLevel>97</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="19098" toLevel="1" name="Bleed Target">
+	<skill id="19098" toLevel="1" name="出血攻擊">
 		<!-- For 15 sec., HP -100 per sec. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -2082,7 +2082,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<trait>BLEED</trait>
 	</skill>
-	<skill id="19099" toLevel="1" name="GM's Power">
+	<skill id="19099" toLevel="1" name="GM權威">
 		<!-- Petrifies the target for 60 min. Base success rate: Guaranteed. Inflicted status: Petrification. -->
 		<icon>icon.skill0367</icon>
 		<operateType>A2</operateType>

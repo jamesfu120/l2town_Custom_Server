@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="18800" toLevel="2" name="Orc's Golden Coffret: Paid Effect">
+	<skill id="18800" toLevel="2" name="半獸人黃金光芒箱子付費效果">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18801" toLevel="2" name="Dancing Cat's Style Lv. 1">
+	<skill id="18801" toLevel="2" name="跳舞貓的舞步-階段2">
 		<!-- Level 1: Due to the Dancing Cat's energy, all stats +1 for 8 h. A party with new or returned adventurers can get an enhanced buff of Lv. 2. -->
 		<!-- Level 2: Dancing Cat gives his blessing to all heroes who return to Aden for new adventures. For 8 h., Max HP/ MP/ CP +17%, P. Atk./ M. Atk./ P. Def./ M. Def. +17%, Atk. Spd./ Casting Spd. +17%, all stats +1, acquired XP/ SP +30%. -->
 		<icon>icon.skill_sing</icon>
@@ -15,13 +15,13 @@
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18802" toLevel="2" name="Blessing of Bliss Cash Effect">
+	<skill id="18802" toLevel="2" name="13週年祝福付費效果">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18803" toLevel="24" name="Anniversary Blessing Lv. 1">
+	<skill id="18803" toLevel="24" name="13週年祝福-階段24">
 		<!-- You can obtain an item in 1 h. There are 23 levels. With a premium buff, you have a slightly higher chance of obtaining items. Note!. The 13 anniversary buff and items cannot be obtained if you are dead or have no free slots in your inventory. -->
 		<icon>icon.ev_13th</icon>
 		<operateType>A1</operateType>
@@ -29,7 +29,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18804" toLevel="1" name="Fresh Wind">
+	<skill id="18804" toLevel="1" name="和風">
 		<!-- Causes a gentle breeze, caressing your face. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
 		<icon>icon.ev_magic_flame_game_wind1</icon>
 		<operateType>A1</operateType>
@@ -39,7 +39,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="18805" toLevel="1" name="Gust">
+	<skill id="18805" toLevel="1" name="突風">
 		<!-- Calls forth a powerful wind that makes you stagger. The wind makes you unable to control your body for 3 sec. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
 		<icon>icon.ev_magic_flame_game_wind2</icon>
 		<operateType>A1</operateType>
@@ -49,7 +49,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>7000</reuseDelay>
 	</skill>
-	<skill id="18806" toLevel="1" name="Magic Woodpile">
+	<skill id="18806" toLevel="1" name="魔法木柴堆">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -57,7 +57,7 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="18807" toLevel="1" name="Large Magic Woodpile">
+	<skill id="18807" toLevel="1" name="巨大魔法木柴堆">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -65,19 +65,19 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="18808" toLevel="1" name="Flame Games">
+	<skill id="18808" toLevel="1" name="火花遊戲">
 		<!-- 1st Flame Games skill after a successful raid. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18809" toLevel="1" name="Magic Flame Festival">
+	<skill id="18809" toLevel="1" name="魔法火花慶典">
 		<!-- 2nd Magic Flame Festival skill after a successful raid. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18810" toLevel="1" name="Magic Fire">
+	<skill id="18810" toLevel="1" name="魔法火花">
 		<!-- Double-click to send a Magic Flame flying for a chance to get a reward. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -85,28 +85,28 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="18811" toLevel="1" name="Novice's Sprout">
+	<skill id="18811" toLevel="1" name="新手玩家用幼苗">
 		<!-- Welcome to Aden! -->
 		<icon>icon.s_newbie_user_display</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18812" toLevel="1" name="Sprout for Returning Users">
+	<skill id="18812" toLevel="1" name="回歸玩家用幼苗">
 		<!-- Welcome back to Aden! -->
 		<icon>icon.s_dormant_user_display</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18813" toLevel="2" name="Master's Lucky Jewelry Box">
+	<skill id="18813" toLevel="2" name="大師幸運寶石盒">
 		<!-- Double-click to obtain an item. -->
 		<icon>icon.bm_jewelbox_master</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18814" toLevel="20" name="Topaz">
+	<skill id="18814" toLevel="20" name="最高級黃寶石10階段">
 		<!-- Spirit Hit can be used. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
@@ -216,7 +216,7 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="18815" toLevel="20" name="Tanzanite">
+	<skill id="18815" toLevel="20" name="最高級丹泉寶石10階段">
 		<!-- Tanzanite - Barrier can be used. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_tanzanite</value>
@@ -243,7 +243,7 @@
 		<operateType>P</operateType>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="18816" toLevel="1" name="Gust - Dance">
+	<skill id="18816" toLevel="1" name="突風-舞蹈">
 		<!-- The gust makes you dance a cheerful dance. -->
 		<icon>icon.ev_magic_flame_game_wind3</icon>
 		<operateType>A1</operateType>
@@ -251,91 +251,91 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18817" toLevel="1" name="Fish Chilli Stew - WIT">
+	<skill id="18817" toLevel="1" name="辣鮮魚湯-智慧">
 		<!-- When used, WIT +3, LUC +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18818" toLevel="1" name="Fish Chilli Stew - INT">
+	<skill id="18818" toLevel="1" name="辣鮮魚湯-智力">
 		<!-- When used, INT +3, LUC +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18819" toLevel="1" name="Fish Chilli Stew - MEN">
+	<skill id="18819" toLevel="1" name="辣鮮魚湯-精神">
 		<!-- When used, MEN +3, LUC +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18820" toLevel="1" name="Fish Chilli Stew - DEX">
+	<skill id="18820" toLevel="1" name="辣鮮魚湯-敏捷">
 		<!-- When used, DEX +3, LUC +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18821" toLevel="1" name="Fish Chilli Stew - STR">
+	<skill id="18821" toLevel="1" name="辣鮮魚湯-力量">
 		<!-- When used, STR +3, LUC +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18822" toLevel="1" name="Fish Chilli Stew - CON">
+	<skill id="18822" toLevel="1" name="辣鮮魚湯-體質">
 		<!-- When used, CON +3, LUC +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18823" toLevel="1" name="Fish Cream Stew - WIT">
+	<skill id="18823" toLevel="1" name="奶油鮮魚湯-智慧">
 		<!-- When used, WIT +3, CHA +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18824" toLevel="1" name="Fish Cream Stew - INT">
+	<skill id="18824" toLevel="1" name="奶油鮮魚湯-智力">
 		<!-- When used, INT +3, CHA +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18825" toLevel="1" name="Fish Cream Stew - MEN">
+	<skill id="18825" toLevel="1" name="奶油鮮魚湯-精神">
 		<!-- When used, MEN +3, CHA +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18826" toLevel="1" name="Fish Cream Stew - DEX">
+	<skill id="18826" toLevel="1" name="奶油鮮魚湯-敏捷">
 		<!-- When used, DEX +3, CHA +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18827" toLevel="1" name="Fish Cream Stew - STR">
+	<skill id="18827" toLevel="1" name="奶油鮮魚湯-力量">
 		<!-- When used, STR +3, CHA +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18828" toLevel="1" name="Fish Cream Stew - CON">
+	<skill id="18828" toLevel="1" name="奶油鮮魚湯-體質">
 		<!-- When used, CON +3, CHA +1 for 30 min. Effects of different types of Fish Stew do not stack. The effect stacks with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18829" toLevel="1" name="Challenger's Shaper">
+	<skill id="18829" toLevel="1" name="挑戰者鉋刀">
 		<!-- Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -354,7 +354,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18830" toLevel="1" name="Challenger's Cutter">
+	<skill id="18830" toLevel="1" name="挑戰者切刃">
 		<!-- Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -373,7 +373,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18831" toLevel="1" name="Challenger's Slasher">
+	<skill id="18831" toLevel="1" name="挑戰者殺刃">
 		<!-- Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -392,7 +392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18832" toLevel="1" name="Challenger's Avenger">
+	<skill id="18832" toLevel="1" name="挑戰者復仇者">
 		<!-- Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -411,7 +411,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18833" toLevel="1" name="Challenger's Fighter">
+	<skill id="18833" toLevel="1" name="挑戰者戰爪">
 		<!-- Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -430,7 +430,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18834" toLevel="1" name="Challenger's Stormer">
+	<skill id="18834" toLevel="1" name="挑戰者風暴者">
 		<!-- Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -449,7 +449,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18835" toLevel="1" name="Challenger's Thrower">
+	<skill id="18835" toLevel="1" name="挑戰者投弓">
 		<!-- Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -468,7 +468,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18836" toLevel="1" name="Challenger's Guardian">
+	<skill id="18836" toLevel="1" name="挑戰者射靈">
 		<!-- Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_infinity_shooter</icon>
 		<operateType>P</operateType>
@@ -487,7 +487,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18837" toLevel="1" name="Challenger's Buster">
+	<skill id="18837" toLevel="1" name="挑戰者爆刃">
 		<!-- M. Skill Critical Rate +5%, M. Skill Critical Damage +10%, Casting Spd. +15%. -->
 		<icon>icon.bm_infinity_sword</icon>
 		<operateType>P</operateType>
@@ -506,7 +506,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18838" toLevel="1" name="Challenger's Caster">
+	<skill id="18838" toLevel="1" name="挑戰者術杖">
 		<!-- M. Skill Critical Rate +5%, M. Skill Critical Damage +10%, Casting Spd. +15%. -->
 		<icon>icon.bm_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -525,7 +525,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18839" toLevel="1" name="Challenger's Retributer">
+	<skill id="18839" toLevel="1" name="挑戰者報恨者">
 		<!-- Critical Damage for basic attacks +10%, M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15%. -->
 		<icon>icon.bm_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -548,7 +548,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18840" toLevel="1" name="Challenger's Dual Swords">
+	<skill id="18840" toLevel="1" name="挑戰者雙刀">
 		<!-- Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dualsword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -567,7 +567,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18841" toLevel="1" name="Challenger's Dual Daggers">
+	<skill id="18841" toLevel="1" name="挑戰者雙匕首">
 		<!-- Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dualdagger_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -586,7 +586,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18842" toLevel="1" name="Challenger's Dual Blunt Weapons">
+	<skill id="18842" toLevel="1" name="挑戰者雙鈍器">
 		<!-- Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dualblunt_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -605,7 +605,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18843" toLevel="1" name="Challenger's Enhanced Shaper">
+	<skill id="18843" toLevel="1" name="強化挑戰者鉋刀">
 		<!-- Max HP +15%, Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dagger_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -628,7 +628,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18844" toLevel="1" name="Challenger's Enhanced Cutter">
+	<skill id="18844" toLevel="1" name="強化挑戰者切刃">
 		<!-- Max HP +15%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_sword_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -651,7 +651,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18845" toLevel="1" name="Challenger's Enhanced Slasher">
+	<skill id="18845" toLevel="1" name="強化挑戰者殺刃">
 		<!-- Max HP +15%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_two_handed_sword_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -674,7 +674,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18846" toLevel="1" name="Challenger's Enhanced Avenger">
+	<skill id="18846" toLevel="1" name="強化挑戰者復仇者">
 		<!-- Max HP +15%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_axe_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -697,7 +697,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18847" toLevel="1" name="Challenger's Enhanced Fighter">
+	<skill id="18847" toLevel="1" name="強化挑戰者戰爪">
 		<!-- Max HP +15%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_fist_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -720,7 +720,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18848" toLevel="1" name="Challenger's Enhanced Stormer">
+	<skill id="18848" toLevel="1" name="強化挑戰者風暴者">
 		<!-- Max HP +15%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_pole_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -743,7 +743,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18849" toLevel="1" name="Challenger's Enhanced Thrower">
+	<skill id="18849" toLevel="1" name="強化挑戰者投弓">
 		<!-- Max HP +15%, Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_bow_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -766,7 +766,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18850" toLevel="1" name="Challenger's Enhanced Guardian">
+	<skill id="18850" toLevel="1" name="強化挑戰者射靈">
 		<!-- Max HP +15%, Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_infinity_shooter</icon>
 		<operateType>P</operateType>
@@ -789,7 +789,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18851" toLevel="1" name="Challenger's Enhanced Buster">
+	<skill id="18851" toLevel="1" name="強化挑戰者爆刃">
 		<!-- Max HP +15%, M. Skill Critical Rate +5%, M. Skill Critical Damage +10%, Casting Spd. +15% -->
 		<icon>icon.bm_infinity_sword</icon>
 		<operateType>P</operateType>
@@ -812,7 +812,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18852" toLevel="1" name="Challenger's Enhanced Caster">
+	<skill id="18852" toLevel="1" name="強化挑戰者術杖">
 		<!-- Max HP +15%, M. Skill Critical Rate +5%, M. Skill Critical Damage +10%, Casting Spd. +15% -->
 		<icon>icon.bm_the_mace_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -835,7 +835,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18853" toLevel="1" name="Challenger's Enhanced Retributer">
+	<skill id="18853" toLevel="1" name="強化挑戰者報恨者">
 		<!-- Max HP +15%, Critical Damage for basic attacks +10%, M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15%. -->
 		<icon>icon.bm_the_staff_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -862,7 +862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18854" toLevel="1" name="Challenger's Enhanced Dual Swords">
+	<skill id="18854" toLevel="1" name="強化挑戰者雙刀">
 		<!-- Max HP +15%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dualsword_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -885,7 +885,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18855" toLevel="1" name="Challenger's Enhanced Dual Daggers">
+	<skill id="18855" toLevel="1" name="強化挑戰者雙匕首">
 		<!-- Max HP +15%, Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dualdagger_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -908,7 +908,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18856" toLevel="1" name="Challenger's Enhanced Dual Blunt Weapons">
+	<skill id="18856" toLevel="1" name="強化挑戰者雙鈍器">
 		<!-- Max HP +15%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%. -->
 		<icon>icon.bm_the_dualblunt_of_hero_i02</icon>
 		<operateType>P</operateType>
@@ -931,7 +931,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18857" toLevel="1" name="+5 Shiny Elemental Shirt Pack">
+	<skill id="18857" toLevel="1" name="+5閃亮的殷海薩襯衫禮盒">
 		<!-- Double-click to obtain a Shiny Einhasad T-shirt enchanted to +5. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -960,7 +960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18858" toLevel="1" name="Challenger's Bracelet">
+	<skill id="18858" toLevel="1" name="挑戰者手鐲">
 		<!-- All stats +1. Unlocks 5 talisman slots. -->
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
 		<operateType>P</operateType>

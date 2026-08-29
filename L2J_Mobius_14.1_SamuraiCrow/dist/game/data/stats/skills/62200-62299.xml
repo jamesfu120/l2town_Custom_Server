@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="62200" toLevel="1" name="Morhi's Chaotic Flash">
+	<skill id="62200" toLevel="1" name="莫特錫渾沌之光">
 		<!-- The boss' base attack skill. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A1</operateType>
@@ -20,7 +20,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62201" toLevel="1" name="Morhi's Chaotic Jump Attack">
+	<skill id="62201" toLevel="1" name="莫特錫渾沌之跳躍攻擊">
 		<!-- Flux Attack -->
 		<icon>icon.skill10269</icon>
 		<operateType>A1</operateType>
@@ -31,7 +31,7 @@
 		<isMagic>6</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="62202" toLevel="1" name="Morhi's Chaotic Thunder Bolt">
+	<skill id="62202" toLevel="1" name="莫特錫渾沌之雷電">
 		<!-- Deals P. damage to nearby enemies knocking them down for 7 sec. Cannot be removed. -->
 		<icon>icon.skll10094</icon>
 		<operateType>A1</operateType>
@@ -41,12 +41,12 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62203" toLevel="1" name="Kasha Orc Tactic Mentor">
+	<skill id="62203" toLevel="1" name="卡沙獸人戰術教官">
 		<!-- After receiving the Chaos Power, the powerful warlord Morhi was invited to a mysterious ritual. There he became even stronger. <Bonus stats>. Max received damage is fixed at 1,000,000. P./ M. Accuracy +100, P./ M. Evasion +100. Additionally, received damage from basic attacks -30%. -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62204" toLevel="10" name="Accuracy Bonus">
+	<skill id="62204" toLevel="10" name="強化命中">
 		<!-- Level 1: Slightly increases P./ M. Accuracy. -->
 		<!-- Level 2: Slightly increases P./ M. Accuracy. -->
 		<!-- Level 3: Slightly increases P./ M. Accuracy. -->
@@ -77,7 +77,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62205" toLevel="10" name="Evasion Bonus">
+	<skill id="62205" toLevel="10" name="強化迴避">
 		<!-- Level 1: Slightly increases P./ M. Evasion. -->
 		<!-- Level 2: Slightly increases P./ M. Evasion. -->
 		<!-- Level 3: Slightly increases P./ M. Evasion. -->
@@ -91,7 +91,7 @@
 		<icon>icon.skill19129</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62206" toLevel="10" name="Evasion Reduction">
+	<skill id="62206" toLevel="10" name="弱化迴避">
 		<!-- Level 1: Slightly decreases P./ M. Evasion. -->
 		<!-- Level 2: Slightly decreases P./ M. Evasion. -->
 		<!-- Level 3: Slightly decreases P./ M. Evasion. -->
@@ -105,27 +105,27 @@
 		<icon>icon.skill19129</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62207" toLevel="1" name="Kasha Orc Militiaman">
+	<skill id="62207" toLevel="1" name="卡沙獸人百人隊長">
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="62208" toLevel="1" name="Kasha Orc Special Warrior">
+	<skill id="62208" toLevel="1" name="卡沙獸人特戰士">
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="62209" toLevel="1" name="Kasha Orc Elder Wizard">
+	<skill id="62209" toLevel="1" name="卡沙獸人上級魔導士">
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="62210" toLevel="1" name="Kasha Orc Tactic Mentor">
+	<skill id="62210" toLevel="1" name="卡沙獸人戰術教官">
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="62211" toLevel="1" name="Kasha's Grave Attack">
+	<skill id="62211" toLevel="1" name="卡沙墓之擊">
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -143,21 +143,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62212" toLevel="1" name="Kasha's Enchanted Grave Attack">
+	<skill id="62212" toLevel="1" name="卡沙附魔墓之擊">
 		<operateType>A1</operateType>
 		<castRange>80</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-115</effectPoint>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="62213" toLevel="1" name="Kasha's Critical Grave Attack">
+	<skill id="62213" toLevel="1" name="卡沙致命攻擊墓之擊">
 		<operateType>A1</operateType>
 		<castRange>80</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-115</effectPoint>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="62214" toLevel="5" name="21st Anniversary Energy Stage 1 (Lv. 105)">
+	<skill id="62214" toLevel="5" name="21週年慶典氣息-1階段(109級)">
 		<!-- Level 1: You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 105+. -->
 		<!-- Level 2: You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 106+. -->
 		<!-- Level 3: You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 107+. -->
@@ -169,7 +169,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62215" toLevel="5" name="21st Anniversary Energy Stage 2 (Lv. 110)">
+	<skill id="62215" toLevel="5" name="21週年慶典氣息-2階段(114級)">
 		<!-- Level 1: You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 110+. -->
 		<!-- Level 2: You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 111+. -->
 		<!-- Level 3: You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 112+. -->
@@ -181,7 +181,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62216" toLevel="1" name="21st Anniversary Energy Stage 3">
+	<skill id="62216" toLevel="1" name="21週年慶典氣息-3階段">
 		<!-- You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 115-119. -->
 		<icon>icon.skill5950</icon>
 		<operateType>A1</operateType>
@@ -189,7 +189,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62217" toLevel="1" name="21st Anniversary Energy Stage 4">
+	<skill id="62217" toLevel="1" name="21週年慶典氣息-4階段">
 		<!-- You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 120-124. -->
 		<icon>icon.skill5950</icon>
 		<operateType>A1</operateType>
@@ -197,7 +197,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62218" toLevel="1" name="21st Anniversary Energy Stage 5">
+	<skill id="62218" toLevel="1" name="21週年慶典氣息-5階段">
 		<!-- You feel the coming of holiday, and your heart is filled with joy. Acquired XP/ SP +???%. The holiday atmosphere is affecting the XP display. Required level: 125+. -->
 		<icon>icon.skill5950</icon>
 		<operateType>A1</operateType>
@@ -205,12 +205,12 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62219" toLevel="1" name="Single Damage">
+	<skill id="62219" toLevel="1" name="ONE傷害">
 		<!-- Max damage 1. -->
 		<icon>icon.skillboss</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62220" toLevel="1" name="Hestui's Rage">
+	<skill id="62220" toLevel="1" name="黑斯吐伊怒擊">
 		<!-- The Totem Spirit is enraged and mercilessly attacks enemies. Its HP Recovery Rate is increased. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
@@ -218,7 +218,7 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62221" toLevel="1" name="Gandi's Rage">
+	<skill id="62221" toLevel="1" name="甘地怒擊">
 		<!-- The Totem Spirit is enraged and mercilessly attacks enemies. Its HP Recovery Rate is increased. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
@@ -226,7 +226,7 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62222" toLevel="1" name="Duda-Mara's Rage">
+	<skill id="62222" toLevel="1" name="都達瑪拉怒擊">
 		<!-- The Totem Spirit is enraged and mercilessly attacks enemies. Its HP Recovery Rate is increased. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
@@ -234,7 +234,7 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62223" toLevel="1" name="Kasha's Enchanted Grave Attack">
+	<skill id="62223" toLevel="1" name="卡沙附魔墓之擊">
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -252,7 +252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62224" toLevel="1" name="Kasha's Avatar Atrus">
+	<skill id="62224" toLevel="1" name="卡沙賢臣 亞特魯斯                             ">
 		<!-- Once of the High Orcs, Atrus lost his way tempted by the Chaos Power. Now he knows only one master - Kasha. <Bonus stats>. Max received damage is fixed at 2,000,000. Received damage from basic attacks -30%, Accuracy/ Evasion +200. <Spawn requirements>. Spawns in Kasha Orc Fortress at 21:00 every Tuesday and Thursday, and disappears in 20 min. <Reward requirements>. The defeat contribution reward is only given to 200 top-damage characters. The damage dealt by a character has to be at least 0.1% of the boss' Max HP. The first/ last hit reward is given to characters who have fulfilled the requirements for the defeat contribution reward as well as have delivered the first/ last blow. The top-damage reward is given to characters who have fulfilled the requirements for the defeat contribution reward as well as have achieved the 1st-10th rank in the damage rank list. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -270,7 +270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62225" toLevel="1" name="Kasha's Destruction (Blunt Weapon)">
+	<skill id="62225" toLevel="1" name="卡沙火山毀滅">
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -291,7 +291,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62226" toLevel="1" name="Kasha's Wave (Blunt Weapon)">
+	<skill id="62226" toLevel="1" name="卡沙緩波">
 		<!-- Deals P. damage stunning enemies for 2 sec. The damage is increased based on the number of affected targets. Cannot be removed. -->
 		<icon>icon.skill33916</icon>
 		<operateType>DA2</operateType>
@@ -338,7 +338,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62227" toLevel="1" name="Kasha's Pull (Blunt Weapon)">
+	<skill id="62227" toLevel="1" name="卡沙緩拖">
 		<!-- Pulls nearby enemies and stuns them for 1 sec. Cannot be removed. -->
 		<icon>icon.skill32715</icon>
 		<operateType>A2</operateType>
@@ -372,7 +372,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62228" toLevel="1" name="Kasha's Sweep (Blunt Weapon)">
+	<skill id="62228" toLevel="1" name="卡沙鈍掃">
 		<!-- Deals P. damage knocking enemies down for 4 sec. The damage is increased based on the number of affected targets. Cannot be removed. -->
 		<icon>icon.skill1184</icon>
 		<operateType>A2</operateType>
@@ -413,7 +413,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62229" toLevel="1" name="Kasha's Direct Attack (Blunt Weapon)">
+	<skill id="62229" toLevel="1" name="卡沙鈍向">
 		<operateType>DA2</operateType>
 		<targetType>ENEMY</targetType>
 		<abnormalLevel>4</abnormalLevel>
@@ -460,7 +460,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62230" toLevel="1" name="Kasha's Fray (Blunt Weapon)">
+	<skill id="62230" toLevel="1" name="卡沙緩衝擊">
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
 		<abnormalLevel>1</abnormalLevel>
@@ -502,7 +502,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62231" toLevel="1" name="Kasha's Destruction (Stormer)">
+	<skill id="62231" toLevel="1" name="卡沙風暴者壞滅">
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -525,7 +525,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62232" toLevel="1" name="Kasha's Inner Storm (Stormer)">
+	<skill id="62232" toLevel="1" name="卡沙風暴者內颶風術">
 		<!-- Deals P. damage knocking enemies down for 4 sec. The damage is increased based on the number of affected targets. Cannot be removed. -->
 		<icon>icon.skill32100</icon>
 		<operateType>A2</operateType>
@@ -561,7 +561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62233" toLevel="1" name="Kasha's Outer Storm (Stormer)">
+	<skill id="62233" toLevel="1" name="卡沙風暴者外颶風術">
 		<!-- Deals P. damage knocking enemies down for 4 sec. The damage is increased based on the number of affected targets. Cannot be removed. -->
 		<icon>icon.skill32100</icon>
 		<operateType>A2</operateType>
@@ -598,7 +598,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62234" toLevel="1" name="Chaos Cure">
+	<skill id="62234" toLevel="1" name="渾沌治癒">
 		<!-- effect visual to script -->
 		<operateType>CA1</operateType>
 		<targetType>TARGET</targetType>
@@ -617,20 +617,20 @@
 		<magicLevel>127</magicLevel>
 		<reuseDelay>100</reuseDelay>
 	</skill>
-	<skill id="62235" toLevel="1" name="Chaos Stone Call">
+	<skill id="62235" toLevel="1" name="渾沌石之喚">
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62236" toLevel="1" name="Kasha's Despair (Stormer)">
+	<skill id="62236" toLevel="1" name="卡沙風暴者絕望">
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>15000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62237" toLevel="1" name="Chaotic Defense">
+	<skill id="62237" toLevel="1" name="渾沌保護">
 		<!-- Uses the power of Chaotic Seal to block Atrus' skill: Kasha's Despair (Stormer). -->
 		<icon>icon.skill1389</icon>
 		<operateType>A1</operateType>
@@ -638,20 +638,20 @@
 		<isMagic>4</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="62238" toLevel="1" name="Kasha's Invincibility">
+	<skill id="62238" toLevel="1" name="不滅卡沙">
 		<!-- The Chaos Power grants invincibility. -->
 		<icon>icon.skill32522</icon>
 		<operateType>A1</operateType>
 		<castRange>1500</castRange>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="62239" toLevel="1" name="Kasha's Conversion">
+	<skill id="62239" toLevel="1" name="卡沙轉換武器">
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62240" toLevel="5" name="Tenacity Reward Lv. 1">
+	<skill id="62240" toLevel="5" name="試練克服證明5級">
 		<!-- Level 1: A special buff for those who have completed the weekly instance zone 'Forsaken Cave of Trials'. P./ M. Accuracy +10. Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +10. P. Atk./ M. Atk./ P. Def./ M. Def. +1%. Acquired XP/ SP +10% -->
 		<!-- Level 2: A special buff for those who have completed the weekly instance zone 'Forsaken Cave of Trials'. P./ M. Accuracy +15. Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +15. P. Atk./ M. Atk./ P. Def./ M. Def. +2%. Acquired XP/ SP +15% -->
 		<!-- Level 3: A special buff for those who have completed the weekly instance zone 'Forsaken Cave of Trials'. P./ M. Accuracy +20. Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +20. P. Atk./ M. Atk./ P. Def./ M. Def. +3%. Acquired XP/ SP +20% -->
@@ -824,7 +824,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62241" toLevel="1" name="Chaotic Seal">
+	<skill id="62241" toLevel="1" name="渾沌封印                             ">
 		<!-- A crystal imbued with the Chaos Power. Recovers Atrus' HP. If all crystals are destroyed and Atrus cannot recover HP, the converted Chaos Power is transferred to those around him. <Bonus stats>. Max received damage is fixed at 2,000,000. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -834,7 +834,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62242" toLevel="1" name="Freya's Breath">
+	<skill id="62242" toLevel="1" name="芙蕾雅氣息">
 		<!-- Freya's Garden is filled with the Queen's icy breath and power. Skill cooldown -99%. Note!. The effect is only active in Freya's Garden. -->
 		<icon>icon.s_npc_ev_2022_summer</icon>
 		<operateType>A1</operateType>
@@ -842,12 +842,12 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62243" toLevel="1" name="Festival Fairy's Gift">
+	<skill id="62243" toLevel="1" name="秋蓉的禮物">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62244" toLevel="3" name="Happy New Year!">
+	<skill id="62244" toLevel="3" name="祈願新年心想事成">
 		<!-- Level 1: Happy New Year! Blue Snake's congratulations makes you warm from inside. You can get Blue Snake's Coin (2 pcs.) in 1 h. Note!. Cannot be obtained if you are dead or have no free slots in the inventory. -->
 		<!-- Level 2: Happy New Year! Blue Snake's congratulations makes you warm from inside. You can get Blue Snake's Coin (2 pcs.) in 1 h. Note!. Cannot be obtained if you are dead or have no free slots in the inventory. -->
 		<!-- Level 3: Happy New Year! Blue Snake's congratulations makes you warm from inside. You can get Blue Snake's Coin (2 pcs.) in 1 h. Note!. Cannot be obtained if you are dead or have no free slots in the inventory. -->
@@ -860,13 +860,13 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62245" toLevel="1" name="Ancient War Spirits' Summoning Ritual">
+	<skill id="62245" toLevel="1" name="古代戰爭靈召喚儀式">
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>57000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62246" toLevel="30" name="Magic Yut Stick - Lv. 1">
+	<skill id="62246" toLevel="30" name="心想事成擲柶-30階段">
 		<!-- Level 1: You are on the square 1. Pass 30 squares to get Blue Snake Doll. <Throw results>. Pig - 1 square. Dog - 2 squares. Sheep - 3 squares. Cow - 4 squares. Horse - 5 squares -->
 		<!-- Level 2: You are on the square 2. Pass 30 squares to get Blue Snake Doll. <Throw results>. Pig - 1 square. Dog - 2 squares. Sheep - 3 squares. Cow - 4 squares. Horse - 5 squares -->
 		<!-- Level 3: You are on the square 3. Pass 30 squares to get Blue Snake Doll. <Throw results>. Pig - 1 square. Dog - 2 squares. Sheep - 3 squares. Cow - 4 squares. Horse - 5 squares -->
@@ -902,18 +902,18 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62247" toLevel="1" name="Completion Reward">
+	<skill id="62247" toLevel="1" name="發放完成一圈獎勵">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62248" toLevel="5" name="Throw Result - Pig">
+	<skill id="62248" toLevel="5" name="擲柶結果-毛">
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62249" toLevel="1" name="Kasha's Furious Power Shot">
+	<skill id="62249" toLevel="1" name="卡沙怒擊能量箭">
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<coolTime>500</coolTime>
@@ -921,14 +921,14 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62250" toLevel="1" name="Kasha's Furious Self-destruction">
+	<skill id="62250" toLevel="1" name="卡沙怒擊自爆">
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62251" toLevel="1" name="Kasha's Furious Destruction">
+	<skill id="62251" toLevel="1" name="卡沙怒擊潰滅">
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
 		<coolTime>500</coolTime>
@@ -936,7 +936,7 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62252" toLevel="1" name="Kasha's Furious Fray">
+	<skill id="62252" toLevel="1" name="卡沙怒擊衝擊">
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
 		<coolTime>500</coolTime>
@@ -944,7 +944,7 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62253" toLevel="1" name="Kasha's Furious Blind Slash">
+	<skill id="62253" toLevel="1" name="卡沙怒擊盲斬">
 		<!-- Deals massive P. damage. For 5 sec., P./ M. Accuracy -300. -->
 		<icon>icon.skill1222</icon>
 		<operateType>A1</operateType>
@@ -955,7 +955,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62254" toLevel="1" name="Kasha's Furious Triple Slash">
+	<skill id="62254" toLevel="1" name="卡沙怒擊三連斬">
 		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
@@ -964,7 +964,7 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62255" toLevel="1" name="Kasha's Furious Power Wave">
+	<skill id="62255" toLevel="1" name="卡沙怒擊能量振波">
 		<!-- The Chaos Power deals massive P. damage to the target stunning them for 2 sec. -->
 		<icon>icon.skill0101</icon>
 		<operateType>A1</operateType>
@@ -975,7 +975,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62256" toLevel="1" name="Dimensional Teleport">
+	<skill id="62256" toLevel="1" name="次元移動">
 		<!-- Displayed when traveling between different worlds. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -983,62 +983,62 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62257" toLevel="1" name="Scarlet Aura - Omen">
+	<skill id="62257" toLevel="1" name="紅光氣息-前兆">
 		<!-- You are surrounded by the red aura. With a small chance, grants Scarlet Crystals when killing monsters in the following hunting zones:. Solo hunting zones up to Lv. 120 (Silent Valley, Desert Quarry, Beleth's Magic Circle);. Party hunting zones up to Lv. 116;. Session zones up to Lv. 110 (Fioren's Crystal Prison, Jamoa's Camp, Pantheon's Museum, Ravaged Innadril, Time Rift, Spirit Forest). -->
 		<icon>icon.s_ev_season_red_aura_buff_2</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
-	<skill id="62258" toLevel="1" name="Scarlet Aura - Breakout">
+	<skill id="62258" toLevel="1" name="紅光氣息-發生">
 		<!-- You are surrounded by the red aura. All Critical Rate +5%, all attack power +10%, P./ M. Def. +10%, damage +5%, acquired XP/ SP +10%, Vitality bonus +10%, received damage -5%. Grants Scarlet Crystals when killing monsters in the following hunting zones:. Solo hunting zones Lv. 120+;. Party hunting zones Lv. 116+;. Session zones Lv. 115+ (Fioren's Crystal Prison, Jamoa's Camp, Pantheon's Museum, Ravaged Innadril, Time Rift, Spirit Forest);. Invasion zones;. Conquest;. Tower of Insolence. -->
 		<icon>icon.s_ev_season_red_aura_buff</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>
-	<skill id="62259" toLevel="1" name="Scarlet Aura - Omen (Reward)">
+	<skill id="62259" toLevel="1" name="發放紅光氣息-前兆獎勵">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="62260" toLevel="1" name="Enraged Wild Defender">
+	<skill id="62260" toLevel="1" name="憤怒的野生守護看守者">
 		<!-- Wild Defender awakened through the unholy summoning ritual of the War Spirits. <Target>. Fire Altar. <Bonus stats>. Ignores ranged attacks and debuffs. P./ M. Accuracy +100, P./ M. Evasion +100 -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62261" toLevel="1" name="Enraged Wild Keeper Tree">
+	<skill id="62261" toLevel="1" name="憤怒的野生守護木">
 		<!-- Wild Keeper awakened through the unholy summoning ritual of the War Spirits. <Target>. Fire Altar. <Bonus stats>. P./ M. Accuracy +100, P./ M. Evasion +100 -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62262" toLevel="1" name="Enraged Wild Keeper Bush">
+	<skill id="62262" toLevel="1" name="憤怒的野生守護樹">
 		<!-- Wild Keeper awakened through the unholy summoning ritual of the War Spirits. <Target>. Fire Altar. <Bonus stats>. P./ M. Accuracy +100, P./ M. Evasion +100 -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62263" toLevel="1" name="Enraged Wild Keeper">
+	<skill id="62263" toLevel="1" name="憤怒的野生守護者">
 		<!-- Wild Keeper awakened through the unholy summoning ritual of the War Spirits. <Target>. Fire Altar. <Bonus stats>. Received damage limit: 3,500,000. P./ M. Accuracy +100, P./ M. Evasion +100 -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62264" toLevel="1" name="Kasha Orc Bandit">
+	<skill id="62264" toLevel="1" name="卡沙獸人突襲兵">
 		<!-- Kasha Orc strengthened with new abilities through the Chaos Power. <Target>. Character. <Bonus stats>. On attack, applies a Debilitation-type debuff. P./ M. Accuracy +100, P./ M. Evasion +100 -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62265" toLevel="1" name="Kasha Orc Elite Soldier">
+	<skill id="62265" toLevel="1" name="卡沙獸人精銳兵">
 		<!-- Kasha Orc strengthened with new abilities through the Chaos Power. <Target>. Character. <Bonus stats>. When hit, gets Invincibility. P./ M. Accuracy +100, P./ M. Evasion +100 -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62266" toLevel="1" name="Kasha Orc Commander">
+	<skill id="62266" toLevel="1" name="卡沙獸人分隊長">
 		<!-- Kasha Orc strengthened with unique abilities through the Chaos Power. <Target>. Character. <Bonus stats>. On attack, applies a Confusion-type debuff. Ignores ranged attacks and debuffs. P./ M. Accuracy +100, P./ M. Evasion +100 -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62267" toLevel="1" name="Scarlet Aura - Breakout (Reward)">
+	<skill id="62267" toLevel="1" name="發放紅光氣息-發生獎勵">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="62268" toLevel="2" name="Spring is Coming">
+	<skill id="62268" toLevel="2" name="閃閃發亮的春天來臨">
 		<!-- Lilia is waiting eagerly for the warm spring to come. In 1 h., grants Spring Flower Seed protected by Lilia for the whole winter. With a certain chance, Rabbit is spawned when killing monsters. <Hunting zones>. Solo/ party field hunting zones Lv. 105+;. Session zones (Ravaged Innadril, Time Rift, Fioren's Crystal Prison, Jamoa's Camp, Pantheon's Museum);. Conquest;. Tower of Insolence. Note!. You cannot get the gift if you are dead or have not enough free slots in your inventory. -->
 		<icon>icon.s_item_ev_2023_whiteday_box1</icon>
 		<operateType>A1</operateType>
@@ -1046,19 +1046,19 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62269" toLevel="1" name="Spring is Coming - Reward">
+	<skill id="62269" toLevel="1" name="閃閃發亮的春天來臨-獎勵">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62270" toLevel="1" name="Scent of Spring Flowers">
+	<skill id="62270" toLevel="1" name="春花香氣">
 		<!-- At last, long-awaiting flowers are blooming after a long winter. -->
 		<icon>icon.ev_flower_pink</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62271" toLevel="1" name="Between Life and Death">
+	<skill id="62271" toLevel="1" name="生與死的界線">
 		<!-- The War Spirits' summoning ritual has upset a delicate balance between life and death, and all living creatures can feel a cold breath of the underworld. Skill cooldown +100%. P. Atk./ M. Atk./ P. Def./ M. Def. -30%. All Critical Rate/ Damage -20%. Received damage +300% -->
 		<icon>BranchSys3.Icon.g_skill23388</icon>
 		<operateType>A1</operateType>
@@ -1066,10 +1066,10 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62272" toLevel="3" name="Scent of Spring Flowers - Failure">
+	<skill id="62272" toLevel="3" name="春花香氣-大成功">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="62273" toLevel="1" name="Blue Candy">
+	<skill id="62273" toLevel="1" name="藍糖果">
 		<!-- This sour candy is filled with the spring's breath. When used with Red Candy, the effect is enhanced. For 30 min., all attack power +10%, P./ M. Def. +10%, acquired XP/ SP +20%. Note!. Removed when entering the Olympiad or the Ceremony of Chaos. The effect can be removed with Alt + Left Mouse Button. -->
 		<icon>icon.ev_2023_whiteday_boy_candy</icon>
 		<operateType>A1</operateType>
@@ -1077,7 +1077,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="62274" toLevel="1" name="Red Candy">
+	<skill id="62274" toLevel="1" name="紅糖果">
 		<!-- This sweet candy is filled with the spring's breath. When used with Blue Candy, the effect is enhanced. For 30 min., damage +5%, Vitality bonus +20%, received damage -5%. Note!. Removed when entering the Olympiad or the Ceremony of Chaos. The effect can be removed with Alt + Left Mouse Button. -->
 		<icon>icon.ev_2023_whiteday_girl_candy</icon>
 		<operateType>A1</operateType>
@@ -1085,24 +1085,24 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="62275" toLevel="1" name="Here Comes Rabbit">
+	<skill id="62275" toLevel="1" name="兔子登場">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="62276" toLevel="1" name="Walker's Hammer Strike">
+	<skill id="62276" toLevel="1" name="急鎚衝擊">
 		<operateType>A1</operateType>
 		<castRange>80</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="62277" toLevel="1" name="Digger's Turning Strike">
+	<skill id="62277" toLevel="1" name="掘繞衝擊">
 		<operateType>A1</operateType>
 		<castRange>120</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="62278" toLevel="1" name="Ranger's Poisonous Dark Shot">
+	<skill id="62278" toLevel="1" name="遊俠闇毒射擊">
 		<!-- For 7 sec., poisons the target; decreases Max HP over time. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A1</operateType>
@@ -1112,7 +1112,7 @@
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="62279" toLevel="1" name="Gunner's Magic Slow">
+	<skill id="62279" toLevel="1" name="砲手魔纏緩速">
 		<!-- For 5 sec., the target's Atk. Spd./ Casting Spd. -90%, skill cooldown +150%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
@@ -1123,19 +1123,19 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="62280" toLevel="1" name="War Machine's Destruction">
+	<skill id="62280" toLevel="1" name="戰爭機器纏繞毀滅">
 		<operateType>A1</operateType>
 		<castRange>120</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="62281" toLevel="1" name="Plunderous Plains">
+	<skill id="62281" toLevel="1" name="掠奪的荒野                                                                                        ">
 		<!-- An unknown energy revives souls of the Dwarves that were obsessed with the construction of the Sky Wagonway leading to the Gods' Palace. <Bonus stats>. P./ M. Accuracy +200. P./ M. Evasion +200. Infection/ Debilitation Atk. Rate +500. Anomaly Resistance +500. Chaos Dwarf Walker: Ignores 70% of P. Def. Chaos Golem Digger: Ignores 70% of P. Def. Chaos Dwarf Ranger: Ignores 70% of P. Def., deals P. damage, and applies an Infection-type debuff. Chaos Golem Gunner: Deals M. damage and applies a Debilitation-type debuff. Chaos Golems' War Machine: Ignores 70% of P. Def. -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62282" toLevel="1" name="Rose Thorn">
+	<skill id="62282" toLevel="1" name="玫瑰之刺">
 		<icon>icon.skill0325</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -1144,7 +1144,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="62283" toLevel="1" name="Rosy Seduction">
+	<skill id="62283" toLevel="1" name="玫瑰引誘">
 		<icon>icon.skill16204</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -1153,7 +1153,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="62284" toLevel="2" name="Power of Sharp-Edged Knife">
+	<skill id="62284" toLevel="2" name="試管小刀氣息">
 		<!-- A knife that once drank Baium's blood, is full of special powers. In 1 h., grants Scroll: Summon Tree. With a certain chance, Red Flower is spawned when killing monsters. <Hunting zones>. Solo/ party field hunting zones Lv. 105+;. Session zones (Ravaged Innadril, Time Rift, Fioren's Crystal Prison, Jamoa's Camp, Pantheon's Museum);. Conquest;. Tower of Insolence. Note!. You cannot get the gift if you are dead or have not enough free slots in your inventory. -->
 		<icon>icon.weapon_knife_i01</icon>
 		<operateType>A1</operateType>
@@ -1161,20 +1161,20 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62285" toLevel="1" name="Power of Sharp-Edged Knife - Reward">
+	<skill id="62285" toLevel="1" name="試管小刀氣息-獎勵">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="62286" toLevel="1" name="Red Flower's Spawn">
+	<skill id="62286" toLevel="1" name="紅光花出現">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="62287" toLevel="1" name="Mighty Chaos Golem">
+	<skill id="62287" toLevel="1" name="巨大渾沌高崙                              ">
 		<!-- A pet project of the Dwarves obsessed with the Sky Wagonway's construction. Appears alone at a certain time and disappears after 20 min. <Bonus stats>. Received damage limit: 2,000,000. P./ M. Accuracy +200. P./ M. Evasion +200. Confusion Atk. Rate +500. Received damage from basic attacks -50%. Ignores 70% of P. Def. <Spawn requirements>. Appears every day at 13:00, 16:00, and 20:00 at a random place of the Plunderous Plains. <Reward requirements>. The defeat contribution reward is only given to 200 top-damage characters. The damage dealt by a character has to be at least 0.1% of the boss' Max HP. The first/ last hit reward is given to characters who have fulfilled the requirements for the defeat contribution reward as well as have delivered the first/ last blow. The top-damage reward is given to characters who have fulfilled the requirements for the defeat contribution reward as well as have achieved the 1st-3rd rank in the damage rank list. -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62288" toLevel="1" name="Mighty Chaos Penance">
+	<skill id="62288" toLevel="1" name="巨大渾沌懲罰">
 		<!-- Makes a dark energy explosion that inflicts Fear on nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Affected by Anomaly Resistance. Not affected by immunity. -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
@@ -1182,7 +1182,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62289" toLevel="1" name="Mighty Chaos Power Wave">
+	<skill id="62289" toLevel="1" name="巨大渾沌能量振波">
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<coolTime>500</coolTime>
@@ -1190,12 +1190,12 @@
 		<hitTime>1000</hitTime>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="62290" toLevel="1" name="Antharas">
+	<skill id="62290" toLevel="1" name="安塔瑞斯                      ">
 		<!-- The Earth Dragon, one the six dragon children of Shillien. Deeply wounded in the war against the gods, he had hidden away in the Dragon Valley in Giran. Fearing his possible return, humans tried to seal him away with a pact with Dasparion, but failed. Having gained Maluk's support, Antharas fell into a deep slumber, but now Shillien's call has awakened him. <Reward requirements>. In case of success, all characters that dealt damage will get Bellra's Green Chest. -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="62291" toLevel="11" name="Cat Sage's Attack">
+	<skill id="62291" toLevel="11" name="睿賢貓攻擊">
 		<!-- Cat Sage's basic attack. -->
 		<icon>icon.skill39914</icon>
 		<operateType>A1</operateType>
@@ -1255,7 +1255,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62292" toLevel="11" name="Cat Sage's Bind">
+	<skill id="62292" toLevel="11" name="睿賢束">
 		<!-- Cat Sage's powerful attack. For 3 sec., inflicts Hold on the target. -->
 		<icon>icon.skill39915</icon>
 		<operateType>A2</operateType>
@@ -1317,7 +1317,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="62293" toLevel="11" name="Blossom Tornado">
+	<skill id="62293" toLevel="11" name="花開旋風">
 		<!-- Cat Sage's special attack. -->
 		<icon>icon.skill39916</icon>
 		<operateType>A1</operateType>
@@ -1364,7 +1364,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62294" toLevel="11" name="Unicorn Mikhail's Attack">
+	<skill id="62294" toLevel="11" name="獨角獸米迦勒攻擊">
 		<!-- Unicorn Mikhail's basic attack. -->
 		<icon>icon.skill39917</icon>
 		<operateType>A1</operateType>
@@ -1424,7 +1424,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62295" toLevel="11" name="Mikhail's Judgment">
+	<skill id="62295" toLevel="11" name="米迦勒審判">
 		<!-- Unicorn Mikhail's powerful attack. For 3 sec., stuns the target. -->
 		<icon>icon.skill39918</icon>
 		<operateType>A2</operateType>
@@ -1489,7 +1489,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62296" toLevel="11" name="Arcane Descent">
+	<skill id="62296" toLevel="11" name="奧祕侵襲">
 		<!-- Unicorn Mikhail's special attack. -->
 		<icon>icon.skill39919</icon>
 		<operateType>A1</operateType>
@@ -1536,7 +1536,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62297" toLevel="11" name="Demoness' Attack">
+	<skill id="62297" toLevel="11" name="魔鬼攻擊">
 		<!-- Demoness' basic attack. -->
 		<icon>icon.skill39920</icon>
 		<operateType>A1</operateType>
@@ -1596,7 +1596,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="62298" toLevel="11" name="Demoness' Allure">
+	<skill id="62298" toLevel="11" name="魔鬼誘惑">
 		<!-- Demoness' powerful attack. With a certain chance, charms the target for 3 sec. making them move toward Demoness. -->
 		<icon>icon.skill39921</icon>
 		<operateType>A2</operateType>
@@ -1659,7 +1659,7 @@
 			<effect name="Compelling" />
 		</effects>
 	</skill>
-	<skill id="62299" toLevel="11" name="Night of the Devil">
+	<skill id="62299" toLevel="11" name="魔鬼夜">
 		<!-- Demoness' special attack. -->
 		<icon>icon.skill39922</icon>
 		<operateType>A1</operateType>

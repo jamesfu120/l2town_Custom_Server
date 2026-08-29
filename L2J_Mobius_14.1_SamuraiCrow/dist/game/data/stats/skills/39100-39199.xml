@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="39101" toLevel="1" name="Chase Down">
+	<skill id="39101" toLevel="1" name="事痕追蹤">
 		<!-- For 15 sec., Speed +66. -->
 		<icon>icon.skill0998</icon>
 		<operateType>A2</operateType>
@@ -15,7 +15,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39102" toLevel="1" name="Sneak">
+	<skill id="39102" toLevel="1" name="潛入取知">
 		<!-- Makes you invisible for monsters. -->
 		<icon>icon.skill10518</icon>
 		<operateType>T</operateType>
@@ -32,13 +32,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39169" toLevel="1" name="Inspiring Crackers">
+	<skill id="39169" toLevel="1" name="應援煙火">
 		<!-- Scatters in a shower of multicolored sparks when exploded. -->
 		<icon>BranchSys.icon.br_firecracker_gold_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="39171" toLevel="5" name="Lucky Gift Coupon (2-hour)">
+	<skill id="39171" toLevel="5" name="幸運禮物抽獎">
 		<!-- Level 1: For 2 h., allows to participate in the Lucky Gift draw. -->
 		<!-- Level 2: For 3 h., changes the armor appearance to that of Traditional Hanbok. Allows you to take part in the Lucky Gift Draw. -->
 		<!-- Level 3: For 6 h., changes the armor appearance to that of Traditional Hanbok. Allows you to take part in the Lucky Gift Draw. -->
@@ -98,7 +98,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39172" toLevel="1" name="Party Scroll of Escape">
+	<skill id="39172" toLevel="1" name="隊伍返回卷軸">
 		<!-- Teleports party members to the nearest village. -->
 		<icon>icon.skill11819</icon>
 		<operateType>A1</operateType>
@@ -125,7 +125,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39173" toLevel="1" name="Stealth Detector">
+	<skill id="39173" toLevel="1" name="隱身探測">
 		<!-- Fires a flash grenade that shows hidden opponents around you and deals them damage. -->
 		<icon>icon.etc_fairy_fire_i00</icon>
 		<operateType>A1</operateType>
@@ -151,7 +151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39174" toLevel="1" name="Valor Recovery Potion">
+	<skill id="39174" toLevel="1" name="勇猛的恢復藥水">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -168,7 +168,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39175" toLevel="1" name="Scroll: PK">
+	<skill id="39175" toLevel="1" name="重啟卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -193,7 +193,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39176" toLevel="1" name="Scroll: Reputation">
+	<skill id="39176" toLevel="1" name="淨化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -220,7 +220,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39177" toLevel="1" name="Challenge Rune - Raid Points">
+	<skill id="39177" toLevel="1" name="決議狩獵點數古文">
 		<!-- When in inventory, raid points +100%. -->
 		<icon>icon.etc_i.etc_rp_point_i00</icon>
 		<operateType>P</operateType>
@@ -232,7 +232,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39178" toLevel="1" name="Attack Scroll: Resolve">
+	<skill id="39178" toLevel="1" name="決議攻擊卷軸">
 		<!-- For 30 min., clan members' P./ M. Atk. +3%, P./ M. Skill Power +3%, acquired XP/ SP +5%. -->
 		<icon>icon.skill19015</icon>
 		<operateType>A1</operateType>
@@ -240,7 +240,7 @@
 		<hitTime>2500</hitTime>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="39179" toLevel="1" name="Defense Scroll: Resolve">
+	<skill id="39179" toLevel="1" name="決議防禦卷軸">
 		<!-- For 30 min., clan members' P./ M. Def. +5%, Debuff Resistance +5%, acquired XP/ SP +5%. -->
 		<icon>icon.skill19015</icon>
 		<operateType>A1</operateType>
@@ -248,12 +248,12 @@
 		<hitTime>2500</hitTime>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="39180" toLevel="1" name="Challenge Recovery Potion">
+	<skill id="39180" toLevel="1" name="決議恢復藥水">
 		<!-- Recovers 3000 HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39181" toLevel="3" name="Honey Vitality Beer">
+	<skill id="39181" toLevel="3" name="蜂蜜活力啤酒">
 		<!-- Level 1: For 10 min., CON/ MEN/ LUC/ CHA +1. Using additional Honey Vitality Beer items while the buff is active enables up to Lv. 3 stacked effects. -->
 		<!-- Level 2: CON/ MEN/ LUC/ CHA +2, acquired XP/ SP +10% for 10 min. If additional Honey Vitality Beer is used while the buff is still active, its effect will stack up to Lv. 3. Can be used with Fish Stew. -->
 		<!-- Level 3: For 10 min., CON/ MEN/ LUC/ CHA +3, acquired XP/ SP +30%. If you drink another Honey Vitality Beer while the effect is active, its duration will be reset. The effect stacks with Fish Stew. -->
@@ -266,7 +266,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39182" toLevel="1" name="Festival Fairy's Scroll: Summon Friend">
+	<skill id="39182" toLevel="1" name="秋蓉好友召喚卷軸">
 		<!-- Summons a selected character. Available only in a party. Cooldown: 30 min. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -291,13 +291,13 @@
 			<effect name="CallPc" />
 		</effects>
 	</skill>
-	<skill id="39183" toLevel="1" name="Vitality Beer">
+	<skill id="39183" toLevel="1" name="活力啤酒">
 		<!-- Double click to recover a certain amount of Vitality. -->
 		<icon>icon.bm_honey_beer</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="39184" toLevel="5" name="Mysterious Safe">
+	<skill id="39184" toLevel="5" name="可疑的金庫">
 		<!-- Double-click to obtain an item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -401,17 +401,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39185" toLevel="1" name="Divine Book of Growth: Zodiac Agathion">
+	<skill id="39185" toLevel="1" name="神聖星座壺精成長書">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39186" toLevel="1" name="Zodiac Agathion Box">
+	<skill id="39186" toLevel="1" name="星座壺精禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="39187" toLevel="21" name="Appearance Stone: Burnstein's Aufgabe Shield (30-day)">
+	<skill id="39187" toLevel="21" name="金聖甲蟲加工石(限時30日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -421,7 +421,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="39188" toLevel="1" name="Red Libra's Kaliel's Energy Pack">
+	<skill id="39188" toLevel="1" name="紅色天秤卡利艾之力禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -454,7 +454,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39189" toLevel="2" name="Clan Hall Belt Lv. 1">
+	<skill id="39189" toLevel="2" name="根據地腰帶-階段2">
 		<!-- Level 1: When equipped, Max HP/ MP/ CP +500, weight limit +12,800, damage +6%, received damage -6%, inventory slots +18. -->
 		<!-- Level 2: When equipped, Max HP/ MP/ CP +500, weight limit +12,800, damage +7%, received damage -7%, inventory slots +18, Attribute Resistance +10. -->
 		<icon>icon.event_energy_belt_i00</icon>
@@ -539,7 +539,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39190" toLevel="1" name="GM Lassana's Present Box">
+	<skill id="39190" toLevel="1" name="GM拉沙納禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -590,7 +590,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39191" toLevel="1" name="Talisman of Wind Pack">
+	<skill id="39191" toLevel="1" name="風之護身符禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -629,7 +629,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39192" toLevel="1" name="Fortress Talisman Pack">
+	<skill id="39192" toLevel="1" name="要塞護身符禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -701,15 +701,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39193" toLevel="1" name="Item Seal Scroll">
+	<skill id="39193" toLevel="1" name="道具封印卷軸">
 		<icon>icon.scrl_item_lock</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39194" toLevel="1" name="Scroll: Release Item Seal">
+	<skill id="39194" toLevel="1" name="道具封印解除卷軸">
 		<icon>icon.scrl_item_unlock</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39195" toLevel="1" name="Dark/ Bloody Helios Enhancement Stone Box">
+	<skill id="39195" toLevel="1" name="黑暗/血腥赫利奧斯強化石禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -742,14 +742,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39196" toLevel="1" name="Knights' Basic Supplies">
+	<skill id="39196" toLevel="1" name="騎士團基本補給品">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39197" toLevel="1" name="Package: +8 Shiny Elemental Shirt">
+	<skill id="39197" toLevel="1" name="+8閃亮的殷海薩襯衫組">
 		<!-- Obtains an Elemental Shirt enchanted to +8 on use. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -757,7 +757,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39198" toLevel="1" name="Package: +8 Physical Reflect Shirt">
+	<skill id="39198" toLevel="1" name="+8反擊襯衫組">
 		<!-- Double-click to obtain +8 Physical Reflect Shirt. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -765,7 +765,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39199" toLevel="1" name="Package: +8 Magical Reflect Shirt">
+	<skill id="39199" toLevel="1" name="+8反魔襯衫組">
 		<!-- Double-click to obtain +8 Magical Reflect Shirt. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

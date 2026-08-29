@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4400" toLevel="3" name="Acumen">
+	<skill id="4400" toLevel="3" name="靈活思緒">
 		<!-- Level 1: Temporarily increases Casting Spd. Effect 1. -->
 		<!-- Level 2: Temporarily increases Casting Spd. Effect 2. -->
 		<!-- Level 3: Temporarily increases Casting Spd. Effect 3. -->
@@ -33,7 +33,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4401" toLevel="3" name="Empower">
+	<skill id="4401" toLevel="3" name="魔力催化">
 		<!-- Level 1: Temporarily increases M. Atk. Effect 1. -->
 		<!-- Level 2: Temporarily increases M. Atk. Effect 2. -->
 		<!-- Level 3: Temporarily increases M. Atk. Effect 3. -->
@@ -66,7 +66,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4402" toLevel="2" name="Haste">
+	<skill id="4402" toLevel="2" name="速度激發">
 		<!-- Level 1: Temporarily increases Atk. Spd. Effect 1. -->
 		<!-- Level 2: Temporarily increases Atk. Spd. Effect 2. -->
 		<icon>icon.skill1086</icon>
@@ -96,7 +96,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4403" toLevel="3" name="Guidance">
+	<skill id="4403" toLevel="3" name="導引">
 		<!-- Level 1: Temporarily increases P. Accuracy. Effect 1. -->
 		<!-- Level 2: Temporarily increases P. Accuracy. Effect 2. -->
 		<!-- Level 3: Temporarily increases P. Accuracy. Effect 3. -->
@@ -129,7 +129,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4404" toLevel="3" name="Focus">
+	<skill id="4404" toLevel="3" name="弱點偵測">
 		<!-- Level 1: Temporarily increases Critical Rate for basic attacks. Effect 1. -->
 		<!-- Level 2: Temporarily increases Critical Rate for basic attacks. Effect 2. -->
 		<!-- Level 3: Temporarily increases Critical Rate for basic attacks. Effect 3. -->
@@ -162,7 +162,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4405" toLevel="3" name="Death Whisper">
+	<skill id="4405" toLevel="3" name="死之呢喃">
 		<!-- Level 1: Temporarily increases Critical Damage for basic attacks. Effect 1. -->
 		<!-- Level 2: Temporarily increases Critical Damage for basic attacks. Effect 2. -->
 		<!-- Level 3: Temporarily increases Critical Damage for basic attacks. Effect 3. -->
@@ -195,7 +195,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4406" toLevel="3" name="Agility">
+	<skill id="4406" toLevel="3" name="敏捷術">
 		<!-- Level 1: Temporarily increases P. Evasion. Effect 1. -->
 		<!-- Level 2: Temporarily increases P. Evasion. Effect 2. -->
 		<!-- Level 3: Temporarily increases P. Evasion. Effect 3. -->
@@ -228,7 +228,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4407" toLevel="2" name="Strong Monster">
+	<skill id="4407" toLevel="2" name="強化型怪物">
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill4407</value>
@@ -237,7 +237,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4408" toLevel="20" name="HP Increase (12x)">
+	<skill id="4408" toLevel="20" name="HP12倍">
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill0000</value>
@@ -316,7 +316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4409" toLevel="20" name="MP Increase (12x)">
+	<skill id="4409" toLevel="20" name="MP2倍">
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill0000</value>
@@ -395,7 +395,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4410" toLevel="22" name="Ultra High P. Atk.">
+	<skill id="4410" toLevel="22" name="究極攻擊力">
 		<icon>
 			<value level="1">icon.skill0141</value>
 			<value level="2">icon.skill0141</value>
@@ -453,7 +453,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4411" toLevel="22" name="Ultra High M. Atk.">
+	<skill id="4411" toLevel="22" name="究極魔法力">
 		<icon>
 			<value level="1">icon.skill4411_normal</value>
 			<value level="2">icon.skill4411_normal</value>
@@ -511,7 +511,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4412" toLevel="22" name="Ultra High P. Def.">
+	<skill id="4412" toLevel="22" name="究極防禦力">
 		<icon>
 			<value level="1">icon.skill0142</value>
 			<value level="2">icon.skill0142</value>
@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4413" toLevel="22" name="Ultra High M. Def.">
+	<skill id="4413" toLevel="22" name="究極魔法防禦">
 		<icon>
 			<value level="1">icon.skill4413_normal</value>
 			<value level="2">icon.skill4413_normal</value>
@@ -627,7 +627,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4414" toLevel="3" name="Heavy Armor">
+	<skill id="4414" toLevel="3" name="輕裝甲型">
 		<!-- Level 1: High P. Def. -->
 		<!-- Level 2: High P. Def. -->
 		<!-- Level 3: Weak P. Def. -->
@@ -658,7 +658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4415" toLevel="26" name="Crossbow">
+	<skill id="4415" toLevel="26" name="弩">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -728,7 +728,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4416" toLevel="27" name="Undead">
+	<skill id="4416" toLevel="27" name="胚胎">
 		<!-- Level 1: Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids. -->
 		<!-- Level 2: The common name for the biotechnological items of the Magic and Giants' ages. Their magic attack is generally strong, and they sometimes use high-level spells, like teleportation. -->
 		<!-- Level 3: Generally considers humans as food. Classifies attacking animals as monsters. This also includes chimeras that have fused more than 2 types of cells, as well as other fantasy creatures from mythology. -->
@@ -1141,7 +1141,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4417" toLevel="38" name="Animals">
+	<skill id="4417" toLevel="38" name="不死生物">
 		<!-- Level 1: Animals -->
 		<!-- Level 2: Beasts -->
 		<!-- Level 3: Beasts -->
@@ -1548,7 +1548,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4418" toLevel="5" name="Fire Attribute">
+	<skill id="4418" toLevel="5" name="火屬性">
 		<!-- Unleashes an attack fortified with Fire. Resistant to Fire attacks. -->
 		<icon>icon.etc_fire_crystal_i00</icon>
 		<operateType>P</operateType>
@@ -1571,7 +1571,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4419" toLevel="5" name="Water Attribute">
+	<skill id="4419" toLevel="5" name="水屬性">
 		<!-- Unleashes an attack fortified with Water. Resistant to Water attacks. -->
 		<icon>icon.etc_water_crystal_i00</icon>
 		<operateType>P</operateType>
@@ -1594,7 +1594,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4420" toLevel="5" name="Wind Attribute">
+	<skill id="4420" toLevel="5" name="風屬性">
 		<!-- Unleashes an attack fortified with Wind. Resistant to Wind attacks. -->
 		<icon>icon.etc_wind_crystal_i00</icon>
 		<operateType>P</operateType>
@@ -1617,7 +1617,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4421" toLevel="5" name="Earth Attribute">
+	<skill id="4421" toLevel="5" name="地屬性">
 		<!-- Unleashes an attack fortified with Earth. Resistant to Earth attacks. -->
 		<icon>icon.etc_earth_crystal_i00</icon>
 		<operateType>P</operateType>
@@ -1640,7 +1640,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4422" toLevel="5" name="Dark Attribute">
+	<skill id="4422" toLevel="5" name="黑暗屬性">
 		<!-- Unleashes an attack fortified with Dark. Resistant to Dark attacks. -->
 		<icon>icon.etc_unholy_crystal_i00</icon>
 		<operateType>P</operateType>
@@ -1663,7 +1663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4423" toLevel="5" name="Holy Attribute">
+	<skill id="4423" toLevel="5" name="神聖屬性">
 		<!-- Unleashes an attack fortified with Holy. Resistant to Holy attacks. -->
 		<icon>icon.etc_holy_crystal_i00</icon>
 		<operateType>P</operateType>
@@ -1686,7 +1686,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4424" toLevel="5" name="Fist Weapon Resistance">
+	<skill id="4424" toLevel="5" name="格鬥兵器抵抗">
 		<!-- Resistant to fist weapons. -->
 		<icon>icon.skill4424</icon>
 		<operateType>P</operateType>
@@ -1704,7 +1704,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4425" toLevel="5" name="Blunt Weapon Resistance">
+	<skill id="4425" toLevel="5" name="鈍器抵抗">
 		<!-- Resistance to blunt weapon attacks. -->
 		<icon>icon.skill4425</icon>
 		<operateType>P</operateType>
@@ -1722,7 +1722,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4426" toLevel="5" name="Dual Sword Resistance">
+	<skill id="4426" toLevel="5" name="二刀流抵抗">
 		<!-- Resistant to dual swords. -->
 		<icon>icon.skill4426</icon>
 		<operateType>P</operateType>
@@ -1740,7 +1740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4427" toLevel="5" name="Sword Resistance">
+	<skill id="4427" toLevel="5" name="刀劍抵抗">
 		<!-- Resistant to Swords. -->
 		<icon>icon.skill4427</icon>
 		<operateType>P</operateType>
@@ -1758,14 +1758,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4428" toLevel="5" name="Two-handed Weapon Resistance">
+	<skill id="4428" toLevel="5" name="雙手兵器抵抗">
 		<!-- Resistant to Two-handed Weapons. -->
 		<icon>icon.skill4428</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4429" toLevel="5" name="Greater Fire Resistance">
+	<skill id="4429" toLevel="5" name="火屬性抵抗強">
 		<!-- Very resistant to Fire. -->
 		<icon>icon.skill4429</icon>
 		<operateType>P</operateType>
@@ -1784,7 +1784,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4430" toLevel="5" name="Greater Water Resistance">
+	<skill id="4430" toLevel="5" name="水屬性抵抗強">
 		<!-- Very resistant to Water. -->
 		<icon>icon.skill4430</icon>
 		<operateType>P</operateType>
@@ -1803,7 +1803,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4431" toLevel="5" name="Greater Wind Resistance">
+	<skill id="4431" toLevel="5" name="風屬性抵抗強">
 		<!-- Very resistant to Wind. -->
 		<icon>icon.skill4431</icon>
 		<operateType>P</operateType>
@@ -1822,7 +1822,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4432" toLevel="5" name="Greater Earth Resistance">
+	<skill id="4432" toLevel="5" name="地屬性抵抗強">
 		<!-- Very resistant to Earth. -->
 		<icon>icon.skill4432</icon>
 		<operateType>P</operateType>
@@ -1841,7 +1841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4433" toLevel="5" name="High Holy Resistance">
+	<skill id="4433" toLevel="5" name="高神聖屬性抵抗">
 		<!-- Enhanced Holy Resistance. -->
 		<icon>icon.skill4433</icon>
 		<operateType>P</operateType>
@@ -1860,7 +1860,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4434" toLevel="5" name="Greater Dark Resistance">
+	<skill id="4434" toLevel="5" name="黑暗屬性抵抗強">
 		<!-- Very resistant to Dark. -->
 		<icon>icon.skill4434</icon>
 		<operateType>P</operateType>
@@ -1879,7 +1879,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4435" toLevel="5" name="High Stun Resistance">
+	<skill id="4435" toLevel="5" name="高衝擊攻擊抵抗">
 		<!-- Level 1: Increases Stun Resistance. -->
 		<!-- Level 2: Highly resistant to Stun. -->
 		<!-- Level 3: Highly resistant to Stun. -->
@@ -1901,7 +1901,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4436" toLevel="5" name="Greater Poison Resistance">
+	<skill id="4436" toLevel="5" name="毒抵抗強">
 		<!-- Level 1: Resistant to Poison attack. -->
 		<!-- Level 2: Highly resistant to Poison attack. -->
 		<!-- Level 3: Highly resistant to Poison attack. -->
@@ -1923,7 +1923,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4437" toLevel="5" name="Greater Bleed Resistance">
+	<skill id="4437" toLevel="5" name="出血抵抗強">
 		<!-- Level 1: Resistant to Bleed. -->
 		<!-- Level 2: Highly resistant to Bleed. -->
 		<!-- Level 3: Highly resistant to Bleed. -->
@@ -1945,7 +1945,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4438" toLevel="5" name="Greater Sleep Resistance">
+	<skill id="4438" toLevel="5" name="催眠抵抗強">
 		<!-- Level 1: Resistant to Sleep. -->
 		<!-- Level 2: Highly resistant to Sleep. -->
 		<!-- Level 3: Highly resistant to Sleep. -->
@@ -1967,7 +1967,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4439" toLevel="5" name="Greater Hold Resistance">
+	<skill id="4439" toLevel="5" name="束縛抵抗強">
 		<!-- Level 1: Resistant to Hold. -->
 		<!-- Level 2: Highly resistant to Hold. -->
 		<!-- Level 3: Highly resistant to Hold. -->
@@ -1989,7 +1989,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4440" toLevel="5" name="Greater Paralysis Resistance">
+	<skill id="4440" toLevel="5" name="麻痺抵抗強">
 		<!-- Level 1: Resistant to Paralyze attack. -->
 		<!-- Level 2: Highly resistant to Paralyze attack. -->
 		<!-- Level 3: Highly resistant to Paralyze attack. -->
@@ -2011,7 +2011,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4441" toLevel="5" name="Greater Mental Resistance">
+	<skill id="4441" toLevel="5" name="精神抵抗強">
 		<!-- Level 1: Resistant to Silence/ Fear. -->
 		<!-- Level 2: Highly resistant to Silence/ Fear. -->
 		<!-- Level 3: Highly resistant to Silence/ Fear. -->
@@ -2033,7 +2033,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4442" toLevel="5" name="Greater Fist Weapon Resistance">
+	<skill id="4442" toLevel="5" name="格鬥兵器抵抗強">
 		<!-- Very resistant to fist weapons. -->
 		<icon>icon.skill4442</icon>
 		<operateType>P</operateType>
@@ -2051,7 +2051,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4443" toLevel="5" name="Greater Blunt Weapon Resistance">
+	<skill id="4443" toLevel="5" name="鈍器抵抗強">
 		<!-- Very resistant to blunts. -->
 		<icon>icon.skill4443</icon>
 		<operateType>P</operateType>
@@ -2069,7 +2069,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4444" toLevel="5" name="Greater Bow/ Crossbow Resistance">
+	<skill id="4444" toLevel="5" name="弓/弩抵抗強">
 		<!-- Greatly increases Bow/ Crossbow Resistance. -->
 		<icon>icon.skill4444</icon>
 		<operateType>P</operateType>
@@ -2101,7 +2101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4445" toLevel="5" name="Greater Spear Resistance">
+	<skill id="4445" toLevel="5" name="長槍抵抗強">
 		<!-- Very resistant to spears. -->
 		<icon>icon.skill4445</icon>
 		<operateType>P</operateType>
@@ -2119,7 +2119,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4446" toLevel="5" name="Greater Dual Sword Resistance">
+	<skill id="4446" toLevel="5" name="二刀流抵抗強">
 		<!-- Very resistant to dual swords. -->
 		<icon>icon.skill4446</icon>
 		<operateType>P</operateType>
@@ -2137,7 +2137,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4447" toLevel="5" name="Greater Sword Resistance">
+	<skill id="4447" toLevel="5" name="刀劍抵抗強">
 		<!-- Very resistant to Swords. -->
 		<icon>icon.skill4447</icon>
 		<operateType>P</operateType>
@@ -2155,7 +2155,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4448" toLevel="5" name="Greater Dagger Resistance">
+	<skill id="4448" toLevel="5" name="高匕首武器抗性">
 		<!-- Highly resistant to Daggers/ Rapiers. -->
 		<icon>icon.skill4448</icon>
 		<operateType>P</operateType>
@@ -2187,14 +2187,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4449" toLevel="5" name="Greater Two-handed Weapon Resistance">
+	<skill id="4449" toLevel="5" name="雙手兵器抵抗強">
 		<!-- Very resistant to Two-handed Weapons. -->
 		<icon>icon.skill4449</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4450" toLevel="5" name="Shock Vulnerability">
+	<skill id="4450" toLevel="5" name="昏迷弱點">
 		<!-- Vulnerable to Stun. -->
 		<icon>icon.skill4450</icon>
 		<operateType>P</operateType>
@@ -2212,7 +2212,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4451" toLevel="5" name="Poison Vulnerability">
+	<skill id="4451" toLevel="5" name="毒弱點">
 		<!-- Vulnerable to Poison. -->
 		<icon>icon.skill4451</icon>
 		<operateType>P</operateType>
@@ -2230,7 +2230,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4452" toLevel="5" name="Bleed Vulnerability">
+	<skill id="4452" toLevel="5" name="出血弱點">
 		<!-- Vulnerable to Bleed. -->
 		<icon>icon.skill4452</icon>
 		<operateType>P</operateType>
@@ -2248,7 +2248,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4453" toLevel="5" name="Sleep Vulnerability">
+	<skill id="4453" toLevel="5" name="催眠弱點">
 		<!-- Vulnerable to Sleep. -->
 		<icon>icon.skill4453</icon>
 		<operateType>P</operateType>
@@ -2266,7 +2266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4454" toLevel="5" name="Hold Vulnerability">
+	<skill id="4454" toLevel="5" name="束縛弱點">
 		<!-- Vulnerable to Hold. -->
 		<icon>icon.skill4454</icon>
 		<operateType>P</operateType>
@@ -2284,7 +2284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4455" toLevel="5" name="Paralysis Vulnerability">
+	<skill id="4455" toLevel="5" name="麻痺弱點">
 		<!-- Vulnerable to Paralysis. -->
 		<icon>icon.skill4455</icon>
 		<operateType>P</operateType>
@@ -2302,7 +2302,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4456" toLevel="5" name="Mental Attack Vulnerability">
+	<skill id="4456" toLevel="5" name="精神弱點">
 		<!-- Vulnerable to Mental Attacks. -->
 		<icon>icon.skill4456</icon>
 		<operateType>P</operateType>
@@ -2320,7 +2320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4457" toLevel="5" name="Fist Weapon Vulnerability">
+	<skill id="4457" toLevel="5" name="格鬥兵器弱點">
 		<!-- Vulnerable to fist weapons. -->
 		<icon>icon.skill4457</icon>
 		<operateType>P</operateType>
@@ -2338,7 +2338,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4458" toLevel="5" name="Spear Vulnerability">
+	<skill id="4458" toLevel="5" name="長槍弱點">
 		<!-- Vulnerable to Spears. -->
 		<icon>icon.skill4458</icon>
 		<operateType>P</operateType>
@@ -2356,7 +2356,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4459" toLevel="5" name="Dual Sword Vulnerability">
+	<skill id="4459" toLevel="5" name="二刀流弱點">
 		<!-- Vulnerable to dual swords. -->
 		<icon>icon.skill4459</icon>
 		<operateType>P</operateType>
@@ -2374,7 +2374,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4460" toLevel="5" name="Sword Vulnerability">
+	<skill id="4460" toLevel="5" name="刀劍弱點">
 		<!-- Vulnerable to Swords. -->
 		<icon>icon.skill4460</icon>
 		<operateType>P</operateType>
@@ -2392,7 +2392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4461" toLevel="5" name="Dagger/ Rapier Vulnerability">
+	<skill id="4461" toLevel="5" name="匕首/細劍弱點">
 		<!-- Vulnerable to Daggers/ Rapiers. -->
 		<icon>icon.skill4461</icon>
 		<operateType>P</operateType>
@@ -2424,7 +2424,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4462" toLevel="5" name="Two-handed Weapon Vulnerability">
+	<skill id="4462" toLevel="5" name="雙手兵器弱點">
 		<!-- Vulnerable to Two-handed Weapons. -->
 		<icon>icon.skill4462</icon>
 		<operateType>P</operateType>
@@ -2456,7 +2456,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4463" toLevel="3" name="Surrender to Water">
+	<skill id="4463" toLevel="3" name="水之陷落">
 		<!-- Level 1: Immediately decreases Water Resistance, and increases Fire Resistance. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Water Resistance, and increases Fire Resistance. Effect 3.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Water Resistance, and increases Fire Resistance. Effect 4.. Inflicted status: Debilitation. -->
@@ -2517,7 +2517,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4464" toLevel="3" name="Surrender to Wind">
+	<skill id="4464" toLevel="3" name="風之陷落">
 		<!-- Level 1: Immediately decreases Wind Resistance and increases Earth Resistance. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Wind Resistance and increases Earth Resistance. Effect 3.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Wind Resistance and increases Earth Resistance. Effect 4.. Inflicted status: Debilitation. -->
@@ -2578,7 +2578,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4465" toLevel="3" name="Surrender to Earth">
+	<skill id="4465" toLevel="3" name="土之陷落">
 		<!-- Level 1: Immediately decreases Earth Resistance and increases Wind Resistance. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Earth Resistance and increases Wind Resistance. Effect 3.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Earth Resistance and increases Wind Resistance. Effect 4.. Inflicted status: Debilitation. -->
@@ -2639,7 +2639,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4466" toLevel="3" name="Fall into Darkness">
+	<skill id="4466" toLevel="3" name="暗之陷落">
 		<!-- Level 1: Immediately decreases Dark Resistance and increases Holy Resistance. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Dark Resistance and increases Holy Resistance. Effect 3.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Dark Resistance and increases Holy Resistance. Effect 4.. Inflicted status: Debilitation. -->
@@ -2700,7 +2700,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4467" toLevel="3" name="Fall into Holiness">
+	<skill id="4467" toLevel="3" name="聖之陷落">
 		<!-- Level 1: Immediately decreases Holy Resistance and increases Dark Resistance. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Holy Resistance and increases Dark Resistance. Effect 3.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Holy Resistance and increases Dark Resistance. Effect 4.. Inflicted status: Debilitation. -->
@@ -2761,7 +2761,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4468" toLevel="2" name="Wind Walk">
+	<skill id="4468" toLevel="2" name="風之疾走">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -2792,7 +2792,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4469" toLevel="1" name="Potion Drinking">
+	<skill id="4469" toLevel="1" name="服用藥水">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2801,7 +2801,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>35</magicLevel>
 	</skill>
-	<skill id="4470" toLevel="1" name="Spoil">
+	<skill id="4470" toLevel="1" name="自體變化">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -2818,7 +2818,7 @@
 			<effect name="Spoil" />
 		</effects>
 	</skill>
-	<skill id="4471" toLevel="12" name="Anger">
+	<skill id="4471" toLevel="12" name="憤怒">
 		<!-- Level 1: Increases NPC's P. Atk. and P. Def. Effect 1. -->
 		<!-- Level 2: Increases NPC's P. Atk. and P. Def. Effect 2. -->
 		<!-- Level 3: Increases NPC's P. Atk. and P. Def. Effect 3. -->
@@ -2936,7 +2936,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4472" toLevel="12" name="Golem's Vicious Strike">
+	<skill id="4472" toLevel="12" name="高崙攻擊">
 		<!-- For powerful Golems that are 1.5x stronger. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2995,7 +2995,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4473" toLevel="12" name="Shock">
+	<skill id="4473" toLevel="12" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
@@ -3066,7 +3066,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4474" toLevel="5" name="Restore Life">
+	<skill id="4474" toLevel="5" name="生命治癒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -3093,7 +3093,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4475" toLevel="1" name="Complete Bleed Resistance">
+	<skill id="4475" toLevel="1" name="完全出血抵抗">
 		<!-- Completely resistant to Bleed. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -3121,7 +3121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4476" toLevel="5" name="Silent Move">
+	<skill id="4476" toLevel="5" name="靜行術">
 		<!-- Blocks a monster's preemptive attack. -->
 		<icon>icon.skill0221</icon>
 		<operateType>A2</operateType>
@@ -3169,7 +3169,7 @@
 			<effect name="SilentMove" />
 		</effects>
 	</skill>
-	<skill id="4477" toLevel="12" name="Frost Wall">
+	<skill id="4477" toLevel="12" name="冰凍之牆">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3247,7 +3247,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4478" toLevel="1" name="Aqua Splash">
+	<skill id="4478" toLevel="1" name="怒濤奔浪">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3269,7 +3269,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4479" toLevel="1" name="Ice Fairy's Blessing">
+	<skill id="4479" toLevel="1" name="冰雪妖精的祝福">
 		<!-- Increases Water Resistance. Effect 4. -->
 		<icon>icon.skill1182</icon>
 		<operateType>A2</operateType>
@@ -3297,7 +3297,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4480" toLevel="1" name="Curse Gloom">
+	<skill id="4480" toLevel="1" name="暗影詛咒">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -3324,7 +3324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4481" toLevel="1" name="Hex">
+	<skill id="4481" toLevel="1" name="衰弱術">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -3351,7 +3351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4482" toLevel="1" name="Silence">
+	<skill id="4482" toLevel="1" name="沉默術">
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -3375,7 +3375,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="4483" toLevel="12" name="Hold">
+	<skill id="4483" toLevel="12" name="束縛">
 		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -3455,7 +3455,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4484" toLevel="1" name="Devour Subordinate">
+	<skill id="4484" toLevel="1" name="吞噬手下">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -3473,7 +3473,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4485" toLevel="1" name="Devour Subordinate">
+	<skill id="4485" toLevel="1" name="吞噬手下">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -3485,7 +3485,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>75</magicLevel>
 	</skill>
-	<skill id="4486" toLevel="12" name="P. Def. Reduction">
+	<skill id="4486" toLevel="12" name="防禦力下降">
 		<!-- Level 1: Temporarily decreases P. Def. Effect 1. Inflicted status: Debilitation. -->
 		<!-- Level 2: Temporarily decreases P. Def. Effect 2. Inflicted status: Debilitation. -->
 		<!-- Level 3: Temporarily decreases P. Def. Effect 2. Inflicted status: Debilitation. -->
@@ -3593,7 +3593,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4487" toLevel="12" name="Decrease M. Def.">
+	<skill id="4487" toLevel="12" name="魔法防禦力下降">
 		<!-- Level 1: Immediately decreases M. Def. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases M. Def. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases M. Def. Effect 2.. Inflicted status: Debilitation. -->
@@ -3701,7 +3701,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4488" toLevel="12" name="Hold">
+	<skill id="4488" toLevel="12" name="束縛">
 		<!-- Holds the target. Inflicted status: Debilitation. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -3753,7 +3753,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4489" toLevel="12" name="Death Bomb">
+	<skill id="4489" toLevel="12" name="死亡炸彈">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3812,7 +3812,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4490" toLevel="12" name="Holy War">
+	<skill id="4490" toLevel="12" name="神聖之牆">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3890,7 +3890,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4491" toLevel="12" name="Holy Weapon">
+	<skill id="4491" toLevel="12" name="神聖武器">
 		<!-- Makes Holy attacks. -->
 		<icon>icon.skill1043</icon>
 		<operateType>A2</operateType>
@@ -3953,7 +3953,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4492" toLevel="12" name="Enlarging Head Curse">
+	<skill id="4492" toLevel="12" name="大頭詛咒">
 		<!-- Temporarily enlarges the head. Inflicted status: Debilitation. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -4021,7 +4021,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4493" toLevel="12" name="Mystic Immunity">
+	<skill id="4493" toLevel="12" name="祕術免疫">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -4104,7 +4104,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4494" toLevel="2" name="Raid Boss">
+	<skill id="4494" toLevel="2" name="地下囚犯">
 		<!-- If the character who has dealt the most damage is 3 or more levels higher than a raid boss, the item/ adena reward is decreased. If the difference is 9 levels or more, the monster drops nothing at all. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -4116,7 +4116,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4495" toLevel="12" name="Power Shot">
+	<skill id="4495" toLevel="12" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4173,7 +4173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4496" toLevel="12" name="Shock">
+	<skill id="4496" toLevel="12" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
@@ -4255,21 +4255,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4497" toLevel="1" name="Treasure Chest (Lv. 21)">
+	<skill id="4497" toLevel="1" name="21級寶箱">
 		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4498" toLevel="1" name="Treasure Chest (Lv. 22)">
+	<skill id="4498" toLevel="1" name="22級寶箱">
 		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4499" toLevel="1" name="Treasure Chest (Lv. 25)">
+	<skill id="4499" toLevel="1" name="25級寶箱">
 		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<operateType>P</operateType>

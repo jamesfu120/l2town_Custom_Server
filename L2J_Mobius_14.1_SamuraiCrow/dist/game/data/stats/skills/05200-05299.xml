@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5200" toLevel="8" name="Pet's Recharge">
+	<skill id="5200" toLevel="8" name="寵物回復術">
 		<!-- Recovers MP. -->
 		<icon>icon.skill1013</icon>
 		<operateType>A1</operateType>
@@ -67,7 +67,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5201" toLevel="6" name="Pet's Concentration">
+	<skill id="5201" toLevel="6" name="寵物精神專注">
 		<!-- Level 1: Temporarily decreases Casting Interruption Rate. Effect 1. -->
 		<!-- Level 2: Temporarily decreases Casting Interruption Rate. Effect 2. -->
 		<!-- Level 3: Temporarily decreases Casting Interruption Rate. Effect 3. -->
@@ -141,7 +141,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5202" toLevel="12" name="Shock">
+	<skill id="5202" toLevel="12" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -198,7 +198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5203" toLevel="12" name="Fear">
+	<skill id="5203" toLevel="12" name="恐懼">
 		<!-- The target runs away in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
@@ -253,7 +253,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="5204" toLevel="1" name="Presentation - First Gigantic Pig Combination">
+	<skill id="5204" toLevel="1" name="展示-超神豬合體">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -262,7 +262,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
 	</skill>
-	<skill id="5205" toLevel="1" name="Heal">
+	<skill id="5205" toLevel="1" name="治癒術">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -276,7 +276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5206" toLevel="1" name="Decrease Speed">
+	<skill id="5206" toLevel="1" name="移動速度下降">
 		<!-- Curse of mutated animals: Decreases Speed. Effect 1. Inflicted status: Debilitation. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -307,7 +307,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5207" toLevel="1" name="Decrease Atk. Spd.">
+	<skill id="5207" toLevel="1" name="攻擊速度下降">
 		<!-- Curse of mutated animals: Decreases Atk. Spd. Effect 1. Inflicted status: Debilitation. -->
 		<icon>icon.skill4038</icon>
 		<operateType>A2</operateType>
@@ -337,7 +337,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5208" toLevel="1" name="Event Wind Walk">
+	<skill id="5208" toLevel="1" name="活動用風之疾走">
 		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
@@ -361,7 +361,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5209" toLevel="1" name="Event Shield">
+	<skill id="5209" toLevel="1" name="活動用保護盾">
 		<!-- P. Def. increases temporarily. Effect 3. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -385,7 +385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5210" toLevel="1" name="Event Blessed Body">
+	<skill id="5210" toLevel="1" name="活動用神佑之體">
 		<!-- Temporarily increases Max HP. Effect 6. -->
 		<icon>icon.skill1045</icon>
 		<operateType>A2</operateType>
@@ -409,7 +409,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5211" toLevel="1" name="Event Vampiric Rage">
+	<skill id="5211" toLevel="1" name="活動用吸血怒擊">
 		<!-- With a certain chance, absorbs a part of inflicted damage as HP. Effect 4. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A2</operateType>
@@ -433,7 +433,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5212" toLevel="1" name="Event Regeneration">
+	<skill id="5212" toLevel="1" name="活動用強癒術">
 		<!-- Temporarily increases HP Recovery Rate. Effect 3. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>
@@ -457,7 +457,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5213" toLevel="1" name="Event Haste">
+	<skill id="5213" toLevel="1" name="活動用速度激發">
 		<!-- Atk. Spd. increases temporarily. Effect 1. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
@@ -481,7 +481,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5214" toLevel="1" name="Event Blessed Soul">
+	<skill id="5214" toLevel="1" name="活動用神佑之魂">
 		<!-- Temporarily increases Max MP. Effect 6. -->
 		<icon>icon.skill1048</icon>
 		<operateType>A2</operateType>
@@ -505,7 +505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5215" toLevel="1" name="Event Acumen">
+	<skill id="5215" toLevel="1" name="活動用靈活思緒">
 		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
@@ -529,7 +529,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5216" toLevel="1" name="Event Concentration">
+	<skill id="5216" toLevel="1" name="活動用精神專注">
 		<!-- Temporarily decreases Casting Interruption Rate. Effect 1. -->
 		<icon>icon.skill1078</icon>
 		<operateType>A2</operateType>
@@ -553,7 +553,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5217" toLevel="1" name="Event Empower">
+	<skill id="5217" toLevel="1" name="活動用魔力催化">
 		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
@@ -577,7 +577,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5218" toLevel="1" name="Instant Teleport">
+	<skill id="5218" toLevel="1" name="瞬間移動">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -589,7 +589,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
 	</skill>
-	<skill id="5219" toLevel="1" name="Giant Mutant Stun">
+	<skill id="5219" toLevel="1" name="突變生物衝擊">
 		<!-- Curse of giant mutated animal: Stuns and paralyses the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -622,7 +622,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5220" toLevel="1" name="Giant Mutant Fear">
+	<skill id="5220" toLevel="1" name="突變生物畏懼">
 		<!-- Curse of giant mutated animal: Inflicts Fear and forces the enemy to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -653,7 +653,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="5221" toLevel="1" name="Baylor - Physical Close Range Vulnerability">
+	<skill id="5221" toLevel="1" name="巴爾勒-物理 近距離 弱點">
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
 		<targetType>SELF</targetType>
@@ -671,7 +671,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5222" toLevel="1" name="Baylor - Physical Long Range Vulnerability">
+	<skill id="5222" toLevel="1" name="巴爾勒-物理 遠距離 弱點">
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
 		<targetType>SELF</targetType>
@@ -683,7 +683,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5223" toLevel="1" name="Baylor - Magic Vulnerability">
+	<skill id="5223" toLevel="1" name="巴爾勒-魔法 弱點">
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
 		<targetType>SELF</targetType>
@@ -696,7 +696,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5224" toLevel="4" name="Berserk">
+	<skill id="5224" toLevel="4" name="強化狂暴化">
 		<!-- Level 1: Increases P. Atk. and P. Def. -->
 		<!-- Level 2: Increases P. Atk. and P./ M. Def. -->
 		<!-- Level 3: Increases P. Atk. and P./ M. Def. -->
@@ -732,7 +732,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5225" toLevel="4" name="Invincibility">
+	<skill id="5225" toLevel="4" name="強化無敵">
 		<!-- Makes you invincible to basic attacks, skills, buffs and debuffs. -->
 		<icon>icon.skill1427</icon>
 		<operateType>A2</operateType>
@@ -782,7 +782,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5226" toLevel="1" name="Imprison">
+	<skill id="5226" toLevel="1" name="傳送至監獄">
 		<!-- Transfers to prison. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -799,7 +799,7 @@
 		<mpConsume>60</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 	</skill>
-	<skill id="5227" toLevel="5" name="Ground Strike">
+	<skill id="5227" toLevel="5" name="完美地之潰滅">
 		<!-- A powerful attack on nearby targets. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -841,7 +841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5228" toLevel="5" name="Jump Attack">
+	<skill id="5228" toLevel="5" name="完美跳躍攻擊">
 		<!-- A powerful attack on nearby targets. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -884,7 +884,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5229" toLevel="5" name="Strong Punch">
+	<skill id="5229" toLevel="5" name="完美強力之拳">
 		<!-- Level 1: Stuns the enemy by a Heavy Punch Attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Stuns the enemy by a Heavy Punch Attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Stuns the enemy by a Heavy Punch Attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -942,7 +942,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5230" toLevel="1" name="Shock">
+	<skill id="5230" toLevel="1" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -973,7 +973,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5231" toLevel="1" name="Shock">
+	<skill id="5231" toLevel="1" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -1004,7 +1004,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5232" toLevel="1" name="Shock">
+	<skill id="5232" toLevel="1" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -1035,7 +1035,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5233" toLevel="1" name="Weight Spin Attack - Weak">
+	<skill id="5233" toLevel="1" name="托特斯迴轉攻擊-下">
 		<!-- A powerful attack on nearby targets. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1054,7 +1054,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5234" toLevel="1" name="Weight Spin Attack - Mid">
+	<skill id="5234" toLevel="1" name="托特斯迴轉攻擊-中">
 		<!-- A powerful attack on nearby targets. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1073,7 +1073,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5235" toLevel="1" name="Weight Spin Attack - Strong">
+	<skill id="5235" toLevel="1" name="托特斯迴轉攻擊-上">
 		<!-- A powerful attack on nearby targets. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1092,7 +1092,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5236" toLevel="1" name="Speed Up">
+	<skill id="5236" toLevel="1" name="加速">
 		<!-- Increases Speed. Effect 2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1115,7 +1115,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5237" toLevel="1" name="Speed Reduction">
+	<skill id="5237" toLevel="1" name="減速">
 		<!-- Decreases Speed. Effect 2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1138,7 +1138,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5238" toLevel="1" name="Frosting">
+	<skill id="5238" toLevel="1" name="冷凍">
 		<!-- Instantly freezes and immobilizes. Inflicted status: Debilitation. -->
 		<icon>icon.skill1174</icon>
 		<operateType>A2</operateType>
@@ -1177,7 +1177,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5239" toLevel="5" name="Event Timer">
+	<skill id="5239" toLevel="5" name="剩餘時間">
 		<!-- Battle cannot be continued when the corresponding effect disappears. Corresponding effects will disappear even if you ride a vehicle. -->
 		<icon>icon.skill5239</icon>
 		<operateType>A2</operateType>
@@ -1202,7 +1202,7 @@
 		<specialLevel>-1</specialLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 	</skill>
-	<skill id="5240" toLevel="1" name="Shock">
+	<skill id="5240" toLevel="1" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -1235,7 +1235,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5241" toLevel="1" name="Shock">
+	<skill id="5241" toLevel="1" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -1267,7 +1267,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5242" toLevel="1" name="Sickness">
+	<skill id="5242" toLevel="1" name="疫病">
 		<!-- Dizzy. Inflicted status: Debilitation. -->
 		<icon>icon.skill5242</icon>
 		<operateType>A2</operateType>
@@ -1289,7 +1289,7 @@
 		<magicLevel>85</magicLevel>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="5243" toLevel="1" name="Blind">
+	<skill id="5243" toLevel="1" name="盲目">
 		<!-- Momentarily cannot see. Inflicted status: Debilitation. -->
 		<icon>icon.skill5243</icon>
 		<operateType>A2</operateType>
@@ -1310,7 +1310,7 @@
 		<magicLevel>85</magicLevel>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="5244" toLevel="1" name="Physical Up">
+	<skill id="5244" toLevel="1" name="物理力量提昇">
 		<!-- Increases P. Atk. and P. Def. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -1336,7 +1336,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5245" toLevel="1" name="Magical Up">
+	<skill id="5245" toLevel="1" name="魔法力量提升">
 		<!-- Increases M. Atk. and M. Def. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
@@ -1362,7 +1362,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5246" toLevel="12" name="Dark Explosion">
+	<skill id="5246" toLevel="12" name="黑暗爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1423,7 +1423,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5247" toLevel="12" name="Seed of Darkness">
+	<skill id="5247" toLevel="12" name="黑暗種子">
 		<!-- Momentarily decreases HP. If the seed is not removed, it will grow and deal heavy damage. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0523</icon>
 		<operateType>A2</operateType>
@@ -1528,7 +1528,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="5248" toLevel="12" name="Seed Explosion">
+	<skill id="5248" toLevel="12" name="種子爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1574,7 +1574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5249" toLevel="12" name="Dark Circle">
+	<skill id="5249" toLevel="12" name="黑暗之輪">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1649,7 +1649,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5250" toLevel="1" name="Shock">
+	<skill id="5250" toLevel="1" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -1679,7 +1679,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5251" toLevel="12" name="Poison">
+	<skill id="5251" toLevel="12" name="毒">
 		<!-- Level 1: Inflicts Poison on the target and decreases HP. Effect 2. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Poison on the target and decreases HP. Effect 3. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Poison on the target and decreases HP. Effect 4. Inflicted status: Infection (Bleed, Poison). -->
@@ -1792,7 +1792,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="5252" toLevel="12" name="Paralysis">
+	<skill id="5252" toLevel="12" name="麻痺">
 		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
@@ -1830,7 +1830,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5253" toLevel="12" name="Bleed">
+	<skill id="5253" toLevel="12" name="出血">
 		<!-- Level 1: Inflicts Bleed on the target and decreases HP. Effect 2. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Bleed on the target and decreases HP. Effect 3. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Bleed on the target and decreases HP. Effect 4. Inflicted status: Infection (Bleed, Poison). -->
@@ -1945,7 +1945,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="5254" toLevel="12" name="Spirit's Invasion">
+	<skill id="5254" toLevel="12" name="靈魂的蠶食">
 		<!-- Level 1: Decreases MP. Effect 2. Inflicted status: Debilitation. -->
 		<!-- Level 2: Decreases MP. Effect 2. Inflicted status: Debilitation. -->
 		<!-- Level 3: Decreases MP. Effect 2. Inflicted status: Debilitation. -->
@@ -2055,7 +2055,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="5255" toLevel="12" name="Mana Burn">
+	<skill id="5255" toLevel="12" name="魔力燃燒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2100,7 +2100,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5256" toLevel="1" name="Announcement of Death">
+	<skill id="5256" toLevel="1" name="死亡宣告">
 		<!-- You'll be dead in 30 sec. -->
 		<icon>icon.skill5239</icon>
 		<operateType>A2</operateType>
@@ -2128,7 +2128,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="5257" toLevel="2" name="Death">
+	<skill id="5257" toLevel="2" name="死亡">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2147,7 +2147,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5258" toLevel="12" name="Mana Burn">
+	<skill id="5258" toLevel="12" name="魔力燃燒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2222,7 +2222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5259" toLevel="12" name="Fear">
+	<skill id="5259" toLevel="12" name="恐懼">
 		<!-- The target runs away in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
@@ -2291,7 +2291,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="5260" toLevel="12" name="Disarm">
+	<skill id="5260" toLevel="12" name="卸除武器">
 		<!-- You are disarmed. Inflicted status: Debilitation. -->
 		<icon>icon.skill0485</icon>
 		<operateType>A2</operateType>
@@ -2343,7 +2343,7 @@
 			<effect name="Disarm" />
 		</effects>
 	</skill>
-	<skill id="5261" toLevel="1" name="Zombie">
+	<skill id="5261" toLevel="1" name="殭屍化">
 		<!-- Condition causing target to transform into zombie. Condition to decrease physical ability. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -2369,7 +2369,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5262" toLevel="12" name="Rising Shot">
+	<skill id="5262" toLevel="12" name="上衝射擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2430,7 +2430,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5263" toLevel="12" name="Chain Lightning">
+	<skill id="5263" toLevel="12" name="連鎖閃電">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2505,7 +2505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5264" toLevel="12" name="Death Mark">
+	<skill id="5264" toLevel="12" name="死亡印記">
 		<!-- Level 1: Marked with the brand of darkness. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Marked with the brand of darkness. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Marked with the brand of darkness. Effect 3.. Inflicted status: Debilitation. -->
@@ -2580,7 +2580,7 @@
 		</mpInitialConsume>
 		<reuseDelay>9000</reuseDelay>
 	</skill>
-	<skill id="5265" toLevel="12" name="Soul Emission">
+	<skill id="5265" toLevel="12" name="靈魂放射">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2657,7 +2657,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5266" toLevel="12" name="Magical Backfire">
+	<skill id="5266" toLevel="12" name="魔力反噬">
 		<!-- Level 1: Increases Skill MP Consumption. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Increases Skill MP Consumption. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Increases Skill MP Consumption. Effect 2.. Inflicted status: Debilitation. -->
@@ -2787,7 +2787,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5267" toLevel="21" name="Trap Explosion">
+	<skill id="5267" toLevel="21" name="陷阱爆發">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2851,7 +2851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5268" toLevel="17" name="Poison">
+	<skill id="5268" toLevel="17" name="毒">
 		<!-- Gradually decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0515</icon>
 		<operateType>A2</operateType>
@@ -2917,7 +2917,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5269" toLevel="17" name="Slow Trap">
+	<skill id="5269" toLevel="17" name="緩速陷阱">
 		<!-- Decreases Atk. Spd., Casting Spd. and Speed. Effect 3.. Inflicted status: Debilitation. -->
 		<icon>icon.skill0516</icon>
 		<operateType>A2</operateType>
@@ -2970,7 +2970,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5270" toLevel="16" name="Flash Trap">
+	<skill id="5270" toLevel="16" name="閃光陷阱">
 		<!-- Stuns the enemy and cancels the enemy's target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0517</icon>
 		<operateType>A2</operateType>
@@ -3018,7 +3018,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5271" toLevel="19" name="Hold">
+	<skill id="5271" toLevel="19" name="束縛">
 		<!-- Holds the target. Inflicted status: Debilitation. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A2</operateType>
@@ -3087,7 +3087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5272" toLevel="17" name="Decoy Provocation">
+	<skill id="5272" toLevel="17" name="誘餌挑撥">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3141,7 +3141,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5273" toLevel="9" name="Power Strike">
+	<skill id="5273" toLevel="9" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3190,7 +3190,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5274" toLevel="9" name="Power Shot">
+	<skill id="5274" toLevel="9" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3238,7 +3238,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5275" toLevel="9" name="Vortex">
+	<skill id="5275" toLevel="9" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3287,7 +3287,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5276" toLevel="9" name="Burst Shot">
+	<skill id="5276" toLevel="9" name="爆射箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3338,7 +3338,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5277" toLevel="9" name="Power Strike">
+	<skill id="5277" toLevel="9" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3389,7 +3389,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5278" toLevel="9" name="Power Shot">
+	<skill id="5278" toLevel="9" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3439,7 +3439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5279" toLevel="9" name="Vortex">
+	<skill id="5279" toLevel="9" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3480,7 +3480,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5280" toLevel="9" name="Burst Shot">
+	<skill id="5280" toLevel="9" name="爆射箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3533,7 +3533,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5281" toLevel="9" name="Power Strike">
+	<skill id="5281" toLevel="9" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3585,7 +3585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5282" toLevel="9" name="Power Shot">
+	<skill id="5282" toLevel="9" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3635,7 +3635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5283" toLevel="9" name="Vortex">
+	<skill id="5283" toLevel="9" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3676,7 +3676,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5284" toLevel="9" name="Burst Shot">
+	<skill id="5284" toLevel="9" name="爆射箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3729,7 +3729,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5285" toLevel="9" name="Power Strike">
+	<skill id="5285" toLevel="9" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3781,7 +3781,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5286" toLevel="9" name="Power Shot">
+	<skill id="5286" toLevel="9" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3831,7 +3831,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5287" toLevel="9" name="Vortex">
+	<skill id="5287" toLevel="9" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -3872,7 +3872,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5288" toLevel="9" name="Burst Shot">
+	<skill id="5288" toLevel="9" name="爆射箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3925,7 +3925,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5289" toLevel="9" name="Power Strike">
+	<skill id="5289" toLevel="9" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3977,7 +3977,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5290" toLevel="9" name="Power Shot">
+	<skill id="5290" toLevel="9" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4027,7 +4027,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5291" toLevel="9" name="Vortex">
+	<skill id="5291" toLevel="9" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -4068,7 +4068,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5292" toLevel="9" name="Burst Shot">
+	<skill id="5292" toLevel="9" name="爆射箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4121,7 +4121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5293" toLevel="9" name="Power Strike">
+	<skill id="5293" toLevel="9" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4173,7 +4173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5294" toLevel="9" name="Power Shot">
+	<skill id="5294" toLevel="9" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4223,7 +4223,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5295" toLevel="9" name="Vortex">
+	<skill id="5295" toLevel="9" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -4264,7 +4264,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5296" toLevel="9" name="Burst Shot">
+	<skill id="5296" toLevel="9" name="爆射箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4317,7 +4317,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5297" toLevel="9" name="Power Strike">
+	<skill id="5297" toLevel="9" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4368,7 +4368,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5298" toLevel="9" name="Power Shot">
+	<skill id="5298" toLevel="9" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -4418,7 +4418,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5299" toLevel="9" name="Vortex">
+	<skill id="5299" toLevel="9" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>

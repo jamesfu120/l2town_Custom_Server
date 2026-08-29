@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17200" toLevel="1" name="Low-grade Potion of Protection: Sleep">
+	<skill id="17200" toLevel="1" name="守護藥水-睡眠(下級)">
 		<!-- Stupor Resistance +5. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
@@ -22,7 +22,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17201" toLevel="1" name="Low-grade Potion of Protection: Poison">
+	<skill id="17201" toLevel="1" name="守護藥水-毒(下級)">
 		<!-- Infection Resistance +5. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i02</icon>
 		<operateType>A2</operateType>
@@ -44,7 +44,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17202" toLevel="1" name="Potion of Protection: Knockback/ Knockdown (Low-grade)">
+	<skill id="17202" toLevel="1" name="守護藥水-擊退/擊倒(下級)">
 		<!-- Confusion Atk. Rate +5. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i10</icon>
 		<operateType>A2</operateType>
@@ -67,7 +67,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17203" toLevel="1" name="Low-grade Potion of Protection: Aerial Yoke">
+	<skill id="17203" toLevel="1" name="守護藥水-空中束縛(下級)">
 		<!-- Confusion Atk. Rate +5. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i11</icon>
 		<operateType>A2</operateType>
@@ -89,29 +89,29 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17204" toLevel="1" name="SP Scroll: 100,000">
+	<skill id="17204" toLevel="1" name="10萬SP卷軸">
 		<!-- SP +100,000. -->
 		<icon>icon.etc_sp_scroll1_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="17205" toLevel="1" name="SP Scroll: 1,000,000">
+	<skill id="17205" toLevel="1" name="100萬SP卷軸">
 		<!-- SP +1,000,000. -->
 		<icon>icon.etc_sp_scroll2_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="17206" toLevel="1" name="SP Scroll: 10,000,000">
+	<skill id="17206" toLevel="1" name="1000萬SP卷軸">
 		<!-- SP +10,000,000. -->
 		<icon>icon.etc_sp_scroll3_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="17207" toLevel="1" name="Master Yogi's Special Scroll: Enchant Weapon">
+	<skill id="17207" toLevel="1" name="大師余義的特別武器強化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17208" toLevel="1" name="Transformation Potion: Metal Suit">
+	<skill id="17208" toLevel="1" name="金屬套裝變身藥劑">
 		<!-- Modifies your appearance into that of a Metal Suit for 1 h. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
@@ -119,33 +119,33 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="17209" toLevel="1" name="Appearance Stone: Metal Suit Head Accessory">
+	<skill id="17209" toLevel="1" name="金屬套裝頭飾加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17210" toLevel="1" name="Metal Suit Breastplate Appearance Stone">
+	<skill id="17210" toLevel="1" name="金屬套裝胸甲加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17211" toLevel="1" name="Appearance Stone: Metal Suit Pants">
+	<skill id="17211" toLevel="1" name="金屬套裝脛甲加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17212" toLevel="1" name="Appearance Stone: Metal Suit Shoes">
+	<skill id="17212" toLevel="1" name="金屬套裝靴加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17213" toLevel="1" name="Appearance Stone: Metal Suit Gloves">
+	<skill id="17213" toLevel="1" name="金屬套裝護手加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17214" toLevel="1" name="Master Yogi's Force Effect (Free)">
+	<skill id="17214" toLevel="1" name="大師余義的道術免費效果">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17215" toLevel="11" name="Master Yogi's Force">
+	<skill id="17215" toLevel="11" name="大師余義的道術">
 		<!-- Master Yogi's mastery power. You can obtain an item 1 times per hour. There are 10 levels, so you can acquire up to 10 items. Return to Master Yogi to refresh the buff. Note!. The item cannot be obtained if you are dead or have no free slots in your inventory. -->
 		<icon>icon.yogi_stick_i00</icon>
 		<operateType>A2</operateType>
@@ -165,13 +165,13 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17216" toLevel="1" name="Master Yogi's Force Effect (Paid)">
+	<skill id="17216" toLevel="1" name="大師余義的道術付費效果">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17217" toLevel="11" name="Master Yogi's Force">
+	<skill id="17217" toLevel="11" name="大師余義的道術">
 		<!-- Master Yogi's mastery power. You can obtain an item 1 times per hour. There are 10 levels, so you can acquire up to 10 items. Return to Master Yogi to refresh the buff. Note!. The item cannot be obtained if you are dead or have no free slots in your inventory. -->
 		<icon>icon.yogi_stick_i00</icon>
 		<operateType>A2</operateType>
@@ -191,18 +191,18 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17218" toLevel="1" name="Valiant Chest">
+	<skill id="17218" toLevel="1" name="插曲禮盒">
 		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="17219" toLevel="1" name="Hero's Gift">
+	<skill id="17219" toLevel="1" name="英雄禮盒">
 		<!-- You can obtain Hero's Energy if you obtain enough XP. -->
 		<icon>icon.etc_raid_d_i02</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17220" toLevel="1" name="Valiant Scroll">
+	<skill id="17220" toLevel="1" name="英雄的插曲卷軸">
 		<!-- For 30 min., P. Atk. +10%, M. Atk. +21%, P. Def. +15%, M. Def. +15%, Max HP/ MP/ CP +15%. Does not disappear after death. -->
 		<icon>icon.etc_cave_page_i00</icon>
 		<operateType>A2</operateType>
@@ -253,182 +253,182 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17221" toLevel="1" name="Hero's SP Scroll - Low-grade">
+	<skill id="17221" toLevel="1" name="新手英雄SP卷軸">
 		<icon>icon.etc_sp_scroll1_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="17222" toLevel="2" name="Hero's SP Scroll - Mid-grade">
+	<skill id="17222" toLevel="2" name="中堅英雄SP卷軸">
 		<icon>icon.etc_sp_scroll2_i00</icon>
 		<operateType>A1</operateType>
 		<isDebuff>false</isDebuff>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="17223" toLevel="3" name="Hero's SP Scroll - High-grade">
+	<skill id="17223" toLevel="3" name="高手英雄SP卷軸">
 		<icon>icon.etc_sp_scroll3_i00</icon>
 		<operateType>A1</operateType>
 		<isDebuff>false</isDebuff>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="17224" toLevel="1" name="Appearance Stone: Valentine Dagger">
+	<skill id="17224" toLevel="1" name="白色情人節加工石-匕首">
 		<icon>BranchSys3.Icon.g_shape_shifting_dagger</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17225" toLevel="1" name="Appearance Stone: Valentine One-handed Sword">
+	<skill id="17225" toLevel="1" name="白色情人節加工石-單手刀劍">
 		<icon>BranchSys3.Icon.g_shape_shifting_sword</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17226" toLevel="1" name="Appearance Stone: Valentine Two-handed Sword">
+	<skill id="17226" toLevel="1" name="白色情人節加工石-雙手刀劍">
 		<icon>BranchSys3.Icon.g_shape_shifting_twohand_sword</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17227" toLevel="1" name="Appearance Stone: Valentine One-handed Blunt Weapon">
+	<skill id="17227" toLevel="1" name="白色情人節加工石-單手鈍器">
 		<icon>BranchSys3.Icon.g_shape_shifting_blunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17228" toLevel="1" name="Appearance Stone: Valentine Fist Weapon">
+	<skill id="17228" toLevel="1" name="白色情人節加工石-格鬥兵器">
 		<icon>BranchSys3.Icon.g_shape_shifting_dualfist</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17229" toLevel="1" name="Appearance Stone: Valentine Spear">
+	<skill id="17229" toLevel="1" name="白色情人節加工石-槍矛">
 		<icon>BranchSys3.Icon.g_shape_shifting_pole</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17230" toLevel="1" name="Appearance Stone: Valentine Bow">
+	<skill id="17230" toLevel="1" name="白色情人節加工石-弓">
 		<icon>BranchSys3.Icon.g_shape_shifting_bow</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17231" toLevel="1" name="Appearance Stone: Valentine Crossbow">
+	<skill id="17231" toLevel="1" name="白色情人節加工石-弩弓">
 		<icon>BranchSys3.Icon.g_shape_shifting_twohand_crossbow</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17232" toLevel="1" name="Appearance Stone: Valentine Magic Sword">
+	<skill id="17232" toLevel="1" name="白色情人節加工石-魔法劍">
 		<icon>BranchSys3.Icon.g_shape_shifting_sword</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17233" toLevel="1" name="Appearance Stone: Valentine One-handed Staff">
+	<skill id="17233" toLevel="1" name="白色情人節加工石-單手魔杖">
 		<icon>BranchSys3.Icon.g_shape_shifting_magic_blunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17234" toLevel="1" name="Appearance Stone: Valentine Two-handed Staff">
+	<skill id="17234" toLevel="1" name="白色情人節加工石-雙手魔杖">
 		<icon>BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17235" toLevel="1" name="Appearance Stone: Valentine Dual Swords">
+	<skill id="17235" toLevel="1" name="白色情人節加工石-雙刀">
 		<icon>BranchSys3.Icon.g_shape_shifting_dual</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17236" toLevel="1" name="Appearance Stone: Valentine Dual Daggers">
+	<skill id="17236" toLevel="1" name="白色情人節加工石-雙匕首">
 		<icon>BranchSys3.Icon.g_shape_shifting_dualdagger</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17237" toLevel="1" name="Appearance Stone: Valentine Dual Blunt Weapons">
+	<skill id="17237" toLevel="1" name="白色情人節加工石-雙鈍器">
 		<icon>BranchSys3.Icon.g_shape_shifting_dualblunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17238" toLevel="1" name="Appearance Stone: Valentine Shield">
+	<skill id="17238" toLevel="1" name="白色情人節加工石-盾牌">
 		<icon>BranchSys3.Icon.g_shape_shifting_shield</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17239" toLevel="1" name="Appearance Stone: Valentine Sigil">
+	<skill id="17239" toLevel="1" name="白色情人節加工石-符印">
 		<icon>BranchSys3.Icon.g_shape_shifting_sigil</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17240" toLevel="1" name="Appearance Stone: Valentine Dagger">
+	<skill id="17240" toLevel="1" name="白色情人節加工石-匕首">
 		<icon>BranchSys3.Icon.g_shape_shifting_dagger</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17241" toLevel="1" name="Appearance Stone: Valentine One-handed Sword">
+	<skill id="17241" toLevel="1" name="白色情人節加工石-單手刀劍">
 		<icon>BranchSys3.Icon.g_shape_shifting_sword</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17242" toLevel="1" name="Appearance Stone: Valentine Two-handed Sword">
+	<skill id="17242" toLevel="1" name="白色情人節加工石-雙手刀劍">
 		<icon>BranchSys3.Icon.g_shape_shifting_twohand_sword</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17243" toLevel="1" name="Appearance Stone: Valentine One-handed Blunt Weapon">
+	<skill id="17243" toLevel="1" name="白色情人節加工石-單手鈍器">
 		<icon>BranchSys3.Icon.g_shape_shifting_blunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17244" toLevel="1" name="Appearance Stone: Valentine Fist Weapon">
+	<skill id="17244" toLevel="1" name="白色情人節加工石-格鬥兵器">
 		<icon>BranchSys3.Icon.g_shape_shifting_dualfist</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17245" toLevel="1" name="Appearance Stone: Valentine Spear">
+	<skill id="17245" toLevel="1" name="白色情人節加工石-槍矛">
 		<icon>BranchSys3.Icon.g_shape_shifting_pole</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17246" toLevel="1" name="Appearance Stone: Valentine Bow">
+	<skill id="17246" toLevel="1" name="白色情人節加工石-弓">
 		<icon>BranchSys3.Icon.g_shape_shifting_bow</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17247" toLevel="1" name="Appearance Stone: Valentine Crossbow">
+	<skill id="17247" toLevel="1" name="白色情人節加工石-弩弓">
 		<icon>BranchSys3.Icon.g_shape_shifting_twohand_crossbow</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17248" toLevel="1" name="Appearance Stone: Valentine Magic Sword">
+	<skill id="17248" toLevel="1" name="白色情人節加工石-魔法劍">
 		<icon>BranchSys3.Icon.g_shape_shifting_sword</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17249" toLevel="1" name="Appearance Stone: Valentine One-handed Staff">
+	<skill id="17249" toLevel="1" name="白色情人節加工石-單手魔杖">
 		<icon>BranchSys3.Icon.g_shape_shifting_magic_blunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17250" toLevel="1" name="Appearance Stone: Valentine Two-handed Staff">
+	<skill id="17250" toLevel="1" name="白色情人節加工石-雙手魔杖">
 		<icon>BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17251" toLevel="1" name="Appearance Stone: Valentine Dual Swords">
+	<skill id="17251" toLevel="1" name="白色情人節加工石-雙刀">
 		<icon>BranchSys3.Icon.g_shape_shifting_dual</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17252" toLevel="1" name="Appearance Stone: Valentine Dual Daggers">
+	<skill id="17252" toLevel="1" name="白色情人節加工石-雙匕首">
 		<icon>BranchSys3.Icon.g_shape_shifting_dualdagger</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17253" toLevel="1" name="Appearance Stone: Valentine Dual Blunt Weapons">
+	<skill id="17253" toLevel="1" name="白色情人節加工石-雙鈍器">
 		<icon>BranchSys3.Icon.g_shape_shifting_dualblunt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17254" toLevel="1" name="Appearance Stone: Valentine Shield">
+	<skill id="17254" toLevel="1" name="白色情人節加工石-盾牌">
 		<icon>BranchSys3.Icon.g_shape_shifting_shield</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17255" toLevel="1" name="Appearance Stone: Valentine Sigil">
+	<skill id="17255" toLevel="1" name="白色情人節加工石-符印">
 		<icon>BranchSys3.Icon.g_shape_shifting_sigil</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17256" toLevel="1" name="Hero's XP Scroll">
+	<skill id="17256" toLevel="1" name="英雄經驗值卷軸">
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="17257" toLevel="1" name="Hero's SP Rune">
+	<skill id="17257" toLevel="1" name="英雄SP古文">
 		<!-- Acquired SP +10%. -->
 		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17258" toLevel="1" name="Appearance Stone: NC Dinos Cap">
+	<skill id="17258" toLevel="1" name="NC Dinos帽加工石">
 		<icon>BranchSys3.Icon.g_shape_shifting_hair1</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17259" toLevel="1" name="Appearance Stone: NC Dinos Cap">
+	<skill id="17259" toLevel="1" name="NC Dinos帽加工石">
 		<icon>BranchSys3.Icon.g_shape_shifting_hair1</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17260" toLevel="1" name="Appearance Stone: Vigilante Hat">
+	<skill id="17260" toLevel="1" name="佐羅帽加工石">
 		<icon>BranchSys3.Icon.g_shape_shifting_hair2</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17261" toLevel="1" name="Appearance Stone: Vigilante Hat">
+	<skill id="17261" toLevel="1" name="佐羅帽加工石">
 		<icon>BranchSys3.Icon.g_shape_shifting_hair2</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17262" toLevel="1" name="Leona's Gift">
+	<skill id="17262" toLevel="1" name="黎歐納的禮物">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17263" toLevel="1" name="Hero's Quick HP Replenishing Potion">
+	<skill id="17263" toLevel="1" name="勇士的瞬間HP恢復劑">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -445,17 +445,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17264" toLevel="1" name="Scroll of Escape: Hellbound">
+	<skill id="17264" toLevel="1" name="返回卷軸-地獄邊界">
 		<!-- Teleports to the Hellbound. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="17265" toLevel="1" name="Leona's Reward Pack">
+	<skill id="17265" toLevel="1" name="黎歐納報酬箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17266" toLevel="3" name="SP Rune 10%">
+	<skill id="17266" toLevel="3" name="SP古文30%%">
 		<!-- Level 1: Acquired SP +10%. -->
 		<!-- Level 2: Acquired SP +20%. -->
 		<!-- Level 3: Acquired SP +30%. -->
@@ -466,7 +466,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17267" toLevel="3" name="SP Rune 10%">
+	<skill id="17267" toLevel="3" name="SP古文30%%">
 		<!-- Level 1: Acquired SP +10%. -->
 		<!-- Level 2: Acquired SP +20%. -->
 		<!-- Level 3: Acquired SP +30%. -->
@@ -477,19 +477,19 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17268" toLevel="1" name="Free Master Yogi's Force Effect 2">
+	<skill id="17268" toLevel="1" name="大師余義的道術免費效果2">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17269" toLevel="1" name="Free Master Yogi's Force Effect 2">
+	<skill id="17269" toLevel="1" name="大師余義的道術付費效果2">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17270" toLevel="1" name="SP Scroll: 100,000">
+	<skill id="17270" toLevel="1" name="10萬SP卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -508,83 +508,83 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17271" toLevel="1" name="Kat the Cat's Surprise Gift">
+	<skill id="17271" toLevel="1" name="土偶變身卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17272" toLevel="1" name="Appearance Stone: Pig Lollipop - One-handed Sword">
+	<skill id="17272" toLevel="1" name="豬豬塔糖加工石-單手刀劍">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17273" toLevel="1" name="Appearance Stone: Chrono Cithara - One-handed Sword">
+	<skill id="17273" toLevel="1" name="克魯諾齊塔納加工石-單手刀劍">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17274" toLevel="1" name="Appearance Stone: Chrono Unitus - Fist Weapon">
+	<skill id="17274" toLevel="1" name="克魯諾鈴鼓加工石-格鬥兵器">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17275" toLevel="1" name="Appearance Stone: Chrono Campana - Spear">
+	<skill id="17275" toLevel="1" name="克魯諾杖鐘加工石-槍">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17276" toLevel="1" name="Appearance Stone: Chrono Darbuka - Two-handed Blunt Weapon">
+	<skill id="17276" toLevel="1" name="克魯諾達布卡加工石-雙手鈍器">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17277" toLevel="1" name="Appearance Stone: Chrono Maracas - Dual Swords">
+	<skill id="17277" toLevel="1" name="克魯諾瑪拉卡斯加工石-雙刀">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17278" toLevel="1" name="Appearance Stone: Pumpkin Dagger - Dagger">
+	<skill id="17278" toLevel="1" name="南瓜匕首加工石-匕首">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17279" toLevel="1" name="Appearance Stone: Pumpkin Dual Daggers - Dual Daggers">
+	<skill id="17279" toLevel="1" name="南瓜雙匕首加工石-雙匕首">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17280" toLevel="1" name="Appearance Stone: Scarecrow Magic Sword">
+	<skill id="17280" toLevel="1" name="稻草人魔法劍加工石-魔法劍">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17281" toLevel="1" name="Appearance Stone: Pig Lollipop - One-handed Sword (15-day)">
+	<skill id="17281" toLevel="1" name="豬豬塔糖加工石-單手刀劍(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17282" toLevel="1" name="Appearance Stone: Chrono Cithara - One-handed Sword (15-day)">
+	<skill id="17282" toLevel="1" name="克魯諾齊塔納加工石-單手刀劍(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17283" toLevel="1" name="Appearance Stone: Chrono Unitus - Fist Weapon (15-day)">
+	<skill id="17283" toLevel="1" name="克魯諾鈴鼓加工石-格鬥兵器(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17284" toLevel="1" name="Appearance Stone: Chrono Campana - Spear (15-day)">
+	<skill id="17284" toLevel="1" name="克魯諾杖鐘加工石-槍(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17285" toLevel="1" name="Appearance Stone: Chrono Darbuka - Two-handed Blunt Weapon (15-day)">
+	<skill id="17285" toLevel="1" name="克魯諾達布卡加工石-雙手鈍器(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17286" toLevel="1" name="Appearance Stone: Chrono Maracas - Dual Swords (15-day)">
+	<skill id="17286" toLevel="1" name="克魯諾瑪拉卡斯加工石-雙刀(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17287" toLevel="1" name="Appearance Stone: Pumpkin Dagger - Dagger (15-day)">
+	<skill id="17287" toLevel="1" name="南瓜匕首加工石-匕首(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17288" toLevel="1" name="Appearance Stone: Pumpkin Dual Daggers - Dual Daggers (15-day)">
+	<skill id="17288" toLevel="1" name="南瓜雙匕首加工石-雙匕首(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17289" toLevel="1" name="Appearance Stone: Scarecrow Magic Sword (15-day)">
+	<skill id="17289" toLevel="1" name="稻草人劍加工石-魔法劍(15日)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17290" toLevel="1" name="PA - Enhanced Rosy Seduction">
+	<skill id="17290" toLevel="1" name="活動用-進階型玫瑰誘惑">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%. -->
 		<icon>BranchSys2.icon.br_rosalia_rose_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -629,7 +629,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17291" toLevel="1" name="Prevailing Sonata - PA">
+	<skill id="17291" toLevel="1" name="戰鬥奏鳴曲-活動">
 		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, Vampiric Rage effect +8%. For PA. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
@@ -687,7 +687,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17292" toLevel="1" name="Daring Sonata - PA">
+	<skill id="17292" toLevel="1" name="移動奏鳴曲-活動">
 		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, skill cooldown -10%. For PA. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
@@ -751,7 +751,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17293" toLevel="1" name="Refreshing Sonata - PA">
+	<skill id="17293" toLevel="1" name="休息奏鳴曲-活動">
 		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, M. Skill MP Consumption -22%. For PA. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
@@ -806,7 +806,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17294" toLevel="1" name="Knight's Harmony - PA">
+	<skill id="17294" toLevel="1" name="守護者和聲-活動">
 		<!-- For 1 h., P. Def. +45%, M. Def. +15%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +35%, Shield Defense Rate +30%, Shield Defense +50%. For PA. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -854,7 +854,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17295" toLevel="1" name="Warrior's Harmony - PA">
+	<skill id="17295" toLevel="1" name="狂戰士和聲-活動">
 		<!-- For 1 h., P. Atk. +22%, Critical Rate for basic attacks +100%, Critical Damage for basic attacks +70%, Atk. Spd. +10%. For PA. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -910,7 +910,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17296" toLevel="1" name="Wizard's Harmony - PA">
+	<skill id="17296" toLevel="1" name="大賢者和聲-活動">
 		<!-- For 1 h., M. Atk. +40%, M. Skill Critical Rate +100%, Casting Spd. +15%, skill cooldown -20%, Skill MP Consumption -15%. For PA. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -996,7 +996,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17297" toLevel="1" name="Prevailing Sonata - Emperor's Cookie">
+	<skill id="17297" toLevel="1" name="戰鬥奏鳴曲-國王餅乾">
 		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, Vampiric Rage effect +8%. Cooldown: 1 h. The effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<operateType>A2</operateType>
@@ -1053,7 +1053,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17298" toLevel="1" name="Daring Sonata - Emperor's Cookie">
+	<skill id="17298" toLevel="1" name="移動奏鳴曲-國王餅乾">
 		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, skill cooldown -10%. Cooldown: 1 h. The effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<operateType>A2</operateType>
@@ -1114,7 +1114,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17299" toLevel="1" name="Refreshing Sonata - Emperor's Cookie">
+	<skill id="17299" toLevel="1" name="休息奏鳴曲-國王餅乾">
 		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./M. Evasion +5, and M. Skill MP Consumption -22%. Cooldown: 1 h. The effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<operateType>A2</operateType>

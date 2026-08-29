@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="18700" toLevel="1" name="Freya's Art of Seduction - Barrier">
+	<skill id="18700" toLevel="1" name="芙蕾雅致命誘惑-屏障">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, received damage -10%, Attribute Resistance +100. The effect remains after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
@@ -94,7 +94,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18701" toLevel="1" name="Freya's Art of Seduction - XP">
+	<skill id="18701" toLevel="1" name="芙蕾雅致命誘惑-EXP">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, acquired XP +30%, Vitality bonus +12%. The effect remains after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
@@ -163,7 +163,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18702" toLevel="1" name="Pa'agrio's Blessing - Might">
+	<skill id="18702" toLevel="1" name="帕格立歐的祝福-力量強化">
 		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, damage +10%, all attack power +10%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
@@ -290,7 +290,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18703" toLevel="1" name="Pa'agrio's Blessing - XP">
+	<skill id="18703" toLevel="1" name="帕格立歐的祝福-EXP">
 		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, acquired XP +30%, Vitality bonus +12%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
@@ -391,25 +391,25 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18704" toLevel="1" name="MOPP Combat Ration">
+	<skill id="18704" toLevel="1" name="MOPP戰鬥糧食">
 		<!-- For 5 min., P. Atk./ P. Def./ M. Atk./ M. Def. +50%, acquired XP/ SP +10%. The effect disappears after logging out. -->
 		<icon>icon.ev_mopp_herb</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="18705" toLevel="3" name="Low-grade Arena Loot">
+	<skill id="18705" toLevel="3" name="上級競技場戰利品">
 		<!-- Double-click to obtain a special item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18706" toLevel="1" name="PA Points">
+	<skill id="18706" toLevel="1" name="活動點數">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="18710" toLevel="2" name="Appearance Stone: Formal Wear">
+	<skill id="18710" toLevel="2" name="禮服加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -419,21 +419,21 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="18711" toLevel="1" name="Blessing of Twilight">
+	<skill id="18711" toLevel="1" name="黃昏的祝福">
 		<!-- For 1 h., acquired XP/ SP +50%. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18712" toLevel="1" name="Blessing of the Dawn">
+	<skill id="18712" toLevel="1" name="黎明的祝福">
 		<!-- For 1 h., acquired XP/ SP +50%. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18713" toLevel="20" name="Red Cat's Eye">
+	<skill id="18713" toLevel="20" name="最高級緋金綠寶石10階段">
 		<!-- Level 1: Critical Damage for basic attacks +1%, P. Skill Critical Damage +1%. -->
 		<!-- Level 2: Critical Damage for basic attacks +2%, P. Skill Critical Damage +2%. -->
 		<!-- Level 3: Critical Damage for basic attacks +4%, P. Skill Critical Damage +4%. -->
@@ -552,7 +552,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18714" toLevel="20" name="Blue Cat's Eye">
+	<skill id="18714" toLevel="20" name="最高級靛金綠寶石10階段">
 		<!-- Level 1: M. Skill Critical Damage +1%. -->
 		<!-- Level 2: M. Skill Critical Damage +2%. -->
 		<!-- Level 3: M. Skill Critical Damage +4%. -->
@@ -646,19 +646,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18715" toLevel="1" name="Greater Ruby">
+	<skill id="18715" toLevel="1" name="高級紅寶石">
 		<!-- Soulshot damage +20%. -->
 		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="18716" toLevel="1" name="Greater Ruby">
+	<skill id="18716" toLevel="1" name="高級紅寶石">
 		<!-- Beast Soulshot damage +20%. -->
 		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18717" toLevel="20" name="Ruby">
+	<skill id="18717" toLevel="20" name="最高級紅寶石10階段">
 		<!-- Level 1: Soulshot/ Beast Soulshot damage +1%. -->
 		<!-- Level 2: Soulshot/ Beast Soulshot damage +3.5%. -->
 		<!-- Level 3: Soulshot/ Beast Soulshot damage +7.5%. -->
@@ -732,7 +732,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18718" toLevel="2" name="Greater Sapphire">
+	<skill id="18718" toLevel="2" name="高級藍寶石">
 		<!-- Level 1: Spiritshot damage +20%. -->
 		<!-- Level 2: Blessed Spiritshot damage +20%. -->
 		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
@@ -740,7 +740,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="18719" toLevel="20" name="Sapphire">
+	<skill id="18719" toLevel="20" name="最高級藍寶石10階段">
 		<!-- Level 1: Spiritshot/ Blessed Spiritshot damage +1%. -->
 		<!-- Level 2: Spiritshot/ Blessed Spiritshot damage +3.5%. -->
 		<!-- Level 3: Spiritshot/ Blessed Spiritshot damage +7.5%. -->
@@ -814,7 +814,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18720" toLevel="2" name="Greater Obsidian - Cancel Target">
+	<skill id="18720" toLevel="2" name="最高級黑曜石-解除目標">
 		<!-- Cancels the enemy's target. -->
 		<icon>
 			<value level="1">icon.bm_jewel_pvpdef_high_lv1_lavianrose</value>
@@ -835,7 +835,7 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="18721" toLevel="2" name="Greater Garnet - Cancel Stun/ Silence">
+	<skill id="18721" toLevel="2" name="最高級深紅寶石-衝擊/沉默解除">
 		<!-- Cancels Stun/ Silence. -->
 		<icon>
 			<value level="1">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
@@ -880,7 +880,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18723" toLevel="6" name="Ultimate Fortune Jewelry Box">
+	<skill id="18723" toLevel="6" name="終極高級寶石盒">
 		<!-- Level 2: Double-click to obtain one of Jewel Lucky Chests. -->
 		<!-- Level 3: Double-click to obtain a Lv. 3 jewel. -->
 		<!-- Level 4: Double-click to obtain a Lv. 4 jewel. -->
@@ -891,7 +891,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18724" toLevel="2" name="Fortune Pack: Red Cat's Eye">
+	<skill id="18724" toLevel="2" name="幸運的靛金綠寶石盒子">
 		<!-- Level 1: Double-click to obtain Red Cat's Eye Lv. 1-5. -->
 		<!-- Level 2: Double-click to obtain Blue Cat's Eye Lv. 1-5. -->
 		<icon>icon.skill0000</icon>
@@ -899,7 +899,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18725" toLevel="1" name="Freya's Art of Seduction - Barrier">
+	<skill id="18725" toLevel="1" name="芙蕾雅致命誘惑-屏障">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, received damage -10%, Attribute Resistance +100. The effect remains after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
@@ -992,7 +992,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18726" toLevel="1" name="Freya's Art of Seduction - XP">
+	<skill id="18726" toLevel="1" name="芙蕾雅致命誘惑-EXP">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, acquired XP +30%, Vitality bonus +12%. The effect remains after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
@@ -1064,7 +1064,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18727" toLevel="1" name="Pa'agrio's Blessing - Might">
+	<skill id="18727" toLevel="1" name="帕格立歐的祝福-力量強化">
 		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, damage +10%, all attack power +10%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
@@ -1163,7 +1163,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18728" toLevel="1" name="Pa'agrio's Blessing - XP">
+	<skill id="18728" toLevel="1" name="帕格立歐的祝福-EXP">
 		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, acquired XP +30%, Vitality bonus +12%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
@@ -1270,7 +1270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18729" toLevel="1" name="Treat Wounded Soldier">
+	<skill id="18729" toLevel="1" name="傷兵治療">
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -1278,13 +1278,13 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="18730" toLevel="1" name="Craft Protection Battery Parts">
+	<skill id="18730" toLevel="1" name="守護炮臺零件製作">
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
 		<hitTime>120000</hitTime>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18731" toLevel="1" name="Activate Protection Battery">
+	<skill id="18731" toLevel="1" name="守護炮臺驅動">
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
@@ -1292,7 +1292,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18732" toLevel="4" name="Low-grade Keucereus Defense Supply Box">
+	<skill id="18732" toLevel="4" name="上級柯塞勒斯防禦成功獎勵箱">
 		<!-- Double-click to obtain an item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1450,14 +1450,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18733" toLevel="1" name="Guardian Captain Isburg Elimination Commemorative Supply Items">
+	<skill id="18733" toLevel="1" name="護衛隊長 伊斯貝勒克擊倒紀念補給品">
 		<!-- Double-click to obtain an item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18734" toLevel="1" name="Balthus Knights' Disguise">
+	<skill id="18734" toLevel="1" name="班卓斯騎士團偽裝">
 		<!-- A disguise as a Balthus Knight. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1467,7 +1467,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18735" toLevel="1" name="Balthus Knights' Disguise">
+	<skill id="18735" toLevel="1" name="班卓斯騎士團偽裝">
 		<!-- A disguise as a Balthus Knight. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1477,7 +1477,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18736" toLevel="1" name="Balthus Knights' Disguise">
+	<skill id="18736" toLevel="1" name="班卓斯騎士團偽裝">
 		<!-- A disguise as a Balthus Knight. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1487,7 +1487,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18737" toLevel="1" name="Balthus Knights' Disguise">
+	<skill id="18737" toLevel="1" name="班卓斯騎士團偽裝">
 		<!-- A disguise as a Balthus Knight. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1497,7 +1497,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18738" toLevel="1" name="+10 Helios Weapon Pack">
+	<skill id="18738" toLevel="1" name="+10赫利奧斯武器禮盒">
 		<!-- Double-click to obtain a Helios weapon enchanted to +10. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1564,7 +1564,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18739" toLevel="3" name="Capsule: +8 Eternal Heavy Armor">
+	<skill id="18739" toLevel="3" name="+8艾迪奧斯防具長袍膠囊">
 		<!-- Level 1: Use this to obtain the Eternal Armor: Heavy Armor Set enchanted by +8. -->
 		<!-- Level 2: Use this to obtain the Eternal Armor: Light Armor Set enchanted by +8. -->
 		<!-- Level 3: Use this to obtain the Eternal Armor: Robe Set enchanted by +8. -->
@@ -1653,7 +1653,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18740" toLevel="1" name="+8 Eternal Armor Pack">
+	<skill id="18740" toLevel="1" name="+8艾迪奧斯防具禮盒">
 		<!-- Double-click to obtain an item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1729,7 +1729,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18741" toLevel="1" name="Freya's Art of Seduction - Barrier">
+	<skill id="18741" toLevel="1" name="芙蕾雅致命誘惑-屏障">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, received damage -10%, Attribute Resistance +100. The effect remains after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
@@ -1823,7 +1823,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18742" toLevel="1" name="Freya's Art of Seduction - XP">
+	<skill id="18742" toLevel="1" name="芙蕾雅致命誘惑-EXP">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, acquired XP +30%, Vitality bonus +12%. The effect remains after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
@@ -1892,7 +1892,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18743" toLevel="1" name="Pa'agrio's Blessing - Might">
+	<skill id="18743" toLevel="1" name="帕格立歐的祝福-力量強化">
 		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, damage +10%, all attack power +10%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
@@ -1991,7 +1991,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18744" toLevel="1" name="Pa'agrio's Blessing - XP">
+	<skill id="18744" toLevel="1" name="帕格立歐的祝福-EXP">
 		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, acquired XP +30%, Vitality bonus +12%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
@@ -2067,7 +2067,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18745" toLevel="3" name="Dragon's Treasure Chest">
+	<skill id="18745" toLevel="3" name="龍之稀有飾品禮盒">
 		<!-- Double-click to obtain an item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2216,7 +2216,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18746" toLevel="1" name="Dragon's Attribute Potion">
+	<skill id="18746" toLevel="1" name="龍之屬性水">
 		<!-- For 30 min., Attribute Attack +30, Attribute Resistance +30. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion</icon>
 		<operateType>A1</operateType>
@@ -2225,7 +2225,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18747" toLevel="1" name="Dragon's Attribute Potion (XP)">
+	<skill id="18747" toLevel="1" name="龍之屬性水-EXP">
 		<!-- For 30 min., Attribute Attack +50, Attribute Resistance +50, acquired XP/ SP +10%. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion_brave</icon>
 		<operateType>A1</operateType>
@@ -2234,14 +2234,14 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18748" toLevel="4" name="Horn Melody - Wealthy Merchant Red">
+	<skill id="18748" toLevel="4" name="角笛之詩-巨商 雷德">
 		<!-- For 1 h., P. Atk. +28%, M. Atk. +97%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="18749" toLevel="4" name="Drum Melody - Wealthy Merchant Red">
+	<skill id="18749" toLevel="4" name="戰鼓之詩-巨商 雷德">
 		<!-- Level 1: For 1 h., Critical Rate for basic attacks +36%, Critical Damage for basic attacks +33%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 2: For 1 h., Critical Rate for basic attacks +36%, Critical Damage for basic attacks +33%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 3: For 1 h., Critical Rate for basic attacks +36%, Critical Damage for basic attacks +33%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
@@ -2251,56 +2251,56 @@
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="18750" toLevel="4" name="Pipe Organ Melody - Wealthy Merchant Red">
+	<skill id="18750" toLevel="4" name="風琴之詩-巨商 雷德">
 		<!-- For 1 h., Max HP +43%, Max MP +68%, Max CP +43%. With a certain chance, Vampiric Rage effect +9%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="18751" toLevel="4" name="Guitar Melody - Wealthy Merchant Red">
+	<skill id="18751" toLevel="4" name="吉他之詩-巨商 雷德">
 		<!-- For 1 h., Atk. Spd. +63%, Casting Spd. +61%, Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18752" toLevel="4" name="Harp Melody - Wealthy Merchant Red">
+	<skill id="18752" toLevel="4" name="豎琴之詩-巨商 雷德">
 		<!-- For 1 h., P. Accuracy +8, P./ M. Evasion +8, Speed +37, received Critical Damage from basic attacks -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18753" toLevel="4" name="Lute Melody - Wealthy Merchant Red">
+	<skill id="18753" toLevel="4" name="琵琶之詩-巨商 雷德">
 		<!-- For 1 h., Atk.Spd. +37%, Casting Spd. +34%. With a certain chance, Vampiric Rage effect +9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18754" toLevel="1" name="Prevailing Sonata - Wealthy Merchant Red">
+	<skill id="18754" toLevel="1" name="戰鬥奏鳴曲-巨商 雷德">
 		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, Vampiric Rage effect +8%. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18755" toLevel="1" name="Daring Sonata - Wealthy Merchant Red">
+	<skill id="18755" toLevel="1" name="移動奏鳴曲-巨商 雷德">
 		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, skill cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="18756" toLevel="1" name="Refreshing Sonata - Wealthy Merchant Red">
+	<skill id="18756" toLevel="1" name="休息奏鳴曲-巨商 雷德">
 		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, M. Skill MP Consumption -22%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="18757" toLevel="1" name="Knight's Harmony - Wealthy Merchant Red">
+	<skill id="18757" toLevel="1" name="守護者和聲-巨商 雷德">
 		<!-- For 1 h., P. Def. +45%, M. Def. +15%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +35%, Shield Defense Rate +30%, Shield Defense +50%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -2346,7 +2346,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18758" toLevel="1" name="Warrior's Harmony - Wealthy Merchant Red">
+	<skill id="18758" toLevel="1" name="狂戰士和聲-巨商 雷德">
 		<!-- For 1 h., P. Atk. +22%, Critical Rate for basic attacks +100%, Critical Damage for basic attacks +70%, Atk. Spd. +10%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -2396,7 +2396,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18759" toLevel="1" name="Wizard's Harmony - Wealthy Merchant Red">
+	<skill id="18759" toLevel="1" name="大賢者和聲-巨商 雷德">
 		<!-- For 1 h., M. Atk. +40%, M. Skill Critical Rate +100%, Casting Spd. +15%, skill cooldown -20%, Skill MP Consumption -15%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -2479,14 +2479,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18760" toLevel="1" name="Prophecy of Might - Wealthy Merchant Red">
+	<skill id="18760" toLevel="1" name="力之預言-巨商 雷德">
 		<!-- For 1 h., the targeted party member's P. Critical Rate, P./ M. Skill Critical Rate, P. Critical Damage and P./ M. Skill Critical Damage +25%. -->
 		<icon>icon.skill19204</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="18761" toLevel="1" name="Red Libra's Appearance Potion - Kelbim's Light Armor">
+	<skill id="18761" toLevel="1" name="紅色天秤外型藥劑-凱爾烈光輕裝">
 		<!-- Changes the armor appearance to that of Kelbim's Light Armor. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2495,7 +2495,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18762" toLevel="1" name="Red Libra's Appearance Potion - Freya's Robe">
+	<skill id="18762" toLevel="1" name="紅色天秤外型藥劑-芙蕾雅長袍">
 		<!-- Changes the armor appearance to that of Freya's Robe. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2504,7 +2504,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18763" toLevel="1" name="Pink's Style Potion - Blue Dynasty Armor">
+	<skill id="18763" toLevel="1" name="粉粉的風格藥劑-藍色王朝">
 		<!-- Appearance changed by wearing the Blue Dynasty Armor. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2513,7 +2513,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18764" toLevel="1" name="Pink's Style Potion - White Assassin Suit">
+	<skill id="18764" toLevel="1" name="粉粉的風格藥劑-雪白刺客">
 		<!-- Changes the armor appearance to that of Light Assassin Outfit. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2522,7 +2522,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18765" toLevel="1" name="Red Libra's Appearance Potion - Formal Wear">
+	<skill id="18765" toLevel="1" name="紅色天秤外型藥劑-禮服">
 		<!-- Changes the armor appearance to that of Formal Wear. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2531,7 +2531,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18766" toLevel="1" name="Red Libra's Appearance Potion - Vampiric Outfit">
+	<skill id="18766" toLevel="1" name="紅色天秤外型藥劑-吸血鬼">
 		<!-- Changes the armor appearance to that of Vampiric Outfit. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2540,7 +2540,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18767" toLevel="1" name="Pink's Style Potion - Robin Hood Costume">
+	<skill id="18767" toLevel="1" name="粉粉的風格藥劑-綠色弓手">
 		<!-- Changes the armor appearance to that of Robin Hood Costume. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2549,7 +2549,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18768" toLevel="1" name="Red Libra's Appearance Potion - Magician Garment">
+	<skill id="18768" toLevel="1" name="紅色天秤外型藥劑-魔術師">
 		<!-- Changes the armor appearance to that of Magician Garment. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2558,15 +2558,15 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18769" toLevel="1" name="Faint Scroll: Enchant Elemental Shirt">
+	<skill id="18769" toLevel="1" name="朦朧的殷海薩襯衫強化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18770" toLevel="1" name="Shining Scroll: Enchant Shirt">
+	<skill id="18770" toLevel="1" name="燦爛的殷海薩襯衫強化卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18771" toLevel="1" name="Einhasad's Charisma Potion">
+	<skill id="18771" toLevel="1" name="殷海薩魅力藥劑">
 		<!-- For 30 min., CHA +5. The effect does not stack with Freya's Luck Potion, Freya's Charisma Potion and Archangel's Grace. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_instant_charisma_potion_i00</icon>
 		<operateType>A1</operateType>
@@ -2574,7 +2574,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="18772" toLevel="5" name="Horn Melody">
+	<skill id="18772" toLevel="5" name="角笛之詩">
 		<!-- Level 1: For 1 h., P. Atk. +28%, M. Atk. +97%, P. Def. +35%, M. Def. +40%. -->
 		<!-- Level 2: For 1 h., P. Atk. +28%, M. Atk. +97%, P. Def. +35%, M. Def. +40%. -->
 		<!-- Level 3: For 1 h., P. Atk. +28%, M. Atk. +97%, P. Def. +35%, M. Def. +40%. -->
@@ -2585,7 +2585,7 @@
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="18773" toLevel="5" name="Drum Melody">
+	<skill id="18773" toLevel="5" name="戰鼓之詩">
 		<!-- Level 1: For 1 h., Critical Rate for basic attacks +36%, Critical Damage for basic attacks +33%, M. Skill Critical Rate +4%, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 2: For 1 h., Critical Rate for basic attacks +36%, Critical Damage for basic attacks +33%, M. Skill Critical Rate +4%, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 3: For 1 h., Critical Rate for basic attacks +36%, Critical Damage for basic attacks +33%, M. Skill Critical Rate +4%, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
@@ -2596,7 +2596,7 @@
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="18774" toLevel="5" name="Pipe Organ Melody">
+	<skill id="18774" toLevel="5" name="風琴之詩">
 		<!-- Level 1: For 1 h., Max HP +43%, Max MP +68%, Max CP +43%. With a certain chance, Vampiric Rage effect +9%. -->
 		<!-- Level 2: For 1 h., Max HP +43%, Max MP +68%, Max CP +43%. With a certain chance, Vampiric Rage effect +9%. -->
 		<!-- Level 3: For 1 h., Max HP +43%, Max MP +68%, Max CP +43%. With a certain chance, Vampiric Rage effect +9%. -->
@@ -2607,7 +2607,7 @@
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="18775" toLevel="5" name="Guitar Melody">
+	<skill id="18775" toLevel="5" name="吉他之詩">
 		<!-- Level 1: For 1 h., Atk. Spd. +63%, Casting Spd. +61%, and all Skill MP Consumption -10%. -->
 		<!-- Level 2: For 1 h., Atk. Spd. +63%, Casting Spd. +61%, and all Skill MP Consumption -10%. -->
 		<!-- Level 3: For 1 h., Atk. Spd. +63%, Casting Spd. +61%, and all Skill MP Consumption -10%. -->
@@ -2618,21 +2618,21 @@
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18776" toLevel="4" name="Harp Melody">
+	<skill id="18776" toLevel="4" name="豎琴之詩">
 		<!-- For 1 h., P. Accuracy +8, P./ M. Evasion +8, Speed +37, received Critical Damage from basic attacks -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18777" toLevel="4" name="Lute Melody">
+	<skill id="18777" toLevel="4" name="琵琶之詩">
 		<!-- For 1 h., Atk.Spd. +37%, Casting Spd. +34%. With a certain chance, Vampiric Rage effect +9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18778" toLevel="2" name="Knight's Harmony">
+	<skill id="18778" toLevel="2" name="守護者和聲">
 		<!-- Level 1: For 1 h., P. Def. +45%, M. Def. +15%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +35%, Shield Defense Rate +30%, Shield Defense +50%. -->
 		<!-- Level 2: For 1 h., P. Def. +45%, M. Def. +35%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +35%, Shield Defense/ Shield Defense Rate +50%, received Critical Rate from basic attacks and M. skills -25%. -->
 		<icon>
@@ -2643,7 +2643,7 @@
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18779" toLevel="2" name="Warrior's Harmony">
+	<skill id="18779" toLevel="2" name="狂戰士和聲">
 		<!-- Level 1: For 1 h., P. Atk. +22%, Critical Rate for basic attacks +100%, Critical Damage for basic attacks +70%, Atk. Spd. +10%. -->
 		<!-- Level 2: For 1 h., P. Atk. +25%, Critical Rate for basic attacks +100%, Critical Damage for basic attacks +85%, Atk. Spd. +10%. With a certain chance, applies Spectral Slash on the target on a basic attack. -->
 		<icon>
@@ -2654,7 +2654,7 @@
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18780" toLevel="2" name="Wizard's Harmony">
+	<skill id="18780" toLevel="2" name="大賢者和聲">
 		<!-- Level 1: For 1 h., M. Atk. +40%, M. Skill Critical Rate +100%, Casting Spd. +15%, skill cooldown -20%, Skill MP Consumption -15%. -->
 		<!-- Level 2: For 1 h., M. Atk. +45%, M. Skill Critical Rate +100%, M. Skill Critical Damage +10%, Casting Spd. +15%, Attribute Attack +100, skill cooldown -20%, Skill MP Consumption -15%. -->
 		<icon>
@@ -2665,49 +2665,49 @@
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18781" toLevel="1" name="Prevailing Drum">
+	<skill id="18781" toLevel="1" name="戰鬥之鼓">
 		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, Vampiric Rage effect +8%. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18782" toLevel="1" name="Daring Drum">
+	<skill id="18782" toLevel="1" name="移動之鼓">
 		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, skill cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="18783" toLevel="1" name="Refreshing Drum">
+	<skill id="18783" toLevel="1" name="休息之鼓">
 		<!-- For 1 h., HP Recovery +75%, MP Recovery +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="18784" toLevel="1" name="Attribute Resistance">
+	<skill id="18784" toLevel="1" name="屬性抵抗">
 		<!-- For 1 h., Attribute Resistance +30. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18785" toLevel="1" name="Debuff Resistance">
+	<skill id="18785" toLevel="1" name="詛咒抵抗">
 		<!-- For 1 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18786" toLevel="1" name="Mental Resistance">
+	<skill id="18786" toLevel="1" name="心靈抵抗">
 		<!-- For 1 h., Buff Cancel Resistance/ Debuff Resistance +30. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="18787" toLevel="1" name="Angel Cat's Blessing">
+	<skill id="18787" toLevel="1" name="天使貓的祝福">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack +100, Skill MP Consumption -15%. Additionally, acquired XP/ SP +50%. This effect remains after death. -->
 		<icon>BranchSys3.g_blessing_of_angel_cat_i00</icon>
 		<operateType>A1</operateType>
@@ -2716,7 +2716,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="18788" toLevel="2" name="Puss the Cat's Blessing">
+	<skill id="18788" toLevel="2" name="普斯貓的祝福">
 		<!-- Level 1: The buff is active while Puss the Cat is growing a watermelon. Acquired XP +30%. When the buff expires, you can obtain Nectar (250 pcs.). Note that you cannot receive Nectar if you are dead. -->
 		<!-- Level 2: Due to Puss the Cat's Blessing, you can obtain Nectar (250 pcs.). Note that you cannot receive Nectar if you are dead. -->
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
@@ -2725,20 +2725,20 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18789" toLevel="1" name="Puss the Cat's Gift">
+	<skill id="18789" toLevel="1" name="普斯貓的禮物">
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18790" toLevel="1" name="Sweet Rice Cake">
+	<skill id="18790" toLevel="1" name="香甜松糕">
 		<!-- Vitality Recovery by 35,000 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="18791" toLevel="1" name="Traditional Hanbok">
+	<skill id="18791" toLevel="1" name="韓服衣裳">
 		<!-- Changes the armor appearance to that of Traditional Hanbok that is usually worn on the Eastern holidays. All stats +1. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -2753,7 +2753,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18793" toLevel="2" name="Spellbook: Vitality of the Exalted Lv. 2">
+	<skill id="18793" toLevel="2" name="魔法書-榮耀活力Lv2">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2788,7 +2788,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18794" toLevel="2" name="Puss the Cat's Blessing">
+	<skill id="18794" toLevel="2" name="普斯貓的祝福">
 		<!-- Level 1: The buff is active while Puss the Cat is growing a watermelon. Acquired XP +30%. When the buff expires, you can obtain Nectar (100 pcs.). Note that you cannot receive Nectar if you are dead. -->
 		<!-- Level 2: Due to Puss the Cat's Blessing, you can obtain Nectar (100 pcs.). Note that you cannot receive Nectar if you are dead. -->
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
@@ -2797,13 +2797,13 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18795" toLevel="1" name="Puss the Cat's Gift">
+	<skill id="18795" toLevel="1" name="普斯貓的禮物">
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18796" toLevel="3" name="Angel's Lucky Pack">
+	<skill id="18796" toLevel="3" name="奈比特祝福箱">
 		<!-- Level 1: Double-click to obtain 30 Shining Magic Baits. Also, you can obtain either Archangel's Grace Pack or Nevit's Blessing Pack. -->
 		<!-- Level 2: Double-click to obtain a rare and valuable item. -->
 		<!-- Level 3: Double-click to obtain a rare and valuable item. -->
@@ -2812,7 +2812,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="18797" toLevel="1" name="Nevit's Gold Hourglass">
+	<skill id="18797" toLevel="1" name="奈比特黃金沙漏">
 		<!-- For 30 min., acquired XP/ SP while hunting +50%. Grants 1 Shining Scroll of Growth each time you get 500,000 XP. To remove the effect, press Alt + Left Mouse Button. -->
 		<icon>icon.bm_nebit_bonus_time_up</icon>
 		<operateType>A2</operateType>
@@ -2857,7 +2857,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18798" toLevel="1" name="Shining Scroll of Growth">
+	<skill id="18798" toLevel="1" name="閃耀的成長書">
 		<!-- Double-click to obtain 1 billion XP. If character's level is lower than 99, the effectiveness is only 20%. Required level: 85+. -->
 		<icon>icon.bm_nebit_exp_book</icon>
 		<operateType>A1</operateType>
@@ -2876,7 +2876,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18799" toLevel="4" name="1st Gift Chest">
+	<skill id="18799" toLevel="4" name="半獸人黃金光芒箱子">
 		<!-- Double-click to obtain a reward with a certain chance. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

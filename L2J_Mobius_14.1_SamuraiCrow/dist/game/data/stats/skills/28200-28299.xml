@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="28200" toLevel="1" name="Adventurer's Circlet">
+	<skill id="28200" toLevel="1" name="探險家頭箍">
 		<!-- P. Atk. +3%, M. Atk. +5%. -->
 		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
 		<operateType>P</operateType>
@@ -15,12 +15,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28201" toLevel="1" name="Adventurer's Bracelet">
+	<skill id="28201" toLevel="1" name="探險家手鐲">
 		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1. Unlocks 3 talisman slots. -->
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="28202" toLevel="1" name="T-shirt Pack">
+	<skill id="28202" toLevel="1" name="襯衫禮盒">
 		<icon>icon.bm_strongbox</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -58,7 +58,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28203" toLevel="1" name="Greater Garnet - Purify">
+	<skill id="28203" toLevel="1" name="高級深紅寶石-淨化">
 		<!-- Removes all debuffs and makes you immune to debuffs for 7 sec. -->
 		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
 		<operateType>A2</operateType>
@@ -94,27 +94,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28204" toLevel="1" name="Box Containing War God's Soul">
+	<skill id="28204" toLevel="1" name="眾神的靈魂之箱">
 		<icon>icon.bm_strongbox</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28205" toLevel="1" name="Anniversary Rune 100%">
+	<skill id="28205" toLevel="1" name="14週年紀念古文100%">
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_5</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="28206" toLevel="1" name="Stable Book of Growth: Starlight Agathion Charm">
+	<skill id="28206" toLevel="1" name="安定的星之壺精幸運符成長書">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28207" toLevel="1" name="Summon Agathion Hut on Chicken Legs">
+	<skill id="28207" toLevel="1" name="召喚芭芭亞卡壺精">
 		<!-- Summons Agathion Hut on Chicken Legs. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28208" toLevel="1" name="Summon Agathion Minion Eye">
+	<skill id="28208" toLevel="1" name="召喚寵侍之瞳壺精">
 		<!-- Summons Agathion Minion Eye. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -129,19 +129,19 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="28209" toLevel="1" name="Summon Agathion Matryoshka">
+	<skill id="28209" toLevel="1" name="召喚俄羅斯娃娃壺精">
 		<!-- Summons Agathion Matryoshka. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28210" toLevel="1" name="Agathion's Trick - Hut on Chicken Legs">
+	<skill id="28210" toLevel="1" name="芭芭亞卡壺精撒嬌">
 		<!-- Shows agathion Hut on Chicken Legs' cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="28211" toLevel="1" name="Hut on Chicken Legs' Blessing - Dash">
+	<skill id="28211" toLevel="1" name="芭芭亞卡的祝福-衝刺">
 		<!-- Speed +100% for 10 sec. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A2</operateType>
@@ -161,7 +161,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28212" toLevel="1" name="Hut on Chicken Legs' Blessing - Invocation">
+	<skill id="28212" toLevel="1" name="芭芭亞卡的祝福-冥想">
 		<!-- For 30 sec., P. Def. -90%, recovers 134 MP per sec. The effect is removed when hit. -->
 		<icon>icon.skill1430</icon>
 		<operateType>A2</operateType>
@@ -188,7 +188,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28213" toLevel="1" name="Hut on Chicken Legs' Blessing - Decrease Weight">
+	<skill id="28213" toLevel="1" name="芭芭亞卡的祝福-閃亮">
 		<!-- Weight limit +9000, inventory slots +9. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -202,7 +202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28214" toLevel="1" name="Hut on Chicken Legs' Teleport: Aden">
+	<skill id="28214" toLevel="1" name="芭芭亞卡傳送-亞丁城鎮">
 		<!-- Teleports you to Aden. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -222,7 +222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28215" toLevel="1" name="Hut on Chicken Legs' Teleport: Rune">
+	<skill id="28215" toLevel="1" name="芭芭亞卡傳送-魯因城鎮">
 		<!-- Teleport to Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -242,7 +242,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28216" toLevel="1" name="Hut on Chicken Legs' Teleport: Giran">
+	<skill id="28216" toLevel="1" name="芭芭亞卡傳送-奇岩城鎮">
 		<!-- Teleports to Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -262,7 +262,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28217" toLevel="1" name="Minion Eye's Encouragement">
+	<skill id="28217" toLevel="1" name="寵侍之瞳的應援">
 		<!-- CON +3, MEN +3, weight limit +10,000, Max HP/ MP/ CP +300, skill cooldown -3%, MP Consumption -3%. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>P</operateType>
@@ -332,7 +332,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28218" toLevel="1" name="Minion Eye's Blessing - Resurrection">
+	<skill id="28218" toLevel="1" name="寵侍之瞳的祝福-返生術">
 		<!-- Enables Blessed Resurrection. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
@@ -355,7 +355,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28219" toLevel="1" name="Matryoshka's Gift">
+	<skill id="28219" toLevel="1" name="俄羅斯娃娃的禮物">
 		<!-- Grants a gift from Matryoshka. -->
 		<icon>icon.etc_pi_gift_box_i02</icon>
 		<operateType>A1</operateType>
@@ -363,7 +363,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>43200000</reuseDelay>
 	</skill>
-	<skill id="28220" toLevel="1" name="Matryoshka's Blessing">
+	<skill id="28220" toLevel="1" name="俄羅斯娃娃的祝福">
 		<!-- For 60 min., acquired XP/ SP while hunting +30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
@@ -385,7 +385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28221" toLevel="1" name="Matryoshka's Teleport - Talking Island Village">
+	<skill id="28221" toLevel="1" name="俄羅斯娃娃傳送-說話之島村莊">
 		<!-- Teleports you to Talking Island Village. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -405,7 +405,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28222" toLevel="1" name="Matryoshka's Teleport - Aden">
+	<skill id="28222" toLevel="1" name="俄羅斯娃娃傳送-亞丁城鎮">
 		<!-- Teleports you to Aden. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -425,7 +425,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28223" toLevel="1" name="Matryoshka's Teleport - Ancient City Arcan">
+	<skill id="28223" toLevel="1" name="俄羅斯娃娃傳送-瑪格門">
 		<!-- Teleports you to Ancient City Arcan in Magmeld. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -445,7 +445,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28224" toLevel="1" name="Matryoshka's Teleport - Keucereus Alliance Base">
+	<skill id="28224" toLevel="1" name="俄羅斯娃娃傳送-柯塞勒斯同盟基地">
 		<!-- Teleports you to Keucereus Alliance Base. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -465,55 +465,55 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28225" toLevel="1" name="+7 Elmoreden Cloak Box">
+	<skill id="28225" toLevel="1" name="+7艾爾摩亞丁斗篷禮盒">
 		<!-- Double-click to obtain Elmoreden Cloak enchanted to +7. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="28226" toLevel="1" name="+7 Aden Cloak Box">
+	<skill id="28226" toLevel="1" name="+7亞丁斗篷禮盒">
 		<!-- Double-click to obtain a +7 Aden Cloak. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="28227" toLevel="1" name="+7 Elmore Cloak Box">
+	<skill id="28227" toLevel="1" name="+7艾爾摩斗篷禮盒">
 		<!-- Double-click to obtain Elmore Cloak enchanted to +7. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="28228" toLevel="1" name="+7 Ferios Cloak Box">
+	<skill id="28228" toLevel="1" name="+7貝里歐斯斗篷禮盒">
 		<!-- Double-click to obtain Ferios Cloak enchanted to +7. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="28229" toLevel="1" name="Reconstruction Society's Pack">
+	<skill id="28229" toLevel="1" name="重建聯合的強化禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28230" toLevel="1" name="Summon Agathion Gnosian">
+	<skill id="28230" toLevel="1" name="召喚格諾席安壺精">
 		<!-- Summons Agathion Gnosian. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28231" toLevel="1" name="Summon Agathion Orodriel">
+	<skill id="28231" toLevel="1" name="召喚奧羅德利爾壺精">
 		<!-- Summons Agathion Orodriel. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28232" toLevel="1" name="Summon Agathion Penalty Kick">
+	<skill id="28232" toLevel="1" name="召喚十二碼罰球壺精">
 		<!-- Summons Penalty Kick agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28233" toLevel="1" name="Agathion's Cute Trick">
+	<skill id="28233" toLevel="1" name="壺精撒嬌">
 		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -528,14 +528,14 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="28234" toLevel="1" name="Freya's Shopping Bag">
+	<skill id="28234" toLevel="1" name="芙蕾雅的心動禮物袋">
 		<!-- Double-click to obtain Freya's Frozen Scroll. There is also a chance to additionally obtain one of the following items: Freya's/ Sirra's/ Snowman's Winter Card. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28235" toLevel="3" name="Freya's Winter Card">
+	<skill id="28235" toLevel="3" name="雪人寒冬卡片">
 		<!-- Level 1: Double-click to randomly obtain an item from a selection of rare items including rare accessories. -->
 		<!-- Level 2: Double-click to obtain an item for enchanting equipment. -->
 		<!-- Level 3: Double-click to randomly obtain an item from a selection of various character growth and enhancement items. -->
@@ -544,73 +544,73 @@
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28236" toLevel="1" name="Sibi's Suspicious Supplies">
+	<skill id="28236" toLevel="1" name="西比斯的獎賞補給品">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28237" toLevel="1" name="Water Dragon's Treasure Chest">
+	<skill id="28237" toLevel="1" name="水龍寶箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28238" toLevel="1" name="Summon Agathion Meliodas">
+	<skill id="28238" toLevel="1" name="召喚梅里奧達斯壺精">
 		<!-- Summons Meliodas agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28239" toLevel="1" name="Summon Agathion Elizabeth">
+	<skill id="28239" toLevel="1" name="召喚伊莉莎白壺精">
 		<!-- Summons Agathion Elizabeth. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28240" toLevel="1" name="Summon Agathion Hawk">
+	<skill id="28240" toLevel="1" name="召喚霍克壺精">
 		<!-- Summons Hawk agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28241" toLevel="1" name="Summon Agathion Ban">
+	<skill id="28241" toLevel="1" name="召喚班壺精">
 		<!-- Summons Ban agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28242" toLevel="1" name="Summon Agathion Diane">
+	<skill id="28242" toLevel="1" name="召喚黛安娜壺精">
 		<!-- Summons Diane agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28243" toLevel="1" name="Summon Agathion King">
+	<skill id="28243" toLevel="1" name="召喚金壺精">
 		<!-- Summons King agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28244" toLevel="1" name="Summon Agathion Merlin">
+	<skill id="28244" toLevel="1" name="召喚瑪琳壺精">
 		<!-- Summons Agathion Merlin. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28245" toLevel="1" name="Summon Agathion Gowther">
+	<skill id="28245" toLevel="1" name="召喚高瑟壺精">
 		<!-- Summons Gowther agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28246" toLevel="1" name="Summon Agathion Escanor">
+	<skill id="28246" toLevel="1" name="召喚艾斯卡諾壺精">
 		<!-- Summons Escanor agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="28247" toLevel="9" name="Seven Deadly Sins - Meliodas">
+	<skill id="28247" toLevel="9" name="七大罪-梅里奧達斯">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and CHA are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -736,7 +736,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28248" toLevel="9" name="Seven Deadly Sins - Elizabeth">
+	<skill id="28248" toLevel="9" name="七大罪-伊莉莎白">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and Recovery Potions' Effect are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -890,7 +890,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28249" toLevel="9" name="Seven Deadly Sins - Hawk">
+	<skill id="28249" toLevel="9" name="七大罪-霍克">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and LUC are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -1016,7 +1016,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28250" toLevel="9" name="Seven Deadly Sins - Ban">
+	<skill id="28250" toLevel="9" name="七大罪-班">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and DEX are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -1142,7 +1142,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28251" toLevel="9" name="Seven Deadly Sins - Diane">
+	<skill id="28251" toLevel="9" name="七大罪-黛安娜">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and STR are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -1268,7 +1268,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28252" toLevel="9" name="Seven Deadly Sins - King">
+	<skill id="28252" toLevel="9" name="七大罪-金">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and WIT are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -1394,7 +1394,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28253" toLevel="9" name="Seven Deadly Sins - Merlin">
+	<skill id="28253" toLevel="9" name="七大罪-瑪琳">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and INT are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -1520,7 +1520,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28254" toLevel="9" name="Seven Deadly Sins - Gowther">
+	<skill id="28254" toLevel="9" name="七大罪-高瑟">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and MEN are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -1646,7 +1646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28255" toLevel="9" name="Seven Deadly Sins - Escanor">
+	<skill id="28255" toLevel="9" name="七大罪-艾斯卡諾">
 		<!-- Level 1: Attribute Resistance, Attribute Attack and CON are increased when the agathion grows. -->
 		<!-- Level 2: Attribute Resistance +5. -->
 		<!-- Level 3: Attribute Resistance +10. -->
@@ -1772,7 +1772,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28256" toLevel="9" name="Sin of Wrath">
+	<skill id="28256" toLevel="9" name="憤怒之罪">
 		<!-- Level 1: PvE damage to common monsters is increased when the agathion grows. -->
 		<!-- Level 2: PvE damage to common monsters +1%. -->
 		<!-- Level 3: PvE damage to common monsters +2%. -->
@@ -1829,7 +1829,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28257" toLevel="9" name="Divine Family Power">
+	<skill id="28257" toLevel="9" name="女神族之力">
 		<!-- Level 1: Received PvE damage is decreased when the agathion grows. -->
 		<!-- Level 2: Received PvE damage -1%. -->
 		<!-- Level 3: Received PvE damage -2%. -->
@@ -1886,7 +1886,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28258" toLevel="8" name="Boar Hat Pub Pig Mark">
+	<skill id="28258" toLevel="8" name="豬帽子酒館看板豬">
 		<!-- Level 1: Acquired XP/ SP are increased when the agathion grows. -->
 		<!-- Level 2: Acquired XP/ SP +1% -->
 		<!-- Level 3: Acquired XP/ SP +2% -->
@@ -1924,7 +1924,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28259" toLevel="8" name="Sin of Greed">
+	<skill id="28259" toLevel="8" name="貪婪之罪">
 		<!-- Level 1: P. Skill Critical Rate is increased when the agathion grows. -->
 		<!-- Level 2: P. Skill Critical Rate +1%. -->
 		<!-- Level 3: P. Skill Critical Rate +2%. -->
@@ -1951,7 +1951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28260" toLevel="8" name="Sin of Envy">
+	<skill id="28260" toLevel="8" name="嫉妒之罪">
 		<!-- Level 1: P. Atk. is increased when the agathion grows. -->
 		<!-- Level 2: P. Atk. +1%. -->
 		<!-- Level 3: P. Atk. +2%. -->
@@ -1978,7 +1978,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28261" toLevel="8" name="Sin of Sloth">
+	<skill id="28261" toLevel="8" name="怠惰之罪">
 		<!-- Level 1: Skill MP Consumption is decreased when the agathion grows. -->
 		<!-- Level 2: Skill MP Consumption -1% -->
 		<!-- Level 3: Skill MP Consumption -2% -->
@@ -2020,7 +2020,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28262" toLevel="8" name="Sin of Gluttony">
+	<skill id="28262" toLevel="8" name="暴食之罪">
 		<!-- Level 1: M. Def. is increased when the agathion grows. -->
 		<!-- Level 2: M. Def. +1%. -->
 		<!-- Level 3: M. Def. +2%. -->
@@ -2047,7 +2047,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28263" toLevel="8" name="Sin of Lust">
+	<skill id="28263" toLevel="8" name="色慾之罪">
 		<!-- Level 1: Debuff Resistance is increased when the agathion grows. -->
 		<!-- Level 2: Debuff Resistance +1%. -->
 		<!-- Level 3: Debuff Resistance +2%. -->
@@ -2074,7 +2074,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28264" toLevel="8" name="Sin of Pride">
+	<skill id="28264" toLevel="8" name="傲慢之罪">
 		<!-- Level 1: P. Def. is increased when the agathion grows. -->
 		<!-- Level 2: P. Def. +1%. -->
 		<!-- Level 3: P. Def. +2%. -->
@@ -2101,7 +2101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28265" toLevel="8" name="Demonic Sword Lostvayne's Power">
+	<skill id="28265" toLevel="8" name="魔劍 失落的凡恩之力">
 		<!-- Level 1: PvP damage is increased when the agathion grows. -->
 		<!-- Level 2: PvP damage +1%. -->
 		<!-- Level 3: PvP damage +2%. -->
@@ -2154,7 +2154,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28266" toLevel="8" name="Tranquility Magic Power">
+	<skill id="28266" toLevel="8" name="撫慰的超魔力">
 		<!-- Level 1: Received PvP damage is decreased when the agathion grows. -->
 		<!-- Level 2: Received PvP damage -1%. -->
 		<!-- Level 3: Received PvP damage -2%. -->
@@ -2207,7 +2207,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28267" toLevel="8" name="Leftover Cleaning Knights' Power">
+	<skill id="28267" toLevel="8" name="剩飯處理騎士團出動！">
 		<!-- Level 1: Acquired XP/ SP while hunting are increased when the agathion grows. -->
 		<!-- Level 2: Acquired XP/ SP while hunting +1%. -->
 		<!-- Level 3: Acquired XP/ SP while hunting +2%. -->
@@ -2245,7 +2245,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28268" toLevel="8" name="Holy Staff Courechouse Power">
+	<skill id="28268" toLevel="8" name="聖棍 克雷修斯之力">
 		<!-- Level 1: Skill cooldown is decreased when the agathion grows. -->
 		<!-- Level 2: Skill cooldown -1%. -->
 		<!-- Level 3: Skill cooldown -2%. -->
@@ -2273,7 +2273,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28269" toLevel="8" name="War Hammer Gideon Power">
+	<skill id="28269" toLevel="8" name="戰鎚 破壞者之力">
 		<!-- Level 1: P. Critical Damage is increased when the agathion grows. -->
 		<!-- Level 2: P. Critical Damage +1%. -->
 		<!-- Level 3: P. Critical Damage +2%. -->
@@ -2300,7 +2300,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28270" toLevel="8" name="Spirit Spear Chastiefol Power">
+	<skill id="28270" toLevel="8" name="靈槍 夏斯提弗之力">
 		<!-- Level 1: M. Atk. is increased when the agathion grows. -->
 		<!-- Level 2: M. Atk. +1%. -->
 		<!-- Level 3: M. Atk. +3%. -->
@@ -2327,7 +2327,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28271" toLevel="8" name="Morning Star Aldan Power">
+	<skill id="28271" toLevel="8" name="明星 阿爾丹之力">
 		<!-- Level 1: M. Critical Damage is increased when the agathion grows. -->
 		<!-- Level 2: M. Critical Damage +1%. -->
 		<!-- Level 3: M. Critical Damage +2%. -->
@@ -2354,7 +2354,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28272" toLevel="8" name="Twin Bow Herritt Power">
+	<skill id="28272" toLevel="8" name="雙弓 哈利特之力">
 		<!-- Level 1: Damage to immobilized targets is increased when the agathion grows. -->
 		<!-- Level 2: Damage to immobilized targets +1%. -->
 		<!-- Level 3: Damage to immobilized targets +2%. -->
@@ -2394,7 +2394,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28273" toLevel="8" name="Divine Axe Rhitta Power">
+	<skill id="28273" toLevel="8" name="神斧 利塔之力">
 		<!-- Level 1: Received P. Critical Damage is decreased when the agathion grows. -->
 		<!-- Level 2: Received P. Critical Damage -1%. -->
 		<!-- Level 3: Received P. Critical Damage -2%. -->
@@ -2434,20 +2434,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28274" toLevel="1" name="Book of Growth: Agathion Seven Deadly Sins">
+	<skill id="28274" toLevel="1" name="七大罪壺精幸運符成長書">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28275" toLevel="1" name="Merlin's Magic Bracelet">
+	<skill id="28275" toLevel="1" name="瑪琳魔法手鐲">
 		<!-- Activates the agathion's main slot and 2 additional slots. -->
 		<icon>BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="28276" toLevel="1" name="Seven Deadly Sins Card Pouch">
+	<skill id="28276" toLevel="1" name="七大罪卡片小袋">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28277" toLevel="1" name="Legendary Knights Card - Seven Deadly Sins">
+	<skill id="28277" toLevel="1" name="傳說騎士團卡片：七大罪">
 		<!-- For 2 h., acquired XP/ SP +30%, Vitality bonus +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +15%, Damage Reflection +20%. -->
 		<icon>BranchIcon.icon.icon_card_sin_meli_legend</icon>
 		<operateType>P</operateType>
@@ -2482,29 +2482,29 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28278" toLevel="1" name="Animate Appearance Stone Pack">
+	<skill id="28278" toLevel="1" name="鼓舞加工石隨機禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28279" toLevel="1" name="+5 Agathion Hawk Lv. 3 (7-day) Pack">
+	<skill id="28279" toLevel="1" name="+5霍克壺精幸運符-階段3(7日)禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="28280" toLevel="1" name="Novice's Sprout">
+	<skill id="28280" toLevel="1" name="新手玩家用幼苗">
 		<!-- For new adventurers in Aden. -->
 		<icon>icon.s_newbie_user_display</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="28281" toLevel="1" name="Goddess Eva's Treasure Chest">
+	<skill id="28281" toLevel="1" name="女神伊娃的寶箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28282" toLevel="2" name="Peeves' Red Potion">
+	<skill id="28282" toLevel="2" name="皮弗斯紫色藥水">
 		<!-- Level 1: For 30 min., acquired XP/ SP +30%, Vitality bonus +30%, P. Atk./ P. Def./ M. Atk./ M. Def. +15%. -->
 		<!-- Level 2: For 30 min., acquired XP/ SP +50%, Vitality bonus +50%, P. Atk./ P. Def./ M. Atk./ M. Def., Critical Damage for basic attacks, P./ M. Skill Power +15%. The effect does not stack with that of Peeves' Red Potion. -->
 		<icon>
@@ -2588,7 +2588,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28283" toLevel="1" name="Peeves' Yellow Potion">
+	<skill id="28283" toLevel="1" name="皮弗斯黃色藥水">
 		<icon>BranchIcon.etc_sign_agathion_feed_yellow_i00</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2613,7 +2613,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28284" toLevel="4" name="Peeves' Blue Potion (1-hour)">
+	<skill id="28284" toLevel="4" name="皮弗斯藍色藥水(8小時)">
 		<!-- Level 1: When used, increases Successful Fishing XP/ SP by 50% for 1 h. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<!-- Level 2: When used, increases Successful Fishing XP/ SP by 50% for 2 h. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<!-- Level 3: When used, increases Successful Fishing XP/ SP by 50% for 4 h. Applied to all bait. Can be stacked with Angler's Blessing. -->
@@ -2651,7 +2651,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28285" toLevel="1" name="Honey Rose Beer">
+	<skill id="28285" toLevel="1" name="蜂蜜玫瑰啤酒">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -30 min.0, Skill MP Consumption -30 min.1. The effect remains after death. -->
 		<icon>BranchSys3.Icon1.g_beerfestival_bavarian_beer</icon>
 		<operateType>A2</operateType>
@@ -2763,7 +2763,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28286" toLevel="1" name="Honey Rose Beer">
+	<skill id="28286" toLevel="1" name="蜂蜜玫瑰啤酒">
 		<!-- For 2 h., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -2 h.0, Skill MP Consumption -2 h.1. The effect remains after death. -->
 		<icon>BranchSys3.Icon1.g_beerfestival_bavarian_beer</icon>
 		<operateType>A2</operateType>
@@ -2875,60 +2875,60 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28287" toLevel="1" name="Jewel Box Lv. 4">
+	<skill id="28287" toLevel="1" name="等級4寶石禮盒">
 		<!-- Double-click to obtain one of Lv. 4 La Vie En Rose's jewels. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28288" toLevel="1" name="Jewel Box Lv. 5">
+	<skill id="28288" toLevel="1" name="等級5寶石禮盒">
 		<!-- Double-click to obtain one of Lv. 5 La Vie En Rose's jewels. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28289" toLevel="1" name="Paulina's Magic Bracelet">
+	<skill id="28289" toLevel="1" name="波莉奈魔法手鐲">
 		<!-- Activates the agathion's main slot and 2 additional slots. -->
 		<icon>BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="28290" toLevel="3" name="Rare Artifact Pack">
+	<skill id="28290" toLevel="3" name="稀有聖紋石箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28291" toLevel="1" name="Water Spirit's Gift">
+	<skill id="28291" toLevel="1" name="水之精靈的禮物">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28292" toLevel="1" name="Ancient Relic">
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
-		<hitTime>500</hitTime>
-		<reuseDelay>500</reuseDelay>
-	</skill>
-	<skill id="28293" toLevel="1" name="Ancient Relic Pack">
+	<skill id="28292" toLevel="1" name="古代遺物">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28294" toLevel="1" name="Shining Ancient Relic Pack">
+	<skill id="28293" toLevel="1" name="古代遺物箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28295" toLevel="1" name="Ultimate Jewelry Box Lv. 3">
+	<skill id="28294" toLevel="1" name="閃耀的古代遺物箱">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28295" toLevel="1" name="終極等級3寶石盒">
 		<!-- Double-click to obtain a Lv. 3 jewel. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2989,7 +2989,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28296" toLevel="1" name="Ultimate Jewelry Box Lv. 4">
+	<skill id="28296" toLevel="1" name="終極等級4寶石盒">
 		<!-- Double-click to obtain a Lv. 4 jewel. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -3050,7 +3050,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28297" toLevel="1" name="Ultimate Jewelry Box Lv. 5">
+	<skill id="28297" toLevel="1" name="終極等級5寶石盒">
 		<!-- Double-click to obtain a Lv. 5 jewel. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -3117,14 +3117,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28298" toLevel="1" name="Jewel Box Lv. 3">
+	<skill id="28298" toLevel="1" name="等級3寶石禮盒">
 		<!-- Double-click to obtain 1 of the Lv. 3 La Vie En Rose's Jewelry Boxes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="28299" toLevel="1" name="Transformation Scroll: Kat the Cat">
+	<skill id="28299" toLevel="1" name="戰鬥貓刻印書">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="32700" toLevel="1" name="Aqua Prison">
+	<skill id="32700" toLevel="1" name="水之牢籠">
 		<!-- Traps the target inside a water drop, immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32644</icon>
 		<operateType>A1</operateType>
@@ -36,7 +36,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32701" toLevel="1" name="Surrender to Water">
+	<skill id="32701" toLevel="1" name="水之陷落">
 		<!-- Decrease the enemy's Water Attack Resistance. Inflicted status: Debilitation. -->
 		<icon>icon.skill1071</icon>
 		<operateType>A1</operateType>
@@ -73,7 +73,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32702" toLevel="1" name="Mass Surrender to Water">
+	<skill id="32702" toLevel="1" name="水之陷落結界">
 		<!-- Decrease the enemies' Water Attack Resistance. Inflicted status: Debilitation. -->
 		<icon>icon.skill1071</icon>
 		<operateType>A1</operateType>
@@ -112,7 +112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32703" toLevel="1" name="Aqua Heal">
+	<skill id="32703" toLevel="1" name="水之治癒">
 		<!-- Restores the target's HP. -->
 		<icon>icon.skill1015</icon>
 		<operateType>A1</operateType>
@@ -135,7 +135,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32704" toLevel="1" name="Bite Attack">
+	<skill id="32704" toLevel="1" name="撕咬攻擊">
 		<!-- Bites the enemy. -->
 		<icon>icon.skill0325</icon>
 		<operateType>A1</operateType>
@@ -157,7 +157,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32705" toLevel="1" name="Fafurion: Basic Attack">
+	<skill id="32705" toLevel="1" name="法利昂攻擊">
 		<!-- Fafurion Basic Attack -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -180,7 +180,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32706" toLevel="1" name="Fafurion Bite">
+	<skill id="32706" toLevel="1" name="法利昂撕咬">
 		<!-- Fafurion's bite deals damage inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32706</icon>
 		<operateType>A1</operateType>
@@ -215,7 +215,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32707" toLevel="1" name="Fafurion: Water Blast">
+	<skill id="32707" toLevel="1" name="法利昂水流爆裂">
 		<!-- Water Blast Presentation -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -224,7 +224,7 @@
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32708" toLevel="2" name="Fafurion: Water Blast">
+	<skill id="32708" toLevel="2" name="法利昂水流爆裂">
 		<!-- Level 1: Suffering magic damage caused by the water pillar that Fafurion summoned and being blown away. -->
 		<!-- Level 2: Fafurion attacks with water magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32708</icon>
@@ -273,7 +273,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32709" toLevel="1" name="Fafurion: Water Spiral">
+	<skill id="32709" toLevel="1" name="法利昂水螺旋">
 		<!-- Fafurion summons a water vortex dealing water damage. Inflicted status: Pull. -->
 		<icon>icon.skill32709</icon>
 		<operateType>A1</operateType>
@@ -283,7 +283,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32710" toLevel="1" name="Fafurion's Hydro Blast">
+	<skill id="32710" toLevel="1" name="法利昂水之爆裂">
 		<!-- Hydro Blast Presentation -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -292,7 +292,7 @@
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32711" toLevel="2" name="Fafurion's Hydro Blast">
+	<skill id="32711" toLevel="2" name="法利昂水之爆裂">
 		<!-- Level 1: Suffering magic damage caused by the water pillar that Fafurion summoned and being blown away. -->
 		<!-- Level 2: Fafurion attacks with water magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>
@@ -344,7 +344,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32712" toLevel="1" name="Fafurion Hydro Spiral">
+	<skill id="32712" toLevel="1" name="法利昂水旋">
 		<!-- Fafurion summons a water vortex dealing water damage. Inflicted status: Pull. -->
 		<icon>icon.skill32709</icon>
 		<operateType>CA1</operateType>
@@ -377,7 +377,7 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="32713" toLevel="1" name="Fafurion: Tail Strike">
+	<skill id="32713" toLevel="1" name="法利昂爪擊">
 		<!-- Fafurion's smashing tail deals damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32713</icon>
 		<operateType>A2</operateType>
@@ -406,7 +406,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32714" toLevel="1" name="Fafurion: Tail Strike">
+	<skill id="32714" toLevel="1" name="法利昂爪擊">
 		<!-- Fafurion's smashing tail deals damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32713</icon>
 		<operateType>A2</operateType>
@@ -435,7 +435,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32715" toLevel="1" name="Fafurion: Water Wave">
+	<skill id="32715" toLevel="1" name="法利昂水震波">
 		<!-- Fafurion summons a wave dealing M. damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32715</icon>
 		<operateType>A2</operateType>
@@ -481,7 +481,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32716" toLevel="3" name="Fafurion Breath">
+	<skill id="32716" toLevel="3" name="法利昂氣息">
 		<!-- Level 1: Fafurion inflicts physical damage to enemies in front of it. -->
 		<!-- Level 2: Knocked back after receiving physical damage from Fafurion's breath. -->
 		<!-- Level 3: Fafurion deals physical damage to enemies in front and knocks them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -518,7 +518,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32717" toLevel="2" name="Fafurion Fear">
+	<skill id="32717" toLevel="2" name="法利昂恐懼">
 		<!-- Level 1: Fafurion's magic aura frightens his enemies making them run away and decreasing their P./ M. Def. -->
 		<!-- Level 2: Fafurion's magic aura frightens his enemies making them run away and decreasing their P./ M. Def. and Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32717</icon>
@@ -558,7 +558,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32718" toLevel="1" name="Fafurion: Power Stamp">
+	<skill id="32718" toLevel="1" name="法利昂能量戳記">
 		<!-- Fafurion deals physical damage to enemies and stuns them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32718</icon>
 		<operateType>A1</operateType>
@@ -588,7 +588,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32719" toLevel="1" name="Fafurion: Summon Water Orb">
+	<skill id="32719" toLevel="1" name="法利昂召喚水球">
 		<!-- Water Orb summoning presentation. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -597,7 +597,7 @@
 		<hitTime>5000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32720" toLevel="1" name="Fafurion: Water Bomb">
+	<skill id="32720" toLevel="1" name="法利昂水炸彈">
 		<!-- The orb casts magic that inflicts great water damage on the aimed target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -607,7 +607,7 @@
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32721" toLevel="1" name="Fafurion Wing Strike">
+	<skill id="32721" toLevel="1" name="法利昂翼擊">
 		<!-- Fafurion attacks enemies in front with wind magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32721</icon>
 		<operateType>A1</operateType>
@@ -642,7 +642,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32722" toLevel="1" name="Fafurion: Tidal Wave">
+	<skill id="32722" toLevel="1" name="法利昂潮汐波濤">
 		<!-- Tidal Wave Presentation -->
 		<icon>icon.skill32722</icon>
 		<operateType>A1</operateType>
@@ -651,7 +651,7 @@
 		<hitTime>7000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32723" toLevel="2" name="Fafurion: Tidal Wave">
+	<skill id="32723" toLevel="2" name="法利昂潮汐波濤">
 		<!-- Fafurion summons a huge wave dealing M. damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32722</icon>
 		<operateType>A2</operateType>
@@ -696,7 +696,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32724" toLevel="1" name="Fafurion Fury">
+	<skill id="32724" toLevel="1" name="法利昂狂暴">
 		<!-- Fafurion becomes enraged, increasing its P. Atk./ M. Atk. -->
 		<icon>icon.skill32724</icon>
 		<operateType>A1</operateType>
@@ -705,7 +705,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32725" toLevel="1" name="Fafurion Berserk">
+	<skill id="32725" toLevel="1" name="法利昂狂暴憤怒">
 		<!-- Livid, Fafurion has changed its appearance, and its P. Atk./ M. Atk. has increased. -->
 		<icon>icon.skill32724</icon>
 		<operateType>A1</operateType>
@@ -714,7 +714,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32726" toLevel="1" name="Fafurion">
+	<skill id="32726" toLevel="1" name="法利昂">
 		<!-- The Water Dragon spawned by Shillien. He slumbered for a long time deep in the sea, his fury controlled by the Elven Witch. However, when the Seven Seals were damaged, he woke up. Now Fafurion, powered by his fury, seeks to resurrect Shillien. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
@@ -723,21 +723,21 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="32727" toLevel="3" name="Fafurion's Arrogance Lv. 1">
+	<skill id="32727" toLevel="3" name="法利昂傲慢-階段3">
 		<!-- Level 1: Fafurion is not very confident of his own powers. -->
 		<!-- Level 2: Fafurion is gradually gaining confidence in his own powers. -->
 		<!-- Level 3: Fafurion is sure of his own powers. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="32728" toLevel="3" name="Fafurion's Anger Lv. 1">
+	<skill id="32728" toLevel="3" name="法利昂憤怒-階段3">
 		<!-- Level 1: Fafurion gets angry as he suffers at the hands of the challengers. -->
 		<!-- Level 2: Fafurion is growing even angrier from the constant pain caused by the challengers. -->
 		<!-- Level 3: Fafurion is infuriated by the massive pain he is feeling. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="32729" toLevel="1" name="Priestess's Prayer">
+	<skill id="32729" toLevel="1" name="巫女的祈禱">
 		<!-- A prayer that the priestess chants to quell Fafurion's rage. If the prayer works, Fafurion's rage decreases sharply. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -747,7 +747,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="32730" toLevel="1" name="Breath">
+	<skill id="32730" toLevel="1" name="氣息">
 		<!-- Inflicts damage on enemies at the front. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -774,7 +774,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32731" toLevel="1" name="Water Wave">
+	<skill id="32731" toLevel="1" name="水震波">
 		<!-- Creates a wave around you to inflict damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -795,7 +795,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32732" toLevel="1" name="Tail Strike">
+	<skill id="32732" toLevel="1" name="爪擊">
 		<!-- Attacks enemies in the back with the tail, dealing damage and stunning them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32713</icon>
 		<operateType>A2</operateType>
@@ -822,7 +822,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32733" toLevel="1" name="Spine Attack">
+	<skill id="32733" toLevel="1" name="脊柱攻擊">
 		<!-- Spreads wings to inflict damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -843,7 +843,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32734" toLevel="2" name="Spiral Shot">
+	<skill id="32734" toLevel="2" name="螺旋射擊">
 		<!-- Level 1: Slashes with its forelegs and appendages. -->
 		<!-- Level 2: Deals physical damage inflicting Bleed and gradually decreasing HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>
@@ -871,7 +871,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32735" toLevel="2" name="Sword Earthquake">
+	<skill id="32735" toLevel="2" name="烈震閃劍">
 		<!-- Level 1: Deals great damage and stuns. -->
 		<!-- Level 2: Deals physical damage and stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>
@@ -913,7 +913,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32736" toLevel="2" name="Shield Bash">
+	<skill id="32736" toLevel="2" name="重擊盾">
 		<!-- Level 1: Swings a shield to inflict damage on enemies in front and knock them down. -->
 		<!-- Level 2: Deals physical damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>
@@ -957,7 +957,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32737" toLevel="2" name="Shield Dash">
+	<skill id="32737" toLevel="2" name="衝刺盾">
 		<!-- Level 1: Dashes at the target in front, damaging and stunning it. -->
 		<!-- Level 2: Charges to the enemy, deals physical damage and stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>
@@ -1003,7 +1003,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32738" toLevel="1" name="Water Shield">
+	<skill id="32738" toLevel="1" name="水盾">
 		<!-- Uses water to sharply increase P. Def. -->
 		<icon>icon.skill1238</icon>
 		<operateType>A2</operateType>
@@ -1024,7 +1024,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32739" toLevel="2" name="Water Spout">
+	<skill id="32739" toLevel="2" name="海龍捲">
 		<!-- Level 1: Uses water to inflict damage on nearby enemies and pull them. -->
 		<!-- Level 2: Pulled forcefully after receiving damage from a surging whirlpool. -->
 		<icon>
@@ -1067,7 +1067,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32740" toLevel="1" name="Aqua Arrow">
+	<skill id="32740" toLevel="1" name="水箭">
 		<!-- Shoots a giant arrow imbued with the Water attribute at the target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1087,7 +1087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32741" toLevel="1" name="Arrow Flush">
+	<skill id="32741" toLevel="1" name="湧流之箭">
 		<!-- Shoots several arrows imbued with the Water attribute, attacking the target and nearby enemies and knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11025</icon>
 		<operateType>A2</operateType>
@@ -1120,7 +1120,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32742" toLevel="1" name="Water Wave">
+	<skill id="32742" toLevel="1" name="水之波濤">
 		<!-- Causes a wave in front of you, dealing magic damage and decreasing Atk. Spd./ Casting Spd./ Speed. Inflicted status: Debilitation. -->
 		<icon>icon.oasis_feel</icon>
 		<operateType>A2</operateType>
@@ -1159,7 +1159,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32743" toLevel="1" name="Surge Wave">
+	<skill id="32743" toLevel="1" name="波濤洶湧">
 		<!-- Attacks the target and nearby enemies decreasing their MP continuously. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill5016</icon>
 		<operateType>A2</operateType>
@@ -1201,7 +1201,7 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="32744" toLevel="1" name="Fafurion's Blessing">
+	<skill id="32744" toLevel="1" name="法利昂祝福">
 		<!-- Fafurion's power increases M. Atk./ Casting Spd./ M. Def. -->
 		<icon>icon.skill4280</icon>
 		<operateType>A2</operateType>
@@ -1232,36 +1232,36 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32746" toLevel="1" name="Suicide Big Bomb">
+	<skill id="32746" toLevel="1" name="自爆巨彈">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="32747" toLevel="1" name="Cyrax">
+	<skill id="32747" toLevel="1" name="薩拉克斯">
 		<!-- A guardian protecting Fafurion Temple. Since Fafurion ordered it to guard the path to his nest, Cyrax has been guarding Fafurion Temple. To defeat Fafurion, you must first eliminate Cyrax. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="32748" toLevel="1" name="Sword's Melody 1">
+	<skill id="32748" toLevel="1" name="劍之旋律1">
 		<!-- An upbeat melody perfect for battle. For 2 h., acquired XP/ SP +5%. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="32749" toLevel="1" name="Sword's Melody 2">
+	<skill id="32749" toLevel="1" name="劍之旋律2">
 		<!-- An upbeat melody perfect for battle. For 2 h., acquired XP/ SP +30%, P. Atk./ M. Atk./ P. Def./ M. Def., Max HP/ MP +5%. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="32750" toLevel="1" name="Sword's Melody 3">
+	<skill id="32750" toLevel="1" name="劍之旋律3">
 		<!-- An upbeat melody perfect for battle. For 2 h., acquired XP/ SP +30%, P. Atk./ M. Atk./ P. Def./ M. Def., Max HP/ MP +10%. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="32751" toLevel="1" name="Limit Barrier">
+	<skill id="32751" toLevel="1" name="極限屏障">
 		<!-- The barrier protects from 600 hits. If you don't deal 600 hits for 15 sec., the boss' HP will be fully restored. -->
 		<icon>icon.skill11621</icon>
 		<operateType>A2</operateType>
@@ -1295,7 +1295,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32752" toLevel="1" name="Maphrian's Blessing">
+	<skill id="32752" toLevel="1" name="梅芙里安的祝福">
 		<!-- For 4 h., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, Skill MP Consumption -15%. Additionally, acquired XP/ SP +30%. The effect remains after death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1303,11 +1303,11 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="32753" toLevel="1" name="Recover 140,000 Vitality">
+	<skill id="32753" toLevel="1" name="活力140000恢復">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32754" toLevel="1" name="Seal of Lilith">
+	<skill id="32754" toLevel="1" name="莉莉絲封印">
 		<!-- You are marked with the Seal of Lilith after being killed by another player. Cannot resurrect for 10 min., PvP damage -15%. -->
 		<icon>icon.skill5873</icon>
 		<operateType>A2</operateType>
@@ -1315,7 +1315,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="32757" toLevel="24" name="Anniversary Fireworks - Lv. 1">
+	<skill id="32757" toLevel="24" name="點綴天空的15週年-階段24">
 		<!-- Level 1: Agathion's unique gift in celebration of the game's anniversary. P. Atk. +5%, M. Atk. +7%, P./ M. Def. +5%, Critical Rate for basic attacks +5%, P./ M. Skill Critical Rate +5%, Critical Damage for basic attacks and P./ M. skills +5%, Atk. Spd./ Casting Spd. +5%. You can receive Anniversary Firecracker once an hour. There are 23 levels. Note!. The Anniversary Fireworks buff and Anniversary Firecrackers cannot be obtained if you are dead or have no free slots in your inventory. -->
 		<!-- Level 2: Agathion's unique gift in celebration of the game's anniversary. P. Atk. +5%, M. Atk. +7%, P./ M. Def. +5%, Critical Rate for basic attacks +5%, P./ M. Skill Critical Rate +5%, Critical Damage for basic attacks and P./ M. skills +5%, Atk. Spd./ Casting Spd. +5%. You can receive Anniversary Firecracker once an hour. There are 23 levels. Note!. The Anniversary Fireworks buff and Anniversary Firecrackers cannot be obtained if you are dead or have no free slots in your inventory. -->
 		<!-- Level 3: Agathion's unique gift in celebration of the game's anniversary. P. Atk. +5%, M. Atk. +7%, P./ M. Def. +5%, Critical Rate for basic attacks +5%, P./ M. Skill Critical Rate +5%, Critical Damage for basic attacks and P./ M. skills +5%, Atk. Spd./ Casting Spd. +5%. You can receive Anniversary Firecracker once an hour. There are 23 levels. Note!. The Anniversary Fireworks buff and Anniversary Firecrackers cannot be obtained if you are dead or have no free slots in your inventory. -->
@@ -1345,7 +1345,7 @@
 		<castRange>900</castRange>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="32758" toLevel="11" name="Anniversary Fireworks - Lv. 1">
+	<skill id="32758" toLevel="11" name="點綴天空的15週年-階段11">
 		<!-- Level 1: Agathion's unique gift in celebration of the game's anniversary. P. Atk. +5%, M. Atk. +7%, P./ M. Def. +5%, Critical Rate for basic attacks +5%, P./ M. Skill Critical Rate +5%, Critical Damage for basic attacks and P./ M. skills +5%, Atk. Spd./ Casting Spd. +5%. You can receive Anniversary Firecracker once in 2 h. There are 10 levels. Note!. The Anniversary Fireworks buff and Anniversary Firecrackers cannot be obtained if you are dead or have no free slots in your inventory. -->
 		<!-- Level 2: Agathion's unique gift in celebration of the game's anniversary. P. Atk. +5%, M. Atk. +7%, P./ M. Def. +5%, Critical Rate for basic attacks +5%, P./ M. Skill Critical Rate +5%, Critical Damage for basic attacks and P./ M. skills +5%, Atk. Spd./ Casting Spd. +5%. You can receive Anniversary Firecracker once in 2 h. There are 10 levels. Note!. The Anniversary Fireworks buff and Anniversary Firecrackers cannot be obtained if you are dead or have no free slots in your inventory. -->
 		<!-- Level 3: Agathion's unique gift in celebration of the game's anniversary. P. Atk. +5%, M. Atk. +7%, P./ M. Def. +5%, Critical Rate for basic attacks +5%, P./ M. Skill Critical Rate +5%, Critical Damage for basic attacks and P./ M. skills +5%, Atk. Spd./ Casting Spd. +5%. You can receive Anniversary Firecracker once in 2 h. There are 10 levels. Note!. The Anniversary Fireworks buff and Anniversary Firecrackers cannot be obtained if you are dead or have no free slots in your inventory. -->
@@ -1362,112 +1362,112 @@
 		<castRange>900</castRange>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="32759" toLevel="1" name="Anniversary Fireworks - Reward">
+	<skill id="32759" toLevel="1" name="點綴天空的15週年-獎勵">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="32760" toLevel="1" name="Horn Melody - Anniversary">
+	<skill id="32760" toLevel="1" name="角笛之詩-15週年紀念">
 		<!-- For 1 h., P. Atk. +30%, M. Atk. +100%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32761" toLevel="1" name="Drum Melody - Anniversary">
+	<skill id="32761" toLevel="1" name="戰鼓之詩-15週年紀念">
 		<!-- For 1 h., Critical Rate for basic attacks +38%, Critical Damage for basic attacks +34%, M. Skill Critical Rate +4%, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32762" toLevel="1" name="Pipe Organ Melody - Anniversary">
+	<skill id="32762" toLevel="1" name="風琴之詩-15週年紀念">
 		<!-- For 1 h., Max HP +45%, Max MP +70%, Max CP +45%, Vampiric Rage effect +9%. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32763" toLevel="1" name="Guitar Melody - Anniversary">
+	<skill id="32763" toLevel="1" name="吉他之詩-15週年紀念">
 		<!-- For 1 h., Atk. Spd. +64%, Casting Spd. +62%, and all Skill MP Consumption -10%. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32764" toLevel="1" name="Attribute Resistance - Anniversary">
+	<skill id="32764" toLevel="1" name="屬性抵抗-15週年紀念">
 		<!-- For 1 h., Attribute Resistance +30. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32765" toLevel="1" name="Debuff Resistance - Anniversary">
+	<skill id="32765" toLevel="1" name="詛咒抵抗-15週年紀念">
 		<!-- For 1 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32766" toLevel="1" name="Mental Resistance - Anniversary">
+	<skill id="32766" toLevel="1" name="心靈抵抗-15週年紀念">
 		<!-- Buff Cancel Resistance 30 for 1 h. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32767" toLevel="1" name="Prevailing Drum - Anniversary">
+	<skill id="32767" toLevel="1" name="戰鬥之鼓-15週年紀念">
 		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, Vampiric Rage effect +8%. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32768" toLevel="1" name="Daring Drum - Anniversary">
+	<skill id="32768" toLevel="1" name="移動之鼓-15週年紀念">
 		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, skill cooldown -10%. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32769" toLevel="1" name="Refreshing Drum - Anniversary">
+	<skill id="32769" toLevel="1" name="休息之鼓-15週年紀念">
 		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, Skill MP Consumption -22%. -->
 		<icon>icon.ev_15th_buff_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32770" toLevel="1" name="Knight's Harmony - Anniversary">
+	<skill id="32770" toLevel="1" name="守護者和聲-15週年紀念">
 		<!-- For 1 h., P. Def. +45%, M. Def. +35%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +35%, Shield Defense/ Shield Defense Rate +50%, received Critical Rate from basic attacks and M. skills -25%. -->
 		<icon>icon.ev_15th_buff_i03</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32771" toLevel="1" name="Warrior's Harmony - Anniversary">
+	<skill id="32771" toLevel="1" name="狂戰士和聲-15週年紀念">
 		<!-- For 1 h., P. Atk. +25%, Critical Rate for basic attacks +100%, Critical Damage for basic attacks +85%, Atk. Spd. +10%. With a certain chance, applies Spectral Slash on the target on a basic attack. -->
 		<icon>icon.ev_15th_buff_i01</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32772" toLevel="1" name="Wizard's Harmony - Anniversary">
+	<skill id="32772" toLevel="1" name="大賢者和聲-15週年紀念">
 		<!-- For 1 h., M. Atk. +45%, M. Skill Critical Rate +100%, M. Skill Critical Damage +10%, Casting Spd. +15%, Attribute Attack +100, skill cooldown -20%, Skill MP Consumption -15%. -->
 		<icon>icon.ev_15th_buff_i02</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32773" toLevel="5" name="Horn Melody">
+	<skill id="32773" toLevel="5" name="角笛之詩">
 		<!-- For 4 h., P. Atk. +30%, M. Atk. +100%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32774" toLevel="5" name="Drum Melody">
+	<skill id="32774" toLevel="5" name="戰鼓之詩">
 		<!-- Level 1: For 4 h., Critical Rate for basic attacks +38%, Critical Damage for basic attacks +34%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 2: For 4 h., Critical Rate for basic attacks +38%, Critical Damage for basic attacks +34%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 3: For 4 h., Critical Rate for basic attacks +38%, Critical Damage for basic attacks +34%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
@@ -1478,112 +1478,112 @@
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32775" toLevel="5" name="Pipe Organ Melody">
+	<skill id="32775" toLevel="5" name="風琴之詩">
 		<!-- For 4 h., Max HP +45%, Max MP +70%, Max CP +45%, Vampiric Rage effect +9%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32776" toLevel="5" name="Guitar Melody">
+	<skill id="32776" toLevel="5" name="吉他之詩">
 		<!-- For 4 h., Atk. Spd. +64%, Casting Spd. +62%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32777" toLevel="1" name="Attribute Resistance">
+	<skill id="32777" toLevel="1" name="屬性抵抗">
 		<!-- For 4 h., Attribute Resistance +30. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32778" toLevel="1" name="Debuff Resistance">
+	<skill id="32778" toLevel="1" name="詛咒抵抗">
 		<!-- For 4 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32779" toLevel="1" name="Mental Resistance">
+	<skill id="32779" toLevel="1" name="心靈抵抗">
 		<!-- Buff Cancel Resistance 30 for 4 h. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32780" toLevel="1" name="Prevailing Drum">
+	<skill id="32780" toLevel="1" name="戰鬥之鼓">
 		<!-- For 4 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, Vampiric Rage effect +8%. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32781" toLevel="1" name="Daring Drum">
+	<skill id="32781" toLevel="1" name="移動之鼓">
 		<!-- For 4 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, skill cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="32782" toLevel="1" name="Refreshing Drum">
+	<skill id="32782" toLevel="1" name="休息之鼓">
 		<!-- For 4 h., HP Recovery +75%, MP Recovery +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="32783" toLevel="2" name="Knight's Harmony">
+	<skill id="32783" toLevel="2" name="守護者和聲">
 		<!-- For 4 h., P. Def. +45%, M. Def. +35%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +35%, Shield Defense/ Shield Defense Rate +50%, received Critical Rate from basic attacks and M. skills -25%. -->
 		<icon>icon.skill19500</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32784" toLevel="2" name="Warrior's Harmony">
+	<skill id="32784" toLevel="2" name="狂戰士和聲">
 		<!-- For 4 h., P. Atk. +25%, Critical Rate for basic attacks +100%, Critical Damage for basic attacks +85%, Atk. Spd. +10%. With a certain chance, applies Spectral Slash on the target on a basic attack. -->
 		<icon>icon.skill19501</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32785" toLevel="2" name="Wizard's Harmony">
+	<skill id="32785" toLevel="2" name="大賢者和聲">
 		<!-- For 4 h., M. Atk. +45%, M. Skill Critical Rate +100%, M. Skill Critical Damage +10%, Casting Spd. +15%, Attribute Attack +100, skill cooldown -20%, Skill MP Consumption -15%. -->
 		<icon>icon.skill19502</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32786" toLevel="1" name="Noblesse Blessing">
+	<skill id="32786" toLevel="1" name="貴族的祝福">
 		<!-- Duration: 1 h. Your buffs and debuffs remain even after death, except for Noblesse Blessing and Lucky Charms' effects. -->
 		<icon>icon.skill19224</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32787" toLevel="1" name="Noblesse Blessing">
+	<skill id="32787" toLevel="1" name="貴族的祝福">
 		<!-- Duration: 4 h. Your buffs and debuffs remain even after death, except for Noblesse Blessing and Lucky Charms' effects. -->
 		<icon>icon.skill19224</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32788" toLevel="1" name="Noblesse Blessing">
+	<skill id="32788" toLevel="1" name="貴族的祝福">
 		<!-- Duration: 8 h. Your buffs and debuffs remain even after death, except for Noblesse Blessing and Lucky Charms' effects. -->
 		<icon>icon.skill19224</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32789" toLevel="5" name="Horn Melody">
+	<skill id="32789" toLevel="5" name="角笛之詩">
 		<!-- For 8 h., P. Atk. +30%, M. Atk. +100%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32790" toLevel="5" name="Drum Melody">
+	<skill id="32790" toLevel="5" name="戰鼓之詩">
 		<!-- Level 1: For 8 h., Critical Rate for basic attacks +38%, Critical Damage for basic attacks +34%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 2: For 8 h., Critical Rate for basic attacks +38%, Critical Damage for basic attacks +34%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<!-- Level 3: For 8 h., Critical Rate for basic attacks +38%, Critical Damage for basic attacks +34%, M. Skill Critical Rate +40, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
@@ -1594,63 +1594,63 @@
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32791" toLevel="5" name="Pipe Organ Melody">
+	<skill id="32791" toLevel="5" name="風琴之詩">
 		<!-- For 8 h., Max HP +45%, Max MP +70%, Max CP +45%, Vampiric Rage effect +9%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32792" toLevel="5" name="Guitar Melody">
+	<skill id="32792" toLevel="5" name="吉他之詩">
 		<!-- For 8 h., Atk. Spd. +64%, Casting Spd. +62%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
 	</skill>
-	<skill id="32793" toLevel="1" name="Attribute Resistance">
+	<skill id="32793" toLevel="1" name="屬性抵抗">
 		<!-- For 8 h., Attribute Resistance +30. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32794" toLevel="1" name="Debuff Resistance">
+	<skill id="32794" toLevel="1" name="詛咒抵抗">
 		<!-- For 8 h., Infection/ Obstruction/ Stupor/ Confusion Resistance +50. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32795" toLevel="1" name="Mental Resistance">
+	<skill id="32795" toLevel="1" name="心靈抵抗">
 		<!-- Buff Cancel Resistance 30 for 8 h. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32796" toLevel="1" name="Prevailing Drum">
+	<skill id="32796" toLevel="1" name="戰鬥之鼓">
 		<!-- For 8 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. With a certain chance, Vampiric Rage effect +8%. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32797" toLevel="1" name="Daring Drum">
+	<skill id="32797" toLevel="1" name="移動之鼓">
 		<!-- For 8 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, skill cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="32798" toLevel="1" name="Refreshing Drum">
+	<skill id="32798" toLevel="1" name="休息之鼓">
 		<!-- For 8 h., HP Recovery +75%, MP Recovery +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>696</effectPoint>
 	</skill>
-	<skill id="32799" toLevel="2" name="Knight's Harmony">
+	<skill id="32799" toLevel="2" name="守護者和聲">
 		<!-- For 8 h., P. Def. +45%, M. Def. +35%, Critical Rate for basic attacks and M. skills +100%, Critical Damage for basic attacks +35%, Shield Defense/ Shield Defense Rate +50%, received Critical Rate from basic attacks and M. skills -25%. -->
 		<icon>icon.skill19500</icon>
 		<operateType>A2</operateType>

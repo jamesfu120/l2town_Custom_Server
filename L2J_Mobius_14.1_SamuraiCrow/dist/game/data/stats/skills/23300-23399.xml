@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="23300" toLevel="1" name="Ghost Piercing">
+	<skill id="23300" toLevel="1" name="鬼刺">
 		<!-- Envelops with a specter to inflict 300 dark damage every second for 10 sec. -->
 		<icon>icon.skill0773</icon>
 		<operateType>A2</operateType>
@@ -27,7 +27,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23301" toLevel="1" name="Dimensional Door A">
+	<skill id="23301" toLevel="1" name="次元之門A">
 		<!-- Summons a dimensional door that teleports to the Dimensional Door B. -->
 		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
@@ -38,7 +38,7 @@
 		<magicLevel>85</magicLevel>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="23302" toLevel="1" name="Dimensional Door B">
+	<skill id="23302" toLevel="1" name="次元之門B">
 		<!-- Summons a dimensional door that teleports to the Dimensional Door A. -->
 		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
@@ -49,7 +49,7 @@
 		<magicLevel>85</magicLevel>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="23303" toLevel="1" name="Teleport">
+	<skill id="23303" toLevel="1" name="移動">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -64,7 +64,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="23304" toLevel="1" name="Teleport">
+	<skill id="23304" toLevel="1" name="移動">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -79,7 +79,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="23305" toLevel="1" name="Agathion Golden Swallow - Swallow's Return">
+	<skill id="23305" toLevel="1" name="金飛燕壺精-燕歸來">
 		<!-- Restores all HP/ MP/ CP and becomes invincible for 5 sec. But can only be used when HP is below 30%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A2</operateType>
@@ -131,7 +131,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23306" toLevel="1" name="Agathion's Cute Trick - Golden Swallow">
+	<skill id="23306" toLevel="1" name="金飛燕壺精聰明伶俐">
 		<!-- The summoned Golden Swallow's cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -146,7 +146,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23307" toLevel="1" name="Agathion's Cute Trick - Swallow">
+	<skill id="23307" toLevel="1" name="飛燕壺精聰明伶俐">
 		<!-- The summoned Swallow's cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -161,7 +161,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23308" toLevel="1" name="Totem's Energy - Body">
+	<skill id="23308" toLevel="1" name="圖騰之力-體力">
 		<!-- Due to the wondrous totem's energy, HP Recovery Rate +30%. Damage on the ground -80%. The effect disappears upon leaving the totem's effect area. -->
 		<icon>BranchSys2.icon.totem_of_body</icon>
 		<operateType>A2</operateType>
@@ -188,7 +188,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23309" toLevel="1" name="Totem's Energy - Spirit">
+	<skill id="23309" toLevel="1" name="圖騰之力-精神">
 		<!-- Due to the wondrous totem's energy, MP Recovery Rate +30%. The effect disappears upon leaving the totem's effect area. -->
 		<icon>BranchSys2.icon.totem_of_mind</icon>
 		<operateType>A2</operateType>
@@ -212,7 +212,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23310" toLevel="1" name="Totem's Energy - Courage">
+	<skill id="23310" toLevel="1" name="圖騰之力-勇氣">
 		<!-- Due to the wondrous totem's energy, P. Def. +15%. The effect disappears upon leaving the totem's effect area. -->
 		<icon>BranchSys2.icon.totem_of_bravery</icon>
 		<operateType>A2</operateType>
@@ -236,7 +236,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23311" toLevel="1" name="Totem's Energy - Fortitude">
+	<skill id="23311" toLevel="1" name="圖騰之力-不屈">
 		<!-- By the totem's mysterious energy, M. Def. +25%. The effect is cancelled when leaving the totem's range. -->
 		<icon>BranchSys2.icon.totem_of_fortitude</icon>
 		<operateType>A2</operateType>
@@ -260,7 +260,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23312" toLevel="1" name="Fall of the Dragon">
+	<skill id="23312" toLevel="1" name="龍之沒落">
 		<!-- A reward for brave adventurers who have defeated the fearsome dragon. For 1 h., acquired XP/ SP +100%. -->
 		<icon>BranchSys2.icon.the_fall_of_dragon</icon>
 		<operateType>A2</operateType>
@@ -294,7 +294,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23313" toLevel="5" name="Action Prohibit Immunity">
+	<skill id="23313" toLevel="5" name="無法行動抗性">
 		<!-- Level 1: Resistance to immobility +20. -->
 		<!-- Level 2: Resistance to immobility +40. -->
 		<!-- Level 3: Resistance to immobility +60. -->
@@ -326,7 +326,7 @@
 		<magicLevel>-3</magicLevel>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="23314" toLevel="5" name="Control Prohibit Immunity">
+	<skill id="23314" toLevel="5" name="無法控制抗性">
 		<!-- Level 1: Resistance to control +20. -->
 		<!-- Level 2: Resistance to control +40. -->
 		<!-- Level 3: Resistance to control +60. -->
@@ -352,7 +352,7 @@
 		<magicLevel>-3</magicLevel>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="23315" toLevel="5" name="Paralysis Immunity Enhance">
+	<skill id="23315" toLevel="5" name="麻痺抗性強化">
 		<!-- Level 1: Paralysis Resistance +20. -->
 		<!-- Level 2: Paralysis Resistance +40. -->
 		<!-- Level 3: Paralysis Resistance +60. -->
@@ -372,7 +372,7 @@
 		<magicLevel>-3</magicLevel>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="23316" toLevel="5" name="Enhance Petrification Immunity">
+	<skill id="23316" toLevel="5" name="石化抗性強化">
 		<!-- Level 1: Increases Petrification Resistance by 20. -->
 		<!-- Level 2: Increases Petrification Resistance by 40. -->
 		<!-- Level 3: Increases Petrification Resistance by 60. -->
@@ -392,7 +392,7 @@
 		<magicLevel>-3</magicLevel>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="23317" toLevel="5" name="Fear Immunity Enhance">
+	<skill id="23317" toLevel="5" name="恐懼抗性強化">
 		<!-- Level 1: Fear Resistance +20. -->
 		<!-- Level 2: Fear Resistance +40. -->
 		<!-- Level 3: Fear Resistance +60. -->
@@ -412,7 +412,7 @@
 		<magicLevel>-3</magicLevel>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="23318" toLevel="1" name="Cat the Ranger Boost">
+	<skill id="23318" toLevel="1" name="遊俠貓強化">
 		<!-- Recovers 10% of the master's HP. For 1 min., Debuff Resistance +80%, Buff Cancel Resistance +40%, Speed +10%, P. Def. +20%, M. Def. +20%. Protects from monsters' preemptive attacks. Cooldown: 10 min. -->
 		<icon>BranchSys2.icon.action5016</icon>
 		<operateType>A2</operateType>
@@ -432,7 +432,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="23319" toLevel="1" name="Blood Seeker">
+	<skill id="23319" toLevel="1" name="渴求血腥">
 		<!-- Inflicts Infection and decreases HP. -->
 		<icon>BranchSys2.icon.br_wp_Caladbulg_i00</icon>
 		<operateType>A2</operateType>
@@ -470,7 +470,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23320" toLevel="1" name="Greedy Throat">
+	<skill id="23320" toLevel="1" name="貪婪之喉">
 		<!-- Inflicts Infection and decreases HP. -->
 		<icon>BranchSys2.icon.br_wp_habus_knife_i00</icon>
 		<operateType>A2</operateType>
@@ -505,7 +505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23321" toLevel="1" name="Draconic Evolver">
+	<skill id="23321" toLevel="1" name="龍之進化">
 		<!-- The target runs away in fear. -->
 		<icon>BranchSys2.icon.br_wp_tiatenon_i00</icon>
 		<operateType>A2</operateType>
@@ -535,7 +535,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="23322" toLevel="10" name="Demonic Desire">
+	<skill id="23322" toLevel="10" name="惡魔渴望">
 		<!-- P. Def. is decreased. -->
 		<icon>BranchSys2.icon.br_wp_astarot_i00</icon>
 		<operateType>A2</operateType>
@@ -565,7 +565,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23323" toLevel="10" name="Fury of Darkness">
+	<skill id="23323" toLevel="10" name="黑暗狂暴">
 		<!-- P. Def. is decreased. Immobilized from Stun. -->
 		<icon>BranchSys2.icon.br_wp_tirbing_i00</icon>
 		<operateType>A2</operateType>
@@ -599,7 +599,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23324" toLevel="1" name="Jet Black Typhoon">
+	<skill id="23324" toLevel="1" name="暗黑旋風">
 		<!-- Casting Spd. and Wind P. Atk. increases momentarily. -->
 		<icon>BranchSys2.icon.br_wp_wind_of_mardil_i00</icon>
 		<operateType>A2</operateType>
@@ -627,7 +627,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23325" toLevel="1" name="Enlarge - Luckpy">
+	<skill id="23325" toLevel="1" name="變大-樂比">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -637,7 +637,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="23326" toLevel="1" name="Reduce - Luckpy">
+	<skill id="23326" toLevel="1" name="回復-樂比">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -647,7 +647,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="23327" toLevel="1" name="Boss Test - Weaken">
+	<skill id="23327" toLevel="1" name="首領測試-弱化">
 		<!-- A skill to test a boss mob - Weaken -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -671,7 +671,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23328" toLevel="1" name="Boss Test - Strengthen">
+	<skill id="23328" toLevel="1" name="首領測試-強化">
 		<!-- A skill to test a boss mob - Strengthen -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -695,7 +695,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23329" toLevel="1" name="Agathion Chorong's Gift 1">
+	<skill id="23329" toLevel="1" name="秋蓉壺精的禮物1">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -717,7 +717,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23330" toLevel="1" name="Agathion Chorong's Gift 2">
+	<skill id="23330" toLevel="1" name="秋蓉壺精的禮物2">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -739,7 +739,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23331" toLevel="1" name="Agathion Chorong's Gift 3">
+	<skill id="23331" toLevel="1" name="秋蓉壺精的禮物3">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -761,7 +761,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23332" toLevel="1" name="Agathion Chorong's Gift 4">
+	<skill id="23332" toLevel="1" name="秋蓉壺精的禮物4">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -783,7 +783,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23333" toLevel="1" name="Agathion's Christmas Gift">
+	<skill id="23333" toLevel="1" name="壺精的新年祈願">
 		<!-- Through the power of Agathion Chorong, Vitality is not consumed. -->
 		<icon>icon.etc_pi_gift_box_i03</icon>
 		<operateType>A2</operateType>
@@ -807,7 +807,7 @@
 			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
-	<skill id="23334" toLevel="1" name="Agathion's Cute Trick - Chorong">
+	<skill id="23334" toLevel="1" name="秋蓉壺精聰明伶俐">
 		<!-- You can see cute tricks of the summoned Chorong. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -822,7 +822,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23335" toLevel="1" name="Agathion's Christmas Gift">
+	<skill id="23335" toLevel="1" name="壺精的新年祈願">
 		<!-- Agathion's Christmas Gift does not consume Vitality when used. -->
 		<icon>icon.etc_pi_gift_box_i03</icon>
 		<operateType>A2</operateType>
@@ -846,7 +846,7 @@
 			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
-	<skill id="23336" toLevel="1" name="Agathion's Cute Trick - Chuchu">
+	<skill id="23336" toLevel="1" name="啾啾壺精聰明伶俐">
 		<!-- Shows Agathion Chuchu's cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -861,7 +861,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23337" toLevel="1" name="Agathion Chuchu's First Gift">
+	<skill id="23337" toLevel="1" name="啾啾壺精的禮物1">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -883,7 +883,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23338" toLevel="1" name="Agathion Chuchu's Second Gift">
+	<skill id="23338" toLevel="1" name="啾啾壺精的禮物2">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -905,7 +905,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23339" toLevel="1" name="Agathion Chuchu's Third Gift">
+	<skill id="23339" toLevel="1" name="啾啾壺精的禮物3">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -927,7 +927,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23340" toLevel="1" name="Agathion Chuchu's Fourth Gift">
+	<skill id="23340" toLevel="1" name="啾啾壺精的禮物4">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -949,7 +949,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23341" toLevel="1" name="Norhand's Petrification">
+	<skill id="23341" toLevel="1" name="諾爾漢德石化">
 		<!-- Temporarily petrified by Norhand's powerful cry. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -975,7 +975,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 	</skill>
-	<skill id="23342" toLevel="2" name="Norhand's Trace">
+	<skill id="23342" toLevel="2" name="諾爾漢德強力痕跡">
 		<!-- Level 1: It has traces of Norhand's voice who is searching for Skuld. -->
 		<!-- Level 2: Leaves traces of Norhand's voice who is searching for Skuld. -->
 		<icon>BranchSys.icon.br_rotten_jack_ghost_i00</icon>
@@ -1003,7 +1003,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23344" toLevel="5" name="Weakened Shillien's Breath">
+	<skill id="23344" toLevel="5" name="席琳氣息弱化">
 		<!-- Level 1: Poisoned by Shillien's Breath. Dark Resistance +5, HP Recovery Rate +5%. If you die while poisoned, the debuff level will increase. -->
 		<!-- Level 2: Poisoned by Shillien's Breath. Dark Resistance +5, HP Recovery Rate +10%, acquired XP increased. If you die while poisoned, the debuff level will increase. -->
 		<!-- Level 3: Repeatedly poisoned by Shillien's Breath. Abilities are greatly decreased. The debuff can be lowered to Lv. 2 through Dark Judge or Newbie Guide in any town. -->
@@ -1127,7 +1127,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23345" toLevel="1" name="Region Banishment">
+	<skill id="23345" toLevel="1" name="地域放逐">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1141,7 +1141,7 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="23346" toLevel="7" name="Agathion's Cute Trick - Valakas">
+	<skill id="23346" toLevel="7" name="巴拉卡斯壺精聰明伶俐">
 		<!-- You can see the summoned Valakas' cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -1156,7 +1156,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23347" toLevel="7" name="Agathion Valakas' Special Skill - Valakas' Blessing">
+	<skill id="23347" toLevel="7" name="巴拉卡斯壺精特殊技能-巴拉卡斯的祝福">
 		<!-- Level 2: Valakas' Blessing. For 1 h., Fire Attack +5, Fire Resistance +5. Cooldown: 1 h. -->
 		<!-- Level 3: Valakas' Blessing. For 1 h., Fire Attack +10, Fire Resistance +10. Cooldown: 1 h. -->
 		<!-- Level 4: Valakas' Blessing. For 1 h., Fire Attack +15, Fire Resistance +15. Cooldown: 1 h. -->
@@ -1171,7 +1171,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="23348" toLevel="1" name="Elpy Transformation">
+	<skill id="23348" toLevel="1" name="變身 獨角兔">
 		<!-- Transforms into a GM. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1201,7 +1201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23349" toLevel="1" name="Tree's Blessing Lv. 1">
+	<skill id="23349" toLevel="1" name="樹之祝福-階段1">
 		<!-- For 10 min., P. Atk. +1%, M. Atk. +2%. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1218,7 +1218,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23350" toLevel="1" name="Tree's Blessing Lv. 2">
+	<skill id="23350" toLevel="1" name="樹之祝福-階段2">
 		<!-- For 15 min., P. Atk. +2%, M. Atk. +4%. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1235,7 +1235,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23351" toLevel="1" name="Tree's Blessing Lv. 3">
+	<skill id="23351" toLevel="1" name="樹之祝福-階段3">
 		<!-- For 20 min., P. Atk. +3%, M. Atk. +6%. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1252,7 +1252,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23352" toLevel="1" name="Tree's Blessing Lv. 4">
+	<skill id="23352" toLevel="1" name="樹之祝福-階段4">
 		<!-- For 25 min., P. Atk. +4%, M. Atk. +8%. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1269,7 +1269,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23353" toLevel="1" name="Tree's Blessing Lv. 5">
+	<skill id="23353" toLevel="1" name="樹之祝福-階段5">
 		<!-- For 60 min., P. Atk. +6%, M. Atk. +12%. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1286,7 +1286,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23354" toLevel="1" name="Lingering Tree's Blessing Lv. 1">
+	<skill id="23354" toLevel="1" name="樹之祝福餘韻-階段1">
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 1. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1305,7 +1305,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23355" toLevel="1" name="Lingering Tree's Blessing Lv. 2">
+	<skill id="23355" toLevel="1" name="樹之祝福餘韻-階段2">
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 2. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1324,7 +1324,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23356" toLevel="1" name="Lingering Tree's Blessing Lv. 3">
+	<skill id="23356" toLevel="1" name="樹之祝福餘韻-階段3">
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 3. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1343,7 +1343,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23357" toLevel="1" name="Lingering Tree's Blessing Lv. 4">
+	<skill id="23357" toLevel="1" name="樹之祝福餘韻-階段4">
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 4. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1362,7 +1362,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23358" toLevel="1" name="Lingering Tree's Blessing Lv. 5">
+	<skill id="23358" toLevel="1" name="樹之祝福餘韻-階段5">
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 5. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1381,7 +1381,7 @@
 		<magicLevel>-2</magicLevel>
 		<specialLevel>-2</specialLevel>
 	</skill>
-	<skill id="23359" toLevel="1" name="Tree's Blessing - Lute Melody">
+	<skill id="23359" toLevel="1" name="樹之祝福-琵琶之詩">
 		<!-- For 10 min., increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1396,7 +1396,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>80</magicLevel>
 	</skill>
-	<skill id="23360" toLevel="1" name="Tree's Blessing - Lute Melody">
+	<skill id="23360" toLevel="1" name="樹之祝福-琵琶之詩">
 		<!-- For 15 min., increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1411,7 +1411,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>81</magicLevel>
 	</skill>
-	<skill id="23361" toLevel="1" name="Tree's Blessing - Lute Melody">
+	<skill id="23361" toLevel="1" name="樹之祝福-琵琶之詩">
 		<!-- For 20 min., increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1426,7 +1426,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>82</magicLevel>
 	</skill>
-	<skill id="23362" toLevel="1" name="Tree's Blessing - Lute Melody">
+	<skill id="23362" toLevel="1" name="樹之祝福-琵琶之詩">
 		<!-- For 25 min., increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1441,7 +1441,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>83</magicLevel>
 	</skill>
-	<skill id="23363" toLevel="1" name="Tree's Blessing - Lute Melody">
+	<skill id="23363" toLevel="1" name="樹之祝福-琵琶之詩">
 		<!-- For 60 min., increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1456,7 +1456,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>84</magicLevel>
 	</skill>
-	<skill id="23364" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
+	<skill id="23364" toLevel="1" name="樹之祝福-風琴之詩">
 		<!-- For 10 min., Max HP +37%, Max MP +37%, Max CP +37%, HP Recovery Rate +20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1471,7 +1471,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>80</magicLevel>
 	</skill>
-	<skill id="23365" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
+	<skill id="23365" toLevel="1" name="樹之祝福-風琴之詩">
 		<!-- For 15 min., Max HP +37%, Max MP +37%, Max CP +37%, HP Recovery Rate +20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1486,7 +1486,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>81</magicLevel>
 	</skill>
-	<skill id="23366" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
+	<skill id="23366" toLevel="1" name="樹之祝福-風琴之詩">
 		<!-- For 20 min., Max HP +37%, Max MP +37%, Max CP +37%, HP Recovery Rate +20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1501,7 +1501,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>82</magicLevel>
 	</skill>
-	<skill id="23367" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
+	<skill id="23367" toLevel="1" name="樹之祝福-風琴之詩">
 		<!-- For 25 min., Max HP +37%, Max MP +37%, Max CP +37%, HP Recovery Rate +20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1516,7 +1516,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>83</magicLevel>
 	</skill>
-	<skill id="23368" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
+	<skill id="23368" toLevel="1" name="樹之祝福-風琴之詩">
 		<!-- For 60 min., Max HP +37%, Max MP +37%, Max CP +37%, HP Recovery Rate +20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1531,7 +1531,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>84</magicLevel>
 	</skill>
-	<skill id="23369" toLevel="1" name="Tree's Blessing - Guitar Melody">
+	<skill id="23369" toLevel="1" name="樹之祝福-吉他之詩">
 		<!-- For 10 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +2%. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1546,7 +1546,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>80</magicLevel>
 	</skill>
-	<skill id="23370" toLevel="1" name="Tree's Blessing - Guitar Melody">
+	<skill id="23370" toLevel="1" name="樹之祝福-吉他之詩">
 		<!-- For 15 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +2%. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1561,7 +1561,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>81</magicLevel>
 	</skill>
-	<skill id="23371" toLevel="1" name="Tree's Blessing - Guitar Melody">
+	<skill id="23371" toLevel="1" name="樹之祝福-吉他之詩">
 		<!-- For 20 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +2%. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1576,7 +1576,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>82</magicLevel>
 	</skill>
-	<skill id="23372" toLevel="1" name="Tree's Blessing - Guitar Melody">
+	<skill id="23372" toLevel="1" name="樹之祝福-吉他之詩">
 		<!-- For 25 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +2%. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1591,7 +1591,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>83</magicLevel>
 	</skill>
-	<skill id="23373" toLevel="1" name="Tree's Blessing - Guitar Melody">
+	<skill id="23373" toLevel="1" name="樹之祝福-吉他之詩">
 		<!-- For 60 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +2%. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1606,7 +1606,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>84</magicLevel>
 	</skill>
-	<skill id="23374" toLevel="1" name="Tree's Blessing - Harp Melody">
+	<skill id="23374" toLevel="1" name="樹之祝福-豎琴之詩">
 		<!-- For 10 min., increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1621,7 +1621,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>80</magicLevel>
 	</skill>
-	<skill id="23375" toLevel="1" name="Tree's Blessing - Harp Melody">
+	<skill id="23375" toLevel="1" name="樹之祝福-豎琴之詩">
 		<!-- For 15 min., increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1636,7 +1636,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>81</magicLevel>
 	</skill>
-	<skill id="23376" toLevel="1" name="Tree's Blessing - Harp Melody">
+	<skill id="23376" toLevel="1" name="樹之祝福-豎琴之詩">
 		<!-- For 20 min., increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1651,7 +1651,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>82</magicLevel>
 	</skill>
-	<skill id="23377" toLevel="1" name="Tree's Blessing - Harp Melody">
+	<skill id="23377" toLevel="1" name="樹之祝福-豎琴之詩">
 		<!-- For 25 min., P. Accuracy +5, P./ M. Evasion +5, Speed +34, received Critical Damage -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1666,7 +1666,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>83</magicLevel>
 	</skill>
-	<skill id="23378" toLevel="1" name="Tree's Blessing - Harp Melody">
+	<skill id="23378" toLevel="1" name="樹之祝福-豎琴之詩">
 		<!-- For 60 min., P. Accuracy +5, P./ M. Evasion +5, Speed +34, received Critical Damage -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1681,7 +1681,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>84</magicLevel>
 	</skill>
-	<skill id="23379" toLevel="1" name="Elpy Master">
+	<skill id="23379" toLevel="1" name="獨角兔大師">
 		<!-- Transforms into a GM. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1711,7 +1711,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23380" toLevel="1" name="Jermann - Soul Snatch">
+	<skill id="23380" toLevel="1" name="傑爾曼-靈魂恐嚇">
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -1726,7 +1726,7 @@
 		<reuseDelay>1200000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="23381" toLevel="3" name="Jermann - Flow of Destruction">
+	<skill id="23381" toLevel="3" name="傑爾曼-破壞之流">
 		<!-- Deals M. damage to the enemy. -->
 		<icon>BranchSys3.Icon.g_skill23381</icon>
 		<operateType>A1</operateType>
@@ -1751,7 +1751,7 @@
 		<staticReuse>true</staticReuse>
 		<trait>KNOCKDOWN</trait>
 	</skill>
-	<skill id="23382" toLevel="1" name="Jermann - Flow of Destruction">
+	<skill id="23382" toLevel="1" name="傑爾曼-迅速">
 		<!-- Momentarily teleports forward for 300 units. -->
 		<icon>BranchSys3.Icon.g_skill23382</icon>
 		<operateType>DA1</operateType>
@@ -1776,7 +1776,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23383" toLevel="1" name="Jermann - Shadow of Darkness">
+	<skill id="23383" toLevel="1" name="傑爾曼-暗之陰影">
 		<!-- Summon your mirror image and Hide. -->
 		<icon>BranchSys3.Icon.g_skill23383</icon>
 		<operateType>A1</operateType>
@@ -1791,7 +1791,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="23384" toLevel="3" name="Jermann - Burning Darkness">
+	<skill id="23384" toLevel="3" name="傑爾曼-燃燒的黑暗">
 		<!-- Level 1: Quickly Recover 45,000 HP. -->
 		<!-- Level 2: Quickly Recover 55,000 HP. -->
 		<!-- Level 3: Quickly Recover 63,000 HP. -->
@@ -1815,7 +1815,7 @@
 		<reuseDelay>50000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="23385" toLevel="3" name="Jermann - Devourer of Nature">
+	<skill id="23385" toLevel="3" name="傑爾曼-自然的捕食者">
 		<!-- Increases HP Recovery Rate. -->
 		<icon>BranchSys3.Icon.g_skill23385</icon>
 		<operateType>A2</operateType>
@@ -1848,7 +1848,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23386" toLevel="3" name="Jermann - Destruction Instinct">
+	<skill id="23386" toLevel="3" name="傑爾曼-破壞本能">
 		<!-- Powerful strike on nearby enemies. -->
 		<icon>BranchSys3.Icon.g_skill23386</icon>
 		<operateType>A1</operateType>
@@ -1870,7 +1870,7 @@
 		<reuseDelay>12000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="23387" toLevel="1" name="Jermann">
+	<skill id="23387" toLevel="1" name="傑爾曼">
 		<!-- Transform into Jermann. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1895,7 +1895,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23388" toLevel="1" name="Jermann">
+	<skill id="23388" toLevel="1" name="傑爾曼">
 		<!-- Transform into Jermann. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1920,7 +1920,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23389" toLevel="1" name="Jermann">
+	<skill id="23389" toLevel="1" name="傑爾曼">
 		<!-- Transform into Jermann. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1945,7 +1945,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23390" toLevel="1" name="Mysterious Power of Ancient Kartia's Labyrinth">
+	<skill id="23390" toLevel="1" name="遠古卡爾提亞迷宮未知力量">
 		<!-- Accept this mysterious power to make it yours. Refuse, and you will suffer the consequences. -->
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A2</operateType>
@@ -1964,7 +1964,7 @@
 		<specialLevel>-2</specialLevel>
 		<trait>POISON</trait>
 	</skill>
-	<skill id="23391" toLevel="1" name="Great Mysterious Power of Ancient Kartia's Labyrinth">
+	<skill id="23391" toLevel="1" name="遠古卡爾提亞迷宮強大未知力量">
 		<!-- Accept this great power to make it yours. Refuse, and you will suffer grave consequences. -->
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A2</operateType>
@@ -1983,7 +1983,7 @@
 		<specialLevel>-2</specialLevel>
 		<trait>POISON</trait>
 	</skill>
-	<skill id="23392" toLevel="1" name="Stabilized Power of Ancient Kartia's Labyrinth">
+	<skill id="23392" toLevel="1" name="遠古卡爾提亞迷宮之力安定化">
 		<!-- Stabilize the Ancient Kartia's Labyrinth to consistently increase your HP. -->
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A2</operateType>
@@ -2001,7 +2001,7 @@
 		<specialLevel>-2</specialLevel>
 		<trait>POISON</trait>
 	</skill>
-	<skill id="23393" toLevel="1" name="Self-destruction">
+	<skill id="23393" toLevel="1" name="自爆">
 		<!-- DD +DOT -->
 		<icon>icon.skill23393</icon>
 		<operateType>A2</operateType>
@@ -2027,7 +2027,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23394" toLevel="1" name="Jermann - Grave of the Sword">
+	<skill id="23394" toLevel="1" name="傑爾曼-劍塚">
 		<!-- Summon the Grave of the Sword to the designated area. -->
 		<icon>BranchSys3.Icon.g_skill23387</icon>
 		<operateType>A1</operateType>
@@ -2044,7 +2044,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="23395" toLevel="1" name="Jermann - Death' Calling">
+	<skill id="23395" toLevel="1" name="傑爾曼-死亡召喚">
 		<!-- Can summon the Warriors of Death if the Grave of the Sword is nearby. -->
 		<icon>BranchSys3.Icon.g_skill23388</icon>
 		<operateType>A2</operateType>
@@ -2076,7 +2076,7 @@
 			</condition>
 		</targetConditions>
 	</skill>
-	<skill id="23396" toLevel="1" name="Jermann - Freezing Cold">
+	<skill id="23396" toLevel="1" name="傑爾曼-嚴寒">
 		<!-- Freeze the ground at the designated area. Enemies on the ice will have momentarily decreased Speed and consistently decreasing HP. -->
 		<icon>BranchSys3.Icon.g_skill23389</icon>
 		<operateType>A1</operateType>
@@ -2095,7 +2095,7 @@
 		<reuseDelay>25000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="23397" toLevel="1" name="Jermann - Shard of Ice">
+	<skill id="23397" toLevel="1" name="傑爾曼-寒冰碎片">
 		<!-- Drop an ice shard at the designated area. Additional damage if the enemy is inflicted with Freezing Cold. -->
 		<icon>BranchSys3.Icon.g_skill23390</icon>
 		<operateType>A1</operateType>
@@ -2114,7 +2114,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="23398" toLevel="3" name="Grave of the Sword">
+	<skill id="23398" toLevel="3" name="劍塚">
 		<!-- Consistently decreases HP. -->
 		<icon>BranchSys3.Icon.g_skill23387</icon>
 		<operateType>A2</operateType>
@@ -2139,7 +2139,7 @@
 		<staticReuse>true</staticReuse>
 		<trait>POISON</trait>
 	</skill>
-	<skill id="23399" toLevel="3" name="Freezing Cold">
+	<skill id="23399" toLevel="3" name="嚴寒">
 		<!-- Momentarily decreases Speed and consistently decreases HP. -->
 		<icon>BranchSys3.Icon.g_skill23389</icon>
 		<operateType>A2</operateType>

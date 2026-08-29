@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="31500" toLevel="1" name="Accelerando">
+	<skill id="31500" toLevel="1" name="漸快">
 		<!-- Increases the tempo of the battle. When using <font color="ECECEC">Chaos Symphony</font>, <font color="ECECEC">Prelude's</font> cooldown -5 sec. On killing an enemy, <font color="ECECEC">Prelude's</font> cooldown -1 sec. -->
 		<icon>icon.skill31500</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="31501" toLevel="2" name="Accelerando - Skill Cooldown Reduction">
+	<skill id="31501" toLevel="2" name="減少漸快-再使用時間">
 		<!-- Level 1: Prelude's cooldown -1 sec. -->
 		<!-- Level 2: Prelude's cooldown -5 sec. -->
 		<icon>icon.skill31500</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="31502" toLevel="1" name="Destruction - Volcanic Blast">
+	<skill id="31502" toLevel="1" name="毀滅-火山爆發">
 		<!-- Under the <font color="ECECEC">Destruction</font> effect, M. Def./ Received Healing -20%. If the target has a Debilitation debuff applied, enables <font color="ECECEC">Elemental Burst</font>. -->
 		<icon>icon.skill11024</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="31503" toLevel="1" name="Destruction - Frost Blast">
+	<skill id="31503" toLevel="1" name="毀滅-寒霜爆發">
 		<!-- Under the <font color="ECECEC">Destruction</font> effect, M. Def./ Speed/ Atk. Spd. -20%. If the target has a Debilitation debuff applied, enables <font color="ECECEC">Elemental Burst</font>. -->
 		<icon>icon.skill11025</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="31504" toLevel="1" name="Destruction - Storm Blast">
+	<skill id="31504" toLevel="1" name="毀滅-風暴爆發">
 		<!-- Under the <font color="ECECEC">Destruction</font> effect, M. Def. -23%. If the target has a Debilitation debuff applied, enables <font color="ECECEC">Elemental Burst</font>. -->
 		<icon>icon.skill11017</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="31505" toLevel="1" name="Destruction - Black Blast">
+	<skill id="31505" toLevel="1" name="毀滅-暗黑爆發">
 		<!-- Under the <font color="ECECEC">Destruction</font> effect, M. Def. -20%, Attribute Resistance -25. If the target has a Debilitation debuff applied, enables <font color="ECECEC">Elemental Burst</font>. -->
 		<icon>icon.skill11027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="31506" toLevel="1" name="Destruction - Sacred Blast">
+	<skill id="31506" toLevel="1" name="毀滅-靈魂爆發">
 		<!-- Under the <font color="ECECEC">Destruction</font> effect, M. Def. -20%, received M. Skill Critical Rate -5%. If the target has a Debilitation debuff applied, enables <font color="ECECEC">Elemental Burst</font>. -->
 		<icon>icon.skill19316</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
-	<skill id="31507" toLevel="1" name="Wolf Sense">
+	<skill id="31507" toLevel="1" name="覺醒狂狼感識">
 		<!-- The Warg's keen sense of smell lets him find hidden enemies. Cancels their Hide effects. Requires a fist weapon. -->
 		<icon>icon.s_cyclone_claw_upgrade</icon>
 		<operateType>A1</operateType>
@@ -63,7 +63,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="31508" toLevel="3" name="Warg's Tough Skin">
+	<skill id="31508" toLevel="3" name="覺醒者力量之膚">
 		<!-- Level 1: The wolf's hide becomes even thicker. For 15 sec., creates a barrier that absorbs 100,000 damage. Requires a fist weapon. Consumes 15 Soulstones. -->
 		<!-- Level 2: The wolf's hide becomes even thicker. For 15 sec., creates a barrier that absorbs 100,000 damage. Received damage limit: 50,000. Requires a fist weapon. Consumes 15 Soulstones. -->
 		<!-- Level 3: The wolf's hide becomes even thicker. For 15 sec., creates a barrier that absorbs 100,000 damage. Received damage limit: 25,000. Requires a fist weapon. Consumes 15 Soulstones. -->
@@ -86,7 +86,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="31509" toLevel="6" name="Exalted - Attack">
+	<skill id="31509" toLevel="6" name="榮耀-攻擊">
 		<!-- Level 1: P. Atk. +2%, M. Atk. +3% -->
 		<!-- Level 2: P. Atk. +4%, M. Atk. +6% -->
 		<!-- Level 3: P. Atk. +7%, M. Atk. +10% -->
@@ -120,7 +120,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31510" toLevel="6" name="Exalted - Defense">
+	<skill id="31510" toLevel="6" name="榮耀-防禦">
 		<!-- Level 1: P./ M. Def. +4% -->
 		<!-- Level 2: P./ M. Def. +8% -->
 		<!-- Level 3: P./ M. Def. +12% -->
@@ -154,7 +154,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31511" toLevel="6" name="Exalted - Focus">
+	<skill id="31511" toLevel="6" name="榮耀-弱點偵測">
 		<!-- Level 1: All Critical Rate +1% -->
 		<!-- Level 2: All Critical Rate +2% -->
 		<!-- Level 3: All Critical Rate +3% -->
@@ -199,7 +199,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31512" toLevel="6" name="Exalted - Vital Force">
+	<skill id="31512" toLevel="6" name="榮耀-活力">
 		<!-- Level 1: HP/ MP/ CP +5% -->
 		<!-- Level 2: HP/ MP/ CP +10% -->
 		<!-- Level 3: HP/ MP/ CP +15% -->
@@ -244,7 +244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31513" toLevel="4" name="Exalted - Weapon Mastery">
+	<skill id="31513" toLevel="4" name="榮耀-精通武器">
 		<!-- Level 1: Attribute Attack +20, Weapon P./ M. Atk. +20 -->
 		<!-- Level 2: Attribute Attack +40, Weapon P./ M. Atk. +40 -->
 		<!-- Level 3: Attribute Attack +70, Weapon P./ M. Atk. +70 -->
@@ -278,7 +278,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31514" toLevel="4" name="Exalted - Armor Mastery">
+	<skill id="31514" toLevel="4" name="榮耀-精通重裝甲">
 		<!-- Level 1: Attribute Resistance +20, Armor P. Def./ Accessory M. Def. +4 -->
 		<!-- Level 2: Attribute Resistance +40, Armor P. Def./ Accessory M. Def. +8 -->
 		<!-- Level 3: Attribute Resistance +70, Armor P. Def./ Accessory M. Def. +14 -->
@@ -422,7 +422,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31515" toLevel="4" name="Exalted - Perfection">
+	<skill id="31515" toLevel="4" name="榮耀-完美">
 		<!-- Level 1: Perfection trigger rate +5 -->
 		<!-- Level 2: Perfection trigger rate +10 -->
 		<!-- Level 3: Perfection trigger rate +20 -->
@@ -441,7 +441,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31516" toLevel="4" name="Exalted - Haste">
+	<skill id="31516" toLevel="4" name="榮耀-速度激發">
 		<!-- Level 1: Skill cooldown -1% -->
 		<!-- Level 2: Skill cooldown -2% -->
 		<!-- Level 3: Skill cooldown -3% -->
@@ -481,7 +481,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31517" toLevel="2" name="Exalted - Power">
+	<skill id="31517" toLevel="2" name="榮耀-力量">
 		<!-- Level 1: All attack power +7% -->
 		<!-- Level 2: All attack power +14% -->
 		<icon>icon.s_ab_t4_power1</icon>
@@ -510,7 +510,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31518" toLevel="2" name="Exalted - Heavy Armor">
+	<skill id="31518" toLevel="2" name="榮耀-武裝">
 		<!-- Level 1: All received Critical Damage -7% -->
 		<!-- Level 2: All received Critical Damage -14% -->
 		<icon>icon.s_ab_t4_plate1</icon>
@@ -539,7 +539,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31519" toLevel="2" name="Exalted - Deadly Attack">
+	<skill id="31519" toLevel="2" name="榮耀-致命攻擊">
 		<!-- Level 1: All Critical Damage +5% -->
 		<!-- Level 2: All Critical Damage +10% -->
 		<icon>icon.s_ab_t4_crt_dmg1</icon>
@@ -568,7 +568,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31520" toLevel="2" name="Exalted - Motivation">
+	<skill id="31520" toLevel="2" name="榮耀-推動">
 		<!-- Level 1: Acquired XP/ SP +5% -->
 		<!-- Level 2: Acquired XP/ SP +10% -->
 		<icon>icon.s_ab_t4_exp_sp1</icon>
@@ -588,7 +588,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31521" toLevel="2" name="Flaming Might Lv. 1">
+	<skill id="31521" toLevel="2" name="火爆2階段">
 		<!-- Deals damage equal to 110% of your P. Atk. -->
 		<icon>icon.skill31146</icon>
 		<operateType>A1</operateType>
@@ -596,14 +596,14 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>20000</reuseDelay>
 	</skill>
-	<skill id="31522" toLevel="2" name="Flaming Might Cooldown Reduction (1 sec.)">
+	<skill id="31522" toLevel="2" name="火爆減少2秒">
 		<!-- Level 1: Fierce Might Cooldown Reduction (1 sec.) -->
 		<!-- Level 2: Fierce Might Cooldown Reduction (2 sec.) -->
 		<icon>icon.skill31406</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="31524" toLevel="8" name="Katana Master">
+	<skill id="31524" toLevel="8" name="熟練武士刀">
 		<!-- Level 1: When using a one-handed sword, P. Atk. +25%, Atk. Spd. +30%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +10%. Additionally, resets skill cooldown or doubles skill duration based on your STR. -->
 		<!-- Level 2: When using a one-handed sword, P. Atk. +30%, Atk. Spd. +30%, Critical Rate for basic attacks +12%, Critical Damage for basic attacks +12%. Additionally, resets skill cooldown or doubles skill duration based on your STR. -->
 		<!-- Level 3: When using a one-handed sword, P. Atk. +32%, Atk. Spd. +30%, Critical Rate for basic attacks +14%, Critical Damage for basic attacks +14%. Additionally, resets skill cooldown or doubles skill duration based on your STR. -->
@@ -670,7 +670,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31525" toLevel="8" name="Samurai Armor Master">
+	<skill id="31525" toLevel="8" name="熟練鎧甲">
 		<!-- Level 1: When using light armor, Max HP +5%, P. Def. +5%, Atk. Spd. +6%, P. Accuracy +4, P. Evasion +4, Speed +10, Received Critical Rate from basic attacks -20%. Additionally, STR +2. -->
 		<!-- Level 2: When using light armor, Max HP +5%, P. Def. +5%, Atk. Spd. +6%, P. Accuracy +4, P. Evasion +4, Speed +10, Received Critical Rate from basic attacks -25%. Additionally, STR +2. -->
 		<!-- Level 3: When using light armor, Max HP +6%, P. Def. +6%, Atk. Spd. +6%, P. Accuracy +4, P. Evasion +4, Speed +10, Received Critical Rate from basic attacks -30%. Additionally, STR +2. -->
@@ -766,7 +766,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31526" toLevel="4" name="Sword Seizure">
+	<skill id="31526" toLevel="4" name="刀劍揮刀訓練">
 		<!-- Level 1: When the sigil is equipped, P. Atk. +1%. -->
 		<!-- Level 2: When the sigil is equipped, P. Atk. +2%. -->
 		<!-- Level 3: When the sigil is equipped, P. Atk. +3%, Critical Damage for basic attacks +1%. -->
@@ -797,7 +797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31527" toLevel="4" name="Slashing of Strow Dummy">
+	<skill id="31527" toLevel="4" name="砍稻訓練">
 		<!-- Level 1: Martial arts are not a set of skills, but a way to gain control over your own mind. P. Atk. +40%, Critical Rate for basic attacks +10%, Attribute Attack +40, Attribute Resistance +40, Confusion/ Stupor/ Obstruction/ Infection Resistance +30, P. Accuracy +2. Additionally, STR +5. -->
 		<!-- Level 2: Martial arts are not a set of skills, but a way to gain control over your own mind. P. Atk. +43%, Critical Rate for basic attacks +13%, Attribute Attack +40, Attribute Resistance +40, Confusion/ Stupor/ Obstruction/ Infection Resistance +30, P. Accuracy +4. Additionally, STR +5. -->
 		<!-- Level 3: Martial arts are not a set of skills, but a way to gain control over your own mind. P. Atk. +46%, Critical Rate for basic attacks +16%, Attribute Attack +40, Attribute Resistance +40, Confusion/ Stupor/ Obstruction/ Infection Resistance +30, P. Accuracy +6. Additionally, STR +5. -->
@@ -845,7 +845,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31528" toLevel="1" name="Heart of Sword">
+	<skill id="31528" toLevel="1" name="劍心">
 		<!-- Critical Rate for basic attacks +1% -->
 		<icon>icon.s_heart_sword</icon>
 		<operateType>P</operateType>
@@ -856,7 +856,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31529" toLevel="1" name="Self-awareness">
+	<skill id="31529" toLevel="1" name="動態視力訓練">
 		<!-- A gaze directed with the soul can stop the enemy's attack. P./ M. Evasion +100. When HP drops below 30%, triggers Fighting Spirit. <font color="ECECEC"><Fighting Spirit></font>. Creates a barrier that absorbs 100,000 damage for 15 sec. Received damage limit: 25,000. Cooldown: 40 sec. -->
 		<icon>icon.s_acuity_training</icon>
 		<operateType>P</operateType>
@@ -876,7 +876,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31530" toLevel="9" name="Take Life">
+	<skill id="31530" toLevel="9" name="煞星斬首">
 		<!-- Level 1: Concentrate all your attention on the tips of your fingers touching the sword. A basic attack. Deals damage equal to 120% of your P. Atk. to the target and nearby enemies. For 10 sec., P. Def. -30% for the enemies in the skill area. Base success rate: 60%. Inflicted status: Debilitation. Requires a one-handed sword. -->
 		<!-- Level 2: Concentrate all your attention on the tips of your fingers touching the sword. A basic attack. Deals damage equal to 130% of your P. Atk. to the target and nearby enemies. For 10 sec., P. Def. -30% for the enemies in the skill area. Base success rate: 60%. Inflicted status: Debilitation. Requires a one-handed sword. -->
 		<!-- Level 3: Concentrate all your attention on the tips of your fingers touching the sword. A basic attack. Deals damage equal to 140% of your P. Atk. to the target and nearby enemies. For 10 sec., P. Def. -30% for the enemies in the skill area. Base success rate: 60%. Inflicted status: Debilitation. Requires a one-handed sword. -->
@@ -1115,7 +1115,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31531" toLevel="9" name="Thousand Wounds">
+	<skill id="31531" toLevel="9" name="決斷地獄">
 		<!-- Level 1: Death awaits those who choose the way of the sword. A basic attack. Attacks the target and enemies in front of them and behind them, dealing damage equal to 120% of your P. Atk. Requires a one-handed sword. -->
 		<!-- Level 2: Death awaits those who choose the way of the sword. A basic attack. Attacks the target and enemies in front of them and behind them, dealing damage equal to 130% of your P. Atk. Requires a one-handed sword. -->
 		<!-- Level 3: Death awaits those who choose the way of the sword. A basic attack. Attacks the target and enemies in front of them and behind them, dealing damage equal to 140% of your P. Atk. Requires a one-handed sword. -->
@@ -1346,7 +1346,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31532" toLevel="4" name="Full Twist">
+	<skill id="31532" toLevel="4" name="一道回天">
 		<!-- Level 1: It is better to die for your honor than to live in disgrace. A basic attack. Attacks nearby enemies thrice, dealing damage equal to 220% of your P. Atk. While using the skill, you are unable to move. Requires a one-handed sword. -->
 		<!-- Level 2: It is better to die for your honor than to live in disgrace. A basic attack. Attacks nearby enemies thrice, dealing damage equal to 230% of your P. Atk. While using the skill, you are unable to move. Requires a one-handed sword. -->
 		<!-- Level 3: It is better to die for your honor than to live in disgrace. A basic attack. Attacks nearby enemies thrice, dealing damage equal to 240% of your P. Atk. While using the skill, you are unable to move. Requires a one-handed sword. -->
@@ -1470,7 +1470,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31533" toLevel="4" name="Disastrous Shriek">
+	<skill id="31533" toLevel="4" name="悲鳴猛擊">
 		<!-- Level 1: A swift attack with the scabbard knocks the target down. Makes nearby hiding enemies visible and prevents them from hiding again for 1 sec. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<!-- Level 2: A swift attack with the scabbard knocks the target down. Makes nearby hiding enemies visible and prevents them from hiding again for 1 sec. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<!-- Level 3: A swift attack with the scabbard knocks the target down. Makes nearby hiding enemies visible and prevents them from hiding again for 2 sec. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. -->
@@ -1606,7 +1606,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31534" toLevel="4" name="Weapon Destruction">
+	<skill id="31534" toLevel="4" name="武裝粉碎">
 		<!-- Level 1: When your mind has lost, your body is sure to follow. If your target is a character, removes invincibility from them. For 20 sec., the target's Max HP -20%. Base success rate: 70%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. Can only be used in PvP. -->
 		<!-- Level 2: When your mind has lost, your body is sure to follow. If your target is a character, removes invincibility from them. For 20 sec., the target's Max HP -25%. Base success rate: 70%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. Can only be used in PvP. -->
 		<!-- Level 3: When your mind has lost, your body is sure to follow. If your target is a character, removes invincibility from them. For 20 sec., the target's Max HP -30%. Base success rate: 70%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. Can only be used in PvP. -->
@@ -1755,7 +1755,7 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="31535" toLevel="4" name="Walk in Monster Woods">
+	<skill id="31535" toLevel="4" name="百鬼夜行">
 		<!-- Level 1: Greed chains the heart and takes freedom from the sword. A basic attack. Attacks nearby enemies dealing damage equal to 220% of your P. Atk. Cancels the enemies' targets preventing them from targeting for 3 sec. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<!-- Level 2: Greed chains the heart and takes freedom from the sword. A basic attack. Attacks nearby enemies dealing damage equal to 230% of your P. Atk. Cancels the enemies' targets preventing them from targeting for 3 sec. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<!-- Level 3: Greed chains the heart and takes freedom from the sword. A basic attack. Attacks nearby enemies dealing damage equal to 240% of your P. Atk. Cancels the enemies' targets preventing them from targeting for 3 sec. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). Requires a one-handed sword. Consumes 3 Soulstones. -->
@@ -1900,7 +1900,7 @@
 			<effect name="Untargetable" />
 		</effects>
 	</skill>
-	<skill id="31536" toLevel="9" name="Maneuver">
+	<skill id="31536" toLevel="9" name="機動">
 		<!-- Level 1: Samurai's sword does not hit the enemy, it opens the way. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 100% of P. Atk. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Requires a one-handed sword. -->
 		<!-- Level 2: Samurai's sword does not hit the enemy, it opens the way. A basic attack. Charges toward the target stunning enemies in the skill area for 3 sec. Deals damage equal to 110% of P. Atk. to the target and nearby enemies. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Requires a one-handed sword. -->
 		<!-- Level 3: Samurai's sword does not hit the enemy, it opens the way. A basic attack. Charges toward the target stunning enemies in the skill area for 3 sec. Deals damage equal to 120% of P. Atk. to the target and nearby enemies. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Requires a one-handed sword. -->
@@ -2151,7 +2151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31537" toLevel="5" name="Pursuit">
+	<skill id="31537" toLevel="5" name="追擊">
 		<!-- Level 1: Samurai's resilience manifests not in waiting, but in moving forward relentlessly. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 140% of P. Atk. Resets the Maneuver's cooldown. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Requires a one-handed sword. Consumes 1 Soulstone. -->
 		<!-- Level 2: Samurai's resilience manifests not in waiting, but in moving forward relentlessly. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 150% of P. Atk. Resets the Maneuver's cooldown. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Requires a one-handed sword. Consumes 1 Soulstone. -->
 		<!-- Level 3: Samurai's resilience manifests not in waiting, but in moving forward relentlessly. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 160% of P. Atk. Resets the Maneuver's cooldown. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Requires a one-handed sword. Consumes 1 Soulstone. -->
@@ -2320,7 +2320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31538" toLevel="1" name="Battojutsu">
+	<skill id="31538" toLevel="1" name="拔刀">
 		<!-- A true sword master directs the blade with their heart and not with their hand. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 250% of P. Atk. Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<icon>icon.s_drawing1</icon>
 		<operateType>DA6</operateType>
@@ -2352,7 +2352,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31539" toLevel="6" name="Furinkazan">
+	<skill id="31539" toLevel="6" name="風林火山">
 		<!-- Level 1: Be fast like a wind and calm like woods. Attack like fire and defend like a mountain. For 30 min., P. Atk. +30%, Basic Attack Power +50%, P./ M. Def. +10%. Requires a one-handed sword. -->
 		<!-- Level 2: Be fast like a wind and calm like woods. Attack like fire and defend like a mountain. For 30 min., P. Atk. +32%, Basic Attack Power +52%, P./ M. Def. +12%. Requires a one-handed sword. -->
 		<!-- Level 3: Be fast like a wind and calm like woods. Attack like fire and defend like a mountain. For 30 min., P. Atk. +34%, Basic Attack Power +54%, P./ M. Def. +14%. Requires a one-handed sword. -->
@@ -2539,7 +2539,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31540" toLevel="6" name="Determination">
+	<skill id="31540" toLevel="6" name="覺悟">
 		<!-- Level 1: Courage is the beginning, determination is the acceptance of the end. For 60 sec., P. Accuracy +5, Atk. Spd. +10%, Basic Attack Power +80%, Critical Rate for basic attacks +20%. Requires a one-hand sword. Consumes 15 Soulstones. -->
 		<!-- Level 2: Courage is the beginning, determination is the acceptance of the end. For 60 sec., P. Accuracy +5, Atk. Spd. +10%, Basic Attack Power +84%, Critical Rate for basic attacks +22%. Requires a one-hand sword. Consumes 15 Soulstones. -->
 		<!-- Level 3: Courage is the beginning, determination is the acceptance of the end. For 60 sec., P. Accuracy +5, Atk. Spd. +15%, Basic Attack Power +88%, Critical Rate for basic attacks +24%. Requires a one-hand sword. Consumes 15 Soulstones. -->
@@ -2762,7 +2762,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31541" toLevel="4" name="Advent">
+	<skill id="31541" toLevel="4" name="降臨">
 		<!-- Level 1: Control the sword with your heart and not with your hand, only then will you achieve the perfection. A basic attack. For 90 sec., P. Accuracy +5, Atk. Spd. +10%, Critical Damage for basic attacks +5%. When using basic attacks and attack skills, deals additional damage equal to 100% of your P. Atk. to nearby enemies. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 2: Control the sword with your heart and not with your hand, only then will you achieve the perfection. A basic attack. For 90 sec., P. Accuracy +5, Atk. Spd. +10%, Critical Damage for basic attacks +7%. When using basic attacks and attack skills, deals additional damage equal to 100% of your P. Atk. to nearby enemies. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 3: Control the sword with your heart and not with your hand, only then will you achieve the perfection. A basic attack. For 90 sec., P. Accuracy +10, Atk. Spd. +10%, Critical Damage for basic attacks +10%. When using basic attacks and attack skills, deals additional damage equal to 100% of your P. Atk. to nearby enemies. Requires a one-handed sword. Consumes 15 Soulstones. -->
@@ -2908,7 +2908,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31542" toLevel="4" name="Adamant Will">
+	<skill id="31542" toLevel="4" name="決意">
 		<!-- Level 1: The will is a sword by which our mind determines the way. Removes all debuffs, and for 3 sec. increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance by 100. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 2: The will is a sword by which our mind determines the way. Removes all debuffs, and for 5 sec. increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance by 150. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 3: The will is a sword by which our mind determines the way. Removes all debuffs, and for 7 sec. increases Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance by 200. Requires a one-handed sword. Consumes 15 Soulstones. -->
@@ -3042,7 +3042,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31543" toLevel="3" name="Atsumori">
+	<skill id="31543" toLevel="3" name="敦盛">
 		<!-- Level 1: Prepare to sacrifice your life for honor. For 10 sec., makes you immune to debuffs, your HP cannot drop below 1. When the effect expires, recovers 20% HP. <font color="ECECEC">Type: Immortality.</font>. HP cannot drop below 1. Does not stack. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 2: Prepare to sacrifice your life for honor. For 10 sec., makes you immune to debuffs, your HP cannot drop below 1. When the effect expires, recovers 30% HP. <font color="ECECEC">Type: Immortality.</font>. HP cannot drop below 1. Does not stack. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 3: Prepare to sacrifice your life for honor. For 10 sec., makes you immune to debuffs, your HP cannot drop below 1. When the effect expires, recovers 40% HP. <font color="ECECEC">Type: Immortality.</font>. HP cannot drop below 1. Does not stack. Requires a one-handed sword. Consumes 15 Soulstones. -->
@@ -3159,7 +3159,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="31544" toLevel="3" name="Omen">
+	<skill id="31544" toLevel="3" name="徵兆">
 		<!-- Level 1: Changes come when your senses know the truth. For 20 sec., P. Atk. +30%. When using a one-handed sword, greatly increases basic attack range. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 2: Changes come when your senses know the truth. For 40 sec., P. Atk. +40%. When using a one-handed sword, greatly increases basic attack range. Requires a one-handed sword. Consumes 15 Soulstones. -->
 		<!-- Level 3: Changes come when your senses know the truth. For 60 sec., P. Atk. +60%, Critical Damage for basic attacks +15%. When using a one-handed sword, greatly increases basic attack range. Requires a one-handed sword. Consumes 15 Soulstones. -->
@@ -3214,7 +3214,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31545" toLevel="2" name="Activation - Single Flash">
+	<skill id="31545" toLevel="2" name="發動-劍氣">
 		<!-- Level 1: Basic animation of the attack and additional damage. -->
 		<!-- Level 2: Animation of the range attack and additional damage. Omen visual effect. -->
 		<icon>
@@ -3234,7 +3234,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31546" toLevel="1" name="Workout">
+	<skill id="31546" toLevel="1" name="鍛鍊身體">
 		<!-- Hard training and patience let the warrior achieve the state of free mind. On a basic attack, deals additional damage to the target equal to 100% of your P. Atk. Requires a one-handed sword. -->
 		<icon>icon.s_physical_training</icon>
 		<operateType>P</operateType>
@@ -3256,7 +3256,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31547" toLevel="3" name="Mental Preparation">
+	<skill id="31547" toLevel="3" name="向心鍛鍊">
 		<!-- Level 1: Control over your mind opens the way to true mastery. When using Full Twist, Pole of Mental Power activates, granting invincibility. <font color="ECECEC"><Pole of Mental Power></font>. Makes you immune to damage and debuffs. -->
 		<!-- Level 2: Control over your mind opens the way to true mastery. When using Full Twist, triggers Pole of Mental Power. Also, when using Walk in Monster Woods, triggers Embodiment. <font color="ECECEC"><Pole of Mental Power></font>. Makes you immune to damage and debuffs. <font color="ECECEC"><Embodiment Lv. 1></font>. For 5 sec., changes Battojutsu to Perception Lv. 1 (not affected by cooldown) that deals damage equal to 275% of P. Atk. -->
 		<!-- Level 3: Control over your mind opens the way to true mastery. When using Full Twist, triggers Pole of Mental Power. Also, when using Walk in Monster Woods, triggers Embodiment. <font color="ECECEC"><Pole of Mental Power></font>. Makes you immune to damage and debuffs. <font color="ECECEC"><Embodiment Lv. 2></font>. For 5 sec., changes Battojutsu to Perception Lv. 2 (not affected by cooldown) that deals damage equal to 300% of P. Atk. -->
@@ -3286,7 +3286,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31548" toLevel="1" name="Weakness Detection">
+	<skill id="31548" toLevel="1" name="展現弱點">
 		<!-- Marks the target for resetting the cooldown of Battojutsu. -->
 		<icon>icon.s_find_weakness</icon>
 		<operateType>A1</operateType>
@@ -3294,14 +3294,14 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="31549" toLevel="1" name="Battojutsu Cooldown Reset">
+	<skill id="31549" toLevel="1" name="拔刀再使用時間初始化">
 		<!-- Resets the cooldown of Battojutsu. // Not used. -->
 		<icon>icon.s_find_weakness</icon>
 		<operateType>A1</operateType>
 		<castRange>1500</castRange>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="31550" toLevel="1" name="Pole of Mental Power">
+	<skill id="31550" toLevel="1" name="精神極致">
 		<!-- Feel the breath of absolute tranquillity. Invincible against basic attacks, skills, and debuffs. -->
 		<icon>icon.s_fighting_spirit</icon>
 		<operateType>A2</operateType>
@@ -3329,7 +3329,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31551" toLevel="4" name="Embodiment - Lv. 1">
+	<skill id="31551" toLevel="4" name="現身-3階段">
 		<!-- Level 1: For 5 sec., changes Battojutsu to Perception Lv. 1. <font color="ECECEC"><Perception Lv. 1></font>. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 275% of P. Atk. Instant cooldown. -->
 		<!-- Level 2: For 5 sec., changes Battojutsu to Perception Lv. 2. <font color="ECECEC"><Perception Lv. 2></font>. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 300% of P. Atk. Instant cooldown. -->
 		<!-- Level 3: For 5 sec., changes Battojutsu to Perception Lv. 2. <font color="ECECEC"><Perception Lv. 2></font>. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 300% of P. Atk. Instant cooldown. -->
@@ -3353,7 +3353,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31552" toLevel="1" name="Perception Lv. 1">
+	<skill id="31552" toLevel="1" name="奧義-1階段">
 		<!-- A true sword master directs the blade with their heart and not with their hand. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 275% of P. Atk. Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<icon>icon.s_drawing2</icon>
 		<operateType>DA6</operateType>
@@ -3384,7 +3384,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31553" toLevel="1" name="Perception Lv. 2">
+	<skill id="31553" toLevel="1" name="奧義-2階段">
 		<!-- A true sword master directs the blade with their heart and not with their hand. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 300% of P. Atk. Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<icon>icon.s_drawing2</icon>
 		<operateType>DA6</operateType>
@@ -3415,7 +3415,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31554" toLevel="4" name="Full Twist">
+	<skill id="31554" toLevel="4" name="一道回天">
 		<!-- Visual effect of a strike and damage. -->
 		<!-- Level 1 - SubLevel 1001 (+1% Power): Visual effect of a strike and damage. -->
 		<!-- Level 1 - SubLevel 1002 (+2% Power): Visual effect of a strike and damage. -->
@@ -3519,7 +3519,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31555" toLevel="9" name="Clever Maneuver">
+	<skill id="31555" toLevel="9" name="識破機動">
 		<!-- Level 1: Samurai's sword does not hit the enemy, it opens the way. <font color="ECECEC"><Maneuver (ranged)></font>. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 120% of P. Atk. to the target and nearby enemies. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). <font color="ECECEC"><Clever Maneuver (melee)></font>. A basic attack. Deals damage equal to 120% of P. Atk. to nearby enemies. The enemies' received Critical Rate from basic attacks +10%. Base success rate: 60%. Inflicted status: Debilitation. Requires a one-handed sword. -->
 		<!-- Level 2: Samurai's sword does not hit the enemy, it opens the way. <font color="ECECEC"><Maneuver (ranged)></font>. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 130% of P. Atk. to the target and nearby enemies. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). <font color="ECECEC"><Clever Maneuver (melee)></font>. A basic attack. Deals damage equal to 130% of P. Atk. to nearby enemies. The enemies' received Critical Rate from basic attacks +10%. Base success rate: 60%. Inflicted status: Debilitation. Requires a one-handed sword. -->
 		<!-- Level 3: Samurai's sword does not hit the enemy, it opens the way. <font color="ECECEC"><Maneuver (ranged)></font>. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 140% of P. Atk. to the target and nearby enemies. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). <font color="ECECEC"><Clever Maneuver (melee)></font>. A basic attack. Deals damage equal to 140% of P. Atk. to nearby enemies. The enemies' received Critical Rate from basic attacks +10%. Base success rate: 60%. Inflicted status: Debilitation. Requires a one-handed sword. -->
@@ -3548,7 +3548,7 @@
 		</mpConsume>
 		<reuseDelay>7000</reuseDelay>
 	</skill>
-	<skill id="31556" toLevel="5" name="Strike">
+	<skill id="31556" toLevel="5" name="猛擊">
 		<!-- Level 1: Samurai's resilience manifests not in waiting, but in moving forward relentlessly. <font color="ECECEC"><Strike (ranged)></font>. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 120% of P. Atk. Resets the Maneuver's cooldown. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). <font color="ECECEC"><Strke (melee)></font>. A basic attack. Deals damage equal to 220% of P. Atk. Resets the Maneuver's cooldown. Consumes 1 Soulstone. -->
 		<!-- Level 2: Samurai's resilience manifests not in waiting, but in moving forward relentlessly. <font color="ECECEC"><Strike (ranged)></font>. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 140% of P. Atk. Resets the Maneuver's cooldown. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). <font color="ECECEC"><Strke (melee)></font>. A basic attack. Deals damage equal to 240% of P. Atk. Resets the Maneuver's cooldown. Consumes 1 Soulstone. -->
 		<!-- Level 3: Samurai's resilience manifests not in waiting, but in moving forward relentlessly. <font color="ECECEC"><Strike (ranged)></font>. A basic attack. Charges toward the target stunning them for 3 sec. Deals damage equal to 160% of P. Atk. Resets the Maneuver's cooldown. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). <font color="ECECEC"><Strke (melee)></font>. A basic attack. Deals damage equal to 260% of P. Atk. Resets the Maneuver's cooldown. Consumes 1 Soulstone. -->
@@ -3570,7 +3570,7 @@
 		</mpConsume>
 		<reuseDelay>7000</reuseDelay>
 	</skill>
-	<skill id="31557" toLevel="1" name="Maneuver Cooldown Reset">
+	<skill id="31557" toLevel="1" name="初始化機動再使用">
 		<!-- Resets the cooldown of Maneuver. -->
 		<icon>icon.s_find_weakness</icon>
 		<operateType>A1</operateType>
@@ -3584,7 +3584,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31558" toLevel="1" name="Perception Lv. 3">
+	<skill id="31558" toLevel="1" name="奧義-3階段">
 		<!-- A true sword master directs the blade with their heart and not with their hand. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 500% of P. Atk. Requires a one-handed sword. Consumes 3 Soulstones. -->
 		<icon>icon.s_drawing2</icon>
 		<operateType>A1</operateType>
@@ -3594,7 +3594,7 @@
 		<hitTime>800</hitTime>
 		<mpConsume>139</mpConsume>
 	</skill>
-	<skill id="31559" toLevel="4" name="Activation - Advent">
+	<skill id="31559" toLevel="4" name="發動-降臨">
 		<!-- Basic animation of the attack and additional damage. -->
 		<icon>icon.s_crow_slash</icon>
 		<operateType>A1</operateType>
@@ -3614,7 +3614,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31560" toLevel="1" name="Summon Kagami">
+	<skill id="31560" toLevel="1" name="騎乘艦馬">
 		<!-- Allows to mount Kagami. -->
 		<icon>icon.s_umemaru_mount</icon>
 		<operateType>A2</operateType>
@@ -3642,7 +3642,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31561" toLevel="1" name="Unsummon Kagami">
+	<skill id="31561" toLevel="1" name="離開艦馬">
 		<!-- Dismounts from a ridable mount. -->
 		<icon>icon.s_umemaru_dismount</icon>
 		<operateType>A1</operateType>
@@ -3658,7 +3658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31562" toLevel="1" name="Kagami's Swiftness">
+	<skill id="31562" toLevel="1" name="艦馬疾衝">
 		<!-- For 30 sec., Speed +95. -->
 		<icon>icon.s_umemaru_gallop</icon>
 		<operateType>A2</operateType>
@@ -3681,7 +3681,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="31563" toLevel="1" name="Charge">
+	<skill id="31563" toLevel="1" name="鬥志">
 		<!-- For 15 sec., creates a barrier that absorbs 100,000 damage. Received damage limit: 25,000.Requires a fist weapon. -->
 		<icon>icon.s_crow_slash</icon>
 		<operateType>A2</operateType>

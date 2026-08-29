@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
+	<skill id="4200" toLevel="12" name="攻擊速度下降">
 		<!-- Level 1: Immediately decreases Atk. Spd. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Atk. Spd. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Atk. Spd. Effect 2.. Inflicted status: Debilitation. -->
@@ -89,7 +89,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4201" toLevel="12" name="Sleep">
+	<skill id="4201" toLevel="12" name="催眠">
 		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
@@ -156,7 +156,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4202" toLevel="12" name="Hold">
+	<skill id="4202" toLevel="12" name="束縛">
 		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
@@ -220,7 +220,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4203" toLevel="12" name="Decrease Speed">
+	<skill id="4203" toLevel="12" name="移動速度下降">
 		<!-- Level 1: Immediately decreases Speed. Effect 1.. Inflicted status: Debilitation. -->
 		<!-- Level 2: Immediately decreases Speed. Effect 2.. Inflicted status: Debilitation. -->
 		<!-- Level 3: Immediately decreases Speed. Effect 2.. Inflicted status: Debilitation. -->
@@ -309,7 +309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4204" toLevel="12" name="Bleed">
+	<skill id="4204" toLevel="12" name="出血">
 		<!-- Level 1: Inflicts Bleed on the target and decreases HP. Effect 2. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Bleed on the target and decreases HP. Effect 3. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Bleed on the target and decreases HP. Effect 4. Inflicted status: Infection (Bleed, Poison). -->
@@ -401,7 +401,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4205" toLevel="12" name="Paralysis">
+	<skill id="4205" toLevel="12" name="麻痺">
 		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
@@ -467,7 +467,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4206" toLevel="12" name="Aura Sink">
+	<skill id="4206" toLevel="12" name="靈氣沉淪">
 		<!-- Level 1: Decreases MP. Effect 2. Inflicted status: Debilitation. -->
 		<!-- Level 2: Decreases MP. Effect 2. Inflicted status: Debilitation. -->
 		<!-- Level 3: Decreases MP. Effect 2. Inflicted status: Debilitation. -->
@@ -557,7 +557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4207" toLevel="12" name="Power Shot">
+	<skill id="4207" toLevel="12" name="能量箭">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -614,7 +614,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4208" toLevel="12" name="Shock">
+	<skill id="4208" toLevel="12" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
@@ -696,7 +696,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4209" toLevel="12" name="Heal">
+	<skill id="4209" toLevel="12" name="治癒術">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -754,7 +754,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4210" toLevel="12" name="Chant of Life">
+	<skill id="4210" toLevel="12" name="生命禮讚">
 		<!-- Recovers HP. -->
 		<icon>icon.skill1229</icon>
 		<operateType>A2</operateType>
@@ -850,7 +850,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4211" toLevel="12" name="Might">
+	<skill id="4211" toLevel="12" name="力量強化">
 		<!-- P. Atk. +50%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -901,7 +901,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4212" toLevel="12" name="Shield">
+	<skill id="4212" toLevel="12" name="保護盾">
 		<!-- P. Def. +50%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -952,7 +952,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4213" toLevel="12" name="Haste">
+	<skill id="4213" toLevel="12" name="速度激發">
 		<!-- Atk. Spd. +50%. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
@@ -1003,7 +1003,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4214" toLevel="12" name="Damage Reflection">
+	<skill id="4214" toLevel="12" name="還擊">
 		<!-- Reflects 20% of received damage. -->
 		<icon>icon.skill0086</icon>
 		<operateType>A2</operateType>
@@ -1053,7 +1053,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4215" toLevel="1" name="Raid Curse">
+	<skill id="4215" toLevel="1" name="狩獵詛咒">
 		<!-- You are cursed by the Raid Boss' guardian spirit. You cannot use P./ M. skills for some time. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -1078,7 +1078,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="4216" toLevel="1" name="Scatter Enemy">
+	<skill id="4216" toLevel="1" name="分散敵方">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1091,7 +1091,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>60</magicLevel>
 	</skill>
-	<skill id="4217" toLevel="1" name="Mass Scatter Enemy">
+	<skill id="4217" toLevel="1" name="廣域分散敵方">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1106,7 +1106,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>60</magicLevel>
 	</skill>
-	<skill id="4218" toLevel="1" name="Drain">
+	<skill id="4218" toLevel="1" name="吸收">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1133,7 +1133,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4219" toLevel="1" name="Hold">
+	<skill id="4219" toLevel="1" name="束縛">
 		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
@@ -1158,7 +1158,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4220" toLevel="1" name="Dual Attack">
+	<skill id="4220" toLevel="1" name="雙刀攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1176,7 +1176,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4221" toLevel="1" name="Range Dual Attack">
+	<skill id="4221" toLevel="1" name="範圍雙刀攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1194,7 +1194,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4222" toLevel="1" name="Instant Teleport">
+	<skill id="4222" toLevel="1" name="瞬間移動">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1203,7 +1203,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>60</magicLevel>
 	</skill>
-	<skill id="4223" toLevel="1" name="Daytime Zaken">
+	<skill id="4223" toLevel="1" name="日間札肯">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1219,7 +1219,7 @@
 		<magicLevel>-1</magicLevel>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="4224" toLevel="1" name="Nighttime Zaken">
+	<skill id="4224" toLevel="1" name="夜間札肯">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1234,7 +1234,7 @@
 		<magicLevel>-1</magicLevel>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="4225" toLevel="5" name="Stun Resistance">
+	<skill id="4225" toLevel="5" name="衝擊攻擊抵抗">
 		<!-- Level 1: Slightly resistant to Sleep. -->
 		<!-- Level 2: Slightly resistant to Sleep. -->
 		<!-- Level 3: Slightly resistant to Sleep. -->
@@ -1256,7 +1256,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4226" toLevel="1" name="Ban Heal">
+	<skill id="4226" toLevel="1" name="禁止治療">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1268,7 +1268,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4227" toLevel="1" name="Zaken Regeneration">
+	<skill id="4227" toLevel="1" name="札肯再生">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1288,7 +1288,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4228" toLevel="12" name="Double Dagger Attack">
+	<skill id="4228" toLevel="12" name="雙匕首攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1346,7 +1346,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4229" toLevel="12" name="Double Wind Fist">
+	<skill id="4229" toLevel="12" name="雙風暴之拳">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1404,7 +1404,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4230" toLevel="1" name="Wild Cannon">
+	<skill id="4230" toLevel="1" name="暴走加農砲">
 		<!-- Makes a powerful attack on castle gates and walls. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1426,7 +1426,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4231" toLevel="12" name="Spit Attack">
+	<skill id="4231" toLevel="12" name="體液攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1504,7 +1504,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4232" toLevel="12" name="Vortex">
+	<skill id="4232" toLevel="12" name="槍舞旋風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1550,7 +1550,7 @@
 			<effect name="PhysicalDamage" />
 		</effects>
 	</skill>
-	<skill id="4233" toLevel="1" name="Vampiric Attack">
+	<skill id="4233" toLevel="1" name="吸血攻擊">
 		<!-- Absorbs the enemy's HP with each attack. -->
 		<icon>icon.skill4233</icon>
 		<operateType>P</operateType>
@@ -1563,7 +1563,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4234" toLevel="12" name="Spear Attack">
+	<skill id="4234" toLevel="12" name="長槍攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1620,7 +1620,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4235" toLevel="1" name="Ram">
+	<skill id="4235" toLevel="1" name="帕森傳送">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1629,7 +1629,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>70</magicLevel>
 	</skill>
-	<skill id="4236" toLevel="1" name="Decrease Heal">
+	<skill id="4236" toLevel="1" name="治癒下降">
 		<!-- Reduces the effectiveness of recovery magic. Inflicted status: Debilitation. -->
 		<icon>icon.skill1269</icon>
 		<operateType>A2</operateType>
@@ -1662,7 +1662,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4237" toLevel="1" name="Decrease Speed">
+	<skill id="4237" toLevel="1" name="移動速度下降">
 		<!-- Decreases Speed. Effect 3. Inflicted status: Debilitation. -->
 		<icon>icon.skill1236</icon>
 		<operateType>A2</operateType>
@@ -1696,7 +1696,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4238" toLevel="1" name="Increase Cooldown">
+	<skill id="4238" toLevel="1" name="再次使用時間增加">
 		<!-- Momentarily increases P./ M. Skill Cooldown. -->
 		<icon>icon.skill1248</icon>
 		<operateType>A2</operateType>
@@ -1732,7 +1732,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4239" toLevel="1" name="Antharas: Recovery">
+	<skill id="4239" toLevel="1" name="安塔瑞斯恢復">
 		<!-- Antharas recovery stage 2. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>
@@ -1753,7 +1753,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4240" toLevel="1" name="Antharas: Recovery">
+	<skill id="4240" toLevel="1" name="安塔瑞斯恢復">
 		<!-- Antharas Recovery stage 3. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>
@@ -1774,7 +1774,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4241" toLevel="1" name="Antharas: Recovery">
+	<skill id="4241" toLevel="1" name="安塔瑞斯恢復">
 		<!-- Antharas Recovery stage 4. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>
@@ -1795,7 +1795,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4242" toLevel="1" name="Zaken Regeneration">
+	<skill id="4242" toLevel="1" name="札肯再生">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1809,7 +1809,7 @@
 		<magicLevel>-1</magicLevel>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="4243" toLevel="1" name="Venomous Poison">
+	<skill id="4243" toLevel="1" name="劇毒">
 		<!-- A deadly toxin courses through your bloodstream, gradually reducing your HP. Effect 9. -->
 		<icon>icon.skill4082</icon>
 		<operateType>A2</operateType>
@@ -1836,7 +1836,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4244" toLevel="12" name="Wild Sweep">
+	<skill id="4244" toLevel="12" name="瘋狂掃蕩">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1898,7 +1898,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4245" toLevel="1" name="Mimic's Rage">
+	<skill id="4245" toLevel="1" name="憤怒的擬身怪">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1927,7 +1927,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4246" toLevel="1" name="Bow Magic Resistance">
+	<skill id="4246" toLevel="1" name="弓魔法耐性">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1943,7 +1943,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4247" toLevel="12" name="(Wind Strike)">
+	<skill id="4247" toLevel="12" name="(狂風之擊)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2018,7 +2018,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4248" toLevel="12" name="Energy Drain">
+	<skill id="4248" toLevel="12" name="能量吸收">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2094,7 +2094,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4249" toLevel="12" name="Decrease Speed">
+	<skill id="4249" toLevel="12" name="移動速度下降">
 		<!-- Immediately decreases Speed. Effect 2.. Inflicted status: Debilitation. -->
 		<icon>icon.skill1184</icon>
 		<operateType>A2</operateType>
@@ -2182,7 +2182,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4250" toLevel="12" name="Twister">
+	<skill id="4250" toLevel="12" name="風漩術">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2257,7 +2257,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4251" toLevel="12" name="Beam Cannon">
+	<skill id="4251" toLevel="12" name="光束加農砲">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2330,7 +2330,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4252" toLevel="12" name="Flame Strike">
+	<skill id="4252" toLevel="12" name="火焰狂襲">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2407,7 +2407,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4253" toLevel="12" name="Blaze">
+	<skill id="4253" toLevel="12" name="赤焰燃燒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2482,7 +2482,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4254" toLevel="12" name="Prominence">
+	<skill id="4254" toLevel="12" name="風之爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2557,7 +2557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4255" toLevel="12" name="Beam Cannon">
+	<skill id="4255" toLevel="12" name="光束加農砲">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2630,7 +2630,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4256" toLevel="1" name="Stun Resistance">
+	<skill id="4256" toLevel="1" name="衝擊耐性">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2641,7 +2641,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4257" toLevel="12" name="Hydro Blast">
+	<skill id="4257" toLevel="12" name="水之爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2718,7 +2718,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4258" toLevel="1" name="Hinder Strider">
+	<skill id="4258" toLevel="1" name="座龍緩速">
 		<!-- Slows down the speed of a user who is riding a strider. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -2745,7 +2745,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4259" toLevel="12" name="Toxic Smoke">
+	<skill id="4259" toLevel="12" name="毒霧">
 		<!-- Level 1: A deadly toxin gradually reducing HP. Effect 2.. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: A deadly toxin gradually reducing HP. Effect 3.. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: A deadly toxin gradually reducing HP. Effect 4.. Inflicted status: Infection (Bleed, Poison). -->
@@ -2871,7 +2871,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4260" toLevel="12" name="Steal Blood">
+	<skill id="4260" toLevel="12" name="吸血">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2973,7 +2973,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4261" toLevel="12" name="Mega Storm Strike">
+	<skill id="4261" toLevel="12" name="狂風暴擊">
 		<!-- Amasses a hurricane and fires it. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -3062,7 +3062,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4262" toLevel="2" name="Holiday Wind Walk">
+	<skill id="4262" toLevel="2" name="聖誕風之疾走">
 		<!-- Level 1: Speed increases temporarily. Effect 2. -->
 		<!-- Level 2: Temporarily increases Speed. Effect 2. -->
 		<icon>icon.skill1204</icon>
@@ -3086,7 +3086,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4263" toLevel="1" name="Holiday Haste">
+	<skill id="4263" toLevel="1" name="聖誕速度激發">
 		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
@@ -3110,7 +3110,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4264" toLevel="1" name="Holiday Empower">
+	<skill id="4264" toLevel="1" name="聖誕魔力催化">
 		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
@@ -3134,7 +3134,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4265" toLevel="3" name="Holiday Might">
+	<skill id="4265" toLevel="3" name="聖誕力量強化">
 		<!-- Level 1: P. Atk. increases temporarily. Effect 1. -->
 		<!-- Level 2: P. Atk. increases temporarily. Effect 2. -->
 		<!-- Level 3: P. Atk. increases temporarily. Effect 3. -->
@@ -3164,7 +3164,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4266" toLevel="3" name="Holiday Shield">
+	<skill id="4266" toLevel="3" name="聖誕保護盾">
 		<!-- Level 1: P. Def. increases temporarily. Effect 1. -->
 		<!-- Level 2: P. Def. increases temporarily. Effect 2. -->
 		<!-- Level 3: P. Def. increases temporarily. Effect 3. -->
@@ -3194,7 +3194,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4267" toLevel="1" name="Grade Penalty">
+	<skill id="4267" toLevel="1" name="等級懲罰">
 		<!-- Your current equipment's grade does not match your level. -->
 		<icon>icon.skill4267</icon>
 		<operateType>P</operateType>
@@ -3202,21 +3202,21 @@
 		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 	</skill>
-	<skill id="4268" toLevel="1" name="Danger Area">
+	<skill id="4268" toLevel="1" name="危險地帶">
 		<!-- You are located in an area in which you can receive environmental damage or penalty. -->
 		<icon>icon.skill4268</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4269" toLevel="1" name="Block All Chat">
+	<skill id="4269" toLevel="1" name="隔絕所有閒談">
 		<!-- A mode that blocks global chatting. Whispers cannot be heard. -->
 		<icon>icon.skill4269</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4270" toLevel="4" name="Weight Penalty">
+	<skill id="4270" toLevel="4" name="負重懲罰">
 		<!-- Level 1: Your inventory weight limit exceeds 50%. HP/ MP recovery is greatly decreased. -->
 		<!-- Level 2: Your inventory weight limit exceeds 66.6%. HP/ MP recovery and Speed are decreased. -->
 		<!-- Level 3: Your inventory weight limit exceeds 80%. HP/ MP regeneration and movement are greatly decreased, and any quest progression is suspended. -->
@@ -3261,7 +3261,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4271" toLevel="50" name="Momentum">
+	<skill id="4271" toLevel="50" name="力量提升">
 		<!-- Level 1: Momentum Lv. 1. -->
 		<!-- Level 2: Momentum Lv. 2. -->
 		<!-- Level 3: Momentum Lv. 3. -->
@@ -3368,7 +3368,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4272" toLevel="1" name="Greater Bow/ Crossbow Resistance">
+	<skill id="4272" toLevel="1" name="弓/弩抵抗強">
 		<!-- Greatly increases Bow/ Crossbow Resistance. -->
 		<icon>icon.skill4272</icon>
 		<operateType>P</operateType>
@@ -3382,7 +3382,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4273" toLevel="5" name="Dagger Resistance">
+	<skill id="4273" toLevel="5" name="匕首武器抗性">
 		<!-- Resistant to Dagger/ Rapier attacks. -->
 		<icon>icon.skill4273_new</icon>
 		<operateType>P</operateType>
@@ -3414,7 +3414,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4274" toLevel="5" name="Blunt Weapon Vulnerability">
+	<skill id="4274" toLevel="5" name="鈍器弱點">
 		<!-- Vulnerable to Blunt Weapons. -->
 		<icon>icon.skill4274_new</icon>
 		<operateType>P</operateType>
@@ -3432,14 +3432,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4275" toLevel="5" name="Holy Attack Vulnerability">
+	<skill id="4275" toLevel="5" name="神聖屬性弱點">
 		<!-- Vulnerable to Holy attack. -->
 		<icon>icon.skill4275_new</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4276" toLevel="5" name="Bow/ Crossbow Vulnerability">
+	<skill id="4276" toLevel="5" name="弓/弩弱點">
 		<!-- Weak against Bow/ Crossbow attacks. -->
 		<icon>icon.skill4276_new</icon>
 		<operateType>P</operateType>
@@ -3471,7 +3471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4277" toLevel="5" name="Poison Resistance">
+	<skill id="4277" toLevel="5" name="毒抵抗">
 		<!-- Level 1: Slightly resistant to Poison attack. -->
 		<!-- Level 2: Slightly resistant to Poison attack. -->
 		<!-- Level 3: Slightly resistant to Poison attack. -->
@@ -3493,7 +3493,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4278" toLevel="1" name="Attack of Darkness">
+	<skill id="4278" toLevel="1" name="黑暗屬性攻擊">
 		<!-- Unleashes a dark attack. -->
 		<icon>icon.skill4278</icon>
 		<operateType>P</operateType>
@@ -3506,35 +3506,35 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4279" toLevel="5" name="Fire Vulnerability">
+	<skill id="4279" toLevel="5" name="火屬性弱點">
 		<!-- Vulnerable to Fire attacks. -->
 		<icon>icon.skill4279_new</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4280" toLevel="5" name="Water Vulnerability">
+	<skill id="4280" toLevel="5" name="水屬性弱點">
 		<!-- Vulnerable to Water attacks. -->
 		<icon>icon.skill4280_new</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4281" toLevel="5" name="Wind Attack Vulnerability">
+	<skill id="4281" toLevel="5" name="風屬性弱點">
 		<!-- Vulnerable to Wind attacks. -->
 		<icon>icon.skill4281_new</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4282" toLevel="5" name="Earth Attack Vulnerability">
+	<skill id="4282" toLevel="5" name="地屬性弱點">
 		<!-- Vulnerable to Earth Attack. -->
 		<icon>icon.skill4282_new</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4283" toLevel="1" name="Greater Magic Damage Resistance">
+	<skill id="4283" toLevel="1" name="魔法抵抗強">
 		<!-- Great M. Damage Resistance. -->
 		<icon>icon.skill4283_new</icon>
 		<operateType>P</operateType>
@@ -3547,7 +3547,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4284" toLevel="5" name="Bleed Resistance">
+	<skill id="4284" toLevel="5" name="出血抵抗">
 		<!-- Level 1: Slightly resistant to Bleed. -->
 		<!-- Level 2: Slightly resistant to Bleed. -->
 		<!-- Level 3: Slightly resistant to Bleed. -->
@@ -3569,7 +3569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4285" toLevel="5" name="Sleep Resistance">
+	<skill id="4285" toLevel="5" name="催眠抵抗">
 		<!-- Level 1: Slightly resistant to Sleep. -->
 		<!-- Level 2: Slightly resistant to Sleep. -->
 		<!-- Level 3: Slightly resistant to Sleep. -->
@@ -3591,7 +3591,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4286" toLevel="1" name="Greater Sleep Resistance">
+	<skill id="4286" toLevel="1" name="催眠抵抗強">
 		<!-- Highly resistant to Sleep. -->
 		<icon>icon.skill4286</icon>
 		<operateType>P</operateType>
@@ -3603,7 +3603,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4287" toLevel="5" name="Hold Resistance">
+	<skill id="4287" toLevel="5" name="束縛抵抗">
 		<!-- Level 1: Slightly resistant to Hold. -->
 		<!-- Level 2: Slightly resistant to Hold. -->
 		<!-- Level 3: Slightly resistant to Hold. -->
@@ -3625,7 +3625,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4288" toLevel="1" name="Greater Hold Resistance">
+	<skill id="4288" toLevel="1" name="束縛抵抗強">
 		<!-- Highly resistant to Hold. -->
 		<icon>icon.skill4288</icon>
 		<operateType>P</operateType>
@@ -3637,7 +3637,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4289" toLevel="1" name="Wyvern Breath">
+	<skill id="4289" toLevel="1" name="飛龍氣息">
 		<!-- A spewing out of wyvern breath that attacks multiple enemies. Success rate is best at close range. -->
 		<icon>icon.skill4289</icon>
 		<operateType>A1</operateType>
@@ -3665,70 +3665,70 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4290" toLevel="1" name="Race">
+	<skill id="4290" toLevel="1" name="種族-不死生物">
 		<!-- Undead -->
 		<icon>icon.skill4290</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4291" toLevel="1" name="Race">
+	<skill id="4291" toLevel="1" name="種族-不死生物">
 		<!-- Magical Creatures -->
 		<icon>icon.skill4291</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4292" toLevel="1" name="Race">
+	<skill id="4292" toLevel="1" name="種族-不死生物">
 		<!-- Beasts -->
 		<icon>icon.skill4292</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4293" toLevel="1" name="Race">
+	<skill id="4293" toLevel="1" name="種族-不死生物">
 		<!-- Animals -->
 		<icon>icon.skill4293</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4294" toLevel="1" name="Race">
+	<skill id="4294" toLevel="1" name="種族-不死生物">
 		<!-- Plants -->
 		<icon>icon.skill4294</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4295" toLevel="1" name="Race">
+	<skill id="4295" toLevel="1" name="種族-不死生物">
 		<!-- Humanoids -->
 		<icon>icon.skill4295</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4296" toLevel="1" name="Race">
+	<skill id="4296" toLevel="1" name="種族-不死生物">
 		<!-- Spirits -->
 		<icon>icon.skill4296</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4297" toLevel="1" name="Race">
+	<skill id="4297" toLevel="1" name="種族-不死生物">
 		<!-- Angels -->
 		<icon>icon.skill4297</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4298" toLevel="1" name="Race">
+	<skill id="4298" toLevel="1" name="種族-不死生物">
 		<!-- Demons -->
 		<icon>icon.skill4298</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="4299" toLevel="1" name="Race">
+	<skill id="4299" toLevel="1" name="種族-不死生物">
 		<!-- Dragons -->
 		<icon>icon.skill4299</icon>
 		<operateType>P</operateType>

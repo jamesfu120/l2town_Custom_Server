@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="15400" toLevel="1" name="Shield of Darkness">
+	<skill id="15400" toLevel="1" name="黑暗之盾">
 		<!-- P. Def. greatly increases temporarily due to the power of darkness. -->
 		<icon>icon.skill0110</icon>
 		<operateType>A2</operateType>
@@ -33,7 +33,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15401" toLevel="1" name="Burning Blood">
+	<skill id="15401" toLevel="1" name="沸騰之血">
 		<!-- Resurrects the dead character restoring them to full health. All buffs and debuffs remain, except for Noblesse Blessing and Raid Blessing. (The effect is active only in Kartia's Labyrinth - Tainted Dimension Attacker.) -->
 		<icon>icon.skill5873</icon>
 		<operateType>A2</operateType>
@@ -67,7 +67,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15402" toLevel="1" name="Wisp's Blessing">
+	<skill id="15402" toLevel="1" name="光魂祝福">
 		<!-- P./ M. Atk. increases temporarily. -->
 		<icon>icon.skill11046</icon>
 		<operateType>A2</operateType>
@@ -95,7 +95,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15403" toLevel="1" name="Favor Exchange">
+	<skill id="15403" toLevel="1" name="善意退轉">
 		<!-- For 25 sec., Speed +30%. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
@@ -121,7 +121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15404" toLevel="1" name="Unable to Target">
+	<skill id="15404" toLevel="1" name="無法鎖定狀態">
 		<!-- Cannot target. -->
 		<icon>icon.notargetting</icon>
 		<operateType>A2</operateType>
@@ -139,7 +139,7 @@
 			<effect name="DisableTargeting" />
 		</effects>
 	</skill>
-	<skill id="15405" toLevel="1" name="Master's Blessing (Awakening)">
+	<skill id="15405" toLevel="1" name="GM的祝福(覺醒)">
 		<!-- Uses the Master's Blessing buff. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -151,7 +151,7 @@
 		<magicLevel>85</magicLevel>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="15406" toLevel="1" name="Warrior's Harmony Zone">
+	<skill id="15406" toLevel="1" name="狂戰士和聲地區">
 		<!-- Creates a zone that provides the Harmony skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -163,7 +163,7 @@
 		<magicLevel>85</magicLevel>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="15407" toLevel="1" name="Knight's Harmony Zone">
+	<skill id="15407" toLevel="1" name="守護者和聲地區">
 		<!-- Creates a zone that provides the Harmony skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -175,7 +175,7 @@
 		<magicLevel>85</magicLevel>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="15408" toLevel="1" name="Wizard's Harmony Zone">
+	<skill id="15408" toLevel="1" name="大賢者和聲地區">
 		<!-- Creates a zone that provides the Harmony skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -187,7 +187,7 @@
 		<magicLevel>85</magicLevel>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="15409" toLevel="1" name="Summon Buff Servant">
+	<skill id="15409" toLevel="1" name="輔助魔法奴隸召喚">
 		<!-- Summons the Buff Servant. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -199,7 +199,7 @@
 		<magicLevel>85</magicLevel>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="15410" toLevel="1" name="Full Attack">
+	<skill id="15410" toLevel="1" name="全面攻擊">
 		<!-- Pulls all nearby characters and attacks them. Inflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
@@ -239,7 +239,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15411" toLevel="1" name="Soul Break">
+	<skill id="15411" toLevel="1" name="靈魂破壞">
 		<!-- A powerful attack on one target. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
@@ -272,7 +272,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15412" toLevel="1" name="Presentation - Toad Cannon Explosion">
+	<skill id="15412" toLevel="1" name="托德加農砲爆炸-展示">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -283,21 +283,21 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="15413" toLevel="1" name="Raid Boss (Lv. 96)">
+	<skill id="15413" toLevel="1" name="96級狩獵首領">
 		<!-- Giant golem created by Dr. Chaos to excavate the Nornil Ruins. This Detector Golem is equipped with attack functions as well, and is a complete collection of all of Dr. Chaos' technological wonders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="15414" toLevel="1" name="Raid Boss (Lv. 96)">
+	<skill id="15414" toLevel="1" name="96級狩獵首領">
 		<!-- Leader of the Spiculas that activated the Intruder Elimination Project under Mother Nornil's orders. This prototype Spicula is emotionless and almost machine-like. It is currently creating mutations in various machines by spreading the Laido Virus. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="15415" toLevel="1" name="No-grade Appearance Modification">
+	<skill id="15415" toLevel="1" name="無等級外型變更">
 		<!-- No-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -318,7 +318,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15416" toLevel="1" name="D-grade Appearance Modification">
+	<skill id="15416" toLevel="1" name="D級外型變更">
 		<!-- D-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -339,7 +339,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15417" toLevel="1" name="C-grade Appearance Modification">
+	<skill id="15417" toLevel="1" name="C級外型變更">
 		<!-- C-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -360,7 +360,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15418" toLevel="1" name="B-grade Appearance Modification">
+	<skill id="15418" toLevel="1" name="B級外型變更">
 		<!-- B-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -381,7 +381,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15419" toLevel="1" name="A-grade Appearance Modification">
+	<skill id="15419" toLevel="1" name="A級外型變更">
 		<!-- A-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -402,24 +402,24 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15420" toLevel="1" name="Before Lind Attack">
+	<skill id="15420" toLevel="1" name="林德攻擊前">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="15421" toLevel="1" name="Lind Attack">
+	<skill id="15421" toLevel="1" name="林德攻擊">
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
-	<skill id="15426" toLevel="1" name="Energy Drain">
+	<skill id="15426" toLevel="1" name="能量吸收">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>145000</castRange>
 		<effectPoint>100</effectPoint>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="15427" toLevel="1" name="Bleed">
+	<skill id="15427" toLevel="1" name="出血">
 		<!-- Inflicts AoE Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -429,7 +429,7 @@
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15428" toLevel="1" name="Knock Back">
+	<skill id="15428" toLevel="1" name="擊退">
 		<!-- Mass Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
@@ -439,7 +439,7 @@
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15429" toLevel="1" name="Hold">
+	<skill id="15429" toLevel="1" name="束縛">
 		<!-- Lindvior's AoE Aerial Yoke. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -449,7 +449,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="15430" toLevel="1" name="Lindvior's Jump">
+	<skill id="15430" toLevel="1" name="林德拜爾跳躍">
 		<!-- Deals damage from a distance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -479,7 +479,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15431" toLevel="1" name="Supersonic Blaster">
+	<skill id="15431" toLevel="1" name="超級波動衝擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -498,7 +498,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15432" toLevel="1" name="Power Strike">
+	<skill id="15432" toLevel="1" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -518,7 +518,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15433" toLevel="1" name="Fall into Darkness">
+	<skill id="15433" toLevel="1" name="暗之陷落">
 		<!-- Dark Resistance has been momentarily decreased, while Holy Resistance has been increased. Inflicted status: Debilitation. -->
 		<icon>icon.skill4336_new</icon>
 		<operateType>A2</operateType>
@@ -553,7 +553,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15434" toLevel="1" name="Drain HP">
+	<skill id="15434" toLevel="1" name="能量奪取">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -577,7 +577,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15435" toLevel="1" name="Power Strike">
+	<skill id="15435" toLevel="1" name="強力攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -597,7 +597,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15436" toLevel="1" name="Wide Sweep">
+	<skill id="15436" toLevel="1" name="瘋狂掃蕩">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -618,7 +618,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15437" toLevel="1" name="Sonic Blaster">
+	<skill id="15437" toLevel="1" name="波動衝擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -637,7 +637,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15438" toLevel="1" name="Hold">
+	<skill id="15438" toLevel="1" name="束縛">
 		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -666,7 +666,7 @@
 			<effect name="BlockMove" />
 		</effects>
 	</skill>
-	<skill id="15439" toLevel="1" name="Drain HP">
+	<skill id="15439" toLevel="1" name="能量奪取">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -690,7 +690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15440" toLevel="1" name="Aura Burn">
+	<skill id="15440" toLevel="1" name="精神燃燒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -711,7 +711,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15441" toLevel="1" name="Death Bomb">
+	<skill id="15441" toLevel="1" name="死亡炸彈">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -729,7 +729,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15442" toLevel="1" name="Bleed">
+	<skill id="15442" toLevel="1" name="出血">
 		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -762,7 +762,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15443" toLevel="1" name="Drain HP">
+	<skill id="15443" toLevel="1" name="能量奪取">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -787,7 +787,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15444" toLevel="1" name="Bleed">
+	<skill id="15444" toLevel="1" name="出血">
 		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -822,7 +822,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15445" toLevel="1" name="Super Strike">
+	<skill id="15445" toLevel="1" name="超級攻擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -841,7 +841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15446" toLevel="1" name="Drain HP">
+	<skill id="15446" toLevel="1" name="能量奪取">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -867,7 +867,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15447" toLevel="1" name="Bleed">
+	<skill id="15447" toLevel="1" name="出血">
 		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -900,7 +900,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15448" toLevel="1" name="Aura Burn">
+	<skill id="15448" toLevel="1" name="精神燃燒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -916,7 +916,7 @@
 		<mpConsume>2</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 	</skill>
-	<skill id="15449" toLevel="1" name="(Wind Strike)">
+	<skill id="15449" toLevel="1" name="(狂風之擊)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -939,7 +939,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15450" toLevel="1" name="Weakness">
+	<skill id="15450" toLevel="1" name="弱化">
 		<!-- Immediately decreases P. Atk. Inflicted status: Debilitation. -->
 		<icon>icon.skill4037</icon>
 		<operateType>A2</operateType>
@@ -969,7 +969,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15451" toLevel="1" name="Bleed">
+	<skill id="15451" toLevel="1" name="出血">
 		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -998,7 +998,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15452" toLevel="1" name="Decrease P. Atk.">
+	<skill id="15452" toLevel="1" name="攻擊力下降">
 		<!-- Immediately decreases P. Atk. Inflicted status: Debilitation. -->
 		<icon>icon.skill1164</icon>
 		<operateType>A2</operateType>
@@ -1024,7 +1024,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15453" toLevel="1" name="Vampiric Touch">
+	<skill id="15453" toLevel="1" name="吸血鬼之吻">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1045,7 +1045,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15454" toLevel="1" name="Memorable Raid Blessing">
+	<skill id="15454" toLevel="1" name="回憶中的狩獵紀念祝福">
 		<!-- For 2 h., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, acquired XP/ SP +30%. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
@@ -1067,14 +1067,14 @@
 		<specialLevel>-2</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="15455" toLevel="1" name="Thin Skin">
+	<skill id="15455" toLevel="1" name="脆弱的皮膚">
 		<!-- Increases received damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>97</magicLevel>
 	</skill>
-	<skill id="15456" toLevel="1" name="Triol's Voice">
+	<skill id="15456" toLevel="1" name="帝雷歐的聲音">
 		<!-- Triol's Voice. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
@@ -1095,7 +1095,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15457" toLevel="2" name="Triol's Domination">
+	<skill id="15457" toLevel="2" name="帝雷歐的支配">
 		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. Inflicted status: Infection (Bleed/ Poison) Demons of Hell, decreasing the character's HP. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1123,7 +1123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15458" toLevel="1" name="Memorable Raid Shield">
+	<skill id="15458" toLevel="1" name="回憶中的狩獵之盾">
 		<!-- A shield cast by the Memorable Raid boss. For 10 min., protects from additional damage. -->
 		<icon>icon.skill0110</icon>
 		<operateType>A2</operateType>
@@ -1145,7 +1145,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15459" toLevel="1" name="Blaze">
+	<skill id="15459" toLevel="1" name="赤焰燃燒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1168,7 +1168,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15460" toLevel="1" name="Poison">
+	<skill id="15460" toLevel="1" name="毒">
 		<!-- Momentarily decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<operateType>A2</operateType>
@@ -1199,7 +1199,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15461" toLevel="1" name="Drain HP">
+	<skill id="15461" toLevel="1" name="能量奪取">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1223,7 +1223,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15462" toLevel="1" name="Heal">
+	<skill id="15462" toLevel="1" name="治癒術">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -1244,7 +1244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15463" toLevel="1" name="Prominence">
+	<skill id="15463" toLevel="1" name="風之爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1267,7 +1267,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15464" toLevel="1" name="Death Link">
+	<skill id="15464" toLevel="1" name="死之糾結">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1290,7 +1290,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15465" toLevel="19" name="Vitality - Quest Reward (Lv. 1)">
+	<skill id="15465" toLevel="19" name="任務活力寶石19">
 		<!-- Level 16: Recovers one Vitality bar. -->
 		<!-- Level 17: Recovers two bars of Vitality. -->
 		<!-- Level 18: Recovers three bars of Vitality. -->
@@ -1370,7 +1370,7 @@
 			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
-	<skill id="15466" toLevel="1" name="Triol's CON Increase">
+	<skill id="15466" toLevel="1" name="帝雷歐體力強化">
 		<!-- Max HP +200%. -->
 		<icon>icon.skill1045</icon>
 		<operateType>P</operateType>
@@ -1385,7 +1385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15467" toLevel="1" name="Triol's P. Def. Increase">
+	<skill id="15467" toLevel="1" name="帝雷歐物理防禦力強化">
 		<!-- P. Def. +200%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>P</operateType>
@@ -1398,7 +1398,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15468" toLevel="1" name="Triol's M. Def. Decrease">
+	<skill id="15468" toLevel="1" name="帝雷歐魔法防禦力弱化">
 		<!-- M. Def. +50%. -->
 		<icon>icon.skill1388</icon>
 		<operateType>P</operateType>
@@ -1411,7 +1411,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15469" toLevel="1" name="Rites for Triol">
+	<skill id="15469" toLevel="1" name="祭獻帝雷歐">
 		<!-- For 60 min., HP Recovery Rate +20%. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>
@@ -1434,7 +1434,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15470" toLevel="1" name="Cancel HP Regeneration">
+	<skill id="15470" toLevel="1" name="HP恢復消除">
 		<icon>icon.skill01703</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1449,7 +1449,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15471" toLevel="1" name="No-grade Appearance Modification (Raid)">
+	<skill id="15471" toLevel="1" name="狩獵無等級外型變更">
 		<!-- No-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -1470,7 +1470,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15472" toLevel="1" name="D-grade Appearance Modification (Raid)">
+	<skill id="15472" toLevel="1" name="狩獵D級外型變更">
 		<!-- D-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -1491,7 +1491,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15473" toLevel="1" name="C-grade Appearance Modification (Raid)">
+	<skill id="15473" toLevel="1" name="狩獵C級外型變更">
 		<!-- C-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -1512,7 +1512,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15474" toLevel="1" name="B-grade Appearance Modification (Raid)">
+	<skill id="15474" toLevel="1" name="狩獵B級外型變更">
 		<!-- B-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -1533,7 +1533,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15475" toLevel="1" name="A-grade Appearance Modification (Raid)">
+	<skill id="15475" toLevel="1" name="狩獵A級外型變更">
 		<!-- A-grade Appearance Modification (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
@@ -1554,7 +1554,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<specialLevel>-3</specialLevel>
 	</skill>
-	<skill id="15476" toLevel="1" name="Spore Spray">
+	<skill id="15476" toLevel="1" name="孢子飛撒">
 		<!-- HP and Speed decreased due to spores. Inflicted status: Debilitation. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -1585,7 +1585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15477" toLevel="1" name="Corrosive Acid Spray">
+	<skill id="15477" toLevel="1" name="腐蝕液噴散">
 		<!-- Decreases P./ M. Def. Inflicted status: Debilitation. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
@@ -1617,7 +1617,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15478" toLevel="1" name="Spread Disease">
+	<skill id="15478" toLevel="1" name="傳染病散佈">
 		<!-- Instantly decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1648,7 +1648,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15479" toLevel="1" name="Vomit Mucus">
+	<skill id="15479" toLevel="1" name="黏液噴吐">
 		<!-- Decreases enemy's P. Accuracy. Inflicted status: Debilitation. -->
 		<icon>icon.skill1222</icon>
 		<operateType>A2</operateType>
@@ -1673,7 +1673,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15480" toLevel="1" name="Shoot Poison">
+	<skill id="15480" toLevel="1" name="毒液施放">
 		<!-- Decreases HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1701,7 +1701,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15481" toLevel="1" name="Shoot Spider Web">
+	<skill id="15481" toLevel="1" name="蛛絲吐射">
 		<!-- The web decreases Speed by 10%. Inflicted status: Debilitation. -->
 		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
@@ -1727,13 +1727,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15482" toLevel="1" name="Presentation - Lind">
+	<skill id="15482" toLevel="1" name="林德展示用">
 		<!-- Lindvior's Event Presentation Skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
 	</skill>
-	<skill id="15483" toLevel="1" name="Annihilation">
+	<skill id="15483" toLevel="1" name="破碎">
 		<!-- Inflicts P. damage on a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1753,7 +1753,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15484" toLevel="1" name="Lightning">
+	<skill id="15484" toLevel="1" name="落雷">
 		<!-- Deals M. damage to a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1774,7 +1774,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15485" toLevel="1" name="Contaminated Atelia Gas">
+	<skill id="15485" toLevel="1" name="處斷">
 		<!-- Inflicts P. damage on a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1794,7 +1794,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15486" toLevel="1" name="Straight Blow">
+	<skill id="15486" toLevel="1" name="直擊">
 		<!-- Attacks a single target inflicting Bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1822,7 +1822,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15487" toLevel="1" name="Disarray">
+	<skill id="15487" toLevel="1" name="分裂">
 		<!-- Inflicts P. damage on a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1842,7 +1842,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15488" toLevel="1" name="Penetrate">
+	<skill id="15488" toLevel="1" name="貫穿">
 		<!-- Inflicts P. damage on a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1862,7 +1862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15489" toLevel="1" name="Vivacity">
+	<skill id="15489" toLevel="1" name="快活">
 		<!-- Increases P. Def. for 5 sec. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -1884,7 +1884,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15490" toLevel="1" name="Rush">
+	<skill id="15490" toLevel="1" name="突擊">
 		<!-- Rush toward enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>DA1</operateType>
@@ -1902,7 +1902,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="15491" toLevel="1" name="Deadly Weapon">
+	<skill id="15491" toLevel="1" name="凶器">
 		<!-- Inflicts P. damage on a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1922,7 +1922,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15492" toLevel="1" name="Immediate Response">
+	<skill id="15492" toLevel="1" name="立即反應">
 		<!-- Attacks a single target poisoning it. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
@@ -1950,7 +1950,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15493" toLevel="1" name="Charge">
+	<skill id="15493" toLevel="1" name="突擊">
 		<!-- Attacks the target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>DA1</operateType>
@@ -1968,7 +1968,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="15494" toLevel="1" name="Strategic Response">
+	<skill id="15494" toLevel="1" name="戰略反應">
 		<!-- Increases Atk. Spd. for 5 sec. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
@@ -1991,7 +1991,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15495" toLevel="1" name="Ingenious Response">
+	<skill id="15495" toLevel="1" name="天才反應">
 		<!-- Increases P. Def. for 5 sec. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -2013,7 +2013,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15496" toLevel="1" name="Travis' Authority">
+	<skill id="15496" toLevel="1" name="特拉庇斯權能">
 		<!-- AoE M. Atk. On target's area. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2040,7 +2040,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15497" toLevel="1" name="Royal Guard Member's power.">
+	<skill id="15497" toLevel="1" name="呼叫親衛隊員">
 		<!-- Royal Guard Member's power. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2048,7 +2048,7 @@
 		<hitTime>1500</hitTime>
 		<mpConsume>10</mpConsume>
 	</skill>
-	<skill id="15498" toLevel="1" name="Dragon Defender">
+	<skill id="15498" toLevel="1" name="龍守護者">
 		<!-- For 1 h., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, Speed +10%. -->
 		<icon>icon.skill4689</icon>
 		<operateType>A2</operateType>
@@ -2056,7 +2056,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="15499" toLevel="1" name="Inspiration of Life">
+	<skill id="15499" toLevel="1" name="生命之力">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10800" toLevel="12" name="Superior Elemental Protection">
+	<skill id="10800" toLevel="12" name="極致元素抵抗">
 		<!-- Level 1: Fire/ Water/ Wind/ Earth Resistance +20. STR +2. -->
 		<!-- Level 2: Fire/ Water/ Wind/ Earth Resistance +22. STR +2. -->
 		<!-- Level 3: Fire/ Water/ Wind/ Earth Resistance +24. STR +2. -->
@@ -105,7 +105,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10801" toLevel="12" name="Bullseye">
+	<skill id="10801" toLevel="12" name="鎖定">
 		<!-- Level 1: Decreases target's Bow/ Crossbow Resistance by 40% and M. Def. by 5%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Decreases target's Bow/ Crossbow Resistance by 45% and M. Def. by 10%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Decreases target's Bow/ Crossbow Resistance by 50% and M. Def. by 15%. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -808,7 +808,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10802" toLevel="8" name="Mass Bullseye">
+	<skill id="10802" toLevel="8" name="多重鎖定">
 		<!-- Decreases target's and nearby enemies' Bow/ Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 1 - SubLevel 1001 (+1% Chance): Decreases target's and nearby enemies' Bow/ Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 1 - SubLevel 1002 (+2% Chance): Decreases target's and nearby enemies' Bow/ Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. Base success rate: 60%. Inflicted status: Debilitation. -->
@@ -1364,7 +1364,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="10803" toLevel="8" name="Time Bomb">
+	<skill id="10803" toLevel="8" name="時限炸彈">
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
@@ -1391,7 +1391,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10804" toLevel="4" name="Bullseye">
+	<skill id="10804" toLevel="4" name="時限炸彈">
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
@@ -1413,7 +1413,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10805" toLevel="4" name="Quick Charge">
+	<skill id="10805" toLevel="4" name="迅捷瞬步">
 		<!-- Level 1: Momentarily moves you forward for 300. -->
 		<!-- Level 2: Momentarily moves you forward for 400. -->
 		<!-- Level 3: Momentarily moves you forward for 500. -->
@@ -1506,7 +1506,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="10806" toLevel="8" name="Frost Trap">
+	<skill id="10806" toLevel="8" name="酷寒陷阱">
 		<!-- Decreases Speed and Atk. Spd./ Casting Spd. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 1 - SubLevel 1001 (Delete ): Decreases Speed and Atk. Spd./ Casting Spd. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 1 - SubLevel 1002 (Delete ): Decreases Speed and Atk. Spd./ Casting Spd. Base success rate: 60%. Inflicted status: Debilitation. -->
@@ -1589,7 +1589,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10807" toLevel="8" name="Gravity Trap">
+	<skill id="10807" toLevel="8" name="重力陷阱">
 		<!-- Holds the target. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 1 - SubLevel 1001 (Delete ): Holds the target. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 1 - SubLevel 1002 (Delete ): Holds the target. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
@@ -1635,7 +1635,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="10808" toLevel="4" name="Decoy Provocation">
+	<skill id="10808" toLevel="4" name="誘餌挑撥">
 		<!-- Prevents the enemy from changing their target. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1664,7 +1664,7 @@
 			<effect name="TargetMe" /> <!-- p_berserker ? -->
 		</effects>
 	</skill>
-	<skill id="10809" toLevel="2" name="Survival Movement">
+	<skill id="10809" toLevel="2" name="求生行動">
 		<!-- Level 1: P. Evasion +15. Disappears after 4 strikes. -->
 		<!-- Level 2: P. Evasion +20. Disappears after 4 strikes. -->
 		<icon>icon.skill1087</icon>
@@ -1689,7 +1689,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10810" toLevel="4" name="Sniping">
+	<skill id="10810" toLevel="4" name="狙擊姿態">
 		<!-- Level 1: For 30 min. when a bow or crossbow is equipped, P. Atk. +5%, Critical Rate for basic attacks and P. skills +5%, P./ M. Def. +5%. -->
 		<!-- Level 2: For 30 min. when a bow or crossbow is equipped, P. Atk. +6%, Critical Rate for basic attacks and P. skills +6%, P./ M. Def. +6%. -->
 		<!-- Level 3: For 30 min. when a bow or crossbow is equipped, P. Atk. +7%, Critical Rate for basic attacks and P. skills +7%, P./ M. Def. +7%. -->
@@ -1906,7 +1906,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10811" toLevel="5" name="Superior Hawk Mastery">
+	<skill id="10811" toLevel="5" name="極致獵鷹精通">
 		<!-- Level 1: When using a bow or a crossbow, P. Atk. +5%. -->
 		<!-- Level 2: When using a bow or a crossbow, P. Atk. +6%. -->
 		<!-- Level 3: When using a bow or a crossbow, P. Atk. +7%. -->
@@ -1939,7 +1939,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10812" toLevel="3" name="Sneak Shot">
+	<skill id="10812" toLevel="3" name="悄然箭">
 		<!-- Level 1: Deals P. damage to the enemy from a distance. Power 29,176. Inflicts Stun when attacking from behind. Requires a bow or a crossbow. Over-hit. Critical. -->
 		<!-- Level 2: Deals P. damage to the enemy from a distance. Power 30,726. Inflicts Stun when attacking from behind. Requires a bow or a crossbow. Over-hit. Critical. -->
 		<!-- Level 3: Deals P. damage to the enemy from a distance. Power 32,277. Inflicts Stun when attacking from behind. Requires a bow or a crossbow. Over-hit. Critical. -->
@@ -1971,7 +1971,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10813" toLevel="3" name="Sneak Shot: Stun">
+	<skill id="10813" toLevel="3" name="悄然箭-衝擊">
 		<!-- Stuns the enemy for 5 sec. With a certain chance, cancels the enemy's target. Requires a bow or a crossbow. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1981,7 +1981,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="10856" toLevel="4" name="Rapid Fire Position">
+	<skill id="10856" toLevel="4" name="快速射擊姿態">
 		<!-- Level 1: For 30 min., P. Atk. +5%, received M. Critical Rate -5%, P. Skill Cooldown -5%. Requires a bow or a crossbow. -->
 		<!-- Level 2: For 30 min., P. Atk. +6%, received M. Critical Rate -7%, P. Skill Cooldown -6%. Requires a bow or a crossbow. -->
 		<!-- Level 3: For 30 min., P. Atk. +7%, received M. Critical Rate -10%, P. Skill Cooldown -7%. Requires a bow or a crossbow. -->
@@ -2210,7 +2210,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10857" toLevel="5" name="Superior Speed Mastery">
+	<skill id="10857" toLevel="5" name="極致銀色精通">
 		<!-- Level 1: Speed +10 -->
 		<!-- Level 2: Speed +12 -->
 		<!-- Level 3: Speed +15 -->
@@ -2244,7 +2244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10858" toLevel="3" name="Retreating Shot">
+	<skill id="10858" toLevel="3" name="後躍一擊">
 		<!-- Level 1: Attacks target with 29,176 Power added to P. Atk., cancels their targeting, and retreats 400 grids backward. -->
 		<!-- Level 2: Attacks target with 30,726 Power added to P. Atk., cancels their targeting, and retreats 400 grids backward. -->
 		<!-- Level 3: Attacks target with 32,277 Power added to P. Atk., cancels their targeting, and retreats 450 grids backward. -->

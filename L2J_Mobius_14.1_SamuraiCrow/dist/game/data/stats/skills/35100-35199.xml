@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="35100" toLevel="3" name="Scroll of Escape: Silent Valley">
+	<skill id="35100" toLevel="3" name="寂靜之谷傳送卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="35101" toLevel="1" name="Dragon Fighter - Balthus">
+	<skill id="35101" toLevel="1" name="龍戰爪-班卓斯">
 		<!-- Max HP/ MP/ CP +30% and Atk. Spd. +30%. -->
 		<icon>icon.skill5860</icon>
 		<operateType>P</operateType>
@@ -28,7 +28,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35102" toLevel="1" name="Dragon Mage - Balthus">
+	<skill id="35102" toLevel="1" name="龍法師-班卓斯">
 		<!-- Max HP/ MP/ CP +30% and Casting Spd. +30%. -->
 		<icon>icon.skill5860</icon>
 		<operateType>P</operateType>
@@ -51,7 +51,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35103" toLevel="1" name="Blessed Scroll: Enchant Circlet">
+	<skill id="35103" toLevel="1" name="祝福的頭箍強化卷軸">
 		<!-- A scroll for enchanting Wizard's/ Warrior's/ Knight's Circlet. Max enchant value: ++5. In case of failure, the circlet's enchant value is reset. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -62,7 +62,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="35104" toLevel="6" name="Warrior's Circlet">
+	<skill id="35104" toLevel="6" name="繽紛權威頭箍">
 		<!-- Level 1: LUC/ CHA +1. -->
 		<!-- Level 2: Vitality bonus +10%, STR +5, LUC/ CHA +1, Attribute Attack +50. -->
 		<!-- Level 3: Acquired XP/ SP +10%, Vitality bonus +10%, P. Atk. +7%, Critical Rate for basic attacks +5%, STR +5, LUC/ CHA +1, Attribute Attack +50. -->
@@ -138,7 +138,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35105" toLevel="5" name="Warrior's Circlet: Enchant Effect">
+	<skill id="35105" toLevel="5" name="權威頭箍強化效果">
 		<!-- Level 1: STR +1. -->
 		<!-- Level 2: STR +2. -->
 		<!-- Level 3: STR +3, Attribute Attack +10. -->
@@ -169,7 +169,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35106" toLevel="5" name="Noble Warrior's Circlet: Enchant Effect">
+	<skill id="35106" toLevel="5" name="高貴權威頭箍強化效果">
 		<!-- Level 1: P. Atk. +1%. -->
 		<!-- Level 2: P. Atk. +2%. -->
 		<!-- Level 3: P. Atk. +3%, Critical Rate for basic attacks +1%. -->
@@ -204,7 +204,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35107" toLevel="10" name="Radiant Warrior's Circlet: Enchant Effect">
+	<skill id="35107" toLevel="10" name="繽紛權威頭箍強化效果">
 		<!-- Level 1: Critical Damage for basic attacks and P./ M. skills +1%. -->
 		<!-- Level 2: Critical Damage for basic attacks and P./ M. skills +3%. -->
 		<!-- Level 3: Critical Damage for basic attacks and P. skills +5%, Power of basic attacks and P. skills +1%. -->
@@ -309,7 +309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35108" toLevel="6" name="Wizard's Circlet">
+	<skill id="35108" toLevel="6" name="繽紛睿智頭箍">
 		<!-- Level 1: LUC/ CHA +1. -->
 		<!-- Level 2: Vitality bonus +10%, INT +5, LUC/ CHA +1, Attribute Attack +50. -->
 		<!-- Level 3: Acquired XP/ SP +10%, Vitality bonus +10%, M. Atk. +14%, M. Skill Critical Rate +5%, INT +5, LUC/ CHA +1, Attribute Attack +50. -->
@@ -386,7 +386,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35109" toLevel="5" name="Wizard's Circlet: Enchant Effect">
+	<skill id="35109" toLevel="5" name="睿智頭箍強化效果">
 		<!-- Level 1: INT +1. -->
 		<!-- Level 2: INT +2. -->
 		<!-- Level 3: INT +3, Attribute Attack +10. -->
@@ -417,7 +417,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35110" toLevel="5" name="Noble Wizard's Circlet: Enchant Effect">
+	<skill id="35110" toLevel="5" name="高貴睿智頭箍強化效果">
 		<!-- Level 1: M. Atk. +1%. -->
 		<!-- Level 2: M. Atk. +4%. -->
 		<!-- Level 3: M. Atk. +6%, M. Skill Critical Rate +1%. -->
@@ -452,7 +452,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35111" toLevel="10" name="Radiant Wizard's Circlet: Enchant Effect">
+	<skill id="35111" toLevel="10" name="繽紛睿智頭箍強化效果">
 		<!-- Level 1: M. Skill Critical Damage +1%. -->
 		<!-- Level 2: M. Skill Critical Damage +3%. -->
 		<!-- Level 3: M. Skill Critical Damage +5%, M. Skill Power +1%. -->
@@ -529,7 +529,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35112" toLevel="6" name="Knight's Circlet">
+	<skill id="35112" toLevel="6" name="繽紛加護頭箍">
 		<!-- Level 1: LUC/ CHA +1. -->
 		<!-- Level 2: LUC/ CHA +1, CON/ MEN +5, Attribute Resistance +50, Vitality bonus +10%. -->
 		<!-- Level 3: LUC/ CHA +1, CON/ MEN +5, Attribute Resistance +50, Vitality bonus +10%, P./ M. Def. +7%, Debuff Resistance +5%, acquired XP/ SP +10%. -->
@@ -643,7 +643,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35113" toLevel="5" name="Knight's Circlet: Enchant Effect">
+	<skill id="35113" toLevel="5" name="加護頭箍強化效果">
 		<!-- Level 1: CON/ MEN +1. -->
 		<!-- Level 2: CON/ MEN +2. -->
 		<!-- Level 3: CON/ MEN +3, Attribute Resistance +10. -->
@@ -725,7 +725,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35114" toLevel="5" name="Noble Knight's Circlet: Enchant Effect">
+	<skill id="35114" toLevel="5" name="高貴加護頭箍強化效果">
 		<!-- Level 1: P./ M. Def. +1%. -->
 		<!-- Level 2: P./ M. Def. +2%. -->
 		<!-- Level 3: P. Def. +3%, M. Def. +4%, Debuff Resistance +1%. -->
@@ -770,7 +770,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35115" toLevel="10" name="Radiant Knight's Circlet: Enchant Effect">
+	<skill id="35115" toLevel="10" name="繽紛加護頭箍強化效果">
 		<!-- Level 1: All received Critical Damage -3% -->
 		<!-- Level 2: All received Critical Damage -5% -->
 		<!-- Level 3: Received damage -3%, all received Critical Damage -7% -->
@@ -890,7 +890,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35116" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35116" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- PvP damage +5%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -909,7 +909,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35117" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35117" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Received PvP damage -5%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -928,7 +928,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35118" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35118" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- PvE damage +5%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -950,7 +950,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35119" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35119" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Received PvE damage -5%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -969,7 +969,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35120" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35120" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- HP/ CP Recovery Potions' Effect +500. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -985,7 +985,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35121" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35121" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Damage to immobilized targets +5%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1014,7 +1014,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35122" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35122" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Received damage when immobilized -5% -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1043,7 +1043,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35123" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35123" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- P. Atk. +1%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1054,7 +1054,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35124" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35124" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- M. Atk. +1%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1065,7 +1065,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35125" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35125" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- P. Def. +2%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1076,7 +1076,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35126" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35126" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- M. Def. +2%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1087,7 +1087,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35127" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35127" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Atk. Spd. +2%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1098,7 +1098,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35128" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35128" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Casting Spd. +2%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1109,7 +1109,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35129" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35129" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Max HP 2%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1120,7 +1120,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35130" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35130" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Max MP 2%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1131,7 +1131,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35131" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35131" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Max CP 2%. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1142,7 +1142,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35132" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35132" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- P. Accuracy +1. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1153,7 +1153,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35133" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35133" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- P. Evasion +1. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1164,7 +1164,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35134" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35134" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- M. Accuracy +1 -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1175,7 +1175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35135" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35135" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- M. Evasion +1. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1186,7 +1186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35136" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35136" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Fire Resistance +10. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1197,7 +1197,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35137" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35137" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Water Resistance +10. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1208,7 +1208,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35138" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35138" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Wind Resistance +10. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1219,7 +1219,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35139" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35139" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Earth Resistance +10. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1230,7 +1230,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35140" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35140" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Holy Resistance +10. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1241,7 +1241,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35141" toLevel="1" name="Circlet Spirit Stone Augment Effect">
+	<skill id="35141" toLevel="1" name="頭箍用靈魂之石精煉效果">
 		<!-- Dark Resistance +10. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1252,7 +1252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35142" toLevel="1" name="Reconstruction Society's Pack">
+	<skill id="35142" toLevel="1" name="重建聯合的強化禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1291,7 +1291,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35143" toLevel="1" name="Circlet Upgrade Stone Pack">
+	<skill id="35143" toLevel="1" name="頭箍升級石禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1323,7 +1323,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35144" toLevel="5" name="Herphah's Gift Box">
+	<skill id="35144" toLevel="5" name="海勒芙雅結業禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1376,7 +1376,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35145" toLevel="3" name="Traditional Hanbok">
+	<skill id="35145" toLevel="3" name="韓服衣裳">
 		<!-- Changes the armor appearance to that of Traditional Hanbok that is usually worn on the Eastern holidays. Lets you get Lucky Gift. -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1386,14 +1386,14 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="35146" toLevel="1" name="Festival Fairy's Growth Scroll">
+	<skill id="35146" toLevel="1" name="秋蓉的成長卷軸">
 		<!-- For 30 min., Vitality bonus +30%. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="35147" toLevel="4" name="+8 Zodiac Agathion Charm Box">
+	<skill id="35147" toLevel="4" name="+7星座壺精晶體">
 		<!-- Double-click to obtain Zodiac Agathion Charm enchanted to +8. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1581,12 +1581,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35148" toLevel="1" name="Herphah's Bracelet">
+	<skill id="35148" toLevel="1" name="海勒芙雅手鐲">
 		<!-- Unlocks 5 talisman slot(s). -->
 		<icon>icon.high_agathion_bracelet_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35149" toLevel="3" name="Large Supply Pack">
+	<skill id="35149" toLevel="3" name="高級補給箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1764,7 +1764,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35150" toLevel="2" name="Glorious Defense Box">
+	<skill id="35150" toLevel="2" name="光榮守護禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1797,7 +1797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35151" toLevel="1" name="Balthus Knight Bracelet">
+	<skill id="35151" toLevel="1" name="班卓斯騎士團手鐲">
 		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1. Unlocks 5 talisman slots. -->
 		<icon>icon.octavis_bracelet_i00</icon>
 		<operateType>P</operateType>
@@ -1831,15 +1831,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35152" toLevel="1" name="Scroll: Enchant Clan Cloak">
+	<skill id="35152" toLevel="1" name="血盟斗篷強化卷軸">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="35153" toLevel="1" name="Giant's Scroll: Enchant Clan Cloak">
+	<skill id="35153" toLevel="1" name="巨人血盟斗篷強化卷軸">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="35154" toLevel="4" name="Clan Cloak - War Lv. 1">
+	<skill id="35154" toLevel="4" name="血盟斗篷-戰爭階段4">
 		<!-- Level 1: Enchantment increases basic stats. -->
 		<!-- Level 2: STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1, LUC +1, CHA +1. Increases Debuff Resistance, when enchanted. -->
 		<!-- Level 3: STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, LUC +2, CHA +2, Debuff Resistance +5%. Increases Recovery Potions' Effect. -->
@@ -1852,7 +1852,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35155" toLevel="5" name="Clan Cloak - War Lv. 1: Enchant Effect">
+	<skill id="35155" toLevel="5" name="血盟斗篷-戰爭階段1強化效果">
 		<!-- Level 1: MEN +1 -->
 		<!-- Level 2: CON +1, MEN +1 -->
 		<!-- Level 3: CON +1, MEN +1, LUC +1 -->
@@ -1861,7 +1861,7 @@
 		<icon>icon.alliance_cloak_pvp01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35156" toLevel="5" name="Clan Cloak - War Lv. 2: Enchant Effect">
+	<skill id="35156" toLevel="5" name="血盟斗篷-戰爭階段2強化效果">
 		<!-- Level 1: STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +2, LUC +1, CHA +1, Debuff Resistance +1% -->
 		<!-- Level 2: STR +1, DEX +1, CON +2, INT +1, WIT +1, MEN +2, LUC +1, CHA +1, Debuff Resistance +2% -->
 		<!-- Level 3: STR +1, DEX +1, CON +2, INT +1, WIT +1, MEN +2, LUC +2, CHA +1, Debuff Resistance +3% -->
@@ -1870,7 +1870,7 @@
 		<icon>icon.alliance_cloak_pvp02</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35157" toLevel="5" name="Clan Cloak - War Lv. 3: Enchant Effect">
+	<skill id="35157" toLevel="5" name="血盟斗篷-戰爭階段3強化效果">
 		<!-- Level 1: STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +3, LUC +2, CHA +2, Debuff Resistance +5%, Recovery Potions' Effect ++20 -->
 		<!-- Level 2: STR +2, DEX +2, CON +3, INT +2, WIT +2, MEN +3, LUC +2, CHA +2, Debuff Resistance +5%, Recovery Potions' Effect ++20 -->
 		<!-- Level 3: STR +2, DEX +2, CON +3, INT +2, WIT +2, MEN +3, LUC +3, CHA +2, Debuff Resistance +5%, Recovery Potions' Effect ++20 -->
@@ -1879,7 +1879,7 @@
 		<icon>icon.alliance_cloak_pvp03</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35158" toLevel="5" name="Clan Cloak - War Lv. 4: Enchant Effect">
+	<skill id="35158" toLevel="5" name="血盟斗篷-戰爭階段4強化效果">
 		<!-- Level 1: STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +4, LUC +3, CHA +3, Debuff Resistance +5%, Recovery Potions' Effect ++30, received PvP damage -+31 -->
 		<!-- Level 2: STR +3, DEX +3, CON +4, INT +3, WIT +3, MEN +4, LUC +3, CHA +3, Debuff Resistance +5%, Recovery Potions' Effect ++30, received PvP damage -+31 -->
 		<!-- Level 3: STR +3, DEX +3, CON +4, INT +3, WIT +3, MEN +4, LUC +4, CHA +3, Debuff Resistance +5%, Recovery Potions' Effect ++30, received PvP damage -+31 -->
@@ -1888,7 +1888,7 @@
 		<icon>icon.alliance_cloak_pvp04</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35159" toLevel="4" name="Clan Cloak - Combat Lv. 1">
+	<skill id="35159" toLevel="4" name="血盟斗篷-戰鬥階段4">
 		<!-- Level 1: Enchantment increases basic stats. -->
 		<!-- Level 2: STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1, LUC +1, CHA +1. Increases acquired XP/ SP in the Vitality state, when enchanted. -->
 		<!-- Level 3: STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, LUC +2, CHA +2, acquired XP/ SP in the Vitality state +5%. Increases Max HP, when enchanted. -->
@@ -1901,7 +1901,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35160" toLevel="5" name="Clan Cloak - Combat Lv. 1: Enchant Effect">
+	<skill id="35160" toLevel="5" name="血盟斗篷-戰鬥階段1強化效果">
 		<!-- Level 1: MEN +1 -->
 		<!-- Level 2: CON +1, MEN +1 -->
 		<!-- Level 3: CON +1, MEN +1, LUC ++1 -->
@@ -1910,7 +1910,7 @@
 		<icon>icon.alliance_cloak_pve01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35161" toLevel="5" name="Clan Cloak - Combat Lv. 2: Enchant Effect">
+	<skill id="35161" toLevel="5" name="血盟斗篷-戰鬥階段2強化效果">
 		<!-- Level 1: STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +2, LUC +1, CHA +1, acquired XP/ SP in the Vitality state +1% -->
 		<!-- Level 2: STR +1, DEX +1, CON +2, INT +1, WIT +1, MEN +2, LUC +1, CHA +1, acquired XP/ SP in the Vitality state +2% -->
 		<!-- Level 3: STR +1, DEX +1, CON +2, INT +1, WIT +1, MEN +2, LUC +2, CHA +1, acquired XP/ SP in the Vitality state +3% -->
@@ -1919,7 +1919,7 @@
 		<icon>icon.alliance_cloak_pve02</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35162" toLevel="5" name="Clan Cloak - Combat Lv. 3: Enchant Effect">
+	<skill id="35162" toLevel="5" name="血盟斗篷-戰鬥階段3強化效果">
 		<!-- Level 1: STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +3, LUC +2, CHA +2, acquired XP/ SP in the Vitality state +5%, Max HP ++20 -->
 		<!-- Level 2: STR +2, DEX +2, CON +3, INT +2, WIT +2, MEN +3, LUC +2, CHA +2, acquired XP/ SP in the Vitality state +5%, Max HP ++20 -->
 		<!-- Level 3: STR +2, DEX +2, CON +3, INT +2, WIT +2, MEN +3, LUC +3, CHA +2, acquired XP/ SP in the Vitality state +5%, Max HP ++20 -->
@@ -1928,7 +1928,7 @@
 		<icon>icon.alliance_cloak_pve03</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35163" toLevel="5" name="Clan Cloak - Combat Lv. 4: Enchant Effect">
+	<skill id="35163" toLevel="5" name="血盟斗篷-戰鬥階段4強化效果">
 		<!-- Level 1: STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +4, LUC +3, CHA +3, acquired XP/ SP in the Vitality state +5%, Max HP ++30, received PvE damage -+31 -->
 		<!-- Level 2: STR +3, DEX +3, CON +4, INT +3, WIT +3, MEN +4, LUC +3, CHA +3, acquired XP/ SP in the Vitality state +5%, Max HP ++30, received PvE damage -+31 -->
 		<!-- Level 3: STR +3, DEX +3, CON +4, INT +3, WIT +3, MEN +4, LUC +4, CHA +3, acquired XP/ SP in the Vitality state +5%, Max HP ++30, received PvE damage -+31 -->
@@ -1937,7 +1937,7 @@
 		<icon>icon.alliance_cloak_pve04</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35164" toLevel="5" name="Capsule: +12 Bloody Helios Weapon">
+	<skill id="35164" toLevel="5" name="+10星座壺精幸運符禮盒">
 		<!-- Level 1: Use to obtain 14 Bloody Helios Weapon enchanted to +12. -->
 		<!-- Level 2: Double-click to obtain Bloody Eternal heavy armor set enchanted to +10. -->
 		<!-- Level 3: Double-click to obtain Bloody Eternal light armor set enchanted to +10. -->
@@ -2107,13 +2107,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35165" toLevel="1" name="Ride Magic Broom">
+	<skill id="35165" toLevel="1" name="魔法掃帚騎乘">
 		<!-- Allows to ride Magic Broom that can quickly transport you to faraway places. You will be automatically dismounted if Server Keeper's Magic Pencil is unequipped. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="35166" toLevel="1" name="Reporter Ability">
+	<skill id="35166" toLevel="1" name="取材天賦">
 		<!-- Blend in with monsters to avoid their notice and gather news safely and quietly. If either you or your party member attacks in this state, the entire party will become exposed. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
@@ -2122,7 +2122,7 @@
 		<hitTime>2000</hitTime>
 		<reuseDelay>4000</reuseDelay>
 	</skill>
-	<skill id="35167" toLevel="1" name="Fortress Talisman - Vitality">
+	<skill id="35167" toLevel="1" name="要塞護身符-活力">
 		<!-- When the talisman is equipped, Vitality bonus +10. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2133,7 +2133,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35168" toLevel="1" name="Fortress Talisman - P. Skill Power">
+	<skill id="35168" toLevel="1" name="要塞護身符-物理技能威力">
 		<!-- Equipping this Talisman increases P. Skill Power by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2145,7 +2145,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35169" toLevel="1" name="Fortress Talisman - M. Skill Power">
+	<skill id="35169" toLevel="1" name="要塞護身符-魔法技能威力">
 		<!-- Equipping this Talisman increases M. Skill Power by 5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2157,7 +2157,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35170" toLevel="1" name="Fortress Talisman - P. Atk.">
+	<skill id="35170" toLevel="1" name="要塞護身符-物理攻擊力">
 		<!-- When the talisman is equipped, P. Atk. +5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2169,7 +2169,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35171" toLevel="1" name="Fortress Talisman - M. Atk.">
+	<skill id="35171" toLevel="1" name="要塞護身符-魔法攻擊力">
 		<!-- When the talisman is equipped, M. Atk. +5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2181,7 +2181,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35172" toLevel="1" name="Fortress Talisman - P. Def.">
+	<skill id="35172" toLevel="1" name="要塞護身符-物理防禦力">
 		<!-- When the talisman is equipped, P. Def. +10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2193,7 +2193,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35173" toLevel="1" name="Fortress Talisman - M. Def.">
+	<skill id="35173" toLevel="1" name="要塞護身符-魔法防禦力">
 		<!-- Equipping this Talisman increases M. Def. by 10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2205,7 +2205,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35174" toLevel="1" name="Fortress Talisman - Atk. Spd.">
+	<skill id="35174" toLevel="1" name="要塞護身符-攻擊速度">
 		<!-- Atk. Spd. +5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2217,7 +2217,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35175" toLevel="1" name="Fortress Talisman - Casting Spd.">
+	<skill id="35175" toLevel="1" name="要塞護身符-施法速度">
 		<!-- Casting Spd. +5%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2229,7 +2229,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35176" toLevel="1" name="Fortress Talisman - P. Accuracy">
+	<skill id="35176" toLevel="1" name="要塞護身符-物理命中">
 		<!-- Equipping this Talisman increases P. Accuracy by 16. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2241,7 +2241,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35177" toLevel="1" name="Fortress Talisman - M. Accuracy">
+	<skill id="35177" toLevel="1" name="要塞 護身符 - 魔法命中">
 		<!-- Equipping this Talisman increases M. Accuracy by 16. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2253,7 +2253,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35178" toLevel="1" name="Fortress Talisman - Shield Defense">
+	<skill id="35178" toLevel="1" name="要塞護身符-盾牌防禦力">
 		<!-- Equipping this Talisman increases Shield Def. by 50%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2265,7 +2265,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35179" toLevel="1" name="Fortress Talisman - Max HP">
+	<skill id="35179" toLevel="1" name="要塞護身符-HP最大值">
 		<!-- Equipping this Talisman increases Max HP by 10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2277,7 +2277,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35180" toLevel="1" name="Fortress Talisman - Max MP">
+	<skill id="35180" toLevel="1" name="要塞護身符-MP最大值">
 		<!-- Equipping this Talisman increases Max MP by 10%. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2289,7 +2289,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35181" toLevel="1" name="Fortress Talisman - Speed">
+	<skill id="35181" toLevel="1" name="要塞護身符-移動速度">
 		<!-- Equipping this Talisman increases Speed by 15. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -2300,7 +2300,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35182" toLevel="1" name="Dragon Skin Shirt">
+	<skill id="35182" toLevel="1" name="龍襯衫">
 		<!-- Acquired XP/ SP +3%, P./ M. Def. +5%, Speed +7, received Critical Damage from basic attacks and M. skills -5% -->
 		<icon>icon.bm_dragon_shirt</icon>
 		<operateType>P</operateType>
@@ -2335,7 +2335,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35183" toLevel="1" name="Dragon Leather Shirt">
+	<skill id="35183" toLevel="1" name="龍皮襯衫">
 		<!-- Acquired XP/ SP +6%, P./ M. Def. +10%, Speed +7, received Critical Damage from basic attacks and M. skills -10%, skill cooldown -3% -->
 		<icon>icon.bm_dragon_leather_shirt</icon>
 		<operateType>P</operateType>
@@ -2385,7 +2385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35184" toLevel="4" name="Dragon Rind Leather Shirt">
+	<skill id="35184" toLevel="4" name="龍紋皮襯衫">
 		<!-- Level 1: Acquired XP/ SP +10%, P./ M. Def. +15%, Speed +7, received Critical Damage from basic attacks and M. skills -15%, skill cooldown -3% -->
 		<!-- Level 2: Acquired XP/ SP +15%, P./ M. Def. +15%, Speed +7, all received Critical Damage -15%, skill cooldown -3% -->
 		<!-- Level 3: Acquired XP/ SP +17%, P./ M. Def. +17%, Speed +8, all received Critical Damage -17%, skill cooldown -4% -->
@@ -2507,7 +2507,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35185" toLevel="6" name="Dragon Skin Shirt: Enchant Effect">
+	<skill id="35185" toLevel="6" name="龍襯衫的強化效果">
 		<!-- Level 1: STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3, LUC +3, CHA +3. -->
 		<!-- Level 2: STR +3, DEX +3, CON +4, INT +3, WIT +3, MEN +4, LUC +3, CHA +3. -->
 		<!-- Level 3: STR +3, DEX +3, CON +4, INT +3, WIT +3, MEN +4, LUC +4, CHA +3. -->
@@ -2607,7 +2607,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35186" toLevel="6" name="Dragon Leather Shirt: Enchant Effect">
+	<skill id="35186" toLevel="6" name="龍皮襯衫的強化效果">
 		<!-- Level 1: STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, LUC +4, CHA +4. -->
 		<!-- Level 2: STR +4, DEX +4, CON +5, INT +4, WIT +4, MEN +5, LUC +4, CHA +4. -->
 		<!-- Level 3: STR +4, DEX +4, CON +5, INT +4, WIT +4, MEN +5, LUC +5, CHA +4. -->
@@ -2707,7 +2707,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35187" toLevel="11" name="Dragon Rind Leather Shirt: Enchant Effect">
+	<skill id="35187" toLevel="11" name="龍紋皮襯衫的強化效果">
 		<!-- Level 1: STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5, LUC +5, CHA +5. -->
 		<!-- Level 2: STR +5, DEX +5, CON +6, INT +5, WIT +5, MEN +6, LUC +5, CHA +5. -->
 		<!-- Level 3: STR +5, DEX +5, CON +6, INT +5, WIT +5, MEN +6, LUC +6, CHA +5. -->
@@ -2852,7 +2852,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35188" toLevel="23" name="Dragon Rage">
+	<skill id="35188" toLevel="23" name="艾勒傑特怒擊">
 		<!-- Level 1: For 60 sec., P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. +10%, P./ M. Def. -10%. -->
 		<!-- Level 2: For 60 sec., P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. +10%, P./ M. Def. -10%. -->
 		<!-- Level 3: For 60 sec., P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. +10%, P./ M. Def. -10%. -->
@@ -3000,7 +3000,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35189" toLevel="23" name="Dragon Scale">
+	<skill id="35189" toLevel="23" name="艾勒傑特護鱗">
 		<!-- Level 1: For 5 sec., makes you invincible. <font color="B09B79C">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<!-- Level 2: For 5 sec., makes you invincible. <font color="B09B79C">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<!-- Level 3: For 5 sec., makes you invincible. <font color="B09B79C">Type: Invincibility.</font>. Immunity to damage and debuffs -->
@@ -3131,7 +3131,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="35190" toLevel="23" name="Dragon Rise">
+	<skill id="35190" toLevel="23" name="艾勒傑特提升">
 		<!-- Level 1: Removes all debuffs and prevents enemies from targeting you for 5 sec. -->
 		<!-- Level 2: Removes all debuffs and prevents enemies from targeting you for 5 sec. -->
 		<!-- Level 3: Removes all debuffs and prevents enemies from targeting you for 5 sec. -->
@@ -3259,7 +3259,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35191" toLevel="1" name="Special Property: Legend's Infinity Shaper">
+	<skill id="35191" toLevel="1" name="特殊能力傳奇無限鉋刀">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3333,7 +3333,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35192" toLevel="1" name="Special Property: Legend's Infinity Cutter">
+	<skill id="35192" toLevel="1" name="特殊能力傳奇無限切刃">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3407,7 +3407,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35193" toLevel="1" name="Special Property: Legend's Infinity Slasher">
+	<skill id="35193" toLevel="1" name="特殊能力傳奇無限殺刃">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3481,7 +3481,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35194" toLevel="1" name="Special Property: Legend's Infinity Avenger">
+	<skill id="35194" toLevel="1" name="特殊能力傳奇無限復仇者">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3555,7 +3555,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35195" toLevel="1" name="Special Property: Legend's Infinity Fighter">
+	<skill id="35195" toLevel="1" name="特殊能力傳奇無限戰爪">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3629,7 +3629,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35196" toLevel="1" name="Special Property: Legend's Infinity Stormer">
+	<skill id="35196" toLevel="1" name="特殊能力傳奇無限風暴者">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3703,7 +3703,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35197" toLevel="1" name="Special Property: Legend's Infinity Thrower">
+	<skill id="35197" toLevel="1" name="特殊能力傳奇無限投弓">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3777,7 +3777,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35198" toLevel="1" name="Special Property: Legend's Infinity Guardian">
+	<skill id="35198" toLevel="1" name="特殊能力傳奇無限射靈">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_infinity_shooter_i01</icon>
 		<operateType>P</operateType>
@@ -3851,7 +3851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35199" toLevel="1" name="Special Property: Legend's Infinity Buster">
+	<skill id="35199" toLevel="1" name="特殊能力傳奇無限爆刃">
 		<!-- Damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5% -->
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>

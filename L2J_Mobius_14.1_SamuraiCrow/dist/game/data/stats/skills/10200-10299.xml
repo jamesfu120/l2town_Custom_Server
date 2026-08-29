@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10244" toLevel="8" name="Raise Sword">
+	<skill id="10244" toLevel="8" name="集結劍">
 		<!-- Level 1: Lifts your spirits. For 40 sec., P. Atk. +5%, P. Skill Power +5%, P. Skill Critical Rate +5%, P. Skill Critical Damage +5%. The skill duration is increased if <font color="ECECEC">Challenge Aura - Faith</font> is active. Requires a shield. -->
 		<!-- Level 2: Lifts your spirits. For 40 sec., P. Atk. +7%, P. Skill Power +7%, P. Skill Critical Rate +5%, P. Skill Critical Damage +7%. The skill duration is increased if <font color="ECECEC">Challenge Aura - Faith</font> is active. Requires a shield. -->
 		<!-- Level 3: Lifts your spirits. For 40 sec., P. Atk. +9%, P. Skill Power +9%, P. Skill Critical Rate +6%, P. Skill Critical Damage +9%. The skill duration is increased if <font color="ECECEC">Challenge Aura - Faith</font> is active. Requires a shield. -->
@@ -193,13 +193,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10245" toLevel="1" name="Wizard's Unique Skill - Passive">
+	<skill id="10245" toLevel="1" name="法師-個人被動技能">
 		<icon>icon.skill0217</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="10246" toLevel="1" name="Wizard's Unique Skill">
+	<skill id="10246" toLevel="1" name="法師-個人">
 		<!-- Atk. Spd. +30% for 5 sec. -->
 		<icon>icon.skill1543</icon>
 		<operateType>A2</operateType>
@@ -224,13 +224,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10247" toLevel="1" name="Knight's Unique Skill - Passive">
+	<skill id="10247" toLevel="1" name="騎士-個人被動技能">
 		<icon>icon.skill0217</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="10248" toLevel="1" name="Knight's Unique Skill">
+	<skill id="10248" toLevel="1" name="騎士-個人">
 		<!-- Atk. Spd. +30% for 5 sec. -->
 		<icon>icon.skill1543</icon>
 		<operateType>A2</operateType>
@@ -255,7 +255,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10249" toLevel="1" name="Extra Hit">
+	<skill id="10249" toLevel="1" name="追加痛擊">
 		<!-- Strikes the enemy with a powerful blow. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -284,7 +284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10250" toLevel="1" name="Extra Hit">
+	<skill id="10250" toLevel="1" name="追加痛擊">
 		<!-- Strikes the enemy with a powerful blow. -->
 		<icon>icon.skill10317</icon>
 		<operateType>DA1</operateType>
@@ -312,7 +312,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10251" toLevel="12" name="Superior Weapon Mastery">
+	<skill id="10251" toLevel="12" name="極致精通武器">
 		<!-- Level 1: P. Atk. +30% and additionally +1689, Atk. Spd. +25%, P. Accuracy +8. When using a spear, increases the number of targets hit on attack. Additionally, STR +2. Requires a sword, a blunt weapon or a spear. Based on your STR, gives a chance to reset skill cooldown or increase the effect's duration by 2 times. -->
 		<!-- Level 2: P. Atk. +30% and additionally +1958, Atk. Spd. +25%, P. Accuracy +8. When using a spear, increases the number of targets hit on attack. Additionally, STR +2. Requires a sword, a blunt weapon or a spear. Based on your STR, gives a chance to reset skill cooldown or increase the effect's duration by 2 times. -->
 		<!-- Level 3: P. Atk. +30% and additionally +2270, Atk. Spd. +25%, P. Accuracy +8. When using a spear, increases the number of targets hit on attack. Additionally, STR +2. Requires a sword, a blunt weapon or a spear. Based on your STR, gives a chance to reset skill cooldown or increase the effect's duration by 2 times. -->
@@ -421,7 +421,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10252" toLevel="12" name="Superior Dual Weapon Mastery">
+	<skill id="10252" toLevel="12" name="極致精通二刀流">
 		<!-- Level 1: P. Atk. +30%, additional P. Atk. +1689, Atk. Spd. +25%, and P. Accuracy +8 when using a dual sword, dual blunt weapon, or fist weapon. STR +2. -->
 		<!-- Level 2: P. Atk. +30%, additional P. Atk. +1958, Atk. Spd. +25%, and P. Accuracy +8 when using a dual sword, dual blunt weapon, or fist weapon. STR +2. -->
 		<!-- Level 3: P. Atk. +30%, additional P. Atk. +2270, Atk. Spd. +25%, and P. Accuracy +8 when using a dual sword, dual blunt weapon, or fist weapon. STR +2. -->
@@ -520,7 +520,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10253" toLevel="12" name="Superior Heavy Armor Mastery">
+	<skill id="10253" toLevel="12" name="極致精通重裝甲">
 		<!-- Level 1: When using heavy armor, Max HP +5368, P. Def. +1731, received Critical Damage from basic attacks -35%.Additionally, STR +2, Dagger/ Bow Resistance +10%. -->
 		<!-- Level 2: When using heavy armor, Max HP +5368, P. Def. +1901, received Critical Damage from basic attacks -35%.Additionally, STR +2, Dagger/ Bow Resistance +10%. -->
 		<!-- Level 3: When using heavy armor, Max HP +5368, P. Def. +2088, received Critical Damage from basic attacks -35%.Additionally, STR +2, Dagger/ Bow Resistance +10%. -->
@@ -613,7 +613,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10254" toLevel="12" name="Superior Light Armor Mastery">
+	<skill id="10254" toLevel="12" name="極致精通輕裝甲">
 		<!-- Level 1: When using light armor, Max HP +5368, P. Def. +1506, Atk. Spd. +10%, P. Accuracy +3, P. Evasion +6, Speed +10, received Critical Rate from basic attacks -35%. Additionally, STR +2. -->
 		<!-- Level 2: When using light armor, Max HP +5368, P. Def. +1654, Atk. Spd. +10%, P. Accuracy +3, P. Evasion +6, Speed +10, received Critical Rate from basic attacks -35%. Additionally, STR +2. -->
 		<!-- Level 3: When using light armor, Max HP +5368, P. Def. +1817, Atk. Spd. +10%, P. Accuracy +3, P. Evasion +6, Speed +10, received Critical Rate from basic attacks -35%. Additionally, STR +2. -->
@@ -715,7 +715,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10255" toLevel="12" name="Superior Momentum Mastery">
+	<skill id="10255" toLevel="12" name="極致精通鬥力">
 		<!-- Level 1: Increases Momentum up to Lv. 10 with a 20% chance on a basic attack and with a 40% chance on a critical attack. Additionally, P. Atk. +30%, Speed +10. -->
 		<!-- Level 2: Increases Momentum up to Lv. 10 with a 22% chance on a basic attack and with a 40% chance on a critical attack. Additionally, P. Atk. +30%, Speed +10. -->
 		<!-- Level 3: Increases Momentum up to Lv. 10 with a 24% chance on a basic attack and with a 40% chance on a critical attack. Additionally, P. Atk. +30%, Speed +10. -->
@@ -807,7 +807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10256" toLevel="12" name="Superior HP Mastery">
+	<skill id="10256" toLevel="12" name="極致精通HP">
 		<!-- Level 1: Max HP +606, Max CP +296, HP Recovery Rate +12, MP Recovery Rate +6. When HP is lower than 60%, P. Atk. +1027. Additionally, STR +2. With a certain chance, recovers 10% HP when hit. -->
 		<!-- Level 2: Max HP +724, Max CP +353, HP Recovery Rate +12, MP Recovery Rate +6. When HP is lower than 60%, P. Atk. +1191. Additionally, STR +2. With a certain chance, recovers 10% HP when hit. -->
 		<!-- Level 3: Max HP +843, Max CP +411, HP Recovery Rate +12, MP Recovery Rate +6. When HP is lower than 60%, P. Atk. +1381. Additionally, STR +2. With a certain chance, recovers 10% HP when hit. -->
@@ -950,7 +950,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10257" toLevel="1" name="Superior Spirit Mastery">
+	<skill id="10257" toLevel="1" name="極致精通精神">
 		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +30. STR +2. -->
 		<icon>icon.skill10257</icon>
 		<operateType>P</operateType>
@@ -970,7 +970,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10258" toLevel="15" name="Armor Destruction">
+	<skill id="10258" toLevel="15" name="戰甲壞滅">
 		<!-- Level 1: Attacks the target dealing damage equal to 95% of P. Atk. Decreases the target's P. Def. Additionally, absorbs the target's Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Attacks the target dealing damage equal to 96% of P. Atk. Decreases the target's P. Def. Additionally, absorbs the target's Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Attacks the target dealing damage equal to 97% of P. Atk. Decreases the target's P. Def. Additionally, absorbs the target's Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -1648,7 +1648,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="10260" toLevel="15" name="Mega Strike">
+	<skill id="10260" toLevel="15" name="爆裂直擊">
 		<!-- Level 1: Attacks the target dealing damage equal to 100% of P. Atk. Damage +30% when consuming up to 3 Momentum. Ignores Shield Defense. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
 		<!-- Level 2: Attacks the target dealing damage equal to 101% of P. Atk. Damage +30% when consuming up to 3 Momentum. Ignores Shield Defense. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
 		<!-- Level 3: Attacks the target dealing damage equal to 102% of P. Atk. Damage +30% when consuming up to 3 Momentum. Ignores Shield Defense. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
@@ -2311,7 +2311,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10262" toLevel="13" name="Power Bomber">
+	<skill id="10262" toLevel="13" name="強力炸彈">
 		<!-- Level 1: Attacks the target dealing damage equal to 104% of P. Atk. and knocking them down for 3 sec. Damage +30% when consuming up to 3 Momentum. Ignores Shield Defense. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks the target dealing damage equal to 105% of P. Atk. and knocking them down for 3 sec. Damage +30% when consuming up to 3 Momentum. Ignores Shield Defense. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks the target dealing damage equal to 106% of P. Atk. and knocking them down for 3 sec. Damage +30% when consuming up to 3 Momentum. Ignores Shield Defense. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -2980,7 +2980,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10263" toLevel="15" name="Hurricane Blaster">
+	<skill id="10263" toLevel="15" name="暴風衝擊">
 		<!-- Level 1: Attacks the target at a distance dealing damage equal to 94% of P. Atk. and decreasing their P. Def. Additionally, absorbs the target's Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Attacks the target at a distance dealing damage equal to 95% of P. Atk. and decreasing their P. Def. Additionally, absorbs the target's Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Attacks the target at a distance dealing damage equal to 96% of P. Atk. and decreasing their P. Def. Additionally, absorbs the target's Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -3656,7 +3656,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="10265" toLevel="15" name="Eruption">
+	<skill id="10265" toLevel="15" name="鬥力放射">
 		<!-- Level 1: Attacks nearby enemies dealing damage equal to 85% of P. Atk. and stunning them for 2 sec. With a certain chance, cancels the enemy's target. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks nearby enemies dealing damage equal to 86% of P. Atk. and stunning them for 2 sec. With a certain chance, cancels the enemy's target. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks nearby enemies dealing damage equal to 87% of P. Atk. and stunning them for 2 sec. With a certain chance, cancels the enemy's target. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -4338,7 +4338,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10266" toLevel="15" name="Giant's Punch">
+	<skill id="10266" toLevel="15" name="巨人之拳">
 		<!-- Strikes the ground with a fist knocking down nearby enemies for 5 sec. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 7 - SubLevel 1001 (+1% Chance): Strikes the ground with a fist knocking down nearby enemies for 5 sec. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 7 - SubLevel 1002 (+2% Chance): Strikes the ground with a fist knocking down nearby enemies for 5 sec. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -4812,7 +4812,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10267" toLevel="13" name="Hurricane Rush">
+	<skill id="10267" toLevel="13" name="暴風突擊">
 		<!-- Rushes to the enemy attacking them and stunning for 3 sec. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 5 - SubLevel 1001 (+1% Chance): Rushes to the enemy attacking them and stunning for 3 sec. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 5 - SubLevel 1002 (+2% Chance): Rushes to the enemy attacking them and stunning for 3 sec. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -5448,7 +5448,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10268" toLevel="6" name="Rolling Thunder">
+	<skill id="10268" toLevel="6" name="閃電迴旋">
 		<!-- Level 1: On a basic attack, creates a whirlwind that decreases the target's P. Def. by 5% for 5 sec. -->
 		<!-- Level 2: On a basic attack, creates a whirlwind that decreases the target's P. Def. by 7% for 5 sec. -->
 		<!-- Level 3: On a basic attack, creates a whirlwind that decreases the target's P. Def. by 9% for 5 sec. -->
@@ -5495,7 +5495,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10269" toLevel="14" name="Jump Attack">
+	<skill id="10269" toLevel="14" name="跳躍攻擊">
 		<!-- Level 1: Makes a jump attacking the target and nearby enemies and dealing damage equal to 95% of P. Atk. For 5 sec., Speed -180. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Makes a jump attacking the target and nearby enemies and dealing damage equal to 96% of P. Atk. For 5 sec., Speed -180. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Makes a jump attacking the target and nearby enemies and dealing damage equal to 97% of P. Atk. For 5 sec., Speed -180. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Debilitation. -->
@@ -6170,7 +6170,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10270" toLevel="1" name="Second Wind">
+	<skill id="10270" toLevel="1" name="最終之力">
 		<!-- Momentarily recovers 35% of Max HP and 15% of Max CP. For 2 min., Max HP +35%, Max CP +15%. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): Momentarily recovers 35% of Max HP and 15% of Max CP. For 2 min., Max HP +35%, Max CP +15%. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): Momentarily recovers 35% of Max HP and 15% of Max CP. For 2 min., Max HP +35%, Max CP +15%. -->
@@ -6278,7 +6278,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10271" toLevel="2" name="Power Provoke">
+	<skill id="10271" toLevel="2" name="強力激怒">
 		<!-- Provokes nearby enemies. For 10 sec., increases their P. Atk. and Atk. Spd., but decreases P. Def. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 1 - SubLevel 1001 (+1% Chance): Provokes nearby enemies. For 10 sec., increases their P. Atk. and Atk. Spd., but decreases P. Def. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 1 - SubLevel 1002 (+2% Chance): Provokes nearby enemies. For 10 sec., increases their P. Atk. and Atk. Spd., but decreases P. Def. Base success rate: 60%. Inflicted status: Debilitation. -->
@@ -6367,7 +6367,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10273" toLevel="4" name="Lightning Disarm">
+	<skill id="10273" toLevel="4" name="疾速卸除武器">
 		<!-- Level 1: Disarms nearby enemies for 5 sec., their P./ M. Atk. -10%. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 2: Disarms nearby enemies for 5 sec., their P./ M. Atk. -15%. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 3: Disarms nearby enemies for 5 sec., their P./ M. Atk. -20%. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
@@ -6558,7 +6558,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10274" toLevel="4" name="Berserker">
+	<skill id="10274" toLevel="4" name="狂暴化">
 		<!-- Level 1: Makes you virtually invincible. For 60 sec., P. Atk. +20%, Atk. Spd. +20%, P. Accuracy +10, Speed +20, Critical Damage for basic attacks and P. skills +10%, Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +200. Recovers 20% HP on killing the target. -->
 		<!-- Level 2: Makes you virtually invincible. For 60 sec., P. Atk. +23%, Atk. Spd. +23%, P. Accuracy +12, Speed +23, Critical Damage for basic attacks and P. skills +11%, Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +230. Recovers 20% HP on killing the target. -->
 		<!-- Level 3: Makes you virtually invincible. For 60 sec., P. Atk. +26%, Atk. Spd. +26%, P. Accuracy +14, Speed +26, Critical Damage for basic attacks and P. skills +13%, Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +260. Recovers 20% HP on killing the target. -->
@@ -6760,7 +6760,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10275" toLevel="8" name="Infinity Strike">
+	<skill id="10275" toLevel="8" name="無限連擊">
 		<!-- Level 1: Attacks the target dealing damage equal to 106% of P. Atk. Ignores 5% of the target's P. Def. High Critical Rate. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
 		<!-- Level 2: Attacks the target dealing damage equal to 107% of P. Atk. Ignores 5% of the target's P. Def. High Critical Rate. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
 		<!-- Level 3: Attacks the target dealing damage equal to 108% of P. Atk. Ignores 6% of the target's P. Def. High Critical Rate. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
@@ -7324,7 +7324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10276" toLevel="1" name="Force of Nature">
+	<skill id="10276" toLevel="1" name="自然之力">
 		<!-- Momentarily increases Momentum to its maximum level. -->
 		<!-- Level 1 - SubLevel 1001 (+1936 Heal): Momentarily increases Momentum to its maximum level. -->
 		<!-- Level 1 - SubLevel 1002 (+2072 Heal): Momentarily increases Momentum to its maximum level. -->
@@ -7434,7 +7434,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10277" toLevel="4" name="Final Cry">
+	<skill id="10277" toLevel="4" name="最終戰嚎">
 		<!-- Level 1: For 2 min., P. Atk. +20%, P. Skill Power +10%. Additionally, P. Skill Damage and P. Atk. in PvP +5%. -->
 		<!-- Level 2: For 2 min., P. Atk. +22%, P. Skill Power +11%. Additionally, P. Skill Damage and P. Atk. in PvP +5%. -->
 		<!-- Level 3: For 2 min., P. Atk. +26%, P. Skill Power +13%. Additionally, P. Skill Damage and P. Atk. in PvP +5%. -->
@@ -7503,7 +7503,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10278" toLevel="8" name="Reduce Anger">
+	<skill id="10278" toLevel="8" name="憤怒縮減">
 		<!-- Decreases nearby enemies' aggression towards you. -->
 		<icon>icon.skill10278</icon>
 		<operateType>A1</operateType>
@@ -7553,7 +7553,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10279" toLevel="1" name="Giant Barrier">
+	<skill id="10279" toLevel="1" name="巨人屏障">
 		<!-- Removes all debuffs. For 10 sec., protects from basic attacks, skills, and debuffs. Speed +30%. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<!-- Level 1 - SubLevel 1001 (+0.5 sec. Time): Removes all debuffs. For 10 sec., protects from basic attacks, skills, and debuffs. Speed +30%. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<!-- Level 1 - SubLevel 1002 (+1 sec. Time): Removes all debuffs. For 10 sec., protects from basic attacks, skills, and debuffs. Speed +30%. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
@@ -7649,7 +7649,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10280" toLevel="1" name="Energy Charging">
+	<skill id="10280" toLevel="1" name="鬥力充能">
 		<!-- Increases Momentum at expense of your HP. -->
 		<icon>icon.skill10283</icon>
 		<operateType>T</operateType>
@@ -7663,7 +7663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10281" toLevel="9" name="Sonic Star">
+	<skill id="10281" toLevel="9" name="五芒星耀">
 		<!-- Level 1: Attacks nearby enemies with the lightning speed dealing them damage equal to 108% of P. Atk. and knocking them down. Ignores 5% of their P. Def. High Critical Rate. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks nearby enemies with the lightning speed dealing them damage equal to 109% of P. Atk. and knocking them down. Ignores 5% of their P. Def. High Critical Rate. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks nearby enemies with the lightning speed dealing them damage equal to 110% of P. Atk. and knocking them down. Ignores 6% of their P. Def. High Critical Rate. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -8318,7 +8318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10283" toLevel="1" name="Increase Momentum">
+	<skill id="10283" toLevel="1" name="鬥力上升">
 		<icon>icon.skill10283</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -8334,7 +8334,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="10284" toLevel="3" name="Lightning Force">
+	<skill id="10284" toLevel="3" name="閃電鬥力">
 		<!-- Level 1: You are imbued with Rage Lv. 1. When using a fist weapon, a sword, a blunt weapon, dual swords, dual blunt weapons or a spear, P. Atk. +10%, Speed +5. With a 20% chance, increases Rage to Lv. 2 on a critical attack. -->
 		<!-- Level 2: You are imbued with Rage Lv. 2. When using a fist weapon, a sword, a blunt weapon, dual swords, dual blunt weapons or a spear, P. Atk. +20%, Speed +7. With a 10% chance, increases Rage to Lv. 3 on a critical attack. -->
 		<!-- Level 3: You are imbued with Rage Lv. 3. When using a fist weapon, a sword, a blunt weapon, dual swords, dual blunt weapons or a spear, P. Atk. +30%, Speed +10. With a 10% chance, renews Rage Lv. 3 on a critical attack. -->
@@ -8418,7 +8418,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10285" toLevel="1" name="HP Drain">
+	<skill id="10285" toLevel="1" name="HP吸收">
 		<!-- Recovers 20% HP. -->
 		<icon>icon.skill10285</icon>
 		<operateType>A1</operateType>
@@ -8436,7 +8436,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10286" toLevel="12" name="Superior Resistance">
+	<skill id="10286" toLevel="12" name="極致抵抗">
 		<!-- Level 1: M. Def. +776, and Fire/ Water/ Wind/ Earth Resistance +20. STR +2. -->
 		<!-- Level 2: M. Def. +878, and Fire/ Water/ Wind/ Earth Resistance +22. STR +2. -->
 		<!-- Level 3: M. Def. +993, and Fire/ Water/ Wind/ Earth Resistance +24. STR +2. -->
@@ -8588,7 +8588,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10287" toLevel="6" name="Rolling Thunder">
+	<skill id="10287" toLevel="6" name="閃電迴旋">
 		<!-- Level 1: HP -225 per sec. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 2: HP -228 per sec. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<!-- Level 3: HP -232 per sec. Base success rate: 60%. Inflicted status: Debilitation. -->
@@ -8649,7 +8649,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10288" toLevel="15" name="Hurricane Storm">
+	<skill id="10288" toLevel="15" name="劇烈風暴">
 		<!-- Level 1: Attacks the target and nearby enemies dealing them damage equal to 85% of P. Atk. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
 		<!-- Level 2: Attacks the target and nearby enemies dealing them damage equal to 86% of P. Atk. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
 		<!-- Level 3: Attacks the target and nearby enemies dealing them damage equal to 87% of P. Atk. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. -->
@@ -9301,7 +9301,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10289" toLevel="4" name="Brave Spear">
+	<skill id="10289" toLevel="4" name="勇氣之矛">
 		<!-- Level 1: For 60 sec., P. Skill Power +30%, PvP damage +5%. -->
 		<!-- Level 2: For 60 sec., P. Skill Power +35%, PvP damage +10%. -->
 		<!-- Level 3: For 60 sec., P. Skill Power +40%, PvP damage +15%. -->
@@ -9492,7 +9492,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10290" toLevel="8" name="Hurricane Slasher">
+	<skill id="10290" toLevel="8" name="旋風斬擊">
 		<!-- Test skill -->
 		<icon>icon.skill0007</icon>
 		<operateType>A1</operateType>
@@ -9538,7 +9538,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="10291" toLevel="1" name="Feral Bear Cry">
+	<skill id="10291" toLevel="1" name="熊之戰嚎">
 		<!-- Shouts loudly to invoke the power of the Bear. For 5 min., P. Atk. and P. Critical Damage/ P. Skill Critical Damage +30%. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): Shouts loudly to invoke the power of the Bear. For 5 min., P. Atk. and P. Critical Damage/ P. Skill Critical Damage +30%. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): Shouts loudly to invoke the power of the Bear. For 5 min., P. Atk. and P. Critical Damage/ P. Skill Critical Damage +30%. -->
@@ -9619,7 +9619,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10292" toLevel="1" name="Feral Ogre Cry">
+	<skill id="10292" toLevel="1" name="食人魔戰嚎">
 		<!-- Uses the ogre's power. For 5 min., P. Atk./ P. Def./ M. Def. +40%, P. Critical Damage/ P. Skill Critical Damage and Max HP +10%. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): Uses the ogre's power. For 5 min., P. Atk./ P. Def./ M. Def. +40%, P. Critical Damage/ P. Skill Critical Damage and Max HP +10%. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): Uses the ogre's power. For 5 min., P. Atk./ P. Def./ M. Def. +40%, P. Critical Damage/ P. Skill Critical Damage and Max HP +10%. -->
@@ -9714,7 +9714,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10293" toLevel="1" name="Feral Puma Cry">
+	<skill id="10293" toLevel="1" name="豹之戰嚎">
 		<!-- Uses Puma's power. For 5 min., P. Accuracy +10, Atk. Spd. +20%, received Critical Damage from basic attacks -40%. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): Uses Puma's power. For 5 min., P. Accuracy +10, Atk. Spd. +20%, received Critical Damage from basic attacks -40%. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): Uses Puma's power. For 5 min., P. Accuracy +10, Atk. Spd. +20%, received Critical Damage from basic attacks -40%. -->
@@ -9793,7 +9793,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10294" toLevel="1" name="Feral Rabbit Cry">
+	<skill id="10294" toLevel="1" name="兔之戰嚎">
 		<!-- Shouts loudly to invoke the power of the Rabbit. For 5 min. Atk. Spd. +30%, Speed +80 and P. Evasion +15. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): Shouts loudly to invoke the power of the Rabbit. For 5 min. Atk. Spd. +30%, Speed +80 and P. Evasion +15. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): Shouts loudly to invoke the power of the Rabbit. For 5 min. Atk. Spd. +30%, Speed +80 and P. Evasion +15. -->
@@ -9875,7 +9875,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10295" toLevel="1" name="Hawk Cry">
+	<skill id="10295" toLevel="1" name="鷹之戰嚎">
 		<!-- Shouts loudly to invoke the power of the Hawk. For 5 min., P. Accuracy +8, Critical Rate for basic attacks +12%, Critical Damage for basic attacks and P. skills +30%. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): Shouts loudly to invoke the power of the Hawk. For 5 min., P. Accuracy +8, Critical Rate for basic attacks +12%, Critical Damage for basic attacks and P. skills +30%. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): Shouts loudly to invoke the power of the Hawk. For 5 min., P. Accuracy +8, Critical Rate for basic attacks +12%, Critical Damage for basic attacks and P. skills +30%. -->
@@ -9960,7 +9960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10296" toLevel="1" name="Spirit of the Hunter">
+	<skill id="10296" toLevel="1" name="狩者之魂">
 		<!-- For 30 min., damage to insects/ plants/ animals +20%. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): For 30 min., damage to insects/ plants/ animals +20%. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): For 30 min., damage to insects/ plants/ animals +20%. -->
@@ -10034,7 +10034,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10297" toLevel="1" name="Spirit of the Slayer">
+	<skill id="10297" toLevel="1" name="殺手之魂">
 		<!-- For 30 min., damage to beasts/ magic creatures/ giants/ dragons +20%. -->
 		<!-- Level 1 - SubLevel 1001 (+15 sec. Time): For 30 min., damage to beasts/ magic creatures/ giants/ dragons +20%. -->
 		<!-- Level 1 - SubLevel 1002 (+30 sec. Time): For 30 min., damage to beasts/ magic creatures/ giants/ dragons +20%. -->
@@ -10109,7 +10109,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10298" toLevel="1" name="Power Revival">
+	<skill id="10298" toLevel="1" name="強力再生">
 		<!-- Recover own HP by 100%, and MP/ CP by 50%. -->
 		<!-- Level 1 - SubLevel 1001 (+532 Recharge): Recover own HP by 100%, and MP/ CP by 50%. -->
 		<!-- Level 1 - SubLevel 1002 (+570 Recharge): Recover own HP by 100%, and MP/ CP by 50%. -->
@@ -10221,7 +10221,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10299" toLevel="1" name="Stun Spear">
+	<skill id="10299" toLevel="1" name="休克之矛">
 		<!-- Stuns the target for 3 sec. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10299</icon>
 		<operateType>A2</operateType>

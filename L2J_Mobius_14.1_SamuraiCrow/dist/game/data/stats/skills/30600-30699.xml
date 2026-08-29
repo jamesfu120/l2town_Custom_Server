@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="30600" toLevel="1" name="Extra Hit">
+	<skill id="30600" toLevel="1" name="追加痛擊">
 		<!-- Strikes the enemy with a powerful blow. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -30,7 +30,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30601" toLevel="1" name="Extra Hit">
+	<skill id="30601" toLevel="1" name="追加痛擊">
 		<!-- Strikes the enemy with a powerful blow. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -60,7 +60,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30602" toLevel="1" name="Eviscerator Force">
+	<skill id="30602" toLevel="1" name="拳鬥士之力">
 		<!-- P. Skill Critical Rate +1%. -->
 		<icon>icon.icon_lender</icon>
 		<operateType>P</operateType>
@@ -73,7 +73,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30603" toLevel="1" name="Eviscerator Force">
+	<skill id="30603" toLevel="1" name="拳鬥士之力">
 		<!-- P. Skill Critical Rate +1%. -->
 		<icon>icon.icon_lender_01</icon>
 		<operateType>A6</operateType>
@@ -97,12 +97,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30604" toLevel="1" name="Block Eviscerator Force">
+	<skill id="30604" toLevel="1" name="禁制拳鬥士之力">
 		<!-- Blocks Eviscerator Force. -->
 		<icon>icon.icon_lender</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="30605" toLevel="1" name="Sayha's Seer Force">
+	<skill id="30605" toLevel="1" name="詩語之力">
 		<!-- M. Skill Critical Rate +1% -->
 		<icon>icon.icon_Er_wizard</icon>
 		<operateType>P</operateType>
@@ -115,7 +115,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30606" toLevel="1" name="Sayha's Seer Force">
+	<skill id="30606" toLevel="1" name="詩語之力">
 		<!-- M. Skill Critical Rate +1%. -->
 		<icon>icon.icon_Er_wizard_01</icon>
 		<operateType>A6</operateType>
@@ -139,12 +139,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30607" toLevel="1" name="Block Sayha's Seer Force">
+	<skill id="30607" toLevel="1" name="禁制詩語之力">
 		<!-- Blocks Sayha's Seer Force. -->
 		<icon>icon.icon_Er_wizard</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="30608" toLevel="5" name="Fury of Eviscerator">
+	<skill id="30608" toLevel="5" name="拳鬥士狂暴">
 		<!-- Level 1: P. Atk. +5%. -->
 		<!-- Level 2: P. Atk. +10%. -->
 		<!-- Level 3: P. Atk. +15%. -->
@@ -176,12 +176,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30609" toLevel="1" name="Bloody Coin Boost">
+	<skill id="30609" toLevel="1" name="血之幣獲得增加">
 		<!-- Increases the Bloody Coin gain. -->
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="30610" toLevel="1" name="Sharpen Edge of Storm">
+	<skill id="30610" toLevel="1" name="銳刃風暴">
 		<!-- Brandishes a spear in a wide circle to expand the strike range in all directions for 30 min. Requires a spear. Unequipping the spear also cancels the Sharpen Edge of Storm effect. -->
 		<icon>icon.skill30610</icon>
 		<operateType>A2</operateType>
@@ -234,7 +234,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30611" toLevel="1" name="Edge of Storm">
+	<skill id="30611" toLevel="1" name="刃之風暴">
 		<!-- Brandishes a spear in a wide circle to expand the strike range in all directions for 1 min. Requires a spear. Unequipping the spear also cancels the Edge of Storm effect. -->
 		<icon>icon.skill30610</icon>
 		<operateType>A2</operateType>
@@ -284,7 +284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30612" toLevel="1" name="Cancel Edge of Storm">
+	<skill id="30612" toLevel="1" name="刃之風暴解除">
 		<!-- Unequipping the spear also cancels the Edge of Storm effect. -->
 		<icon>icon.skill30610</icon>
 		<operateType>A1</operateType>
@@ -298,7 +298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30613" toLevel="1" name="Novice's Rising Smash">
+	<skill id="30613" toLevel="1" name="初心者雷神破擊">
 		<!-- Attacks surrounding enemies dealing damage equal to 130% of your P. Atk. For 5 sec., Received Healing -45%. Requires a sword or a blunt weapon. Critical. Over-hit. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill10013</icon>
 		<operateType>A2</operateType>
@@ -344,7 +344,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30614" toLevel="1" name="Novice's Chain Gust">
+	<skill id="30614" toLevel="1" name="初心者暴烈鎖鍊">
 		<!-- Attacks nearby enemies dealing damage equal to 140% of your P. Atk. Holds them for 5 sec. Requires a sword or a blunt weapon. Critical. Over-hit. Base success rate: 60%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10014</icon>
 		<operateType>A2</operateType>
@@ -390,7 +390,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30615" toLevel="1" name="Novice's Armor Destruction">
+	<skill id="30615" toLevel="1" name="初心者戰甲壞滅">
 		<!-- Attacks the enemy with 2231 power, decreasing their P. Def. and accumulating Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Over-hit. Critical. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill10258</icon>
 		<operateType>A2</operateType>
@@ -441,7 +441,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="30616" toLevel="1" name="Novice's Mega Strike">
+	<skill id="30616" toLevel="1" name="初心者爆裂直擊">
 		<!-- Attacks the target with 3978 power. Damage +15% when consuming up to 3 Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill10260</icon>
 		<operateType>A1</operateType>
@@ -465,7 +465,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30617" toLevel="1" name="Novice's Heart Breaker">
+	<skill id="30617" toLevel="1" name="初心者心臟破壞">
 		<!-- Attacks the target's vital point with 5122 power. Speed +20, P. Evasion +2, Critical Damage for basic attacks from the flanks and from behind +15%. Over-hit. Critical. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10509</icon>
 		<operateType>A3</operateType>
@@ -520,7 +520,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30618" toLevel="1" name="Novice's Blood Stab">
+	<skill id="30618" toLevel="1" name="初心者血影刺擊">
 		<!-- Strikes the enemy from the back with 7776 power. Inflicts Bleed dealing 35 damage per sec. If the attack is successful, deals damage ignoring the enemy's CP. Requires a dagger or dual daggers. Critical. Over-hit. Base success rate: 70%. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10508</icon>
 		<operateType>A2</operateType>
@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30619" toLevel="1" name="Novice's Quick Shot">
+	<skill id="30619" toLevel="1" name="初心者迅捷射擊">
 		<!-- Attacks an enemy from a distance. Power 4436. Ignores 15% of the target's P. Def. Requires a bow or a crossbow. Over-hit. Critical. -->
 		<icon>icon.skill10762</icon>
 		<operateType>A1</operateType>
@@ -601,7 +601,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30620" toLevel="1" name="Novice's Pinpoint Shot">
+	<skill id="30620" toLevel="1" name="初心者精密射擊">
 		<!-- Attacks an enemy from a distance targeting their weak points. Power 6492. Ignores 15% of the target's P. Def. Requires a bow or a crossbow. Over-hit. Critical. -->
 		<icon>icon.skill10763</icon>
 		<operateType>A1</operateType>
@@ -636,7 +636,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30621" toLevel="1" name="Novice's Elemental Crash">
+	<skill id="30621" toLevel="1" name="初心者元素潰滅">
 		<!-- Inflicts magic damage with 31 power. Over-hit. -->
 		<icon>icon.skill11018</icon>
 		<operateType>A1</operateType>
@@ -663,7 +663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30622" toLevel="1" name="Novice's Elemental Spike">
+	<skill id="30622" toLevel="1" name="初心者元素裂刺">
 		<!-- Inflicts magic damage with 26 power. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
@@ -687,7 +687,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30623" toLevel="1" name="Novice's Crippling Attack">
+	<skill id="30623" toLevel="1" name="初心者正面攻擊">
 		<!-- Strikes the target with 2921 power. For 20 sec., P./ M. Def. -20%. Requires a sword, a blunt weapon, dual swords or dual blunt weapons. Critical. Over-hit. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11514</icon>
 		<operateType>A2</operateType>
@@ -735,7 +735,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30624" toLevel="1" name="Novice's Crushing Assault">
+	<skill id="30624" toLevel="1" name="初心者正面潰滅">
 		<!-- Strikes the target with 2921 power. For 20 sec., P./ M. Atk. -20%. Requires a sword, a blunt weapon, dual swords or dual blunt weapons. Critical. Over-hit. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11509</icon>
 		<operateType>A2</operateType>
@@ -782,7 +782,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30625" toLevel="1" name="Novice's Invoke">
+	<skill id="30625" toLevel="1" name="初心者融合召喚">
 		<!-- Calls forth the fist of a Giant from the outer world to strike the target and nearby enemies with 29 power. -->
 		<icon>icon.skill11263</icon>
 		<operateType>A1</operateType>
@@ -807,7 +807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30626" toLevel="1" name="Novice's Mark of Fire">
+	<skill id="30626" toLevel="1" name="初心者烈炎烙印">
 		<!-- Carves a burning mark on the target dealing magic damage with 33 power and inflicting Fear. Speed -150. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11298</icon>
 		<operateType>A2</operateType>
@@ -838,7 +838,7 @@
 			<effect name="PhysicalDamageMute" />
 		</effects>
 	</skill>
-	<skill id="30627" toLevel="1" name="Novice's Dark Blast">
+	<skill id="30627" toLevel="1" name="初心者闇之爆裂">
 		<!-- Deals M. damage to the target. Power 30. -->
 		<icon>icon.skill11766</icon>
 		<operateType>A1</operateType>
@@ -860,7 +860,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30628" toLevel="1" name="Novice's Dark Veil">
+	<skill id="30628" toLevel="1" name="初心者闇之環繞">
 		<!-- Deals M. damage to the target and nearby enemies. Power 23. Decreases their aggression towards you. -->
 		<icon>icon.skill11767</icon>
 		<operateType>A1</operateType>
@@ -888,7 +888,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30629" toLevel="1" name="Heavy Armor Mastery">
+	<skill id="30629" toLevel="1" name="精通重裝甲">
 		<!-- When using heavy armor, Max HP +100, P. Def. +25, received Critical Damage from basic attacks -10%. Additionally, STR +1. -->
 		<icon>icon.skill10253</icon>
 		<operateType>P</operateType>
@@ -921,7 +921,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30630" toLevel="1" name="Light Armor Mastery">
+	<skill id="30630" toLevel="1" name="精通輕裝甲">
 		<!-- When using light armor, Max HP +80, P. Def. +17, Atk. Spd. +5%, P. Accuracy +1, P. Evasion +3, Speed +5, Received P. Critical Rate -15%. Additionally, STR +1. -->
 		<icon>icon.skill10254</icon>
 		<operateType>P</operateType>
@@ -982,7 +982,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30631" toLevel="1" name="Robe Mastery">
+	<skill id="30631" toLevel="1" name="精通長袍">
 		<!-- When using robes, Max HP +50, P. Def. +12, M. Def. +5%. -->
 		<icon>icon.skill11252</icon>
 		<operateType>P</operateType>
@@ -1011,7 +1011,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30632" toLevel="1" name="Weapon Mastery">
+	<skill id="30632" toLevel="1" name="精通武器">
 		<!-- P. Atk. +10% and additionally +13, Atk. Spd. +8%, P. Accuracy +2. When using a spear, increases the number of targets hit on attack. Additionally, STR +1. Requires a sword, a blunt weapon or a spear. Based on your STR, gives a chance to reset skill cooldown or increase the effect's duration by 2 times. -->
 		<icon>icon.skill10251</icon>
 		<operateType>P</operateType>
@@ -1062,7 +1062,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30633" toLevel="1" name="Dual Weapon Mastery">
+	<skill id="30633" toLevel="1" name="精通二刀流">
 		<!-- P. Atk. +10%, additional P. Atk. +13, Atk. Spd. +8%, and P. Accuracy +2 when using a dual sword, dual blunt weapon, or fist weapon. STR +1. -->
 		<icon>icon.skill10252</icon>
 		<operateType>P</operateType>
@@ -1110,7 +1110,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30634" toLevel="1" name="Dagger Mastery">
+	<skill id="30634" toLevel="1" name="精通匕首">
 		<!-- When using a dagger, P. Atk. +8% and additionally +8, Atk. Spd. +8%, P. Accuracy +4, Vital Point Attack Rate +2%. Additionally, STR +1. Depending on STR, P./ M. Skill Cooldown can be reset or its duration can be increased by 2 times. -->
 		<icon>icon.skill10501</icon>
 		<operateType>P</operateType>
@@ -1160,7 +1160,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30635" toLevel="1" name="Dual Dagger Mastery">
+	<skill id="30635" toLevel="1" name="精通雙匕首">
 		<!-- STR +1. When using dual daggers, P. Atk. +8% and +10, Atk. Spd. +8%, P. Accuracy +4, Vital Point Attack Rate +2%. -->
 		<icon>icon.skill10502</icon>
 		<operateType>P</operateType>
@@ -1207,7 +1207,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30636" toLevel="1" name="Bow/Crossbow Mastery">
+	<skill id="30636" toLevel="1" name="精通弓/弩兵器">
 		<!-- When using a bow or a crossbow, P. Atk. +5% and additionally +12, Atk. Spd. +5%, P. Accuracy +4. Additionally, STR +1. Depending on your STR, gives a chance to reset skill cooldown or increase the effect's duration by 2 times. -->
 		<icon>icon.skill10751</icon>
 		<operateType>P</operateType>
@@ -1258,7 +1258,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30637" toLevel="1" name="Weapon Mastery">
+	<skill id="30637" toLevel="1" name="精通武器">
 		<!-- M. Atk. +5% and +57, Casting Spd. +7%. Based on your INT, resets skill cooldown or increases skill duration by 2 times. -->
 		<icon>icon.skill11251</icon>
 		<operateType>P</operateType>
@@ -1281,7 +1281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30638" toLevel="1" name="Magic Weapon Mastery">
+	<skill id="30638" toLevel="1" name="精通魔法武器">
 		<!-- M. Atk. +8% and +35, M. Skill Critical Rate +3%, INT +1. Depending on your INT, resets skill cooldown or increases skill duration by 2 times. -->
 		<icon>icon.skill11251</icon>
 		<operateType>P</operateType>
@@ -1304,7 +1304,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30639" toLevel="1" name="Novice's Chain Strike">
+	<skill id="30639" toLevel="1" name="初心者鎖鍊直擊">
 		<!-- Swings a chain to pull the target to you. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
@@ -1341,7 +1341,7 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="30640" toLevel="1" name="Novice's Iron Aura">
+	<skill id="30640" toLevel="1" name="初心者鐵壁靈氣">
 		<!-- P./ M. Def. +7%, received Critical Damage from basic attacks and M. skills -5%. Only one aura can be active at any time. -->
 		<icon>icon.skill10032</icon>
 		<operateType>A5</operateType>
@@ -1385,7 +1385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30641" toLevel="1" name="Novice's Power Bomber">
+	<skill id="30641" toLevel="1" name="初心者強力炸彈">
 		<!-- Strikes the target with 4096 power knocking them down for 3 sec. Damage +15% when consuming up to 3 Momentum. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Ignores Shield Defense. Critical. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
@@ -1436,7 +1436,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30642" toLevel="1" name="Novice's Feral Ogre Cry">
+	<skill id="30642" toLevel="1" name="初心者食人魔戰嚎">
 		<!-- Uses the ogre's power. For 5 min., P. Atk. and P./ M. Def. +15%, Critical Damage for basic attacks and Max HP +5%. -->
 		<icon>icon.skill10292</icon>
 		<operateType>A2</operateType>
@@ -1475,7 +1475,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30643" toLevel="1" name="Novice's Chain Blow">
+	<skill id="30643" toLevel="1" name="初心者連鎖猛擊">
 		<!-- Inflicts P. damage with 5452 power. If the target is bleeding, skill power +20%, inflicts additional damage. Requires a dagger or dual daggers. Critical. Over-hit. -->
 		<icon>icon.skill10510</icon>
 		<operateType>A1</operateType>
@@ -1526,7 +1526,7 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="30644" toLevel="1" name="Novice's Angel of Death">
+	<skill id="30644" toLevel="1" name="初心者死亡之神">
 		<!-- For 30 sec., Vital Point Attack Rate +20%, P. Skill Power +5%, P. Accuracy +4, P. Evasion +20. Blocks debuffs (up to 2). Requires a dagger or dual daggers. <font color="B09B79">Type: Debuff barrier</font>. Full protection from debuffs for a certain number of times. Does not stack. -->
 		<icon>icon.skill10531</icon>
 		<operateType>A2</operateType>
@@ -1580,7 +1580,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30645" toLevel="1" name="Novice's Multiple Arrows">
+	<skill id="30645" toLevel="1" name="初心者多重箭矢">
 		<!-- Attacks the target and enemies around them in a certain area. Power 4678. Requires a bow or a crossbow. Over-hit. Critical. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -1618,7 +1618,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30646" toLevel="1" name="Novice's Rapid Fire Stance">
+	<skill id="30646" toLevel="1" name="初心者速射姿勢">
 		<!-- For 30 min., P. Atk. +5%, P. Skill Cooldown -2%. Requires a bow or a crossbow. -->
 		<icon>icon.skill10758</icon>
 		<operateType>A2</operateType>
@@ -1666,7 +1666,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30647" toLevel="1" name="Novice's Mass Ruin">
+	<skill id="30647" toLevel="1" name="初心者廣域崩毀">
 		<!-- Attacks the target and enemies around them with 25 Power added to M. Atk. P./ M. Skill Power -7%, P./ M. Def. -15% and Speed -10% for 20 sec.. Base success rate: 60%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11048</icon>
 		<operateType>A2</operateType>
@@ -1719,7 +1719,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30648" toLevel="1" name="Novice's Essence of Mana">
+	<skill id="30648" toLevel="1" name="初心者魔力精髓">
 		<!-- M. Atk. +15%, P. Def. +15%, M. Skill Critical Rate +15%. -->
 		<icon>icon.skill11034</icon>
 		<operateType>T</operateType>
@@ -1740,7 +1740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30649" toLevel="1" name="Novice's Horn Melody">
+	<skill id="30649" toLevel="1" name="初心者角笛之詩">
 		<!-- For 30 min., party members' P. Atk. +7%, M. Atk. +44%, P. Def. +15%, M. Def. +20%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -1786,7 +1786,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30650" toLevel="1" name="Novice's Drum Melody">
+	<skill id="30650" toLevel="1" name="初心者戰鼓之詩">
 		<!-- For 30 min., party members' Critical Rate for basic attacks +15%, Critical Damage for basic attacks +15%, M. Skill Critical Rate +2%, received Critical Damage from basic attacks -25%. With a certain chance, increases Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -1837,7 +1837,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30651" toLevel="1" name="Novice's Pipe Organ Melody">
+	<skill id="30651" toLevel="1" name="初心者風琴之詩">
 		<!-- For 30 min., party members' Max HP +18%, Max MP +31%, Max CP +18%, Vampiric Rage effect +4%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1883,7 +1883,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30652" toLevel="1" name="Novice's Guitar Melody">
+	<skill id="30652" toLevel="1" name="初心者吉他之詩">
 		<!-- For 30 min., party members' Atk. Spd. +30%, Casting Spd. +30%, Skill MP Consumption -5%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1941,7 +1941,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30653" toLevel="1" name="Novice's Knight's Harmony">
+	<skill id="30653" toLevel="1" name="初心者守護者和聲">
 		<!-- For 30 min., the targeted party member's P. Def. +20%, M. Def. +7%, Critical Rate for basic attacks and M. skills +50%, Critical Damage for basic attacks +18%, Shield Defense Rate +15%, Shield Defense +25%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -2005,7 +2005,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30654" toLevel="1" name="Novice's Warrior's Harmony">
+	<skill id="30654" toLevel="1" name="初心者狂戰士和聲">
 		<!-- For 30 min., the targeted party member's P. Atk. +11%, Critical Rate for basic attacks +50%, Critical Damage for basic attacks +35%, Atk. Spd. +5%. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -2057,7 +2057,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30655" toLevel="1" name="Novice's Wizard's Harmony">
+	<skill id="30655" toLevel="1" name="初心者大賢者和聲">
 		<!-- For 30 min., the targeted party member's M. Atk. +20%, M. Skill Critical Rate +50%, Casting Spd. +7%, skill cooldown -10%, Skill MP Consumption -7%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -2130,7 +2130,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30656" toLevel="1" name="Novice's Mark of Weakness">
+	<skill id="30656" toLevel="1" name="初心者衰弱烙印">
 		<!-- Deals continuous magic damage to the target with 17 power for 10 sec. Additionally decreases the target's P./ M. Def. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11259</icon>
 		<operateType>A2</operateType>
@@ -2170,7 +2170,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30657" toLevel="1" name="Novice's Blessing of the Giants">
+	<skill id="30657" toLevel="1" name="初心者巨人祝福">
 		<!-- For 30 min., a servitor's Max MP +10%, HP Recovery Rate +10%, M. Skill Critical Rate +1%, Critical Damage for basic attacks +10%, P. Atk. +5%, P. Def. +10%, Atk. Spd. +10%, M. Atk. +10%, M. Def. +30 min.0, Casting Spd. +30 min.1, Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +30 min.2, received Critical Damage from basic attacks -30 min.3, Speed -30 min.4. -->
 		<icon>icon.skill11297</icon>
 		<operateType>A2</operateType>
@@ -2240,7 +2240,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30658" toLevel="1" name="Novice's Radiant Heal">
+	<skill id="30658" toLevel="1" name="初心者療癒之光">
 		<!-- Recovers target's HP with 297 power. If HP is full, recovers CP. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -2264,7 +2264,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30659" toLevel="1" name="Novice's Dark Force">
+	<skill id="30659" toLevel="1" name="初心者闇之怨氣">
 		<!-- Deals M. damage to the target. Power 24. With a certain chance, knocks the target back. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11814</icon>
 		<operateType>A2</operateType>
@@ -2300,7 +2300,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30660" toLevel="1" name="Novice's Sonic Flash">
+	<skill id="30660" toLevel="1" name="初心者波動閃光">
 		<!-- Hurls an energy wave that attacks the target with 3469 power. Consumes up to 3 Momentum to increase damage. Requires a sword, a blunt weapon, or dual swords. Critical. Over-hit. -->
 		<icon>icon.skill10318new</icon>
 		<operateType>A1</operateType>
@@ -2332,7 +2332,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30661" toLevel="1" name="Novice's Thunder Spear">
+	<skill id="30661" toLevel="1" name="初心者雷鳴之矛">
 		<!-- Throws a spear striking the target and nearby enemies with 4507 power and stunning them for 9 sec. Cancels enemies' targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skll10321</icon>
 		<operateType>A2</operateType>
@@ -2376,7 +2376,7 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="30662" toLevel="1" name="Novice's Summon Phoenix Cubic">
+	<skill id="30662" toLevel="1" name="初心者召喚鳳凰晶體">
 		<!-- Summons Phoenix Cubic that recovers 15 sec. HP to you every 1000, removes debuffs. Also, Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +5. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A1</operateType>
@@ -2402,7 +2402,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30663" toLevel="2" name="Novice's Summon Blood Panther">
+	<skill id="30663" toLevel="2" name="初心者召喚血之豹">
 		<!-- Summons a Blood Panther to fight with you. -->
 		<icon>icon.skill11853</icon>
 		<operateType>A1</operateType>
@@ -2430,7 +2430,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30664" toLevel="1" name="Novice's Reverse Mana">
+	<skill id="30664" toLevel="1" name="初心者反轉魔力">
 		<!-- Attacks the target's vital point with 7368 power. MP +1%. Requires a dagger or dual daggers. -->
 		<icon>icon.skill19299</icon>
 		<operateType>A1</operateType>
@@ -2469,7 +2469,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30665" toLevel="1" name="Novice's Sniping">
+	<skill id="30665" toLevel="1" name="初心者狙擊姿態">
 		<!-- For 30 min. when a bow or crossbow is equipped, P. Atk. +3%, Atk. Spd. +3%, and P. Def./ M. Def. +3%. -->
 		<icon>icon.skill11870</icon>
 		<operateType>A2</operateType>
@@ -2529,7 +2529,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30666" toLevel="1" name="Novice's Volcanic Destruction">
+	<skill id="30666" toLevel="1" name="初心者火山毀滅">
 		<!-- Attacks the target and enemies in line. Deals Fire damage. Power 86. For 10 sec., M. Def. -10%. Additionally applies the Ignite effect that deals damage over time. Over-hit. <Ignite>. Deals M. damage over time; Received Healing -20%. The effect stacks up to 5 times for 10 sec. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11024</icon>
 		<operateType>A2</operateType>
@@ -2572,7 +2572,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30667" toLevel="1" name="Novice's Bedrock Destruction">
+	<skill id="30667" toLevel="1" name="初心者地層毀滅">
 		<!-- Deals Earth damage to the target and nearby enemies. Power 86. For 10 sec., M. Def. -10%, Attribute Resistance -10. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11027</icon>
 		<operateType>A2</operateType>
@@ -2634,7 +2634,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30668" toLevel="2" name="Novice's Summon Feline Queen">
+	<skill id="30668" toLevel="2" name="初心者召喚皇后貓">
 		<!-- Summons a Feline Queen. -->
 		<icon>icon.skill11846</icon>
 		<operateType>A1</operateType>
@@ -2662,7 +2662,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30669" toLevel="1" name="Novice's Divine Prayer">
+	<skill id="30669" toLevel="1" name="初心者神聖祈禱">
 		<!-- For 30 min., party members' HP heal amount +3%. -->
 		<icon>icon.skill11859</icon>
 		<operateType>A2</operateType>
@@ -2688,7 +2688,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30670" toLevel="1" name="Novice's Prevailing Sonata">
+	<skill id="30670" toLevel="1" name="初心者戰鬥奏鳴曲">
 		<!-- For 5 min., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, Casting Interruption Rate -20. With a certain chance, Vampiric Rage effect +4%. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
@@ -2740,7 +2740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30671" toLevel="1" name="Novice's Daring Sonata">
+	<skill id="30671" toLevel="1" name="初心者移動奏鳴曲">
 		<!-- For 5 min., party members' Atk. Spd. +10%, Casting Spd. +10%, Damage Reflection +5%, skill cooldown -5%. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
@@ -2802,7 +2802,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30672" toLevel="1" name="Novice's Refreshing Sonata">
+	<skill id="30672" toLevel="1" name="初心者休息奏鳴曲">
 		<!-- For 5 min., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
@@ -2860,7 +2860,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30673" toLevel="1" name="Novice's Summon Othellot Cubic">
+	<skill id="30673" toLevel="1" name="初心者召喚奧塞羅特晶體">
 		<!-- Summons Othellot Cubic. It recovers 2% HP and 2% MP to you every 10 sec. -->
 		<icon>icon.skill10073_2</icon>
 		<operateType>A1</operateType>
@@ -2883,7 +2883,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30674" toLevel="1" name="Novice's Prevailing Song">
+	<skill id="30674" toLevel="1" name="初心者格鬥之歌">
 		<!-- For 5 min., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, Casting Interruption Rate -20. With a certain chance, Vampiric Rage effect +4%. -->
 		<icon>icon.skill11607</icon>
 		<operateType>A2</operateType>
@@ -2934,7 +2934,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30675" toLevel="1" name="Novice's Daring Song">
+	<skill id="30675" toLevel="1" name="初心者移動之歌">
 		<!-- For 5 min., party members' Atk. Spd. +15%, Casting Spd. +15%, Damage Reflection +5%, skill cooldown -5%. -->
 		<icon>icon.skill11608</icon>
 		<operateType>A2</operateType>
@@ -2988,7 +2988,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30676" toLevel="1" name="Novice's Refreshing Song">
+	<skill id="30676" toLevel="1" name="初心者休息之歌">
 		<!-- For 5 min., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
 		<icon>icon.skill11609</icon>
 		<operateType>A2</operateType>
@@ -3042,7 +3042,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30677" toLevel="1" name="Novice's Right Angle Reverse">
+	<skill id="30677" toLevel="1" name="初心者光聚反轉">
 		<!-- Moves to the right side of the target to attempt the Deadly Attack with 7106 Power added to P. Atk. and stun the target for 3 sec. Requires a dagger or dual daggers to be equipped. -->
 		<icon>icon.skill19303</icon>
 		<operateType>DA5</operateType>
@@ -3089,7 +3089,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30678" toLevel="1" name="Novice's Rapid Fire Position">
+	<skill id="30678" toLevel="1" name="初心者快速射擊姿態">
 		<!-- For 30 min., P. Atk. +3%, received M. Critical Rate -3%, P. Skill Cooldown -3%. Requires a bow or a crossbow. -->
 		<icon>icon.skill11871</icon>
 		<operateType>A2</operateType>
@@ -3148,7 +3148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30679" toLevel="1" name="Novice's Icicle Destruction">
+	<skill id="30679" toLevel="1" name="初心者冰刃毀滅">
 		<!-- Deals Water damage to the target and nearby enemies. Power 86. For 10 sec., M. Def. -10%, Atk. Spd./ Speed -20%. Over-hit. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11025</icon>
 		<operateType>A2</operateType>
@@ -3194,7 +3194,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30680" toLevel="2" name="Novice's Summon Seraphim the Unicorn">
+	<skill id="30680" toLevel="2" name="初心者召喚天使獨角獸">
 		<!-- Summons Seraphim the Unicorn. -->
 		<icon>icon.skill11849</icon>
 		<operateType>A1</operateType>
@@ -3222,7 +3222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30681" toLevel="1" name="Novice's Mana Gain">
+	<skill id="30681" toLevel="1" name="初心者廣域魔力回復">
 		<!-- For 30 min., party members' MP heal amount +11. -->
 		<icon>icon.skill11852new</icon>
 		<operateType>A2</operateType>
@@ -3248,7 +3248,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30682" toLevel="1" name="Novice's Summon Death Cubic">
+	<skill id="30682" toLevel="1" name="初心者召喚死亡晶體">
 		<!-- Summons Death Cubic that recovers 13 sec. HP to you every 600, removes debuffs. Also, Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +10. -->
 		<icon>icon.skill10079_2</icon>
 		<operateType>A1</operateType>
@@ -3270,7 +3270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30683" toLevel="1" name="Novice's Prevailing Dance">
+	<skill id="30683" toLevel="1" name="初心者格鬥之舞">
 		<!-- For 5 min., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, Casting Interruption Rate -20. With a certain chance, Vampiric Rage effect +4%. -->
 		<icon>icon.skill11610</icon>
 		<operateType>A2</operateType>
@@ -3319,7 +3319,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30684" toLevel="1" name="Novice's Daring Dance">
+	<skill id="30684" toLevel="1" name="初心者移動之舞">
 		<!-- For 5 min., party members' Atk. Spd. +15%, Casting Spd. +15%, Damage Reflection +5%, skill cooldown -5%. -->
 		<icon>icon.skill11611</icon>
 		<operateType>A2</operateType>
@@ -3373,7 +3373,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30685" toLevel="1" name="Novice's Refreshing Dance">
+	<skill id="30685" toLevel="1" name="初心者休息之舞">
 		<!-- For 5 min., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
 		<icon>icon.skill11612</icon>
 		<operateType>A2</operateType>
@@ -3427,7 +3427,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30686" toLevel="1" name="Novice's Shadow Reverse">
+	<skill id="30686" toLevel="1" name="初心者暗影反轉">
 		<!-- Makes you move behind the enemy's back to attack them with 7632 power. For 3 sec., their P. Accuracy -3. Requires a dagger or dual daggers. -->
 		<icon>icon.skill19305</icon>
 		<operateType>A2</operateType>
@@ -3471,7 +3471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30687" toLevel="1" name="Novice's Hawk Eye">
+	<skill id="30687" toLevel="1" name="初心者死亡凝視姿態">
 		<!-- For 30 min., when using a bow or crossbow, P. Atk. +3%, P. Skill Power +3%, and received M. Skill Critical Damage -3%. -->
 		<icon>icon.skill11872</icon>
 		<operateType>A2</operateType>
@@ -3509,7 +3509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30688" toLevel="1" name="Novice's Updraft Destruction">
+	<skill id="30688" toLevel="1" name="初心者升流毀滅">
 		<!-- Deals Wind damage to the target and nearby enemies. Power 86. For 10 sec., M. Def. -10%. Over-hit. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill11017</icon>
 		<operateType>A2</operateType>
@@ -3546,7 +3546,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30689" toLevel="2" name="Novice's Summon Soulless">
+	<skill id="30689" toLevel="2" name="初心者召喚失魂者">
 		<!-- Summons Soulless. -->
 		<icon>icon.skill11852</icon>
 		<operateType>A1</operateType>
@@ -3574,7 +3574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30690" toLevel="1" name="Novice's Mental Recharge">
+	<skill id="30690" toLevel="1" name="初心者心靈回復術">
 		<!-- Restores 50% MP of the targeted party member. The skill cooldown is fixed. -->
 		<icon>icon.skill11856</icon>
 		<operateType>A1</operateType>
@@ -3595,7 +3595,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30691" toLevel="1" name="Novice's Frenzy">
+	<skill id="30691" toLevel="1" name="初心者狂暴加護">
 		<!-- For 60 sec., P. Atk. +5%, Atk. Spd. +5%, Critical Rate for basic attacks +0.5%, Critical Damage for basic attacks +5%, Speed +5. When using a two-handed sword/ blunt weapon or a spear, P. Accuracy +4, P. Atk. +5%. Available when HP<30%. -->
 		<icon>icon.skill0176</icon>
 		<operateType>A2</operateType>
@@ -3666,7 +3666,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30692" toLevel="1" name="Novice's Raging Force">
+	<skill id="30692" toLevel="1" name="初心者鬥拳氣破">
 		<!-- Attacks the target with the air energy decreasing their P. Def. and absorbing Momentum. Requires a sword, a blunt weapon, a fist weapon, dual blunt weapons or dual swords. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill0346</icon>
 		<operateType>A2</operateType>
@@ -3704,7 +3704,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="30693" toLevel="1" name="Novice's Prevailing Drum">
+	<skill id="30693" toLevel="1" name="初心者戰鬥之鼓">
 		<!-- For 150 sec., party members' Max HP +15%, P. Atk. +10%, M. Atk. +15%, Casting Interruption Rate -20. With a certain chance, Vampiric Rage effect +4%. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A2</operateType>
@@ -3752,7 +3752,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30694" toLevel="1" name="Novice's Daring Drum">
+	<skill id="30694" toLevel="1" name="初心者移動之鼓">
 		<!-- For 150 sec., party members' Atk. Spd. +15%, Casting Spd. +15%, Damage Reflection +5%, skill cooldown -5%. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
@@ -3800,7 +3800,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30695" toLevel="1" name="Novice's Refreshing Drum">
+	<skill id="30695" toLevel="1" name="初心者休息之鼓">
 		<!-- For 150 sec., party members' HP Recovery Rate +35%, MP Recovery Rate +25%, P./ M. Evasion +3, Skill MP Consumption -10%. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A2</operateType>
@@ -3853,7 +3853,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30696" toLevel="1" name="Novice's Reverse Plunder">
+	<skill id="30696" toLevel="1" name="初心者反轉強奪">
 		<!-- Attempts Deadly Attack and item looting with 7368 power added to P. Atk. Requires dagger/ dual daggers. -->
 		<icon>icon.skill19309</icon>
 		<operateType>A1</operateType>
@@ -3883,7 +3883,7 @@
 			<effect name="Plunder" />
 		</effects>
 	</skill>
-	<skill id="30697" toLevel="1" name="Novice's Power Hammer Crush">
+	<skill id="30697" toLevel="1" name="初心者能量之槌擊">
 		<!-- Attacks the target with 3601 power ignoring 15% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Critical. Over-hit. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10330</icon>
 		<operateType>A2</operateType>
@@ -3922,7 +3922,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30698" toLevel="1" name="Novice's Rush Impact">
+	<skill id="30698" toLevel="1" name="初心者疾襲衝擊">
 		<!-- Rushes forward to attack enemies at the front with 808 power. Inflicts Stun for 5 sec. Requires an ancient sword, a two-handed sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons or dual swords. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
@@ -3971,7 +3971,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30699" toLevel="1" name="Novice's Void Destruction">
+	<skill id="30699" toLevel="1" name="初心者虛空毀滅">
 		<!-- Deals Dark damage to the target and nearby enemies. Power 86. For 10 sec., the target's M. Def. -10%, received M. Skill Critical Rate +5%. Over-hit. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill19316</icon>
 		<operateType>A2</operateType>

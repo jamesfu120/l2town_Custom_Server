@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1901" toLevel="2" name="Aim">
+	<skill id="1901" toLevel="2" name="武裝">
 		<!-- Level 1: Fire/ Water/ Wind/ Earth Resistance +5. -->
 		<!-- Level 2: Fire/ Water/ Wind/ Earth Resistance +10. -->
 		<icon>icon.skill1901</icon>
@@ -41,7 +41,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1902" toLevel="2" name="Mental Fortitude">
+	<skill id="1902" toLevel="2" name="心靈">
 		<!-- Level 1: Debuff Resistance +1%. -->
 		<!-- Level 2: Debuff Resistance +2%. -->
 		<icon>icon.skill1902</icon>
@@ -61,7 +61,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1903" toLevel="1" name="Fitness">
+	<skill id="1903" toLevel="1" name="行動">
 		<!-- HP Recovery Rate +1, MP Recovery Rate +1. -->
 		<icon>icon.skill1903</icon>
 		<operateType>P</operateType>
@@ -78,7 +78,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1904" toLevel="3" name="Unbind">
+	<skill id="1904" toLevel="3" name="永續">
 		<!-- Level 1: Removes all debuffs and makes you immune to debuffs for 10 sec. The skill cooldown is fixed. -->
 		<!-- Level 2: Removes all debuffs and makes you immune to debuffs for 12 sec. The skill cooldown is fixed. -->
 		<!-- Level 3: Removes all debuffs and makes you immune to debuffs for 12 sec. The skill cooldown is fixed. -->
@@ -126,7 +126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1905" toLevel="1" name="Swiftness">
+	<skill id="1905" toLevel="1" name="快速">
 		<!-- Atk. Spd. +4, Casting Spd. +3, Speed +13. -->
 		<icon>icon.skill1905</icon>
 		<operateType>P</operateType>
@@ -148,7 +148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1906" toLevel="2" name="Blessing of Water">
+	<skill id="1906" toLevel="2" name="水之祝福">
 		<!-- Level 1: Water Resistance +10. -->
 		<!-- Level 2: Water Resistance +20. -->
 		<icon>icon.skill1906</icon>
@@ -168,7 +168,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1907" toLevel="3" name="Prevision">
+	<skill id="1907" toLevel="3" name="專心">
 		<!-- Level 1: For 15 sec., P./ M. Evasion +90, Speed +50. The skill cooldown is fixed. -->
 		<!-- Level 2: For 15 sec., P./ M. Evasion +90, Atk. Spd./ Casting Spd. +90, Speed +50. The skill cooldown is fixed. -->
 		<!-- Level 3: For 15 sec., P./ M. Evasion +90, Atk. Spd./ Casting Spd. +90, Speed +50. The skill cooldown is fixed. -->
@@ -218,7 +218,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1908" toLevel="2" name="Delicacy">
+	<skill id="1908" toLevel="2" name="識破">
 		<!-- Level 1: Critical Rate for basic attacks +1%, M. Skill Critical Rate +1%. -->
 		<!-- Level 2: Critical Rate for basic attacks +2%, M. Skill Critical Rate +2%. -->
 		<icon>icon.skill1908</icon>
@@ -245,7 +245,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1909" toLevel="2" name="Sharpness">
+	<skill id="1909" toLevel="2" name="俐落">
 		<!-- Level 1: Critical Damage for basic attacks and M. Skill Critical Damage +1%. -->
 		<!-- Level 2: Critical Damage for basic attacks and M. Skill Critical Damage +2%. -->
 		<icon>icon.skill1909</icon>
@@ -272,7 +272,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1910" toLevel="1" name="Dark Presence">
+	<skill id="1910" toLevel="1" name="黑暗能力">
 		<!-- STR and INT +1 at night. -->
 		<icon>icon.skill1910</icon>
 		<operateType>P</operateType>
@@ -289,7 +289,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1911" toLevel="2" name="Blessing of Wind">
+	<skill id="1911" toLevel="2" name="風之祝福">
 		<!-- Level 1: Wind Resistance +10. -->
 		<!-- Level 2: Wind Resistance +20. -->
 		<icon>icon.skill1911</icon>
@@ -309,7 +309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1912" toLevel="3" name="Disparition">
+	<skill id="1912" toLevel="3" name="瞬影加速">
 		<!-- Level 1: Removes all debuffs. For 5 sec., prevents enemies from targeting you. The skill cooldown is fixed. -->
 		<!-- Level 2: Removes all debuffs. For 6 sec., prevents enemies from targeting you. The skill cooldown is fixed. -->
 		<!-- Level 3: Removes all debuffs. For 6 sec., prevents enemies from targeting you. The skill cooldown is fixed. -->
@@ -360,7 +360,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1913" toLevel="1" name="Life Siphon">
+	<skill id="1913" toLevel="1" name="吸血">
 		<!-- Absorbs 1% of the damage inflicted as HP. -->
 		<icon>icon.skill1913</icon>
 		<operateType>P</operateType>
@@ -373,7 +373,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1914" toLevel="3" name="Savagery">
+	<skill id="1914" toLevel="3" name="狂野">
 		<!-- Level 1: For 60 sec., P. Atk. +10%, M. Atk. +20%, Atk. Spd. +10%, Casting Spd. +10%, P./ M. Def. -10%. The skill cooldown is fixed. -->
 		<!-- Level 2: For 60 sec., P. Atk. +10%, M. Atk. +20%, Atk. Spd. +10%, Casting Spd. +10%. The skill cooldown is fixed. -->
 		<!-- Level 3: For 60 sec., P. Atk. +10%, M. Atk. +20%, Atk. Spd. +10%, Casting Spd. +10%. The skill cooldown is fixed. -->
@@ -427,7 +427,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1915" toLevel="2" name="Fire Power">
+	<skill id="1915" toLevel="2" name="火之祝福">
 		<!-- Level 1: Fire Resistance +10. -->
 		<!-- Level 2: Fire Resistance +20. -->
 		<icon>icon.skill1915</icon>
@@ -447,7 +447,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1916" toLevel="2" name="Energetic">
+	<skill id="1916" toLevel="2" name="活力">
 		<!-- Level 1: HP/ MP/ CP +1%. -->
 		<!-- Level 2: HP/ CP/ MP +2%. -->
 		<icon>icon.skill1916</icon>
@@ -481,7 +481,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1917" toLevel="1" name="Undying Will">
+	<skill id="1917" toLevel="1" name="堅毅">
 		<!-- When hit while HP < 30%, makes you invincible for 5 sec. Trigger cooldown: 5 min. -->
 		<icon>icon.skill1917</icon>
 		<operateType>P</operateType>
@@ -500,7 +500,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1918" toLevel="3" name="Undying Will">
+	<skill id="1918" toLevel="3" name="堅毅">
 		<!-- Makes you invincible. The skill cooldown is fixed. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<icon>icon.skill1917</icon>
 		<operateType>A2</operateType>
@@ -556,7 +556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1919" toLevel="2" name="Dexterity">
+	<skill id="1919" toLevel="2" name="敏銳">
 		<!-- Level 1: Skill cooldown -1%. -->
 		<!-- Level 2: Skill cooldown -2%. -->
 		<icon>icon.skill1919</icon>
@@ -593,7 +593,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1920" toLevel="3" name="Endurance">
+	<skill id="1920" toLevel="3" name="耐力">
 		<!-- Level 1: For 5 sec., reflects 50% of received damage back to the enemy. HP +460 per sec. The skill cooldown is fixed. -->
 		<!-- Level 2: For 7 sec., reflects 50% of received damage back to the enemy. HP +460 per sec. The skill cooldown is fixed. -->
 		<!-- Level 3: For 7 sec., reflects 50% of received damage back to the enemy. HP +460 per sec. The skill cooldown is fixed. -->
@@ -626,7 +626,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1921" toLevel="2" name="Blessing of Earth">
+	<skill id="1921" toLevel="2" name="地之祝福">
 		<!-- Level 1: Earth Resistance +10. -->
 		<!-- Level 2: Earth Resistance +20. -->
 		<icon>icon.skill1921</icon>
@@ -646,7 +646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1922" toLevel="3" name="Earth Tremor">
+	<skill id="1922" toLevel="3" name="大地創傷">
 		<!-- Level 1: Knocks down nearby enemies for 3 sec., their P./ M. Def. -50%. The skill cooldown is fixed. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Knocks down nearby enemies for 5 sec., their P./ M. Def. -50%. The skill cooldown is fixed. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Knocks down nearby enemies for 5 sec., their P./ M. Def. -50%. The skill cooldown is fixed. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -703,7 +703,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1923" toLevel="2" name="Battle Instinct">
+	<skill id="1923" toLevel="2" name="戰鬥直覺">
 		<!-- Level 1: PvP damage +1%. -->
 		<!-- Level 2: PvP damage +2%. -->
 		<icon>icon.skill1923</icon>
@@ -737,7 +737,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1924" toLevel="2" name="Dark Silence">
+	<skill id="1924" toLevel="2" name="闇之沉默">
 		<!-- Level 1: Dark Resistance +10. -->
 		<!-- Level 2: Dark Resistance +20. -->
 		<icon>icon.skill1924</icon>
@@ -757,7 +757,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1925" toLevel="3" name="Soul Protection">
+	<skill id="1925" toLevel="3" name="靈魂保護">
 		<!-- Level 1: For 60 sec., blocks debuffs (up to 3). The skill cooldown is fixed. -->
 		<!-- Level 2: For 60 sec., 6 Attribute Resistance +15, blocks debuffs (up to 3). The skill cooldown is fixed. -->
 		<!-- Level 3: For 60 sec., 6 Attribute Resistance +15, blocks debuffs (up to 3). The skill cooldown is fixed. -->
@@ -836,7 +836,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1926" toLevel="1" name="Body Reinforcement">
+	<skill id="1926" toLevel="1" name="肉體再造">
 		<!-- For 5 min., transforms into the ultimate combat form. The skill cooldown is fixed. -->
 		<icon>icon.skill1926</icon>
 		<operateType>A2</operateType>
@@ -868,7 +868,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1927" toLevel="1" name="Sigel Force">
+	<skill id="1927" toLevel="1" name="席格爾之力">
 		<!-- P. Atk. +1%. -->
 		<icon>icon.icon_sigel</icon>
 		<operateType>P</operateType>
@@ -881,7 +881,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1928" toLevel="1" name="Sigel Force">
+	<skill id="1928" toLevel="1" name="席格爾之力">
 		<!-- P. Atk. +1%. -->
 		<icon>icon.icon_sigel_01</icon>
 		<operateType>A6</operateType>
@@ -916,7 +916,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1929" toLevel="1" name="Tyrr Force">
+	<skill id="1929" toLevel="1" name="提爾之力">
 		<!-- Critical Rate for basic attacks +1%. -->
 		<icon>icon.icon_tir</icon>
 		<operateType>P</operateType>
@@ -929,7 +929,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1930" toLevel="1" name="Tyrr Force">
+	<skill id="1930" toLevel="1" name="提爾之力">
 		<!-- Critical Rate for basic attacks +1%. -->
 		<icon>icon.icon_tir_01</icon>
 		<operateType>A6</operateType>
@@ -955,7 +955,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1931" toLevel="1" name="Othell Force">
+	<skill id="1931" toLevel="1" name="歐瑟之力">
 		<!-- Atk. Spd. +1%. -->
 		<icon>icon.icon_othel</icon>
 		<operateType>P</operateType>
@@ -968,7 +968,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1932" toLevel="1" name="Othell Force">
+	<skill id="1932" toLevel="1" name="歐瑟之力">
 		<!-- Atk. Spd. +1%. -->
 		<icon>icon.icon_othel_01</icon>
 		<operateType>A6</operateType>
@@ -994,7 +994,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1933" toLevel="1" name="Yul Force">
+	<skill id="1933" toLevel="1" name="尤爾之力">
 		<!-- MP Recovery Rate +50%. -->
 		<icon>icon.icon_yr</icon>
 		<operateType>P</operateType>
@@ -1007,7 +1007,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1934" toLevel="1" name="Yul Force">
+	<skill id="1934" toLevel="1" name="尤爾之力">
 		<!-- MP Recovery Rate +50%. -->
 		<icon>icon.icon_yr_01</icon>
 		<operateType>A6</operateType>
@@ -1033,7 +1033,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1935" toLevel="1" name="Feoh Force">
+	<skill id="1935" toLevel="1" name="菲歐之力">
 		<!-- Casting Spd. +1%. -->
 		<icon>icon.icon_feoh</icon>
 		<operateType>P</operateType>
@@ -1046,7 +1046,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1936" toLevel="1" name="Feoh Force">
+	<skill id="1936" toLevel="1" name="菲歐之力">
 		<!-- Casting Spd. +1%. -->
 		<icon>icon.icon_feoh_01</icon>
 		<operateType>A6</operateType>
@@ -1072,7 +1072,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1937" toLevel="1" name="Wynn Force">
+	<skill id="1937" toLevel="1" name="維因之力">
 		<!-- M. Skill MP Consumption -3%. -->
 		<icon>icon.icon_wynn</icon>
 		<operateType>P</operateType>
@@ -1091,7 +1091,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1938" toLevel="1" name="Wynn Force">
+	<skill id="1938" toLevel="1" name="維因之力">
 		<!-- P./ M. Skill MP Consumption -3%. -->
 		<icon>icon.icon_wynn_01</icon>
 		<operateType>A6</operateType>
@@ -1123,7 +1123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1939" toLevel="1" name="Aeore Force">
+	<skill id="1939" toLevel="1" name="艾羅之力">
 		<!-- M. Atk. +1%. -->
 		<icon>icon.icon_eolh</icon>
 		<operateType>P</operateType>
@@ -1136,7 +1136,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1940" toLevel="1" name="Aeore Force">
+	<skill id="1940" toLevel="1" name="艾羅之力">
 		<!-- M. Atk. +1%. -->
 		<icon>icon.icon_eolh_01</icon>
 		<operateType>A6</operateType>
@@ -1162,7 +1162,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1941" toLevel="1" name="Physical Nail Attack">
+	<skill id="1941" toLevel="1" name="實體利爪攻擊">
 		<!-- Attacks an enemy with claws. -->
 		<icon>icon.skill0539</icon>
 		<operateType>A1</operateType>
@@ -1182,7 +1182,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1942" toLevel="1" name="Storm Wind">
+	<skill id="1942" toLevel="1" name="展翼風暴">
 		<!-- Attacks nearby enemies with spread wings. -->
 		<icon>icon.skill0492</icon>
 		<operateType>A1</operateType>
@@ -1206,7 +1206,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1943" toLevel="1" name="Wind Breath">
+	<skill id="1943" toLevel="1" name="展翼衝刺">
 		<!-- Attacks with spread wings. Strikes all in target rush area. -->
 		<icon>icon.skill0540</icon>
 		<operateType>DA1</operateType>
@@ -1235,7 +1235,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1944" toLevel="1" name="Death Arrow">
+	<skill id="1944" toLevel="1" name="死亡之箭">
 		<!-- Shoots a death arrow at the enemy. -->
 		<icon>icon.skill1431</icon>
 		<operateType>A1</operateType>
@@ -1259,7 +1259,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1945" toLevel="1" name="Power Death Beam">
+	<skill id="1945" toLevel="1" name="強力死亡光束">
 		<!-- Attacks enemies at the front. -->
 		<icon>icon.skill1471</icon>
 		<operateType>A1</operateType>
@@ -1287,63 +1287,63 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1946" toLevel="1" name="Block Sigel Force">
+	<skill id="1946" toLevel="1" name="阻絕席格爾之力">
 		<!-- Sigel Momentum is not applied. -->
 		<icon>icon.icon_sigel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="1947" toLevel="1" name="Block Tyrr Force">
+	<skill id="1947" toLevel="1" name="阻絕提爾之力">
 		<!-- Tyrr Momentum is not applied. -->
 		<icon>icon.icon_tir</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1948" toLevel="1" name="Block Othell Force">
+	<skill id="1948" toLevel="1" name="阻絕歐瑟之力">
 		<!-- Othell Momentum is not applied. -->
 		<icon>icon.icon_othel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1949" toLevel="1" name="Block Yul Force">
+	<skill id="1949" toLevel="1" name="阻絕尤爾之力">
 		<!-- Yul Momentum is not applied. -->
 		<icon>icon.icon_yr</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1950" toLevel="1" name="Block Feoh Force">
+	<skill id="1950" toLevel="1" name="阻絕菲歐之力">
 		<!-- Feoh Momentum is not applied. -->
 		<icon>icon.icon_feoh</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1951" toLevel="1" name="Block Iss Force">
+	<skill id="1951" toLevel="1" name="阻絕伊斯之力">
 		<!-- Iss Momentum is not applied. -->
 		<icon>icon.icon_is</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1952" toLevel="1" name="Block Wynn Force">
+	<skill id="1952" toLevel="1" name="阻絕維因之力">
 		<!-- Wynn Momentum is not applied. -->
 		<icon>icon.icon_wynn</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1953" toLevel="1" name="Block Aeore Force">
+	<skill id="1953" toLevel="1" name="阻絕艾羅之力">
 		<!-- Aeore Momentum is not applied. -->
 		<icon>icon.icon_eolh</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1954" toLevel="1" name="Flying Body Reinforcement">
+	<skill id="1954" toLevel="1" name="飛行肉體再造">
 		<!-- Transforms into the ultimate flying combat form. The skill cooldown is fixed. -->
 		<icon>icon.skill0840</icon>
 		<operateType>A2</operateType>
@@ -1399,7 +1399,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1955" toLevel="3" name="Party Solidarity">
+	<skill id="1955" toLevel="3" name="隊伍凝聚力">
 		<!-- Level 1: A party member's P. Atk. +1%, M. Atk. +1%, Critical Rate for basic attacks +1%, Atk. Spd. +1%, Casting Spd. +1%, P./ M. Skill Cooldown -1%. Applies Sigel/ Aeore Force. When 4+ Force effects are applied, activates the Party Solidarity effect. When even more Force effects are applied, the Party Solidarity effect is increased. -->
 		<!-- Level 2: A party member's P. Atk. +5%, M. Atk. +5%, Critical Rate for basic attacks +2%, Atk. Spd. +2%, Casting Spd. +2%, P./ M. Skill Cooldown -2%. Applies Sigel/ Aeore Force. When 4+ Force effects are applied, activates the Party Solidarity effect. When even more Force effects are applied, the Party Solidarity effect is increased. -->
 		<!-- Level 3: A party member's P. Atk. +13%, M. Atk. +16%, Critical Rate for basic attacks +4%, Atk. Spd. +4%, Casting Spd. +4%, P./ M. Skill Cooldown -5%. Applies Sigel/ Aeore Force. When 4+ Force effects are applied, activates the Party Solidarity effect. When even more Force effects are applied, the Party Solidarity effect is increased. -->
@@ -1496,7 +1496,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1956" toLevel="4" name="Subclass - P./ M. Atk. Increase">
+	<skill id="1956" toLevel="4" name="副職業-攻擊力/魔法攻擊力增加">
 		<!-- Level 1: P. Atk. +1%, M. Atk. +1%. -->
 		<!-- Level 2: P. Atk. +2%, M. Atk. +3%. -->
 		<!-- Level 3: P. Atk. +3%, M. Atk. +4%. -->
@@ -1527,7 +1527,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1957" toLevel="4" name="Subclass - P./ M. Def. Increase">
+	<skill id="1957" toLevel="4" name="副職業-防禦力/魔法防禦力增加">
 		<!-- Level 1: P. Def. +1%, M. Def. +1%. -->
 		<!-- Level 2: P. Def. +2%, M. Def. +2%. -->
 		<!-- Level 3: P. Def. +3%, M. Def. +3%. -->
@@ -1558,7 +1558,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1958" toLevel="4" name="Subclass - Atk. Spd./ Casting Spd. Increase">
+	<skill id="1958" toLevel="4" name="副職業-攻擊速度/施法速度增加">
 		<!-- Level 1: Atk. Spd. +1%, Casting Spd. +1%. -->
 		<!-- Level 2: Atk. Spd. +2%, Casting Spd. +2%. -->
 		<!-- Level 3: Atk. Spd. +3%, Casting Spd. +3%. -->
@@ -1589,7 +1589,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1959" toLevel="4" name="Subclass - P./ M. Critical Rate Increase">
+	<skill id="1959" toLevel="4" name="副職業-物理/魔法致命攻擊率增加">
 		<!-- Level 1: Critical Rate for basic attacks +1%, M. Skill Critical Rate +1%. -->
 		<!-- Level 2: Critical Rate for basic attacks +2%, M. Skill Critical Rate +2%. -->
 		<!-- Level 3: Critical Rate for basic attacks +3%, M. Skill Critical Rate +3%. -->
@@ -1620,7 +1620,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1960" toLevel="4" name="Subclass - P./ M. Accuracy Increase">
+	<skill id="1960" toLevel="4" name="副職業-物理攻擊命中/魔法命中增加">
 		<!-- Level 1: P. Accuracy +2, M. Accuracy +2 -->
 		<!-- Level 2: P. Accuracy +4, M. Accuracy +4 -->
 		<!-- Level 3: P. Accuracy +6, M. Accuracy +6 -->
@@ -1651,7 +1651,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1961" toLevel="4" name="Subclass - P./ M. Evasion Increase">
+	<skill id="1961" toLevel="4" name="副職業-物理攻擊迴避/魔法迴避增加">
 		<!-- Level 1: P. Evasion +2, M. Evasion +2. -->
 		<!-- Level 2: P. Evasion +4, M. Evasion +4. -->
 		<!-- Level 3: P. Evasion +6, M. Evasion +6. -->
@@ -1682,7 +1682,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1962" toLevel="4" name="Dual Class Certification - Attack">
+	<skill id="1962" toLevel="4" name="雙職業認證-攻擊">
 		<!-- Level 1: P. Atk. +3%, M. Atk. +4%. -->
 		<!-- Level 2: P. Atk. +6%, M. Atk. +9%. -->
 		<!-- Level 3: P. Atk. +9%, M. Atk. +13%. -->
@@ -1713,7 +1713,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1963" toLevel="4" name="Dual Class Certification - Defense">
+	<skill id="1963" toLevel="4" name="雙職業認證-防禦">
 		<!-- Level 1: P./ M. Def. +3%. -->
 		<!-- Level 2: P./ M. Def. +6%. -->
 		<!-- Level 3: P./ M. Def. +9%. -->
@@ -1744,7 +1744,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1964" toLevel="4" name="Dual Class Certification - Speed">
+	<skill id="1964" toLevel="4" name="雙職業認證-速度">
 		<!-- Level 1: Atk. Spd./ Casting Spd. +3%. -->
 		<!-- Level 2: Atk. Spd./ Casting Spd. +6%. -->
 		<!-- Level 3: Atk. Spd./ Casting Spd. +9%. -->
@@ -1775,7 +1775,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1965" toLevel="4" name="Dual Class Certification - Condition Improvement">
+	<skill id="1965" toLevel="4" name="雙職業認證-狀態">
 		<!-- Level 1: Max HP/ MP/ CP +5%. -->
 		<!-- Level 2: Max HP/ MP/ CP +10%. -->
 		<!-- Level 3: Max HP/ MP/ CP +15%. -->
@@ -1815,7 +1815,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1966" toLevel="4" name="Dual Class - Max MP Bonus">
+	<skill id="1966" toLevel="4" name="雙職業-MP最大值增加">
 		<!-- Level 1: Max MP +6%. -->
 		<!-- Level 2: Max MP +12%. -->
 		<!-- Level 3: Max MP +18%. -->
@@ -1841,7 +1841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1967" toLevel="4" name="Dual Class - Max CP Bonus">
+	<skill id="1967" toLevel="4" name="雙職業-CP最大值增加">
 		<!-- Level 1: Max CP +6%. -->
 		<!-- Level 2: Max CP +12%. -->
 		<!-- Level 3: Max CP +18%. -->
@@ -1867,7 +1867,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1968" toLevel="1" name="Dual Class Certification - Blood Siphon">
+	<skill id="1968" toLevel="1" name="雙職業認證-吸血">
 		<!-- With a certain chance, absorbs 5% of inflicted damage as HP on attack. -->
 		<icon>icon.dual_hpsteal</icon>
 		<operateType>P</operateType>
@@ -1881,7 +1881,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1969" toLevel="1" name="Dual Class - MP Drain">
+	<skill id="1969" toLevel="1" name="雙職業-MP吸收">
 		<!-- With a certain chance, recovers MP on attack. -->
 		<icon>icon.dual_mpsteal</icon>
 		<operateType>P</operateType>
@@ -1918,7 +1918,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1970" toLevel="1" name="Dual Class Certification - Physical Power">
+	<skill id="1970" toLevel="1" name="雙職業認證-能量">
 		<!-- P. Atk. +9%, P./ M. Def. -6%. -->
 		<icon>icon.dual_atkup</icon>
 		<operateType>P</operateType>
@@ -1940,7 +1940,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1971" toLevel="1" name="Dual Class Certification - Magic Power">
+	<skill id="1971" toLevel="1" name="雙職業認證-魔力">
 		<!-- M. Atk. +13%, P./ M. Def. -6%. -->
 		<icon>icon.dual_defup</icon>
 		<operateType>P</operateType>
@@ -1962,7 +1962,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1972" toLevel="1" name="Dual Class - Physical Ability Bonus">
+	<skill id="1972" toLevel="1" name="雙職業-肉體性特性增加">
 		<!-- Stupor/ Obstruction Atk. Rate +20, Stupor/ Obstruction Resistance +20 -->
 		<icon>icon.skill4084</icon>
 		<operateType>P</operateType>
@@ -1987,7 +1987,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1973" toLevel="1" name="Dual Class - Mental Ability Bonus">
+	<skill id="1973" toLevel="1" name="雙職業-精神性特性增加">
 		<!-- Confusion/ Petrification Atk. Rate +20, Confusion/ Petrification Resistance +20 -->
 		<icon>icon.skill4116</icon>
 		<operateType>P</operateType>
@@ -2017,7 +2017,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1974" toLevel="1" name="Dual Class Certification - Berserker's Rage">
+	<skill id="1974" toLevel="1" name="雙職業認證-狂戰士的憤怒">
 		<!-- With a certain chance, P. Atk. +27% on attack. -->
 		<icon>icon.dual_t_atkup</icon>
 		<operateType>P</operateType>
@@ -2049,7 +2049,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1975" toLevel="1" name="Dual Class Certification - Berserker's Rage">
+	<skill id="1975" toLevel="1" name="雙職業認證-狂戰士的憤怒">
 		<!-- For 15 sec., P. Atk. +27%. The skill cooldown is fixed. -->
 		<icon>icon.dual_t_atkup</icon>
 		<operateType>A2</operateType>
@@ -2071,7 +2071,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1976" toLevel="1" name="Dual Class Certification - Master's Rage">
+	<skill id="1976" toLevel="1" name="雙職業認證-大師的憤怒">
 		<!-- With a certain chance, Skill Power +27% when using skills. -->
 		<icon>icon.dual_t_skup</icon>
 		<operateType>P</operateType>
@@ -2090,7 +2090,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1977" toLevel="1" name="Dual Class Certification - Master's Rage">
+	<skill id="1977" toLevel="1" name="雙職業認證-大師的憤怒">
 		<!-- For 15 sec., P./ M. Skill Power +27%. The skill cooldown is fixed. -->
 		<icon>icon.dual_t_skup</icon>
 		<operateType>A2</operateType>
@@ -2116,7 +2116,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1978" toLevel="1" name="Dual Class Certification - Light of Protection">
+	<skill id="1978" toLevel="1" name="雙職業認證-守護之光">
 		<!-- With a certain chance, P./ M. Def. +40% when hit. -->
 		<icon>icon.dual_t_dmgdef</icon>
 		<operateType>P</operateType>
@@ -2148,7 +2148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1979" toLevel="1" name="Dual Class Certification - Light of Protection">
+	<skill id="1979" toLevel="1" name="雙職業認證-守護之光">
 		<!-- For 15 sec., P./ M. Def. +40%. The skill cooldown is fixed. -->
 		<icon>icon.dual_t_dmgdef</icon>
 		<operateType>A2</operateType>
@@ -2174,7 +2174,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1980" toLevel="1" name="Dual Class - Light of Blessing">
+	<skill id="1980" toLevel="1" name="雙職業-祝福之光">
 		<!-- With a certain chance, HP +10,000 when hit. -->
 		<icon>icon.dual_t_dmgheal</icon>
 		<operateType>P</operateType>
@@ -2192,7 +2192,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1981" toLevel="1" name="Dual Class - Light of Blessing">
+	<skill id="1981" toLevel="1" name="雙職業-祝福之光">
 		<!-- Recovers HP. The skill cooldown is fixed. -->
 		<icon>icon.dual_t_dmgheal</icon>
 		<operateType>A1</operateType>
@@ -2209,7 +2209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1982" toLevel="1" name="Dual Class - Shackles of the Giants">
+	<skill id="1982" toLevel="1" name="雙職業-巨人鎖鏈">
 		<!-- Blocks the target's P. skills for 5 sec. Can only be used in PvP. The skill cooldown is fixed. Base success rate: Guaranteed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.dual_a_pblock</icon>
 		<operateType>A2</operateType>
@@ -2238,7 +2238,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="1983" toLevel="1" name="Dual Class - Silence of the Giants">
+	<skill id="1983" toLevel="1" name="雙職業-巨人沉默">
 		<!-- Blocks the target's M. skills for 5 sec. Can only be used in PvP. The skill cooldown is fixed. Base success rate: Guaranteed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.dual_a_mblock</icon>
 		<operateType>A2</operateType>
@@ -2267,7 +2267,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="1984" toLevel="1" name="Dual Class - Yoke of the Giants">
+	<skill id="1984" toLevel="1" name="雙職業-巨人束縛">
 		<!-- For 5 sec., Speed -90% for the target and nearby enemies. Can only be used in PvP. The skill cooldown is fixed. Base success rate: Guaranteed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.dual_a_spdown</icon>
 		<operateType>A2</operateType>
@@ -2302,7 +2302,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1985" toLevel="1" name="Dual Class - Shield of the Giants">
+	<skill id="1985" toLevel="1" name="雙職業-巨人之盾">
 		<!-- For 30 sec., Damage Reflection Resistance +100%. The skill cooldown is fixed. -->
 		<icon>icon.dual_a_refdmg</icon>
 		<operateType>A2</operateType>
@@ -2326,7 +2326,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1986" toLevel="10" name="Dual Class - Maximum Health">
+	<skill id="1986" toLevel="10" name="雙職業 肉體臨界">
 		<!-- Level 1: Max HP +463. Required main/ dual class level: 85. -->
 		<!-- Level 2: Max HP +972. Required main/ dual class level: 90. -->
 		<!-- Level 3: Max HP +1458. Required main/ dual class level: 95. -->
@@ -2370,7 +2370,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1987" toLevel="1" name="Sigel Armor Limit">
+	<skill id="1987" toLevel="1" name="席格爾護甲限界">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe/ Light Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2395,7 +2395,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1988" toLevel="1" name="Tyrr Armor Limit">
+	<skill id="1988" toLevel="1" name="提爾護甲限界">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2418,7 +2418,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1989" toLevel="1" name="Yul Armor Limit">
+	<skill id="1989" toLevel="1" name="尤爾護甲限界">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe/ Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2443,7 +2443,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1990" toLevel="1" name="Othell Armor Limit">
+	<skill id="1990" toLevel="1" name="歐瑟護甲限界">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe/ Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2468,7 +2468,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1991" toLevel="1" name="Feoh Armor Limit">
+	<skill id="1991" toLevel="1" name="菲歐護甲限界">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with Light Armor/ Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2493,7 +2493,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1992" toLevel="1" name="Wynn Armor Limit">
+	<skill id="1992" toLevel="1" name="維因護甲限界">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2516,14 +2516,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1993" toLevel="1" name="Iss Armor Limit">
+	<skill id="1993" toLevel="1" name="伊斯護甲限界">
 		<!-- No Penalty. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="1994" toLevel="1" name="Aeore Armor Limit">
+	<skill id="1994" toLevel="1" name="艾羅護甲限界">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2546,7 +2546,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1995" toLevel="1" name="Dual Class - MP Drain">
+	<skill id="1995" toLevel="1" name="雙職業-MP吸收">
 		<!-- Recovers MP. -->
 		<icon>icon.dual_mpsteal</icon>
 		<operateType>A1</operateType>
@@ -2563,7 +2563,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1996" toLevel="3" name="Hurricane Shackle">
+	<skill id="1996" toLevel="3" name="颶風枷鎖">
 		<!-- Level 1: For 60 sec., blocks the target from using teleportation. The skill cooldown is fixed. Base success rate: Guaranteed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 2: For 60 sec., blocks the target from using teleportation. Your P./ M. Atk. +10% for 60 sec. The skill cooldown is fixed. Base success rate: Guaranteed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 3: For 60 sec., blocks the target from using teleportation. Your P./ M. Atk. +10% for 60 sec. The skill cooldown is fixed. Base success rate: Guaranteed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
@@ -2598,7 +2598,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="1997" toLevel="3" name="Brand of Gravity">
+	<skill id="1997" toLevel="3" name="重力放逐">
 		<!-- Level 1: For 30 sec., prevents the target from being resurrected. The skill cooldown is fixed. -->
 		<!-- Level 2: For 30 sec., prevents the target from being resurrected. Your P./ M. Def. +10% for 30 sec. The skill cooldown is fixed. -->
 		<!-- Level 3: For 30 sec., prevents the target from being resurrected. Your P./ M. Def. +10% for 30 sec. The skill cooldown is fixed. -->
@@ -2638,7 +2638,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="1998" toLevel="1" name="Dual Class Certification - Vitality">
+	<skill id="1998" toLevel="1" name="雙職業-活力">
 		<!-- Vitality bonus +10%. -->
 		<icon>icon.skill10336</icon>
 		<operateType>P</operateType>
@@ -2649,7 +2649,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1999" toLevel="1" name="Dual Class Certification - Recovery">
+	<skill id="1999" toLevel="1" name="雙職業-恢復">
 		<!-- Skill cooldown -4%. -->
 		<icon>icon.skill11226</icon>
 		<operateType>P</operateType>

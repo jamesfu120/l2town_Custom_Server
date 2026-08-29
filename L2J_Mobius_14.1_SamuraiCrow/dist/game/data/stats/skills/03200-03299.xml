@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3200" toLevel="3" name="Item Skill: Spell Refresh">
+	<skill id="3200" toLevel="3" name="武器特技：魔法恢復">
 		<!-- Active skill: Temporarily decreases M. Skill Cooldown. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
@@ -47,7 +47,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3201" toLevel="3" name="Item Skill: Music Refresh">
+	<skill id="3201" toLevel="3" name="武器特技：歌舞恢復">
 		<!-- Active skill: Temporarily decreases Song/ Dance Cooldown. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
@@ -89,7 +89,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3202" toLevel="3" name="Item Skill: Refresh">
+	<skill id="3202" toLevel="3" name="武器特技：技能恢復">
 		<!-- Active skill: Temporarily decreases skill cooldown (except skills with fixed cooldown). -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
@@ -146,7 +146,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3203" toLevel="1" name="Item Skill: Mysterious Ability">
+	<skill id="3203" toLevel="1" name="武器特技：謎樣技巧">
 		<!-- Active skill: Increases your head's size. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
@@ -166,7 +166,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<trait>ETC</trait>
 	</skill>
-	<skill id="3204" toLevel="3" name="Item Skill: Damage Reflection">
+	<skill id="3204" toLevel="3" name="武器特技：還擊">
 		<!-- Active skill: Temporarily reflects some of received damage back to the enemy. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
@@ -210,7 +210,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3205" toLevel="2" name="Item Skill: Party Return">
+	<skill id="3205" toLevel="2" name="武器特技：隊伍回歸">
 		<!-- Active skill: Teleports party members to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
@@ -248,7 +248,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3206" toLevel="10" name="Item Skill: Music">
+	<skill id="3206" toLevel="10" name="武器特技：音樂">
 		<!-- Active skill: Plays music. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
@@ -271,7 +271,7 @@
 		</magicLevel>
 		<reuseDelay>12000</reuseDelay>
 	</skill>
-	<skill id="3207" toLevel="10" name="Item Skill: Heal">
+	<skill id="3207" toLevel="10" name="武器特技：治癒術">
 		<!-- When triggered: Recovers HP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -311,7 +311,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3208" toLevel="10" name="Item Skill: Blessed Body">
+	<skill id="3208" toLevel="10" name="武器特技：神佑之體">
 		<!-- When triggered: For a certain amount of time, increases Max HP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -351,7 +351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3209" toLevel="10" name="Item Skill: Prayer">
+	<skill id="3209" toLevel="10" name="武器特技：祈禱">
 		<!-- When triggered: Temporarily increases Healing Power when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -391,7 +391,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3210" toLevel="10" name="Item Skill: Recharge">
+	<skill id="3210" toLevel="10" name="武器特技：回復術">
 		<!-- When triggered: Recovers MP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -431,7 +431,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3211" toLevel="10" name="Item Skill: Blessed Soul">
+	<skill id="3211" toLevel="10" name="武器特技：神佑之魂">
 		<!-- When triggered: For a certain amount of time, increases Max MP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -471,7 +471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3212" toLevel="15" name="Item Skill: Mana Gain">
+	<skill id="3212" toLevel="15" name="武器特技：魔力回復">
 		<!-- When triggered: Increases MP Recovery Rate when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -521,7 +521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3213" toLevel="10" name="Item Skill: Ritual">
+	<skill id="3213" toLevel="10" name="武器特技：祭禮">
 		<!-- When triggered: Recovers CP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -561,7 +561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3214" toLevel="10" name="Item Skill: Joy">
+	<skill id="3214" toLevel="10" name="武器特技：敬意">
 		<!-- When triggered: For a certain amount of time, increases Max CP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -601,7 +601,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3215" toLevel="15" name="Item Skill: Might">
+	<skill id="3215" toLevel="15" name="武器特技：力量強化">
 		<!-- When triggered: Temporarily increases P. Atk. when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -651,7 +651,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3216" toLevel="15" name="Item Skill: Empower">
+	<skill id="3216" toLevel="15" name="武器特技：魔力催化">
 		<!-- When triggered: Temporarily increases M. Atk. when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -701,7 +701,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3217" toLevel="10" name="Item Skill: Duel Might">
+	<skill id="3217" toLevel="10" name="武器特技：決鬥意志">
 		<!-- When triggered: Increases P. Atk. in PvP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -741,7 +741,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3218" toLevel="15" name="Item Skill: Shield">
+	<skill id="3218" toLevel="15" name="武器特技：保護盾">
 		<!-- When triggered: Temporarily increases P. Def. when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -791,7 +791,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3219" toLevel="15" name="Item Skill: Magic Barrier">
+	<skill id="3219" toLevel="15" name="武器特技：魔法屏障">
 		<!-- When triggered: Temporarily increases M. Def. when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -841,7 +841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3220" toLevel="10" name="Item Skill: Weakness in Duel">
+	<skill id="3220" toLevel="10" name="武器特技：決鬥弱化">
 		<!-- When triggered: Temporarily decreases the target's P. Atk. in PvP when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -881,7 +881,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3221" toLevel="15" name="Item Skill: Agility">
+	<skill id="3221" toLevel="15" name="武器特技：敏捷術">
 		<!-- When triggered: Increases P. Evasion when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -931,7 +931,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3222" toLevel="15" name="Item Skill: Guidance">
+	<skill id="3222" toLevel="15" name="武器特技：導引">
 		<!-- When triggered: Increases P. Accuracy when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -981,7 +981,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3223" toLevel="10" name="Item Skill: Focus">
+	<skill id="3223" toLevel="10" name="武器特技：弱點偵測">
 		<!-- When triggered: Temporarily increases Critical Rate for basic attacks when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1021,7 +1021,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3224" toLevel="10" name="Item Skill: Wild Magic">
+	<skill id="3224" toLevel="10" name="武器特技：野性魔力">
 		<!-- When triggered: Temporarily increases M. Skill Critical Rate when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1061,7 +1061,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3225" toLevel="15" name="Item Skill: Charm">
+	<skill id="3225" toLevel="15" name="武器特技：迷魅術">
 		<!-- When triggered: Decreases the enemy's aggression when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1111,7 +1111,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3226" toLevel="15" name="Item Skill: Slow">
+	<skill id="3226" toLevel="15" name="武器特技：緩速">
 		<!-- When triggered: Temporarily decreases the target's Speed when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1161,7 +1161,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3227" toLevel="15" name="Item Skill: Winter">
+	<skill id="3227" toLevel="15" name="武器特技：寒冬">
 		<!-- When triggered: Temporarily decreases the target's Atk. Spd. when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1211,7 +1211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3228" toLevel="10" name="Item Skill: Stun">
+	<skill id="3228" toLevel="10" name="武器特技：衝擊">
 		<!-- When triggered: Momentarily stuns the target when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1251,7 +1251,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3229" toLevel="10" name="Item Skill: Hold">
+	<skill id="3229" toLevel="10" name="武器特技：束縛">
 		<!-- When triggered: Momentarily inflicts Hold on the target when hit. The target is unlikely to be affected by any Hold attacks while the effect is active. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1291,7 +1291,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3230" toLevel="10" name="Item Skill: Sleep">
+	<skill id="3230" toLevel="10" name="武器特技：催眠">
 		<!-- When triggered: Momentarily inflicts Sleep on the target when hit. The target cannot be affected by any Sleep attacks while the effect is active. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1331,7 +1331,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3231" toLevel="10" name="Item Skill: Paralysis">
+	<skill id="3231" toLevel="10" name="武器特技：麻痺">
 		<!-- When triggered: Momentarily paralyzes the target when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1371,7 +1371,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3232" toLevel="10" name="Item Skill: Medusa">
+	<skill id="3232" toLevel="10" name="武器特技：梅杜莎">
 		<!-- When triggered: Momentarily petrifies the target when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1411,7 +1411,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3233" toLevel="10" name="Item Skill: Fear">
+	<skill id="3233" toLevel="10" name="武器特技：恐懼">
 		<!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee, when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1451,7 +1451,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3234" toLevel="15" name="Item Skill: Poison">
+	<skill id="3234" toLevel="15" name="武器特技：施毒">
 		<!-- Level 1: When triggered: Momentarily poisons the target when hit. Effect 5. -->
 		<!-- Level 2: When triggered: Momentarily poisons the target when hit. Effect 5. -->
 		<!-- Level 3: When triggered: Momentarily poisons the target when hit. Effect 6. -->
@@ -1515,7 +1515,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3235" toLevel="15" name="Item Skill: Bleed">
+	<skill id="3235" toLevel="15" name="武器特技：出血">
 		<!-- Level 1: When triggered: Momentarily inflicts Bleed on the target when hit. Effect 5. -->
 		<!-- Level 2: When triggered: Momentarily inflicts Bleed on the target when hit. Effect 5. -->
 		<!-- Level 3: When triggered: Momentarily inflicts Bleed on the target when hit. Effect 6. -->
@@ -1579,7 +1579,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3236" toLevel="10" name="Item Skill: Silence">
+	<skill id="3236" toLevel="10" name="武器特技：沉默">
 		<!-- When triggered: Momentarily blocks the target's M. skills when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1619,7 +1619,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3237" toLevel="10" name="Item Skill: Doom">
+	<skill id="3237" toLevel="10" name="武器特技：末日">
 		<!-- When triggered: Momentarily blocks the target's P./ M. skills when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -1659,7 +1659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3238" toLevel="10" name="Item Skill: Prayer">
+	<skill id="3238" toLevel="10" name="武器特技：祈禱">
 		<!-- Item skill: Increases Healing Power, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1683,7 +1683,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3239" toLevel="15" name="Item Skill: Mana Gain">
+	<skill id="3239" toLevel="15" name="武器特技：魔力回復">
 		<!-- Item skill: Increases MP Recovery Rate, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1712,7 +1712,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3240" toLevel="15" name="Item Skill: Might">
+	<skill id="3240" toLevel="15" name="武器特技：力量強化">
 		<!-- Item skill: Increases P. Atk., when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1757,7 +1757,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3241" toLevel="15" name="Item Skill: Empower">
+	<skill id="3241" toLevel="15" name="武器特技：魔力催化">
 		<!-- Item skill: Increases M. Atk., when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1786,7 +1786,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3243" toLevel="10" name="Item Skill: Duel Might">
+	<skill id="3243" toLevel="10" name="武器特技：決鬥意志">
 		<!-- Item skill: Increases P. Atk. in PvP, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1814,7 +1814,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3244" toLevel="15" name="Item Skill: Shield">
+	<skill id="3244" toLevel="15" name="武器特技：保護盾">
 		<!-- Item skill: Increases P. Def., when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1859,7 +1859,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3245" toLevel="15" name="Item Skill: Magic Barrier">
+	<skill id="3245" toLevel="15" name="武器特技：魔法屏障">
 		<!-- Item skill: Increases M. Def., when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1904,7 +1904,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3246" toLevel="10" name="Item Skill: Heal Empower">
+	<skill id="3246" toLevel="10" name="武器特技：魔力治癒">
 		<!-- Item skill: Increases Healing Power, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1939,7 +1939,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3247" toLevel="15" name="Item Skill: Agility">
+	<skill id="3247" toLevel="15" name="武器特技：敏捷術">
 		<!-- Item skill: Increases P. Evasion, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1968,7 +1968,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3248" toLevel="15" name="Item Skill: Guidance">
+	<skill id="3248" toLevel="15" name="武器特技：導引">
 		<!-- Item skill: Increases P. Accuracy, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -1997,7 +1997,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3249" toLevel="10" name="Item Skill: Focus">
+	<skill id="3249" toLevel="10" name="武器特技：弱點偵測">
 		<!-- Item skill: When equipped, increases Critical Rate for basic attacks. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2021,7 +2021,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3250" toLevel="10" name="Item Skill: Wild Magic">
+	<skill id="3250" toLevel="10" name="武器特技：野性魔力">
 		<!-- Item skill: Increases M. Skill Critical Rate, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2045,7 +2045,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3251" toLevel="10" name="Item Skill: Weight Limit">
+	<skill id="3251" toLevel="10" name="武器特技：負重強化">
 		<!-- Item skill: Increases Weight Limit by 2 times, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2069,7 +2069,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3252" toLevel="10" name="Item Skill: Eva's Kiss">
+	<skill id="3252" toLevel="10" name="武器特技：伊娃之吻">
 		<!-- Item skill: Increases Breath Gauge, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2093,7 +2093,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3253" toLevel="10" name="Item Skill: Acrobatics">
+	<skill id="3253" toLevel="10" name="武器特技：特技精通">
 		<!-- Item skill: Increases safe fall height, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2117,7 +2117,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3254" toLevel="15" name="Item Skill: Iron Body">
+	<skill id="3254" toLevel="15" name="武器特技：剛體">
 		<!-- Item skill: Increases Fall Damage Resistance, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2145,7 +2145,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3255" toLevel="8" name="Item Skill: Skill Clarity">
+	<skill id="3255" toLevel="8" name="武器特技：戰技澄澈">
 		<!-- Item skill: Decreases P. Skill MP Consumption, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2177,7 +2177,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3256" toLevel="8" name="Item Skill: Spell Clarity">
+	<skill id="3256" toLevel="8" name="武器特技：魔法澄澈">
 		<!-- Item skill: Decreases M. Skill MP Consumption, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2209,7 +2209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3257" toLevel="3" name="Item Skill: Music Clarity">
+	<skill id="3257" toLevel="3" name="武器特技：歌舞澄澈">
 		<!-- Item skill: Decreases Song/ Dance MP Consumption, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2231,7 +2231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3258" toLevel="3" name="Item Skill: Clarity">
+	<skill id="3258" toLevel="3" name="武器特技：澄澈思緒">
 		<!-- Item skill: Decreases Skill MP Consumption, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2267,7 +2267,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3259" toLevel="3" name="Item Skill: Damage Reflection">
+	<skill id="3259" toLevel="3" name="武器特技：還擊">
 		<!-- Item skill: Increases Damage Reflection Rate, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2287,7 +2287,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3260" toLevel="1" name="Forgiveness">
+	<skill id="3260" toLevel="1" name="愛神之箭">
 		<!-- Sends a heart filled with love to mutated animals. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
@@ -2326,7 +2326,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3261" toLevel="1" name="Forgiveness">
+	<skill id="3261" toLevel="1" name="愛神之箭">
 		<!-- Taps into the magic of the bow to fire a harmless bolt. Warning: If you use this skill against a monster, it will flag you for PvP. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
@@ -2344,7 +2344,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="3262" toLevel="1" name="Pardon">
+	<skill id="3262" toLevel="1" name="愛神之箭‧心心相印">
 		<!-- Continuously sends two hearts filled with love to mutated animals. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
@@ -2383,7 +2383,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3263" toLevel="1" name="Blessed Resurrection">
+	<skill id="3263" toLevel="1" name="祝福的復活之力">
 		<!-- Enables the Blessed Resurrection skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2409,7 +2409,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3264" toLevel="1" name="Blessed Escape">
+	<skill id="3264" toLevel="1" name="祝福的返回之力">
 		<!-- Enables the Blessed Escape skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2433,7 +2433,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3265" toLevel="1" name="Mysterious Ability">
+	<skill id="3265" toLevel="1" name="疑問之力">
 		<!-- Increases your head's size. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -2452,7 +2452,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<trait>ETC</trait>
 	</skill>
-	<skill id="3266" toLevel="1" name="Large Firecracker">
+	<skill id="3266" toLevel="1" name="大煙火之力">
 		<!-- Ignites firecrackers. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2466,7 +2466,7 @@
 		<mpInitialConsume>5</mpInitialConsume>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="3267" toLevel="1" name="Unsummon Agathion">
+	<skill id="3267" toLevel="1" name="壺精封印">
 		<!-- Releases the summoned agathion. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
@@ -2481,7 +2481,7 @@
 			<effect name="UnsummonAgathion" />
 		</effects>
 	</skill>
-	<skill id="3268" toLevel="1" name="Summon Agathion - Castle">
+	<skill id="3268" toLevel="1" name="壺精召喚-城堡">
 		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -2498,7 +2498,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3269" toLevel="1" name="Summon Agathion - Rainbow">
+	<skill id="3269" toLevel="1" name="壺精召喚-虹彩之泉根據地">
 		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -2515,7 +2515,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3270" toLevel="1" name="Summon Agathion - Beast Farm">
+	<skill id="3270" toLevel="1" name="壺精召喚-野獸農莊">
 		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -2532,7 +2532,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3271" toLevel="1" name="Blue Talisman - P. Atk.">
+	<skill id="3271" toLevel="1" name="青色護身符-攻擊力">
 		<!-- Increases P. Atk., when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2558,7 +2558,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3272" toLevel="1" name="Blue Talisman - P. Def.">
+	<skill id="3272" toLevel="1" name="青色護身符-防禦力">
 		<!-- Increases P. Def., when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2584,7 +2584,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3273" toLevel="1" name="Red Talisman - HP/CP Recovery">
+	<skill id="3273" toLevel="1" name="赤色護身符-HP/CP恢復">
 		<!-- Recovers HP/ CP, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<operateType>A1</operateType>
@@ -2609,7 +2609,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3274" toLevel="1" name="Blue Talisman - Shield Defense">
+	<skill id="3274" toLevel="1" name="青色護身符-盾牌防禦">
 		<!-- Increases Shield Defense, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2635,7 +2635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3275" toLevel="1" name="Blue Talisman - Shield Defense Rate">
+	<skill id="3275" toLevel="1" name="青色護身符-盾牌防御率增加">
 		<!-- Increases Shield Defense Rate, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2661,7 +2661,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3276" toLevel="1" name="Blue Talisman - M. Def.">
+	<skill id="3276" toLevel="1" name="青色護身符-魔法抵抗">
 		<!-- Increases M. Def., when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2687,7 +2687,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3277" toLevel="1" name="Blue Talisman - M. Critical Rate">
+	<skill id="3277" toLevel="1" name="青色護身符-魔法致命攻擊機率">
 		<!-- Increases M. Skill Critical Rate, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2713,7 +2713,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3278" toLevel="1" name="Red Talisman - MP Recovery Rate">
+	<skill id="3278" toLevel="1" name="赤色護身符-MP恢復速度">
 		<!-- Increases MP Recovery Rate, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<operateType>A2</operateType>
@@ -2739,7 +2739,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3279" toLevel="1" name="Red Talisman - Invocation">
+	<skill id="3279" toLevel="1" name="赤色護身符-MP緩和">
 		<!-- Greatly increases MP Recovery Rate while immobilizing, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<operateType>A2</operateType>
@@ -2773,7 +2773,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3280" toLevel="1" name="Blue Talisman - Invisibility">
+	<skill id="3280" toLevel="1" name="青色護身符-透明化">
 		<!-- Makes you invisible for monsters, protecting from their preemptive strikes, when the talisman is equpped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2803,7 +2803,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3281" toLevel="1" name="Red Talisman - Clarity">
+	<skill id="3281" toLevel="1" name="赤色護身符-使用MP小幅減少">
 		<!-- Decreases Skill MP Consumption, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<operateType>A2</operateType>
@@ -2840,7 +2840,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3282" toLevel="1" name="Red Talisman - Maximum Clarity">
+	<skill id="3282" toLevel="1" name="赤色護身符-使用MP大幅減少">
 		<!-- Decreases Skill MP Consumption, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<operateType>A2</operateType>
@@ -2877,7 +2877,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3283" toLevel="1" name="Blue Talisman - Healing">
+	<skill id="3283" toLevel="1" name="青色護身符-治療威力增加">
 		<!-- Increases Healing Power, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2903,7 +2903,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3284" toLevel="1" name="Blue Talisman - Benefaction">
+	<skill id="3284" toLevel="1" name="青色護身符-加護">
 		<!-- Creates a protective barrier and increases P./ M. Def., when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2933,7 +2933,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3285" toLevel="1" name="Blue Talisman - Berserker">
+	<skill id="3285" toLevel="1" name="青色護身符-狂暴">
 		<!-- Temporarily decreases P./ M. Def. and P. Evasion, and increases P./ M. Atk., Atk. Spd., Casting Spd., and Speed, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2987,7 +2987,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3286" toLevel="1" name="Black Talisman - Bandage">
+	<skill id="3286" toLevel="1" name="黑色護身符-繃帶">
 		<!-- Cures bleeding, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<operateType>A1</operateType>
@@ -3008,7 +3008,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3287" toLevel="1" name="Black Talisman - Physical Freedom">
+	<skill id="3287" toLevel="1" name="黑色護身符-物理逃脫">
 		<!-- Removes P. blocking debuffs, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<operateType>A1</operateType>
@@ -3029,7 +3029,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3288" toLevel="1" name="Black Talisman - Arcane Freedom">
+	<skill id="3288" toLevel="1" name="黑色護身符-魔法逃脫">
 		<!-- Removes M. blocking debuffs, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<operateType>A1</operateType>
@@ -3050,7 +3050,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3289" toLevel="1" name="Black Talisman - Escape">
+	<skill id="3289" toLevel="1" name="黑色護身符-逃脫">
 		<!-- Removes all blocking debuffs, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<operateType>A1</operateType>
@@ -3071,7 +3071,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3290" toLevel="1" name="Black Talisman - Rescue">
+	<skill id="3290" toLevel="1" name="黑色護身符-物理沉默解除">
 		<!-- Removes P. Skill blocking debuffs, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<operateType>A1</operateType>
@@ -3092,7 +3092,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3291" toLevel="1" name="Black Talisman - Vocalization">
+	<skill id="3291" toLevel="1" name="黑色護身符-魔法沉默解除">
 		<!-- Removes M. Skill blocking debuffs, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<operateType>A1</operateType>
@@ -3113,7 +3113,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3292" toLevel="1" name="Black Talisman - Free Speech">
+	<skill id="3292" toLevel="1" name="黑色護身符-沉默解除">
 		<!-- Removes Skill blocking debuffs, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i05</icon>
 		<operateType>A1</operateType>
@@ -3134,7 +3134,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3293" toLevel="1" name="Yellow Talisman - P. Atk.">
+	<skill id="3293" toLevel="1" name="黃色護身符-攻擊力">
 		<!-- Increases P. Atk. when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -3147,7 +3147,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3294" toLevel="1" name="Yellow Talisman - M. Atk.">
+	<skill id="3294" toLevel="1" name="黃色護身符-魔法力">
 		<!-- Increases M. Atk. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -3160,7 +3160,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3295" toLevel="1" name="Yellow Talisman - P. Def.">
+	<skill id="3295" toLevel="1" name="黃色護身符-防禦力">
 		<!-- Increases P. Def. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -3173,7 +3173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3296" toLevel="1" name="Yellow Talisman - M. Def.">
+	<skill id="3296" toLevel="1" name="黃色護身符-魔法抵抗">
 		<!-- Increases M. Def., when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -3186,7 +3186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3297" toLevel="1" name="Yellow Talisman - Accuracy">
+	<skill id="3297" toLevel="1" name="黃色護身符-命中">
 		<!-- Increases P. Accuracy, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -3199,7 +3199,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3298" toLevel="1" name="Yellow Talisman - Evasion">
+	<skill id="3298" toLevel="1" name="黃色護身符-迴避">
 		<!-- Increases P. Evasion, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -3212,7 +3212,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3299" toLevel="1" name="Yellow Talisman - Critical Damage">
+	<skill id="3299" toLevel="1" name="黃色護身符-致命攻擊傷害">
 		<!-- Increases Critical Damage, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>

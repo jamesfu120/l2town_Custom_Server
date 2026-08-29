@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1700" toLevel="1" name="Life">
+	<skill id="1700" toLevel="1" name="生命治癒">
 		<!-- Recovers HP by 15%. -->
 		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
@@ -21,7 +21,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1701" toLevel="1" name="Mass Life">
+	<skill id="1701" toLevel="1" name="廣域生命治癒">
 		<!-- Recovers HP by 15%. -->
 		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
@@ -42,7 +42,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1702" toLevel="1" name="Cancel Hold">
+	<skill id="1702" toLevel="1" name="束縛消除">
 		<icon>icon.skill01702</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -57,7 +57,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1703" toLevel="1" name="Cancel Fear">
+	<skill id="1703" toLevel="1" name="恐懼消除">
 		<icon>icon.skill01703</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -72,7 +72,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1704" toLevel="1" name="Aggression Aura">
+	<skill id="1704" toLevel="1" name="強力挑撥">
 		<!-- . Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<operateType>A2</operateType>
@@ -97,7 +97,7 @@
 			<effect name="TargetMe" />
 		</effects>
 	</skill>
-	<skill id="1705" toLevel="1" name="Fury">
+	<skill id="1705" toLevel="1" name="狂暴">
 		<icon>icon.skill0275</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -124,7 +124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1706" toLevel="1" name="Earthquake">
+	<skill id="1706" toLevel="1" name="烈震閃">
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -141,7 +141,7 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="1708" toLevel="1" name="Bleeding Shot">
+	<skill id="1708" toLevel="1" name="出血射擊">
 		<!-- none. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
@@ -169,7 +169,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1709" toLevel="1" name="Poison Shot">
+	<skill id="1709" toLevel="1" name="劇毒射擊">
 		<!-- none. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
@@ -197,7 +197,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1710" toLevel="1" name="Bleeding Shot">
+	<skill id="1710" toLevel="1" name="出血射擊">
 		<!-- none. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
@@ -228,7 +228,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1711" toLevel="1" name="Poison Shot">
+	<skill id="1711" toLevel="1" name="劇毒射擊">
 		<!-- none. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
@@ -259,7 +259,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1712" toLevel="1" name="Burst Shot">
+	<skill id="1712" toLevel="1" name="爆射箭">
 		<icon>icon.skill0024</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -281,7 +281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1713" toLevel="1" name="Unison Whirl">
+	<skill id="1713" toLevel="1" name="精靈迴轉攻擊">
 		<icon>icon.skill0245</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -301,7 +301,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1714" toLevel="1" name="Unison Downblow">
+	<skill id="1714" toLevel="1" name="精靈下擊">
 		<icon>icon.skill0245</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -322,7 +322,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1715" toLevel="1" name="Unison Rush">
+	<skill id="1715" toLevel="1" name="精靈驅逐">
 		<!-- Unison of Lights' provocation. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0245</icon>
 		<operateType>A1</operateType>
@@ -348,7 +348,7 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="1716" toLevel="1" name="Wise Retainer's Resurrection">
+	<skill id="1716" toLevel="1" name="化身復活">
 		<icon>icon.skill1271</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_NOT</targetType>
@@ -365,7 +365,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1717" toLevel="1" name="Wise Retainer's Protection">
+	<skill id="1717" toLevel="1" name="化身保護">
 		<!-- Protected by Lakcis, the giant of light. -->
 		<icon>icon.skill1271</icon>
 		<operateType>A2</operateType>
@@ -396,7 +396,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1718" toLevel="1" name="Servitor Punishment">
+	<skill id="1718" toLevel="1" name="化身懲戒">
 		<icon>icon.skill1271</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -412,7 +412,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1719" toLevel="1" name="Wise Retainer's Price">
+	<skill id="1719" toLevel="1" name="化身代價">
 		<icon>icon.skill1271</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -425,7 +425,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1720" toLevel="1" name="Lakcis' Protection">
+	<skill id="1720" toLevel="1" name="拉齊西斯加護">
 		<icon>icon.skill1271</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_NOT</targetType>
@@ -447,7 +447,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1721" toLevel="1" name="Chain Attack">
+	<skill id="1721" toLevel="1" name="連續攻擊">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -466,7 +466,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1722" toLevel="1" name="Chain Attack">
+	<skill id="1722" toLevel="1" name="連續攻擊">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -485,7 +485,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1723" toLevel="1" name="Breakthrough">
+	<skill id="1723" toLevel="1" name="突破">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -502,7 +502,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1724" toLevel="1" name="Breakthrough">
+	<skill id="1724" toLevel="1" name="突破">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -521,7 +521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1725" toLevel="1" name="Strong Offense">
+	<skill id="1725" toLevel="1" name="強力攻勢">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -541,7 +541,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1726" toLevel="1" name="Strong Offense">
+	<skill id="1726" toLevel="1" name="強力攻勢">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -561,7 +561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1727" toLevel="1" name="Comeback">
+	<skill id="1727" toLevel="1" name="恢復">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -583,7 +583,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1728" toLevel="1" name="Cluster">
+	<skill id="1728" toLevel="1" name="重組">
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -615,7 +615,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1729" toLevel="1" name="Inspire">
+	<skill id="1729" toLevel="1" name="鼓舞">
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -647,7 +647,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1730" toLevel="1" name="Dimensional Force">
+	<skill id="1730" toLevel="1" name="次元引力">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -667,7 +667,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1731" toLevel="1" name="Dimensional Force">
+	<skill id="1731" toLevel="1" name="次元引力">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -680,25 +680,25 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1732" toLevel="1" name="Magmeld's Promise">
+	<skill id="1732" toLevel="1" name="瑪格門誓言">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1733" toLevel="1" name="Selestia's Rage">
+	<skill id="1733" toLevel="1" name="賽雷斯提憤怒">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1734" toLevel="1" name="Acheron's Penitence">
+	<skill id="1734" toLevel="1" name="阿克隆的贖罪">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="1735" toLevel="3" name="Increase Skill Power">
+	<skill id="1735" toLevel="3" name="角色技能威力增加">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -708,7 +708,7 @@
 			<value level="3">95</value>
 		</magicLevel>
 	</skill>
-	<skill id="1736" toLevel="3" name="Increase M. Atk.">
+	<skill id="1736" toLevel="3" name="角色魔力增加">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
 		<isMagic>1</isMagic>
@@ -719,7 +719,7 @@
 			<value level="3">95</value>
 		</magicLevel>
 	</skill>
-	<skill id="1747" toLevel="1" name="Slaughter">
+	<skill id="1747" toLevel="1" name="虐殺">
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -743,7 +743,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1748" toLevel="1" name="Slaughter">
+	<skill id="1748" toLevel="1" name="虐殺">
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -767,7 +767,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1749" toLevel="1" name="Slow">
+	<skill id="1749" toLevel="1" name="緩速術">
 		<!-- Slows down for 10 sec. -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
@@ -793,7 +793,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1750" toLevel="1" name="Invincibility">
+	<skill id="1750" toLevel="1" name="無敵">
 		<!-- Invincibility -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
@@ -848,7 +848,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1751" toLevel="1" name="Monster PC Bomb Making">
+	<skill id="1751" toLevel="1" name="怪物角色炸彈製作">
 		<!-- Invincibility -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
@@ -871,7 +871,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="1752" toLevel="1" name="PC becomes monster bomb">
+	<skill id="1752" toLevel="1" name="怪物變成炸彈角色">
 		<!-- DD +DOT -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -897,7 +897,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1753" toLevel="1" name="Mass Kill">
+	<skill id="1753" toLevel="1" name="範圍殺害">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -912,7 +912,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1754" toLevel="1" name="Self-destruction">
+	<skill id="1754" toLevel="1" name="自爆">
 		<!-- DD +DOT -->
 		<icon>icon.skill1754</icon>
 		<operateType>A2</operateType>
@@ -939,7 +939,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1755" toLevel="1" name="Monster Area Attack">
+	<skill id="1755" toLevel="1" name="怪物周邊攻擊">
 		<!-- An AoE attack. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
@@ -957,7 +957,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1756" toLevel="14" name="Trick">
+	<skill id="1756" toLevel="14" name="誘騙術">
 		<!-- Level 1: Cancels the enemy's target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Cancels target - Single. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Cancels target - Area. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -987,7 +987,7 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="1757" toLevel="10" name="Attack Enhance">
+	<skill id="1757" toLevel="10" name="攻擊強化">
 		<!-- Increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. -->
 		<icon>icon.skill0077</icon>
 		<operateType>A2</operateType>
@@ -1064,7 +1064,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1758" toLevel="1" name="Monster Mass Kill">
+	<skill id="1758" toLevel="1" name="怪物範圍殺害">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1081,7 +1081,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1759" toLevel="1" name="Armor Destroyer">
+	<skill id="1759" toLevel="1" name="防具破壞者">
 		<!-- Decreases the enemy's P./ M. Def. on attack. -->
 		<icon>icon.skill0122</icon>
 		<operateType>P</operateType>
@@ -1098,7 +1098,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1760" toLevel="6" name="Armor Destruction">
+	<skill id="1760" toLevel="6" name="防具破壞">
 		<!-- Level 1: P./ M. Def. -7%. Additionally, P./ M. Def. -350, P. Evasion -4. The effect stacks with each repeated attack. -->
 		<!-- Level 2: P./ M. Def. -14%. Additionally, P./ M. Def. -420, P. Evasion -5. The effect stacks with each repeated attack. -->
 		<!-- Level 3: P./ M. Def. -21%. Additionally, P./ M. Def. -490, P. Evasion -6. The effect stacks with each repeated attack. -->
@@ -1211,7 +1211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1761" toLevel="10" name="Armor Destruction">
+	<skill id="1761" toLevel="10" name="防具破壞">
 		<!-- Level 1: The effect is enhanced upon stacking. Decreases P. Atk. The current effect - 10%. -->
 		<!-- Level 2: The effect is enhanced upon stacking. Decreases P. Atk. The current effect - 20%. -->
 		<!-- Level 3: The effect is enhanced upon stacking. Decreases P. Atk. The current effect - 30%. -->
@@ -1268,7 +1268,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1762" toLevel="1" name="Boss Multi Resistance">
+	<skill id="1762" toLevel="1" name="首領多重耐性">
 		<!-- Obstruction/ Stupor/ Confusion Immunity. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1289,7 +1289,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1763" toLevel="1" name="Boss Knock Back Resistance">
+	<skill id="1763" toLevel="1" name="首領擊退耐性">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1300,7 +1300,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1764" toLevel="1" name="Boss Knock Down Resistance">
+	<skill id="1764" toLevel="1" name="首領擊倒耐性">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1311,7 +1311,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1765" toLevel="1" name="Boss Binding Resistance">
+	<skill id="1765" toLevel="1" name="首領束縛耐性">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1322,7 +1322,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1766" toLevel="1" name="Boss Transform Resistance">
+	<skill id="1766" toLevel="1" name="首領變異耐性">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="30000" toLevel="1" name="Hydro Attack - Debuff">
+	<skill id="30000" toLevel="1" name="水之詛擊-詛咒魔法">
 		<!-- Stacks Storm Marks when using Hydro Attack. -->
 		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>
@@ -15,7 +15,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30001" toLevel="32" name="Hydro Attack">
+	<skill id="30001" toLevel="32" name="水之詛擊">
 		<!-- Level 1: Deals M. damage to the target. Power 6. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. -->
 		<!-- Level 2: Deals M. damage to the target. Power 14. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. -->
 		<!-- Level 3: Deals M. damage to the target. Power 19. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. -->
@@ -733,7 +733,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30002" toLevel="3" name="Storm Sign">
+	<skill id="30002" toLevel="3" name="風之信號">
 		<!-- Level 1: M. Def. -30%, Speed -70. -->
 		<!-- Level 2: M. Def. -30%, Speed -70. -->
 		<!-- Level 3: M. Def. -30%, Speed -70, M. Skill Critical Rate +20%. -->
@@ -770,7 +770,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30003" toLevel="24" name="Hydro Flare">
+	<skill id="30003" toLevel="24" name="水之閃焰">
 		<!-- Level 1: Deals M. damage to the target. Power 110. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. -->
 		<!-- Level 2: Deals M. damage to the target. Power 120. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. -->
 		<!-- Level 3: Deals M. damage to the target. Power 130. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. -->
@@ -1287,7 +1287,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30004" toLevel="29" name="Hydro Strike">
+	<skill id="30004" toLevel="29" name="水之狂襲">
 		<!-- Level 1: Summons a storm that deals M. damage to the target. Power 57. Makes them faint for 5 sec. With a certain chance, applies an enhanced debuff. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Summons a storm that deals M. damage to the target. Power 66. Makes them faint for 5 sec. With a certain chance, applies an enhanced debuff. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Summons a storm that deals M. damage to the target. Power 74. Makes them faint for 5 sec. With a certain chance, applies an enhanced debuff. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -2008,7 +2008,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30005" toLevel="4" name="Storm Penance">
+	<skill id="30005" toLevel="4" name="風之罰">
 		<!-- Level 1: M. Def. -50%, Speed -100. -->
 		<!-- Level 2: M. Def. -50%, Speed -100. -->
 		<!-- Level 3: M. Def. -50%, Speed -100. -->
@@ -2040,7 +2040,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30006" toLevel="15" name="Storm Rage">
+	<skill id="30006" toLevel="15" name="風暴怒擊">
 		<!-- Level 1: Summons a storm that deals damage to nearby enemies with 255 power blowing them away. If the enemy is debuffed, inflicted damage +10%. Requires a sword or a blunt weapon. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Summons a storm that deals damage to nearby enemies with 269 power blowing them away. If the enemy is debuffed, inflicted damage +10%. Requires a sword or a blunt weapon. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Summons a storm that deals damage to nearby enemies with 283 power blowing them away. If the enemy is debuffed, inflicted damage +10%. Requires a sword or a blunt weapon. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -2706,7 +2706,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30007" toLevel="19" name="Hydro Drain">
+	<skill id="30007" toLevel="19" name="水之奪取">
 		<!-- Level 1: Inflicts magic damage with 123 power. Recovers 5% HP and 5% MP. Over-hit. Requires a sword or a blunt weapon. -->
 		<!-- Level 2: Inflicts magic damage with 127 power. Recovers 5% HP and 5% MP. Over-hit. Requires a sword or a blunt weapon. -->
 		<!-- Level 3: Inflicts magic damage with 130 power. Recovers 5% HP and 5% MP. Over-hit. Requires a sword or a blunt weapon. -->
@@ -3202,7 +3202,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="30008" toLevel="5" name="Wind Blend">
+	<skill id="30008" toLevel="5" name="同化">
 		<!-- Level 1: You slowly blend with the wind for 5 sec., becoming completely invisible. After that the Traces of Wind effect is applied. Requires a sword or a blunt weapon. You cannot cancel the effect by yourself. -->
 		<!-- Level 2: You slowly blend with the wind for 5 sec., becoming completely invisible. P./ M. Def. +70%. After that the Traces of Wind effect is applied. Requires a sword or a blunt weapon. You cannot cancel the effect by yourself. -->
 		<!-- Level 3: You slowly blend with the wind for 5 sec., becoming completely invisible. P./ M. Def. +80%. After that the Traces of Wind effect is applied. Requires a sword or a blunt weapon. You cannot cancel the effect by yourself. -->
@@ -3288,7 +3288,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="30009" toLevel="10" name="Deceptive Blink">
+	<skill id="30009" toLevel="10" name="風隱閃逝">
 		<!-- Teleports back and vanishes for 5 sec., becoming one with the wind. AoE Damage Resistance +99%, Speed +50. After the effect is cancelled, the Traces of Wind effect is applied. Requires a sword or a blunt weapon. Consumes 10 Spirit Ore. -->
 		<!-- Level 9 - SubLevel 1001 (+1% Shield): Teleports back and vanishes for 5 sec., becoming one with the wind. AoE Damage Resistance +99%, Speed +50. After the effect is cancelled, the Traces of Wind effect is applied. Requires a sword or a blunt weapon. Consumes 10 Spirit Ore. -->
 		<!-- Level 9 - SubLevel 1002 (+1.4% Shield): Teleports back and vanishes for 5 sec., becoming one with the wind. AoE Damage Resistance +99%, Speed +50. After the effect is cancelled, the Traces of Wind effect is applied. Requires a sword or a blunt weapon. Consumes 10 Spirit Ore. -->
@@ -3481,7 +3481,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="30010" toLevel="3" name="Windy Refuge">
+	<skill id="30010" toLevel="3" name="風之隱匿處">
 		<!-- Cancels all debuffs. Recovers HP and MP for 10 sec. inside a wind barrier. Movement is impossible. AoE Damage Resistance +99%. When the effect is cancelled, the Traces of Wind effect is applied. -->
 		<!-- Level 1 - SubLevel 1001 (+0.5 sec. Time): Cancels all debuffs. Recovers HP and MP for 10 sec. inside a wind barrier. Movement is impossible. AoE Damage Resistance +99%. When the effect is cancelled, the Traces of Wind effect is applied. -->
 		<!-- Level 1 - SubLevel 1002 (+1 sec. Time): Cancels all debuffs. Recovers HP and MP for 10 sec. inside a wind barrier. Movement is impossible. AoE Damage Resistance +99%. When the effect is cancelled, the Traces of Wind effect is applied. -->
@@ -3683,7 +3683,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="30011" toLevel="19" name="Threatening Wind">
+	<skill id="30011" toLevel="19" name="脅迫之風">
 		<!-- Sends a slashing wind to brand the target with Storm Sign Lv. 3. For 2 sec., inflicts Faint on the target. With a certain chance, applies the enhanced debuff. Requires a sword or a blunt weapon. Consumes 1 Spirit Ore. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 11 - SubLevel 1001 (+1% Chance): Sends a slashing wind to brand the target with Storm Sign Lv. 3. For 2 sec., inflicts Faint on the target. With a certain chance, applies the enhanced debuff. Requires a sword or a blunt weapon. Consumes 1 Spirit Ore. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 11 - SubLevel 1002 (+2% Chance): Sends a slashing wind to brand the target with Storm Sign Lv. 3. For 2 sec., inflicts Faint on the target. With a certain chance, applies the enhanced debuff. Requires a sword or a blunt weapon. Consumes 1 Spirit Ore. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -4138,7 +4138,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30012" toLevel="29" name="Air Rush">
+	<skill id="30012" toLevel="29" name="空中疾襲">
 		<!-- Level 1: Deals M. damage to the target. Power 57. Knocks the target down. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Deals M. damage to the target. Power 66. Knocks the target down. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Deals M. damage to the target. Power 74. Knocks the target down. If the target is debuffed, damage +10%. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -4867,7 +4867,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30013" toLevel="1" name="Switch Places">
+	<skill id="30013" toLevel="1" name="風首">
 		<!-- Trades places with target. Requires a sword or blunt weapon. Can only use on other characters. -->
 		<icon>icon.skill30005</icon>
 		<operateType>A1</operateType>
@@ -4895,7 +4895,7 @@
 			<effect name="BlinkSwap" />
 		</effects>
 	</skill>
-	<skill id="30014" toLevel="19" name="Compelling Wind">
+	<skill id="30014" toLevel="19" name="風之引誘">
 		<!-- Sends a breeze that pushes the target towards you for 5 sec. There is a chance to debuff the target once again. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 11 - SubLevel 1001 (+1% Chance): Sends a breeze that pushes the target towards you for 5 sec. There is a chance to debuff the target once again. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 11 - SubLevel 1002 (+2% Chance): Sends a breeze that pushes the target towards you for 5 sec. There is a chance to debuff the target once again. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -5525,7 +5525,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30015" toLevel="1" name="Mass Compelling Wind">
+	<skill id="30015" toLevel="1" name="團體風之引誘">
 		<!-- Sends a breeze that pushes the target and nearby enemies towards you for 5 sec. Base success rate: Guaranteed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
@@ -5551,7 +5551,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="30016" toLevel="4" name="Eye of the Storm">
+	<skill id="30016" toLevel="4" name="風暴之眼">
 		<!-- Level 1: For 30 sec., M. Skill Critical Rate +10%, P./ M. Def. +30%. -->
 		<!-- Level 2: For 30 sec., M. Skill Critical Rate +10%, P./ M. Def. +30%, M. Skill MP Consumption -50%. -->
 		<!-- Level 3: For 30 sec., M. Skill Critical Rate +10%, P./ M. Def. +30%, Dagger/ Bow Resistance +10, Confusion/ Danger Zone/ Obstruction Resistance +90, M. Skill MP Consumption -50%. -->
@@ -5705,7 +5705,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30017" toLevel="6" name="Ultimate Squall">
+	<skill id="30017" toLevel="6" name="極限風颮">
 		<!-- Level 1: For 10 min., received Critical Damage from basic attacks and M. skills -15%. -->
 		<!-- Level 2: For 10 min., received Critical Damage from basic attacks and M. skills -15%. Additionally, Speed +7. -->
 		<!-- Level 3: Removes all debuffs. For 10 min., M. Atk. +20%, received Critical Damage from basic attacks and M. skills -15%. Additionally, Speed +7. -->
@@ -5976,7 +5976,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30018" toLevel="1" name="Windy Illusion">
+	<skill id="30018" toLevel="1" name="幻風">
 		<!-- Removes all debuffs. For 10 sec., prevents enemies from targeting you. -->
 		<icon>icon.skill30018</icon>
 		<operateType>A2</operateType>
@@ -6001,7 +6001,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30019" toLevel="15" name="Sayha's Penance">
+	<skill id="30019" toLevel="15" name="沙哈執行者">
 		<!-- Level 1: Deals M. damage to the enemy. Power 533. For 10 sec., Atk. Spd./ Casting Spd. -30%, Speed -180. If the target is debuffed, inflicted damage +10%. Applies Storm Sign Lv. 3 to the target; also, with a 50% chance, applies Storm Penance Lv. 4. Consumes 1 Spirit Ore. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Deals M. damage to the enemy. Power 561. For 10 sec., Atk. Spd./ Casting Spd. -30%, Speed -180. If the target is debuffed, inflicted damage +10%. Applies Storm Sign Lv. 3 to the target; also, with a 50% chance, applies Storm Penance Lv. 4. Consumes 1 Spirit Ore. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Deals M. damage to the enemy. Power 589. For 10 sec., Atk. Spd./ Casting Spd. -30%, Speed -180. If the target is debuffed, inflicted damage +10%. Applies Storm Sign Lv. 3 to the target; also, with a 50% chance, applies Storm Penance Lv. 4. Consumes 1 Spirit Ore. Requires a sword or a blunt weapon. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -6509,7 +6509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30020" toLevel="2" name="Sayha's Fury">
+	<skill id="30020" toLevel="2" name="沙哈之怒">
 		<!-- Level 1: For 30 sec., M. Skill Critical Damage +30%, received Critical Damage from basic attacks and M. skills -50%, Speed +70. Requires a sword or a blunt weapon. -->
 		<!-- Level 2: For 30 sec., M. Skill Critical Damage +35%, Speed +70, all received Critical Damage -50%. Requires a sword or a blunt weapon. -->
 		<!-- Level 1 - SubLevel 1001 (+1 sec. Time): For 30 sec., M. Skill Critical Damage +30%, received Critical Damage from basic attacks and M. skills -50%, Speed +70. Requires a sword or a blunt weapon. -->
@@ -6706,7 +6706,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30022" toLevel="3" name="Sayha's Blessing">
+	<skill id="30022" toLevel="3" name="沙哈祝福">
 		<!-- Level 1: For 30 sec., nearby party members' Speed +50, Obstruction/ Danger Zone/ Confusion Resistance +30. Requires a sword or a blunt weapon. -->
 		<!-- Level 2: For 30 sec., nearby party members' Speed +70, Obstruction/ Danger Zone/ Confusion Resistance +40. Requires a sword or a blunt weapon. -->
 		<!-- Level 3: For 30 sec., nearby party members' Speed +90, Obstruction/ Danger Zone/ Confusion Resistance +50. Requires a sword or a blunt weapon. -->
@@ -6981,7 +6981,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30023" toLevel="1" name="Decoy Lock">
+	<skill id="30023" toLevel="1" name="虛晃之隱-npc">
 		<!-- Prevents the enemy from changing their target. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -6989,7 +6989,7 @@
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="30026" toLevel="4" name="Lightning Squall">
+	<skill id="30026" toLevel="4" name="強雷風颮">
 		<!-- Level 1: Deals M. damage to the target. Power 50. Speed -20. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Deals M. damage to the target. Power 100. Speed -20. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Deals M. damage to the target. Power 150. Speed -20. Base success rate: 70%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -7021,7 +7021,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30027" toLevel="1" name="Destructive Bolt">
+	<skill id="30027" toLevel="1" name="毀滅閃雷">
 		<!-- Deals M. damage to the target. Power 300. With a 10% chance, applies Storm Sign Lv. 4. -->
 		<icon>icon.skill30026</icon>
 		<operateType>A1</operateType>
@@ -7043,7 +7043,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30029" toLevel="8" name="Divine Storm">
+	<skill id="30029" toLevel="8" name="神之風暴">
 		<!-- Level 1: Deals M. damage to nearby enemies locking them inside a storm for 5 sec. Power 448. If the target is debuffed, damage +10%. Applies Storm Sign Lv. 2 to the target. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Consumes 1 Spirit Ore. Requires a sword or a blunt weapon. -->
 		<!-- Level 2: Deals M. damage to nearby enemies locking them inside a storm for 5 sec. Power 465. If the target is debuffed, damage +10%. Applies Storm Sign Lv. 2 to the target. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Consumes 1 Spirit Ore. Requires a sword or a blunt weapon. -->
 		<!-- Level 3: Deals M. damage to nearby enemies locking them inside a storm for 5 sec. Power 473. If the target is debuffed, damage +10%. Applies Storm Sign Lv. 2 to the target. Base success rate: 60%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). Consumes 1 Spirit Ore. Requires a sword or a blunt weapon. -->
@@ -7612,7 +7612,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30030" toLevel="1" name="Storm Captivity">
+	<skill id="30030" toLevel="1" name="幽禁風暴">
 		<!-- Trapped by a storm that gives continuous damage. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -7633,7 +7633,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30031" toLevel="1" name="Magic Potential">
+	<skill id="30031" toLevel="1" name="魔法潛能">
 		<!-- M. Skill Critical Rate +7%. -->
 		<icon>icon.skill30025</icon>
 		<operateType>P</operateType>
@@ -7645,7 +7645,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30040" toLevel="19" name="Eminent Blunt Weapon Mastery">
+	<skill id="30040" toLevel="19" name="優越精通鈍器">
 		<!-- Level 1: When using a blunt weapon, M. Atk. +17% and +10, Casting Spd. +5%, M. Skill Power +15%. -->
 		<!-- Level 2: When using a blunt weapon, M. Atk. +17% and +57, Casting Spd. +5%, M. Skill Power +15%. -->
 		<!-- Level 3: When using a blunt weapon, M. Atk. +17% and +228, Casting Spd. +10%, M. Skill Power +15%. When using Hydro Attack, Storm Sign is applied. -->
@@ -7785,7 +7785,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30041" toLevel="19" name="Eminent Robe Mastery">
+	<skill id="30041" toLevel="19" name="優越精通長袍">
 		<!-- Level 1: When equipped with a robe, P. Def. +7. Shields cannot be used. -->
 		<!-- Level 2: When equipped with a robe, P. Def. +12. Shields cannot be used. -->
 		<!-- Level 3: When equipped with a robe, P. Def. +27. Shields cannot be used. -->
@@ -7906,7 +7906,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30042" toLevel="15" name="Eminent Quick Recovery">
+	<skill id="30042" toLevel="15" name="優越快速恢復">
 		<!-- Level 1: Max MP +33, MP Recovery Rate +1, M. Skill Cooldown -10%. -->
 		<!-- Level 2: Max MP +77, MP Recovery Rate +3, M. Skill Cooldown -15%. -->
 		<!-- Level 3: Max MP +223, MP Recovery Rate +5, M. Skill Cooldown -20%, M. Skill MP Consumption -5%. -->
@@ -8010,7 +8010,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30043" toLevel="13" name="Eminent Attribute Resistance">
+	<skill id="30043" toLevel="13" name="優越屬性抵抗">
 		<!-- Level 1: Attribute Attack +10, Fire/ Water/ Wind/ Earth/ Holy Resistance +10. -->
 		<!-- Level 2: Attribute Attack +20, Fire/ Water/ Wind/ Earth/ Holy Resistance +20. -->
 		<!-- Level 3: Attribute Attack +22, Fire/ Water/ Wind/ Earth/ Holy Resistance +22. -->
@@ -8151,7 +8151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30044" toLevel="2" name="Eminent Trait Resistance">
+	<skill id="30044" toLevel="2" name="優越特性抵抗">
 		<!-- Level 1: Obstruction/ Confusion Resistance +30. -->
 		<!-- Level 2: Obstruction/ Confusion/ Danger Zone Resistance +30. -->
 		<icon>icon.skill10005</icon>
@@ -8175,7 +8175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30045" toLevel="3" name="Eminent Ability">
+	<skill id="30045" toLevel="3" name="優越力量">
 		<!-- Level 1: INT +2. -->
 		<!-- Level 2: INT +4. Depending on your INT, resets the skill cooldown or increases the effect's duration by 2 times. -->
 		<!-- Level 3: INT +16. Depending on your INT, resets the skill cooldown or increases the effect's duration by 2 times. -->

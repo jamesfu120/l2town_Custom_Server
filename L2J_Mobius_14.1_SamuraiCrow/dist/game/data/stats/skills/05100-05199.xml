@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5100" toLevel="1" name="Cancel Capture B">
+	<skill id="5100" toLevel="1" name="獵捕B解除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -12,7 +12,7 @@
 		<magicLevel>85</magicLevel>
 		<mpConsume>2</mpConsume>
 	</skill>
-	<skill id="5101" toLevel="1" name="Cancel Capture C">
+	<skill id="5101" toLevel="1" name="獵捕C解除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -24,7 +24,7 @@
 		<magicLevel>85</magicLevel>
 		<mpConsume>2</mpConsume>
 	</skill>
-	<skill id="5102" toLevel="1" name="Cancel All Capture">
+	<skill id="5102" toLevel="1" name="獵捕全解除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -48,7 +48,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5104" toLevel="3" name="Battle Force">
+	<skill id="5104" toLevel="3" name="戰鬥態勢">
 		<!-- Transfers energy to a party member. Increases P. Atk. -->
 		<icon>icon.skill0426</icon>
 		<operateType>A2</operateType>
@@ -79,7 +79,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5105" toLevel="3" name="Spell Force">
+	<skill id="5105" toLevel="3" name="誦咒態勢">
 		<!-- Transfers magic energy to a party member. Increases M. Atk. -->
 		<icon>icon.skill0427</icon>
 		<operateType>A2</operateType>
@@ -110,7 +110,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5106" toLevel="4" name="Capture A-State">
+	<skill id="5106" toLevel="4" name="獵捕A狀態">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -132,7 +132,7 @@
 		<magicLevel>77</magicLevel>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="5107" toLevel="4" name="Capture B State">
+	<skill id="5107" toLevel="4" name="獵捕B狀態">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -154,7 +154,7 @@
 		<magicLevel>77</magicLevel>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="5108" toLevel="4" name="Capture C State">
+	<skill id="5108" toLevel="4" name="獵捕C狀態">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -176,7 +176,7 @@
 		<magicLevel>77</magicLevel>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="5109" toLevel="1" name="Presentation - Clan Gate">
+	<skill id="5109" toLevel="1" name="展示-血盟門扉">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -189,7 +189,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="5110" toLevel="1" name="Cannon Fodder">
+	<skill id="5110" toLevel="1" name="中程奇襲射擊">
 		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 5 Flash Gunpowder. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -255,7 +255,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5111" toLevel="1" name="Big Bang">
+	<skill id="5111" toLevel="1" name="遠程奇襲射擊">
 		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 5 Flash Gunpowder. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -321,7 +321,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5112" toLevel="12" name="Shock">
+	<skill id="5112" toLevel="12" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -377,7 +377,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5113" toLevel="12" name="Buff Dispel">
+	<skill id="5113" toLevel="12" name="魔法消除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -439,7 +439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5114" toLevel="12" name="Hold">
+	<skill id="5114" toLevel="12" name="束縛">
 		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -507,7 +507,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="5115" toLevel="12" name="Cubic Agression">
+	<skill id="5115" toLevel="12" name="晶體挑撥">
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -548,7 +548,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5116" toLevel="12" name="Hold">
+	<skill id="5116" toLevel="12" name="束縛">
 		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -587,7 +587,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5117" toLevel="1" name="Stun">
+	<skill id="5117" toLevel="1" name="衝擊">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -621,7 +621,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5118" toLevel="1" name="Cancel Sailren Use">
+	<skill id="5118" toLevel="1" name="賽爾蘭專用魔法消除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -643,7 +643,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5119" toLevel="1" name="Bleed">
+	<skill id="5119" toLevel="1" name="出血">
 		<icon>icon.skill0245</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -667,7 +667,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5120" toLevel="1" name="Shock">
+	<skill id="5120" toLevel="1" name="休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -701,7 +701,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5121" toLevel="1" name="Presentation - Corpse Revival">
+	<skill id="5121" toLevel="1" name="展示-召喚屍體">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -711,7 +711,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5122" toLevel="1" name="Sailren's Might">
+	<skill id="5122" toLevel="1" name="賽爾蘭專用力量強化">
 		<!-- P. Atk. +50%. -->
 		<icon>icon.skill4028</icon>
 		<operateType>A2</operateType>
@@ -733,7 +733,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5123" toLevel="1" name="Maximize Defense">
+	<skill id="5123" toLevel="1" name="防禦極大化">
 		<!-- Maximizes P. Def., M. Def. and Shield Defense momentarily. -->
 		<icon>icon.skill0454</icon>
 		<operateType>A2</operateType>
@@ -765,7 +765,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5124" toLevel="1" name="Anti-music">
+	<skill id="5124" toLevel="1" name="反制歌舞">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -783,7 +783,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5125" toLevel="1" name="Maximum Resist Status">
+	<skill id="5125" toLevel="1" name="狀態抵抗極大化">
 		<!-- Maximizes Debuff Resistance. -->
 		<icon>icon.skill0456</icon>
 		<operateType>A2</operateType>
@@ -807,7 +807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5126" toLevel="1" name="Maximize Recovery">
+	<skill id="5126" toLevel="1" name="恢復力極大化">
 		<!-- Maximizes HP/ CP Recovery. -->
 		<icon>icon.skill0457</icon>
 		<operateType>A2</operateType>
@@ -835,7 +835,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5127" toLevel="1" name="Recover Momentum">
+	<skill id="5127" toLevel="1" name="力量恢復">
 		<!-- Maximizes P. Atk. and increases Momentum by 1 every 5 sec. -->
 		<icon>icon.skill0458</icon>
 		<operateType>A2</operateType>
@@ -862,7 +862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5128" toLevel="1" name="Maximize Archery">
+	<skill id="5128" toLevel="1" name="遠距離武器術極大化">
 		<!-- Maximizes bow/ crossbow use abilities. -->
 		<icon>icon.skill0459</icon>
 		<operateType>A2</operateType>
@@ -900,7 +900,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5129" toLevel="1" name="Smokescreen">
+	<skill id="5129" toLevel="1" name="煙幕">
 		<!-- Maximizes Evasion and assassination skill. -->
 		<icon>icon.skill0460</icon>
 		<operateType>A2</operateType>
@@ -928,7 +928,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5130" toLevel="1" name="Volcano">
+	<skill id="5130" toLevel="1" name="魔法陣‧爆炎">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -947,7 +947,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5131" toLevel="1" name="Tsunami">
+	<skill id="5131" toLevel="1" name="海嘯">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -966,7 +966,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5132" toLevel="1" name="Cyclone">
+	<skill id="5132" toLevel="1" name="魔法陣‧烈風">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -985,7 +985,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5133" toLevel="1" name="Gehenna">
+	<skill id="5133" toLevel="1" name="魔法陣‧煉獄">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1004,7 +1004,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5134" toLevel="1" name="Anti-summoning Field">
+	<skill id="5134" toLevel="1" name="魔法陣‧次元裂縫">
 		<!-- Through distorted space and segmented time, the servitor disappears and all speeds are decreased. All buffs that increase speed also disappear. -->
 		<icon>icon.skill1424</icon>
 		<operateType>A2</operateType>
@@ -1042,7 +1042,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5135" toLevel="1" name="Slash">
+	<skill id="5135" toLevel="1" name="國王劍‧斬">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1064,7 +1064,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5136" toLevel="1" name="Spin Slash">
+	<skill id="5136" toLevel="1" name="旋風斬">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1085,7 +1085,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5137" toLevel="1" name="Cat's Grip">
+	<skill id="5137" toLevel="1" name="王者威嚴">
 		<!-- . Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
@@ -1117,7 +1117,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5138" toLevel="1" name="Whiplash">
+	<skill id="5138" toLevel="1" name="憤怒的後踢">
 		<!-- . Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -1152,7 +1152,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5139" toLevel="1" name="Tidal Wave">
+	<skill id="5139" toLevel="1" name="大海嘯">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1179,7 +1179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5140" toLevel="1" name="Dark Curse">
+	<skill id="5140" toLevel="1" name="詛咒之力">
 		<!-- none. Inflicted status: Debilitation. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -1213,7 +1213,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5141" toLevel="1" name="Dicing Death">
+	<skill id="5141" toLevel="1" name="烈刃殺">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1234,7 +1234,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5142" toLevel="1" name="Corpse Burst">
+	<skill id="5142" toLevel="1" name="屍體爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>NPC_BODY</targetType>
@@ -1261,7 +1261,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5143" toLevel="1" name="Sailren Use Blow">
+	<skill id="5143" toLevel="1" name="賽爾蘭專用刺擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1281,7 +1281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5144" toLevel="1" name="Mirage">
+	<skill id="5144" toLevel="1" name="海市蜃樓">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1296,7 +1296,7 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="5145" toLevel="1" name="Day of Doom">
+	<skill id="5145" toLevel="1" name="魔法陣‧末日">
 		<!-- Decreases P. Atk., P. Def., Speed, HP Recovery Rate, and Attribute Resistance. Increases Skill MP Consumption. Prevents from receiving buffs. Inflicted status: Debilitation. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
@@ -1366,7 +1366,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5146" toLevel="10" name="Heal">
+	<skill id="5146" toLevel="10" name="治癒術">
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1405,7 +1405,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5147" toLevel="10" name="Blessed Body">
+	<skill id="5147" toLevel="10" name="神佑之體">
 		<!-- When triggered: Temporarily increases Max HP. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1450,7 +1450,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5148" toLevel="10" name="Prayer">
+	<skill id="5148" toLevel="10" name="祈禱">
 		<!-- When triggered: Temporarily increases Healing Power. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1495,7 +1495,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5149" toLevel="10" name="Recharge">
+	<skill id="5149" toLevel="10" name="回復術">
 		<!-- Level 1: When triggered: Recovers MP. Power 33. -->
 		<!-- Level 2: When triggered: Recovers MP. Power 35. -->
 		<!-- Level 3: When triggered: Recovers MP. Power 38. -->
@@ -1544,7 +1544,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5150" toLevel="10" name="Blessed Soul">
+	<skill id="5150" toLevel="10" name="神佑之魂">
 		<!-- Level 1: When triggered: Temporarily Max MP +16. -->
 		<!-- Level 2: When triggered: Temporarily Max MP +32. -->
 		<!-- Level 3: When triggered: Temporarily Max MP +48. -->
@@ -1598,7 +1598,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5151" toLevel="15" name="Mana Gain">
+	<skill id="5151" toLevel="15" name="魔力回復">
 		<!-- When triggered: Increases MP Recovery Rate. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1637,7 +1637,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5152" toLevel="10" name="Ritual">
+	<skill id="5152" toLevel="10" name="祭禮">
 		<!-- Level 1: When triggered: Recovers CP. Power 264. -->
 		<!-- Level 2: When triggered: Recovers CP. Power 289. -->
 		<!-- Level 3: When triggered: Recovers CP. Power 313. -->
@@ -1687,7 +1687,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5153" toLevel="10" name="Joy">
+	<skill id="5153" toLevel="10" name="敬意">
 		<!-- Level 1: When triggered: Temporarily Max CP +24. -->
 		<!-- Level 2: When triggered: Temporarily Max CP +48. -->
 		<!-- Level 3: When triggered: Temporarily Max CP +72. -->
@@ -1741,7 +1741,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5154" toLevel="15" name="Might">
+	<skill id="5154" toLevel="15" name="力量強化">
 		<!-- When triggered: Temporarily increases P. Atk. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1796,7 +1796,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5156" toLevel="15" name="Empower">
+	<skill id="5156" toLevel="15" name="魔力催化">
 		<!-- When triggered: Temporarily increases M. Atk. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1851,7 +1851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5157" toLevel="10" name="Might in Duel">
+	<skill id="5157" toLevel="10" name="決鬥力量強化">
 		<!-- When triggered: Temporarily increases P. Atk. in PvP. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1889,7 +1889,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5158" toLevel="15" name="Shield">
+	<skill id="5158" toLevel="15" name="保護盾">
 		<!-- When triggered: Temporarily increases P. Def. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1944,7 +1944,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5159" toLevel="15" name="Magic Barrier">
+	<skill id="5159" toLevel="15" name="魔法屏障">
 		<!-- When triggered: Temporarily increases M. Def. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1999,7 +1999,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5160" toLevel="10" name="Weakness in Duel">
+	<skill id="5160" toLevel="10" name="決鬥弱化術">
 		<!-- When triggered: Temporarily decreases P. Atk. in PvP. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2042,7 +2042,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5161" toLevel="15" name="Agility">
+	<skill id="5161" toLevel="15" name="敏捷術">
 		<!-- When triggered: Temporarily increases P. Evasion. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2097,7 +2097,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5162" toLevel="15" name="Guidance">
+	<skill id="5162" toLevel="15" name="導引">
 		<!-- When triggered: Temporarily increases P. Accuracy. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2152,7 +2152,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5163" toLevel="10" name="Focus">
+	<skill id="5163" toLevel="10" name="弱點偵測">
 		<!-- When triggered: Temporarily increases Critical Rate for basic attacks. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2197,7 +2197,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5164" toLevel="10" name="Wild Magic">
+	<skill id="5164" toLevel="10" name="野性魔力">
 		<!-- When triggered: Temporarily increases M. Skill Critical Rate. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2242,7 +2242,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5165" toLevel="15" name="Charm">
+	<skill id="5165" toLevel="15" name="迷魅術">
 		<!-- Level 1: When triggered: Decreases the target's aggression. Power 219. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: When triggered: Decreases the target's aggression. Power 234. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: When triggered: Decreases the target's aggression. Power 248. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -2309,7 +2309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5166" toLevel="15" name="Slow">
+	<skill id="5166" toLevel="15" name="緩速術">
 		<!-- When triggered: Temporarily decreases the target's Speed. Effect 3. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2353,7 +2353,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5167" toLevel="15" name="Winter">
+	<skill id="5167" toLevel="15" name="寒冬">
 		<!-- When triggered: Temporarily decreases the target's Atk. Spd. Effect 3. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2397,7 +2397,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5168" toLevel="10" name="Stun">
+	<skill id="5168" toLevel="10" name="衝擊">
 		<!-- When triggered: Momentarily stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2437,7 +2437,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5169" toLevel="10" name="Hold">
+	<skill id="5169" toLevel="10" name="束縛">
 		<!-- When triggered: Momentarily inflicts Hold on the target. The target is unlikely to be affected by any Hold attacks while the effect is active. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2478,7 +2478,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5170" toLevel="10" name="Sleep">
+	<skill id="5170" toLevel="10" name="催眠術">
 		<!-- When triggered: Momentarily inflicts Sleep on the target. The target is unlikely to be affected by any Sleep attacks while the effect is active. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2521,7 +2521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5171" toLevel="10" name="Paralysis">
+	<skill id="5171" toLevel="10" name="麻痺">
 		<!-- When triggered: Temporarily immobilizes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2561,7 +2561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5172" toLevel="10" name="Medusa">
+	<skill id="5172" toLevel="10" name="梅杜莎">
 		<!-- When triggered: Temporarily petrifies the target. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2602,7 +2602,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5173" toLevel="10" name="Fear">
+	<skill id="5173" toLevel="10" name="心之恐懼">
 		<!-- When triggered: Inflicts Fear on the target causing them to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2642,7 +2642,7 @@
 			<!-- FIXME: We need an instant effect that will work only vs monsters and fear them with 40% chance for 20 seconds here -->
 		</effects>
 	</skill>
-	<skill id="5174" toLevel="15" name="Poison">
+	<skill id="5174" toLevel="15" name="施毒術">
 		<!-- Level 1: When triggered: Temporarily poisons the target. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: When triggered: Temporarily poisons the target. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: When triggered: Temporarily poisons the target. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -2735,7 +2735,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5175" toLevel="15" name="Bleed">
+	<skill id="5175" toLevel="15" name="出血術">
 		<!-- Level 1: When triggered: Inflicts Bleed on the target. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: When triggered: Inflicts Bleed on the target. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: When triggered: Inflicts Bleed on the target. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -2829,7 +2829,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5176" toLevel="10" name="Silence">
+	<skill id="5176" toLevel="10" name="沉默術">
 		<!-- When triggered: Temporarily blocks the target's M. skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2867,7 +2867,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="5177" toLevel="10" name="Doom">
+	<skill id="5177" toLevel="10" name="末日">
 		<!-- When triggered: Temporarily blocks the target's P./ M. skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2927,28 +2927,28 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5179" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5179" toLevel="1" name="80級狩獵首領">
 		<!-- The younger brother of the Elrokian chief, Mushika, he is notoriously ambitious, jealous and prone to fits of violence. Where his legendary brother is concerned, he also suffers from something of an inferiority complex. He currently leads the Elrokian faction opposed to Mushika's policies and is scheming to depose his brother and make himself chief. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5180" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5180" toLevel="1" name="80級狩獵首領">
 		<!-- Sailren, an enormous, vicious and dangerous dinosaur who inhabits the Primeval Isle, was sealed inside the Lost Nest ages ago by Shillien and the ancient Elrokian warriors. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5181" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5181" toLevel="1" name="80級狩獵首領">
 		<!-- Wandering near Goddard Castle, this seemingly ordinary Human knight is actually a demon searching for a powerful weapon to increase its strength. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="5182" toLevel="1" name="Blessing of Protection">
+	<skill id="5182" toLevel="1" name="守護的祝福">
 		<!-- Keeps you safe from attacks of chaotic characters who are stronger than you by 10 levels or more. -->
 		<icon>icon.skill0194</icon>
 		<operateType>A2</operateType>
@@ -2970,7 +2970,7 @@
 			<effect name="ProtectionBlessing" />
 		</effects>
 	</skill>
-	<skill id="5183" toLevel="1" name="Dimensional Shock">
+	<skill id="5183" toLevel="1" name="次元休克">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
@@ -2989,7 +2989,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5184" toLevel="1" name="Dragon Breath">
+	<skill id="5184" toLevel="1" name="龍之吐息">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3006,7 +3006,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>75</magicLevel>
 	</skill>
-	<skill id="5185" toLevel="1" name="Craft: Magic-type Guardian">
+	<skill id="5185" toLevel="1" name="展示-魔法衛兵">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3026,7 +3026,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5186" toLevel="2" name="Pet's Haste">
+	<skill id="5186" toLevel="2" name="寵物速度激發">
 		<!-- Level 1: Temporarily increases Atk. Spd. Effect 1. -->
 		<!-- Level 2: Temporarily increases Atk. Spd. Effect 2. -->
 		<icon>icon.skill1086</icon>
@@ -3069,7 +3069,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5187" toLevel="4" name="Pet's Vampiric Rage">
+	<skill id="5187" toLevel="4" name="寵物吸血怒擊">
 		<!-- Level 1: With a certain chance, absorbs a part of inflicted damage as HP. Effect 1. -->
 		<!-- Level 2: With a certain chance, absorbs a part of inflicted damage as HP. Effect 2. -->
 		<!-- Level 3: With a certain chance, absorbs a part of inflicted damage as HP. Effect 3. -->
@@ -3124,7 +3124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5188" toLevel="3" name="Pet's Regeneration">
+	<skill id="5188" toLevel="3" name="寵物強癒術">
 		<!-- Level 1: Temporarily increases HP Recovery Rate. Effect 1. -->
 		<!-- Level 2: Temporarily increases HP Recovery Rate. Effect 2. -->
 		<!-- Level 3: Temporarily increases HP Recovery Rate. Effect 3. -->
@@ -3177,7 +3177,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5189" toLevel="6" name="Pet's Blessed Body">
+	<skill id="5189" toLevel="6" name="寵物神佑之體">
 		<!-- Level 1: Temporarily increases Max HP. Effect 1. -->
 		<!-- Level 2: Temporarily increases Max HP. Effect 2. -->
 		<!-- Level 3: Temporarily increases Max HP. Effect 3. -->
@@ -3251,7 +3251,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5190" toLevel="6" name="Pet Blessed Soul">
+	<skill id="5190" toLevel="6" name="寵物神佑之魂">
 		<!-- Level 1: Temporarily increases Max MP. Effect 1. -->
 		<!-- Level 2: Temporarily increases Max MP. Effect 2. -->
 		<!-- Level 3: Temporarily increases Max MP. Effect 3. -->
@@ -3325,7 +3325,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5191" toLevel="3" name="Pet's Guidance">
+	<skill id="5191" toLevel="3" name="寵物導引">
 		<!-- Level 1: Temporarily increases P. Accuracy. Effect 1. -->
 		<!-- Level 2: Temporarily increases P. Accuracy. Effect 2. -->
 		<!-- Level 3: Temporarily increases P. Accuracy. Effect 3. -->
@@ -3378,7 +3378,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5192" toLevel="2" name="Pet's Wind Walk">
+	<skill id="5192" toLevel="2" name="寵物風之疾走">
 		<!-- Level 1: Temporarily increases Speed. Effect 1. -->
 		<!-- Level 2: Temporarily increases Speed. Effect 2. -->
 		<icon>icon.skill1204</icon>
@@ -3424,7 +3424,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5193" toLevel="3" name="Pet's Acumen">
+	<skill id="5193" toLevel="3" name="寵物靈活思緒">
 		<!-- Level 1: Temporarily increases Casting Spd. Effect 1. -->
 		<!-- Level 2: Temporarily increases Casting Spd. Effect 2. -->
 		<!-- Level 3: Temporarily increases Casting Spd. Effect 3. -->
@@ -3477,7 +3477,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5194" toLevel="3" name="Pet's Empower">
+	<skill id="5194" toLevel="3" name="寵物魔力催化">
 		<!-- Level 1: Temporarily increases M. Atk. Effect 1. -->
 		<!-- Level 2: Temporarily increases M. Atk. Effect 2. -->
 		<!-- Level 3: Temporarily increases M. Atk. Effect 3. -->
@@ -3530,7 +3530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5195" toLevel="12" name="Pet's Greater Heal">
+	<skill id="5195" toLevel="12" name="寵物終極治癒術">
 		<!-- Level 1: Momentarily recovers HP and increases HP Recovery Rate. Power 50. Effect 1. -->
 		<!-- Level 2: Momentarily recovers HP and increases HP Recovery Rate. Power 92. Effect 1. -->
 		<!-- Level 3: Momentarily recovers HP and increases HP Recovery Rate. Power 148. Effect 2. -->
@@ -3646,7 +3646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5196" toLevel="3" name="Pet's Wind Shackles">
+	<skill id="5196" toLevel="3" name="寵物風之鎖">
 		<!-- Receives help from the Wind Spirit. Temporarily decreases the enemy's Atk. Spd. Inflicted status: Debilitation. -->
 		<icon>icon.skill1206</icon>
 		<operateType>A2</operateType>
@@ -3692,7 +3692,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5197" toLevel="3" name="Pet's Hex">
+	<skill id="5197" toLevel="3" name="寵物衰弱術">
 		<!-- Temporarily decreases enemy's P. Def. Inflicted status: Debilitation. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
@@ -3738,7 +3738,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5198" toLevel="3" name="Pet's Slow">
+	<skill id="5198" toLevel="3" name="寵物衰弱術">
 		<!-- Temporarily decreases enemy's Speed. Inflicted status: Debilitation. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -3784,7 +3784,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5199" toLevel="3" name="Pet's Curse Gloom">
+	<skill id="5199" toLevel="3" name="寵物暗影詛咒">
 		<!-- Inflicts a curse that momentarily decreases enemy's M. Def. Inflicted status: Debilitation. -->
 		<icon>icon.skill1263</icon>
 		<operateType>A2</operateType>

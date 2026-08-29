@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="16400" toLevel="1" name="Ferin's Recharge">
+	<skill id="16400" toLevel="1" name="愛琵樂回復術">
 		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's level. Also, for 10 sec., recovers 12 MP per second. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
@@ -11,7 +11,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="16401" toLevel="2" name="Dimensional Death Skin">
+	<skill id="16401" toLevel="2" name="次元死亡之體">
 		<!-- Reflects 50% of received damage for 10 sec. -->
 		<icon>icon.skill0340</icon>
 		<operateType>A2</operateType>
@@ -20,7 +20,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16402" toLevel="2" name="Dimensional Horror">
+	<skill id="16402" toLevel="2" name="次元戰慄">
 		<!-- Inflicts Fear on nearby enemies for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -31,7 +31,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16403" toLevel="2" name="Dimensional Judgment">
+	<skill id="16403" toLevel="2" name="次元審判">
 		<!-- Strikes a nearby target with Judgment of Death, dealing 150,000 damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -42,7 +42,7 @@
 		<isMagic>6</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16404" toLevel="2" name="Dimensional Merciless Judgment">
+	<skill id="16404" toLevel="2" name="次元廣域審判">
 		<!-- Attacks the target at the front with Judgment of Death dealing 150,000 damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -53,7 +53,7 @@
 		<isMagic>6</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16405" toLevel="2" name="Dimensional Mass Judgment">
+	<skill id="16405" toLevel="2" name="次元群體審判">
 		<!-- Strikes all nearby targets with Judgment of Death, dealing 150,000 damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -63,7 +63,7 @@
 		<isMagic>6</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16406" toLevel="2" name="Dimensional Fear">
+	<skill id="16406" toLevel="2" name="次元恐懼">
 		<!-- Attacks the target by Judgment of Death. The effect lasts for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -74,7 +74,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16407" toLevel="2" name="Dimensional Resurrection Block">
+	<skill id="16407" toLevel="2" name="次元返生禁制">
 		<!-- Stops the target from resurrecting for 60 sec. -->
 		<icon>icon.skill_resurrection</icon>
 		<operateType>A2</operateType>
@@ -86,7 +86,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16408" toLevel="4" name="Trap Fear">
+	<skill id="16408" toLevel="4" name="陷阱恐懼">
 		<!-- The enemy moves against own will. The character becomes temporarily uncontrolled. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1381</icon>
 		<operateType>A2</operateType>
@@ -94,7 +94,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="16409" toLevel="4" name="Trap Hold">
+	<skill id="16409" toLevel="4" name="陷阱束縛">
 		<!-- Immobilizes the enemy for a moment. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -126,7 +126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16410" toLevel="4" name="Trap Aerial Yoke">
+	<skill id="16410" toLevel="4" name="陷阱空中束縛">
 		<!-- You cannot move in the air. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11050</icon>
 		<operateType>A2</operateType>
@@ -166,7 +166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16411" toLevel="4" name="Trap Stun">
+	<skill id="16411" toLevel="4" name="陷阱衝擊">
 		<!-- Immobilizes the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -196,7 +196,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16412" toLevel="4" name="Petrifying Trap">
+	<skill id="16412" toLevel="4" name="陷阱石化">
 		<!-- Immobilizes the enemy. Inflicted status: Petrification. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -213,7 +213,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="16413" toLevel="4" name="Trap Poison">
+	<skill id="16413" toLevel="4" name="陷阱施毒">
 		<!-- Inflicts Poison. HP -1000 every 1 sec.. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
@@ -245,7 +245,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16414" toLevel="2" name="Peaceful Zone - Recovery">
+	<skill id="16414" toLevel="2" name="安全區域-恢復">
 		<!-- Max HP +10%, Max MP +30%. Cooldown: 10 sec. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -264,7 +264,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16415" toLevel="6" name="Dimensional Dark Forces">
+	<skill id="16415" toLevel="6" name="次元闇之怨氣">
 		<!-- Level 1: P. Atk. -10%, M. Atk. -10%, Critical Rate for basic attacks -3%, M. Skill Critical Rate -3%. -->
 		<!-- Level 2: P. Atk. -15%, M. Atk. -15%, Critical Rate for basic attacks -4%, M. Skill Critical Rate -4%. -->
 		<!-- Level 3: P. Atk. -20%, M. Atk. -20%, Critical Rate for basic attacks -5%, M. Skill Critical Rate -5%. -->
@@ -374,7 +374,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16416" toLevel="10" name="Bluff Resistance">
+	<skill id="16416" toLevel="10" name="愚弄攻擊抗性">
 		<!-- Level 1: Slightly resistant to Bluff. -->
 		<!-- Level 2: Slightly resistant to Bluff. -->
 		<!-- Level 3: Slightly resistant to Bluff. -->
@@ -388,7 +388,7 @@
 		<icon>icon.skill0358</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16417" toLevel="10" name="Faint Resistance">
+	<skill id="16417" toLevel="10" name="昏厥攻擊抵抗">
 		<!-- Level 1: Slightly resistant to Faint. -->
 		<!-- Level 2: Slightly resistant to Faint. -->
 		<!-- Level 3: Slightly resistant to Faint. -->
@@ -402,7 +402,7 @@
 		<icon>icon.skill4011</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16418" toLevel="10" name="Seduction Resistance">
+	<skill id="16418" toLevel="10" name="魅惑攻擊抗性">
 		<!-- Level 1: Slightly increases Charm Resistance. -->
 		<!-- Level 2: Slightly increases Charm Resistance. -->
 		<!-- Level 3: Slightly increases Charm Resistance. -->
@@ -416,7 +416,7 @@
 		<icon>icon.skill5934</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16419" toLevel="2" name="Stocking Fairy's Blessing">
+	<skill id="16419" toLevel="2" name="襪子妖精的祝福">
 		<!-- For 2 h., STR +3, INT +3, Max HP/ MP +7. The item can be obtained once again in 2 h. You cannot receive the item if you are dead or have no free space in your inventory. -->
 		<icon>BranchSys.icon.br_xmas_present_i00</icon>
 		<operateType>A2</operateType>
@@ -446,7 +446,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16420" toLevel="2" name="Christmas Tree - Blessing">
+	<skill id="16420" toLevel="2" name="樹木妖精的祝福">
 		<!-- Level 1: For 2 h., CON +3, MEN +3, Critical Rate for basic attacks +3%, M. Skill Critical Rate +3%. The item can be obtained once again in 2 h. You cannot receive the item if you are dead or have no free space in your inventory. -->
 		<!-- Level 2: For 2 h., CON +3, MEN +3, Critical Rate for basic attacks +30, M. Skill Critical Rate +30. The item can be obtained once again in 2 h. You cannot receive the item if you are dead or have no free space in your inventory. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
@@ -481,7 +481,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16421" toLevel="2" name="Snowman - Blessing">
+	<skill id="16421" toLevel="2" name="雪人妖精的祝福">
 		<!-- For 2 h., DEX +3, WIT +3, Max HP/ MP +2013. The item can be obtained once again in 2 h. You cannot receive the item if you are dead or have no free space in your inventory. -->
 		<icon>BranchSys.icon.br_xmas_present_luck_i00</icon>
 		<operateType>A2</operateType>
@@ -515,12 +515,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16422" toLevel="1" name="Winter Holiday Reward">
+	<skill id="16422" toLevel="1" name="聖誕獎勵">
 		<!-- Receive a Santa's Mark when the blessing from the Stocking/ Tree/ Snowman Fairy expires. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="16423" toLevel="1" name="Noelle's Gift">
+	<skill id="16423" toLevel="1" name="諾艾樂的魔法">
 		<!-- For 6 h., recovers Vitality, but only if you are in a peaceful zone. When the buff expires, recovers some Vitality even if you leave a peaceful zone. Vitality is not recovered if you are dead. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A2</operateType>
@@ -540,19 +540,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16424" toLevel="1" name="Appearance Stone: Santa Hat">
+	<skill id="16424" toLevel="1" name="聖誕帽加工石">
 		<!-- Changes the appearance of a head accessory to that of Santa Hat. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="16425" toLevel="1" name="Appearance Stone: Santa Suit">
+	<skill id="16425" toLevel="1" name="聖誕外型變更">
 		<!-- Santa Outfit. Duration: 1 h. -->
 		<icon>BranchSys.icon.br_xmas_present_fun_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 	</skill>
-	<skill id="16426" toLevel="1" name="Greater Abelius Cloak - 20 d.">
+	<skill id="16426" toLevel="1" name="亞貝里烏斯斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -575,7 +575,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16427" toLevel="1" name="Greater Sapyros Cloak - 20 d.">
+	<skill id="16427" toLevel="1" name="薩菲洛斯斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -598,7 +598,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16428" toLevel="1" name="Greater Ashagen Cloak - 20 d.">
+	<skill id="16428" toLevel="1" name="凱修納格斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -621,7 +621,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16429" toLevel="1" name="Greater Cranigg Cloak - 20 d.">
+	<skill id="16429" toLevel="1" name="克倫畢斯特斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -644,7 +644,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16430" toLevel="1" name="Greater Soltkreig Cloak - 20 d.">
+	<skill id="16430" toLevel="1" name="索特克里格斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -667,7 +667,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16431" toLevel="1" name="Greater Naviarope Cloak - 20 d.">
+	<skill id="16431" toLevel="1" name="納比亞羅普斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -690,7 +690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16432" toLevel="1" name="Greater Leister Cloak - 20 d.">
+	<skill id="16432" toLevel="1" name="拉伊斯特斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -713,7 +713,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16433" toLevel="1" name="Greater Lakcis Cloak - 20 d.">
+	<skill id="16433" toLevel="1" name="拉奇西斯斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -736,7 +736,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16434" toLevel="1" name="Sayha's Cloak (20-day)">
+	<skill id="16434" toLevel="1" name="沙哈斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -759,7 +759,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16435" toLevel="1" name="Sayha's Cloak (20-day)">
+	<skill id="16435" toLevel="1" name="沙哈斗篷-限時20日">
 		<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
@@ -782,7 +782,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16436" toLevel="1" name="Rush">
+	<skill id="16436" toLevel="1" name="疾襲">
 		<!-- Charges at the enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -792,14 +792,14 @@
 		<hitTime>500</hitTime>
 		<mpConsume>20</mpConsume>
 	</skill>
-	<skill id="16437" toLevel="1" name="Master's Blessing - GM's Cheers">
+	<skill id="16437" toLevel="1" name="GM的祝福-GM的聲援">
 		<!-- The GM is always by your side. For 1 h., acquired XP/ SP +100%. The effect does not stack with Fall of the Dragon. -->
 		<icon>icon.skill0919</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="16438" toLevel="1" name="Horn Melody Lv. 2 - Adventurer">
+	<skill id="16438" toLevel="1" name="角笛之詩-冒險家Lv2">
 		<!-- For 1 h., P. Atk. +24%, M. Atk. +91%, P. Def. +35%, M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -807,7 +807,7 @@
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16439" toLevel="1" name="Drum Melody Lv. 2 - Adventurer">
+	<skill id="16439" toLevel="1" name="戰鼓之詩-冒險家Lv2">
 		<!-- For 1 h., Critical Rate for basic attacks +32%, Critical Damage for basic attacks +31%, M. Skill Critical Rate +4%, received Critical Damage from basic attacks -50%. With a certain chance, increases Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -815,7 +815,7 @@
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16440" toLevel="1" name="Pipe Organ Melody Lv. 2 - Adventurer">
+	<skill id="16440" toLevel="1" name="風琴之詩-冒險家Lv2">
 		<!-- For 1 h., Max HP +39%, Max MP +64%, Max CP +39%. With a certain chance, Vampiric Rage effect +9%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -823,7 +823,7 @@
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16441" toLevel="1" name="Guitar Melody Lv. 2 - Adventurer">
+	<skill id="16441" toLevel="1" name="吉他之詩-冒險家Lv2">
 		<!-- For 1 h., Atk. Spd. +61%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -831,7 +831,7 @@
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16442" toLevel="1" name="Harp Melody Lv. 2 - Adventurer">
+	<skill id="16442" toLevel="1" name="豎琴之詩-冒險家Lv2">
 		<!-- For 60 min., P. Accuracy +6, P./ M. Evasion +6, Speed +35, received Critical Damage from basic attacks -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -839,7 +839,7 @@
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16443" toLevel="1" name="Lute Melody Lv. 2 - Adventurer">
+	<skill id="16443" toLevel="1" name="琵琶之詩-冒險家Lv2">
 		<!-- For 60 min., Atk. Spd. +35%, Casting Spd. +32%. With a certain chance, Vampiric Rage effect +9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -847,7 +847,7 @@
 		<castRange>400</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16444" toLevel="1" name="Fatal Slasher">
+	<skill id="16444" toLevel="1" name="致命殺刃">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>1000</coolTime>
@@ -855,7 +855,7 @@
 		<hitTime>2000</hitTime>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16445" toLevel="1" name="Dark Buster">
+	<skill id="16445" toLevel="1" name="黑暗爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
@@ -864,7 +864,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16446" toLevel="1" name="Unholy Blast">
+	<skill id="16446" toLevel="1" name="黑暗爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>1500</castRange>
@@ -874,7 +874,7 @@
 		<mpConsume>31</mpConsume>
 		<mpInitialConsume>8</mpInitialConsume>
 	</skill>
-	<skill id="16447" toLevel="1" name="Mass Poison">
+	<skill id="16447" toLevel="1" name="廣域施毒">
 		<!-- Inflicts Poison on the target and decreases HP. Effect 14. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
@@ -885,7 +885,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16448" toLevel="1" name="Mass Aerial Yoke">
+	<skill id="16448" toLevel="1" name="廣域空中約束">
 		<!-- Lifts the target and nearby enemies in the air immobilizing them for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A2</operateType>
@@ -926,7 +926,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16449" toLevel="1" name="Mass Hold">
+	<skill id="16449" toLevel="1" name="廣域束縛">
 		<!-- Inflicts Hold on the target and nearby enemies for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10090new</icon>
 		<operateType>A2</operateType>
@@ -937,7 +937,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16450" toLevel="1" name="Mass Fear">
+	<skill id="16450" toLevel="1" name="廣域恐懼">
 		<!-- The target runs away in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
@@ -965,7 +965,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="16451" toLevel="1" name="AoE Stun">
+	<skill id="16451" toLevel="1" name="廣域衝擊">
 		<!-- Attacks nearby enemies, stunning them and canceling their targets for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
@@ -975,7 +975,7 @@
 		<isDebuff>true</isDebuff>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16452" toLevel="6" name="Raid Boss (Lv. 99)">
+	<skill id="16452" toLevel="6" name="99級狩獵首領">
 		<!-- Level 1: An apostle of Etis van Etina, the Lord of Embryo. Her twin sister is Isadora. She is a Dark Healer incarnating the Seal of Avarice. She is constantly observing Aden from another dimension under the orders of Etis van Etina. -->
 		<!-- Level 2: An apostle of Etis van Etina, the Lord of Embryo. Her twin sister is Maliss. She is a Dark Healer incarnating the Seal of Punishment. She is constantly observing Aden from another dimension under the orders of Etis van Etina. -->
 		<!-- Level 3: A dragon that made its name known throughout Aden with its brutality. Was buried deep in the undergrounds for a long time, but was resurrected with the rain of blood. It's looking to destroy the Material Realm, and is aiming for Aden from another dimension. -->
@@ -985,7 +985,7 @@
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16453" toLevel="1" name="Exalted Production">
+	<skill id="16453" toLevel="1" name="榮耀貴族展示">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1002,7 +1002,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16454" toLevel="1" name="Vortex">
+	<skill id="16454" toLevel="1" name="槍舞旋風">
 		<!-- Attacks the target and knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
@@ -1011,7 +1011,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="16455" toLevel="1" name="Spinning Power Slasher">
+	<skill id="16455" toLevel="1" name="槍舞能量旋風">
 		<!-- Attacks the target and knocks nearby enemies back decreasing their Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
@@ -1020,7 +1020,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="16456" toLevel="1" name="Slow">
+	<skill id="16456" toLevel="1" name="緩速術">
 		<!-- Speed decreases momentarily. Effect 1. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -1031,7 +1031,7 @@
 		<mpConsume>20</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 	</skill>
-	<skill id="16457" toLevel="1" name="Mass Knock Down">
+	<skill id="16457" toLevel="1" name="團體擊倒">
 		<!-- Attacks and knocks nearby enemies down cancelling their target and decreasing Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
@@ -1041,7 +1041,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="16458" toLevel="1" name="Mass Power Knock Down">
+	<skill id="16458" toLevel="1" name="團體強力擊倒">
 		<!-- Attacks and knocks nearby enemies down cancelling their target and decreasing Speed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
@@ -1051,7 +1051,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="16459" toLevel="1" name="P. Def. Reduction">
+	<skill id="16459" toLevel="1" name="防禦力下降">
 		<!-- P. Def. decreased. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
@@ -1059,7 +1059,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16460" toLevel="1" name="Maliss' Mark of Blood">
+	<skill id="16460" toLevel="1" name="梅莉莎血腥烙印">
 		<!-- Marks enemies with Blood Seal, making them bleed for 20 sec. AoE. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1070,7 +1070,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16461" toLevel="1" name="Isadora Chaos Mark">
+	<skill id="16461" toLevel="1" name="伊莎朵拉混亂烙印">
 		<!-- Brands enemies with a Death Mark, decreasing their P. Def. for 20 sec. AoE. Inflicted status: Debilitation. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
@@ -1081,7 +1081,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16462" toLevel="1" name="Chaos Mark Retriever">
+	<skill id="16462" toLevel="1" name="混亂烙印回收">
 		<!-- Explodes Chaos Mark left to enemies in range, dealing additional Magic Damage. -->
 		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
@@ -1091,7 +1091,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16463" toLevel="1" name="Bloody Mark Retriever">
+	<skill id="16463" toLevel="1" name="血腥烙印回收">
 		<!-- Explodes Bloody Mark left to enemies in range, dealing additional Magic Damage. -->
 		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
@@ -1101,7 +1101,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16464" toLevel="1" name="Maliss Blood Splash">
+	<skill id="16464" toLevel="1" name="梅莉莎血腥飛濺">
 		<!-- Explodes powerful Blood Splash to enemies in range, dealing Magic Damage. -->
 		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
@@ -1111,7 +1111,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16465" toLevel="1" name="Isadora Dark Splash">
+	<skill id="16465" toLevel="1" name="伊莎朵拉黑暗飛濺">
 		<!-- Explodes powerful Dark Splash to enemies in range, dealing Magic Damage. -->
 		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
@@ -1121,7 +1121,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16466" toLevel="1" name="Explosion">
+	<skill id="16466" toLevel="1" name="爆發">
 		<!-- Explodes bomb and deals great damage and pushes back enemies within range. -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
@@ -1130,7 +1130,7 @@
 		<isMagic>1</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16467" toLevel="1" name="Dimensional Raid Blessing">
+	<skill id="16467" toLevel="1" name="次元狩獵祝福">
 		<!-- Blessing that can be obtained through Merlot. Your chances of receiving a better reward from Merlot increase next time you have this buff. -->
 		<icon>BranchSys2.icon.br_vitality_day_i00</icon>
 		<operateType>A2</operateType>
@@ -1139,14 +1139,14 @@
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16468" toLevel="1" name="Tauti's Invincibility">
+	<skill id="16468" toLevel="1" name="塔武提不滅">
 		<!-- A temporary buff that makes Tauti immune to attacks when he's down. -->
 		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16469" toLevel="1" name="Poison Arrow">
+	<skill id="16469" toLevel="1" name="猛毒之箭">
 		<!-- Has a certain chance to inflict powerful damage on the enemy and poison him. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
@@ -1156,7 +1156,7 @@
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16470" toLevel="1" name="Scream Penetration">
+	<skill id="16470" toLevel="1" name="悲鳴貫通">
 		<!-- Attacks an enemy at the front. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -1165,7 +1165,7 @@
 		<effectPoint>-1</effectPoint>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="16471" toLevel="1" name="Mighty Rush">
+	<skill id="16471" toLevel="1" name="渾身突擊">
 		<!-- Mighty Rush demoralizes the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0495</icon>
 		<operateType>A1</operateType>
@@ -1176,7 +1176,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="16472" toLevel="1" name="Holy Spike">
+	<skill id="16472" toLevel="1" name="神聖之刺">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1186,7 +1186,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16473" toLevel="1" name="Dark Spike">
+	<skill id="16473" toLevel="1" name="黑暗之刺">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1196,7 +1196,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16474" toLevel="1" name="Fire Spike">
+	<skill id="16474" toLevel="1" name="火炎裂刺">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1206,7 +1206,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16475" toLevel="1" name="Aqua Spike">
+	<skill id="16475" toLevel="1" name="水之刺">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1216,7 +1216,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16476" toLevel="1" name="Wind Spike">
+	<skill id="16476" toLevel="1" name="風之刺">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1226,7 +1226,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16477" toLevel="1" name="Earth Spike">
+	<skill id="16477" toLevel="1" name="地之刺">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1236,7 +1236,7 @@
 		<isMagic>1</isMagic>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="16478" toLevel="1" name="Holy Buster">
+	<skill id="16478" toLevel="1" name="神聖爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
@@ -1246,7 +1246,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16479" toLevel="1" name="Fire Buster">
+	<skill id="16479" toLevel="1" name="火之爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
@@ -1256,7 +1256,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16480" toLevel="1" name="Water Buster">
+	<skill id="16480" toLevel="1" name="水之爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
@@ -1266,7 +1266,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16481" toLevel="1" name="Wind Buster">
+	<skill id="16481" toLevel="1" name="水之爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
@@ -1276,7 +1276,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16482" toLevel="1" name="Earth Buster">
+	<skill id="16482" toLevel="1" name="地之爆破">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
@@ -1286,18 +1286,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16483" toLevel="1" name="Holy Blast">
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<castRange>900</castRange>
-		<coolTime>800</coolTime>
-		<effectPoint>-700</effectPoint>
-		<hitTime>2000</hitTime>
-		<isMagic>1</isMagic>
-		<mpConsume>1</mpConsume>
-		<reuseDelay>3000</reuseDelay>
-	</skill>
-	<skill id="16484" toLevel="1" name="Fire Blast">
+	<skill id="16483" toLevel="1" name="神聖爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1308,7 +1297,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16485" toLevel="1" name="Water Blast">
+	<skill id="16484" toLevel="1" name="火焰爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1319,7 +1308,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16486" toLevel="1" name="Wind Blast">
+	<skill id="16485" toLevel="1" name="水流爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1330,7 +1319,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16487" toLevel="1" name="Earth Blast">
+	<skill id="16486" toLevel="1" name="風痕爆裂">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1341,7 +1330,18 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16488" toLevel="1" name="Fatal Strike">
+	<skill id="16487" toLevel="1" name="土域爆裂">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-700</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="16488" toLevel="1" name="致命侵襲">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -1351,7 +1351,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16489" toLevel="1" name="Luminosity">
+	<skill id="16489" toLevel="1" name="發狂">
 		<!-- Inflicts Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockdown, Knockdown). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
@@ -1362,52 +1362,52 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16490" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16490" toLevel="1" name="99級狩獵首領">
 		<!-- Shillien's blood seeped into a criminal's corpse and came back to life against as one of the Undead. Currently aiming for Giran from another dimension in order to complete the darkness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16491" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16491" toLevel="1" name="99級狩獵首領">
 		<!-- The master criminal who resurrected after drinking the blood of Shillien that seeped into the Execution Grounds. It is trapped in the madness of blood, and is aiming for the Giran from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16492" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16492" toLevel="1" name="99級狩獵首領">
 		<!-- Guillotine was once an executioner. After drinking the blood of Shillien that permeated the Execution Grounds, he became the Guillotine of Death that kills to bring about the resurrection of Shillien, and is aiming to destroy Giran Castle from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16493" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16493" toLevel="1" name="99級狩獵首領">
 		<!-- Messenger sent by Lindvior to help with Shillien's resurrection. Has the power of wind as strong as Lindvior, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16494" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16494" toLevel="1" name="99級狩獵首領">
 		<!-- Messenger sent by Valakas to help with Shillien's resurrection. Has the power of fire as strong as Valakas, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16495" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16495" toLevel="1" name="99級狩獵首領">
 		<!-- Messenger sent by Antharas to help with Shillien's resurrection. Has the power of earth as strong as Antharas, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16496" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16496" toLevel="1" name="99級狩獵首領">
 		<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Agarez. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16497" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16497" toLevel="1" name="99級狩獵首領">
 		<!-- Part of the Krakia was affected by the darkness of Nemis and was reborn as Vengeful Oretross. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16498" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16498" toLevel="1" name="99級狩獵首領">
 		<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Eligos. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16499" toLevel="1" name="Raid Boss (Lv. 99)">
+	<skill id="16499" toLevel="1" name="99級狩獵首領">
 		<!-- Part of the Weiss was affected by the darkness of Nemis and was reborn as Vengeful Lerazia. Currently aiming for Gludin from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>

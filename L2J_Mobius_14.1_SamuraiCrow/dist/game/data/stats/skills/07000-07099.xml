@@ -10,7 +10,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="7001" toLevel="1" name="Dispel Buff">
+	<skill id="7001" toLevel="1" name="良性狀態無效化">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -29,7 +29,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7002" toLevel="1" name="Dispel Debuff">
+	<skill id="7002" toLevel="1" name="惡性魔法無效化">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -52,7 +52,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7003" toLevel="1" name="Dispel All">
+	<skill id="7003" toLevel="1" name="大規模無效化">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -76,7 +76,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7004" toLevel="2" name="Dispel Petrification">
+	<skill id="7004" toLevel="2" name="石化無效化">
 		<!-- Cures petrification with the effect of 2 or less. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -93,7 +93,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7005" toLevel="4" name="Greater Chant of Vampire">
+	<skill id="7005" toLevel="4" name="高級嗜血頌歌">
 		<!-- With a certain chance, recovers party members' HP by dealing damage to an enemy. Effect 4. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -126,7 +126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7006" toLevel="13" name="The Love of Pa'agrio">
+	<skill id="7006" toLevel="13" name="高級帕格立歐之心">
 		<!-- Greatly increases alliance members' HP Recovery Rate. Effect 6. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -152,7 +152,7 @@
 			<condition name="TargetMyPledge" />
 		</conditions>
 	</skill>
-	<skill id="7007" toLevel="4" name="Greater Seal of Flame">
+	<skill id="7007" toLevel="4" name="高級火焰封印">
 		<!-- A protective ring of fire that constantly decreases HP of surrounding enemies and members of their alliance. Effect 8. Inflicted status: Debilitation. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -181,7 +181,7 @@
 		<mpInitialConsume>31</mpInitialConsume>
 		<reuseDelay>20000</reuseDelay>
 	</skill>
-	<skill id="7008" toLevel="1" name="Feather of Blessing">
+	<skill id="7008" toLevel="1" name="祝福的羽毛">
 		<!-- Once used, the Feather of Blessing cannot be reused for another 5 min. -->
 		<icon>icon.blessed_feather_i00</icon>
 		<operateType>A2</operateType>
@@ -231,7 +231,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="7014" toLevel="1" name="Test - Critical Damage Up">
+	<skill id="7014" toLevel="1" name="測試-致命傷害提升">
 		<!-- Increases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -252,7 +252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7015" toLevel="1" name="Test - Critical Damage Down">
+	<skill id="7015" toLevel="1" name="測試-致命傷害降低">
 		<!-- Decreases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
@@ -266,7 +266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7016" toLevel="1" name="Test - Critical Damage Up">
+	<skill id="7016" toLevel="1" name="測試-致命傷害提升">
 		<!-- Increases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
@@ -284,7 +284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7017" toLevel="1" name="Test - Critical Damage Down">
+	<skill id="7017" toLevel="1" name="測試-致命傷害降低">
 		<!-- Decreases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
@@ -298,7 +298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7018" toLevel="1" name="Test - Critical Rate Up">
+	<skill id="7018" toLevel="1" name="測試-致命攻擊率提升">
 		<!-- Increases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
@@ -316,7 +316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7019" toLevel="1" name="Test - Critical Rate Down">
+	<skill id="7019" toLevel="1" name="測試-致命攻擊率降低">
 		<!-- Decreases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
@@ -330,7 +330,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7020" toLevel="1" name="Test - Critical Rate Up">
+	<skill id="7020" toLevel="1" name="測試-致命攻擊率提升">
 		<!-- Increases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
@@ -348,7 +348,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7021" toLevel="1" name="Test - Critical Rate Down">
+	<skill id="7021" toLevel="1" name="測試-致命攻擊率降低">
 		<!-- Decreases received Critical Damage from basic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>T</operateType>
@@ -362,7 +362,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7022" toLevel="1" name="Test - Find Hidden Door">
+	<skill id="7022" toLevel="1" name="測試-尋找隱藏的門">
 		<!-- Look for hidden door. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -407,7 +407,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="7028" toLevel="1" name="Stationary NPCs">
+	<skill id="7028" toLevel="1" name="固定NPC">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -418,7 +418,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7029" toLevel="5" name="Super Haste">
+	<skill id="7029" toLevel="5" name="神級加速">
 		<!-- Level 1: Speed is increased. -->
 		<!-- Level 2: speed is increased significantly. -->
 		<!-- Level 3: Speed is increased dramatically. -->
@@ -553,7 +553,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7030" toLevel="1" name="Summon King Bugbear">
+	<skill id="7030" toLevel="1" name="召喚食人妖王">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -574,7 +574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7031" toLevel="1" name="Summon Skeleton Royal Guard">
+	<skill id="7031" toLevel="1" name="召喚骷髏RG">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -589,7 +589,7 @@
 		<mpInitialConsume>1</mpInitialConsume>
 		<reuseDelay>4500</reuseDelay>
 	</skill>
-	<skill id="7032" toLevel="1" name="Summon Hunter Gargoyle">
+	<skill id="7032" toLevel="1" name="召喚狩獵翼魔">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -658,7 +658,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="7041" toLevel="1" name="Master's Blessing - Focus">
+	<skill id="7041" toLevel="1" name="GM的祝福-弱點偵測">
 		<!-- The GM is always by your side. For 1 h., Critical Rate for basic attacks +30%. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A2</operateType>
@@ -684,7 +684,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7042" toLevel="1" name="Master's Blessing - Death Whisper">
+	<skill id="7042" toLevel="1" name="GM的祝福-死之呢喃">
 		<!-- The GM is always by your side. For 1 h., Critical Damage for basic attacks +35%. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
@@ -710,7 +710,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7043" toLevel="1" name="Master's Blessing - Haste">
+	<skill id="7043" toLevel="1" name="GM的祝福-速度激發">
 		<!-- The GM is always by your side. For 1 h., Atk. Spd. +33%. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
@@ -736,7 +736,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7044" toLevel="1" name="Master's Blessing - Guidance">
+	<skill id="7044" toLevel="1" name="GM的祝福-導引">
 		<!-- The GM is always by your side. P. Accuracy +4 for 1 h. -->
 		<icon>icon.skill1240</icon>
 		<operateType>A2</operateType>
@@ -762,7 +762,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7045" toLevel="1" name="Master's Blessing - Blessed Body">
+	<skill id="7045" toLevel="1" name="GM的祝福-神佑之體">
 		<!-- The GM is always by your side. For 1 h., Max HP +35%. -->
 		<icon>icon.skill1045</icon>
 		<operateType>A2</operateType>
@@ -788,7 +788,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7046" toLevel="1" name="Master's Blessing - Blessed Soul">
+	<skill id="7046" toLevel="1" name="GM的祝福-神佑之魂">
 		<!-- The GM is always by your side. For 1 h., Max MP +35%. -->
 		<icon>icon.skill1048</icon>
 		<operateType>A2</operateType>
@@ -814,7 +814,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7047" toLevel="1" name="Master's Blessing - Agility">
+	<skill id="7047" toLevel="1" name="GM的祝福-敏捷術">
 		<!-- The GM is always by your side. P. Evasion +4 for 1 h. -->
 		<icon>icon.skill1087</icon>
 		<operateType>A2</operateType>
@@ -840,7 +840,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7048" toLevel="1" name="Master's Blessing - Acumen">
+	<skill id="7048" toLevel="1" name="GM的祝福-靈活思緒">
 		<!-- The GM is always by your side. For 1 h., Casting Spd. +30%. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
@@ -866,7 +866,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7049" toLevel="1" name="Master's Blessing - Decrease Weight">
+	<skill id="7049" toLevel="1" name="GM的祝福-減輕負重">
 		<!-- The GM is always by your side. For 1 h., overweight limit +9000. -->
 		<icon>icon.skill1257</icon>
 		<operateType>A2</operateType>
@@ -891,7 +891,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7050" toLevel="1" name="Master's Blessing - Might">
+	<skill id="7050" toLevel="1" name="GM的祝福-力量強化">
 		<!-- The GM is always by your side. For 1 h., P. Atk. +15%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -917,7 +917,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7051" toLevel="1" name="Master's Blessing - Shield">
+	<skill id="7051" toLevel="1" name="GM的祝福-保護盾">
 		<!-- The GM is always by your side. For 1 h., P. Def. +15%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -943,7 +943,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7052" toLevel="1" name="Master's Blessing - Magic Barrier">
+	<skill id="7052" toLevel="1" name="GM的祝福-魔法屏障">
 		<!-- The GM is always by your side. For 1 h., M. Def. +30%. -->
 		<icon>icon.skill1036</icon>
 		<operateType>A2</operateType>
@@ -969,7 +969,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7053" toLevel="1" name="Master's Blessing - Vampiric Rage">
+	<skill id="7053" toLevel="1" name="GM的祝福-吸血怒擊">
 		<!-- The GM is always by your side. For 1 h., with a certain chance, absorbs 9% of inflicted melee damage as HP. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A2</operateType>
@@ -995,7 +995,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7054" toLevel="1" name="Master's Blessing - Empower">
+	<skill id="7054" toLevel="1" name="GM的祝福-魔力催化">
 		<!-- The GM is always by your side. For 1 h., M. Atk. +75%. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
@@ -1021,7 +1021,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7055" toLevel="1" name="Master's Blessing - Wind Walk">
+	<skill id="7055" toLevel="1" name="GM的祝福-風之疾走">
 		<!-- The GM is always by your side. For 1 h., Speed +33. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
@@ -1047,7 +1047,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7056" toLevel="1" name="Master's Blessing - Berserker Spirit">
+	<skill id="7056" toLevel="1" name="GM的祝福-狂戰士魂">
 		<!-- The GM is always by your side. For 1 h., a party member's P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
@@ -1101,7 +1101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7057" toLevel="1" name="Master's Blessing - Greater Might">
+	<skill id="7057" toLevel="1" name="GM的祝福-高級力量強化">
 		<!-- The GM is always by your side. For 1 h., P. Atk. +10%. -->
 		<icon>icon.skill1388</icon>
 		<operateType>A2</operateType>
@@ -1127,7 +1127,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7058" toLevel="1" name="Master's Blessing - Greater Shield">
+	<skill id="7058" toLevel="1" name="GM的祝福-高級保護盾">
 		<!-- The GM is always by your side. For 1 h., P. Def. +15%. -->
 		<icon>icon.skill1389</icon>
 		<operateType>A2</operateType>
@@ -1153,7 +1153,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7059" toLevel="1" name="Master's Blessing - Wild Magic">
+	<skill id="7059" toLevel="1" name="GM的祝福-野性魔力">
 		<!-- The GM is always by your side. For 1 h., M. Critical Rate +2%. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A2</operateType>
@@ -1179,7 +1179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7060" toLevel="1" name="Master's Blessing - Clarity">
+	<skill id="7060" toLevel="1" name="GM的祝福-澄澈思緒">
 		<!-- The GM is always by your side. For 1 h., P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, Song/ Dance MP Consumption -20%. -->
 		<icon>icon.skill1397</icon>
 		<operateType>A2</operateType>
@@ -1216,7 +1216,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7061" toLevel="1" name="Master's Blessing - Prophecy of Water">
+	<skill id="7061" toLevel="1" name="GM的祝福-水之預言">
 		<!-- The GM is always by your side. For 1 h., M. Critical Rate +2%, MP Recovery Rate +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%, Skill MP Consumption -5%. -->
 		<icon>icon.skill1355</icon>
 		<operateType>A2</operateType>
@@ -1300,7 +1300,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7062" toLevel="1" name="Master's Blessing - Prophecy of Fire">
+	<skill id="7062" toLevel="1" name="GM的祝福-火之預言">
 		<!-- The GM is always by your side. For 1 h., receives help from the Great Spirit: Max MP +20%, HP Recovery Rate +20%, M. Skill Critical Damage +20%, Critical Damage for basic attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%. -->
 		<icon>icon.skill1356</icon>
 		<operateType>A2</operateType>
@@ -1381,7 +1381,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7063" toLevel="1" name="Master's Blessing - Prophecy of Wind">
+	<skill id="7063" toLevel="1" name="GM的祝福-風之預言">
 		<!-- The GM is always by your side. For 1 h., Max HP +20%, Critical Rate for basic attacks +20%, M. Skill Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%. With a certain chance, absorbs 5% of inflicted damage as HP. -->
 		<icon>icon.skill1357</icon>
 		<operateType>A2</operateType>
@@ -1458,7 +1458,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7064" toLevel="1" name="Master's Blessing - Chant of Victory">
+	<skill id="7064" toLevel="1" name="GM的祝福-凱旋頌歌">
 		<!-- The GM is always by your side. With the help of the Great Spirit, recovers 20% HP. For 1 h., Max HP +20%, M. Skill Critical Rate +2, Critical Damage for basic attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, P. Accuracy +4. -->
 		<icon>icon.skill1363</icon>
 		<operateType>A2</operateType>
@@ -1536,7 +1536,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7065" toLevel="1" name="Test - Charge">
+	<skill id="7065" toLevel="1" name="測試用突擊">
 		<!-- Charges into the enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>DA1</operateType>
@@ -1557,7 +1557,7 @@
 			</condition>
 		</targetConditions>
 	</skill>
-	<skill id="7066" toLevel="1" name="Test Stun Charge">
+	<skill id="7066" toLevel="1" name="測試用衝擊突擊">
 		<!-- Charges into the enemy and stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>DA2</operateType>
@@ -1592,7 +1592,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7067" toLevel="1" name="Test Range Charge">
+	<skill id="7067" toLevel="1" name="測試用範圍 突擊">
 		<!-- Charges into the enemy and inflicts bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0000</icon>
 		<operateType>DA2</operateType>
@@ -1623,7 +1623,7 @@
 			</condition>
 		</targetConditions>
 	</skill>
-	<skill id="7068" toLevel="1" name="Test Steal Abnormal State">
+	<skill id="7068" toLevel="1" name="測試用異常狀態-偷竊">
 		<!-- Steals enemy's abnormal state. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1645,7 +1645,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="7069" toLevel="1" name="Test Abnormal State DD">
+	<skill id="7069" toLevel="1" name="測試用異常狀態-DD">
 		<!-- Inflicts damage according to the enemy's number of abnormal states. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1667,14 +1667,14 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="7070" toLevel="1" name="Test - Soul Eating Passive">
+	<skill id="7070" toLevel="1" name="測試用- 食魂 被動">
 		<!-- Absorbs soul. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>75</magicLevel>
 	</skill>
-	<skill id="7071" toLevel="1" name="Test - Soul Transfer">
+	<skill id="7071" toLevel="1" name="測試用- 靈魂轉移">
 		<!-- Transfers soul to party member. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1692,7 +1692,7 @@
 			</condition>
 		</targetConditions>
 	</skill>
-	<skill id="7072" toLevel="1" name="Test - Basic Trap">
+	<skill id="7072" toLevel="1" name="測試用- 基本陷阱">
 		<!-- Summons trap. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1710,7 +1710,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7073" toLevel="1" name="Test - Find Trap">
+	<skill id="7073" toLevel="1" name="測試用- 察覺陷阱">
 		<!-- Locates trap. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1724,7 +1724,7 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="7074" toLevel="1" name="Test - Cancel Trap">
+	<skill id="7074" toLevel="1" name="測試用- 拆除陷阱">
 		<!-- Cancels trap. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1739,7 +1739,7 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="7075" toLevel="1" name="Test - Distance DD">
+	<skill id="7075" toLevel="1" name="測試用- 距離DD">
 		<!-- Magic damage changes by distance. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1758,7 +1758,7 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<reuseDelay>6000</reuseDelay>
 	</skill>
-	<skill id="7076" toLevel="1" name="Test - Delay Debuff">
+	<skill id="7076" toLevel="1" name="測試用- 延遲 Debuff">
 		<!-- Inflicts Bleed and stuns for 20 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1784,7 +1784,7 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<trait>BLEED</trait>
 	</skill>
-	<skill id="7077" toLevel="1" name="Test - Delay Debuff - Call">
+	<skill id="7077" toLevel="1" name="測試用- 延遲 Debuff-呼喊">
 		<!-- Inflicts Stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1801,7 +1801,7 @@
 		<magicLevel>70</magicLevel>
 		<trait>SHOCK</trait>
 	</skill>
-	<skill id="7078" toLevel="1" name="Test - Blink">
+	<skill id="7078" toLevel="1" name="測試用- 閃逝">
 		<!-- Inflicts Stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1840,7 +1840,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="7079" toLevel="1" name="Test - Party Damage Absorb">
+	<skill id="7079" toLevel="1" name="測試用- 隊伍傷害吸收">
 		<!-- Transfers party damage to tanker. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1859,7 +1859,7 @@
 		<mpConsume>100</mpConsume>
 		<specialLevel>-1</specialLevel>
 	</skill>
-	<skill id="7080" toLevel="1" name="Test - General Attack Prohibited">
+	<skill id="7080" toLevel="1" name="測試用-一般攻擊禁止">
 		<!-- Cannot perform general attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -1878,7 +1878,7 @@
 		<magicLevel>70</magicLevel>
 		<mpConsume>30</mpConsume>
 	</skill>
-	<skill id="7081" toLevel="1" name="Effect Test - Land Shot">
+	<skill id="7081" toLevel="1" name="效果測試用-朝地射擊">
 		<!-- Shoots toward ground. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1897,7 +1897,7 @@
 		<mpConsume>30</mpConsume>
 		<reuseDelay>25000</reuseDelay>
 	</skill>
-	<skill id="7082" toLevel="1" name="Effect Test - Chain Lightning">
+	<skill id="7082" toLevel="1" name="效果測試用- 連鎖閃電">
 		<!-- Chain Lightning -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1919,7 +1919,7 @@
 		<mpInitialConsume>20</mpInitialConsume>
 		<reuseDelay>20000</reuseDelay>
 	</skill>
-	<skill id="7083" toLevel="1" name="Test - Trap Skill">
+	<skill id="7083" toLevel="1" name="測試用- 陷阱技能">
 		<!-- Trap Range Skill -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1935,7 +1935,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>38</magicLevel>
 	</skill>
-	<skill id="7084" toLevel="1" name="Test - Trap Skill">
+	<skill id="7084" toLevel="1" name="測試用- 陷阱技能">
 		<!-- Trap Range Skill -->
 		<icon>icon.skill0000</icon>
 		<operateType>CA1</operateType>
@@ -1953,7 +1953,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>38</magicLevel>
 	</skill>
-	<skill id="7085" toLevel="1" name="Self-Destruct Explosion_test">
+	<skill id="7085" toLevel="1" name="自爆_測試">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1970,7 +1970,7 @@
 		<mpConsume>68</mpConsume>
 		<mpInitialConsume>17</mpInitialConsume>
 	</skill>
-	<skill id="7086" toLevel="1" name="Last Stand_test">
+	<skill id="7086" toLevel="1" name="最終態勢_測試">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1980,7 +1980,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="7087" toLevel="1" name="Chain Magic - Dark Explosion_test">
+	<skill id="7087" toLevel="1" name="連鎖魔法-黑暗爆裂_測試">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1999,7 +1999,7 @@
 		<mpConsume>68</mpConsume>
 		<mpInitialConsume>17</mpInitialConsume>
 	</skill>
-	<skill id="7088" toLevel="1" name="Master's Blessing - Improve Combat">
+	<skill id="7088" toLevel="1" name="GM的祝福-提升戰鬥">
 		<!-- The GM is always by your side. Combines P. Atk. bonus and P. Def. bonus to have enhanced combat power bonus. For 1 h., P. Atk. and P. Def. +15%. -->
 		<icon>icon.skill1499</icon>
 		<operateType>A2</operateType>
@@ -2035,7 +2035,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7089" toLevel="1" name="Master's Blessing - Improve Magic">
+	<skill id="7089" toLevel="1" name="GM的祝福-提升魔法">
 		<!-- The GM is always by your side. Enhances your magic abilities. For 1 h., M. Atk. +75%, M. Def. +30%. -->
 		<icon>icon.skill1500</icon>
 		<operateType>A2</operateType>
@@ -2071,7 +2071,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7090" toLevel="1" name="Master's Blessing - Improve Condition">
+	<skill id="7090" toLevel="1" name="GM的祝福-提升狀態">
 		<!-- The GM is always by your side. Combines Max HP and Max MP bonuses to have enhanced physical and mental power bonus. For 1 h., Max HP/ MP +35%. -->
 		<icon>icon.skill1501</icon>
 		<operateType>A2</operateType>
@@ -2107,7 +2107,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical Attack">
+	<skill id="7091" toLevel="1" name="GM的祝福-提升致命攻擊">
 		<!-- The GM is always by your side. Empowers your critical attacks. For 1 h., Critical Rate for basic attacks +30%, Critical Damage for basic attacks +35%. -->
 		<icon>icon.skill1502</icon>
 		<operateType>A2</operateType>
@@ -2143,7 +2143,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7092" toLevel="1" name="Master's Blessing - Improve Shield Defense">
+	<skill id="7092" toLevel="1" name="GM的祝福-提升盾防禦">
 		<!-- The GM is always by your side. Combine Shield Defense Rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 h., increases Shield Defense Rate by 30% and Shield Defense by 50%. -->
 		<icon>icon.skill1503</icon>
 		<operateType>A2</operateType>
@@ -2179,7 +2179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7093" toLevel="1" name="Master's Blessing - Improve Movement">
+	<skill id="7093" toLevel="1" name="GM的祝福-提升行動力">
 		<!-- The GM is always by your side. Combine Speed increase and P. Evasion increase to have more advanced movement increase effect. For 1 h., Speed +33 and P. Evasion +4. -->
 		<icon>icon.skill1504</icon>
 		<operateType>A2</operateType>
@@ -2215,7 +2215,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7094" toLevel="1" name="Master's Blessing - Sharpen Edge">
+	<skill id="7094" toLevel="1" name="GM的祝福-尖銳之刃">
 		<!-- The GM is always by your side. Sharpens a bladed weapon. For 1 h., P. Atk. +5%, Critical Rate for basic attacks +20%. -->
 		<icon>icon.skill0825</icon>
 		<operateType>A2</operateType>
@@ -2265,7 +2265,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7095" toLevel="1" name="Master's Blessing - Encase Armor">
+	<skill id="7095" toLevel="1" name="GM的祝福-表層硬化">
 		<!-- The GM is always by your side. Thickens the surface of heavy armor. For 1 h., P. Def. +10%. -->
 		<icon>icon.skill0828</icon>
 		<operateType>A2</operateType>
@@ -2294,7 +2294,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7096" toLevel="1" name="Noblesse Blessing - GM's Blessing">
+	<skill id="7096" toLevel="1" name="貴族的祝福-GM的祝福">
 		<!-- The GM is always by your side. Your buffs and debuffs remain after death, except for Noblesse Blessing and Lucky Charms' effects. -->
 		<icon>icon.skill19224</icon>
 		<operateType>A2</operateType>
@@ -2318,7 +2318,7 @@
 			<effect name="NoblesseBless" />
 		</effects>
 	</skill>
-	<skill id="7097" toLevel="1" name="Cancel Shadow Move">
+	<skill id="7097" toLevel="1" name="闇影移動解除">
 		<icon>icon.skill01702</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -2336,7 +2336,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7098" toLevel="1" name="Clan-exclusive Pet Heal">
+	<skill id="7098" toLevel="1" name="血盟專用寵物治癒術">
 		<!-- Recovers all of your HP. Power 3000. -->
 		<icon>icon.skill1401</icon>
 		<operateType>A1</operateType>
@@ -2356,7 +2356,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7099" toLevel="1" name="Clan-exclusive Pet Fear">
+	<skill id="7099" toLevel="1" name="血盟專用寵物恐懼">
 		<!-- Inflicts Fear on the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4108</icon>
 		<operateType>A2</operateType>

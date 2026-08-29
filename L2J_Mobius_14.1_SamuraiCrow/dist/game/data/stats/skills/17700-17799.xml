@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17701" toLevel="20" name="Topaz - Spirit Hit">
+	<skill id="17701" toLevel="20" name="最高級黃寶石-魂靈箭">
 		<!-- Level 1: Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals fixed 1062 damage. -->
 		<!-- Level 2: Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals fixed 3717 damage. -->
 		<!-- Level 3: Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals fixed 6903 damage. -->
@@ -167,7 +167,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17704" toLevel="20" name="Obsidian">
+	<skill id="17704" toLevel="20" name="最高級黑曜石10階段">
 		<!-- Level 1: Received PvP damage -1%. -->
 		<!-- Level 2: Received PvP damage -3%. -->
 		<!-- Level 3: Received PvP damage -7%. -->
@@ -299,7 +299,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17705" toLevel="20" name="Opal">
+	<skill id="17705" toLevel="20" name="最高級貓眼石10階段">
 		<!-- Level 1: Attribute Attack +10. -->
 		<!-- Level 2: Attribute Attack +20. -->
 		<!-- Level 3: Attribute Attack +40. -->
@@ -554,7 +554,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17708" toLevel="20" name="Diamond">
+	<skill id="17708" toLevel="20" name="最高級鑽石10階段">
 		<!-- Level 1: P. Def. +283, received Critical Damage from basic attacks -1%. -->
 		<!-- Level 2: P. Def. +567, received Critical Damage from basic attacks -2%. -->
 		<!-- Level 3: P. Def. +945, received Critical Damage from basic attacks -3%. -->
@@ -677,7 +677,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17709" toLevel="20" name="Pearl">
+	<skill id="17709" toLevel="20" name="最高級珍珠10階段">
 		<!-- Level 1: M. Def. +163, received M. Skill Critical Damage -1%. -->
 		<!-- Level 2: M. Def. +328, received M. Skill Critical Damage -2%. -->
 		<!-- Level 3: M. Def. +548, received M. Skill Critical Damage -3%. -->
@@ -800,13 +800,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17710" toLevel="1" name="Common Anniversary Blessing Effect">
+	<skill id="17710" toLevel="1" name="10週年祝福免費效果">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17711" toLevel="24" name="Common Anniversary Blessing Lv. 1">
+	<skill id="17711" toLevel="24" name="10週年祝福-普通階段24">
 		<!-- You can obtain an item in 1 h. (maximum 23 times). The common blessing's rate is slightly higher than that of the premium blessing. Note!. If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. Also, you also cannot obtain the item if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
@@ -839,13 +839,13 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17712" toLevel="1" name="Premium Anniversary Blessing Effect">
+	<skill id="17712" toLevel="1" name="10週年祝福付費效果">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17713" toLevel="24" name="Premium Anniversary Blessing Lv. 1">
+	<skill id="17713" toLevel="24" name="10週年祝福-優質階段24">
 		<!-- You can obtain an item in 1 h. (maximum 23 times). The common blessing's rate is slightly higher than that of the premium blessing. Note!. If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. Also, you also cannot obtain the item if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
@@ -878,7 +878,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17714" toLevel="1" name="Dancing Cat's Steps">
+	<skill id="17714" toLevel="1" name="跳舞貓的舞步">
 		<!-- For 1 h., skill cooldown -10%, Max HP +30%, Max MP +30%, Max CP +30%, P. Def. +30%, M. Def. +30%, Speed +20, P. Atk. +10%, M. Atk. +20%, Skill MP Consumption -15%. The effect does not stack with Art of Seduction. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
@@ -886,7 +886,7 @@
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17715" toLevel="1" name="Spirit Hit Lv. 1">
+	<skill id="17715" toLevel="1" name="魂靈箭Lv 1">
 		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
@@ -895,7 +895,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="17716" toLevel="1" name="Spirit Hit Lv. 2">
+	<skill id="17716" toLevel="1" name="魂靈箭Lv 2">
 		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
@@ -904,7 +904,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="17717" toLevel="1" name="Spirit Hit Lv. 3">
+	<skill id="17717" toLevel="1" name="魂靈箭Lv 3">
 		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
@@ -913,7 +913,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="17718" toLevel="1" name="Dandy's Breath">
+	<skill id="17718" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Shaper (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -933,7 +933,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17719" toLevel="1" name="Dandy's Breath">
+	<skill id="17719" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Slasher (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -953,7 +953,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17720" toLevel="1" name="Dandy's Breath">
+	<skill id="17720" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Thrower (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -973,7 +973,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17721" toLevel="1" name="Dandy's Breath">
+	<skill id="17721" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Buster (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -993,7 +993,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17722" toLevel="1" name="Dandy's Breath">
+	<skill id="17722" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Cutter (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1013,7 +1013,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17723" toLevel="1" name="Dandy's Breath">
+	<skill id="17723" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Stormer (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1033,7 +1033,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17724" toLevel="1" name="Dandy's Breath">
+	<skill id="17724" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Fighter (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1053,7 +1053,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17725" toLevel="1" name="Dandy's Breath">
+	<skill id="17725" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Avenger (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1073,7 +1073,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17726" toLevel="1" name="Dandy's Breath">
+	<skill id="17726" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Dual Blunt Weapons (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1093,7 +1093,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17727" toLevel="1" name="Dandy's Breath">
+	<skill id="17727" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Antharas Dual Swords (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1113,7 +1113,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17728" toLevel="1" name="Dandy's Breath">
+	<skill id="17728" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Valakas Shaper (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1133,7 +1133,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17729" toLevel="1" name="Dandy's Breath">
+	<skill id="17729" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Valakas Cutter (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1153,7 +1153,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17730" toLevel="1" name="Dandy's Breath">
+	<skill id="17730" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Valakas Slasher (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1173,7 +1173,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17731" toLevel="1" name="Dandy's Breath">
+	<skill id="17731" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Valakas Thrower (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1193,7 +1193,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17732" toLevel="1" name="Dandy's Breath">
+	<skill id="17732" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Valakas Buster (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1213,7 +1213,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17733" toLevel="1" name="Dandy's Breath">
+	<skill id="17733" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Valakas Caster (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1233,7 +1233,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17734" toLevel="1" name="Dandy's Breath">
+	<skill id="17734" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Valakas Retributer (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1253,7 +1253,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17735" toLevel="1" name="Dandy's Breath">
+	<skill id="17735" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Lindvior Shaper (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1273,7 +1273,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17736" toLevel="1" name="Dandy's Breath">
+	<skill id="17736" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Lindvior Thrower (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1293,7 +1293,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17737" toLevel="1" name="Dandy's Breath">
+	<skill id="17737" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Lindvior Slasher (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1313,7 +1313,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17738" toLevel="1" name="Dandy's Breath">
+	<skill id="17738" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Lindvior Caster (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1333,7 +1333,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17739" toLevel="1" name="Dandy's Breath">
+	<skill id="17739" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Lindvior Cutter (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1353,7 +1353,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17740" toLevel="1" name="Dandy's Breath">
+	<skill id="17740" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Lindvior Guardian (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1373,7 +1373,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17741" toLevel="1" name="Dandy's Breath">
+	<skill id="17741" toLevel="1" name="丹帝的鼻之氣息">
 		<!-- Talk to Dandy to obtain Lindvior Dual Daggers (1-hour) (Dandy's Scroll: Release Seal is required). -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
@@ -1393,7 +1393,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17742" toLevel="1" name="Dandy's Strength">
+	<skill id="17742" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1421,7 +1421,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17743" toLevel="1" name="Dandy's Strength">
+	<skill id="17743" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1449,7 +1449,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17744" toLevel="1" name="Dandy's Strength">
+	<skill id="17744" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1477,7 +1477,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17745" toLevel="1" name="Dandy's Strength">
+	<skill id="17745" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Casting Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1505,7 +1505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17746" toLevel="1" name="Dandy's Strength">
+	<skill id="17746" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1533,7 +1533,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17747" toLevel="1" name="Dandy's Strength">
+	<skill id="17747" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1561,7 +1561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17748" toLevel="1" name="Dandy's Strength">
+	<skill id="17748" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1589,7 +1589,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17749" toLevel="1" name="Dandy's Strength">
+	<skill id="17749" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1617,7 +1617,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17750" toLevel="1" name="Dandy's Strength">
+	<skill id="17750" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1645,7 +1645,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17751" toLevel="1" name="Dandy's Strength">
+	<skill id="17751" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1673,7 +1673,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17752" toLevel="1" name="Dandy's Strength">
+	<skill id="17752" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1701,7 +1701,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17753" toLevel="1" name="Dandy's Strength">
+	<skill id="17753" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1729,7 +1729,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17754" toLevel="1" name="Dandy's Strength">
+	<skill id="17754" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1757,7 +1757,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17755" toLevel="1" name="Dandy's Strength">
+	<skill id="17755" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1785,7 +1785,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17756" toLevel="1" name="Dandy's Strength">
+	<skill id="17756" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Casting Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1813,7 +1813,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17757" toLevel="1" name="Dandy's Strength">
+	<skill id="17757" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Casting Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1841,7 +1841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17758" toLevel="1" name="Dandy's Strength">
+	<skill id="17758" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Casting Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1869,7 +1869,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17759" toLevel="1" name="Dandy's Strength">
+	<skill id="17759" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1897,7 +1897,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17760" toLevel="1" name="Dandy's Strength">
+	<skill id="17760" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1925,7 +1925,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17761" toLevel="1" name="Dandy's Strength">
+	<skill id="17761" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1953,7 +1953,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17762" toLevel="1" name="Dandy's Strength">
+	<skill id="17762" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Casting Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1981,7 +1981,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17763" toLevel="1" name="Dandy's Strength">
+	<skill id="17763" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2009,7 +2009,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17764" toLevel="1" name="Dandy's Strength">
+	<skill id="17764" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2037,7 +2037,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17765" toLevel="1" name="Dandy's Strength">
+	<skill id="17765" toLevel="1" name="丹帝之力">
 		<!-- PvP damage +5%, Max HP +15%, Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2065,7 +2065,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17766" toLevel="1" name="Assisting Strength">
+	<skill id="17766" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2101,7 +2101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17767" toLevel="1" name="Assisting Strength">
+	<skill id="17767" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2137,7 +2137,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17768" toLevel="1" name="Assisting Strength">
+	<skill id="17768" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2173,7 +2173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17769" toLevel="1" name="Assisting Strength">
+	<skill id="17769" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2209,7 +2209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17770" toLevel="1" name="Assisting Strength">
+	<skill id="17770" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2245,7 +2245,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17771" toLevel="1" name="Assisting Strength">
+	<skill id="17771" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2281,7 +2281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17772" toLevel="1" name="Assisting Strength">
+	<skill id="17772" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2317,7 +2317,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17773" toLevel="1" name="Assisting Strength">
+	<skill id="17773" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2353,7 +2353,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17774" toLevel="1" name="Assisting Strength">
+	<skill id="17774" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2389,7 +2389,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17775" toLevel="1" name="Assisting Strength">
+	<skill id="17775" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2425,7 +2425,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17776" toLevel="1" name="Assisting Strength">
+	<skill id="17776" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2461,7 +2461,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17777" toLevel="1" name="Assisting Strength">
+	<skill id="17777" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2497,7 +2497,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17778" toLevel="1" name="Assisting Strength">
+	<skill id="17778" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2533,7 +2533,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17779" toLevel="1" name="Assisting Strength">
+	<skill id="17779" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2569,7 +2569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17780" toLevel="1" name="Assisting Strength">
+	<skill id="17780" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2605,7 +2605,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17781" toLevel="1" name="Assisting Strength">
+	<skill id="17781" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2641,7 +2641,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17782" toLevel="1" name="Assisting Strength">
+	<skill id="17782" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2677,7 +2677,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17783" toLevel="1" name="Assisting Strength">
+	<skill id="17783" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2713,7 +2713,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17784" toLevel="1" name="Assisting Strength">
+	<skill id="17784" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2749,7 +2749,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17785" toLevel="1" name="Assisting Strength">
+	<skill id="17785" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2785,7 +2785,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17786" toLevel="1" name="Assisting Strength">
+	<skill id="17786" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2821,7 +2821,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17787" toLevel="1" name="Assisting Strength">
+	<skill id="17787" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2857,7 +2857,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17788" toLevel="1" name="Assisting Strength">
+	<skill id="17788" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2893,7 +2893,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17789" toLevel="1" name="Assisting Strength">
+	<skill id="17789" toLevel="1" name="哥哥的微弱之力">
 		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2929,7 +2929,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17790" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17790" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -2972,7 +2972,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17791" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17791" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3015,7 +3015,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17792" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17792" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3058,7 +3058,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17793" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17793" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Casting Spd. +1999, M. Skill Critical Rate +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3101,7 +3101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17794" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17794" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3144,7 +3144,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17795" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17795" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3187,7 +3187,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17796" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17796" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3230,7 +3230,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17797" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17797" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3273,7 +3273,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17798" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17798" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -3316,7 +3316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17799" toLevel="1" name="Big Brother's Rainwater-enhanced Strength">
+	<skill id="17799" toLevel="1" name="哥哥傾注的強大之力">
 		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for basic attacks +30%, damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>

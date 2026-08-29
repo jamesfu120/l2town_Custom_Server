@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11746" toLevel="6" name="Superior Inquisition">
+	<skill id="11746" toLevel="6" name="極致審問者">
 		<!-- Level 1: M. Atk. +10%, M. Skill Power +3%, M. Skill Critical Rate +5%, M. Skill Critical Damage +2%, damage inflicted on monsters +5% -->
 		<!-- Level 2: M. Atk. +18%, M. Skill Power +3%, M. Skill Critical Rate +5%, M. Skill Critical Damage +2%, damage inflicted on monsters +10% -->
 		<!-- Level 3: M. Atk. +26%, M. Skill Power +6%, M. Skill Critical Rate +10%, M. Skill Critical Damage +4%, damage inflicted on monsters +15% -->
@@ -97,13 +97,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11747" toLevel="1" name="Enchanter's Unique Skill - Passive">
+	<skill id="11747" toLevel="1" name="法師-個人被動技能">
 		<icon>icon.skill0217</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="11748" toLevel="1" name="Enchanter's Unique Skill">
+	<skill id="11748" toLevel="1" name="法師-個人">
 		<!-- Atk. Spd. +30% for 5 sec. -->
 		<icon>icon.skill1543</icon>
 		<operateType>A2</operateType>
@@ -128,7 +128,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11749" toLevel="1" name="Extra Hit">
+	<skill id="11749" toLevel="1" name="追加痛擊">
 		<!-- Strikes the enemy with a powerful blow. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -157,7 +157,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11750" toLevel="1" name="Extra Hit">
+	<skill id="11750" toLevel="1" name="追加痛擊">
 		<!-- Strikes the enemy with a powerful blow. -->
 		<icon>icon.skill10317</icon>
 		<operateType>DA1</operateType>
@@ -185,7 +185,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11751" toLevel="12" name="Superior Magic Weapon Mastery">
+	<skill id="11751" toLevel="12" name="極致精通魔法武器">
 		<!-- Level 1: INT +2. Depending on your INT, resets skill cooldown or increases skill duration by 2 times. When using a magic sword/ one-handed staff/ two-handed staff, M. Atk. +29% and +981. When using any weapon, M. Skill Power +1%, M. Skill Critical Rate +6%, M. Skill Critical Damage +2%. -->
 		<!-- Level 2: INT +2. Depending on your INT, resets skill cooldown or increases skill duration by 2 times. When using a magic sword/ one-handed staff/ two-handed staff, M. Atk. +32% and +1138. When using any weapon, M. Skill Power +2%, M. Skill Critical Rate +8%, M. Skill Critical Damage +2%. -->
 		<!-- Level 3: INT +2. Depending on your INT, resets skill cooldown or increases skill duration by 2 times. When using a magic sword/ one-handed staff/ two-handed staff, M. Atk. +35% and +1319. When using any weapon, M. Skill Power +3%, M. Skill Critical Rate +10%, M. Skill Critical Damage +2%. -->
@@ -310,7 +310,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11752" toLevel="15" name="Sustain">
+	<skill id="11752" toLevel="15" name="反射治癒">
 		<!-- Level 1: For 15 sec., the targeted party member's HP +172 per sec. Received Healing +10%. Additionally, increases Healing Power. <You are targeted automatically> -->
 		<!-- Level 2: For 15 sec., the targeted party member's HP +173 per sec. Received Healing +13%. Additionally, increases Healing Power. <You are targeted automatically> -->
 		<!-- Level 3: For 15 sec., the targeted party member's HP +173 per sec. Received Healing +16%. Additionally, increases Healing Power. <You are targeted automatically> -->
@@ -808,7 +808,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11753" toLevel="3" name="Sustain">
+	<skill id="11753" toLevel="3" name="反射治癒">
 		<!-- Level 1: For 15 sec., Healing Power +50. If triggered again, the effect will increase. -->
 		<!-- Level 2: For 15 sec., Healing Power +100. If triggered again, the effect will increase. -->
 		<!-- Level 3: For 15 sec., Healing Power +200. -->
@@ -836,7 +836,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11754" toLevel="6" name="Fairy of Life">
+	<skill id="11754" toLevel="6" name="生命妖精">
 		<!-- Level 1: Summons a fairy that follows the selected party member. For 60 sec., this party member's received damage -5%. Also, whenever their HP goes below 90%, the fairy recovers 5% of their HP every 5 sec. If the party member is hit, the fairy may remove up to 2 debuffs from them with a certain chance. Consumes 5 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 2: Summons a fairy that follows the selected party member. For 60 sec., this party member's received damage -6%. Also, whenever their HP goes below 90%, the fairy recovers 6% of their HP every 5 sec. If the party member is hit, the fairy may remove up to 2 debuffs from them with a certain chance. Consumes 5 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 3: Summons a fairy that follows the selected party member. For 60 sec., this party member's received damage -7%. Also, whenever their HP goes below 90%, the fairy recovers 7% of their HP every 5 sec. If the party member is hit, the fairy may remove up to 2 debuffs from them with a certain chance. Consumes 5 Spirit Ore. The skill cooldown is fixed. -->
@@ -1000,7 +1000,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11755" toLevel="15" name="Radiant Heal">
+	<skill id="11755" toLevel="15" name="療癒之光">
 		<!-- Level 1: Recovers the target's HP with 1488 power. If HP is full, recovers CP. <You are targeted automatically> -->
 		<!-- Level 2: Recovers the target's HP with 1495 power. If HP is full, recovers CP. <You are targeted automatically> -->
 		<!-- Level 3: Recovers the target's HP with 1507 power. If HP is full, recovers CP. <You are targeted automatically> -->
@@ -1465,7 +1465,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11756" toLevel="15" name="Panic Heal">
+	<skill id="11756" toLevel="15" name="再生之光">
 		<!-- Level 1: Recovers the target's HP with 1488 power. If HP is full, recovers CP. <You are targeted automatically> -->
 		<!-- Level 2: Recovers the target's HP with 1495 power. If HP is full, recovers CP. <You are targeted automatically> -->
 		<!-- Level 3: Recovers the target's HP with 1507 power. If HP is full, recovers CP. <You are targeted automatically> -->
@@ -1931,7 +1931,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11757" toLevel="15" name="Brilliant Heal">
+	<skill id="11757" toLevel="15" name="治癒光輝">
 		<!-- Level 1: Recovers your HP and that of your nearby party members with 1191 power. If HP is full, recovers CP. -->
 		<!-- Level 2: Recovers your HP and that of your nearby party members with 1200 power. If HP is full, recovers CP. -->
 		<!-- Level 3: Recovers your HP and that of your nearby party members with 1210 power. If HP is full, recovers CP. -->
@@ -2396,7 +2396,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11758" toLevel="1" name="Celestial Protection">
+	<skill id="11758" toLevel="1" name="光影之盾">
 		<!-- For 10 sec., grants invincibility to a party member. The identical effects do not stack. Consumes 5 Spirit Ore. <You are targeted automatically>. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<!-- Level 1 - SubLevel 1001 (+1936 Heal): For 10 sec., grants invincibility to a party member. The identical effects do not stack. Consumes 5 Spirit Ore. <You are targeted automatically>. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
 		<!-- Level 1 - SubLevel 1002 (+2072 Heal): For 10 sec., grants invincibility to a party member. The identical effects do not stack. Consumes 5 Spirit Ore. <You are targeted automatically>. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs -->
@@ -2493,7 +2493,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11759" toLevel="1" name="Celestial Party Protection">
+	<skill id="11759" toLevel="1" name="光影之陣">
 		<!-- For 10 sec., grants invincibility to all party members. The identical effects do not stack. Also, applies <font color="ECECEC">Defense Limit</font> on the target. Consumes 10 Spirit Ore. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs. <font color="ECECEC">Defense Limit</font>. For 90 sec., Celestial Protection, Celestial Party Protection, and Celestial Aegis cannot be applied. -->
 		<!-- Level 1 - SubLevel 1001 (+1936 Heal): For 10 sec., grants invincibility to all party members. The identical effects do not stack. Also, applies <font color="ECECEC">Defense Limit</font> on the target. Consumes 10 Spirit Ore. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs. <font color="ECECEC">Defense Limit</font>. For 90 sec., Celestial Protection, Celestial Party Protection, and Celestial Aegis cannot be applied. -->
 		<!-- Level 1 - SubLevel 1002 (+2072 Heal): For 10 sec., grants invincibility to all party members. The identical effects do not stack. Also, applies <font color="ECECEC">Defense Limit</font> on the target. Consumes 10 Spirit Ore. <font color="B09B79">Type: Invincibility.</font>. Immunity to damage and debuffs. <font color="ECECEC">Defense Limit</font>. For 90 sec., Celestial Protection, Celestial Party Protection, and Celestial Aegis cannot be applied. -->
@@ -2596,7 +2596,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11760" toLevel="15" name="Shield Light">
+	<skill id="11760" toLevel="15" name="泉源之光">
 		<!-- Level 1: Creates a light barrier with 166 HP around you and nearby party members. Consumes 2 Spirit Ore. Does not stack with other barrier effects. -->
 		<!-- Level 2: Creates a light barrier with 167 HP around you and nearby party members. Consumes 2 Spirit Ore. Does not stack with other barrier effects. -->
 		<!-- Level 3: Creates a light barrier with 170 HP around you and nearby party members. Consumes 2 Spirit Ore. Does not stack with other barrier effects. -->
@@ -3089,7 +3089,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11761" toLevel="12" name="Brilliant Recharge">
+	<skill id="11761" toLevel="12" name="泉源光輝">
 		<!-- Level 1: Instantly recovers party members' MP with a maximum of 700 Power depending on their level. Also, for 30 sec., recovers 50 MP per second. -->
 		<!-- Level 2: Instantly recovers party members' MP with a maximum of 715 Power depending on their level. Also, for 30 sec., recovers 50 MP per second. -->
 		<!-- Level 3: Instantly recovers party members' MP with a maximum of 725 Power depending on their level. Also, for 30 sec., recovers 50 MP per second. -->
@@ -3572,7 +3572,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11762" toLevel="1" name="Balance Heal">
+	<skill id="11762" toLevel="1" name="平靜之光">
 		<!-- Equalizes the entire party's HP and restores 333 HP/ second for 15 sec. -->
 		<!-- Level 1 - SubLevel 2001 (+1% Power): Equalizes the entire party's HP and restores 333 HP/ second for 15 sec. -->
 		<!-- Level 1 - SubLevel 2002 (+2% Power): Equalizes the entire party's HP and restores 333 HP/ second for 15 sec. -->
@@ -3650,7 +3650,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11763" toLevel="1" name="Radiant Purge">
+	<skill id="11763" toLevel="1" name="淨化之光">
 		<!-- Removes debuffs from the target. Does not work on enemies. -->
 		<!-- Level 1 - SubLevel 1001 (+1936 Heal): Removes debuffs from the target. Does not work on enemies. -->
 		<!-- Level 1 - SubLevel 1002 (+2072 Heal): Removes debuffs from the target. Does not work on enemies. -->
@@ -3720,7 +3720,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11764" toLevel="2" name="Brilliant Purge">
+	<skill id="11764" toLevel="2" name="淨化光輝">
 		<!-- Level 1: Removes debuffs from all party members; for 10 sec., their Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +500. Consumes 2 Spirit Ore. <font color="B09B79">Type: Debuff Resistance bonus.</font>. Greatly increases Debuff Resistance. Does not stack with other effects of the following types: <font color="B09B79">Debuff Resistance bonus and Immunity to debuffs</font>. -->
 		<!-- Level 2: Removes debuffs from all party members; for 10 sec., their Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +500. Additionally, P./ M. Def. +15%. Consumes 2 Spirit Ore. <font color="B09B79">Type: Debuff Resistance bonus.</font>. Greatly increases Debuff Resistance. Does not stack with other effects of the following types: <font color="B09B79">Debuff Resistance bonus and Immunity to debuffs</font>. -->
 		<!-- Level 1 - SubLevel 1001 (+1936 Heal): Removes debuffs from all party members; for 10 sec., their Debilitation/ Confusion/ Obstruction/ Stupor/ Infection/ Petrification/ Pull/ Danger Zone Resistance +500. Consumes 2 Spirit Ore. <font color="B09B79">Type: Debuff Resistance bonus.</font>. Greatly increases Debuff Resistance. Does not stack with other effects of the following types: <font color="B09B79">Debuff Resistance bonus and Immunity to debuffs</font>. -->
@@ -3853,7 +3853,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11765" toLevel="11" name="Crystal Regeneration">
+	<skill id="11765" toLevel="11" name="結晶恢復">
 		<!-- Level 1: Recovers 10% of Max HP/ MP. For 3 sec., turns your body into stone. You cannot move and become invincible to attacks and debuffs. Consumes 5 Spirit Ore. <font color="B09B79">Type: Crystallization.</font>. Grants immunity to damage and debuffs, but makes you unable to move. -->
 		<!-- Level 2: Recovers 12% of Max HP/ MP. For 3 sec., turns your body into stone. You cannot move and become invincible to attacks and debuffs. Consumes 5 Spirit Ore. <font color="B09B79">Type: Crystallization.</font>. Grants immunity to damage and debuffs, but makes you unable to move. -->
 		<!-- Level 3: Recovers 14% of Max HP/ MP. For 3 sec., turns your body into stone. You cannot move and become invincible to attacks and debuffs. Consumes 5 Spirit Ore. <font color="B09B79">Type: Crystallization.</font>. Grants immunity to damage and debuffs, but makes you unable to move. -->
@@ -4348,7 +4348,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11766" toLevel="15" name="Dark Blast">
+	<skill id="11766" toLevel="15" name="闇之爆裂">
 		<!-- Level 1: Dark energy deals damage to the target with 206 power. -->
 		<!-- Level 2: Dark energy deals damage to the target with 213 power. -->
 		<!-- Level 3: Dark energy deals damage to the target with 220 power. -->
@@ -4825,7 +4825,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11767" toLevel="15" name="Mass Dark Veil">
+	<skill id="11767" toLevel="15" name="闇之環繞">
 		<!-- Level 1: Dark Vortex deals damage to the target and surrounding enemies. Power 157. -->
 		<!-- Level 2: Dark Vortex deals damage to the target and surrounding enemies. Power 160. -->
 		<!-- Level 3: Dark Vortex deals damage to the target and surrounding enemies. Power 166. -->
@@ -5308,7 +5308,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11768" toLevel="1" name="Rebirth">
+	<skill id="11768" toLevel="1" name="生命釋放">
 		<!-- Fully recovers party members' HP/ MP/ CP and removes debuffs from them. Consumes 5 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 1 - SubLevel 1001 (+1 sec. Recovery): Fully recovers party members' HP/ MP/ CP and removes debuffs from them. Consumes 5 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 1 - SubLevel 1002 (+2 sec. Recovery): Fully recovers party members' HP/ MP/ CP and removes debuffs from them. Consumes 5 Spirit Ore. The skill cooldown is fixed. -->
@@ -5370,7 +5370,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11769" toLevel="13" name="Dark Backfire">
+	<skill id="11769" toLevel="13" name="闇之怠惰">
 		<!-- Level 1: For 30 sec., the target's Skill MP Consumption +50%, and Casting Spd. and Atk. Spd. -20%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: For 30 sec., the target's Skill MP Consumption +150%, and Casting Spd. and Atk. Spd. -20%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: For 30 sec., the target's Skill MP Consumption +200%, and Casting Spd. and Atk. Spd. -20%. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -6067,7 +6067,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11770" toLevel="5" name="Saintly Patience">
+	<skill id="11770" toLevel="5" name="神聖堅毅">
 		<!-- Level 1: Aeore Healer's patience knows no bounds. For 30 min. P. Def. +5%, M. Def. +5%, received damage -5%. Consumes 20 Spirit Ore. -->
 		<!-- Level 2: Aeore Healer's patience knows no bounds. For 30 min. P. Def. +10%, M. Def. +10%, received damage -5%. Consumes 20 Spirit Ore. -->
 		<!-- Level 3: Aeore Healer's patience knows no bounds. For 30 min. P. Def. +15%, M. Def. +15%, received damage -5%. Consumes 20 Spirit Ore. -->
@@ -6385,7 +6385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11771" toLevel="1" name="Wise Retainer of Lights">
+	<skill id="11771" toLevel="1" name="光之具現">
 		<!-- Finally! Causes Lakcis, the giant of light, to materialize. Protects allies near the giant and attacks the enemies. Continuously decreases HP. -->
 		<icon>icon.skill1349</icon>
 		<operateType>A1</operateType>
@@ -6408,7 +6408,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11772" toLevel="9" name="Giant's Favor">
+	<skill id="11772" toLevel="9" name="高效治癒">
 		<!-- Level 1: Performs an ancient secret technique of the Giants. For 30 sec., Healing Power +1000, received damage -20%. -->
 		<!-- Level 2: Performs an ancient secret technique of the Giants. For 30 sec., Healing Power +1500, received damage -22%. -->
 		<!-- Level 3: Performs an ancient secret technique of the Giants. For 30 sec., Healing Power +2000, received damage -24%. -->
@@ -6845,7 +6845,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11773" toLevel="2" name="Lakcis Disc">
+	<skill id="11773" toLevel="2" name="拉奇西斯化身">
 		<!-- Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
 		<icon>icon.skill11773</icon>
 		<operateType>AU</operateType>
@@ -6882,7 +6882,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11774" toLevel="4" name="Summon Tree of Life">
+	<skill id="11774" toLevel="4" name="召喚生命之樹">
 		<!-- Summons Tree of Life. The summoned tree heals nearby party members for 60 sec. and removes debuffs from them. The Tree of Life cannot be targeted. Consumes 5 Spirit Ore. The skill cooldown is fixed at 60 sec. -->
 		<icon>icon.skill11774</icon>
 		<operateType>A1</operateType>
@@ -6926,7 +6926,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11775" toLevel="1" name="Return">
+	<skill id="11775" toLevel="1" name="回歸">
 		<!-- Moves to the summoned entity. Cannot be used beyond 1000 range. -->
 		<icon>icon.skill11775</icon>
 		<operateType>A1</operateType>
@@ -6947,7 +6947,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11776" toLevel="4" name="Summon Lumi">
+	<skill id="11776" toLevel="4" name="召喚光之精靈">
 		<!-- Summons Unison of Lights. -->
 		<icon>icon.skill11776</icon>
 		<operateType>A1</operateType>
@@ -6983,7 +6983,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11777" toLevel="12" name="Mark of Lumi">
+	<skill id="11777" toLevel="12" name="光精烙印">
 		<!-- Level 1: Strikes the target with a lighting bolt of justice. Power 165. For 1 min., target's P./ M. Def. -10%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Strikes the target with a lighting bolt of justice. Power 167. For 1 min., target's P./ M. Def. -15%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: Strikes the target with a lighting bolt of justice. Power 180. For 1 min., target's P./ M. Def. -20%. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -7485,7 +7485,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11778" toLevel="13" name="Fatal Sleep">
+	<skill id="11778" toLevel="13" name="致命沉睡">
 		<!-- Level 1: Inflicts sleep on the target for 20 sec. After that, Atk. Spd./ Casting Spd./ Speed -50%. Base success rate: 70%. Inflicted status: Stupor (Sleep, Mutation). -->
 		<!-- Level 2: Inflicts sleep on the target for 20 sec. After that, Atk. Spd./ Casting Spd./ Speed -60%. Base success rate: 70%. Inflicted status: Stupor (Sleep, Mutation). -->
 		<!-- Level 3: Inflicts sleep on the target for 20 sec. After that, Atk. Spd./ Casting Spd./ Speed -70%. Base success rate: 70%. Inflicted status: Stupor (Sleep, Mutation). -->
@@ -7964,7 +7964,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="11779" toLevel="10" name="Yoked status">
+	<skill id="11779" toLevel="10" name="緩速狀態">
 		<!-- Level 1: Speed/ Atk. Spd./ Casting Spd. -50%. Base success rate: 70%. Inflicted status: Stupor (Sleep, Mutation). -->
 		<!-- Level 2: Speed/ Atk. Spd./ Casting Spd. -60%. Base success rate: 70%. Inflicted status: Stupor (Sleep, Mutation). -->
 		<!-- Level 3: Speed/ Atk. Spd./ Casting Spd. -70%. Base success rate: 70%. Inflicted status: Stupor (Sleep, Mutation). -->
@@ -8050,7 +8050,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11780" toLevel="13" name="Dark Devour">
+	<skill id="11780" toLevel="13" name="闇之吞噬">
 		<!-- Level 1: The target's Recovery -50%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 2: The target's Recovery -52%. Base success rate: 70%. Inflicted status: Debilitation. -->
 		<!-- Level 3: The target's Recovery -56%. Base success rate: 70%. Inflicted status: Debilitation. -->
@@ -8697,7 +8697,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11781" toLevel="6" name="Dark Devour">
+	<skill id="11781" toLevel="6" name="闇之吞噬">
 		<icon>icon.skill1367</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -8723,7 +8723,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11782" toLevel="2" name="Frantic Healing">
+	<skill id="11782" toLevel="2" name="緊急治癒">
 		<!-- Level 1: When using light armor/ robe, Casting Spd. +30%. M. Skill Critical Rate +6% regardless of the armor equipped. -->
 		<!-- Level 2: When using light armor/ robe, Casting Spd. +50%. M. Skill Critical Rate +13% regardless of the armor equipped. -->
 		<icon>icon.skill11782</icon>
@@ -8753,7 +8753,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11783" toLevel="1" name="Reset">
+	<skill id="11783" toLevel="1" name="重置">
 		<!-- Restarts the target's debuff timers. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill11783</icon>
 		<operateType>A1</operateType>
@@ -8771,7 +8771,7 @@
 			<effect name="AbnormalTimeChange" />
 		</effects>
 	</skill>
-	<skill id="11784" toLevel="4" name="Blessed Resurrection">
+	<skill id="11784" toLevel="4" name="護體返生術">
 		<!-- Level 1: Resurrects the target. Additionally, restores 85% XP. Consumes 2 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 2: Resurrects the target. Additionally, restores 90% XP. Consumes 2 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 3: Resurrects the target. Additionally, restores 95% XP. Consumes 2 Spirit Ore. The skill cooldown is fixed. -->
@@ -8816,7 +8816,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11785" toLevel="3" name="Party Resurrection">
+	<skill id="11785" toLevel="3" name="群體護體返生術">
 		<!-- Level 1: Resurrects all nearby party members. Additionally, restores 80% XP. Consumes 10 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 2: Resurrects all nearby party members. Additionally, restores 90% XP. Consumes 10 Spirit Ore. The skill cooldown is fixed. -->
 		<!-- Level 3: Resurrects all nearby party and clan members. Additionally, restores 100% XP. Consumes 10 Spirit Ore. The skill cooldown is fixed. -->
@@ -8865,7 +8865,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11786" toLevel="1" name="Debuff Immunity">
+	<skill id="11786" toLevel="1" name="詛咒免疫">
 		<!-- For 5 sec., grants immunity to debuffs. <font color="B09B79">Type: Immunity to debuffs.</font>. Immunity to debuff attacks. Does not stack. -->
 		<icon>icon.skill1411</icon>
 		<operateType>A2</operateType>
@@ -8897,7 +8897,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11787" toLevel="12" name="Superior Armor Mastery">
+	<skill id="11787" toLevel="12" name="極致精通護甲">
 		<!-- Level 1: When using light armor or robe, Max HP +4299, P. Def. +1212, M. Def. +10%, HP Recovery Rate +2.8, MP Recovery Rate +3.6. Additionally, INT +2. -->
 		<!-- Level 2: When using light armor or robe, Max HP +4299, P. Def. +1330, M. Def. +10%, HP Recovery Rate +3.4, MP Recovery Rate +4.2. Additionally, INT +2. -->
 		<!-- Level 3: When using light armor or robe, Max HP +4299, P. Def. +1462, M. Def. +10%, HP Recovery Rate +4, MP Recovery Rate +4.8. Additionally, INT +2. -->
@@ -9028,7 +9028,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11788" toLevel="12" name="Superior Casting Mastery">
+	<skill id="11788" toLevel="12" name="極致精通施法">
 		<!-- Level 1: Max MP +313, Casting Spd. +23%, M. Skill Critical Rate +3%, M. Skill Cooldown -25%, M. Skill MP Consumption -15%. Additionally, INT +2. -->
 		<!-- Level 2: Max MP +374, Casting Spd. +23%, M. Skill Critical Rate +3%, M. Skill Cooldown -25%, M. Skill MP Consumption -15%. Additionally, INT +2. -->
 		<!-- Level 3: Max MP +435, Casting Spd. +23%, M. Skill Critical Rate +3%, M. Skill Cooldown -25%, M. Skill MP Consumption -15%. Additionally, INT +2. -->
@@ -9129,7 +9129,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11789" toLevel="12" name="Superior Anti-magic">
+	<skill id="11789" toLevel="12" name="極致抗魔">
 		<!-- Level 1: M. Def. +862. Additionally, INT +2. -->
 		<!-- Level 2: M. Def. +976. Additionally, INT +2. -->
 		<!-- Level 3: M. Def. +1104. Additionally, INT +2. -->
@@ -9204,7 +9204,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11790" toLevel="12" name="Superior Attribute Resistance">
+	<skill id="11790" toLevel="12" name="極致元素保護">
 		<!-- Level 1: Fire/ Water/ Wind/ Earth Resistance +20. INT +2. -->
 		<!-- Level 2: Fire/ Water/ Wind/ Earth Resistance +22. INT +2. -->
 		<!-- Level 3: Fire/ Water/ Wind/ Earth Resistance +24. INT +2. -->
@@ -9309,7 +9309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11791" toLevel="4" name="Aeore's Defense Mastery">
+	<skill id="11791" toLevel="4" name="精通艾羅守護">
 		<!-- Level 1: INT +2. Grants additional effects when a sigil and a magic sword/ one-handed staff are equipped. When the sigil is equipped, MP Recovery Rate +20%, Healing Power +40, M. Skill Power +1%. When using a magic sword or a one-handed staff, M. Atk. +5%. -->
 		<!-- Level 2: INT +2. Grants additional effects when a sigil and a magic sword/ one-handed staff are equipped. When the sigil is equipped, MP Recovery Rate +20%, Healing Power +40, M. Skill Power +2%. When using a magic sword or a one-handed staff, M. Atk. +10%. -->
 		<!-- Level 3: INT +2. Grants additional effects when a sigil and a magic sword/ one-handed staff are equipped. When the sigil is equipped, MP Recovery Rate +20%, Healing Power +40, M. Skill Power +4%. When using a magic sword or a one-handed staff, M. Atk. +15%. -->
@@ -9369,7 +9369,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11792" toLevel="12" name="Superior Debuff Resistance">
+	<skill id="11792" toLevel="12" name="極致特性抵抗">
 		<!-- Level 1: Infection/ Obstruction/ Stupor/ Confusion Resistance +20, INT +2. Also has a 10% chance to reflect P./ M. Debuffs. -->
 		<!-- Level 2: Infection/ Obstruction/ Stupor/ Confusion Resistance +22, INT +2. Also has a 10% chance to reflect P./ M. Debuffs. -->
 		<!-- Level 3: Infection/ Obstruction/ Stupor/ Confusion Resistance +24, INT +2. Also has a 10% chance to reflect P./ M. Debuffs. -->
@@ -9517,7 +9517,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11793" toLevel="3" name="Sustain">
+	<skill id="11793" toLevel="3" name="反射治癒">
 		<!-- For 15 sec., Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
@@ -9569,7 +9569,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11794" toLevel="3" name="Sustain">
+	<skill id="11794" toLevel="3" name="反射治癒">
 		<!-- Level 1: For 10 sec., Healing Power +50. If triggered again, the effect will increase. -->
 		<!-- Level 2: For 10 sec., Healing Power +100. If triggered again, the effect will increase. -->
 		<!-- Level 3: For 10 sec., Healing Power +200. -->
@@ -9597,7 +9597,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11795" toLevel="3" name="Sustain">
+	<skill id="11795" toLevel="3" name="反射治癒">
 		<!-- For 15 sec., Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
@@ -9652,7 +9652,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11796" toLevel="3" name="Sustain">
+	<skill id="11796" toLevel="3" name="反射治癒">
 		<!-- Level 1: For 10 sec., Healing Power +50. If triggered again, the effect will increase. -->
 		<!-- Level 2: For 10 sec., Healing Power +100. If triggered again, the effect will increase. -->
 		<!-- Level 3: For 10 sec., Healing Power +200. -->
@@ -9680,7 +9680,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11797" toLevel="3" name="Sustain">
+	<skill id="11797" toLevel="3" name="反射治癒">
 		<!-- For 15 sec., Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
@@ -9735,7 +9735,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11798" toLevel="3" name="Sustain">
+	<skill id="11798" toLevel="3" name="反射治癒">
 		<!-- Level 1: For 10 sec., Healing Power +50. If triggered again, the effect will increase. -->
 		<!-- Level 2: For 10 sec., Healing Power +100. If triggered again, the effect will increase. -->
 		<!-- Level 3: For 10 sec., Healing Power +200. -->
@@ -9763,7 +9763,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11799" toLevel="3" name="Sustain">
+	<skill id="11799" toLevel="3" name="反射治癒">
 		<!-- For 15 sec., Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>

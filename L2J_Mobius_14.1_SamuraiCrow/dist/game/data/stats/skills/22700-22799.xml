@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22700" toLevel="1" name="Dr. Destroy's Sealed Rune of Wisdom">
+	<skill id="22700" toLevel="1" name="封印著毀滅博士智慧古文">
 		<!-- INT +7 permanently, and has a 10% chance of not consuming MP for healing skills. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -26,7 +26,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22701" toLevel="1" name="Harp's Sealed Rune of Power_Trigger">
+	<skill id="22701" toLevel="1" name="封印著哈普力量古文_觸發">
 		<!-- With a 5% chance, stuns all enemies within 400 m for 3 sec. -->
 		<icon>icon.skill1551</icon>
 		<operateType>A2</operateType>
@@ -52,7 +52,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="22702" toLevel="1" name="Harp's Sealed Rune of Magic_Trigger_Decrease Defense">
+	<skill id="22702" toLevel="1" name="封印著哈普魔法古文_觸發_抵抗下降">
 		<!-- With a 10% chance, M. Def. -20% for all enemies within the range of 400. Duration: 10 sec. -->
 		<icon>icon.skill1263</icon>
 		<operateType>A2</operateType>
@@ -82,7 +82,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22703" toLevel="1" name="Flynt's Sealed Rune of Will_Trigger">
+	<skill id="22703" toLevel="1" name="封印著弗林特意志古文_觸發">
 		<!-- Makes you invincible for 5 sec. -->
 		<icon>icon.skill1551</icon>
 		<operateType>A2</operateType>
@@ -118,7 +118,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22704" toLevel="1" name="Flynt's Sealed Rune of Destruction_Trigger">
+	<skill id="22704" toLevel="1" name="封印著弗林特破壞古文_觸發">
 		<!-- Rune is activated, inflicting a brand and additional damage. -->
 		<icon>icon.skill11511</icon>
 		<operateType>A2</operateType>
@@ -144,7 +144,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22705" toLevel="1" name="Dr. Destroy's Sealed Rune of Skill">
+	<skill id="22705" toLevel="1" name="封印著毀滅博士技巧古文">
 		<!-- For 10 sec., Critical Damage and Critical Rage are increased. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A2</operateType>
@@ -168,7 +168,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22706" toLevel="1" name="Dr. Destroy's Sealed Rune of Wisdom_Trigger">
+	<skill id="22706" toLevel="1" name="封印著毀滅博士智慧古文_觸發">
 		<!-- For 10 sec., skills do not consume MP. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<operateType>A2</operateType>
@@ -190,7 +190,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22707" toLevel="2" name="Vitality Sustaining Potion">
+	<skill id="22707" toLevel="2" name="活力維持藥水">
 		<!-- Sustains Vitality for 30 min. -->
 		<icon>icon.etc_lesser_potion_scarlet_i00</icon>
 		<operateType>A2</operateType>
@@ -218,7 +218,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22708" toLevel="1" name="Nevit's Hourglass (1-hour)">
+	<skill id="22708" toLevel="1" name="奈比特沙漏-1小時">
 		<!-- Obtained XP +50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -247,7 +247,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22709" toLevel="1" name="Nevit's Hourglass (2-hour)">
+	<skill id="22709" toLevel="1" name="奈比特沙漏-2小時">
 		<!-- Obtained XP +50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -276,7 +276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22710" toLevel="3" name="Scroll: Increase Vitality">
+	<skill id="22710" toLevel="3" name="活力提升卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -291,7 +291,7 @@
 			<condition name="CanChangeVitalItemCount" />
 		</conditions>
 	</skill>
-	<skill id="22711" toLevel="3" name="Scroll: Replenish Vitality">
+	<skill id="22711" toLevel="3" name="活力充能卷軸">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -326,7 +326,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22712" toLevel="1" name="Vitality Replenishing Herb Drink">
+	<skill id="22712" toLevel="1" name="活力充能藥草茶">
 		<!-- For 30 min., Vitality is replenished with XP gain through hunting. Effect remains even after death. -->
 		<icon>icon.etc_hot_spring_mineral_i00</icon>
 		<operateType>A2</operateType>
@@ -349,7 +349,7 @@
 			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
-	<skill id="22713" toLevel="1" name="Letter Collector's Gift">
+	<skill id="22713" toLevel="1" name="文字收藏家的禮物">
 		<!-- For 2 h., Atk. Spd. +15%, Casting Spd. +15%, Speed +20. -->
 		<icon>icon.shield_bread_i01</icon>
 		<operateType>A2</operateType>
@@ -369,7 +369,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22714" toLevel="1" name="Transformation Scroll Pack">
+	<skill id="22714" toLevel="1" name="變身卷軸箱子">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -417,7 +417,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22715" toLevel="1" name="Heavenly Treasure Chest">
+	<skill id="22715" toLevel="1" name="天堂寶箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -501,7 +501,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22716" toLevel="1" name="Fantasy Treasure Chest">
+	<skill id="22716" toLevel="1" name="夢幻寶箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -567,7 +567,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22717" toLevel="1" name="Treasure Chest of Glory">
+	<skill id="22717" toLevel="1" name="榮譽寶箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -630,7 +630,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22718" toLevel="1" name="Blessed Griffin Egg">
+	<skill id="22718" toLevel="1" name="祝福的獅鷲蛋">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -759,7 +759,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22719" toLevel="1" name="Transformation Scroll Pack">
+	<skill id="22719" toLevel="1" name="變身卷軸箱子">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -807,7 +807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22720" toLevel="1" name="Brilliant Talisman Pack">
+	<skill id="22720" toLevel="1" name="華麗護身符禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -875,7 +875,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22721" toLevel="1" name="Scroll: Seal Weapon Pack">
+	<skill id="22721" toLevel="1" name="武器封印卷軸禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -922,7 +922,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22722" toLevel="1" name="Scroll: Seal Armor Pack">
+	<skill id="22722" toLevel="1" name="防具封印卷軸禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -969,7 +969,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22723" toLevel="1" name="Weapon Enchant Scroll Pack">
+	<skill id="22723" toLevel="1" name="武器強化卷軸禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1007,7 +1007,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22724" toLevel="1" name="Scroll: Enchant Armor Pack">
+	<skill id="22724" toLevel="1" name="防具強化卷軸禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1045,7 +1045,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22725" toLevel="1" name="Blessed Scroll: Enchant Weapon Pack">
+	<skill id="22725" toLevel="1" name="祝福的武器強化卷軸禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1083,7 +1083,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22726" toLevel="1" name="Blessed Scroll: Enchant Armor Pack">
+	<skill id="22726" toLevel="1" name="祝福的防具強化卷軸禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1121,7 +1121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22727" toLevel="1" name="Transformation Scroll: Saber-toothed Tiger">
+	<skill id="22727" toLevel="1" name="變身卷軸-劍齒虎">
 		<!-- Transforms into Saber-toothed Tiger. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1148,7 +1148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22728" toLevel="1" name="Transformation Scroll: Oel Mahum">
+	<skill id="22728" toLevel="1" name="變身卷軸-奧耶豺狼">
 		<!-- Transforms into Oel Mahum. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1175,7 +1175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22729" toLevel="1" name="Transformation Scroll: Doll Blader">
+	<skill id="22729" toLevel="1" name="變身卷軸-人偶刀手">
 		<!-- Transforms into Doll Blader. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1202,7 +1202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22730" toLevel="1" name="Transformation Scroll: Zaken">
+	<skill id="22730" toLevel="1" name="變身卷軸-札肯">
 		<!-- Transforms into Zaken. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1229,7 +1229,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22731" toLevel="1" name="Transformation Scroll: Anakim">
+	<skill id="22731" toLevel="1" name="變身卷軸-亞納">
 		<!-- Transforms into Anakim. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1260,7 +1260,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22732" toLevel="1" name="Transformation Scroll: Venom">
+	<skill id="22732" toLevel="1" name="變身卷軸-貝諾姆">
 		<!-- Transforms into Venom. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1287,7 +1287,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22733" toLevel="1" name="Transformation Scroll: Gordon">
+	<skill id="22733" toLevel="1" name="變身卷軸-高登">
 		<!-- Transforms into Gordon. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1314,7 +1314,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22734" toLevel="1" name="Transformation Scroll: Ranku">
+	<skill id="22734" toLevel="1" name="變身卷軸-勞庫">
 		<!-- Transforms into Ranku. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1341,7 +1341,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22735" toLevel="1" name="Transformation Scroll: Kechi">
+	<skill id="22735" toLevel="1" name="變身卷軸-基亞齊">
 		<!-- Transforms into Kechi. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1368,7 +1368,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22736" toLevel="1" name="Transformation Scroll: Demon Prince">
+	<skill id="22736" toLevel="1" name="變身卷軸-惡魔公爵">
 		<!-- Transforms into Demon Prince. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1395,7 +1395,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22737" toLevel="1" name="Ink Herb">
+	<skill id="22737" toLevel="1" name="墨水藥草">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1408,7 +1408,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22738" toLevel="1" name="Ink Gauge Reduced">
+	<skill id="22738" toLevel="1" name="墨水量扣除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -1420,7 +1420,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 	</skill>
-	<skill id="22739" toLevel="2" name="Greater Ink Herb">
+	<skill id="22739" toLevel="2" name="大容量墨水藥草">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1434,7 +1434,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22740" toLevel="1" name="Greater Ink Gauge Reduced">
+	<skill id="22740" toLevel="1" name="大容量墨水量扣除">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -1446,7 +1446,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 	</skill>
-	<skill id="22741" toLevel="1" name="Fantasy Gift Box">
+	<skill id="22741" toLevel="1" name="夢幻禮盒">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1542,7 +1542,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22742" toLevel="1" name="Fantasy Health Potion">
+	<skill id="22742" toLevel="1" name="夢幻的紅色藥瓶">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1553,7 +1553,7 @@
 		<magicLevel>1</magicLevel>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="22743" toLevel="1" name="Fantasy Mana Potion">
+	<skill id="22743" toLevel="1" name="夢幻的藍色藥瓶">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1569,7 +1569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22744" toLevel="1" name="Fantasy Cookie">
+	<skill id="22744" toLevel="1" name="夢幻餅乾">
 		<!-- For 60 min., Speed +33. -->
 		<icon>BranchSys3.Icon.ev_halloween_cookie</icon>
 		<operateType>A2</operateType>
@@ -1594,7 +1594,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22745" toLevel="1" name="Fantasy Homemade Cookie">
+	<skill id="22745" toLevel="1" name="夢幻精緻餅乾">
 		<!-- For 60 min., Max MP +20%, HP Recovery Rate +20%, M. Critical Rate +2%, Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Increases P. Def. when hit by a critical attack. Speed -15%. Additionally increases Critical Damage for party members equipped with a bow, a crossbow or a melee weapon when they receive a certain amount of damage. -->
 		<icon>BranchSys3.Icon.ev_halloween_cookie</icon>
 		<operateType>A2</operateType>
@@ -1613,7 +1613,7 @@
 		<specialLevel>-1</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22746" toLevel="1" name="Fantasy Special Cookie">
+	<skill id="22746" toLevel="1" name="夢幻特製餅乾">
 		<!-- For 1 h., acquired XP/ SP while hunting +100% (for characters of Lv. 95 and lower). -->
 		<icon>BranchSys3.Icon.ev_halloween_cookie</icon>
 		<operateType>A2</operateType>
@@ -1652,7 +1652,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22747" toLevel="1" name="Fantasy Isle Medal of Honor">
+	<skill id="22747" toLevel="1" name="夢幻島名譽勳章">
 		<!-- Individual Fame +200. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1665,7 +1665,7 @@
 		<magicLevel>1</magicLevel>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="22748" toLevel="1" name="Scroll: PK (Low-grade)">
+	<skill id="22748" toLevel="1" name="重啟卷軸(下級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1690,7 +1690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22749" toLevel="1" name="Scroll: PK (Mid-grade)">
+	<skill id="22749" toLevel="1" name="重啟卷軸(中級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1715,7 +1715,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22750" toLevel="1" name="Scroll: PK (High-grade)">
+	<skill id="22750" toLevel="1" name="重啟卷軸(上級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1740,7 +1740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22751" toLevel="1" name="Scroll: PK (Top-grade)">
+	<skill id="22751" toLevel="1" name="重啟卷軸(特級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1765,7 +1765,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22752" toLevel="1" name="Scroll: Reputation (Low-grade)">
+	<skill id="22752" toLevel="1" name="淨化卷軸(下級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1792,7 +1792,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22753" toLevel="1" name="Scroll: Reputation (Mid-grade)">
+	<skill id="22753" toLevel="1" name="淨化卷軸(中級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1819,7 +1819,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22754" toLevel="1" name="High-grade Scroll: Reputation">
+	<skill id="22754" toLevel="1" name="淨化卷軸(上級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1846,7 +1846,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22755" toLevel="1" name="Scroll: Reputation (Top-grade)">
+	<skill id="22755" toLevel="1" name="淨化卷軸(特級)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1872,7 +1872,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22756" toLevel="1" name="Transform: Ninja Outfit">
+	<skill id="22756" toLevel="1" name="忍者服飾變身">
 		<!-- CON +1, MEN +1, WIT +1. -->
 		<icon>BranchSys3.icon1.g_co_ninja_u</icon>
 		<operateType>A2</operateType>
@@ -1896,7 +1896,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22757" toLevel="1" name="Transform: Tribal Warrior Costume">
+	<skill id="22757" toLevel="1" name="台灣傳統服飾變身">
 		<!-- CON +1, MEN +1, WIT +1. -->
 		<icon>BranchSys3.icon1.g_co_paiwan_u</icon>
 		<operateType>A2</operateType>
@@ -1920,7 +1920,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22758" toLevel="1" name="Transform: Military Outfit">
+	<skill id="22758" toLevel="1" name="軍用服飾變身">
 		<!-- CON +1, MEN +1, WIT +1. -->
 		<icon>BranchSys3.icon1.g_co_military_u</icon>
 		<operateType>A2</operateType>
@@ -1944,7 +1944,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22759" toLevel="1" name="Metal Suit Transformation">
+	<skill id="22759" toLevel="1" name="金屬套裝服飾變身">
 		<!-- CON +1, MEN +1, WIT +1. -->
 		<icon>BranchSys3.icon1.g_co_sf_u</icon>
 		<operateType>A2</operateType>
@@ -1968,7 +1968,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22760" toLevel="1" name="Transform: Maid Costume">
+	<skill id="22760" toLevel="1" name="可愛女僕服飾變身">
 		<!-- CON +1, MEN +1, WIT +1. -->
 		<icon>BranchSys3.icon1.g_co_cutie_maid</icon>
 		<operateType>A2</operateType>
@@ -1992,7 +1992,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22761" toLevel="1" name="Transform: Emerald Weapon">
+	<skill id="22761" toLevel="1" name="光束武器轉換">
 		<!-- STR +1, DEX +1, INT +1. -->
 		<icon>BranchSys3.Icon.g_beam_sword</icon>
 		<operateType>A2</operateType>
@@ -2016,7 +2016,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22762" toLevel="1" name="Transform: Japanese Weapon">
+	<skill id="22762" toLevel="1" name="和風武器轉換">
 		<!-- STR +1, DEX +1, INT +1. -->
 		<icon>BranchSys3.Icon.g_japan_sword</icon>
 		<operateType>A2</operateType>
@@ -2040,7 +2040,7 @@
 		<specialLevel>-3</specialLevel>
 		<staticReuse>true</staticReuse>
 	</skill>
-	<skill id="22763" toLevel="1" name="Appearance Stone: Santa Outfit (14-day)">
+	<skill id="22763" toLevel="1" name="聖誕服加工石-14日">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2050,7 +2050,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22764" toLevel="1" name="Appearance Stone: Santa Outfit">
+	<skill id="22764" toLevel="1" name="聖誕服加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2060,7 +2060,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22765" toLevel="1" name="PA Vitality">
+	<skill id="22765" toLevel="1" name="活動之力">
 		<!-- For 60 min., recovers Vitality when acquiring XP while hunting. -->
 		<icon>icon.etc_pccafe_point_i00</icon>
 		<operateType>A2</operateType>
@@ -2084,7 +2084,7 @@
 			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
-	<skill id="22766" toLevel="1" name="Vitality Sustaining Potion">
+	<skill id="22766" toLevel="1" name="活力維持藥水">
 		<!-- Sustains Vitality for 10 min. -->
 		<icon>icon.etc_lesser_potion_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -2112,7 +2112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22767" toLevel="2" name="Vitality Sustaining Potion">
+	<skill id="22767" toLevel="2" name="活力維持藥水">
 		<!-- Sustains Vitality for 30 min. -->
 		<icon>icon.etc_lesser_potion_scarlet_i00</icon>
 		<operateType>A2</operateType>
@@ -2140,7 +2140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22768" toLevel="1" name="Appearance: Metal Suit Top">
+	<skill id="22768" toLevel="1" name="金屬套裝上衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2150,7 +2150,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22769" toLevel="1" name="Appearance: Metal Suit Pants">
+	<skill id="22769" toLevel="1" name="金屬套裝下衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2160,7 +2160,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22770" toLevel="1" name="Appearance: Metal Suit Gloves">
+	<skill id="22770" toLevel="1" name="金屬套裝手套加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2170,7 +2170,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22771" toLevel="1" name="Appearance: Metal Suit Boots">
+	<skill id="22771" toLevel="1" name="金屬套裝鞋加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2180,7 +2180,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22772" toLevel="1" name="Appearance Stone: Metal Suit Head Accessory">
+	<skill id="22772" toLevel="1" name="金屬套裝頭飾加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2190,7 +2190,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22773" toLevel="1" name="Appearance: Metal Suit Top">
+	<skill id="22773" toLevel="1" name="金屬套裝上衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2200,7 +2200,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22774" toLevel="1" name="Appearance: Metal Suit Pants">
+	<skill id="22774" toLevel="1" name="金屬套裝下衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2210,7 +2210,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22775" toLevel="1" name="Appearance: Metal Suit Gloves">
+	<skill id="22775" toLevel="1" name="金屬套裝手套加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2220,7 +2220,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22776" toLevel="1" name="Appearance: Metal Suit Boots">
+	<skill id="22776" toLevel="1" name="金屬套裝鞋加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2230,7 +2230,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22777" toLevel="1" name="Appearance Stone: Metal Suit Head Accessory">
+	<skill id="22777" toLevel="1" name="金屬套裝頭飾加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2240,7 +2240,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22778" toLevel="1" name="Military Top Appearance Stone">
+	<skill id="22778" toLevel="1" name="軍用上衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2250,7 +2250,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22779" toLevel="1" name="Military Pants Appearance Stone">
+	<skill id="22779" toLevel="1" name="軍用下衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2260,7 +2260,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22780" toLevel="1" name="Military Gloves Appearance Stone">
+	<skill id="22780" toLevel="1" name="軍用手套加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2270,7 +2270,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22781" toLevel="1" name="Military Shoes Appearance Stone">
+	<skill id="22781" toLevel="1" name="軍用鞋加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2280,7 +2280,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22782" toLevel="1" name="Appearance Stone: Military Head Accessory">
+	<skill id="22782" toLevel="1" name="軍用頭飾加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2290,7 +2290,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22783" toLevel="1" name="Military Top Appearance Stone">
+	<skill id="22783" toLevel="1" name="軍用上衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2300,7 +2300,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22784" toLevel="1" name="Military Pants Appearance Stone">
+	<skill id="22784" toLevel="1" name="軍用下衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2310,7 +2310,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22785" toLevel="1" name="Military Gloves Appearance Stone">
+	<skill id="22785" toLevel="1" name="軍用手套加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2320,7 +2320,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22786" toLevel="1" name="Military Shoes Appearance Stone">
+	<skill id="22786" toLevel="1" name="軍用鞋加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2330,7 +2330,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22787" toLevel="1" name="Appearance Stone: Military Head Accessory">
+	<skill id="22787" toLevel="1" name="軍用頭飾加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2340,7 +2340,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22788" toLevel="1" name="Maid Appearance Stone">
+	<skill id="22788" toLevel="1" name="可愛女僕加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2350,7 +2350,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22789" toLevel="1" name="Appearance Stone: Maid Head Accessory">
+	<skill id="22789" toLevel="1" name="可愛女僕頭飾加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2360,7 +2360,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22790" toLevel="1" name="Maid Appearance Stone">
+	<skill id="22790" toLevel="1" name="可愛女僕加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2370,7 +2370,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22791" toLevel="1" name="Appearance Stone: Maid Head Accessory">
+	<skill id="22791" toLevel="1" name="可愛女僕頭飾加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2380,7 +2380,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22792" toLevel="1" name="Automatic Appearance Stone: Emerald Weapon">
+	<skill id="22792" toLevel="1" name="光束武器自動變換加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2390,7 +2390,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22793" toLevel="1" name="Automatic Appearance Stone: Japanese Weapon">
+	<skill id="22793" toLevel="1" name="和風武器自動變換加工石">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2400,7 +2400,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22794" toLevel="1" name="Shining Accessory Box">
+	<skill id="22794" toLevel="1" name="閃耀的飾品箱">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2427,7 +2427,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22795" toLevel="1" name="Vesper Noble Top Appearance Stone">
+	<skill id="22795" toLevel="1" name="薄暮貴族上衣加工 ">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2437,7 +2437,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22796" toLevel="1" name="Vesper Noble Pants Appearance Stone">
+	<skill id="22796" toLevel="1" name="薄暮貴族下衣加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2447,7 +2447,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22797" toLevel="1" name="Vesper Noble Gloves Appearance Stone">
+	<skill id="22797" toLevel="1" name="薄暮貴族手套加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2457,7 +2457,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22798" toLevel="1" name="Vesper Noble Shoes Appearance Stone">
+	<skill id="22798" toLevel="1" name="薄暮貴族鞋加工">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>
@@ -2467,7 +2467,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="22799" toLevel="1" name="Vesper Noble Top Appearance Stone">
+	<skill id="22799" toLevel="1" name="薄暮貴族上衣加工 ">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ITEM</targetType>

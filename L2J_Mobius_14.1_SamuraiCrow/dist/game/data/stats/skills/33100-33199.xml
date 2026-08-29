@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="33100" toLevel="1" name="Golden Weakness">
+	<skill id="33100" toLevel="1" name="黃金弱化">
 		<!-- Received damage is increased because of the lackeys' failed mission. -->
 		<icon>icon.skill32047</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33101" toLevel="1" name="Mary Reed's HP Recovery">
+	<skill id="33101" toLevel="1" name="梅里里德HP恢復">
 		<!-- Recovers 30% of HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="33102" toLevel="3" name="Ability: Shield Lv. 1">
+	<skill id="33102" toLevel="3" name="能力盾-3階段">
 		<!-- Level 1: Power of Petra concentrated in the device details enhances combat abilities. A barrier having 3% of Tauti's Max HP is created. While the barrier is active, combat abilities are enhanced. -->
 		<!-- Level 2: Power of Petra concentrated in the device details enhances combat abilities. A barrier having 5% of Tauti's Max HP is created. While the barrier is active, combat abilities are enhanced, also Whirlwind and Typhoon are enhanced. -->
 		<!-- Level 3: Power of Petra concentrated in the device details enhances combat abilities. A barrier having 10% of Tauti's Max HP is created. While the barrier is active, combat abilities are significantly enhanced, also Whirlwind and Typhoon are enhanced. -->
@@ -20,13 +20,13 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="33103" toLevel="1" name="Zaken's Protection">
+	<skill id="33103" toLevel="1" name="札肯的保護">
 		<!-- Zaken's Protection grants immortality. Becomes active when Zaken's HP drops to 70% or lower. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="33104" toLevel="3" name="Party Bonus">
+	<skill id="33104" toLevel="3" name="成長隊伍特化">
 		<!-- Level 1: Acquired XP bonus while hunting in a party. All party members receive the same amount of XP with no reference to the party size. -->
 		<!-- Level 2: Acquired XP is increased for parties of 2 or 3 characters. -->
 		<!-- Level 3: Acquired XP bonus while hunting in a party. All party members receive the same amount of XP with no reference to the party size. -->
@@ -41,7 +41,7 @@
 		<affectRange>1500</affectRange>
 		<affectScope>PARTY</affectScope>
 	</skill>
-	<skill id="33105" toLevel="2" name="Tauti Push">
+	<skill id="33105" toLevel="2" name="諳練塔武提拳擊">
 		<!-- Decreases P. Def. of nearby enemies knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -87,7 +87,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33106" toLevel="2" name="Tauti's Whirlwind">
+	<skill id="33106" toLevel="2" name="諳練塔武提迴旋">
 		<!-- Throws nearby enemies in the air dealing them physical damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
@@ -117,7 +117,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33107" toLevel="2" name="Tauti's Typhoon">
+	<skill id="33107" toLevel="2" name="諳練塔武提旋風">
 		<!-- Throws distant enemies in the air dealing them physical damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -161,7 +161,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33108" toLevel="2" name="Tauti's Shock Blast">
+	<skill id="33108" toLevel="2" name="諳練塔武提衝擊波">
 		<!-- Tauti smashes an axe to inflict physical damage and stun enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -193,7 +193,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33109" toLevel="2" name="Tauti Rush">
+	<skill id="33109" toLevel="2" name="諳練塔武提烈波">
 		<!-- Charges into the enemy, deals physical damage and knocks him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>DA2</operateType>
@@ -235,7 +235,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33110" toLevel="2" name="Tauti's Ultra Whirlwind">
+	<skill id="33110" toLevel="2" name="諳練塔武提極大迴旋">
 		<!-- Tauti throws nearby enemies up and deals them fixed damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -265,7 +265,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33111" toLevel="2" name="Tauti's Ultra Typhoon">
+	<skill id="33111" toLevel="2" name="諳練塔武提極大旋風">
 		<!-- Tauti throws distant enemies up and deals them fixed damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -309,7 +309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33112" toLevel="1" name="Dark Energy">
+	<skill id="33112" toLevel="1" name="黑暗氣息">
 		<!-- Increases P. Atk./ M. Atk./ P. Def./ M. Def. at night. -->
 		<icon>icon.skill0523</icon>
 		<operateType>P</operateType>
@@ -324,67 +324,67 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33113" toLevel="1" name="Gas of Respect">
+	<skill id="33113" toLevel="1" name="嚴謹瓦斯">
 		<!-- You offer greetings to Orc Mutant. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33114" toLevel="1" name="Gas of Respect">
+	<skill id="33114" toLevel="1" name="嚴謹瓦斯">
 		<!-- You offer greetings to Orc Mutant. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33115" toLevel="1" name="Concentrated Gas">
+	<skill id="33115" toLevel="1" name="凝聚瓦斯">
 		<!-- Makes you unable to move. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33116" toLevel="1" name="Concentrated Gas">
+	<skill id="33116" toLevel="1" name="凝聚瓦斯">
 		<!-- Makes you unable to move. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33117" toLevel="1" name="Unstable Gas">
+	<skill id="33117" toLevel="1" name="蔓延瓦斯">
 		<!-- Makes you unable to move. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33118" toLevel="1" name="Unstable Gas">
+	<skill id="33118" toLevel="1" name="蔓延瓦斯">
 		<!-- Makes you unable to move. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33119" toLevel="1" name="Laughing Gas">
+	<skill id="33119" toLevel="1" name="笑容瓦斯">
 		<!-- Makes you laugh. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33120" toLevel="1" name="Laughing Gas">
+	<skill id="33120" toLevel="1" name="笑容瓦斯">
 		<!-- Makes you laugh. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33121" toLevel="1" name="Never Look Back">
+	<skill id="33121" toLevel="1" name="要走時即時走">
 		<!-- Dance. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33122" toLevel="1" name="Extremely Explosive Gas">
+	<skill id="33122" toLevel="1" name="急速爆發瓦斯">
 		<!-- Knocks back and stuns the target. -->
 		<icon>icon.ev_greeting1</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33123" toLevel="3" name="Dark Energy">
+	<skill id="33123" toLevel="3" name="黑暗氣息">
 		<!-- Increases P. Atk./ M. Atk./ P. Def./ M. Def. at night. -->
 		<icon>icon.skill0523</icon>
 		<operateType>P</operateType>
@@ -400,7 +400,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33124" toLevel="1" name="Aqua Splash">
+	<skill id="33124" toLevel="1" name="水旋風">
 		<!-- Melee Warrior-type Monsters' Physical AoE Skill (point_blank) -->
 		<icon>icon.skill16204</icon>
 		<operateType>A2</operateType>
@@ -439,7 +439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33125" toLevel="1" name="Water Magic Bomb">
+	<skill id="33125" toLevel="1" name="水魔彈">
 		<!-- Creates a wave around you to inflict damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -461,7 +461,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33126" toLevel="1" name="Knight Level Ranking - 1st Place">
+	<skill id="33126" toLevel="1" name="騎士排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Knights. Speed +3, Attribute Attack +30, Attribute Resistance +30. When the Nine Aegis/ Mocking Resilience skill is used, damage +3% for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -499,7 +499,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33127" toLevel="1" name="Warrior Level Ranking - 1st Place">
+	<skill id="33127" toLevel="1" name="鬥士排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Warriors. Speed +3, Attribute Attack +30, Attribute Resistance +30. When the Berserker/ Steel Mind/ Enormous Wolf/ Advent skill is used, damage +1% for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -543,7 +543,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33128" toLevel="1" name="Rogue Level Ranking - 1st Place">
+	<skill id="33128" toLevel="1" name="遊俠排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Rouges. Speed +3, Attribute Attack +30, Attribute Resistance +30. When the Angel of Death/ Amazing Angel of Death skill is used, damage +1% for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33129" toLevel="1" name="Archer Level Ranking - 1st Place">
+	<skill id="33129" toLevel="1" name="弓手排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Archers. Speed +3, Attribute Attack +30, Attribute Resistance +30. When the Mind's Eye skill is used, damage +1% for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -595,7 +595,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33130" toLevel="1" name="Enchanter Level Ranking - 1st Place">
+	<skill id="33130" toLevel="1" name="法師排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Enchanters. Speed +3, Attribute Attack +30, Attribute Resistance +30. When the Prelude skill is used, damage +3% for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -621,7 +621,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33131" toLevel="1" name="Mage Level Ranking - 1st Place">
+	<skill id="33131" toLevel="1" name="巫師排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Mages. Speed +3, Attribute Attack +30, Attribute Resistance +30. When the Burst Casting/ Superior Burst Casting/ Eye of the Storm/ Eye of the Windstorm/ Fantasia Time skill is used, damage +1% for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -665,7 +665,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33132" toLevel="1" name="Summoner Level Ranking - 1st Place">
+	<skill id="33132" toLevel="1" name="召喚士排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Summoners. Speed +3, Attribute Attack +30, Attribute Resistance +30. When using Naviarope's Spirit, damage +1% for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -691,7 +691,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33133" toLevel="1" name="Healer Level Ranking - 1st Place">
+	<skill id="33133" toLevel="1" name="牧師排名1級">
 		<!-- Bonus for the 1st-10th place in the server level rankings among Healers. Speed +3, Attribute Attack +30, Attribute Resistance +30. When using Fairy of Life, damage +3% for you and your party members for 5 min. -->
 		<icon>icon.s_system_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -716,7 +716,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33134" toLevel="1" name="Class Ranking Effect">
+	<skill id="33134" toLevel="1" name="職業排名優惠">
 		<!-- <Basic effect>. Speed +3, Attribute Attack +30, Attribute Resistance +30. <Class effect>. Knights: When using Nine Aegis/ Mocking Resilience, damage +3% for you and your party members for 5 min. Warriors: When using Berserker/ Steel Mind/ Enormous Wolf/ Advent, damage +1% for 5 min. Rogues: When using Angel of Death/ Amazing Angel of Death, damage +1% for 5 min. Archers: When using Mind's Eye, damage +1% for 5 min. Enchanters: When using Prelude, damage +3% for you and your party members for 5 min. Mages: When using Burst Casting/ Superior Burst Casting/ Eye of the Storm/ Eye of the Windstorm/ Fantasia Time, damage +1% for 5 min. Summoners: When using Naviarope's Spirit, damage +1% for 5 min. Healers: When using Fairy of Life, damage +3% for you and your party members for 5 min. -->
 		<icon>icon.s_system_UI_class_ranking_1</icon>
 		<operateType>P</operateType>
@@ -754,12 +754,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33135" toLevel="1" name="I'm so mad!">
+	<skill id="33135" toLevel="1" name="我生氣啦!!">
 		<icon>icon.skill0325</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-300</effectPoint>
 	</skill>
-	<skill id="33136" toLevel="1" name="Prepare yourself!">
+	<skill id="33136" toLevel="1" name="你們覺悟吧!!">
 		<!-- Melee Warrior-type Monsters' Physical AoE Skill (point_blank) -->
 		<icon>icon.skill16204</icon>
 		<operateType>A2</operateType>
@@ -799,7 +799,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33137" toLevel="1" name="Protection of 1st Place in the List of Ranks for Level - Warrior">
+	<skill id="33137" toLevel="1" name="排名1級的加護-鬥士">
 		<!-- For 5 min., damage +1%. -->
 		<icon>icon.s_system_UI_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -837,7 +837,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33138" toLevel="1" name="Protection of 1st Place in the List of Ranks for Level - Rogue">
+	<skill id="33138" toLevel="1" name="排名1級的加護-遊俠">
 		<!-- For 5 min., damage +1%. -->
 		<icon>icon.s_system_UI_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -853,7 +853,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33139" toLevel="1" name="Protection of 1st Place in the List of Ranks for Level - Archer">
+	<skill id="33139" toLevel="1" name="排名1級的加護-弓手">
 		<!-- For 5 min., damage +1%. -->
 		<icon>icon.s_system_UI_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -868,7 +868,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33140" toLevel="1" name="Protection of 1st Place in the List of Ranks for Level - Mage">
+	<skill id="33140" toLevel="1" name="排名1級的加護-巫師">
 		<!-- For 5 min., damage +1%. -->
 		<icon>icon.s_system_UI_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -883,7 +883,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33141" toLevel="1" name="Protection of 1st Place in the List of Ranks for Level - Summoner">
+	<skill id="33141" toLevel="1" name="排名1級的加護-召喚士">
 		<!-- For 5 min., damage +1%. -->
 		<icon>icon.s_system_UI_class_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -902,7 +902,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33142" toLevel="3" name="Blessing of 1st Place in the List of Ranks for Level: Stage 1 - Knight">
+	<skill id="33142" toLevel="3" name="排名1級的祝福3階段-騎士">
 		<!-- Level 1: For 5 min., damage +3%. -->
 		<!-- Level 2: Not used. -->
 		<!-- Level 3: Not used. -->
@@ -976,7 +976,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33143" toLevel="3" name="Blessing of 1st Place in the List of Ranks for Level: Stage 1 - Enchanter">
+	<skill id="33143" toLevel="3" name="排名1級的祝福3階段-法師">
 		<!-- Level 1: For 5 min., damage +3%. -->
 		<!-- Level 2: Not used. -->
 		<!-- Level 3: Not used. -->
@@ -1050,7 +1050,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33144" toLevel="3" name="Blessing of 1st Place in the List of Ranks for Level: Stage 1 - Healer">
+	<skill id="33144" toLevel="3" name="排名1級的祝福3階段-牧師">
 		<!-- Level 1: For 5 min., damage +3%. -->
 		<!-- Level 2: Not used. -->
 		<!-- Level 3: Not used. -->
@@ -1124,7 +1124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33145" toLevel="1" name="Energy Breath">
+	<skill id="33145" toLevel="1" name="能量氣息">
 		<!-- A basic attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -1145,7 +1145,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33146" toLevel="6" name="Superior Aggression Aura">
+	<skill id="33146" toLevel="6" name="完美極致挑撥靈氣">
 		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
@@ -1168,7 +1168,7 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="33147" toLevel="6" name="Chain Galaxy">
+	<skill id="33147" toLevel="6" name="完美星河鎖鍊">
 		<!-- Level 1: Attacks nearby targets. Healing Power received -90%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Attacks nearby targets. Healing Power received -90%. -->
 		<!-- Level 3: Attacks nearby targets. Healing Power received -90%. Inflicted status: Debilitation. -->
@@ -1179,19 +1179,19 @@
 		<operateType>A1</operateType>
 		<effectPoint>-1378</effectPoint>
 	</skill>
-	<skill id="33148" toLevel="6" name="Chain Hydra">
+	<skill id="33148" toLevel="6" name="完美灼蛇鎖鍊">
 		<!-- Pulls the target to you and provokes nearby enemies into attacking you. Inflicted status: Pull. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-2093</effectPoint>
 	</skill>
-	<skill id="33149" toLevel="6" name="Shield Wave">
+	<skill id="33149" toLevel="6" name="完美盾牌震波">
 		<!-- Attacks nearby enemies stunning them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1378</effectPoint>
 	</skill>
-	<skill id="33150" toLevel="6" name="Armor Destruction">
+	<skill id="33150" toLevel="6" name="完美戰甲壞滅">
 		<!-- Level 1: Attacks the target weakening its defense. Over-hit. Critical. Inflicted status: Debilitation. -->
 		<!-- Level 2: Attacks the target weakening its defense. Over-hit. Critical. -->
 		<!-- Level 3: Attacks the target weakening its defense. Over-hit. Critical. Inflicted status: Debilitation. -->
@@ -1202,13 +1202,13 @@
 		<operateType>A1</operateType>
 		<effectPoint>-687</effectPoint>
 	</skill>
-	<skill id="33151" toLevel="6" name="Sonic Star">
+	<skill id="33151" toLevel="6" name="完美五芒星耀">
 		<!-- Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 	</skill>
-	<skill id="33152" toLevel="6" name="Jump Attack">
+	<skill id="33152" toLevel="6" name="完美跳躍攻擊">
 		<!-- Level 1: Jumps to attack frontal enemies and decreases their Speed by 180 for 5 sec. Over-hit. Critical. Inflicted status: Debilitation. -->
 		<!-- Level 2: Jumps to attack frontal enemies and decreases their Speed by 180 for 5 sec. Over-hit. Critical. -->
 		<!-- Level 3: Jumps to attack frontal enemies and decreases their Speed by 180 for 5 sec. Over-hit. Critical. Inflicted status: Debilitation. -->
@@ -1219,7 +1219,7 @@
 		<operateType>A1</operateType>
 		<effectPoint>-711</effectPoint>
 	</skill>
-	<skill id="33153" toLevel="6" name="Eruption">
+	<skill id="33153" toLevel="6" name="完美鬥力放射">
 		<!-- Level 1: Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks enemies knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1237,13 +1237,13 @@
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 	</skill>
-	<skill id="33154" toLevel="6" name="Shadow Chase">
+	<skill id="33154" toLevel="6" name="完美闇影奇襲">
 		<!-- Moves behind the enemy canceling their target and stunning them for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10516</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-687</effectPoint>
 	</skill>
-	<skill id="33155" toLevel="6" name="Mass Bullseye">
+	<skill id="33155" toLevel="6" name="完美多重鎖定">
 		<!-- Level 1: Decreases target's and nearby enemies' Bow/ Crossbow Resistance by 60% and M. Def. by 25%. Inflicted status: Debilitation. -->
 		<!-- Level 2: Decreases target's and nearby enemies' Bow/ Crossbow Resistance by 60% and M. Def. by 25%. -->
 		<!-- Level 3: Decreases target's and nearby enemies' Bow/ Crossbow Resistance by 60% and M. Def. by 25%. Inflicted status: Debilitation. -->
@@ -1254,25 +1254,25 @@
 		<operateType>A1</operateType>
 		<effectPoint>-714</effectPoint>
 	</skill>
-	<skill id="33156" toLevel="6" name="Impact Shot">
+	<skill id="33156" toLevel="6" name="完美衝擊射擊">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10769</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="33157" toLevel="6" name="Mass Hell Binding">
+	<skill id="33157" toLevel="6" name="完美廣域地獄束縛">
 		<!-- Lifts the target and nearby enemies in the air immobilizing them for 9 sec. Also deals 100 damage per sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-707</effectPoint>
 	</skill>
-	<skill id="33158" toLevel="6" name="Mass Death Fear">
+	<skill id="33158" toLevel="6" name="完美廣域死之恐懼">
 		<!-- Inflicts Fear on the target and nearby enemies for 10 sec. Speed -55%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-705</effectPoint>
 	</skill>
-	<skill id="33159" toLevel="6" name="Mass Ruin">
+	<skill id="33159" toLevel="6" name="完美廣域崩毀">
 		<!-- Level 1: For 20 sec., P./ M. Skill Power -15%, P./ M. Def. -30%, Speed -20%. Inflicted status: Debilitation. -->
 		<!-- Level 2: For 20 sec., P./ M. Skill Power -15%, P./ M. Def. -30%, Speed -20%. -->
 		<!-- Level 3: For 20 sec., P./ M. Skill Power -15%, P./ M. Def. -30%, Speed -20%. Inflicted status: Debilitation. -->
@@ -1283,7 +1283,7 @@
 		<operateType>A1</operateType>
 		<effectPoint>-687</effectPoint>
 	</skill>
-	<skill id="33160" toLevel="6" name="Magical Evasion">
+	<skill id="33160" toLevel="6" name="完美極限閃逝">
 		<!-- Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>
 			<value level="1">icon.skill10281</value>
@@ -1296,7 +1296,7 @@
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 	</skill>
-	<skill id="33161" toLevel="6" name="Dash Assault">
+	<skill id="33161" toLevel="6" name="完美突襲衝擊">
 		<!-- Rushes to the enemy stunning him for 1 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
@@ -1322,7 +1322,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33162" toLevel="6" name="Chaos Symphony">
+	<skill id="33162" toLevel="6" name="完美誘惑交響曲">
 		<!-- Level 1: Strikes the target and nearby enemies. For 20 sec., P. Atk./ M. Atk./ P. Def./ M. Def. -40%, Critical Rate for basic attacks and P./ M. skills -50%. Requires a sword, a blunt weapon, dual swords or dual blunt weapons. Critical. Over-hit. Inflicted status: Debilitation. -->
 		<!-- Level 2: Strikes the target and nearby enemies. For 20 sec., P. Atk./ M. Atk./ P. Def./ M. Def. -40%, Critical Rate for basic attacks and P./ M. skills -50%. Requires a sword, a blunt weapon, dual swords or dual blunt weapons. Critical. Over-hit. -->
 		<!-- Level 3: Strikes the target and nearby enemies. For 20 sec., P. Atk./ M. Atk./ P. Def./ M. Def. -40%, Critical Rate for basic attacks and P./ M. skills -50%. Requires a sword, a blunt weapon, dual swords or dual blunt weapons. Critical. Over-hit. Inflicted status: Debilitation. -->
@@ -1333,7 +1333,7 @@
 		<operateType>A1</operateType>
 		<effectPoint>-707</effectPoint>
 	</skill>
-	<skill id="33163" toLevel="6" name="Summon Demonic Crucifix">
+	<skill id="33163" toLevel="6" name="完美召喚幻影十字">
 		<!-- Level 1: Attacks the target and enemies around them. Casting Spd./ Atk. Spd. -30%, Speed -180. Inflicted status: Debilitation. -->
 		<!-- Level 2: Attacks the target and enemies around them. Casting Spd./ Atk. Spd. -30%, Speed -180. -->
 		<!-- Level 3: Attacks the target and enemies around them. Casting Spd./ Atk. Spd. -30%, Speed -180. Inflicted status: Debilitation. -->
@@ -1344,7 +1344,7 @@
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 	</skill>
-	<skill id="33164" toLevel="6" name="Mass Exile">
+	<skill id="33164" toLevel="6" name="完美廣域次元放逐">
 		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -282 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
@@ -1383,7 +1383,7 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="33165" toLevel="6" name="Mark of Lumi">
+	<skill id="33165" toLevel="6" name="完美光精烙印">
 		<!-- Level 1: For 1 min., the target's P./ M. Def. -10%. Also, applies a mark that consumes 113 HP per sec. Inflicted status: Debilitation. -->
 		<!-- Level 2: For 1 min., the target's P./ M. Def. -10%. Also, applies a mark that consumes 113 HP per sec. -->
 		<!-- Level 3: For 1 min., the target's P./ M. Def. -10%. Also, applies a mark that consumes 113 HP per sec. Inflicted status: Debilitation. -->
@@ -1394,19 +1394,19 @@
 		<operateType>A1</operateType>
 		<effectPoint>-867</effectPoint>
 	</skill>
-	<skill id="33166" toLevel="3" name="Nine Aegis">
+	<skill id="33166" toLevel="3" name="九盾之護">
 		<!-- Creates the protection barrier for 15 sec. with 9 shields. For all party members in the area of effect: P./ M. Def. and Bow/ Crossbow Resistance +50%, M. Damage Reflection +25%. Grants immunity to Confusion and Danger Zone. -->
 		<icon>icon.skill10024</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 	</skill>
-	<skill id="33167" toLevel="2" name="Nine Aegis">
+	<skill id="33167" toLevel="2" name="九盾之護">
 		<!-- Creates the protection barrier. P./ M. Def. and Bow/ Crossbow Resistance +50%, M. Damage Reflection +25%. Grants immunity to Confusion and Danger Zone. -->
 		<icon>icon.skill10107</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 	</skill>
-	<skill id="33168" toLevel="3" name="Eruption">
+	<skill id="33168" toLevel="3" name="鬥力放射">
 		<!-- Level 1: Attacks nearby enemies, stunning them and canceling their targets for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks nearby enemies, stuns them for 2 sec. and cancels their targets. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks nearby enemies, stuns them for 2 sec. and cancels their targets. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1415,14 +1415,14 @@
 		<effectPoint>-687</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="33169" toLevel="3" name="Shadow Chase">
+	<skill id="33169" toLevel="3" name="闇影奇襲">
 		<!-- Moves behind the enemy canceling their target and stunning them for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10516</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="33170" toLevel="3" name="Angel of Death">
+	<skill id="33170" toLevel="3" name="死亡之神">
 		<!-- For 30 sec., Vital Point Attack Rate +45%, P. Skill Power +15%, P. Accuracy +8, P. Evasion +40. Protects from debuffs (up to 7). Requires a dagger or dual daggers. -->
 		<icon>icon.skill10531</icon>
 		<operateType>A1</operateType>
@@ -1439,21 +1439,21 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="33171" toLevel="3" name="Counter Stance">
+	<skill id="33171" toLevel="3" name="反擊之勢">
 		<!-- Takes a counterattack stance for 10 sec. With an 80% chance, evades P. skills and reflects received damage back at an enemy. -->
 		<icon>icon.skill10524</icon>
 		<operateType>A1</operateType>
 		<effectPoint>707</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="33172" toLevel="1" name="Mind's Eye">
+	<skill id="33172" toLevel="1" name="心眼">
 		<!-- Increases P. Accuracy and Atk. Spd. for 1 min. Significantly increases P. Atk. -->
 		<icon>icon.skill10783</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="33173" toLevel="3" name="Mass Ruin">
+	<skill id="33173" toLevel="3" name="廣域崩毀">
 		<!-- Attacks the target and nearby enemies with magic. For 20 sec., decreases P./ M. Skill Power, P./ M. Def. and Speed. -->
 		<icon>icon.skill11048</icon>
 		<operateType>A1</operateType>
@@ -1461,7 +1461,7 @@
 		<mpConsume>286</mpConsume>
 		<mpInitialConsume>72</mpInitialConsume>
 	</skill>
-	<skill id="33174" toLevel="3" name="Blessing Barrier">
+	<skill id="33174" toLevel="3" name="祝福護盾">
 		<!-- For 10 sec., creates a barrier that absorbs received damage equal to 200% of your P. Def. -->
 		<icon>icon.skill11621</icon>
 		<operateType>A2</operateType>
@@ -1480,7 +1480,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33175" toLevel="6" name="Dark Force">
+	<skill id="33175" toLevel="6" name="完美闇之怨氣">
 		<!-- Level 1: Attacks the target with magic and knocking it back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks the target with magic and knocking it back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks the target and knocking it back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1506,36 +1506,36 @@
 			<value level="6">0</value>
 		</mpConsume>
 	</skill>
-	<skill id="33176" toLevel="2" name="Phantom Sword Attack">
+	<skill id="33176" toLevel="2" name="幻影劍擊">
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>87</mpConsume>
 	</skill>
-	<skill id="33177" toLevel="2" name="Phantom Blow">
+	<skill id="33177" toLevel="2" name="幻影爆破">
 		<icon>icon.skill10511</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>87</mpConsume>
 	</skill>
-	<skill id="33178" toLevel="2" name="Phantom Spike">
+	<skill id="33178" toLevel="2" name="幻影刺棘">
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>87</mpConsume>
 	</skill>
-	<skill id="33179" toLevel="2" name="Phantom Crash">
+	<skill id="33179" toLevel="2" name="幻影潰滅">
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>87</mpConsume>
 	</skill>
-	<skill id="33180" toLevel="1" name="Party Instance Zone Bonus">
+	<skill id="33180" toLevel="1" name="隊伍即時地區特化">
 		<!-- If an unlimited party wins a battle, is has a bonus and all members of the party get equal amount of XP. -->
 		<icon>icon.skill1255</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="33181" toLevel="1" name="Dark Thorn">
+	<skill id="33181" toLevel="1" name="黑暗鎚刺">
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1554,7 +1554,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33182" toLevel="1" name="Darkness Energy Bomb">
+	<skill id="33182" toLevel="1" name="黑暗能量炸彈">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1575,7 +1575,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33183" toLevel="1" name="Vicious Killing Strike">
+	<skill id="33183" toLevel="1" name="致命強擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1593,7 +1593,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33184" toLevel="1" name="Furious Slasher">
+	<skill id="33184" toLevel="1" name="暴怒旋風">
 		<icon>icon.skill16204</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1614,7 +1614,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33185" toLevel="1" name="Dark Energy">
+	<skill id="33185" toLevel="1" name="黑暗氣息">
 		<!-- Increases P. Atk./ M. Atk./ P. Def./ M. Def. at night. -->
 		<icon>icon.skill0523</icon>
 		<operateType>P</operateType>
@@ -1629,7 +1629,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33186" toLevel="1" name="Dark Energy">
+	<skill id="33186" toLevel="1" name="黑暗氣息">
 		<!-- Increases P. Atk./ M. Atk./ P. Def./ M. Def. at night. -->
 		<icon>icon.skill0523</icon>
 		<operateType>P</operateType>
@@ -1644,7 +1644,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33187" toLevel="1" name="Wild Break">
+	<skill id="33187" toLevel="1" name="野性碎擊">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1663,7 +1663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33188" toLevel="1" name="Earth Strike">
+	<skill id="33188" toLevel="1" name="地之衝擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1681,7 +1681,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33189" toLevel="4" name="Reinforced Shield of Infinity - Lv. 1">
+	<skill id="33189" toLevel="4" name="強化無限盾牌-階段4">
 		<!-- Level 1: P./ M. Def. +30%. -->
 		<!-- Level 2: P./ M. Def. +50%, P./ M. Atk. +15%. Additionally, increases Atk. Spd. -->
 		<!-- Level 3: P./ M. Def. +70%, P./ M. Atk. +20%. Additionally, increases Atk. Spd. -->
@@ -1691,36 +1691,36 @@
 		<effectPoint>689</effectPoint>
 		<mpConsume>10</mpConsume>
 	</skill>
-	<skill id="33190" toLevel="3" name="Perfect Hold">
+	<skill id="33190" toLevel="3" name="完美束縛">
 		<!-- Holds the enemy for 15 sec., P./ M. Skill Power -50%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Ban on Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
 	</skill>
-	<skill id="33191" toLevel="3" name="Fatal Drain Status">
+	<skill id="33191" toLevel="3" name="致命吸收狀態">
 		<!-- A lot of HP is being absorbed. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-2</effectPoint>
 	</skill>
-	<skill id="33192" toLevel="1" name="Baylor's Rage">
+	<skill id="33192" toLevel="1" name="巴爾勒的憤怒">
 		<!-- Baylor gets mad. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="33193" toLevel="1" name="Blessing of Unity (Reward)">
+	<skill id="33193" toLevel="1" name="融合的祝福獎勵">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="33194" toLevel="7" name="Blessing of Unity Lv. 1">
+	<skill id="33194" toLevel="7" name="融合的祝福-階段1">
 		<!-- For 1 h., acquired XP/ SP +20%, P./ M. Def. +5%. In 1 h., there is a certain chance to obtain Scroll: Enchant Anhel's Blessing. There are 6 levels in total. Note!. 1. The effect remains after death, but is removed after entering the Olympiad or the Ceremony of Chaos. 2. Dead characters cannot obtain neither an item nor the new effect. 3. There must be free slots in your inventory. -->
 		<icon>icon.love_potion_party</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="33195" toLevel="10" name="Direct Hit Resistance">
+	<skill id="33195" toLevel="10" name="直接打擊攻擊抗性">
 		<!-- Level 1: Slightly increases resistance to direct hits. -->
 		<!-- Level 2: Slightly increases resistance to direct hits. -->
 		<!-- Level 3: Slightly increases resistance to direct hits. -->
@@ -1734,7 +1734,7 @@
 		<icon>icon.skill0289</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="33196" toLevel="10" name="AoE Skill Resistance">
+	<skill id="33196" toLevel="10" name="範圍技能攻擊抗性">
 		<!-- Level 1: Slightly increases AoE skill resistance. -->
 		<!-- Level 2: Slightly increases AoE skill resistance. -->
 		<!-- Level 3: Slightly increases AoE skill resistance. -->

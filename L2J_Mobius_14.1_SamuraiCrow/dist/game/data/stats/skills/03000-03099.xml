@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3001" toLevel="1" name="INT _1">
+	<skill id="3001" toLevel="1" name="INT_1">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>0</magicLevel>
 	</skill>
-	<skill id="3002" toLevel="1" name="INT _2">
+	<skill id="3002" toLevel="1" name="INT_2">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>0</magicLevel>
 	</skill>
-	<skill id="3003" toLevel="1" name="STR _2">
+	<skill id="3003" toLevel="1" name="STR_2">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -24,7 +24,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>0</magicLevel>
 	</skill>
-	<skill id="3005" toLevel="1" name="Bleed">
+	<skill id="3005" toLevel="1" name="出血">
 		<!-- Makes a scar that decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
@@ -50,14 +50,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3006" toLevel="1" name="Equip Set">
+	<skill id="3006" toLevel="1" name="裝備成套防具">
 		<!-- Gives additional effects when using a full equipment set. -->
 		<icon>icon.skill0042</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>0</magicLevel>
 	</skill>
-	<skill id="3007" toLevel="6" name="Special Property: Guidance">
+	<skill id="3007" toLevel="6" name="特殊能力 導引">
 		<!-- Level 1: Increases P. Accuracy. -->
 		<!-- Level 2: P. Accuracy +6.07. -->
 		<!-- Level 3: P. Accuracy +5.72. -->
@@ -96,7 +96,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3008" toLevel="6" name="Special Property: Guidance">
+	<skill id="3008" toLevel="6" name="特殊能力 導引">
 		<!-- Level 1: P. Accuracy +5.42. -->
 		<!-- Level 2: P. Accuracy +5.12. -->
 		<!-- Level 3: P. Accuracy +4.82. -->
@@ -135,7 +135,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3009" toLevel="9" name="Special Property: Evasion">
+	<skill id="3009" toLevel="9" name="特殊能力 迴避">
 		<!-- Level 1: P. Evasion +2.95. -->
 		<!-- Level 2: P. Evasion +2.82. -->
 		<!-- Level 3: P. Evasion +2.68. -->
@@ -204,7 +204,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3010" toLevel="6" name="Special Property: Focus">
+	<skill id="3010" toLevel="6" name="特殊能力 偵測">
 		<!-- Level 1: Critical Rate for basic attacks +8.67%. -->
 		<!-- Level 2: Critical Rate for basic attacks +8.22%. -->
 		<!-- Level 3: Critical Rate for basic attacks +7.78%. -->
@@ -236,7 +236,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3011" toLevel="6" name="Special Property: Focus">
+	<skill id="3011" toLevel="6" name="特殊能力 偵測">
 		<!-- Level 1: Critical Rate for basic attacks +9.05%. -->
 		<!-- Level 2: Critical Rate for basic attacks +8.59%. -->
 		<!-- Level 3: Critical Rate for basic attacks +8.12%. -->
@@ -275,7 +275,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3012" toLevel="6" name="Special Property: Anger">
+	<skill id="3012" toLevel="6" name="特殊能力 怒擊">
 		<!-- Decreases Max HP and increases P. Atk. -->
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
@@ -306,7 +306,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3013" toLevel="5" name="Special Property: Health">
+	<skill id="3013" toLevel="5" name="特殊能力 強健">
 		<!-- Level 1: Increases Max HP by 25%. -->
 		<!-- Level 2: Increases Max HP and the number of targets hit on attack. -->
 		<!-- Level 3: Increases Max HP. PvP damage +5%. -->
@@ -378,7 +378,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3014" toLevel="3" name="Special Property: Mana Up">
+	<skill id="3014" toLevel="3" name="特殊能力 魔力上升">
 		<!-- Level 1: Increases Max MP by 30%. -->
 		<!-- Level 2: Increases Max MP and PvP damage. -->
 		<!-- Level 3: Increases Max MP and PvP damage. -->
@@ -425,7 +425,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3016" toLevel="6" name="Special Property: Critical Stun">
+	<skill id="3016" toLevel="6" name="特殊能力 Crt.衝擊">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -465,7 +465,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3018" toLevel="6" name="Special Property: Backstab">
+	<skill id="3018" toLevel="6" name="特殊能力 背擊">
 		<!-- Level 1: Critical Rate for basic attacks from behind +71%. -->
 		<!-- Level 2: Critical Rate for basic attacks from behind +67%. -->
 		<!-- Level 3: Critical Rate for basic attacks from behind +63%. -->
@@ -505,7 +505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3019" toLevel="6" name="Special Property: Backstab">
+	<skill id="3019" toLevel="6" name="特殊能力 背擊">
 		<!-- Level 1: Critical Rate for basic attacks from behind +50%. -->
 		<!-- Level 2: Critical Rate for basic attacks from behind +47%. -->
 		<!-- Level 3: Critical Rate for basic attacks from behind +45%. -->
@@ -545,7 +545,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3020" toLevel="6" name="Special Property: Critical Bleed">
+	<skill id="3020" toLevel="6" name="特殊能力 Crt.出血">
 		<!-- Level 1: Inflicts Bleed on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Bleed on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Bleed on the target and decreases HP. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -604,7 +604,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3021" toLevel="6" name="Special Property: Critical Bleed">
+	<skill id="3021" toLevel="6" name="特殊能力 Crt.出血">
 		<!-- Level 1: Inflicts Bleed on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Bleed on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Bleed on the target and decreases HP. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -656,7 +656,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3022" toLevel="6" name="Special Property: Critical HP Drain">
+	<skill id="3022" toLevel="6" name="特殊能力 Crt.吸收">
 		<icon>icon.skill0070</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -704,7 +704,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3023" toLevel="6" name="Special Property: Critical Damage">
+	<skill id="3023" toLevel="6" name="特殊能力 Crt.傷害">
 		<!-- Increases Critical Damage for basic attacks. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
@@ -731,7 +731,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3024" toLevel="6" name="Special Property: Critical Poison">
+	<skill id="3024" toLevel="6" name="特殊能力 Crt.施毒">
 		<!-- Level 1: Inflicts Poison on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Poison on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Poison on the target and decreases HP. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -802,7 +802,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3025" toLevel="6" name="Special Property: Critical Anger">
+	<skill id="3025" toLevel="6" name="特殊能力 Crt.怒擊">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>NONE</targetType>
@@ -826,7 +826,7 @@
 			<value level="6">61</value>
 		</magicLevel>
 	</skill>
-	<skill id="3026" toLevel="6" name="Special Property: Critical Anger">
+	<skill id="3026" toLevel="6" name="特殊能力 Crt.怒擊">
 		<!-- Inflicts additional damage after a physical critical attack reducing one's own HP. -->
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
@@ -853,7 +853,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3027" toLevel="7" name="Special Property: Rsk. Focus">
+	<skill id="3027" toLevel="7" name="特殊能力  Rsk.偵測">
 		<!-- Level 1: Critical Rate for basic attacks +13.87% when HP is very low. -->
 		<!-- Level 2: Critical Rate for basic attacks +13.09% when HP is very low. -->
 		<!-- Level 3: Critical Rate for basic attacks +12.31% when HP is very low. -->
@@ -933,7 +933,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3028" toLevel="6" name="Special Property: Rsk. Evasion">
+	<skill id="3028" toLevel="6" name="特殊能力  Rsk.迴避">
 		<!-- Level 1: P. Evasion +7.63 when in danger. -->
 		<!-- Level 2: P. Evasion +7.29 when in danger. -->
 		<!-- Level 3: P. Evasion +6.95 when in danger. -->
@@ -973,7 +973,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3029" toLevel="6" name="Special Property: Rsk. Evasion">
+	<skill id="3029" toLevel="6" name="特殊能力  Rsk.迴避">
 		<!-- Level 1: P. Evasion +4.44 when in danger. -->
 		<!-- Level 2: P. Evasion +4.24 when in danger. -->
 		<!-- Level 3: P. Evasion +4.04 when in danger. -->
@@ -1006,7 +1006,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3030" toLevel="6" name="Special Property: Rsk. Evasion">
+	<skill id="3030" toLevel="6" name="特殊能力  Rsk.迴避">
 		<!-- Level 1: P. Evasion +7.63 when in danger. -->
 		<!-- Level 2: P. Evasion +7.29 when in danger. -->
 		<!-- Level 3: P. Evasion +6.95 when in danger. -->
@@ -1046,7 +1046,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3031" toLevel="6" name="Special Property: Rsk. Evasion">
+	<skill id="3031" toLevel="6" name="特殊能力  Rsk.迴避">
 		<!-- Level 1: P. Evasion +7.63 when in danger. -->
 		<!-- Level 2: P. Evasion +7.29 when in danger. -->
 		<!-- Level 3: P. Evasion +6.95 when in danger. -->
@@ -1086,7 +1086,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3032" toLevel="6" name="Special Property: Rsk. Haste">
+	<skill id="3032" toLevel="6" name="特殊能力  Rsk.速度激發">
 		<!-- Increases Atk. Spd. when in danger. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
@@ -1113,7 +1113,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3033" toLevel="6" name="Special Property: Rsk. Haste">
+	<skill id="3033" toLevel="6" name="特殊能力  Rsk.速度激發">
 		<!-- Level 1: Increases Atk. Spd. when in danger by 13%. -->
 		<!-- Level 2: Increases Atk. Spd. when in danger by 12%. -->
 		<!-- Level 3: Increases Atk. Spd. when in danger by 12%. -->
@@ -1152,7 +1152,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3034" toLevel="7" name="Special Property: Rsk. Haste">
+	<skill id="3034" toLevel="7" name="特殊能力  Rsk.速度激發">
 		<!-- Level 1: Increases Atk. Spd. when in danger by 13%. -->
 		<!-- Level 2: Increases Atk. Spd. when in danger by 12%. -->
 		<!-- Level 3: Increases Atk. Spd. when in danger by 12%. -->
@@ -1231,7 +1231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3035" toLevel="6" name="Special Property: Death Force">
+	<skill id="3035" toLevel="6" name="特殊能力 致命力量">
 		<!-- Level 1: Increases success rate of attacks targeting the enemy's vital parts by 50%. -->
 		<!-- Level 2: Increases success rate of attacks targeting the enemy's vital parts by 48%. -->
 		<!-- Level 3: Increases success rate of attacks targeting the enemy's vital parts by 46%. -->
@@ -1270,7 +1270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3036" toLevel="6" name="Special Property: Haste">
+	<skill id="3036" toLevel="6" name="特殊能力 速度激發">
 		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
@@ -1297,7 +1297,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3037" toLevel="6" name="Special Property: Haste">
+	<skill id="3037" toLevel="6" name="特殊能力 速度激發">
 		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
@@ -1324,7 +1324,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3038" toLevel="6" name="Special Property: Haste">
+	<skill id="3038" toLevel="6" name="特殊能力 速度激發">
 		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
@@ -1351,7 +1351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3039" toLevel="7" name="Special Property: Critical HP Drain">
+	<skill id="3039" toLevel="7" name="特殊能力 Crt.吸收">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1403,7 +1403,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3040" toLevel="6" name="Special Property: Critical Poison">
+	<skill id="3040" toLevel="6" name="特殊能力 Crt.施毒">
 		<!-- Level 1: Inflicts Poison on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Poison on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Poison on the target and decreases HP. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -1473,7 +1473,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3041" toLevel="6" name="Special Property: Critical Poison">
+	<skill id="3041" toLevel="6" name="特殊能力 Crt.施毒">
 		<!-- Level 1: Inflicts Poison on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: Inflicts Poison on the target and decreases HP. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: Inflicts Poison on the target and decreases HP. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -1543,7 +1543,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3042" toLevel="20" name="Special Property: Critical Damage">
+	<skill id="3042" toLevel="20" name="特殊能力 Crt.傷害">
 		<!-- Level 1: Increases Critical Damage for basic attacks. -->
 		<!-- Level 2: Increases Critical Damage for basic attacks. -->
 		<!-- Level 3: Increases Critical Damage for basic attacks. -->
@@ -1692,7 +1692,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3043" toLevel="6" name="Special Property: Critical Damage">
+	<skill id="3043" toLevel="6" name="特殊能力 Crt.傷害">
 		<!-- Increases Critical Damage for basic attacks. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
@@ -1719,7 +1719,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3044" toLevel="20" name="Special Property: Focus">
+	<skill id="3044" toLevel="20" name="特殊能力 偵測">
 		<!-- Level 1: Critical Rate for basic attacks +5.36%. -->
 		<!-- Level 2: Critical Rate for basic attacks +3.85%. -->
 		<!-- Level 3: Critical Rate for basic attacks +5.04%. -->
@@ -1889,7 +1889,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3045" toLevel="20" name="Special Property: Haste">
+	<skill id="3045" toLevel="20" name="特殊能力 速度激發">
 		<!-- Level 1: Increases Atk. Spd. -->
 		<!-- Level 2: Increases Atk. Spd. -->
 		<!-- Level 3: Increases Atk. Spd. -->
@@ -1996,7 +1996,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3046" toLevel="20" name="Special Property: Guidance">
+	<skill id="3046" toLevel="20" name="特殊能力 導引">
 		<!-- Level 1: Increases P. Accuracy. -->
 		<!-- Level 2: Increases P. Accuracy. -->
 		<!-- Level 3: Increases P. Accuracy. -->
@@ -2166,7 +2166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3047" toLevel="3" name="Special Property: Acumen">
+	<skill id="3047" toLevel="3" name="特殊能力 靈活思緒">
 		<!-- Level 1: Casting Spd. +15%. -->
 		<!-- Level 2: Increases Casting Spd. and PvP damage. -->
 		<!-- Level 3: Increases Casting Spd. and PvP damage. -->
@@ -2213,7 +2213,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3048" toLevel="3" name="Special Property: Conversion">
+	<skill id="3048" toLevel="3" name="魂體轉換">
 		<!-- Level 1: Decreases Max HP by 40% and increases Max MP by 60%. -->
 		<!-- Level 2: Max HP +40%, Max MP +60%, PvP damage +5%. -->
 		<!-- Level 3: Max HP +40%, Max MP +60%, PvP damage +5%. -->
@@ -2260,7 +2260,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3049" toLevel="2" name="Special Property: Magic Damage">
+	<skill id="3049" toLevel="2" name="特殊能力 魔法傷害">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2281,7 +2281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3050" toLevel="2" name="Special Property: Focus">
+	<skill id="3050" toLevel="2" name="特殊能力 偵測">
 		<!-- Critical Rate for basic attacks +6.16%, PvP damage +5%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
@@ -2309,7 +2309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3051" toLevel="2" name="Special Property: Focus">
+	<skill id="3051" toLevel="2" name="特殊能力 偵測">
 		<!-- Critical Rate for basic attacks +6.73%, PvP damage +5%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
@@ -2337,7 +2337,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3052" toLevel="2" name="Special Property: Critical Bleed">
+	<skill id="3052" toLevel="2" name="特殊能力 Crt.出血">
 		<!-- Inflicts Bleed on the target and decreases HP. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
@@ -2366,7 +2366,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3053" toLevel="2" name="Special Property: Critical Bleed">
+	<skill id="3053" toLevel="2" name="特殊能力 Crt.出血">
 		<!-- Inflicts Bleed on the target and decreases HP. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
@@ -2399,7 +2399,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3054" toLevel="2" name="Special Property: Critical Bleed">
+	<skill id="3054" toLevel="2" name="特殊能力 Crt.出血">
 		<!-- Inflicts Bleed on the target and decreases HP. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
@@ -2432,7 +2432,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3055" toLevel="2" name="Special Property: Critical Bleed">
+	<skill id="3055" toLevel="2" name="特殊能力 Crt.出血">
 		<!-- Inflicts Bleed on the target and decreases HP. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
@@ -2465,7 +2465,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3056" toLevel="3" name="Special Property: Rsk. Haste">
+	<skill id="3056" toLevel="3" name="特殊能力  Rsk.速度激發">
 		<!-- Level 1: Increases Atk. Spd. when in danger. -->
 		<!-- Level 2: Increases Atk. Spd. by 11% when in danger. Inflicts additional damage by 5% during PvP. -->
 		<!-- Level 3: Increases Atk. Spd. by 11% when in danger. Inflicts additional damage by 5% during PvP. -->
@@ -2512,7 +2512,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3057" toLevel="4" name="Special Property: Anger">
+	<skill id="3057" toLevel="4" name="特殊能力 怒擊">
 		<!-- Decreases Max HP and increases P. Atk. Deals additional PvP damage. -->
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
@@ -2551,7 +2551,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3058" toLevel="2" name="Special Property: Anger">
+	<skill id="3058" toLevel="2" name="特殊能力 怒擊">
 		<!-- Decreases Max HP and increases P. Atk. Deals additional PvP damage. -->
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
@@ -2586,7 +2586,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3059" toLevel="2" name="Special Property: Critical HP Drain">
+	<skill id="3059" toLevel="2" name="特殊能力 Crt.吸收">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2610,7 +2610,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3060" toLevel="2" name="Special Property: Critical HP Drain">
+	<skill id="3060" toLevel="2" name="特殊能力 Crt.吸收">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2634,7 +2634,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3061" toLevel="3" name="Special Property: Critical Poison">
+	<skill id="3061" toLevel="3" name="特殊能力 Crt.施毒">
 		<!-- Inflicts Poison on the target and decreases HP. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
@@ -2671,7 +2671,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3062" toLevel="2" name="Special Property: Critical Poison">
+	<skill id="3062" toLevel="2" name="特殊能力 Crt.施毒">
 		<!-- Inflicts Poison on the target and decreases HP. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
@@ -2703,7 +2703,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3063" toLevel="2" name="Special Property: Backstab">
+	<skill id="3063" toLevel="2" name="特殊能力 背擊">
 		<!-- Increases Critical Rate for basic attacks from behind. PvP damage +5%. -->
 		<icon>
 			<value level="1">icon.ensoul_big_old</value>
@@ -2735,7 +2735,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3064" toLevel="1" name="Special Property: Guidance">
+	<skill id="3064" toLevel="1" name="特殊能力 導引">
 		<!-- P. Accuracy +3.95, PvP damage +5%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
@@ -2760,7 +2760,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3065" toLevel="1" name="Special Property: Guidance">
+	<skill id="3065" toLevel="1" name="特殊能力 導引">
 		<!-- P. Accuracy +5.41, PvP damage +5%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
@@ -2785,7 +2785,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3066" toLevel="4" name="Special Property: Critical Damage">
+	<skill id="3066" toLevel="4" name="特殊能力 Crt.傷害">
 		<!-- Increases Critical Damage for basic attacks and PvP damage. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
@@ -2820,7 +2820,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3067" toLevel="2" name="Special Property: Critical Damage">
+	<skill id="3067" toLevel="2" name="特殊能力 Crt.傷害">
 		<!-- Increases Critical Damage for basic attacks and PvP damage. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
@@ -2851,7 +2851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3068" toLevel="3" name="Special Property: Haste">
+	<skill id="3068" toLevel="3" name="特殊能力 速度激發">
 		<!-- Level 1: Increases Atk. Spd. -->
 		<!-- Level 2: Increases Atk. Spd. Inflicts additional damage during PvP. -->
 		<!-- Level 3: Increases Atk. Spd. Inflicts additional damage during PvP. -->
@@ -2898,7 +2898,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3069" toLevel="2" name="Special Property: Rsk. Evasion">
+	<skill id="3069" toLevel="2" name="Rsk.迴避">
 		<!-- Level 1: Increases P. Evasion when in danger. -->
 		<!-- Level 2: P. Evasion +6.8, PvP damage +5% when in danger. -->
 		<icon>
@@ -2916,7 +2916,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3070" toLevel="4" name="Special Property: Critical Stun">
+	<skill id="3070" toLevel="4" name="特殊能力 Crt.衝擊">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -2952,7 +2952,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3071" toLevel="2" name="Special Property: Rsk. Focus">
+	<skill id="3071" toLevel="2" name="特殊能力  Rsk.偵測">
 		<!-- Level 1: Increases Critical Rate for basic attacks when HP is very low. -->
 		<!-- Level 2: Critical Rate for basic attacks +13% when HP is very low. Additionally, PvP damage +5%. -->
 		<icon>
@@ -2991,7 +2991,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3072" toLevel="2" name="Special Property: Empower">
+	<skill id="3072" toLevel="2" name="特殊能力 魔力催化">
 		<!-- Increases M. Atk. and PvP damage. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
@@ -3022,7 +3022,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3073" toLevel="2" name="Special Property: M. Power">
+	<skill id="3073" toLevel="2" name="魔法之力">
 		<!-- Increases MP Consumption, M. Atk. and PvP damage. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
@@ -3058,7 +3058,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3074" toLevel="2" name="Special Property: Silence">
+	<skill id="3074" toLevel="2" name="特殊能力 魔法沉默">
 		<!-- Temporarily blocks the ability to use magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -3087,7 +3087,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="3075" toLevel="2" name="Special Property: Paralysis">
+	<skill id="3075" toLevel="2" name="魔法麻痺">
 		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
@@ -3132,7 +3132,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="3076" toLevel="6" name="Special Property: Empower">
+	<skill id="3076" toLevel="6" name="特殊能力 魔力催化">
 		<!-- Increases M. Atk. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
@@ -3159,7 +3159,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3077" toLevel="6" name="Special Property: M. Power">
+	<skill id="3077" toLevel="6" name="魔法之力">
 		<!-- Increases M. Atk. and MP Consumption. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
@@ -3191,7 +3191,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3078" toLevel="6" name="Special Property: Silence">
+	<skill id="3078" toLevel="6" name="特殊能力 魔法沉默">
 		<!-- Temporarily blocks the ability to use magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -3224,7 +3224,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="3079" toLevel="6" name="Special Property: Paralysis">
+	<skill id="3079" toLevel="6" name="魔法麻痺">
 		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
@@ -3273,7 +3273,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="3080" toLevel="15" name="Item Skill: Aggression">
+	<skill id="3080" toLevel="15" name="武器特技：憎恨">
 		<!-- Level 1: When triggered: Increases the target's aggression after a regular physical attack. Power 438. -->
 		<!-- Level 2: When triggered: Increases the target's aggression after a regular physical attack. Power 467. -->
 		<!-- Level 3: When triggered: Increases the target's aggression after a regular physical attack. Power 495. -->
@@ -3339,7 +3339,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3081" toLevel="15" name="Item Skill: Charm (Attack Active)">
+	<skill id="3081" toLevel="15" name="武器特技：寬恕(物理主動)">
 		<!-- Level 1: When triggered: Decreases the target's aggression after a regular physical attack. Power 219. -->
 		<!-- Level 2: When triggered: Decreases the target's aggression after a regular physical attack. Power 234. -->
 		<!-- Level 3: When triggered: Decreases the target's aggression after a regular physical attack. Power 248. -->
@@ -3405,7 +3405,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3082" toLevel="10" name="Item Skill: Mana Burn">
+	<skill id="3082" toLevel="10" name="武器特技：魔力燃燒">
 		<!-- Level 1: When triggered: Burns up the target's MP on a basic physical attack. Power 49. -->
 		<!-- Level 2: When triggered: Burns up the target's MP on a basic physical attack. Power 53. -->
 		<!-- Level 3: When triggered: Burns up the target's MP on a basic physical attack. Power 57. -->
@@ -3457,7 +3457,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3083" toLevel="15" name="Item Skill: Slow (Attack Active)">
+	<skill id="3083" toLevel="15" name="武器特技：緩速(物理主動)">
 		<!-- When triggered: Momentarily decreases the target's Speed after a regular physical attack. Effect 3. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3500,7 +3500,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3084" toLevel="10" name="Item Skill: Winter (Attack Active)">
+	<skill id="3084" toLevel="10" name="武器特技：寒冬(物理主動)">
 		<!-- When triggered: Momentarily decreases the target's Atk. Spd. after a regular physical attack. Effect 3. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3538,7 +3538,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3085" toLevel="10" name="Item Skill: Stun">
+	<skill id="3085" toLevel="10" name="武器特技：衝擊">
 		<!-- When triggered: Momentarily stuns the target on a basic physical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3577,7 +3577,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3086" toLevel="15" name="Item Skill: Hold">
+	<skill id="3086" toLevel="15" name="武器特技：束縛">
 		<!-- When triggered: Momentarily inflicts Hold on the target on a physical attack. The target cannot be affected by any Hold attacks while the effect is active. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3622,7 +3622,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3087" toLevel="10" name="Item Skill: Sleep">
+	<skill id="3087" toLevel="10" name="武器特技：催眠">
 		<!-- When triggered: Momentarily inflicts Stupor on the target after a regular physical attack. The target is unlikely to be affected by any Stupor attacks while the effect is active. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3664,7 +3664,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3088" toLevel="10" name="Item Skill: Paralysis">
+	<skill id="3088" toLevel="10" name="武器特技：麻痺">
 		<!-- When triggered: Momentarily paralyzes the target on a basic physical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3717,7 +3717,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="3089" toLevel="10" name="Item Skill: Medusa">
+	<skill id="3089" toLevel="10" name="武器特技：梅杜莎">
 		<!-- When triggered: Momentarily petrifies the target on a basic physical attack. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3757,7 +3757,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3090" toLevel="10" name="Item Skill: Fear">
+	<skill id="3090" toLevel="10" name="武器特技：恐懼">
 		<!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee, on a basic physical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3795,7 +3795,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3091" toLevel="15" name="Item Skill: Poison (Attack Active)">
+	<skill id="3091" toLevel="15" name="武器特技：施毒(物理主動)">
 		<!-- Level 1: When triggered: Momentarily poisons the target on a basic physical attack. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: When triggered: Momentarily poisons the target on a basic physical attack. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: When triggered: Momentarily poisons the target on a basic physical attack. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -3887,7 +3887,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3092" toLevel="15" name="Item Skill: Bleed (Attack Active)">
+	<skill id="3092" toLevel="15" name="武器特技：出血(物理主動)">
 		<!-- Level 1: When triggered: Momentarily inflicts Bleed on the target on a basic physical attack. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 2: When triggered: Momentarily inflicts Bleed on the target on a basic physical attack. Effect 5. Inflicted status: Infection (Bleed, Poison). -->
 		<!-- Level 3: When triggered: Momentarily inflicts Bleed on the target on a basic physical attack. Effect 6. Inflicted status: Infection (Bleed, Poison). -->
@@ -3980,7 +3980,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3093" toLevel="10" name="Item Skill: Silence">
+	<skill id="3093" toLevel="10" name="武器特技：沉默">
 		<!-- When triggered: Momentarily blocks the target's M. skills on a basic physical attack. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -4017,7 +4017,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="3094" toLevel="10" name="Item Skill: Doom">
+	<skill id="3094" toLevel="10" name="武器特技：末日">
 		<!-- When triggered: Temporarily blocks the target's P./ M. skills on a basic physical attack. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -4055,7 +4055,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="3095" toLevel="10" name="Item Skill: Mana Burn">
+	<skill id="3095" toLevel="10" name="武器特技：魔力燃燒">
 		<!-- Level 1: When triggered: Burns up the target's MP when using magic. Power 49. -->
 		<!-- Level 2: When triggered: Burns up the target's MP when using magic. Power 53. -->
 		<!-- Level 3: When triggered: Burns up the target's MP when using magic. Power 57. -->
@@ -4108,7 +4108,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3096" toLevel="15" name="Item Skill: Slow (Magic Active)">
+	<skill id="3096" toLevel="15" name="武器特技：緩速(魔法主動)">
 		<!-- When triggered: Momentarily decreases the target's Speed when using magic. Effect 3. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -4152,7 +4152,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3097" toLevel="10" name="Item Skill: Winter (Magic Active)">
+	<skill id="3097" toLevel="10" name="武器特技：寒冬(魔法主動)">
 		<!-- When triggered: Momentarily decreases the target's Atk. Spd. when using magic. Effect 3. Inflicted status: Debilitation. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -4191,7 +4191,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3098" toLevel="10" name="Item Skill: Stun">
+	<skill id="3098" toLevel="10" name="武器特技：衝擊">
 		<!-- When triggered: Momentarily stuns the target when using magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -4231,7 +4231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3099" toLevel="15" name="Item Skill: Hold">
+	<skill id="3099" toLevel="15" name="武器特技：束縛">
 		<!-- When triggered: Momentarily inflicts Hold on the target when using magic. The target is unlikely to be affected by any Hold attacks while the effect is active. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>

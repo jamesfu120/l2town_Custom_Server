@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="35400" toLevel="5" name="Demonic Sword Zariche">
+	<skill id="35400" toLevel="5" name="魔劍‧薩雷奇">
 		<!-- Kill points are granted for killing characters of Lv. 20+. Their amount depends from your level:. 21-84 - 1 pt. / 85-99 - 10 pt. / 100-105 - 100 pt. / 106-110 - 500 pt. / 111+ - 700 pt. Kill Points for levelling up:. Lv. 2 - 15,000 / Lv. 3 - 45,000 / Lv. 4 - 90,000 / Lv. 5 - 180,000. At 23:59 the final owner receives 5 billion adena and additional adena according to their buff level:. Lv. 2 - 200 million / Lv. 3 - 500 million / Lv. 4 - 2 billion / Lv. 5 - 5 billion. The buff level is reset after death. -->
 		<icon>
 			<value level="1">icon.killpoint_zariche1</value>
@@ -38,7 +38,7 @@
 		<affectScope>SINGLE</affectScope>
 		<basicProperty>NONE</basicProperty>
 	</skill>
-	<skill id="35401" toLevel="5" name="Blood Sword Akamanah">
+	<skill id="35401" toLevel="5" name="血劍‧阿卡瑪那夫">
 		<!-- Kill points are granted for killing characters of Lv. 20+. Their amount depends from your level:. 21-84 - 1 pt. / 85-99 - 10 pt. / 100-105 - 100 pt. / 106-110 - 500 pt. / 111+ - 700 pt. Kill Points for level up:. Lv. 2 - 15,000 / Lv. 3 - 45,000 / Lv. 4 - 90,000 / Lv. 5 - 180,000. At 23:59 the final owner receives 5 billion adena and additional adena according to their buff level:. Lv. 2 - 200 million / Lv. 3 - 500 million / Lv. 4 - 2 billion / Lv. 5 - 5 billion. The buff level is reset after death. -->
 		<icon>
 			<value level="1">icon.killpoint_aka_manaf1</value>
@@ -76,7 +76,7 @@
 		<affectScope>SINGLE</affectScope>
 		<basicProperty>NONE</basicProperty>
 	</skill>
-	<skill id="35402" toLevel="1" name="Cry of Sword - Zariche">
+	<skill id="35402" toLevel="1" name="劍之吶喊-薩雷奇">
 		<!-- Skill to show the death effects of Zariche's owner -->
 		<icon>icon.die_effect_zariche1</icon>
 		<operateType>A1</operateType>
@@ -84,7 +84,7 @@
 		<effectPoint>1</effectPoint>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="35403" toLevel="1" name="Cry of Sword - Akamanah">
+	<skill id="35403" toLevel="1" name="劍之吶喊-阿卡瑪那夫">
 		<!-- Skill to show the death effects of Akamanah's owner -->
 		<icon>icon.die_effect_aka_manaf1</icon>
 		<operateType>A1</operateType>
@@ -92,7 +92,7 @@
 		<effectPoint>1</effectPoint>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="35404" toLevel="1" name="Prison of Souls - Zariche">
+	<skill id="35404" toLevel="1" name="靈魂監獄-薩雷奇">
 		<!-- You are trapped by Demonic Sword Zariche. Failing to destroy the Prison of Souls (Limit Barrier) within 2 min. will return you to the nearest town. The barrier is removed after receiving 540 hits. Others cannot damage it. You are immobilized. -->
 		<icon>icon.death_prison1</icon>
 		<operateType>A2</operateType>
@@ -161,7 +161,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35405" toLevel="1" name="Prison of Souls - Akamanah">
+	<skill id="35405" toLevel="1" name="靈魂監獄-阿卡瑪那夫">
 		<!-- You are trapped by Blood Sword Akamanah. Failing to destroy the Prison of Souls (Limit Barrier) within 2 min. will return you to the nearest town. The barrier is removed after receiving 540 hits. Others cannot damage it. You are immobilized. -->
 		<icon>icon.death_prison1</icon>
 		<operateType>A2</operateType>
@@ -245,7 +245,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35406" toLevel="1" name="Soul of Sword - Zariche">
+	<skill id="35406" toLevel="1" name="劍之靈魂-薩雷奇">
 		<!-- The weapon's spirit possesses your body, limiting your movements and defending you from damage. -->
 		<icon>icon.weapon_unique_zariche_i00</icon>
 		<operateType>A2</operateType>
@@ -295,7 +295,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35407" toLevel="1" name="Soul of Sword - Akamanah">
+	<skill id="35407" toLevel="1" name="劍之靈魂-阿卡瑪那夫">
 		<!-- The weapon's spirit possesses your body, limiting your movements and defending you from damage. -->
 		<icon>icon.weapon_aka_i00</icon>
 		<operateType>A2</operateType>
@@ -345,7 +345,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35408" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35408" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_tw_slot_01</icon>
 		<operateType>P</operateType>
@@ -368,7 +368,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35409" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35409" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_tw_slot_01</icon>
 		<operateType>P</operateType>
@@ -391,7 +391,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35410" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35410" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1427, Max MP +499, Max CP +1403. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_sK_slot_01</icon>
 		<operateType>P</operateType>
@@ -414,7 +414,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35411" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35411" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1427, Max MP +499, Max CP +1403. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_sK_slot_01</icon>
 		<operateType>P</operateType>
@@ -437,7 +437,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35412" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35412" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_or_slot_01</icon>
 		<operateType>P</operateType>
@@ -460,7 +460,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35413" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35413" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ya_slot_01</icon>
 		<operateType>P</operateType>
@@ -483,7 +483,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35414" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35414" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1241, Max MP +548, Max CP +1220. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_fw_slot_01</icon>
 		<operateType>P</operateType>
@@ -506,7 +506,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35415" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35415" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1241, Max MP +548, Max CP +1220. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_fw_slot_01</icon>
 		<operateType>P</operateType>
@@ -529,7 +529,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35416" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35416" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ws_slot_01</icon>
 		<operateType>P</operateType>
@@ -552,7 +552,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35417" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35417" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +548, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_eh_slot_01</icon>
 		<operateType>P</operateType>
@@ -575,7 +575,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35418" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35418" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ie_slot_01</icon>
 		<operateType>P</operateType>
@@ -598,7 +598,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35419" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35419" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1427, Max MP +499, Max CP +1403. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_sK_slot_01</icon>
 		<operateType>P</operateType>
@@ -621,7 +621,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35420" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35420" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ie_slot_01</icon>
 		<operateType>P</operateType>
@@ -644,7 +644,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35421" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35421" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_or_slot_01</icon>
 		<operateType>P</operateType>
@@ -667,7 +667,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35422" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35422" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ya_slot_01</icon>
 		<operateType>P</operateType>
@@ -690,7 +690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35423" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35423" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1241, Max MP +548, Max CP +1220. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_fw_slot_01</icon>
 		<operateType>P</operateType>
@@ -713,7 +713,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35424" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35424" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ws_slot_01</icon>
 		<operateType>P</operateType>
@@ -736,7 +736,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35425" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35425" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +548, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_eh_slot_01</icon>
 		<operateType>P</operateType>
@@ -759,7 +759,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35426" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35426" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1427, Max MP +499, Max CP +1403. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_sK_slot_01</icon>
 		<operateType>P</operateType>
@@ -782,7 +782,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35427" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35427" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ie_slot_01</icon>
 		<operateType>P</operateType>
@@ -805,7 +805,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35428" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35428" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_or_slot_01</icon>
 		<operateType>P</operateType>
@@ -828,7 +828,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35429" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35429" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ya_slot_01</icon>
 		<operateType>P</operateType>
@@ -851,7 +851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35430" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35430" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1241, Max MP +548, Max CP +1220. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_fw_slot_01</icon>
 		<operateType>P</operateType>
@@ -874,7 +874,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35431" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35431" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ws_slot_01</icon>
 		<operateType>P</operateType>
@@ -897,7 +897,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35432" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35432" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +548, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_eh_slot_01</icon>
 		<operateType>P</operateType>
@@ -920,7 +920,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35433" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35433" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_tw_slot_01</icon>
 		<operateType>P</operateType>
@@ -943,7 +943,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35434" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35434" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_tw_slot_01</icon>
 		<operateType>P</operateType>
@@ -966,7 +966,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35435" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35435" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ie_slot_01</icon>
 		<operateType>P</operateType>
@@ -989,7 +989,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35436" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35436" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1272, Max MP +523, Max CP +1250. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ie_slot_01</icon>
 		<operateType>P</operateType>
@@ -1012,7 +1012,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35437" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35437" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_or_slot_01</icon>
 		<operateType>P</operateType>
@@ -1035,7 +1035,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35438" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35438" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_tw_slot_01</icon>
 		<operateType>P</operateType>
@@ -1058,7 +1058,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35439" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35439" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_tw_slot_01</icon>
 		<operateType>P</operateType>
@@ -1081,7 +1081,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35440" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35440" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1241, Max MP +548, Max CP +1220. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_fw_slot_01</icon>
 		<operateType>P</operateType>
@@ -1104,7 +1104,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35441" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35441" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1303, Max MP +499, Max CP +1281. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ya_slot_01</icon>
 		<operateType>P</operateType>
@@ -1127,7 +1127,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35442" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35442" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1365, Max MP +499, Max CP +1342. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_gr_slot_01</icon>
 		<operateType>P</operateType>
@@ -1150,7 +1150,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35443" toLevel="1" name="Dye's Special Effect - Slot 1">
+	<skill id="35443" toLevel="1" name="染料特殊效果-1號欄位">
 		<!-- Max HP +1241, Max MP +548, Max CP +1220. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). Max HP/ MP/ CP +5%, HP limit +5000 -->
 		<icon>icon.dyeeffect_ss_slot_01</icon>
 		<operateType>P</operateType>
@@ -1173,7 +1173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35444" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35444" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_tw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1194,7 +1194,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35445" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35445" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_tw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1215,7 +1215,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35446" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35446" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2656, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_sK_slot_02</icon>
 		<operateType>P</operateType>
@@ -1236,7 +1236,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35447" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35447" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2656, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_sK_slot_02</icon>
 		<operateType>P</operateType>
@@ -1257,7 +1257,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35448" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35448" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_or_slot_02</icon>
 		<operateType>P</operateType>
@@ -1278,7 +1278,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35449" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35449" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ya_slot_02</icon>
 		<operateType>P</operateType>
@@ -1299,7 +1299,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35450" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35450" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_fw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1320,7 +1320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35451" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35451" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_fw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1341,7 +1341,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35452" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35452" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ws_slot_02</icon>
 		<operateType>P</operateType>
@@ -1362,7 +1362,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35453" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35453" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2424, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_eh_slot_02</icon>
 		<operateType>P</operateType>
@@ -1383,7 +1383,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35454" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35454" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ie_slot_02</icon>
 		<operateType>P</operateType>
@@ -1404,7 +1404,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35455" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35455" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2656, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_sK_slot_02</icon>
 		<operateType>P</operateType>
@@ -1425,7 +1425,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35456" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35456" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ie_slot_02</icon>
 		<operateType>P</operateType>
@@ -1446,7 +1446,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35457" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35457" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_or_slot_02</icon>
 		<operateType>P</operateType>
@@ -1467,7 +1467,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35458" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35458" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ya_slot_02</icon>
 		<operateType>P</operateType>
@@ -1488,7 +1488,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35459" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35459" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_fw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1509,7 +1509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35460" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35460" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ws_slot_02</icon>
 		<operateType>P</operateType>
@@ -1530,7 +1530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35461" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35461" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2424, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_eh_slot_02</icon>
 		<operateType>P</operateType>
@@ -1551,7 +1551,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35462" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35462" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2656, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_sK_slot_02</icon>
 		<operateType>P</operateType>
@@ -1572,7 +1572,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35463" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35463" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ie_slot_02</icon>
 		<operateType>P</operateType>
@@ -1593,7 +1593,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35464" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35464" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_or_slot_02</icon>
 		<operateType>P</operateType>
@@ -1614,7 +1614,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35465" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35465" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ya_slot_02</icon>
 		<operateType>P</operateType>
@@ -1635,7 +1635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35466" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35466" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_fw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1656,7 +1656,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35467" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35467" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ws_slot_02</icon>
 		<operateType>P</operateType>
@@ -1677,7 +1677,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35468" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35468" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2424, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_eh_slot_02</icon>
 		<operateType>P</operateType>
@@ -1698,7 +1698,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35469" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35469" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_tw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1719,7 +1719,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35470" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35470" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_tw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1740,7 +1740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35471" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35471" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ie_slot_02</icon>
 		<operateType>P</operateType>
@@ -1761,7 +1761,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35472" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35472" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ie_slot_02</icon>
 		<operateType>P</operateType>
@@ -1782,7 +1782,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35473" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35473" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_or_slot_02</icon>
 		<operateType>P</operateType>
@@ -1803,7 +1803,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35474" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35474" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_tw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1824,7 +1824,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35475" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35475" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_tw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1845,7 +1845,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35476" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35476" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_fw_slot_02</icon>
 		<operateType>P</operateType>
@@ -1866,7 +1866,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35477" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35477" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ya_slot_02</icon>
 		<operateType>P</operateType>
@@ -1887,7 +1887,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35478" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35478" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2435, M. Def. +2204, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_gr_slot_02</icon>
 		<operateType>P</operateType>
@@ -1908,7 +1908,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35479" toLevel="1" name="Dye's Special Effect - Slot 2">
+	<skill id="35479" toLevel="1" name="染料特殊效果-2號欄位">
 		<!-- P. Def. +2324, M. Def. +2314, Vitality bonus +3%, acquired XP/ SP +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice). P./ M. Def. +5%, acquired XP/ SP +10% -->
 		<icon>icon.dyeeffect_ss_slot_02</icon>
 		<operateType>P</operateType>
@@ -1929,7 +1929,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35480" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35480" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2226, P. Atk. +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_tw_slot_03</icon>
 		<operateType>P</operateType>
@@ -1956,7 +1956,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35481" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35481" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2226, P. Atk. +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_tw_slot_03</icon>
 		<operateType>P</operateType>
@@ -1983,7 +1983,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35482" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35482" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +1884, P. Atk. +2%, P. Skill Power +2%, P./ M. Def. +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_sK_slot_03</icon>
 		<operateType>P</operateType>
@@ -2010,7 +2010,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35483" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35483" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +1884, P. Atk. +2%, P. Skill Power +2%, P./ M. Def. +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_sK_slot_03</icon>
 		<operateType>P</operateType>
@@ -2037,7 +2037,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35484" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35484" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2483, P. Atk. +1%, Critical Damage for basic attacks +2%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_or_slot_03</icon>
 		<operateType>P</operateType>
@@ -2064,7 +2064,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35485" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35485" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2483, P. Atk. +1%, P. Skill Critical Damage +2%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_ya_slot_03</icon>
 		<operateType>P</operateType>
@@ -2091,7 +2091,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35486" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35486" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- M. Atk. +1309, M. Atk. +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_fw_slot_03</icon>
 		<operateType>P</operateType>
@@ -2118,7 +2118,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35487" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35487" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- M. Atk. +1309, M. Atk. +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_fw_slot_03</icon>
 		<operateType>P</operateType>
@@ -2145,7 +2145,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35488" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35488" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +1199, M. Atk. +654, P./ M. Atk. +2%, P./ M. Skill Power +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_ws_slot_03</icon>
 		<operateType>P</operateType>
@@ -2172,7 +2172,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35489" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35489" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- M. Atk. +1168, M. Atk. +2%, M. Skill Critical Rate +5%, P./ M. Def. +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_eh_slot_03</icon>
 		<operateType>P</operateType>
@@ -2199,7 +2199,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35490" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35490" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2312, P. Atk. +2%, Critical Damage for basic attacks +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_ie_slot_03</icon>
 		<operateType>P</operateType>
@@ -2226,7 +2226,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35491" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35491" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +1884, P. Atk. +2%, P. Skill Power +2%, P./ M. Def. +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_sK_slot_03</icon>
 		<operateType>P</operateType>
@@ -2253,7 +2253,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35492" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35492" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2312, P. Atk. +2%, Critical Damage for basic attacks +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_ie_slot_03</icon>
 		<operateType>P</operateType>
@@ -2280,7 +2280,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35493" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35493" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2483, P. Atk. +1%, Critical Damage for basic attacks +2%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_or_slot_03</icon>
 		<operateType>P</operateType>
@@ -2307,7 +2307,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35494" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35494" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2483, P. Atk. +1%, P. Skill Critical Damage +2%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_ya_slot_03</icon>
 		<operateType>P</operateType>
@@ -2334,7 +2334,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35495" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35495" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- M. Atk. +1309, M. Atk. +3%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_fw_slot_03</icon>
 		<operateType>P</operateType>
@@ -2361,7 +2361,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35496" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35496" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +1199, M. Atk. +654, P./ M. Atk. +2%, P./ M. Skill Power +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_ws_slot_03</icon>
 		<operateType>P</operateType>
@@ -2388,7 +2388,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35497" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35497" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- M. Atk. +1168, M. Atk. +2%, M. Skill Critical Rate +5%, P./ M. Def. +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_eh_slot_03</icon>
 		<operateType>P</operateType>
@@ -2415,7 +2415,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35498" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35498" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +1884, P. Atk. +2%, P. Skill Power +2%, P./ M. Def. +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_sK_slot_03</icon>
 		<operateType>P</operateType>
@@ -2442,7 +2442,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35499" toLevel="1" name="Dye's Special Effect - Slot 3">
+	<skill id="35499" toLevel="1" name="染料特殊效果-3號欄位">
 		<!-- P. Atk. +2312, P. Atk. +2%, Critical Damage for basic attacks +1%. When applying a tattoo, the effect is temporarily replaced with the following one (until further notice):. P./ M. Atk. +5%, Critical Damage for basic attacks and P./ M. skills +3% -->
 		<icon>icon.dyeeffect_ie_slot_03</icon>
 		<operateType>P</operateType>
