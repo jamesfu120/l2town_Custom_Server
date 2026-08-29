@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="7700" name="Recipe: Daisy Hairpin (100%)" type="EtcItem">
+	<item id="7700" name="製作卷軸(雛菊髮飾100%)" type="EtcItem">
 		<!-- For all races. A recipe for Daisy Hairpin. Requires Create Item Common Lv. 4. With a certain chance, creates a head accessory enhanced with a locket. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -14,7 +14,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7701" name="Stick of Faith" additionalName="Mana Up" type="Weapon">
+	<item id="7701" name="信仰手杖" additionalName="Mana Up" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -48,7 +48,7 @@
 			<skill id="3014" level="1" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="7702" name="Stick of Faith" additionalName="Magic Hold" type="Weapon">
+	<item id="7702" name="信仰手杖" additionalName="Magic Hold" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -82,7 +82,7 @@
 			<skill id="1201" level="16" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="7703" name="Stick of Faith" additionalName="Mental Shield" type="Weapon">
+	<item id="7703" name="信仰手杖" additionalName="Mental Shield" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -116,7 +116,7 @@
 			<skill id="1035" level="2" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 		</skills>
 	</item>
-	<item id="7704" name="Stick of Eternity" additionalName="Empower" type="Weapon">
+	<item id="7704" name="永恆手杖" additionalName="Empower" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -150,7 +150,7 @@
 			<skill id="3076" level="3" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="7705" name="Stick of Eternity" additionalName="Rsk. Evasion" type="Weapon">
+	<item id="7705" name="永恆手杖" additionalName="Rsk. Evasion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -184,7 +184,7 @@
 			<skill id="3030" level="3" /> <!-- Special Property: Rsk. Evasion -->
 		</skills>
 	</item>
-	<item id="7706" name="Stick of Eternity" additionalName="Blessed Body" type="Weapon">
+	<item id="7706" name="永恆手杖" additionalName="Blessed Body" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -218,7 +218,7 @@
 			<skill id="1045" level="3" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Blessed Body -->
 		</skills>
 	</item>
-	<item id="7707" name="Nirvana Axe" additionalName="M. Atk." type="Weapon">
+	<item id="7707" name="夢想斧" additionalName="M. Atk." type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -252,7 +252,7 @@
 			<skill id="3077" level="3" /> <!-- Special Property: M. Power -->
 		</skills>
 	</item>
-	<item id="7708" name="Nirvana Axe" additionalName="Poison" type="Weapon">
+	<item id="7708" name="夢想斧" additionalName="Poison" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -286,7 +286,7 @@
 			<skill id="1168" level="6" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Poison -->
 		</skills>
 	</item>
-	<item id="7709" name="Nirvana Axe" additionalName="Magic Weakness" type="Weapon">
+	<item id="7709" name="夢想斧" additionalName="Magic Weakness" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -320,7 +320,7 @@
 			<skill id="1164" level="9" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse of Weakness -->
 		</skills>
 	</item>
-	<item id="7710" name="Club of Nature" additionalName="Acumen" type="Weapon">
+	<item id="7710" name="自然之棍" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -354,7 +354,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="7711" name="Club of Nature" additionalName="Mental Shield" type="Weapon">
+	<item id="7711" name="自然之棍" additionalName="Mental Shield" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -388,7 +388,7 @@
 			<skill id="1035" level="3" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 		</skills>
 	</item>
-	<item id="7712" name="Club of Nature" additionalName="Magic Hold" type="Weapon">
+	<item id="7712" name="自然之棍" additionalName="Magic Hold" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -422,7 +422,7 @@
 			<skill id="1201" level="21" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="7713" name="Mace of Underworld" additionalName="Mana Up" type="Weapon">
+	<item id="7713" name="底獄之鎚" additionalName="Mana Up" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -456,7 +456,7 @@
 			<skill id="3014" level="1" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="7714" name="Mace of Underworld" additionalName="Silence" type="Weapon">
+	<item id="7714" name="底獄之鎚" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -490,7 +490,7 @@
 			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Property: Silence -->
 		</skills>
 	</item>
-	<item id="7715" name="Mace of Underworld" additionalName="Conversion" type="Weapon">
+	<item id="7715" name="底獄之鎚" additionalName="Conversion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -524,7 +524,7 @@
 			<skill id="3048" level="1" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="7716" name="Inferno Staff" additionalName="Acumen" type="Weapon">
+	<item id="7716" name="地獄魔杖" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -558,7 +558,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="7717" name="Inferno Staff" additionalName="Silence" type="Weapon">
+	<item id="7717" name="地獄魔杖" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -592,7 +592,7 @@
 			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Property: Silence -->
 		</skills>
 	</item>
-	<item id="7718" name="Inferno Staff" additionalName="Paralysis" type="Weapon">
+	<item id="7718" name="地獄魔杖" additionalName="Paralysis" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -626,7 +626,7 @@
 			<skill id="3079" level="3" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Property: Paralysis -->
 		</skills>
 	</item>
-	<item id="7719" name="Poleaxe" additionalName="Critical Stun" type="Weapon">
+	<item id="7719" name="長柄戰斧" additionalName="Critical Stun" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -660,7 +660,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="7720" name="Poleaxe" additionalName="Long Blow" type="Weapon">
+	<item id="7720" name="長柄戰斧" additionalName="Long Blow" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -693,7 +693,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="7721" name="Poleaxe" additionalName="Wide Blow" type="Weapon">
+	<item id="7721" name="長柄戰斧" additionalName="Wide Blow" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -726,7 +726,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="7722" name="Sword of Valhalla" additionalName="Acumen" type="Weapon">
+	<item id="7722" name="聖堂之劍" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -759,7 +759,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="7723" name="Sword of Valhalla" additionalName="Magic Weakness" type="Weapon">
+	<item id="7723" name="聖堂之劍" additionalName="Magic Weakness" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -792,7 +792,7 @@
 			<skill id="1164" level="11" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse of Weakness -->
 		</skills>
 	</item>
-	<item id="7724" name="Sword of Valhalla" additionalName="Magic Regeneration" type="Weapon">
+	<item id="7724" name="聖堂之劍" additionalName="Magic Regeneration" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -825,7 +825,7 @@
 			<skill id="1044" level="3" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
 		</skills>
 	</item>
-	<item id="7725" name="Booty - Grey Pouch" type="EtcItem">
+	<item id="7725" name="擄獲物-灰色行囊" type="EtcItem">
 		<!-- An item recovered from the swampland. It is dirty and worn out. It seems to contain something that looks like a water bottle. Double-click to view its contents. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -839,7 +839,7 @@
 			<skill id="2218" level="3" /> <!-- Looted Goods - Gray Pouch -->
 		</skills>
 	</item>
-	<item id="7726" name="Small Green Nimble Fish (Novice)" type="EtcItem">
+	<item id="7726" name="初學者用-敏捷的綠色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -854,7 +854,7 @@
 			<skill id="2220" level="1" /> <!-- Small Green Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7727" name="Small Green Ugly Fish (Novice)" type="EtcItem">
+	<item id="7727" name="初學者用-暴躁的綠色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -869,7 +869,7 @@
 			<skill id="2220" level="2" /> <!-- Small Green Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7728" name="Small Green Fat Fish (Novice)" type="EtcItem">
+	<item id="7728" name="初學者用-寬扁的綠色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -884,7 +884,7 @@
 			<skill id="2220" level="3" /> <!-- Small Green Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7729" name="Green Nimble Fish (Novice)" type="EtcItem">
+	<item id="7729" name="初學者用-敏捷的綠色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -899,7 +899,7 @@
 			<skill id="2220" level="4" /> <!-- Green Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7730" name="Green Ugly Fish (Novice)" type="EtcItem">
+	<item id="7730" name="初學者用-暴躁的綠色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -914,7 +914,7 @@
 			<skill id="2220" level="5" /> <!-- Green Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7731" name="Green Fat Fish (Novice)" type="EtcItem">
+	<item id="7731" name="初學者用-寬扁的綠色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -929,7 +929,7 @@
 			<skill id="2220" level="6" /> <!-- Green Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7732" name="Large Green Nimble Fish (Novice)" type="EtcItem">
+	<item id="7732" name="初學者用-敏捷的綠色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -944,7 +944,7 @@
 			<skill id="2220" level="7" /> <!-- Large Green Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7733" name="Large Green Ugly Fish (Novice)" type="EtcItem">
+	<item id="7733" name="初學者用-暴躁的綠色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -959,7 +959,7 @@
 			<skill id="2220" level="8" /> <!-- Large Green Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7734" name="Large Green Fat Fish (Novice)" type="EtcItem">
+	<item id="7734" name="初學者用-寬扁的綠色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -974,7 +974,7 @@
 			<skill id="2220" level="9" /> <!-- Large Green Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7735" name="Small Jade Nimble Fish (Novice)" type="EtcItem">
+	<item id="7735" name="初學者用-敏捷的翡翠小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -989,7 +989,7 @@
 			<skill id="2221" level="1" /> <!-- Small Jade Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7736" name="Small Jade Ugly Fish (Novice)" type="EtcItem">
+	<item id="7736" name="初學者用-暴躁的翡翠小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1004,7 +1004,7 @@
 			<skill id="2221" level="2" /> <!-- Small Jade Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7737" name="Small Jade Fat Fish (Novice)" type="EtcItem">
+	<item id="7737" name="初學者用-寬扁的翡翠小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1019,7 +1019,7 @@
 			<skill id="2221" level="3" /> <!-- Small Jade Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7738" name="Jade Nimble Fish (Novice)" type="EtcItem">
+	<item id="7738" name="初學者用-敏捷的翡翠魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1034,7 +1034,7 @@
 			<skill id="2221" level="4" /> <!-- Jade Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7739" name="Jade Ugly Fish (Novice)" type="EtcItem">
+	<item id="7739" name="初學者用-暴躁的翡翠魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1049,7 +1049,7 @@
 			<skill id="2221" level="5" /> <!-- Jade Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7740" name="Jade Fat Fish (Novice)" type="EtcItem">
+	<item id="7740" name="初學者用-寬扁的翡翠魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1064,7 +1064,7 @@
 			<skill id="2221" level="6" /> <!-- Jade Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7741" name="Large Jade Nimble Fish (Novice)" type="EtcItem">
+	<item id="7741" name="初學者用-敏捷的翡翠大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1079,7 +1079,7 @@
 			<skill id="2221" level="7" /> <!-- Large Jade Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7742" name="Large Jade Ugly Fish (Novice)" type="EtcItem">
+	<item id="7742" name="初學者用-暴躁的翡翠大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1094,7 +1094,7 @@
 			<skill id="2221" level="8" /> <!-- Large Jade Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7743" name="Large Jade Fat Fish (Novice)" type="EtcItem">
+	<item id="7743" name="初學者用-寬扁的翡翠大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1109,7 +1109,7 @@
 			<skill id="2221" level="9" /> <!-- Large Jade Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7744" name="Small Blue Nimble Fish (Novice)" type="EtcItem">
+	<item id="7744" name="初學者用-敏捷的藍色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1124,7 +1124,7 @@
 			<skill id="2222" level="1" /> <!-- Small Blue Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7745" name="Small Blue Ugly Fish (Novice)" type="EtcItem">
+	<item id="7745" name="初學者用-暴躁的藍色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1139,7 +1139,7 @@
 			<skill id="2222" level="2" /> <!-- Small Blue Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7746" name="Small Blue Fat Fish (Novice)" type="EtcItem">
+	<item id="7746" name="初學者用-寬扁的藍色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1154,7 +1154,7 @@
 			<skill id="2222" level="3" /> <!-- Small Blue Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7747" name="Blue Nimble Fish (Novice)" type="EtcItem">
+	<item id="7747" name="初學者用-敏捷的藍色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1169,7 +1169,7 @@
 			<skill id="2222" level="4" /> <!-- Blue Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7748" name="Blue Ugly Fish (Novice)" type="EtcItem">
+	<item id="7748" name="初學者用-暴躁的藍色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1184,7 +1184,7 @@
 			<skill id="2222" level="5" /> <!-- Blue Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7749" name="Blue Fat Fish (Novice)" type="EtcItem">
+	<item id="7749" name="初學者用-寬扁的藍色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1199,7 +1199,7 @@
 			<skill id="2222" level="6" /> <!-- Blue Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7750" name="Large Blue Nimble Fish (Novice)" type="EtcItem">
+	<item id="7750" name="初學者用-敏捷的藍色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1214,7 +1214,7 @@
 			<skill id="2222" level="7" /> <!-- Large Blue Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7751" name="Large Blue Ugly Fish (Novice)" type="EtcItem">
+	<item id="7751" name="初學者用-暴躁的藍色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1229,7 +1229,7 @@
 			<skill id="2222" level="8" /> <!-- Large Blue Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7752" name="Large Blue Fat Fish (Novice)" type="EtcItem">
+	<item id="7752" name="初學者用-寬扁的藍色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1244,7 +1244,7 @@
 			<skill id="2222" level="9" /> <!-- Large Blue Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7753" name="Small Yellow Nimble Fish (Novice)" type="EtcItem">
+	<item id="7753" name="初學者用-敏捷的黃色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1259,7 +1259,7 @@
 			<skill id="2223" level="1" /> <!-- Small Yellow Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7754" name="Small Yellow Ugly Fish (Novice)" type="EtcItem">
+	<item id="7754" name="初學者用-暴躁的黃色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1274,7 +1274,7 @@
 			<skill id="2223" level="2" /> <!-- Small Yellow Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7755" name="Small Yellow Fat Fish (Novice)" type="EtcItem">
+	<item id="7755" name="初學者用-寬扁的黃色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1289,7 +1289,7 @@
 			<skill id="2223" level="3" /> <!-- Small Yellow Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7756" name="Yellow Nimble Fish (Novice)" type="EtcItem">
+	<item id="7756" name="初學者用-敏捷的黃色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1304,7 +1304,7 @@
 			<skill id="2223" level="4" /> <!-- Yellow Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7757" name="Yellow Ugly Fish (Novice)" type="EtcItem">
+	<item id="7757" name="初學者用-暴躁的黃色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1319,7 +1319,7 @@
 			<skill id="2223" level="5" /> <!-- Yellow Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7758" name="Yellow Fat Fish (Novice)" type="EtcItem">
+	<item id="7758" name="初學者用-寬扁的黃色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1334,7 +1334,7 @@
 			<skill id="2223" level="6" /> <!-- Yellow Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7759" name="Large Yellow Nimble Fish (Novice)" type="EtcItem">
+	<item id="7759" name="初學者用-敏捷的黃色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1349,7 +1349,7 @@
 			<skill id="2223" level="7" /> <!-- Large Yellow Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7760" name="Large Yellow Ugly Fish (Novice)" type="EtcItem">
+	<item id="7760" name="初學者用-暴躁的黃色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1364,7 +1364,7 @@
 			<skill id="2223" level="8" /> <!-- Large Yellow Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7761" name="Large Yellow Fat Fish (Novice)" type="EtcItem">
+	<item id="7761" name="初學者用-寬扁的黃色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1379,7 +1379,7 @@
 			<skill id="2223" level="9" /> <!-- Large Yellow Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7762" name="Small Orange Nimble Fish (Novice)" type="EtcItem">
+	<item id="7762" name="初學者用-敏捷的橙色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1394,7 +1394,7 @@
 			<skill id="2224" level="1" /> <!-- Small Orange Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7763" name="Small Orange Ugly Fish (Novice)" type="EtcItem">
+	<item id="7763" name="初學者用-暴躁的橙色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1409,7 +1409,7 @@
 			<skill id="2224" level="2" /> <!-- Small Orange Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7764" name="Small Orange Fat Fish (Novice)" type="EtcItem">
+	<item id="7764" name="初學者用-寬扁的橙色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1424,7 +1424,7 @@
 			<skill id="2224" level="3" /> <!-- Small Orange Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7765" name="Orange Nimble Fish (Novice)" type="EtcItem">
+	<item id="7765" name="初學者用-敏捷的橙色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1439,7 +1439,7 @@
 			<skill id="2224" level="4" /> <!-- Orange Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7766" name="Orange Ugly Fish (Novice)" type="EtcItem">
+	<item id="7766" name="初學者用-暴躁的橙色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1454,7 +1454,7 @@
 			<skill id="2224" level="5" /> <!-- Orange Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7767" name="Orange Fat Fish (Novice)" type="EtcItem">
+	<item id="7767" name="初學者用-寬扁的橙色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1469,7 +1469,7 @@
 			<skill id="2224" level="6" /> <!-- Orange Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7768" name="Large Orange Nimble Fish (Novice)" type="EtcItem">
+	<item id="7768" name="初學者用-敏捷的橙色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1484,7 +1484,7 @@
 			<skill id="2224" level="7" /> <!-- Large Orange Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7769" name="Large Orange Ugly Fish (Novice)" type="EtcItem">
+	<item id="7769" name="初學者用-暴躁的橙色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1499,7 +1499,7 @@
 			<skill id="2224" level="8" /> <!-- Large Orange Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7770" name="Large Orange Fat Fish (Novice)" type="EtcItem">
+	<item id="7770" name="初學者用-寬扁的橙色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -1514,7 +1514,7 @@
 			<skill id="2224" level="9" /> <!-- Large Orange Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7771" name="Small Purple Nimble Fish (Novice)" type="EtcItem">
+	<item id="7771" name="初學者用-敏捷的紫色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1529,7 +1529,7 @@
 			<skill id="2225" level="1" /> <!-- Small Purple Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7772" name="Small Purple Ugly Fish (Novice)" type="EtcItem">
+	<item id="7772" name="初學者用-暴躁的紫色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1544,7 +1544,7 @@
 			<skill id="2225" level="2" /> <!-- Small Purple Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7773" name="Small Purple Fat Fish (Novice)" type="EtcItem">
+	<item id="7773" name="初學者用-寬扁的紫色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1559,7 +1559,7 @@
 			<skill id="2225" level="3" /> <!-- Small Purple Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7774" name="Purple Nimble Fish (Novice)" type="EtcItem">
+	<item id="7774" name="初學者用-敏捷的紫色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1574,7 +1574,7 @@
 			<skill id="2225" level="4" /> <!-- Purple Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7775" name="Purple Ugly Fish (Novice)" type="EtcItem">
+	<item id="7775" name="初學者用-暴躁的紫色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1589,7 +1589,7 @@
 			<skill id="2225" level="5" /> <!-- Purple Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7776" name="Purple Fat Fish (Novice)" type="EtcItem">
+	<item id="7776" name="初學者用-寬扁的紫色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1604,7 +1604,7 @@
 			<skill id="2225" level="6" /> <!-- Purple Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7777" name="Large Purple Nimble Fish (Novice)" type="EtcItem">
+	<item id="7777" name="初學者用-敏捷的紫色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1619,7 +1619,7 @@
 			<skill id="2225" level="7" /> <!-- Large Purple Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7778" name="Large Purple Ugly Fish (Novice)" type="EtcItem">
+	<item id="7778" name="初學者用-暴躁的紫色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1634,7 +1634,7 @@
 			<skill id="2225" level="8" /> <!-- Large Purple Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7779" name="Large Purple Fat Fish (Novice)" type="EtcItem">
+	<item id="7779" name="初學者用-寬扁的紫色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1649,7 +1649,7 @@
 			<skill id="2225" level="9" /> <!-- Large Purple Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7780" name="Small Red Nimble Fish (Novice)" type="EtcItem">
+	<item id="7780" name="初學者用-敏捷的紅色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1664,7 +1664,7 @@
 			<skill id="2226" level="1" /> <!-- Small Red Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7781" name="Small Red Ugly Fish (Novice)" type="EtcItem">
+	<item id="7781" name="初學者用-暴躁的紅色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1679,7 +1679,7 @@
 			<skill id="2226" level="2" /> <!-- Small Red Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7782" name="Small Red Fat Fish (Novice)" type="EtcItem">
+	<item id="7782" name="初學者用-寬扁的紅色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1694,7 +1694,7 @@
 			<skill id="2226" level="3" /> <!-- Small Red Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7783" name="Red Nimble Fish (Novice)" type="EtcItem">
+	<item id="7783" name="初學者用-敏捷的紅色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1709,7 +1709,7 @@
 			<skill id="2226" level="4" /> <!-- Red Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7784" name="Red Ugly Fish (Novice)" type="EtcItem">
+	<item id="7784" name="初學者用-暴躁的紅色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1724,7 +1724,7 @@
 			<skill id="2226" level="5" /> <!-- Red Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7785" name="Red Fat Fish (Novice)" type="EtcItem">
+	<item id="7785" name="初學者用-寬扁的紅色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1739,7 +1739,7 @@
 			<skill id="2226" level="6" /> <!-- Red Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7786" name="Large Red Nimble Fish (Novice)" type="EtcItem">
+	<item id="7786" name="初學者用-敏捷的紅色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1754,7 +1754,7 @@
 			<skill id="2226" level="7" /> <!-- Large Red Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7787" name="Large Red Ugly Fish (Novice)" type="EtcItem">
+	<item id="7787" name="初學者用-暴躁的紅色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1769,7 +1769,7 @@
 			<skill id="2226" level="8" /> <!-- Large Red Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7788" name="Large Red Fat Fish (Novice)" type="EtcItem">
+	<item id="7788" name="初學者用-寬扁的紅色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1784,7 +1784,7 @@
 			<skill id="2226" level="9" /> <!-- Large Red Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7789" name="Small White Nimble Fish (Novice)" type="EtcItem">
+	<item id="7789" name="初學者用-敏捷的白色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1799,7 +1799,7 @@
 			<skill id="2227" level="1" /> <!-- Small White Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7790" name="Small White Ugly Fish (Novice)" type="EtcItem">
+	<item id="7790" name="初學者用-暴躁的白色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1814,7 +1814,7 @@
 			<skill id="2227" level="2" /> <!-- Small White Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7791" name="Small White Fat Fish (Novice)" type="EtcItem">
+	<item id="7791" name="初學者用-寬扁的白色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1829,7 +1829,7 @@
 			<skill id="2227" level="3" /> <!-- Small White Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7792" name="White Nimble Fish (Novice)" type="EtcItem">
+	<item id="7792" name="初學者用-敏捷的白色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1844,7 +1844,7 @@
 			<skill id="2227" level="4" /> <!-- White Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7793" name="White Ugly Fish (Novice)" type="EtcItem">
+	<item id="7793" name="初學者用-暴躁的白色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1859,7 +1859,7 @@
 			<skill id="2227" level="5" /> <!-- White Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7794" name="White Fat Fish (Novice)" type="EtcItem">
+	<item id="7794" name="初學者用-寬扁的白色魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1874,7 +1874,7 @@
 			<skill id="2227" level="6" /> <!-- White Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7795" name="Large White Nimble Fish (Novice)" type="EtcItem">
+	<item id="7795" name="初學者用-敏捷的白色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1889,7 +1889,7 @@
 			<skill id="2227" level="7" /> <!-- Large White Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7796" name="Large White Ugly Fish (Novice)" type="EtcItem">
+	<item id="7796" name="初學者用-暴躁的白色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1904,7 +1904,7 @@
 			<skill id="2227" level="8" /> <!-- Large White Ugly Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7797" name="Large White Fat Fish (Novice)" type="EtcItem">
+	<item id="7797" name="初學者用-寬扁的白色大魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1919,7 +1919,7 @@
 			<skill id="2227" level="9" /> <!-- Large White Fat Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7798" name="Small Black Nimble Fish (Novice)" type="EtcItem">
+	<item id="7798" name="初學者用-敏捷的黑色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1934,7 +1934,7 @@
 			<skill id="2228" level="1" /> <!-- Small Black Nimble Fish (Novice) -->
 		</skills>
 	</item>
-	<item id="7799" name="Small Black Ugly Fish (Novice)" type="EtcItem">
+	<item id="7799" name="初學者用-暴躁的黑色小魚" type="EtcItem">
 		<!-- Double-click to transform to a random item. The transformed item can be used as a basic material for crafting other items. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />

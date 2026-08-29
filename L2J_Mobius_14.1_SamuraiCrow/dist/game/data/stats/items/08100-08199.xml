@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8100" name="Broken Golem Shard" type="EtcItem">
+	<item id="8100" name="損壞的高崙破片" type="EtcItem">
 		<!-- A Golem's shard. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="immediate_effect" val="true" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8101" name="Dwarf's Favor" type="EtcItem">
+	<item id="8101" name="矮人的囑託" type="EtcItem">
 		<!-- Letter of introduction to Yumita, written by Head Blacksmith Newyear of Schuttgart Village. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -24,7 +24,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8102" name="Pa'agrian Sword" additionalName="Focus" type="Weapon">
+	<item id="8102" name="帕格立歐之劍" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -57,7 +57,7 @@
 			<skill id="3010" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="8103" name="Pa'agrian Sword" additionalName="Health" type="Weapon">
+	<item id="8103" name="帕格立歐之劍" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -90,7 +90,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="8104" name="Pa'agrian Sword" additionalName="Critical Drain" type="Weapon">
+	<item id="8104" name="帕格立歐之劍" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -123,7 +123,7 @@
 			<skill id="3022" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical HP Drain -->
 		</skills>
 	</item>
-	<item id="8105" name="Guardian's Sword" additionalName="Critical Drain" type="Weapon">
+	<item id="8105" name="守護神之劍" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -156,7 +156,7 @@
 			<skill id="3022" level="6" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical HP Drain -->
 		</skills>
 	</item>
-	<item id="8106" name="Guardian's Sword" additionalName="Health" type="Weapon">
+	<item id="8106" name="守護神之劍" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -189,7 +189,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="8107" name="Guardian's Sword" additionalName="Critical Bleed" type="Weapon">
+	<item id="8107" name="守護神之劍" additionalName="Critical Bleed" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -222,7 +222,7 @@
 			<skill id="3055" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Bleed -->
 		</skills>
 	</item>
-	<item id="8108" name="Infernal Master" additionalName="Haste" type="Weapon">
+	<item id="8108" name="煉獄之主" additionalName="Haste" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +6%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -255,7 +255,7 @@
 			<skill id="3068" level="2" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="8109" name="Infernal Master" additionalName="Critical Damage" type="Weapon">
+	<item id="8109" name="煉獄之主" additionalName="Critical Damage" type="Weapon">
 		<!-- <Soul crystal property>. Critical Damage for basic attacks +297. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -288,7 +288,7 @@
 			<skill id="3067" level="1" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="8110" name="Infernal Master" additionalName="Focus" type="Weapon">
+	<item id="8110" name="煉獄之主" additionalName="Focus" type="Weapon">
 		<!-- <Soul crystal property>. Critical Rate for basic attacks +6.1%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -321,7 +321,7 @@
 			<skill id="3050" level="1" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="8111" name="Mysterious Sword" additionalName="Acumen" type="Weapon">
+	<item id="8111" name="奧祕之刃" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -354,7 +354,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="8112" name="Mysterious Sword" additionalName="M. Atk." type="Weapon">
+	<item id="8112" name="奧祕之刃" additionalName="M. Atk." type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -387,7 +387,7 @@
 			<skill id="3077" level="1" /> <!-- Special Property: M. Power -->
 		</skills>
 	</item>
-	<item id="8113" name="Mysterious Sword" additionalName="Magic Weakness" type="Weapon">
+	<item id="8113" name="奧祕之刃" additionalName="Magic Weakness" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -420,7 +420,7 @@
 			<skill id="1164" level="7" type_chance="8" type="ON_MAGIC_SKILL" /> <!-- Curse of Weakness -->
 		</skills>
 	</item>
-	<item id="8114" name="Ecliptic Sword" additionalName="Empower" type="Weapon">
+	<item id="8114" name="日蝕劍" additionalName="Empower" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -453,7 +453,7 @@
 			<skill id="3076" level="4" /> <!-- Special Property: Empower -->
 		</skills>
 	</item>
-	<item id="8115" name="Ecliptic Sword" additionalName="M. Atk." type="Weapon">
+	<item id="8115" name="日蝕劍" additionalName="M. Atk." type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -486,7 +486,7 @@
 			<skill id="3077" level="4" /> <!-- Special Property: M. Power -->
 		</skills>
 	</item>
-	<item id="8116" name="Ecliptic Sword" additionalName="Silence" type="Weapon">
+	<item id="8116" name="日蝕劍" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -519,7 +519,7 @@
 			<skill id="3078" level="4" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Property: Silence -->
 		</skills>
 	</item>
-	<item id="8117" name="Wizard's Tear" additionalName="Acumen" type="Weapon">
+	<item id="8117" name="巫師之淚" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -552,7 +552,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="8118" name="Wizard's Tear" additionalName="M. Atk." type="Weapon">
+	<item id="8118" name="巫師之淚" additionalName="M. Atk." type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -585,7 +585,7 @@
 			<skill id="3077" level="6" /> <!-- Special Property: M. Power -->
 		</skills>
 	</item>
-	<item id="8119" name="Wizard's Tear" additionalName="Conversion" type="Weapon">
+	<item id="8119" name="巫師之淚" additionalName="Conversion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -618,7 +618,7 @@
 			<skill id="3048" level="1" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="8120" name="Dwarven Hammer" additionalName="Health" type="Weapon">
+	<item id="8120" name="矮人巨鎚" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -651,7 +651,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="8121" name="Dwarven Hammer" additionalName="Anger" type="Weapon">
+	<item id="8121" name="矮人巨鎚" additionalName="Anger" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -684,7 +684,7 @@
 			<skill id="3012" level="4" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="8122" name="Dwarven Hammer" additionalName="Critical Bleed" type="Weapon">
+	<item id="8122" name="矮人巨鎚" additionalName="Critical Bleed" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -717,7 +717,7 @@
 			<skill id="3021" level="4" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Bleed -->
 		</skills>
 	</item>
-	<item id="8123" name="Karik Horn" additionalName="Focus" type="Weapon">
+	<item id="8123" name="卡拉克的角" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -750,7 +750,7 @@
 			<skill id="3010" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="8124" name="Karik Horn" additionalName="Haste" type="Weapon">
+	<item id="8124" name="卡拉克的角" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -783,7 +783,7 @@
 			<skill id="3036" level="3" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="8125" name="Karik Horn" additionalName="Critical Drain" type="Weapon">
+	<item id="8125" name="卡拉克的角" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -816,7 +816,7 @@
 			<skill id="3039" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical HP Drain -->
 		</skills>
 	</item>
-	<item id="8126" name="Destroyer Hammer" additionalName="Health" type="Weapon">
+	<item id="8126" name="破壞者巨鎚" additionalName="Health" type="Weapon">
 		<!-- <Soul crystal property>. Max HP +25%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -849,7 +849,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="8127" name="Destroyer Hammer" additionalName="Haste" type="Weapon">
+	<item id="8127" name="破壞者巨鎚" additionalName="Haste" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +6%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -882,7 +882,7 @@
 			<skill id="3068" level="2" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="8128" name="Destroyer Hammer" additionalName="Critical Drain" type="Weapon">
+	<item id="8128" name="破壞者巨鎚" additionalName="Critical Drain" type="Weapon">
 		<!-- <Soul crystal property>. Absorbs 18 HP from the target on a critical attack. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -916,7 +916,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="8129" name="Ice Storm Hammer" additionalName="Focus" type="Weapon">
+	<item id="8129" name="暴風雪巨鎚" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 			<skill id="3010" level="5" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="8130" name="Ice Storm Hammer" additionalName="Anger" type="Weapon">
+	<item id="8130" name="暴風雪巨鎚" additionalName="Anger" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -982,7 +982,7 @@
 			<skill id="3012" level="5" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="8131" name="Ice Storm Hammer" additionalName="Critical Bleed" type="Weapon">
+	<item id="8131" name="暴風雪巨鎚" additionalName="Critical Bleed" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1015,7 +1015,7 @@
 			<skill id="3021" level="5" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Bleed -->
 		</skills>
 	</item>
-	<item id="8132" name="Star Buster" additionalName="Health" type="Weapon">
+	<item id="8132" name="星爆" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1048,7 +1048,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="8133" name="Star Buster" additionalName="Haste" type="Weapon">
+	<item id="8133" name="星爆" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1081,7 +1081,7 @@
 			<skill id="3036" level="6" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="8134" name="Star Buster" additionalName="Rsk. Focus" type="Weapon">
+	<item id="8134" name="星爆" additionalName="Rsk. Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1114,7 +1114,7 @@
 			<skill id="3027" level="6" /> <!-- Special Property: Rsk. Focus -->
 		</skills>
 	</item>
-	<item id="8135" name="Doom Crusher" additionalName="Health" type="Weapon">
+	<item id="8135" name="末日毀滅者" additionalName="Health" type="Weapon">
 		<!-- <Soul crystal property>. Max HP +25%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1147,7 +1147,7 @@
 			<skill id="3013" level="3" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="8136" name="Doom Crusher" additionalName="Anger" type="Weapon">
+	<item id="8136" name="末日毀滅者" additionalName="Anger" type="Weapon">
 		<!-- <Soul crystal property>. Max HP -15%, P. Atk. +32. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1180,7 +1180,7 @@
 			<skill id="3057" level="2" /> <!-- Special Property: Anger -->
 		</skills>
 	</item>
-	<item id="8137" name="Doom Crusher" additionalName="Rsk. Haste" type="Weapon">
+	<item id="8137" name="末日毀滅者" additionalName="Rsk. Haste" type="Weapon">
 		<!-- <Soul crystal property>. Atk. Spd. +11% when HP < 60%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1213,7 +1213,7 @@
 			<skill id="3056" level="2" /> <!-- Special Property: Rsk. Haste -->
 		</skills>
 	</item>
-	<item id="8138" name="Ecliptic Axe" additionalName="Conversion" type="Weapon">
+	<item id="8138" name="月蝕斧" additionalName="Conversion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1247,7 +1247,7 @@
 			<skill id="3048" level="1" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="8139" name="Ecliptic Axe" additionalName="M. Atk." type="Weapon">
+	<item id="8139" name="月蝕斧" additionalName="M. Atk." type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1281,7 +1281,7 @@
 			<skill id="3077" level="4" /> <!-- Special Property: M. Power -->
 		</skills>
 	</item>
-	<item id="8140" name="Ecliptic Axe" additionalName="Magic Hold" type="Weapon">
+	<item id="8140" name="月蝕斧" additionalName="Magic Hold" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1315,7 +1315,7 @@
 			<skill id="1201" level="23" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="8141" name="Spell Breaker" additionalName="Acumen" type="Weapon">
+	<item id="8141" name="破咒者" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1349,7 +1349,7 @@
 			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="8142" name="Spell Breaker" additionalName="Mental Shield" type="Weapon">
+	<item id="8142" name="破咒者" additionalName="Mental Shield" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1383,7 +1383,7 @@
 			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 		</skills>
 	</item>
-	<item id="8143" name="Spell Breaker" additionalName="Magic Hold" type="Weapon">
+	<item id="8143" name="破咒者" additionalName="Magic Hold" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1417,7 +1417,7 @@
 			<skill id="1201" level="25" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
 	</item>
-	<item id="8144" name="Kaim Vanul's Bones" additionalName="Mana Up" type="Weapon">
+	<item id="8144" name="卡倚巴奴之骨" additionalName="Mana Up" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1451,7 +1451,7 @@
 			<skill id="3014" level="1" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="8145" name="Kaim Vanul's Bones" additionalName="Silence" type="Weapon">
+	<item id="8145" name="卡倚巴奴之骨" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1485,7 +1485,7 @@
 			<skill id="3078" level="6" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Property: Silence -->
 		</skills>
 	</item>
-	<item id="8146" name="Kaim Vanul's Bones" additionalName="Conversion" type="Weapon">
+	<item id="8146" name="卡倚巴奴之骨" additionalName="Conversion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1519,7 +1519,7 @@
 			<skill id="3048" level="1" /> <!-- Special Property: Conversion -->
 		</skills>
 	</item>
-	<item id="8147" name="Spiritual Eye" additionalName="Mana Up" type="Weapon">
+	<item id="8147" name="英魂之眼" additionalName="Mana Up" type="Weapon">
 		<!-- <Soul crystal property>. Max MP +30%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1553,7 +1553,7 @@
 			<skill id="3014" level="2" /> <!-- Special Property: Mana Up -->
 		</skills>
 	</item>
-	<item id="8148" name="Spiritual Eye" additionalName="Poison" type="Weapon">
+	<item id="8148" name="英魂之眼" additionalName="Poison" type="Weapon">
 		<!-- <Soul crystal property>. With an 8% chance, poisons the target when using a debuff. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1588,7 +1588,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="8149" name="Spiritual Eye" additionalName="Acumen" type="Weapon">
+	<item id="8149" name="英魂之眼" additionalName="Acumen" type="Weapon">
 		<!-- <Soul crystal property>. Casting Spd. +15%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1622,7 +1622,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="8150" name="Flaming Dragon Skull" additionalName="Acumen" type="Weapon">
+	<item id="8150" name="火龍之首" additionalName="Acumen" type="Weapon">
 		<!-- <Soul crystal property>. Casting Spd. +15%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1656,7 +1656,7 @@
 			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
 		</skills>
 	</item>
-	<item id="8151" name="Flaming Dragon Skull" additionalName="M. Atk." type="Weapon">
+	<item id="8151" name="火龍之首" additionalName="M. Atk." type="Weapon">
 		<!-- <Soul crystal property>. M. Skill MP Consumption +15%, M. Atk. +167. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1690,7 +1690,7 @@
 			<skill id="3073" level="2" /> <!-- Special Property: M. Power -->
 		</skills>
 	</item>
-	<item id="8152" name="Flaming Dragon Skull" additionalName="Silence" type="Weapon">
+	<item id="8152" name="火龍之首" additionalName="Silence" type="Weapon">
 		<!-- <Soul crystal property>. With a 10% chance, inflicts Silence on the target when using a debuff. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1725,7 +1725,7 @@
 			<skill id="3552" level="1" /> <!-- Special Property: PvP Damage -->
 		</skills>
 	</item>
-	<item id="8153" name="Adventurer's Guide Book" type="EtcItem">
+	<item id="8153" name="冒險者指南書" type="EtcItem">
 		<!-- Essential read for adventurers. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="default_action" val="SHOW_ADVENTURER_GUIDE_BOOK" />
@@ -1734,7 +1734,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="2000" />
 	</item>
-	<item id="8154" name="Herb of Life" type="EtcItem">
+	<item id="8154" name="生命藥草" type="EtcItem">
 		<!-- Momentarily recovers some HP. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1746,7 +1746,7 @@
 			<skill id="2244" level="1" /> <!-- Herb Drink of Life -->
 		</skills>
 	</item>
-	<item id="8155" name="Herb of Mana" type="EtcItem">
+	<item id="8155" name="瑪那藥草" type="EtcItem">
 		<!-- Recovers a certain amount of MP immediately. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1758,7 +1758,7 @@
 			<skill id="2245" level="1" /> <!-- Herb Drink of Mana -->
 		</skills>
 	</item>
-	<item id="8156" name="Herb of Power" type="EtcItem">
+	<item id="8156" name="力量藥草" type="EtcItem">
 		<!-- Increases P. Atk. for a certain period of time. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1770,7 +1770,7 @@
 			<skill id="2246" level="1" /> <!-- Herb Drink of Power -->
 		</skills>
 	</item>
-	<item id="8157" name="Herb of Magic" type="EtcItem">
+	<item id="8157" name="魔力藥草" type="EtcItem">
 		<!-- Temporarily increases M. Atk. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1782,7 +1782,7 @@
 			<skill id="2247" level="1" /> <!-- Herb Drink of Magic -->
 		</skills>
 	</item>
-	<item id="8158" name="C-grade Memento Mori" type="EtcItem">
+	<item id="8158" name="死神骸骨-C級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_a_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1791,7 +1791,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8159" name="B-grade Memento Mori" type="EtcItem">
+	<item id="8159" name="死神骸骨-B級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_a_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1800,7 +1800,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8160" name="A-grade Memento Mori" type="EtcItem">
+	<item id="8160" name="死神骸骨-A級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_a_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1809,7 +1809,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8161" name="C-grade Dragon's Heart" type="EtcItem">
+	<item id="8161" name="龍之心-C級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_b_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1818,7 +1818,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8162" name="B-grade Dragon's Heart" type="EtcItem">
+	<item id="8162" name="龍之心-B級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_b_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1827,7 +1827,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8163" name="A-grade Dragon's Heart" type="EtcItem">
+	<item id="8163" name="龍之心-A級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_b_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1836,7 +1836,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8164" name="C-grade Earth Egg" type="EtcItem">
+	<item id="8164" name="大地之卵-C級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_c_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1845,7 +1845,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8165" name="B-grade Earth Egg" type="EtcItem">
+	<item id="8165" name="大地之卵-B級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_c_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1854,7 +1854,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8166" name="A-grade Earth Egg" type="EtcItem">
+	<item id="8166" name="大地之卵-A級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_c_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1863,7 +1863,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8167" name="C-grade Nonliving Nucleus" type="EtcItem">
+	<item id="8167" name="假生命之核-C級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_d_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1872,7 +1872,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8168" name="B-grade Nonliving Nucleus" type="EtcItem">
+	<item id="8168" name="假生命之核-B級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_d_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1881,7 +1881,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8169" name="A-grade Nonliving Nucleus" type="EtcItem">
+	<item id="8169" name="假生命之核-A級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_d_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1890,7 +1890,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8170" name="C-grade Angelic Essence" type="EtcItem">
+	<item id="8170" name="天使之魂-C級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_e_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1899,7 +1899,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8171" name="B-grade Angelic Essence" type="EtcItem">
+	<item id="8171" name="天使之魂-B級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_e_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1908,7 +1908,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8172" name="A-grade Angelic Essence" type="EtcItem">
+	<item id="8172" name="天使之魂-A級" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_e_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1917,7 +1917,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8173" name="C-grade Cradle of Creation (Not used)" type="EtcItem">
+	<item id="8173" name="創造的搖籃-C級(不使用)" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1925,7 +1925,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8174" name="B-grade Cradle of Creation (Not used)" type="EtcItem">
+	<item id="8174" name="創造的搖籃-B級(不使用)" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1933,7 +1933,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8175" name="Cradle of Creation" type="EtcItem">
+	<item id="8175" name="創造的搖籃" type="EtcItem">
 		<!-- Win this item by gambling and exchange it for an A-grade item. -->
 		<set name="icon" val="icon.etc_raid_g_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1942,7 +1942,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8176" name="Destruction Tombstone" type="EtcItem">
+	<item id="8176" name="破滅的墓碑" type="EtcItem">
 		<!-- Obtained from killing a raid boss. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_raid_f_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1951,7 +1951,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="8177" name="Raid Challenger's Circlet" type="Armor">
+	<item id="8177" name="狩獵挑戰者頭箍" type="Armor">
 		<!-- Beginner's Raid Challenger Circlet. -->
 		<set name="icon" val="icon.accessory_raid_challenger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1964,7 +1964,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8178" name="Raid Adventurer's Circlet" type="Armor">
+	<item id="8178" name="狩獵探險家頭箍" type="Armor">
 		<!-- Raid Adventurer's Circlet -->
 		<set name="icon" val="icon.accessory_raid_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1977,7 +1977,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8179" name="Raid Master's Circlet" type="Armor">
+	<item id="8179" name="狩獵大師頭箍" type="Armor">
 		<!-- Raid Master's Circlet -->
 		<set name="icon" val="icon.accessory_raid_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1990,7 +1990,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8180" name="Circlet of Ice Fairy Sirra" type="Armor">
+	<item id="8180" name="冰雪妖精希露頭箍" type="Armor">
 		<!-- Circlet obtained by attacking the Ice Fairy Sirra. -->
 		<set name="icon" val="icon.accessory_ice_queen_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2003,7 +2003,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8181" name="Academy Circlet" type="Armor">
+	<item id="8181" name="學院頭箍" type="Armor">
 		<!-- When the Academy Benefaction skill is used, the death XP penalty -50%, acquired XP +10%. -->
 		<set name="icon" val="icon.accessory_academy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2023,7 +2023,7 @@
 			<skill id="21250" level="1" /> <!-- Academy Benefaction -->
 		</skills>
 	</item>
-	<item id="8182" name="Circlet of Rune" type="Armor">
+	<item id="8182" name="魯因之環" type="Armor">
 		<!-- Rose Circlet. Can be worn by the lord of Rune Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2049,7 +2049,7 @@
 			<skill id="3633" level="2" /> <!-- Residential Shock Immunity -->
 		</skills>
 	</item>
-	<item id="8183" name="Circlet of Schuttgart" type="Armor">
+	<item id="8183" name="修加特之環" type="Armor">
 		<!-- A circlet decorated with a hammer and a torch. Can be worn by the lord of Schuttgart Castle and their clan members but not by allies. Enables Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -2075,7 +2075,7 @@
 			<skill id="3633" level="1" /> <!-- Residential Shock Immunity -->
 		</skills>
 	</item>
-	<item id="8184" name="Party Hat" type="Armor">
+	<item id="8184" name="派對尖帽" type="Armor">
 		<!-- A funny head accessory. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2088,7 +2088,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="8185" name="Chapeau" type="Armor">
+	<item id="8185" name="吟遊詩人帽" type="Armor">
 		<!-- A plumed hat with wide flaps. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2101,7 +2101,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="8186" name="Artisan's Goggles" type="Armor">
+	<item id="8186" name="工匠的護目鏡" type="Armor">
 		<!-- Large goggles for eye protection. Equipped in 2 head accessory slots. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2114,7 +2114,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="8187" name="Red Horn of Victory" type="Armor">
+	<item id="8187" name="勝利者尖角" type="Armor">
 		<!-- A head accessory for the 2006 Halloween Event. -->
 		<set name="icon" val="icon.accessory_hair_cornu_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2126,7 +2126,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="8188" name="Little Angel Wings" type="Armor">
+	<item id="8188" name="小天使之翼" type="Armor">
 		<!-- A head accessory shaped like a little white wing. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2139,7 +2139,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="8189" name="Fairy Antennae" type="Armor">
+	<item id="8189" name="小妖精觸角" type="Armor">
 		<!-- A lovely head accessory shaped like antennae with starlets. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2152,7 +2152,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="8190" name="Demonic Sword Zariche" type="Weapon">
+	<item id="8190" name="魔劍‧薩雷奇" type="Weapon">
 		<!-- Deadly and powerful magical sword made by the devil Bremnon himself. It is always thirsty for blood. -->
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2183,7 +2183,7 @@
 			<skill id="3603" level="1" /> <!-- Demonic Sword Zariche -->
 		</skills>
 	</item>
-	<item id="8191" name="Frintezza's Necklace" type="Armor">
+	<item id="8191" name="芙琳泰沙的項鍊" type="Armor">
 		<!-- MP +42, Sleep/ Paralysis/ Shock Resistance +15%, Sleep/ Paralysis/ Shock Atk. Rate +15%, Poison/ Bleed Resistance +25%, Poison/ Bleed Atk. Rate +25%. Decreases skill cooldown. Reflects a part of the damage. Increases Dark Resistance. Can be crystallized to obtain Selenite. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2204,7 +2204,7 @@
 			<skill id="3604" level="1" /> <!-- Frintezza's Necklace -->
 		</skills>
 	</item>
-	<item id="8192" name="Soul Breaking Arrow" type="EtcItem">
+	<item id="8192" name="破魂之矢" type="EtcItem">
 		<!-- Double-clicking the arrow temporarily pauses Frintezza's musical performance. It is deleted upon entering the Last Imperial Tomb. -->
 		<set name="icon" val="icon.etc_destory_soul_arrow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2218,7 +2218,7 @@
 			<skill id="2234" level="1" /> <!-- Soul Breaking Arrow -->
 		</skills>
 	</item>
-	<item id="8193" name="Corroded Fisherman's Potion - Green" type="EtcItem">
+	<item id="8193" name="腐蝕的漁夫藥水-綠色" type="EtcItem">
 		<!-- A corroded item. Can be sold at a shop. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2235,7 +2235,7 @@
 			<skill id="2274" level="1" /> <!-- Fisherman's Potion - Green -->
 		</skills>
 	</item>
-	<item id="8194" name="Corroded Fisherman's Potion - Jade" type="EtcItem">
+	<item id="8194" name="腐蝕的漁夫藥水-翡翠" type="EtcItem">
 		<!-- A corroded item. Can be sold at a shop. -->
 		<set name="icon" val="icon.etc_oblivion_jade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2252,7 +2252,7 @@
 			<skill id="2274" level="2" /> <!-- Fisherman's Potion - Jade -->
 		</skills>
 	</item>
-	<item id="8195" name="Corroded Fisherman's Potion - Blue" type="EtcItem">
+	<item id="8195" name="腐蝕的漁夫藥水-藍色" type="EtcItem">
 		<!-- A corroded item. Can be sold at a shop. -->
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2269,7 +2269,7 @@
 			<skill id="2274" level="3" /> <!-- Fisherman's Potion - Blue -->
 		</skills>
 	</item>
-	<item id="8196" name="Corroded Fisherman's Potion - Yellow" type="EtcItem">
+	<item id="8196" name="腐蝕的漁夫藥水-黃色" type="EtcItem">
 		<!-- A corroded item. Can be sold at a shop. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2286,7 +2286,7 @@
 			<skill id="2274" level="4" /> <!-- Fisherman's Potion - Yellow -->
 		</skills>
 	</item>
-	<item id="8197" name="Corroded Fisherman's Potion - Orange" type="EtcItem">
+	<item id="8197" name="腐蝕的漁夫藥水-橙色" type="EtcItem">
 		<!-- A corroded item. Can be sold at a shop. -->
 		<set name="icon" val="icon.etc_oblivion_orange_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2303,7 +2303,7 @@
 			<skill id="2274" level="5" /> <!-- Fisherman's Potion - Orange -->
 		</skills>
 	</item>
-	<item id="8198" name="Corroded Fisherman's Potion - Purple" type="EtcItem">
+	<item id="8198" name="腐蝕的漁夫藥水-紫色" type="EtcItem">
 		<!-- A corroded item. Can be sold at a shop. -->
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2320,7 +2320,7 @@
 			<skill id="2274" level="6" /> <!-- Fisherman's Potion - Purple -->
 		</skills>
 	</item>
-	<item id="8199" name="Corroded Fisherman's Potion - Red" type="EtcItem">
+	<item id="8199" name="腐蝕的漁夫藥水-紅色" type="EtcItem">
 		<!-- A corroded item. Can be sold at a shop. -->
 		<set name="icon" val="icon.etc_oblivion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

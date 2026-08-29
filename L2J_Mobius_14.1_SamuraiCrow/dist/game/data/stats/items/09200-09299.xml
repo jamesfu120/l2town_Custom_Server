@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="9200" name="Shadow Item: Jester Hat" additionalName="Firecracker" type="Armor">
+	<item id="9200" name="幻象裝備-小丑帽" additionalName="Firecracker" type="Armor">
 		<!-- A festive jester hat with two tips. Shadow item. Equipped in 2 head accessory slots. Event item with a magic effect. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -18,7 +18,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker -->
 		</skills>
 	</item>
-	<item id="9201" name="Shadow Item: Wizard Hat" additionalName="Firecracker" type="Armor">
+	<item id="9201" name="幻象裝備-魔法師帽" additionalName="Firecracker" type="Armor">
 		<!-- A wide-brimmed wizard hat. Shadow item. Equipped in 2 head accessory slots. An event item with a magic effect. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -36,7 +36,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker -->
 		</skills>
 	</item>
-	<item id="9202" name="Shadow Item: Dapper Cap" additionalName="Firecracker" type="Armor">
+	<item id="9202" name="幻象裝備-花花公子帽" additionalName="Firecracker" type="Armor">
 		<!-- A cap with a visor. Shadow item. Equipped in 2 head accessory slots. Event item with a magic effect. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -54,7 +54,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker -->
 		</skills>
 	</item>
-	<item id="9203" name="Shadow Item: Romantic Chapeau" additionalName="Firecracker" type="Armor">
+	<item id="9203" name="幻象裝備-浪漫圓帽" additionalName="Firecracker" type="Armor">
 		<!-- A fashionable hat. Shadow item. Equipped in 2 head accessory slots. Event item with a magic effect. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -72,7 +72,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker -->
 		</skills>
 	</item>
-	<item id="9204" name="Shadow Item: Iron Circlet" additionalName="Firecracker" type="Armor">
+	<item id="9204" name="幻象裝備-鋼鐵之環" additionalName="Firecracker" type="Armor">
 		<!-- An iron headgear. Shadow item. Equipped in 2 head accessory slots. Event item with a magic effect. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -90,7 +90,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker -->
 		</skills>
 	</item>
-	<item id="9205" name="Alchemist's Chest Key" type="EtcItem">
+	<item id="9205" name="煉金術士的寶箱鑰匙 " type="EtcItem">
 		<!-- A key for Alchemist's Chest. For event only. -->
 		<set name="icon" val="icon.etc_old_key_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -103,7 +103,7 @@
 			<skill id="2322" level="1" /> <!-- Chest Key - Event -->
 		</skills>
 	</item>
-	<item id="9206" name="Major HP Replenishing Potion - Event" type="EtcItem">
+	<item id="9206" name="強力HP治癒藥水-活動用" type="EtcItem">
 		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. Designed for use in events only. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -125,7 +125,7 @@
 			<skill id="2037" level="1" /> <!-- Potent HP Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="9207" name="Quick HP Replenishing Potion - Event" type="EtcItem">
+	<item id="9207" name="瞬間HP治癒藥水-活動用" type="EtcItem">
 		<!-- A magic potion that instantly recovers HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -147,7 +147,7 @@
 			<skill id="2038" level="1" /> <!-- Quick HP Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="9208" name="Phantom Mask - Event" type="Armor">
+	<item id="9208" name="幻影面具-活動用" type="Armor">
 		<!-- A scary head accessory. Equipped in 2 head accessory slots. Event only. -->
 		<set name="icon" val="icon.accessary_mask_of_chaotic_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -161,7 +161,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="9209" name="Rapier" type="Weapon">
+	<item id="9209" name="細劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Saber conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -196,7 +196,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9210" name="Talwar" type="Weapon">
+	<item id="9210" name="曲刀" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Heavy Sword Conversion. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -228,7 +228,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9211" name="Talwar" type="Weapon">
+	<item id="9211" name="曲刀" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Steel Sword Conversion. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -260,7 +260,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9212" name="Field Gun" type="Weapon">
+	<item id="9212" name="獵槍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Reinforced Bow conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -293,7 +293,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9213" name="Fleuret" type="Weapon">
+	<item id="9213" name="鈍劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Bastard Sword conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -328,7 +328,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9214" name="Fleuret" type="Weapon">
+	<item id="9214" name="鈍劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Spinebone Sword conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -363,7 +363,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9215" name="Fleuret" type="Weapon">
+	<item id="9215" name="鈍劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Artisan's Sword conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -398,7 +398,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9216" name="Military Talwar" type="Weapon">
+	<item id="9216" name="突襲曲刀" type="Weapon">
 		<!-- Kamael-exclusive weapon: Saber conversion. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -429,7 +429,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9217" name="Hand Crossbow" type="Weapon">
+	<item id="9217" name="短弩" type="Weapon">
 		<!-- Kamael-exclusive weapon: Longbow conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -462,7 +462,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9218" name="Estoc" type="Weapon">
+	<item id="9218" name="刺劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Crimson Sword conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -497,7 +497,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9219" name="Estoc" type="Weapon">
+	<item id="9219" name="刺劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Elven Sword conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -532,7 +532,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9220" name="Field Sword" type="Weapon">
+	<item id="9220" name="獵劍" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Two-handed Sword Transmutation -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -564,7 +564,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9221" name="Crossbow" type="Weapon">
+	<item id="9221" name="十字弓" type="Weapon">
 		<!-- Kamael-exclusive weapon: Gastraphetes conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9222" name="Épée" type="Weapon">
+	<item id="9222" name="銳劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Sword of Revolution conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -632,7 +632,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9223" name="Katzbalger" type="Weapon">
+	<item id="9223" name="格鬥劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Lesser Giant's Sword conversion. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -664,7 +664,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9224" name="Arm Breaker" type="Weapon">
+	<item id="9224" name="爆破之臂" type="Weapon">
 		<!-- Kamael-exclusive weapon: Reinforced Longbow conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -697,7 +697,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9225" name="Grand Épée" type="Weapon">
+	<item id="9225" name="巨銳劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Elven Long Sword conversion. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -732,7 +732,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9226" name="General's Katzbalger" type="Weapon">
+	<item id="9226" name="將軍格鬥劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Claymore conversion. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -764,7 +764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9227" name="Cranequin" type="Weapon">
+	<item id="9227" name="齒輪弩" type="Weapon">
 		<!-- Kamael-exclusive weapon: Light Bow conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -797,7 +797,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9228" name="Soldat Estoc" type="Weapon">
+	<item id="9228" name="軍用刺劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Stormbringer conversion. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -834,7 +834,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9229" name="Soldat Estoc" additionalName="Critical Anger" type="Weapon">
+	<item id="9229" name="軍用刺劍" additionalName="Critical Anger" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -874,7 +874,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9230" name="Soldat Estoc" additionalName="Focus" type="Weapon">
+	<item id="9230" name="軍用刺劍" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -912,7 +912,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9231" name="Soldat Estoc" additionalName="Decrease Weight" type="Weapon">
+	<item id="9231" name="軍用刺劍" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -950,7 +950,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9232" name="Schlager" type="Weapon">
+	<item id="9232" name="席拉格重劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Flamberge conversion. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -984,7 +984,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9233" name="Schlager" additionalName="Critical Damage" type="Weapon">
+	<item id="9233" name="席拉格重劍" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1021,7 +1021,7 @@
 			<skill id="3023" level="1" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="9234" name="Schlager" additionalName="Focus" type="Weapon">
+	<item id="9234" name="席拉格重劍" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1058,7 +1058,7 @@
 			<skill id="3010" level="1" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="9235" name="Schlager" additionalName="Decrease Weight" type="Weapon">
+	<item id="9235" name="席拉格重劍" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1095,7 +1095,7 @@
 			<skill id="3498" level="1" /> <!-- Special Property: Decrease Weight -->
 		</skills>
 	</item>
-	<item id="9236" name="Arbalest" type="Weapon">
+	<item id="9236" name="強弩" type="Weapon">
 		<!-- Kamael-exclusive weapon: Frozen Bow. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1130,7 +1130,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9237" name="Arbalest" additionalName="Guidance" type="Weapon">
+	<item id="9237" name="強弩" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1168,7 +1168,7 @@
 			<skill id="3008" level="1" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="9238" name="Arbalest" additionalName="Evasion" type="Weapon">
+	<item id="9238" name="強弩" additionalName="Evasion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1206,7 +1206,7 @@
 			<skill id="3009" level="1" /> <!-- Special Property: Evasion -->
 		</skills>
 	</item>
-	<item id="9239" name="Arbalest" additionalName="Quick Recovery" type="Weapon">
+	<item id="9239" name="強弩" additionalName="Quick Recovery" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1241,7 +1241,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9240" name="Chevalier Rapier" type="Weapon">
+	<item id="9240" name="騎兵細劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Shamshir. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1278,7 +1278,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9241" name="Chevalier Rapier" additionalName="Guidance" type="Weapon">
+	<item id="9241" name="騎兵細劍" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1316,7 +1316,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9242" name="Chevalier Rapier" additionalName="Backstab" type="Weapon">
+	<item id="9242" name="騎兵細劍" additionalName="Backstab" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1354,7 +1354,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9243" name="Chevalier Rapier" additionalName="Rsk. Evasion" type="Weapon">
+	<item id="9243" name="騎兵細劍" additionalName="Rsk. Evasion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1392,7 +1392,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9244" name="Chevalier Rapier" type="Weapon">
+	<item id="9244" name="騎兵細劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Katana. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1429,7 +1429,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9245" name="Chevalier Rapier" additionalName="Focus" type="Weapon">
+	<item id="9245" name="騎兵細劍" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1467,7 +1467,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9246" name="Chevalier Rapier" additionalName="Critical Damage" type="Weapon">
+	<item id="9246" name="騎兵細劍" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1505,7 +1505,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9247" name="Chevalier Rapier" additionalName="Haste" type="Weapon">
+	<item id="9247" name="騎兵細劍" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1543,7 +1543,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9248" name="Chevalier Rapier" type="Weapon">
+	<item id="9248" name="騎兵細劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Spirit Sword. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1580,7 +1580,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9249" name="Chevalier Rapier" additionalName="Critical Damage" type="Weapon">
+	<item id="9249" name="騎兵細劍" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1618,7 +1618,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9250" name="Chevalier Rapier" additionalName="Critical Poison" type="Weapon">
+	<item id="9250" name="騎兵細劍" additionalName="Critical Poison" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1657,7 +1657,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9251" name="Chevalier Rapier" additionalName="Haste" type="Weapon">
+	<item id="9251" name="騎兵細劍" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1695,7 +1695,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9252" name="Chevalier Rapier" type="Weapon">
+	<item id="9252" name="騎兵細劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Raid Sword. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1732,7 +1732,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9253" name="Chevalier Rapier" additionalName="Focus" type="Weapon">
+	<item id="9253" name="騎兵細劍" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1770,7 +1770,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9254" name="Chevalier Rapier" additionalName="Critical Drain" type="Weapon">
+	<item id="9254" name="騎兵細劍" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1809,7 +1809,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9255" name="Chevalier Rapier" additionalName="Critical Poison" type="Weapon">
+	<item id="9255" name="騎兵細劍" additionalName="Critical Poison" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1848,7 +1848,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9256" name="Ballista" type="Weapon">
+	<item id="9256" name="弩砲" type="Weapon">
 		<!-- Kamael-exclusive weapon: Elemental Bow. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1883,7 +1883,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9257" name="Ballista" additionalName="Guidance" type="Weapon">
+	<item id="9257" name="弩砲" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1921,7 +1921,7 @@
 			<skill id="3008" level="2" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="9258" name="Ballista" additionalName="Miser" type="Weapon">
+	<item id="9258" name="弩砲" additionalName="Miser" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1957,7 +1957,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9259" name="Ballista" additionalName="Quick Recovery" type="Weapon">
+	<item id="9259" name="弩砲" additionalName="Quick Recovery" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1992,7 +1992,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9260" name="Ballista" type="Weapon">
+	<item id="9260" name="弩砲" type="Weapon">
 		<!-- Kamael-exclusive weapon: Noble Elven Bow. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2027,7 +2027,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9261" name="Ballista" additionalName="Evasion" type="Weapon">
+	<item id="9261" name="弩砲" additionalName="Evasion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2065,7 +2065,7 @@
 			<skill id="3009" level="2" /> <!-- Special Property: Evasion -->
 		</skills>
 	</item>
-	<item id="9262" name="Ballista" additionalName="Miser" type="Weapon">
+	<item id="9262" name="弩砲" additionalName="Miser" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2101,7 +2101,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9263" name="Ballista" additionalName="Cheap Shot" type="Weapon">
+	<item id="9263" name="弩砲" additionalName="Cheap Shot" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2139,7 +2139,7 @@
 			<skill id="3360" level="1" /> <!-- Special Property: Cheap Shot -->
 		</skills>
 	</item>
-	<item id="9264" name="Blinzlasher" type="Weapon">
+	<item id="9264" name="瞬殺使者" type="Weapon">
 		<!-- Kamael-exclusive weapon: Caliburs. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2176,7 +2176,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9265" name="Blinzlasher" additionalName="Guidance" type="Weapon">
+	<item id="9265" name="瞬殺使者" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2214,7 +2214,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9266" name="Blinzlasher" additionalName="Focus" type="Weapon">
+	<item id="9266" name="瞬殺使者" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2252,7 +2252,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9267" name="Blinzlasher" additionalName="Critical Damage" type="Weapon">
+	<item id="9267" name="瞬殺使者" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2290,7 +2290,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9268" name="Blinzlasher" type="Weapon">
+	<item id="9268" name="瞬殺使者" type="Weapon">
 		<!-- Kamael-exclusive weapon: Sword of Delusion. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2327,7 +2327,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9269" name="Blinzlasher" additionalName="Focus" type="Weapon">
+	<item id="9269" name="瞬殺使者" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2365,7 +2365,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9270" name="Blinzlasher" additionalName="Health" type="Weapon">
+	<item id="9270" name="瞬殺使者" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2403,7 +2403,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9271" name="Blinzlasher" additionalName="Rsk. Haste" type="Weapon">
+	<item id="9271" name="瞬殺使者" additionalName="Rsk. Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2441,7 +2441,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9272" name="Blinzlasher" type="Weapon">
+	<item id="9272" name="瞬殺使者" type="Weapon">
 		<!-- Kamael-exclusive weapon: Tsurugi. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2478,7 +2478,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9273" name="Blinzlasher" additionalName="Focus" type="Weapon">
+	<item id="9273" name="瞬殺使者" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2516,7 +2516,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9274" name="Blinzlasher" additionalName="Critical Damage" type="Weapon">
+	<item id="9274" name="瞬殺使者" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2554,7 +2554,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9275" name="Blinzlasher" additionalName="Haste" type="Weapon">
+	<item id="9275" name="瞬殺使者" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2592,7 +2592,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9276" name="Blinzlasher" type="Weapon">
+	<item id="9276" name="瞬殺使者" type="Weapon">
 		<!-- Kamael-exclusive weapon: Sword of Nightmare. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2629,7 +2629,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9277" name="Blinzlasher" additionalName="Health" type="Weapon">
+	<item id="9277" name="瞬殺使者" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2667,7 +2667,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9278" name="Blinzlasher" additionalName="Focus" type="Weapon">
+	<item id="9278" name="瞬殺使者" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2705,7 +2705,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9279" name="Blinzlasher" additionalName="Decrease Weight" type="Weapon">
+	<item id="9279" name="瞬殺使者" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2743,7 +2743,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9280" name="Blinzlasher" type="Weapon">
+	<item id="9280" name="瞬殺使者" type="Weapon">
 		<!-- Kamael-exclusive weapon: Ultimate Sword. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2780,7 +2780,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9281" name="Blinzlasher" additionalName="Guidance" type="Weapon">
+	<item id="9281" name="瞬殺使者" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2818,7 +2818,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9282" name="Blinzlasher" additionalName="Critical Drain" type="Weapon">
+	<item id="9282" name="瞬殺使者" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2857,7 +2857,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9283" name="Blinzlasher" additionalName="Health" type="Weapon">
+	<item id="9283" name="瞬殺使者" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2895,7 +2895,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9284" name="Immortal Edge" type="Weapon">
+	<item id="9284" name="莫北巨刃" type="Weapon">
 		<!-- Kamael-exclusive weapon: Pa'agrio Sword. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2929,7 +2929,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9285" name="Immortal Edge" additionalName="Focus" type="Weapon">
+	<item id="9285" name="莫北巨刃" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2966,7 +2966,7 @@
 			<skill id="3010" level="3" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="9286" name="Immortal Edge" additionalName="Health" type="Weapon">
+	<item id="9286" name="莫北巨刃" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3003,7 +3003,7 @@
 			<skill id="3013" level="1" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="9287" name="Immortal Edge" additionalName="Critical Drain" type="Weapon">
+	<item id="9287" name="莫北巨刃" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3040,7 +3040,7 @@
 			<skill id="3022" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical HP Drain -->
 		</skills>
 	</item>
-	<item id="9288" name="Tathlum" type="Weapon">
+	<item id="9288" name="塔斯蘭弩" type="Weapon">
 		<!-- Kamael-exclusive weapon: Akat Longbow. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3075,7 +3075,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9289" name="Tathlum" additionalName="Guidance" type="Weapon">
+	<item id="9289" name="塔斯蘭弩" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3113,7 +3113,7 @@
 			<skill id="3008" level="3" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="9290" name="Tathlum" additionalName="Evasion" type="Weapon">
+	<item id="9290" name="塔斯蘭弩" additionalName="Evasion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3151,7 +3151,7 @@
 			<skill id="3009" level="3" /> <!-- Special Property: Evasion -->
 		</skills>
 	</item>
-	<item id="9291" name="Tathlum" additionalName="Miser" type="Weapon">
+	<item id="9291" name="塔斯蘭弩" additionalName="Miser" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3187,7 +3187,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9292" name="Admiral's Estoc" type="Weapon">
+	<item id="9292" name="上將刺劍" type="Weapon">
 		<!-- Kamael-exclusive weapon: Samurai Long Sword. 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3224,7 +3224,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9293" name="Admiral's Estoc" additionalName="Focus" type="Weapon">
+	<item id="9293" name="上將刺劍" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3262,7 +3262,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9294" name="Admiral's Estoc" additionalName="Critical Damage" type="Weapon">
+	<item id="9294" name="上將刺劍" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3300,7 +3300,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9295" name="Admiral's Estoc" additionalName="Haste" type="Weapon">
+	<item id="9295" name="上將刺劍" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3338,7 +3338,7 @@
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
 	</item>
-	<item id="9296" name="Saber Tooth" type="Weapon">
+	<item id="9296" name="劍齒虎" type="Weapon">
 		<!-- Kamael-exclusive weapon: Berserker Blade. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3372,7 +3372,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9297" name="Saber Tooth" additionalName="Focus" type="Weapon">
+	<item id="9297" name="劍齒虎" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3409,7 +3409,7 @@
 			<skill id="3010" level="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="9298" name="Saber Tooth" additionalName="Critical Damage" type="Weapon">
+	<item id="9298" name="劍齒虎" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3446,7 +3446,7 @@
 			<skill id="3542" level="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="9299" name="Saber Tooth" additionalName="Haste" type="Weapon">
+	<item id="9299" name="劍齒虎" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />

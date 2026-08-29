@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="2500" name="Dark Legion's Edge" type="Weapon">
+	<item id="2500" name="黑暗軍刀" type="Weapon">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -30,7 +30,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2501" name="Bone Club" type="Weapon">
+	<item id="2501" name="骨棒" type="Weapon">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -54,7 +54,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2502" name="Dwarven War Hammer" type="Weapon">
+	<item id="2502" name="矮人戰鎚" type="Weapon">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dwarven_warhammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -84,7 +84,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2503" name="Yaksa Mace" type="Weapon">
+	<item id="2503" name="夜叉釘鎚" type="Weapon">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -114,7 +114,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2504" name="Meteor Shower" type="Weapon">
+	<item id="2504" name="流星雨" type="Weapon">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -144,7 +144,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2505" name="Iron Canine" type="Weapon">
+	<item id="2505" name="鋼鐵鑽" type="Weapon">
 		<!-- Equipment for wolves. Double-click to equip. -->
 		<set name="icon" val="icon.etc_pet_arms_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2506" name="Wolf's Leather Armor" type="Armor">
+	<item id="2506" name="狼皮甲" type="Armor">
 		<!-- Equipment for wolves. Double-click to equip. -->
 		<set name="icon" val="icon.etc_pet_armor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -191,7 +191,7 @@
 			<stat type="pDef">9</stat>
 		</stats>
 	</item>
-	<item id="2507" name="Lizardspear" type="Weapon">
+	<item id="2507" name="蜥蜴矛" type="Weapon">
 		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -217,7 +217,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2508" name="Cursed Bone" type="EtcItem">
+	<item id="2508" name="受詛咒的骨" type="EtcItem">
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -227,7 +227,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="2509" name="No-grade Spiritshot" type="EtcItem">
+	<item id="2509" name="魔靈彈-普通" type="EtcItem">
 		<!-- Increases weapons' magic power. Used with No-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -243,7 +243,7 @@
 			<skill id="2047" level="1" /> <!-- No-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="2510" name="D-grade Spiritshot" type="EtcItem">
+	<item id="2510" name="魔靈彈-D級" type="EtcItem">
 		<!-- Increases weapons' magic power. Used with D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -260,7 +260,7 @@
 			<skill id="2155" level="1" /> <!-- D-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="2511" name="C-grade Spiritshot" type="EtcItem">
+	<item id="2511" name="魔靈彈-C級" type="EtcItem">
 		<!-- Increases weapons' magic power. Used with C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -277,7 +277,7 @@
 			<skill id="2156" level="1" /> <!-- C-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="2512" name="B-grade Spiritshot" type="EtcItem">
+	<item id="2512" name="魔靈彈-B級" type="EtcItem">
 		<!-- Increases weapons' magic power. Used with B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -294,7 +294,7 @@
 			<skill id="2157" level="1" /> <!-- B-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="2513" name="A-grade Spiritshot" type="EtcItem">
+	<item id="2513" name="魔靈彈-A級" type="EtcItem">
 		<!-- Increases weapons' magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -311,7 +311,7 @@
 			<skill id="2158" level="1" /> <!-- A-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="2514" name="S-grade Spiritshot" type="EtcItem">
+	<item id="2514" name="魔靈彈-S級" type="EtcItem">
 		<!-- Increases weapons' magic power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -328,7 +328,7 @@
 			<skill id="2159" level="1" /> <!-- S-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="2515" name="Wolf Food" type="EtcItem">
+	<item id="2515" name="狼食" type="EtcItem">
 		<!-- When the hunger gauge of a wolf reaches 55% or below, its food will be consumed automatically. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -348,7 +348,7 @@
 			<skill id="2048" level="1" /> <!-- Wolf Food -->
 		</skills>
 	</item>
-	<item id="2516" name="Saber*Saber" type="Weapon">
+	<item id="2516" name="軍刀*軍刀" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -374,7 +374,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2517" name="Saber*Bastard Sword" type="Weapon">
+	<item id="2517" name="軍刀*重劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -400,7 +400,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2518" name="Saber*Spinebone Sword" type="Weapon">
+	<item id="2518" name="軍刀*椎骨之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -426,7 +426,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2519" name="Saber*Artisan's Sword" type="Weapon">
+	<item id="2519" name="軍刀*工匠之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -452,7 +452,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2520" name="Saber*Knight's Sword" type="Weapon">
+	<item id="2520" name="軍刀*騎士劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -478,7 +478,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2521" name="Saber*Crimson Sword" type="Weapon">
+	<item id="2521" name="軍刀*緋紅劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -504,7 +504,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2522" name="Saber*Elven Sword" type="Weapon">
+	<item id="2522" name="軍刀*精靈劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -530,7 +530,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2523" name="Saber*Sword of Revolution" type="Weapon">
+	<item id="2523" name="軍刀*革命劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -556,7 +556,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2524" name="Saber*Elven Long Sword" type="Weapon">
+	<item id="2524" name="軍刀*精靈長劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -582,7 +582,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2525" name="Bastard Sword*Bastard Sword" type="Weapon">
+	<item id="2525" name="重劍*重劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -608,7 +608,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2526" name="Bastard Sword*Spinebone Sword" type="Weapon">
+	<item id="2526" name="重劍*椎骨之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -634,7 +634,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2527" name="Bastard Sword*Artisan's Sword" type="Weapon">
+	<item id="2527" name="重劍*工匠之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -660,7 +660,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2528" name="Bastard Sword*Knight's Sword" type="Weapon">
+	<item id="2528" name="重劍*騎士劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -686,7 +686,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2529" name="Bastard Sword*Crimson Sword" type="Weapon">
+	<item id="2529" name="重劍*緋紅劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -712,7 +712,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2530" name="Bastard Sword*Elven Sword" type="Weapon">
+	<item id="2530" name="重劍*精靈劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -738,7 +738,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2531" name="Bastard Sword*Sword of Revolution" type="Weapon">
+	<item id="2531" name="重劍*革命劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -764,7 +764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2532" name="Bastard Sword*Elven Long Sword" type="Weapon">
+	<item id="2532" name="重劍*精靈長劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -790,7 +790,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2533" name="Spinebone Sword*Spinebone Sword" type="Weapon">
+	<item id="2533" name="椎骨之劍*椎骨之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -816,7 +816,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2534" name="Spinebone Sword*Artisan's Sword" type="Weapon">
+	<item id="2534" name="椎骨之劍*工匠之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -842,7 +842,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2535" name="Spinebone Sword*Knight's Sword" type="Weapon">
+	<item id="2535" name="椎骨之劍*騎士劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -868,7 +868,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2536" name="Spinebone Sword*Crimson Sword" type="Weapon">
+	<item id="2536" name="椎骨之劍*緋紅劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -894,7 +894,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2537" name="Spinebone Sword*Elven Sword" type="Weapon">
+	<item id="2537" name="椎骨之劍*精靈劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -920,7 +920,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2538" name="Spinebone Sword*Sword of Revolution" type="Weapon">
+	<item id="2538" name="椎骨之劍*革命劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -946,7 +946,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2539" name="Spinebone Sword*Elven Long Sword" type="Weapon">
+	<item id="2539" name="椎骨之劍*精靈長劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -972,7 +972,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2540" name="Artisan's Sword*Artisan's Sword" type="Weapon">
+	<item id="2540" name="工匠之劍*工匠之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -998,7 +998,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2541" name="Artisan's Sword*Knight's Sword" type="Weapon">
+	<item id="2541" name="工匠之劍*騎士劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1024,7 +1024,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2542" name="Artisan's Sword*Crimson Sword" type="Weapon">
+	<item id="2542" name="工匠之劍*緋紅劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1050,7 +1050,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2543" name="Artisan's Sword*Elven Sword" type="Weapon">
+	<item id="2543" name="工匠之劍*精靈劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1076,7 +1076,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2544" name="Artisan's Sword*Sword of Revolution" type="Weapon">
+	<item id="2544" name="工匠之劍*革命劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1102,7 +1102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2545" name="Artisan's Sword*Elven Long Sword" type="Weapon">
+	<item id="2545" name="工匠之劍*精靈長劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1128,7 +1128,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2546" name="Knight's Sword*Knight's Sword" type="Weapon">
+	<item id="2546" name="騎士劍*騎士劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1154,7 +1154,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2547" name="Knight's Sword*Crimson Sword" type="Weapon">
+	<item id="2547" name="騎士劍*緋紅劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1180,7 +1180,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2548" name="Knight's Sword*Elven Sword" type="Weapon">
+	<item id="2548" name="騎士劍*精靈劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1206,7 +1206,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2549" name="Knight's Sword*Sword of Revolution" type="Weapon">
+	<item id="2549" name="騎士劍*革命劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1232,7 +1232,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2550" name="Knight's Sword*Elven Long Sword" type="Weapon">
+	<item id="2550" name="騎士劍*精靈長劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1258,7 +1258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2551" name="Crimson Sword*Crimson Sword" type="Weapon">
+	<item id="2551" name="緋紅劍*緋紅劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1284,7 +1284,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2552" name="Crimson Sword*Elven Sword" type="Weapon">
+	<item id="2552" name="緋紅劍*精靈劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1310,7 +1310,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2553" name="Crimson Sword*Sword of Revolution" type="Weapon">
+	<item id="2553" name="緋紅劍*革命劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1336,7 +1336,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2554" name="Crimson Sword*Elven Long Sword" type="Weapon">
+	<item id="2554" name="緋紅劍*精靈長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1368,7 +1368,7 @@
 			<skill id="3046" level="2" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2555" name="Elven Sword*Elven Sword" type="Weapon">
+	<item id="2555" name="精靈劍*精靈劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1394,7 +1394,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2556" name="Elven Sword*Sword of Revolution" type="Weapon">
+	<item id="2556" name="精靈劍*革命劍" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1420,7 +1420,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2557" name="Elven Sword*Elven Long Sword" type="Weapon">
+	<item id="2557" name="精靈劍*精靈長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1452,7 +1452,7 @@
 			<skill id="3042" level="2" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2558" name="Sword of Revolution*Sword of Revolution" type="Weapon">
+	<item id="2558" name="革命劍*革命劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1484,7 +1484,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2559" name="Sword of Revolution*Elven Long Sword" type="Weapon">
+	<item id="2559" name="革命劍*精靈長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1516,7 +1516,7 @@
 			<skill id="3044" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2560" name="Elven Long Sword*Elven Long Sword" type="Weapon">
+	<item id="2560" name="精靈長劍*精靈長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1548,7 +1548,7 @@
 			<skill id="3045" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="2561" name="Stormbringer*Stormbringer" type="Weapon">
+	<item id="2561" name="暴風之劍*暴風之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1580,7 +1580,7 @@
 			<skill id="3046" level="6" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2562" name="Stormbringer*Shamshir" type="Weapon">
+	<item id="2562" name="暴風之劍*彎刀" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1612,7 +1612,7 @@
 			<skill id="3042" level="7" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2563" name="Stormbringer*Katana" type="Weapon">
+	<item id="2563" name="暴風之劍*武士刀" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1644,7 +1644,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2564" name="Stormbringer*Spirit Sword" type="Weapon">
+	<item id="2564" name="暴風之劍*靈魂之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1676,7 +1676,7 @@
 			<skill id="3044" level="7" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2565" name="Stormbringer*Raid Sword" type="Weapon">
+	<item id="2565" name="暴風之劍*襲擊劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1708,7 +1708,7 @@
 			<skill id="3045" level="7" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="2566" name="Stormbringer*Caliburs" type="Weapon">
+	<item id="2566" name="暴風之劍*卡里埔士劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1740,7 +1740,7 @@
 			<skill id="3046" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2567" name="Stormbringer*Ultimate Sword" type="Weapon">
+	<item id="2567" name="暴風之劍*極限之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1772,7 +1772,7 @@
 			<skill id="3042" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2568" name="Stormbringer*Sword of Delusion" type="Weapon">
+	<item id="2568" name="暴風之劍*迷惑之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1804,7 +1804,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2569" name="Stormbringer*Sword of Nightmare" type="Weapon">
+	<item id="2569" name="暴風之劍*夢魘劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1836,7 +1836,7 @@
 			<skill id="3044" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2570" name="Stormbringer*Tsurugi" type="Weapon">
+	<item id="2570" name="暴風之劍*大和劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1868,7 +1868,7 @@
 			<skill id="3045" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="2571" name="Stormbringer*Samurai Long sword" type="Weapon">
+	<item id="2571" name="暴風之劍*瑟魯基長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1900,7 +1900,7 @@
 			<skill id="3046" level="11" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2572" name="Shamshir*Shamshir" type="Weapon">
+	<item id="2572" name="彎刀*彎刀" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1932,7 +1932,7 @@
 			<skill id="3046" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2573" name="Shamshir*Katana" type="Weapon">
+	<item id="2573" name="彎刀*武士刀" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1964,7 +1964,7 @@
 			<skill id="3042" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2574" name="Shamshir*Spirit Sword" type="Weapon">
+	<item id="2574" name="彎刀*靈魂之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1996,7 +1996,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2575" name="Shamshir*Raid Sword" type="Weapon">
+	<item id="2575" name="彎刀*襲擊劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2028,7 +2028,7 @@
 			<skill id="3044" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2576" name="Shamshir*Caliburs" type="Weapon">
+	<item id="2576" name="彎刀*卡里埔士劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2060,7 +2060,7 @@
 			<skill id="3046" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2577" name="Shamshir*Ultimate Sword" type="Weapon">
+	<item id="2577" name="彎刀*極限之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2092,7 +2092,7 @@
 			<skill id="3042" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2578" name="Shamshir*Sword of Delusion" type="Weapon">
+	<item id="2578" name="彎刀*迷惑之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2124,7 +2124,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2579" name="Shamshir*Sword of Nightmare" type="Weapon">
+	<item id="2579" name="彎刀*夢魘劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2156,7 +2156,7 @@
 			<skill id="3044" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2580" name="Shamshir*Tsurugi" type="Weapon">
+	<item id="2580" name="彎刀*大和劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2188,7 +2188,7 @@
 			<skill id="3045" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="2581" name="Shamshir*Samurai Long Sword" type="Weapon">
+	<item id="2581" name="彎刀*瑟魯基長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2220,7 +2220,7 @@
 			<skill id="3046" level="12" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2582" name="Katana*Katana" type="Weapon">
+	<item id="2582" name="武士刀*武士刀" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2252,7 +2252,7 @@
 			<skill id="3045" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="2583" name="Katana*Spirit Sword" type="Weapon">
+	<item id="2583" name="武士刀*靈魂之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2284,7 +2284,7 @@
 			<skill id="3046" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2584" name="Katana*Raid Sword" type="Weapon">
+	<item id="2584" name="武士刀*襲擊劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2316,7 +2316,7 @@
 			<skill id="3042" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2585" name="Katana*Caliburs" type="Weapon">
+	<item id="2585" name="武士刀*卡里埔士劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2348,7 +2348,7 @@
 			<skill id="3046" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2586" name="Katana*Ultimate Sword" type="Weapon">
+	<item id="2586" name="武士刀*極限之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2380,7 +2380,7 @@
 			<skill id="3042" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2587" name="Katana*Sword of Delusion" type="Weapon">
+	<item id="2587" name="武士刀*迷惑之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2412,7 +2412,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2588" name="Katana*Sword of Nightmare" type="Weapon">
+	<item id="2588" name="武士刀*夢魘劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2444,7 +2444,7 @@
 			<skill id="3044" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2589" name="Katana*Tsurugi" type="Weapon">
+	<item id="2589" name="武士刀*大和劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2476,7 +2476,7 @@
 			<skill id="3045" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="2590" name="Katana*Samurai Long Sword" type="Weapon">
+	<item id="2590" name="武士刀*瑟魯基長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2508,7 +2508,7 @@
 			<skill id="3042" level="12" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2591" name="Spirit Sword*Spirit Sword" type="Weapon">
+	<item id="2591" name="靈魂之劍*靈魂之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2540,7 +2540,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2592" name="Spirit Sword*Raid Sword" type="Weapon">
+	<item id="2592" name="靈魂之劍*襲擊劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2572,7 +2572,7 @@
 			<skill id="3044" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2593" name="Spirit Sword*Caliburs" type="Weapon">
+	<item id="2593" name="靈魂之劍*卡里埔士劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2604,7 +2604,7 @@
 			<skill id="3046" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
-	<item id="2594" name="Spirit Sword*Ultimate Sword" type="Weapon">
+	<item id="2594" name="靈魂之劍*極限之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2636,7 +2636,7 @@
 			<skill id="3042" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Critical Damage -->
 		</skills>
 	</item>
-	<item id="2595" name="Spirit Sword*Sword of Delusion" type="Weapon">
+	<item id="2595" name="靈魂之劍*迷惑之劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2668,7 +2668,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2596" name="Spirit Sword*Sword of Nightmare" type="Weapon">
+	<item id="2596" name="靈魂之劍*夢魘劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2700,7 +2700,7 @@
 			<skill id="3044" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
 		</skills>
 	</item>
-	<item id="2597" name="Spirit Sword*Tsurugi" type="Weapon">
+	<item id="2597" name="靈魂之劍*大和劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2732,7 +2732,7 @@
 			<skill id="3045" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
 		</skills>
 	</item>
-	<item id="2598" name="Spirit Sword*Samurai Long Sword" type="Weapon">
+	<item id="2598" name="靈魂之劍*瑟魯基長劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2764,7 +2764,7 @@
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
-	<item id="2599" name="Raid Sword*Raid Sword" type="Weapon">
+	<item id="2599" name="襲擊劍*襲擊劍" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5800" name="Nephilim Lord" type="Weapon">
+	<item id="5800" name="怪物用(那芙琳劍)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -26,7 +26,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5801" name="For NPC (Dusk)" type="Weapon">
+	<item id="5801" name="NPC專用(黃昏)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -52,7 +52,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5802" name="For NPC (Dawn)" type="Weapon">
+	<item id="5802" name="NPC專用(黎明)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -78,7 +78,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5803" name="D-grade Lucky Charm" type="EtcItem">
+	<item id="5803" name="幸運符咒-D級" type="EtcItem">
 		<!-- No death penalty is applied when killed by a boss monster. Required level: 20-39. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -98,7 +98,7 @@
 			<skill id="2168" level="2" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5804" name="C-grade Lucky Charm" type="EtcItem">
+	<item id="5804" name="幸運符咒-C級" type="EtcItem">
 		<!-- No death penalty is applied when killed by a boss monster. Required level: 40-51. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -118,7 +118,7 @@
 			<skill id="2168" level="3" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5805" name="B-grade Lucky Charm" type="EtcItem">
+	<item id="5805" name="幸運符咒-B級" type="EtcItem">
 		<!-- No death penalty is applied when killed by a boss monster. Required level: 52-60. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -138,7 +138,7 @@
 			<skill id="2168" level="4" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5806" name="A-grade Lucky Charm" type="EtcItem">
+	<item id="5806" name="幸運符咒-A級" type="EtcItem">
 		<!-- No death penalty is applied when killed by a boss monster. Required level: 61-75. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -158,7 +158,7 @@
 			<skill id="2168" level="5" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5807" name="S-grade Lucky Charm" type="EtcItem">
+	<item id="5807" name="幸運符咒-S級" type="EtcItem">
 		<!-- No death penalty is applied when killed by a boss monster. Required level: 76+. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -178,7 +178,7 @@
 			<skill id="2168" level="6" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5808" name="Party Mask" type="Armor">
+	<item id="5808" name="舞會面具" type="Armor">
 		<!-- A stylish item that emphasizes your individuality. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -191,7 +191,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="5809" name="Spellbook: Aqua Splash" type="EtcItem">
+	<item id="5809" name="魔法書-怒濤奔浪" type="EtcItem">
 		<!-- A spellbook for learning the Aqua Splash skill. Used by Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -201,7 +201,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5810" name="Spellbook: Rain of Fire" type="EtcItem">
+	<item id="5810" name="魔法書-火山爆發" type="EtcItem">
 		<!-- A spellbook for learning the Rain of Fire skill. Used by Sorcerers and Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -211,7 +211,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5811" name="Spellbook: Mass Slow" type="EtcItem">
+	<item id="5811" name="魔法書-團體緩速術" type="EtcItem">
 		<!-- A spellbook for learning the Mass Slow skill. Used by Necromancers. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -221,7 +221,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5812" name="Spellbook: Servitor Empowerment" type="EtcItem">
+	<item id="5812" name="魔法書-使魔極限防禦" type="EtcItem">
 		<!-- A spellbook for learning the Servitor Ultimate Defense skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -231,7 +231,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5813" name="Spellbook: Servitor Cure" type="EtcItem">
+	<item id="5813" name="魔法書-使魔治療術" type="EtcItem">
 		<!-- A spellbook for learning the Servitor Cure skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -241,7 +241,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5814" name="Spellbook: Servitor Blessing" type="EtcItem">
+	<item id="5814" name="魔法書-使魔祝福" type="EtcItem">
 		<!-- A spellbook for learning the Servitor Blessing skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -251,7 +251,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5815" name="Spellbook: Wild Magic" type="EtcItem">
+	<item id="5815" name="魔法書-野性魔力" type="EtcItem">
 		<!-- A spellbook for learning the Wild Magic skill. Used by Elven Elders and Shillien Elders. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -261,7 +261,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
+	<item id="5816" name="魔法書-伊娃之盾" type="EtcItem">
 		<!-- A spellbook for learning the Advanced Block skill. Used by Elven Elders. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -271,7 +271,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5817" name="Chrono Campana" type="Weapon">
+	<item id="5817" name="克魯諾杖鐘" type="Weapon">
 		<!-- Chronicle III Souvenir! -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -296,7 +296,7 @@
 			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
 		</skills>
 	</item>
-	<item id="5818" name="Alternative Dark Coda" type="EtcItem">
+	<item id="5818" name="改良黑暗柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i08" />
 		<set name="etcitem_type" val="CROP" />
@@ -306,7 +306,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5819" name="Alternative Red Coda" type="EtcItem">
+	<item id="5819" name="改良紅色柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i03" />
 		<set name="etcitem_type" val="CROP" />
@@ -316,7 +316,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5820" name="Alternative Chilly Coda" type="EtcItem">
+	<item id="5820" name="改良冷氣柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i00" />
 		<set name="etcitem_type" val="CROP" />
@@ -326,7 +326,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5821" name="Alternative Blue Coda" type="EtcItem">
+	<item id="5821" name="改良藍色柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i02" />
 		<set name="etcitem_type" val="CROP" />
@@ -336,7 +336,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5822" name="Alternative Golden Coda" type="EtcItem">
+	<item id="5822" name="改良金色柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i04" />
 		<set name="etcitem_type" val="CROP" />
@@ -346,7 +346,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5823" name="Alternative Lute Coda" type="EtcItem">
+	<item id="5823" name="改良魯特柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i06" />
 		<set name="etcitem_type" val="CROP" />
@@ -356,7 +356,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5824" name="Alternative Desert Coda" type="EtcItem">
+	<item id="5824" name="改良沙漠柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i05" />
 		<set name="etcitem_type" val="CROP" />
@@ -366,7 +366,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5825" name="Alternative Red Cobol" type="EtcItem">
+	<item id="5825" name="改良紅色柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i03" />
 		<set name="etcitem_type" val="CROP" />
@@ -376,7 +376,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5826" name="Alternative Chilly Cobol" type="EtcItem">
+	<item id="5826" name="改良冷氣柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i00" />
 		<set name="etcitem_type" val="CROP" />
@@ -386,7 +386,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5827" name="Alternative Blue Cobol" type="EtcItem">
+	<item id="5827" name="改良藍色柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i02" />
 		<set name="etcitem_type" val="CROP" />
@@ -396,7 +396,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5828" name="Alternative Thorn Cobol" type="EtcItem">
+	<item id="5828" name="改良芒刺柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i07" />
 		<set name="etcitem_type" val="CROP" />
@@ -406,7 +406,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5829" name="Alternative Golden Cobol" type="EtcItem">
+	<item id="5829" name="改良金色柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i04" />
 		<set name="etcitem_type" val="CROP" />
@@ -416,7 +416,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5830" name="Alternative Great Cobol" type="EtcItem">
+	<item id="5830" name="改良巨大柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i09" />
 		<set name="etcitem_type" val="CROP" />
@@ -426,7 +426,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5831" name="Alternative Red Codran" type="EtcItem">
+	<item id="5831" name="改良紅色柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i03" />
 		<set name="etcitem_type" val="CROP" />
@@ -436,7 +436,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5832" name="Alternative Sea Codran" type="EtcItem">
+	<item id="5832" name="改良海洋柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i06" />
 		<set name="etcitem_type" val="CROP" />
@@ -446,7 +446,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5833" name="Alternative Chilly Codran" type="EtcItem">
+	<item id="5833" name="改良冷氣柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i00" />
 		<set name="etcitem_type" val="CROP" />
@@ -456,7 +456,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5834" name="Alternative Blue Codran" type="EtcItem">
+	<item id="5834" name="改良藍色柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i02" />
 		<set name="etcitem_type" val="CROP" />
@@ -466,7 +466,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5835" name="Alternative Twin Codran" type="EtcItem">
+	<item id="5835" name="改良雙生柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i07" />
 		<set name="etcitem_type" val="CROP" />
@@ -476,7 +476,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5836" name="Alternative Great Codran" type="EtcItem">
+	<item id="5836" name="改良巨大柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i09" />
 		<set name="etcitem_type" val="CROP" />
@@ -486,7 +486,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5837" name="Alternative Desert Codran" type="EtcItem">
+	<item id="5837" name="改良沙漠柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i05" />
 		<set name="etcitem_type" val="CROP" />
@@ -496,7 +496,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5838" name="Mature Alternative Dark Coda" type="EtcItem">
+	<item id="5838" name="成熟的改良黑暗柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i08" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -506,7 +506,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5839" name="Mature Alternative Red Coda" type="EtcItem">
+	<item id="5839" name="成熟的改良紅色柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i03" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -516,7 +516,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5840" name="Mature Alternative Chilly Coda" type="EtcItem">
+	<item id="5840" name="成熟的改良冷氣柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i00" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -526,7 +526,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5841" name="Mature Alternative Blue Coda" type="EtcItem">
+	<item id="5841" name="成熟的改良藍色柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i02" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -536,7 +536,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5842" name="Mature Alternative Golden Coda" type="EtcItem">
+	<item id="5842" name="成熟的改良金色柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i04" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -546,7 +546,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5843" name="Mature Alternative Lute Coda" type="EtcItem">
+	<item id="5843" name="成熟的改良魯特柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i06" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -556,7 +556,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5844" name="Mature Alternative Desert Coda" type="EtcItem">
+	<item id="5844" name="成熟的改良沙漠柯塔" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_coda_i05" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -566,7 +566,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5845" name="Mature Alternative Red Cobol" type="EtcItem">
+	<item id="5845" name="成熟的改良紅色柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i03" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -576,7 +576,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5846" name="Mature Alternative Chilly Cobol" type="EtcItem">
+	<item id="5846" name="成熟的改良冷氣柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i00" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -586,7 +586,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5847" name="Mature Alternative Blue Cobol" type="EtcItem">
+	<item id="5847" name="成熟的改良藍色柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i02" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -596,7 +596,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5848" name="Mature Alternative Thorn Cobol" type="EtcItem">
+	<item id="5848" name="成熟的改良芒刺柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i07" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -606,7 +606,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5849" name="Mature Alternative Golden Cobol" type="EtcItem">
+	<item id="5849" name="成熟的改良金色柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i04" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -616,7 +616,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5850" name="Mature Alternative Great Cobol" type="EtcItem">
+	<item id="5850" name="成熟的改良巨大柯柏" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_i09" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -626,7 +626,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5851" name="Mature Alternative Red Codran" type="EtcItem">
+	<item id="5851" name="成熟的改良紅色柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i03" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -636,7 +636,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5852" name="Mature Alternative Sea Codran" type="EtcItem">
+	<item id="5852" name="成熟的改良海洋柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i06" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -646,7 +646,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5853" name="Mature Alternative Chilly Codran" type="EtcItem">
+	<item id="5853" name="成熟的改良冷氣柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i00" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -656,7 +656,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5854" name="Mature Alternative Blue Codran" type="EtcItem">
+	<item id="5854" name="成熟的改良藍色柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i02" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -666,7 +666,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5855" name="Mature Alternative Twin Codran" type="EtcItem">
+	<item id="5855" name="成熟的改良雙生柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i07" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -676,7 +676,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5856" name="Mature Alternative Great Codran" type="EtcItem">
+	<item id="5856" name="成熟的改良巨大柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i09" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -686,7 +686,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5857" name="Mature Alternative Desert Codran" type="EtcItem">
+	<item id="5857" name="成熟的改良沙漠柯德朗" type="EtcItem">
 		<!-- Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_i05" />
 		<set name="etcitem_type" val="MATURECROP" />
@@ -696,7 +696,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
+	<item id="5858" name="祝福的根據地返回卷軸" type="EtcItem">
 		<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -716,7 +716,7 @@
 			<skill id="2177" level="1" /> <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skills>
 	</item>
-	<item id="5859" name="Blessed Scroll of Escape: Castle" type="EtcItem">
+	<item id="5859" name="祝福的城堡返回卷軸" type="EtcItem">
 		<!-- A magic scroll for teleporting to a castle. If your clan don't own a fortress, it will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -736,7 +736,7 @@
 			<skill id="2178" level="1" /> <!-- Blessed Scroll of Escape: Castle -->
 		</skills>
 	</item>
-	<item id="5860" name="Lienrik Egg" type="EtcItem">
+	<item id="5860" name="翼蛇的蛋" type="EtcItem">
 		<!-- Lienrik's egg. It's the item that Pet Manager Rood of Heine asked you to find for him. -->
 		<set name="icon" val="icon.etc_dragon_egg_i02" />
 		<set name="immediate_effect" val="true" />
@@ -748,7 +748,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5861" name="Lienrik Egg" type="EtcItem">
+	<item id="5861" name="翼蛇的蛋" type="EtcItem">
 		<!-- Lienrik's shiny red egg. Pet Manager Rood of Heine asked you to find it for him, but...? -->
 		<set name="icon" val="icon.etc_dragon_egg_i01" />
 		<set name="immediate_effect" val="true" />
@@ -760,7 +760,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5862" name="Stone of Contract" type="EtcItem">
+	<item id="5862" name="契約之石" type="EtcItem">
 		<!-- In order to obtain the power of darkness, you will first need to secure this item. Take it to Trader Galman in Dragon Valley. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5863" name="Alligator Tooth" type="EtcItem">
+	<item id="5863" name="鱷魚族的牙" type="EtcItem">
 		<!-- Sharp canine tooth of the Alligator. Bring this to the warehouse keeper of Heine. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -784,7 +784,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5864" name="Mysterious Map Piece" type="EtcItem">
+	<item id="5864" name="謎樣的地圖碎片" type="EtcItem">
 		<!-- Faded piece of paper. Possibly part of a map. -->
 		<set name="icon" val="icon.etc_map_piece_ivory_i00" />
 		<set name="immediate_effect" val="true" />
@@ -796,7 +796,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5865" name="Carnivore Spores" type="EtcItem">
+	<item id="5865" name="動物型孢子" type="EtcItem">
 		<!-- Tissue sample collected from a spore zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -808,7 +808,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5866" name="Herbivorous Spores" type="EtcItem">
+	<item id="5866" name="植物型孢子" type="EtcItem">
 		<!-- Spore sample collected from a rotting tree from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -820,7 +820,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5867" name="Jade Crystal" type="EtcItem">
+	<item id="5867" name="翡翠石" type="EtcItem">
 		<!-- Jade crystal collected from the Enchanted Valley. Take it to Warehouse Freightman Silva of Hunter's Village. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -832,7 +832,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5868" name="Snake Scale" type="EtcItem">
+	<item id="5868" name="蛇的鱗片" type="EtcItem">
 		<!-- Snake scale from the bodies of Palibati and Trives. Take it to Grand Master Oltran of Town of Aden. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -844,7 +844,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5869" name="Remains of Aden Residents" type="EtcItem">
+	<item id="5869" name="亞丁居民的遺骸" type="EtcItem">
 		<!-- Remains of residents of Aden Castle who were killed during the Aden-Elmore war. Collect 60 of them and take them to High Priest Orven. -->
 		<set name="icon" val="icon.etc_ashes_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -856,7 +856,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5870" name="Supply Receipt" type="EtcItem">
+	<item id="5870" name="補給證" type="EtcItem">
 		<!-- Document made from collected mysterious document pieces. Take it to Guard Coleman. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -868,7 +868,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5871" name="Suspicious Document Piece" type="EtcItem">
+	<item id="5871" name="可疑的文件碎片" type="EtcItem">
 		<!-- Piece of document that seems to contain some suspicious contents. If you collect 5 of them, you may be able to decipher the information the document conveys. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
@@ -880,7 +880,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5872" name="Supply Items" type="EtcItem">
+	<item id="5872" name="補給品" type="EtcItem">
 		<!-- Supply items for Taik Orcs. Take it to Guard Coleman and he will give you a reward. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="true" />
@@ -892,7 +892,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5873" name="Treasure Chest" type="EtcItem">
+	<item id="5873" name="海盜的寶箱" type="EtcItem">
 		<!-- Treasure chest that was obtained by slaying Zaken's followers. Take it to Warehouse Keeper Randolf of Town of Giran. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -904,7 +904,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5874" name="Sairon's Silver Hair" type="EtcItem">
+	<item id="5874" name="賽頓的銀髮" type="EtcItem">
 		<!-- Sairon's hair. Take it to Magister Dieter in Giran. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -916,7 +916,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5875" name="Lesser Giant's Lamp" type="EtcItem">
+	<item id="5875" name="下巨人的燈" type="EtcItem">
 		<!-- It is called a Lesser Giant's Lamp. It is not lit. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -928,7 +928,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5876" name="Lesser Giant's Lamp" type="EtcItem">
+	<item id="5876" name="下巨人的燈" type="EtcItem">
 		<!-- It is called a Lesser Giant's Lamp. It is burning dimly. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -940,7 +940,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5877" name="Lesser Giant's Lamp" type="EtcItem">
+	<item id="5877" name="下巨人的燈" type="EtcItem">
 		<!-- It is called a Lesser Giant's Lamp. It is lit. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -952,7 +952,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5878" name="Lesser Giant's Lamp" type="EtcItem">
+	<item id="5878" name="下巨人的燈" type="EtcItem">
 		<!-- It is called a Lesser Giant's Lamp. It is lit. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -964,7 +964,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5879" name="Lesser Giant's Lamp" type="EtcItem">
+	<item id="5879" name="下巨人的燈" type="EtcItem">
 		<!-- It is called a Lesser Giant's Lamp. It is shining brightly. -->
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -976,7 +976,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5880" name="Broken Lesser Giant's Lamp" type="EtcItem">
+	<item id="5880" name="破裂的下巨人的燈" type="EtcItem">
 		<!-- Broken Lesser Giant's Lamp. Take it to Lorain. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -988,7 +988,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5881" name="Blade Stakato Fang" type="EtcItem">
+	<item id="5881" name="刀刃司塔卡拓的牙" type="EtcItem">
 		<!-- Fang that was obtained from killing a blade stakato. Take it to Eva's Priestess Restina in Heine. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1000,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5882" name="Fire Crystal" type="EtcItem">
+	<item id="5882" name="爆裂的碎片" type="EtcItem">
 		<!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1012,7 +1012,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5883" name="Ice Shard" type="EtcItem">
+	<item id="5883" name="凝結的碎片" type="EtcItem">
 		<!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1024,7 +1024,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5884" name="Cave Beast Tooth" type="EtcItem">
+	<item id="5884" name="洞穴獸的牙" type="EtcItem">
 		<!-- An ingredient used by Orc Shamans in their rituals. Take it to Seer Manakia. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1036,7 +1036,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5885" name="Death Wave Light" type="EtcItem">
+	<item id="5885" name="死亡波動的火光" type="EtcItem">
 		<!-- An ingredient used by Orc Shamans in their rituals. Take it to Seer Manakia. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1048,7 +1048,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5886" name="Sealed Mysterious Stone" type="EtcItem">
+	<item id="5886" name="封印的神祕石" type="EtcItem">
 		<!-- Pebble that radiates a strange aura. It sends out a dim light. -->
 		<set name="icon" val="icon.etc_dragon_egg_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1060,7 +1060,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5887" name="Mysterious Stone" type="EtcItem">
+	<item id="5887" name="神祕石" type="EtcItem">
 		<!-- Pebble that radiates a strange aura. It is shining brightly. -->
 		<set name="icon" val="icon.etc_dragon_egg_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1072,7 +1072,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5888" name="Karik Horn" type="EtcItem">
+	<item id="5888" name="卡拉克的角" type="EtcItem">
 		<!-- An ingredient used by Orc Shamans in their rituals. Take it to Seer Manakia. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1084,7 +1084,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5889" name="Cave Howler Skull" type="EtcItem">
+	<item id="5889" name="洞穴咆哮者的頭骨" type="EtcItem">
 		<!-- An ingredient used by Orc Shamans in their rituals. Take it to Seer Manakia. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1096,7 +1096,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5890" name="Mysterious Book" type="EtcItem">
+	<item id="5890" name="謎樣的書" type="EtcItem">
 		<!-- Book obtained from the Giant's Cave. Written in an ancient language, its contents cannot be deciphered. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1108,7 +1108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5891" name="Ancient Language Dictionary: Basic Level" type="EtcItem">
+	<item id="5891" name="古代的基礎辭典" type="EtcItem">
 		<!-- Simple dictionary published by scholars of ancient times. By using this, you can interpret some of the texts of the Lesser Giants. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1120,7 +1120,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5892" name="Ancient Language Dictionary: Intermediate Level" type="EtcItem">
+	<item id="5892" name="古代的中級辭典" type="EtcItem">
 		<!-- Dictionary published by scholars of ancient times. By using this, you can interpret the entire texts of the Lesser Giants. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1132,7 +1132,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5893" name="Leaf of Eucalyptus" type="EtcItem">
+	<item id="5893" name="安樹的樹葉" type="EtcItem">
 		<!-- One of the ingredients used to make wine. Collect 80 of them and take them to Guard Harlan located in the Town of Dion. -->
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1144,7 +1144,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5894" name="Stone of Icy Air" type="EtcItem">
+	<item id="5894" name="寒冷的石頭" type="EtcItem">
 		<!-- Magical stone used by Enku Orc Shamans when they cast ice magic. Collect 100 of these and take them to Guard Harlan located in the Town of Dion. -->
 		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1156,7 +1156,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5895" name="Ritron's Fruit" type="EtcItem">
+	<item id="5895" name="里特隆的果實" type="EtcItem">
 		<!-- Fruit with a tough, hard outer skin and a fragrant smell. Collect 4 of these and take them to Magister Rollant in the Town of Dion. -->
 		<set name="icon" val="icon.etc_cobol_i05" />
 		<set name="immediate_effect" val="true" />
@@ -1168,7 +1168,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5896" name="Moon Face Flower" type="EtcItem">
+	<item id="5896" name="月野花" type="EtcItem">
 		<!-- Flower that is said to bloom only under moonlight. Collect 20 of these and take them to Magister Rollant in the Town of Dion. -->
 		<set name="icon" val="icon.etc_flower_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1180,7 +1180,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5897" name="Leech Fluids" type="EtcItem">
+	<item id="5897" name="吸血鬼的體液" type="EtcItem">
 		<!-- The bodily fluids of a Leech that can be obtained from the Cruma Marshlands. Collect 10 of these and take them to Magister Rollant in the Town of Dion. -->
 		<set name="icon" val="icon.etc_reagent_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1192,7 +1192,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5898" name="Royal Membership" type="EtcItem">
+	<item id="5898" name="特級會員證" type="EtcItem">
 		<!-- It's a coin collectors' dream! Take it to Head Blacksmith Vergara. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1204,7 +1204,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5899" name="Kail's Coin" type="EtcItem">
+	<item id="5899" name="凱依的銅幣" type="EtcItem">
 		<!-- A coin owned by Sorcerer Kail who used to be an aide of Beleth. Take it to Warehouse Keeper Sorint. -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
 		<set name="immediate_effect" val="true" />

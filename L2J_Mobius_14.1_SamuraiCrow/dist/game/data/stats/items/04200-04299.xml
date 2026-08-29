@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="4200" name="Spellbook: Restore Life" type="EtcItem">
+	<item id="4200" name="魔法書-生命治癒" type="EtcItem">
 		<!-- A spellbook for learning the Restore Life skill. Used by Bishops. Required level: 44. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -10,7 +10,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4201" name="Spellbook: Shock Resistance" type="EtcItem">
+	<item id="4201" name="魔法書-抵抗休克" type="EtcItem">
 		<!-- A spellbook for learning the Shock Resistance skill. Used by Elven Elders. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -20,7 +20,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4202" name="Chrono Cithara" type="Weapon">
+	<item id="4202" name="克魯諾齊塔納" type="Weapon">
 		<!-- Chronicle I Souvenir! -->
 		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -41,7 +41,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4203" name="Spellbook: Life Leech" type="EtcItem">
+	<item id="4203" name="魔法書-生命吸取" type="EtcItem">
 		<!-- A spellbook for learning the Life Leech skill. Used by Shillien Knights. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
@@ -51,7 +51,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4204" name="Amulet: Pa'agrio's Tact" type="EtcItem">
+	<item id="4204" name="護身符-帕格立歐迅捷" type="EtcItem">
 		<!-- An amulet for learning the Pa'agrio's Tact skill. Used by Overlords. Required level: 40. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
@@ -61,7 +61,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4205" name="Amulet: Pa'agrio's Rage" type="EtcItem">
+	<item id="4205" name="護身符-帕格立歐憤怒" type="EtcItem">
 		<!-- An amulet for learning the Pa'agrio's Rage skill. Used by Overlords. Required level: 44. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
@@ -71,7 +71,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4206" name="Spellbook: Transfer Pain" type="EtcItem">
+	<item id="4206" name="魔法書-痛苦轉移" type="EtcItem">
 		<!-- A spellbook for learning the Transfer Pain skill. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -81,7 +81,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4207" name="Spellbook: Mana Regeneration" type="EtcItem">
+	<item id="4207" name="魔法書-魔力再生" type="EtcItem">
 		<!-- A spellbook for learning the Mana Regeneration skill. Used by Spellsingers. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -91,7 +91,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4208" name="Spellbook: Curse Gloom" type="EtcItem">
+	<item id="4208" name="魔法書-暗影詛咒" type="EtcItem">
 		<!-- A spellbook for learning the Curse Gloom skill. Used by Necromancers. Required level: 44. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -101,7 +101,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4209" name="Change of Heart - Piece 1" type="EtcItem">
+	<item id="4209" name="L2Event-紅心碎片1" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i01" />
 		<set name="immediate_effect" val="true" />
@@ -109,7 +109,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4210" name="Change of Heart - Piece 2" type="EtcItem">
+	<item id="4210" name="L2Event-紅心碎片2" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i02" />
 		<set name="immediate_effect" val="true" />
@@ -117,7 +117,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4211" name="Change of Heart - Piece 3" type="EtcItem">
+	<item id="4211" name="L2Event-紅心碎片3" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i03" />
 		<set name="immediate_effect" val="true" />
@@ -125,7 +125,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4212" name="Change of Heart - Piece 4" type="EtcItem">
+	<item id="4212" name="L2Event-紅心碎片4" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i04" />
 		<set name="immediate_effect" val="true" />
@@ -133,7 +133,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4213" name="Change of Heart - Piece 5" type="EtcItem">
+	<item id="4213" name="L2Event-紅心碎片5" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i05" />
 		<set name="immediate_effect" val="true" />
@@ -141,7 +141,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4214" name="Change of Heart - Piece 6" type="EtcItem">
+	<item id="4214" name="L2Event-紅心碎片6" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i06" />
 		<set name="immediate_effect" val="true" />
@@ -149,7 +149,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4215" name="Change of Heart - Piece 7" type="EtcItem">
+	<item id="4215" name="L2Event-紅心碎片7" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i07" />
 		<set name="immediate_effect" val="true" />
@@ -157,7 +157,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4216" name="Change of Heart - Piece 8" type="EtcItem">
+	<item id="4216" name="L2Event-紅心碎片8" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i08" />
 		<set name="immediate_effect" val="true" />
@@ -165,7 +165,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4217" name="Change of Heart - Piece 9" type="EtcItem">
+	<item id="4217" name="L2Event-紅心碎片9" type="EtcItem">
 		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i09" />
 		<set name="immediate_effect" val="true" />
@@ -173,7 +173,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4218" name="L2 Day - Scroll: Mana Regeneration" type="EtcItem">
+	<item id="4218" name="L2Event-魔力再生卷軸" type="EtcItem">
 		<!-- Instantly recovers MP. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -189,7 +189,7 @@
 			<skill id="2064" level="1" /> <!-- Scroll: Mana Regeneration -->
 		</skills>
 	</item>
-	<item id="4219" name="Dream Sword" type="Weapon">
+	<item id="4219" name="夢之劍" type="Weapon">
 		<set name="icon" val="icon.weapon_knights_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -215,7 +215,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4220" name="Dream Knife" type="Weapon">
+	<item id="4220" name="夢之刀" type="Weapon">
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -242,7 +242,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4221" name="Ubiquitous Axe" type="Weapon">
+	<item id="4221" name="泛在斧" type="Weapon">
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -269,7 +269,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4222" name="Dream Shield" type="Armor">
+	<item id="4222" name="夢之盾" type="Armor">
 		<set name="icon" val="icon.shield_hoplon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -288,7 +288,7 @@
 			<stat type="sDef">90</stat>
 		</stats>
 	</item>
-	<item id="4223" name="Ubiquitous Shield" type="Armor">
+	<item id="4223" name="泛在盾" type="Armor">
 		<set name="icon" val="icon.shield_dwarven_chain_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -307,7 +307,7 @@
 			<stat type="sDef">90</stat>
 		</stats>
 	</item>
-	<item id="4224" name="Dream Armor" type="Armor">
+	<item id="4224" name="夢之盔甲" type="Armor">
 		<set name="icon" val="icon.armor_blast_plate_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -325,7 +325,7 @@
 			<stat type="pDef">68</stat>
 		</stats>
 	</item>
-	<item id="4225" name="Dream Stockings" type="Armor">
+	<item id="4225" name="夢之長襪" type="Armor">
 		<set name="icon" val="icon.armor_mithril_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -343,7 +343,7 @@
 			<stat type="pDef">43</stat>
 		</stats>
 	</item>
-	<item id="4226" name="Dream Gloves" type="Armor">
+	<item id="4226" name="夢之手套" type="Armor">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -360,7 +360,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="4227" name="Dream Boots" type="Armor">
+	<item id="4227" name="夢之靴" type="Armor">
 		<set name="icon" val="icon.armor_chain_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -377,7 +377,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="4228" name="Ubiquitous Armor" type="Armor">
+	<item id="4228" name="泛在盔甲" type="Armor">
 		<set name="icon" val="icon.armor_compound_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -395,7 +395,7 @@
 			<stat type="pDef">68</stat>
 		</stats>
 	</item>
-	<item id="4229" name="Ubiquitous Stockings" type="Armor">
+	<item id="4229" name="泛在長襪" type="Armor">
 		<set name="icon" val="icon.armor_compound_scale_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -413,7 +413,7 @@
 			<stat type="pDef">43</stat>
 		</stats>
 	</item>
-	<item id="4230" name="Ubiquitous Gloves" type="Armor">
+	<item id="4230" name="泛在手套" type="Armor">
 		<set name="icon" val="icon.armor_manticor_skin_gloves_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -430,7 +430,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="4231" name="Ubiquitous Boots" type="Armor">
+	<item id="4231" name="泛在靴" type="Armor">
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -447,7 +447,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="4232" name="Dice" type="EtcItem">
+	<item id="4232" name="骰子" type="EtcItem">
 		<!-- Simple game of chance! Roll 'em!! -->
 		<set name="icon" val="icon.etc_dice_a_i00" />
 		<set name="default_action" val="DICE" />
@@ -459,7 +459,7 @@
 		<set name="handler" val="RollingDice" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="4233" name="Knuckle Duster" type="Weapon">
+	<item id="4233" name="關節拳" type="Weapon">
 		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -489,7 +489,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4234" name="Hatchling's Lv. 65 Armor" type="Armor">
+	<item id="4234" name="幼龍專用65級防具" type="Armor">
 		<!-- Equipment for hatchlings. Double-click to equip. -->
 		<set name="icon" val="icon.etc_pet_armor_i06" />
 		<set name="default_action" val="EQUIP" />
@@ -510,7 +510,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="4235" name="Hatchling's Lv. 75 Armor" type="Armor">
+	<item id="4235" name="幼龍專用75級防具" type="Armor">
 		<!-- Equipment for hatchlings. Double-click to equip. -->
 		<set name="icon" val="icon.etc_pet_armor_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -531,7 +531,7 @@
 			<stat type="pDef">58</stat>
 		</stats>
 	</item>
-	<item id="4236" name="Gara Item" type="Armor">
+	<item id="4236" name="臨時道具" type="Armor">
 		<set name="icon" val="icon.etc_pet_armor_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -551,7 +551,7 @@
 			<stat type="pDef">58</stat>
 		</stats>
 	</item>
-	<item id="4237" name="Hatchling's Lv. 65 Weapon" type="Weapon">
+	<item id="4237" name="幼龍專用65級武器" type="Weapon">
 		<!-- Equipment for hatchlings. Double-click to equip. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
@@ -577,7 +577,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4238" name="Hatchling's Lv. 75 Weapon" type="Weapon">
+	<item id="4238" name="幼龍專用75級武器" type="Weapon">
 		<!-- Equipment for hatchlings. Double-click to equip. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
@@ -603,7 +603,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4239" name="Blade Mold" type="EtcItem">
+	<item id="4239" name="劍身鑄模" type="EtcItem">
 		<!-- Cargo that Trader Arodin needs to send to the Dark Elves. Find all 20 of them and take them to Trader Tyra. -->
 		<set name="icon" val="icon.etc_artisans_frame_i00" />
 		<set name="immediate_effect" val="true" />
@@ -615,7 +615,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4240" name="Tyra's Bill" type="EtcItem">
+	<item id="4240" name="特威提的票據" type="EtcItem">
 		<!-- Note from Trader Tyra. Take it to Trader Arodin in Gludin Village. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -627,7 +627,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4241" name="Ranger's Report - Part 1" type="EtcItem">
+	<item id="4241" name="巡察報告1" type="EtcItem">
 		<!-- First piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
@@ -639,7 +639,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4242" name="Ranger's Report - Part 2" type="EtcItem">
+	<item id="4242" name="巡察報告2" type="EtcItem">
 		<!-- Second piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
@@ -651,7 +651,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4243" name="Ranger's Report - Part 3" type="EtcItem">
+	<item id="4243" name="巡察報告3" type="EtcItem">
 		<!-- Third piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
@@ -663,7 +663,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4244" name="Ranger's Report - Part 4" type="EtcItem">
+	<item id="4244" name="巡察報告4" type="EtcItem">
 		<!-- Fourth piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
@@ -675,7 +675,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4245" name="Weapons Trade Contract" type="EtcItem">
+	<item id="4245" name="武器交易契約" type="EtcItem">
 		<!-- The contract that was carried by an Ol Mahum General. It is engraved with the Mark of the Dwarves. Take it to Guard Alvah. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -687,7 +687,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4246" name="Attack Directives" type="EtcItem">
+	<item id="4246" name="攻擊指令書" type="EtcItem">
 		<!-- Operation order that was carried by an Ol Mahum General. Take it to Guard Alvah. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -699,7 +699,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4247" name="Certificate of the Silver Scale Guild" type="EtcItem">
+	<item id="4247" name="銀天秤證明書" type="EtcItem">
 		<!-- A certificate that verifies one's membership in the Silver Scales Guild. -->
 		<set name="icon" val="icon.etc_crest_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -711,7 +711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4248" name="Rolento's Cargobox" type="EtcItem">
+	<item id="4248" name="羅倫陶的貨物箱" type="EtcItem">
 		<!-- The war supplies that the Dwarven trader Rolento promised to send to Turek orcs. First, show it to Guard Alvah. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -723,7 +723,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4249" name="Ol Mahum Captain's Head" type="EtcItem">
+	<item id="4249" name="豺狼軍官的頭" type="EtcItem">
 		<!-- A severed head of an Ol Mahum Captain. Collect 30 of them and take them to Turek Chief Burai. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -735,7 +735,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4250" name="Jade Crystal" type="EtcItem">
+	<item id="4250" name="翡翠石" type="EtcItem">
 		<!-- Jade from the Enchanted Valley. Collect and take them to Bentley in Hunters' Village. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -747,7 +747,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4251" name="Ancient Goddess Statue" type="EtcItem">
+	<item id="4251" name="古代女神像" type="EtcItem">
 		<!-- Statue of a goddess from an old empire that has been discovered in the cemetery. Take it to Priestess Flownia of Town of Aden. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -759,7 +759,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4252" name="GalfRedo Romer's Bust" type="EtcItem">
+	<item id="4252" name="哥弗勒多若哈梅爾的胸像" type="EtcItem">
 		<!-- Statue created by the ancient sculptor Berona. Take it to Trader Galibredo of the Town of Oren. -->
 		<set name="icon" val="icon.etc_holy_statue_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -771,7 +771,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4253" name="Eye of the Shadow" type="EtcItem">
+	<item id="4253" name="暗影之眼" type="EtcItem">
 		<!-- Collect 50 eyes of the Shadow and take them to Warehouse Keeper Sorint. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4254" name="Certificate of Participation: Battle Royal" type="EtcItem">
+	<item id="4254" name="特級會員參加資格證" type="EtcItem">
 		<!-- The certificate that allows you to participate in the Battle Royal (for Coin Collectors of the 1st degree). -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -795,7 +795,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4255" name="Cargo Box" type="EtcItem">
+	<item id="4255" name="商業同盟的貨物" type="EtcItem">
 		<!-- The cargo boxes that have been robbed from the wagon of the Trade Guild. Collect 30 of them and take them to Guard Weisz. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -807,7 +807,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4256" name="Agnes' Holy Symbol" type="EtcItem">
+	<item id="4256" name="阿格擬斯聖標" type="EtcItem">
 		<!-- The Crucifix of the goddess of Einhasad. This article was left by Priestess Agnes after her death. Take it along with Agnes' Rosary to Priest Adonius. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
@@ -819,7 +819,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4257" name="Agnes' Rosary" type="EtcItem">
+	<item id="4257" name="阿格擬斯念珠" type="EtcItem">
 		<!-- Rosary used while praying. It was left by Priestess Agnes after her death. Take it along with the Crucifix of the goddess of Einhasad to Priest Adonius. -->
 		<set name="icon" val="icon.etc_evil_necklace_i00" />
 		<set name="immediate_effect" val="true" />
@@ -831,7 +831,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4258" name="Sinister Totem" type="EtcItem">
+	<item id="4258" name="不吉的圖騰" type="EtcItem">
 		<!-- Black totem that exudes an evil aura. Take it to High Priestess Levian. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -843,7 +843,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4259" name="Bear Skin" type="EtcItem">
+	<item id="4259" name="熊皮" type="EtcItem">
 		<!-- The pelts obtained by hunting bears. Collect 20 of them and take them to Grocer Pano of Floran Village. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="immediate_effect" val="true" />
@@ -855,7 +855,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4260" name="Enku Orc's Head" type="EtcItem">
+	<item id="4260" name="安庫獸人頭" type="EtcItem">
 		<!-- Beheaded head of an Enku Orc. Collect 100 of them and take them to Orc Lady Jennifer. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -867,7 +867,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4261" name="Orc Heads Bouquet" type="EtcItem">
+	<item id="4261" name="獸人頭捆" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to High Prefect Drikus. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -879,7 +879,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4262" name="Orc Heads Bouquet" type="EtcItem">
+	<item id="4262" name="獸人頭捆" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Priest Manuel. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -891,7 +891,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4263" name="Orc Heads Bouquet" type="EtcItem">
+	<item id="4263" name="獸人頭捆" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Vuku Chief Driko. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -903,7 +903,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4264" name="Orc Heads Bouquet" type="EtcItem">
+	<item id="4264" name="獸人頭捆" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Seer Somak. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -915,7 +915,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4265" name="Orc Heads Bouquet" type="EtcItem">
+	<item id="4265" name="獸人頭捆" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Prefect Dowki. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -927,7 +927,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4266" name="Orc Heads Bouquet" type="EtcItem">
+	<item id="4266" name="獸人頭捆" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Watchman Endrigo. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -939,7 +939,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4267" name="Orc Heads Bouquet" type="EtcItem">
+	<item id="4267" name="獸人頭捆" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Captain Lucas. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -951,7 +951,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4268" name="Jennifer's Box" type="EtcItem">
+	<item id="4268" name="給甄妮佛的箱子" type="EtcItem">
 		<!-- The box that a man who is smitten by Orc Lady Jennifer asked this to be delivered to her. What do you think is in the box...? -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -963,7 +963,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4269" name="Articles of Dead Heroes" type="EtcItem">
+	<item id="4269" name="遠征隊遺物" type="EtcItem">
 		<!-- Articles of dead soldiers who were sent here as an expeditionary force a thousand years ago. Collected by hunting cave servants. Take them to Antharas' Watchman Gilmore. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -975,7 +975,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4270" name="Old Key" type="EtcItem">
+	<item id="4270" name="破舊的鑰匙" type="EtcItem">
 		<!-- An item left by a dead soldier. His descendent Sir Kristof Rodemai is living in Giran. Take it to him. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="immediate_effect" val="true" />
@@ -987,7 +987,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4271" name="Old Hilt" type="EtcItem">
+	<item id="4271" name="破舊的劍柄" type="EtcItem">
 		<!-- Article left by a dead soldier. His descendant Duelist Kaien is living in the Town of Oren. Take it to him. -->
 		<set name="icon" val="icon.etc_hilt_i00" />
 		<set name="immediate_effect" val="true" />
@@ -999,7 +999,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4272" name="Totem Necklace" type="EtcItem">
+	<item id="4272" name="符咒項鍊" type="EtcItem">
 		<!-- Article left by a dead soldier. His descendent, High Prefect Garvarentz, lives in Hunters Village. Take it to him. -->
 		<set name="icon" val="icon.etc_totem_necklace_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1011,7 +1011,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4273" name="Einhasad's Crucifix" type="EtcItem">
+	<item id="4273" name="殷海薩的聖標" type="EtcItem">
 		<!-- Article left by a dead soldier. Take it to High Priest Orven of Einhasad Temple in Town of Aden where the dead soldier used to be stationed. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1023,7 +1023,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4274" name="Victim's Arm Bone" type="EtcItem">
+	<item id="4274" name="犧牲者臂骨" type="EtcItem">
 		<!-- The arm bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1035,7 +1035,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4275" name="Victim's Thigh Bone" type="EtcItem">
+	<item id="4275" name="犧牲者腿骨" type="EtcItem">
 		<!-- The thigh bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1047,7 +1047,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4276" name="Victim's Skull" type="EtcItem">
+	<item id="4276" name="犧牲者頭骨" type="EtcItem">
 		<!-- The skull of a victim who has been eaten alive by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1059,7 +1059,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4277" name="Victim's Rib Bone" type="EtcItem">
+	<item id="4277" name="犧牲者肋骨" type="EtcItem">
 		<!-- The rib bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_rib_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1071,7 +1071,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4278" name="Victim's Spine" type="EtcItem">
+	<item id="4278" name="犧牲者脊椎" type="EtcItem">
 		<!-- The spine of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1083,7 +1083,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4279" name="Jar of Bones" type="EtcItem">
+	<item id="4279" name="放骨頭的罈" type="EtcItem">
 		<!-- Urn that contains the bones of all the victims. Ask Mad Doctor Orpheus to resurrect the victims. -->
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1095,7 +1095,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4280" name="Useless Bone Pieces" type="EtcItem">
+	<item id="4280" name="無用的骨頭" type="EtcItem">
 		<!-- Useless bone pieces obtained after hunting Crokians. If you take them to Orpheus, perhaps something good will happen...? -->
 		<set name="icon" val="icon.etc_mithril_ore_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1107,7 +1107,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4281" name="Powder to Summon Dead Souls" type="EtcItem">
+	<item id="4281" name="召喚靈魂的粉" type="EtcItem">
 		<!-- Magic powder bought from Magister Xenovia. Throw it along with the victims' bones into the Psychic Medium's Urn. -->
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1119,7 +1119,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4282" name="Sack of the Dead" type="EtcItem">
+	<item id="4282" name="裝屍袋" type="EtcItem">
 		<!-- Sack containing victim's soul. Urn was possessed by the victim's soul. Take it to Locksmith Dorothy. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1131,7 +1131,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4283" name="Frog Prince" type="EtcItem">
+	<item id="4283" name="青蛙王子" type="EtcItem">
 		<!-- What are you waiting for? You promised to help me! Release me from this curse immediately! I want to turn back to normal as soon as possible!!! -->
 		<set name="icon" val="icon.etc_q_frog_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1143,7 +1143,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4284" name="Fly Powder" type="EtcItem">
+	<item id="4284" name="蒼蠅粉" type="EtcItem">
 		<!-- Powder made by grinding dried flies. Use it when you fail in your attempt to transform a frog. -->
 		<set name="icon" val="icon.etc_powder_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1155,7 +1155,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4285" name="Calculator" type="EtcItem">
+	<item id="4285" name="新型計算機" type="EtcItem">
 		<!-- The latest model of calculator. Take it to Blacksmith Brunon. -->
 		<set name="icon" val="icon.etc_calculator_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1167,7 +1167,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4286" name="Gemstone Beast's Crystal" type="EtcItem">
+	<item id="4286" name="寶石獸的結晶" type="EtcItem">
 		<!-- Crystal obtained by slaying a gemstone beast. Collect 10 of these and take them to Blacksmith Silvera. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1179,7 +1179,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4287" name="Lesser Giant's Powerstone" type="EtcItem">
+	<item id="4287" name="下巨人的動力裝置" type="EtcItem">
 		<!-- The Lesser Giant's Powerstone that has been extracted from the corpse of a Giant. Take it to Magister Hanellin. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1191,7 +1191,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4288" name="Hanellin's 1st Letter" type="EtcItem">
+	<item id="4288" name="哈奈林的信" type="EtcItem">
 		<!-- A letter that Hanellin entrusted to you. Deliver it to Magister Harne at the Dark Elf Guild in the Town of Gludio and receive the next instructions. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1203,7 +1203,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4289" name="Hanellin's 2nd Letter" type="EtcItem">
+	<item id="4289" name="哈奈林的信" type="EtcItem">
 		<!-- Letter that Hanellin entrusted you with. Take it to Claudia Athebaldt of Town of Aden and receive your next assignment from her. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1215,7 +1215,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4290" name="Hanellin's 3rd Letter" type="EtcItem">
+	<item id="4290" name="哈奈林的信" type="EtcItem">
 		<!-- Letter that Hanellin entrusted you with. Take it to Martien of the Town of Giran and receive your next assignment from him. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1227,7 +1227,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4291" name="1st Key of Ark" type="EtcItem">
+	<item id="4291" name="聖櫃的鑰匙" type="EtcItem">
 		<!-- The key that was found upon the corpse of the guardian of the sacred ark. Use this key to open the sacred ark and retrieve the sacred object. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1239,7 +1239,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4292" name="2nd Key of Ark" type="EtcItem">
+	<item id="4292" name="聖櫃的鑰匙" type="EtcItem">
 		<!-- The key that was taken after killing Elberos, the guardian of the sacred ark. Use the key to open the sacred ark and retrieve the sacred object. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1251,7 +1251,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4293" name="3rd Key of Ark" type="EtcItem">
+	<item id="4293" name="聖櫃的鑰匙" type="EtcItem">
 		<!-- The key that was taken after killing Shadowfang, the guardian of the sacred ark. Use the key to open the sacred ark and retrieve the sacred object. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1263,7 +1263,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4294" name="White Cloth" type="EtcItem">
+	<item id="4294" name="白布" type="EtcItem">
 		<!-- Large piece of white cloth given by Magister Hanellin. Kill the Platinum Tribe Shamans and Overlords and soak the cloth with their blood. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1275,7 +1275,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4295" name="Bloodstained Cloth" type="EtcItem">
+	<item id="4295" name="染血的布" type="EtcItem">
 		<!-- A cloth soaked in the blood of Angels and Platinum Tribe. According to Hanellin, you must wrap it around your body to challenge Baium. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1287,7 +1287,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4296" name="Order of Gosta" type="EtcItem">
+	<item id="4296" name="茍斯達的指令書" type="EtcItem">
 		<!-- The order states that you should hunt Tasaba Lizardmen and Tasaba Lizardman Shaman and bring back their fangs as proof. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1299,7 +1299,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4297" name="Lizardman's Fang" type="EtcItem">
+	<item id="4297" name="蜥蜴人的牙" type="EtcItem">
 		<!-- The fangs that have been collected as proofs that Tasaba Lizardmen and Tasaba Lizardman Shaman have been hunted. -->
 		<set name="icon" val="icon.etc_molar_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1311,7 +1311,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4298" name="Barrel of League" type="EtcItem">
+	<item id="4298" name="木桶" type="EtcItem">
 		<!-- This seems to be the cargo that was stolen from Iason Heine's wagon by Tasaba Lizardmen. -->
 		<set name="icon" val="icon.etc_wine_barrel_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1323,7 +1323,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4299" name="Operation Document - 1/10" type="EtcItem">
+	<item id="4299" name="作戰計畫書1/10" type="EtcItem">
 		<!-- This document was found in the cargo of the Trade Guild. The document contains various information regarding Innadril. How could this have happened...? -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
