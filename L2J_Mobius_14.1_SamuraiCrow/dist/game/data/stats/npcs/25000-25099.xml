@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25001" level="23" type="RaidBoss" name="Grayclaw Kutus" title="Raid Boss">
+	<npc id="25001" level="23" type="RaidBoss" name="灰爪庫土斯" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25002" count="3" respawnTime="360" weightPoint="1" /> <!-- Kutus' Protector -->
@@ -64,7 +64,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25002" level="22" type="Monster" name="Kutus' Protector" title="Raid Minion">
+	<npc id="25002" level="22" type="Monster" name="庫土斯的守衛" title="Raid Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="2" />
 			<skill name="Debuff_a" id="4198" level="2" />
@@ -105,7 +105,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25003" level="22" type="Monster" name="Kutus' Minion" title="Raid Minion">
+	<npc id="25003" level="22" type="Monster" name="庫土斯的手下" title="Raid Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="2" />
 		</parameters>

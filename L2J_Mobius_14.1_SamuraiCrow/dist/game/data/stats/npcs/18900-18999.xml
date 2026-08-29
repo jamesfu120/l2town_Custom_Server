@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18900" level="84" type="FeedableBeast" name="Mountain Grendel">
+	<npc id="18900" level="84" type="FeedableBeast" name="高山格蘭帝爾">
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="4" />
@@ -78,7 +78,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18901" level="83" type="Monster" name="Mountain Kookaburra" title="Golden">
+	<npc id="18901" level="83" type="Monster" name="高山笑翠鳥" title="Golden">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="16" />
@@ -125,7 +125,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18902" level="83" type="Monster" name="Mountain Cougar" title="Golden">
+	<npc id="18902" level="83" type="Monster" name="高山老虎" title="Golden">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="16" />
@@ -172,7 +172,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18903" level="84" type="Monster" name="Mountain Buffalo" title="Golden">
+	<npc id="18903" level="84" type="Monster" name="高山野牛" title="Golden">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="17" />
@@ -219,7 +219,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18904" level="84" type="Monster" name="Mountain Grendel" title="Golden">
+	<npc id="18904" level="84" type="Monster" name="高山格蘭帝爾" title="Golden">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="17" />
@@ -266,7 +266,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="18905" level="84" type="Monster" name="Farm Bandit" title="Lunatic">
+	<npc id="18905" level="84" type="Monster" name="猛獸掠奪者" title="Lunatic">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6559" level="17" />
@@ -310,7 +310,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="18906" level="84" type="Monster" name="Farm Bandit">
+	<npc id="18906" level="84" type="Monster" name="猛獸掠奪者">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6559" level="16" />
@@ -385,7 +385,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18907" level="84" type="Monster" name="Beast Ravager">
+	<npc id="18907" level="84" type="Monster" name="猛獸吞食者">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6566" level="17" />
@@ -460,7 +460,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18908" level="83" type="Monster" name="Sel Mahum Chef">
+	<npc id="18908" level="83" type="Monster" name="賽爾豺狼料理長">
 		<parameters>
 			<skill name="Skill01_ID" id="6330" level="1" />
 		</parameters>
@@ -508,7 +508,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="18909" level="83" type="Monster" name="Solina Knights">
+	<npc id="18909" level="83" type="Monster" name="索黎那騎士團員">
 		<parameters>
 			<skill name="PhysicalSpecial" id="6311" level="1" />
 		</parameters>
@@ -566,7 +566,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18910" level="83" type="Monster" name="Solina's Knight Captain">
+	<npc id="18910" level="83" type="Monster" name="索黎那騎士團長">
 		<parameters>
 			<skill name="PhysicalSpecial" id="6312" level="1" />
 			<skill name="Buff" id="6313" level="1" />
@@ -625,7 +625,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18911" level="84" type="Monster" name="Abbey Treasure Chest">
+	<npc id="18911" level="84" type="Monster" name="修道院寶箱">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -669,7 +669,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18912" level="1" type="Monster" name="Dummy">
+	<npc id="18912" level="1" type="Monster" name="稻草人">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -701,7 +701,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18913" level="1" type="Monster" name="Furnace">
+	<npc id="18913" level="1" type="Monster" name="火爐">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -733,7 +733,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18914" level="1" type="Monster" name="Furnace">
+	<npc id="18914" level="1" type="Monster" name="火爐">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -765,7 +765,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18915" level="1" type="Monster" name="Divine Furnace">
+	<npc id="18915" level="1" type="Monster" name="神聖的火爐">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -938,7 +938,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18921" level="84" type="Monster" name="Square Base">
+	<npc id="18921" level="84" type="Monster" name="廣場據點">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -976,7 +976,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="18922" level="84" type="Monster" name="Door Golem" title="Final">
+	<npc id="18922" level="84" type="Monster" name="守門高崙" title="Final">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1014,7 +1014,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18923" level="84" type="Monster" name="Door Golem" title="Final">
+	<npc id="18923" level="84" type="Monster" name="守門高崙" title="Final">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1052,7 +1052,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18924" level="84" type="Monster" name="Door Golem">
+	<npc id="18924" level="84" type="Monster" name="守門高崙">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1090,7 +1090,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18925" level="84" type="Monster" name="Trap">
+	<npc id="18925" level="84" type="Monster" name="陷阱">
 		<race>CONSTRUCT</race>
 		<sex>ETC</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1128,7 +1128,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18926" level="85" type="FriendlyNpc" name="Mercenary Archer" title="Jinia Guild">
+	<npc id="18926" level="85" type="FriendlyNpc" name="傭兵弓箭手" title="Jinia Guild">
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
 		</parameters>
@@ -1166,7 +1166,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18927" level="84" type="Monster" name="Campfire">
+	<npc id="18927" level="84" type="Monster" name="火堆">
 		<parameters>
 			<skill name="Skill01_ID" id="6331" level="1" />
 			<skill name="Skill02_ID" id="6332" level="1" />
@@ -1205,7 +1205,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18928" level="85" type="TerrainObject" name="Annihilation Furnace">
+	<npc id="18928" level="85" type="TerrainObject" name="熄滅的火爐">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1238,7 +1238,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="18929" level="84" type="Monster" name="Banner of the Grail">
+	<npc id="18929" level="84" type="Monster" name="聖杯守護物">
 		<parameters>
 			<skill name="Skill01_ID" id="6326" level="1" />
 		</parameters>
@@ -1380,7 +1380,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18933" level="1" type="Monster" name="Campfire Feed">
+	<npc id="18933" level="1" type="Monster" name="火堆上的竹桶">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1414,7 +1414,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18934" level="84" type="Monster" name="Abbey Treasure Chest">
+	<npc id="18934" level="84" type="Monster" name="修道院寶箱">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1454,7 +1454,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18935" level="85" type="Monster" name="Divine Protection of Sword">
+	<npc id="18935" level="85" type="Monster" name="神劍加護">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1488,7 +1488,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18937" level="1" type="Monster" name="Target Dummy">
+	<npc id="18937" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1521,7 +1521,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18938" level="1" type="Monster" name="Target Dummy">
+	<npc id="18938" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1554,7 +1554,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18939" level="1" type="Monster" name="Target Dummy">
+	<npc id="18939" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1587,7 +1587,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18940" level="1" type="Monster" name="Target Dummy">
+	<npc id="18940" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1620,7 +1620,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18941" level="1" type="Monster" name="Target Dummy">
+	<npc id="18941" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1653,7 +1653,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18942" level="1" type="Monster" name="Target Dummy">
+	<npc id="18942" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1686,7 +1686,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18943" level="1" type="Monster" name="Target Dummy">
+	<npc id="18943" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1719,7 +1719,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18944" level="1" type="Monster" name="Target Dummy">
+	<npc id="18944" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1752,7 +1752,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18945" level="1" type="Monster" name="Target Dummy">
+	<npc id="18945" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1785,7 +1785,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18946" level="1" type="Monster" name="Target Dummy">
+	<npc id="18946" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1818,7 +1818,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18947" level="1" type="Monster" name="Target Dummy">
+	<npc id="18947" level="1" type="Monster" name="目標模型">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1851,7 +1851,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18948" level="84" type="Monster" name="Etis van Etina" title="Head of the Embryo">
+	<npc id="18948" level="84" type="Monster" name="耶提斯 潘 艾帝納" title="Head of the Embryo">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1898,7 +1898,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18949" level="84" type="Monster" name="Etis van Etina" title="Head of the Embryo">
+	<npc id="18949" level="84" type="Monster" name="耶提斯 潘 艾帝納" title="Head of the Embryo">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1946,7 +1946,7 @@
 			<height normal="29.5" />
 		</collision>
 	</npc>
-	<npc id="18950" level="84" type="Monster" name="Etis van Etina's Phantom">
+	<npc id="18950" level="84" type="Monster" name="耶提斯 潘 艾帝納的幻影">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1989,7 +1989,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18951" level="84" type="Monster" name="Etis van Etina's Phantom">
+	<npc id="18951" level="84" type="Monster" name="耶提斯 潘 艾帝納的幻影">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2032,7 +2032,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18952" level="82" type="Monster" name="Solina's Guardian">
+	<npc id="18952" level="82" type="Monster" name="索黎那的守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2083,7 +2083,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18953" level="82" type="Monster" name="Solina's Guardian">
+	<npc id="18953" level="82" type="Monster" name="索黎那的守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2134,7 +2134,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18954" level="82" type="Monster" name="Solina's Guardian">
+	<npc id="18954" level="82" type="Monster" name="索黎那的守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2185,7 +2185,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18955" level="82" type="Monster" name="Solina's Guardian">
+	<npc id="18955" level="82" type="Monster" name="索黎那的守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2236,7 +2236,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18956" level="82" type="Monster" name="Tomb Guardian">
+	<npc id="18956" level="82" type="Monster" name="墳墓守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2283,7 +2283,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="18957" level="82" type="Monster" name="Tomb Guardian">
+	<npc id="18957" level="82" type="Monster" name="墳墓守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2330,7 +2330,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="18958" level="82" type="Monster" name="Tomb Guardian">
+	<npc id="18958" level="82" type="Monster" name="墳墓守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2377,7 +2377,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="18959" level="82" type="Monster" name="Tomb Guardian">
+	<npc id="18959" level="82" type="Monster" name="墳墓守護者">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2424,7 +2424,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="18960" level="85" type="Monster" name="Drake Lord">
+	<npc id="18960" level="85" type="Monster" name="龍獸之王">
 		<!-- TODO: Must be confirmed -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2456,7 +2456,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="18961" level="85" type="Monster" name="Behemoth Leader">
+	<npc id="18961" level="85" type="Monster" name="貝希莫斯首領">
 		<!-- TODO: Must be confirmed -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2488,7 +2488,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="18962" level="85" type="Monster" name="Dragon Beast">
+	<npc id="18962" level="85" type="Monster" name="猛龍獸">
 		<!-- TODO: Must be confirmed -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2557,7 +2557,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18964" level="85" type="Monster" name="Antharas' Symbol">
+	<npc id="18964" level="85" type="Monster" name="安塔瑞斯的象徵">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="channeling_skill" id="6742" level="1" />
@@ -2597,7 +2597,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="18965" level="85" type="Monster" name="Antharas' Symbol">
+	<npc id="18965" level="85" type="Monster" name="安塔瑞斯的象徵">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="channeling_skill" id="6742" level="1" />
@@ -2637,7 +2637,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="18966" level="85" type="Monster" name="Antharas' Symbol">
+	<npc id="18966" level="85" type="Monster" name="安塔瑞斯的象徵">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="channeling_skill" id="6742" level="1" />
@@ -2743,7 +2743,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18972" level="90" type="Monster" name="Treekin Defender" title="Scout">
+	<npc id="18972" level="90" type="Monster" name="樹人守護者" title="Scout">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14053" level="2" />
@@ -2802,7 +2802,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18973" level="92" type="Monster" name="Treekin Defender" title="Experienced Scout">
+	<npc id="18973" level="92" type="Monster" name="樹人守護者" title="Experienced Scout">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14053" level="3" />
@@ -2861,7 +2861,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18974" level="90" type="Monster" name="Centaur Archer" title="Scout">
+	<npc id="18974" level="90" type="Monster" name="人馬弓箭手" title="Scout">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14055" level="2" />
@@ -2919,7 +2919,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18975" level="92" type="Monster" name="Centaur Archer" title="Experienced Scout">
+	<npc id="18975" level="92" type="Monster" name="人馬弓箭手" title="Experienced Scout">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14055" level="3" />
@@ -2977,7 +2977,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18976" level="91" type="Monster" name="Beorning Berserker" title="Scout">
+	<npc id="18976" level="91" type="Monster" name="野人狂戰士" title="Scout">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14050" level="1" />
@@ -3036,7 +3036,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18977" level="93" type="Monster" name="Beorning Berserker" title="Experienced Scout">
+	<npc id="18977" level="93" type="Monster" name="野人狂戰士" title="Experienced Scout">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14050" level="2" />
@@ -3095,7 +3095,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18978" level="96" type="Monster" name="Orbis' Victim" title="Cursed Man">
+	<npc id="18978" level="96" type="Monster" name="奧爾比斯犧牲者" title="Cursed Man">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3154,7 +3154,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18979" level="96" type="Monster" name="Orbis' Guardian" title="Cursed Man">
+	<npc id="18979" level="96" type="Monster" name="奧爾比斯警衛兵" title="Cursed Man">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3213,7 +3213,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18980" level="96" type="Monster" name="Orbis' Thrower" title="Cursed Man">
+	<npc id="18980" level="96" type="Monster" name="奧爾比斯投擲兵" title="Cursed Man">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3272,7 +3272,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18981" level="96" type="Monster" name="Orbis' Savant" title="Cursed Man">
+	<npc id="18981" level="96" type="Monster" name="奧爾比斯學術士" title="Cursed Man">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3331,7 +3331,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18982" level="96" type="Monster" name="Orbis' Ancient Hero" title="Cursed Man">
+	<npc id="18982" level="96" type="Monster" name="奧爾比斯古代英雄" title="Cursed Man">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3390,7 +3390,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18983" level="96" type="Monster" name="Orbis' Chief Savant" title="Cursed Man">
+	<npc id="18983" level="96" type="Monster" name="奧爾比斯元老學術士" title="Cursed Man">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3449,7 +3449,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18984" level="99" type="Monster" name="Octavis' Influence">
+	<npc id="18984" level="99" type="Monster" name="歐塔比斯的強權">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14028" level="1" />
@@ -3489,7 +3489,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18985" level="90" type="Monster" name="Genesis Trap 1">
+	<npc id="18985" level="90" type="Monster" name="創世陷阱1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14075" level="1" />
@@ -3531,7 +3531,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18986" level="90" type="Monster" name="Genesis Trap 2">
+	<npc id="18986" level="90" type="Monster" name="創世陷阱2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14076" level="1" />
@@ -3569,7 +3569,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18987" level="90" type="Monster" name="Vine">
+	<npc id="18987" level="90" type="Monster" name="植物藤蔓">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3603,7 +3603,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="18988" level="90" type="Monster" name="Rose Vine">
+	<npc id="18988" level="90" type="Monster" name="玫瑰藤蔓">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3637,7 +3637,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="18989" level="90" type="Monster" name="Apherus Garden Gate">
+	<npc id="18989" level="90" type="Monster" name="阿芙蘿絲庭園之門">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3671,7 +3671,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18990" level="90" type="Monster" name="Apherus Garden Gate">
+	<npc id="18990" level="90" type="Monster" name="阿芙蘿絲庭園之門">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3705,7 +3705,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18991" level="90" type="Monster" name="Apherus Garden Gate">
+	<npc id="18991" level="90" type="Monster" name="阿芙蘿絲庭園之門">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3739,7 +3739,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18992" level="90" type="Monster" name="Apherus Garden Gate">
+	<npc id="18992" level="90" type="Monster" name="阿芙蘿絲庭園之門">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3773,7 +3773,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18993" level="88" type="Monster" name="Hatched Millipede">
+	<npc id="18993" level="88" type="Monster" name="孵化的地底蟲">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14183" level="1" />
@@ -3827,7 +3827,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18994" level="88" type="Monster" name="Hatched Underbug">
+	<npc id="18994" level="88" type="Monster" name="孵化的地底蟲">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14183" level="1" />
@@ -3879,7 +3879,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18995" level="88" type="Monster" name="Awakened Millipede">
+	<npc id="18995" level="88" type="Monster" name="甦醒的地底蟲">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14183" level="1" />
@@ -3927,7 +3927,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18996" level="88" type="Monster" name="Egg">
+	<npc id="18996" level="88" type="Monster" name="卵">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="131" />
@@ -3973,7 +3973,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18997" level="88" type="Monster" name="Egg">
+	<npc id="18997" level="88" type="Monster" name="卵">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="131" />
@@ -4020,7 +4020,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18998" level="90" type="Monster" name="Teredor Transparent 1">
+	<npc id="18998" level="90" type="Monster" name="特拉贊透明1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4055,7 +4055,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18999" level="90" type="Monster" name="Teredor Transparent 2">
+	<npc id="18999" level="90" type="Monster" name="特拉贊透明2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29001" level="40" type="GrandBoss" name="Queen Ant">
+	<npc id="29001" level="40" type="GrandBoss" name="巨蟻女王">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29003" count="6" respawnTime="10" weightPoint="1" /> <!-- Nurse Ant -->
@@ -104,7 +104,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29002" level="38" type="Monster" name="Queen Ant Larva">
+	<npc id="29002" level="38" type="Monster" name="巨蟻女王的幼蟲">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -141,7 +141,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="29003" level="35" type="Monster" name="Nurse Ant">
+	<npc id="29003" level="35" type="Monster" name="護衛螞蟻">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -180,7 +180,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29004" level="37" type="Monster" name="Escort Ant">
+	<npc id="29004" level="37" type="Monster" name="螞蟻警衛">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -223,7 +223,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29005" level="39" type="Monster" name="Ant Guardsman">
+	<npc id="29005" level="39" type="Monster" name="螞蟻侍衛">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -266,7 +266,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29006" level="50" type="GrandBoss" name="Core">
+	<npc id="29006" level="50" type="GrandBoss" name="核心">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29008" count="3" respawnTime="360" weightPoint="1" /> <!-- Fate Knight -->
@@ -355,7 +355,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29007" level="50" type="Monster" name="Death Knight">
+	<npc id="29007" level="50" type="Monster" name="死亡騎士">
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -399,7 +399,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="29008" level="55" type="Monster" name="Fate Knight">
+	<npc id="29008" level="55" type="Monster" name="死亡之刃">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -445,7 +445,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="29009" level="47" type="Monster" name="Dicor">
+	<npc id="29009" level="47" type="Monster" name="迪克爾">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -490,7 +490,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="29010" level="46" type="Monster" name="Validus">
+	<npc id="29010" level="46" type="Monster" name="瓦里達斯">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -533,7 +533,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="29011" level="49" type="Monster" name="Susceptor">
+	<npc id="29011" level="49" type="Monster" name="基座">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -585,7 +585,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29012" level="48" type="Monster" name="Perum">
+	<npc id="29012" level="48" type="Monster" name="匹黎姆">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -633,7 +633,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="29013" level="45" type="Monster" name="Premo">
+	<npc id="29013" level="45" type="Monster" name="普勒摩">
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -676,7 +676,7 @@
 			<height normal="35" grown="43" />
 		</collision>
 	</npc>
-	<npc id="29019" level="79" type="GrandBoss" name="Antharas">
+	<npc id="29019" level="79" type="GrandBoss" name="安塔瑞斯">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="78816" sp="18" />
@@ -887,7 +887,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29020" level="125" type="GrandBoss" name="Baium" title="Elmoreden's Emperor">
+	<npc id="29020" level="125" type="GrandBoss" name="巴溫" title="Elmoreden's Emperor">
 		<!-- NEW UPDATE: PRELUDE OF WAR -->
 		<parameters>
 			<minions name="Privates">
@@ -987,7 +987,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29021" level="74" type="Monster" name="Archangel">
+	<npc id="29021" level="74" type="Monster" name="大天使">
 		<!-- NEW UPDATE: PRELUDE OF WAR -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1030,7 +1030,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29022" level="60" type="GrandBoss" name="Zaken">
+	<npc id="29022" level="60" type="GrandBoss" name="札肯">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="1461" sp="3" />
@@ -1105,7 +1105,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29023" level="58" type="Monster" name="Doll">
+	<npc id="29023" level="58" type="Monster" name="人偶刀手">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1155,7 +1155,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29024" level="59" type="Monster" name="Valley Master">
+	<npc id="29024" level="59" type="Monster" name="貝里大師">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -1204,7 +1204,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29025" level="78" type="Folk" name="Baium">
+	<npc id="29025" level="78" type="Folk" name="巴溫">
 		<!-- Needs to be Folk by Baium AI -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1224,7 +1224,7 @@
 			<height normal="82" />
 		</collision>
 	</npc>
-	<npc id="29026" level="60" type="Monster" name="Pirate Zombie Captain">
+	<npc id="29026" level="60" type="Monster" name="海賊殭屍船長">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1271,7 +1271,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29027" level="57" type="Monster" name="Pirate Zombie">
+	<npc id="29027" level="57" type="Monster" name="海賊殭屍">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1318,7 +1318,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29028" level="118" type="GrandBoss" name="Valakas" title="Fire Dragon">
+	<npc id="29028" level="118" type="GrandBoss" name="巴拉卡斯" title="Fire Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="32535869271" sp="29282280" raidPoints="1000" />
@@ -1520,7 +1520,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29029" level="118" type="Monster" name="Lavasaurus Alpha">
+	<npc id="29029" level="118" type="Monster" name="熔岩撒魯斯初生體">
 		<parameters>
 			<param name="SkillRange" value="500" />
 			<skill name="DDMagic" id="6656" level="1" />
@@ -1575,7 +1575,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="29030" level="84" type="RaidBoss" name="Fenrir's Hound Kerinne" title="Valakas' Spawn">
+	<npc id="29030" level="84" type="RaidBoss" name="魔狼 凱利尼" title="Valakas' Spawn">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29031" count="2" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Ifrit -->
@@ -1634,7 +1634,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29031" level="84" type="Monster" name="Kerinne's Ifrit">
+	<npc id="29031" level="84" type="Monster" name="凱利尼的伊佛利特">
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="9" />
 			<skill name="SelfRangeBuff_a" id="4213" level="9" />
@@ -1678,7 +1678,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29032" level="84" type="Monster" name="Kerinne's Golem">
+	<npc id="29032" level="84" type="Monster" name="凱利尼的高崙">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1716,7 +1716,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29033" level="84" type="RaidBoss" name="Fenrir's Hound Freki" title="Valakas' Spawn">
+	<npc id="29033" level="84" type="RaidBoss" name="魔狼 芙雷奇" title="Valakas' Spawn">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29034" count="3" respawnTime="360" weightPoint="1" /> <!-- Freki's Ifrit -->
@@ -1775,7 +1775,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29034" level="84" type="Monster" name="Freki's Ifrit">
+	<npc id="29034" level="84" type="Monster" name="芙雷奇的伊佛利特">
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="9" />
 			<skill name="Debuff_a" id="4203" level="9" />
@@ -1819,7 +1819,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29035" level="84" type="Monster" name="Freki's Golem">
+	<npc id="29035" level="84" type="Monster" name="芙雷奇的高崙">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1857,7 +1857,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29036" level="84" type="RaidBoss" name="Fenrir's Hound Uruz" title="Valakas' Spawn">
+	<npc id="29036" level="84" type="RaidBoss" name="魔狼 烏路斯" title="Valakas' Spawn">
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="9" />
 			<skill name="SelfBuff_a" id="4175" level="9" />
@@ -1918,7 +1918,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29037" level="84" type="RaidBoss" name="Fenrir's Hound Kinaz" title="Valakas' Spawn">
+	<npc id="29037" level="84" type="RaidBoss" name="魔狼 奇那斯" title="Valakas' Spawn">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29038" count="3" respawnTime="360" weightPoint="1" /> <!-- Kinaz' Ifrit -->
@@ -1981,7 +1981,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29038" level="84" type="Monster" name="Kinaz' Ifrit">
+	<npc id="29038" level="84" type="Monster" name="奇那斯的伊佛利特">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" />
 			<skill name="Debuff_a" id="4201" level="9" />
@@ -2025,7 +2025,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29039" level="84" type="Monster" name="Kinaz' Ifrit">
+	<npc id="29039" level="84" type="Monster" name="奇那斯的伊佛利特">
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="9" />
 			<skill name="SelfRangeBuff_a" id="4212" level="9" />
@@ -2069,7 +2069,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29040" level="84" type="RaidBoss" name="Wings of Flame, Ixion" title="Gatekeeper of Valakas">
+	<npc id="29040" level="84" type="RaidBoss" name="火炎之翼 伊克希恩" title="Gatekeeper of Valakas">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29041" count="1" respawnTime="30" weightPoint="1" /> <!-- Inferno Golem -->
@@ -2137,7 +2137,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29041" level="84" type="Monster" name="Inferno Golem">
+	<npc id="29041" level="84" type="Monster" name="煉獄高崙">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4179" level="9" />
 		</parameters>
@@ -2179,7 +2179,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29042" level="84" type="Monster" name="Inferno Golem">
+	<npc id="29042" level="84" type="Monster" name="煉獄高崙">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2217,7 +2217,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29043" level="84" type="Monster" name="Howling Ifrit">
+	<npc id="29043" level="84" type="Monster" name="怒吼的伊佛利特">
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="9" />
 			<skill name="SelfRangeBuff_a" id="4211" level="9" />
@@ -2261,7 +2261,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29044" level="84" type="Monster" name="Howling Ifrit">
+	<npc id="29044" level="84" type="Monster" name="怒吼的伊佛利特">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" />
 			<skill name="Debuff_a" id="4199" level="9" />
@@ -2305,7 +2305,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29045" level="85" type="GrandBoss" name="Frintezza">
+	<npc id="29045" level="85" type="GrandBoss" name="芙琳泰沙">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2349,7 +2349,7 @@
 			<height normal="42.7" />
 		</collision>
 	</npc>
-	<npc id="29046" level="85" type="GrandBoss" name="Scarlet van Halisha">
+	<npc id="29046" level="85" type="GrandBoss" name="思卡雷特 潘 哈里夏">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8204" /> <!-- Monster Only (Follower of Frintezza Calibur) -->
@@ -2398,7 +2398,7 @@
 			<height normal="90.7" grown="109.4" />
 		</collision>
 	</npc>
-	<npc id="29047" level="85" type="GrandBoss" name="Scarlet van Halisha">
+	<npc id="29047" level="85" type="GrandBoss" name="思卡雷特 潘 哈里夏">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8222" /> <!-- Monster Only (Follower of Frintezza Tran Calibur) -->
@@ -2504,7 +2504,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29048" level="85" type="Monster" name="Evil Spirit">
+	<npc id="29048" level="85" type="Monster" name="遺照">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2547,7 +2547,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29049" level="85" type="Monster" name="Evil Spirit">
+	<npc id="29049" level="85" type="Monster" name="遺照">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2590,7 +2590,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29050" level="85" type="Monster" name="Halisha's Breath">
+	<npc id="29050" level="85" type="Monster" name="哈里夏的氣息">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2634,7 +2634,7 @@
 			<height normal="40" grown="50" />
 		</collision>
 	</npc>
-	<npc id="29051" level="85" type="Monster" name="Halisha's Breath">
+	<npc id="29051" level="85" type="Monster" name="哈里夏的氣息">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2678,7 +2678,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="29052" level="85" type="Folk" name="">
+	<npc id="29052" level="85" type="Folk" name=" ">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2715,7 +2715,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="29053" level="85" type="Folk" name="">
+	<npc id="29053" level="85" type="Folk" name=" ">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2753,7 +2753,7 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="29054" level="99" type="RaidBoss" name="Venom" title="Triol's Leader">
+	<npc id="29054" level="99" type="RaidBoss" name="貝諾姆" title="Triol's Leader">
 		<parameters>
 			<skill name="PhysicalSpecial" id="4993" level="1" />
 			<skill name="DDMagic" id="4994" level="1" />
@@ -2823,7 +2823,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29055" level="70" type="Monster" name="Teleportation Cubic">
+	<npc id="29055" level="70" type="Monster" name="傳送晶體">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2867,7 +2867,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29056" level="60" type="RaidBoss" name="Ice Fairy Sirra" title="Raid Boss">
+	<npc id="29056" level="60" type="RaidBoss" name="冰雪妖精 希露" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29058" count="2" respawnTime="360" weightPoint="1" /> <!-- Sirra's Caretaker -->
@@ -2934,7 +2934,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29057" level="59" type="Monster" name="Sirra's Servant" title="Raid Minion">
+	<npc id="29057" level="59" type="Monster" name="冰雪妖精的侍從" title="Raid Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="5" />
 			<skill name="SelfRangeBuff_a" id="4213" level="5" />
@@ -2978,7 +2978,7 @@
 			<height normal="39.7" />
 		</collision>
 	</npc>
-	<npc id="29058" level="59" type="Monster" name="Sirra's Caretaker" title="Raid Minion">
+	<npc id="29058" level="59" type="Monster" name="冰雪妖精的凝視者" title="Raid Minion">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3057,7 +3057,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29060" level="59" type="RaidBoss" name="Ice Queen's Prefect" title="Raid Boss">
+	<npc id="29060" level="59" type="RaidBoss" name="冰雪女王親衛隊長" title="Raid Boss">
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
 			<skill name="SelfBuff_a" id="4173" level="5" />
@@ -3122,7 +3122,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29061" level="70" type="Teleporter" name="Teleportation Cubic">
+	<npc id="29061" level="70" type="Teleporter" name="傳送晶體">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3156,7 +3156,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29062" level="99" type="RaidBoss" name="Andreas van Halter" title="High Priestess">
+	<npc id="29062" level="99" type="RaidBoss" name="安蒂莉雅絲 班 胡爾特" title="High Priestess">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29063" count="3" respawnTime="360" weightPoint="1" /> <!-- Andreas' Acolyte -->
@@ -3311,7 +3311,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29063" level="99" type="Monster" name="Andreas' Acolyte" title="Raid Minion">
+	<npc id="29063" level="99" type="Monster" name="安蒂莉雅絲的服事" title="Raid Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="10" />
 			<skill name="Debuff_a" id="4206" level="10" />
@@ -3363,7 +3363,7 @@
 			<height normal="28.4" />
 		</collision>
 	</npc>
-	<npc id="29064" level="99" type="Monster" name="Andreas' Acolyte" title="Raid Minion">
+	<npc id="29064" level="99" type="Monster" name="安蒂莉雅絲的服事" title="Raid Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="10" />
 			<skill name="SelfRangeBuff_a" id="4214" level="10" />
@@ -3415,7 +3415,7 @@
 			<height normal="28.4" />
 		</collision>
 	</npc>
-	<npc id="29065" level="80" type="RaidBoss" name="Sailren" title="Sealed Evil Power">
+	<npc id="29065" level="80" type="RaidBoss" name="賽爾蘭" title="Sealed Evil Power">
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="SelfRangeCancel_a" id="5118" level="1" />
@@ -3498,7 +3498,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29066" level="79" type="GrandBoss" name="Antharas">
+	<npc id="29066" level="79" type="GrandBoss" name="安塔瑞斯">
 		<parameters>
 			<param name="ultra_respawn_time" value="8" />
 		</parameters>
@@ -3708,7 +3708,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29067" level="79" type="GrandBoss" name="Antharas">
+	<npc id="29067" level="79" type="GrandBoss" name="安塔瑞斯">
 		<parameters>
 			<param name="ultra_respawn_time" value="5" />
 		</parameters>
@@ -3921,7 +3921,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29068" level="118" type="GrandBoss" name="Antharas" title="Earth Dragon">
+	<npc id="29068" level="118" type="GrandBoss" name="安塔瑞斯" title="Earth Dragon">
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>
@@ -4124,7 +4124,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29069" level="118" type="Monster" name="Dragon Beast">
+	<npc id="29069" level="118" type="Monster" name="貝希莫斯巨龍">
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="PhysicalSpecial" id="5095" level="1" />
@@ -4184,7 +4184,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29070" level="118" type="Monster" name="Dragon Bomber">
+	<npc id="29070" level="118" type="Monster" name="巨龍炸彈">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -4240,7 +4240,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29071" level="78" type="Monster" name="Dragon Bomber">
+	<npc id="29071" level="78" type="Monster" name="巨龍炸彈">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -4289,7 +4289,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29072" level="78" type="Monster" name="Dragon Bomber">
+	<npc id="29072" level="78" type="Monster" name="巨龍炸彈">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -4338,7 +4338,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29073" level="78" type="Monster" name="Dragon Bomber">
+	<npc id="29073" level="78" type="Monster" name="巨龍炸彈">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -4387,7 +4387,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29074" level="78" type="Monster" name="Dragon Bomber">
+	<npc id="29074" level="78" type="Monster" name="巨龍炸彈">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -4436,7 +4436,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29075" level="78" type="Monster" name="Dragon Bomber">
+	<npc id="29075" level="78" type="Monster" name="巨龍炸彈">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -4485,7 +4485,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29076" level="118" type="Monster" name="Large Dragon Bomber">
+	<npc id="29076" level="118" type="Monster" name="大型巨龍炸彈">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -5458,7 +5458,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29095" level="80" type="RaidBoss" name="Gordon" title="Knight of Destruction">
+	<npc id="29095" level="80" type="RaidBoss" name="高登" title="Knight of Destruction">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" />
@@ -5520,7 +5520,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29096" level="80" type="RaidBoss" name="Anais" title="Lord of Splendor">
+	<npc id="29096" level="80" type="RaidBoss" name="亞奈斯" title="Lord of Splendor">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29098" count="3" respawnTime="360" weightPoint="1" /> <!-- Worshiper of Splendor -->
@@ -5614,7 +5614,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29097" level="80" type="Monster" name="Apostle of Splendor" title="Raid Minion">
+	<npc id="29097" level="80" type="Monster" name="輝煌的使徒" title="Raid Minion">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8221" /> <!-- Monster Only (Grail Apostle Spear) -->
@@ -5653,7 +5653,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="29098" level="80" type="Monster" name="Worshiper of Splendor" title="Raid Minion">
+	<npc id="29098" level="80" type="Monster" name="輝煌的崇拜者" title="Raid Minion">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4208" level="10" />
 		</parameters>
@@ -5695,7 +5695,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="29099" level="83" type="GrandBoss" name="Baylor" title="Warden">
+	<npc id="29099" level="83" type="GrandBoss" name="巴爾勒" title="Warden">
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1" />
 			<skill name="selfbuff2" id="5222" level="1" />

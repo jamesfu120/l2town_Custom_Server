@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23113" level="4" type="Monster" name="Crawler" title="Husk">
+	<npc id="23113" level="4" type="Monster" name="爬行者" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -40,7 +40,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="23114" level="6" type="Monster" name="Stalker" title="Husk">
+	<npc id="23114" level="6" type="Monster" name="追蹤者" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -81,7 +81,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23115" level="12" type="Monster" name="Critter" title="Husk">
+	<npc id="23115" level="12" type="Monster" name="異生者" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -121,7 +121,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23116" level="14" type="Monster" name="Avian" title="Husk">
+	<npc id="23116" level="14" type="Monster" name="翼羽者" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -184,7 +184,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23117" level="16" type="Monster" name="Rider" title="Husk">
+	<npc id="23117" level="16" type="Monster" name="騎乘者" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -248,7 +248,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23118" level="8" type="Monster" name="Krapher" title="Husk">
+	<npc id="23118" level="8" type="Monster" name="扭曲者" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -289,7 +289,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23119" level="18" type="Monster" name="Master" title="Embryo">
+	<npc id="23119" level="18" type="Monster" name="雜務工" title="Embryo">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -354,7 +354,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23120" level="18" type="Monster" name="Mechanic" title="Embryo">
+	<npc id="23120" level="18" type="Monster" name="技術工" title="Embryo">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -419,7 +419,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23121" level="8" type="Monster" name="Thief">
+	<npc id="23121" level="8" type="Monster" name="可疑的入侵者">
 		<!-- TODO: Confirm me -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -486,7 +486,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23122" level="20" type="Monster" name="Eyesaroch" title="Husk">
+	<npc id="23122" level="20" type="Monster" name="艾薩羅克" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -550,7 +550,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23123" level="98" type="Monster" name="Isolation Room Warder">
+	<npc id="23123" level="98" type="Monster" name="隔離所教導官">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -595,7 +595,7 @@
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="23126" level="104" type="Monster" name="Embryo Elite Praetorian">
+	<npc id="23126" level="104" type="Monster" name="胚胎精銳親衛隊">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1683" level="1" />
@@ -647,7 +647,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23127" level="104" type="Monster" name="Embryo Elite Chaser">
+	<npc id="23127" level="104" type="Monster" name="胚胎精銳追捕隊">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1692" level="1" />
@@ -701,7 +701,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23128" level="104" type="Monster" name="Embryo Elite Acolyte">
+	<npc id="23128" level="104" type="Monster" name="胚胎精銳修行隊">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1687" level="1" />
@@ -755,7 +755,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23129" level="104" type="Monster" name="Embryo Elite Alchemist">
+	<npc id="23129" level="104" type="Monster" name="胚胎精銳學術隊">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1698" level="1" />
@@ -809,7 +809,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23130" level="104" type="Monster" name="Embryo Elite High Priest">
+	<npc id="23130" level="104" type="Monster" name="胚胎精銳祭司團">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4002" level="11" />
@@ -863,7 +863,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23131" level="104" type="Monster" name="Embryo Executor Captain" title="Watchman of the Altar">
+	<npc id="23131" level="104" type="Monster" name="胚胎上位執行官" title="Watchman of the Altar">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5483" level="1" />
@@ -913,7 +913,7 @@
 			<skill id="5273" level="1" /> <!-- Power Strike -->
 		</skillList>
 	</npc>
-	<npc id="23132" level="104" type="Monster" name="Etina's Enchanter">
+	<npc id="23132" level="104" type="Monster" name="耶提斯福音團">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1652" level="1" />
@@ -970,7 +970,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23133" level="104" type="Monster" name="Etina's Priest">
+	<npc id="23133" level="104" type="Monster" name="耶提斯祭司團">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4002" level="12" />
@@ -1027,7 +1027,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23134" level="104" type="Monster" name="Etina's Guardian">
+	<npc id="23134" level="104" type="Monster" name="耶提斯守護團">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5483" level="1" />
@@ -1084,7 +1084,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23135" level="104" type="Monster" name="Etina's Avenger">
+	<npc id="23135" level="104" type="Monster" name="耶提斯懲戒團">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1687" level="1" />
@@ -1141,7 +1141,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23136" level="104" type="Monster" name="Etina's Agent">
+	<npc id="23136" level="104" type="Monster" name="耶提斯神罰團">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1697" level="1" />
@@ -1198,7 +1198,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23137" level="104" type="Monster" name="Etina's Darkness">
+	<npc id="23137" level="104" type="Monster" name="耶提斯黑暗團">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6093" level="1" />
@@ -1255,7 +1255,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23138" level="104" type="Monster" name="Etina's Executor" title="Watchman of the Altar">
+	<npc id="23138" level="104" type="Monster" name="耶提斯刀刃團" title="Watchman of the Altar">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6093" level="1" />
@@ -1305,7 +1305,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23139" level="103" type="Monster" name="Embryo Savant">
+	<npc id="23139" level="103" type="Monster" name="胚胎研究兵">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1653" level="1" />
@@ -1360,7 +1360,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23140" level="103" type="Monster" name="Embryo Watchman">
+	<npc id="23140" level="103" type="Monster" name="胚胎監視兵">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1654" level="1" />
@@ -1414,7 +1414,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23141" level="103" type="Monster" name="Embryo Fighter">
+	<npc id="23141" level="103" type="Monster" name="胚胎戰鬥兵">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1687" level="1" />
@@ -1469,7 +1469,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23142" level="103" type="Monster" name="Embryo Guard">
+	<npc id="23142" level="103" type="Monster" name="胚胎守護兵">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1682" level="1" />
@@ -1524,7 +1524,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23143" level="99" type="Monster" name="Octavis' Gladiator">
+	<npc id="23143" level="99" type="Monster" name="歐塔比斯劍鬥士 ">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1573,7 +1573,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="23144" level="99" type="Monster" name="Gladiator Arena Beast">
+	<npc id="23144" level="99" type="Monster" name="劍鬥場野獸">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1622,7 +1622,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23145" level="97" type="Monster" name="Octavis' Gladiator">
+	<npc id="23145" level="97" type="Monster" name="歐塔比斯劍鬥士 ">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1673,7 +1673,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="23146" level="97" type="Monster" name="Gladiator Arena Beast">
+	<npc id="23146" level="97" type="Monster" name="劍鬥場野獸">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1723,7 +1723,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23147" level="95" type="Monster" name="Resurrected Creation">
+	<npc id="23147" level="95" type="Monster" name="復活的創造物">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1808,7 +1808,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23148" level="95" type="Monster" name="Lunatic Creature">
+	<npc id="23148" level="95" type="Monster" name="瘋狂的創造物">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1893,7 +1893,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23149" level="95" type="Monster" name="Undead Creature">
+	<npc id="23149" level="95" type="Monster" name="貪婪的創造物">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1978,7 +1978,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23150" level="96" type="Monster" name="Hellish Creature">
+	<npc id="23150" level="96" type="Monster" name="地獄的創造物">
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -2063,7 +2063,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23151" level="96" type="Monster" name="Shillien's Messenger">
+	<npc id="23151" level="96" type="Monster" name="席琳的傳令">
 		<parameters>
 			<param name="MoveAroundSocial" value="180" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -2151,7 +2151,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23152" level="10" type="Monster" name="Husk Eyesaroch">
+	<npc id="23152" level="10" type="Monster" name="堅殼艾薩羅克">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2221,7 +2221,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23153" level="51" type="Monster" name="Achelando">
+	<npc id="23153" level="51" type="Monster" name="亞齊蘭多">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2292,7 +2292,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23154" level="51" type="Monster" name="Styrindo">
+	<npc id="23154" level="51" type="Monster" name="斯特林多">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2363,7 +2363,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23155" level="51" type="Monster" name="Ashende">
+	<npc id="23155" level="51" type="Monster" name="亞旋德">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2434,7 +2434,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23156" level="51" type="Monster" name="Meforde">
+	<npc id="23156" level="51" type="Monster" name="梅弗爾德">
 		<parameters>
 			<param name="MoveAroundSocial" value="170" />
 			<param name="MoveAroundSocial1" value="170" />
@@ -2506,7 +2506,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23157" level="51" type="Monster" name="Rorka">
+	<npc id="23157" level="51" type="Monster" name="羅爾卡">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2578,7 +2578,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23158" level="51" type="Monster" name="Shumerun">
+	<npc id="23158" level="51" type="Monster" name="修梅連">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2650,7 +2650,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23159" level="45" type="Monster" name="Accencio" title="Event Monster">
+	<npc id="23159" level="45" type="Monster" name="艾克西歐" title="Event Monster">
 		<parameters>
 			<skill name="Skill01_ID" id="14274" level="1" />
 			<skill name="Skill02_ID" id="14275" level="1" />
@@ -2695,7 +2695,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23160" level="93" type="Monster" name="Garden Seer">
+	<npc id="23160" level="93" type="Monster" name="庭園祭司長">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="1" />
@@ -2758,7 +2758,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23161" level="92" type="Monster" name="Garden Priest">
+	<npc id="23161" level="92" type="Monster" name="庭園祭司">
 		<parameters>
 			<param name="MoveArounding" value="1" />
 			<param name="Party_Type" value="1" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="36200" level="102" type="Defender" name="Mage" title="Support Unit">
+	<npc id="36200" level="102" type="Defender" name="巫師" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -74,7 +74,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="36201" level="102" type="Defender" name="Healer" title="Support Unit">
+	<npc id="36201" level="102" type="Defender" name="牧師" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -139,7 +139,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="36202" level="105" type="FortCommander" name="Archer Commander" title="Archer Unit">
+	<npc id="36202" level="105" type="FortCommander" name="弓兵隊長" title="Archer Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -204,7 +204,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36203" level="103" type="Defender" name="Archer" title="Archer Unit">
+	<npc id="36203" level="103" type="Defender" name="弓兵隊員" title="Archer Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -264,7 +264,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36204" level="105" type="FortCommander" name="General" title="Officers' Barracks">
+	<npc id="36204" level="105" type="FortCommander" name="將軍" title="Officers' Barracks">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -329,7 +329,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36205" level="105" type="Defender" name="Minister" title="Officers' Barracks">
+	<npc id="36205" level="105" type="Defender" name="將官" title="Officers' Barracks">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -392,7 +392,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36206" level="80" type="Monster" name="Ballista" title="Antharas' Fortress">
+	<npc id="36206" level="80" type="Monster" name="弩砲" title="Antharas' Fortress">
 		<parameters>
 			<param name="FameValue" value="30" />
 			<param name="Armor" value="60" />
@@ -437,7 +437,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36207" level="105" type="Monster" name="Mercenary Captain">
+	<npc id="36207" level="105" type="Monster" name="傭兵隊隊長">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -526,7 +526,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36208" level="103" type="Monster" name="Mercenary Private">
+	<npc id="36208" level="103" type="Monster" name="傭兵隊士兵">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -576,7 +576,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36209" level="20" type="Folk" name="Flagpole">
+	<npc id="36209" level="20" type="Folk" name="旗桿">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -613,7 +613,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36210" level="75" type="FortManager" name="Foreman" title="Western Fortress">
+	<npc id="36210" level="75" type="FortManager" name="監督官" title="Western Fortress">
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -660,7 +660,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36211" level="75" type="Folk" name="Suspicious Merchant" title="Western Fortress">
+	<npc id="36211" level="75" type="Folk" name="可疑的商人" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -708,7 +708,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36212" level="75" type="Folk" name="Garrison Chief" title="Western Fortress">
+	<npc id="36212" level="75" type="Folk" name="守備隊長" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -757,7 +757,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36213" level="75" type="Folk" name="Archer Commander" title="Western Fortress">
+	<npc id="36213" level="75" type="Folk" name="弓兵隊長" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -798,7 +798,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36214" level="75" type="Folk" name="General" title="Western Fortress">
+	<npc id="36214" level="75" type="Folk" name="將軍" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -840,7 +840,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36215" level="75" type="Folk" name="Support Unit Captain" title="Western Fortress">
+	<npc id="36215" level="75" type="Folk" name="支援隊長" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -881,7 +881,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36216" level="75" type="Folk" name="Chief Engineer" title="Western Fortress">
+	<npc id="36216" level="75" type="Folk" name="工兵隊管理員" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -922,7 +922,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36217" level="75" type="FortLogistics" name="Supply Officer" title="Western Fortress">
+	<npc id="36217" level="75" type="FortLogistics" name="補給整備官" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -983,7 +983,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="36218" level="100" type="Folk" name="Supplies">
+	<npc id="36218" level="100" type="Folk" name="寶物箱子">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1020,7 +1020,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36219" level="75" type="Folk" name="Warder" title="Western Fortress">
+	<npc id="36219" level="75" type="Folk" name="收容所管理人" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1068,7 +1068,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36220" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36220" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1113,7 +1113,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36221" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36221" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1158,7 +1158,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36222" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36222" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1206,7 +1206,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36223" level="105" type="Defender" name="Rebel Commander" title="Western Fortress">
+	<npc id="36223" level="105" type="Defender" name="叛亂軍隊長" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1271,7 +1271,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36224" level="103" type="Defender" name="Rebel Elite Soldier" title="Western Fortress">
+	<npc id="36224" level="103" type="Defender" name="叛亂軍精銳兵" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1330,7 +1330,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="36225" level="103" type="Defender" name="Rebel Private" title="Western Fortress">
+	<npc id="36225" level="103" type="Defender" name="叛亂軍士兵" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1385,7 +1385,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36226" level="102" type="Defender" name="Guardsman" title="Western Fortress">
+	<npc id="36226" level="102" type="Defender" name="禁衛兵" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1443,7 +1443,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36227" level="102" type="Defender" name="Protector" title="Western Fortress">
+	<npc id="36227" level="102" type="Defender" name="護衛兵" title="Western Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1501,7 +1501,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36228" level="75" type="Folk" name="Main Machine" title="Control Room">
+	<npc id="36228" level="75" type="Folk" name="主機械裝置" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="117" />
@@ -1552,7 +1552,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="36229" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
+	<npc id="36229" level="75" type="Folk" name="輔助電力裝置" title="Control Room">
 		<parameters>
 			<param name="broadcast_range" value="2000" />
 		</parameters>
@@ -1598,7 +1598,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="36230" level="75" type="Folk" name="Control Panel" title="Control Room">
+	<npc id="36230" level="75" type="Folk" name="控制裝置" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="117" />
@@ -1648,7 +1648,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="36231" level="75" type="Folk" name="Power Control Unit" title="Control Room">
+	<npc id="36231" level="75" type="Folk" name="電力控制裝置" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1690,7 +1690,7 @@
 			<height normal="59.5" />
 		</collision>
 	</npc>
-	<npc id="36232" level="105" type="Defender" name="Dwarven Gunner">
+	<npc id="36232" level="105" type="Defender" name="砲兵矮人">
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -1751,7 +1751,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36233" level="103" type="Defender" name="Scout Golem" title="Control Room">
+	<npc id="36233" level="103" type="Defender" name="偵查高崙" title="Control Room">
 		<parameters>
 			<param name="MoveAroundSocial" value="30" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -1805,7 +1805,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36234" level="105" type="FortCommander" name="Garrison Chief" title="Garrison">
+	<npc id="36234" level="105" type="FortCommander" name="守備隊長" title="Garrison">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1880,7 +1880,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36235" level="103" type="Defender" name="Lookout" title="Garrison">
+	<npc id="36235" level="103" type="Defender" name="守備隊員" title="Garrison">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1941,7 +1941,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36236" level="103" type="Defender" name="Lookout" title="Garrison">
+	<npc id="36236" level="103" type="Defender" name="守備隊員" title="Garrison">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2000,7 +2000,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36237" level="105" type="FortCommander" name="Support Unit Captain" title="Support Unit">
+	<npc id="36237" level="105" type="FortCommander" name="支援隊長" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2075,7 +2075,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36238" level="102" type="Defender" name="Mage" title="Support Unit">
+	<npc id="36238" level="102" type="Defender" name="巫師" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -2142,7 +2142,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36239" level="102" type="Defender" name="Healer" title="Support Unit">
+	<npc id="36239" level="102" type="Defender" name="牧師" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2207,7 +2207,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="36240" level="105" type="FortCommander" name="Archer Commander" title="Archer Unit">
+	<npc id="36240" level="105" type="FortCommander" name="弓兵隊長" title="Archer Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -2272,7 +2272,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36241" level="103" type="Defender" name="Archer" title="Archer Unit">
+	<npc id="36241" level="103" type="Defender" name="弓兵隊員" title="Archer Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2332,7 +2332,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36242" level="105" type="FortCommander" name="General" title="Officers' Barracks">
+	<npc id="36242" level="105" type="FortCommander" name="將軍" title="Officers' Barracks">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2397,7 +2397,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36243" level="105" type="Defender" name="Minister" title="Officers' Barracks">
+	<npc id="36243" level="105" type="Defender" name="將官" title="Officers' Barracks">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2460,7 +2460,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36244" level="80" type="Monster" name="Ballista" title="Western Fortress">
+	<npc id="36244" level="80" type="Monster" name="弩砲" title="Western Fortress">
 		<parameters>
 			<param name="FameValue" value="30" />
 			<param name="Armor" value="60" />
@@ -2505,7 +2505,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36245" level="105" type="Monster" name="Mercenary Captain">
+	<npc id="36245" level="105" type="Monster" name="傭兵隊隊長">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2594,7 +2594,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36246" level="103" type="Monster" name="Mercenary Private">
+	<npc id="36246" level="103" type="Monster" name="傭兵隊士兵">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2644,7 +2644,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36247" level="20" type="Folk" name="Flagpole">
+	<npc id="36247" level="20" type="Folk" name="旗桿">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2681,7 +2681,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36248" level="75" type="FortManager" name="Foreman" title="Hunters' Fortress">
+	<npc id="36248" level="75" type="FortManager" name="監督官" title="Hunters' Fortress">
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -2728,7 +2728,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36249" level="75" type="Folk" name="Suspicious Merchant" title="Hunters' Fortress">
+	<npc id="36249" level="75" type="Folk" name="可疑的商人" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2775,7 +2775,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36250" level="75" type="Folk" name="Garrison Chief" title="Hunters' Fortress">
+	<npc id="36250" level="75" type="Folk" name="守備隊長" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2824,7 +2824,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36251" level="75" type="Folk" name="Archer Commander" title="Hunters' Fortress">
+	<npc id="36251" level="75" type="Folk" name="弓兵隊長" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -2865,7 +2865,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36252" level="75" type="Folk" name="General" title="Hunters' Fortress">
+	<npc id="36252" level="75" type="Folk" name="將軍" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2907,7 +2907,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36253" level="75" type="Folk" name="Support Unit Captain" title="Hunters' Fortress">
+	<npc id="36253" level="75" type="Folk" name="支援隊長" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2948,7 +2948,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36254" level="75" type="Folk" name="Chief Engineer" title="Hunters' Fortress">
+	<npc id="36254" level="75" type="Folk" name="工兵隊管理員" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -2989,7 +2989,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36255" level="75" type="FortLogistics" name="Supply Officer" title="Hunters' Fortress">
+	<npc id="36255" level="75" type="FortLogistics" name="補給整備官" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -3050,7 +3050,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="36256" level="100" type="Folk" name="Supplies">
+	<npc id="36256" level="100" type="Folk" name="寶物箱子">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3087,7 +3087,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36257" level="75" type="Folk" name="Warder" title="Hunters' Fortress">
+	<npc id="36257" level="75" type="Folk" name="收容所管理人" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3135,7 +3135,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36258" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36258" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3180,7 +3180,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36259" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36259" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3225,7 +3225,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36260" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36260" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3273,7 +3273,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36261" level="105" type="Defender" name="Rebel Commander" title="Hunters' Fortress">
+	<npc id="36261" level="105" type="Defender" name="叛亂軍隊長" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3338,7 +3338,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36262" level="103" type="Defender" name="Rebel Elite Soldier" title="Hunters' Fortress">
+	<npc id="36262" level="103" type="Defender" name="叛亂軍精銳兵" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3397,7 +3397,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="36263" level="103" type="Defender" name="Rebel Private" title="Hunters' Fortress">
+	<npc id="36263" level="103" type="Defender" name="叛亂軍士兵" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3452,7 +3452,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36264" level="102" type="Defender" name="Guardsman" title="Hunters' Fortress">
+	<npc id="36264" level="102" type="Defender" name="禁衛兵" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3510,7 +3510,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36265" level="102" type="Defender" name="Protector" title="Hunters' Fortress">
+	<npc id="36265" level="102" type="Defender" name="護衛兵" title="Hunters' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -3568,7 +3568,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36266" level="90" type="Folk" name="Main Machine" title="Control Room">
+	<npc id="36266" level="90" type="Folk" name="主機械裝置" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="118" />
@@ -3619,7 +3619,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="36267" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
+	<npc id="36267" level="75" type="Folk" name="輔助電力裝置" title="Control Room">
 		<parameters>
 			<param name="broadcast_range" value="2000" />
 		</parameters>
@@ -3665,7 +3665,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="36268" level="75" type="Folk" name="Control Panel" title="Control Room">
+	<npc id="36268" level="75" type="Folk" name="控制裝置" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="118" />
@@ -3715,7 +3715,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="36269" level="75" type="Folk" name="Power Control Unit" title="Control Room">
+	<npc id="36269" level="75" type="Folk" name="電力控制裝置" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3757,7 +3757,7 @@
 			<height normal="59.5" />
 		</collision>
 	</npc>
-	<npc id="36270" level="105" type="Defender" name="Dwarven Gunner">
+	<npc id="36270" level="105" type="Defender" name="砲兵矮人">
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -3817,7 +3817,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36271" level="103" type="Defender" name="Scout Golem" title="Control Room">
+	<npc id="36271" level="103" type="Defender" name="偵查高崙" title="Control Room">
 		<parameters>
 			<param name="MoveAroundSocial" value="30" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -3871,7 +3871,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36272" level="105" type="FortCommander" name="Garrison Chief" title="Garrison">
+	<npc id="36272" level="105" type="FortCommander" name="守備隊長" title="Garrison">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3946,7 +3946,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36273" level="103" type="Defender" name="Lookout" title="Garrison">
+	<npc id="36273" level="103" type="Defender" name="守備隊員" title="Garrison">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4007,7 +4007,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36274" level="103" type="Defender" name="Lookout" title="Garrison">
+	<npc id="36274" level="103" type="Defender" name="守備隊員" title="Garrison">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4066,7 +4066,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36275" level="105" type="FortCommander" name="Support Unit Captain" title="Support Unit">
+	<npc id="36275" level="105" type="FortCommander" name="支援隊長" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4141,7 +4141,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36276" level="102" type="Defender" name="Mage" title="Support Unit">
+	<npc id="36276" level="102" type="Defender" name="巫師" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -4208,7 +4208,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36277" level="102" type="Defender" name="Healer" title="Support Unit">
+	<npc id="36277" level="102" type="Defender" name="牧師" title="Support Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4273,7 +4273,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="36278" level="105" type="FortCommander" name="Archer Commander" title="Archer Unit">
+	<npc id="36278" level="105" type="FortCommander" name="弓兵隊長" title="Archer Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -4338,7 +4338,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36279" level="103" type="Defender" name="Archer" title="Archer Unit">
+	<npc id="36279" level="103" type="Defender" name="弓兵隊員" title="Archer Unit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -4398,7 +4398,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36280" level="105" type="FortCommander" name="General" title="Officers' Barracks">
+	<npc id="36280" level="105" type="FortCommander" name="將軍" title="Officers' Barracks">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4463,7 +4463,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36281" level="105" type="Defender" name="Minister" title="Officers' Barracks">
+	<npc id="36281" level="105" type="Defender" name="將官" title="Officers' Barracks">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4526,7 +4526,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36282" level="80" type="Monster" name="Ballista" title="Hunters' Fortress">
+	<npc id="36282" level="80" type="Monster" name="弩砲" title="Hunters' Fortress">
 		<parameters>
 			<param name="FameValue" value="30" />
 			<param name="Armor" value="60" />
@@ -4571,7 +4571,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36283" level="105" type="Monster" name="Mercenary Captain">
+	<npc id="36283" level="105" type="Monster" name="傭兵隊隊長">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4660,7 +4660,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36284" level="103" type="Monster" name="Mercenary Private">
+	<npc id="36284" level="103" type="Monster" name="傭兵隊士兵">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4710,7 +4710,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36285" level="20" type="Folk" name="Flagpole">
+	<npc id="36285" level="20" type="Folk" name="旗桿">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -4747,7 +4747,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36286" level="75" type="FortManager" name="Foreman" title="Aaru Fortress">
+	<npc id="36286" level="75" type="FortManager" name="監督官" title="Aaru Fortress">
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -4794,7 +4794,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36287" level="75" type="Folk" name="Suspicious Merchant" title="Aaru Fortress">
+	<npc id="36287" level="75" type="Folk" name="可疑的商人" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4841,7 +4841,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36288" level="75" type="Folk" name="Garrison Chief" title="Aaru Fortress">
+	<npc id="36288" level="75" type="Folk" name="守備隊長" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4890,7 +4890,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36289" level="75" type="Folk" name="Archer Commander" title="Aaru Fortress">
+	<npc id="36289" level="75" type="Folk" name="弓兵隊長" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -4931,7 +4931,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36290" level="75" type="Folk" name="Support Unit Captain" title="Aaru Fortress">
+	<npc id="36290" level="75" type="Folk" name="支援隊長" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4972,7 +4972,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36291" level="75" type="Folk" name="Chief Engineer" title="Aaru Fortress">
+	<npc id="36291" level="75" type="Folk" name="工兵隊管理員" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -5013,7 +5013,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36292" level="75" type="FortLogistics" name="Supply Officer" title="Aaru Fortress">
+	<npc id="36292" level="75" type="FortLogistics" name="補給整備官" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -5074,7 +5074,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="36293" level="100" type="Folk" name="Supplies">
+	<npc id="36293" level="100" type="Folk" name="寶物箱子">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -5111,7 +5111,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36294" level="75" type="Folk" name="Warder" title="Aaru Fortress">
+	<npc id="36294" level="75" type="Folk" name="收容所管理人" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -5159,7 +5159,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36295" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36295" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -5204,7 +5204,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36296" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36296" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -5249,7 +5249,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36297" level="75" type="FortDoorman" name="Gatekeeper">
+	<npc id="36297" level="75" type="FortDoorman" name="守門人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -5297,7 +5297,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36298" level="105" type="Defender" name="Rebel Commander" title="Aaru Fortress">
+	<npc id="36298" level="105" type="Defender" name="叛亂軍隊長" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5362,7 +5362,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36299" level="103" type="Defender" name="Rebel Elite Soldier" title="Aaru Fortress">
+	<npc id="36299" level="103" type="Defender" name="叛亂軍精銳兵" title="Aaru Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />

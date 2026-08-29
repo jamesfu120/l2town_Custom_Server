@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23301" level="95" type="Monster" name="Laido Destruction Golem">
+	<npc id="23301" level="95" type="Monster" name="萊度破壞高崙">
 		<parameters>
 			<minions name="Privates">
 				<npc id="23302" count="1" respawnTime="360" weightPoint="1" /> <!-- Laido Service Golem -->
@@ -61,7 +61,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23302" level="94" type="Monster" name="Laido Service Golem">
+	<npc id="23302" level="94" type="Monster" name="萊度修理高崙">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="3447" sp="3" />
@@ -116,7 +116,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23303" level="94" type="Monster" name="Spicula Elite Member">
+	<npc id="23303" level="94" type="Monster" name="斯比裘拉精銳隊員">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="1875" sp="3" />
@@ -184,7 +184,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23304" level="96" type="Monster" name="Spicula Larva">
+	<npc id="23304" level="96" type="Monster" name="斯比裘拉幼體">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="5520" sp="3" />
@@ -239,7 +239,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23314" level="98" type="Monster" name="Nerva Orc Bandit">
+	<npc id="23314" level="98" type="Monster" name="奈勒巴獸人突襲兵">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17325" />
@@ -280,7 +280,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23315" level="98" type="Monster" name="Nerva Orc Shooter">
+	<npc id="23315" level="98" type="Monster" name="奈勒巴獸人弓箭手">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15304" />
@@ -322,7 +322,7 @@
 		</skillList>
 		<ai type="ARCHER" aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23316" level="99" type="Monster" name="Nerva Orc Seeress">
+	<npc id="23316" level="99" type="Monster" name="奈勒巴獸人巫師">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17332" lhand="15588" />
@@ -365,7 +365,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23317" level="98" type="Monster" name="Nerva Orc Wizard">
+	<npc id="23317" level="98" type="Monster" name="奈勒巴獸人魔法師">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="8688" />
@@ -406,7 +406,7 @@
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
 	</npc>
-	<npc id="23318" level="99" type="Monster" name="Nerva Orc Assassin">
+	<npc id="23318" level="99" type="Monster" name="奈勒巴獸人暗殺者">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15559" />
@@ -447,7 +447,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23319" level="99" type="Monster" name="Nerva Orc Raider">
+	<npc id="23319" level="99" type="Monster" name="奈勒巴獸人奇襲隊員">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15559" />
@@ -489,7 +489,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23320" level="99" type="Monster" name="Nerva Orc Merchant">
+	<npc id="23320" level="99" type="Monster" name="奈勒巴獸人商人">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="22081" sp="22" />
@@ -530,7 +530,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23321" level="99" type="Monster" name="Nerva Orc Warrior">
+	<npc id="23321" level="99" type="Monster" name="奈勒巴獸人鬥士">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="39405" sp="39" />
@@ -570,7 +570,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23322" level="99" type="Monster" name="Nerva Orc Overlord">
+	<npc id="23322" level="99" type="Monster" name="奈勒巴獸人王">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="49715" sp="50" />
@@ -611,7 +611,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23323" level="99" type="Monster" name="Nerva Orc Elite">
+	<npc id="23323" level="99" type="Monster" name="奈勒巴獸人精銳隊員">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17529" sp="18" />
@@ -651,7 +651,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23324" level="99" type="Monster" name="Captain" title="Nerva Bloodlust">
+	<npc id="23324" level="99" type="Monster" name="隊長" title="Nerva Bloodlust">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31243" sp="31" />
@@ -691,7 +691,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23325" level="99" type="Monster" name="Shooter" title="Nerva Bloodlust">
+	<npc id="23325" level="99" type="Monster" name="弓箭手" title="Nerva Bloodlust">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15304" />
@@ -732,7 +732,7 @@
 		</skillList>
 		<ai type="ARCHER" aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23326" level="99" type="Monster" name="Wizard" title="Nerva Bloodlust">
+	<npc id="23326" level="99" type="Monster" name="魔法師" title="Nerva Bloodlust">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="8688" />
@@ -774,7 +774,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23327" level="99" type="Monster" name="Soldier" title="Nerva Bloodlust">
+	<npc id="23327" level="99" type="Monster" name="士兵" title="Nerva Bloodlust">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17325" />
@@ -815,7 +815,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23328" level="99" type="Monster" name="Assassin" title="Nerva Bloodlust">
+	<npc id="23328" level="99" type="Monster" name="暗殺者" title="Nerva Bloodlust">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="5636" sp="6" />
@@ -855,7 +855,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23329" level="99" type="Monster" name="Nerva Kaysen">
+	<npc id="23329" level="99" type="Monster" name="奈勒巴凱薩">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="175289" sp="175" />
@@ -895,7 +895,7 @@
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 	</npc>
-	<npc id="23330" level="103" type="Monster" name="Rubble">
+	<npc id="23330" level="103" type="Monster" name="嘴怪">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2438" sp="2" />
@@ -935,7 +935,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="23331" level="99" type="Monster" name="Rega">
+	<npc id="23331" level="99" type="Monster" name="蕾嘉">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -964,7 +964,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attribute -->
 		</skillList>
 	</npc>
-	<npc id="23332" level="99" type="Monster" name="One-armed Zombie">
+	<npc id="23332" level="99" type="Monster" name="獨臂殭屍">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -997,7 +997,7 @@
 			<skill id="4450" level="2" /> <!-- Shock Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="23333" level="99" type="Monster" name="Decayed Zombie">
+	<npc id="23333" level="99" type="Monster" name="墮落殭屍">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1029,7 +1029,7 @@
 			<skill id="4450" level="2" /> <!-- Shock Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="23334" level="103" type="Monster" name="Shelop">
+	<npc id="23334" level="103" type="Monster" name="屍羅">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2438" sp="2" />
@@ -1069,7 +1069,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23335" level="99" type="Monster" name="Foras">
+	<npc id="23335" level="99" type="Monster" name="波菈司">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1101,7 +1101,7 @@
 			<skill id="4450" level="2" /> <!-- Shock Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="23336" level="103" type="Monster" name="Death Worm">
+	<npc id="23336" level="103" type="Monster" name="死亡之蟲">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2438" sp="2" />
@@ -1141,7 +1141,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="23337" level="103" type="Monster" name="Large Rubble">
+	<npc id="23337" level="103" type="Monster" name="大嘴怪">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2438" sp="2" />
@@ -1181,7 +1181,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23349" level="87" type="Monster" name="Noctum" title="Gravekeeper">
+	<npc id="23349" level="87" type="Monster" name="那克多" title="Gravekeeper">
 		<parameters>
 			<minions name="Privates">
 				<npc id="22932" count="1" respawnTime="0" weightPoint="0" /> <!-- Krakia Krakos -->
@@ -1254,7 +1254,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23350" level="87" type="Monster" name="Demonic Noctum" title="Gravekeeper">
+	<npc id="23350" level="87" type="Monster" name="惡魔那克多" title="Gravekeeper">
 		<parameters>
 			<minions name="Privates">
 				<npc id="22940" count="1" respawnTime="360" weightPoint="1" /> <!-- Demonic Krakos -->
@@ -1327,7 +1327,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23354" level="104" type="Monster" name="Decay Hannibal">
+	<npc id="23354" level="104" type="Monster" name="迪凱因哈瓦">
 		<parameters>
 			<skill name="Skill01_ID" id="32896" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -1396,7 +1396,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23355" level="104" type="Monster" name="Armor Beast">
+	<npc id="23355" level="104" type="Monster" name="盔甲獸">
 		<parameters>
 			<skill name="Skill01_ID" id="32896" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -1465,7 +1465,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23356" level="104" type="Monster" name="Klein Soldier">
+	<npc id="23356" level="104" type="Monster" name="變異士兵">
 		<parameters>
 			<skill name="Skill01_ID" id="32896" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -1534,7 +1534,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23357" level="104" type="Monster" name="Disorder Warrior">
+	<npc id="23357" level="104" type="Monster" name="渾沌鬥士">
 		<parameters>
 			<skill name="Skill01_ID" id="32896" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -1603,7 +1603,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23360" level="104" type="Monster" name="Bizuard">
+	<npc id="23360" level="104" type="Monster" name="假面蜥蜴">
 		<parameters>
 			<skill name="Skill01_ID" id="32896" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -1677,7 +1677,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="23361" level="104" type="Monster" name="Mutated Fly">
+	<npc id="23361" level="104" type="Monster" name="飛螳">
 		<parameters>
 			<skill name="Skill01_ID" id="32896" level="1" />
 			<param name="Skill01_Probablity" value="2000" />

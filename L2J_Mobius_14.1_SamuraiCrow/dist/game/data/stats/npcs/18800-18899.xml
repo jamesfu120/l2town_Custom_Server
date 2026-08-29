@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18800" level="77" type="Monster" name="Fledgling Lavasaurus">
+	<npc id="18800" level="77" type="Monster" name="岩漿撒魯斯青年體">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -60,7 +60,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18801" level="77" type="Monster" name="Elder Lavasaurus">
+	<npc id="18801" level="77" type="Monster" name="岩漿撒魯斯成年體">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -120,7 +120,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18802" level="78" type="Monster" name="Elderly Lavasaurus">
+	<npc id="18802" level="78" type="Monster" name="岩漿撒魯斯老年體">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -182,7 +182,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18803" level="78" type="Monster" name="Ancient Lavasaurus">
+	<npc id="18803" level="78" type="Monster" name="岩漿撒魯斯古代體">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -244,7 +244,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18804" level="78" type="Monster" name="Tar Beetle">
+	<npc id="18804" level="78" type="Monster" name="焦油甲蟲">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -278,7 +278,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="18807" level="81" type="Monster" name="Frightened Ragna Orc">
+	<npc id="18807" level="81" type="Monster" name="受到驚嚇的羅格納獸人">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="3" sp="3" />
@@ -320,7 +320,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18808" level="82" type="Monster" name="Dark Shaman Varangka">
+	<npc id="18808" level="82" type="Monster" name="暗黑邪術士 巴蘭卡">
 		<parameters>
 			<minions name="Privates">
 				<npc id="18810" count="1" respawnTime="360" weightPoint="1" /> <!-- Varangka's Servant -->
@@ -380,7 +380,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18809" level="82" type="Monster" name="Varangka's Lackey">
+	<npc id="18809" level="82" type="Monster" name="巴蘭卡的心腹">
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
 		</parameters>
@@ -428,7 +428,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="18810" level="82" type="Monster" name="Varangka's Servant">
+	<npc id="18810" level="82" type="Monster" name="巴蘭卡的侍從">
 		<parameters>
 			<param name="HealProb" value="3333" />
 			<param name="SelfRangeHealProb" value="1500" />
@@ -482,7 +482,7 @@
 			<height normal="20.8" />
 		</collision>
 	</npc>
-	<npc id="18811" level="82" type="Monster" name="Altar Guardian">
+	<npc id="18811" level="82" type="Monster" name="祭壇的守護者">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -515,7 +515,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18812" level="81" type="Monster" name="Kasha's Monster Eye" title="Atk. Spd.">
+	<npc id="18812" level="81" type="Monster" name="卡沙之眼" title="Atk. Spd.">
 		<parameters>
 			<param name="my_buff_type" value="1" />
 		</parameters>
@@ -552,7 +552,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18813" level="81" type="Monster" name="Kasha's Monster Eye" title="P. Atk.">
+	<npc id="18813" level="81" type="Monster" name="卡沙之眼" title="P. Atk.">
 		<parameters>
 			<param name="my_buff_type" value="2" />
 		</parameters>
@@ -589,7 +589,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18814" level="81" type="Monster" name="Kasha's Monster Eye" title="Critical Rate">
+	<npc id="18814" level="81" type="Monster" name="卡沙之眼" title="Critical Rate">
 		<parameters>
 			<param name="my_buff_type" value="3" />
 		</parameters>
@@ -626,7 +626,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18815" level="83" type="Monster" name="Cemetery Keeper" title="Death-calling">
+	<npc id="18815" level="83" type="Monster" name="墓地護衛兵" title="Death-calling">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MovingAttack" value="0" />
@@ -672,7 +672,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18816" level="81" type="Monster" name="Chieftain's Chest">
+	<npc id="18816" level="81" type="Monster" name="族長的寶箱">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -713,7 +713,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18824" level="1" type="Monster" name="Merchant of Mammon A">
+	<npc id="18824" level="1" type="Monster" name="財富的商人A">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -746,7 +746,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="18825" level="1" type="Monster" name="Merchant of Mammon B">
+	<npc id="18825" level="1" type="Monster" name="財富的商人B">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -779,7 +779,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="18826" level="80" type="Monster" name="Shillien's Evil Spirit">
+	<npc id="18826" level="80" type="Monster" name="展示用席琳的邪念">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -812,7 +812,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18827" level="80" type="Monster" name="Priest Cain">
+	<npc id="18827" level="80" type="Monster" name="展示用神官 凱因">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -845,7 +845,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18828" level="80" type="Monster" name="High Priest of Dawn">
+	<npc id="18828" level="80" type="Monster" name="黎明的上位祭司">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -878,7 +878,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18829" level="80" type="Monster" name="Shillien's High Spirit">
+	<npc id="18829" level="80" type="Monster" name="展示用席琳的邪念隊長">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -912,7 +912,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18830" level="1" type="Monster" name="Boz's Energy">
+	<npc id="18830" level="1" type="Monster" name="巴斯的能量">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -946,7 +946,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18831" level="1" type="Monster" name="ssq Camera 2">
+	<npc id="18831" level="1" type="Monster" name="ssq展示用鏡頭dummy2">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -979,7 +979,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18832" level="1" type="Monster" name="ssq Camera 3">
+	<npc id="18832" level="1" type="Monster" name="ssq展示用鏡頭dummy3">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1012,7 +1012,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18833" level="1" type="Monster" name="Emperor's Seal Device">
+	<npc id="18833" level="1" type="Monster" name="皇帝的封印裝置">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1045,7 +1045,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18834" level="85" type="Monster" name="Guard of the Dawn">
+	<npc id="18834" level="85" type="Monster" name="黎明的警衛隊員">
 		<parameters>
 			<param name="Fstring_Num" value="19514" />
 		</parameters>
@@ -1088,7 +1088,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18835" level="85" type="Monster" name="Guard of the Dawn">
+	<npc id="18835" level="85" type="Monster" name="黎明的警衛隊員">
 		<parameters>
 			<param name="Fstring_Num" value="19506" />
 		</parameters>
@@ -1131,7 +1131,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18836" level="82" type="Monster" name="Varangka's Guardian">
+	<npc id="18836" level="82" type="Monster" name="巴蘭卡的守護者">
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
 			<skill name="DeBuff" id="6168" level="9" />
@@ -1218,7 +1218,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18839" level="85" type="Monster" name="Maguen">
+	<npc id="18839" level="85" type="Monster" name="馬奎安">
 		<parameters>
 			<skill name="B_PLASMA1" id="6367" level="1" />
 			<skill name="B_PLASMA2" id="6367" level="2" />
@@ -1383,7 +1383,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18843" level="85" type="Monster" name="Kokracon's Banner">
+	<npc id="18843" level="85" type="Monster" name="柯克拉闊的守護物">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1416,7 +1416,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="18844" level="85" type="Monster" name="Reptilikon's Banner">
+	<npc id="18844" level="85" type="Monster" name="雷提里闊的守護物">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1449,7 +1449,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="18845" level="85" type="Monster" name="Torumba's Telegraph">
+	<npc id="18845" level="85" type="Monster" name="土倫巴全身">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1483,7 +1483,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18846" level="85" type="FriendlyNpc" name="Kegor">
+	<npc id="18846" level="85" type="FriendlyNpc" name="凱高爾">
 		<parameters>
 			<skill name="Buff" id="6286" level="1" />
 		</parameters>
@@ -1521,7 +1521,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18847" level="85" type="Monster" name="Freya" title="Ice Queen">
+	<npc id="18847" level="85" type="Monster" name="芙蕾雅" title="Ice Queen">
 		<parameters>
 			<skill name="Skill01_ID" id="6278" level="1" />
 			<skill name="Eternal_Blizzard" id="6276" level="1" />
@@ -1560,7 +1560,7 @@
 			<height normal="98.5" />
 		</collision>
 	</npc>
-	<npc id="18848" level="85" type="FriendlyNpc" name="Elite Knight" title="Jinia Guild">
+	<npc id="18848" level="85" type="FriendlyNpc" name="上級騎士" title="Jinia Guild">
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="10" />
 		</parameters>
@@ -1599,7 +1599,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="18849" level="85" type="FriendlyNpc" name="Legionnaire" title="Jinia Guild">
+	<npc id="18849" level="85" type="FriendlyNpc" name="傭兵戰士" title="Jinia Guild">
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="10" />
 		</parameters>
@@ -1638,7 +1638,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18850" level="85" type="FriendlyNpc" name="Jinia">
+	<npc id="18850" level="85" type="FriendlyNpc" name="吉妮亞">
 		<parameters>
 			<skill name="Skill01_ID" id="6641" level="1" />
 			<skill name="Buff" id="6288" level="1" />
@@ -1678,7 +1678,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18851" level="85" type="FriendlyNpc" name="Kegor">
+	<npc id="18851" level="85" type="FriendlyNpc" name="凱高爾">
 		<parameters>
 			<skill name="Skill01_ID" id="6643" level="1" />
 			<skill name="Buff" id="6289" level="1" />
@@ -1720,7 +1720,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18852" level="85" type="Monster" name="Sirra">
+	<npc id="18852" level="85" type="Monster" name="希露">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1755,7 +1755,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18853" level="85" type="Monster" name="Glacier">
+	<npc id="18853" level="85" type="Monster" name="冰結石">
 		<parameters>
 			<skill name="Buff" id="6301" level="1" />
 		</parameters>
@@ -1794,7 +1794,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18854" level="85" type="Monster" name="Icy Breath">
+	<npc id="18854" level="85" type="Monster" name="冰宮的氣息">
 		<parameters>
 			<skill name="Skill_Blizzard" id="6299" level="1" />
 			<skill name="Skill_Suicide" id="6300" level="1" />
@@ -1835,7 +1835,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18855" level="85" type="Monster" name="Frozen Labyrinth' Knight">
+	<npc id="18855" level="85" type="Monster" name="冰宮騎士">
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
 			<skill name="SelfRangeDD" id="6291" level="1" />
@@ -1890,7 +1890,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18856" level="88" type="Monster" name="Frozen Labyrinth' Knight">
+	<npc id="18856" level="88" type="Monster" name="冰宮騎士">
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
 			<skill name="SelfRangeDD" id="6291" level="1" />
@@ -2119,7 +2119,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18862" level="82" type="Monster" name="Tanta Lizardman Guard" title="Ugoros' Escort Warrior">
+	<npc id="18862" level="82" type="Monster" name="坦塔蜥蜴人守護者" title="Ugoros' Escort Warrior">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="98" /> <!-- Halberd -->
@@ -2165,7 +2165,7 @@
 			<height normal="35" grown="42.2" />
 		</collision>
 	</npc>
-	<npc id="18863" level="84" type="Monster" name="Seer Ugoros" title="Tanta Lizardman">
+	<npc id="18863" level="84" type="Monster" name="祭司長 幽谷勒斯" title="Tanta Lizardman">
 		<parameters>
 			<skill name="Skill01_ID" id="6426" level="1" />
 		</parameters>
@@ -2226,7 +2226,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18864" level="102" type="Monster" name="Poisonous Mushroom">
+	<npc id="18864" level="102" type="Monster" name="夢幻蘑菇">
 		<parameters>
 			<skill name="Skill01_ID" id="6427" level="1" />
 			<skill name="Skill02_ID" id="6622" level="1" />
@@ -2278,7 +2278,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18865" level="102" type="Monster" name="Sticky Mushroom">
+	<npc id="18865" level="102" type="Monster" name="黏黏蘑菇">
 		<parameters>
 			<skill name="Skill01_ID" id="6428" level="1" />
 		</parameters>
@@ -2328,7 +2328,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18866" level="102" type="Monster" name="Rainbow Frog">
+	<npc id="18866" level="102" type="Monster" name="彩虹青蛙">
 		<parameters>
 			<skill name="Skill01_ID" id="6429" level="1" />
 		</parameters>
@@ -2376,7 +2376,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18867" level="102" type="Monster" name="Abyss Weed">
+	<npc id="18867" level="102" type="Monster" name="深淵草">
 		<parameters>
 			<skill name="Skill01_ID" id="6648" level="1" />
 		</parameters>
@@ -2430,7 +2430,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18868" level="102" type="Monster" name="Vitality Plant">
+	<npc id="18868" level="102" type="Monster" name="活力草">
 		<parameters>
 			<skill name="Skill01_ID" id="6430" level="1" />
 		</parameters>
@@ -2480,7 +2480,7 @@
 			</limited>
 		</dropLists>
 	</npc>
-	<npc id="18869" level="83" type="TamedBeast" name="Mountain Kookaburra" title="Tame">
+	<npc id="18869" level="83" type="TamedBeast" name="高山笑翠鳥" title="Tame">
 		<parameters>
 			<param name="my_type" value="1" />
 			<skill name="Buff1" id="6431" level="1" />
@@ -2547,7 +2547,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18870" level="83" type="TamedBeast" name="Mountain Cougar" title="Tame">
+	<npc id="18870" level="83" type="TamedBeast" name="高山老虎" title="Tame">
 		<parameters>
 			<param name="my_type" value="2" />
 			<skill name="Buff1" id="6431" level="1" />
@@ -2614,7 +2614,7 @@
 			<height normal="15.7" />
 		</collision>
 	</npc>
-	<npc id="18871" level="84" type="TamedBeast" name="Mountain Buffalo" title="Tame">
+	<npc id="18871" level="84" type="TamedBeast" name="高山野牛" title="Tame">
 		<parameters>
 			<param name="my_type" value="3" />
 			<skill name="Buff1" id="6431" level="1" />
@@ -2681,7 +2681,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18872" level="84" type="TamedBeast" name="Mountain Grendel" title="Tame">
+	<npc id="18872" level="84" type="TamedBeast" name="高山格蘭帝爾" title="Tame">
 		<parameters>
 			<param name="my_type" value="4" />
 			<skill name="Buff1" id="6431" level="1" />
@@ -2748,7 +2748,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="18873" level="83" type="FeedableBeast" name="Mountain Kookaburra">
+	<npc id="18873" level="83" type="FeedableBeast" name="高山笑翠鳥">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="1" />
@@ -2821,7 +2821,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18874" level="83" type="FeedableBeast" name="Mountain Kookaburra">
+	<npc id="18874" level="83" type="FeedableBeast" name="高山笑翠鳥">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="2" />
@@ -2905,7 +2905,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18875" level="83" type="FeedableBeast" name="Mountain Kookaburra">
+	<npc id="18875" level="83" type="FeedableBeast" name="高山笑翠鳥">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="2" />
@@ -2981,7 +2981,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18876" level="83" type="FeedableBeast" name="Mountain Kookaburra">
+	<npc id="18876" level="83" type="FeedableBeast" name="高山笑翠鳥">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="3" />
@@ -3061,7 +3061,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18877" level="83" type="FeedableBeast" name="Mountain Kookaburra">
+	<npc id="18877" level="83" type="FeedableBeast" name="高山笑翠鳥">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="3" />
@@ -3137,7 +3137,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18878" level="83" type="FeedableBeast" name="Mountain Kookaburra">
+	<npc id="18878" level="83" type="FeedableBeast" name="高山笑翠鳥">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="4" />
@@ -3225,7 +3225,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18879" level="83" type="FeedableBeast" name="Mountain Kookaburra">
+	<npc id="18879" level="83" type="FeedableBeast" name="高山笑翠鳥">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="4" />
@@ -3303,7 +3303,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18880" level="83" type="FeedableBeast" name="Mountain Cougar">
+	<npc id="18880" level="83" type="FeedableBeast" name="高山老虎">
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="1" />
@@ -3376,7 +3376,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18881" level="83" type="FeedableBeast" name="Mountain Cougar">
+	<npc id="18881" level="83" type="FeedableBeast" name="高山老虎">
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="2" />
@@ -3460,7 +3460,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18882" level="83" type="FeedableBeast" name="Mountain Cougar">
+	<npc id="18882" level="83" type="FeedableBeast" name="高山老虎">
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="2" />
@@ -3536,7 +3536,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18883" level="83" type="FeedableBeast" name="Mountain Cougar">
+	<npc id="18883" level="83" type="FeedableBeast" name="高山老虎">
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="3" />
@@ -3616,7 +3616,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18884" level="83" type="FeedableBeast" name="Mountain Cougar">
+	<npc id="18884" level="83" type="FeedableBeast" name="高山老虎">
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="3" />
@@ -3692,7 +3692,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18885" level="83" type="FeedableBeast" name="Mountain Cougar">
+	<npc id="18885" level="83" type="FeedableBeast" name="高山老虎">
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="4" />
@@ -3779,7 +3779,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18886" level="83" type="FeedableBeast" name="Mountain Cougar">
+	<npc id="18886" level="83" type="FeedableBeast" name="高山老虎">
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="4" />
@@ -3857,7 +3857,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18887" level="84" type="FeedableBeast" name="Mountain Buffalo">
+	<npc id="18887" level="84" type="FeedableBeast" name="高山野牛">
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="1" />
@@ -3930,7 +3930,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18888" level="84" type="FeedableBeast" name="Mountain Buffalo">
+	<npc id="18888" level="84" type="FeedableBeast" name="高山野牛">
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="2" />
@@ -4014,7 +4014,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18889" level="84" type="FeedableBeast" name="Mountain Buffalo">
+	<npc id="18889" level="84" type="FeedableBeast" name="高山野牛">
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="2" />
@@ -4090,7 +4090,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18890" level="84" type="FeedableBeast" name="Mountain Buffalo">
+	<npc id="18890" level="84" type="FeedableBeast" name="高山野牛">
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="3" />
@@ -4170,7 +4170,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18891" level="84" type="FeedableBeast" name="Mountain Buffalo">
+	<npc id="18891" level="84" type="FeedableBeast" name="高山野牛">
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="3" />
@@ -4246,7 +4246,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18892" level="84" type="FeedableBeast" name="Mountain Buffalo">
+	<npc id="18892" level="84" type="FeedableBeast" name="高山野牛">
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="4" />
@@ -4330,7 +4330,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18893" level="84" type="FeedableBeast" name="Mountain Buffalo">
+	<npc id="18893" level="84" type="FeedableBeast" name="高山野牛">
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="4" />
@@ -4408,7 +4408,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18894" level="84" type="FeedableBeast" name="Mountain Grendel">
+	<npc id="18894" level="84" type="FeedableBeast" name="高山格蘭帝爾">
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="1" />
@@ -4481,7 +4481,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18895" level="84" type="FeedableBeast" name="Mountain Grendel">
+	<npc id="18895" level="84" type="FeedableBeast" name="高山格蘭帝爾">
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="2" />
@@ -4565,7 +4565,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18896" level="84" type="FeedableBeast" name="Mountain Grendel">
+	<npc id="18896" level="84" type="FeedableBeast" name="高山格蘭帝爾">
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="2" />
@@ -4641,7 +4641,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18897" level="84" type="FeedableBeast" name="Mountain Grendel">
+	<npc id="18897" level="84" type="FeedableBeast" name="高山格蘭帝爾">
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="3" />
@@ -4720,7 +4720,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18898" level="84" type="FeedableBeast" name="Mountain Grendel">
+	<npc id="18898" level="84" type="FeedableBeast" name="高山格蘭帝爾">
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="3" />
@@ -4796,7 +4796,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18899" level="84" type="FeedableBeast" name="Mountain Grendel">
+	<npc id="18899" level="84" type="FeedableBeast" name="高山格蘭帝爾">
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="4" />

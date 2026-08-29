@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25512" level="52" type="RaidBoss" name="Giant Chaos Golem" title="Raid Boss">
+	<npc id="25512" level="52" type="RaidBoss" name="巨神高崙 卡歐斯" title="Raid Boss">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -88,7 +88,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25531" level="81" type="RaidBoss" name="Darnel" title="Torture Maiden">
+	<npc id="25531" level="81" type="RaidBoss" name="達爾尼思" title="Torture Maiden">
 		<parameters>
 			<minions name="Privates">
 				<npc id="22302" count="1" respawnTime="360" weightPoint="1" /> <!-- Darnel's Guardian -->
@@ -159,7 +159,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25532" level="82" type="RaidBoss" name="Kechi" title="Flame Knight">
+	<npc id="25532" level="82" type="RaidBoss" name="基亞齊" title="Flame Knight">
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="selfbuff1" id="5418" level="1" />
@@ -238,7 +238,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25533" level="82" type="Monster" name="Kechi's Minion">
+	<npc id="25533" level="82" type="Monster" name="基亞齊的部下">
 		<parameters>
 			<param name="IsAggressive" value="0" />
 			<param name="AttackRange" value="0" />
@@ -290,7 +290,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25534" level="83" type="RaidBoss" name="Tears" title="Ice">
+	<npc id="25534" level="83" type="RaidBoss" name="提爾斯" title="Ice">
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" />
@@ -354,7 +354,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25535" level="83" type="Monster" name="Tears" title="Ice">
+	<npc id="25535" level="83" type="Monster" name="提爾斯" title="Ice">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- Tears r1 / Tears r1 -->
@@ -395,7 +395,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="25536" level="81" type="RaidBoss" name="Hannibal" title="Raid Boss">
+	<npc id="25536" level="81" type="RaidBoss" name="哈里北爾" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25537" count="1" respawnTime="60" weightPoint="1" /> <!-- Enmity -->
@@ -463,7 +463,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25537" level="81" type="Monster" name="Enmity" title="Raid Minion">
+	<npc id="25537" level="81" type="Monster" name="凝結之恨" title="Raid Minion">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -502,7 +502,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="25538" level="81" type="Monster" name="Revenge" title="Raid Minion">
+	<npc id="25538" level="81" type="Monster" name="永存的怨念" title="Raid Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="8" />
 			<skill name="SelfRangeBuff_a" id="4199" level="9" />
@@ -547,7 +547,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="25539" level="81" type="RaidBoss" name="Typhoon" title="Raid Boss">
+	<npc id="25539" level="81" type="RaidBoss" name="颱風" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="0" />
@@ -619,7 +619,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25540" level="83" type="RaidBoss" name="Demon Prince" title="Raid Boss">
+	<npc id="25540" level="83" type="RaidBoss" name="惡魔公爵" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25541" count="6" respawnTime="360" weightPoint="1" /> <!-- Demon -->
@@ -708,7 +708,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25541" level="83" type="Monster" name="Demon" title="Raid Minion">
+	<npc id="25541" level="83" type="Monster" name="惡魔的創造物" title="Raid Minion">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -749,7 +749,7 @@
 			<height normal="25.8" />
 		</collision>
 	</npc>
-	<npc id="25542" level="83" type="RaidBoss" name="Ranku" title="Raid Boss">
+	<npc id="25542" level="83" type="RaidBoss" name="勞庫" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -828,7 +828,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25543" level="83" type="Monster" name="Eidolon" title="Raid Minion">
+	<npc id="25543" level="83" type="Monster" name="召喚惡魔" title="Raid Minion">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -881,7 +881,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25544" level="83" type="RaidBoss" name="Tully" title="Steel Citadel">
+	<npc id="25544" level="83" type="RaidBoss" name="托里士" title="Steel Citadel">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25545" count="3" respawnTime="360" weightPoint="1" /> <!-- Tully's Banshee -->
@@ -951,7 +951,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25545" level="83" type="Monster" name="Tully's Banshee" title="Raid Minion">
+	<npc id="25545" level="83" type="Monster" name="托里士的拘魔" title="Raid Minion">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5230" level="1" />
 			<skill name="PhysicalSpecial2" id="5231" level="1" />
@@ -1000,7 +1000,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="25546" level="104" type="RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
+	<npc id="25546" level="104" type="RaidBoss" name="背信的拉尼安" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25547" count="2" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Escort -->
@@ -1057,7 +1057,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25547" level="103" type="Monster" name="Rhianna's Escort">
+	<npc id="25547" level="103" type="Monster" name="拉尼安的同夥">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -1102,7 +1102,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="25548" level="103" type="Monster" name="Rhianna's Healer">
+	<npc id="25548" level="103" type="Monster" name="拉尼安的治癒者">
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="10" />
 			<skill name="SelfRangeBuff_a" id="4213" level="10" />
@@ -1151,7 +1151,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25549" level="104" type="RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
+	<npc id="25549" level="104" type="RaidBoss" name="詐欺犯泰西亞" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25550" count="3" respawnTime="360" weightPoint="1" /> <!-- Tesla's Apprentice -->
@@ -1208,7 +1208,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25550" level="103" type="Monster" name="Tesla's Apprentice">
+	<npc id="25550" level="103" type="Monster" name="泰西亞的大弟子">
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="10" />
 			<skill name="Debuff_a" id="4200" level="10" />
@@ -1258,7 +1258,7 @@
 			<height normal="35" grown="42.2" />
 		</collision>
 	</npc>
-	<npc id="25551" level="103" type="Monster" name="Tesla's Herald">
+	<npc id="25551" level="103" type="Monster" name="泰西亞的跑腿">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="10" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -1306,7 +1306,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25552" level="104" type="RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
+	<npc id="25552" level="104" type="RaidBoss" name="靈魂獵人查昆迪" title="Forsaken Prisoner">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -1365,7 +1365,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25553" level="105" type="RaidBoss" name="Durango the Crusher" title="Forsaken Prisoner">
+	<npc id="25553" level="105" type="RaidBoss" name="岩石拳杜泰格" title="Forsaken Prisoner">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="doSummonNPC" value="1" />
@@ -1425,7 +1425,7 @@
 			<height normal="46.3765" />
 		</collision>
 	</npc>
-	<npc id="25554" level="105" type="RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
+	<npc id="25554" level="105" type="RaidBoss" name="不屈的布魯泰齊歐" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25555" count="1" respawnTime="360" weightPoint="1" /> <!-- Brutus' Right Hand -->
@@ -1485,7 +1485,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25555" level="104" type="Monster" name="Brutus' Right Hand">
+	<npc id="25555" level="104" type="Monster" name="布魯泰齊歐的右手">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4721" level="11" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -1533,7 +1533,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="25556" level="104" type="Monster" name="Brutus' Left Hand">
+	<npc id="25556" level="104" type="Monster" name="布魯泰齊歐的左手">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -1579,7 +1579,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25557" level="105" type="RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
+	<npc id="25557" level="105" type="RaidBoss" name="森林掠食者凱凱諾斯" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25558" count="3" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Root -->
@@ -1635,7 +1635,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="25558" level="104" type="Monster" name="Karankawa's Root">
+	<npc id="25558" level="104" type="Monster" name="凱凱諾斯的側根">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="11" />
 			<skill name="Debuff_a" id="4198" level="11" />
@@ -1684,7 +1684,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25559" level="104" type="Monster" name="Karankawa's Blossom">
+	<npc id="25559" level="104" type="Monster" name="凱凱諾斯的花">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4740" level="11" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -1731,7 +1731,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25560" level="105" type="RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
+	<npc id="25560" level="105" type="RaidBoss" name="暴走劍士斯里卡德" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25561" count="2" respawnTime="360" weightPoint="1" /> <!-- Sargon's Attendant -->
@@ -1788,7 +1788,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="25561" level="104" type="Monster" name="Sargon's Attendant">
+	<npc id="25561" level="104" type="Monster" name="斯里卡德的鐘">
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="11" />
 			<skill name="SelfRangeBuff_a" id="4211" level="11" />
@@ -1838,7 +1838,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25562" level="104" type="Monster" name="Sargon's Squire">
+	<npc id="25562" level="104" type="Monster" name="斯里卡德的見習生">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -1884,7 +1884,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25563" level="106" type="RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
+	<npc id="25563" level="106" type="RaidBoss" name="美貌的奈茲里耶" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25564" count="1" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Adept -->
@@ -1988,7 +1988,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25564" level="105" type="Monster" name="Atrielle's Adept">
+	<npc id="25564" level="105" type="Monster" name="奈茲里耶的追隨者">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="11" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -2035,7 +2035,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25565" level="105" type="Monster" name="Atrielle's Minion">
+	<npc id="25565" level="105" type="Monster" name="奈茲里耶的部下">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -2080,7 +2080,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25566" level="106" type="RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
+	<npc id="25566" level="106" type="RaidBoss" name="粗野的南龐" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25567" count="3" respawnTime="360" weightPoint="1" /> <!-- Nagen's Cohort -->
@@ -2185,7 +2185,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25567" level="105" type="Monster" name="Nagen's Cohort">
+	<npc id="25567" level="105" type="Monster" name="南龐的至交">
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="12" />
 			<skill name="Debuff_a" id="4202" level="12" />
@@ -2234,7 +2234,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25568" level="105" type="Monster" name="Nagen's Friend">
+	<npc id="25568" level="105" type="Monster" name="南龐的老友">
 		<parameters>
 			<skill name="HealMagic_a" id="4785" level="12" />
 			<skill name="SelfRangeBuff_a" id="4212" level="12" />
@@ -2283,7 +2283,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25569" level="106" type="RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
+	<npc id="25569" level="106" type="RaidBoss" name="破壞者加斯" title="Forsaken Prisoner">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25570" count="3" respawnTime="360" weightPoint="1" /> <!-- Jax' Vanguard -->
@@ -2384,7 +2384,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25570" level="105" type="Monster" name="Jax' Vanguard">
+	<npc id="25570" level="105" type="Monster" name="加斯的偵查兵">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -2430,7 +2430,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25571" level="105" type="Monster" name="Jax's Bandit">
+	<npc id="25571" level="105" type="Monster" name="加斯的突擊兵">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -2476,7 +2476,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25572" level="104" type="RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
+	<npc id="25572" level="104" type="RaidBoss" name="不法者哈爾庫" title="Forsaken Inmate">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25573" count="2" respawnTime="360" weightPoint="1" /> <!-- Hager's Adept -->
@@ -2533,7 +2533,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25573" level="103" type="Monster" name="Hager's Adept">
+	<npc id="25573" level="103" type="Monster" name="哈爾庫的追隨者">
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="10" />
 			<skill name="SelfRangeBuff_a" id="4213" level="10" />
@@ -2583,7 +2583,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25574" level="103" type="Monster" name="Hager's Escort">
+	<npc id="25574" level="103" type="Monster" name="哈爾庫的警衛">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -2629,7 +2629,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25575" level="104" type="RaidBoss" name="All-seeing Rango" title="Forsaken Inmate">
+	<npc id="25575" level="104" type="RaidBoss" name="透視者朗鐵" title="Forsaken Inmate">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25576" count="4" respawnTime="360" weightPoint="1" /> <!-- Rango's Iris -->
@@ -2689,7 +2689,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="25576" level="103" type="Monster" name="Rango's Iris">
+	<npc id="25576" level="103" type="Monster" name="朗鐵的虹膜">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -2734,7 +2734,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="25577" level="103" type="Monster" name="Rango's Lens">
+	<npc id="25577" level="103" type="Monster" name="朗鐵的水晶體">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="10" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -2781,7 +2781,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25578" level="104" type="RaidBoss" name="Jakard" title="Forsaken Inmate">
+	<npc id="25578" level="104" type="RaidBoss" name="史克雷" title="Forsaken Inmate">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2840,7 +2840,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="25579" level="105" type="RaidBoss" name="Helsing" title="Forsaken Inmate">
+	<npc id="25579" level="105" type="RaidBoss" name="海西奈爾" title="Forsaken Inmate">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25580" count="4" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
@@ -2900,7 +2900,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25580" level="104" type="Monster" name="Helsing's Guard">
+	<npc id="25580" level="104" type="Monster" name="海西奈爾的守護兵">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -2946,7 +2946,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25581" level="104" type="Monster" name="Helsing's Assassin">
+	<npc id="25581" level="104" type="Monster" name="海西奈爾的刺客">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="10" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -2994,7 +2994,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25582" level="105" type="RaidBoss" name="Gillien" title="Forsaken Inmate">
+	<npc id="25582" level="105" type="RaidBoss" name="加爾力安" title="Forsaken Inmate">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25583" count="2" respawnTime="360" weightPoint="1" /> <!-- Gillien's Daughter -->
@@ -3051,7 +3051,7 @@
 			<height normal="31.5" grown="38" />
 		</collision>
 	</npc>
-	<npc id="25583" level="104" type="Monster" name="Gillien's Daughter">
+	<npc id="25583" level="104" type="Monster" name="加爾力安的女兒">
 		<parameters>
 			<skill name="HealMagic_a" id="4785" level="10" />
 			<skill name="SelfRangeBuff_a" id="4213" level="10" />
@@ -3101,7 +3101,7 @@
 			<height normal="28" grown="34.5" />
 		</collision>
 	</npc>
-	<npc id="25584" level="104" type="Monster" name="Gillien's Attendant">
+	<npc id="25584" level="104" type="Monster" name="加爾力安的僕人">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -3147,7 +3147,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25585" level="105" type="RaidBoss" name="Medici" title="Forsaken Inmate">
+	<npc id="25585" level="105" type="RaidBoss" name="麥以迪" title="Forsaken Inmate">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25586" count="3" respawnTime="360" weightPoint="1" /> <!-- Medici's Sister -->
@@ -3203,7 +3203,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="25586" level="104" type="Monster" name="Medici's Sister">
+	<npc id="25586" level="104" type="Monster" name="麥以迪之妹">
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="10" />
 			<skill name="Debuff_a" id="4204" level="10" />
@@ -3252,7 +3252,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25587" level="104" type="Monster" name="Medici's Brother">
+	<npc id="25587" level="104" type="Monster" name="麥以迪之弟">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="10" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3300,7 +3300,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25588" level="105" type="RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
+	<npc id="25588" level="105" type="RaidBoss" name="無法阻止的幕烏士" title="Forsaken Inmate">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3360,7 +3360,7 @@
 			<height normal="46.5" grown="48.4" />
 		</collision>
 	</npc>
-	<npc id="25589" level="106" type="RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
+	<npc id="25589" level="106" type="RaidBoss" name="被放逐的巴里達" title="Forsaken Inmate">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25590" count="1" respawnTime="360" weightPoint="1" /> <!-- Brand's Attendant -->
@@ -3465,7 +3465,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25590" level="105" type="Monster" name="Brand's Attendant">
+	<npc id="25590" level="105" type="Monster" name="巴里達的侍從">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="10" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3513,7 +3513,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25591" level="105" type="Monster" name="Brand's Maid">
+	<npc id="25591" level="105" type="Monster" name="巴里達的侍女">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -3559,7 +3559,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25592" level="106" type="RaidBoss" name="Commander Koenig" title="Forsaken Inmate">
+	<npc id="25592" level="106" type="RaidBoss" name="大將軍卡拉隆" title="Forsaken Inmate">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3662,7 +3662,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25593" level="106" type="RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
+	<npc id="25593" level="106" type="RaidBoss" name="掠食者凱爾格" title="Forsaken Inmate">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25594" count="3" respawnTime="360" weightPoint="1" /> <!-- Gerg's Adept -->
@@ -3762,7 +3762,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25594" level="105" type="Monster" name="Gerg's Adept">
+	<npc id="25594" level="105" type="Monster" name="凱爾格的追隨者">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4760" level="10" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3810,7 +3810,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25595" level="105" type="Monster" name="Gerg's Minion">
+	<npc id="25595" level="105" type="Monster" name="凱爾格的部下">
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
 			<skill name="different_level_9_see_spelled" id="5456" level="1" />
@@ -3856,7 +3856,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25596" level="82" type="Monster" name="Ocular Servitor">
+	<npc id="25596" level="82" type="Monster" name="視線僕人">
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="Party_Type" value="1" />
@@ -3915,7 +3915,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="25597" level="82" type="Monster" name="Heurel">
+	<npc id="25597" level="82" type="Monster" name="豪瑞">
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="MovingAttack" value="0" />
@@ -3966,7 +3966,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="25598" level="82" type="Monster" name="Gegei">
+	<npc id="25598" level="82" type="Monster" name="凱凱">
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="MovingAttack" value="0" />
@@ -4017,7 +4017,7 @@
 			<height normal="71.5" />
 		</collision>
 	</npc>
-	<npc id="25599" level="82" type="Monster" name="Iglas">
+	<npc id="25599" level="82" type="Monster" name="伊格拉斯">
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="MovingAttack" value="0" />

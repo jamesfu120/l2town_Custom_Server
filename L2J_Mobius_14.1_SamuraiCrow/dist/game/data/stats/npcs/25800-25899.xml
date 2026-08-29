@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25800" level="99" type="RaidBoss" name="Michaela" title="Grand Judge">
+	<npc id="25800" level="99" type="RaidBoss" name="米卡耶洛" title="Grand Judge">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="Attack_BoostValue" value="151" />
@@ -58,7 +58,7 @@
 			<skill id="5238" level="1" /> <!-- Freezing -->
 		</skillList>
 	</npc>
-	<npc id="25801" level="88" type="RaidBoss" name="Teredor">
+	<npc id="25801" level="88" type="RaidBoss" name="特拉贊">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="Attack_BoostValue" value="131" />
@@ -103,7 +103,7 @@
 			<skill id="6268" level="1" /> <!-- Jump Attack -->
 		</skillList>
 	</npc>
-	<npc id="25827" level="45" type="Monster" name="Accencio" title="Event Monster">
+	<npc id="25827" level="45" type="Monster" name="艾克西歐" title="Event Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14274" level="1" />
@@ -143,7 +143,7 @@
 			<height normal="35" grown="41.5" />
 		</collision>
 	</npc>
-	<npc id="25828" level="45" type="Monster" name="Malicio" title="Event Monster">
+	<npc id="25828" level="45" type="Monster" name="梅拉西歐" title="Event Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SpecialSkill01_ID" id="14286" level="1" />
@@ -198,7 +198,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25829" level="45" type="Monster" name="Mertes">
+	<npc id="25829" level="45" type="Monster" name="梅爾提斯">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01" id="14274" level="1" />
@@ -238,7 +238,7 @@
 			<height normal="133.5" />
 		</collision>
 	</npc>
-	<npc id="25830" level="45" type="Monster" name="Golem of Repairs">
+	<npc id="25830" level="45" type="Monster" name="修理用高崙">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="heal" id="14276" level="1" />
@@ -276,7 +276,7 @@
 			<height normal="35" grown="41.5" />
 		</collision>
 	</npc>
-	<npc id="25831" level="10" type="Monster" name="Eyesaroch" title="Husk">
+	<npc id="25831" level="10" type="Monster" name="艾薩羅克" title="Husk">
 		<parameters>
 			<skill name="Skill01_ID" id="14159" level="1" />
 			<skill name="Skill02_ID" id="14160" level="1" />
@@ -315,7 +315,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25832" level="20" type="Monster" name="Supervisor" title="Embryo">
+	<npc id="25832" level="20" type="Monster" name="超能預言家" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14172" level="1" />
@@ -356,7 +356,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25833" level="97" type="Monster" name="Orbis' Victim">
+	<npc id="25833" level="97" type="Monster" name="奧爾比斯犧牲者">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14001" level="3" />
@@ -406,7 +406,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25834" level="97" type="Monster" name="Orbis' Guardian">
+	<npc id="25834" level="97" type="Monster" name="奧爾比斯警衛兵">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14005" level="3" />
@@ -456,7 +456,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25835" level="97" type="Monster" name="Orbis' Thrower">
+	<npc id="25835" level="97" type="Monster" name="奧爾比斯投擲兵">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14008" level="3" />
@@ -505,7 +505,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25836" level="97" type="Monster" name="Orbis' Savant">
+	<npc id="25836" level="97" type="Monster" name="奧爾比斯學術士">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -555,7 +555,7 @@
 			<height normal="56" />
 		</collision>
 	</npc>
-	<npc id="25855" level="105" type="RaidBoss" name="Maliss" title="Bloody High Priestess">
+	<npc id="25855" level="105" type="RaidBoss" name="梅莉莎" title="Bloody High Priestess">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14515" level="1" />
@@ -620,7 +620,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25856" level="105" type="RaidBoss" name="Isadora" title="Great Sorceress">
+	<npc id="25856" level="105" type="RaidBoss" name="伊莎朵拉" title="Great Sorceress">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="23707" level="4" />
@@ -686,7 +686,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25857" level="104" type="Monster" name="Corrupted Knight Captain" title="Altar Guardian">
+	<npc id="25857" level="104" type="Monster" name="墮落的騎士團長" title="Altar Guardian">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16982" level="1" /> <!-- Devil Horns of Shield -->
@@ -734,7 +734,7 @@
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
-	<npc id="25858" level="104" type="Monster" name="Corrupted High Priest" title="Altar Guardian">
+	<npc id="25858" level="104" type="Monster" name="墮落的大神官" title="Altar Guardian">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16983" level="1" /> <!-- Embryo's Blessing -->
@@ -782,7 +782,7 @@
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
-	<npc id="25865" level="93" type="Monster" name="Apherus Subordinate">
+	<npc id="25865" level="93" type="Monster" name="阿芙蘿絲的部下">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -829,7 +829,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="25866" level="94" type="RaidBoss" name="Apherus">
+	<npc id="25866" level="94" type="RaidBoss" name="阿芙蘿絲">
 		<parameters>
 			<skill name="Skill01_ID" id="14462" level="1" />
 			<skill name="Skill02_ID" id="14465" level="1" />
@@ -918,7 +918,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25875" level="88" type="RaidBoss" name="Dark Queen" title="Raid Boss">
+	<npc id="25875" level="88" type="RaidBoss" name="漆黑女王" title="Raid Boss">
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<skill name="Skill01_ID" id="14701" level="1" />
@@ -1016,7 +1016,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25876" level="105" type="RaidBoss" name="Maliss" title="Bloody High Priestess">
+	<npc id="25876" level="105" type="RaidBoss" name="梅莉莎" title="Bloody High Priestess">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14515" level="1" />
@@ -1171,7 +1171,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25877" level="105" type="RaidBoss" name="Isadora" title="Great Sorceress">
+	<npc id="25877" level="105" type="RaidBoss" name="伊莎朵拉" title="Great Sorceress">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill02_ID" id="14519" level="1" />
@@ -1327,7 +1327,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25878" level="85" type="Monster" name="Arbitor of Darkness" title="Raid Minion">
+	<npc id="25878" level="85" type="Monster" name="黑暗執行者" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1375,7 +1375,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25879" level="88" type="RaidBoss" name="Dark Queen" title="Raid Boss">
+	<npc id="25879" level="88" type="RaidBoss" name="漆黑女王" title="Raid Boss">
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<skill name="Skill01_ID" id="14701" level="1" />
@@ -1423,7 +1423,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="25880" level="97" type="RaidBoss" name="Georgios" title="Raid Boss">
+	<npc id="25880" level="97" type="RaidBoss" name="格歐吉歐斯" title="Raid Boss">
 		<parameters>
 			<skill name="Skill01_ID" id="14012" level="2" />
 			<skill name="Skill02_ID" id="14013" level="2" />
@@ -1487,7 +1487,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25881" level="99" type="Monster" name="Veridan" title="Hell's Warden">
+	<npc id="25881" level="99" type="Monster" name="艾馬比菲" title="Hell's Warden">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1551042" sp="3102" />
@@ -1621,7 +1621,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25882" level="88" type="RaidBoss" name="Zellaka" title="Lord of Kartia">
+	<npc id="25882" level="88" type="RaidBoss" name="傑拉卡" title="Lord of Kartia">
 		<parameters>
 			<param name="MoveAroundSocial" value="134" />
 			<param name="MoveAroundSocial1" value="134" />
@@ -1756,7 +1756,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25883" level="93" type="RaidBoss" name="Pelline" title="Lord of Kartia">
+	<npc id="25883" level="93" type="RaidBoss" name="佩利內" title="Lord of Kartia">
 		<parameters>
 			<param name="MoveAroundSocial" value="119" />
 			<param name="MoveAroundSocial1" value="119" />
@@ -1891,7 +1891,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25884" level="98" type="RaidBoss" name="Kalios" title="Lord of Kartia">
+	<npc id="25884" level="98" type="RaidBoss" name="卡利歐斯" title="Lord of Kartia">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2033,7 +2033,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25895" level="104" type="Monster" name="Lyn Draco">
+	<npc id="25895" level="104" type="Monster" name="麟紅龍">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2073,7 +2073,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25896" level="104" type="Monster" name="Lyn Draco">
+	<npc id="25896" level="104" type="Monster" name="麟紅龍">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2113,7 +2113,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="25897" level="104" type="Monster" name="Lyn Draco">
+	<npc id="25897" level="104" type="Monster" name="麟紅龍">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2153,7 +2153,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25898" level="104" type="Monster" name="Vortex">
+	<npc id="25898" level="104" type="Monster" name="龍捲風">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
@@ -2198,7 +2198,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25899" level="104" type="GrandBoss" name="Lindvior" title="Wind Dragon">
+	<npc id="25899" level="104" type="GrandBoss" name="林德拜爾" title="Wind Dragon">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15301" /> <!-- Transparent Pole (NPC) -->

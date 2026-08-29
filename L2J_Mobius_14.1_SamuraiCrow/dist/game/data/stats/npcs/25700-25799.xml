@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25700" level="88" type="RaidBoss" name="Glakias" title="Frozen Labyrinth' Knight Captain">
+	<npc id="25700" level="88" type="RaidBoss" name="格拉奇恩斯" title="Frozen Labyrinth' Knight Captain">
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" />
 			<skill name="Skill02_ID" id="6295" level="1" />
@@ -58,7 +58,7 @@
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="25701" level="84" type="RaidBoss" name="Anais" title="Lord of Splendor">
+	<npc id="25701" level="84" type="RaidBoss" name="亞奈斯" title="Lord of Splendor">
 		<parameters>
 			<skill name="Skill01_ID" id="6324" level="1" />
 			<skill name="Skill02_ID" id="6323" level="1" />
@@ -138,7 +138,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25702" level="84" type="Monster" name="Guardian of the Grail">
+	<npc id="25702" level="84" type="Monster" name="聖杯守護者">
 		<parameters>
 			<skill name="Skill01_ID" id="6326" level="1" />
 		</parameters>
@@ -181,7 +181,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25703" level="76" type="RaidBoss" name="Giant Golem" title="Chaos">
+	<npc id="25703" level="76" type="RaidBoss" name="巨神高崙" title="Chaos">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25704" count="3" respawnTime="420" weightPoint="1" /> <!-- Gigantic Golem Subordinate -->
@@ -276,7 +276,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25704" level="75" type="Monster" name="Gigantic Golem Subordinate" title="Chaos">
+	<npc id="25704" level="75" type="Monster" name="巨神高崙部下" title="Chaos">
 		<parameters>
 			<param name="Party_Type" value="1" />
 			<param name="Party_Loyalty" value="1" />
@@ -321,7 +321,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="25705" level="74" type="Monster" name="Giant Boom Golem" title="Chaos">
+	<npc id="25705" level="74" type="Monster" name="巨神炸彈高崙" title="Chaos">
 		<parameters>
 			<skill name="Skill01_ID" id="6265" level="1" />
 			<skill name="Skill02_ID" id="6264" level="1" />
@@ -361,7 +361,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="25706" level="83" type="Monster" name="Labyrinth Watcher">
+	<npc id="25706" level="83" type="Monster" name="迷宮監視者">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="0" />
@@ -417,7 +417,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="25707" level="83" type="Monster" name="Labyrinth Watcher">
+	<npc id="25707" level="83" type="Monster" name="迷宮監視者">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="0" />
@@ -470,7 +470,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="25708" level="83" type="Monster" name="Labyrinth Caretaker">
+	<npc id="25708" level="83" type="Monster" name="迷宮觀察者">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="0" />
@@ -527,7 +527,7 @@
 			<height normal="27.2" />
 		</collision>
 	</npc>
-	<npc id="25709" level="83" type="RaidBoss" name="Labyrinth Warden">
+	<npc id="25709" level="83" type="RaidBoss" name="迷宮守衛">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="6694" level="8" />
 			<skill name="SelfRangePhysicalSpecial_a" id="6695" level="8" />
@@ -579,7 +579,7 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25710" level="83" type="RaidBoss" name="Labyrinth's Guard Captain">
+	<npc id="25710" level="83" type="RaidBoss" name="迷宮警衛隊長">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25711" count="2" respawnTime="150" weightPoint="1" /> <!-- Labyrinth's Guardian -->
@@ -644,7 +644,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25711" level="83" type="Monster" name="Labyrinth's Guardian">
+	<npc id="25711" level="83" type="Monster" name="迷宮警衛兵">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -684,7 +684,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25712" level="83" type="Monster" name="Lost Assistant Guard">
+	<npc id="25712" level="83" type="Monster" name="迷宮警衛助手">
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="8" />
 			<skill name="HealMagic_a" id="4780" level="8" />
@@ -733,7 +733,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25713" level="84" type="RaidBoss" name="Darnel" title="Torture Maiden">
+	<npc id="25713" level="84" type="RaidBoss" name="達爾尼思" title="Torture Maiden">
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4182" level="9" />
@@ -800,7 +800,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25714" level="84" type="RaidBoss" name="Kechi" title="Flame Knight">
+	<npc id="25714" level="84" type="RaidBoss" name="基亞齊" title="Flame Knight">
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="selfbuff1" id="5418" level="1" />
@@ -871,7 +871,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25715" level="84" type="Monster" name="Kechi's Minion">
+	<npc id="25715" level="84" type="Monster" name="基亞齊的部下">
 		<parameters>
 			<param name="IsAggressive" value="0" />
 			<param name="AttackRange" value="0" />
@@ -923,7 +923,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25716" level="84" type="RaidBoss" name="Tears" title="Ice">
+	<npc id="25716" level="84" type="RaidBoss" name="提爾斯" title="Ice">
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" />
@@ -990,7 +990,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25717" level="84" type="Monster" name="Tears" title="Ice">
+	<npc id="25717" level="84" type="Monster" name="提爾斯" title="Ice">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- Tears r1 / Tears r1 -->
@@ -1031,7 +1031,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="25725" level="85" type="RaidBoss" name="Drake Lord" title="Raid Boss">
+	<npc id="25725" level="85" type="RaidBoss" name="龍獸之王" title="Raid Boss">
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1112,7 +1112,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25726" level="85" type="RaidBoss" name="Behemoth Leader" title="Raid Boss">
+	<npc id="25726" level="85" type="RaidBoss" name="貝希莫斯首領" title="Raid Boss">
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1195,7 +1195,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25727" level="85" type="RaidBoss" name="Dragon Beast" title="Raid Boss">
+	<npc id="25727" level="85" type="RaidBoss" name="猛龍獸" title="Raid Boss">
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1274,7 +1274,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25728" level="85" type="Monster" name="Death Knight">
+	<npc id="25728" level="85" type="Monster" name="死亡騎士">
 		<parameters>
 			<skill name="hold_skill" id="6738" level="1" />
 		</parameters>
@@ -1318,7 +1318,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25729" level="85" type="Monster" name="Death Knight">
+	<npc id="25729" level="85" type="Monster" name="死亡騎士">
 		<parameters>
 			<skill name="fan_attack_skill" id="6889" level="1" />
 			<skill name="debuff_skill" id="6890" level="1" />
@@ -1364,7 +1364,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25732" level="85" type="RaidBoss" name="Dragon Beast" title="Raid Boss">
+	<npc id="25732" level="85" type="RaidBoss" name="猛龍獸" title="Raid Boss">
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1443,7 +1443,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25760" level="98" type="RaidBoss" name="Turanclass" title="Raid Boss">
+	<npc id="25760" level="98" type="RaidBoss" name="特藍克列斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="boss_skill_01" id="14015" level="1" />
@@ -1511,7 +1511,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25761" level="97" type="RaidBoss" name="Georgios" title="Raid Boss">
+	<npc id="25761" level="97" type="RaidBoss" name="格歐吉歐斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14012" level="2" />
@@ -1577,7 +1577,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25762" level="97" type="RaidBoss" name="Angelos" title="Raid Boss">
+	<npc id="25762" level="97" type="RaidBoss" name="安傑歐斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14001" level="3" />
@@ -1645,7 +1645,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25763" level="97" type="RaidBoss" name="Theofanis" title="Raid Boss">
+	<npc id="25763" level="97" type="RaidBoss" name="提歐帕尼斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14004" level="3" />
@@ -1711,7 +1711,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25764" level="97" type="RaidBoss" name="Steregos" title="Raid Boss">
+	<npc id="25764" level="97" type="RaidBoss" name="斯泰里格斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14034" level="1" />
@@ -1777,7 +1777,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25765" level="96" type="Monster" name="Beast" title="Raid Minion">
+	<npc id="25765" level="96" type="Monster" name="野獸" title="Raid Minion">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14036" level="1" />
@@ -1826,7 +1826,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25766" level="98" type="RaidBoss" name="Talicrome" title="Raid Boss">
+	<npc id="25766" level="98" type="RaidBoss" name="塔利克洛姆" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="boss_skill_01" id="14019" level="1" />
@@ -1894,7 +1894,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25767" level="97" type="RaidBoss" name="Meikaliya" title="Raid Boss">
+	<npc id="25767" level="97" type="RaidBoss" name="馬伊卡里亞" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -1959,7 +1959,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25768" level="97" type="RaidBoss" name="Evangelos" title="Raid Boss">
+	<npc id="25768" level="97" type="RaidBoss" name="艾巴格洛斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -2024,7 +2024,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25769" level="97" type="RaidBoss" name="Sotiris" title="Raid Boss">
+	<npc id="25769" level="97" type="RaidBoss" name="索提里斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -2093,7 +2093,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25770" level="97" type="RaidBoss" name="Lazaros" title="Raid Boss">
+	<npc id="25770" level="97" type="RaidBoss" name="拉扎羅斯" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<minions name="Privates">
@@ -2165,7 +2165,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25772" level="87" type="Monster" name="Harnak's Wraith" title="Greater Giant King">
+	<npc id="25772" level="87" type="Monster" name="哈勒那克的亡靈" title="Greater Giant King">
 		<parameters>
 			<minions name="Privates">
 				<npc id="22939" count="3" respawnTime="360" weightPoint="1" /> <!-- Demonic Bathus -->
@@ -2229,7 +2229,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25775" level="94" type="RaidBoss" name="Apherus">
+	<npc id="25775" level="94" type="RaidBoss" name="阿芙蘿絲">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14462" level="1" />
@@ -2276,7 +2276,7 @@
 			<height normal="93" />
 		</collision>
 	</npc>
-	<npc id="25776" level="92" type="Monster" name="Guardsman" title="Apherus' Garden">
+	<npc id="25776" level="92" type="Monster" name="禁衛兵" title="Apherus' Garden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<minions name="Privates">
@@ -2327,7 +2327,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25777" level="92" type="Monster" name="Pathfinder" title="Apherus' Garden">
+	<npc id="25777" level="92" type="Monster" name="搜查兵" title="Apherus' Garden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2375,7 +2375,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25778" level="92" type="Monster" name="Protector" title="Apherus' Garden">
+	<npc id="25778" level="92" type="Monster" name="護衛兵" title="Apherus' Garden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2422,7 +2422,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25783" level="20" type="Monster" name="Eyesaroch" title="Husk">
+	<npc id="25783" level="20" type="Monster" name="艾薩羅克" title="Husk">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14159" level="1" />
@@ -2463,7 +2463,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25784" level="10" type="RaidBoss" name="Supervisor" title="Embryo">
+	<npc id="25784" level="10" type="RaidBoss" name="超能預言家" title="Embryo">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2507,7 +2507,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25785" level="88" type="RaidBoss" name="Teredor">
+	<npc id="25785" level="88" type="RaidBoss" name="特拉贊">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2610,7 +2610,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25796" level="99" type="RaidBoss" name="Veridan" title="Hell's Warden">
+	<npc id="25796" level="99" type="RaidBoss" name="艾馬比菲" title="Hell's Warden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="Attack_BoostValue" value="151" />
@@ -2751,7 +2751,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25797" level="99" type="RaidBoss" name="Kechi" title="Flaming">
+	<npc id="25797" level="99" type="RaidBoss" name="基亞齊" title="Flaming">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="selfbuff1" id="5418" level="1" />
@@ -2892,7 +2892,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25798" level="97" type="Monster" name="Kechi's Minion">
+	<npc id="25798" level="97" type="Monster" name="基亞齊的部下">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="selfbuff1" id="4084" level="2" />
@@ -2937,7 +2937,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25799" level="99" type="RaidBoss" name="Michaela" title="Grand Judge">
+	<npc id="25799" level="99" type="RaidBoss" name="米卡耶洛" title="Grand Judge">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" />

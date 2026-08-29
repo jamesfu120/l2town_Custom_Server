@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35100" level="75" type="Merchant" name="Chamberlain of Light">
+	<npc id="35100" level="75" type="Merchant" name="光輝侍衛隊長">
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -60,7 +60,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35101" level="75" type="Folk" name="Grad" title="Wyvern Manager">
+	<npc id="35101" level="75" type="Folk" name="格拉德" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -101,7 +101,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35102" level="75" type="Merchant" name="Greenspan" title="Mercenary Manager">
+	<npc id="35102" level="75" type="Merchant" name="葛林斯潘" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -143,7 +143,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35103" level="75" type="Merchant" name="Manor Manager" title="Gludio">
+	<npc id="35103" level="75" type="Merchant" name="莊園管理員" title="Gludio">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -185,7 +185,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35104" level="75" type="Folk" name="Tyron" title="Gludio's Messenger">
+	<npc id="35104" level="75" type="Folk" name="泰龍" title="Gludio's Messenger">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -229,7 +229,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35105" level="20" type="Artefact" name="Dion Holy Artifact">
+	<npc id="35105" level="20" type="Artefact" name="狄恩守護者">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="1" sp="0" />
@@ -268,7 +268,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35106" level="97" type="Defender" name="Duke Byron Ashton">
+	<npc id="35106" level="97" type="Defender" name="拜倫亞席頓公爵">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -317,7 +317,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35107" level="95" type="Defender" name="Ivano" title="Sir">
+	<npc id="35107" level="95" type="Defender" name="伊瑪諾閣下" title="Sir">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -366,7 +366,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35108" level="93" type="Defender" name="Troop Knight" title="Dion">
+	<npc id="35108" level="93" type="Defender" name="親衛隊騎士" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -415,7 +415,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35109" level="91" type="Defender" name="Troop Wizard" title="Dion">
+	<npc id="35109" level="91" type="Defender" name="親衛隊魔法師" title="Dion">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -466,7 +466,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35110" level="91" type="Defender" name="Troop Wizard" title="Dion">
+	<npc id="35110" level="91" type="Defender" name="親衛隊魔法師" title="Dion">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -517,7 +517,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35111" level="91" type="Defender" name="Guardsman" title="Dion">
+	<npc id="35111" level="91" type="Defender" name="親衛隊" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -566,7 +566,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35112" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35112" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -615,7 +615,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35113" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35113" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -664,7 +664,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35114" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35114" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -713,7 +713,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35115" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35115" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -762,7 +762,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35116" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35116" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -811,7 +811,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35117" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35117" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -860,7 +860,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35118" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35118" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -909,7 +909,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35119" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35119" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -958,7 +958,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35120" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35120" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1007,7 +1007,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35121" level="93" type="Defender" name="Troop Knight" title="Dion">
+	<npc id="35121" level="93" type="Defender" name="親衛隊騎士" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -1056,7 +1056,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35122" level="91" type="Defender" name="Troop Wizard" title="Dion">
+	<npc id="35122" level="91" type="Defender" name="親衛隊魔法師" title="Dion">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1107,7 +1107,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35123" level="91" type="Defender" name="Troop Wizard" title="Dion">
+	<npc id="35123" level="91" type="Defender" name="親衛隊魔法師" title="Dion">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1158,7 +1158,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35124" level="91" type="Defender" name="Guardsman" title="Dion">
+	<npc id="35124" level="91" type="Defender" name="親衛隊" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -1207,7 +1207,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35125" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35125" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1256,7 +1256,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35126" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35126" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1305,7 +1305,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35127" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35127" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1354,7 +1354,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35128" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35128" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1403,7 +1403,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35129" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35129" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1452,7 +1452,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35130" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35130" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1501,7 +1501,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35131" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35131" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1550,7 +1550,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35132" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35132" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1599,7 +1599,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35133" level="89" type="Defender" name="Protector" title="Dion">
+	<npc id="35133" level="89" type="Defender" name="警衛" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1648,7 +1648,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35134" level="75" type="Monster" name="Gatekeeper" title="Dion">
+	<npc id="35134" level="75" type="Monster" name="傳送師" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1713,7 +1713,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35135" level="75" type="Monster" name="Gatekeeper" title="Dion">
+	<npc id="35135" level="75" type="Monster" name="傳送師" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1778,7 +1778,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35136" level="75" type="Monster" name="Gatekeeper" title="Dion">
+	<npc id="35136" level="75" type="Monster" name="傳送師" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1843,7 +1843,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35137" level="75" type="Folk" name="Mass Gatekeeper" title="Dion">
+	<npc id="35137" level="75" type="Folk" name="集體傳送師" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1888,7 +1888,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35138" level="75" type="Folk" name="Outer Castle Gatekeeper" title="Dion">
+	<npc id="35138" level="75" type="Folk" name="外城守門人" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1939,7 +1939,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35139" level="75" type="Folk" name="Inner Castle Gatekeeper" title="Dion">
+	<npc id="35139" level="75" type="Folk" name="內城守門人" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1990,7 +1990,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35140" level="75" type="Folk" name="Blacksmith" title="Dion">
+	<npc id="35140" level="75" type="Folk" name="鐵匠" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -2032,7 +2032,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35141" level="75" type="Warehouse" name="Warehouse Keeper" title="Dion">
+	<npc id="35141" level="75" type="Warehouse" name="倉庫管理員" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2073,7 +2073,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35142" level="75" type="Merchant" name="Chamberlain of Light">
+	<npc id="35142" level="75" type="Merchant" name="光輝侍衛隊長">
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -2133,7 +2133,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35143" level="75" type="Folk" name="Hodler" title="Wyvern Manager">
+	<npc id="35143" level="75" type="Folk" name="荷塔羅" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2174,7 +2174,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35144" level="75" type="Merchant" name="Mercenary Manager Sanford" title="Mercenary Manager">
+	<npc id="35144" level="75" type="Merchant" name="山普德" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2216,7 +2216,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35145" level="75" type="Merchant" name="Manor Manager" title="Dion">
+	<npc id="35145" level="75" type="Merchant" name="莊園管理員" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2258,7 +2258,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35146" level="75" type="Folk" name="Gibbson" title="Dion Messenger">
+	<npc id="35146" level="75" type="Folk" name="吉普森" title="Dion Messenger">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2302,7 +2302,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35147" level="20" type="Artefact" name="Giran Holy Artifact">
+	<npc id="35147" level="20" type="Artefact" name="奇岩守護者">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="1" sp="0" />
@@ -2341,7 +2341,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35148" level="97" type="Defender" name="Baron Carmon Esthus">
+	<npc id="35148" level="97" type="Defender" name="愛司德斯 卡爾蒙 男爵">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -2390,7 +2390,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35149" level="95" type="Defender" name="Ulric" title="Sir">
+	<npc id="35149" level="95" type="Defender" name="烏力克閣下" title="Sir">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -2439,7 +2439,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35150" level="93" type="Defender" name="Troop Knight" title="Giran">
+	<npc id="35150" level="93" type="Defender" name="親衛隊騎士" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -2488,7 +2488,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35151" level="91" type="Defender" name="Troop Wizard" title="Giran">
+	<npc id="35151" level="91" type="Defender" name="親衛隊魔法師" title="Giran">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -2539,7 +2539,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35152" level="91" type="Defender" name="Troop Wizard" title="Giran">
+	<npc id="35152" level="91" type="Defender" name="親衛隊魔法師" title="Giran">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -2590,7 +2590,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35153" level="91" type="Defender" name="Guardsman" title="Giran">
+	<npc id="35153" level="91" type="Defender" name="親衛隊" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -2639,7 +2639,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35154" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35154" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2688,7 +2688,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35155" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35155" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2737,7 +2737,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35156" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35156" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2786,7 +2786,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35157" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35157" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2835,7 +2835,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35158" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35158" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2884,7 +2884,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35159" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35159" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2933,7 +2933,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35160" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35160" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2982,7 +2982,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35161" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35161" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3031,7 +3031,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35162" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35162" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3080,7 +3080,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35163" level="93" type="Defender" name="Troop Knight" title="Giran">
+	<npc id="35163" level="93" type="Defender" name="親衛隊騎士" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -3129,7 +3129,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35164" level="91" type="Defender" name="Troop Wizard" title="Giran">
+	<npc id="35164" level="91" type="Defender" name="親衛隊魔法師" title="Giran">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -3180,7 +3180,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35165" level="91" type="Defender" name="Troop Wizard" title="Giran">
+	<npc id="35165" level="91" type="Defender" name="親衛隊魔法師" title="Giran">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -3231,7 +3231,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35166" level="91" type="Defender" name="Guardsman" title="Giran">
+	<npc id="35166" level="91" type="Defender" name="親衛隊" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -3280,7 +3280,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35167" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35167" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3329,7 +3329,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35168" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35168" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3378,7 +3378,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35169" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35169" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3427,7 +3427,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35170" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35170" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3476,7 +3476,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35171" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35171" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3525,7 +3525,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35172" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35172" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3574,7 +3574,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35173" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35173" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3623,7 +3623,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35174" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35174" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3672,7 +3672,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35175" level="89" type="Defender" name="Protector" title="Giran">
+	<npc id="35175" level="89" type="Defender" name="警衛" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3721,7 +3721,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35176" level="75" type="Monster" name="Gatekeeper" title="Giran">
+	<npc id="35176" level="75" type="Monster" name="傳送師" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3786,7 +3786,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35177" level="75" type="Monster" name="Gatekeeper" title="Giran">
+	<npc id="35177" level="75" type="Monster" name="傳送師" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3851,7 +3851,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35178" level="75" type="Monster" name="Gatekeeper" title="Giran">
+	<npc id="35178" level="75" type="Monster" name="傳送師" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3916,7 +3916,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35179" level="75" type="Folk" name="Mass Gatekeeper" title="Giran">
+	<npc id="35179" level="75" type="Folk" name="集體傳送師" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3961,7 +3961,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35180" level="75" type="Folk" name="Outer Castle Gatekeeper" title="Giran">
+	<npc id="35180" level="75" type="Folk" name="外城守門人" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4012,7 +4012,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35181" level="75" type="Folk" name="Inner Castle Gatekeeper" title="Giran">
+	<npc id="35181" level="75" type="Folk" name="內城守門人" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4063,7 +4063,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35182" level="75" type="Folk" name="Blacksmith" title="Giran">
+	<npc id="35182" level="75" type="Folk" name="鐵匠" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -4105,7 +4105,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35183" level="75" type="Warehouse" name="Warehouse Keeper" title="Giran">
+	<npc id="35183" level="75" type="Warehouse" name="倉庫管理員" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4146,7 +4146,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35184" level="75" type="Merchant" name="Chamberlain of Light">
+	<npc id="35184" level="75" type="Merchant" name="光輝侍衛隊長">
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -4207,7 +4207,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35185" level="75" type="Folk" name="Bryce" title="Wyvern Manager">
+	<npc id="35185" level="75" type="Folk" name="普萊瑟" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4248,7 +4248,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35186" level="75" type="Merchant" name="Arvid" title="Mercenary Manager">
+	<npc id="35186" level="75" type="Merchant" name="阿比德" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4290,7 +4290,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35187" level="75" type="Merchant" name="Manor Manager" title="Giran">
+	<npc id="35187" level="75" type="Merchant" name="莊園管理員" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4332,7 +4332,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35188" level="75" type="Folk" name="Holmes" title="Giran's Messenger">
+	<npc id="35188" level="75" type="Folk" name="霍姆斯" title="Giran's Messenger">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4376,7 +4376,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35189" level="20" type="Artefact" name="Oren Holy Artifact">
+	<npc id="35189" level="20" type="Artefact" name="歐瑞守護者">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="1" sp="0" />
@@ -4415,7 +4415,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35190" level="97" type="Defender" name="Balthus Van Dyke" title="Duke">
+	<npc id="35190" level="97" type="Defender" name="班卓斯 馮 德伊克" title="Duke">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -4464,7 +4464,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35191" level="95" type="Defender" name="Quant" title="Sir">
+	<npc id="35191" level="95" type="Defender" name="昆提" title="Sir">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -4513,7 +4513,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35192" level="93" type="Defender" name="Troop Knight" title="Oren">
+	<npc id="35192" level="93" type="Defender" name="親衛隊騎士" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -4562,7 +4562,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35193" level="91" type="Defender" name="Troop Wizard" title="Oren">
+	<npc id="35193" level="91" type="Defender" name="親衛隊魔法師" title="Oren">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -4613,7 +4613,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35194" level="91" type="Defender" name="Troop Wizard" title="Oren">
+	<npc id="35194" level="91" type="Defender" name="親衛隊魔法師" title="Oren">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -4664,7 +4664,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35195" level="91" type="Defender" name="Guardsman" title="Oren">
+	<npc id="35195" level="91" type="Defender" name="親衛隊" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -4713,7 +4713,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35196" level="89" type="Defender" name="Protector" title="Oren">
+	<npc id="35196" level="89" type="Defender" name="警衛" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4762,7 +4762,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35197" level="89" type="Defender" name="Protector" title="Oren">
+	<npc id="35197" level="89" type="Defender" name="警衛" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4811,7 +4811,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35198" level="89" type="Defender" name="Protector" title="Oren">
+	<npc id="35198" level="89" type="Defender" name="警衛" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4860,7 +4860,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35199" level="89" type="Defender" name="Protector" title="Oren">
+	<npc id="35199" level="89" type="Defender" name="警衛" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>

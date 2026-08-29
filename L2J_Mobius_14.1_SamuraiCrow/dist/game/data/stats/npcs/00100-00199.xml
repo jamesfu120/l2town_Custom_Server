@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="100" level="80" type="Monster" name="Thomas D. Turkey">
+	<npc id="100" level="80" type="Monster" name="不良火雞">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -74,7 +74,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="102" level="70" type="Folk" name="Santa Trainee">
+	<npc id="102" level="70" type="Folk" name="見習聖誕老人">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -112,46 +112,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="103" level="70" type="Folk" name="Holiday Santa" title="Happy New Year!">
-		<race>DWARF</race>
-		<sex>MALE</sex>
-		<acquire exp="1" sp="0" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="10" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="104" level="70" type="Folk" name="Holiday Santa" title="Happy New Year!">
+	<npc id="103" level="70" type="Folk" name="聖誕老人" title="Happy New Year!">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -190,7 +151,46 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="105" level="70" type="Folk" name="Christmas Sled" title="Happy New Year!">
+	<npc id="104" level="70" type="Folk" name="聖誕老人" title="Happy New Year!">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="1" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="true" />
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="10" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="105" level="70" type="Folk" name="聖誕雪橇" title="Happy New Year!">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -228,7 +228,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="106" level="70" type="Folk" name="Birthday Cake">
+	<npc id="106" level="70" type="Folk" name="生日蛋糕">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -266,7 +266,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="107" level="1" type="Monster" name="Fire Spirit">
+	<npc id="107" level="1" type="Monster" name="火的精靈">
 		<parameters>
 			<param name="life_time" value="70" />
 			<param name="max_hp" value="15" />
@@ -317,7 +317,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="108" level="1" type="Monster" name="Enraged Fire Spirit">
+	<npc id="108" level="1" type="Monster" name="狂暴的火的精靈">
 		<parameters>
 			<param name="life_time" value="70" />
 			<param name="max_hp" value="45" />
@@ -368,7 +368,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="109" level="85" type="Folk" name="Jackus Sage" title="Eva's High Priest">
+	<npc id="109" level="85" type="Folk" name="史蒂芬夏格" title="Eva's High Priest">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -406,7 +406,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="110" level="70" type="Folk" name="Eva's Obelisk">
+	<npc id="110" level="70" type="Folk" name="伊娃的方尖塔">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -480,7 +480,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="112" level="55" type="Folk" name="Snow" title="Novice Supporter">
+	<npc id="112" level="55" type="Folk" name="親切的斯諾" title="Novice Supporter">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -516,7 +516,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="113" level="55" type="Folk" name="Snow" title="Novice Supporter">
+	<npc id="113" level="55" type="Folk" name="親切的斯諾" title="Novice Supporter">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -552,7 +552,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="114" level="55" type="Folk" name="Snow" title="Novice Supporter">
+	<npc id="114" level="55" type="Folk" name="親切的斯諾" title="Novice Supporter">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -588,7 +588,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="115" level="55" type="Folk" name="Snow" title="Novice Supporter">
+	<npc id="115" level="55" type="Folk" name="親切的斯諾" title="Novice Supporter">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -624,7 +624,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="116" level="55" type="Folk" name="Snow" title="Novice Supporter">
+	<npc id="116" level="55" type="Folk" name="親切的斯諾" title="Novice Supporter">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -660,7 +660,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="117" level="55" type="Folk" name="Snow" title="Novice Supporter">
+	<npc id="117" level="55" type="Folk" name="親切的斯諾" title="Novice Supporter">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -696,7 +696,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="118" level="80" type="Monster" name="Urd" title="Halloween Family">
+	<npc id="118" level="80" type="Monster" name="兀兒德" title="Halloween Family">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -736,7 +736,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="119" level="80" type="Monster" name="Verdandi" title="Halloween Family">
+	<npc id="119" level="80" type="Monster" name="貝爾丹蒂" title="Halloween Family">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -775,7 +775,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="120" level="80" type="Monster" name="Skuld" title="Jack's Game Trainer">
+	<npc id="120" level="80" type="Monster" name="斯庫迪" title="Jack's Game Trainer">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -814,7 +814,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="121" level="70" type="Folk" name="Lucky Lamp">
+	<npc id="121" level="70" type="Folk" name="吉祥天燈">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -852,7 +852,7 @@
 			<height normal="5" />
 		</collision>
 	</npc>
-	<npc id="122" level="70" type="Folk" name="Environment Lamp">
+	<npc id="122" level="70" type="Folk" name="歡慶天燈">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -891,7 +891,7 @@
 			<height normal="5" />
 		</collision>
 	</npc>
-	<npc id="123" level="70" type="Folk" name="Rolling Lamp">
+	<npc id="123" level="70" type="Folk" name="祈福天燈">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -930,7 +930,7 @@
 			<height normal="5" />
 		</collision>
 	</npc>
-	<npc id="124" level="70" type="Folk" name="Comfort Sky Lantern">
+	<npc id="124" level="70" type="Folk" name="平安天燈">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -969,7 +969,7 @@
 			<height normal="5" />
 		</collision>
 	</npc>
-	<npc id="125" level="80" type="Folk" name="Halloween Event Manager">
+	<npc id="125" level="80" type="Folk" name="萬聖夜活動管理員">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1007,7 +1007,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="126" level="80" type="Folk" name="Kadomas">
+	<npc id="126" level="80" type="Folk" name="門松">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1045,7 +1045,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="127" level="80" type="Folk" name="Kotatsu">
+	<npc id="127" level="80" type="Folk" name="暖爐桌">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1083,7 +1083,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="128" level="70" type="Folk" name="Firecracker Box" title="Firecracker Box">
+	<npc id="128" level="70" type="Folk" name="煙火箱" title="Firecracker Box">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -1121,7 +1121,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="129" level="70" type="Folk" name="White-Bearded Santa" title="Happy New Year!">
+	<npc id="129" level="70" type="Folk" name="白鬍鬚聖誕老人" title="Happy New Year!">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="1" sp="0" />
@@ -1196,7 +1196,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="131" level="80" type="Folk" name="Jet Bike">
+	<npc id="131" level="80" type="Folk" name="噴射戰車">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1232,7 +1232,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="132" level="80" type="Folk" name="Trejuo" title="Blessed Child">
+	<npc id="132" level="80" type="Folk" name="特雷卓" title="Blessed Child">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1268,7 +1268,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="133" level="80" type="Folk" name="Sujin" title="Blessed Child">
+	<npc id="133" level="80" type="Folk" name="蘇琴" title="Blessed Child">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1304,7 +1304,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="134" level="80" type="Folk" name="Dragon Master Lee">
+	<npc id="134" level="80" type="Folk" name="龍之傳人 李">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1340,7 +1340,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="135" level="80" type="Folk" name="Dragon Master Karin">
+	<npc id="135" level="80" type="Folk" name="龍之傳人 卡璘">
 		<!-- TODO: Must be confirmed -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1376,7 +1376,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="136" level="80" type="Folk" name="Shiny Platform">
+	<npc id="136" level="80" type="Folk" name="耀眼舞台">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1411,7 +1411,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="137" level="70" type="Folk" name="Big Wedding Cake">
+	<npc id="137" level="70" type="Folk" name="大型結婚蛋糕">
 		<!-- TODO: Must be confirmed -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1449,7 +1449,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="138" level="80" type="Folk" name="Jet Bike">
+	<npc id="138" level="80" type="Folk" name="噴射戰車">
 		<!-- TODO: Must be confirmed -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1484,7 +1484,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="139" level="70" type="Folk" name="Birthday Cake">
+	<npc id="139" level="70" type="Folk" name="生日蛋糕">
 		<!-- TODO: Must be confirmed -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1522,7 +1522,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="140" level="55" type="Folk" name="Blue Cube">
+	<npc id="140" level="55" type="Folk" name="藍色翻轉方塊">
 		<!-- TODO: Must be confirmed -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -1558,7 +1558,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="141" level="70" type="Folk" name="Dimensional Door" title="Customer Support">
+	<npc id="141" level="70" type="Folk" name="次元之門" title="Customer Support">
 		<!-- TODO: Must be confirmed -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1594,7 +1594,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="142" level="70" type="Folk" name="Dimensional Door" title="Customer Support">
+	<npc id="142" level="70" type="Folk" name="次元之門" title="Customer Support">
 		<!-- TODO: Must be confirmed -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1630,7 +1630,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="143" level="85" type="EffectPoint" name="Totem of Body">
+	<npc id="143" level="85" type="EffectPoint" name="體力圖騰">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="skill_delay" value="60" />
@@ -1672,7 +1672,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="144" level="85" type="EffectPoint" name="Totem of Spirit">
+	<npc id="144" level="85" type="EffectPoint" name="精神圖騰">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="skill_delay" value="60" />
@@ -1714,7 +1714,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="145" level="85" type="EffectPoint" name="Totem of Courage">
+	<npc id="145" level="85" type="EffectPoint" name="勇氣圖騰">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="skill_delay" value="60" />
@@ -1756,7 +1756,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="146" level="85" type="EffectPoint" name="Totem of Fortitude">
+	<npc id="146" level="85" type="EffectPoint" name="不屈圖騰">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="skill_delay" value="60" />
@@ -1798,7 +1798,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="147" level="70" type="Folk" name="Large Cream Cake">
+	<npc id="147" level="70" type="Folk" name="派對用鮮奶油蛋糕">
 		<!-- TODO: Must be confirmed -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1835,7 +1835,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="148" level="84" type="Folk" name="Campfire">
+	<npc id="148" level="84" type="Folk" name="火堆">
 		<!-- TODO: Must be confirmed -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1872,7 +1872,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="149" level="85" type="Monster" name="Bad Bunny">
+	<npc id="149" level="85" type="Monster" name="壞壞兔">
 		<!-- TODO: Must be confirmed -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1909,7 +1909,7 @@
 			<height normal="6" />
 		</collision>
 	</npc>
-	<npc id="150" level="85" type="Monster" name="Bad Bunny Captain">
+	<npc id="150" level="85" type="Monster" name="超神兔">
 		<!-- TODO: Must be confirmed -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1946,7 +1946,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="151" level="85" type="Monster" name="Gloomy Bunny">
+	<npc id="151" level="85" type="Monster" name="無肝壞壞兔">
 		<!-- TODO: Must be confirmed -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1983,7 +1983,7 @@
 			<height normal="6" />
 		</collision>
 	</npc>
-	<npc id="152" level="85" type="Monster" name="Gloomy Bunny Captain">
+	<npc id="152" level="85" type="Monster" name="無肝超神兔">
 		<!-- TODO: Must be confirmed -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -2020,7 +2020,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="153" level="75" type="Folk" name="Magic Laboratory Assistant" title="Event Manager">
+	<npc id="153" level="75" type="Folk" name="魔法學院職員" title="Event Manager">
 		<!-- TODO: Must be confirmed -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -2127,7 +2127,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="156" level="85" type="Monster" name="Happy Bunny">
+	<npc id="156" level="85" type="Monster" name="爆肝壞壞兔">
 		<!-- TODO: Must be confirmed -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -2164,7 +2164,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="157" level="85" type="Monster" name="Happy Bunny Captain">
+	<npc id="157" level="85" type="Monster" name="爆肝超神兔">
 		<!-- TODO: Must be confirmed -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -2201,7 +2201,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="158" level="55" type="Folk" name="Wood Horse">
+	<npc id="158" level="55" type="Folk" name="木馬">
 		<!-- TODO: Must be confirmed -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -2238,7 +2238,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="159" level="1" type="Folk" name="Tame Queen Ant">
+	<npc id="159" level="1" type="Folk" name="溫馴螞蟻公主">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -2275,7 +2275,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="160" level="1" type="Folk" name="Black Bear">
+	<npc id="160" level="1" type="Folk" name="黑熊">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -2312,7 +2312,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="161" level="1" type="Folk" name="Halloween Witch's Broom">
+	<npc id="161" level="1" type="Folk" name="萬聖夜魔女掃帚">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>

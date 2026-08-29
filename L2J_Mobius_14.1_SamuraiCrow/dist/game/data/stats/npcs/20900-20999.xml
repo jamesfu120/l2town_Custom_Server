@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="20922" level="26" type="Monster" name="Maille Lizardman Warrior">
+	<npc id="20922" level="26" type="Monster" name="雄性蜥蜴人戰士">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -77,7 +77,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20923" level="28" type="Monster" name="Maille Lizardman Shaman">
+	<npc id="20923" level="28" type="Monster" name="雄性蜥蜴人咒術士">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -160,7 +160,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20928" level="30" type="Monster" name="Hatu Astral Bee">
+	<npc id="20928" level="30" type="Monster" name="哈圖奇異蜜蜂">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -239,7 +239,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20929" level="32" type="Monster" name="Hatu Dire Wolf">
+	<npc id="20929" level="32" type="Monster" name="哈圖惡狼">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -317,7 +317,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20930" level="34" type="Monster" name="Hatu Brown Bear">
+	<npc id="20930" level="34" type="Monster" name="哈圖棕熊">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -395,7 +395,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20931" level="36" type="Monster" name="Hatu Onyx Beast">
+	<npc id="20931" level="36" type="Monster" name="哈圖瑪瑙獸">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -473,7 +473,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20932" level="38" type="Monster" name="Hatu Crimson Bear">
+	<npc id="20932" level="38" type="Monster" name="哈圖赤色熊">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -551,7 +551,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20933" level="40" type="Monster" name="Hatu Windsus">
+	<npc id="20933" level="40" type="Monster" name="哈圖溫德薩斯">
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -630,7 +630,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20934" level="35" type="Monster" name="Wasp Worker">
+	<npc id="20934" level="35" type="Monster" name="胡蜂工人">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -704,7 +704,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20935" level="37" type="Monster" name="Wasp Captain">
+	<npc id="20935" level="37" type="Monster" name="胡蜂隊長">
 		<parameters>
 			<minions name="Privates">
 				<npc id="20934" count="3" respawnTime="360" weightPoint="1" /> <!-- Wasp Worker -->
@@ -781,7 +781,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20936" level="108" type="Monster" name="Tanor Silenos">
+	<npc id="20936" level="108" type="Monster" name="塔諾賽勒諾斯">
 		<parameters>
 			<skill name="Skill01_ID" id="32827" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -827,7 +827,7 @@
 			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 		</skillList>
 	</npc>
-	<npc id="20937" level="108" type="Monster" name="Tanor Silenos Soldier">
+	<npc id="20937" level="108" type="Monster" name="塔諾賽勒諾斯士兵">
 		<parameters>
 			<skill name="Skill01_ID" id="32827" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -878,7 +878,7 @@
 			<skill id="4073" level="4" /> <!-- Stun -->
 		</skillList>
 	</npc>
-	<npc id="20938" level="108" type="Monster" name="Tanor Silenos Scout">
+	<npc id="20938" level="108" type="Monster" name="塔諾賽勒諾斯巡守">
 		<parameters>
 			<skill name="Skill01_ID" id="32827" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -929,7 +929,7 @@
 			<skill id="4032" level="4" /> <!-- Power Strike -->
 		</skillList>
 	</npc>
-	<npc id="20939" level="108" type="Monster" name="Tanor Silenos Warrior">
+	<npc id="20939" level="108" type="Monster" name="塔諾賽勒諾斯戰士">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="160" />
@@ -971,7 +971,7 @@
 			<skill id="4032" level="4" /> <!-- Power Strike -->
 		</skillList>
 	</npc>
-	<npc id="20941" level="108" type="Monster" name="Tanor Silenos Chieftain" title="Lord of Tanor Canyon">
+	<npc id="20941" level="108" type="Monster" name="塔諾賽勒諾斯族長" title="Lord of Tanor Canyon">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1025,7 +1025,7 @@
 			<skill id="4032" level="5" /> <!-- Power Strike -->
 		</skillList>
 	</npc>
-	<npc id="20942" level="108" type="Monster" name="Nightmare Guide">
+	<npc id="20942" level="108" type="Monster" name="惡夢的領導者">
 		<parameters>
 			<skill name="Skill01_ID" id="32823" level="1" />
 			<skill name="Skill02_ID" id="32824" level="1" />
@@ -1072,7 +1072,7 @@
 			<!-- <skill id="4099" level="2" /> Berserker Spirit -->
 		</skillList>
 	</npc>
-	<npc id="20943" level="108" type="Monster" name="Nightmare Watchman">
+	<npc id="20943" level="108" type="Monster" name="惡夢的監視者">
 		<parameters>
 			<skill name="Skill01_ID" id="32823" level="1" />
 			<skill name="Skill02_ID" id="32824" level="1" />
@@ -1120,7 +1120,7 @@
 			<skill id="4100" level="4" /> <!-- Prominence -->
 		</skillList>
 	</npc>
-	<npc id="20944" level="127" type="Monster" name="Mighty Kat the Cat">
+	<npc id="20944" level="127" type="Monster" name="超級戰鬥貓">
 		<race>DEMONIC</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2207481" hpRegen="11.5" mp="3190" mpRegen="3.9" />
@@ -1140,7 +1140,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20945" level="127" type="Monster" name="Mighty Mew the Cat">
+	<npc id="20945" level="127" type="Monster" name="超級魔法貓">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1163,7 +1163,7 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 	</npc>
-	<npc id="20946" level="127" type="Monster" name="Mighty Feline Queen">
+	<npc id="20946" level="127" type="Monster" name="超級王后貓">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1186,7 +1186,7 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 	</npc>
-	<npc id="20947" level="127" type="Monster" name="Roa">
+	<npc id="20947" level="127" type="Monster" name="洛亞">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1209,7 +1209,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 	</npc>
-	<npc id="20948" level="127" type="Monster" name="Golden Bat Dandy">
+	<npc id="20948" level="127" type="Monster" name="黃金球棒丹帝">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -1232,7 +1232,7 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 	</npc>
-	<npc id="20949" level="127" type="Monster" name="Mighty Kat the Cat" title="Doubled">
+	<npc id="20949" level="127" type="Monster" name="超級戰鬥貓" title="Doubled">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1255,7 +1255,7 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 	</npc>
-	<npc id="20950" level="127" type="Monster" name="Mighty Mew the Cat" title="Doubled">
+	<npc id="20950" level="127" type="Monster" name="超級魔法貓" title="Doubled">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1278,7 +1278,7 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 	</npc>
-	<npc id="20951" level="127" type="Monster" name="Mighty Feline Queen" title="Doubled">
+	<npc id="20951" level="127" type="Monster" name="超級王后貓" title="Doubled">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1301,7 +1301,7 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 	</npc>
-	<npc id="20952" level="127" type="Monster" name="Roa" title="Doubled">
+	<npc id="20952" level="127" type="Monster" name="洛亞" title="Doubled">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1324,7 +1324,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 	</npc>
-	<npc id="20953" level="127" type="Monster" name="Golden Bat Dandy" title="Doubled">
+	<npc id="20953" level="127" type="Monster" name="黃金球棒丹帝" title="Doubled">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -1347,7 +1347,7 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 	</npc>
-	<npc id="20954" level="127" type="Monster" name="Avial's Shadow">
+	<npc id="20954" level="127" type="Monster" name="亞比安之影">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1401,7 +1401,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="20955" level="127" type="Monster" name="Avian's Stormer">
+	<npc id="20955" level="127" type="Monster" name="亞比安喚風者">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1455,7 +1455,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="20956" level="127" type="Monster" name="Avian's Watchful Eye">
+	<npc id="20956" level="127" type="Monster" name="亞比安鷹徽">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1512,7 +1512,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20957" level="127" type="Monster" name="Avian's Steel Wing">
+	<npc id="20957" level="127" type="Monster" name="亞比安盾機">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1566,7 +1566,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20958" level="127" type="Monster" name="Avian's Blade">
+	<npc id="20958" level="127" type="Monster" name="亞比安劍俠">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1619,7 +1619,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="20959" level="127" type="Monster" name="Avial's Dark Shadow">
+	<npc id="20959" level="127" type="Monster" name="亞比安黑影">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1675,7 +1675,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="20960" level="127" type="Monster" name="Avian's Dark Stormer">
+	<npc id="20960" level="127" type="Monster" name="亞比安黑喚風者">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1727,7 +1727,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20961" level="127" type="Monster" name="Avian's Dark Watchful Eye">
+	<npc id="20961" level="127" type="Monster" name="亞比安黑鷹徽">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1779,7 +1779,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20962" level="127" type="Monster" name="Avian's Dark Steel Wing">
+	<npc id="20962" level="127" type="Monster" name="亞比安黑盾機">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1833,7 +1833,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20963" level="127" type="Monster" name="Avian's Dark Blade">
+	<npc id="20963" level="127" type="Monster" name="亞比安黑劍俠">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1891,7 +1891,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20994" level="50" type="Monster" name="Garden Guard Captain">
+	<npc id="20994" level="50" type="Monster" name="庭園警衛隊長">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1976,7 +1976,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="20995" level="48" type="Monster" name="Garden Guardian">
+	<npc id="20995" level="48" type="Monster" name="庭園警衛兵">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
