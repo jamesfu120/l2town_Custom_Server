@@ -276,25 +276,27 @@ public class Baium extends Script
 		}
 	}
 	
-	private boolean isInsideAvailabilityWindow()
+		private boolean isInsideAvailabilityWindow()
 	{
 		Calendar now = Calendar.getInstance();
-		int day = now.get(Calendar.DAY_OF_WEEK);
 		int hour = now.get(Calendar.HOUR_OF_DAY);
-		return ((day == RAID_DAY) && (hour >= SPAWN_HOUR) && (hour < CLOSE_HOUR));
+		// 拿掉 (day == RAID_DAY) 的判斷，只要每天的 21 點 ~ 23 點之間就判定為開放
+		return (hour >= SPAWN_HOUR) && (hour < CLOSE_HOUR);
 	}
 	
-	private void scheduleNextSpawn()
+		private void scheduleNextSpawn()
 	{
 		Calendar nextStart = Calendar.getInstance();
-		nextStart.set(Calendar.DAY_OF_WEEK, RAID_DAY);
+		// 註解掉設定星期幾這行
+		// nextStart.set(Calendar.DAY_OF_WEEK, RAID_DAY); 
 		nextStart.set(Calendar.HOUR_OF_DAY, SPAWN_HOUR);
 		nextStart.set(Calendar.MINUTE, 0);
 		nextStart.set(Calendar.SECOND, 0);
 		
 		if (Calendar.getInstance().after(nextStart))
 		{
-			nextStart.add(Calendar.WEEK_OF_YEAR, 1);
+			// 原本是加一週 (WEEK_OF_YEAR)，改成加 1 天 (DATE)
+			nextStart.add(Calendar.DATE, 1); 
 		}
 		
 		long delay = nextStart.getTimeInMillis() - System.currentTimeMillis();
