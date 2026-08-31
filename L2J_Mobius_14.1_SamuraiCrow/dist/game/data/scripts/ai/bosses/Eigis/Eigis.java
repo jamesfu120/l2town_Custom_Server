@@ -76,8 +76,8 @@ public class Eigis extends Script
 	
 	// Barrier
 	private static final int BARRIER_DURATION_MILLIS = 600000; // 10 minutes
-	private static final int HIT_COUNT = 2000; // 2000 Number of attacks needed to destroy the barrier
-	private static final int HIT_COUNT_RENEW = 500; // 500 hits in 60 seconds to continue without the barrier
+	private static final int HIT_COUNT = 200; // 預設破盾所需的 2000 次攻擊
+	private static final int HIT_COUNT_RENEW = 50; // 預設虛弱期內「維持輸出」所需的 500 次攻擊
 	private static final int RENEW_DURATION_MILLIS = 600000; // 60 seconds of vulnerability
 	private static final SkillHolder LIMIT_BARRIER = new SkillHolder(29515, 1);
 	private boolean _barrierActivated = false;
@@ -105,7 +105,7 @@ public class Eigis extends Script
 		Calendar calendarEigisSeal = Calendar.getInstance();
 		
 		calendarEigisStart.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
-		calendarEigisStart.set(Calendar.HOUR_OF_DAY, 23);
+		calendarEigisStart.set(Calendar.HOUR_OF_DAY, 20);
 		calendarEigisStart.set(Calendar.MINUTE, 0);
 		calendarEigisStart.set(Calendar.SECOND, 0);
 		
@@ -150,7 +150,8 @@ public class Eigis extends Script
 			final Spawn spawn = npc.getSpawn();
 			spawn.setRespawnDelay(0);
 			spawn.startRespawn();
-			DatabaseSpawnManager.getInstance().addNewSpawn(spawn, true);
+			// 將下面這一行註解掉（前面加上 //），避免觸發 DatabaseSpawnManager 錯誤
+		// DatabaseSpawnManager.getInstance().addNewSpawn(spawn, true);
 			
 			GlobalVariablesManager.getInstance().set(EIGIS_ALIVE_VAR, true);
 			// LOGGER.info("Eigis spawned.");

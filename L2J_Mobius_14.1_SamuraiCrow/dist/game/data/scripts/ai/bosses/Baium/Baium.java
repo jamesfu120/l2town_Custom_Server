@@ -313,10 +313,12 @@ public class Baium extends Script
 	/**
 	 * Checks if the Raid timeout has been reached. If the current time is greater than CLOSE_HOUR on the day of the RAID, and the Boss is still alive, forces the instance to close to prevent it from remaining open indefinitely.
 	 */
-	private void checkHardClose()
+		private void checkHardClose()
 	{
 		final Calendar now = Calendar.getInstance();
-		if ((now.get(Calendar.DAY_OF_WEEK) == RAID_DAY) && (now.get(Calendar.HOUR_OF_DAY) >= CLOSE_HOUR))
+		// 刪除或註解掉原本檢查星期的條件，只保留小時檢查：
+		// if ((now.get(Calendar.DAY_OF_WEEK) == RAID_DAY) && (now.get(Calendar.HOUR_OF_DAY) >= CLOSE_HOUR))
+		if (now.get(Calendar.HOUR_OF_DAY) >= CLOSE_HOUR)
 		{
 			if (GrandBossManager.getInstance().getStatus(BAIUM) != DEAD)
 			{
