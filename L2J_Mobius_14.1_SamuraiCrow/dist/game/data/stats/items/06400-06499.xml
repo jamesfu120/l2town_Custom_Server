@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6400" name="鬣狗紋章" type="EtcItem">
+		<!-- The badge indicating that its bearer's event collector is "hyena." Without this badge, one cannot prove one's grade. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6401" name="狐狸紋章" type="EtcItem">
+		<!-- The badge indicating that its bearer's event collector is "fox." Without this badge, one cannot prove one's grade. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6402" name="狼紋章" type="EtcItem">
+		<!-- The badge indicating that its bearer's event collector is "wolf." Without this badge, one cannot prove one's grade -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6403" name="妖精火花" type="EtcItem">
+		<!-- Starlight Festival Event - A gift from the sky. Can be thrown to make a small explosion. Can be used as a material for making various firecrackers. -->
+		<set name="icon" val="icon.etc_fairy_fire_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2023" level="1" /> <!-- Star Shard -->
+		</skills>
+	</item>
+	<item id="6404" name="火藥" type="EtcItem">
+		<!-- Starlight Festival Event - Black powder. Can be used as a material for making a large firecracker. -->
+		<set name="icon" val="icon.etc_powder_black_i00" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6405" name="鎂" type="EtcItem">
+		<!-- Starlight Festival Event - Chemical compound that generates a powerful flash. Can be used as a material for making a large firecracker. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="material" val="STEEL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6406" name="煙火" type="EtcItem">
+		<!-- Explosive device that brilliantly lights up the sky. -->
+		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_event_restricted" val="true" />
+		<skills>
+			<skill id="2024" level="1" /> <!-- Firecracker -->
+		</skills>
+	</item>
+	<item id="6407" name="大煙火" type="EtcItem">
+		<!-- A large firecracker that illuminates the sky with colorful lights. -->
+		<set name="icon" val="icon.etc_ultra_bomb_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_event_restricted" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2025" level="1" /> <!-- Large Firecracker -->
+		</skills>
+	</item>
+	<item id="6408" name="禮服" type="Armor">
+		<!-- A wedding attire that looks like a tuxedo for male characters and a wedding dress for female characters. -->
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="6409" name="2006戰鬥錦標賽-鬥志藥水" type="EtcItem">
+		<!-- Recovers 200 CP. -->
+		<set name="icon" val="icon.etc_cp_potion_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="500" />
+		<set name="reuse_delay" val="1000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="is_event_restricted" val="true" />
+		<skills>
+			<skill id="2166" level="2" /> <!-- Greater CP Potion -->
+		</skills>
+	</item>
+	<item id="6410" name="2006戰鬥錦標賽-瞬間HP治癒藥水" type="EtcItem">
+		<!-- A magic potion that instantly recovers HP. No cooldown. Cannot be used when HP is full. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="is_event_restricted" val="true" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2038" level="1" /> <!-- Quick HP Replenishing Potion -->
+		</skills>
+	</item>
+	<item id="6411" name="敏捷的綠色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="138" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="1" /> <!-- Small Green Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6412" name="暴躁的綠色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="141" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="2" /> <!-- Small Green Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6413" name="寬扁的綠色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="153" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="3" /> <!-- Small Green Fat Fish -->
+		</skills>
+	</item>
+	<item id="6414" name="敏捷的綠色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="167" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="4" /> <!-- Green Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6415" name="暴躁的綠色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="187" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="5" /> <!-- Green Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6416" name="寬扁的綠色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="208" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="6" /> <!-- Green Fat Fish -->
+		</skills>
+	</item>
+	<item id="6417" name="敏捷的綠色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="225" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="7" /> <!-- Large Green Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6418" name="暴躁的綠色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="248" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="8" /> <!-- Large Green Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6419" name="寬扁的綠色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="265" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2190" level="9" /> <!-- Large Green Fat Fish -->
+		</skills>
+	</item>
+	<item id="6420" name="敏捷的翡翠小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="285" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="1" /> <!-- Small Jade Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6421" name="暴躁的翡翠小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="295" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="2" /> <!-- Small Jade Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6422" name="寬扁的翡翠小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="310" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="3" /> <!-- Small Jade Fat Fish -->
+		</skills>
+	</item>
+	<item id="6423" name="敏捷的翡翠魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="325" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="4" /> <!-- Jade Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6424" name="暴躁的翡翠魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="340" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="5" /> <!-- Jade Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6425" name="寬扁的翡翠魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="355" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="6" /> <!-- Jade Fat Fish -->
+		</skills>
+	</item>
+	<item id="6426" name="敏捷的翡翠大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="365" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="7" /> <!-- Large Jade Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6427" name="暴躁的翡翠大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="375" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="8" /> <!-- Large Jade Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6428" name="寬扁的翡翠大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="385" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2191" level="9" /> <!-- Large Jade Fat Fish -->
+		</skills>
+	</item>
+	<item id="6429" name="敏捷的藍色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="395" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="1" /> <!-- Small Blue Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6430" name="暴躁的藍色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="2" /> <!-- Small Blue Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6431" name="寬扁的藍色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="410" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="3" /> <!-- Small Blue Fat Fish -->
+		</skills>
+	</item>
+	<item id="6432" name="敏捷的藍色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="415" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="4" /> <!-- Blue Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6433" name="暴躁的藍色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="418" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="5" /> <!-- Blue Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6434" name="寬扁的藍色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="420" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="6" /> <!-- Blue Fat Fish -->
+		</skills>
+	</item>
+	<item id="6435" name="敏捷的藍色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="425" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="7" /> <!-- Large Blue Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6436" name="暴躁的藍色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="431" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="8" /> <!-- Large Blue Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6437" name="寬扁的藍色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="435" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2192" level="9" /> <!-- Large Blue Fat Fish -->
+		</skills>
+	</item>
+	<item id="6438" name="敏捷的黃色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="442" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="1" /> <!-- Small Yellow Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6439" name="暴躁的黃色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="447" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="2" /> <!-- Small Yellow Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6440" name="寬扁的黃色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="452" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="3" /> <!-- Small Yellow Fat Fish -->
+		</skills>
+	</item>
+	<item id="6441" name="敏捷的黃色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="540" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="4" /> <!-- Yellow Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6442" name="暴躁的黃色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="553" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="5" /> <!-- Yellow Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6443" name="寬扁的黃色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="568" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="6" /> <!-- Yellow Fat Fish -->
+		</skills>
+	</item>
+	<item id="6444" name="敏捷的黃色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="580" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="7" /> <!-- Large Yellow Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6445" name="暴躁的黃色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="594" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="8" /> <!-- Large Yellow Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6446" name="寬扁的黃色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="608" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2193" level="9" /> <!-- Large Yellow Fat Fish -->
+		</skills>
+	</item>
+	<item id="6447" name="敏捷的橙色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="622" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="1" /> <!-- Small Orange Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6448" name="暴躁的橙色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="635" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="2" /> <!-- Small Orange Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6449" name="寬扁的橙色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="649" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="3" /> <!-- Small Orange Fat Fish -->
+		</skills>
+	</item>
+	<item id="6450" name="敏捷的橙色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="663" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="4" /> <!-- Orange Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6451" name="暴躁的橙色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="776" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="5" /> <!-- Orange Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6452" name="寬扁的橙色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="792" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="6" /> <!-- Orange Fat Fish -->
+		</skills>
+	</item>
+	<item id="6453" name="敏捷的橙色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="816" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="7" /> <!-- Large Orange Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6454" name="暴躁的橙色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="840" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="8" /> <!-- Large Orange Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6455" name="寬扁的橙色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="858" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2194" level="9" /> <!-- Large Orange Fat Fish -->
+		</skills>
+	</item>
+	<item id="6456" name="敏捷的紫色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="875" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="1" /> <!-- Small Purple Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6457" name="暴躁的紫色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="893" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="2" /> <!-- Small Purple Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6458" name="寬扁的紫色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="910" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="3" /> <!-- Small Purple Fat Fish -->
+		</skills>
+	</item>
+	<item id="6459" name="敏捷的紫色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="930" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="4" /> <!-- Purple Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6460" name="暴躁的紫色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="948" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="5" /> <!-- Purple Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6461" name="寬扁的紫色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1090" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="6" /> <!-- Purple Fat Fish -->
+		</skills>
+	</item>
+	<item id="6462" name="敏捷的紫色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1111" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="7" /> <!-- Large Purple Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6463" name="暴躁的紫色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1133" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="8" /> <!-- Large Purple Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6464" name="寬扁的紫色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1157" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2195" level="9" /> <!-- Large Purple Fat Fish -->
+		</skills>
+	</item>
+	<item id="6465" name="敏捷的紅色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1277" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="1" /> <!-- Small Red Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6466" name="暴躁的紅色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1301" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="2" /> <!-- Small Red Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6467" name="寬扁的紅色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1326" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="3" /> <!-- Small Red Fat Fish -->
+		</skills>
+	</item>
+	<item id="6468" name="敏捷的紅色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1351" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="4" /> <!-- Red Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6469" name="暴躁的紅色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1376" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="5" /> <!-- Red Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6470" name="寬扁的紅色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1402" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="6" /> <!-- Red Fat Fish -->
+		</skills>
+	</item>
+	<item id="6471" name="敏捷的紅色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1577" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="7" /> <!-- Large Red Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6472" name="暴躁的紅色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1608" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="8" /> <!-- Large Red Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6473" name="寬扁的紅色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1715" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2196" level="9" /> <!-- Large Red Fat Fish -->
+		</skills>
+	</item>
+	<item id="6474" name="敏捷的白色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1747" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="1" /> <!-- Small White Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6475" name="暴躁的白色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1781" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="2" /> <!-- Small White Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6476" name="寬扁的白色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1814" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="3" /> <!-- Small White Fat Fish -->
+		</skills>
+	</item>
+	<item id="6477" name="敏捷的白色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1849" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="4" /> <!-- White Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6478" name="暴躁的白色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1887" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="5" /> <!-- White Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6479" name="寬扁的白色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1923" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="6" /> <!-- White Fat Fish -->
+		</skills>
+	</item>
+	<item id="6480" name="敏捷的白色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1961" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="7" /> <!-- Large White Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6481" name="暴躁的白色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="8" /> <!-- Large White Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6482" name="寬扁的白色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2039" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2197" level="9" /> <!-- Large White Fat Fish -->
+		</skills>
+	</item>
+	<item id="6483" name="敏捷的黑色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2081" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="1" /> <!-- Small Black Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6484" name="暴躁的黑色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2123" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="2" /> <!-- Small Black Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6485" name="寬扁的黑色小魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2166" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="3" /> <!-- Small Black Fat Fish -->
+		</skills>
+	</item>
+	<item id="6486" name="敏捷的黑色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2309" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="4" /> <!-- Black Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6487" name="暴躁的黑色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2357" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="5" /> <!-- Black Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6488" name="寬扁的黑色魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2403" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="6" /> <!-- Black Fat Fish -->
+		</skills>
+	</item>
+	<item id="6489" name="敏捷的黑色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2452" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="7" /> <!-- Large Black Nimble Fish -->
+		</skills>
+	</item>
+	<item id="6490" name="暴躁的黑色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2502" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="8" /> <!-- Large Black Ugly Fish -->
+		</skills>
+	</item>
+	<item id="6491" name="寬扁的黑色大魚" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2552" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2198" level="9" /> <!-- Large Black Fat Fish -->
+		</skills>
+	</item>
+	<item id="6492" name="綠色小寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="153" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2199" level="1" /> <!-- Small Green Chest -->
+		</skills>
+	</item>
+	<item id="6493" name="綠色寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="208" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2199" level="2" /> <!-- Green Chest -->
+		</skills>
+	</item>
+	<item id="6494" name="綠色大寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="265" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2199" level="3" /> <!-- Large Green Chest -->
+		</skills>
+	</item>
+	<item id="6495" name="翡翠小寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="285" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2200" level="1" /> <!-- Small Jade Treasure Chest -->
+		</skills>
+	</item>
+	<item id="6496" name="翡翠寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="315" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
+		</skills>
+	</item>
+	<item id="6497" name="翡翠大寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="345" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2200" level="3" /> <!-- Large Jade Treasure Chest -->
+		</skills>
+	</item>
+	<item id="6498" name="藍色小寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="395" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2201" level="1" /> <!-- Small Blue Treasure Chest -->
+		</skills>
+	</item>
+	<item id="6499" name="藍色寶箱" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to change to a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="419" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2201" level="2" /> <!-- Blue Treasure Chest -->
+		</skills>
+	</item>
+</list>

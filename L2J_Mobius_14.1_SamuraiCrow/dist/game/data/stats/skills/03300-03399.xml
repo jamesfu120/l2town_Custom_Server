@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="3300" toLevel="1" name="黃色護身符-移動速度">
+		<!-- Increases Speed, when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3301" toLevel="1" name="黃色護身符-攻擊速度">
+		<!-- Increases Atk. Spd., when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3302" toLevel="1" name="黃色護身符-施法速度">
+		<!-- Increases Casting Spd., when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3303" toLevel="1" name="白色護身符-出血抗性">
+		<!-- Increases Infection Resistance, when equipped. -->
+		<icon>icon.etc_talisman_i06</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>10</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3304" toLevel="1" name="白色護身符-睡眠抗性">
+		<!-- Increases Stupor Resistance when the talisman is equipped. -->
+		<icon>icon.etc_talisman_i06</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>10</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3305" toLevel="1" name="白色護身符-衝擊抵抗">
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
+		<icon>icon.etc_talisman_i06</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3306" toLevel="1" name="白色護身符-恐懼抗性">
+		<!-- Increases Confusion Resistance when the talisman is equipped. -->
+		<icon>icon.etc_talisman_i06</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>10</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3307" toLevel="1" name="白色護身符-麻痺抗性">
+		<!-- Increases Paralysis Resistance, when equipped. -->
+		<icon>icon.etc_talisman_i06</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>10</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3308" toLevel="1" name="白色護身符-束縛抗性">
+		<!-- Increases Hold Resistance when equipped. -->
+		<icon>icon.etc_talisman_i06</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>10</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3309" toLevel="1" name="白色護身符-魔法消除抗性">
+		<!-- Increases Buff Cancel Resistance, when equipped. -->
+		<icon>icon.etc_talisman_i06</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3310" toLevel="1" name="黃色護身符-HP恢復量">
+		<!-- Increases HP Recovery Rate, when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="HpRegen">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3311" toLevel="1" name="黃色護身符-CP恢復量">
+		<!-- Increases CP Recovery Rate, when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="CpRegen">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3312" toLevel="1" name="黃色護身符-治療威力">
+		<!-- Increases Healing Power, when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="HealEffect">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3313" toLevel="1" name="黃色護身符-速度增加">
+		<!-- Increases P./ M. Atk. and Speed, when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="Speed">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3314" toLevel="1" name="灰色護身符-重量標準">
+		<!-- Increases weight limit, when equipped. -->
+		<icon>icon.etc_talisman_i07</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3315" toLevel="1" name="灰色護身符-中等釣魚熟練">
+		<!-- Enables Fishing Expertise Lv. 8. Effects of two identical talismans do not stack. -->
+		<icon>icon.etc_talisman_i07</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+	</skill>
+	<skill id="3316" toLevel="1" name="黃色護身符-致命攻擊迴避">
+		<!-- When equipped, decreases received Critical Rate from basic attacks. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3317" toLevel="1" name="黃色護身符-致命攻擊減少">
+		<!-- Decreases received Critical Damage from basic attacks. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3318" toLevel="1" name="揚旗">
+		<!-- Display a combat flag on the fortress' flagpole to win the battle. -->
+		<icon>icon.weapon_fort_flag_i00</icon>
+		<operateType>CA1</operateType>
+		<targetType>FORTRESS_FLAGPOLE</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>85</castRange>
+		<channelingStart>1</channelingStart>
+		<channelingTickInterval>0</channelingTickInterval>
+		<effectRange>400</effectRange>
+		<hitTime>180000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<reuseDelay>5000</reuseDelay>
+		<targetConditions>
+			<condition name="OpCheckFlag" />
+		</targetConditions>
+		<startEffects>
+			<effect name="TakeFortStart" />
+		</startEffects>
+		<effects>
+			<effect name="TakeFort" />
+		</effects>
+	</skill>
+	<skill id="3319" toLevel="1" name="戒指的加護">
+		<!-- Immune to Wind, when the ring is equipped. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>86</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<GUST>100</GUST>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3320" toLevel="1" name="黃色護身符-MP恢復量">
+		<!-- Increases MP Recovery Rate, when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>55</magicLevel>
+		<effects>
+			<effect name="MpRegen">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3321" toLevel="1" name="青色護身符-迴避">
+		<!-- Increases P. Evasion and decreases received Critical Rate from basic attacks, when the talisman is equipped. -->
+		<icon>icon.etc_talisman_i01</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>379</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>40</magicLevel>
+		<mpConsume>14</mpConsume>
+		<mpInitialConsume>4</mpInitialConsume>
+		<reuseDelay>360000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3322" toLevel="1" name="鐵手鐲">
+		<!-- Unlocks 1 talisman slot. -->
+		<icon>icon.etc_rbracelet_c_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>20</magicLevel>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>1</slots>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3323" toLevel="1" name="青銅手鐲">
+		<!-- Unlocks 2 talisman slots. -->
+		<icon>icon.etc_rbracelet_b_i01</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>40</magicLevel>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>2</slots>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3324" toLevel="1" name="鋼鐵手鐲">
+		<!-- Unlocks 3 talisman slots. -->
+		<icon>icon.etc_rbracelet_a_i02</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>52</magicLevel>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>3</slots>
+			</effect>
+			<effect name="MaxMp">
+				<amount>60</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3325" toLevel="1" name="米索莉手鐲">
+		<!-- Unlocks 4 talisman slots. -->
+		<icon>icon.etc_rbracelet_s_i03</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>61</magicLevel>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>4</slots>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3326" toLevel="1" name="寶石手鐲">
+		<!-- Unlocks 5 talisman slots. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3327" toLevel="1" name="奧里哈魯根手鐲">
+		<!-- Unlocks 6 talisman slots. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>6</slots>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3328" toLevel="1" name="連環刺">
+		<!-- Stabs with two cursed swords. -->
+		<icon>icon.weapon_dual_sword_i00</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>40</castRange>
+		<coolTime>133</coolTime>
+		<effectPoint>-1</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1667</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>78</magicLevel>
+		<mpConsume>140</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>11500</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3329" toLevel="1" name="強力斬">
+		<!-- A double attack with the cursed swords. -->
+		<icon>icon.weapon_unique_zariche_i00</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>40</castRange>
+		<coolTime>133</coolTime>
+		<effectPoint>-1</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1667</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<mpConsume>140</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>11500</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3330" toLevel="1" name="大氣之刃">
+		<!-- Creates blade of air to attack enemies in front. -->
+		<icon>icon.skill3630</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>6-12</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>FAN</affectScope>
+		<castRange>40</castRange>
+		<coolTime>720</coolTime>
+		<effectPoint>-1</effectPoint>
+		<effectRange>400</effectRange>
+		<fanRange>0;0;80;150</fanRange>
+		<hitTime>1080</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<mpConsume>140</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>15000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3331" toLevel="1" name="縛役">
+		<!-- Emits force to nearby people, giving them the curse of sword. Inflicted status: Debilitation. -->
+		<icon>icon.skill3631</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>60</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>POINT_BLANK</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-1</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<mpConsume>200</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="HpDrain">
+				<power>200</power>
+				<percentage>5</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3332" toLevel="1" name="橙色護身符-溫泉鬥志藥水">
+		<!-- Creates 1 Hot Springs CP Potion, when the talisman is equipped. Requires 16 Soulstones. -->
+		<icon>icon.etc_talisman_i04</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>20000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>16</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>10166</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3333" toLevel="1" name="橙色護身符-A級生命靈藥">
+		<!-- Creates 1 Elixir of Life, when the talisman is equipped. Requires 50 Soulstones. -->
+		<icon>icon.etc_talisman_i04</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>20000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<reuseDelay>600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>8626</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3334" toLevel="1" name="橙色護身符-A級精神靈藥">
+		<!-- Creates 1 Elixir of Mind, when the talisman is equipped. Requires 57 Soulstones. -->
+		<icon>icon.etc_talisman_i04</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>20000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>57</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<reuseDelay>600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>8632</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3335" toLevel="1" name="變身 雪人">
+		<!-- Transforms into Yeti. -->
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>56</magicLevel>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>102</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>102</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3336" toLevel="1" name="變身 野牛">
+		<!-- Transform into Buffalo. There is no effect from Mysterious Potion while in the Buffalo form. -->
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>56</magicLevel>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>103</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>103</transformationId>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>BIG_HEAD,9</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3337" toLevel="1" name="變身 可愛豬">
+		<!-- Transforms into cute pig. -->
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>56</magicLevel>
+		<reuseDelay>600000</reuseDelay>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>104</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>104</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3338" toLevel="1" name="護盾大師">
+		<!-- Enables the character to wear equipment of Shield Master. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3339" toLevel="1" name="詩人">
+		<!-- Enables the character to wear equipment of Enchant Knight. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3340" toLevel="1" name="武器大師">
+		<!-- Enables the character to wear equipment of Weapon Master. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3341" toLevel="1" name="力量大師">
+		<!-- Enables the character to wear equipment of Force Master. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3342" toLevel="1" name="弓術大師">
+		<!-- Enables the character to wear equipment of Bow Master. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3343" toLevel="1" name="匕首大師">
+		<!-- Enables the character to wear equipment of Dagger Master. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3344" toLevel="1" name="巫師">
+		<!-- Enables the character to wear equipment of Wizard. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3345" toLevel="1" name="召喚士">
+		<!-- Enables the character to wear equipment of Summoner. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3346" toLevel="1" name="牧師">
+		<!-- Enables the character to wear equipment of Healer. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3347" toLevel="1" name="法師">
+		<!-- Enables the character to wear equipment of Enchanter. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3348" toLevel="1" name="王朝盔甲">
+		<!-- Increases P. Def., Max HP, Received Healing, and Confusion Resistance. -->
+		<icon>icon.armor_t91_uk_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>13</SHOCK>
+			</effect>
+			<effect name="EnableCloak" />
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5.4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3349" toLevel="1" name="王朝盔甲">
+		<!-- Increases P. Atk., Max HP, Critical Rate for basic attacks, Dark Resistance and Critical Damage for basic attacks. -->
+		<icon>icon.armor_t91_uw_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>5.4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>234</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>24.6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3350" toLevel="1" name="王朝盔甲">
+		<!-- Increases P. Atk., Max HP, Dark Resistance, and decreases MP Consumption. -->
+		<icon>icon.armor_t91_uf_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>5.4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3351" toLevel="1" name="王朝盔甲">
+		<!-- Increases P. Atk., Max HP, Dark Resistance. Decreases Song/ Dance MP Consumption. -->
+		<icon>icon.armor_t91_uke_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5.4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3352" toLevel="1" name="王朝皮甲">
+		<!-- Increases P. Evasion, Max HP, Atk. Spd., and Hold Resistance. -->
+		<icon>icon.armor_t92_ud_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>13</HOLD>
+			</effect>
+			<effect name="EnableCloak" />
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>4.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>2.66</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3353" toLevel="1" name="王朝皮甲">
+		<!-- Increases P. Accuracy, Max MP, Atk. Spd., MP Recovery Rate, and Dark Resistance. -->
+		<icon>icon.armor_t92_ub_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="Accuracy">
+				<amount>4.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>2.66</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>321</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>1.72</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3354" toLevel="1" name="王朝長袍">
+		<!-- Increases Casting Spd., Max MP, Healing Power, Dark Resistance, and decreases Casting Interruption Rate. -->
+		<icon>icon.armor_t93_uh_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>321</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3355" toLevel="1" name="王朝長袍">
+		<!-- Increases Casting Spd., Max MP, Dark Resistance. Decreases MP Consumption and Casting Interruption Rate. -->
+		<icon>icon.armor_t93_ue_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>321</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3356" toLevel="1" name="王朝長袍">
+		<!-- Increases Casting Spd./ Max MP/ P. Atk./ P. Def./ Dark Resistance. -->
+		<icon>icon.armor_t93_us_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="PhysicalAttack">
+				<amount>2.6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>2.6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>321</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3357" toLevel="1" name="王朝長袍">
+		<!-- Increases Casting Spd./ Max MP/ M. Atk./ Dark Resistance. -->
+		<icon>icon.armor_t93_uw_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="EnableCloak" />
+			<effect name="MagicalAttack">
+				<amount>5.4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>321</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3358" toLevel="1" name="裝備旗子">
+		<!-- Equip flag to decrease various battle abilities. -->
+		<icon>icon.weapon_fort_flag_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>-80</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>-80</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-80</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-80</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-80</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3359" toLevel="1" name="變身 土著">
+		<!-- Transforms into a Native. -->
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>56</magicLevel>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>101</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>101</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3360" toLevel="1" name="特殊能力 輕射">
+		<!-- Decreases MP Consumption. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3361" toLevel="1" name="壺精召喚-要塞">
+		<!-- Summons an agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>65</magicLevel>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16029</npcId> <!-- Agathion Fortress -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3362" toLevel="1" name="特性強化項鍊">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3363" toLevel="1" name="特性強化戒指">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3364" toLevel="1" name="特性強化耳環">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3365" toLevel="1" name="特性抵抗項鍊">
+		<!-- Increases Confusion Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>18</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3366" toLevel="1" name="特性抵抗戒指">
+		<!-- Increases Confusion Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>8</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3367" toLevel="1" name="特性抵抗耳環">
+		<!-- Increases Confusion Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>12</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3368" toLevel="1" name="特性強化項鍊">
+		<!-- Increases Infection Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3369" toLevel="1" name="特性強化戒指">
+		<!-- Increases Infection Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3370" toLevel="1" name="特性強化耳環">
+		<!-- Increases Infection Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3371" toLevel="1" name="特性抵抗項鍊">
+		<!-- Increases Infection Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>11</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3372" toLevel="1" name="特性抵抗戒指">
+		<!-- Increases Infection Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>5</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3373" toLevel="1" name="特性抵抗耳環">
+		<!-- Increases Infection Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>8</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3374" toLevel="1" name="特性強化項鍊">
+		<!-- Increases Infection Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3375" toLevel="1" name="特性強化戒指">
+		<!-- Increases Infection Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3376" toLevel="1" name="特性強化耳環">
+		<!-- Increases Infection Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3377" toLevel="1" name="特性抵抗項鍊">
+		<!-- Increases Infection Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>16</POISON>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3378" toLevel="1" name="特性抵抗戒指">
+		<!-- Increases Infection Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>7</POISON>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3379" toLevel="1" name="特性抵抗耳環">
+		<!-- Increases Infection Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>11</POISON>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3380" toLevel="1" name="特性強化項鍊">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3381" toLevel="1" name="特性強化戒指">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3382" toLevel="1" name="特性強化耳環">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3383" toLevel="1" name="特性抵抗項鍊">
+		<!-- Increases Confusion Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>9</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3384" toLevel="1" name="特性抵抗戒指">
+		<!-- Increases Confusion Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>4</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3385" toLevel="1" name="特性抵抗耳環">
+		<!-- Increases Confusion Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>6</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3386" toLevel="1" name="特性強化項鍊">
+		<!-- Increases Obstruction Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3387" toLevel="1" name="特性強化戒指">
+		<!-- Increases Obstruction Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3388" toLevel="1" name="特性強化耳環">
+		<!-- Increases Obstruction Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3389" toLevel="1" name="特性抵抗項鍊">
+		<!-- Increases Obstruction Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>18</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3390" toLevel="1" name="特性抵抗戒指">
+		<!-- Increases Obstruction Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>8</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3391" toLevel="1" name="特性抵抗耳環">
+		<!-- Increases Obstruction Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>12</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3392" toLevel="1" name="特性強化項鍊">
+		<!-- Increases Stupor Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3393" toLevel="1" name="特性強化戒指">
+		<!-- Increases Stupor Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3394" toLevel="1" name="特性強化耳環">
+		<!-- Increases Stupor Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+	</skill>
+	<skill id="3395" toLevel="1" name="特性抵抗項鍊">
+		<!-- Increases Stupor Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>18</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3396" toLevel="1" name="特性抵抗戒指">
+		<!-- Increases Stupor Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>8</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3397" toLevel="1" name="特性抵抗耳環">
+		<!-- Increases Stupor Resistance. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>12</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3398" toLevel="1" name="特性強化項鍊">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3399" toLevel="1" name="特性強化戒指">
+		<!-- Increases Confusion Atk. Rate. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+</list>

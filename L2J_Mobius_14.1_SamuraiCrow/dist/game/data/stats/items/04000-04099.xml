@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="4000" name="傭兵配置表(槍/固定)" type="EtcItem">
+		<!-- Oren/ Spear/ Stationary. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4001" name="傭兵配置表(弓/固定)" type="EtcItem">
+		<!-- Oren/ Bow/ Stationary. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4002" name="傭兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Oren/ Healer/ Stationary. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4003" name="傭兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Oren/ Wizard/ Stationary. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4004" name="傭兵配置表(劍/移動)" type="EtcItem">
+		<!-- Oren/ Sword/ Mobile. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4005" name="傭兵配置表(槍/移動)" type="EtcItem">
+		<!-- Oren/ Spear/ Mobile. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4006" name="傭兵配置表(弓/移動)" type="EtcItem">
+		<!-- Oren/ Bow/ Mobile. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4007" name="傭兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Oren/ Healer/ Mobile. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4008" name="傭兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Oren/ Wizard/ Mobile. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4009" name="傭兵配置表(傳送師1)" type="EtcItem">
+		<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4010" name="傭兵配置表(傳送師2)" type="EtcItem">
+		<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4011" name="傭兵配置表(傳送師3)" type="EtcItem">
+		<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4012" name="傭兵配置表(劍/固定)" type="EtcItem">
+		<!-- Aden/ Sword/ Stationary. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4013" name="傭兵配置表(槍/固定)" type="EtcItem">
+		<!-- Aden/ Spear/ Stationary. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4014" name="傭兵配置表(弓/固定)" type="EtcItem">
+		<!-- Aden/ Bow/ Stationary. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4015" name="傭兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Aden/ Healer/ Stationary. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4016" name="傭兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Aden/ Wizard/ Stationary. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4017" name="傭兵配置表(劍/移動)" type="EtcItem">
+		<!-- Aden/ Sword/ Mobile. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4018" name="傭兵配置表(槍/移動)" type="EtcItem">
+		<!-- Aden/ Spear/ Mobile. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4019" name="傭兵配置表(弓/移動)" type="EtcItem">
+		<!-- Aden/ Bow/ Mobile. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4020" name="傭兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Aden/ Healer/ Mobile. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4021" name="傭兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Aden/ Wizard/ Mobile. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4022" name="傭兵配置表(傳送師1)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the East or West Gate of the inner castle, the halls or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4023" name="傭兵配置表(傳送師2)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East Gate of the inner castle, the halls or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4024" name="傭兵配置表(傳送師3)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the West Gate of the inner castle, the halls or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4025" name="傭兵配置表(傳送師4)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East or West Gate of the inner castle, or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4026" name="傭兵配置表(傳送師5)" type="EtcItem">
+		<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East or West Gate of the inner castle, or the halls. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="4027" name="花束" type="Weapon">
+		<set name="icon" val="icon.etc_plan_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="PAPER" />
+		<stats>
+			<stat type="pAtk">8</stat>
+			<stat type="mAtk">6</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4028" name="怪物用(下巨人的武器)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="101" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="300" />
+		<set name="price" val="81800" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">5</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4029" name="色紙(紅色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4030" name="色紙(橘黃色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4031" name="色紙(黃色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4032" name="色紙(綠色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4033" name="色紙(藍色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4034" name="色紙(紫色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4035" name="色紙(白色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4036" name="色紙(黑色)" type="EtcItem">
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4037" name="幸運貨幣" type="EtcItem">
+		<set name="icon" val="icon.etc_coins_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4038" name="幼龍飼料" type="EtcItem">
+		<!-- When the hunger gauge of a Hatchling reaches 55% or below, its food will be consumed automatically. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="150" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="PetFood" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<skills>
+			<skill id="2063" level="1" /> <!-- Hatchling Food -->
+		</skills>
+	</item>
+	<item id="4039" name="腐蝕的鑄模的黏劑" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="6000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4040" name="腐蝕的鑄模的潤滑劑" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_reagent_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="10000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4041" name="腐蝕的鑄模的強化劑" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_reagent_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="23000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4042" name="腐蝕的恩尼亞" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="12000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4043" name="亞索沛" type="EtcItem">
+		<!-- Crystal representing life and protection. It is used for making elixirs. Can also be sold at a general store. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="6000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4044" name="腐蝕的梭芷" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="6000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4045" name="腐蝕的巨匠骨架" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_lump_yellow_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="411000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4046" name="腐蝕的巨匠砧鎖" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_lump_dark_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="90400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4047" name="腐蝕的刀匠鑄模" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_mold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="710000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4048" name="腐蝕的巨匠模具" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_silver_mold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="154000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4049" name="金剛石耳環的寶石" type="EtcItem">
+		<!-- Key material for Dwarves to make Admantite Earring. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_crystal_ball_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="763" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4050" name="金剛石戒指的金屬線" type="EtcItem">
+		<!-- Key material for Dwarves to make Admantite Ring. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="646" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4051" name="金剛石項鍊的鍊子" type="EtcItem">
+		<!-- Key material for Dwarves to make Admantite Necklace. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1032" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4052" name="黑光耳環的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Black Ore Earring. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1130" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4053" name="黑光戒指的金屬線" type="EtcItem">
+		<!-- Key material for Dwarves to make Black Ore Ring. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_gem_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="934" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4054" name="黑光項鍊的珠子" type="EtcItem">
+		<!-- Key material for Dwarves to make Black Ore Necklace. Can be sold in any shop. -->
+		<set name="icon" val="BranchSys2.icon.etc_blackorenecklace_beads_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2031" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4055" name="合金盾的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Compound Shield. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="624" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4056" name="夏隆胸甲的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Zubei's Breastplate. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2210" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4057" name="夏隆脛甲的材料" type="EtcItem">
+		<!-- Key material for Dwarves to make Zubei's Gaiters. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1430" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4058" name="毀滅靴的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Implosion Boots. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4059" name="寧靜靴的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Boots of Silence. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4060" name="守護神靴的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Guardian's Boots. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4061" name="佩勒迪亞靴的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Paradia Boots. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4062" name="元素靴的內襯" type="EtcItem">
+		<!-- Key material for Dwarves to make Elemental Boots. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4063" name="恩寵靴的內襯" type="EtcItem">
+		<!-- Key material for Dwarves to make Boots of Grace. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4064" name="阿巴敦胸甲的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Avadon Breastplate. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2210" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4065" name="阿巴敦脛甲材料" type="EtcItem">
+		<!-- Key material for Dwarves to make Avadon Gaiters. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1430" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4066" name="夏隆皮衫的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Zubei's Leather Shirt. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1697" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4067" name="夏隆皮脛甲的材料" type="EtcItem">
+		<!-- Key material for Dwarves to make Zubei's Leather Gaiters. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1118" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4068" name="阿巴敦皮甲的內襯" type="EtcItem">
+		<!-- Key material for Dwarves to make Avadon Leather Armor. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2209" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4069" name="夏隆外衣的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Zubei's Tunic. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1697" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4070" name="夏隆長襪的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Zubei's Stockings. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1118" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4071" name="阿巴敦長袍的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Avadon Robe. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2209" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4072" name="阿巴敦頭箍的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Avadon Circlet. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4073" name="封印的阿巴敦手套的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Avadon Gloves. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4074" name="寧靜鏈手套的組件" type="EtcItem">
+		<!-- Key material for Dwarves to make Chain Gloves of Silence. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4075" name="守護神手套的組件" type="EtcItem">
+		<!-- Key material for Dwarves to make Guardian's Gloves. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4076" name="祝福手套的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Gloves of Blessing. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4077" name="末日盾的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Doom Shield. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="890" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4078" name="青狼胸甲的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Blue Wolf Breastplate. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2739" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4079" name="祝福靴的組件" type="EtcItem">
+		<!-- Key material for Dwarves to make Boots of Blessing. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4080" name="青狼脛甲的材料" type="EtcItem">
+		<!-- Key material for Dwarves to make Blue Wolf Gaiters. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1945" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4081" name="末日金屬盔甲的合金" type="EtcItem">
+		<!-- Key material for Dwarves to make Doom Plate Armor. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_lump_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4059" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4082" name="青狼皮甲的材料" type="EtcItem">
+		<!-- Key material for Dwarves to make Blue Wolf Leather Armor. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3540" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4083" name="末日皮甲的組件" type="EtcItem">
+		<!-- Key material for Dwarves to make Doom Leather Armor. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3540" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4084" name="青狼外衣的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Blue Wolf Tunic. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2302" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4085" name="末日外衣的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Doom Tunic. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2302" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4086" name="青狼長襪的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Blue Wolf Stockings. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1705" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4087" name="末日長襪的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Doom Stockings. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1705" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4088" name="青狼頭盔的組件" type="EtcItem">
+		<!-- Key material for Dwarves to make Blue Wolf Helmet. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1059" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4089" name="末日頭盔的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Doom Helmet. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1059" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4090" name="封印的青狼長靴的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Blue Wolf Boots. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4091" name="封印的末日手套的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Doom Gloves. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4092" name="元素手套的內襯" type="EtcItem">
+		<!-- Key material for Dwarves to make Elemental Gloves. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4093" name="恩寵手套的內襯" type="EtcItem">
+		<!-- Key material for Dwarves to make Gloves of Grace. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4094" name="毀滅長手套的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Implosion Gauntlets. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4095" name="佩勒迪亞手套的圖樣" type="EtcItem">
+		<!-- Key material for Dwarves to make Paradia Gloves. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4096" name="封印的青狼手套的布料" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Blue Wolf Gloves. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4097" name="封印的夏隆靴的組件" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Zubei's Boots. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4098" name="封印的阿巴敦靴的組件" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Avadon Boots. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="769" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4099" name="封印的末日靴的碎片" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Doom Boots. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="891" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+	</item>
+</list>

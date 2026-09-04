@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="1800" name="製作卷軸(骨片胸甲100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Piece Bone Breastplate. Requires Create Item Lv. 1. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="128" />
+		<set name="recipe_id" val="16" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1801" name="製作卷軸(骨片脛甲100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Piece Bone Gaiters. Requires Create Item Lv. 1. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="80" />
+		<set name="recipe_id" val="17" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1802" name="製作卷軸(幻滅項鍊100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Necklace of Anguish. Requires Create Item Lv. 1. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="19" />
+		<set name="recipe_id" val="18" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1803" name="製作卷軸(智慧項鍊100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Necklace of Wisdom. Requires Create Item Lv. 1. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="48" />
+		<set name="recipe_id" val="19" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1804" name="製作卷軸(靈魂彈-D級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for D-grade Soulshot. Requires Create Item Lv. 2. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5000" />
+		<set name="recipe_id" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1805" name="製作卷軸(靈魂彈-C級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for C-grade Soulshot. Requires Create Item Lv. 4. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="60000" />
+		<set name="recipe_id" val="21" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1806" name="製作卷軸(靈魂彈-B級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for B-grade Soulshot. Requires Create Item Lv. 6. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100000" />
+		<set name="recipe_id" val="22" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1807" name="製作卷軸(靈魂彈-A級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for A-grade Soulshot. Requires Create Item Lv. 7. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="150000" />
+		<set name="recipe_id" val="23" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
+	</item>
+	<item id="1808" name="製作卷軸(靈魂彈-S級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for S-grade Soulshot. Requires Create Item Lv. 8. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="450000" />
+		<set name="recipe_id" val="24" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1809" name="製作卷軸(耐久的枝葉)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Durable Stem. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1810" name="製作卷軸(木製模具)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Wooden Frame. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1811" name="製作卷軸(安特之樹皮)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Bark of Ant. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1812" name="製作卷軸(粗糙的骨粉)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Coarse Bone Powder. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1813" name="製作卷軸(精製鐵塊)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Refined Steel. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1814" name="製作卷軸(腐蝕的皮革100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Corroded Leather. Requires Create Item Lv. 1. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="380" />
+		<set name="recipe_id" val="25" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1815" name="製作卷軸(弓弦)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Bowstring. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1816" name="製作卷軸(鐵製模具)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Steel Frame. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1817" name="製作卷軸(腐蝕的強化繩索100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Corroded Cord. Requires Create Item Lv. 2. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1000" />
+		<set name="recipe_id" val="26" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1818" name="製作卷軸(精製青銅)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Refined Bronze. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1819" name="製作卷軸(安特藥水)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for an Ant Potion. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1820" name="製作卷軸(魔法紙)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Magic Paper. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1821" name="製作卷軸(灼熱的油)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Flaming Oil. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1822" name="製作卷軸(魔法粉)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Magic Powder. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1823" name="製作卷軸(精製的米索莉)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Refined Mithril. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1824" name="製作卷軸(強化鋼鐵)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Quenched Steel. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1825" name="製作卷軸(腐蝕的奧里哈魯根100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Corroded Oriharukon. Requires Create Item Lv. 4. Success rate: 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="2800" />
+		<set name="recipe_id" val="27" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="1826" name="製作卷軸(魔力液)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Enchanted Solution. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1827" name="製作卷軸(金屬模具)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Metal Frame. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1828" name="製作卷軸(高等級鐵塊)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Top-grade Steel. Requires Create Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1829" name="根據地返回卷軸" type="EtcItem">
+		<!-- A magic scroll for teleporting to a clan hall. If your clan don't own a clan hall, you will be relocated to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2040" level="1" /> <!-- Scroll of Escape: Clan Hall -->
+		</skills>
+	</item>
+	<item id="1830" name="城堡返回卷軸" type="EtcItem">
+		<!-- A magic scroll for teleporting to a castle. If your clan don't own a castle, you will be relocated to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_castle_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2041" level="1" /> <!-- Scroll of Escape: Castle -->
+		</skills>
+	</item>
+	<item id="1831" name="解毒草" type="EtcItem">
+		<!-- A reagent that neutralizes poison. -->
+		<set name="icon" val="icon.etc_herb_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="75" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2042" level="1" /> <!-- Antidote -->
+		</skills>
+	</item>
+	<item id="1832" name="濃縮解毒藥" type="EtcItem">
+		<!-- A high-quality reagent that neutralizes powerful poison. -->
+		<set name="icon" val="icon.etc_reagent_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="180" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2043" level="1" /> <!-- Greater Antidote -->
+		</skills>
+	</item>
+	<item id="1833" name="繃帶" type="EtcItem">
+		<!-- Medical bandage that stops Bleeding when injured. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="75" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2044" level="1" /> <!-- Bandage -->
+		</skills>
+	</item>
+	<item id="1834" name="強力繃帶" type="EtcItem">
+		<!-- Medical bandage that stops Bleeding fast when severely injured. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="180" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2045" level="1" /> <!-- Emergency Dressing -->
+		</skills>
+	</item>
+	<item id="1835" name="靈魂彈-普通" type="EtcItem">
+		<!-- Soulshots increase weapon power. Used with No-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="7" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2039" level="1" /> <!-- No-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="1836" name="肯德尼爾的命令" type="EtcItem">
+		<!-- Punish Kaboo Chief Uoph. He should be somewhere around the ruins over the hill, west of the Elven Village. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1837" name="肯德尼爾的命令" type="EtcItem">
+		<!-- Punish Kaboo Chief Kracha. He should be somewhere around the Nine obelisk, southwest of the Elven Village. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1838" name="肯德尼爾的命令" type="EtcItem">
+		<!-- Punish Kaboo Chief Batoh. He should be somewhere around the entrance of the underground fortress of the Elves. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1839" name="肯德尼爾的命令" type="EtcItem">
+		<!-- Punish Kaboo Chief Tanukia. He should be somewhere around the open-air theatre ruins, southwest of the Elven Village. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1840" name="肯德尼爾的命令" type="EtcItem">
+		<!-- An order to kill Kaboo Chief Turel. He should be somewhere near the ruins to the north-west from Iris Lake. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1841" name="肯德尼爾的命令" type="EtcItem">
+		<!-- An order to kill Kaboo Chief Roko. He should be somewhere near the ruins to the west from Iris Lake. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1842" name="肯德尼爾的命令" type="EtcItem">
+		<!-- An order to kill Kaboo Chief Kamut. He should be somewhere near the ruins to the south from Iris Lake. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1843" name="肯德尼爾的命令" type="EtcItem">
+		<!-- An order to kill Kaboo Chief Murtika. He should be somewhere near the ruins to the east from Iris Lake. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1844" name="卡布獸人首領項鍊" type="EtcItem">
+		<!-- A necklace taken from a dead chief of Kaboo Orcs. Take it to Sentinel Kendell. -->
+		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1845" name="卡布獸人首領項鍊" type="EtcItem">
+		<!-- A necklace taken from a dead chief of Kaboo Orcs. Take it to Sentinel Kendell. -->
+		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1846" name="土瑞克頸鍊" type="EtcItem">
+		<!-- A merit badge of warriors from the Turek Orc tribe. Collect these and take them to Piotur for a reward. -->
+		<set name="icon" val="icon.etc_totem_necklace_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1847" name="土瑞克勳章" type="EtcItem">
+		<!-- A merit badge of officers from the Turek Orc tribe. Collect these and take them to Piotur for a reward. -->
+		<set name="icon" val="icon.etc_totem_necklace_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1848" name="瓷器的碎片" type="EtcItem">
+		<!-- A piece of a clay urn from the Elmoreden Empire. -->
+		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1849" name="銅製飾品的碎片" type="EtcItem">
+		<!-- A piece of a brass decoration from the Elmoreden Empire. -->
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="240" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1850" name="青銅鏡的碎片" type="EtcItem">
+		<!-- A bronze mirror piece from the Elmoreden Empire. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="240" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1851" name="玉石項鍊的珠子" type="EtcItem">
+		<!-- A relic from the Elmoreden Empire. A part of Jade Necklace. -->
+		<set name="icon" val="icon.etc_debris_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="280" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1852" name="古代瓷器" type="EtcItem">
+		<!-- A clay urn of the Elmoreden Empire. -->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="1800" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1853" name="古老的銅製冠冕" type="EtcItem">
+		<!-- A brass tiara from the Elmoreden Empire. -->
+		<set name="icon" val="icon.etc_ancient_crown_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="2100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1854" name="古老的青銅鏡" type="EtcItem">
+		<!-- A piece of a bronze mirror from the Elmoreden Empire. -->
+		<set name="icon" val="icon.etc_mirror_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="2100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1855" name="古老的玉石項鍊" type="EtcItem">
+		<!-- A jade necklace from the Elmoreden Empire. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="2550" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="1856" name="護身符-生命禮讚" type="EtcItem">
+		<!-- An amulet for learning the Chant of Life skill. Used by Orc Shamans. Required level: 20. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1857" name="尼比特狐狗的尖牙" type="EtcItem">
+		<!-- Fang taken by killing Keltirs. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1858" name="尼比特狐狗的尖牙" type="EtcItem">
+		<!-- Fang taken by killing Keltirs. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1859" name="尼比特狐狗的尖牙" type="EtcItem">
+		<!-- Fang taken by killing Keltirs. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1860" name="尼比特狐狗的尖牙" type="EtcItem">
+		<!-- Fang taken by killing Keltirs. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1861" name="尼比特狐狗的尖牙" type="EtcItem">
+		<!-- Fang taken by killing Keltirs. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1862" name="尼比特狐狗的尖牙" type="EtcItem">
+		<!-- Fang taken by killing Keltirs. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1863" name="地圖-艾爾摩" type="EtcItem">
+		<!-- Ancient, obsolete map. Can be purchased at any shop. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Maps" />
+	</item>
+	<item id="1864" name="腐蝕的樹枝" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="20" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1865" name="腐蝕的研磨劑" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="40" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1866" name="腐蝕的軟皮" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_suede_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="300" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1867" name="腐蝕的動物的皮" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1868" name="腐蝕的線" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_skein_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1869" name="腐蝕的鋼鐵礦" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_lump_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1870" name="腐蝕的煤礦" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_coal_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1871" name="腐蝕的木炭" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_charcoal_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1872" name="腐蝕的動物的骨頭" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_piece_bone_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1873" name="腐蝕的銀塊" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1874" name="腐蝕的奧里哈魯根原石" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_oriharukon_ore_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="3000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1875" name="腐蝕的純石" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="3000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1876" name="腐蝕的米索莉原石" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_mithril_ore_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1877" name="腐蝕的金剛石塊" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_adamantite_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1878" name="腐蝕的絞線" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_braided_hemp_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1879" name="腐蝕的炭焦" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="1200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1880" name="腐蝕的鐵" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_lump_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="2000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1881" name="腐蝕的粗糙的骨粉" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="1500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1882" name="腐蝕的皮革" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_leather_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="900" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1883" name="腐蝕的鐵鑄模" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_mold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="4500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1884" name="腐蝕的強化繩索" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_skein_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="325" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1885" name="腐蝕的高級軟皮" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="2400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1886" name="腐蝕的銀鑄模" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_silver_mold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="13500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1887" name="腐蝕的純化的研磨劑" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_potion_clear_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="8100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1888" name="腐蝕的合成的炭焦" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="6600" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1889" name="腐蝕的合成的絞線" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_compound_braid_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="3000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1890" name="腐蝕的米索莉合金" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_lump_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="13100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1891" name="腐蝕的工匠模具" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_artisans_frame_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="95000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1892" name="腐蝕的鐵匠模具" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="64000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1893" name="腐蝕的奧里哈魯根" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_oriharukon_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="24600" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1894" name="腐蝕的高級皮革" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_crafted_leather_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="5700" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1895" name="腐蝕的金屬纖維" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_metallic_fiber_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="700" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1896" name="幻滅項鍊的鍊子" type="EtcItem">
+		<!-- Key material for Dwarves to make Necklace of Anguish. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="95" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1897" name="智慧項鍊的鍊子" type="EtcItem">
+		<!-- Key material for Dwarves to make Necklace of Wisdom. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="168" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1898" name="藍鑽項鍊的鍊子" type="EtcItem">
+		<!-- Key material for Dwarves to make Blue Diamond Necklace. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="390" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1899" name="奉獻項鍊的鍊子" type="EtcItem">
+		<!-- Key material for Dwarves to make Necklace of Devotion. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="256" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

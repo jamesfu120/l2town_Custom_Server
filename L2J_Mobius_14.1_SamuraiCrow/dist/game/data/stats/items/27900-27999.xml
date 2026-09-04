@@ -1,0 +1,2581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="27900" name="真艾迪奧斯胸甲" additionalName="Heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy armor, can be upgraded by the Blacksmith in any town. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">479</stat>
+		</stats>
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="27901" name="真艾迪奧斯脛甲" additionalName="Heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">299</stat>
+		</stats>
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27902" name="真艾迪奧斯護手" additionalName="Heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27903" name="真艾迪奧斯靴" additionalName="Heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27904" name="真艾迪奧斯皮頭盔" additionalName="Light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27905" name="真艾迪奧斯皮甲" additionalName="Light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Light armor, can be upgraded by the Blacksmith in any town. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">383</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="27906" name="真艾迪奧斯皮脛甲" additionalName="Light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">239</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27907" name="真艾迪奧斯皮手套" additionalName="Light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27908" name="真艾迪奧斯皮靴" additionalName="Light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27909" name="真艾迪奧斯頭箍" additionalName="Robe/ Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27910" name="真艾迪奧斯外衣" additionalName="Robe/ Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Robe, can be upgraded by the Blacksmith in any town. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">263</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="27911" name="真艾迪奧斯長襪" additionalName="Robe/ Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">164</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27912" name="真艾迪奧斯手套" additionalName="Robe/ Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27913" name="真艾迪奧斯鞋" additionalName="Robe/ Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27914" name="真艾迪奧斯頭盔" additionalName="Reinforced heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27915" name="真艾迪奧斯胸甲" additionalName="Reinforced heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">479</stat>
+		</stats>
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="27916" name="真艾迪奧斯脛甲" additionalName="Reinforced heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">299</stat>
+		</stats>
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27917" name="真艾迪奧斯護手" additionalName="Reinforced heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27918" name="真艾迪奧斯靴" additionalName="Reinforced heavy armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27919" name="真艾迪奧斯皮頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27920" name="真艾迪奧斯皮甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">383</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="27921" name="真艾迪奧斯皮脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">239</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27922" name="真艾迪奧斯皮手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27923" name="真艾迪奧斯皮靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27924" name="真艾迪奧斯頭箍" additionalName="Reinforced robe / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27925" name="真艾迪奧斯外衣" additionalName="Reinforced robe / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">263</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="27926" name="真艾迪奧斯長襪" additionalName="Reinforced robe / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">164</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27927" name="真艾迪奧斯手套" additionalName="Reinforced robe / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27928" name="真艾迪奧斯鞋" additionalName="Reinforced robe / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27929" name="真艾迪奧斯頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27930" name="真艾迪奧斯胸甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">479</stat>
+		</stats>
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="27931" name="真艾迪奧斯脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">299</stat>
+		</stats>
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27932" name="真艾迪奧斯護手" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27933" name="真艾迪奧斯靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27934" name="真艾迪奧斯皮頭盔" additionalName="Reinforced light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27935" name="真艾迪奧斯皮甲" additionalName="Reinforced light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">383</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="27936" name="真艾迪奧斯皮脛甲" additionalName="Reinforced light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">239</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27937" name="真艾迪奧斯皮手套" additionalName="Reinforced light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27938" name="真艾迪奧斯皮靴" additionalName="Reinforced light armor / Lv. 4" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27939" name="真艾迪奧斯頭箍" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">180</stat>
+		</stats>
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="4" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27940" name="真艾迪奧斯外衣" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">263</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="4" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="27941" name="真艾迪奧斯長襪" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">164</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="4" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27942" name="真艾迪奧斯手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="4" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27943" name="真艾迪奧斯鞋" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">120</stat>
+		</stats>
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="4" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27944" name="真艾迪奧斯頭盔" additionalName="Heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27945" name="真艾迪奧斯胸甲" additionalName="Heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy armor, can be upgraded by the Blacksmith in any town. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">488</stat>
+		</stats>
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="27946" name="真艾迪奧斯脛甲" additionalName="Heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">305</stat>
+		</stats>
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27947" name="真艾迪奧斯護手" additionalName="Heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27948" name="真艾迪奧斯靴" additionalName="Heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27949" name="真艾迪奧斯皮頭盔" additionalName="Light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27950" name="真艾迪奧斯皮甲" additionalName="Light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Light armor, can be upgraded by the Blacksmith in any town. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">390</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="27951" name="真艾迪奧斯皮脛甲" additionalName="Light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">244</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27952" name="真艾迪奧斯皮手套" additionalName="Light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27953" name="真艾迪奧斯皮靴" additionalName="Light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27954" name="真艾迪奧斯頭箍" additionalName="Robe/ Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27955" name="真艾迪奧斯外衣" additionalName="Robe/ Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Robe, can be upgraded by the Blacksmith in any town. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">268</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="27956" name="真艾迪奧斯長襪" additionalName="Robe/ Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">168</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27957" name="真艾迪奧斯手套" additionalName="Robe/ Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27958" name="真艾迪奧斯鞋" additionalName="Robe/ Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27959" name="真艾迪奧斯頭盔" additionalName="Reinforced heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27960" name="真艾迪奧斯胸甲" additionalName="Reinforced heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">488</stat>
+		</stats>
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="27961" name="真艾迪奧斯脛甲" additionalName="Reinforced heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">305</stat>
+		</stats>
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27962" name="真艾迪奧斯護手" additionalName="Reinforced heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27963" name="真艾迪奧斯靴" additionalName="Reinforced heavy armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27964" name="真艾迪奧斯皮頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27965" name="真艾迪奧斯皮甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">390</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="27966" name="真艾迪奧斯皮脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">244</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27967" name="真艾迪奧斯皮手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27968" name="真艾迪奧斯皮靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27969" name="真艾迪奧斯頭箍" additionalName="Reinforced robe / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27970" name="真艾迪奧斯外衣" additionalName="Reinforced robe / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">268</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="27971" name="真艾迪奧斯長襪" additionalName="Reinforced robe / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">168</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27972" name="真艾迪奧斯手套" additionalName="Reinforced robe / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27973" name="真艾迪奧斯鞋" additionalName="Reinforced robe / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27974" name="真艾迪奧斯頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27975" name="真艾迪奧斯胸甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">488</stat>
+		</stats>
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="27976" name="真艾迪奧斯脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">305</stat>
+		</stats>
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27977" name="真艾迪奧斯護手" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27978" name="真艾迪奧斯靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27979" name="真艾迪奧斯皮頭盔" additionalName="Reinforced light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27980" name="真艾迪奧斯皮甲" additionalName="Reinforced light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">390</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="27981" name="真艾迪奧斯皮脛甲" additionalName="Reinforced light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">244</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27982" name="真艾迪奧斯皮手套" additionalName="Reinforced light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27983" name="真艾迪奧斯皮靴" additionalName="Reinforced light armor / Lv. 5" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27984" name="真艾迪奧斯頭箍" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">183</stat>
+		</stats>
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="5" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27985" name="真艾迪奧斯外衣" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">268</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="5" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="27986" name="真艾迪奧斯長襪" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">168</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="5" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27987" name="真艾迪奧斯手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="5" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27988" name="真艾迪奧斯鞋" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">122</stat>
+		</stats>
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="5" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27989" name="真艾迪奧斯頭盔" additionalName="Heavy armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.5%, M. Atk. +3%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">187</stat>
+		</stats>
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="6" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27990" name="真艾迪奧斯胸甲" additionalName="Heavy armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.5%, M. Atk. +3%. Heavy armor, can be upgraded by the Blacksmith in any town. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">498</stat>
+		</stats>
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="6" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="27991" name="真艾迪奧斯脛甲" additionalName="Heavy armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.5%, M. Atk. +3%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">311</stat>
+		</stats>
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="6" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27992" name="真艾迪奧斯護手" additionalName="Heavy armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">125</stat>
+		</stats>
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="6" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27993" name="真艾迪奧斯靴" additionalName="Heavy armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Heavy armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">125</stat>
+		</stats>
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="6" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27994" name="真艾迪奧斯皮頭盔" additionalName="Light armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.5%, M. Atk. +3%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">187</stat>
+		</stats>
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="6" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+	<item id="27995" name="真艾迪奧斯皮甲" additionalName="Light armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -8%, P. Atk. +1.5%, M. Atk. +3%. Light armor, can be upgraded by the Blacksmith in any town. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">398</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="6" /> <!-- Inherent Abilities - Top Attack -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="27996" name="真艾迪奧斯皮脛甲" additionalName="Light armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -5%, P. Atk. +1.5%, M. Atk. +3%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">249</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="6" /> <!-- Inherent Abilities - Pants Attack -->
+		</skills>
+	</item>
+	<item id="27997" name="真艾迪奧斯皮手套" additionalName="Light armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">125</stat>
+		</stats>
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="6" /> <!-- Inherent Abilities - Gloves Attack -->
+		</skills>
+	</item>
+	<item id="27998" name="真艾迪奧斯皮靴" additionalName="Light armor / Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Light armor, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">125</stat>
+		</stats>
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="6" /> <!-- Inherent Abilities - Shoes Attack -->
+		</skills>
+	</item>
+	<item id="27999" name="真艾迪奧斯頭箍" additionalName="Robe/ Lv. 6" type="Armor">
+		<!-- 1 common soul crystal can be inserted. Received damage -3%, P. Atk. +1.5%, M. Atk. +3%. Robe, can be upgraded by the Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<set name="ensoulNormalSlots" val="1" />
+		<stats>
+			<stat type="pDef">187</stat>
+		</stats>
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="6" /> <!-- Inherent Abilities - Helm Attack -->
+		</skills>
+	</item>
+</list>

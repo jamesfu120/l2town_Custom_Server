@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="3900" name="狼用高級鋼甲" type="Armor">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="283000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">38</stat>
+			<stat type="pDef">43</stat>
+		</stats>
+	</item>
+	<item id="3901" name="狼用米索莉甲" type="Armor">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="412500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">41</stat>
+			<stat type="pDef">47</stat>
+		</stats>
+	</item>
+	<item id="3902" name="幽靈狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="30500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3903" name="米索莉狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">16</stat>
+			<stat type="mAtk">14</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3904" name="森林狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="80000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">23</stat>
+			<stat type="mAtk">18</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3905" name="奧里哈魯根狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="120000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">24</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3906" name="索蒂德狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="175000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">30</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3907" name="地獄犬狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="225000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">49</stat>
+			<stat type="mAtk">36</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3908" name="土狼狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="285000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">58</stat>
+			<stat type="mAtk">42</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3909" name="冰結晶狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="360000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">69</stat>
+			<stat type="mAtk">50</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3910" name="青狼狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="550000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">80</stat>
+			<stat type="mAtk">58</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3911" name="潘里亞狼牙" type="Weapon">
+		<!-- Equipment for wolves. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="750000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">93</stat>
+			<stat type="mAtk">66</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3912" name="幼龍用軟甲" type="Armor">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="58500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">26</stat>
+			<stat type="pDef">26</stat>
+		</stats>
+	</item>
+	<item id="3913" name="幼龍用鱗甲" type="Armor">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="86000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">29</stat>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="3914" name="幼龍用鎖子甲" type="Armor">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="113000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">31</stat>
+			<stat type="pDef">31</stat>
+		</stats>
+	</item>
+	<item id="3915" name="幼龍用青銅外衣" type="Armor">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="145500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">33</stat>
+			<stat type="pDef">33</stat>
+		</stats>
+	</item>
+	<item id="3916" name="幼龍用鐵外衣" type="Armor">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="186000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">36</stat>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="3917" name="幼龍用影鋼甲" type="Armor">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="283000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">38</stat>
+			<stat type="pDef">38</stat>
+		</stats>
+	</item>
+	<item id="3918" name="幼龍用米索莉外衣" type="Armor">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="412500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="mDef">41</stat>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="3919" name="巨蛇之牙" type="Weapon">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">8</stat>
+			<stat type="mAtk">7</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3920" name="蛇吻" type="Weapon">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="155000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">9</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3921" name="影牙" type="Weapon">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="210000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3922" name="艾里亞之牙" type="Weapon">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="285000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">13</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3923" name="拷刑者" type="Weapon">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="380000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">16</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3924" name="巫努艾之牙" type="Weapon">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="550000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">15</stat>
+			<stat type="mAtk">18</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3925" name="災疫斷絕" type="Weapon">
+		<!-- Equipment for hatchlings. Double-click to equip. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="800000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="HATCHLING_GROUP" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">17</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3926" name="L2Day-導引卷軸" type="EtcItem">
+		<!-- Increases P. Accuracy. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2050" level="1" /> <!-- Scroll: Guidance -->
+		</skills>
+	</item>
+	<item id="3927" name="L2Day-死之呢喃卷軸" type="EtcItem">
+		<!-- Increases Critical Damage for basic attacks. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2051" level="1" /> <!-- Scroll: Death Whisper -->
+		</skills>
+	</item>
+	<item id="3928" name="L2Day-弱點偵測卷軸" type="EtcItem">
+		<!-- Increases Critical Rate for basic attacks. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2052" level="1" /> <!-- Scroll: Focus -->
+		</skills>
+	</item>
+	<item id="3929" name="L2Day-靈活思緒卷軸" type="EtcItem">
+		<!-- Increases Casting Spd. Effect 3. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2053" level="1" /> <!-- Scroll: Acumen -->
+		</skills>
+	</item>
+	<item id="3930" name="L2Day-速度激發卷軸" type="EtcItem">
+		<!-- Increases Atk. Spd. Effect 2. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2054" level="1" /> <!-- Scroll: Haste -->
+		</skills>
+	</item>
+	<item id="3931" name="L2Day-敏捷術卷軸" type="EtcItem">
+		<!-- Increases P. Evasion. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2055" level="1" /> <!-- Scroll: Agility -->
+		</skills>
+	</item>
+	<item id="3932" name="L2Day-魔力催化卷軸" type="EtcItem">
+		<!-- Increases M. Atk. Effect 3. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2056" level="1" /> <!-- Scroll: Empower -->
+		</skills>
+	</item>
+	<item id="3933" name="L2Day-力量強化卷軸" type="EtcItem">
+		<!-- Increases P. Atk. Effect 3. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2057" level="1" /> <!-- Scroll: Might -->
+		</skills>
+	</item>
+	<item id="3934" name="L2Day-風之疾走卷軸" type="EtcItem">
+		<!-- Increases Speed. Effect 2. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2058" level="1" /> <!-- Scroll: Wind Walk -->
+		</skills>
+	</item>
+	<item id="3935" name="L2Day-保護盾卷軸" type="EtcItem">
+		<!-- Increases P. Def. Effect 3. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="for_npc" val="true" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="2059" level="1" /> <!-- Scroll: Shield -->
+		</skills>
+	</item>
+	<item id="3936" name="祝福的復活卷軸" type="EtcItem">
+		<!-- A magic scroll that resurrects a dead character fully recovering their XP. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="400000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="2049" level="1" /> <!-- Blessed Scroll of Resurrection -->
+		</skills>
+	</item>
+	<item id="3937" name="怪物用(下巨人)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="101" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="300" />
+		<set name="price" val="81800" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">50</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="3938" name="怪物用(下巨人魔法師武器)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="101" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="300" />
+		<set name="price" val="81800" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">50</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="3939" name="怪物用(班席)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="101" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="300" />
+		<set name="price" val="81800" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">50</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="3940" name="設計圖-召喚攻城高崙" type="EtcItem">
+		<!-- A blueprint for learning the Summon Siege Golem skill. Required level: 49. -->
+		<set name="icon" val="icon.etc_plan_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3941" name="魔法書-團體返生術" type="EtcItem">
+		<!-- A spellbook for learning the Mass Resurrection skill. Used by Bishops. Required level: 40. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3942" name="魔法書-隊伍回歸術" type="EtcItem">
+		<!-- A spellbook for learning the Party Return skill. Used by Elven Elders. Required level: 48. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3943" name="護身符-帕格立歐之心" type="EtcItem">
+		<!-- An amulet for learning the Pa'agrio's Heart skill. Used by Overlords. Required level: 44. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3944" name="魔法書-減輕負重" type="EtcItem">
+		<!-- A spellbook for learning the Decrease Weight skill. Used by Elven Oracles. Required level: 35. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="2450" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3945" name="船票-說話之島往奇岩" type="EtcItem">
+		<!-- A ticket for a ship from Talking Island to Giran. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3946" name="船票-奇岩往說話之島" type="EtcItem">
+		<!-- A ticket for a ship from Giran to Talking Island. -->
+		<set name="icon" val="icon.etc_ticket_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3947" name="祝福的魔靈彈-普通" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with No-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_white_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="4" />
+		<set name="price" val="35" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<skills>
+			<skill id="2061" level="1" /> <!-- Blessed No-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="3948" name="祝福的魔靈彈-D級" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with D-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="4" />
+		<set name="price" val="28" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="D" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<skills>
+			<skill id="2160" level="1" /> <!-- Blessed D-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="3949" name="祝福的魔靈彈-C級" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with C-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_green_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="42" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="C" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<skills>
+			<skill id="2161" level="1" /> <!-- Blessed C-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="3950" name="祝福的魔靈彈-B級" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with B-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_red_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="245" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="B" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2162" level="1" /> <!-- Blessed B-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="3951" name="祝福的魔靈彈-A級" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with A-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="290" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="A" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2163" level="1" /> <!-- Blessed A-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="3952" name="祝福的魔靈彈-S級" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="350" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2164" level="1" /> <!-- Blessed S-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="3953" name="製作卷軸(祝福的魔靈彈-D級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Blessed D-grade Spiritshot. Requires Create Item Lv. 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5000" />
+		<set name="recipe_id" val="323" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3954" name="製作卷軸(祝福的魔靈彈-C級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Blessed C-grade Spiritshot. Requires Create Item Lv. 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="60000" />
+		<set name="recipe_id" val="324" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3955" name="製作卷軸(祝福的魔靈彈-B級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Blessed B-grade Spiritshot. Requires Create Item Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="100000" />
+		<set name="recipe_id" val="325" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3956" name="製作卷軸(祝福的魔靈彈-A級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Blessed A-grade Spiritshot. Requires Create Item Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="150000" />
+		<set name="recipe_id" val="326" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3957" name="製作卷軸(祝福的魔靈彈-S級100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Blessed S-grade Spiritshot. Requires Create Item Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="450000" />
+		<set name="recipe_id" val="327" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3958" name="L2Day-祝福的返回卷軸" type="EtcItem">
+		<!-- A magic scroll for teleporting to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="2036" level="2" /> <!-- L2 Day - Blessed Scroll of Escape -->
+		</skills>
+	</item>
+	<item id="3959" name="L2Day-祝福的復活卷軸" type="EtcItem">
+		<!-- A magic scroll that resurrects a dead character fully recovering their XP. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="2062" level="1" /> <!-- Blessed Scroll of Resurrection -->
+		</skills>
+	</item>
+	<item id="3960" name="傭兵配置表(劍/固定)" type="EtcItem">
+		<!-- Gludio/ Sword/ Stationary. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3961" name="傭兵配置表(槍/固定)" type="EtcItem">
+		<!-- Gludio/ Spear/ Stationary. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3962" name="傭兵配置表(弓/固定)" type="EtcItem">
+		<!-- Gludio/ Bow/ Stationary. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3963" name="傭兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Gludio/ Cleric/ Stationary. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3964" name="傭兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Gludio/ Wizard/ Stationary. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3965" name="傭兵配置表(劍/移動)" type="EtcItem">
+		<!-- Gludio/ Sword/ Mobile. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3966" name="傭兵配置表(槍/移動)" type="EtcItem">
+		<!-- Gludio/ Spear/ Mobile. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3967" name="傭兵配置表(弓/移動)" type="EtcItem">
+		<!-- Gludio/ Bow/ Mobile. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3968" name="傭兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Gludio/ Cleric/ Mobile. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3969" name="傭兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Gludio/ Wizard/ Mobile. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3970" name="傭兵配置表(傳送師1)" type="EtcItem">
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3971" name="傭兵配置表(傳送師2)" type="EtcItem">
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3972" name="傭兵配置表(傳送師3)" type="EtcItem">
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3973" name="傭兵配置表(劍/固定)" type="EtcItem">
+		<!-- Dion/ Sword/ Stationary. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3974" name="傭兵配置表(槍/固定)" type="EtcItem">
+		<!-- Dion/ Spear/ Stationary. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3975" name="傭兵配置表(弓/固定)" type="EtcItem">
+		<!-- Dion/ Bow/ Stationary. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3976" name="傭兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Dion/ Healer/ Stationary. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3977" name="傭兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Dion/ Wizard/ Stationary. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3978" name="傭兵配置表(劍/移動)" type="EtcItem">
+		<!-- Dion/ Sword/ Mobile. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3979" name="傭兵配置表(槍/移動)" type="EtcItem">
+		<!-- Dion/ Spear/ Mobile. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3980" name="傭兵配置表(弓/移動)" type="EtcItem">
+		<!-- Dion/ Bow/ Mobile. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3981" name="傭兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Dion/ Healer/ Mobile. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3982" name="傭兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Dion/ Wizard/ Mobile. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3983" name="傭兵配置表(傳送師1)" type="EtcItem">
+		<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3984" name="傭兵配置表(傳送師2)" type="EtcItem">
+		<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3985" name="傭兵配置表(傳送師3)" type="EtcItem">
+		<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3986" name="傭兵配置表(劍/固定)" type="EtcItem">
+		<!-- Giran/ Sword/ Stationary. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3987" name="傭兵配置表(槍/固定)" type="EtcItem">
+		<!-- Giran/ Spear/ Stationary. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3988" name="傭兵配置表(弓/固定)" type="EtcItem">
+		<!-- Giran/ Bow/ Stationary. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3989" name="傭兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Giran/ Healer/ Stationary. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3990" name="傭兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Giran/ Wizard/ Stationary. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3991" name="傭兵配置表(劍/移動)" type="EtcItem">
+		<!-- Giran/ Sword/ Mobile. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3992" name="傭兵配置表(槍/移動)" type="EtcItem">
+		<!-- Giran/ Spear/ Mobile. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3993" name="傭兵配置表(弓/移動)" type="EtcItem">
+		<!-- Giran/ Bow/ Mobile. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3994" name="傭兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Giran/ Healer/ Mobile. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3995" name="傭兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Giran/ Wizard/ Mobile. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3996" name="傭兵配置表(傳送師1)" type="EtcItem">
+		<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3997" name="傭兵配置表(傳送師2)" type="EtcItem">
+		<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3998" name="傭兵配置表(傳送師3)" type="EtcItem">
+		<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="3999" name="傭兵配置表(劍/固定)" type="EtcItem">
+		<!-- Oren/ Sword/ Stationary. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+</list>

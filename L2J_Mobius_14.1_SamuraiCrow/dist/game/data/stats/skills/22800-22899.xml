@@ -1,0 +1,1487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="22800" toLevel="1" name="薄暮貴族下衣加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22801" toLevel="1" name="薄暮貴族手套加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22802" toLevel="1" name="薄暮貴族鞋加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22803" toLevel="1" name="夢幻的上衣加工石組">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23575</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50">
+						<item id="23546" count="1" /> <!-- Appearance Stone: Vesper Noble Light Armor (Upper) - 7-day / Event -->
+					</item>
+					<item chance="50">
+						<item id="23585" count="1" /> <!-- Appearance Stone: Vorpal Light Armor (Upper) - 7-day / Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22804" toLevel="1" name="夢幻的下衣加工石組">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23576</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50">
+						<item id="23547" count="1" /> <!-- Appearance Stone: Vesper Noble Light Armor (Lower) - 7-day / Event -->
+					</item>
+					<item chance="50">
+						<item id="23586" count="1" /> <!-- Appearance Stone: Vorpal Light Armor (Lower) - 7-day / Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22805" toLevel="1" name="夢幻的手套加工石組">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23577</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50">
+						<item id="23548" count="1" /> <!-- Appearance Stone: Vesper Noble Light Armor (Gloves) - 7-day / Event -->
+					</item>
+					<item chance="50">
+						<item id="23587" count="1" /> <!-- Appearance Stone: Vorpal Light Armor (Gloves) - 7-day / Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22806" toLevel="1" name="夢幻的鞋加工石組">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23578</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50">
+						<item id="23549" count="1" /> <!-- Appearance Stone: Vesper Noble Light Armor (Shoes) - 7-day / Event -->
+					</item>
+					<item chance="50">
+						<item id="23588" count="1" /> <!-- Appearance Stone: Vorpal Light Armor (Shoes) - 7-day / Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22807" toLevel="1" name="怪物武器加工石禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23534</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.6666">
+						<item id="23535" count="1" /> <!-- Appearance Stone: Hellblade - Event -->
+					</item>
+					<item chance="16.6666">
+						<item id="23536" count="1" /> <!-- Appearance Stone: Tiat's Tiatenon - Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23537" count="1" /> <!-- Appearance Stone: Butcher Blades - Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23538" count="1" /> <!-- Appearance Stone: Aenkinel's Astaroth - Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23539" count="1" /> <!-- Appearance Stone: Tirbing - Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23540" count="1" /> <!-- Appearance Stone: Mardil's Wind - Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22808" toLevel="1" name="貫雷劍加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22809" toLevel="1" name="蒂雅堤諾加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22810" toLevel="1" name="忍者上衣加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22811" toLevel="1" name="忍者下衣加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22812" toLevel="1" name="忍者手套加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22813" toLevel="1" name="忍者鞋加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22814" toLevel="1" name="忍者頭飾加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22815" toLevel="1" name="忍者上衣加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22816" toLevel="1" name="忍者下衣加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22817" toLevel="1" name="忍者手套加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22818" toLevel="1" name="忍者鞋加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22819" toLevel="1" name="忍者頭飾加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22820" toLevel="6" name="忍者套裝-主動">
+		<!-- Level 1: Can use Invisibility when whole set is equipped. -->
+		<!-- Level 2: Can use Invisibility when whole set is equipped. -->
+		<!-- Level 3: Can use Invisibility when whole set is equipped. -->
+		<!-- Level 4: Can use Invisibility when whole set is equipped. -->
+		<!-- Level 5: Can use Invisibility when whole set is equipped. -->
+		<!-- Level 6: For 3 min., you are invisible for monsters. Speed -10%. Final stage. -->
+		<icon>BranchSys3.icon1.g_co_ninja_u</icon>
+		<operateType>
+			<value level="1">A1</value>
+			<value level="2">A1</value>
+			<value level="3">A1</value>
+			<value level="4">A1</value>
+			<value level="5">A1</value>
+			<value level="6">A2</value>
+		</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>180</abnormalTime>
+		<abnormalType>STEALTH</abnormalType>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitCancelTime>0</hitCancelTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">0</value>
+			<value level="6">360000</value>
+		</reuseDelay>
+		<specialLevel>-1</specialLevel>
+		<conditions>
+			<condition name="OpSkill" fromLevel="1" toLevel="5">
+				<skillId>22820</skillId> <!-- Ninja Set - Active -->
+				<skillLevel>6</skillLevel>
+				<hasLearned>true</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SilentMove" fromLevel="6" toLevel="6">
+				<chance>100</chance>
+			</effect>
+			<effect name="Speed" fromLevel="6" toLevel="6">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22821" toLevel="6" name="忍者套裝-被動">
+		<!-- Level 1: Speed increases when whole set is equipped. -->
+		<!-- Level 2: Speed increases when whole set is equipped. -->
+		<!-- Level 3: Speed increases when whole set is equipped. -->
+		<!-- Level 4: Speed increases when whole set is equipped. -->
+		<!-- Level 5: Speed increases when whole set is equipped. -->
+		<!-- Level 6: Speed increased. Final stage. -->
+		<icon>BranchSys3.icon1.g_co_ninja_u</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<specialLevel>-1</specialLevel>
+	</skill>
+	<skill id="22822" toLevel="1" name="泳裝服飾變身">
+		<!-- CON +1, MEN +1, WIT +1. -->
+		<icon>BranchSys3.icon1.g_co_swimsuit_event_03</icon>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5400</abnormalTime>
+		<abnormalType>RUNWAY_ARMOR</abnormalType>
+		<abnormalVisualEffect>RUNWAY_ARMOR6</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>780</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitCancelTime>0.1</hitCancelTime>
+		<hitTime>500</hitTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-3</magicLevel>
+		<reuseDelay>5000</reuseDelay>
+		<specialLevel>-3</specialLevel>
+		<staticReuse>true</staticReuse>
+	</skill>
+	<skill id="22823" toLevel="1" name="僕從庖刀加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22824" toLevel="1" name="阿斯塔洛特加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22825" toLevel="1" name="提爾鋒加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22826" toLevel="1" name="瑪蒂之風加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22827" toLevel="1" name="博佩斯上衣加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22828" toLevel="1" name="博佩斯下衣加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22829" toLevel="1" name="博佩斯手套加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22830" toLevel="1" name="博佩斯鞋加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22831" toLevel="1" name="博佩斯上衣加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22832" toLevel="1" name="博佩斯下衣加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22833" toLevel="1" name="博佩斯手套加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22834" toLevel="1" name="博佩斯鞋加工">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22835" toLevel="1" name="怪物武器加工石禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23589</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.6666">
+						<item id="23590" count="1" /> <!-- Appearance Stone: Hellblade - 7-day / Event -->
+					</item>
+					<item chance="16.6666">
+						<item id="23591" count="1" /> <!-- Appearance Stone: Tiat's Tiatenon - 7-day / Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23592" count="1" /> <!-- Appearance Stone: Butcher Blades - 7-day / Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23593" count="1" /> <!-- Appearance Stone: Aenkinel's Astaroth - 7-day / Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23594" count="1" /> <!-- Appearance Stone: Tirbing - 7-day / Event -->
+					</item>
+					<item chance="16.6667">
+						<item id="23595" count="1" /> <!-- Appearance Stone: Mardil's Wind - 7-day / Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22836" toLevel="1" name="貫雷劍加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22837" toLevel="1" name="蒂雅堤諾加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22838" toLevel="1" name="僕從庖刀加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22839" toLevel="1" name="阿斯塔洛特加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22840" toLevel="1" name="提爾鋒加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22841" toLevel="1" name="瑪蒂之風加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22842" toLevel="1" name="85單人迷宮入場券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23606</itemConsumeId> <!-- Entrance Pass: Kartia's Labyrinth Lv. 85 Solo -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>205</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22843" toLevel="1" name="90單人迷宮入場券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23607</itemConsumeId> <!-- Entrance Pass: Kartia's Labyrinth Lv. 90 Solo -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>206</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22844" toLevel="1" name="95單人迷宮入場券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23608</itemConsumeId> <!-- Entrance Pass: Kartia's Labyrinth Lv. 95 Solo -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>207</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22845" toLevel="1" name="85隊伍迷宮入場券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23609</itemConsumeId> <!-- Entrance Pass: Kartia's Labyrinth Lv. 85 Party -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22846" toLevel="1" name="90隊伍迷宮入場券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23610</itemConsumeId> <!-- Entrance Pass: Kartia's Labyrinth Lv. 90 Party -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>209</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22847" toLevel="1" name="95隊伍迷宮入場券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23611</itemConsumeId> <!-- Entrance Pass: Kartia's Labyrinth Lv. 95 Party -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>210</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22848" toLevel="1" name="活力維持藥水">
+		<!-- Maintains the Vitality amount. -->
+		<icon>icon.skilltransform4</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>VP_UP</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>1800000</reuseDelay>
+		<specialLevel>-1</specialLevel>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22849" toLevel="1" name="龍之氣息充能藥水">
+		<icon>icon.etc_potion_of_energy_i01</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23620</itemConsumeId> <!-- Dragon Vitality Replenishing Potion -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>17500</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>17500</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22850" toLevel="1" name="活力停滯藥水">
+		<!-- Sustains Vitality, but you do not receive Vitality bonus. -->
+		<icon>BranchSys3.lcon.g_vitality_potion_stop</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VP_UP</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22851" toLevel="2" name="巧克力甜甜圈-活力維持">
+		<!-- Sustains Vitality for 30 min. -->
+		<icon>BranchSys3.icon1.g_chocolate_doughnut_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>100</effectPoint>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isDebuff>false</isDebuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>3600000</reuseDelay>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22852" toLevel="1" name="俄羅斯餡餅-活力充能">
+		<!-- For 30 min., Vitality is replenished with XP gain through hunting. -->
+		<icon>BranchSys3.icon1.g_dumpling_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>VP_UP</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>100</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>3600000</reuseDelay>
+		<specialLevel>-2</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem" />
+		</conditions>
+	</skill>
+	<skill id="22853" toLevel="1" name="托倫生薑麵包-1小時">
+		<!-- Acquired XP +50%. -->
+		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>VOTE</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="22854" toLevel="1" name="托倫生薑麵包-1.5小時">
+		<!-- Acquired XP +50%. -->
+		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5400</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>VOTE</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="22855" toLevel="1" name="托倫生薑麵包-2小時">
+		<!-- Acquired XP +50%. -->
+		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>7200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>VOTE</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="22856" toLevel="1" name="托倫生薑麵包-2.5小時">
+		<!-- Acquired XP +50%. -->
+		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9000</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>VOTE</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="22857" toLevel="1" name="托倫生薑麵包-3小時">
+		<!-- Acquired XP +50%. -->
+		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>VOTE</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="22858" toLevel="1" name="托倫生薑麵包-4小時">
+		<!-- Acquired XP +50%. -->
+		<icon>BranchSys3.icon1.g_torun_gingerbread_pl</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>14400</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>VOTE</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="22859" toLevel="2" name="燃燒的火堆的溫暖">
+		<!-- Level 1: You can feel the heat of the campfire more closely when seated. HP Recovery Rate +300%, CP Recovery Rate +300%, and MP Recovery Rate +300%. -->
+		<!-- Level 2: You can feel the warmth of the campfire. HP Recovery Rate +80%, CP Recovery Rate +60%, and MP Recovery Rate +40%. P. Skill MP Consumption -20%, and M. Skill MP Consumption -10%. -->
+		<icon>icon.etc_torch_on_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_NOT</targetType>
+		<abnormalLevel>99</abnormalLevel>
+		<abnormalTime>25</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectRange>-2</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+	</skill>
+	<skill id="22860" toLevel="1" name="召喚燃燒的火堆">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>1800000</reuseDelay>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+	</skill>
+	<skill id="22861" toLevel="1" name="騎士團的幸運禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23648</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.1">
+						<item id="36102" count="1" /> <!-- Agathion Box -->
+					</item>
+					<item chance="2">
+						<item id="36094" count="1" /> <!-- Vitality Replenishing Star Candy -->
+					</item>
+					<item chance="2">
+						<item id="36095" count="1" /> <!-- Vitality Recovering Star Candy -->
+					</item>
+					<item chance="2">
+						<item id="36096" count="1" /> <!-- Vitality Sustaining Star Candy -->
+					</item>
+					<item chance="12.9">
+						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
+					</item>
+					<item chance="12">
+						<item id="21210" count="1" /> <!-- MP Recovery Potion -->
+					</item>
+					<item chance="12">
+						<item id="23208" count="2" /> <!-- Red Potion of Regeneration -->
+					</item>
+					<item chance="15">
+						<item id="1538" count="3" /> <!-- Blessed Scroll of Escape -->
+					</item>
+					<item chance="7">
+						<item id="20870" count="1" /> <!-- Red Firecracker -->
+					</item>
+					<item chance="7">
+						<item id="20871" count="1" /> <!-- Golden Firecracker -->
+					</item>
+					<item chance="7">
+						<item id="20872" count="1" /> <!-- Blue Firecracker -->
+					</item>
+					<item chance="7">
+						<item id="20873" count="1" /> <!-- Pink Firecracker -->
+					</item>
+					<item chance="7">
+						<item id="20874" count="1" /> <!-- White Firecracker -->
+					</item>
+					<item chance="7">
+						<item id="20875" count="1" /> <!-- Silver Firecracker -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22862" toLevel="1" name="親衛隊的幸運禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23649</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.05">
+						<item id="36162" count="1" /> <!-- Scroll of Blessing - R99-grade -->
+					</item>
+					<item chance="0.1">
+						<item id="36161" count="1" /> <!-- Scroll of Blessing - R95-grade -->
+					</item>
+					<item chance="0.4">
+						<item id="36160" count="1" /> <!-- Scroll of Blessing - R-grade (2) -->
+					</item>
+					<item chance="0.4">
+						<item id="19446" count="1" /> <!-- R99-grade Unbind Scroll -->
+					</item>
+					<item chance="0.8">
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
+					</item>
+					<item chance="1.5">
+						<item id="36159" count="1" /> <!-- Scroll of Blessing - R-grade (1) -->
+					</item>
+					<item chance="2">
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
+					</item>
+					<item chance="12">
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon - Event -->
+					</item>
+					<item chance="13">
+						<item id="36164" count="3" /> <!-- Giant's Scroll: Enchant R-grade Armor - Event -->
+					</item>
+					<item chance="12.75">
+						<item id="36008" count="1" /> <!-- High-grade Stone: Enchant R-grade Weapon -->
+					</item>
+					<item chance="13">
+						<item id="36009" count="1" /> <!-- High-grade Stone: Enchant R-grade Armor -->
+					</item>
+					<item chance="11">
+						<item id="30298" count="3" /> <!-- Superior Giant's Codex Manuscript - Mastery -->
+					</item>
+					<item chance="11">
+						<item id="30299" count="3" /> <!-- Superior Giant's Codex Manuscript - Discipline -->
+					</item>
+					<item chance="11">
+						<item id="30297" count="7" /> <!-- Superior Giant's Codex Manuscript -->
+					</item>
+					<item chance="11">
+						<item id="19440" count="15" /> <!-- Jewel -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="22863" toLevel="1" name="祝福的武器加工石-R級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22864" toLevel="1" name="祝福的武器加工石-S級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22865" toLevel="1" name="祝福的武器加工石-A級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22866" toLevel="1" name="祝福的武器加工石-B級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22867" toLevel="1" name="祝福的武器加工石-C級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22868" toLevel="1" name="祝福的武器加工石-D級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22869" toLevel="1" name="祝福的武器加工石-R級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22870" toLevel="1" name="祝福的武器加工石-S級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22871" toLevel="1" name="祝福的武器加工石-A級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22872" toLevel="1" name="祝福的武器加工石-B級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22873" toLevel="1" name="祝福的武器加工石-C級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22874" toLevel="1" name="祝福的武器加工石-D級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22875" toLevel="1" name="祝福的武器加工石-R級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22876" toLevel="1" name="祝福的武器加工石-S級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22877" toLevel="1" name="祝福的武器加工石-A級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22878" toLevel="1" name="祝福的武器加工石-B級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22879" toLevel="1" name="祝福的武器加工石-C級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22880" toLevel="1" name="祝福的武器加工石-D級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22881" toLevel="1" name="祝福的防具加工卷軸-R級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22882" toLevel="1" name="祝福的防具加工卷軸-S級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22883" toLevel="1" name="祝福的防具加工卷軸-A級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22884" toLevel="1" name="祝福的防具加工卷軸-B級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22885" toLevel="1" name="祝福的防具加工卷軸-C級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22886" toLevel="1" name="祝福的防具加工卷軸-D級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22887" toLevel="1" name="祝福的防具加工卷軸-R級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22888" toLevel="1" name="祝福的防具加工卷軸-S級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22889" toLevel="1" name="祝福的防具加工卷軸-A級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22890" toLevel="1" name="祝福的防具加工卷軸-B級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22891" toLevel="1" name="祝福的防具加工卷軸-C級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22892" toLevel="1" name="祝福的防具加工卷軸-D級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22893" toLevel="1" name="祝福的防具加工卷軸-R級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22894" toLevel="1" name="祝福的防具加工卷軸-S級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22895" toLevel="1" name="祝福的防具加工卷軸-A級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22896" toLevel="1" name="祝福的防具加工卷軸-B級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22897" toLevel="1" name="祝福的防具加工卷軸-C級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22898" toLevel="1" name="祝福的防具加工卷軸-D級">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="22899" toLevel="1" name="傳說鐵匠的祝福-活動">
+		<!-- Blessed by the Legendary Blacksmith, all items have a 100% crafting (workshop) success rate. -->
+		<icon>BranchSys3.icon1.s_g_ev_recipe_success_rate</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="8000" name="黎明傭兵配置表(弓/固定)" type="EtcItem">
+		<!-- Rune/ Bow/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="350000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8001" name="黎明傭兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Rune/ Cleric/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="140000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8002" name="黎明傭兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Rune/ Wizard/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="170000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8003" name="黎明傭兵配置表(劍/移動)" type="EtcItem">
+		<!-- Rune/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="200000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8004" name="黎明傭兵配置表(槍/移動)" type="EtcItem">
+		<!-- Rune/ Spear/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="350000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8005" name="黎明傭兵配置表(弓/移動)" type="EtcItem">
+		<!-- Rune/ Bow/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="350000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8006" name="黎明傭兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Rune/ Cleric/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8007" name="黎明傭兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Rune/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="90000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8008" name="高級訓練兵配置表(劍/固定)" type="EtcItem">
+		<!-- Rune/ Sword/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="110000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8009" name="高級訓練兵配置表(槍/固定)" type="EtcItem">
+		<!-- Rune/ Spear/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="230000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8010" name="高級訓練兵配置表(弓/固定)" type="EtcItem">
+		<!-- Rune/ Bow/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="230000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8011" name="高級訓練兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Rune/ Cleric/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="70000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8012" name="高級訓練兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Rune/ Wizard/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="90000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8013" name="高級訓練兵配置表(劍/移動)" type="EtcItem">
+		<!-- Rune/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="110000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8014" name="高級訓練兵配置表(槍/移動)" type="EtcItem">
+		<!-- Rune/ Spear/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="230000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8015" name="高級訓練兵配置表(弓/移動)" type="EtcItem">
+		<!-- Rune/ Bow/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="230000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8016" name="高級訓練兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Rune/ Cleric/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="40000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8017" name="高級訓練兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Rune/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8018" name="訓練兵配置表(劍/固定)" type="EtcItem">
+		<!-- Rune/ Sword/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8019" name="訓練兵配置表(槍/固定)" type="EtcItem">
+		<!-- Rune/ Spear/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8020" name="訓練兵配置表(弓/固定)" type="EtcItem">
+		<!-- Rune/ Bow/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8021" name="訓練兵配置表(牧師/固定)" type="EtcItem">
+		<!-- Rune/ Cleric/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="40000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8022" name="訓練兵配置表(巫師/固定)" type="EtcItem">
+		<!-- Rune/ Wizard/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8023" name="訓練兵配置表(劍/移動)" type="EtcItem">
+		<!-- Rune/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="60000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8024" name="訓練兵配置表(槍/移動)" type="EtcItem">
+		<!-- Rune/ Spear/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8025" name="訓練兵配置表(弓/移動)" type="EtcItem">
+		<!-- Rune/ Bow/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8026" name="訓練兵配置表(牧師/移動)" type="EtcItem">
+		<!-- Rune/ Cleric/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="2500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8027" name="訓練兵配置表(巫師/移動)" type="EtcItem">
+		<!-- Rune/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="5000000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8028" name="那芙琳戰士配置表" type="EtcItem">
+		<!-- Rune/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="2500000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8029" name="那芙琳咒術士配置表" type="EtcItem">
+		<!-- Rune/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="5000000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="8030" name="溫泉神酒" type="EtcItem">
+		<!-- Used during the Rainbow Springs Clan Hall Battle, this item may be used on the Hot Springs Yeti. -->
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2240" level="1" /> <!-- Hot Spring Nectar -->
+		</skills>
+	</item>
+	<item id="8031" name="溫泉礦泉水" type="EtcItem">
+		<!-- Used during the Rainbow Springs Clan Hall Battle, this item may be used on the Hot Springs Yeti. -->
+		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2241" level="1" /> <!-- Hot Spring Mineral Water -->
+		</skills>
+	</item>
+	<item id="8032" name="溫泉湧泉水" type="EtcItem">
+		<!-- Used during the Rainbow Springs Clan Hall Battle, this item may be used on the Hot Springs Yeti. -->
+		<set name="icon" val="icon.etc_hot_spring_fountain_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2242" level="1" /> <!-- Hot Spring Water -->
+		</skills>
+	</item>
+	<item id="8033" name="溫泉硫磺" type="EtcItem">
+		<!-- Used during the Rainbow Springs Clan Hall Battle, this item may be used on the Hot Springs Yeti. -->
+		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2243" level="1" /> <!-- Hot Spring Brimstone -->
+		</skills>
+	</item>
+	<item id="8034" name="溫泉根據地爭奪參賽證" type="EtcItem">
+		<!-- A participation certificate for the Hot Springs Clan Hall Competition. Can be gained through Santiago's Star Energy Pack, which is a reward for fishing. -->
+		<set name="icon" val="icon.etc_hs_agit_war_joining_certificate_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="8035" name="溫泉地文字A" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_a_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8036" name="溫泉地文字B" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_b_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8037" name="溫泉地文字C" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_c_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8038" name="溫泉地文字D" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_d_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8039" name="溫泉地文字E" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_e_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8040" name="溫泉地文字F" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_f_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8041" name="溫泉地文字G" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_g_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8042" name="溫泉地文字H" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_h_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8043" name="溫泉地文字I" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_i_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8044" name="溫泉地文字J" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8045" name="溫泉地文字K" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_k_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8046" name="溫泉地文字L" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_l_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8047" name="溫泉地文字N" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_n_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8048" name="溫泉地文字O" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_o_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8049" name="溫泉地文字P" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_p_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8050" name="溫泉地文字R" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_r_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8051" name="溫泉地文字S" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_s_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8052" name="溫泉地文字T" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_t_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8053" name="溫泉地文字U" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_u_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8054" name="溫泉地文字W" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_w_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8055" name="溫泉地文字Y" type="EtcItem">
+		<!-- Used in combination with similar texts, this may provide rewards during the Hot Springs Clan Hall Battle. -->
+		<set name="icon" val="icon.etc_alphabet_y_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8056" name="輝煌之間的鑰匙" type="EtcItem">
+		<!-- The key to the Splendor Room in the Monastery of Silence. -->
+		<set name="icon" val="icon.etc_old_key_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2238" level="1" /> <!-- Room of Splendor Key -->
+		</skills>
+	</item>
+	<item id="8057" name="銀血" type="EtcItem">
+		<!-- The Ice Queen's pets' favorite food. -->
+		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="8058" name="被鎖住的研究日誌" type="EtcItem">
+		<!-- Dr. Chaos' research report. It's locked. -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8059" min="1" max="1" chance="100" /> <!-- Research Report -->
+		</capsuled_items>
+	</item>
+	<item id="8059" name="研究日誌" type="EtcItem">
+		<!-- Unlock the padlock to read Dr. Chaos' research report. -->
+		<set name="icon" val="icon.etc_magic_book_blue_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="handler" val="Book" />
+	</item>
+	<item id="8060" name="謎樣的鑰匙" type="EtcItem">
+		<!-- The small journal key that was included with the memo. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2260" level="1" /> <!-- Key of Enigma -->
+		</skills>
+	</item>
+	<item id="8061" name="潦草的筆記" type="EtcItem">
+		<!-- Dr. Chaos' research report. -->
+		<set name="icon" val="icon.etc_memopad_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8062" name="雄性蜥蜴人血" type="EtcItem">
+		<!-- Blood obtained by killing Maille Lizardmen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8063" name="阿朗尼得王的腳" type="EtcItem">
+		<!-- A leg from Arachnid King. -->
+		<set name="icon" val="icon.etc_sting_b_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8064" name="見習生標章" type="EtcItem">
+		<!-- Permits entry to the Pagan Temple. Don't lose it! -->
+		<set name="icon" val="icon.etc_red_rose_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8065" name="變色的見習生標章" type="EtcItem">
+		<!-- This faded badge permits entry to the Pagan Temple. -->
+		<set name="icon" val="icon.etc_white_rose_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8066" name="死靈法師的心臟" type="EtcItem">
+		<!-- Obtain this necromantic heart by slaying Bone Animators, Bone Slayers or Skull Animators. -->
+		<set name="icon" val="icon.etc_bodypart_heart_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8067" name="邪教標章" type="EtcItem">
+		<!-- Permits entry and access to the chapel of the Pagan Temple. -->
+		<set name="icon" val="icon.etc_totem_necklace_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8068" name="邪教徒圖騰" type="EtcItem">
+		<!-- The totem obtained by defeating the Pagans. -->
+		<set name="icon" val="icon.etc_totem_necklace_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8069" name="修道僧經典" type="EtcItem">
+		<!-- The scripture obtained by defeating the monks within the Monastery of Silence. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8070" name="寶瓶" type="EtcItem">
+		<!-- The bottle from Greymore. Pour the water into a the Holy Grail in the Splendor Room and take it with you. -->
+		<set name="icon" val="icon.etc_potion_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8071" name="裝著聖杯之水的寶瓶" type="EtcItem">
+		<!-- The bottle containing the water from the Holy Grail in the Splendor Room. Take it to Greymore. -->
+		<set name="icon" val="icon.etc_potion_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8072" name="羚羊皮革" type="EtcItem">
+		<!-- The exceptional hide needed to create the magical scroll. -->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8073" name="芙琳泰沙的結界破咒書" type="EtcItem">
+		<!-- The scroll that permits passage though Frintezza's Magic Force Field. Meet his guide near the Imperial Tomb entrance and he will let you enter the forbidden area. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8074" name="監視者之眼" type="EtcItem">
+		<!-- An eye from the Watcher that has been harassing the Floran farmers. Take it to Alex in Floran Village. -->
+		<set name="icon" val="icon.etc_eyeball_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8075" name="怪岩高崙的碎片" type="EtcItem">
+		<!-- This is a fragment from a Roughly Hewn Rock Golem. Take it to Almankel in Floran Village. -->
+		<set name="icon" val="icon.etc_debris_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8076" name="德魯蜥蜴人的鱗片" type="EtcItem">
+		<!-- This is a scale of the Delu Lizardman that has been harassing the farmers of Floran. Take it to Almankel in Floran Village. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8077" name="銀冰晶" type="EtcItem">
+		<!-- Crystal obtained from a monster. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8078" name="黑冰晶" type="EtcItem">
+		<!-- When stuck into a the target, the character becomes violent. -->
+		<set name="icon" val="icon.etc_gem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8079" name="美紗的信" type="EtcItem">
+		<!-- Secret letter from Misa to Rafforty. Don't break the seal! -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8080" name="雷普利的信" type="EtcItem">
+		<!-- Secret letter from Rafforty to Misa. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8081" name="便條紙的片段" type="EtcItem">
+		<!-- Unknown tablet fragment. -->
+		<set name="icon" val="icon.etc_broken_tablet_fragment_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8082" name="報告書的片段" type="EtcItem">
+		<!-- Fragment of the report from the stone statue. -->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8083" name="偵查兵的偵查記錄" type="EtcItem">
+		<!-- Scribbled note written by a scout searching the nest. -->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8084" name="純粹的結晶" type="EtcItem">
+		<!-- This white crystal was expelled by a wild beast whose heart was pure. -->
+		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8085" name="司塔卡拓的牙齒" type="EtcItem">
+		<!-- Fangs gained from killing Stakatos. -->
+		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8086" name="藏有聖火的寶箱" type="EtcItem">
+		<!-- Box Containing Flame of Holy Spirit -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8087" name="受詛咒的人偶" type="EtcItem">
+		<!-- Enchanted doll that has been said to control the evil creatures of the Ragna Orcs. -->
+		<set name="icon" val="icon.etc_totem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8088" name="半獸人的陪葬品" type="EtcItem">
+		<!-- Remains stolen by grave robbers. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8089" name="受詛咒的陪葬品" type="EtcItem">
+		<!-- An ornament created by evil spirits. -->
+		<set name="icon" val="icon.etc_totem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8090" name="電波探測器" type="EtcItem">
+		<!-- This rod lights up in the presence of strong electric waves. It is presently unlit. -->
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8091" name="電波探測器" type="EtcItem">
+		<!-- This rod lights up in the presence of strong electric waves. It is presently lit. -->
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8092" name="望遠鏡高崙殘骸" type="EtcItem">
+		<!-- Metal obtained from hunting the Scout Golem. It may be concealing something. -->
+		<set name="icon" val="icon.etc_debris_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8093" name="高崙發信裝置" type="EtcItem">
+		<!-- Dispatcher obtained from hunting the Telescope Golem. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8094" name="儲藏媒介" type="EtcItem">
+		<!-- The storage medium taken from the Golem. It is empty. -->
+		<set name="icon" val="icon.etc_calculator_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8095" name="儲藏媒介" type="EtcItem">
+		<!-- The storage medium taken from the Golem. It contains information. -->
+		<set name="icon" val="icon.etc_calculator_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8096" name="雙刀高崙運作記錄器" type="EtcItem">
+		<!-- The analysis device obtained from the Ginzu Golem. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8097" name="X-688" type="EtcItem">
+		<!-- Curious scroll found on Dr. Chaos' bookshelf. -->
+		<set name="icon" val="icon.etc_map_ivory_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8098" name="鐵道員的補給物資" type="EtcItem">
+		<!-- Railroad Worker's Supply Materials -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8099" name="山賊團的證物" type="EtcItem">
+		<!-- Animal's tooth worn by the thieves of the Plunderous Plains. -->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>
