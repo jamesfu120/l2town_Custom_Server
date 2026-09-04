@@ -34,7 +34,7 @@ file.Close
 Set file = Nothing
 
 'Generate command.
-command = """C:\Program Files\BellSoft\LibericaJDK-25\bin\java.exe"" " & parameters & " -jar ../libs/GameServer.jar"
+command = """C:\Program Files\BellSoft\LibericaJDK-25\bin\java.exe"" " & parameters & " -jar ../libs/LoginServer.jar"
 If window = 1 Then
 	command = "cmd /c start ""L2J Mobius - Login Server Console"" " & command
 End If
