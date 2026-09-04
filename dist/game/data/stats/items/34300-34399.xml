@@ -1,0 +1,3409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="34300" name="活動用-華麗細劍 (水)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Colichemarde (Water), upgrade options are limited. <Special properties>. P. Critical Rate +64. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_colichemarde_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">176</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3010" level="6" /> <!-- Special Property: Focus -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34301" name="活動用-華麗細劍 (風)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Colichemarde (Wind), upgrade options are limited. <Special properties>. P. Critical Rate +64. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_colichemarde_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">176</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3010" level="6" /> <!-- Special Property: Focus -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34302" name="活動用-華麗細劍 (火)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Colichemarde (Fire), upgrade options are limited. <Special properties>. P. Critical Rate +64. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_colichemarde_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">176</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3010" level="6" /> <!-- Special Property: Focus -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34303" name="活動用-華麗細劍 (神聖)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Colichemarde (Holy), upgrade options are limited. <Special properties>. P. Critical Rate +64. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_colichemarde_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">176</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3010" level="6" /> <!-- Special Property: Focus -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34304" name="活動用-華麗細劍 (黑暗)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Colichemarde (Dark), upgrade options are limited. <Special properties>. P. Critical Rate +64. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_colichemarde_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">176</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3010" level="6" /> <!-- Special Property: Focus -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34305" name="活動用-巫師之淚 (大地)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Wizard's Tear (Earth), upgrade options are limited. <Special properties>. Casting Spd. +15%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34306" name="活動用-巫師之淚 (水)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Wizard's Tear (Water), upgrade options are limited. <Special properties>. Casting Spd. +15%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34307" name="活動用-巫師之淚 (風)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Wizard's Tear (Wind), upgrade options are limited. <Special properties>. Casting Spd. +15%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34308" name="活動用-巫師之淚 (火)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Wizard's Tear (Fire), upgrade options are limited. <Special properties>. Casting Spd. +15%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34309" name="活動用-巫師之淚 (神聖)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Wizard's Tear (Holy), upgrade options are limited. <Special properties>. Casting Spd. +15%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34310" name="活動用-巫師之淚 (黑暗)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Wizard's Tear (Dark), upgrade options are limited. <Special properties>. Casting Spd. +15%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="135" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34311" name="活動用-冒險弓 (大地)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Bow of Peril (Earth), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1310" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+	</item>
+	<item id="34312" name="活動用-冒險弓 (水)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Bow of Peril (Water), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1310" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+	</item>
+	<item id="34313" name="活動用-冒險弓 (風)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Bow of Peril (Wind), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1310" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+	</item>
+	<item id="34314" name="活動用-冒險弓 (火)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Bow of Peril (Fire), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1310" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+	</item>
+	<item id="34315" name="活動用-冒險弓 (神聖)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Bow of Peril (Holy), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1310" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+	</item>
+	<item id="34316" name="活動用-冒險弓 (黑暗)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Bow of Peril (Dark), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1310" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+	</item>
+	<item id="34317" name="活動用-冥犬之牙 (大地)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Hell Hound (Earth), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hell_hound_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="348" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+	</item>
+	<item id="34318" name="活動用-冥犬之牙 (水)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Hell Hound (Water), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hell_hound_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="348" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+	</item>
+	<item id="34319" name="活動用-冥犬之牙 (風)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Hell Hound (Wind), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hell_hound_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="348" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+	</item>
+	<item id="34320" name="活動用-冥犬之牙 (火)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Hell Hound (Fire), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hell_hound_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="348" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+	</item>
+	<item id="34321" name="活動用-冥犬之牙 (神聖)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Hell Hound (Holy), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hell_hound_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="348" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+	</item>
+	<item id="34322" name="活動用-冥犬之牙 (黑暗)-快速恢復" additionalName="PA exclusive" type="Weapon">
+		<!-- Hell Hound (Dark), upgrade options are limited. <Special properties>. Skill cooldown -13%. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_hell_hound_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="B" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="348" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="170" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+	</item>
+	<item id="34323" name="活動用-那卡風暴 (大地)-Crt.傷害" additionalName="PA exclusive" type="Weapon">
+		<!-- Naga's Storm (Earth), upgrade options are limited. <Special properties>. P. Atk. +200 on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="93" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Property: Critical Damage -->
+		</skills>
+	</item>
+	<item id="34324" name="活動用-那卡風暴 (水)-Crt.傷害" additionalName="PA exclusive" type="Weapon">
+		<!-- Naga's Storm (Water), upgrade options are limited. <Special properties>. P. Atk. +200 on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="93" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Property: Critical Damage -->
+		</skills>
+	</item>
+	<item id="34325" name="活動用-那卡風暴 (風)-Crt.傷害" additionalName="PA exclusive" type="Weapon">
+		<!-- Naga's Storm (Wind), upgrade options are limited. <Special properties>. P. Atk. +200 on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="93" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Property: Critical Damage -->
+		</skills>
+	</item>
+	<item id="34326" name="活動用-那卡風暴 (火)-Crt.傷害" additionalName="PA exclusive" type="Weapon">
+		<!-- Naga's Storm (Fire), upgrade options are limited. <Special properties>. P. Atk. +200 on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="93" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Property: Critical Damage -->
+		</skills>
+	</item>
+	<item id="34327" name="活動用-那卡風暴 (神聖)-Crt.傷害" additionalName="PA exclusive" type="Weapon">
+		<!-- Naga's Storm (Holy), upgrade options are limited. <Special properties>. P. Atk. +200 on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="93" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Property: Critical Damage -->
+		</skills>
+	</item>
+	<item id="34328" name="活動用-那卡風暴 (黑暗)-Crt.傷害" additionalName="PA exclusive" type="Weapon">
+		<!-- Naga's Storm (Dark), upgrade options are limited. <Special properties>. P. Atk. +200 on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_naga_storm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="93" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Property: Critical Damage -->
+		</skills>
+	</item>
+	<item id="34329" name="活動用-惡魔結晶 (大地)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Daimon's Crystal (Earth), upgrade options are limited. <Special properties>. Casting Spd. +15%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="88" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34330" name="活動用-惡魔結晶 (水)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Daimon's Crystal (Water), upgrade options are limited. <Special properties>. Casting Spd. +15%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="88" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34331" name="活動用-惡魔結晶 (風)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Daimon's Crystal (Wind), upgrade options are limited. <Special properties>. Casting Spd. +15%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="88" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34332" name="活動用-惡魔結晶 (火)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Daimon's Crystal (Fire), upgrade options are limited. <Special properties>. Casting Spd. +15%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="88" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34333" name="活動用-惡魔結晶 (神聖)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Daimon's Crystal (Holy), upgrade options are limited. <Special properties>. Casting Spd. +15%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="88" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34334" name="活動用-惡魔結晶 (黑暗)-靈活思緒" additionalName="PA exclusive" type="Weapon">
+		<!-- Daimon's Crystal (Dark), upgrade options are limited. <Special properties>. Casting Spd. +15%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="88" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">177</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="3" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="34335" name="活動用-貝拉凱爾聖斧 (大地)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Barakiel's Axe (Earth), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="155" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34336" name="活動用-貝拉凱爾聖斧 (水)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Barakiel's Axe (Water), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="155" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34337" name="活動用-貝拉凱爾聖斧 (風)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Barakiel's Axe (Wind), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="155" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34338" name="活動用-貝拉凱爾聖斧 (火)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Barakiel's Axe (Fire), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="155" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34339" name="活動用-貝拉凱爾聖斧 (神聖)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Barakiel's Axe (Holy), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="155" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34340" name="活動用-貝拉凱爾聖斧 (黑暗)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Barakiel's Axe (Dark), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="155" />
+		<set name="material" val="ORIHARUKON" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34341" name="活動用-復仇爆弩 (大地)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Screaming Vengeance (Earth), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_soul_shooter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">318</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34342" name="活動用-復仇爆弩 (水)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Screaming Vengeance (Water), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_soul_shooter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">318</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34343" name="活動用-復仇爆弩 (風)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Screaming Vengeance (Wind), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_soul_shooter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">318</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34344" name="活動用-復仇爆弩 (火)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Screaming Vengeance (Fire), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_soul_shooter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">318</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34345" name="活動用-復仇爆弩 (神聖)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Screaming Vengeance (Holy), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_soul_shooter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">318</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34346" name="活動用-復仇爆弩 (黑暗)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Screaming Vengeance (Dark), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_soul_shooter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">318</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34347" name="活動用-光明守護之劍 (大地)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Durendal (Earth), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_death_bringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">350</stat>
+			<stat type="accCombat">2</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34348" name="活動用-光明守護之劍 (水)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Durendal (Water), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_death_bringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">350</stat>
+			<stat type="accCombat">2</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34349" name="活動用-光明守護之劍 (風)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Durendal (Wind), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_death_bringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">350</stat>
+			<stat type="accCombat">2</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34350" name="活動用-光明守護之劍 (火)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Durendal (Fire), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_death_bringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">350</stat>
+			<stat type="accCombat">2</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34351" name="活動用-光明守護之劍 (神聖)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Durendal (Holy), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_death_bringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">350</stat>
+			<stat type="accCombat">2</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34352" name="活動用-光明守護之劍 (黑暗)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Durendal (Dark), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_death_bringer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">350</stat>
+			<stat type="accCombat">2</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34353" name="活動用-貝希莫斯巨叉 (大地)-強健" additionalName="PA exclusive" type="Weapon">
+		<!-- Behemoth's Tuning Fork (Earth), upgrade options are limited. <Special properties>. Max HP +25%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Property: Health -->
+		</skills>
+	</item>
+	<item id="34354" name="活動用-貝希莫斯巨叉 (水)-強健" additionalName="PA exclusive" type="Weapon">
+		<!-- Behemoth's Tuning Fork (Water), upgrade options are limited. <Special properties>. Max HP +25%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Property: Health -->
+		</skills>
+	</item>
+	<item id="34355" name="活動用-貝希莫斯巨叉 (風)-強健" additionalName="PA exclusive" type="Weapon">
+		<!-- Behemoth's Tuning Fork (Wind), upgrade options are limited. <Special properties>. Max HP +25%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Property: Health -->
+		</skills>
+	</item>
+	<item id="34356" name="活動用-貝希莫斯巨叉 (火)-強健" additionalName="PA exclusive" type="Weapon">
+		<!-- Behemoth's Tuning Fork (Fire), upgrade options are limited. <Special properties>. Max HP +25%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Property: Health -->
+		</skills>
+	</item>
+	<item id="34357" name="活動用-貝希莫斯巨叉 (神聖)-強健" additionalName="PA exclusive" type="Weapon">
+		<!-- Behemoth's Tuning Fork (Holy), upgrade options are limited. <Special properties>. Max HP +25%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Property: Health -->
+		</skills>
+	</item>
+	<item id="34358" name="活動用-貝希莫斯巨叉 (黑暗)-強健" additionalName="PA exclusive" type="Weapon">
+		<!-- Behemoth's Tuning Fork (Dark), upgrade options are limited. <Special properties>. Max HP +25%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="5" /> <!-- Special Property: Health -->
+		</skills>
+	</item>
+	<item id="34359" name="活動用-夏伊德獵弓 (大地)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Shyeed's Bow (Earth), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="mp_consume" val="5" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34360" name="活動用-夏伊德獵弓 (水)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Shyeed's Bow (Water), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="mp_consume" val="5" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34361" name="活動用-夏伊德獵弓 (風)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Shyeed's Bow (Wind), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="mp_consume" val="5" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34362" name="活動用-夏伊德獵弓 (火)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Shyeed's Bow (Fire), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="mp_consume" val="5" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34363" name="活動用-夏伊德獵弓 (神聖)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Shyeed's Bow (Holy), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="mp_consume" val="5" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34364" name="活動用-夏伊德獵弓 (黑暗)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Shyeed's Bow (Dark), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="820" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="164" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="mp_consume" val="5" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">133</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34365" name="活動用-伊波斯巨劍 (大地)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Ipos' Sword (Earth), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34366" name="活動用-伊波斯巨劍 (水)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Ipos' Sword (Water), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34367" name="活動用-伊波斯巨劍 (風)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Ipos' Sword (Wind), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34368" name="活動用-伊波斯巨劍 (火)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Ipos' Sword (Fire), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34369" name="活動用-伊波斯巨劍 (神聖)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Ipos' Sword (Holy), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34370" name="活動用-伊波斯巨劍 (黑暗)-偵測" additionalName="PA exclusive" type="Weapon">
+		<!-- Ipos' Sword (Dark), upgrade options are limited. <Special properties>. P. Critical Rate +61. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3050" level="2" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="34371" name="活動用-索貝克颶風 (大地)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sobekk's Hurricane (Earth), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="133" />
+		<set name="material" val="ADAMANTAITE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34372" name="活動用-索貝克颶風 (水)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sobekk's Hurricane (Water), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="133" />
+		<set name="material" val="ADAMANTAITE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34373" name="活動用-索貝克颶風 (風)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sobekk's Hurricane (Wind), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="133" />
+		<set name="material" val="ADAMANTAITE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34374" name="活動用-索貝克颶風 (火)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sobekk's Hurricane (Fire), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="133" />
+		<set name="material" val="ADAMANTAITE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34375" name="活動用-索貝克颶風 (神聖)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sobekk's Hurricane (Holy), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="133" />
+		<set name="material" val="ADAMANTAITE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34376" name="活動用-索貝克颶風 (黑暗)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sobekk's Hurricane (Dark), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="133" />
+		<set name="material" val="ADAMANTAITE" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34377" name="活動用-希露冰刃 (大地)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sirra's Blade (Earth), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34378" name="活動用-希露冰刃 (水)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sirra's Blade (Water), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34379" name="活動用-希露冰刃 (風)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sirra's Blade (Wind), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34380" name="活動用-希露冰刃 (火)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sirra's Blade (Fire), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34381" name="活動用-希露冰刃 (神聖)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sirra's Blade (Holy), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34382" name="活動用-希露冰刃 (黑暗)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Sirra's Blade (Dark), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage.Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34383" name="活動用-閃光之珠 (大地)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Éclair Bijou (Earth), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_greed_stinger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">228</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34384" name="活動用-閃光之珠 (水)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Éclair Bijou (Water), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_greed_stinger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">228</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34385" name="活動用-閃光之珠 (風)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Éclair Bijou (Wind), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_greed_stinger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">228</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34386" name="活動用-閃光之珠 (火)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Éclair Bijou (Fire), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_greed_stinger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">228</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34387" name="活動用-閃光之珠 (神聖)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Éclair Bijou (Holy), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_greed_stinger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">228</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34388" name="活動用-閃光之珠 (黑暗)-速度激發" additionalName="PA exclusive" type="Weapon">
+		<!-- Éclair Bijou (Dark), upgrade options are limited. <Special properties>. Atk. Spd. +6%. Deals additional PvP damage. Starting from +4, with a certain chance, increases P. Atk., M. Atk. and Received Healing, and decreases Skill MP Consumption for you and your party members on a critical attack. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_greed_stinger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">228</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="critRate">10</stat>
+			<stat type="randomDamage">40</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3068" level="3" /> <!-- Special Property: Haste -->
+			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
+		</skills>
+	</item>
+	<item id="34389" name="活動用-岱依封長戟 (大地)-Crt.衝擊" additionalName="PA exclusive" type="Weapon">
+		<!-- Tiphon's Spear (Earth), upgrade options are limited. <Special properties>. With a 25% chance, stuns the target on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="CHRYSOLITE" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Stun -->
+			<skill id="3552" level="2" /> <!-- Special Property: PvP Damage -->
+		</skills>
+	</item>
+	<item id="34390" name="活動用-岱依封長戟 (水)-Crt.衝擊" additionalName="PA exclusive" type="Weapon">
+		<!-- Tiphon's Spear (Water), upgrade options are limited. <Special properties>. With a 25% chance, stuns the target on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="CHRYSOLITE" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Stun -->
+			<skill id="3552" level="2" /> <!-- Special Property: PvP Damage -->
+		</skills>
+	</item>
+	<item id="34391" name="活動用-岱依封長戟 (風)-Crt.衝擊" additionalName="PA exclusive" type="Weapon">
+		<!-- Tiphon's Spear (Wind), upgrade options are limited. <Special properties>. With a 25% chance, stuns the target on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="CHRYSOLITE" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Stun -->
+			<skill id="3552" level="2" /> <!-- Special Property: PvP Damage -->
+		</skills>
+	</item>
+	<item id="34392" name="活動用-岱依封長戟 (火)-Crt.衝擊" additionalName="PA exclusive" type="Weapon">
+		<!-- Tiphon's Spear (Fire), upgrade options are limited. <Special properties>. With a 25% chance, stuns the target on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="CHRYSOLITE" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Stun -->
+			<skill id="3552" level="2" /> <!-- Special Property: PvP Damage -->
+		</skills>
+	</item>
+	<item id="34393" name="活動用-岱依封長戟 (神聖)-Crt.衝擊" additionalName="PA exclusive" type="Weapon">
+		<!-- Tiphon's Spear (Holy), upgrade options are limited. <Special properties>. With a 25% chance, stuns the target on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="CHRYSOLITE" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Stun -->
+			<skill id="3552" level="2" /> <!-- Special Property: PvP Damage -->
+		</skills>
+	</item>
+	<item id="34394" name="活動用-岱依封長戟 (黑暗)-Crt.衝擊" additionalName="PA exclusive" type="Weapon">
+		<!-- Tiphon's Spear (Dark), upgrade options are limited. <Special properties>. With a 25% chance, stuns the target on a critical attack. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="182" />
+		<set name="material" val="CHRYSOLITE" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="darkPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3070" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Property: Critical Stun -->
+			<skill id="3552" level="2" /> <!-- Special Property: PvP Damage -->
+		</skills>
+	</item>
+	<item id="34395" name="活動用-塔魯刀*大馬士革刀 (大地)" additionalName="PA exclusive" type="Weapon">
+		<!-- Tallum Blade*Damascus Sword (Earth), upgrade options are limited. When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34396" name="活動用-塔魯刀*大馬士革刀 (水)" additionalName="PA exclusive" type="Weapon">
+		<!-- Tallum Blade*Damascus Sword (Water), upgrade options are limited. When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34397" name="活動用-塔魯刀*大馬士革刀 (風)" additionalName="PA exclusive" type="Weapon">
+		<!-- Tallum Blade*Damascus Sword (Wind), upgrade options are limited. When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34398" name="活動用-塔魯刀*大馬士革刀 (火)" additionalName="PA exclusive" type="Weapon">
+		<!-- Tallum Blade*Damascus Sword (Fire), upgrade options are limited. When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+	<item id="34399" name="活動用-塔魯刀*大馬士革刀 (神聖)" additionalName="PA exclusive" type="Weapon">
+		<!-- Tallum Blade*Damascus Sword (Holy), upgrade options are limited. When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%. Deals additional PvP damage. Time-limited item. Cannot be crystallized. Can only be enchanted. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="A" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="180" />
+		<set name="time" val="21600" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="189" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">150</stat>
+		</stats>
+		<skills>
+			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Haste -->
+		</skills>
+	</item>
+</list>

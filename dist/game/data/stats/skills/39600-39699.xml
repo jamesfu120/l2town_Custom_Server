@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39600" toLevel="1" name="紅色天秤外型藥劑-愛麗絲">
+		<!-- Changes the armor appearance to that of Alice's Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39601" toLevel="1" name="紅色天秤外型藥劑-蒸汽龐克">
+		<!-- Changes the armor appearance to that of Steampunk outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39602" toLevel="1" name="紅色天秤外型藥劑-秀麗韓服">
+		<!-- Changes the armor appearance to that of Lovely Hanbok. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>86400</abnormalTime>
+		<abnormalType>APPEARANCE_POTION</abnormalType>
+		<abnormalVisualEffect>AVE_RED_LIBRA_29</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>780</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>1500</hitTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>5000</reuseDelay>
+		<reuseDelayType>S</reuseDelayType>
+		<specialLevel>-1</specialLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">APPEARANCE_POTION,1</value>
+				</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39603" toLevel="1" name="紅色天秤外型藥劑-小丑">
+		<!-- Changes the armor appearance to that of Jester Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39604" toLevel="1" name="粉粉的風格藥劑-紳士">
+		<!-- Changes the armor appearance to that of Elite Knight Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39605" toLevel="1" name="紅色天秤外型藥劑-紅色龍騎士">
+		<!-- Changes the armor appearance to that of Red Dragon Knight Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39606" toLevel="1" name="紅色天秤外型藥劑-暗殺者">
+		<!-- Changes the armor appearance to that of Assassin Suit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39607" toLevel="1" name="紅色天秤外型藥劑-寧芙黃色">
+		<!-- Changes the armor appearance to that of Yellow Nymph Costume. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39608" toLevel="1" name="芙蕾雅的暴風卷軸">
+		<!-- For 10 min. while hunting, Vitality Consumption +150%, acquired XP/ SP +150%. The effect remains after death. Cooldown: 9 min. Available if 1 or more Vitality bar is full. Cannot be used in the Olympiad. Does not stack with Freya's Scroll of Blessing and Maphr's Scroll of Storm. To remove the effect, press Alt + Left Mouse Button. -->
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>FREYA_SCROLL_VIT</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81054</itemConsumeId>
+		<reuseDelay>540000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>150</amount>
+			</effect>
+			<effect name="ExpModify">
+				<amount>150</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>150</amount>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>EXP_SPECIAL,-1;DANDY_CHALLENGE,-1;SANTIAGO_SCROLL,-1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39609" toLevel="1" name="秋蓉的風格解除藥水">
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>0</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>5000</reuseDelay>
+		<reuseDelayType>S</reuseDelayType>
+		<specialLevel>-1</specialLevel>
+		<conditions>
+			<condition name="OpAffectedBySkill">
+				<skillId>39602</skillId> <!-- Red Libra's Appearance Potion - Lovely Hanbok -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">APPEARANCE_POTION,1</value>
+				</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39610" toLevel="1" name="芙蕾雅的暴風卷軸">
+		<!-- For 10 min. while hunting, Vitality Consumption +150%, acquired XP/ SP +150%. The effect remains after death. Cooldown: 9 min. Available if 1 or more Vitality bar is full. Cannot be used in the Olympiad. Does not stack with Freya's Scroll of Blessing and Maphr's Scroll of Storm. To remove the effect, press Alt + Left Mouse Button. -->
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>FREYA_SCROLL_VIT</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81140</itemConsumeId>
+		<reuseDelay>540000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>150</amount>
+			</effect>
+			<effect name="ExpModify">
+				<amount>150</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>150</amount>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>EXP_SPECIAL,-1;DANDY_CHALLENGE,-1;SANTIAGO_SCROLL,-1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39611" toLevel="1" name="暗殺者衣裳外型加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39612" toLevel="1" name="聖地牙哥海風卷軸">
+		<!-- For 10 min. while hunting, Vitality Consumption +30%, acquired XP/ SP +30%. Cooldown: 9 min. The effect does not stack with Freya's Frozen Scroll and Freya's Scroll of Storm. The effect can be removed with Alt + Left Mouse Button. -->
+		<icon>icon.freya_scroll</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>FREYA_SCROLL_VIT</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81145</itemConsumeId>
+		<reuseDelay>540000</reuseDelay>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>30</amount>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>FREYA_SCROLL_VIT,-1;EXP_SPECIAL,-1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39613" toLevel="1" name="+6天使戒指禮盒">
+		<!-- Double-click to obtain +6 Angel's Ring. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39614" toLevel="1" name="+8天使戒指禮盒">
+		<!-- Double-click to obtain +8 Angel's Ring. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39615" toLevel="1" name="活力維持古文">
+		<!-- When in inventory, sustains Vitality. -->
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39616" toLevel="1" name="熟練者面具強化卷軸">
+		<icon>icon.episode_scrl_of_ench_hair</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39617" toLevel="1" name="雅特拿斯耳環強化卷軸">
+		<icon>icon.episode_scrl_of_ench_hair</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39618" toLevel="1" name="廢棄的礦坑時間充能石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81358</itemConsumeId> <!-- Abandoned Coal Mines' Time Stone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+			</condition>
+			<condition name="CanUseHuntingTimeIncreaseItem">
+				<zoneId>11</zoneId>
+				<time>3600000</time>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>11</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39619" toLevel="1" name="祝福的胸針強化卷軸">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39620" toLevel="3" name="加工效果-魅力3階段">
+		<!-- Level 1: CHA +1. -->
+		<!-- Level 2: CHA +2. -->
+		<!-- Level 3: CHA +3. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39621" toLevel="1" name="蜂蜜年糕">
+		<!-- Recovers 10,000 Vitality. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>1</effectPoint>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81367</itemConsumeId> <!-- Songpyeon (Event) -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>5000</reuseDelay>
+		<specialLevel>-1</specialLevel>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>10000</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39622" toLevel="1" name="秀麗韓服外型加工石">
+		<!-- An appearance stone that changes armor appearance to that of Lovely Hanbok. Can be used on upper and full-body armor. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39623" toLevel="3" name="加工效果-戰鬥3階段">
+		<!-- Level 1: Damage +1%. -->
+		<!-- Level 2: Damage +2%. -->
+		<!-- Level 3: Damage +5%. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39624" toLevel="3" name="加工效果-守衛3階段">
+		<!-- Level 1: Received damage -1%. -->
+		<!-- Level 2: Received damage -2%. -->
+		<!-- Level 3: Received damage -5%. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-5</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-5</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39625" toLevel="3" name="加工效果-潛能3階段">
+		<!-- Level 1: STR/ INT/ DEX /CON/ WIT/ MEN +1. -->
+		<!-- Level 2: STR/ INT/ DEX /CON/ WIT/ MEN +2. -->
+		<!-- Level 3: STR/ INT/ DEX /CON/ WIT/ MEN +3. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39626" toLevel="3" name="加工效果-突襲3階段">
+		<!-- Level 1: P./ M. Atk. +1%. -->
+		<!-- Level 2: P./ M. Atk. +2%. -->
+		<!-- Level 3: P./ M. Atk. +5%. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39627" toLevel="3" name="加工效果-救援3階段">
+		<!-- Level 1: P./ M. Def. +1%. -->
+		<!-- Level 2: P./ M. Def. +2%. -->
+		<!-- Level 3: P./ M. Def. +5%. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39628" toLevel="3" name="加工效果-屬性3階段">
+		<!-- Level 1: Attribute Attack/ Resistance +10. -->
+		<!-- Level 2: Attribute Attack/ Resistance +20. -->
+		<!-- Level 3: Attribute Attack/ Resistance +50. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39629" toLevel="1" name="+8祝福的祝福的艾迪奧斯重裝套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39630" toLevel="1" name="+8祝福的祝福的艾迪奧斯輕裝套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39631" toLevel="1" name="+8祝福的祝福的艾迪奧斯長袍套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39632" toLevel="1" name="+10祝福的祝福的艾迪奧斯重裝套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39633" toLevel="1" name="+10祝福的祝福的艾迪奧斯輕裝套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39634" toLevel="1" name="+10祝福的祝福的艾迪奧斯長袍套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39635" toLevel="1" name="+14祝福的赫利奧斯鉋刀禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39636" toLevel="1" name="+14祝福的赫利奧斯切刃禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39637" toLevel="1" name="+14祝福的赫利奧斯殺刃禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39638" toLevel="1" name="+14祝福的赫利奧斯復仇者禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39639" toLevel="1" name="+14祝福的赫利奧斯戰爪禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39640" toLevel="1" name="+14祝福的赫利奧斯風暴者禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39641" toLevel="1" name="+14祝福的赫利奧斯投弓禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39642" toLevel="1" name="+14祝福的赫利奧斯射靈禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39643" toLevel="1" name="+14祝福的赫利奧斯爆刃禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39644" toLevel="1" name="+14祝福的赫利奧斯術杖禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39645" toLevel="1" name="+14祝福的赫利奧斯報恨者禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39646" toLevel="1" name="+14祝福的赫利奧斯雙刀禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39647" toLevel="1" name="+14祝福的赫利奧斯雙匕首禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39648" toLevel="1" name="+14祝福的赫利奧斯雙鈍器禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39649" toLevel="1" name="秋蓉的風格藥劑-緋紅刺客">
+		<!-- Changes the armor appearance to that of Red Assassin Suit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39650" toLevel="1" name="秋蓉的風格藥劑-湛藍刺客">
+		<!-- Changes the armor appearance to that of Blue Assassin Suit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39651" toLevel="1" name="秋蓉的風格藥劑-粉紅刺客">
+		<!-- Changes armor appearance to that of Pink Assassin Suit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39652" toLevel="1" name="秋蓉的風格藥劑-暗黑祭司">
+		<!-- Changes the armor appearance to that of Demon Priest Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39653" toLevel="1" name="神聖的龍壺精成長書">
+		<!-- Required for growing of dragon agathions. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39654" toLevel="1" name="傑-克-南瓜藥草">
+		<!-- You can feel the powerful energy of Jack O'Lantern. This energy might have caused the growth of monsters. For 1 min., P./ M. Atk. +15%, Critical Damage for basic attacks and P./ M. skills +15%, Vitality bonus +50%. -->
+		<icon>icon.ev_jack_ghost_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="39655" toLevel="1" name="加工效果-活力">
+		<!-- When you have Vitality, acquired XP +3%. -->
+		<icon>icon.rare_acc_smith_piece</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>3</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39656" toLevel="1" name="蜂蜜黑啤酒">
+		<!-- When used, all stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
+		<icon>icon.bm_royal_black_beer</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<coolTime>500</coolTime>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39657" toLevel="2" name="傲慢之塔時間充能石-中層部">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81463</itemConsumeId> <!-- Time Stone: Tower of Insolence (Lower Floor) -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>36000000</reuseDelay>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>110</minLevel>
+			</condition>
+			<condition name="CanUseHuntingTimeIncreaseItem">
+				<zoneId>
+					<value level="1">8</value>
+					<value level="2">9</value>
+				</zoneId>
+				<time>3600000</time>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>
+					<value level="1">8</value>
+					<value level="2">9</value>
+				</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39658" toLevel="1" name="最高級紅寶石">
+		<!-- Soulshot damage +23%. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39659" toLevel="1" name="最高級紅寶石">
+		<!-- Beast Soulshot damage +23%. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39660" toLevel="2" name="最高級藍寶石">
+		<!-- Level 1: Spiritshot damage +23%. -->
+		<!-- Level 2: Blessed Spiritshot damage +23%. -->
+		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39661" toLevel="1" name="新世界的呼喚">
+		<!-- Call the name buried in the depth of your soul, not the one that is associated with this body - it is no more than an empty sound. This world is ruled by the cruel yet loving goddess. Here all souls are free from their mortal bodies. Here you will find your inner self. Here only power guarantees law and order. Use Woeful Sword Eigis to open up the horizon, and it will lead you to the new world. For 2 h., damage +5%, Vitality bonus +5%, received damage -5%. The effect is removed when entering the Olympiad or the Ceremony of Chaos. The effect remains after death. -->
+		<icon>icon.ev_2021_teasing_scroll1</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39662" toLevel="2" name="test_蘊含新世界氣息的藥水">
+		<!-- A mysterious potion from another dimension. For 30 min., P./ M. Atk. +10%, Atk. Spd./ Casting Spd. +10%, Max HP/ MP/ CP +10%, acquired XP/ SP +5%. The effect does not stack with that of Royal Santiago's Soup. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
+		<icon>
+			<value level="1">BranchSys3.lcon.g_vitality_potion_stop</value>
+			<value level="2">icon.ev_2021_teasing_scroll1</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39663" toLevel="1" name="緋紅刺客套裝外型加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39664" toLevel="1" name="湛藍刺客套裝外型加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39665" toLevel="1" name="粉紅刺客套裝外型加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39666" toLevel="1" name="執事衣裳外型加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39667" toLevel="1" name="愛麗絲衣裳外型加工石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39668" toLevel="1" name="16週年莉莉特別變身糖果">
+		<!-- An anniversary gift. Double-click to change your armor appearance into that of Jester Outfit. The effect is removed in the Olympiad and the Ceremony of Chaos. The effect can be cancelled by pressing Alt + Left Mouse Button. -->
+		<icon>icon.etc_whiteday_candy</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39669" toLevel="1" name="梅芙的風之卷軸">
+		<!-- For 10 min. while hunting, Vitality Consumption +30%, adena drop rate +30%. The effect remains after death. Cooldown: 9 min. Can only be used when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Scroll of Storm. The effect can be removed with Alt + Left Mouse Button. -->
+		<icon>icon.bm_maphr_scroll</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>0</effectPoint>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>540000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="BonusDropAdena">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39670" toLevel="1" name="梅芙的暴風卷軸">
+		<!-- For 10 min. while hunting, Vitality Consumption +50%, adena drop rate +50%. The effect remains after death. Cooldown: 9 min. Can only be used when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with Freya's Scroll of Storm. The effect can be removed with Alt + Left Mouse Button. -->
+		<icon>icon.bm_maphr_scroll_up</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>0</effectPoint>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>540000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="BonusDropAdena">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39671" toLevel="1" name="時間的精髓">
+		<!-- When used, decreases time of homunculus creation for 1 h. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81673</itemConsumeId> <!-- Essence of Time -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DecreaseWaitingTime">
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39672" toLevel="1" name="時間的精髓(測試)">
+		<!-- A test item for homunculus system. When used, decreases time of homunculus creation for 24 h. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81674</itemConsumeId> <!-- Essence of Time (test) -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DecreaseWaitingTime">
+				<time>86400000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39673" toLevel="1" name="健康活力牛奶">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39674" toLevel="3" name="召喚茉子">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39675" toLevel="1" name="心想事成年糕湯">
+		<!-- For 30 min., all Critical Rate +5%, all attack power +10%, P./ M. Def. +10%, damage +5%, acquired XP/ SP +10%, Vitality bonus +10%, received damage -5%. Note!. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
+		<icon>icon.ev_stew_of_pray</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39676" toLevel="3" name="情人節99%巧克力">
+		<!-- Level 1: For 10 min., CON/ MEN/ DEX/ WIT +1, Attribute Attack/ Resistance +5, Speed +5, Vitality bonus +5%. -->
+		<!-- Level 2: For 10 min., STR/ INT/ CON/ MEN/ DEX/ WIT +1, Attribute Attack/ Resistance +15, Speed +7, P./ M. Atk. +3%, Vitality bonus +20%. -->
+		<!-- Level 3: For 10 min., all stats +1, Attribute Attack/ Resistance +70, Speed +15, P./ M. Atk. +10%, Critical Damage for basic attacks and P./ M. skills +5%, Vitality bonus +50%. -->
+		<icon>
+			<value level="1">BranchSys.icon.br_valentine_darkchoco_i00</value>
+			<value level="2">BranchSys.icon.br_valentine_deco_i00</value>
+			<value level="3">icon.etc_whiteday_choco</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39677" toLevel="6" name="高級聖紋石書強化效果">
+		<!-- Level 1: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1 -->
+		<!-- Level 2: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +10 -->
+		<!-- Level 3: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +20 -->
+		<!-- Level 4: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +30 -->
+		<!-- Level 5: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +40 -->
+		<!-- Level 6: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +50 -->
+		<icon>icon.artifact_book_01</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ArtifactSlot">
+				<amount>3</amount>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39678" toLevel="11" name="最高級聖紋石書強化效果">
+		<!-- Level 1: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +50. Attribute Attack +50 -->
+		<!-- Level 2: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +60. Attribute Attack +60 -->
+		<!-- Level 3: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +70. Attribute Attack +70 -->
+		<!-- Level 4: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +80. Attribute Attack +80 -->
+		<!-- Level 5: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +90. Attribute Attack +90 -->
+		<!-- Level 6: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +100. Attribute Attack +100. When hit while Fantasia Harmony is active, Enhanced Critical Stroke is triggered. Enhanced Critical Stroke: Critical Damage for basic attacks +110%, P. Skill Critical Damage +10%, M. Skill Critical Damage +10%. -->
+		<!-- Level 7: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +110. Attribute Attack +110. When hit while Fantasia Harmony is active, Enhanced Critical Stroke is triggered. Enhanced Critical Stroke: Critical Damage for basic attacks +110%, P. Skill Critical Damage +10%, M. Skill Critical Damage +10%. -->
+		<!-- Level 8: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +120. Attribute Attack +120. Damage +1%. When hit while Fantasia Harmony is active, Enhanced Critical Stroke is triggered. Enhanced Critical Stroke: Critical Damage for basic attacks +110%, P. Skill Critical Damage +10%, M. Skill Critical Damage +10%. -->
+		<!-- Level 9: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +130. Attribute Attack +130. Damage +1%. When hit while Fantasia Harmony is active, Enhanced Critical Stroke is triggered. Enhanced Critical Stroke: Critical Damage for basic attacks +110%, P. Skill Critical Damage +10%, M. Skill Critical Damage +10%. -->
+		<!-- Level 10: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +140. Attribute Attack +140. Damage +2%. When hit while Fantasia Harmony is active, Enhanced Critical Stroke is triggered. Enhanced Critical Stroke: Critical Damage for basic attacks +110%, P. Skill Critical Damage +10%, M. Skill Critical Damage +10%. -->
+		<!-- Level 11: Unlocks slots for three artifact sets. <Enchant effect>. Speed +5. Acquired XP/ SP +5%. LUC/ CHA +1. Attribute Resistance +150. Attribute Attack +150. Damage +3%. When hit while Fantasia Harmony is active, Enhanced Critical Stroke is triggered. Enhanced Critical Stroke: Critical Damage for basic attacks +110%, P. Skill Critical Damage +10%, M. Skill Critical Damage +10%. -->
+		<icon>icon.artifact_book_02</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ArtifactSlot">
+				<amount>3</amount>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+					<value level="7">110</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">140</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+					<value level="7">110</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">140</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+					<value level="7">110</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">140</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+					<value level="7">110</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">140</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+					<value level="7">110</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">140</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+					<value level="7">110</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">140</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+					<value level="7">110</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">140</value>
+					<value level="11">150</value>
+				</amount>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">1</value>
+					<value level="9">1</value>
+					<value level="10">2</value>
+					<value level="11">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">1</value>
+					<value level="9">1</value>
+					<value level="10">2</value>
+					<value level="11">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">1</value>
+					<value level="9">1</value>
+					<value level="10">2</value>
+					<value level="11">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">1</value>
+					<value level="9">1</value>
+					<value level="10">2</value>
+					<value level="11">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">1</value>
+					<value level="9">1</value>
+					<value level="10">2</value>
+					<value level="11">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">1</value>
+					<value level="9">1</value>
+					<value level="10">2</value>
+					<value level="11">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<chance>80</chance>
+				<targetType>SELF</targetType>
+				<minDamage>300</minDamage>
+				<skillId>11569</skillId> <!-- Critical Stroke -->
+				<skillLevel>2</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39679" toLevel="1" name="祝福的聖紋石書強化卷軸">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39680" toLevel="1" name="皇家金色救援交換券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39681" toLevel="1" name="皇家黑色救援交換券">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39682" toLevel="1" name="危機的因納得立時間充能石">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81699</itemConsumeId> <!-- Ravaged Innadril's Time Stone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>100</minLevel>
+			</condition>
+			<condition name="CanUseHuntingTimeIncreaseItem">
+				<zoneId>13</zoneId>
+				<time>3600000</time>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>13</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39683" toLevel="1" name="艾爾席恩風格糖果-白色情人節">
+		<!-- Appearance changed by wearing the Blue Dynasty Armor. -->
+		<icon>icon.etc_whiteday_candy</icon>
+		<operateType>A1</operateType>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39684" toLevel="1" name="最高級種子手鐲4階段強化卷軸">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="39685" toLevel="1" name="秋蓉氣息卷軸">
+		<!-- A scroll prepared by the Festival Fairy and imbued with the energy of Aden. For 30 min., Critical Damage for basic attacks and P./ M. skills +5%, acquired XP/ SP +10%. The effect is removed when entering the Olympiad or the Ceremony of Chaos. The effect remains after death. -->
+		<icon>icon.etc_charm_of_luck_i01</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>SONGPYEN_BUFF</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<canBeDispelled>false</canBeDispelled>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81708</itemConsumeId> <!-- Festival Fairy's Energy Scroll -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>2000</reuseDelay>
+		<conditions>
+			<condition name="OpNotInEvent" />
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39686" toLevel="1" name="+6利維坦重裝套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39687" toLevel="1" name="+6利維坦輕裝套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39688" toLevel="1" name="+6利維坦長袍套裝禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39689" toLevel="1" name="+14克里修納鉋刀禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39690" toLevel="1" name="+14克里修納切刃禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39691" toLevel="1" name="+14克里修納殺刃禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39692" toLevel="1" name="+14克里修納復仇者禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39693" toLevel="1" name="+14克里修納戰爪禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39694" toLevel="1" name="+14克里修納風暴者禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39695" toLevel="1" name="+14克里修納投弓禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39696" toLevel="1" name="+14克里修納射靈禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39697" toLevel="1" name="+14克里修納爆刃禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39698" toLevel="1" name="+14克里修納術杖禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39699" toLevel="1" name="+14克里修納報恨者禮盒">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

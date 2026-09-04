@@ -1,0 +1,2023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="19500" name="遺物箱" type="EtcItem">
+		<!-- Item obtained from the creatures in Silent Valley. Collect enough and bring them to Recipe Merchant Dolphren at the Aden Blacksmith. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="19501" name="魔物的痕跡" type="EtcItem">
+		<!-- Item obtained from the creatures inhabiting the Shrine of Loyalty. Collect enough and bring them to Priest Bastian in Einhasad's Temple in the Town of Goddard. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="19502" name="黃色搜魂石-R級" type="EtcItem">
+		<!-- Legendary yellow crystal containing the light of absorbed souls. R-grade. Bestows additional special abilities on a weapon. -->
+		<set name="icon" val="icon.r_soul_stone_i03" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19503" name="藍綠色搜魂石-R級" type="EtcItem">
+		<!-- Legendary Teal crystal containing the light of absorbed souls. R-grade. Can bestow an additional special ability on a weapon with a Green Soul Crystal. -->
+		<set name="icon" val="icon.r_soul_stone_i04" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19504" name="紫色搜魂石-R級" type="EtcItem">
+		<!-- Legendary purple crystal containing the light of absorbed souls. R-grade. Bestows additional special abilities on a weapon. -->
+		<set name="icon" val="icon.r_soul_stone_i05" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19505" name="黃色搜魂石-R95級" type="EtcItem">
+		<!-- Legendary yellow crystal containing the light of absorbed souls. R95-grade. Bestows additional special abilities on a weapon. -->
+		<set name="icon" val="icon.r95_soul_stone_i03" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19506" name="藍綠色搜魂石-R95級" type="EtcItem">
+		<!-- Legendary Teal crystal containing the light of absorbed souls. R95-grade. Can bestow an additional special ability on a weapon with a Green Soul Crystal. -->
+		<set name="icon" val="icon.r95_soul_stone_i04" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19507" name="紫色搜魂石-R95級" type="EtcItem">
+		<!-- Legendary purple crystal containing the light of absorbed souls. R95-grade. Bestows additional special abilities on a weapon. -->
+		<set name="icon" val="icon.r95_soul_stone_i05" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19508" name="黃色搜魂石碎片-R級" type="EtcItem">
+		<!-- Legendary yellow crystal fragment containing the light of absorbed souls. R-grade. Collect 10 to make a complete crystal. -->
+		<set name="icon" val="icon.r_soul_stone_piece_i03" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19509" name="藍綠色搜魂石碎片-R級" type="EtcItem">
+		<!-- Legendary Teal crystal fragment containing the light of absorbed souls. R-grade. Collect 10 to make a complete crystal. -->
+		<set name="icon" val="icon.r_soul_stone_piece_i04" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19510" name="紫色搜魂石碎片-R級" type="EtcItem">
+		<!-- Legendary purple crystal fragment containing the light of absorbed souls. R-grade. Collect 10 to make a complete crystal. -->
+		<set name="icon" val="icon.r_soul_stone_piece_i05" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19511" name="黃色搜魂石碎片-R95級" type="EtcItem">
+		<!-- Legendary yellow crystal fragment containing the light of absorbed souls. R95-grade. Collect 10 to make a complete crystal. -->
+		<set name="icon" val="icon.r95_soul_stone_piece_i03" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19512" name="藍綠色搜魂石碎片-R95級" type="EtcItem">
+		<!-- Legendary Teal crystal fragment containing the light of absorbed souls. R95-grade. Collect 10 to make a complete crystal. -->
+		<set name="icon" val="icon.r95_soul_stone_piece_i04" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19513" name="紫色搜魂石碎片-R95級" type="EtcItem">
+		<!-- Legendary purple crystal fragment containing the light of absorbed souls. R95-grade. Collect 10 to make a complete crystal. -->
+		<set name="icon" val="icon.r95_soul_stone_piece_i05" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="19514" name="腐蝕的古代戰爭工匠的骨架" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i02" />
+		<set name="weight" val="2" />
+		<set name="price" val="1555000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19515" name="腐蝕的古代里澳林的模具" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i02" />
+		<set name="weight" val="2" />
+		<set name="price" val="608000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19516" name="腐蝕的古代名匠砧鎖" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i02" />
+		<set name="weight" val="2" />
+		<set name="price" val="1500000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19517" name="腐蝕的古代戰爭工匠的模具" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i02" />
+		<set name="weight" val="2" />
+		<set name="price" val="330000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19518" name="腐蝕的傳說戰爭工匠的骨架" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i03" />
+		<set name="weight" val="2" />
+		<set name="price" val="4060000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19519" name="腐蝕的傳說里澳林的模具" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i03" />
+		<set name="weight" val="2" />
+		<set name="price" val="1584000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19520" name="腐蝕的傳說名匠砧鎖" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i03" />
+		<set name="weight" val="2" />
+		<set name="price" val="3750000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19521" name="腐蝕的傳說戰爭工匠的模具" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i03" />
+		<set name="weight" val="2" />
+		<set name="price" val="850000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="19522" name="永生頭盔" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="146" />
+		<set name="weight" val="530" />
+		<set name="price" val="6878552" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">116</stat>
+		</stats>
+	</item>
+	<item id="19523" name="永生胸甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="391" />
+		<set name="weight" val="7520" />
+		<set name="price" val="18342805" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">309</stat>
+		</stats>
+		<skills>
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="19524" name="永生脛甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="244" />
+		<set name="weight" val="3170" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="11464253" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">193</stat>
+		</stats>
+	</item>
+	<item id="19525" name="永生護手" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t501_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="97" />
+		<set name="weight" val="510" />
+		<set name="price" val="4585701" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">77</stat>
+		</stats>
+	</item>
+	<item id="19526" name="永生靴" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t501_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="97" />
+		<set name="weight" val="1070" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="4585701" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">77</stat>
+		</stats>
+	</item>
+	<item id="19527" name="永生盾" additionalName="Reinforced" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Increases Shield Defense. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
+		<set name="icon" val="icon.weapon_sacon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="97" />
+		<set name="weight" val="1130" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="4585701" />
+		<set name="material" val="DAMASCUS" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="sDef">422</stat>
+			<stat type="rShld">20</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+		<skills>
+			<skill id="8781" level="1" /> <!-- Equip Shield -->
+		</skills>
+	</item>
+	<item id="19528" name="永生皮頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="146" />
+		<set name="weight" val="530" />
+		<set name="price" val="6878552" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">116</stat>
+		</stats>
+	</item>
+	<item id="19529" name="永生皮甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="391" />
+		<set name="weight" val="4140" />
+		<set name="price" val="18342805" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">247</stat>
+			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="19530" name="永生皮脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="244" />
+		<set name="weight" val="1320" />
+		<set name="price" val="11464253" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">154</stat>
+			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
+		</stats>
+	</item>
+	<item id="19531" name="永生皮手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="97" />
+		<set name="weight" val="510" />
+		<set name="price" val="4585701" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">77</stat>
+		</stats>
+	</item>
+	<item id="19532" name="永生皮靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="97" />
+		<set name="weight" val="1070" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="4585701" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">77</stat>
+		</stats>
+	</item>
+	<item id="19533" name="永生頭箍" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="146" />
+		<set name="weight" val="530" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="6878552" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">116</stat>
+		</stats>
+	</item>
+	<item id="19534" name="永生外衣" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="391" />
+		<set name="weight" val="1750" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="18342805" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+			<stat type="mDef">36</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="19535" name="永生長襪" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="244" />
+		<set name="weight" val="850" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="11464253" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">106</stat>
+			<stat type="mDef">24</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="19536" name="永生手套" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t503_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="97" />
+		<set name="weight" val="510" />
+		<set name="price" val="4585701" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">77</stat>
+		</stats>
+	</item>
+	<item id="19537" name="永生鞋" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t503_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="97" />
+		<set name="weight" val="1070" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="4585701" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">77</stat>
+		</stats>
+	</item>
+	<item id="19538" name="煉獄頭盔" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="399" />
+		<set name="weight" val="530" />
+		<set name="price" val="18736280" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">128</stat>
+		</stats>
+	</item>
+	<item id="19539" name="煉獄胸甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1065" />
+		<set name="weight" val="7520" />
+		<set name="price" val="49963413" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">341</stat>
+		</stats>
+		<skills>
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="19540" name="煉獄脛甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t601_l_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="666" />
+		<set name="weight" val="3170" />
+		<set name="price" val="31227133" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">213</stat>
+		</stats>
+	</item>
+	<item id="19541" name="煉獄護手" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t601_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="266" />
+		<set name="weight" val="510" />
+		<set name="price" val="12490853" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">85</stat>
+		</stats>
+	</item>
+	<item id="19542" name="煉獄靴" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t601_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="266" />
+		<set name="weight" val="1070" />
+		<set name="price" val="12490853" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">85</stat>
+		</stats>
+	</item>
+	<item id="19543" name="煉獄盾" additionalName="Reinforced" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Increases Shield Defense. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
+		<set name="icon" val="icon.kratere_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="266" />
+		<set name="weight" val="1130" />
+		<set name="price" val="12490853" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="material" val="DAMASCUS" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="sDef">466</stat>
+			<stat type="rShld">20</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+		<skills>
+			<skill id="8782" level="1" /> <!-- Equip Shield -->
+		</skills>
+	</item>
+	<item id="19544" name="煉獄皮頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="399" />
+		<set name="weight" val="530" />
+		<set name="price" val="18736280" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">128</stat>
+		</stats>
+	</item>
+	<item id="19545" name="煉獄皮甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1065" />
+		<set name="weight" val="4140" />
+		<set name="price" val="49963413" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">272</stat>
+			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="19546" name="煉獄皮脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t602_l_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="666" />
+		<set name="weight" val="1320" />
+		<set name="price" val="31227133" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">170</stat>
+			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
+		</stats>
+	</item>
+	<item id="19547" name="煉獄皮手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t602_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="266" />
+		<set name="weight" val="510" />
+		<set name="price" val="12490853" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">85</stat>
+		</stats>
+	</item>
+	<item id="19548" name="煉獄皮靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t602_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="266" />
+		<set name="weight" val="1070" />
+		<set name="price" val="12490853" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">85</stat>
+		</stats>
+	</item>
+	<item id="19549" name="煉獄頭箍" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="399" />
+		<set name="weight" val="530" />
+		<set name="price" val="18736280" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">128</stat>
+		</stats>
+	</item>
+	<item id="19550" name="煉獄外衣" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1065" />
+		<set name="weight" val="1750" />
+		<set name="price" val="49963413" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">187</stat>
+			<stat type="mDef">41</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="19551" name="煉獄長襪" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t603_l_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="666" />
+		<set name="weight" val="850" />
+		<set name="price" val="31227133" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">117</stat>
+			<stat type="mDef">27</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="19552" name="煉獄手套" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t603_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="266" />
+		<set name="weight" val="510" />
+		<set name="price" val="12490853" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">85</stat>
+		</stats>
+	</item>
+	<item id="19553" name="煉獄鞋" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Upgrade>. Take Scroll of Blessing - R-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t603_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="266" />
+		<set name="weight" val="1070" />
+		<set name="price" val="12490853" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">85</stat>
+		</stats>
+	</item>
+	<item id="19554" name="卡戴拉頭盔" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="1226" />
+		<set name="weight" val="530" />
+		<set name="price" val="57490000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">141</stat>
+		</stats>
+	</item>
+	<item id="19555" name="卡戴拉胸甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t401_u_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="3270" />
+		<set name="weight" val="7520" />
+		<set name="price" val="153308000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">377</stat>
+		</stats>
+		<skills>
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="19556" name="卡戴拉脛甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t401_l_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="2044" />
+		<set name="weight" val="3170" />
+		<set name="price" val="95818000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">235</stat>
+		</stats>
+	</item>
+	<item id="19557" name="卡戴拉護手" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t401_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="817" />
+		<set name="weight" val="510" />
+		<set name="price" val="38327000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">94</stat>
+		</stats>
+	</item>
+	<item id="19558" name="卡戴拉靴" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t401_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="817" />
+		<set name="weight" val="1070" />
+		<set name="price" val="38327000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">94</stat>
+		</stats>
+	</item>
+	<item id="19559" name="卡戴拉盾" additionalName="Reinforced" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Increases Shield Defense. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
+		<set name="icon" val="icon.beranka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="858" />
+		<set name="weight" val="1130" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="40243000" />
+		<set name="material" val="DAMASCUS" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="sDef">515</stat>
+			<stat type="rShld">20</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+		<skills>
+			<skill id="8783" level="1" /> <!-- Equip Shield -->
+		</skills>
+	</item>
+	<item id="19560" name="卡戴拉皮頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="1226" />
+		<set name="weight" val="530" />
+		<set name="price" val="57490000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">141</stat>
+		</stats>
+	</item>
+	<item id="19561" name="卡戴拉皮甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t402_u_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="3270" />
+		<set name="weight" val="4140" />
+		<set name="price" val="153308000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">301</stat>
+			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="19562" name="卡戴拉皮脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t402_l_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="2044" />
+		<set name="weight" val="1320" />
+		<set name="price" val="95818000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">188</stat>
+			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
+		</stats>
+	</item>
+	<item id="19563" name="卡戴拉皮手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t402_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="817" />
+		<set name="weight" val="510" />
+		<set name="price" val="38327000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">94</stat>
+		</stats>
+	</item>
+	<item id="19564" name="卡戴拉皮靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t402_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="817" />
+		<set name="weight" val="1070" />
+		<set name="price" val="38327000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">94</stat>
+		</stats>
+	</item>
+	<item id="19565" name="卡戴拉頭箍" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="1226" />
+		<set name="weight" val="530" />
+		<set name="price" val="57490000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">141</stat>
+		</stats>
+	</item>
+	<item id="19566" name="卡戴拉外衣" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t403_u_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="3270" />
+		<set name="weight" val="1750" />
+		<set name="price" val="153308000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">207</stat>
+			<stat type="mDef">47</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="19567" name="卡戴拉長襪" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t403_l_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="2044" />
+		<set name="weight" val="850" />
+		<set name="price" val="95818000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">129</stat>
+			<stat type="mDef">31</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="19568" name="卡戴拉手套" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t403_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="817" />
+		<set name="weight" val="510" />
+		<set name="price" val="38327000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">94</stat>
+		</stats>
+	</item>
+	<item id="19569" name="卡戴拉鞋" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R95-grade Armor. <Upgrade>. Take Scroll of Blessing - R95-grade Armor and go to the Head Blacksmith of any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t403_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R95" />
+		<set name="crystal_count" val="817" />
+		<set name="weight" val="1070" />
+		<set name="price" val="38327000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">94</stat>
+		</stats>
+	</item>
+	<item id="19570" name="艾迪奧斯頭盔" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="2702" />
+		<set name="weight" val="530" />
+		<set name="price" val="126687000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">150</stat>
+		</stats>
+	</item>
+	<item id="19571" name="艾迪奧斯胸甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_t701_u_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="7207" />
+		<set name="weight" val="7520" />
+		<set name="price" val="337834000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+		<skills>
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="19572" name="艾迪奧斯脛甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_t701_l_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="4504" />
+		<set name="weight" val="3170" />
+		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">250</stat>
+		</stats>
+	</item>
+	<item id="19573" name="艾迪奧斯護手" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_t701_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1801" />
+		<set name="weight" val="510" />
+		<set name="price" val="84458000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">100</stat>
+		</stats>
+	</item>
+	<item id="19574" name="艾迪奧斯靴" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_t701_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1801" />
+		<set name="weight" val="1070" />
+		<set name="price" val="84458000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">100</stat>
+		</stats>
+	</item>
+	<item id="19575" name="艾迪奧斯盾" additionalName="Reinforced" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Increases Shield Defense. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
+		<set name="icon" val="icon.weapon_akra_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1891" />
+		<set name="weight" val="1130" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="88681000" />
+		<set name="material" val="DAMASCUS" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="sDef">546</stat>
+			<stat type="rShld">20</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+		<skills>
+			<skill id="8784" level="1" /> <!-- Equip Shield -->
+		</skills>
+	</item>
+	<item id="19576" name="艾迪奧斯皮頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="2702" />
+		<set name="weight" val="530" />
+		<set name="price" val="126687000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">150</stat>
+		</stats>
+	</item>
+	<item id="19577" name="艾迪奧斯皮甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="7207" />
+		<set name="weight" val="4140" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="337834000" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">320</stat>
+			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="19578" name="艾迪奧斯皮脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t702_l_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="4504" />
+		<set name="weight" val="1320" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="211146000" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">200</stat>
+			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
+		</stats>
+	</item>
+	<item id="19579" name="艾迪奧斯皮手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t702_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1801" />
+		<set name="weight" val="510" />
+		<set name="price" val="84458000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">100</stat>
+		</stats>
+	</item>
+	<item id="19580" name="艾迪奧斯皮靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. -->
+		<set name="icon" val="icon.armor_t702_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1801" />
+		<set name="weight" val="1070" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="84458000" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">100</stat>
+		</stats>
+	</item>
+	<item id="19581" name="艾迪奧斯頭箍" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="2702" />
+		<set name="weight" val="530" />
+		<set name="price" val="126687000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">150</stat>
+		</stats>
+	</item>
+	<item id="19582" name="艾迪奧斯外衣" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="7207" />
+		<set name="weight" val="1750" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="337834000" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">220</stat>
+			<stat type="mDef">49</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="19583" name="艾迪奧斯長襪" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_t703_l_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="4504" />
+		<set name="weight" val="850" />
+		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">137</stat>
+			<stat type="mDef">33</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="19584" name="艾迪奧斯手套" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_t703_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1801" />
+		<set name="weight" val="510" />
+		<set name="price" val="84458000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">100</stat>
+		</stats>
+	</item>
+	<item id="19585" name="艾迪奧斯鞋" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. <Enchanting>. Use Scroll: Enchant R99-grade Armor. <Upgrade>. Take Scroll of Blessing - R99-grade Armor and go to the Head Blacksmith in any town to make the armor Blessed. Can be augmented. -->
+		<set name="icon" val="icon.armor_t703_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1801" />
+		<set name="weight" val="1070" />
+		<set name="price" val="84458000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pDef">100</stat>
+		</stats>
+	</item>
+	<item id="19586" name="束縛的永生頭盔" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="14" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="687000" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pDef">114</stat>
+		</stats>
+	</item>
+	<item id="19587" name="束縛的永生胸甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item Common. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. -->
+		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="39" />
+		<set name="weight" val="7520" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="1834000" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pDef">304</stat>
+		</stats>
+		<skills>
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="19588" name="束縛的永生脛甲" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="24" />
+		<set name="weight" val="3170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="1146000" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<stats>
+			<stat type="pDef">190</stat>
+		</stats>
+	</item>
+	<item id="19589" name="束縛的永生護手" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_t501_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="9" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="458000" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
+	</item>
+	<item id="19590" name="束縛的永生靴" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_t501_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="9" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="458000" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
+	</item>
+	<item id="19591" name="束縛的永生盾" additionalName="Reinforced" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Additionally increases Shield Defense. Use an Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.weapon_sacon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="10" />
+		<set name="weight" val="1130" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="481000" />
+		<set name="material" val="DAMASCUS" />
+		<stats>
+			<stat type="sDef">415</stat>
+			<stat type="rShld">20</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+		<skills>
+			<skill id="8781" level="1" /> <!-- Equip Shield -->
+		</skills>
+	</item>
+	<item id="19592" name="束縛的永生皮頭盔" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="14" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="687000" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pDef">114</stat>
+		</stats>
+	</item>
+	<item id="19593" name="束縛的永生皮胸甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item Common. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="39" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="1834000" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pDef">243</stat>
+			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="19594" name="束縛的永生皮脛甲" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="24" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="1146000" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<stats>
+			<stat type="pDef">152</stat>
+			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
+		</stats>
+	</item>
+	<item id="19595" name="束縛的永生皮手套" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="9" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="458000" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
+	</item>
+	<item id="19596" name="束縛的永生皮靴" additionalName="Not used" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="9" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="458000" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
+	</item>
+	<item id="19597" name="束縛的永生頭箍" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="14" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="687000" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pDef">114</stat>
+		</stats>
+	</item>
+	<item id="19598" name="束縛的永生外衣" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item Common. Starting from +4, increases M. Evasion and M. Debuff Resistance -->
+		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="39" />
+		<set name="weight" val="1750" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="1834000" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pDef">167</stat>
+			<stat type="mDef">36</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+		<skills>
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Robe -->
+		</skills>
+	</item>
+	<item id="19599" name="束縛的永生長襪" additionalName="Reinforced robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Use Unbind Scroll to make the item common. -->
+		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="24" />
+		<set name="weight" val="850" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="1146000" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<stats>
+			<stat type="pDef">104</stat>
+			<stat type="mDef">24</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+</list>
