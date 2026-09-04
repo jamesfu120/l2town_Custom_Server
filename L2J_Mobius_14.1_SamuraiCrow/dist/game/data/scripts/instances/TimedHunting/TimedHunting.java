@@ -318,19 +318,19 @@ public class TimedHunting extends InstanceScript
 		{
 			// 1. Time Validation
 			final Calendar now = Calendar.getInstance();
-			final int day = now.get(Calendar.DAY_OF_WEEK);
+			//final int day = now.get(Calendar.DAY_OF_WEEK);
 			final int hour = now.get(Calendar.HOUR_OF_DAY);
 			final int minute = now.get(Calendar.MINUTE);
 			final int second = now.get(Calendar.SECOND);
 			
 			boolean isOpen = false;
-			final int targetDay = Calendar.WEDNESDAY;
+			//final int targetDay = Calendar.WEDNESDAY;
 			final int startHour = 22;
 			final int startMinute = 0;
 			final int endHour = 23;
 			final int endMinute = 0;
 			
-			if (day == targetDay)
+			//if (day == targetDay)
 			{
 				long currentTotalSeconds = (hour * 3600) + (minute * 60) + second;
 				long startTotalSeconds = (startHour * 3600) + (startMinute * 60);
