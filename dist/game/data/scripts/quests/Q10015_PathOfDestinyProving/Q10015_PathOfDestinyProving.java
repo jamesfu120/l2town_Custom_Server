@@ -52,6 +52,8 @@ public class Q10015_PathOfDestinyProving extends Quest
 	// Class change rewards
 	private static final int SS_R = 33780;
 	private static final int BSS_R = 33794;
+	private static final int LCOIN = 48472;
+	private static final int ACOIN = 57;
 	private static final int BOX_R_HEAVY = 46924;
 	private static final int BOX_R_LIGHT = 46925;
 	private static final int BOX_R_ROBE = 46926;
@@ -221,6 +223,8 @@ public class Q10015_PathOfDestinyProving extends Quest
 			
 			giveItems(player, SS_R, 5000);
 			giveItems(player, BSS_R, 5000);
+			giveItems(player, LCOIN, 5000);
+			giveItems(player, ACOIN, 500000);
 			switch (player.getPlayerClass())
 			{
 				case WARLORD:
