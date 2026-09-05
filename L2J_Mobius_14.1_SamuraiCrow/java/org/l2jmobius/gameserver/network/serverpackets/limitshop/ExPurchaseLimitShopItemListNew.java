@@ -62,6 +62,9 @@ public class ExPurchaseLimitShopItemListNew extends ServerPacket
 		{
 			buffer.writeInt(product.getId());
 			buffer.writeInt(product.getProductionId());
+			// 👑 GM 強制插隊補丁：將等級限制塞在商品ID後面
+			buffer.writeInt(1);   // 最低等級要求：1級
+			buffer.writeInt(999); // 最高等級要求：999級
 			buffer.writeInt(product.getIngredientIds()[0]);
 			buffer.writeInt(product.getIngredientIds()[1]);
 			buffer.writeInt(product.getIngredientIds()[2]);
@@ -148,10 +151,6 @@ public class ExPurchaseLimitShopItemListNew extends ServerPacket
 			buffer.writeInt((int) (chance3 * 100000));
 			buffer.writeInt((int) (chance4 * 100000));
 			buffer.writeInt((int) (chance5 * 100000));
-			
-			// 👑 GM 終極暴力破解補丁：強行在封包末端餵給客戶端等級限制，徹底消滅 0級 Bug！
-			buffer.writeInt(1);   // 最低等級要求：1級
-			buffer.writeInt(999); // 最高等級要求：999級
 		}
 	}
 }
