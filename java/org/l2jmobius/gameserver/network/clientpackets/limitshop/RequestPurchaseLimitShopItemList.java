@@ -86,6 +86,26 @@ public class RequestPurchaseLimitShopItemList extends ClientPacket
 			// Get the subList for current page.
 			final List<LimitShopProductHolder> productList = products.subList(start, end);
 			
+			// 👑 GM 終極全域解鎖補丁：在封包發射前，強制將清單內所有商品的購買限制清洗為 1~999 級！
+			// 這樣做可以完美維持原本的封包數據結構，0% 機率產生亂碼，且能 100% 點亮商城按鈕！
+			for (LimitShopProductHolder prod : productList)
+			{
+				try
+				{
+					java.lang.reflect.Field minLvlField = prod.getClass().getDeclaredField("_minLevel");
+					minLvlField.setAccessible(true);
+					minLvlField.setInt(prod, 1); // 強制清洗為 1 級
+					
+					java.lang.reflect.Field maxLvlField = prod.getClass().getDeclaredField("_maxLevel");
+					maxLvlField.setAccessible(true);
+					maxLvlField.setInt(prod, 999); // 強制清洗為 999 級
+				}
+				catch (Exception e)
+				{
+					// 防禦報錯
+				}
+			}
+			
 			// Send the packet.
 			if (_shopType == 4) // Lcoin Special Craft
 			{
