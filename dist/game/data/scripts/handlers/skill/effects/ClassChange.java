@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.entity.actor.enums.player.SubclassInfoType;
 import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcut;
 import org.l2jmobius.gameserver.entity.groups.Party;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
 import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.mechanics.skill.AbnormalVisualEffect;
@@ -169,8 +170,33 @@ public class ClassChange extends AbstractEffect
 			// Disarm unusable equipment.
 			player.disarmUnusableEquipment();
 			
+			// =================== GM 自訂新增：修正相容性後的貨幣福利 ===================
+			final int playerLevel = player.getLevel();
+			final int lCoinId = 48472; // L幣 ID
+			final int adenaId = 57;    // 金幣 (Adena) ID
+			
+			if (playerLevel >= 40 && playerLevel < 76)
+			{
+				// 修正：將第一個參數換成標準的 ItemProcessType.REWARD
+				player.addItem(ItemProcessType.REWARD, lCoinId, 5000, player, true);
+				player.addItem(ItemProcessType.REWARD, adenaId, 500000, player, true);
+				player.sendMessage("[系統] 恭喜完成二轉！已獲得 5000 L幣 與 50萬金幣 支援物資。");
+			}
+			else if (playerLevel >= 20 && playerLevel < 40)
+			{
+				player.addItem(ItemProcessType.REWARD, adenaId, 10000, player, true);
+				player.sendMessage("[系統] 恭喜完成一轉！已獲得 1萬金幣 支援物資。");
+			}
+			else if (playerLevel >= 76)
+			{
+				player.addItem(ItemProcessType.REWARD, lCoinId, 10000, player, true);
+				player.sendMessage("[系統] 恭喜完成高階轉職！已獲得 10000 L幣 支援物資。");
+			}
+			// ===================================================================
+			
 			if (player.isDeathKnight())
 			{
+
 				// Fix Death Knight model animation.
 				player.transform(101, false);
 				ThreadPool.schedule(() -> player.stopTransformation(false), 50);
@@ -188,3 +214,5 @@ public class ClassChange extends AbstractEffect
 		}, 500);
 	}
 }
+
+
