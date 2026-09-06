@@ -92,17 +92,15 @@ public class RequestPurchaseLimitShopItemList extends ClientPacket
 			{
 				try
 				{
-					java.lang.reflect.Field minLvlField = prod.getClass().getDeclaredField("_minLevel");
-					minLvlField.setAccessible(true);
-					minLvlField.setInt(prod, 1); // 強制清洗為 1 級
-					
-					java.lang.reflect.Field maxLvlField = prod.getClass().getDeclaredField("_maxLevel");
-					maxLvlField.setAccessible(true);
-					maxLvlField.setInt(prod, 999); // 強制清洗為 999 級
+					// 讓它直接在 gameserver 黑視窗上列印出這個物件裡面所有的變數名稱
+					for (java.lang.reflect.Field field : prod.getClass().getDeclaredFields())
+					{
+						System.out.println("[GM 商城探針] 發現變數名稱: " + field.getName() + " , 類型: " + field.getType().getSimpleName());
+					}
+					break; // 印一次就夠了，直接跳出
 				}
 				catch (Exception e)
 				{
-					// 防禦報錯
 				}
 			}
 			
