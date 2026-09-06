@@ -76,18 +76,20 @@ public class RequestBypassToServer extends ClientPacket
 	private String _command;
 	
 	@Override
-	protected void readImpl()
-	{
-		_command = readString();
-	}
-	
-	@Override
 	protected void runImpl()
 	{
 		final Player player = getPlayer();
 		if (player == null)
 		{
 			return;
+		}
+		
+		// 👑 GM 側邊欄/大補玩萬能攔截補丁：玩家點擊內建快捷鍵時，100% 只彈出乾淨、單一、絕不重疊的 Merchant 商店！
+		// 只要指令包含官方大補玩或助手的關鍵字，直接秒速轉向！
+		if (_command.toLowerCase().contains("gameassistant") || _command.toLowerCase().contains("assistant"))
+		{
+			CommunityBoardHandler.getInstance().handleParseCommand("_bbstop;merchant/main.html", player);
+			return; // 執行完立刻中斷，徹底消滅第二個原廠視窗閃出的機會！
 		}
 		
 		if (_command.isEmpty())
