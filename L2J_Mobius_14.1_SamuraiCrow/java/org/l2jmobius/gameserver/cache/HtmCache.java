@@ -139,7 +139,8 @@ public class HtmCache
 			filePath = file.toURI().getPath().substring(ServerConfig.DATAPACK_ROOT.toURI().getPath().length());
 			if (GeneralConfig.CHECK_HTML_ENCODING && !filePath.startsWith("data/lang") && !StandardCharsets.US_ASCII.newEncoder().canEncode(content))
 			{
-				LOGGER.warning("HTML encoding check: File " + filePath + " contains non ASCII content.");
+				// 👑 GM 完美校正：直接關閉 HTML 英文潔癖警告，開服黑視窗從此清清爽爽！
+			    // LOGGER.warning("HTML encoding check: File " + filePath + " contains non ASCII content.");
 			}
 			
 			final String oldContent = HTML_CACHE.put(filePath, content);
