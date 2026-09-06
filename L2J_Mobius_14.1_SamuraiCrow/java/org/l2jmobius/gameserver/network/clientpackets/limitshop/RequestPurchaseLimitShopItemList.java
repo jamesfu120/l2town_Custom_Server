@@ -19,6 +19,27 @@
  * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.network.clientpackets.limitshop;
+/*
+ * Copyright (c) 2013 L2jMobius
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 
 import java.util.List;
 
@@ -31,7 +52,7 @@ import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExPurchaseLimitC
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExPurchaseLimitShopItemListNew;
 
 /**
- * @author Mobius
+ * @author Mobius, GM Fix
  */
 public class RequestPurchaseLimitShopItemList extends ClientPacket
 {
@@ -86,26 +107,25 @@ public class RequestPurchaseLimitShopItemList extends ClientPacket
 			// Get the subList for current page.
 			final List<LimitShopProductHolder> productList = products.subList(start, end);
 			
-			// 👑 GM 終極全域解鎖補丁：在封包發射前，強制將清單內所有商品的購買限制清洗為 1~999 級！
-			// 這樣做可以完美維持原本的封包數據結構，0% 機率產生亂碼，且能 100% 點亮商城按鈕！
+			// 👑 GM 終極完美解鎖補丁：利用父類別反射，精準強行清洗全商城商品等級限制！
 			for (LimitShopProductHolder prod : productList)
 			{
 				try
 				{
-					// 因為 _minLevel 躺在父類別，必須用 getSuperclass() 才能強行侵入抓出它！
+					// 先試著抓父類別的等級格子
 					java.lang.reflect.Field minLvlField = prod.getClass().getSuperclass().getDeclaredField("_minLevel");
 					minLvlField.setAccessible(true);
-					minLvlField.setInt(prod, 1); // 強制清洗最低等級為 1 級
+					minLvlField.setInt(prod, 1);
 					
 					java.lang.reflect.Field maxLvlField = prod.getClass().getSuperclass().getDeclaredField("_maxLevel");
 					maxLvlField.setAccessible(true);
-					maxLvlField.setInt(prod, 999); // 強制清洗最高等級為 999 級
+					maxLvlField.setInt(prod, 999);
 				}
 				catch (Exception e)
 				{
-					// 如果新核心沒有繼承關係，則嘗試直接抓取本體
 					try
 					{
+						// 如果沒有父類別，直接抓本體
 						java.lang.reflect.Field minLvlField = prod.getClass().getDeclaredField("_minLevel");
 						minLvlField.setAccessible(true);
 						minLvlField.setInt(prod, 1);
@@ -114,8 +134,10 @@ public class RequestPurchaseLimitShopItemList extends ClientPacket
 						maxLvlField.setAccessible(true);
 						maxLvlField.setInt(prod, 999);
 					}
-				catch (Exception e)
-				{
+					catch (Exception ex)
+					{
+						// 防禦報錯
+					}
 				}
 			}
 			
