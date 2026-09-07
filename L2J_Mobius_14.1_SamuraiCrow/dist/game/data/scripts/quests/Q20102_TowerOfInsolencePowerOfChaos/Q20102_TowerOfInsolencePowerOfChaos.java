@@ -20,7 +20,6 @@
  */
 package quests.Q20102_TowerOfInsolencePowerOfChaos;
 
-import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.entity.Location;
 import org.l2jmobius.gameserver.entity.actor.Npc;
 import org.l2jmobius.gameserver.entity.actor.Player;
@@ -28,7 +27,6 @@ import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.mechanics.script.QuestDialogType;
 import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuest;
-import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuestLocation;
 import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestDialog;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestNotification;
@@ -36,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestNotification;
 import quests.Q20103_TowerOfInsolenceResearchingThePowerOfChaos.Q20103_TowerOfInsolenceResearchingThePowerOfChaos;
 
 /**
- * @author CostyKiller
+ * @author CostyKiller, GM Fix
  */
 public class Q20102_TowerOfInsolencePowerOfChaos extends Quest
 {
@@ -71,31 +69,19 @@ public class Q20102_TowerOfInsolencePowerOfChaos extends Quest
 			case "TELEPORT":
 			{
 				final QuestState questState = getQuestState(player, false);
-				final NewQuestLocation questLocation = getQuestData().getLocation();
+				
+				// 👑 GM 傳送補丁：無視壞掉的 XML 資料庫，直接硬寫死傲慢之塔一樓大廳奈利亞的實體座標！
+				// 讓玩家點擊任務傳送時，百分之百直接飛到定點！
+				Location insolenceTowerLocation = new Location(114752, 15936, -3500); // 這是傲慢之塔大廳基本座標
+				
 				if (questState == null)
 				{
-					final Location location = TeleportListData.getInstance().getTeleport(questLocation.getStartLocationId()).getLocation();
-					teleportToQuestLocation(player, location);
+					teleportToQuestLocation(player, insolenceTowerLocation);
 					sendAcceptDialog(player);
 				}
-				else if (questState.isCond(QuestCondType.STARTED))
+				else
 				{
-					if (questLocation.getQuestLocationId() > 0)
-					{
-						final Location location = TeleportListData.getInstance().getTeleport(questLocation.getQuestLocationId()).getLocation();
-						teleportToQuestLocation(player, location);
-					}
-				}
-				else if (questState.isCond(QuestCondType.DONE) && !questState.isCompleted())
-				{
-					if (questLocation.getEndLocationId() > 0)
-					{
-						final Location location = TeleportListData.getInstance().getTeleport(questLocation.getEndLocationId()).getLocation();
-						if (teleportToQuestLocation(player, location))
-						{
-							sendEndDialog(player);
-						}
-					}
+					teleportToQuestLocation(player, insolenceTowerLocation);
 				}
 				break;
 			}
