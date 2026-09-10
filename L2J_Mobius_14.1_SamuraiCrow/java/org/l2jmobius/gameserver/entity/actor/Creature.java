@@ -654,8 +654,8 @@ public abstract class Creature extends WorldObject
 				final String name = NpcData.getInstance().getTemplate(getId()).getName();
 				if ((name != null) && !BossAnnouncementsConfig.RAIDBOSSES_EXCLUDED_FROM_SPAWN_ANNOUNCEMENTS.contains(getId()))
 				{
-					World.broadcastToAllOnlinePlayers(name + " has spawned!");
-					World.broadcastToAllOnlinePlayersOnScreen(name + " has spawned!");
+					World.broadcastToAllOnlinePlayers(name + " 已經降臨！");
+					World.broadcastToAllOnlinePlayersOnScreen(name + " 已經降臨！");
 				}
 			}
 		}
@@ -664,8 +664,8 @@ public abstract class Creature extends WorldObject
 			final String name = NpcData.getInstance().getTemplate(getId()).getName();
 			if ((name != null) && !BossAnnouncementsConfig.RAIDBOSSES_EXCLUDED_FROM_SPAWN_ANNOUNCEMENTS.contains(getId()))
 			{
-				World.broadcastToAllOnlinePlayers(name + " has spawned!");
-				World.broadcastToAllOnlinePlayersOnScreen(name + " has spawned!");
+				World.broadcastToAllOnlinePlayers(name + "已經降臨！");
+				World.broadcastToAllOnlinePlayersOnScreen(name + " 已經降臨！");
 			}
 		}
 	}

@@ -30,19 +30,29 @@ import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.mechanics.script.newquestdata.NewQuestLocation;
 import org.l2jmobius.gameserver.mechanics.script.newquestdata.QuestCondType;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestDialog;
+import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestNotification;
 
 import quests.Q10022_HelpersIdentity.Q10022_HelpersIdentity;
 
 /**
- * @author Stayway
+ * @author Stayway, Anti-Lockup Fix Version
  */
 public class Q10021_EssenceOfTheProphecy extends Quest
 {
 	private static final int QUEST_ID = 10021;
+	private static final int PROPHECY_FRAGMENT = 39537; // 預言裝置碎片 ID
+	private static final int TELEPORT_GUIDE = 82955;    // 大神官傳送指南 ID
+	private static final int RAYMOND = 30134;           // 大神官 雷門德 NPC ID
+	private static final int TALANEY = 32139;           // 🌟 補上：塔勒妮 NPC ID（接任務的 NPC）
 	
 	public Q10021_EssenceOfTheProphecy()
 	{
 		super(QUEST_ID);
+		// 註冊兩個 NPC 的對話監聽，不管點誰都能強制解鎖
+		addStartNpc(TALANEY);
+		addTalkId(TALANEY);
+		addStartNpc(RAYMOND);
+		addTalkId(RAYMOND);
 	}
 	
 	@Override
@@ -61,8 +71,12 @@ public class Q10021_EssenceOfTheProphecy extends Quest
 				if (!questState.isStarted() && !questState.isCompleted())
 				{
 					questState.startQuest();
-					giveItems(player, 82955, 1); // Teleportation Guide - High Priest Raymond
-					giveItems(player, 39537, 1); // Prophecy Fragment
+					giveItems(player, TELEPORT_GUIDE, 1);
+					giveItems(player, PROPHECY_FRAGMENT, 1);
+					
+					// 🌟 核心解鎖防卡死：接取任務時，立刻在後台強行把狀態進度推到最頂端！
+					questState.setCond(QuestCondType.DONE);
+					player.sendPacket(new ExQuestNotification(questState));
 				}
 				break;
 			}
@@ -129,7 +143,7 @@ public class Q10021_EssenceOfTheProphecy extends Quest
 				{
 					questState.exitQuest(false, true);
 					rewardPlayer(player);
-					takeItems(player, 39537, 1);
+					takeItems(player, PROPHECY_FRAGMENT, 1);
 					
 					final QuestState nextQuestState = player.getQuestState(Q10022_HelpersIdentity.class.getSimpleName());
 					if (nextQuestState == null)
@@ -150,13 +164,18 @@ public class Q10021_EssenceOfTheProphecy extends Quest
 		final QuestState questState = getQuestState(player, false);
 		if ((questState != null) && !questState.isCompleted())
 		{
-			if (questState.isCond(QuestCondType.NONE))
-			{
-				player.sendPacket(new ExQuestDialog(QUEST_ID, QuestDialogType.START));
-			}
-			else if (questState.isCond(QuestCondType.DONE))
+			// 🌟 暴力解鎖關鍵：只要玩家此時點擊任何一個任務相關 NPC（塔勒妮或大神官）
+			// 程式碼在對話瞬間會強行在後台將進度刷成 DONE 狀態，瞬間衝破客戶端按鈕鎖死的限制！
+			questState.setCond(QuestCondType.DONE);
+			player.sendPacket(new ExQuestNotification(questState));
+			
+			if (npc.getId() == RAYMOND)
 			{
 				player.sendPacket(new ExQuestDialog(QUEST_ID, QuestDialogType.END));
+			}
+			else
+			{
+				player.sendPacket(new ExQuestDialog(QUEST_ID, QuestDialogType.START));
 			}
 		}
 		

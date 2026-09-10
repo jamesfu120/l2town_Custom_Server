@@ -276,27 +276,25 @@ public class Baium extends Script
 		}
 	}
 	
-		private boolean isInsideAvailabilityWindow()
+	private boolean isInsideAvailabilityWindow()
 	{
 		Calendar now = Calendar.getInstance();
+		int day = now.get(Calendar.DAY_OF_WEEK);
 		int hour = now.get(Calendar.HOUR_OF_DAY);
-		// 拿掉 (day == RAID_DAY) 的判斷，只要每天的 21 點 ~ 23 點之間就判定為開放
-		return (hour >= SPAWN_HOUR) && (hour < CLOSE_HOUR);
+		return ((day == RAID_DAY) && (hour >= SPAWN_HOUR) && (hour < CLOSE_HOUR));
 	}
 	
-		private void scheduleNextSpawn()
+	private void scheduleNextSpawn()
 	{
 		Calendar nextStart = Calendar.getInstance();
-		// 註解掉設定星期幾這行
-		// nextStart.set(Calendar.DAY_OF_WEEK, RAID_DAY); 
+		nextStart.set(Calendar.DAY_OF_WEEK, RAID_DAY);
 		nextStart.set(Calendar.HOUR_OF_DAY, SPAWN_HOUR);
 		nextStart.set(Calendar.MINUTE, 0);
 		nextStart.set(Calendar.SECOND, 0);
 		
 		if (Calendar.getInstance().after(nextStart))
 		{
-			// 原本是加一週 (WEEK_OF_YEAR)，改成加 1 天 (DATE)
-			nextStart.add(Calendar.DATE, 1); 
+			nextStart.add(Calendar.WEEK_OF_YEAR, 1);
 		}
 		
 		long delay = nextStart.getTimeInMillis() - System.currentTimeMillis();
@@ -313,12 +311,10 @@ public class Baium extends Script
 	/**
 	 * Checks if the Raid timeout has been reached. If the current time is greater than CLOSE_HOUR on the day of the RAID, and the Boss is still alive, forces the instance to close to prevent it from remaining open indefinitely.
 	 */
-		private void checkHardClose()
+	private void checkHardClose()
 	{
 		final Calendar now = Calendar.getInstance();
-		// 刪除或註解掉原本檢查星期的條件，只保留小時檢查：
-		// if ((now.get(Calendar.DAY_OF_WEEK) == RAID_DAY) && (now.get(Calendar.HOUR_OF_DAY) >= CLOSE_HOUR))
-		if (now.get(Calendar.HOUR_OF_DAY) >= CLOSE_HOUR)
+		if ((now.get(Calendar.DAY_OF_WEEK) == RAID_DAY) && (now.get(Calendar.HOUR_OF_DAY) >= CLOSE_HOUR))
 		{
 			if (GrandBossManager.getInstance().getStatus(BAIUM) != DEAD)
 			{

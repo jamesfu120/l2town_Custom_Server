@@ -210,8 +210,7 @@ public class CommunityBoardHandler implements IHandler<IParseBoardHandler, Strin
 	public String removeBypass(Player player)
 	{
 		return _bypasses.remove(player.getObjectId());
-	}
-	
+	}	
 	/**
 	 * Separates and send an HTML into multiple packets, to display into the community board.<br>
 	 * The limit is 16383 characters.
@@ -220,9 +219,38 @@ public class CommunityBoardHandler implements IHandler<IParseBoardHandler, Strin
 	 */
 	public static void separateAndSend(String html, Player player)
 	{
-		HtmlUtil.sendCBHtml(player, html);
+		String processedHtml = html;
+		if (processedHtml != null)
+		{
+			final StringBuilder sb = new StringBuilder();
+			int count = 0;
+			
+			// 🌟 核心修正：將所有玩家轉為基礎 Object 陣列，完美繞過所有核心的版本類型衝突
+			final Object[] objects = org.l2jmobius.gameserver.entity.World.getPlayers().toArray();
+			for (Object obj : objects)
+			{
+				if (obj instanceof Player)
+				{
+					final Player onlinePlayer = (Player) obj;
+					if (!onlinePlayer.isInvisible()) // 排除隱身 GM
+					{
+						sb.append(onlinePlayer.getName()).append(", ");
+						count++;
+					}
+				}
+			}
+			
+			// 組合最終名單字串
+			final String playerListStr = sb.length() > 0 ? sb.substring(0, sb.length() - 2) : "目前無玩家在線";
+			
+			// 進行標籤全域替換
+			processedHtml = processedHtml.replace("%online_players%", playerListStr);
+			processedHtml = processedHtml.replace("%online_count%", String.valueOf(count));
+		}
+		
+		// 發送處理過後的網頁內容
+		HtmlUtil.sendCBHtml(player, processedHtml);
 	}
-	
 	public static CommunityBoardHandler getInstance()
 	{
 		return SingletonHolder.INSTANCE;

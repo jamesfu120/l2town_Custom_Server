@@ -53,6 +53,7 @@ public class Q10415_PathOfDestinyProving extends Quest
 	// Class change rewards
 	private static final int SS_R = 33780;
 	private static final int BSS_R = 33794;
+	private static final int LCOIN = 48472;
 	private static final int BOX_R_HEAVY = 46924;
 	private static final int WEAPON_FIST_R = 47011;
 	// Misc
@@ -152,6 +153,10 @@ public class Q10415_PathOfDestinyProving extends Quest
 				{
 					questState.exitQuest(false, true);
 					rewardPlayer(player);
+					// 1. 使用核心自帶的 LCOIN 變數與 giveItems 方法發放 L幣
+                    giveItems(player, LCOIN, 5000);
+                    // 2. 將第一個參數從字串改為 org.l2jmobius.gameserver.entity.item.enums.ItemProcessType 列舉
+                    player.addAdena(org.l2jmobius.gameserver.entity.item.enums.ItemProcessType.QUEST, 2000000, player, true);
 					
 					final QuestState nextQuestState = player.getQuestState(Q10416_ChangedSpirits.class.getSimpleName());
 					if (nextQuestState == null)

@@ -11786,6 +11786,13 @@ public class Player extends Playable
 	{
 		startWarnUserTakeBreak();
 		
+		// 🌟 【核心修改】自訂玩家登入全服公告
+		if (!isGM()) 
+		{
+			// 在所有線上玩家的聊天欄發送中文系統公告
+			org.l2jmobius.gameserver.entity.World.broadcastToAllOnlinePlayers(getName() + " 已登入。歡迎回到遊戲！");
+		}
+		
 		if (isGM() && !GeneralConfig.GM_STARTUP_BUILDER_HIDE)
 		{
 			// Bleah, see L2J custom below.
