@@ -1,12 +1,10 @@
-<html><body>
-There are currently <font color="00ffff">%tax_income% Adena</font> Adena in taxes stored in the castle's vault.<br>
-Please enter the amount you wish to withdraw.<br>
-<table width=270 border=0>
-<tr><td align=center><edit var="data1" width=200 type="number"></td></tr>
+<html><body>目前已有 <font color="00ffff">    </font>在儲存於的庫存中的稅務.<br>請輸入您想提取的金額.<br>
+<table border="0" width="270">
+<tr><td align="center"><edit type="number" var="data1" width="200"></edit></td></tr>
 </table>
 <br>
 <center>
-<button value="Withdrawal" action="bypass -h Script CastleChamberlain withdraw $data1" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" width=90 height=27>
-</center>
+<button action="bypass -h Script CastleChamberlain withdraw $data1" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="27" value="提取 提取" width="90">
+</button></center>
 <br>
 </body></html>

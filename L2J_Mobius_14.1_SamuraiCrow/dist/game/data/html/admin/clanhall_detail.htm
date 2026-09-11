@@ -1,65 +1,58 @@
-<html><title>Main Admin Menu</title><body>
+<html><title> 管理者選單</title><body>
 <center>
-<table width=270 border=0 bgcolor="444444">
+<table bgcolor="444444" border="0" width="270">
 <tr>
-<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="65"></button></td>
+<td><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="角色" width="65"></button></td>
+<td><button action="bypass admin_admin2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲" width="65"></button></td>
+<td><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="管理" width="65"></button></td>
 </tr>
 </table>
 <br>
-<font name="hs11" color="LEVEL">&%%clanHallId%; (%clanHallId%)</font><br1>
-(&*%clanHallId%;)<br>
-<font name="hs10" color="LEVEL">Info:</font><br1>
-
-<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<font color="LEVEL" name="hs11">&amp;; () </font><br1>(&amp;*;)<br>
+<font color="LEVEL" name="hs10">資訊:</font><br1>
+<table bgcolor="363636" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align=center fixwidth="250">Location:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">&^%clanHallId%;</font></td>
+<td align="center" fixwidth="250">位置:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">&amp;^;</font></td>
 </tr>
-
-<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<table bgcolor="363636" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align=center fixwidth="250">Grade:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%clanHallGrade%</font></td>
+<td align="center" fixwidth="250">年級:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%clanHallGrade%</font></td>
 </tr>
-
-<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<table bgcolor="363636" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align=center fixwidth="250">Size:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%clanHallSize% square feet</font></td>
+<td align="center" fixwidth="250">尺寸:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">平方英尺</font></td>
 </tr>
-
-<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<table bgcolor="363636" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align=center fixwidth="250">Owner:</font></td>
-<td align=center fixwidth="250">%clanHallOwner%</td>
+<td align="center" fixwidth="250">擁有者:</td>
+<td align="center" fixwidth="250">%clanHallOwner%</td>
 </tr>
 </table>
 <br><br>
-
-<font name="hs10" color="LEVEL">Actions:</font><br1>
-<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<font color="LEVEL" name="hs10">行動:</font><br1>
+<table bgcolor="363636" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align=center fixwidth="250"><button value="Give" action="bypass -h admin_clanhall id=%clanHallId% action=give" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td align=center fixwidth="250"><button value="Take" action="bypass -h admin_clanhall id=%clanHallId% action=take" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align="center" fixwidth="250"><button action="bypass -h admin_clanhall id=%clanHallId% action=give" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="提供 提供" width="125"></button></td>
+<td align="center" fixwidth="250"><button action="bypass -h admin_clanhall id=%clanHallId% action=take" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="  接收 " width="125"></button></td>
 </tr>
 <tr>
-<td align=center fixwidth="250"><button value="Open doors" action="bypass -h admin_clanhall id=%clanHallId% action=openCloseDoors actionVal=true" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td align=center fixwidth="250"><button value="Close doors" action="bypass -h admin_clanhall id=%clanHallId% action=openCloseDoors actionVal=false" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align="center" fixwidth="250"><button action="bypass -h admin_clanhall id=%clanHallId% action=openCloseDoors actionVal=true" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="開啟自己的門" width="125"></button></td>
+<td align="center" fixwidth="250"><button action="bypass -h admin_clanhall id=%clanHallId% action=openCloseDoors actionVal=false" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="門 門" width="125"></button></td>
 </tr>
 <tr>
-<td align=center fixwidth="250"><button value="Teleport inside" action="bypass -h admin_clanhall id=%clanHallId% action=teleport actionVal=inside" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td align=center fixwidth="250"><button value="Teleport outside" action="bypass -h admin_clanhall id=%clanHallId% action=teleport actionVal=outside" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align="center" fixwidth="250"><button action="bypass -h admin_clanhall id=%clanHallId% action=teleport actionVal=inside" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="    " width="125"></button></td>
+<td align="center" fixwidth="250"><button action="bypass -h admin_clanhall id=%clanHallId% action=teleport actionVal=outside" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="在外面" width="125"></button></td>
 </tr>
 </table>
 <br><br>
-
-<font name="hs10" color="LEVEL">Functions:</font><br1>
+<font color="LEVEL" name="hs10">功能:</font><br1>
 %functionList%
 
 <br>
-<button value="Back" action="bypass -h admin_clanhall" width=200 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
-</center>
+<button action="bypass -h admin_clanhall" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="200"><br1>
+</br1></button></br1></br1></table></table></table></br1></br1></center>
 </body></html>

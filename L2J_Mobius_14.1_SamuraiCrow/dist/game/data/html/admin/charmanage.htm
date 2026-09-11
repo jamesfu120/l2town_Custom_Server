@@ -1,55 +1,55 @@
 <html><body>
-<table width=270>
+<table width="270">
 <tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Character Selection Menu</center></td>
-<td width=45><button value="Back" action="bypass admin_admin6" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>角色選擇選單</center></td>
+<td width="45"><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr>
 </table><br>
-<table width=240><tr>
-<td width=80>Character:</td><td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass admin_html help/charmanage.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="240"><tr>
+<td width="80">角色:</td><td><edit height="15" var="qbox" width="120"></edit></td>
+<td><button action="bypass admin_html help/charmanage.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="幫助" width="45"></button></td>
 </tr></table><br>
 <center>
-<table width=260><tr>
-<td><button value="Go" action="bypass -h admin_goto_char_menu $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Kick" action="bypass -h admin_kick_menu $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Ban Chr" action="bypass -h admin_ban_char $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Ban Acc" action="bypass -h admin_ban_acc $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="260"><tr>
+<td><button action="bypass -h admin_goto_char_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="請您繼續閱讀更多來自 羅馬的文章:" width="60"></button></td>
+<td><button action="bypass -h admin_kick_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="子子 子" width="60"></button></td>
+<td><button action="bypass -h admin_ban_char $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="禁止他們使用 Chr" width="60"></button></td>
+<td><button action="bypass -h admin_ban_acc $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="禁止使用." width="60"></button></td>
 </tr><tr>
-<td><button value="Get" action="bypass -h admin_recall_char_menu $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Kill" action="bypass -h admin_kill_menu $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="UnbanChr" action="bypass -h admin_unban_char $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="UnbanAcc" action="bypass -h admin_unban_acc $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_recall_char_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="  得到得到" width="60"></button></td>
+<td><button action="bypass -h admin_kill_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="打死 打死" width="60"></button></td>
+<td><button action="bypass -h admin_unban_char $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="沒有任何問題." width="60"></button></td>
+<td><button action="bypass -h admin_unban_acc $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="沒有任何問題. UnbanAcc" width="60"></button></td>
 </tr>
 <tr>
-<td><button value="Get Party" action="bypass -h admin_recall_party_menu $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Get Clan" action="bypass -h admin_recall_clan_menu $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Jail" action="bypass -h admin_jail $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="UnJail" action="bypass -h admin_unjail $qbox" width=60 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_recall_party_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="  獲得" width="60"></button></td>
+<td><button action="bypass -h admin_recall_clan_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="  獲得" width="60"></button></td>
+<td><button action="bypass -h admin_jail $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="監獄 " width="60"></button></td>
+<td><button action="bypass -h admin_unjail $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="沒有監獄" width="60"></button></td>
 </tr>
 </table>
 </center><br>
 <center>
-<table width=260><tr>
-<td width=15>X:</td><td><edit var="char_cord_x" width=50></td>
-<td width=15>Y:</td><td><edit var="char_cord_y" width=50></td>
-<td width=15>Z:</td><td><edit var="char_cord_z" width=50></td>
-<td><button value="Teleport" action="bypass -h admin_teleport_character_to_menu $qbox $char_cord_x $char_cord_y $char_cord_z" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="260"><tr>
+<td width="15">X: 這就是X:</td><td><edit var="char_cord_x" width="50"></edit></td>
+<td width="15">::</td><td><edit var="char_cord_y" width="50"></edit></td>
+<td width="15">::</td><td><edit var="char_cord_z" width="50"></edit></td>
+<td><button action="bypass -h admin_teleport_character_to_menu $qbox $char_cord_x $char_cord_y $char_cord_z" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="    " width="60"></button></td>
 </tr></table><br>
-<table width=260>
-<tr><td width=90>Starter Towns:</td><td width="110">Mainland:</td></tr>
-<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -114351 255286 -1520"><font color="LEVEL">Talking Island</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 15670 142983 -2705"><font color="LEVEL">Town of Dion</font></a></td></tr>
-<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -80353 247981 -3507"><font color="LEVEL">Faeron Village</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 17838 170274 -3508"><font color="LEVEL">Floran Village</font></a></td></tr>
-<tr><td></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 83400 147943 -3404"><font color="LEVEL">Town of Giran</font></a></td></tr>
-<tr><td>Arenas:</td><td><a action="bypass -h admin_teleport_character_to_menu $qbox -80826 149775 -3043"><font color="LEVEL">Gludin Village</font></a></td></tr>
-<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -86979 142402 -3643"><font color="LEVEL">Gludin Arena</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox -12672 122776 -3116"><font color="LEVEL">Town of Gludio</font></a></td></tr>
-<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox 147451 46728 -3410"><font color="LEVEL">Coliseum</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 117110 76883 -2695"><font color="LEVEL">Hunters Village</font></a></td></tr>
-<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox 73890 142656 -3778"><font color="LEVEL">Giran Arena</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 147450 26741 -2204"><font color="LEVEL">Town of Aden</font></a></td></tr>
-<tr><td></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 82956 53162 -1495"><font color="LEVEL">Town of Oren</font></a></td></tr>
-<tr><td>Others:</td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 147928 -55273 -2734"><font color="LEVEL">Town of Goddard</font></a></td></tr>
-<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -186742 244167 2670"><font color="LEVEL">Keucereus</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 87386 -143246 -1293 "><font color="LEVEL">Town of Schuttgart</font></a></td></tr>
-<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox 207320 87617 -1112"><font color="LEVEL">Arcan</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 111409 219364 -3545"><font color="LEVEL">Heine</font></a></td></tr>
+<table width="260">
+<tr><td width="90">開始城市:</td><td width="110">大陸:</td></tr>
+<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -114351 255286 -1520"><font color="LEVEL">狼人村莊</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 15670 142983 -2705"><font color="LEVEL"> 的  </font></a></td></tr>
+<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -80353 247981 -3507"><font color="LEVEL">法龍   </font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 17838 170274 -3508"><font color="LEVEL">【 芙羅蘭村莊 】</font></a></td></tr>
+<tr><td></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 83400 147943 -3404"><font color="LEVEL"> 的  </font></a></td></tr>
+<tr><td>球場:</td><td><a action="bypass -h admin_teleport_character_to_menu $qbox -80826 149775 -3043"><font color="LEVEL">【 古魯丁村莊 】</font></a></td></tr>
+<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -86979 142402 -3643"><font color="LEVEL">    </font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox -12672 122776 -3116"><font color="LEVEL"> 的  </font></a></td></tr>
+<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox 147451 46728 -3410"><font color="LEVEL">昂赫瀑布</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 117110 76883 -2695"><font color="LEVEL">【 獵人村莊 】</font></a></td></tr>
+<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox 73890 142656 -3778"><font color="LEVEL">伊娃水中庭園</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 147450 26741 -2204"><font color="LEVEL"> 的  </font></a></td></tr>
+<tr><td></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 82956 53162 -1495"><font color="LEVEL"> 的  </font></a></td></tr>
+<tr><td>::</td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 147928 -55273 -2734"><font color="LEVEL"> 的  </font></a></td></tr>
+<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox -186742 244167 2670"><font color="LEVEL">Keucereus 這個</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 87386 -143246 -1293 "><font color="LEVEL"> 的  </font></a></td></tr>
+<tr><td><a action="bypass -h admin_teleport_character_to_menu $qbox 207320 87617 -1112"><font color="LEVEL">阿爾卡納</font></a></td><td><a action="bypass -h admin_teleport_character_to_menu $qbox 111409 219364 -3545"><font color="LEVEL">矮人村莊</font></a></td></tr>
 </table>
 </center>
 </body></html>

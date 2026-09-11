@@ -1,59 +1,59 @@
-<html><title>Admin Castle Manage</title><body>
+<html><title>城堡管理</title><body>
 <center>
-<table width=270>
+<table width="270">
 <tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Admin Castle Manage</center></td>
-<td width=45><button value="Back" action="bypass admin_castlemanage" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>城堡管理</center></td>
+<td width="45"><button action="bypass admin_castlemanage" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr>
 </table>
 <br>
-<font color=""><button action="" value="%castleName% Castle Info" width=270 height=21 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch"></font>
-	<table width="270" border="0" bgcolor="444444">
-		<tr>
-			<td>Owner:</td>
-			<td><font color="LEVEL">%ownerName%</font></td>
-		</tr>
-		<tr>
-			<td>Clan:</td>
-			<td><font color="LEVEL">%ownerClan%</font></td>
-		</tr>
-		<tr>
-			<td>Castle Side:</td>
-			<td><font color="LEVEL">%castleSide%</font></td>
-		</tr>
-		<tr>
-			<td>Siege Info:</td>
-			<td><button  value="Show me" action="bypass admin_castlemanage %castleId% showRegWindow" width=85 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		</tr>
-	</table>
-	<br><br>
-	<button action="" value="Castle Manage" width=270 height=21 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch">
-	<table width=256 border=0 bgcolor="444444">
-		<tr>
-			<td align=center><button value="Give Castle" action="bypass admin_castlemanage %castleId% setOwner $ebox" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><combobox width=120 height=17 var=ebox list=Light;Dark></td>
-		</tr>
-		<tr>
-			<td align=center><button value="Take Castle" action="bypass admin_castlemanage %castleId% takeCastle" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><button value="Switch Sides" action="bypass admin_castlemanage %castleId% switchSide" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		</tr>
-	</table>
-		<br><br>
-		<button action="" value="Siege Manage" width=270 height=21 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch">
-	<table width=256 border=0 bgcolor="444444">
-		<tr>
-			<td align=center><button value="Add Attacker" action="bypass admin_castlemanage %castleId% addAttacker" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><button value="Remove Attacker" action="bypass admin_castlemanage %castleId% removeAttacker" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		</tr>
-		<tr>
-			<td align=center><button value="Add Deffender" action="bypass admin_castlemanage %castleId% addDeffender" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><button value="Remove Deffender" action="bypass admin_castlemanage %castleId% removeDeffender" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		</tr>
-		<tr>
-			<td align=center><button value="Start Siege" action="bypass admin_castlemanage %castleId% startSiege" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><button value="Stop Siege" action="bypass admin_castlemanage %castleId% stopSiege" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		</tr>
-	</table>
-</center>
+<font color=""><button action="" back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch" height="21" value="  資訊" width="270"></button></font>
+<table bgcolor="444444" border="0" width="270">
+<tr>
+<td>擁有者:</td>
+<td><font color="LEVEL">%ownerName%</font></td>
+</tr>
+<tr>
+<td>::</td>
+<td><font color="LEVEL">%ownerClan%</font></td>
+</tr>
+<tr>
+<td> 旁邊:</td>
+<td><font color="LEVEL">%castleSide%</font></td>
+</tr>
+<tr>
+<td> 資訊:</td>
+<td><button action="bypass admin_castlemanage %castleId% showRegWindow" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="給我看看" width="85"></button></td>
+</tr>
+</table>
+<br><br>
+<button action="" back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch" height="21" value=" 管理" width="270">
+<table bgcolor="444444" border="0" width="256">
+<tr>
+<td align="center"><button action="bypass admin_castlemanage %castleId% setOwner $ebox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="給予城堡" width="128"></button></td>
+<td align="center"><combobox height="17" list="Light;Dark" var="ebox" width="120"></combobox></td>
+</tr>
+<tr>
+<td align="center"><button action="bypass admin_castlemanage %castleId% takeCastle" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="      " width="130"></button></td>
+<td align="center"><button action="bypass admin_castlemanage %castleId% switchSide" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="交換側面" width="130"></button></td>
+</tr>
+</table>
+<br><br>
+<button action="" back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch" height="21" value=" 管理" width="270">
+<table bgcolor="444444" border="0" width="256">
+<tr>
+<td align="center"><button action="bypass admin_castlemanage %castleId% addAttacker" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="增加攻擊者" width="128"></button></td>
+<td align="center"><button action="bypass admin_castlemanage %castleId% removeAttacker" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="移除攻擊者" width="128"></button></td>
+</tr>
+<tr>
+<td align="center"><button action="bypass admin_castlemanage %castleId% addDeffender" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 防守者" width="128"></button></td>
+<td align="center"><button action="bypass admin_castlemanage %castleId% removeDeffender" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="移除防守者" width="128"></button></td>
+</tr>
+<tr>
+<td align="center"><button action="bypass admin_castlemanage %castleId% startSiege" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="開始攻城戰" width="128"></button></td>
+<td align="center"><button action="bypass admin_castlemanage %castleId% stopSiege" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="   停止使用" width="128"></button></td>
+</tr>
+</table>
+</button></button></center>
 </body></html>

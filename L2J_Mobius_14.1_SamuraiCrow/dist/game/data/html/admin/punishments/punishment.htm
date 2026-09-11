@@ -1,64 +1,63 @@
-<html><title>Punishment Information Panel</title><body>
+<html><title>刑法資訊小組</title><body>
 <center>
-<table width=270>
+<table width="270">
 <tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Punishment Panel</center></td>
-<td width=45><button value="Back" action="bypass admin_admin7" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>刑罰小組</center></td>
+<td width="45"><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr>
 </table>
 <br>
-<table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
-	<tr>
-		<td>Affect Type:</td>
-		<td><combobox width=120 height=12 var="affectType" list="%affects%"></td>
-	</tr>
-	<tr>
-		<td>Key:</td>
-		<td><edit var="key" width="130" height="12"></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td><a action="bypass admin_punishment info $key $affectType">Check</a></td>
-	</tr>
+<table bgcolor="666666" cellpadding="6" cellspacing="0" width="280">
+<tr>
+<td>影響：</td>
+<td><combobox height="12" list="%affects%" var="affectType" width="120"></combobox></td>
+</tr>
+<tr>
+<td>關鍵是:</td>
+<td><edit height="12" var="key" width="130"></edit></td>
+</tr>
+<tr>
+<td></td>
+<td><a action="bypass admin_punishment info $key $affectType">檢查 檢查</a></td>
+</tr>
 </table>
 <br>
-<table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
-	<tr>
-		<td>Punishment Type:</td>
-		<td><combobox width=120 height=12 var="punishmentType" list="%punishments%"></td>
-	</tr>
-	<tr>
-		<td>Time:</td>
-		<td><edit var="expiration" width="130" height="12" type="number"></td>
-	</tr>
-	<tr>
-		<td>Reason:</td>
-		<td><multiedit var="reason" width=130 height=32></td>
-	</tr>
-	<tr>
-		<td>Account:</td>
-		<td><edit var="acc" width="130" height="12"></td>
-		<td><a action="bypass -h admin_punishment_add $acc ACCOUNT $punishmentType $expiration $reason">Ban</a></td>
-	</tr>
-	<tr>
-		<td>Character:</td>
-		<td><edit var="char" width="130" height="12"></td>
-		<td><a action="bypass -h admin_punishment_add $char CHARACTER $punishmentType $expiration $reason">Ban</a></td>
-	</tr>
-	<tr>
-		<td>IP:</td>
-		<td><edit var="ip" width="130" height="12"></td>
-		<td><a action="bypass -h admin_punishment_add $ip IP $punishmentType $expiration $reason">Ban</a></td>
-	</tr>
-	<tr>
-		<td>HWID:</td>
-		<td><edit var="hwid" width="130" height="12"></td>
-		<td><a action="bypass -h admin_punishment_add $hwid HWID $punishmentType $expiration $reason">Ban</a></td>
-	</tr>
+<table bgcolor="666666" cellpadding="6" cellspacing="0" width="280">
+<tr>
+<td>罰：:</td>
+<td><combobox height="12" list="%punishments%" var="punishmentType" width="120"></combobox></td>
+</tr>
+<tr>
+<td>時間:</td>
+<td><edit height="12" type="number" var="expiration" width="130"></edit></td>
+</tr>
+<tr>
+<td>原因:</td>
+<td><multiedit height="32" var="reason" width="130"></multiedit></td>
+</tr>
+<tr>
+<td>帳號:</td>
+<td><edit height="12" var="acc" width="130"></edit></td>
+<td><a action="bypass -h admin_punishment_add $acc ACCOUNT $punishmentType $expiration $reason">禁止 禁止 禁止</a></td>
+</tr>
+<tr>
+<td>角色:</td>
+<td><edit height="12" var="char" width="130"></edit></td>
+<td><a action="bypass -h admin_punishment_add $char CHARACTER $punishmentType $expiration $reason">禁止 禁止 禁止</a></td>
+</tr>
+<tr>
+<td>網址:</td>
+<td><edit height="12" var="ip" width="130"></edit></td>
+<td><a action="bypass -h admin_punishment_add $ip IP $punishmentType $expiration $reason">禁止 禁止 禁止</a></td>
+</tr>
+<tr>
+<td>HWID:  這樣的東西</td>
+<td><edit height="12" var="hwid" width="130"></edit></td>
+<td><a action="bypass -h admin_punishment_add $hwid HWID $punishmentType $expiration $reason">禁止 禁止 禁止</a></td>
+</tr>
 </table>
 </center>
 <br>
-<font color="LEVEL">For permanent ban use 0 as time.<br1>
-Also the time is in minutes.</font>
-</html>
+<font color="LEVEL">永久禁止使用 0 as time.<br1>此外,時間也是在分鐘.</br1></font>
+</body></html>

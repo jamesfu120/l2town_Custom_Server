@@ -1,29 +1,26 @@
-<html><body><br><font color="LEVEL">[Manage Clan Hall]</font><br>
-<table width=275 cellspacing=3 cellpadding=0>
+<html><body><br><font color="LEVEL">[管理 廳]</font><br>
+<table cellpadding="0" cellspacing="3" width="275">
 <tr>
-<td FIXWIDTH=65><font color="999999">Name</font></td>
-<td FIXWIDTH=230>Chandelier (XP Recovery Device)</td>
+<td fixwidth="65"><font color="999999">這個名字</font></td>
+<td fixwidth="230">這是一臺電筒 (XP Recovery Device) </td>
 </tr>
 <tr>
-<td><font color="999999">Cost</font></td>
+<td><font color="999999">價格 價格</font></td>
 <td><font color="00FFFF">%funcCost%</font></td>
 </tr>
 <tr>
-<td valign=top><font color="999999">Use</font></td>
-<td>Restores XP of any clan member who is resurrected in the clan hall.</td>
+<td valign="top"><font color="999999">使用 使用</font></td>
+<td>恢復任何在廳復活的 會員的 XP.</td>
 </tr>
 </table>
-<br>
-The fee for using this feature must be paid in advance.<br>
-The initial fee will be deducted from the Clan Leader's <font color="LEVEL">inventory</font>, and subsequent fees will be withdrawn from the  <font color="LEVEL">clan warehouse</font>.<br>
-If there is not sufficient Adena in the clan warehouse,<font color="LEVEL"> the facility will be reset</font>.<br>
+<br>使用這個功能的費用必須提前付出.<br>首要費用將從領導人的額外扣除.<font color="LEVEL">資料庫 資料庫</font>接下來的收費將從 中提取.<font color="LEVEL"> 倉庫</font>.<br>如果倉庫裡沒有足夠的,<font color="LEVEL">該設施將會重置</font>.<br>
 <center>
-<table width=200>
-<tr><td align=center>
-<button action="bypass -h Script ClanHallManager manageFunctions setFunction %funcId% %funcLv%" value="OK" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-</td> <td align=center>
-<button action="bypass -h Script ClanHallManager manageFunctions" value="Cancel" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-</td></tr>
+<table width="200">
+<tr><td align="center">
+<button action="bypass -h Script ClanHallManager manageFunctions setFunction %funcId% %funcLv%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="27" value="這樣就好了" width="80">
+</button></td> <td align="center">
+<button action="bypass -h Script ClanHallManager manageFunctions" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="27" value="    " width="80">
+</button></td></tr>
 </table>
 </center>
 </body></html>

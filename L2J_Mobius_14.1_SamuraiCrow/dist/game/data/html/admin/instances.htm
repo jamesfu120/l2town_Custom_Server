@@ -1,36 +1,30 @@
-<html><title>Main Admin Menu</title><body>
+<html><title> 管理者選單</title><body>
 <center>
-<table width=270 border=0 bgcolor="444444">
+<table bgcolor="444444" border="0" width="270">
 <tr>
-<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="65"></button></td>
+<td><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="角色" width="65"></button></td>
+<td><button action="bypass admin_admin2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲" width="65"></button></td>
+<td><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="管理" width="65"></button></td>
 </tr>
 </table>
 <br><br>
-<font name="hs12" color="LEVEL">Instance Manager</font>
+<font color="LEVEL" name="hs12">舉例經理</font>
 <br>
-
-<font name="hs10" color="LEVEL">Info:</font><br1>
-Instance is kind of parallel universe where players can see only creatures in their own instance.<br>
-
-<font name="hs10" color="LEVEL">Statistics:</font><br1>
-<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<font color="LEVEL" name="hs10">資訊:</font><br1>例項是一種平行宇宙,玩家只能在自己的例項中看到生物.<br>
+<font color="LEVEL" name="hs10">統計:</font><br1>
+<table bgcolor="363636" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align=center fixwidth="250">Active Instances:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%instCount%</font></td>
+<td align="center" fixwidth="250">活躍的:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%instCount%</font></td>
 </tr>
-
 <tr>
-<td align=center fixwidth="250">Loaded Templates:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%tempCount%</font></td>
+<td align="center" fixwidth="250">載入的模板:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%tempCount%</font></td>
 </tr>
 </table>
 <br><br>
-<font name="hs10" color="LEVEL">Functions:</font><br1>
-
-<button value="Show me all instance templates" action="bypass -h admin_listinstances" width=200 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-
-</center>
+<font color="LEVEL" name="hs10">功能:</font><br1>
+<button action="bypass -h admin_listinstances" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="請向我展示所有示例模板" width="200">
+</button></br1></br1></br1></center>
 </body></html>

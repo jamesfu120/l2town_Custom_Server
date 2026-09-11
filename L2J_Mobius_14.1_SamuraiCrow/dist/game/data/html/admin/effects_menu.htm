@@ -1,54 +1,54 @@
-<html><title>Effects Panel</title><body>
+<html><title>效果管理</title><body>
 <center>
-<table width=270><tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Effects Menu</center></td>
-<td width=45><button value="Back" action="bypass admin_admin6" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>效果管理</center></td>
+<td width="45"><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr></table><br>
-<table width=270>
+<table width="270">
 <tr>
-<td>QuickBox:</td>
-<td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass admin_html help/effects_menu.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td>數值：</td>
+<td><edit height="15" var="qbox" width="120"></edit></td>
+<td><button action="bypass admin_html help/effects_menu.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="幫助" width="45"></button></td>
 </tr>
 </table>
 <br>
-Character Based:<br1>
-<table width=270>
+【 玩家 】<br1>
+<table width="270">
 <tr>
-<td><button value="Para" action="bypass -h admin_para_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Un Para" action="bypass -h admin_unpara_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Para All" action="bypass -h admin_para_all_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="UnPara All" action="bypass -h admin_unpara_all_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_para_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="指定麻痺" width="65"></button></td>
+<td><button action="bypass -h admin_unpara_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="解除麻痺" width="65"></button></td>
+<td><button action="bypass -h admin_para_all_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="麻痺全部" width="65"></button></td>
+<td><button action="bypass -h admin_unpara_all_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="解除全部" width="65"></button></td>
 </tr>
 <tr>
-<td><button value="Social" action="bypass -h admin_social_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Effect" action="bypass -h admin_effect_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Abnormal" action="bypass -h admin_ave_abnormal $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Displ.Eff." action="bypass -h admin_set_displayeffect_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_social_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="社交動作" width="65"></button></td>
+<td><button action="bypass -h admin_effect_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="技能效果" width="65"></button></td>
+<td><button action="bypass -h admin_ave_abnormal $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="異常效果" width="65"></button></td>
+<td><button action="bypass -h admin_set_displayeffect_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="技能顯示" width="65"></button></td>
 </tr>
 <tr>
-<td><button value="Transform" action="bypass -h admin_transform_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Untransf." action="bypass -h admin_untransform" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="SmallHead" action="bypass -h admin_shrinkhead" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="BigHead" action="bypass -h admin_bighead" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_transform_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="變身效果" width="65"></button></td>
+<td><button action="bypass -h admin_untransform" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="取消變身" width="65"></button></td>
+<td><button action="bypass -h admin_shrinkhead" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="還原小頭" width="65"></button></td>
+<td><button action="bypass -h admin_bighead" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="大頭效果" width="65"></button></td>
 </tr>
 </table>
 <br><br>
-World Based:<br1>
-<table width=270>
+【 世界 】<br1>
+<table width="270">
 <tr>
-<td><button value="Day Sky" action="bypass -h admin_atmosphere_menu sky day 0" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Night Sky" action="bypass -h admin_atmosphere_menu sky night 0" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Dawn Sky" action="bypass -h admin_atmosphere_menu signsky dawn 0" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Dusk Sky" action="bypass -h admin_atmosphere_menu signsky dusk 0" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_atmosphere_menu sky day 0" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="白天天空" width="65"></button></td>
+<td><button action="bypass -h admin_atmosphere_menu sky night 0" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="夜晚天空" width="65"></button></td>
+<td><button action="bypass -h admin_atmosphere_menu signsky dawn 0" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="黎明天空" width="65"></button></td>
+<td><button action="bypass -h admin_atmosphere_menu signsky dusk 0" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="黃昏天空" width="65"></button></td>
 </tr><tr>
-<td><button value="Red Sky" action="bypass -h admin_atmosphere_menu sky red $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="E Quake" action="bypass -h admin_earthquake_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Sounds" action="bypass -h admin_play_sounds" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Mob Group" action="bypass -h admin_mobmenu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_atmosphere_menu sky red $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="紅色天空" width="65"></button></td>
+<td><button action="bypass -h admin_earthquake_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="地震效果" width="65"></button></td>
+<td><button action="bypass -h admin_play_sounds" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="音樂選單" width="65"></button></td>
+<td><button action="bypass -h admin_mobmenu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="怪物群組" width="65"></button></td>
 <td></td><td></td>
 </tr></table><br><br>
 <br><br>
-</center>
+</br1></br1></center>
 </body></html>

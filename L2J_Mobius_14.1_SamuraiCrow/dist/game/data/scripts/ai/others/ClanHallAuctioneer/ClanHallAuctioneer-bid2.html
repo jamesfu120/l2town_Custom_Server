@@ -1,15 +1,12 @@
 <html>
 <body>
-<table width=270 border=0>
-<tr><td width=90>Minimum bid price:</td> <td width=180><font color="aaccff">%minBid%</font> Adena</td></tr> <tr><td>Bid price:</td> <td><font color="aaccff">%myBid%</font> Adena</td></tr> <tr><td>Closing date:</td> <td>%auctionEnd%</td></tr>
+<table border="0" width="270">
+<tr><td width="90">最低的投標價格:</td> <td width="180"><font color="aaccff">%minBid%</font>    </td></tr> <tr><td>比價價價格:</td> <td><font color="aaccff">%myBid%</font>    </td></tr> <tr><td>結束日期:</td> <td>%auctionEnd%</td></tr>
 </table>
-<br>
-Raising a bid is only possible after a bid has been made. Canceled bids will be refunded, minus the transaction tax ( <font color="LEVEL">10% of the bid price</font> ).<br>
-You can raise or cancel a bid by selecting "My Auction" in the top menu.<br>
-Would you like to submit a bid?<br>
-<img src="L2UI.SquareBlank" width=270 height=10><img src="L2UI.SquareWhite" width=270 height=1><img src="L2UI.SquareBlank" width=270 height=5>
-<table width=270 border=0>
-<tr><td width=100></td> <td width=80 align=center><button action="bypass -h Script ClanHallAuctioneer my_auction" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> <td width=80 align=center><button action="bypass -h Script ClanHallAuctioneer bid id=%id%" value="Confirm" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<br>只有在投標完成後才能提升投標.取消的投標將會被退款,除了交易稅 ()<font color="LEVEL"> 比價的價格</font> ).<br>您可以在上方選單中選擇"我的拍賣"或"拍賣".<br>您是否希望提交投標?<br>
+<img height="10" src="L2UI.SquareBlank" width="270"/><img height="1" src="L2UI.SquareWhite" width="270"/><img height="5" src="L2UI.SquareBlank" width="270"/>
+<table border="0" width="270">
+<tr><td width="100"></td> <td align="center" width="80"><button action="bypass -h Script ClanHallAuctioneer my_auction" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="27" value="返回" width="80"></button></td> <td align="center" width="80"><button action="bypass -h Script ClanHallAuctioneer bid id=%id%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="27" value="    " width="80"></button></td></tr>
 </table>
-&nbsp;<br>
+ <br>
 </body></html>

@@ -1,31 +1,31 @@
-<html><title>Login server</title><body>
-<table width=270><tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Server Management Menu</center></td>
-<td width=45><button value="Back" action="bypass admin_admin4" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<html><title>登入伺服器</title><body>
+<table width="270"><tr>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>伺服器管理選單</center></td>
+<td width="45"><button action="bypass admin_admin4" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr></table>
 <br><br>
-<table width=240>
+<table width="240">
 <tr>
-<td width=100>Max Players:</td>
-<td><edit var="qbox" width=120 height=21></td>
-<td><button value="Help" action="bypass admin_html help/login.htm" width=45 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="100">最大的玩家:</td>
+<td><edit height="21" var="qbox" width="120"></edit></td>
+<td><button action="bypass admin_html help/login.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="15" value="幫助" width="45"></button></td>
 </tr></table><br><br>
-<table width=260><tr>
-<td>Registered as:</td><td>%server_name%</td>
+<table width="260"><tr>
+<td>註冊為:</td><td>%server_name%</td>
 </tr><tr>
-<td>Status: %status%</td><td>Type: %clock%</td>
+<td>狀態: </td><td>:    </td>
 </tr><tr>
-<td>Brackets: %brackets%</td><td>Max Players %max_players%</td>
+<td>括號: </td><td>最大的玩家 </td>
 </tr></table>
 <center>
 <br><br>
-<table width=260><tr>
-<td><button value="Gm Only" action="bypass -h admin_server_gm_only" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Kick non GMs" action="bypass -h admin_kick_non_gm" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Everyone" action="bypass -h admin_server_all" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr><tr>
-<td><button value="Clock On" action="bypass -h admin_server_list_clock on" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Clock Off" action="bypass -h admin_server_list_clock off" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Max Players" action="bypass -h admin_server_max_player $qbox" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr></table>
+<table width="260"><tr>
+<td><button action="bypass -h admin_server_gm_only" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 只有" width="95"></button></td>
+<td><button action="bypass -h admin_kick_non_gm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="沒有 GM 的子" width="95"></button></td>
+<td><button action="bypass -h admin_server_all" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="每個人都是" width="95"></button></td></tr><tr>
+<td><button action="bypass -h admin_server_list_clock on" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="在時間上" width="95"></button></td>
+<td><button action="bypass -h admin_server_list_clock off" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="關閉時間" width="95"></button></td>
+<td><button action="bypass -h admin_server_max_player $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="最大的玩家" width="95"></button></td></tr></table>
 </center>
 </body></html>

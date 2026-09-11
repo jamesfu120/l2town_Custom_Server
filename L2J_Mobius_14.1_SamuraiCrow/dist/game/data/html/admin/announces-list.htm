@@ -1,48 +1,47 @@
-<html noscrollbar>
-	<body>
-		<center>
-			<br>
-			<table border="0" cellpadding="0" cellspacing="0" width="97%" height="480" background="L2UI_CH3.refinewnd_back_Pattern">
-				<tr>
-					<td valign="top" align="center">
-						<table border="0" cellpadding="0" cellspacing="0">
-							<tr>
-								<td width="256" height="185" background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td>
-							</tr>
-						</table>
-						Announcements:<br1>
-						<table width="690" height="20" cellspacing="5" background="L2UI_CT1.Button_DF_Calculator">
-							<tr>
-								<td width="5"></td>
-								<td width="80">Id</td>
-								<td width="100">Type</td>
-								<td width="100">Author</td>
-								<td width="60">Restart</td>
-								<td width="60">Show</td>
-								<td width="60">Edit</td>
-								<td width="60">Remove</td>
-								<td width="5"></td>
-							</tr>
-						</table>
-						<table width="690" height="20" cellspacing="2" background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+<html noscrollbar="">
+<body>
+<center>
+<br>
+<table background="L2UI_CH3.refinewnd_back_Pattern" border="0" cellpadding="0" cellspacing="0" height="480" width="97%">
+<tr>
+<td align="center" valign="top">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td background="L2UI_CT1.OlympiadWnd_DF_GrandTexture" height="185" width="256"></td>
+</tr>
+</table>公告:<br1>
+<table background="L2UI_CT1.Button_DF_Calculator" cellspacing="5" height="20" width="690">
+<tr>
+<td width="5"></td>
+<td width="80">Id  如何使用?</td>
+<td width="100">型別</td>
+<td width="100">作者  作者</td>
+<td width="60">請重新啟動</td>
+<td width="60">表演 表演</td>
+<td width="60">編輯 編輯</td>
+<td width="60">刪除 刪除</td>
+<td width="5"></td>
+</tr>
+</table>
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG" cellspacing="2" height="20" width="690">
 							%announcements%
 						</table>
-						<center>
-							<table width=280 cellspacing=0>
-								<tr>
+<center>
+<table cellspacing="0" width="280">
+<tr>
 									%pages%
 								</tr>
-							</table>
-							<table>
-								<tr>
-									<td><button value="Add" action="bypass -h admin_announces add" width="70" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-									<td><button value="Restart" action="bypass -h admin_announces restart" width="70" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-								</tr>
-							</table>
-						</center>
-					</td>
-				</tr>
-			</table>
-		</center>
-	</body>
+</table>
+<table>
+<tr>
+<td><button action="bypass -h admin_announces add" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="新增公告" width="70"></button></td>
+<td><button action="bypass -h admin_announces restart" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="請重新啟動" width="70"></button></td>
+</tr>
+</table>
+</center>
+</br1></td>
+</tr>
+</table>
+</center>
+</body>
 </html>

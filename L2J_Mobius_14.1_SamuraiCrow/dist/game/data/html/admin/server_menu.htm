@@ -1,73 +1,70 @@
-<html><title>Server Management Panel</title><body>
+<html><title>伺服器管理小組</title><body>
 <center>
-<table width=270 border=0 bgcolor="444444">
+<table bgcolor="444444" border="0" width="270">
 <tr>
-<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="65"></button></td>
+<td><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="角色" width="65"></button></td>
+<td><button action="bypass admin_admin2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲" width="65"></button></td>
+<td><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="管理" width="65"></button></td>
 </tr>
 </table><br>
-<table width=270>
+<table width="270">
 <tr>
-<td>QuickBox:</td>
-<td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass admin_html help/server_menu.htm" width=60 height=24 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td>數值：</td>
+<td><edit height="15" var="qbox" width="120"></edit></td>
+<td><button action="bypass admin_html help/server_menu.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="24" value="幫助" width="60"></button></td>
 </tr>
 </table>
-<br><br>
-Development:<br1>
-<table width=270>
+<br><br>發展: 發展:<br1>
+<table width="270">
 <tr>
-<td><button value="Open All Doors" action="bypass -h admin_openall" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Close All Doors" action="bypass -h admin_closeall" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_openall" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="開啟所有門" width="125"></button></td>
+<td><button action="bypass -h admin_closeall" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 所有的門" width="125"></button></td>
 </tr>
 <tr>
-<td><button value="Fight Calc" action="bypass -h admin_fight_calculator_show" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Packet Forge" action="bypass -h admin_forge" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_fight_calculator_show" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="戰鬥卡爾克" width="125"></button></td>
+<td><button action="bypass -h admin_forge" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="包裝鍛 " width="125"></button></td>
 </tr>
 <tr>
-<td><button value="System Message" action="bypass -h admin_msg $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Spawns Debug" action="bypass -h admin_spawn_debug_menu" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_msg $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="資訊系統" width="125"></button></td>
+<td><button action="bypass -h admin_spawn_debug_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="召喚除錯" width="125"></button></td>
 </tr>
 </table><br><br>
-<table width=270>
+<table width="270">
 <tr>
-<td><button value="Skill Test" action="bypass -h admin_skill_test $qbox" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Zone Build" action="bypass -h admin_zone_build" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Zone Check" action="bypass -h admin_zone_check" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_skill_test $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="技能測試 技能測試" width="82"></button></td>
+<td><button action="bypass -h admin_zone_build" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="區域建構" width="82"></button></td>
+<td><button action="bypass -h admin_zone_check" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="檢查區域檢查" width="82"></button></td>
 </tr>
 <tr>
-<td><button value="Config" action="bypass -h admin_config_server" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Triggers" action="bypass admin_html event_triggers.htm" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Reload" action="bypass admin_reload_menu" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-</table>
-<br><br>
-Maintenance:<br1>
-<table width=270>
-<tr>
-<td><button value="LoginServer" action="bypass -h admin_server_login" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GameServer" action="bypass -h admin_server_shutdown" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-<td><button value="Server Info" action="bypass -h admin_serverinfo" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Announcements" action="bypass -h admin_announces list" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_config_server" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="預覽 預覽 預覽" width="82"></button></td>
+<td><button action="bypass admin_html event_triggers.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="引發 引發" width="82"></button></td>
+<td><button action="bypass admin_reload_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="重新讀取" width="82"></button></td>
 </tr>
 </table>
-<br><br>
-Geodata:<br1>
-<table width=270>
+<br><br>維護:<br1>
+<table width="270">
 <tr>
-<td><button value="Geo Pos" action="bypass -h admin_geo_pos" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Spawn Pos" action="bypass -h admin_geo_spawn_pos" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Can Move" action="bypass -h admin_geo_can_move" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_server_login" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="登入伺服器" width="130"></button></td>
+<td><button action="bypass -h admin_server_shutdown" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲伺服器" width="130"></button></td>
 </tr>
 <tr>
-<td><button value="Can See" action="bypass -h admin_geo_can_see" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Geogrid" action="bypass -h admin_geogrid" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Geomap" action="bypass -h admin_geomap" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_serverinfo" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="伺服器資訊" width="130"></button></td>
+<td><button action="bypass -h admin_announces list" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="公告 公告" width="130"></button></td>
 </tr>
 </table>
-</center>
+<br><br>地資料:<br1>
+<table width="270">
+<tr>
+<td><button action="bypass -h admin_geo_pos" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="地質地質地質地質地質地質地質地質" width="82"></button></td>
+<td><button action="bypass -h admin_geo_spawn_pos" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" Pos 關於我們" width="82"></button></td>
+<td><button action="bypass -h admin_geo_can_move" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 可以 " width="82"></button></td>
+</tr>
+<tr>
+<td><button action="bypass -h admin_geo_can_see" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="看到可以" width="82"></button></td>
+<td><button action="bypass -h admin_geogrid" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="基格格里德" width="82"></button></td>
+<td><button action="bypass -h admin_geomap" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="關於地圖的地圖" width="82"></button></td>
+</tr>
+</table>
+</br1></br1></br1></center>
 </body></html>

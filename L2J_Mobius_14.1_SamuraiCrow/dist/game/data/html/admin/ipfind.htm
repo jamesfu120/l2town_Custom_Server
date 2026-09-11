@@ -1,20 +1,18 @@
 <html><body>
-<table width=270><tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Ip Menu</center></td>
-<td width=45><button value="Back" action="bypass admin_find_dualbox" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr></table><br>
-Characters logged from <font color="LEVEL">%ip%</font>:<br>
-<table width=270>		
-<tr><td width=80>Name</td><td width=110>Class</td><td width=40>Level</td></tr>
+<table width="270"><tr>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>這裡的 Ip 選單</center></td>
+<td width="45"><button action="bypass admin_find_dualbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
+</tr></table><br>從  登入的字元<font color="LEVEL">%ip%</font>:<br>
+<table width="270">
+<tr><td width="80">這個名字</td><td width="110">班級 班級</td><td width="40">層面 層面</td></tr>
 %results%
 </table>
 <br>
 <center>
 <table><tr>
-<td width=100>IP Number:</td>
-<td><edit var="ip_number" width=100></td>
-<td><button value="Find" action="bypass -h admin_find_ip $ip_number" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="100">IP號碼:</td>
+<td><edit var="ip_number" width="100"></edit></td>
+<td><button action="bypass -h admin_find_ip $ip_number" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="找到 找到" width="40"></button></td>
 </tr></table></center>
-<br>Found %number% character%end%
-</body></html>
+<br> 找到字元 </body></html>

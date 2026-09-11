@@ -1,63 +1,63 @@
-<html><title>GM Menu</title><body>
+<html><title> 選單</title><body>
 <center>
-<table width=270 border=0 bgcolor="444444">
+<table bgcolor="444444" border="0" width="270">
 <tr>
-<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="65"></button></td>
+<td><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="角色" width="65"></button></td>
+<td><button action="bypass admin_admin2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲" width="65"></button></td>
+<td><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="管理" width="65"></button></td>
 </tr>
 </table><br>
-<table width=270>
+<table width="270">
 <tr>
-<td><font color="LEVEL">QuickBox:</font></td>
-<td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass admin_help" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><font color="LEVEL">數值：</font></td>
+<td><edit height="15" var="qbox" width="120"></edit></td>
+<td><button action="bypass admin_help" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="幫助" width="45"></button></td>
 </tr>
 </table>
-<table width=270><tr>
-<td><button value="List ON" action="bypass -h admin_gmliston" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="List OFF" action="bypass -h admin_gmlistoff" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Diet" action="bypass -h admin_diet" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Invis" action="bypass -h admin_invis_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td><button action="bypass -h admin_gmliston" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="在名單上" width="65"></button></td>
+<td><button action="bypass -h admin_gmlistoff" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="排名 關閉" width="65"></button></td>
+<td><button action="bypass -h admin_diet" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 飲食方式" width="65"></button></td>
+<td><button action="bypass -h admin_invis_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="在 Invis " width="65"></button></td>
 </tr><tr>
-<td><button value="Petitions" action="bypass -h admin_view_petitions" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Silence" action="bypass -h admin_silence" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="TradeOff" action="bypass -h admin_tradeoff" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Invul" action="bypass admin_invul" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_view_petitions" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="請願 請願" width="65"></button></td>
+<td><button action="bypass -h admin_silence" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="沉默 沉默" width="65"></button></td>
+<td><button action="bypass -h admin_tradeoff" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="交易 交易" width="65"></button></td>
+<td><button action="bypass admin_invul" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="     " width="65"></button></td>
 </tr><tr>
-<td><button value="Announces" action="bypass -h admin_announces list" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Exceptions" action="bypass -h admin_exceptions" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Enhance" action="bypass admin_enchant" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM Shop" action="bypass admin_gmshop" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_announces list" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="公告 公告" width="65"></button></td>
+<td><button action="bypass -h admin_exceptions" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="只有例外" width="65"></button></td>
+<td><button action="bypass admin_enchant" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="增強 增強" width="65"></button></td>
+<td><button action="bypass admin_gmshop" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="GM商店" width="65"></button></td>
 </tr><tr>
-<td><button value="Instance" action="bypass admin_html instancezone.htm" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Events" action="bypass admin_event_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Debug" action="bypass -h admin_debug" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Server" action="bypass admin_admin4" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_html instancezone.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="舉例 舉例" width="65"></button></td>
+<td><button action="bypass admin_event_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="活動 活動" width="65"></button></td>
+<td><button action="bypass -h admin_debug" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="預覽 預覽 預覽 預覽" width="65"></button></td>
+<td><button action="bypass admin_admin4" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="伺服器 伺服器" width="65"></button></td>
 </tr>
 </table><br1>
-<table width=270><tr>
-<td><font color="LEVEL">Super Haste:</font></td>
-<td><button value="1" action="bypass -h admin_superhaste 1" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="2" action="bypass -h admin_superhaste 2" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="3" action="bypass -h admin_superhaste 3" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="4" action="bypass -h admin_superhaste 4" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Off" action="bypass -h admin_superhaste 0" width=30 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td><font color="LEVEL">超級快速:</font></td>
+<td><button action="bypass -h admin_superhaste 1" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="1" width="30"></button></td>
+<td><button action="bypass -h admin_superhaste 2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="2" width="30"></button></td>
+<td><button action="bypass -h admin_superhaste 3" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="3" width="30"></button></td>
+<td><button action="bypass -h admin_superhaste 4" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="4" width="30"></button></td>
+<td><button action="bypass -h admin_superhaste 0" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="關閉 關閉" width="30"></button></td>
 </tr></table><br>
-<center><multiedit var="new_announcement" width=250 height=50></center>
+<center><multiedit height="50" var="new_announcement" width="250"></multiedit></center>
 <table width="160"><tr>
-<td><button value="Announce" action="bypass -h admin_announce $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Critical" action="bypass -h admin_announce_crit $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="On-Screen" action="bypass -h admin_announce_screen $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM Chat" action="bypass -h admin_gmchat_menu $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_announce $new_announcement" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="公告 公告" width="65"></button></td>
+<td><button action="bypass -h admin_announce_crit $new_announcement" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="評論 評論" width="65"></button></td>
+<td><button action="bypass -h admin_announce_screen $new_announcement" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="在螢幕上" width="65"></button></td>
+<td><button action="bypass -h admin_gmchat_menu $new_announcement" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 聊天" width="65"></button></td>
 </tr></table><br>
-<table width=270><tr>
-<td><button value="Fenrir" action="bypass -h admin_ride_wolf" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Strider" action="bypass -h admin_ride_strider" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Wyvern" action="bypass -h admin_ride_wyvern" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Horse" action="bypass -h admin_ride_horse" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td><button action="bypass -h admin_ride_wolf" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="這就是 Fenrir" width="65"></button></td>
+<td><button action="bypass -h admin_ride_strider" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="斯特萊德" width="65"></button></td>
+<td><button action="bypass -h admin_ride_wyvern" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="維爾恩" width="65"></button></td>
+<td><button action="bypass -h admin_ride_horse" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="騎馬 馬" width="65"></button></td>
 </tr><tr>
-<td><button value="Jet Bike" action="bypass -h admin_ride_bike" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_ride_bike" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="噴氣式腳踏車" width="65"></button></td>
 </tr></table><br>
-</center></body></html>
+</br1></center></body></html>

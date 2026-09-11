@@ -1,38 +1,36 @@
-<html><title>Instance Maintenance Menu</title><body>
+<html><title>此分類下一篇: 舉例維護選單</title><body>
 <center>
-<table width=270><tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Instance Creation Menu</center></td>
-<td width=45><button value="Back" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>建立例項選單</center></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr></table><br>
-<table width=260>
+<table width="260">
 <tr>
-<td><button value="General" action="bypass admin_html instancezone.htm" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Individual" action="bypass admin_html instancezone2.htm" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Template IDs" action="bypass admin_instancezones" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_html instancezone.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="總統 總統" width="83"></button></td>
+<td><button action="bypass admin_html instancezone2.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="個人 個人" width="83"></button></td>
+<td><button action="bypass admin_instancezones" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="模板 ID " width="83"></button></td>
 </tr>
-</table><br>
-Create Example:<br1>
-Instance: [ 1 ] - Template: [ demo.xml ]<br>
-<table width=260>
+</table><br>舉例: 建立<br1>舉例: [1] - 模板: [demo.xml]<br>
+<table width="260">
 <tr>
 <td></td>
-<td>Instance</td>
-<td>Template XML</td>
+<td>舉例 舉例</td>
+<td>這個XML模板</td>
 </tr>
 <tr>
-<td><button value="Create" action="bypass -h admin_instancecreate $instanceid_create $templateid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><edit var="instanceid_create" width=50></td>
-<td><edit var="templateid" width=80></td>
+<td><button action="bypass -h admin_instancecreate $instanceid_create $templateid" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="建立 建立" width="80"></button></td>
+<td><edit var="instanceid_create" width="50"></edit></td>
+<td><edit var="templateid" width="80"></edit></td>
 </tr>
 <tr><td><br></td></tr>
 <tr>
-<td><button value="Destroy" action="bypass -h admin_instancedestroy $instanceid_destroy $templateid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><edit var="instanceid_destroy" width=50></td>
+<td><button action="bypass -h admin_instancedestroy $instanceid_destroy $templateid" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="摧毀 摧毀" width="80"></button></td>
+<td><edit var="instanceid_destroy" width="50"></edit></td>
 </tr>
 </table>
 <br><br>
-<button value="List Instances" action="bypass -h admin_instancelist" width=110 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br><br>
-<font color="LEVEL">IDs => 300000: reserved for dynamic instances!</font>
-</center>
+<button action="bypass -h admin_instancelist" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="列表  " width="110"><br><br>
+<font color="LEVEL">IDs =&gt; 300000: 預留於動態!</font>
+</button></br1></center>
 </body></html>

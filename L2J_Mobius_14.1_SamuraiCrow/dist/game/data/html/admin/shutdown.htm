@@ -1,22 +1,22 @@
-<html><title>Shutdown Server</title><body>
-<table width=270><tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Server Management</center></td>
-<td width=45><button value="Back" action="bypass admin_admin4" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<html><title>關閉伺服器</title><body>
+<table width="270"><tr>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>管理伺服器管理</center></td>
+<td width="45"><button action="bypass admin_admin4" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr></table><br>
-<table width=270><tr>
-<td width=100>Shutdown time:</td>
-<td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass admin_html help/shutdown.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td width="100">關閉時間:</td>
+<td><edit height="15" var="qbox" width="120"></edit></td>
+<td><button action="bypass admin_html help/shutdown.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="幫助" width="45"></button></td>
 </tr></table><br><br>
-<table width=270>	
-<tr><td>Players Online:</td><td>%count%</td></tr>
-<tr><td>Used Memory:</td><td>%used% bytes</td></tr>
-<tr><td>Game Time:</td><td>%time%</td></tr>
+<table width="270">
+<tr><td>線上玩家:</td><td>%count%</td></tr>
+<tr><td>使用記憶體:</td><td>位元組 位元組</td></tr>
+<tr><td> 時間:</td><td>%time%</td></tr>
 </table><br><br>
 <center><table><tr><td>
-<button value="Shutdown" action="bypass -h admin_server_shutdown $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td>			
-<button value="Restart" action="bypass -h admin_server_restart $qbox" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td>			
-<button value="Abort" action="bypass -h admin_server_abort" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<button action="bypass -h admin_server_shutdown $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="關閉活動" width="80"></button></td><td>
+<button action="bypass -h admin_server_restart $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="請重新啟動" width="80"></button></td><td>
+<button action="bypass -h admin_server_abort" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="墮胎 墮胎 墮胎" width="80"></button></td></tr>
 </table></center>
 </body></html>

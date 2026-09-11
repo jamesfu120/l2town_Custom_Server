@@ -1,22 +1,19 @@
 <html><body>
-<font color="LEVEL">Bidding is only permitted in one clan hall.</font> When a bid is submitted, the amount of adena bid is <font color="LEVEL">deposited</font> from the clan warehouse into the auction. <font color="LEVEL">10% of the bid amount is a transaction tax</font> and cannot be returned even if the bidding is canceled.<br>
-<font color="LEVEL">The bid price</font> must be higher than the minimum bid price (or previous bid price when rebidding) and the clan that has written the highest price at the end of the auction wins the auction.<br>
-There are currently <font color="aaccff">%clanAdena%</font> adena in the clan warehouse. The minimum amount that can be bid is <font color="aaccff">%minBid%</font> adena.<br>
-How much do you want to bid?
-<table width=270 border=0>
+<font color="LEVEL">只有在一個廳才可以投標.</font>在提交投標時, 投標的金額是 <font color="LEVEL">存款 存款</font>從 倉庫進入拍賣場. <font color="LEVEL">的投標金額是交易稅</font>即使取消招標,也無法退貨.<br>
+<font color="LEVEL">價格的價格</font>價格必須高於最低價格的價格 (或在重新拍賣時的價格價格) 而在拍賣結束時寫出最高價格的贏得拍賣.<br>目前已有 <font color="aaccff">%clanAdena%</font>在倉庫裡. 最低的價格是.<font color="aaccff">%minBid%</font>.  這是一種<br>您想投標多少錢? <table border="0" width="270">
 <tr>
-<td width=220 align=right><edit var=bidprice width=230 align=right type=number></td>
-<td width=40 align=right>adena</td>
+<td align="right" width="220"><edit align="right" type="number" var="bidprice" width="230"></edit></td>
+<td align="right" width="40">    </td>
 </tr>
 </table>
-<img src="L2UI.SquareBlank" width=270 height=10>
-<img src="L2UI.SquareWhite" width=270 height=1>
-<img src="L2UI.SquareBlank" width=270 height=5>
-<table width=270 border=0>
+<img height="10" src="L2UI.SquareBlank" width="270"/>
+<img height="1" src="L2UI.SquareWhite" width="270"/>
+<img height="5" src="L2UI.SquareBlank" width="270"/>
+<table border="0" width="270">
 <tr>
-<td width=110></td>
-<td width=80 align=center><button action="bypass -h Script ClanHallAuctioneer auctionList id=%id%" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=80 align=center><button action="bypass -h Script ClanHallAuctioneer bid id=%id% bid=' $bidprice '	" value="Confirm" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="110"></td>
+<td align="center" width="80"><button action="bypass -h Script ClanHallAuctioneer auctionList id=%id%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="27" value="返回" width="80"></button></td>
+<td align="center" width="80"><button action="bypass -h Script ClanHallAuctioneer bid id=%id% bid=' $bidprice '	" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="27" value="    " width="80"></button></td>
 </tr>
 </table>
 </body></html>

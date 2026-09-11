@@ -1,47 +1,43 @@
-<html><title>Skill Menu</title><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Player/Clan Skills Editor</center></td>
-<td width=40><button value="Back" action="bypass -h admin_character_info %name%" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<html><title>技能選單 技能選單</title><body>
+<table width="260"><tr>
+<td width="40"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="40"></button></td>
+<td width="180"><center>玩家/技能編輯</center></td>
+<td width="40"><button action="bypass -h admin_character_info %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="40"></button></td>
 </tr></table>
 <br><br>
-<center>Editing <font color="LEVEL">%name%</font>
+<center>編輯  <font color="LEVEL">%name%</font>
 <br>
-<table width=270>
-	<tr>
-		<td width=50>Class:</td>
-		<td width=160><font color="LEVEL">%class%</font></td>
-		<td width=20>Lv:</td>
-		<td width=40><font color="LEVEL">%level%</font></td>
-	</tr>
-</table>
-<br>
-============ Player ============
-<br>
-<table width=270>
+<table width="270">
 <tr>
-	<td><button value="Add skills" action="bypass -h admin_skill_list" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	<td><button value="Take skills" action="bypass -h admin_get_skills" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-	<td><button value="Delete skills" action="bypass -h admin_remove_skills 0" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	<td><button value="Reset skills reuse" action="bypass -h admin_removereuse" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-	<td><button value="Give All Skills" action="bypass -h admin_give_all_skills" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	<td><button value="Give taken skills" action="bypass -h admin_reset_skills" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-	<td><button value="Give All Skills FS/FP" action="bypass -h admin_give_all_skills_fs" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	<td><button value="Remove All Skills" action="bypass -h admin_remove_all_skills" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="50">此分類下一篇:</td>
+<td width="160"><font color="LEVEL">%class%</font></td>
+<td width="20">Lv:  這是什麼意思?</td>
+<td width="40"><font color="LEVEL">%level%</font></td>
 </tr>
 </table>
-<br>
-============ Clan ============
-<br>
-<table width=270>
+<br>============ 玩家 ============== <br>
+<table width="270">
 <tr>
-	<td><button value="Give Clan Skills" action="bypass -h admin_give_clan_skills" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	<td><button value="Give All Clan Skills" action="bypass -h admin_give_all_clan_skills" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_skill_list" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="技能 技能" width="130"></button></td>
+<td><button action="bypass -h admin_get_skills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="學習技能 學習技能" width="130"></button></td>
+</tr>
+<tr>
+<td><button action="bypass -h admin_remove_skills 0" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="刪除技能" width="130"></button></td>
+<td><button action="bypass -h admin_removereuse" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="重置技能重新使用" width="130"></button></td>
+</tr>
+<tr>
+<td><button action="bypass -h admin_give_all_skills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="給所有技能" width="130"></button></td>
+<td><button action="bypass -h admin_reset_skills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="提供所取得的技能" width="130"></button></td>
+</tr>
+<tr>
+<td><button action="bypass -h admin_give_all_skills_fs" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="給所有技能 FS/FP" width="130"></button></td>
+<td><button action="bypass -h admin_remove_all_skills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="移除所有技能" width="130"></button></td>
+</tr>
+</table>
+<br>==========  ============   <br>
+<table width="270">
+<tr>
+<td><button action="bypass -h admin_give_clan_skills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 提供技能" width="130"></button></td>
+<td><button action="bypass -h admin_give_all_clan_skills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="給所有的人 技能" width="130"></button></td>
 </tr>
 </table></center></body></html>

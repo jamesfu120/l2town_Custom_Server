@@ -1,38 +1,34 @@
 <html><body>
-<table width=270><tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Siege Menu</center></td>
-<td width=45><button value="Back" action="bypass -h admin_clanhall" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>攻城選單</center></td>
+<td width="45"><button action="bypass -h admin_clanhall" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr></table><center>
-<br>ClanHall: %clanhallName%<br1>
-ClanHall Owner: %clanhallOwner%
-<br>
+<br>ClanHall:    這就是我的家人<br1>氏族館所有者:  <br>
 <center>
-<edit var="box" width=120 height=15>
-</center>
+<edit height="15" var="box" width="120">
+</edit></center>
 <br>
 <table><tr>
-<td><button value="Open Doors" action="bypass -h admin_clanhallopendoors %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Close Doors" action="bypass -h admin_clanhallclosedoors %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_clanhallopendoors %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="開啟自己的門" width="135"></button></td>
+<td><button action="bypass -h admin_clanhallclosedoors %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 門 門" width="135"></button></td>
 </tr><tr>
-<td><button value="Give ClanHall" action="bypass -h admin_clanhallset %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Take ClanHall" action="bypass -h admin_clanhalldel %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_clanhallset %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="給我們ClanHall" width="135"></button></td>
+<td><button action="bypass -h admin_clanhalldel %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="請選擇 ClanHall" width="135"></button></td>
 </tr><tr>
-<td><button value="Start Siege" action="bypass -h admin_chsiege_startSiege %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="End Siege" action="bypass -h admin_chsiege_endsSiege %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_chsiege_startSiege %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="開始攻城戰" width="135"></button></td>
+<td><button action="bypass -h admin_chsiege_endsSiege %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="結束攻城戰" width="135"></button></td>
 </tr><tr>
-<td><button value="Add Attacker" action="bypass -h admin_chsiege_addAttacker %clanhallId% $box" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Remove Attacker" action="bypass -h admin_chsiege_removeAttacker %clanhallId% $box" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_chsiege_addAttacker %clanhallId% $box" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="增加攻擊者" width="135"></button></td>
+<td><button action="bypass -h admin_chsiege_removeAttacker %clanhallId% $box" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="移除攻擊者" width="135"></button></td>
 </tr><tr>
-<td><button value="List Attackers" action="bypass -h admin_chsiege_listAttackers %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Clear Attackers" action="bypass -h admin_chsiege_clearAttackers %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_chsiege_listAttackers %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="列表攻擊者" width="135"></button></td>
+<td><button action="bypass -h admin_chsiege_clearAttackers %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="清晰的攻擊者" width="135"></button></td>
 </tr><tr>
-<td><button value="Set Siege Date" action="bypass -h admin_chsiege_setSiegeDate %clanhallId% $box" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Teleport self" action="bypass -h admin_clanhallteleportself %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_chsiege_setSiegeDate %clanhallId% $box" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="設定  日期" width="135"></button></td>
+<td><button action="bypass -h admin_clanhallteleportself %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="自己" width="135"></button></td>
 </tr><tr>
-<td><button value="Forward Siege" action="bypass -h admin_chsiege_forwardSiege %clanhallId%" width=135 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_chsiege_forwardSiege %clanhallId%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="前進  " width="135"></button></td>
 </tr>
-</table></center>
-<br><font color="FF0000">
-Note:</font> Use the box to enter the clan name to add/remove (can be done just by targetting a clan member) or the date to set the siege. Date must be on this format DD-MM-YYYY;HH:MM.
-</body></html>
+</table></br1></center>
+<br><font color="FF0000">注意:</font>使用方塊輸入 的名字來/移除 (只需標籤一個 會員) 或設定 的日期. 日期必須在這個格式DD-MM-YYYY;HH:MM. </body></html>

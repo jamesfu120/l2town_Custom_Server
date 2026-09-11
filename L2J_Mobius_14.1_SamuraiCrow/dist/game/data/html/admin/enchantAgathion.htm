@@ -1,72 +1,72 @@
-<html><title>Agathion Enchant Menu</title><body>
+<html><title>Agathion 迷人的選單</title><body>
 <center>
-<table width=285 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
-	<tr>
-		<td><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		<td width=140 align=center>Enchant Value 0-10:</td>
-		<td width=55 align=center><edit var="qbox" width=40 height=14></td>
-		<td><button value="Back" action="bypass -h admin_enchant" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	</tr>
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG" width="285">
+<tr>
+<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td align="center" width="140">Enchant  0-10::</td>
+<td align="center" width="55"><edit height="14" var="qbox" width="40"></edit></td>
+<td><button action="bypass -h admin_enchant" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
+</tr>
 </table>
-<table border=0 cellpadding=0 cellspacing=0 width=292 height=330 background="L2UI_CH3.refinewnd_back_Pattern"><tr><td align=center>
+<table background="L2UI_CH3.refinewnd_back_Pattern" border="0" cellpadding="0" cellspacing="0" height="330" width="292"><tr><td align="center">
 <br><br><br><br>
-<table width=280><tr><td align=center>
+<table width="280"><tr><td align="center">
 <table>
-	<tr><td align=center><font color="LEVEL">Enchante Equipped Agathions</font><br></td></tr>
-	<tr><td align=center><font color=828282>Equip and un-equip while enchanting.</font></td></tr>
-	<tr><td align=center><font color=828282>Each button corresponds to agathion slot</font></td></tr>
-	<tr><td align=center><font color=828282>in your inventory.</font></td></tr>
+<tr><td align="center"><font color="LEVEL">有趣的裝備 Agathions</font><br></td></tr>
+<tr><td align="center"><font color="828282">裝備並非裝備,同時也讓人迷人.</font></td></tr>
+<tr><td align="center"><font color="828282">每個按都與 agathion 插槽相符</font></td></tr>
+<tr><td align="center"><font color="828282">在您的庫存中.</font></td></tr>
 </table>
 <br><br><br><br>
-<table order=0 bgcolor=282828 align=center>
-	<tr>
-		<td align=center><button value="+3" action="bypass -h admin_seta1 3" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1></td>
-		<td width=10></td>
-		<td align=center><button value="+3" action="bypass -h admin_seta2 3" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		<td align=center><button value="+3" action="bypass -h admin_seta3 3" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		<td align=center><button value="+3" action="bypass -h admin_seta4 3" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		<td align=center><button value="+3" action="bypass -h admin_seta5 3" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	</tr>
-	<tr>
-		<td align=center>
-			<font color=LEVEL>
-			<table width=35 background="L2UI_CT1.Windows.Windows_DF_TooltipBG"><tr><td align=center>
-				<button value="                    %ag0_ench%          " action="bypass -h admin_seta1 $qbox" width=35 height=35 back="%ag0_icon%" fore="%ag0_icon%">
-			</td></tr></table>
-		</td>
-		<td width=10></td>
-		<td align=center>
-			<table width=35 background="L2UI_CT1.Windows.Windows_DF_TooltipBG"><tr><td align=center>
-				<button value="                    %ag1_ench%          " action="bypass -h admin_seta2 $qbox" width=35 height=35 back="%ag1_icon%" fore="%ag1_icon%">
-			</td></tr></table>
-		</td>
-		<td align=center>
-			<table width=35 background="L2UI_CT1.Windows.Windows_DF_TooltipBG"><tr><td align=center>
-				<button value="                    %ag2_ench%          " action="bypass -h admin_seta3 $qbox" width=35 height=35 back="%ag2_icon%" fore="%ag2_icon%">
-			</td></tr></table>
-		</td>
-		<td align=center>
-			<table width=35 background="L2UI_CT1.Windows.Windows_DF_TooltipBG"><tr><td align=center>
-				<button value="                    %ag3_ench%          " action="bypass -h admin_seta4 $qbox" width=35 height=35 back="%ag3_icon%" fore="%ag3_icon%">
-			</td></tr></table>
-		</td>
-		<td align=center>
-			<table width=35 background="L2UI_CT1.Windows.Windows_DF_TooltipBG"><tr><td align=center>
-				<button value="                    %ag4_ench%          " action="bypass -h admin_seta5 $qbox" width=35 height=35 back="%ag4_icon%" fore="%ag4_icon%">
-			</td></tr></table>
-			</font>
-		</td>
-	</tr>
-	<tr>
-		<table><tr>
-			<td align=center><button value="+10" action="bypass -h admin_seta1 10" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1></td>
-			<td width=10></td>
-			<td align=center><button value="+10" action="bypass -h admin_seta2 10" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><button value="+10" action="bypass -h admin_seta3 10" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><button value="+10" action="bypass -h admin_seta4 10" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td align=center><button value="+10" action="bypass -h admin_seta5 10" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		</tr></table>
-	</tr>
+<table align="center" bgcolor="282828" order="0">
+<tr>
+<td align="center"><button action="bypass -h admin_seta1 3" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+3" width="45"><br1></br1></button></td>
+<td width="10"></td>
+<td align="center"><button action="bypass -h admin_seta2 3" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+3" width="45"></button></td>
+<td align="center"><button action="bypass -h admin_seta3 3" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+3" width="45"></button></td>
+<td align="center"><button action="bypass -h admin_seta4 3" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+3" width="45"></button></td>
+<td align="center"><button action="bypass -h admin_seta5 3" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+3" width="45"></button></td>
+</tr>
+<tr>
+<td align="center">
+<font color="LEVEL">
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG" width="35"><tr><td align="center">
+<button action="bypass -h admin_seta1 $qbox" back="%ag0_icon%" fore="%ag0_icon%" height="35" value="                    %ag0_ench%          " width="35">
+</button></td></tr></table>
+</font></td>
+<td width="10"></td>
+<td align="center">
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG" width="35"><tr><td align="center">
+<button action="bypass -h admin_seta2 $qbox" back="%ag1_icon%" fore="%ag1_icon%" height="35" value="                    %ag1_ench%          " width="35">
+</button></td></tr></table>
+</td>
+<td align="center">
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG" width="35"><tr><td align="center">
+<button action="bypass -h admin_seta3 $qbox" back="%ag2_icon%" fore="%ag2_icon%" height="35" value="                    %ag2_ench%          " width="35">
+</button></td></tr></table>
+</td>
+<td align="center">
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG" width="35"><tr><td align="center">
+<button action="bypass -h admin_seta4 $qbox" back="%ag3_icon%" fore="%ag3_icon%" height="35" value="                    %ag3_ench%          " width="35">
+</button></td></tr></table>
+</td>
+<td align="center">
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG" width="35"><tr><td align="center">
+<button action="bypass -h admin_seta5 $qbox" back="%ag4_icon%" fore="%ag4_icon%" height="35" value="                    %ag4_ench%          " width="35">
+</button></td></tr></table>
+
+</td>
+</tr>
+<tr>
+<table><tr>
+<td align="center"><button action="bypass -h admin_seta1 10" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+10" width="45"><br1></br1></button></td>
+<td width="10"></td>
+<td align="center"><button action="bypass -h admin_seta2 10" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+10" width="45"></button></td>
+<td align="center"><button action="bypass -h admin_seta3 10" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+10" width="45"></button></td>
+<td align="center"><button action="bypass -h admin_seta4 10" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+10" width="45"></button></td>
+<td align="center"><button action="bypass -h admin_seta5 10" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="+10" width="45"></button></td>
+</tr></table>
+</tr>
 </table>
 </td></tr></table>
 <br>

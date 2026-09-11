@@ -1,72 +1,70 @@
-<html><title>Transformation</title><body>
+<html><title>變化 變化</title><body>
 <center>
-<table width=270>
+<table width="270">
 <tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Transformation Menu</center></td>
-<td width=45><button value="Back" action="bypass admin_admin3" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>轉型選單</center></td>
+<td width="45"><button action="bypass admin_admin3" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr>
 </table>
 <br>
 <table width="270">
 <tr>
-<td><button value="Page 1" action="bypass admin_html transform.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Page 2" action="bypass admin_html transform2.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Page 3" action="bypass admin_html transform3.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Page 4" action="bypass admin_html transform4.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Page 5" action="bypass admin_html transform5.htm" width="50" height="18" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_html transform.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="首頁 1" width="50"></button></td>
+<td><button action="bypass admin_html transform2.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="第2頁 " width="50"></button></td>
+<td><button action="bypass admin_html transform3.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="第3頁 " width="50"></button></td>
+<td><button action="bypass admin_html transform4.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="第四頁 " width="50"></button></td>
+<td><button action="bypass admin_html transform5.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="第五頁 " width="50"></button></td>
 </tr>
 </table>
 <br>
 <table width="270">
 <tr>
-<td>Values:</td>
-<td><edit var="qbox" width="200" height="15" /></td>
+<td>數值：</td>
+<td><edit height="15" var="qbox" width="200"></edit></td>
 </tr>
 </table>
 <br>
 <table width="270">
 <tr>
-<td><button value="Send" action="bypass -h admin_transform_menu $qbox" width="40" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></td>
-<td><button value="Help" action="bypass admin_html help/transform.htm" width="40" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></td>
-<td><button value="Untransform" action="bypass -h admin_untransform" width="90" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></td>
+<td><button action="bypass -h admin_transform_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="傳送" width="40"></button></td>
+<td><button action="bypass admin_html help/transform.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="幫助" width="40"></button></td>
+<td><button action="bypass -h admin_untransform" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="沒有變化" width="90"></button></td>
 </tr>
 </table>
-<br>
-Mercenary Transformations:<br1>
-<table width=260>
+<br>傭兵轉型:<br1>
+<table width="260">
 <tr>
-<td><button value="Human" action="bypass -h admin_transform_menu 10 $qbox" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Dark Elf" action="bypass -h admin_transform_menu 12 $qbox" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Light Elf" action="bypass -h admin_transform_menu 11 $qbox" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_transform_menu 10 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="人性 的人性" width="82"></button></td>
+<td><button action="bypass -h admin_transform_menu 12 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="黑暗精靈" width="82"></button></td>
+<td><button action="bypass -h admin_transform_menu 11 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="這是一位光精靈" width="82"></button></td>
 </tr>
 <tr>
-<td><button value="Dwarf" action="bypass -h admin_transform_menu 14 $qbox" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Orc" action="bypass -h admin_transform_menu 13 $qbox" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Kamael" action="bypass -h admin_transform_menu 15 $qbox" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_transform_menu 14 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="闇天使" width="82"></button></td>
+<td><button action="bypass -h admin_transform_menu 13 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="奧爾克" width="82"></button></td>
+<td><button action="bypass -h admin_transform_menu 15 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="死亡騎士" width="82"></button></td>
 </tr>
 </table>
-<br>
-Battle Transformations:<br1>
-<table width=260>
+<br>戰鬥變化:<br1>
+<table width="260">
 <tr>
-<td><button value="Archer Captain" action="bypass -h admin_transform_menu 17 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Fortress Captain" action="bypass -h admin_transform_menu 21 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_transform_menu 17 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="弓箭手船長" width="125"></button></td>
+<td><button action="bypass -h admin_transform_menu 21 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 隊長" width="125"></button></td>
 </tr>
 <tr>
-<td><button value="Kamael Captain" action="bypass -h admin_transform_menu 19 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Guard Captain" action="bypass -h admin_transform_menu 16 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_transform_menu 19 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 隊長" width="125"></button></td>
+<td><button action="bypass -h admin_transform_menu 16 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="警衛隊的船長" width="125"></button></td>
 </tr>
 <tr>
-<td><button value="Magic Leader" action="bypass -h admin_transform_menu 18 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Dragon Lee" action="bypass -h admin_transform_menu 20005 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_transform_menu 18 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="魔力領導人" width="125"></button></td>
+<td><button action="bypass -h admin_transform_menu 20005 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="李龍龍 李龍" width="125"></button></td>
 </tr>
 <tr>
-<td><button value="Guard of Dawn" action="bypass -h admin_transform_menu 113 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Dragon Karin" action="bypass -h admin_transform_menu 20006 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_transform_menu 113 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="黎明的守衛隊" width="125"></button></td>
+<td><button action="bypass -h admin_transform_menu 20006 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="卡琳·龍 龍" width="125"></button></td>
 </tr>
-<tr><td><button value="Knight of Dawn" action="bypass -h admin_transform_menu 20 $qbox" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<tr><td><button action="bypass -h admin_transform_menu 20 $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value=" 的黎明" width="125"></button></td>
 </tr>
 </table>
-</center>
+</br1></br1></center>
 </body></html>

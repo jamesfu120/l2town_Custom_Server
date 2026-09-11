@@ -1,21 +1,21 @@
-<html><title>Petition info</title><body>
+<html><title>請願資訊</title><body>
 <center>
-<table width=270 bgcolor="444444">
+<table bgcolor="444444" width="270">
 <tr>
-<td><button value="Accept" action="bypass -h admin_accept_petition %petition%" width="80" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Reject" action="bypass -h admin_reject_petition %petition%" width="80" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Back" action="bypass -h admin_view_petitions" width="80" height="21" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_accept_petition %petition%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="接受 接受" width="80"></button></td>
+<td><button action="bypass -h admin_reject_petition %petition%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="拒絕 拒絕" width="80"></button></td>
+<td><button action="bypass -h admin_view_petitions" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="80"></button></td>
 </tr>
 </table><br>
-<font color="LEVEL">Petition #%petition%</font><br>
-<img src="L2UI.SquareWhite" width=260 height=1><br>
-<table width=270 border=0>
-<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Time:</font></td><td align=right width=170>%time%</td></tr></table></td></tr>
-<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Petitioner:</font></td><td align=right width=170><font color="%online%">%petitioner%</font></td></tr></table></td></tr>
-<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Type</font></td><td align=right width=170>%type%</td></tr></table></td></tr>
+<font color="LEVEL">請願 #</font><br>
+<img height="1" src="L2UI.SquareWhite" width="260"/><br>
+<table border="0" width="270">
+<tr><td><table bgcolor="131210" border="0" width="270"><tr><td width="100"><font color="LEVEL">時間:</font></td><td align="right" width="170">%time%</td></tr></table></td></tr>
+<tr><td><table border="0" width="270"><tr><td width="100"><font color="LEVEL">請願人:</font></td><td align="right" width="170"><font color="%online%">%petitioner%</font></td></tr></table></td></tr>
+<tr><td><table bgcolor="131210" border="0" width="270"><tr><td width="100"><font color="LEVEL">型別</font></td><td align="right" width="170">%type%</td></tr></table></td></tr>
 </table>
-<br><img src="L2UI.SquareWhite" width=260 height=1><br>
-<table width=270><tr><td>%text%</td></tr></table>
-<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+<br><img height="1" src="L2UI.SquareWhite" width="260"/><br>
+<table width="270"><tr><td>%text%</td></tr></table>
+<br><img height="1" src="L2UI.SquareWhite" width="260"/><br>
 </center>
 </body></html>

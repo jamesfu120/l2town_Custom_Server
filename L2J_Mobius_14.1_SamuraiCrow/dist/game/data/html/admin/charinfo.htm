@@ -1,137 +1,132 @@
-<html><title>Information Panel: %name%</title><body>
+<html><title>資訊小組: </title><body>
 <center>
-<table width=270>
+<table width="270">
 <tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Player: %name%</center></td>
-<td width=45><button value="Back" action="bypass admin_show_characters 0" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>玩家: </center></td>
+<td width="45"><button action="bypass admin_show_characters 0" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr>
 </table>
 <br>
-<table width=240>
+<table width="240">
 <tr>
-<td><button value="Go To" action="bypass -h admin_goto_char_menu %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Kick" action="bypass -h admin_kick_menu %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Ban Acc" action="bypass -h admin_ban_acc %account%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Ban Chr" action="bypass -h admin_ban_char %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_goto_char_menu %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="走到 的位置" width="65"></button></td>
+<td><button action="bypass -h admin_kick_menu %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="子子 子" width="65"></button></td>
+<td><button action="bypass -h admin_ban_acc %account%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="禁止使用." width="65"></button></td>
+<td><button action="bypass -h admin_ban_char %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="禁止他們使用 Chr" width="65"></button></td>
 </tr><tr>
-<td><button value="Recall" action="bypass admin_recall_char_menu %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Skills" action="bypass admin_show_skills" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Edit" action="bypass admin_edit_character" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Class" action="bypass admin_setclass" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_recall_char_menu %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="提醒 提醒" width="65"></button></td>
+<td><button action="bypass admin_show_skills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="技能 技能" width="65"></button></td>
+<td><button action="bypass admin_edit_character" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="編輯 編輯" width="65"></button></td>
+<td><button action="bypass admin_setclass" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="班級 班級" width="65"></button></td>
 </tr><tr>
-<td><button value="Lv/Exp/Sp" action="bypass admin_add_exp_sp_to_character" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Instance" action="bypass -h admin_instancezone %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Effects" action="bypass admin_getbuffs %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Party" action="bypass -h admin_partyinfo" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_add_exp_sp_to_character" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="Lv/Exp/Sp 關於我們" width="65"></button></td>
+<td><button action="bypass -h admin_instancezone %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="舉例 舉例" width="65"></button></td>
+<td><button action="bypass admin_getbuffs %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="影響 影響" width="65"></button></td>
+<td><button action="bypass -h admin_partyinfo" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="18" value="    " width="65"></button></td>
 </tr>
 </table>
 <br>
-<table width=240 bgcolor="666666">
+<table bgcolor="666666" width="240">
 <tr>
-<td>Account Name: </td><td><font color="LEVEL"><a action="bypass -h admin_find_account %name%">%account%</a></font></td>
+<td>帳號名稱: </td><td><font color="LEVEL"><a action="bypass -h admin_find_account %name%">%account%</a></font></td>
 </tr>
 <tr>
-<td>Account IP: </td><td><font color="LEVEL"><a action="bypass -h admin_find_ip %ip%">%ip%</a></font></td>
+<td>帳戶IP: </td><td><font color="LEVEL"><a action="bypass -h admin_find_ip %ip%">%ip%</a></font></td>
 </tr>
-<tr> 
-<td>Hardware MAC: </td><td><font color="LEVEL"><a action="bypass -h admin_hwid">%hwid%</a></font></td>
-</tr> 
-<tr> 
-<td>Punishment: </td><td><font color="LEVEL"><a action="bypass -h admin_punishment player %name%">Info</a></font></td>
-</tr> 
 <tr>
-<td>Client Protocol: </td><td><font color="LEVEL">%protocol%</font></td>
+<td>MAC 硬體: </td><td><font color="LEVEL"><a action="bypass -h admin_hwid">%hwid%</a></font></td>
+</tr>
+<tr>
+<td>罰則: </td><td><font color="LEVEL"><a action="bypass -h admin_punishment player %name%">資訊 資訊</a></font></td>
+</tr>
+<tr>
+<td>客戶端協議: </td><td><font color="LEVEL">%protocol%</font></td>
 </tr>
 </table>
 <br>
 <br>
-<table width=240 bgcolor="666666">
+<table bgcolor="666666" width="240">
 <tr>
-<td>Name:</td><td>%name%</td><td><button value="Refresh" action="bypass -h admin_character_info %name%" width=60 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td>姓名:</td><td>%name%</td><td><button action="bypass -h admin_character_info %name%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="重新整理 重新整理" width="60"></button></td>
 </tr>
 <tr>
-<td>Clan:</td><td>%clan%</td>
+<td>::</td><td>%clan%</td>
 </tr>
 <tr>
-<td>Level:</td><td>%level%</td>
+<td>級別:</td><td>%level%</td>
 </tr>
 <tr>
-<td>Class:</td><td>%class%</td>
+<td>此分類下一篇:</td><td>%class%</td>
 </tr>
 <tr>
-<td>BaseClass:</td><td>%baseclass%</td>
+<td>基層級:</td><td>%baseclass%</td>
 </tr>
 <tr>
-<td>CP:</td><td> <font color="LEVEL">%currentcp%</font> / %maxcp%</td>
+<td>CP:  這就是我的意思</td><td> <font color="LEVEL">%currentcp%</font>  / </td>
 </tr>
 <tr>
-<td>HP:</td><td> <font color="LEVEL">%currenthp%</font> / %maxhp%</td>
+<td>HP: 沒有任何問題</td><td> <font color="LEVEL">%currenthp%</font>  / </td>
 </tr>
 <tr>
-<td>MP:</td><td><font color="LEVEL">%currentmp%</font> / %maxmp%</td>
+<td>國會議員:</td><td><font color="LEVEL">%currentmp%</font>  / </td>
 </tr>
 <tr>
-<td>Weight:</td><td>%currentload% / %maxload%</td>
+<td>重量:</td><td> / </td>
 </tr>
 <tr>
-<td>EXP:</td><td>%xp%</td>
+<td>EXP:  沒有使用</td><td>%xp%</td>
 </tr>
 <tr>
-<td>SP:</td><td>%sp%</td>
+<td>SP:  這就是我的意思</td><td>%sp%</td>
 </tr>
 <tr>
-<td>Noblesse:</td><td>%noblesse%</td>
+<td>::</td><td>%noblesse%</td>
 </tr>
 <tr>
-<td>Instance:</td><td>%inst%</td>
+<td>舉例:</td><td>%inst%</td>
 </tr>
 </table>
 <br><br>
-<table width=240 bgcolor="666666">
+<table bgcolor="666666" width="240">
 <tr>
-<td>P. Atk:</td><td>%patk%</td><td>M. Atk:</td><td>%matk%</td>
+<td>P. Atk: 沒有任何問題</td><td>%patk%</td><td>M. Atk: 這就是我的想法.</td><td>%matk%</td>
 </tr>
 <tr>
-<td>P. Def:</td><td>%pdef%</td><td>M. Def:</td><td>%mdef%</td>
+<td>P. Def: 關於我們</td><td>%pdef%</td><td>M. Def: 關於我們</td><td>%mdef%</td>
 </tr>
 <tr>
-<td>Accuracy:</td><td>%accuracy%</td><td>Evasion:</td><td>%evasion%</td>
+<td>精度:</td><td>%accuracy%</td><td>逃避:</td><td>%evasion%</td>
 </tr>
 <tr>
-<td>Crit Rate:</td><td>%critical%</td><td>Speed:</td><td>%runspeed%</td>
+<td>評估率:</td><td>%critical%</td><td>速度:</td><td>%runspeed%</td>
 </tr>
 <tr>
-<td>Atk. Spd.:</td><td>%patkspd%</td><td>Casting Spd.:</td><td>%matkspd%</td>
+<td>在 Spd:</td><td>%patkspd%</td><td>演出 Spd.:</td><td>%matkspd%</td>
 </tr>
 </table>
 <br><br>
-<table width=240 bgcolor="666666">
+<table bgcolor="666666" width="240">
 <tr>
-<td>HP Regen:</td><td>%hpregen%</td>
+<td>HP Regen: 這是一種熱血的熱水.</td><td>%hpregen%</td>
 </tr>
 <tr>
-<td>MP Regen:</td><td>%mpregen%</td>
+<td>國會議員雷根:</td><td>%mpregen%</td>
 </tr>
 <tr>
-<td>CP Regen:</td><td>%cpregen%</td>
-</tr>
-</table>
-<br>
-<table width=240>
-<tr>
-<td>PvP Kills: </td><td>%pvpkills%</td>
-<td>Reputation: </td><td>%reputation%</td>
-</tr>
-<tr>
-<td>PK Kills: </td><td>%pkkills%</td>
-<td>PvP Flag: </td><td>%pvpflag%</td>
+<td>CP 雨天:</td><td>%cpregen%</td>
 </tr>
 </table>
 <br>
-Coordinates: %x% %y% %z%<br1>
-Heading: %heading%<br1>
-AI: %ai%
-%autoplay%
-</center>
+<table width="240">
+<tr>
+<td>PvP 殺戮: </td><td>%pvpkills%</td>
+<td>名聲: </td><td>%reputation%</td>
+</tr>
+<tr>
+<td>這樣的殺戮: </td><td>%pkkills%</td>
+<td>PvP 旗: </td><td>%pvpflag%</td>
+</tr>
+</table>
+<br>座標:    <br1>標題: <br1>AI:    </br1></br1></center>
 </body></html>

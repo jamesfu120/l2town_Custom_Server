@@ -1,89 +1,81 @@
-<html><title>Game Panel</title><body>
+<html><title> 面板</title><body>
 <center>
-<table width=270 border=0 bgcolor="444444">
+<table bgcolor="444444" border="0" width="270">
 <tr>
-<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="65"></button></td>
+<td><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="角色" width="65"></button></td>
+<td><button action="bypass admin_admin2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲" width="65"></button></td>
+<td><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="管理" width="65"></button></td>
 </tr>
 </table><br>
-<table width=240>
+<table width="240">
 <tr>
-<td>QuickBox:</td>
-<td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass admin_html help/game_menu.htm" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td>數值：</td>
+<td><edit height="15" var="qbox" width="120"></edit></td>
+<td><button action="bypass admin_html help/game_menu.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="幫助" width="45"></button></td>
 </tr>
 </table>
-<br>
-Clan Related:<br1>
-<table width=240>
+<br> 有關:<br1>
+<table width="240">
 <tr>
-<td><button value="Create" action="bypass -h admin_pledge create $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Info" action="bypass -h admin_pledge info" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Set Level" action="bypass -h admin_pledge setlevel $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_pledge create $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="建立 建立" width="82"></button></td>
+<td><button action="bypass -h admin_pledge info" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="資訊 資訊" width="82"></button></td>
+<td><button action="bypass -h admin_pledge setlevel $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="設定水平 設定水平" width="82"></button></td>
 </tr>
 <tr>
-<td><button value="Delete" action="bypass -h admin_pledge dismiss $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Reputation" action="bypass -h admin_pledge rep $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Pen. leaders" action="bypass -h admin_clan_show_pending" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-</table>
-<br>
-War Related:<br1>
-<table width=240>
-<tr>
-<td><button value="ClanHall" action="bypass -h admin_clanhall" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Castle" action="bypass -h admin_castlemanage" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Fortress" action="bypass -h admin_fortsiege" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_pledge dismiss $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="刪除" width="82"></button></td>
+<td><button action="bypass -h admin_pledge rep $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="名譽 " width="82"></button></td>
+<td><button action="bypass -h admin_clan_show_pending" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="筆記. 領導者" width="82"></button></td>
 </tr>
 </table>
-<br>
-Cursed Weapons:<br1>
-<table width=240>
+<br>關於戰爭:<br1>
+<table width="240">
 <tr>
-<td><button value="Info" action="bypass -h admin_cw_info_menu $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Add" action="bypass -h admin_cw_add $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Remove" action="bypass -h admin_cw_remove $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_clanhall" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="ClanHall 的姓氏" width="82"></button></td>
+<td><button action="bypass -h admin_castlemanage" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="    " width="82"></button></td>
+<td><button action="bypass -h admin_fortsiege" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="生命石" width="82"></button></td>
 </tr>
 </table>
-<br>
-Manor:<br1>
+<br>詛咒的:<br1>
+<table width="240">
+<tr>
+<td><button action="bypass -h admin_cw_info_menu $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="資訊 資訊" width="82"></button></td>
+<td><button action="bypass -h admin_cw_add $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="新增公告" width="82"></button></td>
+<td><button action="bypass -h admin_cw_remove $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="刪除 刪除" width="82"></button></td>
+</tr>
+</table>
+<br>::<br1>
 <table width="125">
 <tr>
-<td><button value="Manor info" action="bypass -h admin_manor" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_manor" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="資訊" width="125"></button></td>
 </tr>
 </table>
-<br>
-Gracia Seeds:<br1>
+<br>格拉西亞種子:<br1>
 <table width="125">
 <tr>
-<td><button value="Gracia info" action="bypass -h admin_gracia_seeds" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_gracia_seeds" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="格拉西亞的資訊" width="125"></button></td>
 </tr>
 </table>
-<br>
-Grand Boss:<br1>
+<br>::<br1>
 <table width="125">
 <tr>
-<td><button value="Grand Boss Info" action="bypass -h admin_grandboss" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_grandboss" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value=" 資訊" width="125"></button></td>
 </tr>
 </table>
-<br>
-Olympiad:<br1>
+<br>::<br1>
 <table width="125">
 <tr>
-<td><button value="Check Olympiad" action="bypass -h admin_checkolympiad" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Save Olympiad" action="bypass -h admin_saveolymp" width="125" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_checkolympiad" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="檢查   " width="125"></button></td>
+<td><button action="bypass -h admin_saveolymp" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value=" 儲存  " width="125"></button></td>
 </tr>
 </table>
-<br>
-Heroes:<br1>
+<br>英雄:<br1>
 <table width="250">
 <tr>
-<td><button value="Set Hero" action="bypass -h admin_sethero" width="100" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Give unclaimed Hero" action="bypass -h admin_givehero" width="150" height="20" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_sethero" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="英雄 集中的英雄" width="100"></button></td>
+<td><button action="bypass -h admin_givehero" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="給予沒有聲稱的英雄" width="150"></button></td>
 </tr>
 </table>
 <br>
-</center>
+</br1></br1></br1></br1></br1></br1></br1></br1></center>
 </body></html>

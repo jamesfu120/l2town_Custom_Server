@@ -1,35 +1,35 @@
-<html><title>Instance Maintenance Menu</title><body>
+<html><title>此分類下一篇: 舉例維護選單</title><body>
 <center>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Instance Creation Menu</center></td>
-<td width=40><button value="Back" action="bypass admin_html instancezone.htm" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="260"><tr>
+<td width="40"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="40"></button></td>
+<td width="180"><center>建立例項選單</center></td>
+<td width="40"><button action="bypass admin_html instancezone.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="40"></button></td>
 </tr></table><br>
-<table width=260>
+<table width="260">
 <tr>
-<td><button value="General" action="bypass admin_html instancezone.htm" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Individual" action="bypass admin_html instancezone2.htm" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Template IDs" action="bypass admin_instancezones" width=83 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_html instancezone.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="總統 總統" width="83"></button></td>
+<td><button action="bypass admin_html instancezone2.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="個人 個人" width="83"></button></td>
+<td><button action="bypass admin_instancezones" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="模板 ID " width="83"></button></td>
 </tr>
 </table><br>
-<center>Character Related:<br>
-<table width=260>
+<center>有關角色:<br>
+<table width="260">
 <tr>
 <td></td>
-<td>Player Name</td>
-<td>Template Id</td>
+<td>姓名 玩家名稱</td>
+<td>模板 Id 模板 Id</td>
 </tr>
 <tr>
-<td><button value="Clear" action="bypass -h admin_instancezone_clear $playername $instanceid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><edit var="playername" width=90></td>
-<td><edit var="instanceid" width=60></td>
+<td><button action="bypass -h admin_instancezone_clear $playername $instanceid" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="清晰 清晰" width="80"></button></td>
+<td><edit var="playername" width="90"></edit></td>
+<td><edit var="instanceid" width="60"></edit></td>
 </tr>
 <tr><td><br></td></tr>
 <tr>
-<td><button value="List" action="bypass -h admin_instancezone $playername2" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><edit var="playername2" width=90></td>
+<td><button action="bypass -h admin_instancezone $playername2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="列表 列表" width="80"></button></td>
+<td><edit var="playername2" width="90"></edit></td>
 </tr>
 </table><br><br><br>
-<font color="LEVEL">Note: Template IDs also found in gameserver\data\InstanceNames.xml</font>
+<font color="LEVEL">注意: 模板ID也在遊戲伺服器\資料\InstanceNames.xml中發現</font>
 </center>
-</body></html>
+</center></body></html>

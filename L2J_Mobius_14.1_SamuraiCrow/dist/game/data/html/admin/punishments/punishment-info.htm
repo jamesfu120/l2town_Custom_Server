@@ -1,33 +1,33 @@
-<html><title>Punishment Information Panel</title><body>
+<html><title>刑法資訊小組</title><body>
 <center>
-<table width=270>
+<table width="270">
 <tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>%affect_type%: <font color="LEVEL">%player_name%</font></center></td>
-<td width=45><button value="Back" action="bypass admin_punishment" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>:：  <font color="LEVEL">%player_name%</font></center></td>
+<td width="45"><button action="bypass admin_punishment" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr>
 </table>
 <br>
-<table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
-	<tr>
-		<td>Affect Type:</td>
-		<td><combobox width=120 height=12 var="affectType" list="%affects%"></td>
-	</tr>
-	<tr>
-		<td>Key:</td>
-		<td><edit var="key" width="130" height="12"></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td><a action="bypass admin_punishment info $key $affectType">Check</a></td>
-	</tr>
+<table bgcolor="666666" cellpadding="6" cellspacing="0" width="280">
+<tr>
+<td>影響：</td>
+<td><combobox height="12" list="%affects%" var="affectType" width="120"></combobox></td>
+</tr>
+<tr>
+<td>關鍵是:</td>
+<td><edit height="12" var="key" width="130"></edit></td>
+</tr>
+<tr>
+<td></td>
+<td><a action="bypass admin_punishment info $key $affectType">檢查 檢查</a></td>
+</tr>
 </table>
 <br>
-<table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
-	<tr>
-		<td>Type</td>
-		<td>Expiration</td>
-		<td>Action</td>
-	</tr>
+<table bgcolor="666666" cellpadding="6" cellspacing="0" width="280">
+<tr>
+<td>型別</td>
+<td>終止時間</td>
+<td>此分類下一篇: 行動</td>
+</tr>
 	%punishments%
-</table>
+</table></center></body></html>

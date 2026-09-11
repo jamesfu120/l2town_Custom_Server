@@ -1,33 +1,31 @@
 <html>
-	<head>
-		<title>Effects of %targetName%</title>
-	</head>
-	<body>
-		<table width="100%">
-			<tr>
-				<td width=45>
-					<button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
-				</td>
-				<td width=180>
-					<center><font color="LEVEL">Effects of %targetName%</font></center>
-				</td>
-				<td width=45>
-					<button value="Back" action="bypass admin_current_player" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
-				</td>
-				<td width=15></td>
-			</tr>
-		</table>
-		<table width="100%">
-		<tr><td>
+<head>
+<title>  的影響</title>
+</head>
+<body>
+<table width="100%">
+<tr>
+<td width="45">
+<button action="bypass admin_admin" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df" height="21" value="主頁" width="45">
+</button></td>
+<td width="180">
+<center><font color="LEVEL">  的影響</font></center>
+</td>
+<td width="45">
+<button action="bypass admin_current_player" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df" height="21" value="返回" width="45">
+</button></td>
+<td width="15"></td>
+</tr>
+</table>
+<table width="100%">
+<tr><td>
 			%buffs%
 		</td></tr>
-		</table>
-		<br><br>%pages%<br>
-		<center>
-		<button value="%buffsText%" action="bypass admin_getbuffs%passives% %targetName%" width=160 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br>
-		<button value="Remove All" action="bypass admin_stopallbuffs %targetObjId%" width=160 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br>
-		<br>
-		Total skill count: %skillSize%
-		</center>
-	</body>
+</table>
+<br><br>%pages%<br>
+<center>
+<button action="bypass admin_getbuffs%passives% %targetName%" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df" height="21" value="%buffsText%" width="160"><br>
+<button action="bypass admin_stopallbuffs %targetObjId%" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df" height="21" value="移除所有" width="160"><br>
+<br>總技能數量:  </button></button></center>
+</body>
 </html>

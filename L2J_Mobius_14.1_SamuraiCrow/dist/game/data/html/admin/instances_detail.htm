@@ -1,56 +1,48 @@
-<html><title>Main Admin Menu</title><body>
+<html><title> 管理者選單</title><body>
 <center>
-<table width=270 border=0 bgcolor="444444">
+<table bgcolor="444444" border="0" width="270">
 <tr>
-<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="65"></button></td>
+<td><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="角色" width="65"></button></td>
+<td><button action="bypass admin_admin2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲" width="65"></button></td>
+<td><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="管理" width="65"></button></td>
 </tr>
 </table>
 <br>
-<font name="hs11" color="LEVEL">%templateName% (%templateId%)</font>
+<font color="LEVEL" name="hs11"> () </font>
 <br>
-
-<font name="hs10" color="LEVEL">Info:</font><br1>
-<table border=0 cellpadding=0 cellspacing=0 bgcolor="363636">
+<font color="LEVEL" name="hs10">資訊:</font><br1>
+<table bgcolor="363636" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align=center fixwidth="250">Active worlds:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%activeWorlds%</font></td>
+<td align="center" fixwidth="250">活躍的世界:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%activeWorlds%</font></td>
 </tr>
-
 <tr>
-<td align=center fixwidth="250">Duration:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%duration%</font></td>
+<td align="center" fixwidth="250">持續時間:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%duration%</font></td>
 </tr>
-
 <tr>
-<td align=center fixwidth="250">Empty destroy time:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%emptyDuration%</font></td>
+<td align="center" fixwidth="250">空的摧毀時間:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%emptyDuration%</font></td>
 </tr>
-
 <tr>
-<td align=center fixwidth="250">Eject time:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%ejectDuration%</font></td>
+<td align="center" fixwidth="250">排放時間:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%ejectDuration%</font></td>
 </tr>
-
 <tr>
-<td align=center fixwidth="250">Remove buff:</font></td>
-<td align=center fixwidth="250"><font color="LEVEL">%removeBuff%</font></td>
+<td align="center" fixwidth="250"> 取消Buff:</td>
+<td align="center" fixwidth="250"><font color="LEVEL">%removeBuff%</font></td>
 </tr>
 </table>
-
 <br><br>
-<font name="hs10" color="LEVEL">Create Instance from template:</font><br1>
-
-<combobox width=120 height=17 var=ebox list=Alone;Party;CommandChannel><br>
-<button value="Create Instance!" action="bypass -h admin_instancecreate %templateId% $ebox" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-
+<font color="LEVEL" name="hs10">從模板中建立一個例子:</font><br1>
+<combobox height="17" list="Alone;Party;CommandChannel" var="ebox" width="120"><br>
+<button action="bypass -h admin_instancecreate %templateId% $ebox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="建立一個例子!" width="140">
 <br><br>
-<font name="hs10" color="LEVEL">Active Instances:</font><br1>
+<font color="LEVEL" name="hs10">活躍的:</font><br1>
 
 %instanceList%
 
-<button value="Back" action="bypass -h admin_instancelist" width=200 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
-</center>
+<button action="bypass -h admin_instancelist" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="200"><br1>
+</br1></button></br1></button></combobox></br1></br1></center>
 </body></html>

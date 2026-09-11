@@ -1,16 +1,16 @@
-<html><title>Admin Event Triggers</title><body>
+<html><title>活動觸發器</title><body>
 <center>
-<table width=270><tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Admin Event Triggers</center></td>
-<td width=45><button value="Back" action="bypass admin_html server_menu.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width="270"><tr>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>活動觸發器</center></td>
+<td width="45"><button action="bypass admin_html server_menu.htm" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr></table><br><br>
-<table width=270><tr>
-<td align=center width=40>ID:</td><td><edit var="qbox" width=200 height=15></td>
+<table width="270"><tr>
+<td align="center" width="40">您的ID:</td><td><edit height="15" var="qbox" width="200"></edit></td>
 </tr></table><br><br>
-<table width=270><tr>
-<td><button value="Enable" action="bypass -h admin_event_trigger $qbox true" width=120 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Disable" action="bypass -h admin_event_trigger $qbox false" width=120 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>	
+<table width="270"><tr>
+<td><button action="bypass -h admin_event_trigger $qbox true" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="啟用" width="120"></button></td>
+<td><button action="bypass -h admin_event_trigger $qbox false" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="禁用" width="120"></button></td>
 </tr></table>
 </center>
 </body></html>

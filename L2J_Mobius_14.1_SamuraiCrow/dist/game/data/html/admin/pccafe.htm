@@ -1,60 +1,60 @@
-<html><title>Admin PC Points Manager</title><body>
+<html><title>玩家讚美點數：</title><body>
 <center>
-<table width=270 align=center>
+<table align="center" width="270">
 <tr>
-<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Admin PC Points Manager</center></td>
-<td width=45><button value="Back" action="bypass admin_admin6" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
+<td width="180"><center>玩家讚美點數：</center></td>
+<td width="45"><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td>
 </tr>
 </table>
 <br>
-<font color="LEVEL">Target info</font><br1>
-	<table width="270" align=center border="0" bgcolor="444444">
-		<tr>
-			<td>Player Name:</td>
-			<td><font color="00FF00">%targetName%</font></td>
-		</tr>
-		<tr>
-			<td>Player Points:</td>
-			<td><font color="00FF00">%points%</font></td>
-		</tr>
-	</table>
-	<br>
-	<font color="LEVEL">Target Operations</font><br1>
-	<table width=256 align=center border=0 bgcolor="444444">
-		<tr>
-			<td width=128 align=center>Operation</td>
-			<td width=128 align=center><combobox width=120 height=17 var=ebox list=increase;decrease;set></td>
-		</tr>
-		<tr>
-			<td width=128 align=center>Value</td>
-			<td width=128 align=center><edit var="val" width=120 type="number"></td>
-		</tr>
-	</table>
-	<table width="270" align=center border="0" bgcolor="444444">
-		<tr>
-			<td><center><br><button value="Confirm" action="bypass -h admin_pccafepoints $ebox $val" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
-		</tr>
-	</table>
-	<br>
-	<font color="LEVEL">Reward More players</font><br1>
-	<table width=256 align=center border=0 bgcolor="444444">
-		<tr>
-			<td width=128 align=center>Range</td>
-			<td width=128 align=center><edit var="range" width=120 type="number"></td>
-		</tr>
-		<tr>
-			<td width=128 align=center>Value</td>
-			<td width=128 align=center><edit var="val2" width=120 type="number"></td>
-		</tr>
-	</table>
-	<table width="257" align=center border="0" bgcolor="444444">
-		<tr>
-			<td><center><br><button value="Confirm" action="bypass -h admin_pccafepoints rewardOnline $val2 $range" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
-		</tr>
-		<tr>
-			<td><center>Note: If you leave 'Range' empty or set 0,<br1>it will reward all online players.</center></td>
-		</tr>
-	</table>
-</center>
+<font color="LEVEL">您可以使用PC點數購買物品。</font><br1>
+<table align="center" bgcolor="444444" border="0" width="270">
+<tr>
+<td>可以購買多個</td>
+<td><font color="00FF00">%targetName%</font></td>
+</tr>
+<tr>
+<td>，例如髮飾，甚至是限時</td>
+<td><font color="00FF00">%points%</font></td>
+</tr>
+</table>
+<br>
+<font color="LEVEL">目標運營活動</font><br1>
+<table align="center" bgcolor="444444" border="0" width="256">
+<tr>
+<td align="center" width="128">看看目前的獎勵。</td>
+<td align="center" width="128"><combobox height="17" list="increase;decrease;set" var="ebox" width="120"></combobox></td>
+</tr>
+<tr>
+<td align="center" width="128">購買一般商品</td>
+<td align="center" width="128"><edit type="number" var="val" width="120"></edit></td>
+</tr>
+</table>
+<table align="center" bgcolor="444444" border="0" width="270">
+<tr>
+<td><center><br><button action="bypass -h admin_pccafepoints $ebox $val" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="    " width="80"></button></center></td>
+</tr>
+</table>
+<br>
+<font color="LEVEL">購買讚譽武器</font><br1>
+<table align="center" bgcolor="444444" border="0" width="256">
+<tr>
+<td align="center" width="128">範圍 範圍</td>
+<td align="center" width="128"><edit type="number" var="range" width="120"></edit></td>
+</tr>
+<tr>
+<td align="center" width="128">購買一般商品</td>
+<td align="center" width="128"><edit type="number" var="val2" width="120"></edit></td>
+</tr>
+</table>
+<table align="center" bgcolor="444444" border="0" width="257">
+<tr>
+<td><center><br><button action="bypass -h admin_pccafepoints rewardOnline $val2 $range" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="    " width="80"></button></center></td>
+</tr>
+<tr>
+<td><center>注意:如果您留下 'Range' 空或設定為 0,<br1>這將會影響所有線上玩家.</br1></center></td>
+</tr>
+</table>
+</br1></br1></br1></center>
 </body></html>
