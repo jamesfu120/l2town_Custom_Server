@@ -243,6 +243,30 @@ public class AttackableAI extends CreatureAI
 	}
 	
 	@Override
+	public  void  notifyActionReadyToAct ()
+	{
+		// 一次成功的攻擊會讓戰鬥繼續進行，只有無法攻擊到的目標才會超時。
+		如果 ( getIntention ( )  ==  Intention.ATTACK )
+		{
+			_attackTimeout  =  MAX_ATTACK_TIMEOUT  +  GameTimeTaskManager.getInstance ( ). getGameTicks ( );
+		}
+		
+		super.notifyActionReadyToAct ( ) ;
+	}
+	
+	@Override
+	public  void  notifyActionFinishCasting ()
+	{
+		// 施法成功後，戰鬥將繼續進行，超時僅適用於無法到達的目標。
+		如果 ( getIntention ( )  ==  Intention.ATTACK )
+		{
+			_attackTimeout  =  MAX_ATTACK_TIMEOUT  +  GameTimeTaskManager.getInstance ( ). getGameTicks ( );
+		}
+		
+		super.notifyActionFinishCasting ( ) ;
+	}
+	
+	@Override
 	public synchronized void setIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
 		// Set the AI cast target.
