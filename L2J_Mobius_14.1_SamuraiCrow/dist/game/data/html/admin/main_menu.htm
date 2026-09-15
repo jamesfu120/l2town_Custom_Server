@@ -1,50 +1,50 @@
-<html><title> 管理者選單</title><body>
+<html><title>管理首頁</title><body>
 <center>
-<table bgcolor="444444" border="0" width="270">
+<table width=270 border=0 bgcolor="444444">
 <tr>
-<td><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="65"></button></td>
-<td><button action="bypass admin_admin6" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="角色" width="65"></button></td>
-<td><button action="bypass admin_admin2" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="遊戲" width="65"></button></td>
-<td><button action="bypass admin_admin7" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="管理" width="65"></button></td>
+<td><button value="首頁" action="bypass -h admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="人物" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="遊戲" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table><br>
-<table width="270">
+<table width=270>
 <tr>
-<td><font color="LEVEL">Prev:主頁</font></td>
-<td><edit height="15" var="qbox" width="120"></edit></td>
-<td><button action="bypass admin_help" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="幫助" width="45"></button></td>
+<td><font color="LEVEL">數值:</font></td>
+<td><edit var="qbox" width=120 height=15></td>
+<td><button value="幫助" action="bypass -h admin_html help/main_menu.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 <br>
-<table width="270"><tr>
-<td><button action="bypass -h admin_create_item $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="此分類下一篇: 專案" width="65"></button></td>
-<td><button action="bypass -h admin_move_to $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="    " width="65"></button></td>
-<td><button action="bypass -h admin_spawn_monster $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="永久" width="65"></button></td>
-<td><button action="bypass -h admin_find_character $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="找到 找到" width="65"></button></td>
+<table width=270><tr>
+<td><button value="創造物品" action="bypass -h admin_create_item $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="傳送選單" action="bypass -h admin_move_to $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="召喚NPC" action="bypass -h admin_spawn_monster $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="尋找玩家" action="bypass -h admin_find_character $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button action="bypass -h admin_list_positions $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="列表Pos" width="65"></button></td>
-<td><button action="bypass -h admin_list_spawns $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="列表Spwn" width="65"></button></td>
-<td><button action="bypass -h admin_list_positions $qbox 1" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="走去位置" width="65"></button></td>
-<td><button action="bypass -h admin_list_spawns $qbox 1" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="這就是GoSpawn" width="65"></button></td>
+<td><button value="NPC位置" action="bypass -h admin_list_positions $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="列出NPC" action="bypass -h admin_list_spawns $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="goPosition" action="bypass -h admin_list_positions $qbox 1" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="前往NPC" action="bypass -h admin_list_spawns $qbox 1" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button action="bypass -h admin_scan $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="掃描 掃描" width="65"></button></td>
-<td><button action="bypass -h admin_pccafepoints" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="PC 點數" width="65"></button></td>
-<td><button action="bypass -h admin_primepoints" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="NCoins  這是一款硬幣" width="65"></button></td>
-<td><button action="bypass -h admin_premium_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="優惠 優惠" width="65"></button></td>
+<td><button value="附近NPC" action="bypass -h admin_scan $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="活動點數" action="bypass -h admin_pccafepoints" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="NCoin" action="bypass -h admin_primepoints" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="會員系統" action="bypass -h admin_premium_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 <br>
-幫助選單<br1>
-<table width="270">
+對目標進行操作:<br1>
+<table width=270>
 <tr>
-<td><button action="bypass -h admin_kill_menu" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="打死 打死" width="65"></button></td>
-<td><button action="bypass -h admin_res" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="預覽 這裡有什麼好處?" width="65"></button></td>
-<td><button action="bypass admin_open" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="開啟 開啟" width="65"></button></td>
-<td><button action="bypass admin_close" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="    " width="65"></button></td>
+<td><button value="殺死" action="bypass -h admin_kill_menu" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="復活" action="bypass -h admin_res" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="開啟" action="bypass -h admin_open" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="關閉" action="bypass -h admin_close" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button action="bypass -h admin_recall_npc" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="提醒NPC" width="65"></button></td>
-<td><button action="bypass -h admin_delete" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="刪除" width="65"></button></td>
-<td><button action="bypass -h admin_heal" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="治癒 治癒" width="65"></button></td>
-<td><button action="bypass -h admin_fullfood" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="完整的食物" width="65"></button></td>
+<td><button value="移動NPC" action="bypass -h admin_recall_npc" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="刪除" action="bypass -h admin_delete" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="補血" action="bypass -h admin_heal" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="飽食度" action="bypass -h admin_fullfood" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr></table>
-</br1></center></body></html>
+</center></body></html>
