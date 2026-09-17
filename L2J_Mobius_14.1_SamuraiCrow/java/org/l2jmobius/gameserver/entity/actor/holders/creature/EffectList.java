@@ -851,7 +851,12 @@ public class EffectList
 		if (!_actives.isEmpty())
 		{
 			// Removes the buff from the given effect list.
-			_actives.remove(info);
+			// 已移除表示已停止，再次停止會剝奪相同技能的新增益效果。
+			if (!_actives.remove(info))
+			{
+				return;
+			}
+
 			
 			// Remove short buff.
 			if (info == _shortBuff)

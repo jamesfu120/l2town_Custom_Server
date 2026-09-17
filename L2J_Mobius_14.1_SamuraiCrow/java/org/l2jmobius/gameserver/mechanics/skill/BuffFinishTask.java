@@ -50,7 +50,9 @@ public class BuffFinishTask
 				final Creature effected = info.getEffected();
 				if ((effected != null) && (entry.getValue().incrementAndGet() > info.getAbnormalTime()))
 				{
-					ThreadPool.execute(() -> effected.getEffectList().stopSkillEffects(SkillFinishType.NORMAL, info.getSkill().getId()));
+					// 只能停止一次此增益效果，相同技能的後續增益效果不應受到影響。
+					ThreadPool.execute(() -> effected.getEffectList().remove(info, SkillFinishType.NORMAL, true, true));
+					removeBuffInfo(info);
 				}
 			}
 		}
