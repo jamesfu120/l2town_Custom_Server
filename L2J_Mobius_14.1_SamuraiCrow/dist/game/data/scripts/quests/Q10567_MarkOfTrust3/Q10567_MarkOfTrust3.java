@@ -142,8 +142,8 @@ public class Q10567_MarkOfTrust3 extends Quest
 						if (itemCount < data.getGoal().getCount())
 						{
 							giveItems(player, data.getGoal().getItemId(), 1);
-							final int newItemCount = (int) getQuestItemsCount(player, data.getGoal().getItemId());
-							questState.setCount(newItemCount);
+							// 該商標可能已由 Mark of Trust - 2 擁有，因此計數遵循所持有的商標。
+						questState.setCount ( ( int ) getQuestItemsCount ( player , data.getGoal ( ). getItemId ( ) ));
 						}
 					}
 					else
