@@ -12,7 +12,7 @@
  * General Public License for more details.
  * 
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://gnu.org>.
  */
 package org.l2jmobius.gameserver.handler;
 
@@ -84,21 +84,11 @@ public class CommunityBoardHandler implements IHandler<IParseBoardHandler, Strin
 		return _datatable.size();
 	}
 	
-	/**
-	 * Verifies if the string is a registered community board command.
-	 * @param cmd the command to verify
-	 * @return {@code true} if the command has been registered, {@code false} otherwise
-	 */
 	public boolean isCommunityBoardCommand(String cmd)
 	{
 		return getHandler(cmd) != null;
 	}
 	
-	/**
-	 * Parses a community board command.
-	 * @param command the command
-	 * @param player the player
-	 */
 	public void handleParseCommand(String command, Player player)
 	{
 		if (player == null)
@@ -122,16 +112,6 @@ public class CommunityBoardHandler implements IHandler<IParseBoardHandler, Strin
 		cb.onCommand(command, player);
 	}
 	
-	/**
-	 * Writes a command into the client.
-	 * @param player the player
-	 * @param url the command URL
-	 * @param arg1 the first argument
-	 * @param arg2 the second argument
-	 * @param arg3 the third argument
-	 * @param arg4 the fourth argument
-	 * @param arg5 the fifth argument
-	 */
 	public void handleWriteCommand(Player player, String url, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		if (player == null)
@@ -155,7 +135,7 @@ public class CommunityBoardHandler implements IHandler<IParseBoardHandler, Strin
 			}
 			case "Post":
 			{
-				cmd = "_bbspos"; // TODO: Implement.
+				cmd = "_bbspos"; 
 				break;
 			}
 			case "Region":
@@ -191,32 +171,16 @@ public class CommunityBoardHandler implements IHandler<IParseBoardHandler, Strin
 		((IWriteBoardHandler) cb).writeCommunityBoardCommand(player, arg1, arg2, arg3, arg4, arg5);
 	}
 	
-	/**
-	 * Sets the last bypass used by the player.
-	 * @param player the player
-	 * @param title the title
-	 * @param bypass the bypass
-	 */
 	public void addBypass(Player player, String title, String bypass)
 	{
 		_bypasses.put(player.getObjectId(), title + "&" + bypass);
 	}
 	
-	/**
-	 * Removes the last bypass used by the player.
-	 * @param player the player
-	 * @return the last bypass used
-	 */
 	public String removeBypass(Player player)
 	{
 		return _bypasses.remove(player.getObjectId());
 	}	
-	/**
-	 * Separates and send an HTML into multiple packets, to display into the community board.<br>
-	 * The limit is 16383 characters.
-	 * @param html the HTML to send
-	 * @param player the player
-	 */
+
 	public static void separateAndSend(String html, Player player)
 	{
 		String processedHtml = html;
@@ -224,33 +188,26 @@ public class CommunityBoardHandler implements IHandler<IParseBoardHandler, Strin
 		{
 			final StringBuilder sb = new StringBuilder();
 			int count = 0;
-			
-			// 🌟 核心修正：將所有玩家轉為基礎 Object 陣列，完美繞過所有核心的版本類型衝突
 			final Object[] objects = org.l2jmobius.gameserver.entity.World.getPlayers().toArray();
 			for (Object obj : objects)
 			{
 				if (obj instanceof Player)
 				{
 					final Player onlinePlayer = (Player) obj;
-					if (!onlinePlayer.isInvisible()) // 排除隱身 GM
+					if (!onlinePlayer.isInvisible()) 
 					{
 						sb.append(onlinePlayer.getName()).append(", ");
 						count++;
 					}
 				}
 			}
-			
-			// 組合最終名單字串
 			final String playerListStr = sb.length() > 0 ? sb.substring(0, sb.length() - 2) : "目前無玩家在線";
-			
-			// 進行標籤全域替換
 			processedHtml = processedHtml.replace("%online_players%", playerListStr);
 			processedHtml = processedHtml.replace("%online_count%", String.valueOf(count));
 		}
-		
-		// 發送處理過後的網頁內容
-		HtmlUtil.sendCBHtml(player, processedHtml);
+		org.l2jmobius.gameserver.util.HtmlUtil.sendCBHtml(player, processedHtml);
 	}
+	
 	public static CommunityBoardHandler getInstance()
 	{
 		return SingletonHolder.INSTANCE;

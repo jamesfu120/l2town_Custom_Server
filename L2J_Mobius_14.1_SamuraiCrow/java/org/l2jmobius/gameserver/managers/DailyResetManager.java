@@ -518,29 +518,44 @@ public class DailyResetManager
 		LOGGER.info("Clan Mission Rewards have been reset.");
 	}
 	
-	private void resetClanContribution()
-	{
-		// Update data for online players.
-		for (Player player : World.getPlayers())
-		{
-			player.getVariables().set(PlayerVariables.CLAN_CONTRIBUTION_PREVIOUS, player.getClanContribution());
-			player.getVariables().set(PlayerVariables.CLAN_CONTRIBUTION_TOTAL_PREVIOUS, player.getClanContributionTotal());
-			player.getVariables().remove(PlayerVariables.CLAN_CONTRIBUTION);
-		}
-		
-		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET var = 'CLAN_CONTRIBUTION_PREVIOUS' WHERE `var` = 'CLAN_CONTRIBUTION' AND charId IN (SELECT charId FROM characters WHERE online = 0)"))
-		{
-			ps.executeUpdate();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not reset Clan contributions: ", e);
-		}
-		
-		LOGGER.info("Clan contributions have been reset.");
-	}
+private void resetClanContribution()
+{
+    // 1. 處理線上玩家
+    for (Player player : World.getPlayers())
+    {
+        player.getVariables().set(PlayerVariables.CLAN_CONTRIBUTION_PREVIOUS, player.getClanContribution());
+        player.getVariables().set(PlayerVariables.CLAN_CONTRIBUTION_TOTAL_PREVIOUS, player.getClanContributionTotal());
+        player.getVariables().remove(PlayerVariables.CLAN_CONTRIBUTION);
+    }
+    
+    // 2. 處理離線玩家 (修正版)
+    try (Connection con = DatabaseFactory.getConnection())
+    {
+        // 步驟 A: 先把所有「即將被改名」的離線玩家的舊 PREVIOUS 記錄刪除，防止主鍵衝突
+        try (PreparedStatement psDel = con.prepareStatement(
+            "DELETE FROM character_variables WHERE var = 'CLAN_CONTRIBUTION_PREVIOUS' " +
+            "AND charId IN (SELECT charId FROM character_variables WHERE var = 'CLAN_CONTRIBUTION') " +
+            "AND charId IN (SELECT charId FROM characters WHERE online = 0)"))
+        {
+            psDel.executeUpdate();
+        }
+
+        // 步驟 B: 安全地將 CLAN_CONTRIBUTION 改名為 CLAN_CONTRIBUTION_PREVIOUS
+        try (PreparedStatement psUpd = con.prepareStatement(
+            "UPDATE character_variables SET var = 'CLAN_CONTRIBUTION_PREVIOUS' " +
+            "WHERE `var` = 'CLAN_CONTRIBUTION' AND charId IN (SELECT charId FROM characters WHERE online = 0)"))
+        {
+            psUpd.executeUpdate();
+        }
+    }
+    catch (Exception e)
+    {
+        LOGGER.log(Level.SEVERE, "Could not reset Clan contributions: ", e);
+    }
+    
+    LOGGER.info("Clan contributions have been reset.");
+}
+
 	
 	private void resetThroneOfHeroesWeekly()
 	{

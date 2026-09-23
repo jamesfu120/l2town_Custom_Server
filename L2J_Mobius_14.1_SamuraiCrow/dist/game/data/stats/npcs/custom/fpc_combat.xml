@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
 	<!-- Sigel Phoenix Knight -->
-	<npc id="81001" level="94" type="Monster" name="Siegfield" title="Sigel Phoenix Knight">
+	<npc id="81001" level="94" type="Monster" name="大力神" title="Sigel Phoenix Knight">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="39" dex="55" wit="39" con="82" men="38">
@@ -17,7 +17,7 @@
 				<run ground="132" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="148" hair="0" hairColor="0" face="0" equipRHand="37869" equipLHand="37212" equipHead="37209" equipGloves="37210" equipChest="37207" equipLegs="37208" equipFeet="37211" equipCloak="30310" />
 		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -42,7 +42,7 @@
 		</skillList>
 	</npc>
 	<!-- Tyrr Titan -->
-	<npc id="81002" level="94" type="Monster" name="Tyrrion" title="Tyrr Titan">
+	<npc id="81002" level="94" type="Monster" name="黑社會" title="Tyrr Titan">
 		<race>ORC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="37" dex="50" wit="38" con="87" men="41">
@@ -58,7 +58,7 @@
 				<run ground="130" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="154" hair="0" hairColor="0" face="0" equipRHand="37870" equipHead="37215" equipGloves="37216" equipChest="37213" equipLegs="37214" equipFeet="37217" equipCloak="30311" />
 		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -95,7 +95,7 @@
 				<run ground="131" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="161" hair="0" hairColor="0" face="0" equipRHand="37880" equipHead="37215" equipGloves="37216" equipChest="37213" equipLegs="37214" equipFeet="37217" equipCloak="30312" />
 		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -134,7 +134,7 @@
 				<run ground="140" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="165" hair="0" hairColor="0" face="0" equipRHand="37875" equipHead="37215" equipGloves="37216" equipChest="37213" equipLegs="37214" equipFeet="37217" equipCloak="30313" />
 		<ai type="ARCHER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -173,7 +173,7 @@
 				<run ground="124" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="166" hair="0" hairColor="0" face="0" equipRHand="37878" equipHead="37220" equipGloves="37221" equipChest="37218" equipLegs="37219" equipFeet="37222" equipCloak="30314" />
 		<ai type="MAGE" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -214,7 +214,7 @@
 				<run ground="139" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="173" hair="0" hairColor="0" face="0" equipRHand="37879" equipHead="37209" equipGloves="37210" equipChest="37207" equipLegs="37208" equipFeet="37211" equipCloak="30316" />
 		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -253,7 +253,7 @@
 				<run ground="129" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="180" hair="0" hairColor="0" face="0" equipRHand="37876" equipLHand="37223" equipHead="37220" equipGloves="37221" equipChest="37218" equipLegs="37219" equipFeet="37222" equipCloak="30317" />
 		<ai type="HEALER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -290,7 +290,7 @@
 				<run ground="141" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="188" hair="0" hairColor="0" face="0" equipRHand="37872" equipHead="37215" equipGloves="37216" equipChest="37213" equipLegs="37214" equipFeet="37217" equipCloak="40200" />
 		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>
@@ -327,7 +327,7 @@
 				<run ground="141" />
 			</speed>
 		</stats>
-		<status talkable="false" randomAnimation="false" randomWalk="false" attackable="true" />
+		<status talkable="true" randomAnimation="true" randomWalk="true" attackable="true" />
 		<fakePlayer classId="189" hair="0" hairColor="0" face="0" equipRHand="37878" equipHead="37220" equipGloves="37221" equipChest="37218" equipLegs="37219" equipFeet="37222" equipCloak="40201" />
 		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
 			<clanList>

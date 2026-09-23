@@ -1,43 +1,216 @@
-<html>
-<body>
-<br>
-<table border=0 cellspacing=0 cellpadding=0 width=745>
-	<tr>
-		<td valign="top" width="180">
-			<!-- 這裡是左邊的導航選單變數，核心會在這裡動態塞入按鈕 -->
-			%navigation%
-		</td>
-		<td valign="top" width="565">
-			<br><br>
-			<center>
-				<!-- 1. 頂部主標題 -->
-				<font name="hs12" color="CDB67F">歡迎來到我們的佈告欄</font>
-				<br><br><br>
-				
-				<!-- 2. 🌟 線上人數與名單表格 🌟 -->
-				<table width="480" bgcolor="000000" style="border:1px solid #333333; padding:15px;">
-					<tr>
-						<td align="center">
-							<font name="hs12" color="LEVEL">🔥 當前在線人數：</font> 
-							<font name="hs12" color="00FF00" size=4><b>%online_count%</b></font> 
-							<font name="hs12" color="LEVEL"> 人</font>
-						</td>
-					</tr>
-					<tr>
-						<td align="left">
-							<br>
-							<font name="hs12" color="CDB67F">👥 在線玩家名單：</font><br>
-							<font name="hs11" color="FFFFFF">%online_players%</font>
-						</td>
-					</tr>
-				</table>
-				
-				<br><br><br><br>
-				<!-- 3. 底部字樣 -->
-				<font name="hs11" color="444444">LINEAGE II - COMMUNITY BOARD</font>
-			</center>
-		</td>
-	</tr>
-</table>
-</body>
+<html noscrollbar>
+	<body>
+		<table width=700>
+			<tr>
+				<td height=10></td>
+			</tr>
+		</table>
+		<table width=20>
+			<tr>
+				<td>
+					%navigation%
+				</td>
+				<td>
+					<center>
+						<table border=0 cellpadding=0 cellspacing=0 width=555 height=455 background="L2UI_CT1.Windows_DF_TooltipBG">
+							<tr>
+								<td align="center">
+									<img src="L2UI_CT1.HtmlWnd_DF_TextureKnight" width=300 height=220>
+								</td>
+							</tr>
+							<tr>
+								 <td align="center"><font color="009393">[</font> %playerpremiumchr% <font color="009393">]</font><font color="009393"> 您已上線</font><font color="EEDD82"> %playedday% </font><font color="009393">天、</font><font color="EEDD82"> %playedhour% </font><font color="009393">小時、</font><font color="EEDD82"> %playedminute% </font><font color="009393">分鐘</font></td>
+							</tr>
+							<tr>
+								<td>
+									<center><img src="L2UI.SquareGray" width=480 height=1></center>
+								</td>
+							</tr>
+							<tr>
+								 <td height=10></td>
+							</tr>
+							<tr>
+								<td align="center">
+								    <table border=0 cellspacing=0 cellpadding=0 width=465 height=26>
+										<tr>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=185 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=185 valign=center><font color="009393"> 伺服器名稱-</font><font color="EEDD82">[%servername%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+											<td width=5></td>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=170 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=170 valign=center><font color="009393"> 遊戲版本-</font><font color="EEDD82">%serverver%</font></td>
+										        </tr>
+									            </table>
+											</td>
+											<td width=5></td>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=110 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=110 valign=center><font color="009393"> 在線人數-</font><font color="EEDD82">[%onlineAll%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								 <td height=10></td>
+							</tr>
+							<tr>
+								<td>
+									<center><img src="L2UI.SquareGray" width=478 height=1></center>
+								</td>
+							</tr>
+							<tr>
+								 <td height=10></td>
+							</tr>
+							<tr>
+								<td align="center">
+								    <table border=0 cellspacing=0 cellpadding=0 width=465 height=26>
+										<tr>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=185 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=185 valign=center><font color="009393"> 角色名稱-</font><font color="EEDD82">[%playername%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+											<td width=5></td>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=170 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=170 valign=center><font color="009393"> 角色職業-</font><font color="EEDD82">[%playerclass%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+											<td width=5></td>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=110 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=110 valign=center><font color="009393"> 角色等級-</font><font color="EEDD82">[%playerlevel%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								 <td height=10></td>
+							</tr>
+							<tr>
+								<td>
+									<center><img src="L2UI.SquareGray" width=478 height=1></center>
+								</td>
+							</tr>
+							<tr>
+								 <td height=10></td>
+							</tr>
+							<tr>
+								<td align="center">
+								    <table border=0 cellspacing=0 cellpadding=0 width=465 height=26>
+										<tr>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=185 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=185 valign=center><font color="009393"> 所屬血盟-</font><font color="EEDD82">[%playerclan%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+											<td width=5></td>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=170 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=170 valign=center><font color="009393"> 帳戶狀態-</font><font color="EEDD82">[%playerpremium%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+											<td width=5></td>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=110 height=25 bgcolor=292929 background="L2UI_CT1.Windows_DF_TooltipBG">
+										        <tr>
+											        <td width=110 valign=center><font color="009393"> Exp/Sp -</font><font color="EEDD82">[%serverrate%]</font></td>
+										        </tr>
+									            </table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								 <td height=10></td>
+							</tr>
+							<tr>
+								<td>
+									<center><img src="L2UI.SquareGray" width=478 height=1></center>
+								</td>
+							</tr>
+							<tr>
+								 <td height=15></td>
+							</tr>
+							<tr>
+								<td>
+									<center><img src="L2UI_CH3.herotower_deco" width=256 height=32></center>
+								</td>
+							</tr>
+							<tr>
+								 <td height=25></td>
+							</tr>
+							<tr>
+								<td align="center">
+								    <table border=0 cellspacing=0 cellpadding=0 width=350 height=80 background="L2UI_CT1.Windows_DF_TooltipBG">
+										<tr>
+											<td>
+												<table border=0 cellspacing=0 cellpadding=0 width=350 height=80>
+										        <tr>
+											        <td bgcolor=373737><font color="CDB67F">  查看用戶狀態 聊天視窗輸入</font><font color="LEVEL">  .user</font></td>
+												</tr>
+							                    <tr>
+								                    <td><font color="CDB67F">  自動藥水(CP.HP.MP)開關 聊天視窗輸入 <font color="LEVEL"> .apon .apoff</font></font></td>
+												</tr>
+							                    <tr>
+								                    <td bgcolor=373737><font color="CDB67F">  經驗值獲得開關 聊天視窗輸入 <font color="LEVEL"> .expoff .expon</font></font></td>
+												</tr>
+							                    <tr>
+								                    <td><font color="CDB67F">  離線商店</font><font color="LEVEL">  擺好商店直接退出遊戲</font></td>
+										        </tr>
+									            </table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								 <td height=25></td>
+							</tr>
+						</table>
+						<table border=0 cellpadding=0 cellspacing=0 width=555>
+							<tr>
+								<td height=10></td>
+							</tr>
+						</table>
+						<table border=0 cellpadding=0 cellspacing=0 width=555 background="L2UI_CT1.Windows_DF_TooltipBG">
+							<tr>
+								<td height=17></td>
+							</tr>
+							<tr>
+								<td align=center><font color=ff5151>L2Town 天堂II</font><font color=009393>-覺醒（暗鴉武士）</font></td>
+								<td><font color=LEVEL><button action="bypass _bbssell;home" value="便捷商店" width=150 height=20 back="L2UI_CT1.ListCTRL_DF_Title_Down" fore="L2UI_CT1.ListCTRL_DF_Title"></button></font></td>
+							</tr>
+							<tr>
+								<td height=15></td>
+							</tr>
+						</table>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>

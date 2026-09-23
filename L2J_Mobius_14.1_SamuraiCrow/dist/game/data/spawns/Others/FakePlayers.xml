@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+<list xmlns:xsi="http://w3.org" xsi:noNamespaceSchemaLocation="../../../xsd/spawns.xsd">
 	<spawn name="FakePlayers">
+		
+		<!-- ========================================================== -->
+		<!-- 📢 區域一：原廠擺攤假人 Evi -->
+		<!-- ========================================================== -->
 		<group>
-			<npc id="80000" x="83485" y="147998" z="-3407" heading="23509" respawnTime="60sec" /> <!-- Evi -->
+			<npc id="80000" x="83485" y="147998" z="-3407" heading="23509" respawnTime="60sec" />
 		</group>
+
+		<!-- ========================================================== -->
+		<!-- 🐉 區域二：龍之谷 (Dragon Valley) 假人主力刷怪團隊 -->
+		<!-- ========================================================== -->
+		<group>
+			<!-- 聖騎士 Siegfield -->
+			<npc id="81001" x="79115" y="116101" z="-3735" heading="0" respawnTime="30sec" />
+			<!-- 泰坦戰士 Tyrrion -->
+			<npc id="81002" x="79399" y="115776" z="-3752" heading="16384" respawnTime="30sec" />
+			<!-- 魔導 Feoth (提供魔法輸出) -->
+			<npc id="81005" x="79294" y="115521" z="-3752" heading="32768" respawnTime="30sec" />
+		</group>
+
+		<group>
+			<!-- 暗天使弓手 Yully -->
+			<npc id="81004" x="82345" y="114782" z="-3420" heading="0" respawnTime="30sec" />
+			<!-- 矮人刺客 Othelo -->
+			<npc id="81003" x="82400" y="114850" z="-3420" heading="8192" respawnTime="30sec" />
+			<!-- 補師 Aeore -->
+			<npc id="81007" x="82290" y="114700" z="-3420" heading="49152" respawnTime="30sec" />
+		</group>
+
+		<!-- ========================================================== -->
+		<!-- 🪓 區域三：殺戮斷頭台 (Fields of Massacre) 假人先鋒群 -->
+		<!-- ========================================================== -->
+		<group>
+			<!-- 劍刃舞者 Isda -->
+			<npc id="81006" x="76542" y="56321" z="-4100" heading="24576" respawnTime="30sec" />
+			<!-- 拳師 Breezer -->
+			<npc id="81008" x="76600" y="56400" z="-4100" heading="12288" respawnTime="30sec" />
+		</group>
+
 	</spawn>
 </list>
