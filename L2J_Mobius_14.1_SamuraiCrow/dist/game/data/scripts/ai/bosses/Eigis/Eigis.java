@@ -94,6 +94,23 @@ public class Eigis extends Script
 	
 	public Eigis()
 	{
+		// 🛠️ 終極修正：手動注入生怪宣告，讓 DatabaseSpawnManager 認識這隻怪
+		try
+		{
+			final org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate template = org.l2jmobius.gameserver.data.xml.NpcData.getInstance().getTemplate(EIGIS);
+			if (template != null)
+			{
+				final org.l2jmobius.gameserver.entity.spawns.Spawn dummySpawn = new org.l2jmobius.gameserver.entity.spawns.Spawn(template);
+				dummySpawn.setXYZ(EIGIS_LOCATION);
+				dummySpawn.setHeading(0);
+				dummySpawn.setRespawnDelay(0);
+				DatabaseSpawnManager.getInstance().addNewSpawn(dummySpawn, false); // 用 false 代表純註冊不寫入資料庫
+			}
+		}
+		catch (Exception e)
+		{
+			// 忽略錯誤
+		}
 		addAttackId(EIGIS);
 		addSpawnId(EIGIS);
 		addKillId(EIGIS);
@@ -150,7 +167,8 @@ public class Eigis extends Script
 			final Spawn spawn = npc.getSpawn();
 			spawn.setRespawnDelay(0);
 			spawn.startRespawn();
-			DatabaseSpawnManager.getInstance().addNewSpawn(spawn, true);
+			// 修正核心：註解掉下面這行，不向 DatabaseSpawnManager 註冊
+			// DatabaseSpawnManager.getInstance().addNewSpawn(spawn, true);
 			
 			GlobalVariablesManager.getInstance().set(EIGIS_ALIVE_VAR, true);
 			// LOGGER.info("Eigis spawned.");

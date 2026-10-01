@@ -82,7 +82,15 @@ public class MutantStakatoCrog extends Script
 	private void scheduleSpawn(SpawnEvent spawnEvent)
 	{
 		final Calendar time = TimeUtil.getNextTime(spawnEvent.hour, spawnEvent.minute);
-		startQuestTimer(spawnEvent.name, time.getTimeInMillis() - System.currentTimeMillis(), null, null);
+		long delay = time.getTimeInMillis() - System.currentTimeMillis();
+		
+		// 修正核心：如果時間差小於等於 0，代表應該排到明天的同一個時間點
+		if (delay <= 0)
+		{
+			delay += 86400000L; // 加上一天的毫秒數 (24小時 * 60分 * 60秒 * 1000)
+		}
+		
+		startQuestTimer(spawnEvent.name, delay, null, null);
 	}
 	
 	private static class SpawnEvent

@@ -138,13 +138,23 @@ public class ChaosGolem extends Script
 	private void scheduleGolem17()
 	{
 		final Calendar nextGolem17Time = TimeUtil.getNextTime(GOLEM_17_TIME[0], GOLEM_17_TIME[1]);
-		startQuestTimer("spawnGolem17", nextGolem17Time.getTimeInMillis() - System.currentTimeMillis(), null, null);
+		long delay = nextGolem17Time.getTimeInMillis() - System.currentTimeMillis();
+		if (delay <= 0)
+		{
+			delay += 86400000L;
+		}
+		startQuestTimer("spawnGolem17", delay, null, null);
 	}
 	
 	private void scheduleGolem18()
 	{
-		final Calendar nextGolem18Time = TimeUtil.getNextTime(GOLEM_18_TIME[0], GOLEM_18_TIME[1]);
-		startQuestTimer("spawnGolem18", nextGolem18Time.getTimeInMillis() - System.currentTimeMillis(), null, null);
+		final Calendar nextGolem17Time = TimeUtil.getNextTime(GOLEM_17_TIME[0], GOLEM_17_TIME[1]);
+		long delay = nextGolem17Time.getTimeInMillis() - System.currentTimeMillis();
+		if (delay <= 0)
+		{
+			delay += 86400000L;
+		}
+		startQuestTimer("spawnGolem18", delay, null, null);
 	}
 	
 	public static void main(String[] args)
