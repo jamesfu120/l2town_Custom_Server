@@ -59,12 +59,15 @@ public class BlockActions extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if ((effected == null) || effected.isRaid())
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 		{
-			return;
+                  		// Raids are immune, checked here so that the effect flag is not applied to them either.
+		return (effected != null) && !effected.isRaid();
+
 		}
+	@Override
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
+	{	
 		
 		for (Integer skillId : _allowedSkills)
 		{

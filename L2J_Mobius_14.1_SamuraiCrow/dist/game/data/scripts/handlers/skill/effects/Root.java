@@ -56,13 +56,15 @@ public class Root extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if ((effected == null) || effected.isRaid())
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 		{
-			return;
+          // Raids are immune, checked here so that the effect flag is not applied to them either.
+		return (effected != null) && !effected.isRaid();
 		}
 		
+		@Override
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)	
+	{
 		effected.stopMove(null);
 		effected.getAI().notifyActionRooted();
 	}
