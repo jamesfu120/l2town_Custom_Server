@@ -365,6 +365,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExCharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExDamagePopUp;
 import org.l2jmobius.gameserver.network.serverpackets.ExDieInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
+import org.l2jmobius.gameserver.network.serverpackets.ExFieldDieLimitTime;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
@@ -3639,15 +3640,24 @@ public class Player extends Playable
 		
 		if (count > 0)
 		{
-			if (!_inventory.reduceAdena(process, count, this, reference))
+			// The destroyed item is kept, spending the whole stack clears the inventory adena instance.
+			final Item adenaItem = _inventory.destroyItemByItemId(process, Inventory.ADENA_ID, count, this, reference);
+			if (adenaItem == null)
 			{
 				return false;
 			}
 			
 			// Send update packet.
-			final Item adenaItem = _inventory.getAdenaInstance();
 			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addItem(adenaItem);
+			if (adenaItem.getCount() > 0)
+			{
+				iu.addModifiedItem(adenaItem);
+			}
+			else
+			{
+				iu.addRemovedItem(adenaItem);
+			}
+			
 			sendInventoryUpdate(iu);
 			
 			if (sendMessage)
@@ -5778,6 +5788,7 @@ public class Player extends Playable
 		else if (PlayerConfig.DISCONNECT_AFTER_DEATH)
 		{
 			DecayTaskManager.getInstance().add(this);
+			sendPacket(new ExFieldDieLimitTime(DecayTaskManager.PLAYER_DEATH_DISCONNECT_TIME));
 		}
 		
 		return true;
@@ -11786,13 +11797,6 @@ public class Player extends Playable
 	{
 		startWarnUserTakeBreak();
 		
-		// 🌟 【核心修改】自訂玩家登入全服公告
-		if (!isGM()) 
-		{
-			// 在所有線上玩家的聊天欄發送中文系統公告
-			org.l2jmobius.gameserver.entity.World.broadcastToAllOnlinePlayers(getName() + " 已登入。歡迎回到遊戲！");
-		}
-		
 		if (isGM() && !GeneralConfig.GM_STARTUP_BUILDER_HIDE)
 		{
 			// Bleah, see L2J custom below.
@@ -11925,6 +11929,10 @@ public class Player extends Playable
 		
 		// Stop decay task.
 		DecayTaskManager.getInstance().cancel(this);
+		if (PlayerConfig.DISCONNECT_AFTER_DEATH)
+		{
+			sendPacket(new ExFieldDieLimitTime(0));
+		}
 		
 		sendPacket(new EtcStatusUpdate(this));
 		_revivePet = false;

@@ -110,4 +110,22 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
+    <npc id="99001"  displayId="100" name="石頭剪刀布" usingServerSideName="true" title="石頭剪刀布" >
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false"/>
+		<collision>
+			<radius normal="10" />
+			<height normal="13" />
+		</collision>
+	</npc>
 </list>
