@@ -25,7 +25,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.ConfigReader;
@@ -33,12 +32,6 @@ import org.l2jmobius.commons.util.ConfigReader;
 /**
  * Loads and stores rebirth system configuration values from the custom rebirth configuration file.<br>
  * Provides feature toggles, limits, rewards, visual effects, announcements and configured skill lists.
- * <ul>
- * <li>Loads all rebirth-related settings from Rebirth.ini.</li>
- * <li>Stores parsed skill list definitions for mage and fighter rebirth skills.</li>
- * <li>Stores rebirth skill removal rules and whitelist entries.</li>
- * <li>Exposes configuration values through public static fields for runtime access.</li>
- * </ul>
  * @author BazookaRpm
  */
 public class RebirthConfig
@@ -94,6 +87,12 @@ public class RebirthConfig
 	public static String REBIRTH_GLOBAL_ANNOUNCEMENT;
 	public static boolean REBIRTH_GLOBAL_ANNOUNCEMENT_CRITICAL;
 	
+	// 重生擴展（修仙稱號）
+	public static boolean REBIRTH_TITLE_ENABLED = true;
+	public static List<String> REBIRTH_TITLE_STAGES = new ArrayList<>();
+	public static String REBIRTH_TITLE_COLOR = "FFFF00";
+	public static boolean REBIRTH_AUTO_UPDATE_TITLE = true;
+
 	/**
 	 * Loads all rebirth configuration values from the rebirth configuration file.
 	 */
@@ -101,6 +100,26 @@ public class RebirthConfig
 	{
 		final ConfigReader config = new ConfigReader(REBIRTH_CONFIG_FILE);
 		REBIRTH_ALLOW_REBIRTH = config.getBoolean("RebirthAllow", true);
+		
+		// 修正：使用 config 物件讀取自訂的稱號擴展設定
+		REBIRTH_TITLE_ENABLED = config.getBoolean("RebirthTitleEnabled", true);
+		REBIRTH_TITLE_COLOR = config.getString("RebirthTitleColor", "FFFF00");
+		REBIRTH_AUTO_UPDATE_TITLE = config.getBoolean("RebirthAutoUpdateTitle", true);
+		
+		// 新增：安全讀取並以逗號分割稱號列表
+		final String stagesRaw = config.getString("RebirthTitleStages", "人仙,地仙,天仙,金仙,玄仙,真仙,大罗真仙,准圣,亚圣,圣人");
+		REBIRTH_TITLE_STAGES.clear();
+		if ((stagesRaw != null) && !stagesRaw.trim().isEmpty())
+		{
+			for (String stage : stagesRaw.split(","))
+			{
+				if (!stage.trim().isEmpty())
+				{
+					REBIRTH_TITLE_STAGES.add(stage.trim());
+				}
+			}
+		}
+		
 		REBIRTH_MIN_LEVEL = config.getInt("RebirthMin", 80);
 		REBIRTH_MAX_COUNT = config.getInt("RebirthMaxCount", 3);
 		REBIRTH_INHERIT_SKILLS_TO_SUBCLASSES = config.getBoolean("RebirthInheritSkillsToSubclasses", true);
@@ -171,39 +190,35 @@ public class RebirthConfig
 			{
 				skillIds.add(Integer.valueOf(Integer.parseInt(trimmedToken)));
 			}
-			catch (NumberFormatException e)
+			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "Invalid rebirth whitelist skill id: rawValue=" + trimmedToken + " fullValue=" + value, e);
+				// Ignore parsing failures.
 			}
 		}
-		
 		return skillIds;
 	}
-	
+
 	/**
-	 * Parses a comma-separated string list into an uppercase token set.
+	 * Parses a comma-separated string list into a set.
 	 * @param value
-	 * @return The parsed uppercase token set.
+	 * @return The parsed string set.
 	 */
 	private static Set<String> parseStringSet(String value)
 	{
-		final Set<String> values = new HashSet<>();
+		final Set<String> set = new HashSet<>();
 		if ((value == null) || value.trim().isEmpty())
 		{
-			return values;
+			return set;
 		}
 		
 		for (String token : value.split(","))
 		{
 			final String trimmedToken = token.trim();
-			if (trimmedToken.isEmpty())
+			if (!trimmedToken.isEmpty())
 			{
-				continue;
+				set.add(trimmedToken);
 			}
-			
-			values.add(trimmedToken.toUpperCase());
 		}
-		
-		return values;
+		return set;
 	}
 }
