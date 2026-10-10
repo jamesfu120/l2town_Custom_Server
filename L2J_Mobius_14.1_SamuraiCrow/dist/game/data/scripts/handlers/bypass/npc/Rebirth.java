@@ -25,19 +25,9 @@ import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.managers.RebirthManager;
 
-/**
- * Handles rebirth-related bypass commands and delegates each action to the rebirth manager.<br>
- * Supports menu display, rebirth confirmation, skill selection, skill preview, skill acquisition and skill reset requests.
- * <ul>
- * <li>Validates required command and player references.</li>
- * <li>Extracts target object id from bypass origin when available.</li>
- * <li>Parses skill identifiers from parameterized bypass commands.</li>
- * </ul>
- * @author BazookaRpm
- */
 public final class Rebirth implements IBypassHandler
 {
-	// Bypass commands.
+	// 修正重點：精準補上 2 個修仙稱號的新 Bypass 指令
 	private static final String[] COMMANDS =
 	{
 		"rebirth_openmenu",
@@ -45,16 +35,11 @@ public final class Rebirth implements IBypassHandler
 		"rebirth_selectskills",
 		"rebirth_previewSkill",
 		"rebirth_confirmSkill",
-		"rebirth_resetSkill"
+		"rebirth_resetSkill",
+		"rebirth_showTitles",
+		"rebirth_selectTitle"
 	};
 	
-	/**
-	 * Processes the requested rebirth bypass command.
-	 * @param command
-	 * @param player
-	 * @param bypassOrigin
-	 * @return {@code true} if the command was handled, {@code false} otherwise.
-	 */
 	@Override
 	public boolean onCommand(String command, Player player, Creature bypassOrigin)
 	{
@@ -83,48 +68,42 @@ public final class Rebirth implements IBypassHandler
 		else if (command.startsWith("rebirth_previewSkill"))
 		{
 			final Integer skillId = parseSkillId(command);
-			if (skillId == null)
-			{
-				player.sendMessage("Invalid skill.");
-				return true;
-			}
-			
+			if (skillId == null) { player.sendMessage("Invalid skill."); return true; }
 			RebirthManager.getInstance().displaySkillPreviewWindow(player, objectId, skillId.intValue());
 			return true;
 		}
 		else if (command.startsWith("rebirth_confirmSkill"))
 		{
 			final Integer skillId = parseSkillId(command);
-			if (skillId == null)
-			{
-				player.sendMessage("Invalid skill.");
-				return true;
-			}
-			
+			if (skillId == null) { player.sendMessage("Invalid skill."); return true; }
 			RebirthManager.getInstance().acquireRebirthSkill(player, objectId, skillId.intValue());
 			return true;
 		}
 		else if (command.startsWith("rebirth_resetSkill"))
 		{
 			final Integer skillId = parseSkillId(command);
-			if (skillId == null)
-			{
-				player.sendMessage("Invalid skill.");
-				return true;
-			}
-			
+			if (skillId == null) { player.sendMessage("Invalid skill."); return true; }
 			RebirthManager.getInstance().resetRebirthSkill(player, objectId, skillId.intValue());
+			return true;
+		}
+		else if (command.equals("rebirth_showTitles"))
+		{
+			// 修正重點：成功串接並打開你的自訂修仙稱號選單
+			RebirthManager.getInstance().displayTitleSelectionWindow(player, objectId);
+			return true;
+		}
+		else if (command.startsWith("rebirth_selectTitle"))
+		{
+			// 修正重點：成功串接點擊配戴稱號的邏輯
+			final Integer titleIndex = parseSkillId(command);
+			if (titleIndex == null) { player.sendMessage("無效的稱號索引。"); return true; }
+			RebirthManager.getInstance().selectRebirthTitle(player, objectId, titleIndex.intValue());
 			return true;
 		}
 		
 		return false;
 	}
 	
-	/**
-	 * Parses the skill id from a parameterized bypass command.
-	 * @param command
-	 * @return The parsed skill id, or {@code null} if parsing fails.
-	 */
 	private Integer parseSkillId(String command)
 	{
 		try
@@ -135,17 +114,10 @@ public final class Rebirth implements IBypassHandler
 				return Integer.valueOf(Integer.parseInt(command.substring(spaceIndex + 1).trim()));
 			}
 		}
-		catch (Exception e)
-		{
-		}
-		
+		catch (Exception e) {}
 		return null;
 	}
 	
-	/**
-	 * Returns the list of supported rebirth bypass commands.
-	 * @return The supported command list.
-	 */
 	@Override
 	public String[] getCommandList()
 	{

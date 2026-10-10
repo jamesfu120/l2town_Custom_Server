@@ -191,10 +191,10 @@ public final class RebirthManager
 		html.replace("%rebirth_count%", currentRebirthCount + "/" + RebirthConfig.REBIRTH_MAX_COUNT);
 		html.replace("%rebirth_icons%", buildAcquiredSkillsHtml(player, selectedSkills, skillDefinitionMap, true));
 		html.replace("%next_skill_icon%", "<img src=\"icon.etc_coins_gold_i00\" width=32 height=32>");
-		html.replace("%next_skill_name%", "Rebirth Tokens");
+		html.replace("%next_skill_name%", "重生代幣");
 		html.replace("%next_skill_lvl%", String.valueOf(tokenCount));
 		html.replace("%next_skill_desc%", "Refund mode: " + RebirthConfig.REBIRTH_SKILL_REFUND_MODE);
-		if (currentRebirthCount < RebirthConfig.REBIRTH_MAX_COUNT) { html.replace("%rebirth_button%", "<button value=\"Request Rebirth\" action=\"bypass -h rebirth_confirmrequest\" width=130 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">"); }
+		if (currentRebirthCount < RebirthConfig.REBIRTH_MAX_COUNT) { html.replace("%rebirth_button%", "<button value=\"申請轉生重生\" action=\"bypass -h rebirth_confirmrequest\" width=130 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">"); }
 		else { html.replace("%rebirth_button%", "<font color=AAAAAA>Max Rebirth reached.</font>"); }
 		player.sendPacket(html);
 	}
@@ -250,7 +250,7 @@ public final class RebirthManager
 	}
 	private String buildAcquiredSkillsHtml(Player player, List<Integer> selectedSkills, Map<Integer, String> skillDefinitionMap, boolean showResetButton)
 	{
-		if (selectedSkills.isEmpty()) return "<center><font color=\"AAAAAA\">You don't have any skills selected yet.</font></center>";
+		if (selectedSkills.isEmpty()) return "<center><font color=\"AAAAAA\">目前尚未選擇任何轉生技能。</font></center>";
 		final StringBuilder htmlBuilder = new StringBuilder();
 		htmlBuilder.append("<table width=270 border=0 cellpadding=2 cellspacing=2><tr>");
 		int column = 0;

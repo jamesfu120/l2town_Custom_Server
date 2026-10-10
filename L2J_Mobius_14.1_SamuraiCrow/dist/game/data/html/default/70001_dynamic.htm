@@ -1,37 +1,40 @@
-<html>
-<body>
-<center>
-<br>
-<font color="LEVEL">再生經理</font>
-<br>
-<table cellpadding="1" cellspacing="2" width="256">
-<tr>
-<td align="center" width="128">
-<font color="66CC66">您的重生</font><br1>
-<font color="FFFF99">%rebirth_count%</font>
-</br1></td>
-<td align="center" width="128">
-    %next_skill_icon%<br1>
-<font color="FFDD99">%next_skill_name%</font><br1>
-<font color="FFFF99">Lv.   </font>
-</br1></br1></td>
-</tr>
+<html><body><center>
+<font color="LEVEL">【 重生管理員 】</font><br><br>
+
+<table width=260 border=0 cellpadding=2 cellspacing=2>
+	<tr>
+		<td width=60 align=center>
+			<img src="icon.etc_coins_gold_i00" width=32 height=32>
+		</td>
+		<td width=200>
+			<font color="66CC66">目前的重生次數：</font><br1>
+			<font color="FFFF99">%rebirth_count%</font>
+		</td>
+	</tr>
 </table>
+
 <br>
-<table cellpadding="1" cellspacing="2" width="256">
-<tr>
-<td align="center">
-    %next_skill_desc%
-  </td>
-</tr>
+<table width=260 border=0 cellpadding=2 cellspacing=2>
+	<tr>
+		<td width=60 align=center>
+			%next_skill_icon%
+		</td>
+		<td width=200>
+			<font color="FFDD99">%next_skill_name%</font> : <font color="FFFF99">Lv. %next_skill_lvl%</font><br1>
+			<font color="AAAAAA">%next_skill_desc%</font>
+		</td>
+	</tr>
 </table>
+
 <br>
-<font color="66CC66">獲得的重生技能</font><br1>
+<img src="L2UI.SquareBlank" width=260 height=1><br>
+<font color="LEVEL">【 已獲得的重生技能 】</font><br>
 %rebirth_icons%
-<br><br>
-%rebirth_button%
 <br>
-<button action="bypass -h rebirth_selectskills" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="選擇技能" width="130">
-</button></br1></center>
-</body>
-</html>
+
+<img src="L2UI.SquareBlank" width=260 height=1><br><br>
+%rebirth_button%<br1>
+<button value="更換稱號" action="bypass -h rebirth_showTitles" width=130 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="選擇技能" action="bypass -h rebirth_selectskills" width=130 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+
+</center></body></html>
