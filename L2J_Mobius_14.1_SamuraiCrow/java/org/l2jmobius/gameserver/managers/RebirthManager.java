@@ -55,7 +55,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
-
 public final class RebirthManager
 {
 	private static final Logger LOGGER = Logger.getLogger(RebirthManager.class.getName());
@@ -179,7 +178,6 @@ public final class RebirthManager
 		html.setHtml(htmlBuilder.toString());
 		player.sendPacket(html);
 	}
-
 	public void displayMainWindow(Player player, int objectId)
 	{
 		final Map<Integer, String> skillDefinitionMap = createSkillDefinitionMap(getSkillPool(player), player);
@@ -198,6 +196,7 @@ public final class RebirthManager
 		else { html.replace("%rebirth_button%", "<font color=AAAAAA>Max Rebirth reached.</font>"); }
 		player.sendPacket(html);
 	}
+
 	public void acquireRebirthSkill(Player player, int objectId, int skillId)
 	{
 		final int playerId = player.getObjectId();
@@ -223,7 +222,6 @@ public final class RebirthManager
 			displayMainWindow(player, objectId);
 		} finally { REBIRTH_SKILL_OPERATIONS_IN_PROGRESS.remove(Integer.valueOf(playerId)); }
 	}
-
 	public void resetRebirthSkill(Player player, int objectId, int skillId)
 	{
 		final int playerId = player.getObjectId();
@@ -248,6 +246,7 @@ public final class RebirthManager
 			displayMainWindow(player, objectId);
 		} finally { REBIRTH_SKILL_OPERATIONS_IN_PROGRESS.remove(Integer.valueOf(playerId)); }
 	}
+
 	private String buildAcquiredSkillsHtml(Player player, List<Integer> selectedSkills, Map<Integer, String> skillDefinitionMap, boolean showResetButton)
 	{
 		if (selectedSkills.isEmpty()) return "<center><font color=\"AAAAAA\">目前尚未選擇任何轉生技能。</font></center>";
@@ -272,9 +271,7 @@ public final class RebirthManager
 		htmlBuilder.append("</tr></table>");
 		return htmlBuilder.toString();
 	}
-
 	private List<String> getSkillPool(Player player) { return player.getPlayerClass().isMage() ? RebirthConfig.REBIRTH_MAGE_SKILLS : RebirthConfig.REBIRTH_FIGHTER_SKILLS; }
-	
 	private Map<Integer, String> createSkillDefinitionMap(List<String> skillDefinitions, Player player)
 	{
 		final Map<Integer, String> skillDefinitionMap = new HashMap<>();
@@ -285,9 +282,7 @@ public final class RebirthManager
 		}
 		return skillDefinitionMap;
 	}
-	
 	private Set<Integer> createSkillSet(List<Integer> skills) { return new HashSet<>(skills); }
-	
 	private List<Integer> loadValidatedSelectedSkills(Player player, Map<Integer, String> skillDefinitionMap)
 	{
 		final int playerId = player.getObjectId();
@@ -302,27 +297,94 @@ public final class RebirthManager
 		if (changed) saveSelectedSkills(playerId, validSkills);
 		return validSkills;
 	}
-	
 	private String getSkillDefinition(Map<Integer, String> skillDefinitionMap, int skillId) { return skillDefinitionMap.get(Integer.valueOf(skillId)); }
 	private int getSkillId(String definition) { final String[] parts = definition.split(","); return (parts.length < 2) ? 0 : Integer.parseInt(parts[0].trim()); }
 	private int getSkillLevel(String definition) { final String[] parts = definition.split(","); return (parts.length < 2) ? 1 : Integer.parseInt(parts[1].trim()); }
 	private int getSkillCost(String definition) { final String[] parts = definition.split(","); return (parts.length < 3) ? 1 : Math.max(1, Integer.parseInt(parts[2].trim())); }
 	private int getRefundAmount(int itemCost) { return RebirthConfig.REBIRTH_SKILL_REFUND_MODE.equals("FULL") ? itemCost : (RebirthConfig.REBIRTH_SKILL_REFUND_MODE.equals("MID") ? itemCost / 2 : 0); }
 	private synchronized long getItemCount(Player player, int itemId) { final Item item = player.getInventory().getItemByItemId(itemId); return item != null ? item.getCount() : 0; }
-	public void requestRebirth(Player player)
+
+		public void requestRebirth(Player player)
 	{
 		final int playerId = player.getObjectId();
 		if (!REBIRTH_OPERATIONS_IN_PROGRESS.add(Integer.valueOf(playerId))) { player.sendMessage(REBIRTH_BUSY_MESSAGE); return; }
 		try {
 			if (!RebirthConfig.REBIRTH_ALLOW_REBIRTH || player.getLevel() < RebirthConfig.REBIRTH_MIN_LEVEL) return;
 			if (player.isSubClassActive() || player.isAlikeDead() || player.isInDuel() || player.isCastingNow() || player.isAttackingNow()) return;
+			
 			final int currentRebirthCount = getRebirthLevel(player);
 			if (currentRebirthCount >= RebirthConfig.REBIRTH_MAX_COUNT) return;
+			
+			// 🛠️ 1. 24小時冷卻檢查系統 (閉關時間判斷)
+			final long currentTime = System.currentTimeMillis();
+			// 從角色變变量系統中撈取上一次渡劫失敗的時間戳記
+			final long lastFailTime = player.getVariables().getLong("Rebirth_Fail_Cooldown", 0);
+			if (lastFailTime > 0)
+			{
+				final long hoursPassed = (currentTime - lastFailTime) / (1000 * 60 * 60);
+				if (hoursPassed < 24)
+				{
+					final long timeLeftMillis = (24 * 1000 * 60 * 60) - (currentTime - lastFailTime);
+					final long remainingHours = timeLeftMillis / (1000 * 60 * 60);
+					final long remainingMinutes = (timeLeftMillis % (1000 * 60 * 60)) / (1000 * 60);
+					player.sendMessage("【心魔未除】你剛遭遇渡劫失敗不久，元神尚未恢復！必須閉關調養。剩餘時間：" + remainingHours + " 小時 " + remainingMinutes + " 分鐘。");
+					displayMainWindow(player, 0);
+					return; // 直接攔截攔阻
+				}
+			}
+			
+			// 2. 動態計算成功率
+			int successRate = 100;
+			if (RebirthConfig.REBIRTH_RATE_ENABLED)
+			{
+				final int nextRebirthLevel = currentRebirthCount + 1;
+				if (nextRebirthLevel <= 3) successRate = 100;
+				else if (nextRebirthLevel <= 6) successRate = 90;
+				else if (nextRebirthLevel <= 10) successRate = 80;
+				else if (nextRebirthLevel <= 14) successRate = 70;
+				else if (nextRebirthLevel <= 16) successRate = 60;
+				else if (nextRebirthLevel <= 18) successRate = 50;
+				else if (nextRebirthLevel == 19) successRate = 30;
+				else if (nextRebirthLevel == 20) successRate = 10;
+				else successRate = 10;
+			}
+			
+			// 3. 扣除材料（不論成敗先扣，當作材料費）
 			if (!consumeItem(player, RebirthConfig.REBIRTH_ITEM_ID, RebirthConfig.REBIRTH_ITEM_AMOUNT, ItemProcessType.DESTROY, "rebirth request")) return;
+			
+			// 4. 隨機機率判定
+			if (RebirthConfig.REBIRTH_RATE_ENABLED && successRate < 100)
+			{
+				final int randomChance = org.l2jmobius.commons.util.Rnd.get(1, 100);
+				if (randomChance > successRate)
+				{
+					player.sendMessage("【渡劫失敗】突破至第 " + (currentRebirthCount + 1) + " 轉遭遇心魔！本次成功率為：" + successRate + "%。消耗的材料已損毀。");
+					player.broadcastPacket(new MagicSkillUse(player, player, 2024, 1, 1, 0)); 
+					
+					// 🛠️ 核心升級：記錄目前的失敗時間戳記到資料庫變數中，開啟 24 小時冷卻
+					player.getVariables().set("Rebirth_Fail_Cooldown", currentTime);
+					player.getVariables().storeMe(); // 持久化存檔到 character_variables
+					
+					if (RebirthConfig.REBIRTH_GLOBAL_ANNOUNCEMENT_ENABLED)
+					{
+						final String failAnnouncement = "【渡劫天罰】一聲驚天巨響！玩家 [" + player.getName() + "] 試圖突破至第 " + (currentRebirthCount + 1) + " 轉境界失敗，不慎遭遇心魔！元神受損，即將閉關修煉 24 小時！";
+						World.broadcastToAllOnlinePlayers(failAnnouncement, true);
+					}
+					
+					displayMainWindow(player, 0);
+					return; // 攔截！等級保留在原樣，不降1級
+				}
+			}
+
+			// 5. 通過考驗 -> 渡劫成功！(清除先前的失敗冷卻，並執行降回1級等成功邏輯)
+			player.getVariables().remove("Rebirth_Fail_Cooldown");
+			player.getVariables().storeMe();
+			
 			grantRebirth(player, currentRebirthCount + 1, currentRebirthCount == 0);
+			player.sendMessage("【渡劫成功】恭喜你成功突破心魔，晉升至第 " + (currentRebirthCount + 1) + " 轉境界！修為已重製為1級。");
+			
 		} finally { REBIRTH_OPERATIONS_IN_PROGRESS.remove(Integer.valueOf(playerId)); }
 	}
-
 	private void grantRebirth(Player player, int newCount, boolean firstBirth)
 	{
 		final int playerId = player.getObjectId();
@@ -388,23 +450,6 @@ public final class RebirthManager
 		displayTitleSelectionWindow(player, objectId);
 	}
 
-	private void grantRebirthSkills(Player player, Map<Integer, String> skillDefinitionMap, List<Integer> selectedSkills)
-	{
-		if (!RebirthConfig.REBIRTH_INHERIT_SKILLS_TO_SUBCLASSES && (player.getClassIndex() > 0)) return;
-		for (int skillId : selectedSkills) {
-			final String definition = getSkillDefinition(skillDefinitionMap, skillId);
-			if (definition == null) continue;
-			final Skill skill = SkillData.getInstance().getSkill(skillId, getSkillLevel(definition));
-			if (skill != null) player.addSkill(skill, true);
-		}
-		player.sendSkillList();
-	}
-
-	public void playRebirthSelectFx(Player player)
-	{
-		if (RebirthConfig.REBIRTH_SELECT_SOCIAL_ID > 0) player.broadcastPacket(new SocialAction(player.getObjectId(), RebirthConfig.REBIRTH_SELECT_SOCIAL_ID));
-		if (RebirthConfig.REBIRTH_SELECT_EFFECT_SKILL_ID > 0) player.broadcastPacket(new MagicSkillUse(player, player, RebirthConfig.REBIRTH_SELECT_EFFECT_SKILL_ID, RebirthConfig.REBIRTH_SELECT_EFFECT_SKILL_LVL, 1, 0));
-	}
 	private boolean isProtectedByGroup(Player player, Skill skill)
 	{
 		if ((player == null) || (skill == null) || RebirthConfig.REBIRTH_DELETE_PROTECTED_SKILL_GROUPS.isEmpty()) return false;
@@ -417,7 +462,6 @@ public final class RebirthManager
 		if (isProtectedSkillGroupEnabled("SUBPLEDGE") && isSkillInTree(skill, SkillTreeData.getInstance().getSubPledgeSkillTree())) return true;
 		if (isProtectedSkillGroupEnabled("COLLECT") && isSkillInTree(skill, SkillTreeData.getInstance().getCollectSkillTree())) return true;
 		if (isProtectedSkillGroupEnabled("SUBCLASS") && isSkillInTree(skill, SkillTreeData.getInstance().getSubClassSkillTree())) return true;
-		if (isProtectedSkillGroupEnabled("TRANSFORM") && isSkillInTree(skill, SkillTreeData.getInstance().getTransformSkillTree())) return true;
 		if (isProtectedSkillGroupEnabled("TRANSFER") && isTransferSkill(player, skill)) return true;
 		if (isProtectedSkillGroupEnabled("RACE") && isRaceSkill(player, skill)) return true;
 		if (isProtectedSkillGroupEnabled("REVELATION") && isRevelationSkill(player, skill)) return true;
@@ -448,8 +492,44 @@ public final class RebirthManager
 	private boolean consumeItem(Player player, int itemId, long amount, ItemProcessType processType, String reason) { if ((player == null) || (itemId <= 0) || (amount <= 0) || (amount > Integer.MAX_VALUE)) return false; final Item item = player.getInventory().getItemByItemId(itemId); if ((item == null) || (item.getCount() < amount)) { final String itemName = ((item != null) && (item.getTemplate() != null)) ? item.getTemplate().getName() : ("Item " + itemId); player.sendMessage("You need at least " + amount + " [ " + itemName + " ] for " + reason + "."); return false; } player.getInventory().destroyItem(processType, item, (int) amount, player, null); return true; }
 	private void routePostRebirthUi(Player player, List<Integer> selectedSkills, int rebirthCount, Map<Integer, String> skillDefinitionMap) { displayMainWindow(player, 0); player.sendMessage("Use your rebirth tokens to purchase skills."); }
 	private void grantRewardTokens(Player player) { if ((RebirthConfig.REBIRTH_REWARD_ITEM_ID <= 0) || (RebirthConfig.REBIRTH_REWARD_ITEM_AMOUNT <= 0)) return; player.addItem(ItemProcessType.REWARD, RebirthConfig.REBIRTH_REWARD_ITEM_ID, RebirthConfig.REBIRTH_REWARD_ITEM_AMOUNT, player, true); player.sendMessage("You received " + RebirthConfig.REBIRTH_REWARD_ITEM_AMOUNT + " rebirth token(s)."); }
-	public void grantRebirthSkills(Player player) { final Map<Integer, String> skillDefinitionMap = createSkillDefinitionMap(getSkillPool(player), player); if (!RebirthConfig.REBIRTH_INHERIT_SKILLS_TO_SUBCLASSES && (player.getClassIndex() > 0)) return; for (int skillId : loadValidatedSelectedSkills(player, skillDefinitionMap)) { final String definition = getSkillDefinition(skillDefinitionMap, skillId); if (definition == null) continue; final Skill skill = SkillData.getInstance().getSkill(skillId, getSkillLevel(definition)); if (skill != null) player.addSkill(skill, true); } player.sendSkillList(); }
+	
+	public void grantRebirthSkills(Player player)
+	{
+		final Map<Integer, String> skillDefinitionMap = createSkillDefinitionMap(getSkillPool(player), player);
+		if (!RebirthConfig.REBIRTH_INHERIT_SKILLS_TO_SUBCLASSES && (player.getClassIndex() > 0)) return;
+		for (int skillId : loadValidatedSelectedSkills(player, skillDefinitionMap)) {
+			final String definition = getSkillDefinition(skillDefinitionMap, skillId);
+			if (definition == null) continue;
+			final Skill skill = SkillData.getInstance().getSkill(skillId, getSkillLevel(definition));
+			if (skill != null) player.addSkill(skill, true);
+		}
+		player.sendSkillList();
+	}
+	
+	private void grantRebirthSkills(Player player, Map<Integer, String> skillDefinitionMap, List<Integer> selectedSkills)
+	{
+		if (!RebirthConfig.REBIRTH_INHERIT_SKILLS_TO_SUBCLASSES && (player.getClassIndex() > 0)) return;
+		for (int skillId : selectedSkills) {
+			final String definition = getSkillDefinition(skillDefinitionMap, skillId);
+			if (definition == null) continue;
+			final Skill skill = SkillData.getInstance().getSkill(skillId, getSkillLevel(definition));
+			if (skill != null) player.addSkill(skill, true);
+		}
+		player.sendSkillList();
+	}
+
 	public void displayCongrats(Player player, int rebirthCount) { if (RebirthConfig.REBIRTH_FINISH_SOCIAL_ID > 0) player.broadcastPacket(new SocialAction(player.getObjectId(), RebirthConfig.REBIRTH_FINISH_SOCIAL_ID)); if (RebirthConfig.REBIRTH_FINISH_EFFECT_SKILL_ID > 0) player.broadcastPacket(new MagicSkillUse(player, player, RebirthConfig.REBIRTH_FINISH_EFFECT_SKILL_ID, RebirthConfig.REBIRTH_FINISH_EFFECT_SKILL_LVL, 1, 0)); final String screenMessage = RebirthConfig.REBIRTH_SCREEN_MESSAGE.replace("%player%", player.getName()).replace("%rebirth_count%", String.valueOf(rebirthCount)).replace("%max_rebirth%", String.valueOf(RebirthConfig.REBIRTH_MAX_COUNT)); if (RebirthConfig.REBIRTH_SCREEN_MESSAGE_ENABLED) player.sendPacket(new ExShowScreenMessage(screenMessage, ExShowScreenMessage.TOP_CENTER, RebirthConfig.REBIRTH_SCREEN_MESSAGE_TIME)); if (RebirthConfig.REBIRTH_GLOBAL_ANNOUNCEMENT_ENABLED) World.broadcastToAllOnlinePlayers(RebirthConfig.REBIRTH_GLOBAL_ANNOUNCEMENT.replace("%player%", player.getName()).replace("%rebirth_count%", String.valueOf(rebirthCount)).replace("%max_rebirth%", String.valueOf(RebirthConfig.REBIRTH_MAX_COUNT)), RebirthConfig.REBIRTH_GLOBAL_ANNOUNCEMENT_CRITICAL); }
+	public void playRebirthSelectFx(Player player)
+	{
+		if (RebirthConfig.REBIRTH_SELECT_SOCIAL_ID > 0)
+		{
+			player.broadcastPacket(new SocialAction(player.getObjectId(), RebirthConfig.REBIRTH_SELECT_SOCIAL_ID));
+		}
+		if (RebirthConfig.REBIRTH_SELECT_EFFECT_SKILL_ID > 0)
+		{
+			player.broadcastPacket(new MagicSkillUse(player, player, RebirthConfig.REBIRTH_SELECT_EFFECT_SKILL_ID, RebirthConfig.REBIRTH_SELECT_EFFECT_SKILL_LVL, 1, 0));
+		}
+	}
 	public static RebirthManager getInstance() { return SingletonHolder.INSTANCE; }
 	private static class SingletonHolder { protected static final RebirthManager INSTANCE = new RebirthManager(); }
 }

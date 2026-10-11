@@ -61,6 +61,8 @@ public class RebirthConfig
 	public static int REBIRTH_REWARD_ITEM_ID;
 	public static int REBIRTH_REWARD_ITEM_AMOUNT;
 	public static String REBIRTH_SKILL_REFUND_MODE;
+	public static boolean REBIRTH_RATE_ENABLED = true;
+    public static int REBIRTH_SUCCESS_RATE = 80;
 	
 	// Skill pools.
 	public static List<String> REBIRTH_MAGE_SKILLS = new ArrayList<>();
@@ -107,7 +109,7 @@ public class RebirthConfig
 		REBIRTH_AUTO_UPDATE_TITLE = config.getBoolean("RebirthAutoUpdateTitle", true);
 		
 		// 新增：安全讀取並以逗號分割稱號列表
-		final String stagesRaw = config.getString("RebirthTitleStages", "人仙,地仙,天仙,金仙,玄仙,真仙,大罗真仙,准圣,亚圣,圣人");
+		final String stagesRaw = config.getString("RebirthTitleStages", "人仙,地仙,天仙,金仙,玄仙,真仙,大羅真仙,准聖,亞聖,聖人,仙王,仙帝,不朽之王,祭道,仙尊,無上至尊,荒古至尊,主宰,萬道始祖,混沌掌控者");
 		REBIRTH_TITLE_STAGES.clear();
 		if ((stagesRaw != null) && !stagesRaw.trim().isEmpty())
 		{
@@ -116,6 +118,8 @@ public class RebirthConfig
 				if (!stage.trim().isEmpty())
 				{
 					REBIRTH_TITLE_STAGES.add(stage.trim());
+					REBIRTH_RATE_ENABLED = config.getBoolean("RebirthRateEnabled", true);
+                    REBIRTH_SUCCESS_RATE = config.getInt("RebirthSuccessRate", 80);
 				}
 			}
 		}
