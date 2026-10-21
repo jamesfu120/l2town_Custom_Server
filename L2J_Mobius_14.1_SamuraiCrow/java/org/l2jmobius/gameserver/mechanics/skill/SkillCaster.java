@@ -57,7 +57,6 @@ import org.l2jmobius.gameserver.entity.item.type.ActionType;
 import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.managers.ScriptManager;
-import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
 import org.l2jmobius.gameserver.mechanics.effects.EffectType;
 import org.l2jmobius.gameserver.mechanics.events.EventDispatcher;
 import org.l2jmobius.gameserver.mechanics.events.EventType;
@@ -70,14 +69,11 @@ import org.l2jmobius.gameserver.mechanics.options.OptionSkillType;
 import org.l2jmobius.gameserver.mechanics.skill.enums.FlyType;
 import org.l2jmobius.gameserver.mechanics.skill.enums.NextActionType;
 import org.l2jmobius.gameserver.mechanics.skill.holders.SkillUseHolder;
-import org.l2jmobius.gameserver.mechanics.skill.targets.AffectScope;
 import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 import org.l2jmobius.gameserver.mechanics.stats.Formulas;
-import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExMagicSkillUseGround;
 import org.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceled;
@@ -138,8 +134,8 @@ public class SkillCaster implements Runnable
 	 */
 	public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
 	{
-		// Prevent players from attacking before the Olympiad countdown ends.
-		if (caster.isPlayer() && skill.hasNegativeEffect())
+		// Prevent players from attacking before the Olympiad countdown ends. Olympiad Manager NPC is excluded.
+		if (caster.isPlayer() && skill.hasNegativeEffect() && (target != null) && (target.getId() != 36402))
 		{
 			final Player player = caster.asPlayer();
 			if (player.isInOlympiadMode() && !player.isOlympiadStart())
@@ -189,7 +185,7 @@ public class SkillCaster implements Runnable
 			return null;
 		}
 		
-		if ((skill.getCastRange() > 0) && !LocationUtil.checkIfInRange(skill.getCastRange() + (int) caster.getStat().getValue(Stat.MAGIC_ATTACK_RANGE, 0), caster, target, false))
+		if ((skill.getCastRange() > 0) && !LocationUtil.checkIfInRange(skill.getCastRange(), caster, target, false))
 		{
 			return null;
 		}
@@ -360,16 +356,6 @@ public class SkillCaster implements Runnable
 		if (!_skill.isNotBroadcastable())
 		{
 			caster.broadcastSkillPacket(new MagicSkillUse(caster, target, _skill.getDisplayId(), _skill.getDisplayLevel(), displayedCastTime, reuseDelay, _skill.getReuseDelayGroup(), actionId, _castingType), target);
-			if (caster.isPlayer() && (_skill.getTargetType() == TargetType.GROUND) && (_skill.getAffectScope() == AffectScope.FAN_PB))
-			{
-				final Player player = caster.asPlayer();
-				final Location worldPosition = player.getCurrentSkillWorldPosition();
-				if (worldPosition != null)
-				{
-					final Location location = new Location(worldPosition.getX(), worldPosition.getY(), worldPosition.getZ(), worldPosition.getHeading());
-					ThreadPool.schedule(() -> player.broadcastPacket(new ExMagicSkillUseGround(player.getObjectId(), _skill.getDisplayId(), location)), 100);
-				}
-			}
 		}
 		
 		if (caster.isPlayer() && !instantCast)
@@ -377,7 +363,7 @@ public class SkillCaster implements Runnable
 			// Send a system message to the player.
 			if (!_skill.isHidingMessages())
 			{
-				caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_HAVE_USED_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
+				caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 			}
 			
 			// Show the gauge bar for casting.
@@ -404,7 +390,7 @@ public class SkillCaster implements Runnable
 			{
 				if (player.getFame() < _skill.getFamePointConsume())
 				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REPUTATION_POINTS);
+					player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
 					return false;
 				}
 				
@@ -427,7 +413,7 @@ public class SkillCaster implements Runnable
 				
 				clan.takeReputationScore(_skill.getClanRepConsume());
 				
-				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CLAN_REPUTATION_POINTS_SPENT);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
 				msg.addInt(_skill.getClanRepConsume());
 				player.sendPacket(msg);
 			}
@@ -436,20 +422,6 @@ public class SkillCaster implements Runnable
 		// Trigger any skill cast start effects.
 		if (target.isCreature())
 		{
-			// Tempfix for the delayed TriggerSkillByDualRange effect skill.
-			final List<AbstractEffect> effects = _skill.getEffects(EffectScope.GENERAL);
-			if ((effects != null) && !effects.isEmpty())
-			{
-				for (AbstractEffect effect : effects)
-				{
-					if (effect.getEffectType() == EffectType.DUAL_RANGE)
-					{
-						effect.instant(caster, target.asCreature(), _skill, null);
-						return false;
-					}
-				}
-			}
-			
 			_skill.applyEffectScope(EffectScope.START, new BuffInfo(caster, target.asCreature(), _skill, false, _item, null), true, false);
 		}
 		
@@ -476,7 +448,7 @@ public class SkillCaster implements Runnable
 		{
 			if (caster.isPlayer())
 			{
-				caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
+				caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 			}
 			
 			return false;
@@ -601,12 +573,6 @@ public class SkillCaster implements Runnable
 		
 		// On each repeat recharge shots before cast.
 		caster.rechargeShots(_skill.useSoulShot(), _skill.useSpiritShot(), false);
-		
-		// Reset current skill world position.
-		if (caster.isPlayer() && (_skill.getTargetType() == TargetType.GROUND) && ((_skill.getAffectScope() == AffectScope.FAN_PB) || (_skill.getAffectScope() == AffectScope.FAN)))
-		{
-			caster.asPlayer().setCurrentSkillWorldPosition(null);
-		}
 		
 		return true;
 	}
@@ -825,7 +791,8 @@ public class SkillCaster implements Runnable
 						}
 						
 						// Players which are 9 levels above a Raid Boss and cast a skill nearby, are silenced with the Raid Curse skill.
-						if (!NpcConfig.RAID_DISABLE_CURSE && attackable.isRaid() && attackable.giveRaidCurse() && attackable.isInCombat() && ((player.getLevel() - attackable.getLevel()) > 8))
+						// Static skills (recipe books, potions and other item skills) are not casting.
+						if (!NpcConfig.RAID_DISABLE_CURSE && !skill.isStatic() && attackable.isRaid() && attackable.giveRaidCurse() && attackable.isInCombat() && ((player.getLevel() - attackable.getLevel()) > 8))
 						{
 							final CommonSkill curse = skill.hasNegativeEffect() ? CommonSkill.RAID_CURSE2 : CommonSkill.RAID_CURSE;
 							curse.getSkill().applyEffects(attackable, player);
@@ -1000,7 +967,7 @@ public class SkillCaster implements Runnable
 				return;
 			}
 			
-			if (skill.checkCondition(creature, target, true))
+			if (skill.checkCondition(creature, target))
 			{
 				if (creature.isSkillDisabled(skill))
 				{
@@ -1037,6 +1004,20 @@ public class SkillCaster implements Runnable
 				
 				// Launch the magic skill and calculate its effects.
 				skill.activateSkill(creature, item, targets);
+				
+				// Update pvpflag, as callSkill does for normal casts.
+				// Damage counts even with effectPoint 0, as an auto-attack hit does.
+				final Player player = creature.asPlayer();
+				if ((player != null) && (skill.hasNegativeEffect() || skill.hasEffectType(EffectType.PHYSICAL_ATTACK, EffectType.MAGICAL_ATTACK)))
+				{
+					for (WorldObject obj : targets)
+					{
+						if (obj.isPlayable())
+						{
+							player.updatePvPStatus(obj.asCreature());
+						}
+					}
+				}
 				
 				// Notify skill is casted.
 				if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_SKILL_FINISH_CAST, creature))
@@ -1278,7 +1259,7 @@ public class SkillCaster implements Runnable
 			
 			if (player.isInOlympiadMode() && skill.isBlockedInOlympiad())
 			{
-				player.sendPacket(SystemMessageId.THE_SKILL_CANNOT_BE_USED_IN_THE_OLYMPIAD);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
 				return false;
 			}
 			
@@ -1291,7 +1272,7 @@ public class SkillCaster implements Runnable
 			// Check if not in AirShip.
 			if (player.isInAirShip() && !skill.hasEffectType(EffectType.REFUEL_AIRSHIP))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_THE_REQUIREMENTS_ARE_NOT_MET);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(skill);
 				player.sendPacket(sm);
 				return false;
@@ -1299,7 +1280,7 @@ public class SkillCaster implements Runnable
 			
 			if (player.getFame() < skill.getFamePointConsume())
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REPUTATION_POINTS);
+				player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
 				return false;
 			}
 			
@@ -1368,9 +1349,28 @@ public class SkillCaster implements Runnable
 				}
 				else
 				{
-					x = target.getX();
-					y = target.getY();
-					z = target.getZ();
+					final double dx = creature.getX() - target.getX();
+					final double dy = creature.getY() - target.getY();
+					final double distance = Math.hypot(dx, dy);
+					double offset = creature.getCollisionRadius() + 10;
+					if (target.isCreature())
+					{
+						offset += target.asCreature().getCollisionRadius();
+					}
+					
+					if (distance > offset)
+					{
+						final double ratio = offset / distance;
+						x = target.getX() + (int) (dx * ratio);
+						y = target.getY() + (int) (dy * ratio);
+						z = target.getZ();
+					}
+					else
+					{
+						x = creature.getX();
+						y = creature.getY();
+						z = creature.getZ();
+					}
 				}
 				break;
 			}
@@ -1397,27 +1397,6 @@ public class SkillCaster implements Runnable
 				x = target.getX() + (int) (Math.cos(Math.PI + radian + course) * nRadius);
 				y = target.getY() + (int) (Math.sin(Math.PI + radian + course) * nRadius);
 				z = target.getZ();
-				break;
-			}
-			case DA6:
-			{
-				final int dx = target.getX() - creature.getX();
-				final int dy = target.getY() - creature.getY();
-				final double distance = Math.sqrt((dx * dx) + (dy * dy));
-				if (distance > 1)
-				{
-					final double range = _skill.getCastRange();
-					final double ratio = range / distance;
-					x = creature.getX() + (int) (dx * ratio);
-					y = creature.getY() + (int) (dy * ratio);
-					z = creature.getZ();
-				}
-				else
-				{
-					x = creature.getX();
-					y = creature.getY();
-					z = creature.getZ();
-				}
 				break;
 			}
 		}
