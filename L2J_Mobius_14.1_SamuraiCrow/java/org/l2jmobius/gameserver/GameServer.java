@@ -364,6 +364,7 @@ public class GameServer
 		printSection("NPCs");
 		NpcData.getInstance();
 		FakePlayerChatManager.getInstance();
+		org.l2jmobius.gameserver.managers.FakePlayerPopulationManager.initialize();
 		SpawnData.getInstance();
 		WalkingManager.getInstance();
 		StaticObjectData.getInstance();

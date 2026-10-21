@@ -1395,4 +1395,9 @@ public class EffectList
 	{
 		return (_effectFlags & flag.getMask()) != 0;
 	}
+	public void sendPartyEffectIconsNow()
+    {
+    // 補空接口供假人經理呼叫
+    } 
+
 }

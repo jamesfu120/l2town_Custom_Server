@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="32900" toLevel="1" name="魔法裂刺">
+	<skill id="32900" toLevel="1" name="Magic Spike">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -10,7 +10,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32901" toLevel="1" name="魔法爆破">
+	<skill id="32901" toLevel="1" name="Magic Devastation">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
@@ -20,7 +20,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="32902" toLevel="1" name="魔法爆裂">
+	<skill id="32902" toLevel="1" name="Magic Burst">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -31,7 +31,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="32903" toLevel="1" name="廣域施毒">
+	<skill id="32903" toLevel="1" name="Mass Poison">
 		<!-- Inflicts Poison on the target and decreases HP. Effect 11. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A1</operateType>
@@ -44,7 +44,7 @@
 		<mpConsume>1</mpConsume>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="32904" toLevel="1" name="廣域恐懼">
+	<skill id="32904" toLevel="1" name="Mass Fear">
 		<!-- The target runs away in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
@@ -73,7 +73,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="32905" toLevel="1" name="致命攻擊旋風">
+	<skill id="32905" toLevel="1" name="Critical Slasher">
 		<icon>icon.skill16636</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -96,7 +96,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32906" toLevel="1" name="狂暴化">
+	<skill id="32906" toLevel="1" name="Berserk">
 		<!-- Continued battle has enhanced Physical Attack. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
@@ -105,7 +105,7 @@
 		<hitTime>3700</hitTime>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32907" toLevel="1" name="極限屏障">
+	<skill id="32907" toLevel="1" name="Limit Barrier">
 		<!-- The barrier protects from 1050 hits. If you don't deal 1050 hits for 15 sec., the boss' HP will be fully restored. -->
 		<icon>icon.skill11621</icon>
 		<operateType>A2</operateType>
@@ -113,7 +113,7 @@
 		<effectPoint>10</effectPoint>
 		<hitTime>0</hitTime>
 	</skill>
-	<skill id="32908" toLevel="1" name="爆擊盾">
+	<skill id="32908" toLevel="1" name="Critical Atk. Shield">
 		<!-- Decreases received Critical Rate from basic attacks and received Critical Damage from basic attacks. -->
 		<icon>icon.skill0035</icon>
 		<operateType>P</operateType>
@@ -128,22 +128,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32909" toLevel="1" name="道具掉落規則">
+	<skill id="32909" toLevel="1" name="Rule of Looting">
 		<!-- There are few rules of looting. If the raiding characters are not in the party, the right to loot is given to the character who has dealt the killing blow. If there are more than one raiding paties, the right to loot is given to the party whose member has dealt the killing blow. If the raiding characters are joined to command channel, the right to loot is given to all members of the command channel whose member has dealt the killing blow. The rule of looting extends for 5 min. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="32910" toLevel="1" name="道具掉落規則">
+	<skill id="32910" toLevel="1" name="Rule of Looting">
 		<!-- When the first raid boss is down, the command channel leader has a right to loot the boss during 5 min. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="32911" toLevel="1" name="首領戰鬥領域">
+	<skill id="32911" toLevel="1" name="Boss Fighting Area">
 		<!-- If the character uses AoE attack in the boss area, the clan mates will be affected by friendly fire. But party and command channel members won't receive any damage. The damage from the AoE attack can be received by any character except the attacker, even if they are in party with a cursed weapon wielder or belong to an alliance. Any character can be attacked personally. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="32912" toLevel="1" name="狂暴化">
+	<skill id="32912" toLevel="1" name="Berserk">
 		<!-- Continued battle has enhanced Physical Attack. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
@@ -152,7 +152,7 @@
 		<hitTime>3700</hitTime>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32913" toLevel="1" name="致命攻擊">
+	<skill id="32913" toLevel="1" name="Critical Hit">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -171,7 +171,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32914" toLevel="1" name="快速投擲">
+	<skill id="32914" toLevel="1" name="Rapid Throw">
 		<!-- A melee physical skill for warriors that knocks 1 monster back. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -190,7 +190,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32915" toLevel="1" name="能量球">
+	<skill id="32915" toLevel="1" name="Energy Ball">
 		<!-- A basic attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -211,7 +211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32916" toLevel="1" name="昏迷攻擊">
+	<skill id="32916" toLevel="1" name="Stun Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
@@ -247,7 +247,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32917" toLevel="1" name="致命攻擊">
+	<skill id="32917" toLevel="1" name="Critical Hit">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -266,7 +266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32918" toLevel="1" name="快速投擲">
+	<skill id="32918" toLevel="1" name="Rapid Throw">
 		<!-- A melee physical skill for warriors that knocks 1 monster back. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -285,7 +285,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32919" toLevel="1" name="昏迷攻擊">
+	<skill id="32919" toLevel="1" name="Stun Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
@@ -321,7 +321,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32920" toLevel="2" name="龍之強擊">
+	<skill id="32920" toLevel="2" name="Dragon Strike">
 		<!-- none. Inflicted status: Debilitation. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -355,7 +355,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32921" toLevel="3" name="致命地之震動">
+	<skill id="32921" toLevel="3" name="Fatal Earth Tremor">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -369,11 +369,16 @@
 		<mpConsume>62</mpConsume>
 		<mpInitialConsume>16</mpInitialConsume>
 	</skill>
-	<skill id="32922" toLevel="3" name="致命投擲重標槍">
+	<skill id="32922" toLevel="3" name="Throw Pilum">
 		<!-- A Dragon Peltast skill. A ranged attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<castRange>450</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>
+			<value fromLevel="1" toLevel="1">450</value>
+			<value fromLevel="2" toLevel="3">900</value>
+		</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-111</effectPoint>
 		<hitTime>
@@ -382,8 +387,18 @@
 			<value level="3">1000</value>
 		</hitTime>
 		<isDebuff>true</isDebuff>
+		<reuseDelay>
+			<value fromLevel="1" toLevel="1">0</value>
+			<value fromLevel="2" toLevel="3">5000</value>
+		</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="32923" toLevel="2" name="龍之衝擊">
+	<skill id="32923" toLevel="2" name="Mortal Blow Strike">
 		<!-- A physical AoE attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -396,7 +411,7 @@
 		<mpConsume>158</mpConsume>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="32924" toLevel="1" name="義西卡旋擊">
+	<skill id="32924" toLevel="1" name="Ishka's Whirlwind">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -424,7 +439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32925" toLevel="1" name="義西卡強擊">
+	<skill id="32925" toLevel="1" name="Ishka's Vicious Strike">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -444,7 +459,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32926" toLevel="1" name="義西卡怒雷爆">
+	<skill id="32926" toLevel="1" name="Ishka's Lightning Burst">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -478,7 +493,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32927" toLevel="2" name="精采能量箭">
+	<skill id="32927" toLevel="2" name="Flawless Power Shot">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -486,7 +501,7 @@
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="32928" toLevel="1" name="快速投擲">
+	<skill id="32928" toLevel="1" name="Rapid Throw">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -494,7 +509,7 @@
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="32929" toLevel="4" name="領取巨大的金幣包袱">
+	<skill id="32929" toLevel="4" name="Bag of Adena To Obtain">
 		<!-- For 3 sec., bleeding owner of the monkey collects adena that were kept in a bag of adena. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1551</icon>
 		<operateType>A1</operateType>
@@ -503,7 +518,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>6</isMagic>
 	</skill>
-	<skill id="32930" toLevel="1" name="金幣加持">
+	<skill id="32930" toLevel="1" name="More Adena">
 		<!-- Adena drop rate increased for 15 sec. -->
 		<icon>icon.buff_inc_adena</icon>
 		<operateType>A2</operateType>
@@ -517,7 +532,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32931" toLevel="1" name="致命攻擊">
+	<skill id="32931" toLevel="1" name="Critical Hit">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -537,7 +552,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32932" toLevel="1" name="能量箭">
+	<skill id="32932" toLevel="1" name="Power Shot">
 		<!-- A melee physical skill for warriors that knocks 1 monster back. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -557,7 +572,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32933" toLevel="1" name="能量球">
+	<skill id="32933" toLevel="1" name="Energy Ball">
 		<!-- A basic attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -576,7 +591,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32934" toLevel="1" name="昏迷攻擊">
+	<skill id="32934" toLevel="1" name="Stun Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
@@ -612,7 +627,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32935" toLevel="1" name="靈魂安息">
+	<skill id="32935" toLevel="1" name="Tranquil Soul">
 		<!-- Take a rest under the protection of gracious Maphr, the godess of Earth. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -623,7 +638,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<stayAfterDeath>true</stayAfterDeath>
 	</skill>
-	<skill id="32936" toLevel="1" name="致命攻擊">
+	<skill id="32936" toLevel="1" name="Critical Hit">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -643,7 +658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32937" toLevel="1" name="昏迷攻擊">
+	<skill id="32937" toLevel="1" name="Stun Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
@@ -679,7 +694,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32938" toLevel="1" name="能量球">
+	<skill id="32938" toLevel="1" name="Energy Ball">
 		<!-- A basic attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -700,7 +715,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32939" toLevel="1" name="快速投擲">
+	<skill id="32939" toLevel="1" name="Rapid Throw">
 		<!-- A melee physical skill for warriors that knocks 1 monster back. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -731,7 +746,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32940" toLevel="1" name="能量球">
+	<skill id="32940" toLevel="1" name="Energy Ball">
 		<!-- A basic attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -751,7 +766,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32941" toLevel="1" name="魔力攻擊">
+	<skill id="32941" toLevel="1" name="Magic Attack">
 		<!-- A powerful attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -770,7 +785,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32942" toLevel="1" name="強力攻擊">
+	<skill id="32942" toLevel="1" name="Power Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -789,7 +804,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32943" toLevel="1" name="強力攻擊">
+	<skill id="32943" toLevel="1" name="Power Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -808,7 +823,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32944" toLevel="1" name="強力攻擊">
+	<skill id="32944" toLevel="1" name="Power Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -827,7 +842,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32945" toLevel="1" name="究極輔助魔法">
+	<skill id="32945" toLevel="1" name="Ultimate Buff">
 		<!-- For 10 sec., P. Def. +100%, M. Def. +100%. -->
 		<icon>icon.skill0757</icon>
 		<operateType>A1</operateType>
@@ -836,7 +851,7 @@
 		<mpConsume>50</mpConsume>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="32946" toLevel="1" name="狂暴憤怒">
+	<skill id="32946" toLevel="1" name="Berserk">
 		<!-- You have reached your physical limit. Increases Debuff Resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd. and Critical Damage for basic attacks. When the target is killed, recovers 20% HP. When HP<60%, P. Atk. +10%, Critical Rate for basic attacks +10%. When HP<30%, P. Atk. +30%, Critical Rate for basic attacks +30%. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A2</operateType>
@@ -909,7 +924,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32947" toLevel="1" name="狂暴憤怒">
+	<skill id="32947" toLevel="1" name="Berserk">
 		<!-- You have reached your physical limit. Increases Debuff Resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd. and Critical Damage for basic attacks. When the target is killed, recovers 20% HP. When HP<60%, P. Atk. +10%, Critical Rate for basic attacks +10%. When HP<30%, P. Atk. +30%, Critical Rate for basic attacks +30%. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A2</operateType>
@@ -982,73 +997,73 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32948" toLevel="4" name="精采致命侵襲">
+	<skill id="32948" toLevel="4" name="Flawless Fatal Strike">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32949" toLevel="1" name="致命射擊">
+	<skill id="32949" toLevel="1" name="Fatal Shot">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32950" toLevel="4" name="精采致命殺刃">
+	<skill id="32950" toLevel="4" name="Flawless Fatal Slasher">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32951" toLevel="1" name="爆射箭">
+	<skill id="32951" toLevel="1" name="Burst Shot">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32952" toLevel="4" name="精采黑暗之刺">
+	<skill id="32952" toLevel="4" name="Flawless Dark Spike">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32953" toLevel="1" name="火炎裂刺">
+	<skill id="32953" toLevel="1" name="Fire Spike">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32954" toLevel="4" name="精采風之刺">
+	<skill id="32954" toLevel="4" name="Flawless Wind Spike">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32955" toLevel="4" name="精采神聖爆裂">
+	<skill id="32955" toLevel="4" name="Flawless Holy Blast">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32956" toLevel="4" name="精采黑暗爆裂">
+	<skill id="32956" toLevel="4" name="Flawless Unholy Blast">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32957" toLevel="4" name="精采火焰爆裂">
+	<skill id="32957" toLevel="4" name="Flawless Fire Blast">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32958" toLevel="4" name="精采風之刺">
+	<skill id="32958" toLevel="4" name="Flawless Wind Blast">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-700</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32959" toLevel="4" name="完美廣域衝擊">
+	<skill id="32959" toLevel="4" name="AoE Stun">
 		<!-- Level 1: Attacks nearby enemies and stuns them for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Attacks nearby enemies and stuns them for 10 sec.. Additionally, Received damage +30%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Attacks nearby enemies and stuns them for 10 sec.. Additionally, Received damage +30%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1082,7 +1097,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32960" toLevel="4" name="完美廣域束縛">
+	<skill id="32960" toLevel="4" name="Mass Hold">
 		<!-- Level 1: Inflicts Hold on the target and nearby enemies for 10 sec.. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<!-- Level 2: Inflicts Hold on the target and nearby enemies for 10 sec.. Additionally, Received damage +30%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Ban on Stealth). -->
 		<!-- Level 3: Inflicts Hold on the target and nearby enemies for 10 sec.. Additionally, Received damage +30%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Ban on Stealth). -->
@@ -1118,7 +1133,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32961" toLevel="4" name="完美沉睡之雲">
+	<skill id="32961" toLevel="4" name="Sleeping Cloud">
 		<!-- Level 1: Inflicts Sleep on the target and nearby enemies for 10 sec.. Inflicted status: Stupor (Sleep, Mutation). -->
 		<!-- Level 2: Inflicts Sleep on the target and nearby enemies for 10 sec.. Additionally, Received damage +30%. Inflicted status: Stupor (Sleep, Mutation). -->
 		<!-- Level 3: Inflicts Sleep on the target and nearby enemies for 10 sec.. Additionally, Received damage +30%. Inflicted status: Stupor (Sleep, Mutation). -->
@@ -1158,7 +1173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32962" toLevel="4" name="完美廣域空中約束">
+	<skill id="32962" toLevel="4" name="Mass Aerial Yoke">
 		<!-- Level 1: Lifts the target and nearby enemies in the air immobilizing them for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: Lifts the target and nearby enemies in the air immobilizing them for 10 sec.. Additionally, Received damage +30%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: Lifts the target and nearby enemies in the air immobilizing them for 10 sec.. Additionally, Received damage +30%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1207,7 +1222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32963" toLevel="4" name="完美團體鎖鏈破擊">
+	<skill id="32963" toLevel="4" name="Mass Chain Smash">
 		<!-- Level 1: Pulls nearby enemies toward you. Inflicted status: Pull. -->
 		<!-- Level 2: Deals great damage and pulls nearby enemies toward you. Inflicted status: Pull. -->
 		<!-- Level 3: Deals great damage and pulls nearby enemies toward you. Inflicted status: Pull. -->
@@ -1242,7 +1257,7 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="32964" toLevel="4" name="完美廣域恐懼">
+	<skill id="32964" toLevel="4" name="Mass Fear">
 		<!-- Level 1: The target runs away in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: The target runs away in fear. Additionally, received damage +30%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 3: The target runs away in fear. Additionally, received damage +30%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1275,7 +1290,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="32965" toLevel="1" name="狂暴憤怒">
+	<skill id="32965" toLevel="1" name="Berserk">
 		<!-- Body is at the extreme physical limit. Increases Debuff Resistance, Speed, P. Atk., and P. Def. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A2</operateType>
@@ -1306,7 +1321,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32966" toLevel="2" name="小天使 努路的繽紛幸運">
+	<skill id="32966" toLevel="2" name="Angel Lulu's Shining Luck">
 		<!-- Level 1: By the will of Lulu, the Angel of Luck, LUC +1 for 10 sec. -->
 		<!-- Level 2: By the will of Lulu, the Angel of Luck, LUC +3 for 10 sec. -->
 		<icon>
@@ -1333,7 +1348,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32967" toLevel="2" name="葛瑞絲的繽紛幸運">
+	<skill id="32967" toLevel="2" name="Grace's Shining Luck">
 		<!-- Level 1: By the will of Grace, the Goddess of Luck, LUC +1 for 10 sec. -->
 		<!-- Level 2: By the will of Grace, the Goddess of Luck, LUC +3 for 10 sec. -->
 		<icon>
@@ -1360,7 +1375,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32968" toLevel="1" name="極限盾">
+	<skill id="32968" toLevel="1" name="Shield of Limit">
 		<!-- Decreases received damage. -->
 		<icon>icon.skill3123</icon>
 		<operateType>P</operateType>
@@ -1370,18 +1385,18 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32969" toLevel="1" name="憎恨的旋律">
+	<skill id="32969" toLevel="1" name="Tune of Aggression">
 		<!-- Body becomes stronger with Requiem of Hatred. Received P. Damage and received P. Critical Damage are decreased. -->
 		<icon>icon.skill1289</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32970" toLevel="1" name="致命殺刃">
+	<skill id="32970" toLevel="1" name="Fatal Slasher">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32971" toLevel="1" name="幽暗獨懼">
+	<skill id="32971" toLevel="1" name="Dark Single Target Fear">
 		<!-- Deals damage to enemy, inflicts Fear and immobilizes the target for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -1416,32 +1431,32 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="32972" toLevel="1" name="風之信號弱點">
+	<skill id="32972" toLevel="1" name="Vulnerability to Storm Sign">
 		<!-- When Storm Sign of Sayha's Seer is cast, the Magic Defense Remove effect is active. The effect greatly decreases M. Def. -->
 		<icon>icon.skill0511</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32973" toLevel="1" name="魔法防禦破壞">
+	<skill id="32973" toLevel="1" name="Magic Defense Remove">
 		<!-- M. Def. is greatly decreased. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32974" toLevel="1" name="魔法防禦破壞">
+	<skill id="32974" toLevel="1" name="Magic Defense Remove">
 		<!-- M. Def. is greatly decreased. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32975" toLevel="1" name="魔法防禦破壞">
+	<skill id="32975" toLevel="1" name="Magic Defense Remove">
 		<!-- M. Def. is greatly decreased. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32976" toLevel="1" name="特殊技能抗性">
+	<skill id="32976" toLevel="1" name="Special Skill Resistance">
 		<!-- Resistance to Provoke/ Bullseye/ Ultimate Bullseye/ Right Sidestep. -->
 		<icon>icon.skill0833</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32977" toLevel="4" name="克洛賓致命劇毒-4階段">
+	<skill id="32977" toLevel="4" name="Krofin's Critical Poison Lv. 1">
 		<!-- Level 1: Because of Krofin's poison, Atk. Spd./ Casting Spd. -30%. Cannot be removed. -->
 		<!-- Level 2: Because of Krofin's poison, Atk. Spd./ Casting Spd. -30%, P./ M. Def. -30%. Cannot be removed. -->
 		<!-- Level 3: Because of Krofin's poison, Atk. Spd./ Casting Spd. -30%, P./ M. Def. -30%, P./ M. Atk. -30%. Cannot be removed. -->
@@ -1450,13 +1465,13 @@
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32978" toLevel="1" name="克洛賓致命死亡">
+	<skill id="32978" toLevel="1" name="Krofin's Critical Death">
 		<!-- Because of Krofin's poison, the target loses 99% HP for 5 sec. -->
 		<icon>icon.skill32644</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32979" toLevel="1" name="黑暗能量箭">
+	<skill id="32979" toLevel="1" name="Unholy Power Shot">
 		<!-- A melee physical skill for warriors that knocks 1 monster back. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1475,7 +1490,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32980" toLevel="1" name="黑暗能量箭">
+	<skill id="32980" toLevel="1" name="Unholy Power Shot">
 		<!-- A melee physical skill for warriors that knocks 1 monster back. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1494,7 +1509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32981" toLevel="1" name="黑暗能量球">
+	<skill id="32981" toLevel="1" name="Unholy Energy Ball">
 		<!-- A basic attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -1515,7 +1530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32982" toLevel="1" name="黑暗能量球">
+	<skill id="32982" toLevel="1" name="Unholy Energy Ball">
 		<!-- A basic attack of 1 monster that uses ranged magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -1536,7 +1551,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32983" toLevel="1" name="黑暗之擊">
+	<skill id="32983" toLevel="1" name="Unholy Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1555,7 +1570,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32984" toLevel="1" name="黑暗之擊">
+	<skill id="32984" toLevel="1" name="Unholy Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1574,7 +1589,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32985" toLevel="1" name="昏迷攻擊">
+	<skill id="32985" toLevel="1" name="Stun Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
@@ -1610,7 +1625,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32986" toLevel="1" name="昏迷攻擊">
+	<skill id="32986" toLevel="1" name="Stun Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
@@ -1646,7 +1661,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32987" toLevel="1" name="黑暗獨懼">
+	<skill id="32987" toLevel="1" name="Unholy Single Target Fear">
 		<!-- Deals damage to enemy, inflicts Fear and immobilizes the target for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -1680,7 +1695,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="32988" toLevel="1" name="黑暗獨懼">
+	<skill id="32988" toLevel="1" name="Unholy Single Target Fear">
 		<!-- Deals damage to enemy, inflicts Fear and immobilizes the target for 5 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -1714,7 +1729,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="32989" toLevel="1" name="黑暗衝擊">
+	<skill id="32989" toLevel="1" name="Unholy Shield">
 		<!-- Deals physical damage to the target and immobilizes it for 3 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10554</icon>
 		<operateType>A2</operateType>
@@ -1750,7 +1765,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32990" toLevel="2" name="致命破擊">
+	<skill id="32990" toLevel="2" name="Unholy Shield">
 		<!-- Level 1: Deals physical damage to the target and immobilizes it for 3 sec.. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<!-- Level 2: An attack on a single target. -->
 		<icon>icon.skill10554</icon>
@@ -1790,7 +1805,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32991" toLevel="1" name="黑暗出血射擊">
+	<skill id="32991" toLevel="1" name="Unholy Bleeding Shot">
 		<!-- Inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
@@ -1819,7 +1834,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32992" toLevel="1" name="黑暗出血射擊">
+	<skill id="32992" toLevel="1" name="Unholy Bleeding Shot">
 		<!-- Inflicts Bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
@@ -1848,7 +1863,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32993" toLevel="1" name="廣域猛擊">
+	<skill id="32993" toLevel="1" name="Mass Slam">
 		<!-- Inflicts a powerful blow on the target and knocks it back for a certain amount of time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
@@ -1891,7 +1906,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32994" toLevel="1" name="廣域猛擊">
+	<skill id="32994" toLevel="1" name="Mass Slam">
 		<!-- Inflicts a powerful blow on the target and knocks it back for a certain amount of time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
@@ -1934,30 +1949,30 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32995" toLevel="1" name="致命魔彈">
+	<skill id="32995" toLevel="1" name="Critical Magic Bomb">
 		<icon>icon.skill16636</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="32996" toLevel="1" name="滅體詛咒">
+	<skill id="32996" toLevel="1" name="Curse of Broken Body">
 		<!-- For 10 sec., P./ M. Def. is decreased. Inflicted status: Debilitation. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32997" toLevel="1" name="滅體詛咒">
+	<skill id="32997" toLevel="1" name="Curse of Broken Body">
 		<!-- For 10 sec., P./ M. Def. is decreased. Inflicted status: Debilitation. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32998" toLevel="1" name="金幣加持_測試">
+	<skill id="32998" toLevel="1" name="Adena Boost_Test">
 		<!-- Adena drop rate increased for 30 sec. -->
 		<icon>icon.buff_inc_adena</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32999" toLevel="4" name="繽紛的水之丘秋基本技能">
+	<skill id="32999" toLevel="4" name="Chuchu's Basic Ability">
 		<!-- Restores Vitality when killing monsters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>

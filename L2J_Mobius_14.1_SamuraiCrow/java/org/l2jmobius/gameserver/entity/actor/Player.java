@@ -550,6 +550,7 @@ public class Player extends Playable
 	private volatile boolean _isOnline = false;
 	private boolean _offlinePlay = false;
 	private boolean _enteredWorld = false;
+	public boolean _fakePlayer = false;
 	private long _onlineTime;
 	private long _onlineBeginTime;
 	private long _lastAccess;
@@ -1140,7 +1141,39 @@ public class Player extends Playable
 		
 		return null;
 	}
-	
+		public static Player createFakePlayer(PlayerTemplate template, String name, int level)
+	{
+		boolean female = Rnd.nextBoolean();
+		int classId = template.getPlayerClass().getId();
+		if (template.getRace() == Race.ERTHEIA)
+		{
+			female = true;
+		}
+		else if (!CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, classId) && !CategoryData.getInstance().isInCategory(CategoryType.WARG_ALL_CLASS, classId) && !CategoryData.getInstance().isInCategory(CategoryType.SAMURAI_ALL_CLASS, classId))
+		{
+			if (CategoryData.getInstance().isInCategory(CategoryType.SHINE_MAKER_ALL_CLASS, classId))
+			{
+				female = true;
+			}
+		}
+		else
+		{
+			female = false;
+		}
+		
+		PlayerAppearance appearance = new PlayerAppearance((byte) Rnd.get(0, 2), (byte) Rnd.get(0, 3), (byte) Rnd.get(0, 4), female);
+		Player player = new Player(template, "__fake__", appearance);
+		player.setName(name);
+		player.setAccessLevel(0, false, false);
+		player.setBaseClass(template.getPlayerClass());
+		player.setPlayerClass(template.getPlayerClass().getId());
+		player._fakePlayer = true;
+		player.setOnlineStatus(true, false);
+		player.setEnteredWorld();
+		player.getStat().setLevel(Math.min(level, player.getStat().getMaxLevel() - 1));
+		player.setExp(player.getStat().getExpForLevel(player.getLevel()));
+		return player;
+	}	
 	@Override
 	public String getName()
 	{
@@ -15182,6 +15215,10 @@ public class Player extends Playable
 	}
 	
 	@Override
+		public boolean isFakePlayer()
+	{
+		return _fakePlayer;
+	}
 	public boolean isPlayer()
 	{
 		return true;

@@ -122,4 +122,9 @@ public class FakePlayerData
 	{
 		protected static final FakePlayerData INSTANCE = new FakePlayerData();
 	}
+		public void addDynamicFakePlayerName(String name)
+	{
+		_fakePlayerNames.put(name.toLowerCase(), name);
+		_talkableFakePlayerNames.add(name.toLowerCase());
+	}
 }
