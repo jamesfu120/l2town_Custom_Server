@@ -363,7 +363,7 @@ public class SkillCaster implements Runnable
 			// Send a system message to the player.
 			if (!_skill.isHidingMessages())
 			{
-				caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
+				caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_HAVE_USED_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 			}
 			
 			// Show the gauge bar for casting.
@@ -390,7 +390,7 @@ public class SkillCaster implements Runnable
 			{
 				if (player.getFame() < _skill.getFamePointConsume())
 				{
-					player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 					return false;
 				}
 				
@@ -413,7 +413,7 @@ public class SkillCaster implements Runnable
 				
 				clan.takeReputationScore(_skill.getClanRepConsume());
 				
-				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
 				msg.addInt(_skill.getClanRepConsume());
 				player.sendPacket(msg);
 			}
@@ -448,7 +448,7 @@ public class SkillCaster implements Runnable
 		{
 			if (caster.isPlayer())
 			{
-				caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+				caster.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 			}
 			
 			return false;
@@ -967,7 +967,7 @@ public class SkillCaster implements Runnable
 				return;
 			}
 			
-			if (skill.checkCondition(creature, target))
+			if (skill.checkCondition(creature, target, false))
 			{
 				if (creature.isSkillDisabled(skill))
 				{
@@ -1259,7 +1259,7 @@ public class SkillCaster implements Runnable
 			
 			if (player.isInOlympiadMode() && skill.isBlockedInOlympiad())
 			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return false;
 			}
 			
@@ -1272,7 +1272,7 @@ public class SkillCaster implements Runnable
 			// Check if not in AirShip.
 			if (player.isInAirShip() && !skill.hasEffectType(EffectType.REFUEL_AIRSHIP))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
 				sm.addSkillName(skill);
 				player.sendPacket(sm);
 				return false;
@@ -1280,7 +1280,7 @@ public class SkillCaster implements Runnable
 			
 			if (player.getFame() < skill.getFamePointConsume())
 			{
-				player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 				return false;
 			}
 			
