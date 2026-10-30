@@ -55,17 +55,29 @@ public class FakePlayerPopulationManager {
             int totalToSpawn = FakePlayersConfig.FAKE_PLAYER_TOTAL_COUNT;
             int shopCount = FakePlayersConfig.FAKE_PLAYER_SHOP_COUNT;
             
+            // 🔥 精準升級：直接配置 80 級對應的三轉高階職業池
+            // 包含：騎士統領(88), 決鬥者(89), 巨匠(90), 泰坦(113) -> 穿末日
+            // 包含：鷹眼(92), 冒險家(93), 銀月(102), 暗影鷹眼(109) -> 穿青狼
+            // 包含：大魔導(94), 咒詩(103), 狂熱者(110), 主教(97), 聖徒(98) -> 穿阿巴敦
+            int[] thirdClassPool = new int[]{
+               88, 89, 90, 113, 
+               92, 93, 102, 109, 
+               94, 103, 110, 97, 98
+            };
+            
             for (int i = 0; i < totalToSpawn; i = i + 1) {
                // 判斷當前要生成的假人是商店型還是戰鬥型
                boolean isShop = (i < shopCount);
                
                // 利用新版 14.1 核心機制創立並生成假人實體
                org.l2jmobius.gameserver.data.xml.PlayerTemplateData templateData = org.l2jmobius.gameserver.data.xml.PlayerTemplateData.getInstance();
-               // 隨機獲取 1 級的基礎職業模板 (職業 ID 0 為人類戰士)
-               org.l2jmobius.gameserver.entity.actor.templates.PlayerTemplate template = templateData.getTemplate(0);
+               
+               // 隨機從三轉職業池中抽取一個 ID
+               int randomClassId = thirdClassPool[org.l2jmobius.commons.util.Rnd.get(thirdClassPool.length)];
+               org.l2jmobius.gameserver.entity.actor.templates.PlayerTemplate template = templateData.getTemplate(randomClassId);
                
                if (template != null) {
-                  // 呼叫我們寫好的不重複姓名生成器，隨機決定假人等級 (例如 80 級)
+                  // 呼叫我們寫好的不重複姓名生成器，隨機決定假人等級為 80 級
                   String fName = uniqueName();
                   Player fakePlayer = Player.createFakePlayer(template, fName, 80);
                   
@@ -87,7 +99,7 @@ public class FakePlayerPopulationManager {
                   }
                }
             }
-            LOGGER.info("FakePlayerPopulationManager: 開機全自動暴力召喚 " + PLAYERS.size() + " 名假人軍團成功登入世界！");
+            LOGGER.info("FakePlayerPopulationManager: 開機全自動暴力召喚 " + PLAYERS.size() + " 名【完美三轉高階職業】假人軍團登入世界！");
          } catch (Exception e) {
             LOGGER.warning("開機自動暴力召喚假人時發生異常: " + e.getMessage());
          }
@@ -267,27 +279,30 @@ public class FakePlayerPopulationManager {
          boolean isArcher = className.contains("archer") || className.contains("ranger") || className.contains("scout") || className.contains("rogue");
 
          // 2. 初始化各部位 B 級頂級裝備 ID 容器 (預設為戰士重裝：末日套裝)
-         int weaponId = 76;   // 物理職：長劍 (瑟魯基長劍)
-         int chestId = 2378;  // 末日金屬盔甲 (上衣)
-         int legsId = 2419;   // 末日金屬護腿 (下褲)
-         int glovesId = 2465; // 末日手套
-         int bootsId = 2439;  // 末日靴子
+         int weaponId = 79;   // 物理職：長劍 (大馬士革刀)
+         int chestId = 11386;  // 末日金屬盔甲 (上衣)
+         int legsId = 0;   // 末日金屬護腿 (下褲) 下褲設為 0 不裝備，避免衝突頂掉上衣
+         int glovesId = 11379; // 末日手套
+         int bootsId = 11382;  // 末日靴子 
+		 int helmetId = 11387;  // 末日頭盔
 
          // 3. 根據四分法智慧調整裝備套組 ID
          if (isMage) {
             // 法師組：阿巴敦法袍套組 + 靈魂之眼雙手杖
-            weaponId = 71;    // 靈魂之眼 (雙手杖)
-            chestId = 2407;   // 阿巴敦外衣
-            legsId = 2424;    // 阿巴敦長褲
-            glovesId = 2466;  // 阿巴敦手套
-            bootsId = 2441;   // 阿巴敦靴子
+            weaponId = 7722;    // 聖堂之劍 (靈活思緒)
+            chestId = 11369;   // 阿巴敦外衣
+            legsId = 0;    // 阿巴敦長褲 下褲設為 0 不裝備，避免衝突頂掉上衣
+            glovesId = 11366;  // 阿巴敦手套
+            bootsId = 11372;   // 阿巴敦靴子
+			helmetId = 12981;  // 阿巴敦頭冠
          } else if (isArcher) {
-            // 弓手組：青狼輕甲套組 + 冰晶弓
-            weaponId = 286;   // 冰晶弓
-            chestId = 2392;   // 青狼皮革盔甲
-            legsId = 2421;    // 青狼護腿
-            glovesId = 2463;  // 青狼手套
-            bootsId = 2436;   // 青狼靴子
+            // 弓手組：青狼輕甲套組 + 冒險弓
+            weaponId = 4830;   // 冒險弓 節射
+            chestId = 11395;   // 青狼皮革盔甲
+            legsId = 0;    // 青狼護腿 下褲設為 0 不裝備，避免衝突頂掉上衣
+            glovesId = 11400;  // 青狼手套
+            bootsId = 11397;   // 青狼靴子
+			helmetId = 2416;  // 青狼頭盔
          }
 
          // 4. 實裝發放與自動強制穿戴 (武器與防具部位)
