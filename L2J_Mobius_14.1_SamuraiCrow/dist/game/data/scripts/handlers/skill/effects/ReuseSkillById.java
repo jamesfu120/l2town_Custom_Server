@@ -20,7 +20,7 @@
  */
 package handlers.skill.effects;
 
-import org.l2jmobius.gameserver.data.xml.SkillData;
+
 import org.l2jmobius.gameserver.entity.actor.Creature;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
@@ -55,10 +55,7 @@ public class ReuseSkillById extends AbstractEffect
 		final Player player = effector.asPlayer();
 		if (player != null)
 		{
-			final int skillLevel = player.getSkillLevel(_skillId);
-			if (skillLevel > 0)
-			{
-				final Skill s = SkillData.getInstance().getSkill(_skillId, skillLevel);
+			final Skill s = player.getKnownSkill(_skillId);
 				if (s != null)
 				{
 					if (_amount > 0)
@@ -81,4 +78,4 @@ public class ReuseSkillById extends AbstractEffect
 			}
 		}
 	}
-}
+
