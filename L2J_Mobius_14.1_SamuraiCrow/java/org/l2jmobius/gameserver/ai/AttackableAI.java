@@ -921,7 +921,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Cast skills.
-		if ((!npc.isMoving() && npc.hasSkillChance()) || (npc.getAiType() == AIType.MAGE))
+		if ((!npc.isMoving() && npc.hasSkillChance()) || (npc.getAiType() == AIType.MAGE) || (npc.getAiType() == AIType.HEALER))
 		{
 			// First use the most important skill - heal. Even reconsider target.
 			if (!template.getAISkills(AISkillScope.HEAL).isEmpty())
@@ -936,6 +936,10 @@ public class AttackableAI extends CreatureAI
 						if ((Rnd.get(100) < healChance) && checkSkillTarget(healSkill, healTarget))
 						{
 							setTarget(healTarget);
+							if (npc.isMoving())
+							{
+								clientStopMoving(null);
+							}
 							npc.doCast(healSkill);
 							// LOGGER.finer(this + " used heal skill " + healSkill + " with target " + getTarget());
 							return;
@@ -954,6 +958,10 @@ public class AttackableAI extends CreatureAI
 					if (checkSkillTarget(buffSkill, buffTarget))
 					{
 						setTarget(buffTarget);
+						if (npc.isMoving())
+						{
+							clientStopMoving(null);
+						}
 						npc.doCast(buffSkill);
 						// LOGGER.finer(this + " used buff skill " + buffSkill + " with target " + getTarget());
 						return;
@@ -979,6 +987,10 @@ public class AttackableAI extends CreatureAI
 				final Skill muteSkill = template.getAISkills(AISkillScope.COT).get(Rnd.get(template.getAISkills(AISkillScope.COT).size()));
 				if (SkillCaster.checkUseConditions(npc, muteSkill) && checkSkillTarget(muteSkill, target) && allowsParameterizedCast(npc, muteSkill, target))
 				{
+					if (npc.isMoving())
+					{
+						clientStopMoving(null);
+					}
 					npc.doCast(muteSkill);
 					// LOGGER.finer(this + " used mute skill " + muteSkill + " with target " + getTarget());
 					return;
@@ -991,6 +1003,10 @@ public class AttackableAI extends CreatureAI
 				final Skill shortRangeSkill = npc.getShortRangeSkills().get(Rnd.get(npc.getShortRangeSkills().size()));
 				if (SkillCaster.checkUseConditions(npc, shortRangeSkill) && checkSkillTarget(shortRangeSkill, target) && allowsParameterizedCast(npc, shortRangeSkill, target))
 				{
+					if (npc.isMoving())
+					{
+						clientStopMoving(null);
+					}
 					npc.doCast(shortRangeSkill);
 					// LOGGER.finer(this + " used short range skill " + shortRangeSkill + " with target " + getTarget());
 					return;
@@ -1003,6 +1019,10 @@ public class AttackableAI extends CreatureAI
 				final Skill longRangeSkill = npc.getLongRangeSkills().get(Rnd.get(npc.getLongRangeSkills().size()));
 				if (SkillCaster.checkUseConditions(npc, longRangeSkill) && checkSkillTarget(longRangeSkill, target) && allowsParameterizedCast(npc, longRangeSkill, target))
 				{
+					if (npc.isMoving())
+					{
+						clientStopMoving(null);
+					}
 					npc.doCast(longRangeSkill);
 					// LOGGER.finer(this + " used long range skill " + longRangeSkill + " with target " + getTarget());
 					return;
@@ -1015,6 +1035,10 @@ public class AttackableAI extends CreatureAI
 				final Skill generalSkill = template.getAISkills(AISkillScope.GENERAL).get(Rnd.get(template.getAISkills(AISkillScope.GENERAL).size()));
 				if (SkillCaster.checkUseConditions(npc, generalSkill) && checkSkillTarget(generalSkill, target) && allowsParameterizedCast(npc, generalSkill, target))
 				{
+					if (npc.isMoving())
+					{
+						clientStopMoving(null);
+					}
 					npc.doCast(generalSkill);
 					// LOGGER.finer(this + " used general skill " + generalSkill + " with target " + getTarget());
 					return;

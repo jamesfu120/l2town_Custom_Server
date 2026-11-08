@@ -31,6 +31,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.config.ConquestConfig;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.entity.Location;
@@ -94,23 +95,11 @@ public class Eigis extends Script
 	
 	public Eigis()
 	{
-		// 🛠️ 終極修正：手動注入生怪宣告，讓 DatabaseSpawnManager 認識這隻怪
-		try
+		if (!ConquestConfig.CONQUEST_EIGIS_ENABLED)
 		{
-			final org.l2jmobius.gameserver.entity.actor.templates.NpcTemplate template = org.l2jmobius.gameserver.data.xml.NpcData.getInstance().getTemplate(EIGIS);
-			if (template != null)
-			{
-				final org.l2jmobius.gameserver.entity.spawns.Spawn dummySpawn = new org.l2jmobius.gameserver.entity.spawns.Spawn(template);
-				dummySpawn.setXYZ(EIGIS_LOCATION);
-				dummySpawn.setHeading(0);
-				dummySpawn.setRespawnDelay(0);
-				DatabaseSpawnManager.getInstance().addNewSpawn(dummySpawn, false); // 用 false 代表純註冊不寫入資料庫
-			}
+			return;
 		}
-		catch (Exception e)
-		{
-			// 忽略錯誤
-		}
+		
 		addAttackId(EIGIS);
 		addSpawnId(EIGIS);
 		addKillId(EIGIS);
