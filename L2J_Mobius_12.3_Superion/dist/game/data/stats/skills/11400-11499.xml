@@ -348,6 +348,7 @@
 					<value level="27">17</value>
 					<value level="28">18</value>
 					<value level="29">19</value>
+					<value level="30">20</value>
 					<value level="31">20</value>
 				</amount>
 				<mode>PER</mode>
@@ -468,14 +469,14 @@
 			<effect name="DamageByAttack">
 				<amount>
 					<value fromLevel="1" toLevel="30">0</value>
-					<value level="31">15</value>
+					<value level="31">-15</value>
 				</amount>
 				<type>PK</type>
 			</effect>
 			<effect name="DamageByAttack">
 				<amount>
 					<value fromLevel="1" toLevel="30">0</value>
-					<value level="31">15</value>
+					<value level="31">-15</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 			</effect>
