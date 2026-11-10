@@ -355,6 +355,9 @@ public abstract class AbstractAI
 		
 		// Warg.
 		if (_actor.isPlayer() && _actor.asPlayer().isWarg())
+			{
+			final int transformId = _actor.getTransformationId();
+			if ((transformId == 0) || (transformId == 182) || (transformId == 183) || (transformId == 184))
 		{
 			if (isAutoAttacking)
 			{
@@ -377,12 +380,12 @@ public abstract class AbstractAI
 					}
 				}
 			}
-			else
+			else if (transformId != 0)
 			{
 				_actor.stopTransformation(false);
 			}
 		}
-		
+			}	
 		_clientAutoAttacking = isAutoAttacking;
 	}
 	
