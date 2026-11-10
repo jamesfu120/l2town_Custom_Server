@@ -348,6 +348,7 @@
 					<value level="27">17</value>
 					<value level="28">18</value>
 					<value level="29">19</value>
+					<value level="30">20</value>
 					<value level="31">20</value>
 				</amount>
 				<mode>PER</mode>
@@ -468,14 +469,14 @@
 			<effect name="DamageByAttack">
 				<amount>
 					<value fromLevel="1" toLevel="30">0</value>
-					<value level="31">15</value>
+					<value level="31">-15</value>
 				</amount>
 				<type>PK</type>
 			</effect>
 			<effect name="DamageByAttack">
 				<amount>
 					<value fromLevel="1" toLevel="30">0</value>
-					<value level="31">15</value>
+					<value level="31">-15</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 			</effect>
@@ -578,6 +579,21 @@
 				</amount>
 			</effect>
 			<effect name="ExpModify">
+				<amount>
+					<value level="21">1</value>
+					<value level="22">2</value>
+					<value level="23">3</value>
+					<value level="24">4</value>
+					<value level="25">5</value>
+					<value level="26">6</value>
+					<value level="27">7</value>
+					<value level="28">8</value>
+					<value level="29">9</value>
+					<value level="30">10</value>
+					<value level="31">40</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
 				<amount>
 					<value level="21">1</value>
 					<value level="22">2</value>
@@ -846,6 +862,7 @@
 					<value level="27">135</value>
 					<value level="28">140</value>
 					<value level="29">145</value>
+					<value level="30">150</value>
 					<value level="31">220</value>
 				</amount>
 				<mode>DIFF</mode>

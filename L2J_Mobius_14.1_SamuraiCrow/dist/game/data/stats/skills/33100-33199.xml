@@ -672,7 +672,7 @@
 				<castSkillId>30016</castSkillId>
 				<targetType>SELF</targetType>
 			</effect>
-			<<effect name="TriggerSkillBySkill">
+			<effect name="TriggerSkillBySkill">
 				<skillId>33140</skillId> <!-- Protection of 1st Place in the List of Ranks for Level - Mage -->
 				<skillLevel>1</skillLevel>
 				<castSkillId>31307</castSkillId>
@@ -976,9 +976,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>20000</reuseDelay>
 		<effects>
-			<effect name="PhysicalAttack">
-				<amount>3</amount>
-				<effect name="PveMagicalSkillDamageBonus">
+			<effect name="PveMagicalSkillDamageBonus">
 				<amount>1</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
