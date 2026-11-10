@@ -179,7 +179,8 @@ public class PlayerStatus extends PlayableStatus
 				tDmg = Math.min((int) summon.getCurrentHp() - 1, tDmg);
 				if (tDmg > 0)
 				{
-					summon.reduceCurrentHp(tDmg, attacker, null);
+					// The share is already final, the damage taken modifiers of reduceCurrentHp would push it past the cap and kill the servitor.
+					summon.getStatus().reduceHp(tDmg, attacker);
 					amount -= tDmg;
 					fullValue = (int) amount; // Reduce the announced value here as player will get a message about summon damage.
 				}
@@ -223,22 +224,18 @@ public class PlayerStatus extends PlayableStatus
 						}
 					}
 					
+					int casterHpDamage = transferDmg;
 					if ((attacker.isPlayable() || attacker.isFakePlayer()) && (caster.getCurrentCp() > 0))
 					{
-						if (caster.getCurrentCp() > transferDmg)
-						{
-							caster.getStatus().reduceCp(transferDmg);
-						}
-						else
-						{
-							transferDmg = (int) (transferDmg - caster.getCurrentCp());
-							caster.getStatus().reduceCp((int) caster.getCurrentCp());
-						}
+						final int cpDamage = (int) Math.min(caster.getCurrentCp(), transferDmg);
+						caster.getStatus().reduceCp(cpDamage);
+						casterHpDamage -= cpDamage;
 					}
 					
 					if (membersInRange > 0)
 					{
-						caster.reduceCurrentHp(transferDmg / membersInRange, attacker, null);
+						// CP was taken above and the share is capped, so the rest goes straight to HP without the damage taken modifiers.
+						caster.getStatus().reduceHp(casterHpDamage / membersInRange, attacker, null, true, false, false, true);
 						amount -= transferDmg;
 						fullValue = (int) amount;
 					}
