@@ -9517,8 +9517,8 @@
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="5">50</value>
-			<value fromLevel="4" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="5">40</value>
+			<value fromLevel="4" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 		</activateRate>
 		<affectScope>SINGLE</affectScope>
 		<basicProperty>NONE</basicProperty>
