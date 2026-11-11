@@ -836,7 +836,7 @@
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
+																					<xs:extension base="xs:string">
 																						<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
 																						<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
 																						<xs:attribute name="toLevel" type="xs:unsignedByte" use="optional" />
