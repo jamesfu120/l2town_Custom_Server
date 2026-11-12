@@ -63,7 +63,7 @@ import org.l2jmobius.gameserver.mechanics.skill.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * @author Mobius
+ * @author Mobius, JankisLT
  */
 public class AutoUseTaskManager
 {
@@ -752,6 +752,24 @@ public class AutoUseTaskManager
 	public void removeAutoPetPotionItem(Player player)
 	{
 		player.getAutoUseSettings().setAutoPetPotionItem(0);
+		stopAutoUseTask(player);
+	}
+	
+	/**
+	 * Clears only the potion slot (player and/or pet) that holds this item id, so the other slot keeps running.
+	 * @param player The {@code Player} object to modify.
+	 * @param itemId The item id of the potion to remove.
+	 */
+	public void removeAutoPotionItemById(Player player, int itemId)
+	{
+		if (player.getAutoUseSettings().getAutoPotionItem() == itemId)
+		{
+			player.getAutoUseSettings().setAutoPotionItem(0);
+		}
+		if (player.getAutoUseSettings().getAutoPetPotionItem() == itemId)
+		{
+			player.getAutoUseSettings().setAutoPetPotionItem(0);
+		}
 		stopAutoUseTask(player);
 	}
 	

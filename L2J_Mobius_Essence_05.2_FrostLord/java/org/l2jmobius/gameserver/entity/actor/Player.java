@@ -16200,7 +16200,11 @@ public class Player extends Playable
 				if (item != null)
 				{
 					shortcut.setAutoUse(true);
-					if (item.isPotion())
+					if (item.isPotion() && (shortcut.getPage() == 23) && (shortcut.getSlot() == 2)) // Pet potion slot.
+					{
+						AutoUseTaskManager.getInstance().setAutoPetPotionItem(this, item.getId());
+					}
+					else if (item.isPotion())
 					{
 						AutoUseTaskManager.getInstance().setAutoPotionItem(this, item.getId());
 					}

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.taskmanagers.AutoUseTaskManager;
 
 /**
- * @author Mobius
+ * @author Mobius, JankisLT
  */
 public class ExRequestActivateAutoShortcut extends ClientPacket
 {
@@ -173,10 +173,9 @@ public class ExRequestActivateAutoShortcut extends ClientPacket
 				{
 					AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, item.getId());
 				}
-				else // auto potion
+				else // auto potion: only the slot holding this item, the other potion slot keeps running.
 				{
-					AutoUseTaskManager.getInstance().removeAutoPotionItem(player);
-					AutoUseTaskManager.getInstance().removeAutoPetPotionItem(player);
+					AutoUseTaskManager.getInstance().removeAutoPotionItemById(player, item.getId());
 				}
 			}
 			

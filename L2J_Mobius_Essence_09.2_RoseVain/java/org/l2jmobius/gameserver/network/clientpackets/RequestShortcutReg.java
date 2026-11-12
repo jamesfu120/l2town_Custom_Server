@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoSho
 import org.l2jmobius.gameserver.taskmanagers.AutoUseTaskManager;
 
 /**
- * @author Mobius
+ * @author Mobius, JankisLT
  */
 public class RequestShortcutReg extends ClientPacket
 {
@@ -142,13 +142,19 @@ public class RequestShortcutReg extends ClientPacket
 					}
 					case ITEM:
 					{
-						if (player.getInventory().getItemByObjectId(oldShortcut.getId()).isPotion())
+						// Shortcut id is the object id, auto use holds item ids; a gone item is dropped by the task itself.
+						final Item oldItem = player.getInventory().getItemByObjectId(oldShortcut.getId());
+						if (oldItem == null)
 						{
-							AutoUseTaskManager.getInstance().removeAutoPotionItem(player);
+							break;
+						}
+						if (oldItem.isPotion())
+						{
+							AutoUseTaskManager.getInstance().removeAutoPotionItemById(player, oldItem.getId());
 						}
 						else
 						{
-							AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldShortcut.getId());
+							AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldItem.getId());
 						}
 						break;
 					}
@@ -170,8 +176,14 @@ public class RequestShortcutReg extends ClientPacket
 		player.sendPacket(new ExActivateAutoShortcut(sc, _active));
 		player.sendSkillList();
 		
-		// When id is not auto used, deactivate auto shortcuts.
-		if (!player.getAutoUseSettings().isAutoSkill(_id) && !player.getAutoUseSettings().getAutoSupplyItems().contains(_id))
+		// When id is not auto used, deactivate auto shortcuts. Item shortcuts carry the object id, auto use holds item ids.
+		boolean autoUsed = player.getAutoUseSettings().isAutoSkill(_id);
+		if (_type == ShortcutType.ITEM)
+		{
+			final Item newItem = player.getInventory().getItemByObjectId(_id);
+			autoUsed = (newItem != null) && (player.getAutoUseSettings().getAutoSupplyItems().contains(newItem.getId()) || (player.getAutoUseSettings().getAutoPotionItem() == newItem.getId()) || (player.getAutoUseSettings().getAutoPetPotionItem() == newItem.getId()));
+		}
+		if (!autoUsed)
 		{
 			final List<Integer> positions = player.getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
 			final Integer position = _slot + (_page * Shortcuts.MAX_SHORTCUTS_PER_BAR);

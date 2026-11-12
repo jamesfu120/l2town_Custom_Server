@@ -23,10 +23,11 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcut;
 import org.l2jmobius.gameserver.entity.actor.holders.player.Shortcuts;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.taskmanagers.AutoUseTaskManager;
 
 /**
- * @author Mobius
+ * @author Mobius, JankisLT
  */
 public class RequestShortcutDel extends ClientPacket
 {
@@ -90,7 +91,20 @@ public class RequestShortcutDel extends ClientPacket
 					}
 					case ITEM:
 					{
-						AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldShortcut.getId());
+						// Shortcut id is the object id, auto use holds item ids; a gone item is dropped by the task itself.
+						final Item oldItem = player.getInventory().getItemByObjectId(oldShortcut.getId());
+						if (oldItem == null)
+						{
+							break;
+						}
+						if (oldItem.isPotion())
+						{
+							AutoUseTaskManager.getInstance().removeAutoPotionItemById(player, oldItem.getId());
+						}
+						else
+						{
+							AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldItem.getId());
+						}
 						break;
 					}
 					case ACTION:
