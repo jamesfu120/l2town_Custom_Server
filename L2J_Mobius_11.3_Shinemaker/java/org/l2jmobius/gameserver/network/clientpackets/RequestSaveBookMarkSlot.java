@@ -54,6 +54,11 @@ public class RequestSaveBookMarkSlot extends ClientPacket
 			return;
 		}
 		
+		if ((name.length() > 50) || (tag.length() > 50))
+		{
+			return;
+		}
+		
 		player.teleportBookmarkAdd(player.getX(), player.getY(), player.getZ(), icon, tag, name);
 	}
 }

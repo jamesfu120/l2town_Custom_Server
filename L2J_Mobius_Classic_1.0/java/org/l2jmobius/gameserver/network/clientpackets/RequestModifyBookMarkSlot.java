@@ -47,6 +47,11 @@ public class RequestModifyBookMarkSlot extends ClientPacket
 			return;
 		}
 		
+		if ((_name.length() > 50) || (_tag.length() > 50))
+		{
+			return;
+		}
+		
 		player.teleportBookmarkModify(_id, _icon, _tag, _name);
 	}
 }
