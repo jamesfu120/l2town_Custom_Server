@@ -13872,10 +13872,6 @@ public class Player extends Playable
 			return;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-		sm.addItemName(13016);
-		sendPacket(sm);
-		
 		final TeleportBookmark bookmark = _tpbookmarks.get(id);
 		if (bookmark != null)
 		{
@@ -13885,7 +13881,7 @@ public class Player extends Playable
 				return;
 			}
 			
-			destroyItem(null, _inventory.getItemByItemId(13016).getObjectId(), 1, null, false);
+			destroyItem(null, _inventory.getItemByItemId(13016).getObjectId(), 1, null, true);
 			teleToLocation(bookmark, false);
 		}
 		

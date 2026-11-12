@@ -13656,14 +13656,10 @@ public class Player extends Playable
 			return;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
-		sm.addItemName(13016);
-		sendPacket(sm);
-		
 		final TeleportBookmark bookmark = _tpbookmarks.get(id);
 		if (bookmark != null)
 		{
-			destroyItem(ItemProcessType.NONE, _inventory.getItemByItemId(13016).getObjectId(), 1, null, false);
+			destroyItem(ItemProcessType.NONE, _inventory.getItemByItemId(13016).getObjectId(), 1, null, true);
 			teleToLocation(bookmark, false);
 		}
 		
