@@ -82,16 +82,16 @@ public class RequestMakeMacro extends ClientPacket
 			return;
 		}
 		
-		// Invalid macro. Refer to the Help file for instructions.
-		if (_commandsLength > 255)
+		// Invalid macro. Refer to the Help file for instructions. Name/acronym over the character_macroses columns (40/4) fail the insert and the macro is lost on relog.
+		if ((_commandsLength > 255) || (_macro.getName().length() > 40) || (_macro.getAcronym().length() > 4))
 		{
 			player.sendPacket(SystemMessageId.INVALID_MACRO_REFER_TO_THE_HELP_FILE_FOR_INSTRUCTIONS);
 			return;
 		}
 		
-		// You may create up to 24 macros.
+		// You may create up to 24 macros (editing an existing one is always allowed).
 		final Collection<Macro> macros = player.getMacros().getAllMacroses().values();
-		if (macros.size() > 24)
+		if ((macros.size() >= 24) && macros.stream().noneMatch(m -> m.getId() == _macro.getId()))
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_CREATE_UP_TO_24_MACROS);
 			return;
