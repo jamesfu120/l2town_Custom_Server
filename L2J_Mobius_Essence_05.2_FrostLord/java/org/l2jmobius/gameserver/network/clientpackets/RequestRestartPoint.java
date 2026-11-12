@@ -310,11 +310,11 @@ public class RequestRestartPoint extends ClientPacket
 						player.doRevive(100.0);
 						loc = MapRegionData.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN);
 						player.teleToLocation(loc, true, instance);
-						break;
+						return; // Already revived and moved: the common pending-revive teleport below would repeat it and leave the flag set.
 					}
 					
-					final int firstID = PlayerConfig.RESURRECT_BY_PAYMENT_ENABLED ? PlayerConfig.RESURRECT_BY_PAYMENT_FIRST_RESURRECT_ITEM : 91663;
-					final int secondID = PlayerConfig.RESURRECT_BY_PAYMENT_ENABLED ? PlayerConfig.RESURRECT_BY_PAYMENT_SECOND_RESURRECT_ITEM : 57;
+					final int firstID = PlayerConfig.RESURRECT_BY_PAYMENT_FIRST_RESURRECT_ITEM;
+					final int secondID = PlayerConfig.RESURRECT_BY_PAYMENT_SECOND_RESURRECT_ITEM;
 					Map<Integer, Map<Integer, ResurrectByPaymentHolder>> resMAP = null;
 					Item item = null;
 					if (_resItemID == firstID)
@@ -330,6 +330,10 @@ public class RequestRestartPoint extends ClientPacket
 					
 					if ((resMAP == null) || (item == null))
 					{
+						if (resMAP != null)
+						{
+							player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+						}
 						break;
 					}
 					
@@ -354,9 +358,15 @@ public class RequestRestartPoint extends ClientPacket
 						
 						final int getValue = maxResTime <= originalValue ? maxResTime : originalValue + 1;
 						final ResurrectByPaymentHolder rbph = resMAP.get(level).get(getValue);
+						if (rbph == null) // Times list has no entry right after the free ones (MaxFreeResurrectionsByDay vs the value lists).
+						{
+							player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+							return;
+						}
 						final long fee = (int) (rbph.getAmount() * player.getStat().getValue(Stat.RESURRECTION_FEE_MODIFIER, 1));
 						if (item.getCount() < fee)
 						{
+							player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 							return;
 						}
 						
@@ -365,7 +375,7 @@ public class RequestRestartPoint extends ClientPacket
 						player.doRevive(rbph.getResurrectPercent());
 						loc = MapRegionData.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN);
 						player.teleToLocation(loc, true, instance);
-						break;
+						return; // Already revived and moved: the common pending-revive teleport below would repeat it and leave the flag set.
 					}
 				}
 			}
