@@ -51,7 +51,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeFail;
 
 /**
- * @author Galagard
+ * @author Galagard, JankisLT
  */
 public class PlayerClassChange extends Script
 {
@@ -125,6 +125,13 @@ public class PlayerClassChange extends Script
 			}
 		}
 		// Case 4: nobody has the skill - just a class change.
+		// Every class left is a previous class for the client list; an existing entry keeps its saved skills.
+		final String sourceKey = PlayerVariables.CLASS_CHANGE_HISTORY + player.getActiveClass();
+		if (!player.getVariables().hasVariable(sourceKey))
+		{
+			player.getVariables().set(sourceKey, "");
+		}
+		
 		wipePlayer(player);
 		applyClass(player, event.getClassId(), event.getSex());
 		learnSkills(player, newClass);

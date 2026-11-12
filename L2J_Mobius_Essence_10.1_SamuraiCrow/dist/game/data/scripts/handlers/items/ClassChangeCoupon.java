@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeU
 import ai.others.ClassChange.ClassChangeManager;
 
 /**
- * @author Galagard
+ * @author Galagard, JankisLT
  */
 public class ClassChangeCoupon implements IItemHandler
 {
@@ -99,10 +99,6 @@ public class ClassChangeCoupon implements IItemHandler
 		}
 		
 		final int currentClassId = player.getActiveClass();
-		if (!prevClassList.contains(currentClassId))
-		{
-			prevClassList.add(currentClassId);
-		}
 		
 		// Assembles skills for the current class.
 		final List<Skill> currentHighGrade = classChange.getCurrentHighGradeSkills(player);
