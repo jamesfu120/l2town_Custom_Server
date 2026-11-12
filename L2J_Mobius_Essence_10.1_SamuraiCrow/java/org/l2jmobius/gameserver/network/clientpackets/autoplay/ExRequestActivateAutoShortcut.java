@@ -53,7 +53,8 @@ public class ExRequestActivateAutoShortcut extends ClientPacket
 	protected void runImpl()
 	{
 		final Player player = getPlayer();
-		if (player == null)
+		// Activate-all (slot -1) never starts supplies when auto items are disabled, like a single supply slot.
+		if ((player == null) || ((_slot == -1) && (_page == 0) && _active && !GeneralConfig.ENABLE_AUTO_ITEM))
 		{
 			return;
 		}
@@ -244,8 +245,11 @@ public class ExRequestActivateAutoShortcut extends ClientPacket
 				return;
 			}
 			
-			// action
-			AutoUseTaskManager.getInstance().addAutoAction(player, shortcut.getId());
+			// action (an item or skill refused above must not be stored as an action id)
+			if (shortcut.getType() == ShortcutType.ACTION)
+			{
+				AutoUseTaskManager.getInstance().addAutoAction(player, shortcut.getId());
+			}
 		}
 	}
 }
