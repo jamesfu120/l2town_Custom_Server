@@ -87,7 +87,7 @@ public class RequestNewHennaUnequip extends ClientPacket
 			feeType = henna.getCancelL2CoinFee();
 		}
 		
-		if (player.destroyItemByItemId(ItemProcessType.FEE, _itemId, feeType, player, false))
+		if (((_itemId == Inventory.ADENA_ID) || (_itemId == Inventory.LCOIN_ID)) && player.destroyItemByItemId(ItemProcessType.FEE, _itemId, feeType, player, false)) // Any other id had a 0 fee.
 		{
 			player.removeHenna(_slotId);
 			player.getStat().recalculateStats(true);

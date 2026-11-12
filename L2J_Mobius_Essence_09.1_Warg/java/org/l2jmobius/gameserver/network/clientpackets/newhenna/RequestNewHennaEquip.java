@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.entity.item.henna.Henna;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -92,7 +93,9 @@ public class RequestNewHennaEquip extends ClientPacket
 		}
 		
 		final long _count = player.getInventory().getInventoryItemCount(henna.getDyeItemId(), -1);
-		if (henna.isAllowedClass(player) && (_count >= henna.getWearCount()) && ((player.getAdena() >= henna.getWearFee()) || (player.getInventory().getItemByItemId(91663).getCount() >= henna.getL2CoinFee())) && player.addHenna(_slotId, henna))
+		// The fee is checked in the currency the client chose: either currency used to pass, then a failed destroy was ignored (free henna; NPE without L-Coin).
+		final long fee = _otherItemId == Inventory.ADENA_ID ? henna.getWearFee() : _otherItemId == Inventory.LCOIN_ID ? henna.getL2CoinFee() : -1;
+		if (henna.isAllowedClass(player) && (_count >= henna.getWearCount()) && (fee >= 0) && (player.getInventory().getInventoryItemCount(_otherItemId, -1) >= fee) && player.addHenna(_slotId, henna))
 		
 		{
 			int feeType = 0;
