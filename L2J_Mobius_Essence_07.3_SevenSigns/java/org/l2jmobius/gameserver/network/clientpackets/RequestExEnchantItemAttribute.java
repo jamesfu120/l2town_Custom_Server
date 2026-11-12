@@ -307,8 +307,6 @@ public class RequestExEnchantItemAttribute extends ClientPacket
 		
 		if (powerToAdd <= 0)
 		{
-			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
-			player.removeRequest(EnchantItemAttributeRequest.class);
 			return -1;
 		}
 		
