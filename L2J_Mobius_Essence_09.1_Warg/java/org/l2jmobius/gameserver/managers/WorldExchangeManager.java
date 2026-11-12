@@ -371,7 +371,7 @@ public class WorldExchangeManager implements IXmlReader
 			feePrice = WorldExchangeConfig.WORLD_EXCHANGE_MAX_ADENA_FEE;
 		}
 		
-		if (feePrice > player.getAdena())
+		if (feePrice > (player.getAdena() - (item.getId() == Inventory.ADENA_ID ? amount : 0)))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ADENA));
 			player.sendPacket(WorldExchangeRegisterItem.FAIL);
