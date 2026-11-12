@@ -62,9 +62,9 @@ public class ExRequestTeleportFavoritesAddDel extends ClientPacket
 		final List<Integer> favorites = new ArrayList<>();
 		for (int id : player.getVariables().getIntegerList(PlayerVariables.FAVORITE_TELEPORTS))
 		{
-			if (TeleportListData.getInstance().getTeleport(_teleportId) == null)
+			if (TeleportListData.getInstance().getTeleport(id) == null)
 			{
-				PacketLogger.warning("No registered teleport location for id: " + _teleportId);
+				PacketLogger.warning("No registered teleport location for id: " + id);
 			}
 			else
 			{
@@ -74,7 +74,7 @@ public class ExRequestTeleportFavoritesAddDel extends ClientPacket
 		
 		if (_enable)
 		{
-			if (!favorites.contains(_teleportId))
+			if (!favorites.contains(_teleportId) && (favorites.size() < 50))
 			{
 				favorites.add(_teleportId);
 			}
