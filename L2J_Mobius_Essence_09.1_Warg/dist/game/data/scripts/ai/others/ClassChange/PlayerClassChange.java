@@ -24,9 +24,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.data.enums.CategoryType;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
 import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
 import org.l2jmobius.gameserver.entity.actor.enums.player.ShortcutType;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
@@ -72,7 +75,8 @@ public class PlayerClassChange extends Script
 		}
 		
 		final PlayerClass newClass = PlayerClass.getPlayerClass(event.getClassId());
-		if (newClass == null)
+		// Another class of the same tier, with a sex that class allows; the state checks of the coupon use are repeated here.
+		if ((newClass == null) || (newClass == player.getPlayerClass()) || (newClass.level() != player.getPlayerClass().level()) || !isSexAllowed(newClass, event.getSex()) || !ClassChangeManager.getInstance().canCheckAction(player))
 		{
 			player.sendPacket(ExClassChangeFail.STATIC_PACKET);
 			return;
@@ -137,6 +141,40 @@ public class PlayerClassChange extends Script
 		learnSkills(player, newClass);
 		finalizeChange(player, coupon);
 		clientRestart(player);
+	}
+	
+	/**
+	 * Checks the sex against the single-sex classes of character creation.
+	 * @param newClass the class being changed to.
+	 * @param sex 0 for male, 1 for female.
+	 * @return {@code true} if the class allows that sex.
+	 */
+	private boolean isSexAllowed(PlayerClass newClass, int sex)
+	{
+		if ((sex != 0) && (sex != 1))
+		{
+			return false;
+		}
+		
+		final boolean female = sex == 1;
+		final int classId = newClass.getId();
+		final CategoryData categories = CategoryData.getInstance();
+		if (categories.isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, classId) || categories.isInCategory(CategoryType.WARG_ALL_CLASS, classId) || categories.isInCategory(CategoryType.VANGUARD_ALL_CLASS, classId) || categories.isInCategory(CategoryType.HIGH_ELF_TEMPLAR, classId))
+		{
+			return !female;
+		}
+		
+		if (categories.isInCategory(CategoryType.HIGH_ELF_WEAVER, classId))
+		{
+			return female;
+		}
+		
+		if (categories.isInCategory(CategoryType.ASSASSIN_ALL_CLASS, classId))
+		{
+			return female == (newClass.getRace() == Race.DARK_ELF);
+		}
+		
+		return true;
 	}
 	
 	private boolean hasHistoryForClass(Player player, int classId)
