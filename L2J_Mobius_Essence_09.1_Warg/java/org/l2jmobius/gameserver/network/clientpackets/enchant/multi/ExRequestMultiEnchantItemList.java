@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
 import org.l2jmobius.gameserver.managers.events.BlackCouponManager;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.enums.MultiEnchantResult;
@@ -111,7 +112,7 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 		{
 			player.removeRequest(request.getClass());
 			player.sendPacket(new ExResultSetMultiEnchantItemList(player, 1));
-			Logger.getLogger("MultiEnchant - player " + player.getObjectId() + " " + player.getName() + " trying enchant items, when scroll count is less than items!");
+			PacketLogger.warning("MultiEnchant - player " + player.getObjectId() + " " + player.getName() + " trying enchant items, when scroll count is less than items!");
 			return;
 		}
 		
@@ -155,9 +156,9 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 				return;
 			}
 			
-			if (scrollTemplate.getMaxEnchantLevel() < enchantItem.getEnchantLevel())
+			if (!scrollTemplate.isValid(enchantItem, null))
 			{
-				Logger.getLogger("MultiEnchant - player " + player.getObjectId() + " " + player.getName() + " trying over-enchant item " + enchantItem.getItemName() + " " + enchantItem.getObjectId());
+				PacketLogger.warning("MultiEnchant - player " + player.getObjectId() + " " + player.getName() + " trying over-enchant item " + enchantItem.getItemName() + " " + enchantItem.getObjectId());
 				player.removeRequest(request.getClass());
 				return;
 			}
