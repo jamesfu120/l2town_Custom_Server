@@ -38,6 +38,6 @@ public class ExAdenaInvenCount extends ServerPacket
 	{
 		ServerPackets.EX_ADENA_INVEN_COUNT.writeId(this, buffer);
 		buffer.writeLong(_player.getAdena());
-		buffer.writeShort(_player.getInventory().getSize());
+		buffer.writeShort(_player.getInventory().getNonQuestSize());
 	}
 }
