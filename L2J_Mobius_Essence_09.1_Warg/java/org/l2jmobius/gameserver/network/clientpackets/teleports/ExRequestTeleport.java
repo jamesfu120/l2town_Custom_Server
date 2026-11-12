@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.mechanics.siege.Castle;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
+import org.l2jmobius.gameserver.network.serverpackets.quest.ExTeleportUI;
 
 /**
  * @author NviX, Mobius
@@ -116,7 +117,8 @@ public class ExRequestTeleport extends ClientPacket
 		
 		if (player.getLevel() > PlayerConfig.MAX_FREE_TELEPORT_LEVEL)
 		{
-			int price = teleport.getPrice();
+			// Same integer formula as the client (ExTeleportUI price ratio), L-Coin included: it showed 9 for 10 and was charged 10.
+			final int price = (int) ((teleport.getPrice() * (100L - ExTeleportUI.PRICE_RATIO)) / 100);
 			if (price > 0)
 			{
 				// Check if player has fee.
@@ -130,9 +132,6 @@ public class ExRequestTeleport extends ClientPacket
 				}
 				else
 				{
-					// Tempfix: Adjust teleport price for client discrepancy.
-					price *= 0.99f;
-					
 					if (player.getAdena() < price)
 					{
 						player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);

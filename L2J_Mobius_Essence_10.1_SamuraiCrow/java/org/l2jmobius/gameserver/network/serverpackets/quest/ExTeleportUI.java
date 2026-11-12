@@ -30,6 +30,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExTeleportUI extends ServerPacket
 {
+	/** Discount in percent the client applies to every teleport price; ExRequestTeleport charges the same. */
+	public static final int PRICE_RATIO = 1;
+	
 	public ExTeleportUI()
 	{
 	}
@@ -38,6 +41,6 @@ public class ExTeleportUI extends ServerPacket
 	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
 		ServerPackets.EX_TELEPORT_UI.writeId(this, buffer);
-		buffer.writeInt(1); // PriceRatio
+		buffer.writeInt(PRICE_RATIO);
 	}
 }
