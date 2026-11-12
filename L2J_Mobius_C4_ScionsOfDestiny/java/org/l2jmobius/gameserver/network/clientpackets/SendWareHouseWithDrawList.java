@@ -140,7 +140,7 @@ public class SendWareHouseWithDrawList extends ClientPacket
 			}
 		}
 		
-		int weight = 0;
+		long weight = 0; // int overflowed on large stacks (count * weight is long) and passed the weight check.
 		int slots = 0;
 		for (ItemHolder i : _items)
 		{

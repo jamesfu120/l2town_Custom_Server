@@ -22,6 +22,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
+import org.l2jmobius.gameserver.entity.actor.Npc;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.clan.ClanAccess;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
@@ -29,6 +30,7 @@ import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.entity.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.entity.itemcontainer.ItemContainer;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.entity.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
 import org.l2jmobius.gameserver.network.PacketLogger;
@@ -92,6 +94,13 @@ public class SendWareHouseWithDrawList extends ClientPacket
 		{
 			return;
 		}
+		// The active warehouse is never cleared: without the keeper in reach a stored one could be emptied from anywhere. Freight (Game Assistant) opens without an NPC.
+		final Npc manager = player.getLastFolkNPC();
+		if (!(warehouse instanceof PlayerFreight) && ((manager == null) || !manager.canInteract(player)) && !player.isGM())
+		{
+			player.sendPacket(SystemMessageId.YOU_FAILED_AT_SENDING_THE_PACKAGE_BECAUSE_YOU_ARE_TOO_FAR_FROM_THE_WAREHOUSE);
+			return;
+		}
 		
 		if (!(warehouse instanceof PlayerWarehouse) && !player.getAccessLevel().allowTransaction())
 		{
@@ -118,7 +127,7 @@ public class SendWareHouseWithDrawList extends ClientPacket
 			return;
 		}
 		
-		int weight = 0;
+		long weight = 0; // int overflowed on large stacks (count * weight is long) and passed the weight check.
 		int slots = 0;
 		for (ItemHolder i : _items)
 		{
