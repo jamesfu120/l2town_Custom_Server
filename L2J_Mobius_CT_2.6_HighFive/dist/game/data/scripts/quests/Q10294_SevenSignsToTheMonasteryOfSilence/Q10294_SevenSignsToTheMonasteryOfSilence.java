@@ -369,6 +369,11 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			}
 			case ODD_GLOBE:
 			{
+				if (qs.isCompleted())
+				{
+					break;
+				}
+				
 				if (qs.getCond() < 3)
 				{
 					htmltext = "32815-01.html";

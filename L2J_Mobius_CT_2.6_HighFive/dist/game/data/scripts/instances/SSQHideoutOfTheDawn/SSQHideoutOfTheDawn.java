@@ -47,6 +47,12 @@ public class SSQHideoutOfTheDawn extends InstanceScript
 	}
 	
 	@Override
+	public String onFirstTalk(Npc npc, Player player)
+	{
+		return npc.getId() + ".html";
+	}
+	
+	@Override
 	public String onEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;

@@ -493,8 +493,9 @@ public class SSQMonasteryOfSilence extends InstanceScript
 				case ETIS_VAN_ETINA:
 				{
 					playMovie(player, Movie.SSQ2_BOSS_CLOSING);
-					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
-					startQuestTimer("TELEPORT_TO_PLAYER", 63000, npc, player);
+					final Npc elcadia = world.getParameters().getObject("elcadia", Npc.class);
+					elcadia.teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
+					startQuestTimer("TELEPORT_TO_PLAYER", 63000, elcadia, player);
 					final QuestState qs = player.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName());
 					if ((qs != null) && qs.isMemoState(2))
 					{
@@ -522,6 +523,32 @@ public class SSQMonasteryOfSilence extends InstanceScript
 				break;
 			}
 		}
+	}
+	
+	@Override
+	public String onFirstTalk(Npc npc, Player player)
+	{
+		switch (npc.getId())
+		{
+			case TELEPORT_CONTROL_DEVICE1:
+			{
+				return "32817.html";
+			}
+			case TELEPORT_CONTROL_DEVICE2:
+			{
+				return "32818.html";
+			}
+			case TELEPORT_CONTROL_DEVICE3:
+			{
+				return "32819.html";
+			}
+			case TELEPORT_CONTROL_DEVICE4:
+			{
+				return "32820.html";
+			}
+		}
+		
+		return super.onFirstTalk(npc, player);
 	}
 	
 	@Override

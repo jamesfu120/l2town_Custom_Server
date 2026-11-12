@@ -229,6 +229,32 @@ public class SSQMonasteryOfSilence extends InstanceScript
 	}
 	
 	@Override
+	public String onFirstTalk(Npc npc, Player player)
+	{
+		switch (npc.getId())
+		{
+			case TELEPORT_CONTROL_DEVICE1:
+			{
+				return "32817.html";
+			}
+			case TELEPORT_CONTROL_DEVICE2:
+			{
+				return "32818.html";
+			}
+			case TELEPORT_CONTROL_DEVICE3:
+			{
+				return "32819.html";
+			}
+			case TELEPORT_CONTROL_DEVICE4:
+			{
+				return "32820.html";
+			}
+		}
+		
+		return super.onFirstTalk(npc, player);
+	}
+	
+	@Override
 	public String onTalk(Npc npc, Player talker)
 	{
 		if (npc.getId() == ODD_GLOBE)

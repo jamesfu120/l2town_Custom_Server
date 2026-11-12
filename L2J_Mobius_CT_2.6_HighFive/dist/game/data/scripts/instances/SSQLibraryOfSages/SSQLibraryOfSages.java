@@ -109,6 +109,12 @@ public class SSQLibraryOfSages extends InstanceScript
 	}
 	
 	@Override
+	public String onFirstTalk(Npc npc, Player player)
+	{
+		return npc.getId() + ".html";
+	}
+	
+	@Override
 	public String onTalk(Npc npc, Player talker)
 	{
 		enterInstance(talker, TEMPLATE_ID);
@@ -129,13 +135,14 @@ public class SSQLibraryOfSages extends InstanceScript
 	
 	private void spawnElcadia(Player player, InstanceWorld world)
 	{
-		final Npc elcadia = world.getParameters().getObject("elcadia", Npc.class);
-		if (elcadia != null)
+		final Npc oldElcadia = world.getParameters().getObject("elcadia", Npc.class);
+		if (oldElcadia != null)
 		{
-			elcadia.deleteMe();
+			oldElcadia.deleteMe();
 		}
 		
-		world.setParameter("elcadia", addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId()));
+		final Npc elcadia = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId());
+		world.setParameter("elcadia", elcadia);
 		startQuestTimer("FOLLOW", 3000, elcadia, player);
 	}
 	

@@ -168,7 +168,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "32595-04.html":
 			{
-				if (qs.isCond(3))
+				if (qs.isCond(3) && !isBusy)
 				{
 					isBusy = true;
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP).addStringParameter(player.getName()));
@@ -178,6 +178,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 					monster.addDamageHate(player, 0, 999);
 					monster.getAI().setIntentionAttack(player);
 					startQuestTimer("despawn", 300000, monster, null);
+					htmltext = event;
 				}
 				break;
 			}
