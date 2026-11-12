@@ -68,7 +68,7 @@ public class ExRequestRandomCraftLockSlot extends ClientPacket
 		{
 			final PlayerRandomCraft rc = player.getRandomCraft();
 			int lockedItemCount = rc.getLockedSlotCount();
-			if (((rc.getRewards().size() - 1) >= _id) && (lockedItemCount < 3))
+			if ((_id >= 0) && ((rc.getRewards().size() - 1) >= _id) && (lockedItemCount < 3) && (rc.getRewards().get(_id) != null) && !rc.getRewards().get(_id).isLocked())
 			{
 				int price = LOCK_PRICE[Math.min(lockedItemCount, 2)];
 				Item lcoin = player.getInventory().getItemByItemId(Inventory.LCOIN_ID);
