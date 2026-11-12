@@ -9517,8 +9517,8 @@
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="5">50</value>
-			<value fromLevel="4" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="5">40</value>
+			<value fromLevel="4" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 		</activateRate>
 		<affectScope>SINGLE</affectScope>
 		<basicProperty>NONE</basicProperty>
@@ -10084,8 +10084,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">150</value>
-			<value fromLevel="3" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="11">30</value>
+			<value fromLevel="3" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + subIndex}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -10171,6 +10171,10 @@
 			<effect name="KnockBack">
 				<speed>600</speed>
 				<distance>200</distance>
+				<chance>
+					<value fromLevel="1" toLevel="11">60</value>
+					<value fromLevel="3" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + subIndex}</value>
+				</chance>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>

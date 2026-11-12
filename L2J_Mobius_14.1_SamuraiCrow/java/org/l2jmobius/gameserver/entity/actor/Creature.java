@@ -4746,14 +4746,20 @@ public abstract class Creature extends WorldObject
 	}
 	
 	/**
-	 * @return the Level Modifier ((level + 89) / 100).
+	 * @return the level modifier, including Odyssey scaling for players above level 99.
 	 */
 	public double getLevelMod()
 	{
 		if ((_transform == null) || _transform.isStance())
 		{
-			// Untested: (lvl + 89 + unk5,5forSkill4.0Else * odyssey_lvl_mod) / 100; odyssey_lvl_mod = (lvl-99) min 0.
-			return (getLevel() + 89) / 100d;
+			final int level = getLevel();
+			// Odyssey level modifier for players above level 99.
+			if (isPlayer() && (level > 99))
+			{
+				return (level + 89 + (4 * (level - 99))) / 100d;
+			}
+			
+			return (level + 89) / 100d;
 		}
 		
 		return _transform.getLevelMod(this);
