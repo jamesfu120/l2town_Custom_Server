@@ -869,6 +869,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			if ((target != null) && target.isPet())
 			{
 				activeChar.sendPacket(new GMViewItemList(1, target.asPet()));
+				activeChar.sendPacket(new GMViewItemList(2, target.asPet()));
 			}
 			else
 			{

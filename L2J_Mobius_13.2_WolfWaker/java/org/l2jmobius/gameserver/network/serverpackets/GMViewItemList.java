@@ -70,17 +70,17 @@ public class GMViewItemList extends AbstractItemPacket
 		if (_sendType == 2)
 		{
 			buffer.writeInt(_items.size());
+			buffer.writeInt(_items.size());
+			for (Item item : _items)
+			{
+				writeItem(item, buffer);
+			}
 		}
 		else
 		{
 			buffer.writeString(_playerName);
 			buffer.writeInt(_limit); // inventory limit
-		}
-		
-		buffer.writeInt(_items.size());
-		for (Item item : _items)
-		{
-			writeItem(item, buffer);
+			buffer.writeInt(_items.size());
 		}
 	}
 }

@@ -41,12 +41,6 @@ public class SSQHideoutOfTheDawn extends InstanceScript
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, Player player)
-	{
-		return npc.getId() + ".html";
-	}
-	
-	@Override
 	public String onTalk(Npc npc, Player talker)
 	{
 		if (npc.getId() == WOOD)
