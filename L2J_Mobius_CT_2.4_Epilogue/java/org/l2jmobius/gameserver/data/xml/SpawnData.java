@@ -906,6 +906,11 @@ public class SpawnData implements IXmlReader
 		final int npcSpawnTemplateId = spawn.getNpcSpawnTemplateId();
 		final Location spawnLocation = spawn.getSpawnLocation();
 		final File spawnFile = npcSpawnTemplateId > 0 ? new File(_spawnTemplates.get(npcSpawnTemplateId)) : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+		// A temporary spawn (never saved to XML) has no file to edit; reading the missing tile file only logged a warning.
+		if ((npcSpawnTemplateId <= 0) && !spawnFile.isFile())
+		{
+			return;
+		}
 		final File tempFile = new File(spawnFile.getAbsolutePath().substring(ServerConfig.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 		try
 		{
