@@ -190,7 +190,7 @@ public class ExRequestMultiEnchantItemList extends ClientPacket
 						// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 						if (scrollTemplate.getChance(player, enchantItem) > 0)
 						{
-							enchantItem.setEnchantLevel(enchantItem.getEnchantLevel() + Math.min(Rnd.get(scrollTemplate.getRandomEnchantMin(), scrollTemplate.getRandomEnchantMax()), scrollTemplate.getMaxEnchantLevel()));
+							enchantItem.setEnchantLevel(Math.min(enchantItem.getEnchantLevel() + Rnd.get(scrollTemplate.getRandomEnchantMin(), scrollTemplate.getRandomEnchantMax()), scrollTemplate.getMaxEnchantLevel()));
 							enchantItem.updateDatabase();
 							iu.addModifiedItem(enchantItem);
 						}
