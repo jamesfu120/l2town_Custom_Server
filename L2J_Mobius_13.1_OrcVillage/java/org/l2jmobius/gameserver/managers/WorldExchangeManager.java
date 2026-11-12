@@ -675,7 +675,7 @@ public class WorldExchangeManager implements IXmlReader
 	 * @param player
 	 * @param worldExchangeId
 	 */
-	public void buyItem(Player player, long worldExchangeId)
+	public synchronized void buyItem(Player player, long worldExchangeId)
 	{
 		if (!WorldExchangeConfig.ENABLE_WORLD_EXCHANGE)
 		{
@@ -700,6 +700,14 @@ public class WorldExchangeManager implements IXmlReader
 		if (worldExchangeItem.getStoreType() != WorldExchangeItemStatusType.WORLD_EXCHANGE_REGISTERED)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.ITEM_OUT_OF_STOCK));
+			player.sendPacket(WorldExchangeBuyItem.FAIL);
+			return;
+		}
+		
+		// Checked before paying: the item was added without any capacity or weight check.
+		if (!player.getInventory().validateCapacity(worldExchangeItem.getItemInstance()) || !player.getInventory().validateWeightByItemId(worldExchangeItem.getItemInstance().getId(), worldExchangeItem.getItemInstance().getCount()))
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 			player.sendPacket(WorldExchangeBuyItem.FAIL);
 			return;
 		}
