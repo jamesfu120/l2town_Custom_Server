@@ -73,7 +73,8 @@ public class ExAutoPlaySetting extends ClientPacket
 			return;
 		}
 		
-		player.sendPacket(new ExAutoPlaySettingSend(_options, _active, _pickUp, _nextTargetMode, _shortRange, _potionPercent, _respectfulHunting));
+		// Echo active only when auto play can run, else the client shows it on while nothing plays.
+		player.sendPacket(new ExAutoPlaySettingSend(_options, _active && GeneralConfig.ENABLE_AUTO_PLAY, _pickUp, _nextTargetMode, _shortRange, _potionPercent, _respectfulHunting));
 		player.getAutoPlaySettings().setAutoPotionPercent(_potionPercent);
 		
 		if (!GeneralConfig.ENABLE_AUTO_PLAY)
