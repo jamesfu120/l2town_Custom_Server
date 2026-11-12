@@ -324,7 +324,13 @@ public class WorldExchangeManager implements IXmlReader
 		}
 		
 		final Map<WorldExchangeItemStatusType, List<WorldExchangeHolder>> playerBids = getPlayerBids(player.getObjectId());
-		if (playerBids.size() >= 10)
+		int bidCount = 0;
+		for (List<WorldExchangeHolder> bids : playerBids.values())
+		{
+			bidCount += bids.size();
+		}
+		
+		if (bidCount >= 10)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NO_SLOTS_AVAILABLE));
 			player.sendPacket(WorldExchangeRegisterItem.FAIL);
