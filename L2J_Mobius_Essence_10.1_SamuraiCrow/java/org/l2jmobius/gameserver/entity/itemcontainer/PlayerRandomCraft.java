@@ -251,7 +251,7 @@ public class PlayerRandomCraft
 	
 	public void make()
 	{
-		if (_player.hasItemRequest() || _player.hasRequest(RandomCraftRequest.class))
+		if (_player.hasItemRequest() || _player.hasRequest(RandomCraftRequest.class) || (_rewardList.size() < 5) || _rewardList.contains(null))
 		{
 			return;
 		}
