@@ -58,6 +58,8 @@ import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeF
  */
 public class PlayerClassChange extends Script
 {
+	private static final int EXTRACTION_FEE_ITEM_ID = 103060; // Aden's Blessing.
+	
 	@RegisterEvent(EventType.ON_PLAYER_CLASS_CHANGE_REQUEST)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onClassChangeRequest(OnPlayerClassChangeRequest event)
@@ -92,6 +94,16 @@ public class PlayerClassChange extends Script
 		
 		final boolean originHasSkills = !ClassChangeManager.getInstance().getCurrentHighGradeSkills(player).isEmpty();
 		final boolean destHasHistory = hasHistoryForClass(player, event.getClassId());
+		
+		// An extraction that cannot be paid must fail before the wipe, or the source skills are lost with no history entry.
+		if (event.isExtractSkill() && (originHasSkills || destHasHistory))
+		{
+			if ((event.getCommissionId() != EXTRACTION_FEE_ITEM_ID) || (player.getInventory().getItemByItemId(EXTRACTION_FEE_ITEM_ID) == null))
+			{
+				player.sendPacket(ExClassChangeFail.STATIC_PACKET);
+				return;
+			}
+		}
 		
 		// Case 1: origin has skills, destination has NO history.
 		// extract = extracts from the source, endpoint
