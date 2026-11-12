@@ -92,8 +92,9 @@ public class SendWareHouseDepositList extends ClientPacket
 			return;
 		}
 		
+		// An active trade is refused before the fee is taken (the later check came after it: fee lost, nothing stored).
 		final ItemContainer warehouse = player.getActiveWarehouse();
-		if (warehouse == null)
+		if ((warehouse == null) || (player.getActiveTradeList() != null))
 		{
 			return;
 		}
@@ -127,9 +128,10 @@ public class SendWareHouseDepositList extends ClientPacket
 		}
 		
 		// Freight price from config or normal price per item slot (30).
-		final long fee = _items.size() * 30;
+		final long feePerItem = 30;
 		long currentAdena = player.getAdena();
 		int slots = 0;
+		int chargeable = 0;
 		for (ItemHolder itemHolder : _items)
 		{
 			final Item item = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
@@ -138,6 +140,11 @@ public class SendWareHouseDepositList extends ClientPacket
 				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
 				return;
 			}
+			if (!item.isDepositable(isPrivate) || !item.isAvailable(player, true, isPrivate))
+			{
+				continue; // Skipped by the transfer below as well: takes no slot and no fee.
+			}
+			chargeable++;
 			
 			// Calculate needed adena and slots.
 			if (item.getId() == ADENA_ID)
@@ -162,16 +169,11 @@ public class SendWareHouseDepositList extends ClientPacket
 			return;
 		}
 		
+		final long fee = chargeable * feePerItem;
 		// Check if enough adena and charge the fee.
 		if ((currentAdena < fee) || !player.reduceAdena(ItemProcessType.FEE, fee, manager, false))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-			return;
-		}
-		
-		// Get current tradelist if any.
-		if (player.getActiveTradeList() != null)
-		{
 			return;
 		}
 		

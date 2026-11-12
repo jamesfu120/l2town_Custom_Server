@@ -91,8 +91,9 @@ public class SendWareHouseDepositList extends ClientPacket
 			return;
 		}
 		
+		// An active trade is refused before the fee is taken (the later check came after it: fee lost, nothing stored).
 		final ItemContainer warehouse = player.getActiveWarehouse();
-		if (warehouse == null)
+		if ((warehouse == null) || (player.getActiveTradeList() != null))
 		{
 			return;
 		}
@@ -124,21 +125,22 @@ public class SendWareHouseDepositList extends ClientPacket
 		}
 		
 		// Freight price from config or normal price per item slot.
-		final long fee;
+		final long feePerItem;
 		final int currency;
 		if (isPrivate)
 		{
-			fee = _items.size() * 30;
+			feePerItem = 30;
 			currency = Inventory.ADENA_ID;
 		}
 		else
 		{
-			fee = _items.size() * 100;
+			feePerItem = 100;
 			currency = Inventory.LCOIN_ID;
 		}
 		
 		long currentCurrency = player.getInventory().getInventoryItemCount(currency, -1);
 		int slots = 0;
+		int chargeable = 0;
 		for (ItemHolder itemHolder : _items)
 		{
 			final Item item = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
@@ -147,6 +149,11 @@ public class SendWareHouseDepositList extends ClientPacket
 				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
 				return;
 			}
+			if (!item.isDepositable(isPrivate) || !item.isAvailable(player, true, isPrivate))
+			{
+				continue; // Skipped by the transfer below as well: takes no slot and no fee.
+			}
+			chargeable++;
 			
 			// Calculate needed currency and slots.
 			if (item.getId() == currency)
@@ -171,16 +178,11 @@ public class SendWareHouseDepositList extends ClientPacket
 			return;
 		}
 		
+		final long fee = chargeable * feePerItem;
 		// Check if enough currency and charge the fee.
 		if ((currentCurrency < fee) || !player.destroyItemByItemId(ItemProcessType.FEE, currency, fee, manager, false))
 		{
 			player.sendPacket(isPrivate ? SystemMessageId.NOT_ENOUGH_ADENA : SystemMessageId.NOT_ENOUGH_L2_COINS);
-			return;
-		}
-		
-		// Get current tradelist if any.
-		if (player.getActiveTradeList() != null)
-		{
 			return;
 		}
 		
