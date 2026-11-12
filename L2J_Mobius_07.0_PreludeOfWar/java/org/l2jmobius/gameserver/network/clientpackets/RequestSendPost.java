@@ -47,8 +47,8 @@ public class RequestSendPost extends ClientPacket
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private static final int MAX_RECV_LENGTH = 16;
-	private static final int MAX_SUBJ_LENGTH = 128;
-	private static final int MAX_TEXT_LENGTH = 512;
+	private static final int MAX_SUBJ_LENGTH = 50;
+	private static final int MAX_TEXT_LENGTH = 1000;
 	private static final int MAX_ATTACHMENTS = 8;
 	private static final int INBOX_SIZE = 240;
 	private static final int OUTBOX_SIZE = 240;
@@ -172,8 +172,7 @@ public class RequestSendPost extends ClientPacket
 		
 		if (_text.length() > MAX_TEXT_LENGTH)
 		{
-			// not found message for this
-			player.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED);
+			player.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED_2);
 			return;
 		}
 		
