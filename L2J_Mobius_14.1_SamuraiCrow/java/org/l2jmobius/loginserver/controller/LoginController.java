@@ -161,9 +161,14 @@ public class LoginController
 		_loginServerClients.remove(account);
 	}
 	
-	public LoginClient getAuthedClient(String account)
+		public LoginClient getAuthedClient(String account)
 	{
 		return _loginServerClients.get(account);
+	}
+	
+	public int getAuthenticatedClientCount()
+	{
+		return _loginServerClients.size();
 	}
 	
 	public AccountInfo retriveAccountInfo(String clientAddr, String login, String password)

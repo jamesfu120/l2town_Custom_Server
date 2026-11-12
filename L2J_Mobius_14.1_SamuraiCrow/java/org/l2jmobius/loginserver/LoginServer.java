@@ -45,6 +45,11 @@ import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.LoginPacketHandler;
 import org.l2jmobius.loginserver.network.gameserverpackets.receive.ServerStatus;
 import org.l2jmobius.loginserver.ui.Gui;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import org.l2jmobius.tools.dashboard.bridge.DashboardProfile;
+import org.l2jmobius.tools.dashboard.bridge.RuntimeManagementAgent;
+import org.l2jmobius.tools.dashboard.bridge.RuntimeManagementBean;
 
 /**
  * Bootstraps and drives the login server lifecycle.<br>
@@ -82,6 +87,7 @@ public class LoginServer
 	
 	// Network listeners.
 	private GameServerListener _gameServerListener;
+	private ScheduledFuture<?> _dashboardLifecycleTask;
 	
 	// Login server status.
 	private static volatile int _loginStatus = ServerStatus.STATUS_NORMAL;
@@ -97,6 +103,7 @@ public class LoginServer
 		initializeSecurityAndBans();
 		configureScheduledRestart();
 		initializeNetworkListeners();
+		RuntimeManagementAgent.publish(new RuntimeManagementBean("LoginServer", () -> "Login Server", () -> -1, () -> -1, GameServerListener::getGameServerCount, () -> LoginController.getInstance().getAuthenticatedClientCount(), seconds -> scheduleDashboardLifecycleAction(seconds, false), seconds -> scheduleDashboardLifecycleAction(seconds, true), this::cancelDashboardLifecycleAction), LOGGER);
 	}
 	
 	/**
@@ -105,6 +112,12 @@ public class LoginServer
 	private void initializeInterfaceLayer()
 	{
 		InterfaceConfig.load();
+		
+		if (RuntimeManagementAgent.isManagedProcess())
+		{
+			System.out.println("LoginServer: Running under " + DashboardProfile.MANAGEMENT_LABEL + " management.");
+			return;
+		}
 		
 		if (!InterfaceConfig.ENABLE_GUI)
 		{
@@ -357,6 +370,37 @@ public class LoginServer
 	 * Shuts down the login server and optionally signals restart to the wrapper.
 	 * @param restart True to request a restart exit code.
 	 */
+	 	private synchronized void scheduleDashboardLifecycleAction(int seconds, boolean restart)
+	{
+		cancelDashboardLifecycleAction();
+		if (seconds <= 0)
+		{
+			ThreadPool.execute(() -> shutdown(restart));
+			return;
+		}
+		
+		LOGGER.warning("Dashboard requested Login Server " + (restart ? "restart" : "shutdown") + " in " + seconds + " second(s).");
+		_dashboardLifecycleTask = ThreadPool.schedule(() -> shutdown(restart), TimeUnit.SECONDS.toMillis(seconds));
+	}
+	
+	private synchronized boolean cancelDashboardLifecycleAction()
+	{
+		final ScheduledFuture<?> task = _dashboardLifecycleTask;
+		if (task == null)
+		{
+			return false;
+		}
+		
+		_dashboardLifecycleTask = null;
+		if (!task.cancel(false))
+		{
+			return false;
+		}
+		
+		LOGGER.info("Dashboard Login Server lifecycle request cancelled.");
+		return true;
+	}
+
 	public void shutdown(boolean restart)
 	{
 		if (DatabaseConfig.BACKUP_DATABASE)

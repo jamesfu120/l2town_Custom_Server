@@ -205,6 +205,9 @@ import org.l2jmobius.gameserver.taskmanagers.ItemLifeTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanagers.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.ui.Gui;
 import org.l2jmobius.gameserver.util.DeadlockWatcher;
+import org.l2jmobius.tools.dashboard.bridge.DashboardProfile;
+import org.l2jmobius.tools.dashboard.bridge.RuntimeManagementAgent;
+import org.l2jmobius.tools.dashboard.bridge.RuntimeManagementBean;
 
 public class GameServer
 {
@@ -216,9 +219,13 @@ public class GameServer
 	
 	public GameServer() throws Exception
 	{
-		// GUI
+				// GUI
 		InterfaceConfig.load();
-		if (InterfaceConfig.ENABLE_GUI)
+		if (RuntimeManagementAgent.isManagedProcess())
+		{
+			System.out.println("GameServer: Running under " + DashboardProfile.MANAGEMENT_LABEL + " management.");
+		}
+		else if (InterfaceConfig.ENABLE_GUI)
 		{
 			System.out.println("GameServer: Running in GUI mode.");
 			new Gui();
@@ -532,6 +539,8 @@ public class GameServer
 		
 		new ConnectionManager<>(new InetSocketAddress(ServerConfig.PORT_GAME), GameClient::new, new GamePacketHandler());
 		
+						RuntimeManagementAgent.publish(new RuntimeManagementBean("GameServer", () -> LoginServerThread.getInstance().getServerName(), () -> World.getPlayers().size(), () -> ServerConfig.MAXIMUM_ONLINE_USERS, () -> -1, () -> -1, seconds -> Shutdown.getInstance().startShutdown(null, seconds, false), seconds -> Shutdown.getInstance().startShutdown(null, seconds, true), () -> { Shutdown.getInstance().abort(null); return true; }), LOGGER);
+
 		LoginServerThread.getInstance().start();
 		
 		Toolkit.getDefaultToolkit().beep();
