@@ -15235,7 +15235,7 @@ public class Player extends Playable
 	{
 		// Get reset time.
 		final Calendar calendar = Calendar.getInstance();
-		if ((calendar.get(Calendar.HOUR_OF_DAY) < 6) && (calendar.get(Calendar.MINUTE) < 30))
+		if ((calendar.get(Calendar.HOUR_OF_DAY) < 6) || ((calendar.get(Calendar.HOUR_OF_DAY) == 6) && (calendar.get(Calendar.MINUTE) < 30)))
 		{
 			calendar.add(Calendar.DAY_OF_MONTH, -1);
 		}
