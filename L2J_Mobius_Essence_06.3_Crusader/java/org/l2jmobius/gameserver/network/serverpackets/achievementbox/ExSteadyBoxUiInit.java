@@ -33,13 +33,13 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExSteadyBoxUiInit extends ServerPacket
 {
-	private static final int[] OPEN_PRICE =
+	public static final int[] OPEN_PRICE =
 	{
 		500,
 		1000,
 		1500
 	};
-	private static final int[] WAIT_TIME =
+	public static final int[] WAIT_TIME =
 	{
 		0,
 		60,
@@ -47,7 +47,7 @@ public class ExSteadyBoxUiInit extends ServerPacket
 		360,
 		540
 	};
-	private static final int[] TIME_PRICE =
+	public static final int[] TIME_PRICE =
 	{
 		100,
 		500,

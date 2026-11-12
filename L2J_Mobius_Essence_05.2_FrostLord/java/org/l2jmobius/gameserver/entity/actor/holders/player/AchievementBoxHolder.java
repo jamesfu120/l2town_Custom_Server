@@ -43,6 +43,7 @@ import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.serverpackets.achievementbox.ExSteadyAllBoxUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.achievementbox.ExSteadyBoxReward;
+import org.l2jmobius.gameserver.network.serverpackets.achievementbox.ExSteadyBoxUiInit;
 
 /**
  * @author Serenitty, nlyyn, MacuK, Rudelitobr
@@ -322,7 +323,8 @@ public class AchievementBoxHolder
 		}
 		
 		final AchievementBoxInfoHolder holder = getAchievementBox().get(slotId - 1);
-		if ((holder != null) && _owner.destroyItemByItemId(ItemProcessType.FEE, Inventory.LCOIN_ID, fee, _owner, true))
+		// The fee comes from the client: anything below the server price (1 L-Coin) opened the box.
+		if ((holder != null) && (fee >= getSkipPrice(holder, slotId)) && _owner.destroyItemByItemId(ItemProcessType.FEE, Inventory.LCOIN_ID, fee, _owner, true))
 		{
 			if (_pendingBoxSlotId == slotId)
 			{
@@ -331,6 +333,29 @@ public class AchievementBoxHolder
 			
 			finishAndUnlockChest(slotId);
 		}
+	}
+	
+	/**
+	 * Price of opening the box now, from the ExSteadyBoxUiInit tables the client chooses from: the remaining-time price for the box being opened, else the open price of its type.
+	 * @param holder the box being opened.
+	 * @param slotId the slot of the box.
+	 * @return the L-Coin price.
+	 */
+	private long getSkipPrice(AchievementBoxInfoHolder holder, int slotId)
+	{
+		if ((_pendingBoxSlotId == slotId) && (_boxTimeForOpen > 0))
+		{
+			final long remainingMinutes = Math.max(0, _boxTimeForOpen - System.currentTimeMillis()) / 60000;
+			int index = 0;
+			for (int i = 1; (i < ExSteadyBoxUiInit.WAIT_TIME.length) && (ExSteadyBoxUiInit.WAIT_TIME[i] <= remainingMinutes); i++)
+			{
+				index = i;
+			}
+			return ExSteadyBoxUiInit.TIME_PRICE[index];
+		}
+		
+		final int typeIndex = holder.getType().ordinal() - 1; // BOX_2H = 1 -> OPEN_PRICE[0]; the client matches nIndex = i + 1 with the box type.
+		return (typeIndex >= 0) && (typeIndex < ExSteadyBoxUiInit.OPEN_PRICE.length) ? ExSteadyBoxUiInit.OPEN_PRICE[typeIndex] : Long.MAX_VALUE;
 	}
 	
 	public boolean setBoxTimeForOpen(long time)
