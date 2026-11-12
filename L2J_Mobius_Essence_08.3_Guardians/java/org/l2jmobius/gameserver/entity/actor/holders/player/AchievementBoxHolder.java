@@ -270,7 +270,7 @@ public class AchievementBoxHolder
 	
 	public void openBox(int slotId)
 	{
-		if (slotId > getBoxOwned())
+		if ((slotId < 1) || (slotId > getBoxOwned()))
 		{
 			return;
 		}
@@ -317,7 +317,7 @@ public class AchievementBoxHolder
 	
 	public void skipBoxOpenTime(int slotId, long fee)
 	{
-		if (slotId > getBoxOwned())
+		if ((slotId < 1) || (slotId > getBoxOwned()))
 		{
 			return;
 		}
@@ -495,6 +495,11 @@ public class AchievementBoxHolder
 	
 	public void getReward(int slotId)
 	{
+		if ((slotId < 1) || (slotId > getAchievementBox().size()))
+		{
+			return;
+		}
+		
 		final AchievementBoxInfoHolder holder = getAchievementBox().get(slotId - 1);
 		if (holder.getState() != AchievementBoxStateType.RECEIVE_REWARD)
 		{
