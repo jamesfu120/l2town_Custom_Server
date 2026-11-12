@@ -357,6 +357,14 @@ public class WorldExchangeManager implements IXmlReader
 		}
 		
 		final Item item = player.getInventory().getItemByObjectId(itemObjectId);
+		final WorldExchangeItemSubType category = _itemCategories.get(item.getId());
+		if (category == null)
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD));
+			player.sendPacket(WorldExchangeRegisterItem.FAIL);
+			return;
+		}
+		
 		long feePrice = calculateFeeForRegister(player, itemObjectId, amount, priceForEach);
 		if ((WorldExchangeConfig.WORLD_EXCHANGE_MAX_ADENA_FEE != -1) && (feePrice > WorldExchangeConfig.WORLD_EXCHANGE_MAX_ADENA_FEE))
 		{
@@ -392,14 +400,6 @@ public class WorldExchangeManager implements IXmlReader
 		if (itemInstance == null)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NO_ITEM_FOUND));
-			player.sendPacket(WorldExchangeRegisterItem.FAIL);
-			return;
-		}
-		
-		final WorldExchangeItemSubType category = _itemCategories.get(itemInstance.getId());
-		if (category == null)
-		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD));
 			player.sendPacket(WorldExchangeRegisterItem.FAIL);
 			return;
 		}
