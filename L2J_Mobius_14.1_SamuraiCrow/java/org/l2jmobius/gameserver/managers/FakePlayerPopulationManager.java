@@ -222,16 +222,35 @@ public class FakePlayerPopulationManager {
          if (FakePlayersConfig.FAKE_PLAYER_AUTO_HUNT) {
             ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::runThinkSafely, 750L, 250L);
             ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::randomChat, 15000L, 15000L);
+			         ThreadPool.scheduleAtFixedRate(() -> {
+            try { broadcastFakePlayersToNearbyPlayers(); } catch (Throwable t) { LOGGER.log(Level.WARNING, "broadcastFake error", t); }
+         }, 3000L, 3000L);
+
          }
 
-         ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::ensurePopulation, 1000L, 1000L);
+                  ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::ensurePopulation, 1000L, 1000L);
          ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::syncFakePlayersToPartyMatchingList, 3000L, 5000L);
          ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::relocateCombatFakesToHuntingGrounds, 15000L, 15000L);
          LOGGER.fine("FakePlayerPopulationManager: spawned " + PLAYERS.size() + " in-memory fake players (shop=" + shop + ", combat=" + combat + ").");
       }
    }
 
+   // 貼在 initialize() 結束大括號的外面！
+   private static void broadcastFakePlayersToNearbyPlayers() {
+      for (Player fake : PLAYERS) {
+         if (fake == null || !fake.isSpawned() || !fake.isOnline()) {
+            continue;
+         }
+         World.forEachVisibleObjectInRange(fake, Player.class, 3000, realPlayer -> {
+            if (realPlayer != null && !realPlayer.isFakePlayer() && realPlayer.isOnline()) {
+               fake.sendInfo(realPlayer);
+            }
+         });
+      }
+   }
+
    private static void cleanupOrphanFakePlayerItems() {
+
       try {
          Connection con = DatabaseFactory.getConnection();
 
@@ -841,65 +860,34 @@ public class FakePlayerPopulationManager {
       return score;
    }
 
-   private static boolean tryUseOffensiveCombatSkill(Player player, Monster monster) {
-      if (player != null && monster != null && !monster.isDead() && monster.isSpawned()) {
-         List<Skill> skills = findOffensiveCombatSkills(player);
-         if (skills.isEmpty() && FakePlayersConfig.FAKE_PLAYER_AUTO_LEARN_CLASS_SKILLS) {
-            prepareCombatFakePlayer(player);
-            skills = findOffensiveCombatSkills(player);
-         }
+      private static boolean tryUseOffensiveCombatSkill(Player player, Monster monster) {
+      if (player == null || monster == null || monster.isDead() || !monster.isSpawned()) return false;
 
-         if (skills.isEmpty()) {
-            return false;
-         } else {
-            player.setTarget(monster);
-            int previousSkillId = (Integer)LAST_OFFENSIVE_SKILL.getOrDefault(player, -1);
-            int startIndex = 0;
-
-            for(int i = 0; i < skills.size(); ++i) {
-               if (((Skill)skills.get(i)).getId() == previousSkillId) {
-                  startIndex = (i + 1) % skills.size();
-                  break;
-               }
-            }
-
-            for(int offset = 0; offset < skills.size(); ++offset) {
-               Skill skill = (Skill)skills.get((startIndex + offset) % skills.size());
-               if (skill != null && !player.isSkillDisabled(skill) && !player.isCastingNow()) {
-                  player.setCurrentMp((double)player.getMaxMp());
-                  player.getAI().setIntentionAttack(monster);
-                  player.getAI().setIntentionCast(skill, monster, (Item)null, true, false);
-                  player.getAI().notifyActionThink();
-                  boolean accepted = player.isCastingNow() || player.getAI().getIntention() == Intention.CAST;
-                  if (accepted) {
-                     LAST_OFFENSIVE_SKILL.put(player, skill.getId());
-                     long wakeDelay = Math.max(200L, (long)skill.getHitTime() + 100L);
-                     ThreadPool.schedule(() -> {
-                        try {
-                           if (player.isOnline() && player.isSpawned() && !player.isDead()) {
-                              WorldObject patt0$temp = player.getTarget();
-                              if (patt0$temp instanceof Monster) {
-                                 Monster target = (Monster)patt0$temp;
-                                 if (!target.isDead()) {
-                                    player.getAI().setIntentionAttack(target);
-                                    player.getAI().notifyActionThink();
-                                 }
-                              }
-                           }
-                        } catch (Throwable var3) {
-                        }
-
-                     }, wakeDelay);
-                     return true;
-                  }
-               }
-            }
-
-            return false;
-         }
-      } else {
-         return false;
+      List<Skill> skills = findOffensiveCombatSkills(player);
+      if (skills.isEmpty()) {
+         prepareCombatFakePlayer(player);
+         skills = findOffensiveCombatSkills(player);
       }
+      if (skills.isEmpty()) return false;
+
+      player.setTarget(monster);
+      for (Skill skill : skills) {
+         if (skill != null && !player.isSkillDisabled(skill) && !player.isCastingNow()) {
+            double castRange = Math.max(150.0, player.getMagicalAttackRange(skill));
+            if (player.calculateDistance3D(monster) > castRange) {
+               player.getAI().setIntentionMoveTo(new Location(monster.getX(), monster.getY(), monster.getZ()));
+               return true;
+            }
+            player.setCurrentMp(player.getMaxMp());
+            player.rechargeShots(true, true, false);
+            // 直接呼叫 SkillCaster 強制施法，解決巫師發呆或只拿法杖普攻的問題
+            if (SkillCaster.castSkill(player, monster, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+               LAST_OFFENSIVE_SKILL.put(player, skill.getId());
+               return true;
+            }
+         }
+      }
+      return false;
    }
 
    private static void applyFixedBGradeEquipment(Player player) {
@@ -1199,18 +1187,27 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   private static boolean isSuitableHuntingMonster(Player player, Monster monster) {
-      if (monster != null && monster.isSpawned() && !monster.isDead() && !monster.isFakePlayer() && !monster.isRaid() && !monster.isRaidMinion() && !monster.isQuestMonster()) {
-         if (monster.getInstanceId() != player.getInstanceId()) {
-            return false;
-         } else {
-            int level = player.getLevel();
-            int diff = monster.getLevel() - level;
-            return diff >= FakePlayersConfig.FAKE_PLAYER_HUNT_MIN_LEVEL_DIFF && diff <= FakePlayersConfig.FAKE_PLAYER_HUNT_MAX_LEVEL_DIFF;
-         }
-      } else {
+        private static boolean isSuitableHuntingMonster(Player player, Monster monster) {
+      if (monster == null || !monster.isSpawned() || monster.isDead() || monster.isFakePlayer()
+         || monster.isRaid() || monster.isRaidMinion() || monster.isQuestMonster()) {
          return false;
       }
+      if (monster.getInstanceId() != player.getInstanceId()) {
+         return false;
+      }
+      // 過濾水下區域與極端高空/深淵座標
+      if (monster.isInsideZone(org.l2jmobius.gameserver.entity.zone.ZoneId.WATER) || monster.getZ() < -6000 || monster.getZ() > 10000) {
+         return false;
+      }
+	  // 限制在亞丁/艾爾摩主大陸常規地圖範圍內
+      int x = monster.getX();
+      int y = monster.getY();
+      if (x < -130000 || x > 220000 || y < -150000 || y > 260000 || monster.getLevel() > 85) {
+         return false;
+      }
+      int level = player.getLevel();
+      int diff = monster.getLevel() - level;
+      return diff >= FakePlayersConfig.FAKE_PLAYER_HUNT_MIN_LEVEL_DIFF && diff <= FakePlayersConfig.FAKE_PLAYER_HUNT_MAX_LEVEL_DIFF;
    }
 
    private static Monster findSuitableMonsterNearby(Player player, int range) {
@@ -1317,12 +1314,46 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   private static boolean manageLootAndSupplies(Player player) {
-      if (player != null && !player.isDead() && !isShopPlayer(player)) {
-         configureAutomaticPotion(player);
+      private static boolean manageLootAndSupplies(Player player) {
+      if (player == null || player.isDead() || isShopPlayer(player)) {
          return false;
+      }
+      configureAutomaticPotion(player);
+
+      // 若設定檔未開啟撿物，或假人正在施法中，則不執行撿物
+      if (!FakePlayersConfig.FAKE_PLAYER_CAN_PICKUP || player.isCastingNow() || player.isMovementDisabled()) {
+         return false;
+      }
+
+      // 搜尋範圍內的地面掉落物 (Item)
+            List<Item> droppedItems = World.getVisibleObjectsInRange(player, Item.class, FakePlayersConfig.FAKE_PLAYER_LOOT_RANGE, item ->
+         item != null && item.isSpawned() && item.getInstanceId() == player.getInstanceId()
+         && (item.getOwnerId() == 0 || item.getOwnerId() == player.getObjectId())
+      );
+
+      if (droppedItems.isEmpty()) {
+         return false;
+      }
+
+      // 找出距離最近的掉落物
+      Item nearestItem = droppedItems.stream()
+         .min((a, b) -> Double.compare(player.calculateDistance3D(a), player.calculateDistance3D(b)))
+         .orElse(null);
+
+      if (nearestItem == null) {
+         return false;
+      }
+
+      double distance = player.calculateDistance3D(nearestItem);
+      if (distance <= FakePlayersConfig.FAKE_PLAYER_PICKUP_DISTANCE) {
+         // 進入拾取距離：執行拾取動作並從世界移除（不寫入資料庫）
+         player.broadcastPacket(new org.l2jmobius.gameserver.network.serverpackets.GetItem(nearestItem, player.getObjectId()));
+         nearestItem.decayMe();
+         return true;
       } else {
-         return false;
+         // 距離較遠：先走過去掉落物旁邊
+         player.getAI().setIntentionMoveTo(new Location(nearestItem.getX(), nearestItem.getY(), nearestItem.getZ()));
+         return true;
       }
    }
 
@@ -1348,84 +1379,287 @@ public class FakePlayerPopulationManager {
 
    }
 
-   private static void think() {
+      private static void think() {
       long now = System.currentTimeMillis();
       if (now >= NEXT_OCCUPANCY_REBUILD_AT) {
          NEXT_OCCUPANCY_REBUILD_AT = now + 1000L;
          rebuildTargetOccupancy();
       }
 
-      for(Player player : PLAYERS) {
-         if (player == null || !player.isSpawned() || player.isDead()) {
+      for (Player player : PLAYERS) {
+         if (player == null || !player.isSpawned() || player.isDead() || isShopPlayer(player)) {
             continue;
          }
-         if (isShopPlayer(player)) {
+
+         if (now < NEXT_AI_THINK_AT.getOrDefault(player, 0L)) {
             continue;
          }
+         NEXT_AI_THINK_AT.put(player, now + Rnd.get(650, 950));
 
          try {
-            player.getAI().setIntentionActive();
+             // 強制解除任何可能導致假人站著不動的負重或定身狀態
+            player.getEffectList().stopEffects(AbnormalType.BOT_PENALTY);
+            if (!player.isRunning()) {
+               player.setRunning();
+            }
+            if (player.getWorldRegion() != null && !player.getWorldRegion().isActive()) {
+               player.getWorldRegion().setActive(true);
+            }
+            if (player.isTeleporting()) player.setTeleporting(false, false);
+            if (player.isOverloaded()) player.setOverloaded(false);
+			            if (player.getZ() < -6000 || player.getZ() > 10000) {
+               Location safeLoc = FALLBACK_HUNTING_GROUNDS[Rnd.get(FALLBACK_HUNTING_GROUNDS.length)];
+               player.teleToLocation(safeLoc, true);
+               player.revalidateZone(true);
+               player.broadcastInfo();
+               player.broadcastUserInfo();
+               continue;
+            }
 
-            // 🌟 屍體清除鎖定：打死怪立刻清除目標，拒絕散步發呆
-            WorldObject currentTarget = player.getTarget();
-            if (currentTarget instanceof Monster && ((Monster) currentTarget).isDead()) {
+            // 1. 定期補充物資與開啟靈魂彈
+            if (now >= NEXT_RESOURCE_SYNC_AT.getOrDefault(player, 0L)) {
+               NEXT_RESOURCE_SYNC_AT.put(player, now + RESOURCE_SYNC_INTERVAL_MS);
+               prepareFakeConsumables(player);
+            }
+
+            // 防呆：若假人掉進地底深淵或飛上高空，立即拉回安全地面並刷新視野
+            if (player.getZ() < -6000 || player.getZ() > 10000) {
+               Location safeLoc = FALLBACK_HUNTING_GROUNDS[Rnd.get(FALLBACK_HUNTING_GROUNDS.length)];
+               player.teleToLocation(safeLoc, true);
+               player.revalidateZone(true);
+               player.broadcastInfo();
+               player.broadcastUserInfo();
+               continue;
+            }
+
+            // 2. 定期檢查武器是否符合等級
+            if (now >= NEXT_EQUIPMENT_CHECK_AT.getOrDefault(player, 0L)) {
+               NEXT_EQUIPMENT_CHECK_AT.put(player, now + EQUIPMENT_CHECK_INTERVAL_MS);
+               ensureCombatWeapon(player);
+            }
+
+            // 3. 升級自動偵測
+            int currentLevel = player.getLevel();
+            Integer lastLevel = LAST_LEVELS.put(player, currentLevel);
+            if (lastLevel != null && lastLevel != currentLevel) {
+               player.setTarget(null);
+               player.setTitle(String.valueOf(currentLevel));
+               prepareCombatFakePlayer(player);
+               SUPPORT_ROLE_CACHE.remove(player);
+               applyFixedBGradeEquipment(player);
+               configureAutomaticPotion(player);
+            }
+
+            // 4. 清除已死亡的怪物目標，並立即檢查地面掉落物
+            if (player.getTarget() instanceof Monster m && m.isDead()) {
                player.setTarget(null);
             }
-
-            // 5秒補充一次物資
-            long nextResourceSync = LAST_CHAT.getOrDefault(player, 0L); 
-            if (now >= nextResourceSync) {
-               LAST_CHAT.put(player, now + 5000L);
-               prepareFakeConsumables(player);
-               manageLootAndSupplies(player);
+            if (manageLootAndSupplies(player)) {
+               player.getAI().notifyActionThink();
+               continue;
             }
 
-            // 🌟【終極解鎖】：修正反編譯泛型擦除，使用 Object 接收再精準轉換為 Creature / Monster！
+            // 5. 優先反擊正在攻擊自己的怪物
             Monster attacker = null;
-            Set attackBy = player.getAttackByList();
+            Set<?> attackBy = player.getAttackByList();
             if (attackBy != null && !attackBy.isEmpty()) {
                for (Object obj : attackBy) {
-                  if (obj instanceof Monster) {
-                     Monster m = (Monster) obj;
-                     if (!m.isDead()) {
-                        attacker = m;
-                        break;
-                     }
+                  if (obj instanceof Monster m && isAnyNormalCombatMonster(m, player)) {
+                     attacker = m;
+                     break;
                   }
                }
             }
-
-
-            // 優先反擊揍我的怪，沒被打就自動尋找下一隻怪
             if (attacker != null) {
                reserveMonsterTarget(player, attacker);
                if (!tryUseOffensiveCombatSkill(player, attacker)) {
                   forceFakePhysicalAttack(player, attacker);
                }
-            } else {
-               WorldObject targetCheck = player.getTarget();
-               if (targetCheck == null || !(targetCheck instanceof Monster)) {
-                  Monster nearest = findSuitableMonsterNearby(player, FakePlayersConfig.FAKE_PLAYER_HUNT_SEARCH_RANGE);
-                  if (nearest != null) {
-                     reserveMonsterTarget(player, nearest);
-                  }
-               }
+               player.getAI().notifyActionThink();
+               continue;
+            }
 
-               WorldObject finalTarget = player.getTarget();
-               if (finalTarget instanceof Monster && !((Monster) finalTarget).isDead()) {
-                  Monster targetMonster = (Monster) finalTarget;
-                  if (!tryUseOffensiveCombatSkill(player, targetMonster)) {
-                     forceFakePhysicalAttack(player, targetMonster);
-                  }
+            // 6. 組隊輔助 AI
+            if (player.isInParty() && isSupportClass(player)) {
+               boolean needHeal = checkPartyNeedsHealing(player);
+               if (needHeal || now >= NEXT_PARTY_SUPPORT_AT.getOrDefault(player, 0L)) {
+                  boolean casted = performPartySupport(player);
+                  NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 500L : 1500L));
+                  if (casted) continue;
                }
             }
 
+            // 7. 組隊跟隨 AI
+            if (handlePartyFollowAndAssist(player)) {
+               player.getAI().notifyActionThink();
+               continue;
+            }
+
+                       // 8. 自主打怪與全圖找怪傳送
+            handleAutonomousHunting(player);
             player.getAI().notifyActionThink();
 
          } catch (Throwable t) {
             LOGGER.log(Level.WARNING, "AI tick error: " + player.getName(), t);
          }
       }
+   }
+
+   private static boolean canPartyMoveNow(Player player) {
+      long now = System.currentTimeMillis();
+      if (now < NEXT_PARTY_MOVE_AT.getOrDefault(player, 0L)) return false;
+      NEXT_PARTY_MOVE_AT.put(player, now + 1500L);
+      return true;
+   }
+
+   private static boolean handlePartyFollowAndAssist(Player player) {
+      if (player == null || !player.isInParty() || player.getParty() == null) return false;
+      Player leader = player.getParty().getLeader();
+      if (leader == null || leader == player || leader.isFakePlayer() || !leader.isOnline() || !leader.isSpawned() || leader.isDead()) return false;
+
+      // 跨副本自動傳送跟隨隊長
+      if (player.getInstanceId() != leader.getInstanceId() && !player.isCastingNow()) {
+         player.setInstance(leader.getInstanceWorld());
+         player.teleToLocation(new Location(leader.getX() + Rnd.get(-100, 100), leader.getY() + Rnd.get(-100, 100), leader.getZ()), false);
+         return true;
+      }
+
+      // 距離隊長超過 2500 碼直接傳送至隊長身邊，避免卡地形
+      double distToLeader = player.calculateDistance3D(leader);
+      if (distToLeader > 2500.0 && !player.isCastingNow()) {
+         player.teleToLocation(new Location(leader.getX() + Rnd.get(-120, 120), leader.getY() + Rnd.get(-120, 120), leader.getZ()), true);
+         return true;
+      }
+
+      // 集火隊長正在攻擊的怪物
+      if (leader.getTarget() instanceof Monster leaderTarget && !leaderTarget.isDead() && isAnyNormalCombatMonster(leaderTarget, player)) {
+         PARTY_PATROL_POINTS.remove(player);
+         reserveMonsterTarget(player, leaderTarget);
+         if (!tryUseOffensiveCombatSkill(player, leaderTarget)) {
+            forceFakePhysicalAttack(player, leaderTarget);
+         }
+         return true;
+      }
+
+      // 隊長沒打怪時，若假人目標超出隊長周圍 1200 碼則取消目標
+      if (player.getTarget() instanceof Monster currentMonster && leader.calculateDistance3D(currentMonster) > 1200.0) {
+         player.setTarget(null);
+         player.getAI().setIntentionActive();
+      }
+
+      // 距離隊長超過 900 碼主動跑向隊長
+      if (distToLeader > 900.0 && !player.isMovementDisabled() && !player.isCastingNow()) {
+         if (canPartyMoveNow(player)) {
+            player.getAI().setIntentionMoveTo(new Location(leader.getX() + Rnd.get(-150, 150), leader.getY() + Rnd.get(-150, 150), leader.getZ()));
+         }
+         return true;
+      }
+      return false;
+   }
+
+      private static boolean handleAutonomousHunting(Player player) {
+      boolean followingRealLeader = player.isInParty() && player.getParty() != null && player.getParty().getLeader() != null && !player.getParty().getLeader().isFakePlayer();
+      Player leader = followingRealLeader ? player.getParty().getLeader() : null;
+      Monster targetMonster = (player.getTarget() instanceof Monster existing && isAnyNormalCombatMonster(existing, player)) ? existing : null;
+
+      if (targetMonster == null) {
+         targetMonster = followingRealLeader && leader != null
+            ? findSuitableMonsterNearby(leader, 1200)
+            : findSuitableMonsterNearby(player, FakePlayersConfig.FAKE_PLAYER_HUNT_SEARCH_RANGE);
+      }
+
+      // 周圍找不到怪時的處理
+      if (targetMonster == null) {
+         if (followingRealLeader && leader != null) {
+            // 組隊狀態：在隊長周圍環形走動巡邏
+            Location patrol = PARTY_PATROL_POINTS.get(player);
+            if (patrol == null || player.calculateDistance3D(patrol) <= 100.0 || leader.calculateDistance3D(patrol) > 500.0) {
+               int step = PARTY_PATROL_STEPS.merge(player, 1, Integer::sum);
+               double angle = ((player.getObjectId() * 137.508 + step * 67.0) % 360.0) * Math.PI / 180.0;
+               patrol = new Location(leader.getX() + (int)(Math.cos(angle) * 280.0), leader.getY() + (int)(Math.sin(angle) * 280.0), leader.getZ());
+               PARTY_PATROL_POINTS.put(player, patrol);
+            }
+            if (player.calculateDistance3D(patrol) > 100.0 && !player.isMovementDisabled() && canPartyMoveNow(player)) {
+               player.getAI().setIntentionMoveTo(patrol);
+            }
+            return true;
+         } else {
+            // 單人練功：全圖找怪並直接傳送過去（含高度防呆與視野刷新，確保 GM 傳送過去 100% 看得到人）
+            Monster globalTarget = findGlobalSuitableMonster(player);
+            if (globalTarget != null) {
+               int gx = globalTarget.getX();
+               int gy = globalTarget.getY();
+               int gz = globalTarget.getZ();
+               if (gz > -6000 && gz < 10000) {
+                  reserveMonsterTarget(player, globalTarget);
+                  player.teleToLocation(new Location(gx, gy, gz + 25), true);
+                  player.revalidateZone(true);
+                  player.broadcastInfo();
+                  player.broadcastUserInfo();
+                  player.getAI().setIntentionActive();
+               }
+            }
+            return true;
+         }
+      }
+
+      reserveMonsterTarget(player, targetMonster);
+      if (!tryUseOffensiveCombatSkill(player, targetMonster)) {
+         forceFakePhysicalAttack(player, targetMonster);
+      }
+      return true;
+   }
+
+   private static boolean checkPartyNeedsHealing(Player player) {
+      List<Player> members = player.getParty().getMembers().stream().filter(m -> m != null && m.isOnline() && m.isSpawned() && !m.isDead()).toList();
+      if (members.size() < 2) return false;
+      double threshold = FakePlayersConfig.FAKE_PLAYER_SUPPORT_HEAL_PERCENT / 100.0;
+      boolean lowHp = members.stream().anyMatch(m -> m.getMaxHp() > 0 && (m.getCurrentHp() / m.getMaxHp()) < threshold);
+      if (lowHp) PARTY_HEALING_MODE.put(player, true);
+      else if (members.stream().allMatch(m -> m.getCurrentHp() >= m.getMaxHp() * 0.95)) PARTY_HEALING_MODE.remove(player);
+      return PARTY_HEALING_MODE.getOrDefault(player, false);
+   }
+
+   private static boolean performPartySupport(Player player) {
+      List<Player> members = player.getParty().getMembers().stream().filter(m -> m != null && m.isOnline() && m.isSpawned() && !m.isDead()).toList();
+      if (members.size() < 2) return false;
+
+      // 1. 治療血量低於設定百分比的隊友
+      double threshold = FakePlayersConfig.FAKE_PLAYER_SUPPORT_HEAL_PERCENT / 100.0;
+      Player lowest = members.stream().filter(m -> m.getMaxHp() > 0 && (m.getCurrentHp() / m.getMaxHp()) < threshold)
+         .min(Comparator.comparingDouble(m -> m.getCurrentHp() / m.getMaxHp())).orElse(null);
+
+      if (lowest != null) {
+         for (Skill skill : player.getAllSkills()) {
+            if (isUsablePositiveSupportSkill(skill) && !player.isSkillDisabled(skill) && skill.hasEffectType(EffectType.HEAL, EffectType.CPHEAL)) {
+               Player target = (skill.getAffectScope() == AffectScope.PARTY || skill.getAffectScope() == AffectScope.RANGE) ? player : lowest;
+               player.setCurrentMp(player.getMaxMp());
+               if (SkillCaster.castSkill(player, target, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+            }
+         }
+      }
+
+      // 2. 血量安全時，為隊友施放缺少的輔助 Buff / 歌舞
+      for (Skill skill : player.getAllSkills()) {
+         if (isUsablePositiveSupportSkill(skill) && isPositiveBuffSkill(skill) && !player.isSkillDisabled(skill)) {
+            boolean isParty = skill.getAffectScope() == AffectScope.PARTY || skill.getAffectScope() == AffectScope.RANGE;
+            if (isParty) {
+               boolean anyMissing = members.stream().anyMatch(m -> player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
+               if (anyMissing) {
+                  player.setCurrentMp(player.getMaxMp());
+                  if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+               }
+            } else {
+               for (Player m : members) {
+                  if (player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
+                     player.setCurrentMp(player.getMaxMp());
+                     if (SkillCaster.castSkill(player, m, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+                  }
+               }
+            }
+         }
+      }
+      return false;
    }
 
    public static void forceFakePhysicalAttack(Player player, Monster monster) {
@@ -1462,8 +1696,27 @@ public class FakePlayerPopulationManager {
             player.getInventory().addItem(ItemProcessType.REWARD, id, 1000, player, null);
          }
       }
+	   activateAllAutoShots(player); // 加上這一行，讓假人自動開啟靈魂彈與魔靈彈
    }
 
+      private static void activateAllAutoShots(Player player) {
+      if (player == null || !player.isFakePlayer() || isShopPlayer(player)) return;
+      int level = player.getLevel();
+      // 依據假人等級只發放對應階級的 1 種靈魂彈 + 1 種祝福魔靈彈，避免負重 100% 卡死不能動
+      int soulshotId = (level < 20) ? 1835 : (level < 40) ? 1463 : (level < 52) ? 1464 : (level < 61) ? 1465 : (level < 76) ? 1466 : 1467;
+      int spiritshotId = (level < 20) ? 3947 : (level < 40) ? 3948 : (level < 52) ? 3949 : (level < 61) ? 3950 : (level < 76) ? 3951 : 3952;
+
+      if (player.getInventory().getInventoryItemCount(soulshotId, -1) < 200) {
+         player.getInventory().addItem(ItemProcessType.REWARD, soulshotId, 500, player, null);
+      }
+      if (player.getInventory().getInventoryItemCount(spiritshotId, -1) < 200) {
+         player.getInventory().addItem(ItemProcessType.REWARD, spiritshotId, 500, player, null);
+      }
+      player.addAutoSoulShot(soulshotId);
+      player.addAutoSoulShot(spiritshotId);
+      player.rechargeShots(true, true, false);
+   }
+   
    private static void removeFakeEquipmentGradePenalty(Player player) {
       if (player != null && player.getInventory().getInventoryItemCount(29510, -1) < 1) {
          player.getInventory().addItem(ItemProcessType.REWARD, 29510, 1, player, null);
@@ -1472,7 +1725,7 @@ public class FakePlayerPopulationManager {
 
    private static void randomChat() {
       long now = System.currentTimeMillis();
-      String[] msg = {"大家好。", "這裡有人一起練嗎？", "今天怪物掉寶不錯。", "有人要組隊嗎？", "l2tw.com 天堂2單機論壇"};
+      String[] msg = {"大家好。", "這裡有人一起練嗎？", "今天怪物掉寶不錯。", "有人要組隊嗎？", "l2town.ddns.net 天堂2單機論壇"};
       for (Player fake : PLAYERS) {
          if (fake != null && fake.isSpawned() && fake.isOnline() && (now - LAST_CHAT.getOrDefault(fake, 0L) >= 30000L) && Rnd.get(100) < 22) {
             fake.broadcastPacket(new CreatureSay(fake, ChatType.GENERAL, fake.getName(), msg[Rnd.get(msg.length)]));

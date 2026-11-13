@@ -852,7 +852,7 @@ public class Attackable extends Npc
 	 * @param attacker the creature generating hate
 	 * @return the hate multiplier for this attacker
 	 */
-	public double getHateRatio(Creature attacker)
+		public double getHateRatio(Creature attacker)
 	{
 		if (!attacker.isPlayer())
 		{
@@ -867,10 +867,17 @@ public class Attackable extends Npc
 		
 		final Player player = attacker.asPlayer();
 		int ratio = 0;
-		final CategoryType group = params.getEnum("SetHateGroup", CategoryType.class, null);
-		if ((group != null) && player.isInCategory(group))
+		try
 		{
-			ratio += params.getInt("SetHateGroupRatio", 0);
+			final CategoryType group = params.getEnum("SetHateGroup", CategoryType.class, null);
+			if ((group != null) && player.isInCategory(group))
+			{
+				ratio += params.getInt("SetHateGroupRatio", 0);
+			}
+		}
+		catch (IllegalArgumentException ignored)
+		{
+			// 忽略怪物 XML 資料檔中無效的 SetHateGroup 分類名稱（例如 attacker_group）
 		}
 		
 		if (player.getPlayerClass().getId() == params.getInt("SetHateOccupation", -1))
@@ -878,9 +885,15 @@ public class Attackable extends Npc
 			ratio += params.getInt("SetHateOccupationRatio", 0);
 		}
 		
-		if (player.getRace() == params.getEnum("SetHateRace", Race.class, null))
+		try
 		{
-			ratio += params.getInt("SetHateRaceRatio", 0);
+			if (player.getRace() == params.getEnum("SetHateRace", Race.class, null))
+			{
+				ratio += params.getInt("SetHateRaceRatio", 0);
+			}
+		}
+		catch (IllegalArgumentException ignored)
+		{
 		}
 		
 		return 1 + (ratio / 100.0);
