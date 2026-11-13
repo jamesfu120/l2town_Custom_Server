@@ -345,7 +345,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 				final double chance = Rnd.get(100f);
 				if (chance < _product.getChance())
 				{
-					rewards.put(0, new LimitShopRandomCraftReward(_product.getProductionId(), (int) _product.getCount(), 0));
+					rewards.computeIfAbsent(0, _ -> new LimitShopRandomCraftReward(_product.getProductionId(), 0, 0)).getCount().addAndGet((int) _product.getCount());
 					final Item item = player.addItem(_shopIndex == 4 ? ItemProcessType.CRAFT : ItemProcessType.BUY, _product.getProductionId(), _product.getCount(), player, true);
 					if (_product.isAnnounce())
 					{
