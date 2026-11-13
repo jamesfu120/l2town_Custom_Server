@@ -361,11 +361,11 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					player.destroyItemByItemId(ItemProcessType.FEE, _product.getIngredientIds()[i], amount, player, true);
 				}
 			}
-			
-			if (VipSystemConfig.VIP_SYSTEM_L_SHOP_AFFECT)
-			{
-				player.updateVipPoints(_amount);
-			}
+		}
+		
+		if (VipSystemConfig.VIP_SYSTEM_L_SHOP_AFFECT)
+		{
+			player.updateVipPoints(_amount);
 		}
 		
 		// Reward.
