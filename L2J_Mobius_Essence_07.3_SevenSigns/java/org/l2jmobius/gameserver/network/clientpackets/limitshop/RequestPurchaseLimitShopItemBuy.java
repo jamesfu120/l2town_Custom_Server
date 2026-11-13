@@ -338,7 +338,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Collection<Item> items = player.getInventory().getAllItemsByItemId(_product.getIngredientIds()[i], _product.getIngredientEnchants()[i]);
 					for (Item item : items)
 					{
-						if (count == ingredientQuantity)
+						if (count == (ingredientQuantity * _amount))
 						{
 							break;
 						}
