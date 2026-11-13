@@ -85,7 +85,8 @@ public class RequestNewHennaPotenEnchant extends ClientPacket
 		}
 		
 		final Optional<ItemHolder> itemFee = currentFee.getItems().stream().filter(ih -> ih.getId() == _costItemId).findAny();
-		if (itemFee.isEmpty() || !player.destroyItemByItemId(ItemProcessType.FEE, itemFee.get().getId(), itemFee.get().getCount(), player, true))
+		// Adena is checked before the fee item is destroyed: without it the booster was lost and nothing was enchanted.
+		if (itemFee.isEmpty() || (player.getAdena() < currentFee.getAdenaFee()) || !player.destroyItemByItemId(ItemProcessType.FEE, itemFee.get().getId(), itemFee.get().getCount(), player, true))
 		{
 			return;
 		}
