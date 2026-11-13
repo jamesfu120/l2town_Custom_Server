@@ -126,9 +126,9 @@ public class ExRequestPrivateStoreSearchList extends ClientPacket
 		{
 			historyTemp.add(history.get(index));
 			
-			if ((index == (history.size() - 1)) || (index == (MAX_ITEM_PER_PAGE - 1)) || ((index > 0) && ((index % (MAX_ITEM_PER_PAGE - 1)) == 0)))
+			if ((index == (history.size() - 1)) || (((index + 1) % MAX_ITEM_PER_PAGE) == 0))
 			{
-				player.sendPacket(new ExPrivateStoreSearchHistory(page, maxPage, historyTemp));
+				player.sendPacket(new ExPrivateStoreSearchHistory(page, maxPage, new ArrayList<>(historyTemp)));
 				page++;
 				historyTemp.clear();
 			}
