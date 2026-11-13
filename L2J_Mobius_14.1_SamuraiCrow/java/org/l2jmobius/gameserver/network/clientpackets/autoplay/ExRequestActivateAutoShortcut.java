@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.taskmanagers.AutoUseTaskManager;
 
 /**
- * @author Mobius
+ * @author Mobius, JankisLT
  */
 public class ExRequestActivateAutoShortcut extends ClientPacket
 {
@@ -57,7 +57,8 @@ public class ExRequestActivateAutoShortcut extends ClientPacket
 	protected void runImpl()
 	{
 		final Player player = getPlayer();
-		if (player == null)
+		// Activate-all (slot -1) never starts supplies when auto items are disabled, like a single supply slot.
+		if ((player == null) || ((_slot == -1) && (_page == 0) && _active && !GeneralConfig.ENABLE_AUTO_ITEM))
 		{
 			return;
 		}
@@ -239,7 +240,7 @@ public class ExRequestActivateAutoShortcut extends ClientPacket
 			
 			// action
 			final ActionDataHolder actionHolder = ActionData.getInstance().getActionData(shortcut.getId());
-			if (actionHolder != null)
+			if ((shortcut.getType() == ShortcutType.ACTION) && (actionHolder != null))
 			{
 				final IActionUserHandler actionHandler = ActionUserHandler.getInstance().getHandler(actionHolder.getHandler());
 				if (actionHandler != null)

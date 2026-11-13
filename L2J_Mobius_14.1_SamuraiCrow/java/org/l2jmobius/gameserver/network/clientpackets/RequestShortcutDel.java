@@ -50,7 +50,7 @@ public class RequestShortcutDel extends ClientPacket
 			return;
 		}
 		
-		if ((_page > 24) || (_page < 0))
+		if ((_page > 25) || (_page < 0))
 		{
 			return;
 		}
