@@ -17,9 +17,9 @@
 package handlers.skill.effects;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.entity.actor.Creature;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
@@ -47,7 +47,7 @@ public class DoubleCast extends AbstractEffect
 	
 	public DoubleCast(StatSet params)
 	{
-		_addedToggles = new HashMap<>();
+		_addedToggles = new ConcurrentHashMap<>();
 	}
 	
 	@Override
@@ -80,11 +80,14 @@ public class DoubleCast extends AbstractEffect
 	{
 		if (effected.isPlayer())
 		{
-			_addedToggles.computeIfPresent(effected.getObjectId(), (k, v) ->
+			final List<SkillHolder> toggles = _addedToggles.remove(effected.getObjectId());
+			if (toggles != null)
 			{
-				v.forEach(h -> effected.stopSkillEffects(h.getSkill()));
-				return null;
-			});
+				for (SkillHolder holder : toggles)
+				{
+					effected.stopSkillEffects(holder.getSkill());
+				}
+			}
 		}
 	}
 }
