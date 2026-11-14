@@ -74,6 +74,22 @@ public class RequestRelicsUpgrade extends ClientPacket
 			return;
 		}
 		
+		// The relic must be owned and below level 4 and the ingredients owned, before the fee: the skill was given at the client's level for any relic and missing ingredients still counted for the chance.
+		final Collection<PlayerRelicData> ownedRelics = player.getRelics();
+		PlayerRelicData ownedRelic = null;
+		for (PlayerRelicData relic : ownedRelics)
+		{
+			if ((relic.getRelicId() == _relicId) && (relic.getRelicIndex() < 300))
+			{
+				ownedRelic = relic;
+				break;
+			}
+		}
+		if ((RelicData.getInstance().getRelic(_relicId) == null) || (ownedRelic == null) || (ownedRelic.getRelicLevel() >= 4) || _ingredients.isEmpty() || !RequestRelicsCombination.hasIngredients(ownedRelics, _ingredients, null))
+		{
+			return;
+		}
+		
 		final ItemHolder itemFee = RelicData.getInstance().getEnchantFee();
 		if (!player.destroyItemByItemId(ItemProcessType.FEE, itemFee.getId(), itemFee.getCount(), player, true))
 		{
@@ -114,7 +130,7 @@ public class RequestRelicsUpgrade extends ClientPacket
 			PlayerRelicData ingredientRelic = null;
 			for (PlayerRelicData relic : storedRelics)
 			{
-				if (relic.getRelicId() == ingredient)
+				if ((relic.getRelicId() == ingredient) && (relic.getRelicIndex() < 300)) // Confirmed copies only, as checked above.
 				{
 					ingredientRelic = relic;
 					break;

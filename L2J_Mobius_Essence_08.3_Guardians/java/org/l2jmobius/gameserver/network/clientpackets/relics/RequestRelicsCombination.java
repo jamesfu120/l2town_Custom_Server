@@ -22,11 +22,14 @@ package org.l2jmobius.gameserver.network.clientpackets.relics;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Map;
 
 import org.l2jmobius.gameserver.config.RelicSystemConfig;
 import org.l2jmobius.gameserver.data.holders.RelicCompoundFeeHolder;
+import org.l2jmobius.gameserver.data.holders.RelicDataHolder;
 import org.l2jmobius.gameserver.data.xml.RelicData;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.enums.player.RelicGrade;
@@ -85,6 +88,12 @@ public class RequestRelicsCombination extends ClientPacket
 		if (unconfirmedRelics.size() >= RelicSystemConfig.RELIC_UNCONFIRMED_LIST_LIMIT) // If you have 100 relics in your confirmation list, restrictions are applied to the relic summoning and compounding functions.
 		{
 			player.sendPacket(SystemMessageId.SUMMON_COMPOUND_IS_UNAVAILABLE_AS_YOU_HAVE_MORE_THAN_100_UNCONFIRMED_DOLLS);
+			return;
+		}
+		
+		// Each ingredient must be an owned confirmed relic of the used grade, missing ones were skipped after the fee was taken.
+		if ((_relicsUsedGrade < 0) || (_relicsUsedGrade >= RelicGrade.values().length) || (_relicsUsedCount < 4) || ((_relicsUsedCount % 4) != 0) || (_ingredientIds.size() != _relicsUsedCount) || !hasIngredients(storedRelics, _ingredientIds, RelicGrade.values()[_relicsUsedGrade]))
+		{
 			return;
 		}
 		
@@ -196,5 +205,48 @@ public class RequestRelicsCombination extends ClientPacket
 		player.sendPacket(new ExRelicsExchangeList(player));
 		player.sendPacket(new ExRelicsPointInfo(player));
 		player.storeRelics();
+	}
+
+	/**
+	 * Checks that every listed id is a confirmed relic (index below 300) owned at least as many times as it is listed, and of the given grade unless it is null.
+	 * @param storedRelics the player's relics
+	 * @param ingredientIds the relic ids sent by the client, repeated per copy
+	 * @param grade the required grade, or null for any
+	 * @return true when all ingredients can be consumed
+	 */
+	static boolean hasIngredients(Collection<PlayerRelicData> storedRelics, List<Integer> ingredientIds, RelicGrade grade)
+	{
+		final Map<Integer, Integer> needed = new HashMap<>();
+		for (int ingredientId : ingredientIds)
+		{
+			needed.merge(ingredientId, 1, Integer::sum);
+		}
+
+		for (Entry<Integer, Integer> entry : needed.entrySet())
+		{
+			final int relicId = entry.getKey();
+			final RelicDataHolder relicData = RelicData.getInstance().getRelic(relicId);
+			if ((relicData == null) || ((grade != null) && (relicData.getGrade() != grade)))
+			{
+				return false;
+			}
+
+			PlayerRelicData ownedRelic = null;
+			for (PlayerRelicData relic : storedRelics)
+			{
+				if ((relic.getRelicId() == relicId) && (relic.getRelicIndex() < 300))
+				{
+					ownedRelic = relic;
+					break;
+				}
+			}
+
+			if ((ownedRelic == null) || (ownedRelic.getRelicCount() < entry.getValue()))
+			{
+				return false;
+			}
+		}
+
+		return true;
 	}
 }
