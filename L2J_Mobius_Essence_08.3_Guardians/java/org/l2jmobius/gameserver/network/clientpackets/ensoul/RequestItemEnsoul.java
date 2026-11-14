@@ -85,6 +85,7 @@ public class RequestItemEnsoul extends ClientPacket
 		if (player.hasAbnormalType(AbnormalType.FREEZING))
 		{
 			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_WHILE_IN_FROZEN_STATE);
+			return;
 		}
 		
 		if (player.isDead())
@@ -173,6 +174,53 @@ public class RequestItemEnsoul extends ClientPacket
 			return;
 		}
 		
+		// Each option must fit a slot of this item, and the result may not repeat a slot or an ability (the client hides those).
+		final EnsoulOption[] resultSlots = new EnsoulOption[]
+		{
+			item.getSpecialAbility(0),
+			item.getSpecialAbility(1),
+			item.getAdditionalSpecialAbility(0)
+		};
+		final boolean[] requestedSlots = new boolean[resultSlots.length];
+		for (EnsoulItemOption itemOption : _options)
+		{
+			if (itemOption == null)
+			{
+				PacketLogger.warning("Player: " + player + " attempting to ensoul item with an invalid option or slot: " + item + "!");
+				return;
+			}
+
+			final boolean normal = itemOption.getType() == 1;
+			final EnsoulOption option = EnsoulData.getInstance().getOption(itemOption.getSoulCrystalOption());
+			if ((option == null) || (itemOption.getPosition() > (normal ? template.getEnsoulSlots() : template.getSpecialEnsoulSlots())))
+			{
+				PacketLogger.warning("Player: " + player + " attempting to ensoul item with an invalid option or slot: " + item + "!");
+				return;
+			}
+
+			final int slot = normal ? itemOption.getPosition() - 1 : 2;
+			if (requestedSlots[slot])
+			{
+				PacketLogger.warning("Player: " + player + " attempting to ensoul the same slot twice: " + item + "!");
+				return;
+			}
+
+			requestedSlots[slot] = true;
+			resultSlots[slot] = option;
+		}
+
+		for (int i = 0; i < resultSlots.length; i++)
+		{
+			for (int j = i + 1; j < resultSlots.length; j++)
+			{
+				if ((resultSlots[i] != null) && (resultSlots[j] != null) && (resultSlots[i].getSkillId() == resultSlots[j].getSkillId()))
+				{
+					PacketLogger.warning("Player: " + player + " attempting to ensoul the same ability twice: " + item + "!");
+					return;
+				}
+			}
+		}
+
 		int success = 0;
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (EnsoulItemOption itemOption : _options)
