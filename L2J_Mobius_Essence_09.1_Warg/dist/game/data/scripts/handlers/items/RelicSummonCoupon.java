@@ -27,11 +27,11 @@ import org.l2jmobius.gameserver.data.holders.RelicCouponHolder;
 import org.l2jmobius.gameserver.data.xml.RelicCouponData;
 import org.l2jmobius.gameserver.entity.actor.Playable;
 import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerRelicData;
 import org.l2jmobius.gameserver.entity.actor.request.RelicSummonRequest;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.mechanics.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.relics.ExRelicsSummonResult;
@@ -62,7 +62,16 @@ public class RelicSummonCoupon implements IItemHandler
 		}
 		
 		// If you have 100 relics in your confirmation list, restrictions are applied to the relic summoning and compounding functions.
-		if (player.getAccountVariables().getInt(AccountVariables.UNCONFIRMED_RELICS_COUNT, 0) == 100)
+		// Counted like RequestRelicsCombination (unconfirmed relics are set on summon to index 300), the account variable is never written.
+		int unconfirmedRelics = 0;
+		for (PlayerRelicData relic : player.getRelics())
+		{
+			if ((relic.getRelicIndex() >= 300) && (relic.getRelicCount() == 1))
+			{
+				unconfirmedRelics++;
+			}
+		}
+		if (unconfirmedRelics >= RelicSystemConfig.RELIC_UNCONFIRMED_LIST_LIMIT)
 		{
 			player.sendPacket(SystemMessageId.SUMMON_COMPOUND_IS_UNAVAILABLE_AS_YOU_HAVE_MORE_THAN_100_UNCONFIRMED_DOLLS);
 			return false;

@@ -82,7 +82,7 @@ public class RequestRelicsCombination extends ClientPacket
 			}
 		}
 		
-		if (unconfirmedRelics.size() == RelicSystemConfig.RELIC_UNCONFIRMED_LIST_LIMIT) // If you have 100 relics in your confirmation list, restrictions are applied to the relic summoning and compounding functions.
+		if (unconfirmedRelics.size() >= RelicSystemConfig.RELIC_UNCONFIRMED_LIST_LIMIT) // If you have 100 relics in your confirmation list, restrictions are applied to the relic summoning and compounding functions.
 		{
 			player.sendPacket(SystemMessageId.SUMMON_COMPOUND_IS_UNAVAILABLE_AS_YOU_HAVE_MORE_THAN_100_UNCONFIRMED_DOLLS);
 			return;
