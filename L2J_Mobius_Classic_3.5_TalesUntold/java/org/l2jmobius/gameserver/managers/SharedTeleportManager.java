@@ -50,6 +50,15 @@ public class SharedTeleportManager
 		return _sharedTeleports.get(id);
 	}
 	
+	/**
+	 * Removes a used up shared location; entries were never removed and the map grew with every share.
+	 * @param id the shared location id.
+	 */
+	public void removeTeleport(int id)
+	{
+		_sharedTeleports.remove(id);
+	}
+	
 	public synchronized int nextId(Creature creature)
 	{
 		final int nextId = ++_lastSharedTeleportId;

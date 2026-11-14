@@ -50,6 +50,7 @@ public class CreatureSay extends ServerPacket
 	private int _mask;
 	private List<String> _parameters;
 	private boolean _shareLocation;
+	private int _shareId; // Created once per message: writeImpl runs per recipient, and each write made a new 5-use entry.
 	
 	/**
 	 * @param sender
@@ -78,6 +79,7 @@ public class CreatureSay extends ServerPacket
 		_chatType = chatType;
 		_text = text;
 		_shareLocation = shareLocation;
+		_shareId = shareLocation ? SharedTeleportManager.getInstance().nextId(sender) : 0;
 		if (receiver != null)
 		{
 			if (receiver.getFriendList().contains(sender.getObjectId()))
@@ -120,6 +122,7 @@ public class CreatureSay extends ServerPacket
 		_senderName = senderName;
 		_text = text;
 		_shareLocation = shareLocation;
+		_shareId = (shareLocation && (sender != null)) ? SharedTeleportManager.getInstance().nextId(sender) : 0;
 	}
 	
 	public CreatureSay(Creature sender, ChatType chatType, NpcStringId npcStringId)
@@ -230,7 +233,7 @@ public class CreatureSay extends ServerPacket
 			if (_shareLocation)
 			{
 				buffer.writeByte(1);
-				buffer.writeShort(SharedTeleportManager.getInstance().nextId(_sender));
+				buffer.writeShort(_shareId);
 			}
 		}
 		else

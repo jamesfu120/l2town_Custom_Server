@@ -21,6 +21,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.teleports;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.holders.SharedTeleportHolder;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
@@ -77,9 +78,32 @@ public class ExRequestSharedLocationTeleport extends ClientPacket
 			return;
 		}
 		
+		// The checks of ExRequestTeleport: dead, jailed, store, combat, karma and cannot-escape players used this one.
+		if (player.isDead())
+		{
+			player.sendMessage("You cannot teleport right now.");
+			return;
+		}
+		
+		if (player.isInStoreMode() || player.cannotEscape() || ((!PlayerConfig.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT || !PlayerConfig.ALT_GAME_KARMA_PLAYER_CAN_USE_GK) && (player.getReputation() < 0)))
+		{
+			player.sendMessage("You cannot teleport right now.");
+			return;
+		}
+		
+		if (!PlayerConfig.TELEPORT_WHILE_PLAYER_IN_COMBAT && (player.isInCombat() || player.isCastingNow()))
+		{
+			player.sendMessage("You cannot teleport right now.");
+			return;
+		}
+		
 		if (player.destroyItemByItemId(ItemProcessType.FEE, Inventory.LCOIN_ID, GeneralConfig.TELEPORT_SHARE_LOCATION_COST, player, true))
 		{
 			teleport.decrementCount();
+			if (teleport.getCount() == 0)
+			{
+				SharedTeleportManager.getInstance().removeTeleport(_id);
+			}
 			player.abortCast();
 			player.stopMove(null);
 			player.teleToLocation(teleport.getLocation());
