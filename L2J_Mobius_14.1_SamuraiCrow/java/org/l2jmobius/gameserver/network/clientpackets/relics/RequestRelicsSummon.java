@@ -66,7 +66,7 @@ public class RequestRelicsSummon extends ClientPacket
 			return;
 		}
 		
-		if (player.getAccountVariables().getInt(AccountVariables.UNCONFIRMED_RELICS_COUNT, 0) == RelicSystemConfig.RELIC_UNCONFIRMED_LIST_LIMIT)
+		if (player.getAccountVariables().getInt(AccountVariables.UNCONFIRMED_RELICS_COUNT, 0) >= RelicSystemConfig.RELIC_UNCONFIRMED_LIST_LIMIT)
 		{
 			player.sendPacket(SystemMessageId.SUMMON_COMPOUND_IS_UNAVAILABLE_AS_YOU_HAVE_MORE_THAN_100_UNCONFIRMED_RELICS);
 			return;
