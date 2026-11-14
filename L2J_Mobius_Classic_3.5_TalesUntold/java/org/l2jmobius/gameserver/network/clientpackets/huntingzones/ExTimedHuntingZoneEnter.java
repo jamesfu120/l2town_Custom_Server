@@ -104,6 +104,12 @@ public class ExTimedHuntingZoneEnter extends ClientPacket
 			return;
 		}
 		
+		if (player.isDead() || player.isInStoreMode() || player.cannotEscape())
+		{
+			player.sendMessage("Cannot use time-limited hunting zones right now.");
+			return;
+		}
+		
 		final TimedHuntingZoneHolder holder = TimedHuntingZoneData.getInstance().getHuntingZone(_zoneId);
 		if (holder == null)
 		{
@@ -134,21 +140,17 @@ public class ExTimedHuntingZoneEnter extends ClientPacket
 		
 		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
 		final long lastEntryTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, 0);
-		if ((lastEntryTime + holder.getResetDelay()) < currentTime)
+		final boolean newPeriod = (lastEntryTime + holder.getResetDelay()) < currentTime;
+		if (newPeriod && (endTime == currentTime))
 		{
-			if (endTime == currentTime)
-			{
-				endTime += holder.getInitialTime();
-			}
-			
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, currentTime);
+			endTime += holder.getInitialTime();
 		}
 		
 		if (endTime > currentTime)
 		{
 			if (holder.getEntryItemId() == Inventory.ADENA_ID)
 			{
-				if (player.getAdena() > holder.getEntryFee())
+				if (player.getAdena() >= holder.getEntryFee())
 				{
 					player.reduceAdena(ItemProcessType.FEE, holder.getEntryFee(), player, true);
 				}
@@ -162,6 +164,12 @@ public class ExTimedHuntingZoneEnter extends ClientPacket
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 				return;
+			}
+			
+			// The period starts only once the fee is paid: recorded before it, a refused fee locked the zone until its reset.
+			if (newPeriod)
+			{
+				player.getVariables().set(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, currentTime);
 			}
 			
 			player.getVariables().set(PlayerVariables.LAST_HUNTING_ZONE_ID, _zoneId);
