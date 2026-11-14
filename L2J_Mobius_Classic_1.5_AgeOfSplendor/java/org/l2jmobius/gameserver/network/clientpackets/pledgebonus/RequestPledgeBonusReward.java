@@ -49,7 +49,7 @@ public class RequestPledgeBonusReward extends ClientPacket
 			return;
 		}
 		
-		if ((_type < 0) || (_type > ClanRewardType.values().length))
+		if ((_type < 0) || (_type >= ClanRewardType.values().length))
 		{
 			return;
 		}
