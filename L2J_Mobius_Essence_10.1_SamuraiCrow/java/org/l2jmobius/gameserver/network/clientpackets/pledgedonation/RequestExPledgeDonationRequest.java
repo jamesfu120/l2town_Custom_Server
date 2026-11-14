@@ -62,6 +62,13 @@ public class RequestExPledgeDonationRequest extends ClientPacket
 			return;
 		}
 		
+		// The daily count and the 24h after joining were only shown to the client.
+		if ((_type < 0) || (_type > 2) || (player.getClanDonationPoints() < 1) || ((player.getClanJoinTime() + 86400000) > System.currentTimeMillis()))
+		{
+			player.sendPacket(new ExPledgeDonationRequest(false, _type, player.getClanDonationPoints()));
+			return;
+		}
+		
 		switch (_type)
 		{
 			case 0:
@@ -73,6 +80,7 @@ public class RequestExPledgeDonationRequest extends ClientPacket
 				else
 				{
 					player.sendPacket(new ExPledgeDonationRequest(false, _type, 2));
+					return; // An unpaid donation went on to the count, the critical roll and the success packet.
 				}
 				break;
 			}
@@ -87,6 +95,7 @@ public class RequestExPledgeDonationRequest extends ClientPacket
 				else
 				{
 					player.sendPacket(new ExPledgeDonationRequest(false, _type, 2));
+					return; // An unpaid donation went on to the count, the critical roll and the success packet.
 				}
 				break;
 			}
@@ -101,6 +110,7 @@ public class RequestExPledgeDonationRequest extends ClientPacket
 				else
 				{
 					player.sendPacket(new ExPledgeDonationRequest(false, _type, 2));
+					return; // An unpaid donation went on to the count, the critical roll and the success packet.
 				}
 				break;
 			}
