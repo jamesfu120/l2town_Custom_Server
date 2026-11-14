@@ -96,7 +96,7 @@ public class RequestMissionLevelReceiveReward extends ClientPacket
 			}
 			case 3:
 			{
-				if ((_holder.getSpecialReward() == null) || info.getCollectedSpecialReward() || ((info.getCurrentLevel() != _level) && (info.getCurrentLevel() < _level)))
+				if ((_holder.getSpecialReward() == null) || info.getCollectedSpecialReward() || (info.getCurrentLevel() < _holder.getMaxLevel())) // The client sends the limit level: a lower one gave the special reward at any level.
 				{
 					player.removeRequest(RewardRequest.class);
 					return;

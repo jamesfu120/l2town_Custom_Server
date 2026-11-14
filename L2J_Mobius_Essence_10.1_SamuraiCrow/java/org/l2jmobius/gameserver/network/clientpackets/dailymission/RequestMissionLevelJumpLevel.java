@@ -20,6 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.dailymission;
 
+import org.l2jmobius.gameserver.data.holders.MissionLevelHolder;
 import org.l2jmobius.gameserver.data.xml.MissionLevel;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.holders.player.MissionLevelPlayerDataHolder;
@@ -55,10 +56,18 @@ public class RequestMissionLevelJumpLevel extends ClientPacket
 			return;
 		}
 		
+		// Jumping at or above the limit level only took the L-Coin.
+		final MissionLevelHolder holder = MissionLevel.getInstance().getMissionBySeason(MissionLevel.getInstance().getCurrentSeason());
+		if ((holder == null) || (player.getMissionLevelProgress().getCurrentLevel() >= holder.getMaxLevel()))
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		if (player.destroyItemByItemId(ItemProcessType.FEE, Inventory.LCOIN_ID, 1000, player, false))
 		{
 			final MissionLevelPlayerDataHolder info = player.getMissionLevelProgress();
-			info.setCurrentLevel(30);
+			info.setCurrentLevel(holder.getMaxLevel());
 			player.getVariables().set(PlayerVariables.MISSION_LEVEL_PROGRESS + MissionLevel.getInstance().getCurrentSeason(), info.getVariablesFromInfo());
 			player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		}
