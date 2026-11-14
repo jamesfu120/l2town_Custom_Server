@@ -68,6 +68,14 @@ public class RequestExAcquirePetSkill extends ClientPacket
 		}
 		
 		final Optional<PetSkillAcquireHolder> reqItem = PetAcquireList.getInstance().getSkills(pet.getPetData().getType()).stream().filter(it -> (it.getSkillId() == skillId) && (it.getSkillLevel() == skillLevel)).findFirst();
+		// Pet level, evolution and the previous skill level were checked by the client only.
+		final Skill knownSkill = pet.getKnownSkill(skillId);
+		final int knownLevel = knownSkill == null ? 0 : knownSkill.getLevel();
+		if (!reqItem.isPresent() || (pet.getLevel() < reqItem.get().getReqLvl()) || (pet.getEvolveLevel() < reqItem.get().getEvolve()) || (knownLevel >= skillLevel) || (knownLevel < (skillLevel - 1)))
+		{
+			return;
+		}
+
 		if (reqItem.isPresent())
 		{
 			if (reqItem.get().getItem() != null)

@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.entity.actor.instance.Pet;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.entity.item.holders.ItemHolder;
 import org.l2jmobius.gameserver.mechanics.skill.Skill;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.holders.PetSkillAcquireHolder;
 import org.l2jmobius.gameserver.network.serverpackets.pet.ExAcquirePetSkillResult;
@@ -72,31 +73,39 @@ public class RequestExAcquirePetSkill extends ClientPacket
 		}
 		
 		final Optional<PetSkillAcquireHolder> reqSkill = PetAcquireList.getInstance().getSkills(pet.getPetData().getType()).stream().filter(it -> (it.getSkillId() == skillId) && (it.getSkillLevel() == skillLevel)).findFirst();
-		if (reqSkill.isPresent())
+		// Pet level, evolution and the previous skill level were checked by the client only.
+		final Skill knownSkill = pet.getKnownSkill(skillId);
+		final int knownLevel = knownSkill == null ? 0 : knownSkill.getLevel();
+		if (!reqSkill.isPresent() || (pet.getLevel() < reqSkill.get().getReqLvl()) || (pet.getEvolveLevel() < reqSkill.get().getEvolve()) || (knownLevel >= skillLevel) || (knownLevel < (skillLevel - 1)))
 		{
-			// If no items are needed, learning is allowed directly.
-			final List<ItemHolder> requiredItems = reqSkill.get().getItems();
-			if (requiredItems.isEmpty())
+			player.sendPacket(new ExAcquirePetSkillResult(skillId, skillLevel, false));
+			return;
+		}
+		
+		// Every required item is needed: the old loop learned the skill after destroying the first one it could.
+		final List<ItemHolder> requiredItems = reqSkill.get().getItems();
+		for (ItemHolder item : requiredItems)
+		{
+			if (player.getInventory().getInventoryItemCount(item.getId(), -1) < item.getCount())
 			{
-				pet.addSkill(skill);
-				pet.storePetSkills(skillId, skillLevel);
-				player.sendPacket(new ExPetSkillList(false, pet));
-				player.sendPacket(new ExAcquirePetSkillResult(skillId, skillLevel, true));
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
+				player.sendPacket(new ExAcquirePetSkillResult(skillId, skillLevel, false));
 				return;
 			}
-			
-			// If items are needed, check and deduct all necessary items.
-			for (ItemHolder item : requiredItems)
+		}
+		
+		for (ItemHolder item : requiredItems)
+		{
+			if (!player.destroyItemByItemId(ItemProcessType.FEE, item.getId(), item.getCount(), null, true))
 			{
-				if (player.destroyItemByItemId(ItemProcessType.FEE, item.getId(), item.getCount(), null, true))
-				{
-					pet.addSkill(skill);
-					pet.storePetSkills(skillId, skillLevel);
-					player.sendPacket(new ExPetSkillList(false, pet));
-					player.sendPacket(new ExAcquirePetSkillResult(skillId, skillLevel, true));
-					break;
-				}
+				player.sendPacket(new ExAcquirePetSkillResult(skillId, skillLevel, false));
+				return;
 			}
 		}
+		
+		pet.addSkill(skill);
+		pet.storePetSkills(skillId, skillLevel);
+		player.sendPacket(new ExPetSkillList(false, pet));
+		player.sendPacket(new ExAcquirePetSkillResult(skillId, skillLevel, true));
 	}
 }
