@@ -89,6 +89,16 @@ public class RequestCollectionRegister extends ClientPacket
 			return;
 		}
 		
+		for (PlayerCollectionData coll : player.getCollections())
+		{
+			// Every slot of a collection can be registered once.
+			if ((coll.getCollectionId() == _collectionId) && (coll.getIndex() == _index))
+			{
+				player.sendMessage("This collection slot is already registered.");
+				return;
+			}
+		}
+		
 		player.destroyItem(ItemProcessType.FEE, item, count, player, true);
 		
 		player.sendPacket(new ExCollectionRegister(_collectionId, _index, item));

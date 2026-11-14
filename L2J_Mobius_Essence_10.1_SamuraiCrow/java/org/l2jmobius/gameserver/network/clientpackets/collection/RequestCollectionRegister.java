@@ -79,7 +79,7 @@ public class RequestCollectionRegister extends ClientPacket
 		long count = 0;
 		for (ItemEnchantHolder data : collection.getItems())
 		{
-			if ((data.getId() == item.getId()) && ((data.getEnchantLevel() == 0) || (data.getEnchantLevel() == item.getEnchantLevel())))
+			if ((data.getIndex() == _index) && (data.getId() == item.getId()) && ((data.getEnchantLevel() == 0) || (data.getEnchantLevel() == item.getEnchantLevel())))
 			{
 				count = data.getCount();
 				break;
@@ -95,7 +95,7 @@ public class RequestCollectionRegister extends ClientPacket
 		PlayerCollectionData currentColl = null;
 		for (PlayerCollectionData coll : player.getCollections())
 		{
-			if (coll.getCollectionId() == _collectionId)
+			if ((coll.getCollectionId() == _collectionId) && (coll.getIndex() == _index))
 			{
 				currentColl = coll;
 				break;
