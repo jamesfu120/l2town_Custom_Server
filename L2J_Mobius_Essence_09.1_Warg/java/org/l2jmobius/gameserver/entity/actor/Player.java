@@ -5953,25 +5953,41 @@ public class Player extends Playable
 	{
 		final Date date = new Date(System.currentTimeMillis());
 		final Item itemTransfer = getInventory().transferItem(ItemProcessType.TRANSFER, item.getObjectId(), item.getCount(), _itemPenalty, this, null);
-		if (_itemPenaltyList.size() < 30)
+		if (itemTransfer == null)
 		{
-			_itemPenaltyList.add(new ItemPenaltyHolder(itemTransfer.getObjectId(), killerObjectId, date));
+			return;
 		}
-		else
+		
+		// A stackable item joins the stack already lost: keep one entry per stack, a second one restored nothing and broke the list.
+		final int itemTransferId = itemTransfer.getObjectId();
+		for (ItemPenaltyHolder holder : new ArrayList<>(_itemPenaltyList))
+		{
+			if (holder.getItemObjectId() == itemTransferId)
+			{
+				removePenaltyItem(holder);
+			}
+		}
+		
+		// Over the limit the oldest item is lost: it is destroyed with its item_restore row, which came back after a relog.
+		if (_itemPenaltyList.size() >= 30)
 		{
 			final ItemPenaltyHolder itemToDelete = _itemPenaltyList.getFirst();
-			final Item newItem = _itemPenalty.getItemByObjectId(itemToDelete.getItemObjectId());
-			newItem.setOwnerId(0);
-			newItem.updateDatabase(true);
-			_itemPenaltyList.removeFirst();
-			_itemPenaltyList.add(new ItemPenaltyHolder(itemTransfer.getObjectId(), killerObjectId, date));
+			final Item oldItem = _itemPenalty.getItemByObjectId(itemToDelete.getItemObjectId());
+			if (oldItem != null)
+			{
+				_itemPenalty.destroyItem(ItemProcessType.DESTROY, oldItem, this, null);
+			}
+			
+			removePenaltyItem(itemToDelete);
 		}
+		
+		_itemPenaltyList.add(new ItemPenaltyHolder(itemTransferId, killerObjectId, date));
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO item_restore (ownerId, objectId, dateLost, killerObj) VALUES (?,?,?,?)"))
 		{
 			statement.setInt(1, getObjectId());
-			statement.setInt(2, itemTransfer.getObjectId());
+			statement.setInt(2, itemTransferId);
 			statement.setDate(3, date);
 			statement.setInt(4, killerObjectId);
 			statement.execute();

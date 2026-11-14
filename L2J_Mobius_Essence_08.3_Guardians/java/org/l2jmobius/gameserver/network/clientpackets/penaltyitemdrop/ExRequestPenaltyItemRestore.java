@@ -73,6 +73,22 @@ public class ExRequestPenaltyItemRestore extends ClientPacket
 			return;
 		}
 		
+		// Checked before the fee: a missing item threw NPE after paying, and the inventory had no space check.
+		final Item item = player.getItemPenalty().getItemByObjectId(itemPenalty.getItemObjectId());
+		if (item == null)
+		{
+			player.removePenaltyItem(itemPenalty);
+			player.sendPacket(new ExPenaltyItemList(player));
+			return;
+		}
+		
+		final long slots = (item.isStackable() && (player.getInventory().getItemByItemId(item.getId()) != null)) ? 0 : 1;
+		if (!player.getInventory().validateCapacity(slots) || !player.getInventory().validateWeight(item.getTemplate().getWeight() * item.getCount()))
+		{
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+			return;
+		}
+
 		final int price = _isAdena ? FeatureConfig.ITEM_PENALTY_RESTORE_ADENA : FeatureConfig.ITEM_PENALTY_RESTORE_LCOIN;
 		if (_isAdena)
 		{
@@ -82,13 +98,12 @@ public class ExRequestPenaltyItemRestore extends ClientPacket
 				return;
 			}
 		}
-		else if (!player.destroyItemByItemId(ItemProcessType.TRANSFER, Inventory.LCOIN_ID, price, null, true))
+		else if (!player.destroyItemByItemId(ItemProcessType.FEE, Inventory.LCOIN_ID, price, null, true))
 		{
 			player.sendPacket(SystemMessageId.NOT_ENOUGH);
 			return;
 		}
 		
-		final Item item = player.getItemPenalty().getItemByObjectId(itemPenalty.getItemObjectId());
 		player.getItemPenalty().transferItem(ItemProcessType.TRANSFER, item.getObjectId(), item.getCount(), player.getInventory(), player, null);
 		player.sendItemList();
 		

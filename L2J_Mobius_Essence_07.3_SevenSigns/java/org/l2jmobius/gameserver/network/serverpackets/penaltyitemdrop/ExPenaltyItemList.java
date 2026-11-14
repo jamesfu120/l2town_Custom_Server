@@ -51,8 +51,16 @@ public class ExPenaltyItemList extends ServerPacket
 		}
 		else
 		{
-			buffer.writeInt(_player.getItemPenaltyList().size());
-			final List<ItemPenaltyHolder> listItems = new ArrayList<>(_player.getItemPenaltyList());
+			// An entry without its item (lost stack, old rows) threw here and left the window empty.
+			final List<ItemPenaltyHolder> listItems = new ArrayList<>();
+			for (ItemPenaltyHolder holder : _player.getItemPenaltyList())
+			{
+				if (_player.getItemPenalty().getItemByObjectId(holder.getItemObjectId()) != null)
+				{
+					listItems.add(holder);
+				}
+			}
+			buffer.writeInt(listItems.size());
 			for (ItemPenaltyHolder holder : listItems.reversed())
 			{
 				final Item item = _player.getItemPenalty().getItemByObjectId(holder.getItemObjectId());
