@@ -49,7 +49,7 @@ public class ExUniqueGachaInvenItemList extends ClientPacket
 		final List<Item> items = new ArrayList<>(UniqueGachaManager.getInstance().getTemporaryWarehouse(player));
 		final int totalSize = items.size();
 		final int perPage = 150;
-		final int totalPages = totalSize / perPage;
+		final int totalPages = Math.max(0, totalSize - 1) / perPage; // Last page index: an exact multiple of perPage sent an extra empty page.
 		
 		for (int i = 0; i <= totalPages; i++)
 		{

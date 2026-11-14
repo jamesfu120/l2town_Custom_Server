@@ -61,6 +61,7 @@ import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLo
 import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.gacha.UniqueGachaSidebarInfo;
 import org.l2jmobius.gameserver.util.StatSet;
 
@@ -410,29 +411,66 @@ public class UniqueGachaManager
 			return false;
 		}
 		
-		// Check items.
+		// Check items, inventory space and weight. A count below 1 moved a stack backwards (warehouse +n, inventory -n): duplication.
+		long slots = 0;
+		long weight = 0;
 		for (ItemHolder requestedItem : requestedItems)
 		{
 			final ItemTemplate template = ItemData.getInstance().getTemplate(requestedItem.getId());
-			final List<Item> item = template == null ? null : template.isStackable() ? List.of(warehouse.getItemByItemId(requestedItem.getId())) : new ArrayList<>(warehouse.getAllItemsByItemId(requestedItem.getId()));
-			if ((item == null) || item.isEmpty())
+			if ((template == null) || (requestedItem.getCount() < 1))
 			{
 				return false;
 			}
 			
-			if ((template != null) && template.isStackable() ? item.get(0).getCount() < requestedItem.getCount() : item.size() < requestedItem.getCount())
+			if (template.isStackable())
 			{
-				return false;
+				final Item item = warehouse.getItemByItemId(requestedItem.getId());
+				if ((item == null) || (item.getCount() < requestedItem.getCount()))
+				{
+					return false;
+				}
+				
+				if (inventory.getItemByItemId(requestedItem.getId()) == null)
+				{
+					slots++;
+				}
 			}
+			else
+			{
+				if (warehouse.getAllItemsByItemId(requestedItem.getId()).size() < requestedItem.getCount())
+				{
+					return false;
+				}
+				
+				slots += requestedItem.getCount();
+			}
+			
+			weight += template.getWeight() * requestedItem.getCount();
+		}
+		
+		if (!inventory.validateCapacity(slots) || !inventory.validateWeight(weight))
+		{
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_S_WEIGHT_SLOT_LIMIT_HAS_BEEN_EXCEEDED_SO_YOU_CANNOT_RECEIVE_THE_REWARD_PLEASE_FREE_UP_SOME_SPACE_AND_TRY_AGAIN);
+			return false;
 		}
 		
 		for (ItemHolder requestedItem : requestedItems)
 		{
-			final ItemTemplate template = ItemData.getInstance().getTemplate(requestedItem.getId());
-			final List<Item> item = template.isStackable() ? List.of(warehouse.getItemByItemId(requestedItem.getId())) : new ArrayList<>(warehouse.getAllItemsByItemId(requestedItem.getId()));
-			for (Item wareHouseItem : item)
+			if (ItemData.getInstance().getTemplate(requestedItem.getId()).isStackable())
 			{
-				warehouse.transferItem(ItemProcessType.TRANSFER, wareHouseItem.getObjectId(), (template.isStackable() ? requestedItem.getCount() : 1), inventory, player, null);
+				final Item item = warehouse.getItemByItemId(requestedItem.getId());
+				if (item != null)
+				{
+					warehouse.transferItem(ItemProcessType.TRANSFER, item.getObjectId(), requestedItem.getCount(), inventory, player, null);
+				}
+				continue;
+			}
+			
+			// Only the requested number of copies, not every copy of the id.
+			final List<Item> copies = new ArrayList<>(warehouse.getAllItemsByItemId(requestedItem.getId()));
+			for (int i = 0; (i < copies.size()) && (i < requestedItem.getCount()); i++)
+			{
+				warehouse.transferItem(ItemProcessType.TRANSFER, copies.get(i).getObjectId(), 1, inventory, player, null);
 			}
 		}
 		

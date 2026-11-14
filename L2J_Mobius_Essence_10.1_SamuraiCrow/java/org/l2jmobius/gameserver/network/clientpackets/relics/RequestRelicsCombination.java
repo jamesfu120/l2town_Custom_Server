@@ -221,7 +221,7 @@ public class RequestRelicsCombination extends ClientPacket
 		{
 			needed.merge(ingredientId, 1, Integer::sum);
 		}
-
+		
 		for (Entry<Integer, Integer> entry : needed.entrySet())
 		{
 			final int relicId = entry.getKey();
@@ -230,7 +230,7 @@ public class RequestRelicsCombination extends ClientPacket
 			{
 				return false;
 			}
-
+			
 			PlayerRelicData ownedRelic = null;
 			for (PlayerRelicData relic : storedRelics)
 			{
@@ -240,13 +240,13 @@ public class RequestRelicsCombination extends ClientPacket
 					break;
 				}
 			}
-
+			
 			if ((ownedRelic == null) || (ownedRelic.getRelicCount() < entry.getValue()))
 			{
 				return false;
 			}
 		}
-
+		
 		return true;
 	}
 }

@@ -189,7 +189,7 @@ public class RequestItemEnsoul extends ClientPacket
 				PacketLogger.warning("Player: " + player + " attempting to ensoul item with an invalid option or slot: " + item + "!");
 				return;
 			}
-
+			
 			final boolean normal = itemOption.getType() == 1;
 			final EnsoulOption option = EnsoulData.getInstance().getOption(itemOption.getSoulCrystalOption());
 			if ((option == null) || (itemOption.getPosition() > (normal ? template.getEnsoulSlots() : template.getSpecialEnsoulSlots())))
@@ -197,18 +197,18 @@ public class RequestItemEnsoul extends ClientPacket
 				PacketLogger.warning("Player: " + player + " attempting to ensoul item with an invalid option or slot: " + item + "!");
 				return;
 			}
-
+			
 			final int slot = normal ? itemOption.getPosition() - 1 : 2;
 			if (requestedSlots[slot])
 			{
 				PacketLogger.warning("Player: " + player + " attempting to ensoul the same slot twice: " + item + "!");
 				return;
 			}
-
+			
 			requestedSlots[slot] = true;
 			resultSlots[slot] = option;
 		}
-
+		
 		for (int i = 0; i < resultSlots.length; i++)
 		{
 			for (int j = i + 1; j < resultSlots.length; j++)
@@ -220,7 +220,7 @@ public class RequestItemEnsoul extends ClientPacket
 				}
 			}
 		}
-
+		
 		int success = 0;
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (EnsoulItemOption itemOption : _options)

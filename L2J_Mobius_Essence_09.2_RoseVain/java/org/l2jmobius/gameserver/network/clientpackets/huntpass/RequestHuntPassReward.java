@@ -138,7 +138,7 @@ public class RequestHuntPassReward extends ClientPacket
 		{
 			givenRewards[1] = HuntPassData.getInstance().getPremiumRewards().get(premiumRewardIndex);
 		}
-
+		
 		long weight = 0;
 		long slots = 0;
 		for (ItemHolder given : givenRewards)
@@ -147,7 +147,7 @@ public class RequestHuntPassReward extends ClientPacket
 			{
 				continue;
 			}
-
+			
 			final ItemTemplate itemTemplate = ItemData.getInstance().getTemplate(given.getId());
 			if (itemTemplate != null)
 			{
