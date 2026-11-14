@@ -26,9 +26,11 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
+import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.enums.creature.Race;
 import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+import org.l2jmobius.gameserver.entity.item.ItemTemplate;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.entity.item.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
@@ -79,7 +81,7 @@ public class RequestCrystallizeItem extends ClientPacket
 			return;
 		}
 		
-		if (player.isInStoreMode() || !player.isInCrystallize())
+		if (player.isInStoreMode() || (player.getActiveTradeList() != null) || !player.isInCrystallize())
 		{
 			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
@@ -197,7 +199,43 @@ public class RequestCrystallizeItem extends ClientPacket
 		final List<ItemChanceHolder> crystallizationRewards = ItemCrystallizationData.getInstance().getCrystallizationRewards(itemToRemove);
 		if ((crystallizationRewards == null) || crystallizationRewards.isEmpty())
 		{
-			player.sendPacket(SystemMessageId.ANGEL_NEVIT_S_DESCENT_BONUS_TIME_S1);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_CRYSTALLIZED); // Was an unrelated Angel Nevit message.
+			return;
+		}
+		
+		// The crystals need space; the crystallized item frees its own slot when it is destroyed whole.
+		long slots = 0;
+		long weight = 0;
+		for (ItemChanceHolder holder : crystallizationRewards)
+		{
+			final ItemTemplate rewardTemplate = ItemData.getInstance().getTemplate(holder.getId());
+			if (rewardTemplate == null)
+			{
+				continue;
+			}
+			
+			if (!rewardTemplate.isStackable())
+			{
+				slots += holder.getCount();
+			}
+			else if (player.getInventory().getItemByItemId(holder.getId()) == null)
+			{
+				slots++;
+			}
+			
+			weight += rewardTemplate.getWeight() * holder.getCount();
+		}
+		
+		if (!itemToRemove.isStackable() || (_count >= itemToRemove.getCount()))
+		{
+			slots--;
+		}
+		
+		weight -= itemToRemove.getTemplate().getWeight() * _count;
+		if (!player.getInventory().validateCapacity(Math.max(0, slots)) || !player.getInventory().validateWeight(Math.max(0, weight)))
+		{
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -232,6 +270,13 @@ public class RequestCrystallizeItem extends ClientPacket
 		
 		// remove from inventory
 		final Item removedItem = player.getInventory().destroyItem(ItemProcessType.DESTROY, _objectId, _count, player, null);
+		if (removedItem == null) // Crystals were given even when nothing was destroyed.
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.setInCrystallize(false);
+			return;
+		}
+		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
 		player.sendPacket(iu); // Sent inventory update for destruction instantly.

@@ -73,7 +73,7 @@ public class RequestCrystallizeItem extends ClientPacket
 			return;
 		}
 		
-		if (player.isInStoreMode() || player.isInCrystallize())
+		if (player.isInStoreMode() || (player.getActiveTradeList() != null) || player.isInCrystallize())
 		{
 			player.sendMessage("'While operating a private store or workshop, you cannot discard, destroy or trade an item.");
 			return;
@@ -199,6 +199,13 @@ public class RequestCrystallizeItem extends ClientPacket
 		
 		// remove from inventory
 		final Item removedItem = player.getInventory().destroyItem(ItemProcessType.DESTROY, _objectId, _count, player, null);
+		if (removedItem == null) // Crystals were given even when nothing was destroyed.
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.setInCrystallize(false);
+			return;
+		}
+		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
 		player.sendPacket(iu); // Sent inventory update for destruction instantly.
