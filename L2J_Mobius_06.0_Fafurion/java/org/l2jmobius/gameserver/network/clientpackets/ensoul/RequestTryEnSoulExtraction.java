@@ -65,6 +65,19 @@ public class RequestTryEnSoulExtraction extends ClientPacket
 			return;
 		}
 		
+		// Type and position come from the client: two normal slots and one special slot, else an out of bounds index.
+		if (((_type != 1) || (_position < 0) || (_position > 1)) && ((_type != 2) || (_position != 0)))
+		{
+			player.sendPacket(new ExEnSoulExtractionResult(false, item));
+			return;
+		}
+		
+		if (player.isInStoreMode() || (player.getActiveTradeList() != null) || player.hasItemRequest())
+		{
+			player.sendPacket(new ExEnSoulExtractionResult(false, item));
+			return;
+		}
+		
 		EnsoulOption option = null;
 		if (_type == 1)
 		{
@@ -116,6 +129,7 @@ public class RequestTryEnSoulExtraction extends ClientPacket
 		
 		// Remove equipped rune.
 		item.removeSpecialAbility(_position, _type);
+		item.applySpecialAbilities(); // The second rune moved to the first slot lost its skill on an equipped item.
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
 		
