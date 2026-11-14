@@ -324,7 +324,13 @@ public class WorldExchangeManager implements IXmlReader
 		}
 		
 		final Map<WorldExchangeItemStatusType, List<WorldExchangeHolder>> playerBids = getPlayerBids(player.getObjectId());
-		if (playerBids.size() >= 10)
+		int bidCount = 0;
+		for (List<WorldExchangeHolder> bids : playerBids.values())
+		{
+			bidCount += bids.size();
+		}
+		
+		if (bidCount >= 10)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NO_SLOTS_AVAILABLE));
 			player.sendPacket(WorldExchangeRegisterItem.FAIL);
@@ -346,13 +352,20 @@ public class WorldExchangeManager implements IXmlReader
 		}
 		
 		final Item item = player.getInventory().getItemByObjectId(itemObjectId);
+		final WorldExchangeItemSubType category = _itemCategories.get(item.getId());
+		if (category == null)
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD));
+			player.sendPacket(WorldExchangeRegisterItem.FAIL);
+			return;
+		}
 		long feePrice = calculateFeeForRegister(player, itemObjectId, amount, priceForEach);
 		if ((WorldExchangeConfig.WORLD_EXCHANGE_MAX_ADENA_FEE != -1) && (feePrice > WorldExchangeConfig.WORLD_EXCHANGE_MAX_ADENA_FEE))
 		{
 			feePrice = WorldExchangeConfig.WORLD_EXCHANGE_MAX_ADENA_FEE;
 		}
 		
-		if (feePrice > player.getAdena())
+		if (feePrice > (player.getAdena() - (item.getId() == Inventory.ADENA_ID ? amount : 0)))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ADENA));
 			player.sendPacket(WorldExchangeRegisterItem.FAIL);
@@ -381,14 +394,6 @@ public class WorldExchangeManager implements IXmlReader
 		if (itemInstance == null)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NO_ITEM_FOUND));
-			player.sendPacket(WorldExchangeRegisterItem.FAIL);
-			return;
-		}
-		
-		final WorldExchangeItemSubType category = _itemCategories.get(itemInstance.getId());
-		if (category == null)
-		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD));
 			player.sendPacket(WorldExchangeRegisterItem.FAIL);
 			return;
 		}
@@ -669,7 +674,7 @@ public class WorldExchangeManager implements IXmlReader
 	 * @param player
 	 * @param worldExchangeId
 	 */
-	public void buyItem(Player player, long worldExchangeId)
+	public synchronized void buyItem(Player player, long worldExchangeId)
 	{
 		if (!WorldExchangeConfig.ENABLE_WORLD_EXCHANGE)
 		{
@@ -698,6 +703,14 @@ public class WorldExchangeManager implements IXmlReader
 			return;
 		}
 		
+		// Checked before paying: the item was added without any capacity or weight check.
+		if (!player.getInventory().validateCapacity(worldExchangeItem.getItemInstance()) || !player.getInventory().validateWeightByItemId(worldExchangeItem.getItemInstance().getId(), worldExchangeItem.getItemInstance().getCount()))
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
+			player.sendPacket(WorldExchangeBuyItem.FAIL);
+			return;
+		}
+
 		final Item lcoin = player.getInventory().getItemByItemId(Inventory.EINHASAD_COIN_ID);
 		if ((lcoin == null) || (lcoin.getCount() < worldExchangeItem.getPrice()))
 		{
