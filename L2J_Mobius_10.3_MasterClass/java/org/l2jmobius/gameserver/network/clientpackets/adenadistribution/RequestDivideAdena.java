@@ -1,23 +1,28 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.network.clientpackets.adenadistribution;
 
 import java.util.List;
 
+import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.request.AdenaDistributionRequest;
 import org.l2jmobius.gameserver.entity.groups.CommandChannel;
@@ -29,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivide
 import org.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaDone;
 
 /**
- * @author Sdw
+ * @author Sdw, JankisLT
  */
 public class RequestDivideAdena extends ClientPacket
 {
@@ -104,13 +109,13 @@ public class RequestDivideAdena extends ClientPacket
 			cancelDistribution(request);
 			return;
 		}
-		else if (targets.size() < request.getPlayers().size())
+		else if ((targets.size() != request.getPlayers().size()) || !targets.containsAll(request.getPlayers())) // Any leave or join, not only a smaller count.
 		{
 			player.sendPacket(SystemMessageId.THE_DISTRIBUTION_PARTICIPANTS_HAVE_CHANGED_ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
 			cancelDistribution(request);
 			return;
 		}
-		else if (player.getAdena() < _adenaCount)
+		else if ((_adenaCount < 1) || (player.getAdena() < _adenaCount))
 		{
 			player.sendPacket(SystemMessageId.DISTRIBUTION_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA_FOR_DISTRIBUTION);
 			cancelDistribution(request);
@@ -118,6 +123,18 @@ public class RequestDivideAdena extends ClientPacket
 		}
 		
 		final long memberAdenaGet = _adenaCount / targets.size();
+		
+		// addAdena cuts a share at the adena limit, and the cut part was lost after the leader paid in full.
+		for (Player target : targets)
+		{
+			if ((target != null) && (target.getAdena() > (PlayerConfig.MAX_ADENA - memberAdenaGet)))
+			{
+				player.sendPacket(SystemMessageId.DISTRIBUTION_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA_FOR_DISTRIBUTION);
+				cancelDistribution(request);
+				return;
+			}
+		}
+		
 		if (player.reduceAdena(ItemProcessType.TRANSFER, memberAdenaGet * targets.size(), player, false))
 		{
 			for (Player target : targets)
