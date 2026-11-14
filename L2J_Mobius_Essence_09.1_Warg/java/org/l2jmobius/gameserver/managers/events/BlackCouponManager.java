@@ -122,6 +122,11 @@ public class BlackCouponManager
 	public BlackCouponRestoreCategory getCategoryByItemId(int itemId)
 	{
 		final ItemTemplate item = ItemData.getInstance().getTemplate(itemId);
+		if (item == null) // An unknown id from the client threw NPE below.
+		{
+			return null;
+		}
+		
 		if (_restoreIdFromXml)
 		{
 			if (_xmlRestoreList.containsKey(itemId))

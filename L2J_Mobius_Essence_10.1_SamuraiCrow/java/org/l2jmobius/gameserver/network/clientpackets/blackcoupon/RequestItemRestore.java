@@ -57,7 +57,8 @@ public class RequestItemRestore extends ClientPacket
 		}
 		
 		final BlackCouponManager manager = BlackCouponManager.getInstance();
-		if (player.getInventory().getInventoryItemCount(manager.getBlackCouponId(), -1) < 1L)
+		// Outside the event the coupon is never set (NPE), and the check must cover the count that is destroyed.
+		if (!manager.getEventStatus() || (player.getInventory().getInventoryItemCount(manager.getBlackCouponId(), -1) < manager.getBlackCouponCount()))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			player.sendPacket(ItemRestoreResult.FAIL);
@@ -76,13 +77,15 @@ public class RequestItemRestore extends ClientPacket
 		}
 		
 		final ItemRestoreHolder restoreHolder = filter.stream().filter(holder -> holder.getEnchantLevel() == _enchantLevel).min(Comparator.comparingLong(ItemRestoreHolder::getDestroyDate)).orElse(null);
-		if (restoreHolder == null)
+		if ((restoreHolder == null) || !player.destroyItemByItemId(ItemProcessType.FEE, manager.getBlackCouponId(), manager.getBlackCouponCount(), player, true))
 		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ItemRestoreResult.FAIL);
 			return;
 		}
 		
-		player.destroyItemByItemId(ItemProcessType.FEE, manager.getBlackCouponId(), manager.getBlackCouponCount(), player, true);
-		final Item item = player.addItem(ItemProcessType.REWARD, restoreHolder.getRepairItemId(), manager.getBlackCouponCount(), restoreHolder.getEnchantLevel(), player, true);
+		// One restored item; the coupon count was used as the item count.
+		final Item item = player.addItem(ItemProcessType.REWARD, restoreHolder.getRepairItemId(), 1, restoreHolder.getEnchantLevel(), player, true);
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
 		player.sendInventoryUpdate(iu);
