@@ -211,7 +211,25 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 		}
 		
 		// Check existing items.
-		final int remainingInfo = Math.max(0, Math.max(_product.getAccountBuyLimit(), Math.max(_product.getAccountDailyLimit(), _product.getAccountMonthlyLimit())));
+		// Left before this purchase under the limit checked above (was the largest limit: earlier purchases and the weekly limit ignored).
+		int remaining = 0;
+		if (_product.getAccountDailyLimit() > 0)
+		{
+			remaining = _product.getAccountDailyLimit() - player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + _product.getProductionId(), 0);
+		}
+		else if (_product.getAccountWeeklyLimit() > 0)
+		{
+			remaining = _product.getAccountWeeklyLimit() - player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_WEEKLY_COUNT + _product.getProductionId(), 0);
+		}
+		else if (_product.getAccountMonthlyLimit() > 0)
+		{
+			remaining = _product.getAccountMonthlyLimit() - player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_MONTHLY_COUNT + _product.getProductionId(), 0);
+		}
+		else if (_product.getAccountBuyLimit() > 0)
+		{
+			remaining = _product.getAccountBuyLimit() - player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0);
+		}
+		final int remainingInfo = Math.max(0, remaining);
 		for (int i = 0; i < _product.getIngredientIds().length; i++)
 		{
 			if (_product.getIngredientIds()[i] == 0)
@@ -328,7 +346,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket
 					final Collection<Item> items = player.getInventory().getAllItemsByItemId(_product.getIngredientIds()[i], _product.getIngredientEnchants()[i]);
 					for (Item item : items)
 					{
-						if (count == ingredientQuantity)
+						if (count == (ingredientQuantity * _amount))
 						{
 							break;
 						}
