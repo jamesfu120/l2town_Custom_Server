@@ -23,6 +23,7 @@ package org.l2jmobius.gameserver.network.clientpackets.autopeel;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.request.AutoPeelRequest;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.ActionType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.autopeel.ExReadyItemAutoPeel;
 
@@ -49,7 +50,7 @@ public class ExRequestReadyItemAutoPeel extends ClientPacket
 		}
 		
 		final Item item = player.getInventory().getItemByObjectId(_itemObjectId);
-		if ((item == null) || !item.isEtcItem() || (item.getEtcItem().getExtractableItems() == null) || item.getEtcItem().getExtractableItems().isEmpty())
+		if ((item == null) || !item.isEtcItem() || (item.getTemplate().getDefaultAction() != ActionType.PEEL) || (item.getEtcItem().getExtractableItems() == null) || item.getEtcItem().getExtractableItems().isEmpty())
 		{
 			player.sendPacket(new ExReadyItemAutoPeel(false, _itemObjectId));
 			return;

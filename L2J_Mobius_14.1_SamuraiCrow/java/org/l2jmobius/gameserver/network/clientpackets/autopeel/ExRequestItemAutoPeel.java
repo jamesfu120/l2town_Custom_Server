@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.request.AutoPeelRequest;
 import org.l2jmobius.gameserver.entity.item.EtcItem;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.item.type.ActionType;
+import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
@@ -66,7 +68,7 @@ public class ExRequestItemAutoPeel extends ClientPacket
 		if (request == null)
 		{
 			final Item item = player.getInventory().getItemByObjectId(_itemObjectId);
-			if ((item == null) || !item.isEtcItem() || (item.getEtcItem().getExtractableItems() == null) || item.getEtcItem().getExtractableItems().isEmpty())
+			if ((item == null) || !item.isEtcItem() || (item.getTemplate().getDefaultAction() != ActionType.PEEL) || (item.getEtcItem().getExtractableItems() == null) || item.getEtcItem().getExtractableItems().isEmpty())
 			{
 				return;
 			}
@@ -88,7 +90,8 @@ public class ExRequestItemAutoPeel extends ClientPacket
 			return;
 		}
 		
-		if (!item.getTemplate().checkCondition(player, item, true))
+		// The handler is called directly, so the UseItem state checks are repeated here.
+		if (player.isAlikeDead() || player.hasBlockActions() || player.isControlBlocked() || player.isInStoreMode() || (player.getActiveTradeList() != null) || player.isInsideZone(ZoneId.JAIL) || !item.getTemplate().checkCondition(player, item, true))
 		{
 			player.sendPacket(new ExResultItemAutoPeel(false, _totalPeelCount, _remainingPeelCount, Collections.emptyList()));
 			player.removeRequest(request.getClass());
