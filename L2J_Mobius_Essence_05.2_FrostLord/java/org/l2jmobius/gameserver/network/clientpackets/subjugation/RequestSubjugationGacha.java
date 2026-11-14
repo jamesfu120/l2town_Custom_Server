@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.data.xml.SubjugationGacha;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.holders.player.PlayerPurgeHolder;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationGacha;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationGachaUI;
@@ -64,11 +65,19 @@ public class RequestSubjugationGacha extends ClientPacket
 		
 		final PlayerPurgeHolder playerKeys = player.getPurgePoints().get(_category);
 		final Map<Integer, Double> subjugationData = SubjugationGacha.getInstance().getSubjugation(_category);
-		if ((playerKeys != null) && (playerKeys.getKeys() >= _amount) && (player.getInventory().getAdena() > (20000L * _amount)))
+		if ((subjugationData != null) && (playerKeys != null) && (playerKeys.getKeys() >= _amount) && (player.getInventory().getAdena() >= (20000L * _amount)))
 		{
+			// Each draw adds one item, possibly non-stackable.
+			if (!player.isInventoryUnder80(false) || !player.getInventory().validateCapacity(_amount))
+			{
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_IS_LESS_THAN_80_AND_SLOT_COUNT_IS_LESS_THAN_90_OF_CAPACITY);
+				return;
+			}
+			
 			player.getInventory().reduceAdena(ItemProcessType.FEE, 20000L * _amount, player, null);
 			final int curKeys = playerKeys.getKeys() - _amount;
-			player.getPurgePoints().put(_category, new PlayerPurgeHolder(playerKeys.getPoints(), curKeys, 0));
+			// Keep the weekly allowance: 0 froze the points while keys were left, and refilled it to 40 once they were spent.
+			player.getPurgePoints().put(_category, new PlayerPurgeHolder(playerKeys.getPoints(), curKeys, playerKeys.getRemainingKeys()));
 			final int dataSize = subjugationData.size();
 			final double[] chances = new double[dataSize];
 			final int[] itemIds = new int[dataSize];
