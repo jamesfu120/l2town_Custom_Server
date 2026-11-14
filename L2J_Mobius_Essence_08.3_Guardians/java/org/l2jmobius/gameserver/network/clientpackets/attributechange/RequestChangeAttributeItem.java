@@ -64,6 +64,28 @@ public class RequestChangeAttributeItem extends ClientPacket
 		final PlayerInventory inventory = player.getInventory();
 		final Item item = inventory.getItemByObjectId(_itemObjId);
 		
+		// The consumed id came from the client: any item worked as the crystal, and the target was only checked after destroying it.
+		if ((item == null) || !item.isWeapon() || !item.hasAttributes() || (item.getAttackAttribute() == null) || player.isInStoreMode())
+		{
+			player.sendPacket(ExChangeAttributeFail.STATIC);
+			return;
+		}
+		
+		final AttributeType newType = AttributeType.findByClientId(_newElementId);
+		if ((newType == null) || (newType == AttributeType.NONE) || (newType == item.getAttackAttributeType()))
+		{
+			player.sendPacket(ExChangeAttributeFail.STATIC);
+			return;
+		}
+		
+		// A missing crystal still goes to the punishment below.
+		final Item crystal = inventory.getItemByItemId(_consumeItemId);
+		if ((crystal != null) && (!crystal.isEtcItem() || !"ChangeAttributeCrystal".equals(crystal.getEtcItem().getHandlerName()) || (crystal.getTemplate().getCrystalTypePlus() != item.getTemplate().getCrystalTypePlus())))
+		{
+			player.sendPacket(ExChangeAttributeFail.STATIC);
+			return;
+		}
+		
 		// Attempting to destroy item.
 		if (player.getInventory().destroyItemByItemId(ItemProcessType.FEE, _consumeItemId, 1, player, item) == null)
 		{
@@ -77,7 +99,7 @@ public class RequestChangeAttributeItem extends ClientPacket
 		final int oldElementId = item.getAttackAttributeType().getClientId();
 		final int elementValue = item.getAttackAttribute().getValue();
 		item.clearAllAttributes();
-		item.setAttribute(new AttributeHolder(AttributeType.findByClientId(_newElementId), elementValue), true);
+		item.setAttribute(new AttributeHolder(newType, elementValue), true);
 		
 		// send packets
 		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_SUCCESSFULLY_CHANGED_TO_S3_ATTRIBUTE);
