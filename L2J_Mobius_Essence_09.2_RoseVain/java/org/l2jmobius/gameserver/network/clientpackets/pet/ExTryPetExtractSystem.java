@@ -66,6 +66,12 @@ public class ExTryPetExtractSystem extends ClientPacket
 		}
 		
 		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(petItem.getId());
+		if (petData == null)
+		{
+			player.sendPacket(new ResultPetExtractSystem(false));
+			return;
+		}
+		
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
 		final Pet pet = new Pet(npcTemplate, player, petItem);
 		final PetInventory petInventory = pet.getInventory();
@@ -93,6 +99,12 @@ public class ExTryPetExtractSystem extends ClientPacket
 		{
 			final int extractItemId = holder.getExtractItem();
 			final int extractItemCount = (int) (petInfo.getStat().getExp() / holder.getExtractExp());
+			if (extractItemCount < 1) // Not enough exp for one item: the pet and the default fee were taken for nothing.
+			{
+				player.sendPacket(new ResultPetExtractSystem(false));
+				return;
+			}
+			
 			final int extractCostId = holder.getExtractCost().getId();
 			final long extractCostCount = holder.getExtractCost().getCount() * extractItemCount;
 			final int defaultCostId = holder.getDefaultCost().getId();
