@@ -47,7 +47,7 @@ public class RequestHuntPassBuyPremium extends ClientPacket
 	protected void runImpl()
 	{
 		final Player player = getPlayer();
-		if (player == null)
+		if ((player == null) || (player.getHuntPass() == null) || player.getHuntPass().isPremium()) // A second request paid again for the same premium.
 		{
 			return;
 		}

@@ -54,22 +54,25 @@ public class HuntpassSayhasToggle extends ClientPacket
 			return;
 		}
 		
-		if (player.getVitalityPoints() < 35000)
+		// Only a change of state: activating again restarted the span without counting the time used so far.
+		if (_sayhaToggle == huntPass.toggleSayha())
+		{
+			player.sendPacket(new HuntPassSayhasSupportInfo(player));
+			return;
+		}
+		
+		if (!_sayhaToggle)
+		{
+			huntPass.setSayhasSustention(false);
+		}
+		else if (player.getVitalityPoints() < 35000) // Required to activate only, deactivating is always allowed.
 		{
 			player.sendPacket(SystemMessageId.UNABLE_TO_ACTIVATE_YOU_CAN_USE_SAYHA_S_GRACE_SUSTENTION_EFFECT_OF_THE_SEASON_PASS_ONLY_IF_YOU_HAVE_AT_LEAST_35_000_SAYHA_S_GRACE_POINTS);
 			return;
 		}
-		
-		int timeEarned = huntPass.getAvailableSayhaTime();
-		int timeUsed = huntPass.getUsedSayhaTime();
-		
-		if (_sayhaToggle && (timeEarned > 0) && (timeEarned > timeUsed))
+		else if ((huntPass.getAvailableSayhaTime() > 0) && (huntPass.getAvailableSayhaTime() > huntPass.getUsedSayhaTime()))
 		{
 			huntPass.setSayhasSustention(true);
-		}
-		else
-		{
-			huntPass.setSayhasSustention(false);
 		}
 		
 		player.sendPacket(new HuntPassSayhasSupportInfo(player));

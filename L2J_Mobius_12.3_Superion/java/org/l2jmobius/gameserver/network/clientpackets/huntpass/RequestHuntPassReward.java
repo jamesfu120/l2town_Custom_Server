@@ -57,7 +57,7 @@ public class RequestHuntPassReward extends ClientPacket
 	protected void runImpl()
 	{
 		final Player player = getPlayer();
-		if (player == null)
+		if ((player == null) || (player.getHuntPass() == null))
 		{
 			return;
 		}
@@ -128,9 +128,33 @@ public class RequestHuntPassReward extends ClientPacket
 			return;
 		}
 		
-		final ItemTemplate itemTemplate = ItemData.getInstance().getTemplate(reward.getId());
-		final long weight = itemTemplate.getWeight() * reward.getCount();
-		final long slots = itemTemplate.isStackable() ? 1 : reward.getCount();
+		// One request can give both the normal and the premium reward (see normalReward and premiumReward), so both are checked.
+		final ItemHolder[] givenRewards = new ItemHolder[2];
+		if ((rewardIndex < HuntPassData.getInstance().getRewardsCount()) && (!huntPass.isPremium() || ((premiumRewardIndex >= rewardIndex) && (premiumRewardIndex < HuntPassData.getInstance().getPremiumRewardsCount()))))
+		{
+			givenRewards[0] = HuntPassData.getInstance().getRewards().get(rewardIndex);
+		}
+		if (huntPass.isPremium() && (premiumRewardIndex < HuntPassData.getInstance().getPremiumRewardsCount()))
+		{
+			givenRewards[1] = HuntPassData.getInstance().getPremiumRewards().get(premiumRewardIndex);
+		}
+
+		long weight = 0;
+		long slots = 0;
+		for (ItemHolder given : givenRewards)
+		{
+			if (given == null)
+			{
+				continue;
+			}
+
+			final ItemTemplate itemTemplate = ItemData.getInstance().getTemplate(given.getId());
+			if (itemTemplate != null)
+			{
+				weight += itemTemplate.getWeight() * given.getCount();
+				slots += itemTemplate.isStackable() ? 1 : given.getCount();
+			}
+		}
 		if (!player.getInventory().validateWeight(weight) || !player.getInventory().validateCapacity(slots))
 		{
 			player.sendPacket(SystemMessageId.YOUR_INVENTORY_S_WEIGHT_SLOT_LIMIT_HAS_BEEN_EXCEEDED_SO_YOU_CANNOT_RECEIVE_THE_REWARD_PLEASE_FREE_UP_SOME_SPACE_AND_TRY_AGAIN);

@@ -132,7 +132,13 @@ public class HuntPass
 			statement.setBoolean(5, isPremium());
 			statement.setInt(6, getPremiumRewardStep());
 			statement.setInt(7, getAvailableSayhaTime());
-			statement.setInt(8, getUsedSayhaTime());
+			// The running sustention span is only added when toggled off, so a logout while active stored it as unused.
+			int usedSayhaTime = getUsedSayhaTime();
+			if (_toggleSayha && (_toggleStartTime > 0))
+			{
+				usedSayhaTime += (int) ((System.currentTimeMillis() / 1000) - _toggleStartTime);
+			}
+			statement.setInt(8, usedSayhaTime);
 			statement.setBoolean(9, rewardAlert());
 			statement.execute();
 			statement.close();
