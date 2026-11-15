@@ -2464,9 +2464,10 @@ public class Item extends WorldObject
 			ps.setInt(1, getObjectId());
 			ps.setInt(2, option.getId());
 			ps.execute();
-			
+
+// Only an equipped item gave the skill: for an item in the inventory this removed the equipped item's skill of the same id.			
 			final Skill skill = option.getSkill();
-			if (skill != null)
+			if ((skill != null) && isEquipped())
 			{
 				final Player player = asPlayer();
 				if (player != null)
