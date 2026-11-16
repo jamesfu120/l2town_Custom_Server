@@ -94,6 +94,7 @@ public class ExRequestUserWatcherAdd extends ClientPacket
 		catch (Exception e)
 		{
 			PacketLogger.warning("ExRequestUserWatcherAdd: Could not add surveillance objectid: " + e.getMessage());
+			return; // Not stored: listed until relog only.
 		}
 		
 		// Player added to your friend list.
