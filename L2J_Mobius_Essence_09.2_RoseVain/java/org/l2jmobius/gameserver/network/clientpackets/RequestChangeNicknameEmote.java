@@ -93,28 +93,23 @@ public class RequestChangeNicknameEmote extends ClientPacket
 		// return;
 		// }
 		
-		if (((_itemId == ESPECIAL_COLOR_TITLE_EMOTE) || (_itemId == ESPECIAL_COLOR_TITLE_SEALED) || (_itemId == ESPECIAL_STYLISH_COLOR_TITLE)) && player.destroyItem(ItemProcessType.NONE, item, 1, null, true))
+		// The color index is resolved before the item is destroyed: 0 (and 1 for the common items) threw after destroying it.
+		final boolean special = (_itemId == ESPECIAL_COLOR_TITLE_EMOTE) || (_itemId == ESPECIAL_COLOR_TITLE_SEALED) || (_itemId == ESPECIAL_STYLISH_COLOR_TITLE);
+		int colorIndex = special ? _colorNum - 1 : _colorNum - 2;
+		if (!special && (colorIndex > 11) && (player.getLevel() >= 90))
 		{
-			player.setTitle(_title);
-			player.getAppearance().setTitleColor(COLORS[_colorNum - 1]);
-			player.broadcastUserInfo();
-			player.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
+			colorIndex = 15;
+		}
+		
+		if ((colorIndex < 0) || (colorIndex >= COLORS.length) || !player.destroyItem(ItemProcessType.NONE, item, 1, null, true))
+		{
 			return;
 		}
 		
-		if (player.destroyItem(ItemProcessType.NONE, item, 1, null, true))
-		{
-			int skyblue = _colorNum - 2;
-			if ((skyblue > 11) && (player.getLevel() >= 90))
-			{
-				skyblue = 15;
-			}
-			
-			player.setTitle(_title);
-			player.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
-			player.getAppearance().setTitleColor(COLORS[skyblue]);
-			player.broadcastUserInfo();
-		}
+		player.setTitle(_title);
+		player.getAppearance().setTitleColor(COLORS[colorIndex]);
+		player.broadcastUserInfo();
+		player.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
 		
 	}
 	
