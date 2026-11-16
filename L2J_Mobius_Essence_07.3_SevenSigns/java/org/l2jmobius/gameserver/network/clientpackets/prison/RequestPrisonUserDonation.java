@@ -38,7 +38,7 @@ public class RequestPrisonUserDonation extends ClientPacket
 	protected void runImpl()
 	{
 		Player player = getPlayer();
-		if (player == null)
+		if ((player == null) || !player.isPrisoner()) // The donation bail stays after release: a free player paid again for reputation and a teleport.
 		{
 			return;
 		}

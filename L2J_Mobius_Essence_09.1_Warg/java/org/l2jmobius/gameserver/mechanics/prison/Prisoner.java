@@ -152,7 +152,7 @@ public class Prisoner
 	
 	public void requestFreedomByDonation(Player player)
 	{
-		if (!player.destroyItemByItemId(ItemProcessType.FEE, _donationBailHolder.getId(), _donationBailHolder.getCount(), player, true))
+		if ((_donationBailHolder == null) || !player.destroyItemByItemId(ItemProcessType.FEE, _donationBailHolder.getId(), _donationBailHolder.getCount(), player, true)) // Null before any sentence.
 		{
 			player.sendPacket(new ExPrisonUserDonation(false));
 		}
