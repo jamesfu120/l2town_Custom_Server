@@ -67,13 +67,39 @@ public class ExEvolvePet extends ClientPacket
 			final boolean isAbleToEvolveLevel1 = (pet.getLevel() >= 40) && (pet.getEvolveLevel() == EvolveLevel.None.ordinal());
 			final boolean isAbleToEvolveLevel2 = (pet.getLevel() >= 76) && (pet.getEvolveLevel() == EvolveLevel.First.ordinal());
 			
-			if (isAbleToEvolveLevel1 && (activeChar.destroyItemByItemId(ItemProcessType.FEE, 94096, 1, null, true) || activeChar.destroyItemByItemId(ItemProcessType.FEE, 103391, 1, null, true)))
+			final EvolveLevel evolveLevel = isAbleToEvolveLevel1 ? EvolveLevel.First : isAbleToEvolveLevel2 ? EvolveLevel.Second : null;
+			if (evolveLevel == null)
 			{
-				doEvolve(activeChar, pet, EvolveLevel.First);
+				return;
 			}
-			else if (isAbleToEvolveLevel2 && (activeChar.destroyItemByItemId(ItemProcessType.FEE, 94117, 1, null, true) || activeChar.destroyItemByItemId(ItemProcessType.FEE, 103392, 1, null, true)))
+			
+			// The evolved pet is resolved before the stone is taken: missing data threw or returned after the stone and the unsummon.
+			final List<PetData> pets = PetDataTable.getInstance().getPetDatasByEvolve(pet.getControlItem().getId(), evolveLevel);
+			if ((pets == null) || pets.isEmpty())
 			{
-				doEvolve(activeChar, pet, EvolveLevel.Second);
+				return;
+			}
+			
+			final PetData targetPet = pets.get(Rnd.get(pets.size()));
+			final PetData petData = PetDataTable.getInstance().getPetData(targetPet.getNpcId());
+			if ((petData == null) || (petData.getNpcId() == -1))
+			{
+				return;
+			}
+			
+			final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(evolveLevel == EvolveLevel.Second ? pet.getId() + 2 : petData.getNpcId());
+			if (npcTemplate == null)
+			{
+				return;
+			}
+			
+			// One of two stones: trying the first with a message showed an error when the second one was used.
+			final int firstStone = evolveLevel == EvolveLevel.First ? 94096 : 94117;
+			final int secondStone = evolveLevel == EvolveLevel.First ? 103391 : 103392;
+			final int stoneId = activeChar.getInventory().getItemByItemId(firstStone) != null ? firstStone : secondStone;
+			if (activeChar.destroyItemByItemId(ItemProcessType.FEE, stoneId, 1, null, true))
+			{
+				doEvolve(activeChar, pet, evolveLevel, npcTemplate);
 			}
 		}
 		else
@@ -82,19 +108,10 @@ public class ExEvolvePet extends ClientPacket
 		}
 	}
 	
-	private void doEvolve(Player activeChar, Pet pet, EvolveLevel evolveLevel)
+	private void doEvolve(Player activeChar, Pet pet, EvolveLevel evolveLevel, NpcTemplate npcTemplate)
 	{
 		final Item controlItem = pet.getControlItem();
 		pet.unSummon(activeChar);
-		final List<PetData> pets = PetDataTable.getInstance().getPetDatasByEvolve(controlItem.getId(), evolveLevel);
-		final PetData targetPet = pets.get(Rnd.get(pets.size()));
-		final PetData petData = PetDataTable.getInstance().getPetData(targetPet.getNpcId());
-		if ((petData == null) || (petData.getNpcId() == -1))
-		{
-			return;
-		}
-		
-		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(evolveLevel == EvolveLevel.Second ? pet.getId() + 2 : petData.getNpcId());
 		final Pet evolved = Pet.spawnPet(npcTemplate, activeChar, controlItem);
 		if (evolved == null)
 		{

@@ -196,7 +196,7 @@ public class ExPetEquipItem extends ClientPacket
 					final Item transferedItem = player.transferItem(ItemProcessType.TRANSFER, item.getObjectId(), 1, pet.getInventory(), null);
 					pet.useEquippableItem(transferedItem, false);
 					sendInfos(pet, player);
-				}, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+				}, TimeUnit.NANOSECONDS.toMillis(Math.max(0, player.getAttackEndTime() - System.nanoTime()))); // The end time is System.nanoTime based, the delay in ms (as in UseItem).
 			}
 			else
 			{

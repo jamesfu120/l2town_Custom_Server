@@ -97,6 +97,11 @@ public class ExPetUnequipItem extends ClientPacket
 		
 		// Char cannot use item when dead.
 		final Item item = pet.getInventory().getItemByObjectId(_objectId);
+		if (item == null) // An object id not in the pet inventory threw NPE below.
+		{
+			return;
+		}
+		
 		if (player.isDead() || pet.isDead() || !player.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_THE_REQUIREMENTS_ARE_NOT_MET);
