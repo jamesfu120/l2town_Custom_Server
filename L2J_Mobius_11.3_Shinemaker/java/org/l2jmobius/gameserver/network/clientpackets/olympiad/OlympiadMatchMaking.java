@@ -78,6 +78,7 @@ public class OlympiadMatchMaking extends ClientPacket
 			return;
 		}
 		
+		boolean registered = false;
 		if (_gameRuleType == 1)
 		{
 			if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) /* || (player.getLevel() < 110) */) // TODO: Config and include at OlyManager script.
@@ -90,8 +91,15 @@ public class OlympiadMatchMaking extends ClientPacket
 			}
 			else
 			{
-				OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
+				registered = OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
 			}
+		}
+		
+		// The client was told it was in the queue even when the registration failed.
+		if (!registered)
+		{
+			player.sendPacket(new ExOlympiadMatchMakingResult(_gameRuleType, 0));
+			return;
 		}
 		
 		player.sendPacket(new ExOlympiadMatchMakingResult(_gameRuleType, 1));
