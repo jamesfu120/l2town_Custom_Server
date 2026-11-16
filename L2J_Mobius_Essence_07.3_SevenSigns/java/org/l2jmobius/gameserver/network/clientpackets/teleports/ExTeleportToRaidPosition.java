@@ -89,7 +89,8 @@ public class ExTeleportToRaidPosition extends ClientPacket
 		}
 		
 		// Players should not be able to teleport if in combat, or in a special location.
-		if (player.isCastingNow() || player.isInCombat() || player.isImmobilized() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInTimedHuntingZone())
+		// Also the prison, store, fishing and movie checks of ExRequestTeleport: a prisoner could leave the labyrinth here.
+		if (player.isCastingNow() || player.isInCombat() || player.isImmobilized() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInTimedHuntingZone() || player.isPrisoner() || player.isInStoreMode() || player.isFishing() || (player.getMovieHolder() != null))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
 			return;
