@@ -2822,13 +2822,17 @@
 			<value level="1">79</value>
 			<value level="2">82</value>
 		</magicLevel>
-		<mpConsume>32</mpConsume>
+		<mpConsume>40</mpConsume>
 		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="DamageShield">
-				<amount>20</amount>
+				<amount>10</amount>
 			</effect>
-			<effect name="CallSkill" fromLevel="2" toLevel="2">
+			<effect name="TriggerSkillByDamageReceived" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
 				<skillId>47358</skillId> <!-- Revenge Counterattack -->
 				<skillLevel>1</skillLevel>
 			</effect>

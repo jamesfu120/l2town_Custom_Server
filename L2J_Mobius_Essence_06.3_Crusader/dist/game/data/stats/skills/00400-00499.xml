@@ -2928,9 +2928,13 @@
 		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="DamageShield">
-				<amount>20</amount>
+				<amount>10</amount>
 			</effect>
-			<effect name="CallSkill" fromLevel="2" toLevel="2">
+			<effect name="TriggerSkillByDamageReceived" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
 				<skillId>47358</skillId> <!-- Revenge Counterattack -->
 				<skillLevel>1</skillLevel>
 			</effect>
