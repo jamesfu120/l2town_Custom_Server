@@ -54,12 +54,16 @@ public class RequestCrossEventNormalReward extends ClientPacket
 			return;
 		}
 		
-		if (CrossEventManager.getInstance().getGameTickets(player) == 0)
+		// A full board made getRandomCell recurse forever and fewer than 16 rewards (event off) threw, both after the ticket was taken.
+		if ((CrossEventManager.getInstance().getGameTickets(player) == 0) || (CrossEventManager.getInstance().getRegularRewardsList().size() < 16) || (player.getCrossEventCells().size() >= 16))
 		{
 			return;
 		}
 		
-		player.destroyItemByItemId(ItemProcessType.FEE, CrossEventManager.getInstance().getTicketId(), 1, player, false);
+		if (!player.destroyItemByItemId(ItemProcessType.FEE, CrossEventManager.getInstance().getTicketId(), 1, player, false))
+		{
+			return;
+		}
 		
 		getRandomCell(player);
 		

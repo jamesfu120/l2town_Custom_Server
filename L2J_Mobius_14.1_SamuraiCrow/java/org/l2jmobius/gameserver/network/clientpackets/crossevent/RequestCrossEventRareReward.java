@@ -47,8 +47,9 @@ public class RequestCrossEventRareReward extends ClientPacket
 	@Override
 	protected void runImpl()
 	{
+		// The available count was never checked (unlimited rare rewards); an empty list (event off) recursed forever.
 		final Player player = getPlayer();
-		if (player == null)
+		if ((player == null) || CrossEventManager.getInstance().getAdvancedRewardList().isEmpty() || (player.getCrossRewardsCount() < 1))
 		{
 			return;
 		}

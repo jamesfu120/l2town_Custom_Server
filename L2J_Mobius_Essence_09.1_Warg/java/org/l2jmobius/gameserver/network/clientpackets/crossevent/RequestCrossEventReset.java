@@ -32,8 +32,6 @@ import org.l2jmobius.gameserver.network.serverpackets.crossevent.ExCrossEventRes
  */
 public class RequestCrossEventReset extends ClientPacket
 {
-	private static final int ITEM_RESET_ID = 57; // Adena
-	
 	@Override
 	protected void readImpl()
 	{
@@ -50,7 +48,13 @@ public class RequestCrossEventReset extends ClientPacket
 		}
 		
 		final int resetCount = player.getPlayerResetCount();
-		if (resetCount < 1)
+		if ((resetCount < 1) || CrossEventManager.getInstance().getRegularRewardsList().isEmpty())
+		{
+			return;
+		}
+		
+		// The fee was taken after the reset and its result ignored, so a reset without the Adena was free.
+		if (!player.reduceAdena(ItemProcessType.FEE, CrossEventManager.getInstance().getResetCostAmount(), player, true))
 		{
 			return;
 		}
@@ -61,6 +65,5 @@ public class RequestCrossEventReset extends ClientPacket
 		player.getCrossEventCells().clear();
 		CrossEventManager.getInstance().resetAdvancedRewards(player);
 		player.sendPacket(new ExCrossEventInfo(player));
-		player.getInventory().destroyItemByItemId(ItemProcessType.FEE, ITEM_RESET_ID, CrossEventManager.getInstance().getResetCostAmount(), player, null);
 	}
 }
