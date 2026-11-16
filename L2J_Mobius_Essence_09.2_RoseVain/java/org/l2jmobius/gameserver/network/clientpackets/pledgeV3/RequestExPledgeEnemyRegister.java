@@ -20,6 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.pledgeV3;
 
+import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.clan.Clan;
@@ -93,6 +94,14 @@ public class RequestExPledgeEnemyRegister extends ClientPacket
 		if ((playerClan.getAllyId() == enemyClan.getAllyId()) && (playerClan.getAllyId() != 0))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DECLARE_WAR_ON_AN_ALLIED_CLAN_2));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		// The level and member requirements of RequestStartPledgeWar, for both clans; the client checks only the name.
+		if ((playerClan.getLevel() < 3) || (playerClan.getMembersCount() < PlayerConfig.ALT_CLAN_MEMBERS_FOR_WAR) || (enemyClan.getLevel() < 3) || (enemyClan.getMembersCount() < PlayerConfig.ALT_CLAN_MEMBERS_FOR_WAR))
+		{
+			player.sendPacket(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LV_3_OR_HIGHER_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_15_OR_GREATER);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.entity.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeEnemyInfoList;
 import org.l2jmobius.gameserver.taskmanagers.AttackStanceTaskManager;
 
@@ -80,6 +81,14 @@ public class RequestExPledgeEnemyDelete extends ClientPacket
 			return;
 		}
 		
+		// As RequestStopPledgeWar: the 500 fee could take the reputation below 0 and disable the clan skills.
+		if (playerClan.getReputationScore() <= 500)
+		{
+			player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		for (ClanMember member : playerClan.getMembers())
 		{
 			if ((member == null) || (member.getPlayer() == null))
@@ -96,6 +105,7 @@ public class RequestExPledgeEnemyDelete extends ClientPacket
 		
 		// Reduce reputation.
 		playerClan.takeReputationScore(500);
+		playerClan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_LOST_500_REPUTATION_POINTS_FOR_WITHDRAWING_FROM_THE_CLAN_WAR));
 		ClanTable.getInstance().deleteClanWars(playerClan.getId(), enemyClan.getId());
 		
 		broadcastClanInfo(playerClan, enemyClan);
