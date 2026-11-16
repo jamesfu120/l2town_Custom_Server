@@ -49,6 +49,11 @@ public class ExResetStatusBonus extends ClientPacket
 		
 		final PlayerVariables vars = player.getVariables();
 		int points = vars.getInt(PlayerVariables.STAT_STR.toString(), 0) + vars.getInt(PlayerVariables.STAT_DEX.toString(), 0) + vars.getInt(PlayerVariables.STAT_CON.toString(), 0) + vars.getInt(PlayerVariables.STAT_INT.toString(), 0) + vars.getInt(PlayerVariables.STAT_WIT.toString(), 0) + vars.getInt(PlayerVariables.STAT_MEN.toString(), 0);
+		if (points < 1) // Nothing to reset: the lowest fee was taken anyway.
+		{
+			return;
+		}
+		
 		int adenaCost;
 		int lcoinCost;
 		
@@ -101,7 +106,6 @@ public class ExResetStatusBonus extends ClientPacket
 			player.getVariables().remove(PlayerVariables.STAT_INT);
 			player.getVariables().remove(PlayerVariables.STAT_WIT);
 			player.getVariables().remove(PlayerVariables.STAT_MEN);
-			player.getVariables().set(PlayerVariables.ELIXIRS_AVAILABLE, player.getVariables().getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0));
 			
 			player.getStat().recalculateStats(true);
 			

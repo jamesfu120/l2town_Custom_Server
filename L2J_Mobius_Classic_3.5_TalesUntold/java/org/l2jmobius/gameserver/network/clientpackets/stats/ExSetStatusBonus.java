@@ -63,8 +63,10 @@ public class ExSetStatusBonus extends ClientPacket
 			return;
 		}
 		
-		final int usedPoints = player.getVariables().getInt(PlayerVariables.STAT_POINTS, 0);
-		final int elixirsAvailable = player.getVariables().getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0);
+		// Used points are the distributed ones: STAT_POINTS is never written, so every request could add the full amount again.
+		final PlayerVariables vars = player.getVariables();
+		final int usedPoints = vars.getInt(PlayerVariables.STAT_STR, 0) + vars.getInt(PlayerVariables.STAT_DEX, 0) + vars.getInt(PlayerVariables.STAT_CON, 0) + vars.getInt(PlayerVariables.STAT_INT, 0) + vars.getInt(PlayerVariables.STAT_WIT, 0) + vars.getInt(PlayerVariables.STAT_MEN, 0);
+		final int elixirsAvailable = vars.getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0);
 		final int currentPoints = _str + _dex + _con + _int + _wit + _men;
 		final int possiblePoints = player.getLevel() < 76 ? 0 : ((player.getLevel() - 75) + elixirsAvailable) - usedPoints;
 		if ((possiblePoints <= 0) || (currentPoints > possiblePoints))
