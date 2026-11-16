@@ -150,6 +150,26 @@ public class RequestSellItem extends ClientPacket
 		
 		long totalPrice = 0;
 		
+		// The limit is checked for the whole list before anything is sold, against the room left under MAX_ADENA:
+		// checked inside the loop it returned after earlier items were gone, and addAdena cut what passed the limit.
+		long listPrice = 0;
+		for (UniqueItemHolder i : _items)
+		{
+			final Item item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
+			if ((item == null) || (!item.isSellable()))
+			{
+				continue;
+			}
+			
+			final long price = item.getReferencePrice() / 2;
+			listPrice += price * i.getCount();
+			if (((MAX_ADENA / i.getCount()) < price) || (listPrice > MAX_ADENA) || (!MerchantZeroSellPriceConfig.MERCHANT_ZERO_SELL_PRICE && (listPrice > (MAX_ADENA - player.getAdena()))))
+			{
+				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_YOUR_OUT_OF_POCKET_ADENA_LIMIT);
+				return;
+			}
+		}
+		
 		// Proceed the sell
 		for (UniqueItemHolder i : _items)
 		{
@@ -160,20 +180,20 @@ public class RequestSellItem extends ClientPacket
 			}
 			
 			final long price = item.getReferencePrice() / 2;
-			totalPrice += price * i.getCount();
-			if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA))
-			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_YOUR_OUT_OF_POCKET_ADENA_LIMIT);
-				return;
-			}
-			
+			final Item removedItem;
 			if (GeneralConfig.ALLOW_REFUND)
 			{
-				player.getInventory().transferItem(ItemProcessType.TRANSFER, i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
+				removedItem = player.getInventory().transferItem(ItemProcessType.TRANSFER, i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
 			}
 			else
 			{
-				player.getInventory().destroyItem(ItemProcessType.SELL, i.getObjectId(), i.getCount(), player, merchant);
+				removedItem = player.getInventory().destroyItem(ItemProcessType.SELL, i.getObjectId(), i.getCount(), player, merchant);
+			}
+			
+			// Paid only for what was removed.
+			if (removedItem != null)
+			{
+				totalPrice += price * i.getCount();
 			}
 		}
 		

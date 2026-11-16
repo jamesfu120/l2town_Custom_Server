@@ -246,6 +246,12 @@ public class RequestBuyItem extends ClientPacket
 				{
 					player.getInventory().addItem(ItemProcessType.BUY, i.getId(), i.getCount(), player, merchant);
 				}
+				else // Sold out after the check (another buyer): the Adena was taken for an item not given.
+				{
+					final long refund = (long) (product.getPrice() * (1 + castleTaxRate + product.getBaseTaxRate())) * i.getCount();
+					player.addAdena(ItemProcessType.REFUND, refund, merchant, true);
+					subTotal -= refund;
+				}
 			}
 			else
 			{
