@@ -288,9 +288,9 @@ public class Baium extends Script
 					addBoss(_baiumInstance);
 					_lastAttackTime = System.currentTimeMillis();
 					
-					startQuestTimer(EVENT_WAKEUP_ACTION, 50, _baiumInstance, null);
-					startQuestTimer(EVENT_MANAGE_EARTHQUAKE, 2000, _baiumInstance, null);
-					startQuestTimer(EVENT_SOCIAL_ACTION, 10000, _baiumInstance, player);
+					startQuestTimer(EVENT_WAKEUP_ACTION, 2500, _baiumInstance, null);
+					startQuestTimer(EVENT_MANAGE_EARTHQUAKE, 6000, _baiumInstance, null);
+					startQuestTimer(EVENT_SOCIAL_ACTION, 20000, _baiumInstance, player);
 					startQuestTimer(EVENT_CHECK_ATTACK, CHECK_ATTACK_INTERVAL_MILLIS, _baiumInstance, null);
 					
 					npc.deleteMe();
