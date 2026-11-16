@@ -1102,14 +1102,15 @@
 		<affectRange>1000</affectRange>
 		<affectScope>PARTY</affectScope>
 		<effectPoint>100</effectPoint>
+		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
-		<mpConsume>
-			<value level="1">80</value>
-			<value level="2">85</value>
-		</mpConsume>
-		<reuseDelay>10000</reuseDelay>
+		<mpConsume>105</mpConsume>
+		<reuseDelay>90000</reuseDelay>
+		<reuseDelayGroup>45533</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
@@ -1126,11 +1127,23 @@
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
-		<affectScope>SINGLE</affectScope>
+		<affectLimit>15-15</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>RANGE</affectScope>
+		<castRange>600</castRange>
 		<effectPoint>-500</effectPoint>
-		<effectRange>450</effectRange>
+		<effectRange>1200</effectRange>
+		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<mpConsume>105</mpConsume>
+		<reuseDelay>90000</reuseDelay>
+		<reuseDelayGroup>45533</reuseDelayGroup>
 		<effects>
 			<effect name="MagicalDamage">
 				<power>130</power>
@@ -1670,12 +1683,16 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<alternateAllySkillId>45523</alternateAllySkillId>
-		<alternateEnemySkillId>45535</alternateEnemySkillId>
-		<castRange>800</castRange>
+		<alternateEnemySkillId>45524</alternateEnemySkillId>
+		<castRange>600</castRange>
 		<effectPoint>0</effectPoint>
 		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
+		<mpConsume>105</mpConsume>
 		<reuseDelay>90000</reuseDelay>
 	</skill>
 	<skill id="45534" toLevel="1" name="Dark Disruption">
@@ -1685,12 +1702,13 @@
 		<targetType>ENEMY</targetType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
-		<affectLimit>10-10</affectLimit>
+		<affectLimit>15-15</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>200</affectRange>
 		<affectScope>RANGE</affectScope>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>600</castRange>
+		<effectPoint>-500</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -1706,20 +1724,8 @@
 			<effect name="MagicalDamage">
 				<power>130</power>
 			</effect>
-			<effect name="HealEffect">
-				<amount>-500</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="CallSkill">
-				<skillId>45535</skillId> <!-- Exclusion -->
-				<skillLevel>1</skillLevel>
-			</effect>
 			<effect name="CallSkill">
 				<skillId>47256</skillId> <!-- Dark Disruption -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="CallSkill">
-				<skillId>47244</skillId> <!-- Rush Block -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -1828,7 +1834,7 @@
 		<effectPoint>-400</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic>
-		<itemConsumeCount>100</itemConsumeCount>
+		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
