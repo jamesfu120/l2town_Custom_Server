@@ -68,7 +68,7 @@ public class SecretShopEventManager
 	
 	private static final int TICKET_AMOUNT_PER_GAME = 1;
 	
-	private static final ConcurrentHashMap<Player, PlayerTicketData> PLAYER_REWARD_QUEUES = new ConcurrentHashMap<>();
+	private static final ConcurrentHashMap<Integer, PlayerTicketData> PLAYER_REWARD_QUEUES = new ConcurrentHashMap<>(); // By object id: Player keys were never removed and kept every session's Player.
 	private static final Set<Player> LIST_TO_UPDATE = ConcurrentHashMap.newKeySet();
 	
 	private static Map<Integer, List<SecretShopRewardHolder>> _rewardData = new HashMap<>();
@@ -478,9 +478,7 @@ public class SecretShopEventManager
 	
 	public void addTickets(Player player)
 	{
-		PLAYER_REWARD_QUEUES.computeIfAbsent(player, _ -> new PlayerTicketData());
-		
-		final PlayerTicketData playerData = PLAYER_REWARD_QUEUES.get(player);
+		final PlayerTicketData playerData = PLAYER_REWARD_QUEUES.computeIfAbsent(player.getObjectId(), _ -> new PlayerTicketData());
 		final Queue<TicketTask> queue = playerData.getQueue();
 		queue.add(new TicketTask(player));
 		
@@ -521,6 +519,12 @@ public class SecretShopEventManager
 			}
 			
 			playerData.getProcessingFlag().set(false);
+			
+			// A ticket added after the loop ended and before the flag was cleared waited for the next request.
+			if (!queue.isEmpty() && playerData.getProcessingFlag().compareAndSet(false, true))
+			{
+				processPlayerQueue(playerData);
+			}
 		});
 	}
 	
