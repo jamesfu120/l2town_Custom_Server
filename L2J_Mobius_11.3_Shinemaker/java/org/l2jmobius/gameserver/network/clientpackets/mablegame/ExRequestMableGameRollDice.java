@@ -61,19 +61,25 @@ public class ExRequestMableGameRollDice extends ClientPacket
 			return;
 		}
 		
-		if (_diceType == 0)
+		// Any type but 1 rolled a common dice, while only type 0 checked the daily common limit.
+		if ((_diceType != 0) && (_diceType != 1))
 		{
-			if (playerState.getRemainCommonDice() <= 0)
-			{
-				return;
-			}
-			
-			playerState.setRemainCommonDice(playerState.getRemainCommonDice() - 1);
+			return;
+		}
+		
+		if ((_diceType == 0) && (playerState.getRemainCommonDice() <= 0))
+		{
+			return;
 		}
 		
 		if (!player.destroyItemByItemId(ItemProcessType.FEE, _diceType == 1 ? MableGameData.ENHANCED_DICE_ITEM_ID : MableGameData.COMMON_DICE_ITEM_ID, 1, player, true))
 		{
 			return;
+		}
+		
+		if (_diceType == 0) // Counted after the dice is taken: a missing dice item cost a daily roll.
+		{
+			playerState.setRemainCommonDice(playerState.getRemainCommonDice() - 1);
 		}
 		
 		int dice = _diceType == 1 ? Rnd.get(5, 6) : Rnd.get(1, 6);

@@ -53,7 +53,7 @@ public class ExRequestMableGameReset extends ClientPacket
 		
 		// Check if can reset.
 		final MableGameData.MableGamePlayerState playerState = data.getPlayerState(player.getAccountName());
-		if ((playerState.getCurrentCellId() < data.getHighestCellId()) || (playerState.getRound() == data.getDailyAvailableRounds()))
+		if ((playerState.getCurrentCellId() < data.getHighestCellId()) || (playerState.getRound() >= data.getDailyAvailableRounds())) // A round above a lowered limit passed "==".
 		{
 			return;
 		}
