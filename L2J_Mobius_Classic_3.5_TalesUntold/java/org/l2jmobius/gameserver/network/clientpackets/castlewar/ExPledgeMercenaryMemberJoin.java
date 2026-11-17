@@ -20,6 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.castlewar;
 
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.managers.SiegeManager;
@@ -47,13 +48,25 @@ public class ExPledgeMercenaryMemberJoin extends ClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final Siege siege = SiegeManager.getInstance().getSiege(_castleId);
-		if ((siege != null) && siege.isInProgress())
+		final Player player = getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final Player player = getPlayer();
+		// An unknown castle id skipped the in-progress check.
+		final Siege siege = SiegeManager.getInstance().getSiege(_castleId);
+		if ((siege == null) || siege.isInProgress())
+		{
+			return;
+		}
+		
+		// Any clan could be joined, and leaving with another clan id kept the player in the real clan's reward list.
+		final Clan target = ClanTable.getInstance().getClan(_type ? _pledgeId : player.getClanIdMercenary());
+		if ((target == null) || (_type ? !target.isRecruitMercenary() : !player.isMercenary()) || (!siege.checkIsAttacker(target) && !siege.checkIsDefender(target)))
+		{
+			return;
+		}
 		
 		if (_type)
 		{
@@ -81,7 +94,7 @@ public class ExPledgeMercenaryMemberJoin extends ClientPacket
 					return;
 				}
 				
-				if ((siege != null) && (siege.checkIsAttacker(clan) || siege.checkIsDefender(clan)))
+				if (siege.checkIsAttacker(clan) || siege.checkIsDefender(clan))
 				{
 					player.sendPacket(SystemMessageId.MEMBERS_OF_THE_CLANS_THAT_ARE_REGISTERED_AS_ATTACKERS_DEFENDERS_OR_OWN_THE_CASTLE_CANNOT_BE_MERCENARIES);
 					return;
@@ -89,7 +102,7 @@ public class ExPledgeMercenaryMemberJoin extends ClientPacket
 			}
 		}
 		
-		player.setMercenary(_type, _pledgeId);
+		player.setMercenary(_type, target.getId());
 		player.sendPacket(new MercenaryCastleWarCastleSiegeAttackerList(_castleId));
 		player.sendPacket(new MercenaryCastleWarCastleSiegeDefenderList(_castleId));
 	}

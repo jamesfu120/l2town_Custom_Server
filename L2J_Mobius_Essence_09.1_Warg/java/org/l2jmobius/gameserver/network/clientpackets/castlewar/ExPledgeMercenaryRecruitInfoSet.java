@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 public class ExPledgeMercenaryRecruitInfoSet extends ClientPacket
 {
 	private boolean _isRecruit;
-	private int _mercenaryReaward;
+	private long _mercenaryReaward;
 	
 	@Override
 	protected void readImpl()
@@ -35,7 +35,7 @@ public class ExPledgeMercenaryRecruitInfoSet extends ClientPacket
 		readInt(); // castleId
 		readInt(); // type
 		_isRecruit = readInt() == 1;
-		_mercenaryReaward = readInt();
+		_mercenaryReaward = readLong();
 	}
 	
 	@Override
@@ -47,8 +47,9 @@ public class ExPledgeMercenaryRecruitInfoSet extends ClientPacket
 			return;
 		}
 		
+		// Only the leader may set it; a share above 100% paid mercenaries more than the castle treasury held.
 		final Clan clan = player.getClan();
-		if (clan == null)
+		if ((clan == null) || !player.isClanLeader() || (_mercenaryReaward < 0) || (_mercenaryReaward > 100))
 		{
 			return;
 		}
@@ -59,6 +60,6 @@ public class ExPledgeMercenaryRecruitInfoSet extends ClientPacket
 		}
 		
 		clan.setRecruitMercenary(_isRecruit);
-		clan.setRewardMercenary(_mercenaryReaward);
+		clan.setRewardMercenary((int) _mercenaryReaward);
 	}
 }
