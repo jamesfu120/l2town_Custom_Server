@@ -49,8 +49,9 @@ public class RequestExPledgeV3SetAnnounce extends ClientPacket
 			return;
 		}
 		
+		// The client and the community board let only the leader edit it; any member (or a mercenary) could rewrite it here.
 		final Clan clan = player.getClan();
-		if (clan == null)
+		if ((clan == null) || !player.isClanLeader())
 		{
 			return;
 		}

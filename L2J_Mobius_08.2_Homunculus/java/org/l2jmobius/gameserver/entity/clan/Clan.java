@@ -1128,7 +1128,7 @@ public class Clan
 		
 		if (notice.length() > MAX_NOTICE_LENGTH)
 		{
-			notice = notice.substring(0, MAX_NOTICE_LENGTH - 1);
+			notice = notice.substring(0, MAX_NOTICE_LENGTH);
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection();
