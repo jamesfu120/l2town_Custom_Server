@@ -151,6 +151,7 @@ public class Guardian extends Attackable
 		if (!getSummoner().asPlayer().isOnline() && !getSummoner().asPlayer().isOfflinePlay())
 		{
 			deleteMe();
+			return;
 		}
 		
 		if (isCastingNow())
@@ -241,6 +242,14 @@ public class Guardian extends Attackable
 	{
 		stopAttackTask();
 		return super.deleteMe();
+	}
+	
+	@Override
+	public void onDecay()
+	{
+		// A killed guardian decays through onDecay, not deleteMe: without this its task ran every second until the owner logged out.
+		stopAttackTask();
+		super.onDecay();
 	}
 	
 	@Override
