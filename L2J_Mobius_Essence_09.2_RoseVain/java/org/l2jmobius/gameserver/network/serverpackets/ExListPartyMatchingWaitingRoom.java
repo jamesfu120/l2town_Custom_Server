@@ -49,7 +49,7 @@ public class ExListPartyMatchingWaitingRoom extends ServerPacket
 	{
 		final List<Player> players = MatchingRoomManager.getInstance().getPlayerInWaitingList(minLevel, maxLevel, classIds, query);
 		_size = players.size();
-		final int startIndex = (page - 1) * NUM_PER_PAGE;
+		final int startIndex = Math.max(0, (page - 1) * NUM_PER_PAGE); // Page 0 or below threw on a negative index.
 		int chunkSize = _size - startIndex;
 		if (chunkSize > NUM_PER_PAGE)
 		{
