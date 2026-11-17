@@ -247,15 +247,18 @@ public class RecipeManager
 			if (_player != _target)
 			{
 				final ManufactureItem item = _player.getManufactureItems().get(_recipeList.getId());
-				if (item != null)
+				if (item == null) // A recipe known but not offered in the workshop was made for free (price 0).
 				{
-					_price = item.getCost();
-					if (_target.getAdena() < _price) // check price
-					{
-						_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-						abort();
-						return;
-					}
+					abort();
+					return;
+				}
+				
+				_price = item.getCost();
+				if (_target.getAdena() < _price) // check price
+				{
+					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					abort();
+					return;
 				}
 			}
 			
@@ -391,8 +394,9 @@ public class RecipeManager
 			// First take adena for manufacture.
 			if ((_target != _player) && (_price > 0)) // Customer must pay for services.
 			{
-				// Attempt to pay for item.
-				final Item adenatransfer = _target.transferItem(ItemProcessType.TRANSFER, _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+				// Attempt to pay for item (a customer without any Adena threw NPE on the adena instance).
+				final Item adenaInstance = _target.getInventory().getAdenaInstance();
+				final Item adenatransfer = adenaInstance == null ? null : _target.transferItem(ItemProcessType.TRANSFER, adenaInstance.getObjectId(), _price, _player.getInventory(), _player);
 				if (adenatransfer == null)
 				{
 					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -406,6 +410,11 @@ public class RecipeManager
 			{
 				// handle possible cheaters here
 				// (they click craft then try to get rid of items in order to get free craft).
+				// The customer already paid above: give the fee back, nothing was made.
+				if ((_target != _player) && (_price > 0))
+				{
+					_player.transferItem(ItemProcessType.REFUND, _player.getInventory().getAdenaInstance().getObjectId(), _price, _target.getInventory(), _target);
+				}
 			}
 			else if ((Rnd.get(100) < (_recipeList.getSuccessRate() + _player.getStat().getValue(Stat.CRAFT_RATE, 0))) || _target.tryLuck())
 			{
