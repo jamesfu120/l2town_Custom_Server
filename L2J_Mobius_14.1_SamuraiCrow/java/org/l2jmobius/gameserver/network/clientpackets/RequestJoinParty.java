@@ -1,29 +1,7 @@
-/*
- * Copyright (c) 2013 L2jMobius
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
-import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.entity.World;
 import org.l2jmobius.gameserver.entity.WorldObject;
 import org.l2jmobius.gameserver.entity.actor.Player;
@@ -38,10 +16,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * sample 29 42 00 00 10 01 00 00 00 format cdd
- * @version $Revision: 1.7.4.4 $ $Date: 2005/03/27 15:29:30 $
- */
 public class RequestJoinParty extends ClientPacket
 {
 	private String _name;
@@ -52,23 +26,6 @@ public class RequestJoinParty extends ClientPacket
 	{
 		_name = readString();
 		_partyDistributionTypeId = readInt();
-	}
-	
-	private void scheduleDeny(Player player)
-	{
-		if (player != null)
-		{
-			if (player.getParty() == null)
-			{
-				player.sendPacket(SystemMessageId.THE_PARTY_IS_DISBANDED);
-			}
-			else
-			{
-				player.sendPacket(SystemMessageId.THE_PLAYER_HAS_DECLINED_TO_JOIN_YOUR_PARTY);
-			}
-			
-			player.onTransactionResponse();
-		}
 	}
 	
 	@Override
@@ -86,23 +43,6 @@ public class RequestJoinParty extends ClientPacket
 			requestor.getClientSettings().setPartyContributionType(_partyDistributionTypeId);
 		}
 		
-		if (FakePlayerData.getInstance().isTalkable(_name))
-		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
-			sm.addString(FakePlayerData.getInstance().getProperName(_name));
-			requestor.sendPacket(sm);
-			if (!requestor.isProcessingRequest())
-			{
-				ThreadPool.schedule(() -> scheduleDeny(requestor), 10000);
-				requestor.blockRequest();
-			}
-			else
-			{
-				requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
-			}
-			return;
-		}
-		
 		final Player target;
 		if (requestor.isInsideZone(ZoneId.CONQUEST))
 		{
@@ -111,7 +51,7 @@ public class RequestJoinParty extends ClientPacket
 			{
 				target = requestorTarget.asPlayer();
 			}
-			else // The Conquest name contains a character at start.
+			else
 			{
 				Player found = null;
 				for (Player player : World.getPlayers())
@@ -143,6 +83,33 @@ public class RequestJoinParty extends ClientPacket
 			return;
 		}
 		
+		if (target.isFakePlayer())
+		{
+			if (target.isInParty())
+			{
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_A_MEMBER_OF_ANOTHER_PARTY_AND_CANNOT_BE_INVITED);
+				sm.addString(target.getAppearance().getVisibleName());
+				requestor.sendPacket(sm);
+				return;
+			}
+			
+			final PartyDistributionType distType = PartyDistributionType.findById(_partyDistributionTypeId);
+			Party party = requestor.getParty();
+			if (party == null)
+			{
+				party = new Party(requestor, distType != null ? distType : PartyDistributionType.FINDERS_KEEPERS);
+				requestor.setParty(party);
+			}
+			else if (!party.isLeader(requestor))
+			{
+				requestor.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
+				return;
+			}
+			
+			target.joinParty(party);
+			requestor.sendMessage("假人 " + target.getName() + " 已秒速同意並加入你的隊伍！");
+			return;
+		}
 		if ((target.getClient() == null) || target.getClient().isDetached())
 		{
 			requestor.sendMessage("Player is in offline mode.");
@@ -217,13 +184,6 @@ public class RequestJoinParty extends ClientPacket
 			return;
 		}
 		
-		// Removed in version Prelude of War - 02 August 2019.
-		// if (target.isCursedWeaponEquipped() || requestor.isCursedWeaponEquipped())
-		// {
-		// requestor.sendPacket(SystemMessageId.INVALID_TARGET);
-		// return;
-		// }
-		
 		if (target.isJailed() || requestor.isJailed())
 		{
 			requestor.sendMessage("You cannot invite a player while is in Jail.");
@@ -271,15 +231,9 @@ public class RequestJoinParty extends ClientPacket
 		}
 	}
 	
-	/**
-	 * @param target
-	 * @param requestor
-	 */
 	private void addTargetToParty(Player target, Player requestor)
 	{
 		final Party party = requestor.getParty();
-		
-		// Summary of people already in party and people that get invitation.
 		if (!party.isLeader(requestor))
 		{
 			requestor.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
@@ -309,10 +263,6 @@ public class RequestJoinParty extends ClientPacket
 		}
 	}
 	
-	/**
-	 * @param target
-	 * @param requestor
-	 */
 	private void createNewParty(Player target, Player requestor)
 	{
 		final PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
