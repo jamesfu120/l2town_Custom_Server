@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.mechanics.events.EventType;
 import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerQuestAbort;
 import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.mechanics.script.QuestState;
-import org.l2jmobius.gameserver.mechanics.script.QuestType;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestNotificationAll;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestUI;
@@ -55,12 +54,18 @@ public class RequestExQuestCancel extends ClientPacket
 			return;
 		}
 		
+		// An unknown quest id threw here; abortQuest, as exitQuest(REPEATABLE) reported the abort as a quest completion.
 		final Quest quest = ScriptManager.getInstance().getQuest(_questId);
+		if (quest == null)
+		{
+			return;
+		}
+		
 		final QuestState qs = quest.getQuestState(player, false);
 		if ((qs != null) && !qs.isCompleted())
 		{
 			qs.setSimulated(false);
-			qs.exitQuest(QuestType.REPEATABLE);
+			qs.abortQuest();
 			player.sendPacket(new ExQuestUI(player));
 			player.sendPacket(new ExQuestNotificationAll(player));
 			

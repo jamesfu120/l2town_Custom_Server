@@ -57,7 +57,8 @@ public class RequestQuestAbort extends ClientPacket
 			}
 			
 			final QuestState qs = player.getQuestState(qe.getName());
-			if (qs != null)
+			// A completed quest cannot be aborted.
+			if ((qs != null) && !qs.isCompleted())
 			{
 				qs.exitQuest(true);
 				player.sendPacket(new QuestList(player));

@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.mechanics.events.EventType;
 import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerQuestAbort;
 import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.mechanics.script.QuestState;
-import org.l2jmobius.gameserver.mechanics.script.QuestType;
 import org.l2jmobius.gameserver.network.serverpackets.QuestList;
 
 /**
@@ -57,10 +56,11 @@ public class RequestQuestAbort extends ClientPacket
 		if (qe != null)
 		{
 			final QuestState qs = player.getQuestState(qe.getName());
-			if (qs != null)
+			// A completed quest cannot be aborted; abortQuest, as exitQuest(REPEATABLE) reported the abort as a quest completion.
+			if ((qs != null) && !qs.isCompleted())
 			{
 				qs.setSimulated(false);
-				qs.exitQuest(QuestType.REPEATABLE);
+				qs.abortQuest();
 				player.sendPacket(new QuestList(player));
 				
 				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_QUEST_ABORT, player, Containers.Players()))
