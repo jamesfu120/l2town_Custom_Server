@@ -22,13 +22,17 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.PlayerConfig;
+import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.entity.World;
 import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.enums.player.ChatBroadcastType;
+import org.l2jmobius.gameserver.entity.actor.holders.player.BlockList;
 import org.l2jmobius.gameserver.entity.clan.Clan;
 import org.l2jmobius.gameserver.entity.groups.Party;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.ExRequestNewInvitePartyInquiry;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Serenitty
@@ -70,6 +74,11 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 			case 8:
 			{
 				_sayType = ChatType.TRADE;
+				break;
+			}
+			case 9: // The alliance tab sends 9; without it the ALLIANCE branch was unreachable.
+			{
+				_sayType = ChatType.ALLIANCE;
 				break;
 			}
 		}
@@ -133,6 +142,10 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 				}
 				break;
 			}
+			default:
+			{
+				return;
+			}
 		}
 		
 		switch (_sayType)
@@ -145,7 +158,13 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 					return;
 				}
 				
-				World.broadcastToAllOnlinePlayers(new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType));
+				if ((player.getLevel() < GeneralConfig.MINIMUM_CHAT_LEVEL) && !player.isGM())
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.SHOUT_CANNOT_BE_USED_BY_CHARACTERS_LV_S1_OR_LOWER).addInt(GeneralConfig.MINIMUM_CHAT_LEVEL));
+					return;
+				}
+				
+				broadcastAsChat(player, new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType), GeneralConfig.DEFAULT_GLOBAL_CHAT);
 				break;
 			}
 			case TRADE:
@@ -156,7 +175,13 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 					return;
 				}
 				
-				World.broadcastToAllOnlinePlayers(new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType));
+				if (player.getLevel() < 20)
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.TRADE_CHAT_CANNOT_BE_USED_BY_CHARACTERS_LV_S1_OR_LOWER).addInt(20));
+					return;
+				}
+				
+				broadcastAsChat(player, new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType), GeneralConfig.DEFAULT_TRADE_CHAT);
 				break;
 			}
 			case GENERAL:
@@ -194,6 +219,31 @@ public class RequestNewInvitePartyInquiry extends ClientPacket
 				
 				player.getClan().broadcastToOnlineAllyMembers(new ExRequestNewInvitePartyInquiry(player, _reqType, _sayType));
 				break;
+			}
+		}
+	}
+	
+	/**
+	 * Sends like shout or trade chat: same region and instance for ON (GM only for GM), everyone for GLOBAL, nobody for OFF.
+	 * It went to every online player, past the chat mode and the receivers' block lists.
+	 * @param player the sender
+	 * @param msg the inquiry packet
+	 * @param mode the chat broadcast mode of that channel
+	 */
+	private static void broadcastAsChat(Player player, ExRequestNewInvitePartyInquiry msg, ChatBroadcastType mode)
+	{
+		final boolean regional = (mode == ChatBroadcastType.ON) || ((mode == ChatBroadcastType.GM) && player.isGM());
+		if (!regional && (mode != ChatBroadcastType.GLOBAL))
+		{
+			return;
+		}
+		
+		final int region = MapRegionData.getInstance().getMapRegionLocId(player);
+		for (Player target : World.getPlayers())
+		{
+			if (!BlockList.isBlocked(target, player) && (!regional || ((target.getInstanceId() == player.getInstanceId()) && (MapRegionData.getInstance().getMapRegionLocId(target) == region))))
+			{
+				target.sendPacket(msg);
 			}
 		}
 	}
