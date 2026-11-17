@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.managers.CHSiegeManager;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.mechanics.siege.Castle;
 import org.l2jmobius.gameserver.mechanics.siege.clanhalls.SiegableHall;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 
 /**
