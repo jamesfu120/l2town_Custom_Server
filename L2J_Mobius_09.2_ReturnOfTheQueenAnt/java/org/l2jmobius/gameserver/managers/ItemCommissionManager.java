@@ -104,7 +104,7 @@ public class ItemCommissionManager
 					while (rs.next())
 					{
 						final Item itemInstance = new Item(rs);
-						World.getInstance().addObject(itemInstance); // Otherwise the bought item, once dropped, cannot be picked up.
+						World.addObject(itemInstance); // Otherwise the bought item, once dropped, cannot be picked up.
 						itemInstances.put(itemInstance.getObjectId(), itemInstance);
 					}
 				}
