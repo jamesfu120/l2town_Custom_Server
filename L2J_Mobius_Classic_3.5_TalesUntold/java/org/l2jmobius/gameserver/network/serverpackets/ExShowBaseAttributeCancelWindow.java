@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.network.ServerPackets;
 public class ExShowBaseAttributeCancelWindow extends ServerPacket
 {
 	private final List<Item> _items = new ArrayList<>();
-	private long _price;
 	
 	public ExShowBaseAttributeCancelWindow(Player player)
 	{
@@ -58,52 +57,43 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket
 	}
 	
 	/**
-	 * TODO: Unhardcode! Update prices for Top/Mid/Low S80/S84
-	 * @param item
-	 * @return
+	 * Attribute removal fee, shared with {@code RequestExRemoveItemAttribute} so the shown price is the charged price.
+	 * @param item the item to clear
+	 * @return the fee in adena, 0 for grades without a fee
 	 */
-	private long getPrice(Item item)
+	public static long getPrice(Item item)
 	{
+		final boolean weapon = item.isWeapon();
 		switch (item.getTemplate().getCrystalType())
 		{
 			case S:
 			{
-				if (item.isWeapon())
-				{
-					_price = 50000;
-				}
-				else
-				{
-					_price = 40000;
-				}
-				break;
+				return weapon ? 50000 : 40000;
 			}
 			case S80:
 			{
-				if (item.isWeapon())
-				{
-					_price = 100000;
-				}
-				else
-				{
-					_price = 80000;
-				}
-				break;
+				return weapon ? 100000 : 80000;
 			}
 			case S84:
 			{
-				if (item.isWeapon())
-				{
-					_price = 200000;
-				}
-				else
-				{
-					_price = 160000;
-				}
-				break;
+				return weapon ? 200000 : 160000;
+			}
+			case R:
+			{
+				return weapon ? 400000 : 320000;
+			}
+			case R95:
+			{
+				return weapon ? 800000 : 640000;
+			}
+			case R99:
+			{
+				return weapon ? 3200000 : 2560000;
+			}
+			default:
+			{
+				return 0;
 			}
 		}
-		
-		return _price;
 	}
 }
