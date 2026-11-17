@@ -1106,36 +1106,46 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   private static Set<WeaponType> getPreferredWeaponTypes(Player player) {
-      Set<WeaponType> result = new HashSet();
+      private static Set<WeaponType> getPreferredWeaponTypes(Player player) {
+      Set<WeaponType> result = new HashSet<>();
       if (player != null && player.getPlayerClass() != null) {
          PlayerClass playerClass = player.getPlayerClass();
-         if (!playerClass.isMage() && !playerClass.isSummoner()) {
-            Collection<InitialEquipment> equipment = InitialEquipmentData.getInstance().getClassEquipment(findNativeInitialEquipmentClass(playerClass));
-            if (equipment != null) {
-               for(InitialEquipment holder : equipment) {
-                  if (holder.isEquipped()) {
-                     ItemTemplate item = ItemData.getInstance().getTemplate(holder.getId());
-                     if (item != null && item.isWeapon()) {
-                        ItemType var8 = item.getItemType();
-                        if (var8 instanceof WeaponType) {
-                           WeaponType weaponType = (WeaponType)var8;
-                           result.add(weaponType);
-                        }
+         String className = playerClass.name().toLowerCase();
+
+         // 1. 法師、召喚師、輔助系（包含半獸人霸主 OVERLORD、戰狂 DOOMCRYER、主教、長老等）-> 強制拿雙手魔杖
+         if (playerClass.isMage() || playerClass.isSummoner() || isSupportClass(player) || className.contains("overlord") || className.contains("dominator") || className.contains("warcryer") || className.contains("doomcryer")) {
+            result.add(WeaponType.BLUNT);
+            return result;
+         }
+
+         // 2. 弓手系（鷹眼、銀月、暗影、人馬、巡守等）-> 強制拿弓，並自動塞 10000 支箭矢防罰站
+         if (className.contains("archer") || className.contains("ranger") || className.contains("hawkeye") || className.contains("sagittarius") || className.contains("sentinel") || className.contains("trickster") || className.contains("arbalester")) {
+            result.add(WeaponType.BOW);
+            if (player.getInventory().getInventoryItemCount(17, -1) < 1000) {
+               player.getInventory().addItem(ItemProcessType.REWARD, 17, 10000, player, null); // B級以上通用箭矢可改為 1343(B箭) 或 1344(A箭)
+            }
+            return result;
+         }
+
+         // 3. 其餘物理戰士系 -> 維持原本的新手武器偏好判定
+         Collection<InitialEquipment> equipment = InitialEquipmentData.getInstance().getClassEquipment(findNativeInitialEquipmentClass(playerClass));
+         if (equipment != null) {
+            for (InitialEquipment holder : equipment) {
+               if (holder.isEquipped()) {
+                  ItemTemplate item = ItemData.getInstance().getTemplate(holder.getId());
+                  if (item != null && item.isWeapon()) {
+                     ItemType var8 = item.getItemType();
+                     if (var8 instanceof WeaponType) {
+                        WeaponType weaponType = (WeaponType) var8;
+                        result.add(weaponType);
                      }
                   }
                }
             }
-
-            return result;
-         } else {
-            result.add(WeaponType.BLUNT);
-            return result;
          }
-      } else {
-         return result;
       }
-   }
+      return result;
+    }
 
    private static boolean containsBlockedEquipmentName(String name) {
       if (name == null) {
@@ -1478,6 +1488,10 @@ public class FakePlayerPopulationManager {
                player.getAI().notifyActionThink();
                continue;
             }
+            // 5.5 假人自主社交：若尚未入隊且允許組隊，定時邀請周圍孤單假人組成練功小隊
+            if (!player.isInParty() && Rnd.get(100) < 15) {
+               autoFormFakeParty(player);
+            }
 
             // 6. 組隊輔助 AI
             if (player.isInParty() && isSupportClass(player)) {
@@ -1734,7 +1748,61 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   public static void handlePlayerChat(Player speaker, String targetName, String text, ChatType type) {
+        public static void handlePlayerChat(Player speaker, String targetName, String text, ChatType type) {
+      if (speaker == null || speaker.isFakePlayer() || speaker.isInParty() || text == null) {
+         return;
+      }
+      String msg = text.trim().toLowerCase();
+      if (msg.contains("111") || msg.contains("組隊") || msg.contains("帶我") || msg.contains("party")) {
+         for (Player fake : PLAYERS) {
+            if (fake != null && fake.isSpawned() && !fake.isDead() && !isShopPlayer(fake) && fake.calculateDistance3D(speaker) <= 1500.0) {
+               Party party = fake.getParty();
+               if (party == null) {
+                  party = new Party(fake, org.l2jmobius.gameserver.entity.groups.PartyDistributionType.FINDERS_KEEPERS);
+                  fake.setParty(party);
+                  speaker.joinParty(party);
+                  fake.broadcastPacket(new CreatureSay(fake, ChatType.GENERAL, fake.getName(), "好啊，我們兩個一起練！"));
+                  return;
+               } else if (party.getMemberCount() < 9) {
+                  speaker.joinParty(party);
+                  fake.broadcastPacket(new CreatureSay(fake, ChatType.GENERAL, fake.getName(), "來吧，歡迎加入小隊！"));
+                  return;
+               }
+            }
+         }
+      }
+   }
+
+   private static void autoFormFakeParty(Player leader) {
+      if (leader == null || leader.isDead() || isShopPlayer(leader) || !FakePlayersConfig.FAKE_PLAYER_ALLOW_PARTY) {
+         return;
+      }
+      try {
+         Party party = leader.getParty();
+         int maxMembers = Math.min(9, FakePlayersConfig.FAKE_PLAYER_MAX_PARTY_MEMBERS);
+         if (party != null && (!party.isLeader(leader) || party.getMemberCount() >= maxMembers)) {
+            return;
+         }
+
+         List<Player> nearbyFakes = World.getVisibleObjectsInRange(leader, Player.class, 1200, p -> 
+            p != null && p.isFakePlayer() && p != leader && !p.isDead() && !p.isInParty() && !isShopPlayer(p)
+         );
+
+         for (Player candidate : nearbyFakes) {
+            if (party == null) {
+               party = new Party(leader, org.l2jmobius.gameserver.entity.groups.PartyDistributionType.FINDERS_KEEPERS);
+               leader.setParty(party);
+            }
+            if (party.getMemberCount() < maxMembers) {
+               candidate.joinParty(party);
+               LOGGER.fine("[假人自主組隊] 假人 " + leader.getName() + " 在獵場邀請了 " + candidate.getName() + " 組成練功小隊。");
+            } else {
+               break;
+            }
+         }
+      } catch (Exception e) {
+         LOGGER.log(Level.FINE, "假人自主組隊異常", e);
+      }
    }
 
    public static List<Player> getPlayers() {

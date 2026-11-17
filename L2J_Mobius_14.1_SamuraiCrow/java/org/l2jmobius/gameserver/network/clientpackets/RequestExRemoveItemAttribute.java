@@ -22,11 +22,11 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.enums.creature.AttributeType;
-import org.l2jmobius.gameserver.entity.item.Weapon;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -36,7 +36,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class RequestExRemoveItemAttribute extends ClientPacket
 {
 	private int _objectId;
-	private long _price;
 	private byte _element;
 	
 	@Override
@@ -55,6 +54,13 @@ public class RequestExRemoveItemAttribute extends ClientPacket
 			return;
 		}
 		
+// An item offered in a trade or private store must not lose its attribute before the buyer receives it.
+		if (player.isInStoreMode() || player.isProcessingTransaction())
+		{
+			player.sendPacket(player.isInStoreMode() ? SystemMessageId.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP : SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_TRADING);
+			return;
+		}
+
 		final Item targetItem = player.getInventory().getItemByObjectId(_objectId);
 		if (targetItem == null)
 		{
@@ -72,7 +78,7 @@ public class RequestExRemoveItemAttribute extends ClientPacket
 			return;
 		}
 		
-		if (player.reduceAdena(ItemProcessType.FEE, getPrice(targetItem), player, true))
+		if (player.reduceAdena(ItemProcessType.FEE, ExShowBaseAttributeCancelWindow.getPrice(targetItem), player, true))
 		{
 			targetItem.clearAttribute(type);
 			player.updateUserInfo();
@@ -128,109 +134,4 @@ public class RequestExRemoveItemAttribute extends ClientPacket
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_TO_CANCEL_THIS_ATTRIBUTE);
 		}
 	}
-	
-	private long getPrice(Item item)
-	{
-		switch (item.getTemplate().getCrystalType())
-		{
-			case S:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 50000;
-				}
-				else
-				{
-					_price = 40000;
-				}
-				break;
-			}
-			case S80:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 100000;
-				}
-				else
-				{
-					_price = 80000;
-				}
-				break;
-			}
-			case S84:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 200000;
-				}
-				else
-				{
-					_price = 160000;
-				}
-				break;
-			}
-			case R:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 400000;
-				}
-				else
-				{
-					_price = 320000;
-				}
-				break;
-			}
-			case R95:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 800000;
-				}
-				else
-				{
-					_price = 640000;
-				}
-				break;
-			}
-			case R99:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 3200000;
-				}
-				else
-				{
-					_price = 2560000;
-				}
-				break;
-			}
-			case R110:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 6400000;
-				}
-				else
-				{
-					_price = 5120000;
-				}
-				break;
-			}
-			case L:
-			{
-				if (item.getTemplate() instanceof Weapon)
-				{
-					_price = 6400000;
-				}
-				else
-				{
-					_price = 5120000;
-				}
-				break;
-			}
-		}
-		
-		return _price;
-	}
-}
+}	

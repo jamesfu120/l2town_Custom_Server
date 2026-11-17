@@ -83,16 +83,26 @@ public class RequestJoinParty extends ClientPacket
 			return;
 		}
 		
-		if (target.isFakePlayer())
+				if (target.isFakePlayer())
 		{
+			// 情況 A：如果假人已經有隊伍了 -> 只要你目前沒有隊伍且對方未滿員，直接讓你加入他們的隊伍！
 			if (target.isInParty())
 			{
+				final Party targetParty = target.getParty();
+				if (!requestor.isInParty() && (targetParty.getMemberCount() < PlayerConfig.ALT_PARTY_MAX_MEMBERS))
+				{
+					requestor.joinParty(targetParty);
+					requestor.sendMessage("你已成功加入假人「" + target.getName() + "」的練功隊伍！");
+					return;
+				}
+				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_A_MEMBER_OF_ANOTHER_PARTY_AND_CANNOT_BE_INVITED);
 				sm.addString(target.getAppearance().getVisibleName());
 				requestor.sendPacket(sm);
 				return;
 			}
 			
+			// 情況 B：如果假人目前沒有隊伍 -> 維持原本的秒同意加入你的隊伍
 			final PartyDistributionType distType = PartyDistributionType.findById(_partyDistributionTypeId);
 			Party party = requestor.getParty();
 			if (party == null)
@@ -110,6 +120,7 @@ public class RequestJoinParty extends ClientPacket
 			requestor.sendMessage("假人 " + target.getName() + " 已秒速同意並加入你的隊伍！");
 			return;
 		}
+
 		if ((target.getClient() == null) || target.getClient().isDetached())
 		{
 			requestor.sendMessage("Player is in offline mode.");

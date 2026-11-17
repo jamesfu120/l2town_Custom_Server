@@ -230,7 +230,9 @@ public class Say2 extends ClientPacket
 		if (handler != null)
 		{
 			handler.onChat(chatType, player, _target, _text);
+			org.l2jmobius.gameserver.managers.FakePlayerPopulationManager.handlePlayerChat(player, _target, _text, chatType);
 		}
+
 		else
 		{
 			PacketLogger.info("No handler registered for ChatType: " + _type + " Player: " + getClient());
