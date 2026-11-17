@@ -49,13 +49,18 @@ public class RequestRecipeBookDestroy extends ClientPacket
 			return;
 		}
 		
+		// A recipe not in the book only logged a warning; a deleted one stayed offered in the workshop list.
 		final RecipeList rp = RecipeData.getInstance().getRecipeList(_recipeID);
-		if (rp == null)
+		if ((rp == null) || !player.hasRecipeList(_recipeID))
 		{
 			return;
 		}
 		
 		player.unregisterRecipeList(_recipeID);
+		if (player.hasManufactureShop())
+		{
+			player.getManufactureItems().remove(_recipeID);
+		}
 		
 		final RecipeBookItemList response = new RecipeBookItemList(rp.isDwarvenRecipe(), player.getMaxMp());
 		if (rp.isDwarvenRecipe())

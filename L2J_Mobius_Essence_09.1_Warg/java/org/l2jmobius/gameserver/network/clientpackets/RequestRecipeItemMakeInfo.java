@@ -20,6 +20,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
@@ -37,7 +38,8 @@ public class RequestRecipeItemMakeInfo extends ClientPacket
 	protected void runImpl()
 	{
 		final Player player = getPlayer();
-		if (player == null)
+		// RecipeItemMakeInfo writes nothing for an unknown id.
+		if ((player == null) || (RecipeData.getInstance().getRecipeList(_id) == null))
 		{
 			return;
 		}

@@ -57,8 +57,9 @@ public class RequestRecipeBookDestroy extends ClientPacket
 			return;
 		}
 		
+		// A recipe not in the book only logged a warning.
 		final RecipeHolder rp = RecipeData.getInstance().getRecipe(_recipeID);
-		if (rp == null)
+		if ((rp == null) || !player.hasRecipeList(_recipeID))
 		{
 			player.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
 			return;
