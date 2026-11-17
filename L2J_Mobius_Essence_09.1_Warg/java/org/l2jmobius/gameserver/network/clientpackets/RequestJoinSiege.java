@@ -97,6 +97,13 @@ public class RequestJoinSiege extends ClientPacket
 					return;
 				}
 				
+				// Cancelling mid-siege reloaded every SiegeClan, so all headquarters flags stopped being tracked.
+				if (castle.getSiege().isInProgress() || castle.getSiege().isRegistrationOver())
+				{
+					player.sendPacket(SystemMessageId.THIS_IS_NOT_THE_TIME_FOR_SIEGE_REGISTRATION_AND_SO_REGISTRATION_AND_CANCELLATION_CANNOT_BE_DONE);
+					return;
+				}
+				
 				castle.getSiege().removeSiegeClan(player);
 				if (_isAttacker == 1)
 				{
