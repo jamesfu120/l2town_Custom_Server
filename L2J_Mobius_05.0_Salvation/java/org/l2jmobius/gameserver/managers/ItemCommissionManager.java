@@ -40,6 +40,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.entity.World;
 import org.l2jmobius.gameserver.entity.actor.Npc;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.instance.CommissionManager;
@@ -103,6 +104,7 @@ public class ItemCommissionManager
 					while (rs.next())
 					{
 						final Item itemInstance = new Item(rs);
+						World.addObject(itemInstance); // Otherwise the bought item, once dropped, cannot be picked up.
 						itemInstances.put(itemInstance.getObjectId(), itemInstance);
 					}
 				}
