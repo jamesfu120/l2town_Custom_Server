@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.mechanics.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
+import org.l2jmobius.gameserver.taskmanagers.AttackStanceTaskManager;
 
 /**
  * @author Mobius
@@ -44,6 +45,18 @@ public class ExCastleWarObserverStart extends ClientPacket
 	{
 		final Player player = getPlayer();
 		if (player == null)
+		{
+			return;
+		}
+		
+		// A second start overwrote the return point (free teleport into the siege); observing also made a fighter invulnerable and left instances.
+		if (player.inObserverMode())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_FUNCTION_IN_THE_OBSERVER_MODE);
+			return;
+		}
+		
+		if (player.isDead() || AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || player.isInOlympiadMode() || player.isInInstance() || player.isInStoreMode() || player.isCursedWeaponEquipped() || player.isJailed() || player.isTeleporting())
 		{
 			return;
 		}
