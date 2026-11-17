@@ -308,6 +308,7 @@ public class MultiSellChoose extends ClientPacket
 						summedIngredients.add(new ItemChanceHolder(ingredient.getId(), ingredient.getChance(), ingredient.getCount() + summedIngredient.getCount(), ingredient.getEnchantmentLevel(), ingredient.isMaintainIngredient()));
 						summedIngredients.remove(summedIngredient);
 						added = true;
+						break; // The list was just changed: going on threw ConcurrentModificationException.
 					}
 				}
 				
@@ -338,7 +339,7 @@ public class MultiSellChoose extends ClientPacket
 						return;
 					}
 				}
-				else if (!checkIngredients(player, list, inventory, clan, ingredient.getId(), Math.multiplyExact(ingredient.getCount(), _amount)))
+				else if (!checkIngredients(player, list, inventory, clan, ingredient.getId(), Math.multiplyExact(list.getIngredientCount(ingredient), _amount))) // The taken count (multiplier, Adena tax), not the raw one.
 				{
 					return;
 				}
