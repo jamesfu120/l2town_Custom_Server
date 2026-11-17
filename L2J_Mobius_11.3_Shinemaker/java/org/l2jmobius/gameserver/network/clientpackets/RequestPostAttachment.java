@@ -130,8 +130,8 @@ public class RequestPostAttachment extends ClientPacket
 			return;
 		}
 		
-		int weight = 0;
-		int slots = 0;
+		long weight = 0; // Long: count x weight overflowed int and passed the check.
+		long slots = 0;
 		for (Item item : attachments.getItems())
 		{
 			if (item == null)
