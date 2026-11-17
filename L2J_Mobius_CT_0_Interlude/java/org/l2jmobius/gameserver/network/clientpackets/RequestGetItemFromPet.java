@@ -25,6 +25,8 @@ import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.instance.Pet;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.managers.PunishmentManager;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -81,6 +83,26 @@ public class RequestGetItemFromPet extends ClientPacket
 		if (_amount > item.getCount())
 		{
 			PunishmentManager.handleIllegalPlayerAction(player, getClass().getSimpleName() + ": Character " + player.getName() + " of account " + player.getAccountName() + " tried to get item with oid " + _objectId + " from pet but has invalid count " + _amount + " item count: " + item.getCount(), GeneralConfig.DEFAULT_PUNISH);
+			return;
+		}
+		
+		// The transfer checks neither side, so a full inventory went past its slot and weight limit and Adena past MAX_ADENA was lost.
+		final PlayerInventory inventory = player.getInventory();
+		if (!inventory.validateCapacity(item))
+		{
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+			return;
+		}
+		
+		if (!inventory.validateWeight(item.getTemplate().getWeight() * (long) _amount))
+		{
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+			return;
+		}
+		
+		if ((item.getId() == Inventory.ADENA_ID) && (inventory.getAdena() > (Inventory.MAX_ADENA - _amount)))
+		{
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_YOUR_OUT_OF_POCKET_ADENA_LIMIT);
 			return;
 		}
 		
