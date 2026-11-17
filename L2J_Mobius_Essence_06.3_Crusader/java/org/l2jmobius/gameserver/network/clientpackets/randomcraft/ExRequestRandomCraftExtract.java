@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.request.RandomCraftRequest;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.entity.item.instance.Item;
+import org.l2jmobius.gameserver.entity.itemcontainer.PlayerRandomCraft;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftExtract;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
@@ -77,8 +78,8 @@ public class ExRequestRandomCraftExtract extends ClientPacket
 		
 		player.addRequest(new RandomCraftRequest(player));
 		
-		int points = 0;
-		int fee = 0;
+		long points = 0;
+		long fee = 0;
 		Map<Integer, Long> toDestroy = new HashMap<>();
 		for (Entry<Integer, Long> e : _items.entrySet())
 		{
@@ -93,13 +94,15 @@ public class ExRequestRandomCraftExtract extends ClientPacket
 			final Item item = player.getInventory().getItemByObjectId(objId);
 			if (item != null)
 			{
-				if (count > item.getCount())
+				// Items without extract data give no points and must not be destroyed.
+				final long itemPoints = RandomCraftData.getInstance().getPoints(item.getId());
+				if ((itemPoints < 1) || (count > item.getCount()))
 				{
 					continue;
 				}
 				
 				toDestroy.put(objId, count);
-				points += RandomCraftData.getInstance().getPoints(item.getId()) * count;
+				points += itemPoints * count;
 				fee += RandomCraftData.getInstance().getFee(item.getId()) * count;
 			}
 			else
@@ -108,7 +111,10 @@ public class ExRequestRandomCraftExtract extends ClientPacket
 			}
 		}
 		
-		if ((points < 1) || (fee < 0))
+		// Points above what the gauge can hold would be lost while the items are still destroyed.
+		final PlayerRandomCraft craft = player.getRandomCraft();
+		final long capacity = ((PlayerRandomCraft.MAX_FULL_CRAFT_POINTS - craft.getFullCraftPoints() + 1L) * PlayerRandomCraft.MAX_CRAFT_POINTS) - craft.getCraftPoints();
+		if ((points < 1) || (points > capacity) || (fee < 0))
 		{
 			player.removeRequest(RandomCraftRequest.class);
 			return;
@@ -121,7 +127,7 @@ public class ExRequestRandomCraftExtract extends ClientPacket
 				player.destroyItem(ItemProcessType.FEE, e.getKey(), e.getValue(), player, true);
 			}
 			
-			player.getRandomCraft().addCraftPoints(points);
+			craft.addCraftPoints((int) points);
 		}
 		
 		player.sendPacket(new ExCraftInfo(player));
