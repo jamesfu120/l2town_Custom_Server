@@ -764,6 +764,13 @@ public class QuestState
 			}
 		}
 	}
+	/**
+	 * Drops the quest like a repeatable exit, without the quest complete notification that {@link #exitQuest(QuestType)} sends.
+	 */
+	public void abortQuest()
+	{
+		exitQuest(true);
+	}
 	
 	/**
 	 * Finishes the quest and removes all quest items associated with this quest from the player's inventory.<br>

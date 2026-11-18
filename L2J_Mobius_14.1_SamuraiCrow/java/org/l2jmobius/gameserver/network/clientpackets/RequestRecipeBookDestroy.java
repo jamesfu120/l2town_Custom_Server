@@ -58,7 +58,7 @@ public class RequestRecipeBookDestroy extends ClientPacket
 		}
 		
 		final RecipeHolder rp = RecipeData.getInstance().getRecipe(_recipeID);
-		if (rp == null)
+		if ((rp == null) || !player.hasRecipeList(_recipeID))
 		{
 			player.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
 			return;

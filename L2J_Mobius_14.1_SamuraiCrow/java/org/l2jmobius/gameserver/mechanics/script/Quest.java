@@ -6571,6 +6571,16 @@ public class Quest implements IEventTimerEvent<String>, IEventTimerCancel<String
 			return false;
 		}
 		
+		// Same siege rule as ExRequestTeleport; quest teleports skipped it.
+		if (!PlayerConfig.TELEPORT_WHILE_SIEGE_IN_PROGRESS)
+		{
+			final Castle castle = CastleManager.getInstance().getCastle(loc.getX(), loc.getY(), loc.getZ());
+			if ((castle != null) && castle.getSiege().isInProgress())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
+				return false;
+			}
+		}
 		player.abortCast();
 		player.stopMove(null);
 		player.teleToLocation(loc);

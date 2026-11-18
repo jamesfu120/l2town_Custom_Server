@@ -40,6 +40,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.entity.World;
 import org.l2jmobius.gameserver.entity.actor.Npc;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.instance.CommissionManager;
@@ -106,6 +107,7 @@ public class ItemCommissionManager
 					while (rs.next())
 					{
 						final Item itemInstance = new Item(rs);
+						World.addObject(itemInstance); // Otherwise the bought item, once dropped, cannot be picked up.
 						itemInstances.put(itemInstance.getObjectId(), itemInstance);
 					}
 				}
@@ -281,28 +283,23 @@ public class ItemCommissionManager
 				return;
 			}
 			
-			switch (Math.max(durationType, discountInPercentage))
+			// Each voucher is taken on its own; a shared choice between duration and discount kept the extension when a discount was used too.
+			if (durationType == 4)
 			{
-				case 4:
-				{
-					player.destroyItemByItemId(null, 22353, 1, player, true); // 15 days
-					break;
-				}
-				case 5:
-				{
-					player.destroyItemByItemId(null, 22354, 1, player, true); // 30 days
-					break;
-				}
-				case 30:
-				{
-					player.destroyItemByItemId(null, 22351, 1, player, true); // 30% discount
-					break;
-				}
-				case 100:
-				{
-					player.destroyItemByItemId(null, 22352, 1, player, true); // 100% discount
-					break;
-				}
+				player.destroyItemByItemId(null, 22353, 1, player, true); // 15 days
+			}
+			else if (durationType == 5)
+			{
+				player.destroyItemByItemId(null, 22354, 1, player, true); // 30 days
+			}
+			
+			if (discountInPercentage == 30)
+			{
+				player.destroyItemByItemId(null, 22351, 1, player, true); // 30% discount
+			}
+			else if (discountInPercentage == 100)
+			{
+				player.destroyItemByItemId(null, 22352, 1, player, true); // 100% discount
 			}
 			
 			try (Connection con = DatabaseFactory.getConnection();
@@ -323,7 +320,7 @@ public class ItemCommissionManager
 						final ScheduledFuture<?> saleEndTask = ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
 						commissionItem.setSaleEndTask(saleEndTask);
 						_commissionItems.put(commissionItem.getCommissionId(), commissionItem);
-						player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));
+						player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) durationType));
 						player.sendPacket(SystemMessageId.THE_ITEM_HAS_BEEN_REGISTERED);
 						player.sendPacket(ExResponseCommissionRegister.SUCCEED);
 						
