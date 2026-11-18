@@ -1,18 +1,22 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.entity.actor.holders.player;
 
@@ -33,7 +37,7 @@ import org.l2jmobius.gameserver.entity.actor.Player;
  * ADD: 3223: The previous name is being registered. Please try again later.<br>
  * DEL 3219: $s1 was successfully deleted from your Contact List.<br>
  * DEL 3217: The name is not currently registered.
- * @author UnAfraid, mrTJO
+ * @author UnAfraid, mrTJO, JankisLT
  */
 public class ContactList
 {
@@ -91,7 +95,8 @@ public class ContactList
 			return false;
 		}
 		
-		if (_player.getName().equals(name))
+		// Names are found case-insensitively, so a case-sensitive self check let a player add themselves.
+		if (_player.getName().equalsIgnoreCase(name))
 		{
 			_player.sendMessage("You cannot add your own name.");
 			return false;
@@ -126,13 +131,16 @@ public class ContactList
 			statement.setInt(2, contactId);
 			statement.execute();
 			
-			_contacts.add(name);
+			// Keep the stored spelling; the typed one only matched until the list was reloaded on login.
+			final String contactName = CharInfoTable.getInstance().getNameById(contactId);
+			_contacts.add(contactName != null ? contactName : name);
 			
 			_player.sendMessage(name + " was successfully added to your Contact List.");
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "Error found in " + _player.getName() + "'s ContactsList: " + e.getMessage(), e);
+			return false;
 		}
 		
 		return true;
@@ -140,7 +148,18 @@ public class ContactList
 	
 	public void remove(String name)
 	{
-		if (!_contacts.contains(name))
+		// The client may still list the name as it was typed, while the stored entry has the real spelling.
+		String stored = null;
+		for (String contactName : _contacts)
+		{
+			if (contactName.equalsIgnoreCase(name))
+			{
+				stored = contactName;
+				break;
+			}
+		}
+		
+		if (stored == null)
 		{
 			_player.sendMessage("The name is not currently registered.");
 			return;
@@ -153,7 +172,7 @@ public class ContactList
 			return;
 		}
 		
-		_contacts.remove(name);
+		_contacts.remove(stored);
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(QUERY_REMOVE))
