@@ -51,7 +51,8 @@ public class RequestExOustFromMpccRoom extends ClientPacket
 		if ((room != null) && (room.getLeader() == player) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
 		{
 			final Player target = World.getPlayer(_objectId);
-			if (target != null)
+			// The target must be in this room; deleteMember detached any player from their own room otherwise.
+			if ((target != null) && (target != player) && (target.getMatchingRoom() == room))
 			{
 				room.deleteMember(target, true);
 			}
