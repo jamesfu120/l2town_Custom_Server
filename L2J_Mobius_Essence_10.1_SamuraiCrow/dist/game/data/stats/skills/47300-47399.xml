@@ -3765,36 +3765,32 @@
 				<criticalChance>10</criticalChance>
 				<repeatCount>2</repeatCount>
 			</effect>
-			<selfEffects>
-				<effect name="CallSkill">
-					<skillId>47383</skillId> <!-- Legendary Lethal Shot -->
-					<chance>50</chance>
-					<skillLevel>
-						<amount>
-							<value level="1">1</value>
-							<value level="2">2</value>
-							<value level="3">3</value>
-							<value level="4">4</value>
-							<value level="5">5</value>
-							<value level="6">6</value>
-							<value level="7">7</value>
-							<value level="8">8</value>
-							<value level="9">9</value>
-							<value level="10">10</value>
-							<value level="11">11</value>
-							<value level="12">12</value>
-							<value level="13">13</value>
-							<value level="14">14</value>
-							<value level="15">15</value>
-							<value level="16">16</value>
-							<value level="17">17</value>
-							<value level="18">18</value>
-							<value level="19">19</value>
-							<value level="20">20</value>
-						</amount>
-					</skillLevel>
-				</effect>
-			</selfEffects>
+			<effect name="CallSkill">
+				<skillId>47383</skillId> <!-- Legendary Lethal Shot -->
+				<chance>50</chance>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">16</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+					<value level="20">20</value>
+				</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="47383" toLevel="20" name="Legendary Lethal Shot">
