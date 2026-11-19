@@ -64,18 +64,19 @@ public class RankManager
 	private static final String GET_HEROES = "SELECT characters.charId, characters.char_name, characters.race, characters.sex, characters.base_class, characters.level, characters.clanid, olympiad_nobles_eom.competitions_won, olympiad_nobles_eom.competitions_lost, olympiad_nobles_eom.olympiad_points, heroes.legend_count, heroes.count FROM heroes, characters, olympiad_nobles_eom WHERE characters.charId = heroes.charId AND characters.charId = olympiad_nobles_eom.charId AND heroes.played = 1 AND characters.accesslevel = 0 ORDER BY olympiad_nobles_eom.olympiad_points DESC, characters.base_class ASC LIMIT " + RankManager.PLAYER_LIMIT;
 	private static final String GET_CHARACTERS_BY_CLASS = "SELECT charId FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 39 AND characters.base_class = ? ORDER BY exp DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;
 	
-	private final Map<Integer, StatSet> _mainList = new ConcurrentHashMap<>();
-	private Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
-	private final Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
-	private Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
-	private final List<HeroInfo> _mainHeroList = new ArrayList<>();
-	private List<HeroInfo> _snapshotHeroList = new ArrayList<>();
-	private final Map<Integer, StatSet> _mainPvpList = new ConcurrentHashMap<>();
-	private Map<Integer, StatSet> _snapshotPvpList = new ConcurrentHashMap<>();
-	private final Map<Integer, StatSet> _mainPetList = new ConcurrentHashMap<>();
-	private Map<Integer, StatSet> _snapshotPetList = new ConcurrentHashMap<>();
-	private final Map<Integer, StatSet> _mainClanList = new ConcurrentHashMap<>();
-	private Map<Integer, StatSet> _snapshotClanList = new ConcurrentHashMap<>();
+	// Rebuilt into new collections and swapped in; the previous ones become the snapshot and are never modified again.
+	private volatile Map<Integer, StatSet> _mainList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
+	private volatile List<HeroInfo> _mainHeroList = new ArrayList<>();
+	private volatile List<HeroInfo> _snapshotHeroList = new ArrayList<>();
+	private volatile Map<Integer, StatSet> _mainPvpList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _snapshotPvpList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _mainPetList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _snapshotPetList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _mainClanList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _snapshotClanList = new ConcurrentHashMap<>();
 	
 	// Cache maps for consulting global ranks.
 	private final Map<Integer, Integer> _globalConsultingRankCache = new ConcurrentHashMap<>();
@@ -122,23 +123,15 @@ public class RankManager
 	
 	private synchronized void update()
 	{
+		// The snapshot aliased the main map that was then cleared (no rank change ever showed) and the lists stayed empty while reloading.
+		final Map<Integer, StatSet> mainList = new ConcurrentHashMap<>();
+		final Map<Integer, StatSet> mainOlyList = new ConcurrentHashMap<>();
+		final List<HeroInfo> mainHeroList = new ArrayList<>();
+		final Map<Integer, StatSet> mainPvpList = new ConcurrentHashMap<>();
+		final Map<Integer, StatSet> mainPetList = new ConcurrentHashMap<>();
+		final Map<Integer, StatSet> mainClanList = new ConcurrentHashMap<>();
+		
 		// Load charIds All.
-		_snapshotList = _mainList;
-		_mainList.clear();
-		_snapshotOlyList = _mainOlyList;
-		_mainOlyList.clear();
-		_snapshotHeroList = _mainHeroList;
-		_mainHeroList.clear();
-		_snapshotPvpList = _mainPvpList;
-		_mainPvpList.clear();
-		_snapshotPetList = _mainPetList;
-		_mainPetList.clear();
-		_snapshotClanList = _mainClanList;
-		_mainClanList.clear();
-		
-		_globalConsultingRankCache.clear();
-		_raceConsultingRankCache.clear();
-		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_CHARACTERS))
 		{
@@ -169,7 +162,7 @@ public class RankManager
 						stats.set("clanName", "");
 					}
 					
-					_mainList.put(i, stats);
+					mainList.put(i, stats);
 					i++;
 				}
 			}
@@ -226,7 +219,7 @@ public class RankManager
 					
 					loadClassRank(charId, classId, stats);
 					
-					_mainOlyList.put(i, stats);
+					mainOlyList.put(i, stats);
 					i++;
 				}
 			}
@@ -258,7 +251,7 @@ public class RankManager
 					final int olympiadPoints = result.getInt("olympiad_points");
 					final int clanLevel = (clanId > 0) ? ClanTable.getInstance().getClan(clanId).getLevel() : 0;
 					final boolean isTopHero = isFirstHero;
-					_mainHeroList.add(new HeroInfo(charName, clanName, ServerConfig.SERVER_ID, race, isMale, baseClass, level, legendCount, competitionsWon, competitionsLost, olympiadPoints, clanLevel, isTopHero));
+					mainHeroList.add(new HeroInfo(charName, clanName, ServerConfig.SERVER_ID, race, isMale, baseClass, level, legendCount, competitionsWon, competitionsLost, olympiadPoints, clanLevel, isTopHero));
 					isFirstHero = false;
 				}
 			}
@@ -299,7 +292,7 @@ public class RankManager
 						stats.set("clanName", "");
 					}
 					
-					_mainPvpList.put(i, stats);
+					mainPvpList.put(i, stats);
 					i++;
 				}
 			}
@@ -343,7 +336,7 @@ public class RankManager
 					stats.set("petType", petData.getType());
 					stats.set("npcId", petData.getNpcId());
 					
-					_mainPetList.put(i++, stats);
+					mainPetList.put(i++, stats);
 				}
 			}
 		}
@@ -368,7 +361,7 @@ public class RankManager
 					stats.set("reputation_score", result.getInt("reputation_score"));
 					stats.set("exp", result.getLong("exp"));
 					stats.set("clan_id", result.getInt("clan_id"));
-					_mainClanList.put(i, stats);
+					mainClanList.put(i, stats);
 					i++;
 				}
 			}
@@ -377,6 +370,22 @@ public class RankManager
 		{
 			LOGGER.log(Level.WARNING, "Could not load clan total rank data: " + this + " - " + e.getMessage(), e);
 		}
+		
+		_snapshotList = _mainList;
+		_mainList = mainList;
+		_snapshotOlyList = _mainOlyList;
+		_mainOlyList = mainOlyList;
+		_mainHeroList = mainHeroList;
+		_snapshotHeroList = mainHeroList; // Shown as the current heroes and has no rank change; an old list would be empty after a restart.
+		_snapshotPvpList = _mainPvpList;
+		_mainPvpList = mainPvpList;
+		_snapshotPetList = _mainPetList;
+		_mainPetList = mainPetList;
+		_snapshotClanList = _mainClanList;
+		_mainClanList = mainClanList;
+		
+		_globalConsultingRankCache.clear();
+		_raceConsultingRankCache.clear();
 	}
 	
 	private void loadClassRank(int charId, int classId, StatSet stats)

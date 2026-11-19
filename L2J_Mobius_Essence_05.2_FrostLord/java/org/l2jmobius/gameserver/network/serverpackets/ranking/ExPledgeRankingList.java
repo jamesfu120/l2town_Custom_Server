@@ -22,6 +22,7 @@ package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -73,6 +74,14 @@ public class ExPledgeRankingList extends ServerPacket
 		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("clan_id", 0) == _player.getClanId()).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
 		final List<Entry<Integer, StatSet>> limited = isTop150 ? list.stream().limit(150).toList() : playerData == null ? Collections.emptyList() : list.subList(Math.max(0, indexOf - 10), Math.min(list.size(), indexOf + 10));
+		// The previous rank is the clan's key in the unfiltered snapshot, 0 = new. Top 150 wrote the current rank (no change ever
+		// shown), and a clan missing from the snapshot wrote no field and shifted the rest of the packet.
+		final Map<Integer, Integer> previousRanks = new HashMap<>();
+		for (Entry<Integer, StatSet> ssData : snapshot)
+		{
+			previousRanks.put(ssData.getValue().getInt("clan_id"), ssData.getKey());
+		}
+		
 		buffer.writeInt(limited.size());
 		int rank = 1;
 		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).toList())
@@ -80,15 +89,7 @@ public class ExPledgeRankingList extends ServerPacket
 			int curRank = rank++;
 			final StatSet player = data.getValue();
 			buffer.writeInt(!isTop150 ? data.getKey() : curRank);
-			for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
-			{
-				final StatSet snapshotData = ssData.getValue();
-				if (player.getInt("clan_id") == snapshotData.getInt("clan_id"))
-				{
-					buffer.writeInt(!isTop150 ? ssData.getKey() : curRank); // server rank snapshot
-				}
-			}
-			
+			buffer.writeInt(previousRanks.getOrDefault(player.getInt("clan_id"), 0)); // previous rank
 			buffer.writeSizedString(player.getString("clan_name"));
 			buffer.writeInt(player.getInt("clan_level"));
 			buffer.writeSizedString(player.getString("char_name"));

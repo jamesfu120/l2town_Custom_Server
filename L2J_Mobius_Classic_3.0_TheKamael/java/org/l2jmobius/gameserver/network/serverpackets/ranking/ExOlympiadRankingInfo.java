@@ -85,22 +85,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 							buffer.writeSizedString(player.getString("name")); // name
 							buffer.writeSizedString(player.getString("clanName")); // clan name
 							buffer.writeInt(id); // rank
-							if (!_snapshotList.isEmpty())
-							{
-								for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
-								{
-									final Integer id2 = id2Entry.getKey();
-									final StatSet snapshot = id2Entry.getValue();
-									if (player.getInt("charId") == snapshot.getInt("charId"))
-									{
-										buffer.writeInt(id2); // previous rank
-									}
-								}
-							}
-							else
-							{
-								buffer.writeInt(id);
-							}
+							writeSnapshot(buffer, _snapshotList, player.getInt("charId"), id);
 							
 							buffer.writeInt(ServerConfig.SERVER_ID); // server id
 							buffer.writeInt(player.getInt("level")); // level
@@ -140,22 +125,7 @@ public class ExOlympiadRankingInfo extends ServerPacket
 									buffer.writeSizedString(plr.getString("name"));
 									buffer.writeSizedString(plr.getString("clanName"));
 									buffer.writeInt(id2);
-									if (!_snapshotList.isEmpty())
-									{
-										for (Entry<Integer, StatSet> id3Entry : _snapshotList.entrySet())
-										{
-											final Integer id3 = id3Entry.getKey();
-											final StatSet snapshot = id3Entry.getValue();
-											if (player.getInt("charId") == snapshot.getInt("charId"))
-											{
-												buffer.writeInt(id3); // class rank snapshot
-											}
-										}
-									}
-									else
-									{
-										buffer.writeInt(id2);
-									}
+									writeSnapshot(buffer, _snapshotList, player.getInt("charId"), id2);
 									
 									buffer.writeInt(ServerConfig.SERVER_ID);
 									buffer.writeInt(plr.getInt("level"));
@@ -200,35 +170,20 @@ public class ExOlympiadRankingInfo extends ServerPacket
 								buffer.writeSizedString(player.getString("name"));
 								buffer.writeSizedString(player.getString("clanName"));
 								buffer.writeInt(i); // class rank
-								if (!_snapshotList.isEmpty())
+								final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
+								int j = 1;
+								for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
 								{
-									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
-									int j = 1;
-									for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
+									final Integer id2 = id2Entry.getKey();
+									final StatSet snapshot = id2Entry.getValue();
+									if (_classId == snapshot.getInt("classId"))
 									{
-										final Integer id2 = id2Entry.getKey();
-										final StatSet snapshot = id2Entry.getValue();
-										if (_classId == snapshot.getInt("classId"))
-										{
-											snapshotRaceList.put(j, _snapshotList.get(id2));
-											j++;
-										}
-									}
-									
-									for (Entry<Integer, StatSet> id2Entry : snapshotRaceList.entrySet())
-									{
-										final Integer id2 = id2Entry.getKey();
-										final StatSet snapshot = id2Entry.getValue();
-										if (player.getInt("charId") == snapshot.getInt("charId"))
-										{
-											buffer.writeInt(id2); // class rank snapshot
-										}
+										snapshotRaceList.put(j, _snapshotList.get(id2));
+										j++;
 									}
 								}
-								else
-								{
-									buffer.writeInt(i);
-								}
+								
+								writeSnapshot(buffer, snapshotRaceList, player.getInt("charId"), i);
 								
 								buffer.writeInt(ServerConfig.SERVER_ID);
 								buffer.writeInt(player.getInt("level"));
@@ -306,5 +261,27 @@ public class ExOlympiadRankingInfo extends ServerPacket
 				}
 			}
 		}
+	}
+	
+	/**
+	 * Writes the snapshot rank of {@code charId}, or the fallback value when it is not in {@code snapshot}.
+	 * A row missing from the snapshot wrote nothing and shifted every following row.
+	 * @param buffer the packet buffer
+	 * @param snapshot the snapshot list to search
+	 * @param charId the character to look up
+	 * @param rank fallback rank
+	 */
+	private static void writeSnapshot(WriteBuffer buffer, Map<Integer, StatSet> snapshot, int charId, int rank)
+	{
+		for (Entry<Integer, StatSet> entry : snapshot.entrySet())
+		{
+			if (entry.getValue().getInt("charId") == charId)
+			{
+				buffer.writeInt(entry.getKey()); // previous rank
+				return;
+			}
+		}
+		
+		buffer.writeInt(rank);
 	}
 }

@@ -22,6 +22,7 @@ package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -74,8 +75,16 @@ public class ExPvpRankingList extends ServerPacket
 		buffer.writeInt(_race);
 		if (!_playerList.isEmpty() && (_type != 255) && (_race != 255))
 		{
-			final RankingCategory category = RankingCategory.values()[_tabId];
-			writeFilteredRankingData(category, category.getScopeByGroup(_type), Race.values()[_race], PlayerClass.getPlayerClass(_class), buffer);
+			// Group and race come from the client; an out-of-range one threw here.
+			final RankingCategory category = (_tabId >= 0) && (_tabId < RankingCategory.values().length) ? RankingCategory.values()[_tabId] : null;
+			final RankingScope scope = category == null ? null : category.getScopeByGroup(_type);
+			if ((scope == null) || (_race < 0) || (_race >= Race.values().length))
+			{
+				buffer.writeInt(0);
+				return;
+			}
+			
+			writeFilteredRankingData(category, scope, Race.values()[_race], PlayerClass.getPlayerClass(_class), buffer);
 		}
 		else
 		{
@@ -148,6 +157,16 @@ public class ExPvpRankingList extends ServerPacket
 			}
 		}
 		
+		// The client reads nRank, nPrevRank: the previous rank is the position in the snapshot of the same filter (its key in SELF), 0 = new.
+		// It got the snapshot rank and the EXP race rank, and a player missing from the snapshot wrote nothing and shifted the packet.
+		final Map<Integer, Integer> previousRanks = new HashMap<>();
+		int position = 0;
+		for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
+		{
+			position++;
+			previousRanks.put(ssData.getValue().getInt("charId"), scope == RankingScope.SELF ? ssData.getKey() : position);
+		}
+		
 		buffer.writeInt(limited.size());
 		int rank = 1;
 		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).toList())
@@ -159,28 +178,11 @@ public class ExPvpRankingList extends ServerPacket
 			buffer.writeInt(player.getInt("level"));
 			buffer.writeInt(player.getInt("race"));
 			buffer.writeInt(player.getInt("classId"));
-			buffer.writeLong(player.getInt("points")); // server rank
-			if (!snapshot.isEmpty())
-			{
-				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
-				{
-					final StatSet snapshotData = ssData.getValue();
-					if (player.getInt("charId") == snapshotData.getInt("charId"))
-					{
-						buffer.writeInt(scope == RankingScope.SELF ? ssData.getKey() : curRank); // server rank snapshot
-						buffer.writeInt(snapshotData.getInt("raceRank", 0)); // race rank snapshot
-						buffer.writeInt(player.getInt("kills"));
-						buffer.writeInt(player.getInt("deaths"));
-					}
-				}
-			}
-			else
-			{
-				buffer.writeInt(scope == RankingScope.SELF ? data.getKey() : curRank);
-				buffer.writeInt(0);
-				buffer.writeInt(0);
-				buffer.writeInt(0);
-			}
+			buffer.writeLong(player.getInt("points")); // PvP points
+			buffer.writeInt(scope == RankingScope.SELF ? data.getKey() : curRank); // rank
+			buffer.writeInt(previousRanks.getOrDefault(player.getInt("charId"), 0)); // previous rank
+			buffer.writeInt(player.getInt("kills"));
+			buffer.writeInt(player.getInt("deaths"));
 		}
 	}
 }

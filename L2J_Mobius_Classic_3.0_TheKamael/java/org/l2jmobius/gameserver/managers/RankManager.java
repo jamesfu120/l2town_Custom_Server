@@ -59,10 +59,11 @@ public class RankManager
 	private static final String GET_HEROES = "SELECT characters.charId, characters.char_name, characters.race, characters.sex, characters.base_class, characters.level, characters.clanid, olympiad_nobles_eom.competitions_won, olympiad_nobles_eom.competitions_lost, olympiad_nobles_eom.olympiad_points, heroes.legend_count, heroes.count FROM heroes, characters, olympiad_nobles_eom WHERE characters.charId = heroes.charId AND characters.charId = olympiad_nobles_eom.charId AND heroes.played = 1 AND characters.accesslevel = 0 ORDER BY olympiad_nobles_eom.olympiad_points DESC, characters.base_class ASC LIMIT " + RankManager.PLAYER_LIMIT;
 	private static final String GET_CHARACTERS_BY_CLASS = "SELECT characters.charId, olympiad_nobles.olympiad_points FROM characters, olympiad_nobles WHERE olympiad_nobles.charId = characters.charId AND characters.base_class = ? ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
 	
-	private final Map<Integer, StatSet> _mainList = new ConcurrentHashMap<>();
-	private Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
-	private final Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
-	private Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
+	// Rebuilt into new collections and swapped in; the previous ones become the snapshot and are never modified again.
+	private volatile Map<Integer, StatSet> _mainList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
+	private volatile Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
 	private final List<HeroInfo> _mainHeroList = new ArrayList<>();
 	private final List<HeroInfo> _snapshotHeroList = new ArrayList<>();
 	
@@ -111,12 +112,11 @@ public class RankManager
 	
 	private synchronized void update()
 	{
-		// Load charIds All.
-		_snapshotList = _mainList;
-		_mainList.clear();
-		_snapshotOlyList = _mainOlyList;
-		_mainOlyList.clear();
+		// The snapshot aliased the main map that was then cleared (no rank change ever showed) and the lists stayed empty while reloading.
+		final Map<Integer, StatSet> mainList = new ConcurrentHashMap<>();
+		final Map<Integer, StatSet> mainOlyList = new ConcurrentHashMap<>();
 		
+		// Load charIds All.
 		if (!Hero.getInstance().getHeroes().isEmpty())
 		{
 			try (Connection con = DatabaseFactory.getConnection();
@@ -149,9 +149,6 @@ public class RankManager
 			}
 		}
 		
-		_globalConsultingRankCache.clear();
-		_raceConsultingRankCache.clear();
-		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_CHARACTERS))
 		{
@@ -180,7 +177,7 @@ public class RankManager
 						stats.set("clanName", "");
 					}
 					
-					_mainList.put(i, stats);
+					mainList.put(i, stats);
 					i++;
 				}
 			}
@@ -237,7 +234,7 @@ public class RankManager
 					
 					loadClassRank(charId, classId, stats);
 					
-					_mainOlyList.put(i, stats);
+					mainOlyList.put(i, stats);
 					i++;
 				}
 			}
@@ -278,6 +275,14 @@ public class RankManager
 				LOGGER.log(Level.WARNING, "Could not load Hero and Legend Info rank data: " + this + " - " + e.getMessage(), e);
 			}
 		}
+		
+		_snapshotList = _mainList;
+		_mainList = mainList;
+		_snapshotOlyList = _mainOlyList;
+		_mainOlyList = mainOlyList;
+		
+		_globalConsultingRankCache.clear();
+		_raceConsultingRankCache.clear();
 	}
 	
 	private void loadClassRank(int charId, int classId, StatSet stats)

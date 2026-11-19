@@ -22,6 +22,7 @@ package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -70,8 +71,16 @@ public class ExPetRankingList extends ServerPacket
 		buffer.writeInt(_petItemObjectId);
 		if (!_playerList.isEmpty())
 		{
-			final RankingCategory category = RankingCategory.values()[_tabId];
-			writeFilteredRankingData(buffer, category, category.getScopeByGroup(_season));
+			// The group comes from the client; an out-of-range one threw here.
+			final RankingCategory category = (_tabId >= 0) && (_tabId < RankingCategory.values().length) ? RankingCategory.values()[_tabId] : null;
+			final RankingScope scope = category == null ? null : category.getScopeByGroup(_season);
+			if (scope == null)
+			{
+				buffer.writeInt(0);
+				return;
+			}
+			
+			writeFilteredRankingData(buffer, category, scope);
 		}
 		else
 		{
@@ -100,7 +109,8 @@ public class ExPetRankingList extends ServerPacket
 			}
 			case FRIEND:
 			{
-				writeScopeData(buffer, scope, _playerList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).toList(), _snapshotList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).toList());
+				// Pet rows store the owner as "ownerId"; reading "charId" threw and the tab never filled.
+				writeScopeData(buffer, scope, _playerList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("ownerId"))).toList(), _snapshotList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("ownerId"))).toList());
 				break;
 			}
 		}
@@ -108,7 +118,8 @@ public class ExPetRankingList extends ServerPacket
 	
 	private void writeScopeData(WriteBuffer buffer, RankingScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
 	{
-		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
+		// SELF centres on the requested pet (else the player's first); "charId" is not in pet rows, so it was always empty.
+		Entry<Integer, StatSet> playerData = list.stream().filter(it -> (_petItemObjectId > 0) ? (it.getValue().getInt("controlledItemObjId", 0) == _petItemObjectId) : (it.getValue().getInt("ownerId", 0) == _player.getObjectId())).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
 		final List<Entry<Integer, StatSet>> limited;
 		switch (scope)
@@ -139,6 +150,16 @@ public class ExPetRankingList extends ServerPacket
 			}
 		}
 		
+		// The previous rank is the position in the snapshot of the same filter (its key in SELF), 0 = new. Non-SELF scopes wrote the
+		// current rank (no change ever shown), and a pet missing from the snapshot wrote no field and shifted the rest of the packet.
+		final Map<Integer, Integer> previousRanks = new HashMap<>();
+		int position = 0;
+		for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
+		{
+			position++;
+			previousRanks.put(ssData.getValue().getInt("controlledItemObjId", 0), scope == RankingScope.SELF ? ssData.getKey() : position);
+		}
+		
 		buffer.writeInt(limited.size());
 		int rank = 1;
 		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).toList())
@@ -153,22 +174,8 @@ public class ExPetRankingList extends ServerPacket
 			buffer.writeShort(pet.getInt("level", 1));
 			buffer.writeShort(pet.getInt("owner_race", 0));
 			buffer.writeShort(pet.getInt("owner_level", 1));
-			buffer.writeInt(scope == RankingScope.SELF ? data.getKey() : curRank); // server rank
-			if (!snapshot.isEmpty())
-			{
-				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
-				{
-					final StatSet snapshotData = ssData.getValue();
-					if (pet.getInt("controlledItemObjId", 0) == snapshotData.getInt("controlledItemObjId", 0))
-					{
-						buffer.writeInt(scope == RankingScope.SELF ? ssData.getKey() : curRank); // server rank snapshot
-					}
-				}
-			}
-			else
-			{
-				buffer.writeInt(scope == RankingScope.SELF ? data.getKey() : curRank); // server rank
-			}
+			buffer.writeInt(scope == RankingScope.SELF ? data.getKey() : curRank); // rank
+			buffer.writeInt(previousRanks.getOrDefault(pet.getInt("controlledItemObjId", 0), 0)); // previous rank
 		}
 	}
 }

@@ -142,19 +142,22 @@ public class ExOlympiadRankingInfo extends ServerPacket
 			buffer.writeSizedString(player.getString("name")); // name
 			buffer.writeSizedString(player.getString("clanName")); // clan name
 			buffer.writeInt(scope == RankingOlympiadScope.SELF ? data.getKey() : curRank); // rank
-			if (!snapshot.isEmpty())
+			// A player missing from the snapshot wrote no field and shifted the packet; the previous rank only counted matches, so it was always 1.
+			boolean found = false;
+			int snapshotRank = 0;
+			for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
 			{
-				int snapshotRank = 1;
-				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).toList())
+				snapshotRank++;
+				final StatSet snapshotData = ssData.getValue();
+				if (player.getInt("charId") == snapshotData.getInt("charId"))
 				{
-					final StatSet snapshotData = ssData.getValue();
-					if (player.getInt("charId") == snapshotData.getInt("charId"))
-					{
-						buffer.writeInt(scope == RankingOlympiadScope.SELF ? ssData.getKey() : snapshotRank++); // previous rank
-					}
+					buffer.writeInt(scope == RankingOlympiadScope.SELF ? ssData.getKey() : snapshotRank); // previous rank
+					found = true;
+					break;
 				}
 			}
-			else
+			
+			if (!found)
 			{
 				buffer.writeInt(scope == RankingOlympiadScope.SELF ? data.getKey() : curRank);
 			}
