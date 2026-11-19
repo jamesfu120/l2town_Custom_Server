@@ -88,26 +88,7 @@ public class ExRankingCharRankers extends ServerPacket
 							buffer.writeInt(player.getInt("classId"));
 							buffer.writeInt(player.getInt("race"));
 							buffer.writeInt(id); // server rank
-							if (!_snapshotList.isEmpty())
-							{
-								for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
-								{
-									final Integer id2 = id2Entry.getKey();
-									final StatSet snapshot = id2Entry.getValue();
-									if (player.getInt("charId") == snapshot.getInt("charId"))
-									{
-										buffer.writeInt(id2); // server rank snapshot
-										buffer.writeInt(snapshot.getInt("raceRank", 0)); // race rank snapshot
-										buffer.writeInt(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
-									}
-								}
-							}
-							else
-							{
-								buffer.writeInt(id);
-								buffer.writeInt(0);
-								buffer.writeInt(0);
-							}
+							writeSnapshot(buffer, _snapshotList, player.getInt("charId"), id, 0, 0);
 						}
 					}
 					else
@@ -141,20 +122,7 @@ public class ExRankingCharRankers extends ServerPacket
 									buffer.writeInt(plr.getInt("classId"));
 									buffer.writeInt(plr.getInt("race"));
 									buffer.writeInt(id2); // server rank
-									if (!_snapshotList.isEmpty())
-									{
-										for (Entry<Integer, StatSet> id3Entry : _snapshotList.entrySet())
-										{
-											final Integer id3 = id3Entry.getKey();
-											final StatSet snapshot = id3Entry.getValue();
-											if (player.getInt("charId") == snapshot.getInt("charId"))
-											{
-												buffer.writeInt(id3); // server rank snapshot
-												buffer.writeInt(snapshot.getInt("raceRank", 0));
-												buffer.writeInt(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
-											}
-										}
-									}
+									writeSnapshot(buffer, _snapshotList, plr.getInt("charId"), id2, 0, 0); // Was the requester's row for every line.
 								}
 							}
 						}
@@ -193,8 +161,6 @@ public class ExRankingCharRankers extends ServerPacket
 								buffer.writeInt(player.getInt("classId"));
 								buffer.writeInt(player.getInt("race"));
 								buffer.writeInt(i); // server rank
-								if (!_snapshotList.isEmpty())
-								{
 									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
 									int j = 1;
 									for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
@@ -208,24 +174,7 @@ public class ExRankingCharRankers extends ServerPacket
 										}
 									}
 									
-									for (Entry<Integer, StatSet> id2Entry : snapshotRaceList.entrySet())
-									{
-										final Integer id2 = id2Entry.getKey();
-										final StatSet snapshot = id2Entry.getValue();
-										if (player.getInt("charId") == snapshot.getInt("charId"))
-										{
-											buffer.writeInt(id2); // server rank snapshot
-											buffer.writeInt(snapshot.getInt("raceRank", 0)); // race rank snapshot
-											buffer.writeInt(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
-										}
-									}
-								}
-								else
-								{
-									buffer.writeInt(i);
-									buffer.writeInt(i);
-									buffer.writeInt(i); // nClassRank_Snapshot
-								}
+									writeSnapshot(buffer, snapshotRaceList, player.getInt("charId"), i, i, i);
 								
 								i++;
 							}
@@ -319,26 +268,7 @@ public class ExRankingCharRankers extends ServerPacket
 							buffer.writeInt(player.getInt("classId"));
 							buffer.writeInt(player.getInt("race"));
 							buffer.writeInt(id); // clan rank
-							if (!_snapshotList.isEmpty())
-							{
-								for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
-								{
-									final Integer id2 = id2Entry.getKey();
-									final StatSet snapshot = id2Entry.getValue();
-									if (player.getInt("charId") == snapshot.getInt("charId"))
-									{
-										buffer.writeInt(id2); // server rank snapshot
-										buffer.writeInt(snapshot.getInt("raceRank", 0)); // race rank snapshot
-										buffer.writeInt(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
-									}
-								}
-							}
-							else
-							{
-								buffer.writeInt(id);
-								buffer.writeInt(0);
-								buffer.writeInt(0);
-							}
+							writeSnapshot(buffer, _snapshotList, player.getInt("charId"), id, 0, 0);
 						}
 					}
 					else
@@ -380,26 +310,7 @@ public class ExRankingCharRankers extends ServerPacket
 								buffer.writeInt(player.getInt("classId"));
 								buffer.writeInt(player.getInt("race"));
 								buffer.writeInt(id); // friend rank
-								if (!_snapshotList.isEmpty())
-								{
-									for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
-									{
-										final Integer id2 = id2Entry.getKey();
-										final StatSet snapshot = id2Entry.getValue();
-										if (player.getInt("charId") == snapshot.getInt("charId"))
-										{
-											buffer.writeInt(id2); // server rank snapshot
-											buffer.writeInt(snapshot.getInt("raceRank", 0)); // race rank snapshot
-											buffer.writeInt(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
-										}
-									}
-								}
-								else
-								{
-									buffer.writeInt(id);
-									buffer.writeInt(0);
-									buffer.writeInt(0);
-								}
+								writeSnapshot(buffer, _snapshotList, player.getInt("charId"), id, 0, 0);
 							}
 						}
 					}
@@ -422,26 +333,7 @@ public class ExRankingCharRankers extends ServerPacket
 						buffer.writeInt(_player.getBaseClass());
 						buffer.writeInt(_player.getRace().ordinal());
 						buffer.writeInt(1); // clan rank
-						if (!_snapshotList.isEmpty())
-						{
-							for (Entry<Integer, StatSet> idEntry : _snapshotList.entrySet())
-							{
-								final Integer id = idEntry.getKey();
-								final StatSet snapshot = idEntry.getValue();
-								if (_player.getObjectId() == snapshot.getInt("charId"))
-								{
-									buffer.writeInt(id); // server rank snapshot
-									buffer.writeInt(snapshot.getInt("raceRank", 0)); // race rank snapshot
-									buffer.writeInt(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
-								}
-							}
-						}
-						else
-						{
-							buffer.writeInt(0);
-							buffer.writeInt(0);
-							buffer.writeInt(0);
-						}
+						writeSnapshot(buffer, _snapshotList, _player.getObjectId(), 0, 0, 0);
 					}
 					break;
 				}
@@ -472,8 +364,6 @@ public class ExRankingCharRankers extends ServerPacket
 								buffer.writeInt(player.getInt("classId"));
 								buffer.writeInt(player.getInt("race"));
 								buffer.writeInt(i); // server rank
-								if (!_snapshotList.isEmpty())
-								{
 									final Map<Integer, StatSet> snapshotClassList = new ConcurrentHashMap<>();
 									int j = 1;
 									for (Entry<Integer, StatSet> id2Entry : _snapshotList.entrySet())
@@ -487,24 +377,7 @@ public class ExRankingCharRankers extends ServerPacket
 										}
 									}
 									
-									for (Entry<Integer, StatSet> id2Entry : snapshotClassList.entrySet())
-									{
-										final Integer id2 = id2Entry.getKey();
-										final StatSet snapshot = id2Entry.getValue();
-										if (player.getInt("charId") == snapshot.getInt("charId"))
-										{
-											buffer.writeInt(id2); // server rank snapshot
-											buffer.writeInt(snapshot.getInt("raceRank", 0)); // race rank snapshot
-											buffer.writeInt(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
-										}
-									}
-								}
-								else
-								{
-									buffer.writeInt(i);
-									buffer.writeInt(i);
-									buffer.writeInt(i); // nClassRank_Snapshot?
-								}
+									writeSnapshot(buffer, snapshotClassList, player.getInt("charId"), i, i, i);
 								
 								i++;
 							}
@@ -575,5 +448,33 @@ public class ExRankingCharRankers extends ServerPacket
 		{
 			buffer.writeInt(0);
 		}
+	}
+	/**
+	 * Writes the three snapshot ranks of {@code charId}, or the fallback values when it is not in {@code snapshot}.
+	 * A row missing from the snapshot wrote nothing and shifted every following row.
+	 * @param buffer the packet buffer
+	 * @param snapshot the snapshot list to search
+	 * @param charId the character to look up
+	 * @param rank fallback server rank
+	 * @param raceRank fallback race rank
+	 * @param classRank fallback class rank
+	 */
+	private static void writeSnapshot(WriteBuffer buffer, Map<Integer, StatSet> snapshot, int charId, int rank, int raceRank, int classRank)
+	{
+		for (Entry<Integer, StatSet> entry : snapshot.entrySet())
+		{
+			final StatSet data = entry.getValue();
+			if (data.getInt("charId") == charId)
+			{
+				buffer.writeInt(entry.getKey()); // server rank snapshot
+				buffer.writeInt(data.getInt("raceRank", 0)); // race rank snapshot
+				buffer.writeInt(data.getInt("classRank", 0)); // nClassRank_Snapshot
+				return;
+			}
+		}
+		
+		buffer.writeInt(rank);
+		buffer.writeInt(raceRank);
+		buffer.writeInt(classRank);
 	}
 }

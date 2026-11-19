@@ -151,7 +151,7 @@ public class FakePlayerPopulationManager {
       return false;
    }
 
-   private static boolean isSupportSkill(Skill skill) {
+     private static boolean isSupportSkill(Skill skill) {
       if (!isUsablePositiveSupportSkill(skill)) return false;
       AffectScope scope = skill.getAffectScope();
       if (scope == AffectScope.PARTY || scope == AffectScope.PARTY_PLEDGE || scope == AffectScope.RANGE || scope == AffectScope.PLEDGE) return true;
@@ -161,14 +161,18 @@ public class FakePlayerPopulationManager {
 
    private static boolean isPositiveBuffSkill(Skill skill) {
       if (skill == null || skill.hasNegativeEffect() || isFakePartyReturnSkill(skill)) return false;
-      if (skill.getAffectScope() == AffectScope.SINGLE && skill.getTargetType() == TargetType.SELF) return false;
-      if (skill.hasEffectType(EffectType.HEAL, EffectType.MANAHEAL_BY_LEVEL)) return false;
+      if (skill.hasEffectType(EffectType.HEAL, EffectType.MANAHEAL_BY_LEVEL, EffectType.MANAHEAL_PERCENT)) return false;
+      // 只要是持續性的增益狀態（Buff / 歌舞 / 觸發技），包含自體 Buff（TargetType.SELF）全部允許施放！
+      if (skill.getBuffType().isBuff() || skill.getBuffType().isDance()) {
+         return true;
+      }
       TargetType tt = skill.getTargetType();
       AffectScope scope = skill.getAffectScope();
-      return scope == AffectScope.PARTY || scope == AffectScope.RANGE || scope == AffectScope.PLEDGE || tt == TargetType.OTHERS || tt == TargetType.MY_PARTY || tt == TargetType.TARGET || tt == TargetType.TARGET_OR_SELF;
+      return scope == AffectScope.PARTY || scope == AffectScope.PARTY_PLEDGE || scope == AffectScope.RANGE || scope == AffectScope.PLEDGE || tt == TargetType.SELF || tt == TargetType.OTHERS || tt == TargetType.MY_PARTY || tt == TargetType.TARGET || tt == TargetType.TARGET_OR_SELF;
    }
 
    private static boolean isUsablePositiveSupportSkill(Skill skill) {
+	  if (isCrashRiskSkill(skill)) return false;
       if (skill == null || skill.isPassive() || !skill.isActive() || skill.isToggle() || skill.hasNegativeEffect()) return false;
       if (isFakePartySummonSkill(skill) || isFakePartyReturnSkill(skill) || skill.hasEffectType(EffectType.TELEPORT)) return false;
       String name = skill.getName() != null ? skill.getName().toLowerCase(Locale.ROOT) : "";
@@ -196,6 +200,29 @@ public class FakePlayerPopulationManager {
 
    private static boolean isForbiddenFakeSupportUtilitySkill(Skill skill) {
       return skill == null || isFakePartySummonSkill(skill) || isFakePartyReturnSkill(skill) || skill.isTransformation();
+   }
+   
+         private static boolean isCrashRiskSkill(Skill skill) {
+      if (skill == null) return true;
+      // 1. 只使用 14.1 確認存在的 TELEPORT 類型檢查
+      if (skill.hasEffectType(EffectType.TELEPORT, EffectType.TELEPORT_TO_TARGET)) {
+         return true;
+      }
+      // 2. 透過效果類別名稱（字串比對）安全過濾所有衝鋒、閃現、擊退、拉人位移技，完全不受版本列舉名稱影響
+      for (EffectScope effectScope : EffectScope.values()) {
+         List<AbstractEffect> effects = skill.getEffects(effectScope);
+         if (effects != null) {
+            for (AbstractEffect effect : effects) {
+               if (effect != null) {
+                  String effName = effect.getClass().getSimpleName().toLowerCase(Locale.ROOT);
+                  if (effName.contains("charge") || effName.contains("rush") || effName.contains("blink") || effName.contains("dash") || effName.contains("fly") || effName.contains("knockback") || effName.contains("pull")) {
+                     return true;
+                  }
+               }
+            }
+         }
+      }
+      return false;
    }
 
    public static void initialize() {
@@ -397,9 +424,10 @@ public class FakePlayerPopulationManager {
       return classes;
    }
 
-   private static void spawnOne(boolean shop) {
+      private static void spawnOne(boolean shop) {
       try {
-         int level = Rnd.get(FakePlayersConfig.FAKE_PLAYER_MIN_LEVEL, Math.min(120, FakePlayersConfig.FAKE_PLAYER_MAX_LEVEL));
+         // 🔥 修改：直接強制假人生成等級為 70 ~ 110 級
+         int level = Rnd.get(70, 110);
          List<PlayerClass> classes = getEligibleFakeClasses(level);
          if (classes.isEmpty()) {
             LOGGER.warning("No EPIC 14.1 playable class is eligible for fake-player level " + level + ".");
@@ -821,8 +849,8 @@ public class FakePlayerPopulationManager {
       if (player == null) {
          return magicSkills;
       } else {
-         for(Skill skill : player.getAllSkills()) {
-            if (skill != null && !skill.isPassive() && skill.isActive() && !skill.isToggle() && !isForbiddenFakeSupportUtilitySkill(skill) && !isFakePartySummonSkill(skill) && !skill.hasEffectType(EffectType.TELEPORT, EffectType.TELEPORT_TO_TARGET)) {
+                 for(Skill skill : player.getAllSkills()) {
+            if (skill != null && !skill.isPassive() && skill.isActive() && !skill.isToggle() && !isForbiddenFakeSupportUtilitySkill(skill) && !isFakePartySummonSkill(skill) && !isCrashRiskSkill(skill) && !skill.hasEffectType(EffectType.TELEPORT, EffectType.TELEPORT_TO_TARGET)) {
                if (skill.isMagic()) {
                   if (findOffensiveMagicSkillCandidate(skill)) {
                      magicSkills.add(skill);
@@ -1197,7 +1225,7 @@ public class FakePlayerPopulationManager {
       }
    }
 
-        private static boolean isSuitableHuntingMonster(Player player, Monster monster) {
+          private static boolean isSuitableHuntingMonster(Player player, Monster monster) {
       if (monster == null || !monster.isSpawned() || monster.isDead() || monster.isFakePlayer()
          || monster.isRaid() || monster.isRaidMinion() || monster.isQuestMonster()) {
          return false;
@@ -1209,10 +1237,14 @@ public class FakePlayerPopulationManager {
       if (monster.isInsideZone(org.l2jmobius.gameserver.entity.zone.ZoneId.WATER) || monster.getZ() < -6000 || monster.getZ() > 10000) {
          return false;
       }
-	  // 限制在亞丁/艾爾摩主大陸常規地圖範圍內
+      // 🔥 修改：如果假人已經在隊伍中（跟隨玩家練功），完全無視等級差與 85 級限制，確保全隊一起打怪！
+      if (player.isInParty()) {
+         return true;
+      }
+      // 單人假人限制在主大陸常規地圖範圍內，並依照等級差尋怪
       int x = monster.getX();
       int y = monster.getY();
-      if (x < -130000 || x > 220000 || y < -150000 || y > 260000 || monster.getLevel() > 85) {
+      if (x < -130000 || x > 220000 || y < -150000 || y > 260000 || monster.getLevel() > 115) {
          return false;
       }
       int level = player.getLevel();
@@ -1396,8 +1428,22 @@ public class FakePlayerPopulationManager {
          rebuildTargetOccupancy();
       }
 
-      for (Player player : PLAYERS) {
-         if (player == null || !player.isSpawned() || player.isDead() || isShopPlayer(player)) {
+           for (Player player : PLAYERS) {
+         if (player == null || !player.isSpawned() || isShopPlayer(player)) {
+            continue;
+         }
+
+         // 🔥 新增：若假人死亡，檢查是否收到祝復（秒起），或自動觸發死亡復活排程（不再永久躺平）
+         if (player.isDead()) {
+            if (player.isPendingRevive()) {
+               // 玩家對假人用了祝復或復活術 -> 0.25秒內自動幫假人按「確認復活」站起來！
+               player.reviveAnswer(1);
+               player.fullRestore();
+               player.getAI().setIntentionActive();
+            } else {
+               // 一般陣亡 -> 確保觸發自動復活排程
+               handleFakePlayerDeath(player);
+            }
             continue;
          }
 
@@ -1406,12 +1452,37 @@ public class FakePlayerPopulationManager {
          }
          NEXT_AI_THINK_AT.put(player, now + Rnd.get(650, 950));
 
-         try {
-             // 強制解除任何可能導致假人站著不動的負重或定身狀態
+                          try {
+            // 🔥 根治無限上下馬：1. 強制下馬並移除當前坐騎狀態
+            if (player.isMounted()) {
+               player.dismount();
+            }
+            if (player.isTransformed()) {
+               player.stopTransformation(true);
+            }
+            for (var info : player.getEffectList().getEffects()) {
+               if (info != null && info.getSkill() != null) {
+                  String skillName = info.getSkill().getName().toLowerCase(Locale.ROOT);
+                  if (skillName.contains("mount") || skillName.contains("ride") || skillName.contains("horse") || skillName.contains("騎乘") || skillName.contains("座騎") || skillName.contains("戰馬") || skillName.contains("幻影")) {
+                     player.stopSkillEffects(info.getSkill());
+                  }
+               }
+            }
+            // 🔥 2. 關鍵：直接從假人技能欄中「永久刪除」所有坐騎/騎乘技能，讓他無法再次上馬！
+            for (Skill sk : player.getAllSkills()) {
+               if (sk != null) {
+                  String skName = sk.getName().toLowerCase(Locale.ROOT);
+                  if (sk.isTransformation() || skName.contains("mount") || skName.contains("ride") || skName.contains("horse") || skName.contains("騎乘") || skName.contains("座騎") || skName.contains("戰馬") || skName.contains("幻影")) {
+                     player.removeSkill(sk, false);
+                  }
+               }
+            }
+
             player.getEffectList().stopEffects(AbnormalType.BOT_PENALTY);
             if (!player.isRunning()) {
                player.setRunning();
             }
+
             if (player.getWorldRegion() != null && !player.getWorldRegion().isActive()) {
                player.getWorldRegion().setActive(true);
             }
@@ -1493,20 +1564,33 @@ public class FakePlayerPopulationManager {
                autoFormFakeParty(player);
             }
 
-            // 6. 組隊輔助 AI
-            if (player.isInParty() && isSupportClass(player)) {
-               boolean needHeal = checkPartyNeedsHealing(player);
-               if (needHeal || now >= NEXT_PARTY_SUPPORT_AT.getOrDefault(player, 0L)) {
-                  boolean casted = performPartySupport(player);
-                  NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 500L : 1500L));
-                  if (casted) continue;
+                        // 6. 全方位輔助與自體 Buff AI（冷卻拉長至 3 秒，確保不影響打怪與跟隨節奏）
+            boolean needHeal = player.isInParty() && checkPartyNeedsHealing(player);
+            if (needHeal || now >= NEXT_PARTY_SUPPORT_AT.getOrDefault(player, 0L)) {
+               boolean casted = performPartySupport(player);
+               NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 3000L : 5000L));
+               if (casted) {
+                  player.getAI().notifyActionThink();
+                  continue;
                }
             }
 
-            // 7. 組隊跟隨 AI
-            if (handlePartyFollowAndAssist(player)) {
-               player.getAI().notifyActionThink();
-               continue;
+                        // 7. 組隊跟隨 AI（保留跨副本傳送；600 碼內且隊長未隱身時，直接放行去第 8 步主動打怪！）
+            if (player.isInParty() && player.getParty() != null) {
+               Player leader = player.getParty().getLeader();
+               if (leader != null && leader != player && leader.isSpawned() && !leader.isDead()) {
+                  // 若隊長在副本或距離過遠（超過 600 碼），交給原本的 handlePartyFollowAndAssist 處理傳送與跟隨
+                  if (leader.getInstanceId() != player.getInstanceId() || player.calculateDistance3D(leader) > 600.0) {
+                     if (handlePartyFollowAndAssist(player)) {
+                        player.getAI().notifyActionThink();
+                        continue;
+                     }
+                  }
+                  // 若隊長在 600 碼內但處於隱身狀態，保持警戒跟隨不開怪
+                  if (leader.isInvisible()) {
+                     continue;
+                  }
+               }
             }
 
                        // 8. 自主打怪與全圖找怪傳送
@@ -1634,11 +1718,14 @@ public class FakePlayerPopulationManager {
       return PARTY_HEALING_MODE.getOrDefault(player, false);
    }
 
-   private static boolean performPartySupport(Player player) {
-      List<Player> members = player.getParty().getMembers().stream().filter(m -> m != null && m.isOnline() && m.isSpawned() && !m.isDead()).toList();
-      if (members.size() < 2) return false;
+         private static boolean performPartySupport(Player player) {
+      if (player == null || player.isDead() || player.isCastingNow() || player.isAttackingNow()) return false;
 
-      // 1. 治療血量低於設定百分比的隊友
+      List<Player> members = (player.isInParty() && player.getParty() != null)
+         ? player.getParty().getMembers().stream().filter(m -> m != null && m.isOnline() && m.isSpawned() && !m.isDead()).toList()
+         : List.of(player);
+
+      // 1. 【隊伍治療】優先治療血量低於設定百分比的隊友
       double threshold = FakePlayersConfig.FAKE_PLAYER_SUPPORT_HEAL_PERCENT / 100.0;
       Player lowest = members.stream().filter(m -> m.getMaxHp() > 0 && (m.getCurrentHp() / m.getMaxHp()) < threshold)
          .min(Comparator.comparingDouble(m -> m.getCurrentHp() / m.getMaxHp())).orElse(null);
@@ -1647,28 +1734,69 @@ public class FakePlayerPopulationManager {
          for (Skill skill : player.getAllSkills()) {
             if (isUsablePositiveSupportSkill(skill) && !player.isSkillDisabled(skill) && skill.hasEffectType(EffectType.HEAL, EffectType.CPHEAL)) {
                Player target = (skill.getAffectScope() == AffectScope.PARTY || skill.getAffectScope() == AffectScope.RANGE) ? player : lowest;
-               player.setCurrentMp(player.getMaxMp());
-               if (SkillCaster.castSkill(player, target, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+               if (player.calculateDistance3D(target) <= 900.0) {
+                  player.setCurrentMp(player.getMaxMp());
+                  if (SkillCaster.castSkill(player, target, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+               }
             }
          }
       }
 
-      // 2. 血量安全時，為隊友施放缺少的輔助 Buff / 歌舞
       for (Skill skill : player.getAllSkills()) {
-         if (isUsablePositiveSupportSkill(skill) && isPositiveBuffSkill(skill) && !player.isSkillDisabled(skill)) {
-            boolean isParty = skill.getAffectScope() == AffectScope.PARTY || skill.getAffectScope() == AffectScope.RANGE;
-            if (isParty) {
-               boolean anyMissing = members.stream().anyMatch(m -> player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
-               if (anyMissing) {
-                  player.setCurrentMp(player.getMaxMp());
-                  if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
-               }
-            } else {
-               for (Player m : members) {
-                  if (player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
-                     player.setCurrentMp(player.getMaxMp());
-                     if (SkillCaster.castSkill(player, m, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+         if (!isUsablePositiveSupportSkill(skill) || !isPositiveBuffSkill(skill) || player.isSkillDisabled(skill)) {
+            continue;
+         }
+
+         // 確保有足夠精靈礦石 (ID: 3031) 或魔石 (ID: 1785)，避免消耗品不足導致施法空轉卡住
+         if (skill.getItemConsumeId() > 0 && player.getInventory().getInventoryItemCount(skill.getItemConsumeId(), -1) < skill.getItemConsumeCount()) {
+            player.getInventory().addItem(ItemProcessType.REWARD, skill.getItemConsumeId(), 500, player, null);
+         }
+
+         AffectScope scope = skill.getAffectScope();
+         TargetType targetType = skill.getTargetType();
+
+         // 情況 A：純自體增益技能
+         if (targetType == TargetType.SELF && scope == AffectScope.SINGLE) {
+            if (!player.isAffectedBySkill(skill.getId())) {
+               player.setCurrentMp(player.getMaxMp());
+               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+            }
+            continue;
+         }
+
+         // 情況 B：君主專屬血盟技能（AffectScope.PLEDGE）-> 強制同步套用給全隊
+         if (scope == AffectScope.PLEDGE || scope == AffectScope.PARTY_PLEDGE) {
+            boolean anyMemberMissing = members.stream().anyMatch(m -> player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
+            if (anyMemberMissing) {
+               player.setCurrentMp(player.getMaxMp());
+               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+                  for (Player m : members) {
+                     if (m != player && player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
+                        skill.applyEffects(player, m);
+                     }
                   }
+                  return true;
+               }
+            }
+            continue;
+         }
+
+         // 情況 C：一般隊伍範圍 Buff / 戰狂 / 歌舞
+         if (scope == AffectScope.PARTY || scope == AffectScope.RANGE) {
+            boolean anyMissing = members.stream().anyMatch(m -> player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
+            if (anyMissing) {
+               player.setCurrentMp(player.getMaxMp());
+               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+            }
+            continue;
+         }
+
+         // 情況 D：單體指定輔助技能（僅在有組隊時幫隊友施放，避免單人假人對自己亂放無效技能）
+         if (player.isInParty()) {
+            for (Player m : members) {
+               if (player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
+                  player.setCurrentMp(player.getMaxMp());
+                  if (SkillCaster.castSkill(player, m, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
                }
             }
          }

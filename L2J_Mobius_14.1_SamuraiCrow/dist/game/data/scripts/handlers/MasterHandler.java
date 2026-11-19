@@ -253,6 +253,7 @@ import handlers.chat.commands.voiced.OfflinePlay;
 import handlers.chat.commands.voiced.Online;
 import handlers.chat.commands.voiced.Premium;
 import handlers.chat.commands.voiced.Wedding;
+import handlers.chat.commands.voiced.AllCome;
 import handlers.items.Appearance;
 import handlers.items.BeastSoulShot;
 import handlers.items.BeastSpiritShot;
@@ -608,6 +609,7 @@ public class MasterHandler
 			// TODO: Add configuration options for this voiced commands.
 			// CastleHandler.class,
 			// ClanHandler.class,
+			AllCome.class,
 			ExperienceGain.class,
 			WeddingConfig.ALLOW_WEDDING ? Wedding.class : null,
 			BankingConfig.BANKING_SYSTEM_ENABLED ? Banking.class : null,
