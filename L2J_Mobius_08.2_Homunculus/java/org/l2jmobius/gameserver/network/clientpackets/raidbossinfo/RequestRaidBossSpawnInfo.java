@@ -44,7 +44,7 @@ public class RequestRaidBossSpawnInfo extends ClientPacket
 	protected void readImpl()
 	{
 		final int count = readInt();
-		for (int i = 0; i < count; i++)
+		for (int i = 0; (i < count) && (remaining() >= 4); i++) // The count is the client's; read only the ids actually sent.
 		{
 			final int bossId = readInt();
 			final GrandBoss boss = GrandBossManager.getInstance().getBoss(bossId);
