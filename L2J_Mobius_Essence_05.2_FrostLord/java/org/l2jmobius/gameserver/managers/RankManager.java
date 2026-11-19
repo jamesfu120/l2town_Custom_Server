@@ -69,7 +69,6 @@ public class RankManager
 	private volatile Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
 	private volatile Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
 	private volatile Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
-	private volatile List<HeroInfo> _mainHeroList = new ArrayList<>();
 	private volatile List<HeroInfo> _snapshotHeroList = new ArrayList<>();
 	private volatile Map<Integer, StatSet> _mainPvpList = new ConcurrentHashMap<>();
 	private volatile Map<Integer, StatSet> _snapshotPvpList = new ConcurrentHashMap<>();
@@ -375,7 +374,6 @@ public class RankManager
 		_mainList = mainList;
 		_snapshotOlyList = _mainOlyList;
 		_mainOlyList = mainOlyList;
-		_mainHeroList = mainHeroList;
 		_snapshotHeroList = mainHeroList; // Shown as the current heroes and has no rank change; an old list would be empty after a restart.
 		_snapshotPvpList = _mainPvpList;
 		_mainPvpList = mainPvpList;
