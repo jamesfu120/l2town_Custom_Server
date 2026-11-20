@@ -712,15 +712,14 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectLimit>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1001">8-2</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1002" toSubLevel="1002">10-2</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1003" toSubLevel="1003">14-2</value>
 			<value level="1">5-2</value>
 			<value level="2">5-2</value>
 			<value level="3">5-2</value>
-			<value toLevel="1" fromLevel="3" fromSubLevel="1001" toSubLevel="1001">8-2</value>
-			<value toLevel="1" fromLevel="3" fromSubLevel="1002" toSubLevel="1002">10-2</value>
-			<value toLevel="1" fromLevel="3" fromSubLevel="1003" toSubLevel="1003">14-2</value>
 		</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
-		<affectRange>150</affectRange>
 		<affectRange>300</affectRange>
 		<affectScope>RANGE</affectScope>
 		<castRange>400</castRange>
@@ -737,23 +736,31 @@
 			<value level="3">120</value>
 		</mpConsume>
 		<reuseDelay>20000</reuseDelay>
-		<reuseDelayGroup>87309</reuseDelayGroup>
 		<effects>
 			<effect name="PhysicalDamage">
 				<power>
 					<value level="1">5500</value>
-					<value fromLevel="1" toLevel="1" toSubLevel="1001" fromSubLevel="1001">6000</value>
-					<value fromLevel="1" toLevel="1" toSubLevel="1002" fromSubLevel="1003">6800</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">6000</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">6800</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">9500</value>
 					<value level="2">5800</value>
-					<value fromLevel="2" toLevel="2" toSubLevel="1001" fromSubLevel="1001">6400</value>
-					<value fromLevel="2" toLevel="2" toSubLevel="1002" fromSubLevel="1003">7200</value>
+					<value fromLevel="2" toLevel="2" fromSubLevel="1001" toSubLevel="1001">6400</value>
+					<value fromLevel="2" toLevel="2" fromSubLevel="1002" toSubLevel="1002">7200</value>
+					<value fromLevel="2" toLevel="2" fromSubLevel="1003" toSubLevel="1003">9900</value>
 					<value level="3">6200</value>
-					<value fromLevel="3" toLevel="3" toSubLevel="1001" fromSubLevel="1001">6900</value>
-					<value fromLevel="3" toLevel="3" toSubLevel="1002" fromSubLevel="1003">7800</value>
+					<value fromLevel="3" toLevel="3" fromSubLevel="1001" toSubLevel="1001">6900</value>
+					<value fromLevel="3" toLevel="3" fromSubLevel="1002" toSubLevel="1002">7800</value>
+					<value fromLevel="3" toLevel="3" fromSubLevel="1003" toSubLevel="1003">10500</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>0.9</pDefMod>
+				<pDefMod>0.85</pDefMod>
 				<criticalChance>10</criticalChance>
+				<repeatCount>
+					<value level="1">2</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value fromLevel="1" toLevel="3" fromSubLevel="1003" toSubLevel="1003">3</value>
+				</repeatCount>
 			</effect>
 		</effects>
 	</skill>
@@ -766,44 +773,56 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectLimit>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1001">8-2</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1002" toSubLevel="1002">10-2</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1003" toSubLevel="1003">14-2</value>
 			<value level="1">5-2</value>
 			<value level="2">5-2</value>
 			<value level="3">5-2</value>
-			<value toLevel="1" fromLevel="3" fromSubLevel="1001" toSubLevel="1001">8-2</value>
-			<value toLevel="1" fromLevel="3" fromSubLevel="1002" toSubLevel="1002">10-2</value>
-			<value toLevel="1" fromLevel="3" fromSubLevel="1003" toSubLevel="1003">14-2</value>
 		</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>300</affectRange>
 		<affectScope>RANGE</affectScope>
 		<castRange>400</castRange>
+		<coolTime>200</coolTime>
 		<effectPoint>
 			<value level="1">-410</value>
 			<value level="2">-435</value>
 			<value level="3">-460</value>
 		</effectPoint>
+		<hitTime>1000</hitTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<mpConsume>
 			<value level="1">105</value>
 			<value level="2">112</value>
 			<value level="3">120</value>
 		</mpConsume>
+		<reuseDelay>20000</reuseDelay>
 		<effects>
 			<effect name="PhysicalDamage">
 				<power>
 					<value level="1">5500</value>
-					<value fromLevel="1" toLevel="1" toSubLevel="1001" fromSubLevel="1001">6000</value>
-					<value fromLevel="1" toLevel="1" toSubLevel="1002" fromSubLevel="1003">6800</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">6000</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">6800</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">9500</value>
 					<value level="2">5800</value>
-					<value fromLevel="2" toLevel="2" toSubLevel="1001" fromSubLevel="1001">6400</value>
-					<value fromLevel="2" toLevel="2" toSubLevel="1002" fromSubLevel="1003">7200</value>
+					<value fromLevel="2" toLevel="2" fromSubLevel="1001" toSubLevel="1001">6400</value>
+					<value fromLevel="2" toLevel="2" fromSubLevel="1002" toSubLevel="1002">7200</value>
+					<value fromLevel="2" toLevel="2" fromSubLevel="1003" toSubLevel="1003">9900</value>
 					<value level="3">6200</value>
-					<value fromLevel="3" toLevel="3" toSubLevel="1001" fromSubLevel="1001">6900</value>
-					<value fromLevel="3" toLevel="3" toSubLevel="1002" fromSubLevel="1003">7800</value>
+					<value fromLevel="3" toLevel="3" fromSubLevel="1001" toSubLevel="1001">6900</value>
+					<value fromLevel="3" toLevel="3" fromSubLevel="1002" toSubLevel="1002">7800</value>
+					<value fromLevel="3" toLevel="3" fromSubLevel="1003" toSubLevel="1003">10500</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>0.9</pDefMod>
+				<pDefMod>0.85</pDefMod>
 				<criticalChance>10</criticalChance>
+				<repeatCount>
+					<value level="1">2</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value fromLevel="1" toLevel="3" fromSubLevel="1003" toSubLevel="1003">3</value>
+				</repeatCount>
 			</effect>
 		</effects>
 	</skill>

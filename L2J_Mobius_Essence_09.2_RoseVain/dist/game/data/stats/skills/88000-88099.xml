@@ -3348,21 +3348,15 @@
 		<isMagic>0</isMagic>
 		<effects>
 			<effect name="DefencePhysicalSkillCriticalRate">
-				<amount>
-					<value level="1">5</value>
-				</amount>
+				<amount>-5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefencePhysicalSkillCriticalDamage">
-				<amount>
-					<value level="1">-5</value>
-				</amount>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>-1</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>
-					<value level="1">1</value>
-				</amount>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>-1</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait">

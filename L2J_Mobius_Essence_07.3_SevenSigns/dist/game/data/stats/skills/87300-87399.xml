@@ -821,13 +821,24 @@
 		<affectScope>SINGLE</affectScope>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>400</castRange>
+		<coolTime>200</coolTime>
 		<effectPoint>
 			<value level="1">-390</value>
 			<value level="2">-435</value>
 			<value level="3">-460</value>
 		</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>1000</hitTime>
+		<isHidingMessages>true</isHidingMessages>
 		<isMagic>0</isMagic>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1001">5</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1002" toSubLevel="1002">10</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1003" toSubLevel="1003">20</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>
 			<value level="1">99</value>
 			<value level="2">112</value>
@@ -836,25 +847,10 @@
 		<reuseDelay>20000</reuseDelay>
 		<reuseDelayGroup>87309</reuseDelayGroup>
 		<effects>
-			<effect name="CallSkill">
-				<skillId>87454</skillId> <!-- Summon Shadow -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="CallSkill">
-				<skillId>87422</skillId> <!-- Clone Dance -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-				</skillLevel>
-			</effect>
-			<effect name="CallSkill" fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1003">
-				<skillId>87422</skillId> <!-- Clone Dance -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-				</skillLevel>
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>87421</closeSkill> <!-- Clone Dance -->
+				<rangeSkill>87422</rangeSkill> <!-- Clone Dance -->
+				<distance>100</distance>
 			</effect>
 		</effects>
 	</skill>
@@ -920,6 +916,7 @@
 		</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
+		<isHidingMessages>true</isHidingMessages>
 		<isMagic>0</isMagic>
 		<mpConsume>
 			<value level="1">13</value>
