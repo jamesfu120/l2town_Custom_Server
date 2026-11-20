@@ -1869,10 +1869,10 @@
 		<effects>
 			<effect name="HealOverTime">
 				<power>
-					<value level="1">20</value>
-					<value level="2">60</value>
+					<value level="1">36</value> <!-- 359-360 -->
+					<value level="2">55</value> <!-- 549-550 -->
 				</power>
-				<ticks>3</ticks>
+				<ticks>15</ticks> <!-- 9.9 sec -->
 			</effect>
 		</effects>
 	</skill>
@@ -1965,25 +1965,20 @@
 		</effects>
 	</skill>
 	<skill id="87476" toLevel="1" name="Assassin - MP Recovery">
+		<!-- Erosion / Murder Attempt Lv. 2: with a chance, recovers 1% MP when using a skill (trigger cooldown 3.5 sec). -->
 		<icon>icon.skill19169</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>1200</abnormalTime>
-		<abnormalType>MP_REGEN_UP</abnormalType>
 		<affectScope>SINGLE</affectScope>
+		<effectPoint>0</effectPoint>
 		<hitTime>0</hitTime>
-		<isMagic>4</isMagic>
-		<itemConsumeCount>3</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLevel>20</magicLevel>
-		<reuseDelay>10000</reuseDelay>
+		<isMagic>0</isMagic>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<reuseDelay>3500</reuseDelay>
 		<effects>
-			<effect name="ManaHealOverTime">
-				<power>
-					<value level="1">15</value>
-				</power>
-				<ticks>3</ticks>
+			<effect name="Mp">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

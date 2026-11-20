@@ -2252,11 +2252,17 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
-		<itemConsumeCount>20</itemConsumeCount>
+		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>100</mpConsume>
 		<reuseDelay>1200000</reuseDelay>
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="OpSkillAcquire">
 				<skillId>87307</skillId> <!-- Assassination -->
 				<hasLearned>true</hasLearned>
@@ -2407,6 +2413,12 @@
 		</mpConsume>
 		<reuseDelay>0</reuseDelay>
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>87362</skillId> <!-- Murder Attempt -->
 			</condition>
@@ -2435,10 +2447,12 @@
 				<amount>100</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MpVampiricAttack" fromLevel="2" toLevel="2">
-				<amount>1</amount>
+			<effect name="TriggerSkillByDamageDealt" fromLevel="2" toLevel="2">
+				<allowNormalAttack>false</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
 				<chance>15</chance>
-				<mode>PER</mode>
+				<skillId>87476</skillId> <!-- Assassin - MP Recovery -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2464,6 +2478,12 @@
 		</mpConsume>
 		<reuseDelay>0</reuseDelay>
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>87361</skillId> <!-- Erosion -->
 			</condition>
@@ -2658,7 +2678,7 @@
 				<KNOCKBACK>50</KNOCKBACK>
 			</effect>
 			<effect name="DefenceTrait">
-				<KNOCKBACK>50</KNOCKBACK>
+				<KNOCKBACK>-50</KNOCKBACK>
 			</effect>
 			<effect name="TriggerSkillByKill">
 				<victimType>Creature</victimType>
@@ -3295,7 +3315,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
-				<amount>10</amount>
+				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>

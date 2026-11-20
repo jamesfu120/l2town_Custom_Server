@@ -2254,11 +2254,17 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
-		<itemConsumeCount>20</itemConsumeCount>
+		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>100</mpConsume>
 		<reuseDelay>1200000</reuseDelay>
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="OpSkillAcquire">
 				<skillId>87307</skillId> <!-- Assassination -->
 				<hasLearned>true</hasLearned>
@@ -2412,6 +2418,12 @@
 		</mpConsume>
 		<reuseDelay>0</reuseDelay>
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>87362</skillId> <!-- Murder Attempt -->
 			</condition>
@@ -2422,11 +2434,11 @@
 				<allowSkillAttack>true</allowSkillAttack>
 				<targetType>ENEMY</targetType>
 				<attackerType>Creature</attackerType>
-				<skillId>87371</skillId> <!-- Erosion Curse Lv. 1 -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-				</skillLevel>
+				<renewDuration>true</renewDuration>
+				<triggerSkills>
+					<value level="1">87371,1;87372,1;87373,1</value> <!-- Erosion Curse Lv. 1-3 -->
+					<value level="2">87371,2;87372,2;87373,2</value>
+				</triggerSkills>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="2" toLevel="2">
 				<amount>500</amount>
@@ -2440,10 +2452,12 @@
 				<amount>500</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MpVampiricAttack" fromLevel="2" toLevel="2">
-				<amount>1</amount>
+			<effect name="TriggerSkillByDamageDealt" fromLevel="2" toLevel="2">
+				<allowNormalAttack>false</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
 				<chance>15</chance>
-				<mode>PER</mode>
+				<skillId>87476</skillId> <!-- Assassin - MP Recovery -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2469,6 +2483,12 @@
 		</mpConsume>
 		<reuseDelay>0</reuseDelay>
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>87361</skillId> <!-- Erosion -->
 			</condition>
@@ -2538,10 +2558,12 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpVampiricAttack" fromLevel="2" toLevel="2">
-				<amount>1</amount>
+			<effect name="TriggerSkillByDamageDealt" fromLevel="2" toLevel="2">
+				<allowNormalAttack>false</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
 				<chance>15</chance>
-				<mode>PER</mode>
+				<skillId>87476</skillId> <!-- Assassin - MP Recovery -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2676,7 +2698,7 @@
 				<KNOCKBACK>50</KNOCKBACK>
 			</effect>
 			<effect name="DefenceTrait">
-				<KNOCKBACK>50</KNOCKBACK>
+				<KNOCKBACK>-50</KNOCKBACK>
 			</effect>
 			<effect name="TriggerSkillByKill">
 				<victimType>Creature</victimType>
@@ -2736,7 +2758,7 @@
 			<effect name="PveRaidPhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">1</value>
-					<value level="2">2</value>
+					<value level="2">3</value>
 					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
@@ -2744,7 +2766,7 @@
 			<effect name="PvePhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">1</value>
-					<value level="2">2</value>
+					<value level="2">3</value>
 					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
@@ -2752,7 +2774,7 @@
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">1</value>
-					<value level="2">2</value>
+					<value level="2">3</value>
 					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
@@ -2760,7 +2782,7 @@
 			<effect name="PveRaidPhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">1</value>
-					<value level="2">2</value>
+					<value level="2">3</value>
 					<value level="3">5</value>
 				</amount>
 				<mode>PER</mode>
@@ -3353,7 +3375,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
-				<amount>10</amount>
+				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
