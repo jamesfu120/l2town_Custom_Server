@@ -344,7 +344,7 @@
 			<value level="1">V_KNIGHT_SHELTER</value>
 			<value level="2">V_EVA_T_SHELTER_AVE</value>
 		</abnormalVisualEffect>
-		<affectLimit>5-12</affectLimit>
+		<affectLimit>5-5</affectLimit>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>700</affectRange>
 		<affectScope>POINT_BLANK</affectScope>
@@ -435,8 +435,8 @@
 		<operateType>DA1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectLimit>
-			<value level="1">12-12</value>
-			<value level="2">15-15</value>
+			<value level="1">12-0</value>
+			<value level="2">15-0</value>
 		</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>250</affectRange>
@@ -845,7 +845,12 @@
 		<icon>icon.s_curse_of_shilen</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
-		<affectLimit>8-2</affectLimit>
+		<affectLimit>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">8-3</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">8-6</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">8-9</value>
+			<value level="1">8-3</value>
+		</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>300</affectRange>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1187,7 +1192,7 @@
 		<icon>icon.s_rush_attack</icon>
 		<operateType>DA1</operateType>
 		<targetType>ENEMY</targetType>
-		<affectLimit>2-1</affectLimit>
+		<affectLimit>2-2</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>100</affectRange>
 		<affectScope>RANGE</affectScope>
@@ -2845,7 +2850,7 @@
 		<icon>icon.skill10508</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
-		<affectLimit>1-3</affectLimit>
+		<affectLimit>1-5</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>150</affectRange>
 		<affectScope>RANGE</affectScope>
@@ -2929,7 +2934,7 @@
 		<icon>icon.s_fury_blade</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
-		<affectLimit>3-3</affectLimit>
+		<affectLimit>3-2</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>300</affectRange>
 		<affectScope>RANGE</affectScope>
@@ -3013,7 +3018,7 @@
 		<icon>icon.skill0321</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
-		<affectLimit>1-3</affectLimit>
+		<affectLimit>1-4</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>300</affectRange>
 		<affectScope>RANGE</affectScope>

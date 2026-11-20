@@ -1419,7 +1419,15 @@
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
-		<affectLimit>7-12</affectLimit>
+		<affectLimit>
+			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1001">7-4</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="1002" toSubLevel="1002">7-5</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="1003" toSubLevel="1003">7-6</value>
+			<value level="1">7-3</value>
+			<value level="2">7-3</value>
+			<value level="3">7-3</value>
+			<value level="4">7-3</value>
+		</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectRange>550</affectRange>
 		<affectScope>FAN</affectScope>
