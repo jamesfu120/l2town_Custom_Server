@@ -2453,6 +2453,17 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalShieldAngleAll" />
+			<effect name="ShieldDefenceIgnoreRemoval">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByKill">
+				<victimType>Creature</victimType>
+				<chance>100</chance>
+				<skillId>87991</skillId> <!-- Lord Knight - MP Recovery -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="AssistOwnerCast">
 				<summonId>34206</summonId> <!-- Guardian -->
 				<castSkillId>87821</castSkillId> <!-- Flying Leap -->

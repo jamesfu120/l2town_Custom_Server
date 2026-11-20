@@ -2099,8 +2099,22 @@
 		</effects>
 	</skill>
 	<skill id="87991" toLevel="1" name="Lord Knight - MP Recovery">
+		<!-- Lord Knight: recovers 1% MP on killing the target (trigger cooldown 3 sec). -->
 		<icon>icon.skill19169</icon>
-		<operateType>P</operateType>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>0</effectPoint>
+		<hitTime>0</hitTime>
+		<isMagic>0</isMagic>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<reuseDelay>3000</reuseDelay>
+		<effects>
+			<effect name="Mp">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="87992" toLevel="8" name="Templar's Rush">
 		<!-- Level 1: <<font color="FF8000">Rush skill</font>>. Charges at the enemy and attacks them. Power 2300. Ignores 10% of the target's defense. Critical. -->
