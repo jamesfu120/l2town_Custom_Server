@@ -2328,7 +2328,10 @@
 		<affectRange>150</affectRange>
 		<affectScope>POINT_BLANK</affectScope>
 		<effectPoint>-500</effectPoint>
-		<itemConsumeCount>60</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">30</value>
+			<value level="2">60</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>200</mpConsume>
@@ -2337,7 +2340,6 @@
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
 				<skillId>87475</skillId> <!-- Time Distortion -->
 				<skillLevel>1</skillLevel>
-				<targetType>ENEMY</targetType>
 			</effect>
 			<effect name="PhysicalDamage">
 				<repeatCount>2</repeatCount>
@@ -2553,32 +2555,27 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillEvasion">
+			<effect name="SkillEvasion" fromLevel="2" toLevel="2">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceCriticalRate">
-				<amount>10</amount>
+			<effect name="BlockAbnormalSlot">
+				<slot>TIME_DISTORTION</slot>
+			</effect>
+			<effect name="DefenceMagicCriticalRate" fromLevel="2" toLevel="2">
+				<amount>11</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceMagicCriticalRate">
-				<amount>10</amount>
+			<effect name="DefencePhysicalSkillCriticalRate" fromLevel="2" toLevel="2">
+				<amount>11</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefencePhysicalSkillCriticalRate">
-				<amount>10</amount>
+			<effect name="DefenceMagicCriticalDamage" fromLevel="2" toLevel="2">
+				<amount>11</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceMagicCriticalDamage">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefencePhysicalSkillCriticalDamage">
-				<amount>10</amount>
+			<effect name="DefencePhysicalSkillCriticalDamage" fromLevel="2" toLevel="2">
+				<amount>11</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

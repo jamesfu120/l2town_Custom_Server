@@ -2326,7 +2326,10 @@
 		<affectRange>350</affectRange>
 		<affectScope>POINT_BLANK</affectScope>
 		<effectPoint>-500</effectPoint>
-		<itemConsumeCount>60</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">30</value>
+			<value level="2">60</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>200</mpConsume>
@@ -2335,7 +2338,6 @@
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
 				<skillId>87475</skillId> <!-- Time Distortion -->
 				<skillLevel>1</skillLevel>
-				<targetType>ENEMY</targetType>
 			</effect>
 			<effect name="PhysicalDamage">
 				<repeatCount>2</repeatCount>
@@ -2559,31 +2561,41 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="SkillEvasion">
-				<amount>30</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">35</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceCriticalRate">
+			<effect name="BlockAbnormalSlot">
+				<slot>TIME_DISTORTION</slot>
+			</effect>
+			<effect name="DefenceMagicCriticalRate" fromLevel="2" toLevel="2">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefencePhysicalSkillCriticalRate" fromLevel="2" toLevel="2">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage" fromLevel="2" toLevel="2">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefencePhysicalSkillCriticalDamage" fromLevel="2" toLevel="2">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AreaOfEffectDamageDefence" fromLevel="2" toLevel="2">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceMagicCriticalRate">
-				<amount>10</amount>
+			<effect name="PvpMagicalSkillDefenceBonus" fromLevel="2" toLevel="2">
+				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefencePhysicalSkillCriticalRate">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceMagicCriticalDamage">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefencePhysicalSkillCriticalDamage">
-				<amount>10</amount>
+			<effect name="PveMagicalSkillDefenceBonus" fromLevel="2" toLevel="2">
+				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
