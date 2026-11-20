@@ -2115,7 +2115,15 @@
 		<effectPoint>-500</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1000</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="OpHaveSummonedNpc">
 				<npcId>15995</npcId> <!-- Shadow -->
 			</condition>
