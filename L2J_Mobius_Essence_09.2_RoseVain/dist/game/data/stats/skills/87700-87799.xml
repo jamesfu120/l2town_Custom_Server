@@ -1589,21 +1589,21 @@
 			</effect>
 			<effect name="MagicalDamage">
 				<power>
-					<value level="1">36</value>
-					<value level="2">48</value>
-					<value level="3">96</value>
-					<value level="4">108</value>
-					<value level="5">126</value>
-					<value level="6">152</value>
-					<value level="7">168</value>
-					<value level="8">182</value>
-					<value level="9">189</value>
-					<value level="10">196</value>
-					<value level="11">204</value>
-					<value level="12">211</value>
-					<value level="13">218</value>
-					<value level="14">228</value>
-					<value level="15">240</value>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">73</value>
+					<value level="6">84</value>
+					<value level="7">96</value>
+					<value level="8">112</value>
+					<value level="9">128</value>
+					<value level="10">145</value>
+					<value level="11">162</value>
+					<value level="12">179</value>
+					<value level="13">196</value>
+					<value level="14">214</value>
+					<value level="15">232</value>
 					<value level="16">247</value>
 					<value level="17">254</value>
 					<value level="18">261</value>
@@ -1721,6 +1721,30 @@
 		<reuseDelay>1000</reuseDelay>
 		<reuseDelayGroup>87702</reuseDelayGroup>
 		<effects>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">73</value>
+					<value level="6">84</value>
+					<value level="7">96</value>
+					<value level="8">112</value>
+					<value level="9">128</value>
+					<value level="10">145</value>
+					<value level="11">162</value>
+					<value level="12">179</value>
+					<value level="13">196</value>
+					<value level="14">214</value>
+					<value level="15">232</value>
+					<value level="16">247</value>
+					<value level="17">254</value>
+					<value level="18">261</value>
+					<value level="19">268</value>
+					<value level="20">276</value>
+				</power>
+			</effect>
 			<effect name="MagicalDamage">
 				<power>
 					<value level="1">33</value>
@@ -4484,7 +4508,7 @@
 		<!-- Level 19: <font color="FF0000">Fire magic</font>. A sphere of raging flame attacks the enemy. Inflicts magic damage twice. Power <font color="FFFF00">268</font>. Applies <font color="FF0000">Ice Vulnerability</font> and <font color="FF0000">Heat</font> to the target. <font color="FF0000">Ice Vulnerability</font>. Decreases <font color="FF0000">Ice Resistance</font>. If <font color="00AAFF">Fire Vulnerability</font> is applied to the target:. Removes <font color="00AAFF">Fire Vulnerability</font>. <font color="00AAFF">Heat</font>. If <font color="00AAFF">Coldness</font> is applied to the target:. Removes <font color="77FF99">Coldness</font> and then triggers <font color="00AAFF">Incompatibility</font>. <font color="77FF99">Incompatibility</font>. Inflicts magic damage. Power 268. M. Def. -30%. The skill can only be used in transcendent instance zones. -->
 		<!-- Level 20: <font color="FF0000">Fire magic</font>. A sphere of raging flame attacks the enemy. Inflicts magic damage twice. Power <font color="FFFF00">276</font>. Applies <font color="FF0000">Ice Vulnerability</font> and <font color="FF0000">Heat</font> to the target. <font color="FF0000">Ice Vulnerability</font>. Decreases <font color="FF0000">Ice Resistance</font>. If <font color="00AAFF">Fire Vulnerability</font> is applied to the target:. Removes <font color="00AAFF">Fire Vulnerability</font>. <font color="00AAFF">Heat</font>. If <font color="00AAFF">Coldness</font> is applied to the target:. Removes <font color="77FF99">Coldness</font> and then triggers <font color="00AAFF">Incompatibility</font>. <font color="77FF99">Incompatibility</font>. Inflicts magic damage. Power 276. M. Def. -30%. The skill can only be used in transcendent instance zones. -->
 		<icon>icon.s_sp_flame_orb</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectLimit>5-12</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4518,27 +4542,49 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
-			<value level="1">16</value>
-			<value level="2">22</value>
+			<value level="1">21</value>
+			<value level="2">23</value>
 			<value level="3">27</value>
-			<value level="4">31</value>
-			<value level="5">34</value>
-			<value level="6">37</value>
-			<value level="7">39</value>
-			<value level="8">41</value>
-			<value level="9">42</value>
-			<value level="10">44</value>
-			<value level="11">46</value>
-			<value level="12">48</value>
-			<value level="13">51</value>
-			<value level="14">53</value>
-			<value level="15">55</value>
-			<value level="16">57</value>
-			<value level="17">59</value>
-			<value level="18">61</value>
-			<value level="19">63</value>
-			<value level="20">65</value>
+			<value level="4">30</value>
+			<value level="5">32</value>
+			<value level="6">35</value>
+			<value level="7">38</value>
+			<value level="8">40</value>
+			<value level="9">43</value>
+			<value level="10">46</value>
+			<value level="11">49</value>
+			<value level="12">52</value>
+			<value level="13">54</value>
+			<value level="14">57</value>
+			<value level="15">60</value>
+			<value level="16">63</value>
+			<value level="17">64</value>
+			<value level="18">65</value>
+			<value level="19">66</value>
+			<value level="20">67</value>
 		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">5</value>
+			<value level="8">6</value>
+			<value level="9">6</value>
+			<value level="10">6</value>
+			<value level="11">6</value>
+			<value level="12">6</value>
+			<value level="13">7</value>
+			<value level="14">7</value>
+			<value level="15">7</value>
+			<value level="16">7</value>
+			<value level="17">7</value>
+			<value level="18">7</value>
+			<value level="19">7</value>
+			<value level="20">7</value>
+		</mpInitialConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
 			<effect name="MagicalDamage">
@@ -4567,21 +4613,21 @@
 			</effect>
 			<effect name="MagicalDamage">
 				<power>
-					<value level="1">36</value>
-					<value level="2">48</value>
-					<value level="3">96</value>
-					<value level="4">108</value>
-					<value level="5">126</value>
-					<value level="6">152</value>
-					<value level="7">168</value>
-					<value level="8">182</value>
-					<value level="9">189</value>
-					<value level="10">196</value>
-					<value level="11">204</value>
-					<value level="12">211</value>
-					<value level="13">218</value>
-					<value level="14">228</value>
-					<value level="15">240</value>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">73</value>
+					<value level="6">84</value>
+					<value level="7">96</value>
+					<value level="8">112</value>
+					<value level="9">128</value>
+					<value level="10">145</value>
+					<value level="11">162</value>
+					<value level="12">179</value>
+					<value level="13">196</value>
+					<value level="14">214</value>
+					<value level="15">232</value>
 					<value level="16">247</value>
 					<value level="17">254</value>
 					<value level="18">261</value>
@@ -4645,7 +4691,7 @@
 		<!-- Level 19: <font color="00AAFF">Ice magic</font>. A sphere of freezing cold attacks the enemy. Inflicts magic damage twice. Power 268. Applies <font color="00AAFF">Fire Vulnerability</font> and <font color="00AAFF">Coldness</font> to the target. <font color="00AAFF">Fire Vulnerability</font>. Decreases <font color="00AAFF">Fire Resistance</font>. If <font color="FF0000">Ice Vulnerability</font> is applied to the target:. Removes <font color="FF0000">Ice Vulnerability</font>. <font color="FF0000">Coldness</font>. If <font color="FF0000">Heat</font> is applied to the target:. Removes <font color="77FF99">Heat</font> and then triggers <font color="FF0000">Incompatibility</font>. <font color="77FF99">Incompatibility</font>. Inflicts magic damage. Power 268. M. Def. -30%. The skill can only be used in transcendent instance zones. -->
 		<!-- Level 20: <font color="00AAFF">Ice magic</font>. A sphere of freezing cold attacks the enemy. Inflicts magic damage twice. Power 276. Applies <font color="00AAFF">Fire Vulnerability</font> and <font color="00AAFF">Coldness</font> to the target. <font color="00AAFF">Fire Vulnerability</font>. Decreases <font color="00AAFF">Fire Resistance</font>. If <font color="FF0000">Ice Vulnerability</font> is applied to the target:. Removes <font color="FF0000">Ice Vulnerability</font>. <font color="FF0000">Coldness</font>. If <font color="FF0000">Heat</font> is applied to the target:. Removes <font color="77FF99">Heat</font> and then triggers <font color="FF0000">Incompatibility</font>. <font color="77FF99">Incompatibility</font>. Inflicts magic damage. Power 276. M. Def. -30%. The skill can only be used in transcendent instance zones. -->
 		<icon>icon.s_sp_freezing_orb</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectLimit>5-12</affectLimit>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4679,27 +4725,49 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
-			<value level="1">16</value>
-			<value level="2">22</value>
+			<value level="1">21</value>
+			<value level="2">23</value>
 			<value level="3">27</value>
-			<value level="4">31</value>
-			<value level="5">34</value>
-			<value level="6">37</value>
-			<value level="7">39</value>
-			<value level="8">41</value>
-			<value level="9">42</value>
-			<value level="10">44</value>
-			<value level="11">46</value>
-			<value level="12">48</value>
-			<value level="13">51</value>
-			<value level="14">53</value>
-			<value level="15">55</value>
-			<value level="16">57</value>
-			<value level="17">59</value>
-			<value level="18">61</value>
-			<value level="19">63</value>
-			<value level="20">65</value>
+			<value level="4">30</value>
+			<value level="5">32</value>
+			<value level="6">35</value>
+			<value level="7">38</value>
+			<value level="8">40</value>
+			<value level="9">43</value>
+			<value level="10">46</value>
+			<value level="11">49</value>
+			<value level="12">52</value>
+			<value level="13">54</value>
+			<value level="14">57</value>
+			<value level="15">60</value>
+			<value level="16">63</value>
+			<value level="17">64</value>
+			<value level="18">65</value>
+			<value level="19">66</value>
+			<value level="20">67</value>
 		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">5</value>
+			<value level="8">6</value>
+			<value level="9">6</value>
+			<value level="10">6</value>
+			<value level="11">6</value>
+			<value level="12">6</value>
+			<value level="13">7</value>
+			<value level="14">7</value>
+			<value level="15">7</value>
+			<value level="16">7</value>
+			<value level="17">7</value>
+			<value level="18">7</value>
+			<value level="19">7</value>
+			<value level="20">7</value>
+		</mpInitialConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
 			<effect name="MagicalDamage">
@@ -4728,21 +4796,21 @@
 			</effect>
 			<effect name="MagicalDamage">
 				<power>
-					<value level="1">36</value>
-					<value level="2">48</value>
-					<value level="3">96</value>
-					<value level="4">108</value>
-					<value level="5">126</value>
-					<value level="6">152</value>
-					<value level="7">168</value>
-					<value level="8">182</value>
-					<value level="9">189</value>
-					<value level="10">196</value>
-					<value level="11">204</value>
-					<value level="12">211</value>
-					<value level="13">218</value>
-					<value level="14">228</value>
-					<value level="15">240</value>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">73</value>
+					<value level="6">84</value>
+					<value level="7">96</value>
+					<value level="8">112</value>
+					<value level="9">128</value>
+					<value level="10">145</value>
+					<value level="11">162</value>
+					<value level="12">179</value>
+					<value level="13">196</value>
+					<value level="14">214</value>
+					<value level="15">232</value>
 					<value level="16">247</value>
 					<value level="17">254</value>
 					<value level="18">261</value>
