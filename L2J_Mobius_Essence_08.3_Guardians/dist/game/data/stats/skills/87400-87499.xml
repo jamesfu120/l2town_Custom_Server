@@ -227,7 +227,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="BlockSkill">
-				<skillIds>47941;47928;176;420;47811;45282;45281;45159;45244;45260;45312;45402;87105;47404;47406;47408;47402;47341;47001;87307;47440;1556;47441;47917;45288;1335;47242;47247;47253;87006;87009</skillIds>
+				<skillIds>47941;47928;176;420;47811;45282;45281;45159;45244;45260;87159;45051;45312;47511;47513;45402;87105;47404;47406;47408;47698;47699;47700;47402;47341;47001;87307;47440;1556;87067;87068;87069;47441;47917;88254;45288;1335;47242;47247;47253;87006;87009;87708;87810;87811;87812</skillIds>
 			</effect>
 		</effects>
 	</skill>
@@ -598,7 +598,6 @@
 		<targetType>ENEMY</targetType>
 		<abnormalTime>10</abnormalTime>
 		<affectScope>SINGLE</affectScope>
-		<basicProperty>MAGIC</basicProperty>
 		<castRange>-1</castRange>
 		<effectPoint>-400</effectPoint>
 		<hpConsume>0</hpConsume>
@@ -606,15 +605,20 @@
 		<isMagic>0</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>0</mpConsume>
-		<trait>DERANGEMENT</trait>
 		<targetConditions>
 			<condition name="TargetRace">
 				<race>KAMAEL</race>
 			</condition>
 		</targetConditions>
 		<effects>
-			<effect name="Mute" />
-			<effect name="PhysicalMute" />
+			<effect name="PhysicalSkillPower">
+				<amount>-8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>-8</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="87420" toLevel="1" name="Constraint - Sylphs">
