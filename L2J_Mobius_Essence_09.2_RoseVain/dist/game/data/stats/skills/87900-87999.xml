@@ -176,6 +176,12 @@
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">30</value>
@@ -270,7 +276,12 @@
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -312,7 +323,11 @@
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -494,7 +509,11 @@
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -587,10 +606,10 @@
 		<hitTime>500</hitTime>
 		<isMagic>4</isMagic>
 		<itemConsumeCount>
-			<value level="1">3</value>
+			<value level="1">1</value>
 			<value level="2">10</value>
-			<value level="3">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="3">20</value>
+			<value level="4">20</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
@@ -638,7 +657,7 @@
 		<hitTime>500</hitTime>
 		<isMagic>4</isMagic>
 		<itemConsumeCount>
-			<value level="1">3</value>
+			<value level="1">1</value>
 			<value level="2">10</value>
 			<value level="3">20</value>
 			<value level="4">20</value>
@@ -955,6 +974,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>500</castRange>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-200</value>
 			<value level="2">-400</value>
@@ -982,6 +1002,7 @@
 			<value level="24">-940</value>
 			<value level="25">-950</value>
 		</effectPoint>
+		<hitTime>1500</hitTime>
 		<mpConsume>
 			<value level="1">18</value>
 			<value level="2">31</value>
@@ -1568,6 +1589,18 @@
 			<value fromLevel="1" toLevel="10" fromSubLevel="1001" toSubLevel="1003">2</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>
+			<value level="1">103</value>
+			<value level="2">111</value>
+			<value level="3">117</value>
+			<value level="4">119</value>
+			<value level="5">122</value>
+			<value level="6">123</value>
+			<value level="7">125</value>
+			<value level="8">126</value>
+			<value level="9">127</value>
+			<value level="10">129</value>
+		</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 		<reuseDelayGroup>87810</reuseDelayGroup>
 		<staticReuse>
@@ -1625,7 +1658,7 @@
 					<value fromLevel="10" toLevel="10" fromSubLevel="1002" toSubLevel="1002">7694</value>
 					<value fromLevel="10" toLevel="10" fromSubLevel="1003" toSubLevel="1003">7794</value>
 				</power>
-				<pDefMod>0.8</pDefMod>
+				<pDefMod>0.7</pDefMod>
 				<criticalChance>10</criticalChance>
 				<repeatCount>2</repeatCount>
 			</effect>
@@ -1654,7 +1687,7 @@
 			<value fromLevel="1" toLevel="10" fromSubLevel="1001" toSubLevel="1003">200</value>
 		</affectRange>
 		<affectScope>RANGE</affectScope>
-		<castRange>-1</castRange>
+		<castRange>500</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">1520</value>
