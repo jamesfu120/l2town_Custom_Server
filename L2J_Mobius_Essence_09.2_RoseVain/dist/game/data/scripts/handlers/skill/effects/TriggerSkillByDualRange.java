@@ -20,6 +20,7 @@
  */
 package handlers.skill.effects;
 
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.entity.actor.Creature;
 import org.l2jmobius.gameserver.entity.actor.Player;
@@ -40,6 +41,10 @@ public class TriggerSkillByDualRange extends AbstractEffect
 	private final SkillHolder _rangeSkill;
 	private final int _distance;
 	private final boolean _adjustLevel;
+	private final int _boostSkillId;
+	private final int _boostChance;
+	private final SkillHolder _boostCloseSkill;
+	private final SkillHolder _boostRangeSkill;
 	
 	public TriggerSkillByDualRange(StatSet params)
 	{
@@ -48,6 +53,11 @@ public class TriggerSkillByDualRange extends AbstractEffect
 		_rangeSkill = new SkillHolder(params.getInt("rangeSkill"), params.getInt("rangeSkillLevel", 1));
 		_distance = params.getInt("distance", 120);
 		_adjustLevel = params.getBoolean("adjustLevel", true);
+		// Optional boost: while the caster knows boostSkill, boostChance% of casts use the boost close/range skills.
+		_boostSkillId = params.getInt("boostSkill", 0);
+		_boostChance = params.getInt("boostChance", 0);
+		_boostCloseSkill = new SkillHolder(params.getInt("boostCloseSkill", _closeSkill.getSkillId()), _closeSkill.getSkillLevel());
+		_boostRangeSkill = new SkillHolder(params.getInt("boostRangeSkill", _rangeSkill.getSkillId()), _rangeSkill.getSkillLevel());
 	}
 	
 	@Override
@@ -70,7 +80,9 @@ public class TriggerSkillByDualRange extends AbstractEffect
 			return;
 		}
 		
-		final SkillHolder skillHolder = effector.calculateDistance3D(effected) < _distance ? _closeSkill : _rangeSkill;
+		final boolean boosted = (_boostSkillId > 0) && (effector.getKnownSkill(_boostSkillId) != null) && (Rnd.get(100) < _boostChance);
+		final boolean close = effector.calculateDistance3D(effected) < _distance;
+		final SkillHolder skillHolder = boosted ? (close ? _boostCloseSkill : _boostRangeSkill) : (close ? _closeSkill : _rangeSkill);
 		final Skill triggerSkill = _adjustLevel ? SkillData.getInstance().getSkill(skillHolder.getSkillId(), skill.getLevel(), skill.getSubLevel()) : skillHolder.getSkill();
 		if (triggerSkill == null)
 		{

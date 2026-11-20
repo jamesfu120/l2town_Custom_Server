@@ -159,6 +159,10 @@
 					<value level="25">25</value>
 				</rangeSkillLevel>
 				<distance>100</distance>
+				<boostSkill>87395</boostSkill> <!-- Blow Boost -->
+				<boostChance>50</boostChance>
+				<boostCloseSkill>87311</boostCloseSkill> <!-- Enhanced Blow -->
+				<boostRangeSkill>87312</boostRangeSkill> <!-- Enhanced Blow -->
 			</effect>
 		</effects>
 	</skill>
@@ -3295,16 +3299,6 @@
 		<!-- Allows you to deal a stronger attack. When using the Blow skill with a 50% chance, uses Enhanced Blow. -->
 		<icon>icon.s_assassin_swoop_attack_upgrade</icon>
 		<operateType>P</operateType>
-		<effects>
-			<effect name="FatalBlowRate">
-				<amount>50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ReplaceSkillBySkill">
-				<existingSkillId>87301</existingSkillId> <!-- Blow -->
-				<replacementSkillId>87310</replacementSkillId> <!-- Enhanced Blow -->
-			</effect>
-		</effects>
 	</skill>
 	<skill id="87396" toLevel="1" name="Shadow Boost">
 		<!-- When using a dagger, P. Atk. +15%. <Skill upgrade>. Shadow Attack → Enhanced Shadow Attack. Number of targets is increased. Defense Ignore is increased. -->

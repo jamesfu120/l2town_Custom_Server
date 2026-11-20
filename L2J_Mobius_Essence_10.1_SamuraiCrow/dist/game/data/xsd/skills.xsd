@@ -2840,6 +2840,10 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="boostSkill" type="xs:unsignedInt" />
+															<xs:element name="boostChance" type="xs:unsignedByte" />
+															<xs:element name="boostCloseSkill" type="xs:unsignedInt" />
+															<xs:element name="boostRangeSkill" type="xs:unsignedInt" />
 															<xs:element name="closeSkill">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
