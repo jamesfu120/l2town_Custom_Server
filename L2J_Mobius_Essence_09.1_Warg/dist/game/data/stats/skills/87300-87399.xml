@@ -737,8 +737,9 @@
 		<effectPoint>-495</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>0</isMagic>
+		<itemConsumeCount>15</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>0</mpConsume>
-		<reuseDelay>1000</reuseDelay>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -759,12 +760,6 @@
 			<effect name="TeleportToTarget" />
 			<effect name="CallRandomSkill">
 				<skills>87352,1;87308,1;</skills>
-			</effect>
-			<effect name="CallSkillByKill">
-				<victimType>Monster,Player</victimType>
-				<skillId>87454</skillId> <!-- Summon Shadow -->
-				<skillLevel>1</skillLevel>
-				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -3470,19 +3465,20 @@
 		<icon>icon.s_assassin_shadow_partner</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillBySkill">
+			<effect name="CallSkillOnEnemyDeath">
 				<skillId>87454</skillId> <!-- Summon Shadow -->
 				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<castSkillId>87323</castSkillId> <!-- Return Motion -->
-				<targetType>SELF</targetType>
+				<attackSkillId>87308</attackSkillId> <!-- Assassination -->
 			</effect>
-			<effect name="TriggerSkillBySkill">
+			<effect name="CallSkillOnEnemyDeath">
 				<skillId>87454</skillId> <!-- Summon Shadow -->
 				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<castSkillId>87307</castSkillId> <!-- Assassination -->
-				<targetType>SELF</targetType>
+				<attackSkillId>88085</attackSkillId> <!-- Assassination -->
+			</effect>
+			<effect name="CallSkillOnEnemyDeath">
+				<skillId>87454</skillId> <!-- Summon Shadow -->
+				<skillLevel>1</skillLevel>
+				<attackSkillId>88086</attackSkillId> <!-- Assassination -->
 			</effect>
 		</effects>
 	</skill>

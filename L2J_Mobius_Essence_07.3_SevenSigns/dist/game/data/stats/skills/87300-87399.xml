@@ -737,8 +737,9 @@
 		<effectPoint>-495</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>0</isMagic>
+		<itemConsumeCount>20</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>0</mpConsume>
-		<reuseDelay>1000</reuseDelay>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -759,12 +760,6 @@
 			<effect name="TeleportToTarget" />
 			<effect name="CallRandomSkill">
 				<skills>87352,1;87308,1;</skills>
-			</effect>
-			<effect name="CallSkillByKill">
-				<victimType>Monster,Player</victimType>
-				<skillId>87454</skillId> <!-- Summon Shadow -->
-				<skillLevel>1</skillLevel>
-				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>
@@ -2118,7 +2113,7 @@
 		<hitTime>500</hitTime>
 		<hpConsume>0</hpConsume>
 		<isMagic>0</isMagic>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>100</mpConsume>
 		<reuseDelay>60000</reuseDelay>
@@ -2614,11 +2609,11 @@
 		<effects>
 			<effect name="SkillEvasion">
 				<magicType>0</magicType>
-				<amount>55</amount>
+				<amount>50</amount>
 			</effect>
 			<effect name="SkillEvasion">
 				<magicType>1</magicType>
-				<amount>55</amount>
+				<amount>50</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -3394,19 +3389,10 @@
 		<icon>icon.s_assassin_shadow_partner</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillBySkill">
+			<effect name="CallSkillOnEnemyDeath">
 				<skillId>87454</skillId> <!-- Summon Shadow -->
 				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<castSkillId>87323</castSkillId> <!-- Return Motion -->
-				<targetType>SELF</targetType>
-			</effect>
-			<effect name="TriggerSkillBySkill">
-				<skillId>87454</skillId> <!-- Summon Shadow -->
-				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<castSkillId>87307</castSkillId> <!-- Assassination -->
-				<targetType>SELF</targetType>
+				<attackSkillId>87308</attackSkillId> <!-- Assassination -->
 			</effect>
 		</effects>
 	</skill>

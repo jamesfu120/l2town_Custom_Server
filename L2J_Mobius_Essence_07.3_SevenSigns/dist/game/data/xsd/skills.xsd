@@ -2809,7 +2809,25 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="powerModifier" type="xs:decimal" />
-															<xs:element name="repeatCount" type="xs:unsignedByte" />
+															<xs:element name="repeatCount">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
+																						<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
+																						<xs:attribute name="toLevel" type="xs:unsignedByte" use="optional" />
+																						<xs:attribute name="fromSubLevel" type="xs:unsignedShort" use="optional" />
+																						<xs:attribute name="toSubLevel" type="xs:unsignedShort" use="optional" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="pveOnly" type="xs:boolean" />
 															<xs:element name="PhysicalAttackRange" type="xs:unsignedByte" />
 															<xs:element name="PhysicalAttackRangeMode" type="xs:string" />

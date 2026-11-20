@@ -81,7 +81,8 @@ public class CallSkillOnEnemyDeath extends AbstractEffect
 		}
 		
 		final Player player = attacker.asPlayer();
-		if (player.getLastSkillUsed().getId() != _attackSkill.getSkill().getId())
+		final Skill lastSkill = player.getLastSkillUsed();
+		if ((lastSkill == null) || (lastSkill.getId() != _attackSkill.getSkillId()))
 		{
 			return;
 		}
