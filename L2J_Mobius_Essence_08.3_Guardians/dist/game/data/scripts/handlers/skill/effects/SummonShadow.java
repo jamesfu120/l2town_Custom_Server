@@ -63,7 +63,9 @@ public class SummonShadow extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isAlikeDead())
+		// The summoner, not the effected: Clone Dance calls this on its enemy target.
+		final Player player = effector.asPlayer();
+		if ((player == null) || player.isAlikeDead())
 		{
 			return;
 		}
@@ -74,13 +76,7 @@ public class SummonShadow extends AbstractEffect
 			return;
 		}
 		
-		final Player player = effector.asPlayer();
 		if (player.isMounted())
-		{
-			return;
-		}
-		
-		if (player.getSummonedNpcCount() >= 3)
 		{
 			return;
 		}
@@ -92,18 +88,27 @@ public class SummonShadow extends AbstractEffect
 			return;
 		}
 		
-		// TODO: Probably move to shadows instead of summoned NPCs.
-		final Collection<Npc> summonedShadows = player.getSummonedNpcs();
-		if (!summonedShadows.isEmpty())
+		// Up to 3 shadows: at the limit the oldest one gives way. Bounded, so a shadow that stays listed cannot spin it.
+		for (int i = 0; (i < 3) && (player.getSummonedNpcCount() >= 3); i++)
 		{
-			for (Npc npc : summonedShadows)
+			Shadow oldest = null;
+			final Collection<Npc> summoned = player.getSummonedNpcs();
+			for (Npc npc : summoned)
 			{
-				if (npc.getId() == _npcId)
+				if ((npc.getId() == _npcId) && (npc instanceof Shadow) && ((oldest == null) || (((Shadow) npc).getSpawnTime() < oldest.getSpawnTime())))
 				{
-					npc.deleteMe();
-					break;
+					oldest = (Shadow) npc;
 				}
 			}
+			if (oldest == null)
+			{
+				return; // The limit is held by other summoned NPCs.
+			}
+			oldest.deleteMe();
+		}
+		if (player.getSummonedNpcCount() >= 3)
+		{
+			return;
 		}
 		
 		final int x = player.getX();
@@ -112,11 +117,11 @@ public class SummonShadow extends AbstractEffect
 		final Shadow shadow = new Shadow(npcTemplate, player);
 		shadow.fullRestore();
 		shadow.setHeading(player.getHeading());
-		shadow.spawnMe(x, y, z);
-		shadow.setSummoner(player);
 		shadow.setInstance(player.getInstanceWorld());
-		shadow.scheduleDespawn(_despawnDelay);
 		shadow.setShowSummonAnimation(true);
+		// Summoner before spawnMe: Shadow.onSpawn copies the summoner's buffs and passives.
 		player.addSummonedNpc(shadow);
+		shadow.spawnMe(x, y, z);
+		shadow.scheduleDespawn(_despawnDelay);
 	}
 }
