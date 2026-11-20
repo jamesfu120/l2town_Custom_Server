@@ -12373,6 +12373,11 @@ public class Player extends Playable
 					s.deleteMe();
 				}
 			}
+			else if (s instanceof Shadow)
+			{
+				// Shadows disappear when their summoner teleports.
+				s.deleteMe();
+			}
 		});
 		
 		// Show movie if available.

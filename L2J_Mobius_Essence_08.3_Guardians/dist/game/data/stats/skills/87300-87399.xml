@@ -2119,6 +2119,8 @@
 		<hitTime>500</hitTime>
 		<hpConsume>0</hpConsume>
 		<isMagic>0</isMagic>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>100</mpConsume>
 		<reuseDelay>60000</reuseDelay>
 		<conditions>
@@ -2153,21 +2155,13 @@
 			</effect>
 		</selfEffects>
 		<effects>
-			<effect name="PhysicalDamage">
-				<pAtkMod>1.2</pAtkMod>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>0.9</pDefMod>
-				<criticalChance>10</criticalChance>
-			</effect>
 			<effect name="CallSkill">
 				<skillId>87377</skillId> <!-- Smoke Effect -->
 				<skillLevel>1</skillLevel>
-				<targetType>SELF</targetType>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>87378</skillId> <!-- Smokescreen -->
 				<skillLevel>1</skillLevel>
-				<targetType>ENEMY</targetType>
 			</effect>
 		</effects>
 	</skill>
@@ -2623,19 +2617,16 @@
 		<targetType>SELF</targetType>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>H_ASN_SHAPE_BLADE_AVE</abnormalVisualEffect>
-		<activateRate>80</activateRate>
 		<affectScope>SINGLE</affectScope>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="SkillEvasion">
 				<magicType>0</magicType>
-				<amount>50</amount>
+				<amount>55</amount>
 			</effect>
 			<effect name="SkillEvasion">
 				<magicType>1</magicType>
-				<amount>50</amount>
+				<amount>55</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -2984,14 +2975,6 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>87377</castSkillId>
-				<skillId>87378</skillId> <!-- Smokescreen -->
-				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<targetType>ENEMY</targetType>
-				<attackerType>Creature</attackerType>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="87378" toLevel="1" name="Smokescreen">
@@ -3001,10 +2984,7 @@
 		<targetType>ENEMY</targetType>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>H_ASN_AS_MODE_SCREEN</abnormalVisualEffect>
-		<affectLimit>5-5</affectLimit>
-		<affectObject>NOT_FRIEND</affectObject>
-		<affectRange>300</affectRange>
-		<affectScope>RANGE</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="Accuracy">

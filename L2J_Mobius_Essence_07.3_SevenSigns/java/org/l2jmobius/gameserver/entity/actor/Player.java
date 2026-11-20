@@ -12134,6 +12134,15 @@ public class Player extends Playable
 			sendPacket(new PetSummonInfo(s, 0));
 		});
 		
+		// Shadows disappear when their summoner teleports.
+		getSummonedNpcs().forEach(s ->
+		{
+			if (s instanceof Shadow)
+			{
+				s.deleteMe();
+			}
+		});
+		
 		// Show movie if available.
 		if (_movieHolder != null)
 		{
