@@ -3907,6 +3907,9 @@
 			<effect name="MagicalDamage">
 				<power>450</power>
 			</effect>
+			<effect name="MagicalDamage">
+				<power>450</power>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="87748" toLevel="1" name="Powerful Light">
@@ -3922,12 +3925,10 @@
 		<reuseDelay>10000</reuseDelay>
 		<effects>
 			<effect name="PhysicalDamage">
-				<pAtkMod>
-					<value level="1">5</value>
-				</pAtkMod>
-				<pAtkMod>
-					<value level="1">5</value>
-				</pAtkMod>
+				<pAtkMod>5</pAtkMod>
+			</effect>
+			<effect name="PhysicalDamage">
+				<pAtkMod>5</pAtkMod>
 			</effect>
 		</effects>
 	</skill>
@@ -5469,7 +5470,7 @@
 				<attackSkillId>87715</attackSkillId> <!-- Bright Dance of Light -->
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
-				<chance>100</chance>
+				<chance>20</chance>
 				<targetType>ENEMY</targetType>
 				<skillId>87792</skillId> <!-- Ultimate Dispel -->
 				<skillLevel>1</skillLevel>
@@ -5495,6 +5496,33 @@
 			<effect name="ReplaceSkillBySkill">
 				<existingSkillId>87708</existingSkillId> <!-- Claidheamh Soluis -->
 				<replacementSkillId>87718</replacementSkillId> <!-- Shining Claidheamh Soluis -->
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>87718</attackSkillId> <!-- Shining Claidheamh Soluis -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>87792</skillId> <!-- Ultimate Dispel -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>87710</attackSkillId> <!-- Sephiroth -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>87792</skillId> <!-- Ultimate Dispel -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>87778</attackSkillId> <!-- Transcendent Bright Dance -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>87792</skillId> <!-- Ultimate Dispel -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
