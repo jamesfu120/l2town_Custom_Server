@@ -3977,6 +3977,8 @@
 		<coolTime>500</coolTime>
 		<hitTime>5500</hitTime>
 		<isMagic>1</isMagic>
+		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>120</mpConsume>
 		<mpInitialConsume>30</mpInitialConsume>
@@ -3985,58 +3987,72 @@
 		<effects>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87705</castSkillId> <!-- Bright Dance -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87706</castSkillId> <!-- Bright Dance -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87707</castSkillId> <!-- Bright Dance -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87715</castSkillId> <!-- Bright Dance of Light -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87716</castSkillId> <!-- Bright Dance of Light -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87717</castSkillId> <!-- Bright Dance of Light -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87708</castSkillId> <!-- Claidheamh Soluis -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>87718</castSkillId> <!-- Shining Claidheamh Soluis -->
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<skillId>26032</skillId> <!-- Brilliant Blessing -->
+				<skillId>87752</skillId> <!-- Brilliant Light -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>87710</castSkillId> <!-- Sephiroth -->
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+				<skillId>87752</skillId> <!-- Brilliant Light -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>87778</castSkillId> <!-- Transcendent Bright Dance -->
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="HpRegen">
@@ -4095,16 +4111,19 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>10</amount>
+				<amount>-10</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>10</ANOMALY>
+			</effect>
 			<effect name="HealOverTime">
-				<power>500</power>
-				<ticks>2</ticks>
+				<power>250</power> <!-- 500 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 			<effect name="ManaHealOverTime">
-				<power>20</power>
-				<ticks>2</ticks>
+				<power>10</power> <!-- 20 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -4392,6 +4411,20 @@
 				<skillId>87762</skillId> <!-- Brilliant Blessing -->
 				<skillLevel>1</skillLevel>
 			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>87710</castSkillId> <!-- Sephiroth -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillId>87762</skillId> <!-- Brilliant Blessing -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>87778</castSkillId> <!-- Transcendent Bright Dance -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillId>87762</skillId> <!-- Brilliant Blessing -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="HpRegen">
 				<amount>20</amount>
 				<mode>DIFF</mode>
@@ -4400,7 +4433,11 @@
 				<amount>5</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<!-- TODO: Decreases debuff/ anomaly duration. -->
+			<effect name="AbnormalTimeChange">
+				<slot>DISARM;PARALYZE;ROOT_MAGICALLY;SILENCE;SLEEP;STUN;TURN_FLEE;TURN_STONE</slot>
+				<amount>-50</amount>
+				<mode>DEBUFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="87762" toLevel="1" name="Brilliant Blessing">
@@ -4443,16 +4480,19 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>40</amount>
+				<amount>-40</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>40</ANOMALY>
+			</effect>
 			<effect name="HealOverTime">
-				<power>2000</power>
-				<ticks>2</ticks>
+				<power>1000</power> <!-- 2000 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 			<effect name="ManaHealOverTime">
-				<power>50</power>
-				<ticks>2</ticks>
+				<power>25</power> <!-- 50 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 		</effects>
 	</skill>

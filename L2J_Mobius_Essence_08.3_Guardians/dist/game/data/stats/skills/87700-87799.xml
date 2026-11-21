@@ -3882,6 +3882,8 @@
 		<coolTime>500</coolTime>
 		<hitTime>5500</hitTime>
 		<isMagic>1</isMagic>
+		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>120</mpConsume>
 		<mpInitialConsume>30</mpInitialConsume>
@@ -3893,7 +3895,7 @@
 				<skillId>87752</skillId> <!-- Brilliant Light -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1</minDamage>
-				<chance>100</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
 			</effect>
@@ -3905,7 +3907,11 @@
 				<amount>5</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<!-- TODO: Decreases debuff/ anomaly duration. -->
+			<effect name="AbnormalTimeChange">
+				<slot>DISARM;PARALYZE;ROOT_MAGICALLY;SILENCE;SLEEP;STUN;TURN_FLEE;TURN_STONE</slot>
+				<amount>-10</amount>
+				<mode>DEBUFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="87752" toLevel="1" name="Brilliant Light">
@@ -3949,13 +3955,16 @@
 				<amount>-10</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>10</ANOMALY>
+			</effect>
 			<effect name="HealOverTime">
-				<power>500</power>
-				<ticks>2</ticks>
+				<power>250</power> <!-- 500 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 			<effect name="ManaHealOverTime">
-				<power>50</power>
-				<ticks>2</ticks>
+				<power>10</power> <!-- 20 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -4196,6 +4205,20 @@
 				<skillId>87762</skillId> <!-- Brilliant Blessing -->
 				<skillLevel>1</skillLevel>
 			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>87710</castSkillId> <!-- Sephiroth -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillId>87762</skillId> <!-- Brilliant Blessing -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>87778</castSkillId> <!-- Transcendent Bright Dance -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillId>87762</skillId> <!-- Brilliant Blessing -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="TriggerSkillByMagicType">
 				<magicTypes>1</magicTypes>
 				<skillId>87762</skillId> <!-- Brilliant Blessing -->
@@ -4213,7 +4236,11 @@
 				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<!-- TODO: Decreases debuff/ anomaly duration. -->
+			<effect name="AbnormalTimeChange">
+				<slot>DISARM;PARALYZE;ROOT_MAGICALLY;SILENCE;SLEEP;STUN;TURN_FLEE;TURN_STONE</slot>
+				<amount>-50</amount>
+				<mode>DEBUFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="87762" toLevel="1" name="Brilliant Blessing">
@@ -4257,13 +4284,16 @@
 				<amount>-40</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>40</ANOMALY>
+			</effect>
 			<effect name="HealOverTime">
-				<power>3000</power>
-				<ticks>2</ticks>
+				<power>1000</power> <!-- 2000 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 			<effect name="ManaHealOverTime">
-				<power>100</power>
-				<ticks>2</ticks>
+				<power>25</power> <!-- 50 every 2 sec -->
+				<ticks>3</ticks>
 			</effect>
 		</effects>
 	</skill>
