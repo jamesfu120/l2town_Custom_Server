@@ -724,6 +724,8 @@
 		<effectRange>1200</effectRange>
 		<hitTime>5800</hitTime>
 		<isMagic>1</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">36</value>
@@ -1359,6 +1361,8 @@
 		</effectPoint>
 		<hitTime>3500</hitTime>
 		<isMagic>1</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">74</value>
@@ -1424,7 +1428,10 @@
 		<effectPoint>-1980</effectPoint>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic>
-		<itemConsumeCount>60</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">30</value>
+			<value level="2">60</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
@@ -2118,6 +2125,8 @@
 		<effectRange>1200</effectRange>
 		<hitTime>5500</hitTime>
 		<isMagic>1</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">45</value>
@@ -2151,7 +2160,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<castRange>400</castRange>
+		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-550</value>
@@ -2490,7 +2499,7 @@
 			<value level="15">-1900</value>
 		</effectPoint>
 		<effectRange>1200</effectRange>
-		<hitTime>6000</hitTime>
+		<hitTime>5500</hitTime>
 		<isMagic>1</isMagic>
 		<itemConsumeCount>
 			<value fromLevel="1" toLevel="15">2</value>
