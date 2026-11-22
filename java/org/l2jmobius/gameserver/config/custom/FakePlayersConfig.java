@@ -34,6 +34,9 @@ public class FakePlayersConfig
 	// Constants
 	public static boolean FAKE_PLAYERS_ENABLED;
 	public static boolean FAKE_PLAYER_CHAT;
+	public static String[] FAKE_PLAYER_CHAT_MESSAGES;
+    public static int FAKE_PLAYER_CHAT_MIN_INTERVAL;
+    public static int FAKE_PLAYER_CHAT_MAX_INTERVAL;
 	public static boolean FAKE_PLAYER_USE_SHOTS;
 	public static boolean FAKE_PLAYER_KILL_PVP;
 	public static boolean FAKE_PLAYER_KILL_KARMA;
@@ -47,8 +50,11 @@ public class FakePlayersConfig
 	public static void load()
 	{
 		final ConfigReader config = new ConfigReader(FAKE_PLAYERS_CONFIG_FILE);
+		FAKE_PLAYER_CHAT_MIN_INTERVAL = Math.max(5, config.getInt("FakePlayerChatMinInterval", 90));
+        FAKE_PLAYER_CHAT_MAX_INTERVAL = Math.max(FAKE_PLAYER_CHAT_MIN_INTERVAL, config.getInt("FakePlayerChatMaxInterval", 150));
 		FAKE_PLAYERS_ENABLED = config.getBoolean("EnableFakePlayers", false);
 		FAKE_PLAYER_CHAT = config.getBoolean("FakePlayerChat", false);
+		FAKE_PLAYER_CHAT_MESSAGES = config.getString("FakePlayerChatMessages", "大家好。,這裡有人一起練嗎？,今天怪物掉寶不錯。,有人要組隊嗎？,l2town.ddns.net 天堂2單機論壇").split(",");
 		FAKE_PLAYER_USE_SHOTS = config.getBoolean("FakePlayerUseShots", false);
 		FAKE_PLAYER_KILL_PVP = config.getBoolean("FakePlayerKillsRewardPvP", false);
 		FAKE_PLAYER_KILL_KARMA = config.getBoolean("FakePlayerUnflaggedKillsKarma", false);
