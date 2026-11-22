@@ -6247,9 +6247,15 @@ public class Player extends Playable
 	 * <li>Send a Server->Client StatusUpdate packet with its new Experience</li><br>
 	 * @param killer
 	 */
-	public void calculateDeathExpPenalty(Creature killer)
+		public void calculateDeathExpPenalty(Creature killer)
 	{
+		if (isFakePlayer())
+		{
+			return;
+		}
+		
 		final int level = getLevel();
+
 		double percentLost = ExperienceLossData.getInstance().getPercentLost(level);
 		
 		// Calculate reduce exp lost stats.
@@ -14936,7 +14942,13 @@ public class Player extends Playable
 	 */
 	public void checkPlayerSkills()
 	{
+		if (isFakePlayer())
+		{
+			return;
+		}
+		
 		SkillLearn learn;
+
 		for (Entry<Integer, Skill> e : getSkills().entrySet())
 		{
 			learn = SkillTreeData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getPlayerClass());

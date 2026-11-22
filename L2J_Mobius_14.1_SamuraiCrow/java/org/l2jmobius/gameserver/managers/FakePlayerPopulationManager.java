@@ -28,6 +28,9 @@ import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.InitialEquipmentData;
 import org.l2jmobius.gameserver.data.xml.ItemData;
+import org.l2jmobius.gameserver.data.xml.RecipeData;
+import org.l2jmobius.gameserver.data.holders.RecipeHolder;
+import org.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -57,6 +60,7 @@ import org.l2jmobius.gameserver.entity.item.type.ArmorType;
 import org.l2jmobius.gameserver.entity.item.type.EtcItemType;
 import org.l2jmobius.gameserver.entity.item.type.ItemType;
 import org.l2jmobius.gameserver.entity.item.type.WeaponType;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.mechanics.effects.AbstractEffect;
 import org.l2jmobius.gameserver.mechanics.effects.EffectType;
 import org.l2jmobius.gameserver.mechanics.events.EventType;
@@ -90,6 +94,7 @@ public class FakePlayerPopulationManager {
    private static final Map<Player, Integer> PARTY_PATROL_STEPS = new ConcurrentHashMap();
    private static final Map<Player, Integer> LAST_PARTY_SUPPORT_SKILL = new ConcurrentHashMap();
    private static final Map<Player, Integer> LAST_OFFENSIVE_SKILL = new ConcurrentHashMap();
+   private static final Map<Player, Long> LEADER_LAST_COMBAT_AT = new ConcurrentHashMap<>();
    private static final Map<Player, Boolean> PARTY_HEALING_MODE = new ConcurrentHashMap();
    private static final Map<Player, Boolean> SUPPORT_ROLE_CACHE = new ConcurrentHashMap();
    private static final Map<Player, Long> NEXT_RESOURCE_SYNC_AT = new ConcurrentHashMap();
@@ -128,8 +133,8 @@ public class FakePlayerPopulationManager {
    // =========================================================================
    // 🧠 核心基礎神經區：移至頂部確保全檔案編譯放行
    // =========================================================================
-   private static boolean isShopPlayer(Player player) {
-      return player != null && player.getPrivateStoreType() == PrivateStoreType.SELL;
+      private static boolean isShopPlayer(Player player) {
+      return player != null && (player.getPrivateStoreType() == PrivateStoreType.SELL || player.getPrivateStoreType() == PrivateStoreType.MANUFACTURE);
    }
 
    private static boolean isSupportClass(Player player) {
@@ -202,20 +207,25 @@ public class FakePlayerPopulationManager {
       return skill == null || isFakePartySummonSkill(skill) || isFakePartyReturnSkill(skill) || skill.isTransformation();
    }
    
-         private static boolean isCrashRiskSkill(Skill skill) {
+          private static boolean isCrashRiskSkill(Skill skill) {
       if (skill == null) return true;
-      // 1. 只使用 14.1 確認存在的 TELEPORT 類型檢查
+      // 1. 過濾傳送與目標傳送技能
       if (skill.hasEffectType(EffectType.TELEPORT, EffectType.TELEPORT_TO_TARGET)) {
          return true;
       }
-      // 2. 透過效果類別名稱（字串比對）安全過濾所有衝鋒、閃現、擊退、拉人位移技，完全不受版本列舉名稱影響
+      // 2. 過濾技能名稱包含 summon 或 召喚 的技能（避免召喚出 Template is null 的使魔）
+      String skillName = skill.getName() != null ? skill.getName().toLowerCase(Locale.ROOT) : "";
+      if (skillName.contains("summon") || skillName.contains("召喚")) {
+         return true;
+      }
+      // 3. 透過效果類別名稱安全過濾所有位移技與召喚技（Summon / SummonNpc / SummonPet 等）
       for (EffectScope effectScope : EffectScope.values()) {
          List<AbstractEffect> effects = skill.getEffects(effectScope);
          if (effects != null) {
             for (AbstractEffect effect : effects) {
                if (effect != null) {
                   String effName = effect.getClass().getSimpleName().toLowerCase(Locale.ROOT);
-                  if (effName.contains("charge") || effName.contains("rush") || effName.contains("blink") || effName.contains("dash") || effName.contains("fly") || effName.contains("knockback") || effName.contains("pull")) {
+                  if (effName.contains("charge") || effName.contains("rush") || effName.contains("blink") || effName.contains("dash") || effName.contains("fly") || effName.contains("knockback") || effName.contains("pull") || effName.contains("summon")) {
                      return true;
                   }
                }
@@ -269,7 +279,7 @@ public class FakePlayerPopulationManager {
             continue;
          }
          World.forEachVisibleObjectInRange(fake, Player.class, 3000, realPlayer -> {
-            if (realPlayer != null && !realPlayer.isFakePlayer() && realPlayer.isOnline()) {
+                        if (realPlayer != null && !realPlayer.isFakePlayer() && realPlayer.isOnline()) {
                fake.sendInfo(realPlayer);
             }
          });
@@ -427,7 +437,9 @@ public class FakePlayerPopulationManager {
       private static void spawnOne(boolean shop) {
       try {
          // 🔥 修改：直接強制假人生成等級為 70 ~ 110 級
-         int level = Rnd.get(70, 110);
+         int minLv = Math.max(1, FakePlayersConfig.FAKE_PLAYER_MIN_LEVEL);
+         int maxLv = Math.max(minLv, FakePlayersConfig.FAKE_PLAYER_MAX_LEVEL);
+         int level = Rnd.get(minLv, maxLv);
          List<PlayerClass> classes = getEligibleFakeClasses(level);
          if (classes.isEmpty()) {
             LOGGER.warning("No EPIC 14.1 playable class is eligible for fake-player level " + level + ".");
@@ -502,11 +514,14 @@ public class FakePlayerPopulationManager {
             applyFixedBGradeEquipment(player);
          }
 
-         Location loc = shop ? TOWNS[Rnd.get(TOWNS.length)] : findCombatSpawnLocation(player);
-         player.spawnMe(loc.getX() + Rnd.get(-200, 200), loc.getY() + Rnd.get(-200, 200), loc.getZ());
+                  Location loc = shop ? TOWNS[Rnd.get(TOWNS.length)] : findCombatSpawnLocation(player);
+         if (loc == null || (loc.getX() == 0 && loc.getY() == 0)) {
+            loc = TOWNS[Rnd.get(TOWNS.length)];
+         }
+                  player.spawnMe(loc.getX() + Rnd.get(-150, 150), loc.getY() + Rnd.get(-150, 150), loc.getZ());
          if (!player.isSpawned() || World.getPlayer(player.getObjectId()) != player) {
-            LOGGER.warning("Fake player " + name + " failed world registration/spawn; retrying once. objectId=" + player.getObjectId() + ", spawned=" + player.isSpawned());
-            player.spawnMe(loc.getX(), loc.getY(), loc.getZ());
+            Location fallback = FALLBACK_HUNTING_GROUNDS[Rnd.get(FALLBACK_HUNTING_GROUNDS.length)];
+            player.spawnMe(fallback.getX() + Rnd.get(-150, 150), fallback.getY() + Rnd.get(-150, 150), fallback.getZ());
          }
 
          if (!player.isSpawned() || World.getPlayer(player.getObjectId()) != player) {
@@ -568,9 +583,12 @@ public class FakePlayerPopulationManager {
    }
 
    private static Location findCombatSpawnLocation(Player player) {
-      if (LAST_COMBAT_SPAWN_ANCHOR != null && LAST_COMBAT_SPAWN_REMAINING > 0) {
+            if (LAST_COMBAT_SPAWN_ANCHOR != null && LAST_COMBAT_SPAWN_REMAINING > 0) {
          --LAST_COMBAT_SPAWN_REMAINING;
-         return new Location(LAST_COMBAT_SPAWN_ANCHOR.getX() + Rnd.get(-800, 800), LAST_COMBAT_SPAWN_ANCHOR.getY() + Rnd.get(-800, 800), LAST_COMBAT_SPAWN_ANCHOR.getZ());
+         int tx = LAST_COMBAT_SPAWN_ANCHOR.getX() + Rnd.get(-150, 150);
+         int ty = LAST_COMBAT_SPAWN_ANCHOR.getY() + Rnd.get(-150, 150);
+         int tz = LAST_COMBAT_SPAWN_ANCHOR.getZ();
+         return GeoEngine.getInstance().getValidLocation(LAST_COMBAT_SPAWN_ANCHOR.getX(), LAST_COMBAT_SPAWN_ANCHOR.getY(), tz, tx, ty, tz, null);
       } else {
          List<Monster> candidates = getMonsterSnapshot().stream().filter((monster) -> isSuitableHuntingMonster(player, monster)).toList();
          if (candidates.isEmpty()) {
@@ -655,58 +673,130 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   private static void setupShop(Player player) {
-      player.setTitle("隨機商店");
+     private static void setupShop(Player player) {
+      // 50% 機率開立矮人製作工房，50% 機率開立實用百貨商店
+      if (Rnd.get(100) < 50 && setupManufactureWorkshop(player)) {
+         return;
+      }
+
+      player.setTitle("百貨商人");
       int stockCount = Rnd.get(FakePlayersConfig.FAKE_PLAYER_SHOP_MIN_ITEMS, FakePlayersConfig.FAKE_PLAYER_SHOP_MAX_ITEMS);
       int added = 0;
 
-      for(int i = 0; i < stockCount * 10 && added < stockCount; ++i) {
+      for (int i = 0; i < stockCount * 15 && added < stockCount; ++i) {
          ItemTemplate template = getRandomShopItem();
-         if (template != null && template.isSellable() && template.isTradeable() && !template.isQuestItem()) {
-            long count = template.isStackable() ? (long)Rnd.get(FakePlayersConfig.FAKE_PLAYER_SHOP_MIN_STACK, FakePlayersConfig.FAKE_PLAYER_SHOP_MAX_STACK) : 1L;
-            long referencePrice = Math.max(1L, template.getReferencePrice());
+         if (template != null && template.isSellable() && template.isTradeable() && !template.isQuestItem() && !containsBlockedEquipmentName(template.getName())) {
+            long count = template.isStackable() ? (long) Rnd.get(FakePlayersConfig.FAKE_PLAYER_SHOP_MIN_STACK, FakePlayersConfig.FAKE_PLAYER_SHOP_MAX_STACK) : 1L;
+            long referencePrice = Math.max(1000L, template.getReferencePrice());
             long minPrice = Math.max(FakePlayersConfig.FAKE_PLAYER_SHOP_MIN_PRICE, referencePrice / 2L);
-            long maxPrice = Math.max(minPrice, Math.min(FakePlayersConfig.FAKE_PLAYER_SHOP_MAX_PRICE, referencePrice * 3L));
+            long maxPrice = Math.max(minPrice, Math.min(FakePlayersConfig.FAKE_PLAYER_SHOP_MAX_PRICE, referencePrice * 2L));
             long price = Rnd.get(minPrice, maxPrice);
             TradeItem virtualItem = new TradeItem(template, count, price);
             virtualItem.setObjectId(NEXT_VIRTUAL_SHOP_OBJECT_ID.getAndDecrement());
-            if (!player.getSellList().getItems().stream().anyMatch((existing) -> existing.getItem().getId() == template.getId())) {
+            if (!player.getSellList().getItems().stream().anyMatch(existing -> existing.getItem().getId() == template.getId())) {
                player.getSellList().getItems().add(virtualItem);
                ++added;
             }
          }
       }
 
-      player.getSellList().setTitle("隨機武器／裝備／藥水／材料");
+            player.getSellList().setTitle("精選裝備／卷軸／藥水／材料");
       player.setPrivateStoreType(PrivateStoreType.SELL);
+      player.sitDown();
+      player.broadcastUserInfo();
+      player.broadcastPacket(new org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell(player));
+
    }
 
+         @SuppressWarnings({"rawtypes", "unchecked"})
+     private static boolean setupManufactureWorkshop(Player player) {
+      try {
+         List<RecipeHolder> validRecipes = new ArrayList<>();
+         for (int id = 1; id <= 2500; ++id) {
+            RecipeHolder r = RecipeData.getInstance().getRecipe(id);
+            if (r != null && r.getItemId() > 0 && ItemData.getInstance().getTemplate(r.getItemId()) != null) {
+               validRecipes.add(r);
+            }
+         }
+         if (validRecipes.isEmpty()) {
+            return false;
+         }
+
+                  player.setTitle("矮人工房");
+         int recipeCount = Rnd.get(6, 12);
+         int added = 0;
+         Map<Integer, Long> craftItems = new java.util.HashMap<>();
+
+         int maxLoops = recipeCount * 10;
+         for (int i = 0; i != maxLoops; ++i) {
+            if (added >= recipeCount) {
+               break;
+            }
+            RecipeHolder recipe = validRecipes.get(Rnd.get(validRecipes.size()));
+            if (recipe.isDwarvenRecipe()) {
+               player.registerDwarvenRecipeList(recipe, false);
+            } else {
+               player.registerCommonRecipeList(recipe, false);
+            }
+            if (!craftItems.containsKey(recipe.getId())) {
+               long craftFee = Rnd.get(10000L, 500000L);
+               craftItems.put(recipe.getId(), craftFee);
+               ++added;
+            }
+         }
+         player.setManufactureItems(craftItems);
+
+         if (added == 0) {
+            return false;
+         }
+
+                  player.setStoreName("【矮人工房】裝備／靈魂彈代工");
+         player.setPrivateStoreType(PrivateStoreType.MANUFACTURE);
+         player.sitDown();
+         player.broadcastUserInfo();
+         player.broadcastPacket(new RecipeShopMsg(player));
+         return true;
+      } catch (Exception e) {
+         LOGGER.log(Level.WARNING, "Failed to setup fake dwarf workshop for " + player.getName(), e);
+         return false;
+      }
+   }
+
+   @SuppressWarnings({"rawtypes", "unchecked"})
    private static ItemTemplate getRandomShopItem() {
       int roll = Rnd.get(100);
-      if (roll < 30) {
-         return getRandom(ItemData.getInstance().getAllWeapons());
-      } else if (roll < 65) {
-         return getRandom(ItemData.getInstance().getAllArmors());
-      } else if (roll >= 85) {
-         List<ItemTemplate> materials = new ArrayList();
-
-         for(EtcItem item : ItemData.getInstance().getAllEtcItems()) {
-            if (!item.isPotion() && !item.isElixir() && !item.isScroll() && item.getItemType() != EtcItemType.ARROW && item.getItemType() != EtcItemType.BOLT) {
-               materials.add(item);
+      if (roll >= 80) {
+         List others = new ArrayList();
+         for (EtcItem item : ItemData.getInstance().getAllEtcItems()) {
+            if (item != null && (item.isPotion() || item.isElixir() || (!item.isQuestItem() && item.getItemType() != EtcItemType.ARROW && item.getItemType() != EtcItemType.BOLT))) {
+               others.add(item);
             }
          }
-
-         return getRandom(materials);
+         return getRandom(others);
+      } else if (roll >= 60) {
+         List scrolls = new ArrayList();
+         for (EtcItem item : ItemData.getInstance().getAllEtcItems()) {
+            if (item != null && item.isScroll()) {
+               scrolls.add(item);
+            }
+         }
+         return getRandom(scrolls);
+      } else if (roll >= 30) {
+         List armors = new ArrayList();
+         for (Armor a : ItemData.getInstance().getAllArmors()) {
+            if (a != null && a.getItemGrade() != ItemGrade.NONE && a.getItemGrade() != ItemGrade.D && a.getItemGrade() != ItemGrade.C) {
+               armors.add(a);
+            }
+         }
+         return getRandom(armors);
       } else {
-         List<ItemTemplate> potions = new ArrayList();
-
-         for(EtcItem item : ItemData.getInstance().getAllEtcItems()) {
-            if (item.isPotion() || item.getItemType() == EtcItemType.ELIXIR) {
-               potions.add(item);
+         List weapons = new ArrayList();
+         for (Weapon w : ItemData.getInstance().getAllWeapons()) {
+            if (w != null && w.getItemGrade() != ItemGrade.NONE && w.getItemGrade() != ItemGrade.D && w.getItemGrade() != ItemGrade.C) {
+               weapons.add(w);
             }
          }
-
-         return getRandom(potions);
+         return getRandom(weapons);
       }
    }
 
@@ -917,155 +1007,137 @@ public class FakePlayerPopulationManager {
       }
       return false;
    }
+                  private static ItemGrade getDesiredFakeGrade(Player player) {
+      return ItemGrade.R;
+   }
+
+   private static int getDesiredFakeEnchant(Player player) {
+      return 10;
+   }
 
    private static void applyFixedBGradeEquipment(Player player) {
       if (player != null && !player.isDead() && !isShopPlayer(player)) {
          PlayerClass playerClass = player.getPlayerClass();
-         ItemGrade desiredGrade = player.getLevel() <= 60 ? ItemGrade.B : ItemGrade.A;
-         int desiredEnchant = player.getLevel() <= 60 ? 6 : 10;
-         Set<WeaponType> preferredWeapons = getPreferredWeaponTypes(player);
-         Set<ArmorType> preferredArmor = getPreferredArmorTypes(player);
+         int desiredEnchant = getDesiredFakeEnchant(player);
+         boolean highTier = player.getLevel() >= 95;
 
-         for(Item equipped : new ArrayList<Item>(player.getInventory().getPaperdollItems(new Predicate[0]))) {
+         for (Item equipped : new ArrayList<>(player.getInventory().getPaperdollItems())) {
             if (equipped != null && (equipped.isWeapon() || equipped.isArmor())) {
                BodyPart bodyPart = BodyPart.fromItem(equipped);
                if (bodyPart != null) {
                   player.getInventory().unEquipItemInBodySlot(bodyPart);
                }
-
-               player.getInventory().destroyItem(ItemProcessType.DESTROY, equipped, equipped.getCount(), player, (Object)null);
+               player.getInventory().destroyItem(ItemProcessType.DESTROY, equipped, equipped.getCount(), player, null);
             }
          }
 
-         List<ItemTemplate> weaponCandidates = new ArrayList();
+                  String className = playerClass != null ? playerClass.name().toLowerCase() : "";
+         boolean isMagic = playerClass != null && (playerClass.isMage() || playerClass.isSummoner() || className.contains("bishop") || className.contains("cardinal") || className.contains("elder") || className.contains("saint") || className.contains("prophet") || className.contains("hierophant") || className.contains("dominator") || className.contains("doomcryer") || className.contains("aeore") || className.contains("feoh") || className.contains("wynn"));
+         boolean isLight = !isMagic && (className.contains("rogue") || className.contains("dagger") || className.contains("archer") || className.contains("ranger") || className.contains("hawkeye") || className.contains("sagittarius") || className.contains("warg") || className.contains("samurai") || className.contains("tyrant") || className.contains("grand") || className.contains("trickster") || className.contains("berserker") || className.contains("doombringer") || className.contains("soul_") || className.contains("inspector") || className.contains("judicator") || className.contains("kamael") || className.contains("othell") || className.contains("yul_") || className.contains("shine"));
 
-         for(ItemTemplate item : ItemData.getInstance().getAllWeapons()) {
-            if (isValidFakeWeapon(player, item, preferredWeapons, desiredGrade)) {
-               weaponCandidates.add(item);
+         int[] armorSetIds;
+         if (isMagic) {
+            armorSetIds = highTier ? new int[]{17441, 17442, 17443, 17444, 17445} : new int[]{17315, 17316, 17317, 17318, 17319};
+         } else if (isLight) {
+            armorSetIds = highTier ? new int[]{17436, 17437, 17438, 17439, 17440} : new int[]{17310, 17311, 17312, 17313, 17314};
+         } else {
+            armorSetIds = highTier ? new int[]{17430, 17431, 17432, 17433, 17434} : new int[]{17304, 17305, 17306, 17307, 17308};
+         }
+
+         for (int armorId : armorSetIds) {
+            ItemTemplate tpl = ItemData.getInstance().getTemplate(armorId);
+            if (tpl != null) {
+               equipGeneratedArmor(player, tpl, desiredEnchant);
             }
          }
 
-         if (playerClass != null && (playerClass.isMage() || playerClass.isSummoner())) {
-            List<ItemTemplate> staffCandidates = weaponCandidates.stream().filter((itemx) -> itemx.getItemType() == WeaponType.BLUNT && itemx.getBodyPart() == BodyPart.LR_HAND).toList();
-            if (!staffCandidates.isEmpty()) {
-               weaponCandidates.clear();
-               weaponCandidates.addAll(staffCandidates);
-            }
-         }
-
-         if (!weaponCandidates.isEmpty()) {
-            equipCompatibleWeapon(player, weaponCandidates);
-         }
-
-         Set<BodyPart> armorParts = new HashSet();
-         PlayerClass equipmentClass = findNativeInitialEquipmentClass(playerClass);
-         Collection<InitialEquipment> initialEquipment = InitialEquipmentData.getInstance().getClassEquipment(equipmentClass);
-         if (initialEquipment != null) {
-            for(InitialEquipment holder : initialEquipment) {
-               if (holder.isEquipped()) {
-                  ItemTemplate item = ItemData.getInstance().getTemplate(holder.getId());
-                  if (item != null && item.isArmor() && item.getBodyPart() != BodyPart.NONE) {
-                     armorParts.add(item.getBodyPart());
-                  }
-               }
-            }
-         }
-
-         if (armorParts.isEmpty()) {
-            armorParts.add(BodyPart.HEAD);
-            armorParts.add(BodyPart.CHEST);
-            armorParts.add(BodyPart.LEGS);
-            armorParts.add(BodyPart.GLOVES);
-            armorParts.add(BodyPart.FEET);
-         }
-
-         for(BodyPart bodyPart : armorParts) {
-            List<ItemTemplate> armorCandidates = new ArrayList();
-
-            for(Armor armor : ItemData.getInstance().getAllArmors()) {
-               if (((ItemTemplate)armor).getItemGrade() == desiredGrade && ((ItemTemplate)armor).getBodyPart() == bodyPart && !((ItemTemplate)armor).isQuestItem() && !containsBlockedEquipmentName(((ItemTemplate)armor).getName())) {
-                  ItemType var17 = ((ItemTemplate)armor).getItemType();
-                  if (var17 instanceof ArmorType) {
-                     ArmorType armorType = (ArmorType)var17;
-                     if (preferredArmor.contains(armorType)) {
-                        armorCandidates.add(armor);
-                     }
-                  }
-               }
-            }
-
-            if (armorCandidates.isEmpty()) {
-               for(Armor armor : ItemData.getInstance().getAllArmors()) {
-                  if (((ItemTemplate)armor).getItemGrade() == desiredGrade && ((ItemTemplate)armor).getBodyPart() == bodyPart && !((ItemTemplate)armor).isQuestItem() && !containsBlockedEquipmentName(((ItemTemplate)armor).getName())) {
-                     armorCandidates.add(armor);
-                  }
-               }
-            }
-
-            while(!armorCandidates.isEmpty()) {
-               ItemTemplate armor = (ItemTemplate)armorCandidates.remove(Rnd.get(armorCandidates.size()));
-               if (equipGeneratedArmor(player, armor, desiredEnchant)) {
-                  break;
-               }
-            }
-         }
+         ensureCombatWeapon(player);
 
          if (playerClass != null) {
             player.broadcastUserInfo();
          }
-
       }
    }
 
-   private static void ensureCombatWeapon(Player player) {
+      private static void ensureCombatWeapon(Player player) {
       if (player != null && !player.isDead() && !isShopPlayer(player)) {
-         PlayerClass playerClass = player.getPlayerClass();
-         ItemGrade desiredGrade = player.getLevel() <= 60 ? ItemGrade.B : ItemGrade.A;
-         int desiredEnchant = player.getLevel() <= 60 ? 6 : 10;
-         Weapon activeWeapon = player.getActiveWeaponItem();
+         int desiredEnchant = getDesiredFakeEnchant(player);
+         boolean highTier = player.getLevel() >= 95;
          Item activeWeaponInstance = player.getActiveWeaponInstance();
-         Set<WeaponType> preferredTypes = getPreferredWeaponTypes(player);
-         boolean magicClass = playerClass != null && (playerClass.isMage() || playerClass.isSummoner());
-         if (activeWeaponInstance != null && activeWeapon != null && activeWeapon.getItemGrade() == desiredGrade && activeWeaponInstance.getEnchantLevel() == desiredEnchant) {
-            if (!magicClass) {
-               if (preferredTypes.isEmpty() || preferredTypes.contains(activeWeapon.getItemType())) {
-                  return;
-               }
-            } else if (activeWeapon.getItemType() == WeaponType.BLUNT && activeWeaponInstance.getTemplate().getBodyPart() == BodyPart.LR_HAND) {
-               return;
-            }
+         if (activeWeaponInstance != null && activeWeaponInstance.getEnchantLevel() == desiredEnchant && activeWeaponInstance.getTemplate().getItemGrade().name().startsWith("R")) {
+            return;
          }
 
-         List<ItemTemplate> candidates = new ArrayList();
+         PlayerClass playerClass = player.getPlayerClass();
+         String className = playerClass != null ? playerClass.name().toLowerCase() : "";
+         int weaponId;
 
-         for(ItemTemplate item : ItemData.getInstance().getAllWeapons()) {
-            if (isValidFakeWeapon(player, item, preferredTypes, desiredGrade) && (!magicClass || item.getItemType() == WeaponType.BLUNT && item.getBodyPart() == BodyPart.LR_HAND)) {
-               candidates.add(item);
+         // 1. 伊斯輔助系（吟遊詩人 / 劍舞 / 戰狂 / 霸主）-> 拿雙刀（帥氣且可放歌舞技能）
+         if (className.contains("iss_") || className.contains("enchanter") || className.contains("duelist") || className.contains("gladiator") || className.contains("bladedancer") || className.contains("swordsinger") || className.contains("spectral_dancer") || className.contains("sword_muse")) {
+            weaponId = highTier ? 17427 : 17978; // 赫利奧斯雙刀 / 祝福的鎮魂雙刀
+         }
+         // 2. 純法師 / 召喚師 / 補師 / 戰狂霸主 -> 拿雙手魔杖
+else if (playerClass != null && (playerClass.isMage() || playerClass.isSummoner() || className.contains("feoh") || className.contains("wynn") || className.contains("aeore") || className.contains("bishop") || className.contains("cardinal") || className.contains("elder") || className.contains("saint") || className.contains("prophet") || className.contains("hierophant") || className.contains("dominator") || className.contains("doomcryer") || className.contains("overlord") || className.contains("warcryer"))) {
+   weaponId = highTier ? 17426 : 17977; // 赫利奧斯報恨者 / 祝福的鎮魂報恨者
+         }
+		 
+         // 3. 14.1 新職業（死亡騎士 / 武士 / 閃耀使者）-> 拿單手劍
+         else if (player.isDeathKnight() || player.isSamurai() || player.isShineMaker() || className.contains("death") || className.contains("samurai") || className.contains("shine")) {
+            weaponId = highTier ? 17417 : 17968; // 赫利奧斯切刃 / 祝福的鎮魂切刃
+         }
+         // 4. 狼人 / 暴君（提爾卡巴塔里）-> 拿拳套
+         else if (player.isWarg() || className.contains("warg") || className.contains("tyrant") || className.contains("khavatari")) {
+            weaponId = highTier ? 17420 : 17971; // 赫利奧斯戰爪 / 祝福的鎮魂戰爪
+         }
+         // 5. 弓手系（尤爾射手 / 鷹眼 / 銀月 / 暗影）-> 拿弓 + 補 R 級箭矢
+         else if (className.contains("yul_") || className.contains("archer") || className.contains("ranger") || className.contains("hawkeye") || className.contains("sagittarius") || className.contains("sentinel") || className.contains("trickster") || className.contains("arbalester")) {
+            weaponId = highTier ? 17422 : 17973; // 赫利奧斯投弓 / 祝福的鎮魂投弓
+            if (player.getInventory().getInventoryItemCount(18550, -1) < 1000) {
+               player.getInventory().addItem(ItemProcessType.REWARD, 18550, 10000, player, null);
             }
          }
+         // 6. 刺客系（歐瑟盜賊 / 寶藏 / 大地 / 深淵）-> 拿匕首
+         else if (className.contains("othell") || className.contains("dagger") || className.contains("rogue") || className.contains("adventurer") || className.contains("wind") || className.contains("ghost")) {
+            weaponId = highTier ? 17416 : 17967; // 赫利奧斯鉋刀 / 祝福的鎮魂鉋刀
+         }
+         // 7. 長槍系（提爾巨匠 / 傭兵）-> 拿長槍
+         else if (className.contains("dreadnought") || className.contains("warlord") || className.contains("pole")) {
+            weaponId = highTier ? 17421 : 17972; // 赫利奧斯風暴者 / 祝福的鎮魂風暴者
+         }
+         // 8. 雙手巨劍系（提爾泰坦 / 破壞者 / 末日狂戰士）-> 拿雙手劍
+else if (className.contains("titan") || className.contains("destroyer") || className.contains("berserker") || className.contains("doombringer")) {
+   weaponId = highTier ? 17418 : 17969; // 赫利奧斯殺刃 / 祝福的鎮魂殺刃
+         }
+         // 9. 預設單手劍（席格爾騎士 / 戰士通用）
+         else {
+            weaponId = highTier ? 17417 : 17968;
+         }
 
-         if (candidates.isEmpty()) {
-            if (magicClass) {
-               LOGGER.warning("No suitable grade/enchant LR_HAND BLUNT weapon candidate is available for fake mage " + player.getName() + ".");
+         if (activeWeaponInstance != null) {
+            BodyPart bodyPart = BodyPart.fromItem(activeWeaponInstance);
+            if (bodyPart != null) {
+               player.getInventory().unEquipItemInBodySlot(bodyPart);
             }
+            player.getInventory().destroyItem(ItemProcessType.DESTROY, activeWeaponInstance, activeWeaponInstance.getCount(), player, null);
+         }
 
-         } else {
-            if (activeWeaponInstance != null) {
-               BodyPart bodyPart = BodyPart.fromItem(activeWeaponInstance);
-               if (bodyPart != null) {
-                  player.getInventory().unEquipItemInBodySlot(bodyPart);
-               }
-
-               player.getInventory().destroyItem(ItemProcessType.DESTROY, activeWeaponInstance, activeWeaponInstance.getCount(), player, (Object)null);
-            }
-
-            equipCompatibleWeapon(player, candidates);
+         ItemTemplate weaponTpl = ItemData.getInstance().getTemplate(weaponId);
+         if (weaponTpl != null) {
+            equipGeneratedEquipment(player, weaponTpl);
          }
       }
    }
 
-   private static boolean isValidFakeWeapon(Player player, ItemTemplate item, Set<WeaponType> preferredTypes, ItemGrade desiredGrade) {
-      return player != null && item != null && item.isWeapon() && item.isEquipable() && !item.isQuestItem() && item.getItemGrade() == desiredGrade && !containsBlockedEquipmentName(item.getName()) && (preferredTypes.isEmpty() || preferredTypes.contains(item.getItemType()));
+   private static boolean isValidNormalArmor(Armor armor, ItemGrade desiredGrade, BodyPart bodyPart) {
+      return armor != null
+         && armor.getItemGrade() == desiredGrade
+         && armor.getBodyPart() == bodyPart
+         && armor.isEquipable()
+         && !armor.isQuestItem()
+         && armor.isSellable()
+         && armor.isDropable()
+         && armor.isTradeable()
+         && !containsBlockedEquipmentName(armor.getName());
    }
 
    private static boolean equipGeneratedArmor(Player player, ItemTemplate template, int enchantLevel) {
@@ -1145,12 +1217,22 @@ public class FakePlayerPopulationManager {
             result.add(WeaponType.BLUNT);
             return result;
          }
+          
+         // 1.5 14.1 新職業專屬武器限制
+         if (player.isDeathKnight() || player.isSamurai() || player.isShineMaker() || className.contains("death") || className.contains("samurai") || className.contains("shine")) {
+            result.add(WeaponType.SWORD);
+            return result;
+         }
+         if (player.isWarg() || className.contains("warg")) {
+            result.add(WeaponType.FIST);
+            return result;
+         }
 
-         // 2. 弓手系（鷹眼、銀月、暗影、人馬、巡守等）-> 強制拿弓，並自動塞 10000 支箭矢防罰站
-         if (className.contains("archer") || className.contains("ranger") || className.contains("hawkeye") || className.contains("sagittarius") || className.contains("sentinel") || className.contains("trickster") || className.contains("arbalester")) {
+         // 2. 弓手系 -> 強制拿弓，並自動補 10000 支箭矢防罰站
+                  if (className.contains("archer") || className.contains("ranger") || className.contains("hawkeye") || className.contains("sagittarius") || className.contains("sentinel") || className.contains("trickster") || className.contains("arbalester")) {
             result.add(WeaponType.BOW);
-            if (player.getInventory().getInventoryItemCount(17, -1) < 1000) {
-               player.getInventory().addItem(ItemProcessType.REWARD, 17, 10000, player, null); // B級以上通用箭矢可改為 1343(B箭) 或 1344(A箭)
+            if (player.getInventory().getInventoryItemCount(18550, -1) < 1000) {
+               player.getInventory().addItem(ItemProcessType.REWARD, 18550, 10000, player, null);
             }
             return result;
          }
@@ -1207,10 +1289,10 @@ public class FakePlayerPopulationManager {
 
    private static boolean equipGeneratedEquipment(Player player, ItemTemplate template) {
       if (player != null && template != null) {
-         Item item = player.getInventory().addItem(ItemProcessType.REWARD, template.getId(), 1L, player, (Object)null);
-         if (item != null && item.isEquipable() && player.canUseEquipment(item)) {
-            item.setEnchantLevel(player.getLevel() <= 60 ? 6 : 10);
-            player.useEquippableItem(item, false);
+                  Item item = player.getInventory().addItem(ItemProcessType.REWARD, template.getId(), 1L, player, (Object)null);
+         if (item != null && item.isEquipable()) {
+            item.setEnchantLevel(getDesiredFakeEnchant(player));
+            player.getInventory().equipItem(item);
             Weapon activeWeapon = player.getActiveWeaponItem();
             return activeWeapon != null && activeWeapon.getId() == item.getId();
          } else {
@@ -1225,7 +1307,7 @@ public class FakePlayerPopulationManager {
       }
    }
 
-          private static boolean isSuitableHuntingMonster(Player player, Monster monster) {
+            private static boolean isSuitableHuntingMonster(Player player, Monster monster) {
       if (monster == null || !monster.isSpawned() || monster.isDead() || monster.isFakePlayer()
          || monster.isRaid() || monster.isRaidMinion() || monster.isQuestMonster()) {
          return false;
@@ -1233,18 +1315,22 @@ public class FakePlayerPopulationManager {
       if (monster.getInstanceId() != player.getInstanceId()) {
          return false;
       }
-      // 過濾水下區域與極端高空/深淵座標
-      if (monster.isInsideZone(org.l2jmobius.gameserver.entity.zone.ZoneId.WATER) || monster.getZ() < -6000 || monster.getZ() > 10000) {
+            // 1. 強制過濾所有超出地圖合法邊界（X/Y/Z）與水下的怪物（避開 Y < -150000 的極北無地形區域）
+      int x = monster.getX();
+      int y = monster.getY();
+      int z = monster.getZ();
+      if (x < -120000 || x > 190000 || y < -150000 || y > 240000 || z < -5000 || z > 8000) {
          return false;
       }
-      // 🔥 修改：如果假人已經在隊伍中（跟隨玩家練功），完全無視等級差與 85 級限制，確保全隊一起打怪！
+      if (monster.isInsideZone(org.l2jmobius.gameserver.entity.zone.ZoneId.WATER)) {
+         return false;
+      }
+      // 2. 組隊跟隨狀態下，只要座標合法就直接允許打怪
       if (player.isInParty()) {
          return true;
       }
-      // 單人假人限制在主大陸常規地圖範圍內，並依照等級差尋怪
-      int x = monster.getX();
-      int y = monster.getY();
-      if (x < -130000 || x > 220000 || y < -150000 || y > 260000 || monster.getLevel() > 115) {
+      // 3. 單人假人限制等級差尋怪
+      if (monster.getLevel() > 115) {
          return false;
       }
       int level = player.getLevel();
@@ -1386,10 +1472,22 @@ public class FakePlayerPopulationManager {
          return false;
       }
 
-      double distance = player.calculateDistance3D(nearestItem);
+            double distance = player.calculateDistance3D(nearestItem);
       if (distance <= FakePlayersConfig.FAKE_PLAYER_PICKUP_DISTANCE) {
-         // 進入拾取距離：執行拾取動作並從世界移除（不寫入資料庫）
          player.broadcastPacket(new org.l2jmobius.gameserver.network.serverpackets.GetItem(nearestItem, player.getObjectId()));
+         if (player.isInParty() && player.getParty() != null) {
+            Player leader = player.getParty().getLeader();
+            if (leader != null && !leader.isFakePlayer() && leader.isOnline()) {
+               if (nearestItem.getId() == 57) {
+                    player.getParty().distributeAdena(leader, nearestItem.getCount(), leader);
+               } else {
+                  player.getParty().distributeItem(leader, nearestItem);
+               }
+               nearestItem.decayMe();
+               return true;
+            }
+         }
+         // 單人假人：維持直接銷毀，不寫入資料庫
          nearestItem.decayMe();
          return true;
       } else {
@@ -1488,7 +1586,12 @@ public class FakePlayerPopulationManager {
             }
             if (player.isTeleporting()) player.setTeleporting(false, false);
             if (player.isOverloaded()) player.setOverloaded(false);
-			            if (player.getZ() < -6000 || player.getZ() > 10000) {
+			                       // 防呆：若假人超出地圖邊界（X/Y 越界，或掉進深淵/飛上高空），立即拉回安全地面並刷新視野
+            int px = player.getX();
+            int py = player.getY();
+            int pz = player.getZ();
+            if (px < -130000 || px > 220000 || py < -260000 || py > 260000 || pz < -6000 || pz > 10000) {
+               player.setTarget(null);
                Location safeLoc = FALLBACK_HUNTING_GROUNDS[Rnd.get(FALLBACK_HUNTING_GROUNDS.length)];
                player.teleToLocation(safeLoc, true);
                player.revalidateZone(true);
@@ -1503,20 +1606,11 @@ public class FakePlayerPopulationManager {
                prepareFakeConsumables(player);
             }
 
-            // 防呆：若假人掉進地底深淵或飛上高空，立即拉回安全地面並刷新視野
-            if (player.getZ() < -6000 || player.getZ() > 10000) {
-               Location safeLoc = FALLBACK_HUNTING_GROUNDS[Rnd.get(FALLBACK_HUNTING_GROUNDS.length)];
-               player.teleToLocation(safeLoc, true);
-               player.revalidateZone(true);
-               player.broadcastInfo();
-               player.broadcastUserInfo();
-               continue;
-            }
-
-            // 2. 定期檢查武器是否符合等級
+                        // 2. 定期檢查武器是否符合等級，並強制同步外觀封包給周圍玩家
             if (now >= NEXT_EQUIPMENT_CHECK_AT.getOrDefault(player, 0L)) {
                NEXT_EQUIPMENT_CHECK_AT.put(player, now + EQUIPMENT_CHECK_INTERVAL_MS);
                ensureCombatWeapon(player);
+               player.broadcastUserInfo();
             }
 
             // 3. 升級自動偵測
@@ -1564,32 +1658,56 @@ public class FakePlayerPopulationManager {
                autoFormFakeParty(player);
             }
 
-                        // 6. 全方位輔助與自體 Buff AI（冷卻拉長至 3 秒，確保不影響打怪與跟隨節奏）
+                        // 6. 全方位輔助與自體 Buff AI（隊友血量低於門檻時，強制中斷普攻優先補血）
             boolean needHeal = player.isInParty() && checkPartyNeedsHealing(player);
             if (needHeal || now >= NEXT_PARTY_SUPPORT_AT.getOrDefault(player, 0L)) {
+               if (needHeal && player.isAttackingNow()) {
+                  player.abortAttack();
+               }
                boolean casted = performPartySupport(player);
-               NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 3000L : 5000L));
+               NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 1200L : 3000L));
                if (casted) {
                   player.getAI().notifyActionThink();
                   continue;
                }
             }
 
-                        // 7. 組隊跟隨 AI（保留跨副本傳送；600 碼內且隊長未隱身時，直接放行去第 8 步主動打怪！）
+                                    // 7. 組隊跟隨與集火 AI（優先跟隊長打同一隻；若隊長 5 秒沒打怪則放行自主找怪）
             if (player.isInParty() && player.getParty() != null) {
                Player leader = player.getParty().getLeader();
                if (leader != null && leader != player && leader.isSpawned() && !leader.isDead()) {
-                  // 若隊長在副本或距離過遠（超過 600 碼），交給原本的 handlePartyFollowAndAssist 處理傳送與跟隨
+                  if (leader.isInvisible()) {
+                     continue;
+                  }
+                  // 距離過遠（> 600 碼）或跨副本，交給原本的傳送與跟隨邏輯
                   if (leader.getInstanceId() != player.getInstanceId() || player.calculateDistance3D(leader) > 600.0) {
                      if (handlePartyFollowAndAssist(player)) {
                         player.getAI().notifyActionThink();
                         continue;
                      }
                   }
-                  // 若隊長在 600 碼內但處於隱身狀態，保持警戒跟隨不開怪
-                  if (leader.isInvisible()) {
+                  // 隊長 600 碼內：檢查隊長是否正在選取/攻擊活著的怪物
+                  if (leader.getTarget() instanceof Monster leaderTarget && !leaderTarget.isDead() && isAnyNormalCombatMonster(leaderTarget, player)) {
+                     LEADER_LAST_COMBAT_AT.put(leader, now);
+                     PARTY_PATROL_POINTS.remove(player);
+                     reserveMonsterTarget(player, leaderTarget);
+                     if (!tryUseOffensiveCombatSkill(player, leaderTarget)) {
+                        forceFakePhysicalAttack(player, leaderTarget);
+                     }
+                     player.getAI().notifyActionThink();
                      continue;
                   }
+                  // 隊長目前沒選怪：判斷是否已經超過 5 秒（5000ms）沒打怪
+                  long lastCombat = LEADER_LAST_COMBAT_AT.getOrDefault(leader, 0L);
+                  if (now - lastCombat < 5000L) {
+                     // 5 秒緩衝期內：先停手待命跟隨隊長，不亂開其他怪
+                     if (player.getTarget() instanceof Monster m && !m.isDead()) {
+                        player.setTarget(null);
+                        player.getAI().setIntentionActive();
+                     }
+                     continue;
+                  }
+                  // 超過 5 秒隊長仍未開怪 -> 自動放行往下執行第 8 步（handleAutonomousHunting）自主找怪！
                }
             }
 
@@ -1658,6 +1776,14 @@ public class FakePlayerPopulationManager {
       private static boolean handleAutonomousHunting(Player player) {
       boolean followingRealLeader = player.isInParty() && player.getParty() != null && player.getParty().getLeader() != null && !player.getParty().getLeader().isFakePlayer();
       Player leader = followingRealLeader ? player.getParty().getLeader() : null;
+	  // 只要隊長有選取/攻擊活著的怪物，立刻放棄原本的怪，轉火隊長的目標
+      if (leader != null && !leader.isInvisible() && leader.getTarget() instanceof Monster leaderTarget && !leaderTarget.isDead() && isAnyNormalCombatMonster(leaderTarget, player)) {
+         reserveMonsterTarget(player, leaderTarget);
+         if (!tryUseOffensiveCombatSkill(player, leaderTarget)) {
+            forceFakePhysicalAttack(player, leaderTarget);
+         }
+         return true;
+      }
       Monster targetMonster = (player.getTarget() instanceof Monster existing && isAnyNormalCombatMonster(existing, player)) ? existing : null;
 
       if (targetMonster == null) {
@@ -1682,13 +1808,13 @@ public class FakePlayerPopulationManager {
             }
             return true;
          } else {
-            // 單人練功：全圖找怪並直接傳送過去（含高度防呆與視野刷新，確保 GM 傳送過去 100% 看得到人）
+            // 單人練功：全圖找怪並直接傳送過去（含完整 XYZ 邊界防呆）
             Monster globalTarget = findGlobalSuitableMonster(player);
             if (globalTarget != null) {
                int gx = globalTarget.getX();
                int gy = globalTarget.getY();
                int gz = globalTarget.getZ();
-               if (gz > -6000 && gz < 10000) {
+               if (gx >= -130000 && gx <= 220000 && gy >= -260000 && gy <= 260000 && gz > -6000 && gz < 10000) {
                   reserveMonsterTarget(player, globalTarget);
                   player.teleToLocation(new Location(gx, gy, gz + 25), true);
                   player.revalidateZone(true);
@@ -1718,29 +1844,36 @@ public class FakePlayerPopulationManager {
       return PARTY_HEALING_MODE.getOrDefault(player, false);
    }
 
-         private static boolean performPartySupport(Player player) {
-      if (player == null || player.isDead() || player.isCastingNow() || player.isAttackingNow()) return false;
+          private static boolean performPartySupport(Player player) {
+      if (player == null || player.isDead() || player.isCastingNow()) return false;
 
       List<Player> members = (player.isInParty() && player.getParty() != null)
          ? player.getParty().getMembers().stream().filter(m -> m != null && m.isOnline() && m.isSpawned() && !m.isDead()).toList()
          : List.of(player);
 
-      // 1. 【隊伍治療】優先治療血量低於設定百分比的隊友
+      // 1. 【隊伍治療】優先治療血量低於設定百分比的隊友（支援 HEAL、HP、HEAL_PERCENT 等所有補血類型）
       double threshold = FakePlayersConfig.FAKE_PLAYER_SUPPORT_HEAL_PERCENT / 100.0;
       Player lowest = members.stream().filter(m -> m.getMaxHp() > 0 && (m.getCurrentHp() / m.getMaxHp()) < threshold)
          .min(Comparator.comparingDouble(m -> m.getCurrentHp() / m.getMaxHp())).orElse(null);
 
       if (lowest != null) {
          for (Skill skill : player.getAllSkills()) {
-            if (isUsablePositiveSupportSkill(skill) && !player.isSkillDisabled(skill) && skill.hasEffectType(EffectType.HEAL, EffectType.CPHEAL)) {
+            if (isUsablePositiveSupportSkill(skill) && !player.isSkillDisabled(skill)
+                             && skill.hasEffectType(EffectType.HEAL, EffectType.CPHEAL)) {
                Player target = (skill.getAffectScope() == AffectScope.PARTY || skill.getAffectScope() == AffectScope.RANGE) ? player : lowest;
                if (player.calculateDistance3D(target) <= 900.0) {
+                  if (player.isAttackingNow()) {
+                     player.abortAttack();
+                  }
                   player.setCurrentMp(player.getMaxMp());
                   if (SkillCaster.castSkill(player, target, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
                }
             }
          }
       }
+
+      // 若仍在普攻中則先不放常駐 Buff，避免打斷輸出節奏
+      if (player.isAttackingNow()) return false;
 
       for (Skill skill : player.getAllSkills()) {
          if (!isUsablePositiveSupportSkill(skill) || !isPositiveBuffSkill(skill) || player.isSkillDisabled(skill)) {
@@ -1755,11 +1888,14 @@ public class FakePlayerPopulationManager {
          AffectScope scope = skill.getAffectScope();
          TargetType targetType = skill.getTargetType();
 
-         // 情況 A：純自體增益技能
+                  // 情況 A：純自體增益技能（防死循環：若上一招已經放過這招且沒產生圖示，直接跳過不卡打怪）
          if (targetType == TargetType.SELF && scope == AffectScope.SINGLE) {
-            if (!player.isAffectedBySkill(skill.getId())) {
+            if (!player.isAffectedBySkill(skill.getId()) && LAST_PARTY_SUPPORT_SKILL.getOrDefault(player, -1) != skill.getId()) {
                player.setCurrentMp(player.getMaxMp());
-               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+                  LAST_PARTY_SUPPORT_SKILL.put(player, skill.getId());
+                  return true;
+               }
             }
             continue;
          }
@@ -1845,8 +1981,8 @@ public class FakePlayerPopulationManager {
       if (player == null || !player.isFakePlayer() || isShopPlayer(player)) return;
       int level = player.getLevel();
       // 依據假人等級只發放對應階級的 1 種靈魂彈 + 1 種祝福魔靈彈，避免負重 100% 卡死不能動
-      int soulshotId = (level < 20) ? 1835 : (level < 40) ? 1463 : (level < 52) ? 1464 : (level < 61) ? 1465 : (level < 76) ? 1466 : 1467;
-      int spiritshotId = (level < 20) ? 3947 : (level < 40) ? 3948 : (level < 52) ? 3949 : (level < 61) ? 3950 : (level < 76) ? 3951 : 3952;
+      int soulshotId = 17754;
+      int spiritshotId = 19442;
 
       if (player.getInventory().getInventoryItemCount(soulshotId, -1) < 200) {
          player.getInventory().addItem(ItemProcessType.REWARD, soulshotId, 500, player, null);
@@ -1865,13 +2001,24 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   private static void randomChat() {
+         private static void randomChat() {
+      if (!FakePlayersConfig.FAKE_PLAYER_CHAT) {
+         return;
+      }
+      String[] msg = FakePlayersConfig.FAKE_PLAYER_CHAT_MESSAGES;
+      if (msg == null || msg.length == 0) {
+         return;
+      }
       long now = System.currentTimeMillis();
-      String[] msg = {"大家好。", "這裡有人一起練嗎？", "今天怪物掉寶不錯。", "有人要組隊嗎？", "l2town.ddns.net 天堂2單機論壇"};
+      long minMs = FakePlayersConfig.FAKE_PLAYER_CHAT_MIN_INTERVAL * 1000L;
+      long maxMs = FakePlayersConfig.FAKE_PLAYER_CHAT_MAX_INTERVAL * 1000L;
       for (Player fake : PLAYERS) {
-         if (fake != null && fake.isSpawned() && fake.isOnline() && (now - LAST_CHAT.getOrDefault(fake, 0L) >= 30000L) && Rnd.get(100) < 22) {
-            fake.broadcastPacket(new CreatureSay(fake, ChatType.GENERAL, fake.getName(), msg[Rnd.get(msg.length)]));
-            LAST_CHAT.put(fake, now);
+         if (fake != null && fake.isSpawned() && fake.isOnline() && now >= LAST_CHAT.getOrDefault(fake, 0L) && Rnd.get(100) < 22) {
+            String text = msg[Rnd.get(msg.length)].trim();
+            if (!text.isEmpty()) {
+               fake.broadcastPacket(new CreatureSay(fake, ChatType.GENERAL, fake.getName(), text));
+               LAST_CHAT.put(fake, now + Rnd.get(minMs, maxMs));
+            }
          }
       }
    }
