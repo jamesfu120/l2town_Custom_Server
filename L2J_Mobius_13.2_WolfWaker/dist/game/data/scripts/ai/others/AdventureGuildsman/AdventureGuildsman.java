@@ -160,6 +160,7 @@ public class AdventureGuildsman extends Script
 			case "pccafe_help_lottery001.htm":
 			case "pccafe_help_lottery002.htm":
 			case "adventurer_agent_town_voucher_change.htm":
+			case "adventurer_agent_town_alegria.htm":
 			case "life_crystal_merge001.htm":
 			case "life_crystal_merge002.htm":
 			case "voucher_trader1001.htm":
