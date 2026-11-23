@@ -76,6 +76,7 @@ import org.l2jmobius.gameserver.entity.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.entity.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.entity.actor.instance.Monster;
 import org.l2jmobius.gameserver.entity.actor.instance.Trap;
+import org.l2jmobius.gameserver.entity.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.entity.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.entity.actor.status.CreatureStatus;
 import org.l2jmobius.gameserver.entity.actor.templates.CreatureTemplate;
@@ -945,6 +946,11 @@ public abstract class Creature extends WorldObject
 		
 		abortCast();
 		setTarget(null);
+		
+		if (isPlayer())
+		{
+			asPlayer().removeRequest(SayuneRequest.class);
+		}
 		
 		setTeleporting(true);
 		

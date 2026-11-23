@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.entity.Location;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.enums.player.PrivateStoreType;
+import org.l2jmobius.gameserver.entity.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.entity.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.managers.CastleManager;
 import org.l2jmobius.gameserver.mechanics.siege.Castle;
@@ -69,7 +70,7 @@ public class ExRequestTeleport extends ClientPacket
 		}
 		
 		// Players should not be able to teleport if in a special location.
-		if ((player.getMovieHolder() != null) || player.isFishing() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInTimedHuntingZone() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
+		if ((player.getMovieHolder() != null) || player.isFishing() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInTimedHuntingZone() || (player.getPrivateStoreType() != PrivateStoreType.NONE) || player.hasRequest(SayuneRequest.class))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
 			return;

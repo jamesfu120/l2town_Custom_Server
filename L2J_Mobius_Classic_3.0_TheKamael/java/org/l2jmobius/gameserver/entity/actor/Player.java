@@ -12901,7 +12901,7 @@ public class Player extends Playable
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_DUEL);
 			return false;
 		}
-		else if (isFlying())
+		else if (isFlying() || hasRequest(SayuneRequest.class))
 		{
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_FLYING);
 			return false;

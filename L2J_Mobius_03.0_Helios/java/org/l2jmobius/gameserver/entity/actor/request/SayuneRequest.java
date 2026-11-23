@@ -1,18 +1,22 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (c) 2013 L2jMobius
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package org.l2jmobius.gameserver.entity.actor.request;
 
@@ -24,6 +28,7 @@ import java.util.Objects;
 
 import org.l2jmobius.gameserver.data.holders.SayuneEntry;
 import org.l2jmobius.gameserver.data.xml.SayuneData;
+import org.l2jmobius.gameserver.entity.Location;
 import org.l2jmobius.gameserver.entity.World;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.network.enums.SayuneType;
@@ -31,11 +36,12 @@ import org.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
 import org.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
 
 /**
- * @author UnAfraid
+ * @author UnAfraid, Notorion
  */
 public class SayuneRequest extends AbstractRequest
 {
 	private final int _mapId;
+	private final Location _startLocation;
 	private boolean _isSelecting;
 	private final Deque<SayuneEntry> _possibleEntries = new ArrayDeque<>();
 	
@@ -43,6 +49,7 @@ public class SayuneRequest extends AbstractRequest
 	{
 		super(player);
 		_mapId = mapId;
+		_startLocation = new Location(player.getX(), player.getY(), player.getZ());
 		
 		final SayuneEntry map = SayuneData.getInstance().getMap(_mapId);
 		Objects.requireNonNull(map);
@@ -125,28 +132,6 @@ public class SayuneRequest extends AbstractRequest
 	
 	public void onLogout()
 	{
-		final SayuneEntry map = SayuneData.getInstance().getMap(_mapId);
-		if ((map != null) && !map.getInnerEntries().isEmpty())
-		{
-			final SayuneEntry nextEntry = findEntry(0);
-			if (_isSelecting || ((nextEntry != null) && nextEntry.isSelector()))
-			{
-				// If player is on selector or next entry is selector go back to first entry.
-				getPlayer().setXYZ(map);
-			}
-			else
-			{
-				// Try to find last entry to set player, if not set him to first entry.
-				final SayuneEntry lastEntry = map.getInnerEntries().get(map.getInnerEntries().size() - 1);
-				if (lastEntry != null)
-				{
-					getPlayer().setXYZ(lastEntry);
-				}
-				else
-				{
-					getPlayer().setXYZ(map);
-				}
-			}
-		}
+		getPlayer().setXYZ(_startLocation);
 	}
 }
