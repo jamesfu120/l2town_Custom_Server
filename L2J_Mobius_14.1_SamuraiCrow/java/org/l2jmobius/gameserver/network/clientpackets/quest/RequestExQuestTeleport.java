@@ -21,8 +21,10 @@
 package org.l2jmobius.gameserver.network.clientpackets.quest;
 
 import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.managers.ScriptManager;
 import org.l2jmobius.gameserver.mechanics.script.Quest;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
 
 /**
@@ -47,6 +49,12 @@ public class RequestExQuestTeleport extends ClientPacket
 			return;
 		}
 		
+		if (player.hasRequest(SayuneRequest.class))
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
+			return;
+		}
+
 		final Quest quest = ScriptManager.getInstance().getQuest(_questId);
 		if (quest == null)
 		{

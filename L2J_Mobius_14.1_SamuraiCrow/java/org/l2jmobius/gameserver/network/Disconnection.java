@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.managers.AntiFeedManager;
 import org.l2jmobius.gameserver.network.serverpackets.ServerPacket;
 import org.l2jmobius.gameserver.taskmanagers.AttackStanceTaskManager;
@@ -113,6 +114,12 @@ public class Disconnection
 		{
 			if (_player != null)
 			{
+				final SayuneRequest sayune = _player.getRequest(SayuneRequest.class);
+				if (sayune != null)
+				{
+					sayune.onLogout();
+				}
+
 				_player.storeMe();
 				
 				if (_player.isOnline())
