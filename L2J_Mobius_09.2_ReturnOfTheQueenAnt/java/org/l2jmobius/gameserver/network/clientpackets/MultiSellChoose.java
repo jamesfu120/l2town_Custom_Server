@@ -121,7 +121,12 @@ public class MultiSellChoose extends ClientPacket
 			return;
 		}
 		
-		if ((_amount < 1) || (_amount > GeneralConfig.MULTISELL_AMOUNT_LIMIT)) // 999 999 is client max.
+		if (_amount < 1)
+		{
+			return;
+		}
+		
+		if (_amount > GeneralConfig.MULTISELL_AMOUNT_LIMIT) // 999 999 is client max.
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
