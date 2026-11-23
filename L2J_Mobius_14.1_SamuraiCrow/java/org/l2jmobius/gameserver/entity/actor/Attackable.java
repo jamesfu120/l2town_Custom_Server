@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.config.RatesConfig;
 import org.l2jmobius.gameserver.config.custom.ChampionMonstersConfig;
 import org.l2jmobius.gameserver.config.custom.ClassBalanceConfig;
+import org.l2jmobius.gameserver.config.custom.CustomDropConfig;
 import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
 import org.l2jmobius.gameserver.data.enums.CategoryType;
@@ -1297,7 +1298,27 @@ public class Attackable extends Npc
 			
 			deathItems.clear();
 		}
-		
+				// Custom Drop Config (DropItems.ini)
+		final List<ItemHolder> customDrops = CustomDropConfig.roll(getId());
+		if (!customDrops.isEmpty())
+		{
+			for (ItemHolder drop : customDrops)
+			{
+				final ItemTemplate item = ItemData.getInstance().getTemplate(drop.getId());
+				if (item != null)
+				{
+					if (PlayerConfig.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && PlayerConfig.AUTO_LOOT) || (_isRaid && PlayerConfig.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && PlayerConfig.AUTO_LOOT_HERBS))
+					{
+						player.doAutoLoot(this, drop);
+					}
+					else
+					{
+						dropItem(player, drop);
+					}
+				}
+			}
+		}
+
 		// Items that can be obtained with a daily limit.
 		final Collection<LimitedDropHolder> limitedDropList = npcTemplate.getLimitedDropList();
 		if (limitedDropList != null)
