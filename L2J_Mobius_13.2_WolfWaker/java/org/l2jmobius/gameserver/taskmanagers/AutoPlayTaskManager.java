@@ -322,9 +322,9 @@ public class AutoPlayTaskManager
 		
 		private boolean isMageCaster(Player player)
 		{
-			// Iss classes considered fighters.
+			// Iss and Shine Maker classes considered fighters.
 			final int classId = player.getActiveClass();
-			if ((classId >= PlayerClass.ISS_HIEROPHANT.getId()) && (classId <= PlayerClass.ISS_DOOMCRYER.getId()))
+			if (((classId >= PlayerClass.ISS_HIEROPHANT.getId()) && (classId <= PlayerClass.ISS_DOOMCRYER.getId())) || ((classId >= PlayerClass.DWARF_MAKER.getId()) && (classId <= PlayerClass.SHINE_MAKER.getId())))
 			{
 				return false;
 			}
