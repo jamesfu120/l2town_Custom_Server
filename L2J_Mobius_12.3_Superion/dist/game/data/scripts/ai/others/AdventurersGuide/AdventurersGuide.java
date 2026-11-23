@@ -59,7 +59,7 @@ public class AdventurersGuide extends Script
 	};
 	
 	// Misc
-	private static final int MAX_LEVEL_BUFFS = 99;
+	private static final int MAX_LEVEL_BUFFS = 105;
 	private static final int MIN_LEVEL_PROTECTION = 40;
 	
 	private AdventurersGuide()
@@ -83,6 +83,7 @@ public class AdventurersGuide extends Script
 			case "guide-06.html":
 			case "guide-07.html":
 			case "guide-08.html":
+			case "guide-09.html":
 			{
 				htmltext = event;
 				break;

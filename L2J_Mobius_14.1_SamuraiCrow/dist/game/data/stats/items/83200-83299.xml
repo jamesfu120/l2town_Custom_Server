@@ -817,33 +817,45 @@
 		<!-- For 60 min., applies the following effects: Fever Melody Lv. 1, Drumbeat of Serenity Lv. 1, and Fantasia Harmony Lv. 1. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39890" level="1" /> <!-- Special Cocktail -->
+		</skills>
 	</item>
 	<item id="83255" name="Special Cocktail" additionalName="Event" type="EtcItem">
 		<!-- For 60 min., applies the following effects: Fever Melody Lv. 1, Drumbeat of Serenity Lv. 1, and Fantasia Harmony Lv. 1. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39892" level="1" /> <!-- Special Cocktail -->
+		</skills>
 	</item>
 	<item id="83256" name="Special Cocktail" additionalName="Event" type="EtcItem">
 		<!-- For 60 min., applies the following effects: Fever Melody Lv. 1, Drumbeat of Serenity Lv. 1, and Fantasia Harmony Lv. 1. Note!. The effect remains after death. Cooldown: 10 sec. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39891" level="1" /> <!-- Special Cocktail -->
+		</skills>
 	</item>
 	<item id="83257" name="Silver Powder" additionalName="Event" type="EtcItem">
 		<!-- Powder from silver crystals. -->

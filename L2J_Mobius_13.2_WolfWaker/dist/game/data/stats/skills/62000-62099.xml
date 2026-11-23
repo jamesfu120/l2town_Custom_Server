@@ -828,7 +828,7 @@
 		<magicLevel>1</magicLevel>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-				<skillId>39514</skillId> <!-- Fantasia Harmony - Wondrous Cocktail -->
+				<skillId>39771</skillId> <!-- Drum Concert - Emperor's Special Cocktail -->
 			</condition>
 		</conditions>
 		<effects>
@@ -920,6 +920,10 @@
 		</conditions>
 		<effects>
 			<effect name="HpRegen">
+				<amount>90</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
 				<amount>90</amount>
 				<mode>PER</mode>
 			</effect>
