@@ -239,24 +239,29 @@ public class ClanVariables extends AbstractVariables
 	{
 		_saveLock.lock();
 		
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement st = con.prepareStatement(DELETE_ALL_QUERY))
+		try
 		{
-			st.setInt(1, _objectId);
-			st.execute();
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement st = con.prepareStatement(DELETE_ALL_QUERY))
+			{
+				st.setInt(1, _objectId);
+				st.execute();
+			}
+			
+			// Clear all variables.
+			getSet().clear();
+			clearChangeTracking();
+			compareAndSetChanges(true, false);
+			return true;
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not delete variables for: " + _objectId, e);
-			_saveLock.unlock();
 			return false;
 		}
-		
-		// Clear all variables.
-		getSet().clear();
-		clearChangeTracking();
-		
-		_saveLock.unlock();
-		return true;
+		finally
+		{
+			_saveLock.unlock();
+		}
 	}
 }
