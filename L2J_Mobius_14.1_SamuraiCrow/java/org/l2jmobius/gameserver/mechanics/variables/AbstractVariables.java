@@ -53,43 +53,37 @@ public abstract class AbstractVariables extends StatSet
 	@Override
 	public void set(String name, boolean value)
 	{
-		trackChange(name);
-		super.set(name, value);
+		setTracked(name, () -> super.set(name, value));
 	}
 	
 	@Override
 	public void set(String name, byte value)
 	{
-		trackChange(name);
-		super.set(name, value);
+		setTracked(name, () -> super.set(name, value));
 	}
 	
 	@Override
 	public void set(String name, short value)
 	{
-		trackChange(name);
-		super.set(name, value);
+		setTracked(name, () -> super.set(name, value));
 	}
 	
 	@Override
 	public void set(String name, int value)
 	{
-		trackChange(name);
-		super.set(name, value);
+		setTracked(name, () -> super.set(name, value));
 	}
 	
 	@Override
 	public void set(String name, long value)
 	{
-		trackChange(name);
-		super.set(name, value);
+		setTracked(name, () -> super.set(name, value));
 	}
 	
 	@Override
 	public void set(String name, float value)
 	{
-		trackChange(name);
-		super.set(name, value);
+		setTracked(name, () -> super.set(name, value));
 	}
 	
 	@Override
@@ -156,12 +150,21 @@ public abstract class AbstractVariables extends StatSet
 	 */
 	public void set(String name, String value, boolean markAsChanged)
 	{
+		_saveLock.lock();
+		
+		try
+	{
 		if (markAsChanged)
 		{
 			trackChange(name);
 		}
 		
 		super.set(name, value);
+	}
+	finally
+		{
+			_saveLock.unlock();
+		}
 	}
 	
 	/**
@@ -204,7 +207,6 @@ public abstract class AbstractVariables extends StatSet
 		
 		try
 		{
-			_hasChanges.compareAndSet(false, true);
 			
 			// First remove from map.
 			final Object removed = getSet().remove(name);
@@ -216,11 +218,14 @@ public abstract class AbstractVariables extends StatSet
 				if (_added.remove(name))
 				{
 					// It was new and never persisted -> nothing more to do.
+					_modified.remove(name);
+					_hasChanges.set(!_added.isEmpty() || !_modified.isEmpty() || !_deleted.isEmpty());
 					return;
 				}
 				
 				_modified.remove(name);
 				_deleted.add(name);
+				_hasChanges.set(true);
 			}
 		}
 		finally
@@ -237,5 +242,25 @@ public abstract class AbstractVariables extends StatSet
 		_added.clear();
 		_modified.clear();
 		_deleted.clear();
+	}
+	
+	/**
+	 * Tracks the change and updates the value under the save lock, so a save cannot clear the change before the new value is stored.
+	 * @param name the name of the variable
+	 * @param action the value update
+	 */
+	private void setTracked(String name, Runnable action)
+	{
+		_saveLock.lock();
+		
+		try
+		{
+			trackChange(name);
+			action.run();
+		}
+		finally
+		{
+			_saveLock.unlock();
+		}
 	}
 }

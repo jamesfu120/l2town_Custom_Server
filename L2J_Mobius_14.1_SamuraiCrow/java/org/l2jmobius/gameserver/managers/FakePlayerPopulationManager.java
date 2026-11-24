@@ -268,8 +268,26 @@ public class FakePlayerPopulationManager {
                   ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::ensurePopulation, 1000L, 1000L);
          ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::syncFakePlayersToPartyMatchingList, 3000L, 5000L);
          ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::relocateCombatFakesToHuntingGrounds, 15000L, 15000L);
+		          // 🔥 註冊全域聊天監聽（免 import 通用版：相容所有 Mobius 14.1 事件路徑）
+         org.l2jmobius.gameserver.mechanics.events.Containers.Players().addListener(
+            new org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener(
+               org.l2jmobius.gameserver.mechanics.events.Containers.Players(),
+               EventType.ON_PLAYER_CHAT,
+               event -> {
+                  try {
+                     Player activeChar = (Player) event.getClass().getMethod("getActiveChar").invoke(event);
+                     String target = (String) event.getClass().getMethod("getTarget").invoke(event);
+                     String text = (String) event.getClass().getMethod("getText").invoke(event);
+                     ChatType chatType = (ChatType) event.getClass().getMethod("getChatType").invoke(event);
+                     handlePlayerChat(activeChar, target, text, chatType);
+                  } catch (Exception ignored) {
+                  }
+               },
+               FakePlayerPopulationManager.class
+            )
+         );
          LOGGER.fine("FakePlayerPopulationManager: spawned " + PLAYERS.size() + " in-memory fake players (shop=" + shop + ", combat=" + combat + ").");
-      }
+      } 
    }
 
    // 貼在 initialize() 結束大括號的外面！
@@ -853,7 +871,7 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   private static void prepareCombatFakePlayer(Player player) {
+      private static void prepareCombatFakePlayer(Player player) {
       if (player != null && player.isFakePlayer()) {
          player.getEffectList().stopEffects(AbnormalType.BOT_PENALTY);
          if (FakePlayersConfig.FAKE_PLAYER_AUTO_LEARN_CLASS_SKILLS) {
@@ -879,43 +897,46 @@ public class FakePlayerPopulationManager {
             }
          }
 
+                  // 🔥【修正位置】：僅在假人已進入世界（isSpawned）且技能不含 CallSkill 連鎖觸發時才開啟光環
+         if (player.isSpawned()) {
+            for (Skill skill : player.getAllSkills()) {
+               if (skill != null && skill.isToggle() && !skill.hasNegativeEffect() && !isCrashRiskSkill(skill)) {
+                  boolean hasCallSkill = false;
+                  for (EffectScope scope : EffectScope.values()) {
+                     List<AbstractEffect> effects = skill.getEffects(scope);
+                     if (effects != null) {
+                        for (AbstractEffect eff : effects) {
+                           if (eff != null && eff.getClass().getSimpleName().contains("CallSkill")) {
+                              hasCallSkill = true;
+                              break;
+                           }
+                        }
+                     }
+                  }
+                  if (!hasCallSkill && !player.isAffectedBySkill(skill.getId())) {
+                     skill.applyEffects(player, player);
+                  }
+               }
+            }
+         }
+
          player.setCurrentHp((double)player.getMaxHp());
          player.setCurrentMp((double)player.getMaxMp());
          player.setCurrentCp((double)player.getMaxCp());
       }
    }
 
-   private static boolean isMagicCombatClass(Player player) {
-      if (player == null) {
-         return false;
-      } else {
-         PlayerClass playerClass = player.getPlayerClass();
-         if (playerClass == null || !playerClass.isMage() && !playerClass.isSummoner()) {
-            if (isSupportClass(player)) {
-               return true;
-            } else {
-               return !findOffensiveMagicSkills(player).isEmpty();
-            }
-         } else {
-            return true;
-         }
-      }
-   }
-
-   private static List<Skill> findOffensiveMagicSkills(Player player) {
-      List<Skill> result = new ArrayList();
+      private static List<Skill> findOffensiveMagicSkills(Player player) {
+      List<Skill> result = new ArrayList<>();
       if (player == null) {
          return result;
-      } else {
-         for(Skill skill : player.getAllSkills()) {
-            if (findOffensiveMagicSkillCandidate(skill)) {
-               result.add(skill);
-            }
-         }
-
-         result.sort((a, b) -> Integer.compare(offensiveSkillScore(b), offensiveSkillScore(a)));
-         return result;
       }
+      for (Skill skill : player.getAllSkills()) {
+         if (findOffensiveMagicSkillCandidate(skill)) {
+            result.add(skill);
+         }
+      }
+      return result;
    }
 
    private static boolean findOffensiveMagicSkillCandidate(Skill skill) {
@@ -933,72 +954,127 @@ public class FakePlayerPopulationManager {
       }
    }
 
-   private static List<Skill> findOffensiveCombatSkills(Player player) {
-      List<Skill> magicSkills = new ArrayList();
-      List<Skill> physicalSkills = new ArrayList();
+      // 🔥【替換位置 2】：修正輔助職業不被誤判為法師、放寬物理技能限制、加入動態連招與 AOE 判斷
+   private static boolean isMagicCombatClass(Player player) {
       if (player == null) {
-         return magicSkills;
-      } else {
-                 for(Skill skill : player.getAllSkills()) {
-            if (skill != null && !skill.isPassive() && skill.isActive() && !skill.isToggle() && !isForbiddenFakeSupportUtilitySkill(skill) && !isFakePartySummonSkill(skill) && !isCrashRiskSkill(skill) && !skill.hasEffectType(EffectType.TELEPORT, EffectType.TELEPORT_TO_TARGET)) {
-               if (skill.isMagic()) {
-                  if (findOffensiveMagicSkillCandidate(skill)) {
-                     magicSkills.add(skill);
-                  }
-               } else if (skill.hasNegativeEffect() && skill.hasEffectType(EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK, EffectType.DEATH_LINK, EffectType.HP_DRAIN, EffectType.DMG_OVER_TIME, EffectType.DMG_OVER_TIME_PERCENT)) {
-                  physicalSkills.add(skill);
-               }
-            }
-         }
-
-         magicSkills.sort((a, b) -> Integer.compare(offensiveSkillScore(b), offensiveSkillScore(a)));
-         physicalSkills.sort((a, b) -> Integer.compare(offensiveSkillScore(b), offensiveSkillScore(a)));
-         if (isMagicCombatClass(player)) {
-            return findOffensiveMagicSkills(player);
-         } else {
-            return physicalSkills.isEmpty() ? magicSkills : physicalSkills;
-         }
+         return false;
       }
+      PlayerClass playerClass = player.getPlayerClass();
+      if (playerClass != null && (playerClass.isMage() || playerClass.isSummoner())) {
+         return true;
+      }
+      // 只有真正擁有攻擊魔法的職業才走法師邏輯，避免拿雙刀的伊斯輔助發呆
+      return !findOffensiveMagicSkills(player).isEmpty();
    }
 
-   private static int offensiveSkillScore(Skill skill) {
-      int score = skill.getLevel() * 100 + Math.min(skill.getCastRange(), 5000);
+     private static boolean isPhysicalOffensiveSkill(Skill skill) {
+      if (skill == null || skill.isPassive() || !skill.isActive() || skill.isToggle() || skill.isMagic()) {
+         return false;
+      }
+      if (isCrashRiskSkill(skill) || isForbiddenFakeSupportUtilitySkill(skill) || isFakePartySummonSkill(skill)) {
+         return false;
+      }
+      if (skill.getBuffType().isBuff() || skill.getBuffType().isDance()) {
+         return false;
+      }
+      TargetType tt = skill.getTargetType();
+      boolean hostile = (tt == TargetType.ENEMY || tt == TargetType.ENEMY_ONLY || skill.hasNegativeEffect());
+      return hostile && skill.hasEffectType(
+         EffectType.PHYSICAL_ATTACK,
+         EffectType.PHYSICAL_ATTACK_HP_LINK,
+         EffectType.DEATH_LINK,
+         EffectType.HP_DRAIN
+      );
+   }
+
+   private static List<Skill> findOffensiveCombatSkills(Player player) {
+      List<Skill> magicSkills = new ArrayList<>();
+      List<Skill> physicalSkills = new ArrayList<>();
+      if (player == null) {
+         return magicSkills;
+      }
+
+      for (Skill skill : player.getAllSkills()) {
+         if (skill != null && !skill.isPassive() && skill.isActive() && !skill.isToggle() && !isCrashRiskSkill(skill)) {
+            if (skill.isMagic()) {
+               if (findOffensiveMagicSkillCandidate(skill)) {
+                  magicSkills.add(skill);
+               }
+            } else if (isPhysicalOffensiveSkill(skill)) {
+               physicalSkills.add(skill);
+            }
+         }
+      }
+
+      if (isMagicCombatClass(player) && !magicSkills.isEmpty()) {
+         return magicSkills;
+      }
+      return physicalSkills.isEmpty() ? magicSkills : physicalSkills;
+   }
+
+   private static int calculateDynamicSkillScore(Player player, Skill skill) {
+      int score = skill.getLevel() * 100;
+
+      // 1. 避免無限重複放同一招，強制形成連招循環
+      if (LAST_OFFENSIVE_SKILL.getOrDefault(player, -1) == skill.getId()) {
+         score -= 150000;
+      }
+
+      // 2. 冷卻時間 >= 3 秒的通常為高傷大招或破防技，優先施放
+      if (skill.getReuseDelay() >= 3000) {
+         score += 30000;
+      }
+
+      // 3. 範圍技（AOE）智慧切換：周圍 >= 2 隻怪時優先放範圍技，單挑時保留
+      if (skill.getAffectScope() == AffectScope.RANGE || skill.getAffectScope() == AffectScope.FAN) {
+         int nearbyMonsters = World.getVisibleObjectsInRange(player, Monster.class, 300, m -> m != null && !m.isDead()).size();
+         if (nearbyMonsters >= 2) {
+            score += 80000;
+         } else {
+            score -= 50000;
+         }
+      }
+
       if (skill.isMagic()) {
          score += 200000;
       }
-
-      if (skill.hasEffectType(EffectType.MAGICAL_ATTACK, EffectType.MAGICAL_DMG_OVER_TIME)) {
-         score += 50000;
-      }
-
-      if (skill.hasEffectType(EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK)) {
-         score += 25000;
-      }
-
       return score;
    }
 
-      private static boolean tryUseOffensiveCombatSkill(Player player, Monster monster) {
-      if (player == null || monster == null || monster.isDead() || !monster.isSpawned()) return false;
+   private static boolean tryUseOffensiveCombatSkill(Player player, Monster monster) {
+      if (player == null || monster == null || monster.isDead() || !monster.isSpawned()) {
+         return false;
+      }
+      if (player.isCastingNow()) {
+         return true;
+      }
 
       List<Skill> skills = findOffensiveCombatSkills(player);
       if (skills.isEmpty()) {
          prepareCombatFakePlayer(player);
          skills = findOffensiveCombatSkills(player);
       }
-      if (skills.isEmpty()) return false;
+      if (skills.isEmpty()) {
+         return false;
+      }
+
+      // 每次出手前根據當前戰況（單體/群怪、上一招施放紀錄）動態排序技能
+      skills.sort((a, b) -> Integer.compare(calculateDynamicSkillScore(player, b), calculateDynamicSkillScore(player, a)));
 
       player.setTarget(monster);
       for (Skill skill : skills) {
-         if (skill != null && !player.isSkillDisabled(skill) && !player.isCastingNow()) {
-            double castRange = Math.max(150.0, player.getMagicalAttackRange(skill));
+         if (skill != null && !player.isSkillDisabled(skill)) {
+            double castRange = skill.isMagic()
+               ? Math.max(150.0, player.getMagicalAttackRange(skill))
+               : Math.max(80.0, skill.getCastRange());
+
             if (player.calculateDistance3D(monster) > castRange) {
                player.getAI().setIntentionMoveTo(new Location(monster.getX(), monster.getY(), monster.getZ()));
                return true;
             }
+
             player.setCurrentMp(player.getMaxMp());
             player.rechargeShots(true, true, false);
-            // 直接呼叫 SkillCaster 強制施法，解決巫師發呆或只拿法杖普攻的問題
             if (SkillCaster.castSkill(player, monster, skill, null, SkillCastingType.NORMAL, false, false) != null) {
                LAST_OFFENSIVE_SKILL.put(player, skill.getId());
                return true;
@@ -1007,6 +1083,7 @@ public class FakePlayerPopulationManager {
       }
       return false;
    }
+
                   private static ItemGrade getDesiredFakeGrade(Player player) {
       return ItemGrade.R;
    }
@@ -1672,10 +1749,23 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                }
             }
 
-                                    // 7. 組隊跟隨與集火 AI（優先跟隊長打同一隻；若隊長 5 秒沒打怪則放行自主找怪）
+                // 7. 組隊跟隨與集火 AI（優先跟隊長打同一隻；若隊長 5 秒沒打怪則放行自主找怪）
             if (player.isInParty() && player.getParty() != null) {
-               Player leader = player.getParty().getLeader();
-               if (leader != null && leader != player && leader.isSpawned() && !leader.isDead()) {
+               Party party = player.getParty();
+               Player leader = party.getLeader();
+
+               // 🔥 新增：如果目前隊長是假人，但隊伍裡有真人玩家，立刻自動把隊長移交給真人！
+               if (leader != null && leader.isFakePlayer() && leader == player) {
+                  for (Player member : party.getMembers()) {
+                     if (member != null && !member.isFakePlayer() && member.isOnline()) {
+                        party.changePartyLeader(member.getName());
+                        leader = member;
+                        break;
+                     }
+                  }
+               }
+
+                if (leader != null && leader != player && leader.isSpawned() && !leader.isDead()) {
                   if (leader.isInvisible()) {
                      continue;
                   }
@@ -2023,27 +2113,101 @@ else if (className.contains("titan") || className.contains("destroyer") || class
       }
    }
 
-        public static void handlePlayerChat(Player speaker, String targetName, String text, ChatType type) {
-      if (speaker == null || speaker.isFakePlayer() || speaker.isInParty() || text == null) {
+            public static void handlePlayerChat(Player speaker, String targetName, String text, ChatType type) {
+      if (speaker == null || speaker.isFakePlayer() || text == null) {
          return;
       }
       String msg = text.trim().toLowerCase();
-      if (msg.contains("111") || msg.contains("組隊") || msg.contains("帶我") || msg.contains("party")) {
-         for (Player fake : PLAYERS) {
-            if (fake != null && fake.isSpawned() && !fake.isDead() && !isShopPlayer(fake) && fake.calculateDistance3D(speaker) <= 1500.0) {
-               Party party = fake.getParty();
-               if (party == null) {
-                  party = new Party(fake, org.l2jmobius.gameserver.entity.groups.PartyDistributionType.FINDERS_KEEPERS);
-                  fake.setParty(party);
-                  speaker.joinParty(party);
-                  fake.broadcastPacket(new CreatureSay(fake, ChatType.GENERAL, fake.getName(), "好啊，我們兩個一起練！"));
-                  return;
-               } else if (party.getMemberCount() < 9) {
-                  speaker.joinParty(party);
-                  fake.broadcastPacket(new CreatureSay(fake, ChatType.GENERAL, fake.getName(), "來吧，歡迎加入小隊！"));
-                  return;
+
+      // 功能 A：真人在隊伍中，任何頻道喊「集合」或「過來」直接把全隊假人拉到身邊並解除傳送鎖定
+      if (speaker.isInParty() && speaker.getParty() != null) {
+         if (msg.contains("集合") || msg.contains("過來") || msg.contains("summon")) {
+            int summoned = 0;
+            for (Player member : speaker.getParty().getMembers()) {
+               if (member != null && member != speaker && member.isFakePlayer()) {
+                  if (member.isDead()) {
+                     member.doRevive();
+                     member.fullRestore();
+                  }
+                  member.abortAttack();
+                  member.abortCast();
+                  member.setTarget(null);
+                  if (member.getInstanceId() != speaker.getInstanceId()) {
+                     member.setInstance(speaker.getInstanceWorld());
+                  }
+                  member.teleToLocation(new Location(speaker.getX() + Rnd.get(-100, 100), speaker.getY() + Rnd.get(-100, 100), speaker.getZ()), true);
+                  member.onTeleported();
+                  member.revalidateZone(true);
+                  member.broadcastInfo();
+                  member.broadcastUserInfo();
+                  member.getAI().setIntentionActive();
+                  // 🔥 強制刷新隊長畫面的組隊小視窗狀態，解決隊友名字變暗灰色的顯示問題
+                                    if (speaker.getParty() != null) {
+                     speaker.getParty().broadcastToPartyMembers(member, new org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowUpdate(member, true));
+                  }
+                  ++summoned;
                }
             }
+            if (summoned > 0) {
+               speaker.sendMessage("【系統】已將 " + summoned + " 名假人隊友召集至您的位置。");
+            }
+            return;
+         }
+      }
+
+      // 功能 B：真人尚未入隊，喊「111 / 組隊 / 帶我」自動組隊並把隊長移交給真人
+      if (!speaker.isInParty() && (msg.contains("111") || msg.contains("組隊") || msg.contains("帶我") || msg.contains("party"))) {
+         Player chosenFake = null;
+
+         // 1. 優先尋找附近 1500 碼內的戰鬥假人
+         for (Player fake : PLAYERS) {
+            if (fake != null && fake.isSpawned() && !fake.isDead() && !isShopPlayer(fake) && fake.calculateDistance3D(speaker) <= 1500.0) {
+               if (fake.getParty() == null || fake.getParty().getMemberCount() < 9) {
+                  chosenFake = fake;
+                  break;
+               }
+            }
+         }
+
+         // 2. 若身邊沒假人，直接從野外挑選一名空閒的戰鬥假人傳送過來支援
+         if (chosenFake == null) {
+            for (Player fake : PLAYERS) {
+               if (fake != null && fake.isSpawned() && !fake.isDead() && !isShopPlayer(fake)) {
+                  if (fake.getParty() == null || fake.getParty().getMemberCount() < 9) {
+                     chosenFake = fake;
+                     break;
+                  }
+               }
+            }
+         }
+
+         if (chosenFake != null) {
+            Party party = chosenFake.getParty();
+            if (party == null) {
+               party = new Party(chosenFake, org.l2jmobius.gameserver.entity.groups.PartyDistributionType.FINDERS_KEEPERS);
+               chosenFake.setParty(party);
+            }
+            // 讓真人加入隊伍，並立刻將隊長移交給真人！
+            speaker.joinParty(party);
+            party.changePartyLeader(speaker.getName());
+
+            // 讓全隊假人隊友立刻傳送到真人隊長身邊就位並解除傳送鎖定
+            for (Player member : party.getMembers()) {
+               if (member != null && member.isFakePlayer() && !member.isDead()) {
+                  member.setTarget(null);
+                  if (member.getInstanceId() != speaker.getInstanceId()) {
+                     member.setInstance(speaker.getInstanceWorld());
+                  }
+                  member.teleToLocation(new Location(speaker.getX() + Rnd.get(-120, 120), speaker.getY() + Rnd.get(-120, 120), speaker.getZ()), true);
+                  member.onTeleported();
+                  member.revalidateZone(true);
+                  member.broadcastInfo();
+                  member.broadcastUserInfo();
+                  member.getAI().setIntentionActive();
+               }
+            }
+
+            chosenFake.broadcastPacket(new CreatureSay(chosenFake, ChatType.PARTY, chosenFake.getName(), "隊長好！全隊已傳送至你身邊待命，請下達攻擊目標！"));
          }
       }
    }
