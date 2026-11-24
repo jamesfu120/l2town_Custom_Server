@@ -250,6 +250,9 @@ public class PlayerVariables extends AbstractVariables
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
+				// Single transaction, a failed batch is rolled back when the connection closes.
+				con.setAutoCommit(false);
+				
 				if (!_deleted.isEmpty())
 				{
 					try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
@@ -289,6 +292,8 @@ public class PlayerVariables extends AbstractVariables
 						st.executeBatch();
 					}
 				}
+				
+				con.commit();
 				
 				// Clear tracking after successful save.
 				clearChangeTracking();
