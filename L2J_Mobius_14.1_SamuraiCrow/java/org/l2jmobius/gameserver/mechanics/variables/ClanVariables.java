@@ -104,20 +104,38 @@ public class ClanVariables extends AbstractVariables
 			return false;
 		}
 		
-		// If async saving is enabled and not already scheduled, schedule a save.
-		if (ASYNC_SAVE_ENABLED && !_scheduledSave.get())
+		if (!ASYNC_SAVE_ENABLED)
 		{
-			_scheduledSave.set(true);
+			return saveNow();
+		}
 			
-			ThreadPool.schedule(() ->
+			// Only the first call schedules a save, later calls are batched into it.
+		if (_scheduledSave.compareAndSet(false, true))
+		{
+			if (ThreadPool.schedule(() ->
+			{
+				try
+			{
+				saveNow();
+		}
+		finally
+				{
+					_scheduledSave.set(false);
+		
+		// Retry a failed save or changes made while saving.
+					if (hasChanges())
+					{
+						storeMe();
+					}
+				}
+			}, SAVE_INTERVAL) == null)
 			{
 				_scheduledSave.set(false);
-				saveNow();
-			}, SAVE_INTERVAL);
-			return true;
+				return false;
+			}
 		}
 		
-		return saveNow();
+		return true;
 	}
 	
 	/**
@@ -220,25 +238,29 @@ public class ClanVariables extends AbstractVariables
 	public boolean deleteMe()
 	{
 		_saveLock.lock();
-		
+		try
+		{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement st = con.prepareStatement(DELETE_ALL_QUERY))
 		{
 			st.setInt(1, _objectId);
 			st.execute();
 		}
+		// Clear all variables.
+			getSet().clear();
+			clearChangeTracking();
+			compareAndSetChanges(true, false);
+			return true;
+		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not delete variables for: " + _objectId, e);
-			_saveLock.unlock();
 			return false;
 		}
 		
-		// Clear all variables.
-		getSet().clear();
-		clearChangeTracking();
-		
+		finally
+		{		
 		_saveLock.unlock();
-		return true;
+		}
 	}
 }

@@ -385,40 +385,166 @@ public final class RebirthManager
 			
 		} finally { REBIRTH_OPERATIONS_IN_PROGRESS.remove(Integer.valueOf(playerId)); }
 	}
-	private void grantRebirth(Player player, int newCount, boolean firstBirth)
+		private void grantRebirth(Player player, int newCount, boolean firstBirth)
 	{
 		final int playerId = player.getObjectId();
-		try {
+		try
+		{
 			final boolean updated = firstBirth ? insertFirst(playerId) : updateCount(playerId, newCount);
-			if (!updated) return;
+			if (!updated)
+			{
+				return;
+			}
+
+			// 1. 取得該職業的 1 級最原始初始職業 ID（Root Class）
+			final int rootClassId = getRootClassId(player.getBaseClass());
+
+			// 2. 將等級與經驗值精準降回 1 級
 			final long targetExp = ExperienceData.getInstance().getExpForLevel(1);
-			if (player.getExp() > targetExp) player.removeExpAndSp(player.getExp() - targetExp, 0);
-			player.setPlayerClass(player.getBaseClass());
-			if (RebirthConfig.REBIRTH_DELETE_ALL_SKILLS) {
-				for (Skill skill : player.getAllSkills()) {
-					if (skill != null && !RebirthConfig.REBIRTH_SKILL_DELETE_WHITELIST.contains(Integer.valueOf(skill.getId())) && !isProtectedByGroup(player, skill)) { player.removeSkill(skill, true); }
+			if (player.getExp() > targetExp)
+			{
+				player.removeExpAndSp(player.getExp() - targetExp, player.getSp());
+			}
+
+			// 3. 關鍵修正：將主職業與當前職業同時還原為 1 級初始職業！
+			player.setBaseClass(rootClassId);
+			player.setPlayerClass(rootClassId);
+
+			// 4. 清除已完成的成長任務與轉職任務紀錄，讓系統重新觸發全套新手成長任務！
+			resetGrowthAndClassQuests(player);
+
+			// 5. 清除高轉技能並重新學習 1 級初始職業基礎技能（保留轉生自選技能與白名單）
+			if (RebirthConfig.REBIRTH_DELETE_ALL_SKILLS)
+			{
+				for (Skill skill : player.getAllSkills())
+				{
+					if ((skill != null) && !RebirthConfig.REBIRTH_SKILL_DELETE_WHITELIST.contains(Integer.valueOf(skill.getId())) && !isProtectedByGroup(player, skill))
+					{
+						player.removeSkill(skill, true);
+					}
 				}
 			}
 			player.giveAvailableSkills(true, true, true, false);
-			if (RebirthConfig.REBIRTH_DELETE_RESTORE_TEMPORARY_SKILLS) player.regiveTemporarySkills();
-			if (RebirthConfig.REBIRTH_TITLE_ENABLED && RebirthConfig.REBIRTH_AUTO_UPDATE_TITLE) {
-				String titleName = (newCount <= RebirthConfig.REBIRTH_TITLE_STAGES.size()) ? RebirthConfig.REBIRTH_TITLE_STAGES.get(newCount - 1) : "轉生強者 Lv." + newCount;
+			if (RebirthConfig.REBIRTH_DELETE_RESTORE_TEMPORARY_SKILLS)
+			{
+				player.regiveTemporarySkills();
+			}
+
+			// 6. 更新修仙轉生稱號
+			if (RebirthConfig.REBIRTH_TITLE_ENABLED && RebirthConfig.REBIRTH_AUTO_UPDATE_TITLE)
+			{
+				final String titleName = (newCount <= RebirthConfig.REBIRTH_TITLE_STAGES.size()) ? RebirthConfig.REBIRTH_TITLE_STAGES.get(newCount - 1) : ("轉生強者 Lv." + newCount);
 				player.setTitle(titleName);
 			}
+
+			// 7. 解除超階裝備懲罰（若身上穿著 R 級裝備，自動解除避免 1 級穿高階裝被罰站，或讓玩家自行換裝）
+			player.abortAttack();
+			player.abortCast();
+			player.setCurrentHp(player.getMaxHp());
+			player.setCurrentMp(player.getMaxMp());
+			player.setCurrentCp(player.getMaxCp());
 			player.storeMe();
-		} catch (Exception e) { return; }
-		try {
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Failed during grantRebirth core reset for " + player.getName(), e);
+			return;
+		}
+
+		try
+		{
 			final Map<Integer, String> skillDefinitionMap = createSkillDefinitionMap(getSkillPool(player), player);
 			final List<Integer> selectedSkills = loadValidatedSelectedSkills(player, skillDefinitionMap);
 			grantRewardTokens(player);
-			if (!RebirthConfig.REBIRTH_DELETE_RESTORE_TEMPORARY_SKILLS) grantRebirthSkills(player, skillDefinitionMap, selectedSkills);
+			if (!RebirthConfig.REBIRTH_DELETE_RESTORE_TEMPORARY_SKILLS)
+			{
+				grantRebirthSkills(player, skillDefinitionMap, selectedSkills);
+			}
+
 			player.sendSkillList();
 			player.broadcastUserInfo();
 			player.broadcastStatusUpdate();
+
+			// 8. 傳送回說話之島新手村（-114598, 253600, -1528），並主動觸發 1 級新手成長任務提示！
+			player.teleToLocation(-114598, 253600, -1528);
+			triggerNewbieGrowthQuests(player);
+
 			displayCongrats(player, newCount);
 			routePostRebirthUi(player, selectedSkills, newCount, skillDefinitionMap);
-		} catch (Exception e) {}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Failed during grantRebirth post-UI for " + player.getName(), e);
+		}
 	}
+
+	/**
+	 * 清空角色的舊成長任務、轉職任務與新手教學紀錄，確保轉生後能重新接取全套成長任務
+	 */
+	private void resetGrowthAndClassQuests(Player player)
+	{
+		try
+		{
+			// 1. 清除記憶體中的所有已完成/進行中任務狀態（保留純日常或系統永久變數）
+			for (org.l2jmobius.gameserver.mechanics.script.QuestState qs : player.getAllQuestStates())
+			{
+				if (qs != null)
+				{
+					qs.exitQuest(true, true);
+				}
+			}
+
+			// 2. 清除資料庫 character_quests 裡該角色的歷史任務完成紀錄（避免重登後任務又變回已完成）
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM character_quests WHERE charId = ?"))
+			{
+				ps.setInt(1, player.getObjectId());
+				ps.executeUpdate();
+			}
+
+			// 3. 清除新手成長任務與教學導引的角色變數標記
+			player.getVariables().remove("NEWBIE_GUIDE_COMPLETED");
+			player.getVariables().remove("TUTORIAL_COMPLETED");
+			player.getVariables().storeMe();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Failed to reset quests on rebirth for " + player.getName(), e);
+		}
+	}
+
+	/**
+	 * 主動發送客戶端任務列表更新與等級觸發事件，喚醒 14.1 新手成長任務系統
+	 */
+	private void triggerNewbieGrowthQuests(Player player)
+	{
+		try
+		{
+			// 發送空任務列表封包刷新客戶端任務日誌
+			player.sendPacket(new org.l2jmobius.gameserver.network.serverpackets.QuestList(player));
+
+			// 透過純反射安全派發 OnPlayerLevelChanged(player, 1, 1) 事件，100% 不受套件路徑改名影響
+			final Class<?> eventClass = Class.forName("org.l2jmobius.gameserver.mechanics.events.argtypes.OnPlayerLevelChanged");
+			final Object eventObj = eventClass.getConstructor(Player.class, int.class, int.class).newInstance(player, 1, 1);
+			final Object dispatcher = org.l2jmobius.gameserver.mechanics.events.EventDispatcher.getInstance();
+			for (java.lang.reflect.Method m : dispatcher.getClass().getMethods())
+			{
+				if (m.getName().equals("notifyEventAsync") && (m.getParameterCount() == 2) && m.getParameterTypes()[1].isArray())
+				{
+					final Object containers = java.lang.reflect.Array.newInstance(m.getParameterTypes()[1].getComponentType(), 1);
+					java.lang.reflect.Array.set(containers, 0, player);
+					m.invoke(dispatcher, eventObj, containers);
+					break;
+				}
+			}
+			player.sendMessage("【重生啟程】你的職業已還原為初始職業，所有成長與轉職任務已重置，可依等級重新接取！");
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.FINE, "Quest trigger notice fallback for " + player.getName(), e);
+		}
+	}
+
 	public void displayTitleSelectionWindow(Player player, int objectId)
 	{
 		if (!RebirthConfig.REBIRTH_TITLE_ENABLED) { player.sendMessage("轉生稱號系統目前未啟用。"); return; }

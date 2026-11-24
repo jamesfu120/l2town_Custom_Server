@@ -53,11 +53,11 @@ public class ItemVariables extends AbstractVariables
 	private static final boolean ASYNC_SAVE_ENABLED = true;
 	
 	// Public variables.
+	public static final String VIRTUAL = "VIRTUAL";
 	public static final String VISUAL_ID = "visualId";
 	public static final String VISUAL_APPEARANCE_STONE_ID = "visualAppearanceStoneId";
 	public static final String VISUAL_APPEARANCE_LIFE_TIME = "visualAppearanceLifetime";
 	public static final String TRANSMOG_ID = "transmogId";
-	public static final String VIRTUAL = "virtual";
 	
 	// Private variables.
 	private final AtomicBoolean _scheduledSave = new AtomicBoolean(false);
@@ -131,20 +131,38 @@ public class ItemVariables extends AbstractVariables
 			return false;
 		}
 		
-		// If async saving is enabled and not already scheduled, schedule a save.
-		if (ASYNC_SAVE_ENABLED && !_scheduledSave.get())
+		if (!ASYNC_SAVE_ENABLED)
 		{
-			_scheduledSave.set(true);
-			
-			ThreadPool.schedule(() ->
-			{
-				_scheduledSave.set(false);
-				saveNow();
-			}, SAVE_INTERVAL);
-			return true;
+			return saveNow();
 		}
 		
-		return saveNow();
+		// Only the first call schedules a save, later calls are batched into it.
+		if (_scheduledSave.compareAndSet(false, true))
+		{
+			if (ThreadPool.schedule(() ->
+			{
+				try
+				{
+					saveNow();
+				}
+				finally
+				{
+					_scheduledSave.set(false);
+					
+					// Retry a failed save or changes made while saving.
+					if (hasChanges())
+					{
+						storeMe();
+					}
+				}
+			}, SAVE_INTERVAL) == null)
+			{
+				_scheduledSave.set(false);
+				return false;
+			}
+		}
+		
+		return true;
 	}
 	
 	/**
@@ -242,24 +260,29 @@ public class ItemVariables extends AbstractVariables
 	{
 		_saveLock.lock();
 		
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement st = con.prepareStatement(DELETE_ALL_QUERY))
+		try
 		{
-			st.setInt(1, _objectId);
-			st.execute();
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement st = con.prepareStatement(DELETE_ALL_QUERY))
+			{
+				st.setInt(1, _objectId);
+				st.execute();
+			}
+			
+			// Clear all variables.
+			getSet().clear();
+			clearChangeTracking();
+			compareAndSetChanges(true, false);
+			return true;
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not delete variables for: " + _objectId, e);
-			_saveLock.unlock();
 			return false;
 		}
-		
-		// Clear all variables.
-		getSet().clear();
-		clearChangeTracking();
-		
-		_saveLock.unlock();
-		return true;
+		finally
+		{
+			_saveLock.unlock();
+		}
 	}
 }
