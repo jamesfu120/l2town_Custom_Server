@@ -112,20 +112,38 @@ public class AccountVariables extends AbstractVariables
 			return false;
 		}
 		
-		// If async saving is enabled and not already scheduled, schedule a save.
-		if (ASYNC_SAVE_ENABLED && !_scheduledSave.get())
+		if (!ASYNC_SAVE_ENABLED)
 		{
-			_scheduledSave.set(true);
-			
-			ThreadPool.schedule(() ->
-			{
-				_scheduledSave.set(false);
-				saveNow();
-			}, SAVE_INTERVAL);
-			return true;
+			return saveNow();
 		}
 		
-		return saveNow();
+		// Only the first call schedules a save, later calls are batched into it.
+		if (_scheduledSave.compareAndSet(false, true))
+		{
+			if (ThreadPool.schedule(() ->
+			{
+				try
+				{
+					saveNow();
+				}
+				finally
+				{
+					_scheduledSave.set(false);
+					
+					// Retry a failed save or changes made while saving.
+					if (hasChanges())
+					{
+						storeMe();
+					}
+				}
+			}, SAVE_INTERVAL) == null)
+			{
+				_scheduledSave.set(false);
+				return false;
+			}
+		}
+		
+		return true;
 	}
 	
 	/**
