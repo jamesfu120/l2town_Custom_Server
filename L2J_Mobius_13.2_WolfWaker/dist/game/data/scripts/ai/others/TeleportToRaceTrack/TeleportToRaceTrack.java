@@ -43,7 +43,7 @@ public class TeleportToRaceTrack extends Script
 	static
 	{
 		TELEPORTER_LOCATIONS.put(30320, new Location(-80826, 149775, -3043)); // Richlin
-		TELEPORTER_LOCATIONS.put(30256, new Location(-12672, 122776, -3116)); // Bella
+		TELEPORTER_LOCATIONS.put(30256, new Location(-14445, 123990, -3120)); // Bella
 		TELEPORTER_LOCATIONS.put(30059, new Location(15670, 142983, -2705)); // Trisha
 		TELEPORTER_LOCATIONS.put(30080, new Location(83400, 147943, -3404)); // Clarissa
 		TELEPORTER_LOCATIONS.put(30899, new Location(111409, 219364, -3545)); // Flauen
