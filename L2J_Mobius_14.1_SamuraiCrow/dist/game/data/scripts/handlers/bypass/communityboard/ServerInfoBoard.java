@@ -88,6 +88,7 @@ public class ServerInfoBoard implements IParseBoardHandler
 		html = html.replace("%serverTime%", DATE_TIME_FMT.format(new Date()));
 		html = html.replace("%serverUpTime%", getUptime());
 		html = html.replace("%navigation%", loadNavigation());
+		html = html.replace("%onlinePlayers%", playerListStr);
 
 		CommunityBoardHandler.separateAndSend(html, player);
 		return true;

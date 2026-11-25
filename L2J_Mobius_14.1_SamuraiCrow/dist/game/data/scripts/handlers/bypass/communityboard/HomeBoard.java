@@ -1041,7 +1041,7 @@ public class HomeBoard implements IParseBoardHandler
 		return SERVER_RATE_FALLBACK;
 	}
 	
-	private static String fillServerInfo(String html)
+		private static String fillServerInfo(String html)
 	{
 		if (html == null)
 		{
@@ -1054,6 +1054,30 @@ public class HomeBoard implements IParseBoardHandler
 		final int charCount = queryInt("SELECT COUNT(*) FROM characters", 0);
 		final int clanCount = queryInt("SELECT COUNT(*) FROM clan_data", 0);
 		
+		// ===== 新增：查詢實時在線玩家名單 =====
+		final StringBuilder onlineNames = new StringBuilder();
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT char_name FROM characters WHERE online=1 ORDER BY level DESC");
+			ResultSet rs = ps.executeQuery())
+		{
+			int count = 0;
+			while (rs.next())
+			{
+				if (count > 0)
+				{
+					onlineNames.append(", ");
+				}
+				onlineNames.append(rs.getString("char_name"));
+				count++;
+			}
+		}
+		catch (Exception e)
+		{
+			System.out.println("[HomeBoard] online players query failed: " + e.getMessage());
+		}
+		final String playerListStr = (onlineNames.length() > 0) ? onlineNames.toString() : "目前無玩家在線";
+		// ===================================
+
 		html = html.replace("%serverName%", readServerName());
 		html = html.replace("%servername%", readServerName());
 		html = html.replace("%serverver%", SERVER_VERSION);
@@ -1066,6 +1090,7 @@ public class HomeBoard implements IParseBoardHandler
 		html = html.replace("%gameTime%", getGameTime());
 		html = html.replace("%serverTime%", DateTimeFormatter.ofPattern("HH:mm").format(Instant.now().atZone(java.time.ZoneId.systemDefault())));
 		html = html.replace("%serverUpTime%", getUpTime());
+		html = html.replace("%onlinePlayers%", playerListStr); // 替換 HTML 中的實時名單變數
 		return html;
 	}
 	

@@ -2,7 +2,7 @@
 <center>
 <table width="270"><tr>
 <td width="45"><button action="bypass admin_admin" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="主頁" width="45"></button></td>
-<td width="180"><center>帳號: </center></td>
+<td width="180"><center>帳號: %account% </center></td>
 <td width="45"><button action="bypass admin_character_info %player%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="21" value="返回" width="45"></button></td></tr>
 </table><br>
 <table width="270">
@@ -16,12 +16,12 @@
 <br><br>
 <table width="270">
 <tr>
-<td><button action="bypass -h admin_ban_acc %account%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="禁止帳戶" width="90"></button></td>
-<td><button action="bypass -h admin_unban_acc %account%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="請重置帳戶" width="90"></button></td>
-<td><button action="bypass -h admin_account_level %account% $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="定製水平 定製水平" width="90"></button></td>
+<td><button action="bypass -h admin_ban_acc %account%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="封鎖帳號" width="90"></button></td>
+<td><button action="bypass -h admin_unban_acc %account%" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="解除封鎖" width="90"></button></td>
+<td><button action="bypass -h admin_account_level %account% $qbox" back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" height="20" value="設定權限" width="90"></button></td>
 </tr>
 </table>
 <br><br>
-</center>帳號: <font color="LEVEL">%account%</font><br>的帳號中的另一個字元:<br>
+</center>帳號: <font color="LEVEL">%account%</font><br>帳號內的其他人物:<br>
 %characters%
 </body></html>
