@@ -545,7 +545,7 @@ public class PlayerConfig
 		PETITIONING_ALLOWED = config.getBoolean("PetitioningAllowed", true);
 		MAX_PETITIONS_PER_PLAYER = config.getInt("MaxPetitionsPerPlayer", 5);
 		MAX_PETITIONS_PENDING = config.getInt("MaxPetitionsPending", 25);
-		MAX_FREE_TELEPORT_LEVEL = config.getInt("MaxFreeTeleportLevel", 99);
+		MAX_FREE_TELEPORT_LEVEL = config.getInt("MaxFreeTeleportLevel", 104);
 		DELETE_DAYS = config.getInt("DeleteCharAfterDays", 1);
 		DISCONNECT_AFTER_DEATH = config.getBoolean("DisconnectAfterDeath", true);
 		PARTY_XP_CUTOFF_METHOD = Enum.valueOf(PartyExpType.class, config.getString("PartyXpCutoffMethod", "LEVEL").toUpperCase());

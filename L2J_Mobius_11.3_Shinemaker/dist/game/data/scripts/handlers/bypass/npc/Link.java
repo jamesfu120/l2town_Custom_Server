@@ -96,6 +96,7 @@ public class Link implements IBypassHandler
 		VALID_LINKS.add("petmanager/evolve.htm");
 		VALID_LINKS.add("petmanager/exchange.htm");
 		VALID_LINKS.add("petmanager/instructions.htm");
+		VALID_LINKS.add("teleporter/arena.htm");
 		VALID_LINKS.add("teleporter/separatedsoul.htm");
 		VALID_LINKS.add("warehouse/clanwh.htm");
 		VALID_LINKS.add("warehouse/privatewh.htm");
