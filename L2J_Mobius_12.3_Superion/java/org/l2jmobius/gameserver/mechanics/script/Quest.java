@@ -2979,10 +2979,10 @@ public class Quest implements IEventTimerEvent<String>, IEventTimerCancel<String
 					}
 				}
 			}
-			
-			addCondMinLevel(condition.getMinLevel(), html);
-			addCondMaxLevel(condition.getMaxLevel(), html);
 		}
+		
+		addCondMinLevel(condition.getMinLevel(), html);
+		addCondMaxLevel(condition.getMaxLevel(), html);
 	}
 	
 	public void onQuestAborted(Player player)
