@@ -42,7 +42,7 @@ public class ExQuestUI extends ServerPacket
 	{
 		for (QuestState questState : player.getAllQuestStates())
 		{
-			if (questState.getQuest() != null)
+			if ((questState.getQuest() != null) && !questState.isCreated())
 			{
 				_questStates.add(questState);
 				
