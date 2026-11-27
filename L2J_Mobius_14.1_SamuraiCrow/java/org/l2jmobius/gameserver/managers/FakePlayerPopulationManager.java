@@ -86,8 +86,13 @@ public class FakePlayerPopulationManager {
    private static final List<Player> PLAYERS = new CopyOnWriteArrayList();
    private static final Map<Player, Integer> LAST_LEVELS = new ConcurrentHashMap();
    private static final Map<Player, Long> LAST_CHAT = new ConcurrentHashMap();
+   private static final Map<Player, Long> NEXT_LOOT_CHECK_AT = new ConcurrentHashMap<>();
+   private static final Map<Player, Long> NEXT_PARTY_FORM_AT = new ConcurrentHashMap<>();
+   private static final Map<Player, Integer> CACHED_AOE_MONSTER_COUNT = new ConcurrentHashMap<>();
+   private static final Map<Player, Long> NEXT_AOE_SCAN_AT = new ConcurrentHashMap<>();
    private static final Map<Player, Long> NEXT_AI_THINK_AT = new ConcurrentHashMap();
    private static final Map<Player, Long> NEXT_PARTY_SUPPORT_AT = new ConcurrentHashMap();
+   private static final Map<String, Long> SUPPORT_SKILL_RETRY_AT = new ConcurrentHashMap<>();
    private static final Map<Player, Long> NEXT_PARTY_MOVE_AT = new ConcurrentHashMap();
    private static final Map<Player, Location> PARTY_PATROL_POINTS = new ConcurrentHashMap();
    private static final Map<Player, Location> PARTY_PATROL_ANCHORS = new ConcurrentHashMap();
@@ -207,25 +212,25 @@ public class FakePlayerPopulationManager {
       return skill == null || isFakePartySummonSkill(skill) || isFakePartyReturnSkill(skill) || skill.isTransformation();
    }
    
-          private static boolean isCrashRiskSkill(Skill skill) {
+             private static boolean isCrashRiskSkill(Skill skill) {
       if (skill == null) return true;
       // 1. 過濾傳送與目標傳送技能
       if (skill.hasEffectType(EffectType.TELEPORT, EffectType.TELEPORT_TO_TARGET)) {
          return true;
       }
-      // 2. 過濾技能名稱包含 summon 或 召喚 的技能（避免召喚出 Template is null 的使魔）
+      // 2. 過濾無效的道具/結晶/座騎召喚（保留戰鬥使魔召喚，交給 isBlockedFakeSkill 依職業放行）
       String skillName = skill.getName() != null ? skill.getName().toLowerCase(Locale.ROOT) : "";
-      if (skillName.contains("summon") || skillName.contains("召喚")) {
+      if (skillName.contains("crystal") || skillName.contains("shot") || skillName.contains("cubic") || skillName.contains("portal") || skillName.contains("gate")) {
          return true;
       }
-      // 3. 透過效果類別名稱安全過濾所有位移技與召喚技（Summon / SummonNpc / SummonPet 等）
+      // 3. 透過效果類別名稱過濾危險位移技（不再無差別封鎖 Summon 使魔效果）
       for (EffectScope effectScope : EffectScope.values()) {
          List<AbstractEffect> effects = skill.getEffects(effectScope);
          if (effects != null) {
             for (AbstractEffect effect : effects) {
                if (effect != null) {
                   String effName = effect.getClass().getSimpleName().toLowerCase(Locale.ROOT);
-                  if (effName.contains("charge") || effName.contains("rush") || effName.contains("blink") || effName.contains("dash") || effName.contains("fly") || effName.contains("knockback") || effName.contains("pull") || effName.contains("summon")) {
+                  if (effName.contains("charge") || effName.contains("rush") || effName.contains("blink") || effName.contains("dash") || effName.contains("fly") || effName.contains("knockback") || effName.contains("pull") || effName.contains("summonnpc")) {
                      return true;
                   }
                }
@@ -234,6 +239,32 @@ public class FakePlayerPopulationManager {
       }
       return false;
    }
+   
+         private static boolean isBlockedFakeSkill(Player player, Skill skill) {
+      if (skill == null || skill.isTransformation() || isCrashRiskSkill(skill)) {
+         return true;
+      }
+      String skName = skill.getName() != null ? skill.getName().toLowerCase(Locale.ROOT) : "";
+      // 1. 永遠封鎖所有座騎與騎乘技能
+      if (skName.contains("mount") || skName.contains("ride") || skName.contains("horse")
+         || skName.contains("騎乘") || skName.contains("座騎") || skName.contains("戰馬") || skName.contains("幻影")) {
+         return true;
+      }
+      // 2. 只有 85 級以上（四轉覺醒）才過濾舊時代 2~3 轉重複歌舞，避免與奏鳴曲互相覆蓋；84 級以下三轉假人保留原歌舞！
+      if (player != null && player.getLevel() >= 85) {
+         if (skName.startsWith("dance of ") || skName.startsWith("song of ") || skName.startsWith("chant of ")
+            || skName.contains("之舞") || skName.contains("之歌") || skName.contains("吟唱")) {
+            return true;
+         }
+      }
+      // 3. 召喚類技能：只有「召喚師職業」才允許保留，其他職業一律過濾避免亂召
+      if (skName.contains("summon") || skName.contains("召喚")) {
+         boolean isSummoner = player != null && player.getPlayerClass() != null && player.getPlayerClass().isSummoner();
+         return !isSummoner;
+      }
+      return false;
+   }
+
 
    public static void initialize() {
       cleanupOrphanFakePlayerItems();
@@ -265,9 +296,11 @@ public class FakePlayerPopulationManager {
 
          }
 
-                  ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::ensurePopulation, 1000L, 1000L);
+         ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::ensurePopulation, 1000L, 1000L);
          ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::syncFakePlayersToPartyMatchingList, 3000L, 5000L);
          ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::relocateCombatFakesToHuntingGrounds, 15000L, 15000L);
+		 ThreadPool.scheduleAtFixedRate(FakePlayerPopulationManager::exportFakePlayersStatusJson, 3000L, 3000L);
+
 		          // 🔥 註冊全域聊天監聽（免 import 通用版：相容所有 Mobius 14.1 事件路徑）
          org.l2jmobius.gameserver.mechanics.events.Containers.Players().addListener(
             new org.l2jmobius.gameserver.mechanics.events.listeners.ConsumerEventListener(
@@ -368,6 +401,10 @@ public class FakePlayerPopulationManager {
                SUPPORT_ROLE_CACHE.remove(player);
                NEXT_RESOURCE_SYNC_AT.remove(player);
                NEXT_EQUIPMENT_CHECK_AT.remove(player);
+			   NEXT_LOOT_CHECK_AT.remove(player);
+               NEXT_PARTY_FORM_AT.remove(player);
+               CACHED_AOE_MONSTER_COUNT.remove(player);
+               NEXT_AOE_SCAN_AT.remove(player);
             }
          }
 
@@ -424,6 +461,10 @@ public class FakePlayerPopulationManager {
          SUPPORT_ROLE_CACHE.remove(player);
          NEXT_RESOURCE_SYNC_AT.remove(player);
          NEXT_EQUIPMENT_CHECK_AT.remove(player);
+		 NEXT_LOOT_CHECK_AT.remove(player);
+         NEXT_PARTY_FORM_AT.remove(player);
+         CACHED_AOE_MONSTER_COUNT.remove(player);
+         NEXT_AOE_SCAN_AT.remove(player);
       }
 
    }
@@ -870,27 +911,35 @@ public class FakePlayerPopulationManager {
          }
       }
    }
-
-      private static void prepareCombatFakePlayer(Player player) {
+    private static void prepareCombatFakePlayer(Player player) {
       if (player != null && player.isFakePlayer()) {
          player.getEffectList().stopEffects(AbnormalType.BOT_PENALTY);
-         if (FakePlayersConfig.FAKE_PLAYER_AUTO_LEARN_CLASS_SKILLS) {
+               if (FakePlayersConfig.FAKE_PLAYER_AUTO_LEARN_CLASS_SKILLS) {
             try {
                Collection<Skill> skills = SkillTreeData.getInstance().getAllAvailableSkills(player, player.getTemplate().getPlayerClass(), true, true, true, true);
                int added = 0;
 
-               for(Skill skill : skills) {
+                              for (Skill skill : skills) {
                   if (skill != null && player.getKnownSkill(skill.getId()) != skill) {
+                     // 🔥 源頭攔截：學技能當下直接過濾坐騎、騎乘、變身與高風險技能，絕不加入技能欄
+                     if (isBlockedFakeSkill(player, skill)) { 
+					 continue; 
+                     }
                      player.addSkill(skill, false);
                      ++added;
                   }
                }
 
+               // 雙重保險：清理角色模板自帶的基礎坐騎/變身技能（僅在初始化與升級時執行一次）
+               for (Skill existing : new ArrayList<>(player.getAllSkills())) {
+                  if (isBlockedFakeSkill(player, existing)) { 
+                     player.removeSkill(existing, false);
+                  }
+               }
+
                player.getStat().recalculateStats(false);
                if (added > 0) {
-                  Logger var10000 = LOGGER;
-                  String var10001 = player.getName();
-                  var10000.fine("Fake player class skills prepared: name=" + var10001 + ", class=" + player.getPlayerClass().name() + ", level=" + player.getLevel() + ", added=" + added);
+                  LOGGER.fine("Fake player class skills prepared: name=" + player.getName() + ", class=" + player.getPlayerClass().name() + ", level=" + player.getLevel() + ", added=" + added);
                }
             } catch (Exception e) {
                LOGGER.log(Level.WARNING, "Could not prepare class skills for fake player " + player.getName(), e);
@@ -1025,9 +1074,17 @@ public class FakePlayerPopulationManager {
          score += 30000;
       }
 
-      // 3. 範圍技（AOE）智慧切換：周圍 >= 2 隻怪時優先放範圍技，單挑時保留
+            // 3. 範圍技（AOE）智慧切換：每 1.5 秒快取一次周圍怪數，避免單回合多招範圍技重複掃描地圖
       if (skill.getAffectScope() == AffectScope.RANGE || skill.getAffectScope() == AffectScope.FAN) {
-         int nearbyMonsters = World.getVisibleObjectsInRange(player, Monster.class, 300, m -> m != null && !m.isDead()).size();
+         long now = System.currentTimeMillis();
+         int nearbyMonsters;
+         if (now >= NEXT_AOE_SCAN_AT.getOrDefault(player, 0L)) {
+            nearbyMonsters = World.getVisibleObjectsInRange(player, Monster.class, 300, m -> m != null && !m.isDead()).size();
+            CACHED_AOE_MONSTER_COUNT.put(player, nearbyMonsters);
+            NEXT_AOE_SCAN_AT.put(player, now + 1500L);
+         } else {
+            nearbyMonsters = CACHED_AOE_MONSTER_COUNT.getOrDefault(player, 1);
+         }
          if (nearbyMonsters >= 2) {
             score += 80000;
          } else {
@@ -1523,15 +1580,22 @@ else if (className.contains("titan") || className.contains("destroyer") || class
       if (player == null || player.isDead() || isShopPlayer(player)) {
          return false;
       }
-      configureAutomaticPotion(player);
+            configureAutomaticPotion(player);
 
       // 若設定檔未開啟撿物，或假人正在施法中，則不執行撿物
       if (!FakePlayersConfig.FAKE_PLAYER_CAN_PICKUP || player.isCastingNow() || player.isMovementDisabled()) {
          return false;
       }
 
+      // 每 2.5 秒掃描一次地面掉落物，大幅降低無掉落物時的周邊物件遍歷開銷
+      long now = System.currentTimeMillis();
+      if (now < NEXT_LOOT_CHECK_AT.getOrDefault(player, 0L)) {
+         return false;
+      }
+      NEXT_LOOT_CHECK_AT.put(player, now + 2500L);
+
       // 搜尋範圍內的地面掉落物 (Item)
-            List<Item> droppedItems = World.getVisibleObjectsInRange(player, Item.class, FakePlayersConfig.FAKE_PLAYER_LOOT_RANGE, item ->
+      List<Item> droppedItems = World.getVisibleObjectsInRange(player, Item.class, FakePlayersConfig.FAKE_PLAYER_LOOT_RANGE, item ->
          item != null && item.isSpawned() && item.getInstanceId() == player.getInstanceId()
          && (item.getOwnerId() == 0 || item.getOwnerId() == player.getObjectId())
       );
@@ -1628,29 +1692,12 @@ else if (className.contains("titan") || className.contains("destroyer") || class
          NEXT_AI_THINK_AT.put(player, now + Rnd.get(650, 950));
 
                           try {
-            // 🔥 根治無限上下馬：1. 強制下馬並移除當前坐騎狀態
+                        // 🔥 已在 prepareCombatFakePlayer 源頭移除坐騎/變身技能，此處僅保留極輕量的狀態防呆
             if (player.isMounted()) {
                player.dismount();
             }
             if (player.isTransformed()) {
                player.stopTransformation(true);
-            }
-            for (var info : player.getEffectList().getEffects()) {
-               if (info != null && info.getSkill() != null) {
-                  String skillName = info.getSkill().getName().toLowerCase(Locale.ROOT);
-                  if (skillName.contains("mount") || skillName.contains("ride") || skillName.contains("horse") || skillName.contains("騎乘") || skillName.contains("座騎") || skillName.contains("戰馬") || skillName.contains("幻影")) {
-                     player.stopSkillEffects(info.getSkill());
-                  }
-               }
-            }
-            // 🔥 2. 關鍵：直接從假人技能欄中「永久刪除」所有坐騎/騎乘技能，讓他無法再次上馬！
-            for (Skill sk : player.getAllSkills()) {
-               if (sk != null) {
-                  String skName = sk.getName().toLowerCase(Locale.ROOT);
-                  if (sk.isTransformation() || skName.contains("mount") || skName.contains("ride") || skName.contains("horse") || skName.contains("騎乘") || skName.contains("座騎") || skName.contains("戰馬") || skName.contains("幻影")) {
-                     player.removeSkill(sk, false);
-                  }
-               }
             }
 
             player.getEffectList().stopEffects(AbnormalType.BOT_PENALTY);
@@ -1677,10 +1724,11 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                continue;
             }
 
-            // 1. 定期補充物資與開啟靈魂彈
+                        // 1. 定期補充物資、開啟靈魂彈，並同步假人組隊狀態圖示給隊友
             if (now >= NEXT_RESOURCE_SYNC_AT.getOrDefault(player, 0L)) {
                NEXT_RESOURCE_SYNC_AT.put(player, now + RESOURCE_SYNC_INTERVAL_MS);
                prepareFakeConsumables(player);
+               broadcastFakePartyEffects(player);
             }
 
                         // 2. 定期檢查武器是否符合等級，並強制同步外觀封包給周圍玩家
@@ -1711,7 +1759,25 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                continue;
             }
 
-            // 5. 優先反擊正在攻擊自己的怪物
+            // 5.5 假人自主社交：若尚未入隊且允許組隊，定時邀請周圍孤單假人組成練功小隊
+            if (!player.isInParty() && Rnd.get(100) < 15) {
+               autoFormFakeParty(player);
+            }
+		    // 5.6 全方位輔助、歌舞與自體 Buff AI（優先於反擊，確保戰鬥中也能跳滿全隊歌舞）
+            boolean needHeal = player.isInParty() && checkPartyNeedsHealing(player);
+            if (needHeal || now >= NEXT_PARTY_SUPPORT_AT.getOrDefault(player, 0L)) {
+               if (needHeal && player.isAttackingNow()) {
+                  player.abortAttack();
+               }
+               boolean casted = performPartySupport(player);
+               NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 1200L : 3000L));
+               if (casted) {
+                  player.getAI().notifyActionThink();
+                  continue;
+               }
+            }
+
+            // 6. 優先反擊正在攻擊自己的怪物
             Monster attacker = null;
             Set<?> attackBy = player.getAttackByList();
             if (attackBy != null && !attackBy.isEmpty()) {
@@ -1729,24 +1795,6 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                }
                player.getAI().notifyActionThink();
                continue;
-            }
-            // 5.5 假人自主社交：若尚未入隊且允許組隊，定時邀請周圍孤單假人組成練功小隊
-            if (!player.isInParty() && Rnd.get(100) < 15) {
-               autoFormFakeParty(player);
-            }
-
-                        // 6. 全方位輔助與自體 Buff AI（隊友血量低於門檻時，強制中斷普攻優先補血）
-            boolean needHeal = player.isInParty() && checkPartyNeedsHealing(player);
-            if (needHeal || now >= NEXT_PARTY_SUPPORT_AT.getOrDefault(player, 0L)) {
-               if (needHeal && player.isAttackingNow()) {
-                  player.abortAttack();
-               }
-               boolean casted = performPartySupport(player);
-               NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 1200L : 3000L));
-               if (casted) {
-                  player.getAI().notifyActionThink();
-                  continue;
-               }
             }
 
                 // 7. 組隊跟隨與集火 AI（優先跟隊長打同一隻；若隊長 5 秒沒打怪則放行自主找怪）
@@ -1934,7 +1982,25 @@ else if (className.contains("titan") || className.contains("destroyer") || class
       return PARTY_HEALING_MODE.getOrDefault(player, false);
    }
 
-          private static boolean performPartySupport(Player player) {
+         private static boolean isIssThirtyMinMelody(Skill skill) {
+      if (skill == null || skill.getName() == null) {
+         return false;
+      }
+      String name = skill.getName().toLowerCase(Locale.ROOT);
+      return name.contains("horn") || name.contains("drum") || name.contains("organ") || name.contains("guitar") || name.contains("harp")
+         || name.contains("lute") || name.contains("melody")
+         || name.contains("角笛") || name.contains("鼓聲") || name.contains("管風琴") || name.contains("吉他") || name.contains("豎琴") || name.contains("旋律");
+		 }	 
+		    private static boolean isIssSonataOrHarmony(Skill skill) {
+      if (skill == null || skill.getName() == null) {
+         return false;
+      }
+      String name = skill.getName().toLowerCase(Locale.ROOT);
+      return name.contains("sonata") || name.contains("harmony") || name.contains("rhapsody")
+         || name.contains("奏鳴曲") || name.contains("和聲") || name.contains("狂想曲");
+   }
+   
+    private static boolean performPartySupport(Player player) {
       if (player == null || player.isDead() || player.isCastingNow()) return false;
 
       List<Player> members = (player.isInParty() && player.getParty() != null)
@@ -1962,15 +2028,29 @@ else if (className.contains("titan") || className.contains("destroyer") || class
          }
       }
 
-      // 若仍在普攻中則先不放常駐 Buff，避免打斷輸出節奏
-      if (player.isAttackingNow()) return false;
+                  // 🔥 移除原本的 if (player.isAttackingNow()) return false; 改為需要放歌舞時才暫停普攻
+      long now = System.currentTimeMillis();
+      List<Skill> sortedSkills = new ArrayList<>(player.getAllSkills());
+            // 優先順序：1. 四大 30 分鐘旋律（角笛/鼓聲/管風琴/吉他/豎琴）最優先 -> 2. 技能 ID 由大到小（4轉奏鳴曲優先）
+      sortedSkills.sort((a, b) -> {
+         boolean aMelody = isIssThirtyMinMelody(a);
+         boolean bMelody = isIssThirtyMinMelody(b);
+         if (aMelody != bMelody) {
+            return aMelody ? -1 : 1;
+         }
+         return Integer.compare(b != null ? b.getId() : 0, a != null ? a.getId() : 0);
+      });
 
-      for (Skill skill : player.getAllSkills()) {
+      for (Skill skill : sortedSkills) {
          if (!isUsablePositiveSupportSkill(skill) || !isPositiveBuffSkill(skill) || player.isSkillDisabled(skill)) {
             continue;
          }
 
-         // 確保有足夠精靈礦石 (ID: 3031) 或魔石 (ID: 1785)，避免消耗品不足導致施法空轉卡住
+                  // 單一技能 29 分鐘內若已施放過則跳過（防止同類 Buff 互相覆蓋），但若有真人隊友缺少此狀態則立刻補放
+         String retryKey = player.getObjectId() + ":" + skill.getId();
+         long retryDeadline = SUPPORT_SKILL_RETRY_AT.getOrDefault(retryKey, 0L);
+
+         // 確保有足夠精靈礦石 (ID: 3031) 或魔石 (ID: 1785)
          if (skill.getItemConsumeId() > 0 && player.getInventory().getInventoryItemCount(skill.getItemConsumeId(), -1) < skill.getItemConsumeCount()) {
             player.getInventory().addItem(ItemProcessType.REWARD, skill.getItemConsumeId(), 500, player, null);
          }
@@ -1978,12 +2058,15 @@ else if (className.contains("titan") || className.contains("destroyer") || class
          AffectScope scope = skill.getAffectScope();
          TargetType targetType = skill.getTargetType();
 
-                  // 情況 A：純自體增益技能（防死循環：若上一招已經放過這招且沒產生圖示，直接跳過不卡打怪）
+         // 情況 A：純自體增益技能（29 分鐘冷卻防互蓋）
          if (targetType == TargetType.SELF && scope == AffectScope.SINGLE) {
-            if (!player.isAffectedBySkill(skill.getId()) && LAST_PARTY_SUPPORT_SKILL.getOrDefault(player, -1) != skill.getId()) {
+            if (now >= retryDeadline && !player.isAffectedBySkill(skill.getId()) && LAST_PARTY_SUPPORT_SKILL.getOrDefault(player, -1) != skill.getId()) {
+               if (player.isAttackingNow()) player.abortAttack();
                player.setCurrentMp(player.getMaxMp());
                if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
                   LAST_PARTY_SUPPORT_SKILL.put(player, skill.getId());
+                  SUPPORT_SKILL_RETRY_AT.put(retryKey, now + 1740000L);
+                  broadcastFakePartyEffects(player);
                   return true;
                }
             }
@@ -1993,13 +2076,17 @@ else if (className.contains("titan") || className.contains("destroyer") || class
          // 情況 B：君主專屬血盟技能（AffectScope.PLEDGE）-> 強制同步套用給全隊
          if (scope == AffectScope.PLEDGE || scope == AffectScope.PARTY_PLEDGE) {
             boolean anyMemberMissing = members.stream().anyMatch(m -> player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
-            if (anyMemberMissing) {
+            boolean realLeaderMissing = members.stream().anyMatch(m -> !m.isFakePlayer() && player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
+            if (anyMemberMissing && (now >= retryDeadline || realLeaderMissing)) {
+               if (player.isAttackingNow()) player.abortAttack();
                player.setCurrentMp(player.getMaxMp());
                if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+                  SUPPORT_SKILL_RETRY_AT.put(retryKey, now + 1740000L);
                   for (Player m : members) {
                      if (m != player && player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
                         skill.applyEffects(player, m);
                      }
+                     broadcastFakePartyEffects(m);
                   }
                   return true;
                }
@@ -2007,26 +2094,73 @@ else if (className.contains("titan") || className.contains("destroyer") || class
             continue;
          }
 
-         // 情況 C：一般隊伍範圍 Buff / 戰狂 / 歌舞
-         if (scope == AffectScope.PARTY || scope == AffectScope.RANGE) {
+                          // 情況 C：一般隊伍範圍 Buff / 戰狂 / 歌舞 / 奏鳴曲 / 四大 30 分鐘旋律 / 單體和聲
+         if (scope == AffectScope.PARTY || scope == AffectScope.RANGE || isIssSonataOrHarmony(skill)) {
+            boolean isMelody = isIssThirtyMinMelody(skill);
+            boolean isSonataOrHarmony = isIssSonataOrHarmony(skill);
+            int xmlDurationSec = skill.getAbnormalTime();
+            long smartCooldownMs = (xmlDurationSec > 75) ? ((xmlDurationSec - 15) * 1000L) : 290000L;
+
+            // 1. 單體「和聲（Harmony）」：逐一幫缺少和聲的隊友施放（且防三種和聲互蓋）
+            if (scope == AffectScope.SINGLE && isSonataOrHarmony) {
+               if (player.isInParty()) {
+                  for (Player m : members) {
+                     if (player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
+                        boolean alreadyHasHarmony = m.getEffectList().getEffects().stream()
+                           .anyMatch(e -> e != null && e.getSkill() != null && (e.getSkill().getName().toLowerCase(Locale.ROOT).contains("harmony") || e.getSkill().getName().contains("和聲")));
+                        if (!alreadyHasHarmony && (now >= retryDeadline || !m.isFakePlayer())) {
+                           if (player.isAttackingNow()) player.abortAttack();
+                           player.setCurrentMp(player.getMaxMp());
+                           if (SkillCaster.castSkill(player, m, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+                              SUPPORT_SKILL_RETRY_AT.put(retryKey, now + smartCooldownMs);
+                              broadcastFakePartyEffects(m);
+                              return true;
+                           }
+                        }
+                     }
+                  }
+               }
+               continue;
+            }
+
+            // 2. 全隊「三大奏鳴曲（前進/鬥志/舒緩）」與「四大旋律」
             boolean anyMissing = members.stream().anyMatch(m -> player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
-            if (anyMissing) {
+            boolean realLeaderMissing = members.stream().anyMatch(m -> !m.isFakePlayer() && player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
+            boolean shouldCast = (isMelody || isSonataOrHarmony)
+               ? (anyMissing || now >= retryDeadline)
+               : (anyMissing && (now >= retryDeadline || realLeaderMissing));
+
+            if (shouldCast) {
+               if (player.isAttackingNow()) player.abortAttack();
                player.setCurrentMp(player.getMaxMp());
-               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+                  SUPPORT_SKILL_RETRY_AT.put(retryKey, now + smartCooldownMs);
+                  for (Player m : members) {
+                     broadcastFakePartyEffects(m);
+                  }
+                  return true;
+               }
             }
             continue;
          }
 
-         // 情況 D：單體指定輔助技能（僅在有組隊時幫隊友施放，避免單人假人對自己亂放無效技能）
+         // 情況 D：單體指定輔助技能（僅在有組隊時幫隊友施放）
          if (player.isInParty()) {
             for (Player m : members) {
                if (player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
-                  player.setCurrentMp(player.getMaxMp());
-                  if (SkillCaster.castSkill(player, m, skill, null, SkillCastingType.NORMAL, false, false) != null) return true;
+                  if (now >= retryDeadline || !m.isFakePlayer()) {
+                     if (player.isAttackingNow()) player.abortAttack();
+                     player.setCurrentMp(player.getMaxMp());
+                     if (SkillCaster.castSkill(player, m, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+                        SUPPORT_SKILL_RETRY_AT.put(retryKey, now + 1740000L);
+                        broadcastFakePartyEffects(m);
+                        return true;
+                     }
+                  }
                }
             }
          }
-      }
+	  } 
       return false;
    }
 
@@ -2216,6 +2350,11 @@ else if (className.contains("titan") || className.contains("destroyer") || class
       if (leader == null || leader.isDead() || isShopPlayer(leader) || !FakePlayersConfig.FAKE_PLAYER_ALLOW_PARTY) {
          return;
       }
+	  long now = System.currentTimeMillis();
+      if (now < NEXT_PARTY_FORM_AT.getOrDefault(leader, 0L)) {
+         return;
+      }
+      NEXT_PARTY_FORM_AT.put(leader, now + 12000L);
       try {
          Party party = leader.getParty();
          int maxMembers = Math.min(9, FakePlayersConfig.FAKE_PLAYER_MAX_PARTY_MEMBERS);
@@ -2243,7 +2382,125 @@ else if (className.contains("titan") || className.contains("destroyer") || class
          LOGGER.log(Level.FINE, "假人自主組隊異常", e);
       }
    }
+              private static boolean manageFakeSummonerServitors(Player player) {
+      if (player == null || player.isDead() || player.isCastingNow()) {
+         return false;
+      }
+      int currentCount = player.getServitors().size();
+      // 1. 維因召喚師在 14.1 版本最多可同時帶 2 隻使魔（若未滿 2 隻則繼續召喚，最多嘗試 2 隻上限）
+      if (currentCount < 2) {
+         int[] crystals = {17371, 1462, 1461, 3031};
+         for (int cid : crystals) {
+            if (player.getInventory().getInventoryItemCount(cid, -1) < 50) {
+               player.getInventory().addItem(ItemProcessType.REWARD, cid, 200, player, null);
+            }
+         }
+         for (Skill skill : player.getAllSkills()) {
+            if (skill != null && skill.isActive() && !skill.isPassive() && !skill.isToggle() && !player.isSkillDisabled(skill)) {
+               String skName = skill.getName() != null ? skill.getName().toLowerCase(Locale.ROOT) : "";
+               if (skName.contains("summon") || skName.contains("召喚")) {
+                  player.setCurrentMp(player.getMaxMp());
+                  if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
+                     return true;
+                  }
+               }
+            }
+         }
+      }
 
+      // 2. 只要場上有使魔（1 隻或 2 隻），立刻發放使魔彈藥並命令全部使魔一起圍毆目標！
+      if (currentCount > 0) {
+         int[] beastShots = {6645, 6647};
+         for (int shotId : beastShots) {
+            if (player.getInventory().getInventoryItemCount(shotId, -1) < 200) {
+               player.getInventory().addItem(ItemProcessType.REWARD, shotId, 1000, player, null);
+            }
+            player.addAutoSoulShot(shotId);
+         }
+
+         Monster targetMonster = (player.getTarget() instanceof Monster m && !m.isDead() && m.isSpawned()) ? m : null;
+         for (var servitor : player.getServitors().values()) {
+            if (servitor != null && !servitor.isDead()) {
+               servitor.rechargeShots(true, true, false);
+               if (targetMonster != null && servitor.getTarget() != targetMonster) {
+                  servitor.setTarget(targetMonster);
+                  servitor.getAI().setIntentionAttack(targetMonster);
+               }
+            }
+         }
+      }
+      return false;
+   }
+
+        private static void broadcastFakePartyEffects(Player fake) {
+      if (fake == null || !fake.isFakePlayer() || !fake.isInParty() || fake.getParty() == null) {
+         return;
+      }
+      try {
+         org.l2jmobius.gameserver.network.serverpackets.PartySpelled ps = new org.l2jmobius.gameserver.network.serverpackets.PartySpelled(fake);
+         // 自動相容 Mobius 14.1 的 BuffInfo 寫入方法（若建構子未自動填入則透過反射補入）
+         java.lang.reflect.Method addSkillMethod = null;
+         for (java.lang.reflect.Method m : ps.getClass().getMethods()) {
+            if (m.getName().equals("addSkill") && m.getParameterCount() == 1) {
+               addSkillMethod = m;
+               break;
+            }
+         }
+         if (addSkillMethod != null) {
+            for (var info : fake.getEffectList().getEffects()) {
+               if (info != null && info.isInUse() && !info.getSkill().isToggle()) {
+                  addSkillMethod.invoke(ps, info);
+               }
+            }
+         }
+         fake.getParty().broadcastToPartyMembers(fake, ps);
+      } catch (Exception ignored) {
+      }
+   }
+      private static void exportFakePlayersStatusJson() {
+      try {
+         StringBuilder sb = new StringBuilder();
+         sb.append("{\"updatedAt\":").append(System.currentTimeMillis()).append(",\"players\":[");
+         boolean first = true;
+         for (Player p : PLAYERS) {
+            if (p == null || !p.isSpawned()) {
+               continue;
+            }
+            if (!first) {
+               sb.append(",");
+            }
+            first = false;
+            String action = isShopPlayer(p) ? "擺攤/工房中"
+               : (p.isDead() ? "陣亡待復活"
+               : (p.isCastingNow() ? "施放技能中"
+               : (p.isAttackingNow() ? "戰鬥輸出中"
+               : (p.isMoving() ? "尋路移動中" : "巡邏警戒中"))));
+            String targetName = (p.getTarget() != null) ? p.getTarget().getName().replace("\"", "'") : "無";
+            sb.append("{")
+              .append("\"name\":\"").append(p.getName()).append("\",")
+              .append("\"level\":").append(p.getLevel()).append(",")
+              .append("\"class\":\"").append(p.getPlayerClass().name()).append("\",")
+              .append("\"hp\":").append((int) p.getCurrentHp()).append(",")
+              .append("\"maxHp\":").append(p.getMaxHp()).append(",")
+              .append("\"mp\":").append((int) p.getCurrentMp()).append(",")
+              .append("\"maxMp\":").append(p.getMaxMp()).append(",")
+              .append("\"x\":").append(p.getX()).append(",")
+              .append("\"y\":").append(p.getY()).append(",")
+              .append("\"inParty\":").append(p.isInParty()).append(",")
+              .append("\"isShop\":").append(isShopPlayer(p)).append(",")
+              .append("\"action\":\"").append(action).append("\",")
+              .append("\"target\":\"").append(targetName).append("\"")
+              .append("}");
+         }
+         sb.append("]}");
+         java.nio.file.Files.writeString(
+            java.nio.file.Paths.get("D:/xampp/htdocs/fake_status.json"),
+            sb.toString(),
+            java.nio.charset.StandardCharsets.UTF_8
+         );
+      } catch (Exception ignored) {
+      }
+   }
    public static List<Player> getPlayers() {
       return PLAYERS;
    }

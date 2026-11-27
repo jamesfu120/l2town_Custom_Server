@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.mechanics.events.holders.actor.player.OnPlayerQu
 import org.l2jmobius.gameserver.mechanics.script.Quest;
 import org.l2jmobius.gameserver.mechanics.script.QuestState;
 import org.l2jmobius.gameserver.network.clientpackets.ClientPacket;
+import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestAcceptableList;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestNotificationAll;
 import org.l2jmobius.gameserver.network.serverpackets.quest.ExQuestUI;
 
@@ -67,6 +68,7 @@ public class RequestExQuestCancel extends ClientPacket
 			qs.setSimulated(false);
 			qs.abortQuest();
 			player.sendPacket(new ExQuestUI(player));
+			player.sendPacket(new ExQuestAcceptableList(player));
 			player.sendPacket(new ExQuestNotificationAll(player));
 			
 			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_QUEST_ABORT, player, Containers.Players()))

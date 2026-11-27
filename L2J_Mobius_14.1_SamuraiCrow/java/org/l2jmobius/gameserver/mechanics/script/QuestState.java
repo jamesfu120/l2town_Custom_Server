@@ -406,7 +406,6 @@ public class QuestState
 		}
 		
 		// Send a packet to the client to inform it of the quest progress (step change).
-		_player.sendPacket(new ExQuestUI(_player));
 		_player.sendPacket(new ExQuestNotification(this));
 	}
 	
@@ -653,7 +652,6 @@ public class QuestState
 		set(COUNT_VAR, String.valueOf(value));
 		
 		_player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
-		_player.sendPacket(new ExQuestUI(_player));
 		_player.sendPacket(new ExQuestNotification(this));
 	}
 	
@@ -754,7 +752,7 @@ public class QuestState
 			set(COUNT_VAR, "0");
 			setState(State.STARTED);
 			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_ACCEPT.getPacket());
-			// _player.sendPacket(new ExQuestUI(_player));
+			_player.sendPacket(new ExQuestUI(_player));
 			// _player.sendPacket(new ExQuestNotification(this));
 			_player.sendPacket(new ExQuestAcceptableList(_player));
 			
@@ -873,6 +871,7 @@ public class QuestState
 		
 		_player.sendPacket(new ExQuestNotification(this));
 		_player.sendPacket(new ExQuestUI(_player));
+		_player.sendPacket(new ExQuestAcceptableList(_player));
 		
 		_vars = null;
 	}
