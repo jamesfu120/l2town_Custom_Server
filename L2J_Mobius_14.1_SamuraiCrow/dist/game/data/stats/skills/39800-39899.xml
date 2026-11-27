@@ -2190,7 +2190,7 @@
 		<!-- The Ceremony of Chaos buff. <font color="ECECEC"><Effect></font>. <font color="A3A3A3">Duration:</font> <font color="B09B79">7 min.</font>. Max HP/ MP/ CP +85%. P. Def. +95%. M. Def. +90%. Attribute Resistance +50. All received Critical Rate -25% -->
 		<icon>icon.skill31001</icon>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2198,7 +2198,7 @@
 			<value level="4">6</value>
 		</abnormalLevel>
 		<abnormalTime>420</abnormalTime>
-		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<affectRange>1000</affectRange>
 		<affectScope>SINGLE</affectScope>
 		<basicProperty>NONE</basicProperty>
@@ -2210,98 +2210,98 @@
 		<effects>
 			<effect name="MaxHp">
 				<amount>
-					<value level="1">75</value>
+					<value level="1">85</value>
 					<value fromLevel="2" toLevel="3">85</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxMp">
 				<amount>
-					<value level="1">75</value>
+					<value level="1">85</value>
 					<value fromLevel="2" toLevel="3">85</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxCp">
 				<amount>
-					<value level="1">75</value>
+					<value level="1">85</value>
 					<value fromLevel="2" toLevel="3">85</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">80</value>
+					<value level="1">95</value>
 					<value fromLevel="2" toLevel="3">95</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">75</value>
+					<value level="1">90</value>
 					<value fromLevel="2" toLevel="3">90</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
-					<value level="1">10</value>
+					<value level="1">50</value>
 					<value fromLevel="2" toLevel="3">50</value>
 				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
-					<value level="1">10</value>
+					<value level="1">50</value>
 					<value fromLevel="2" toLevel="3">50</value>
 				</amount>
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
-					<value level="1">10</value>
+					<value level="1">50</value>
 					<value fromLevel="2" toLevel="3">50</value>
 				</amount>
 				<attribute>WIND</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
-					<value level="1">10</value>
+					<value level="1">50</value>
 					<value fromLevel="2" toLevel="3">50</value>
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
-					<value level="1">10</value>
+					<value level="1">50</value>
 					<value fromLevel="2" toLevel="3">50</value>
 				</amount>
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
-					<value level="1">10</value>
+					<value level="1">50</value>
 					<value fromLevel="2" toLevel="3">50</value>
 				</amount>
 				<attribute>DARK</attribute>
 			</effect>
 			<effect name="DefenceCriticalRate">
 				<amount>
-					<value level="1">15</value>
+					<value level="1">25</value>
 					<value fromLevel="2" toLevel="3">25</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceMagicCriticalRate">
 				<amount>
-					<value level="1">15</value>
+					<value level="1">25</value>
 					<value fromLevel="2" toLevel="3">25</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefencePhysicalSkillCriticalRate">
 				<amount>
-					<value level="1">15</value>
+					<value level="1">25</value>
 					<value fromLevel="2" toLevel="3">25</value>
 				</amount>
 				<mode>PER</mode>

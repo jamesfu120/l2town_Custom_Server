@@ -26,12 +26,14 @@ import org.l2jmobius.gameserver.config.OlympiadConfig;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.entity.actor.Npc;
 import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.managers.RankManager;
 import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
 import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExHeroList;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Monument of Heroes AI.
@@ -105,6 +107,11 @@ public class MonumentOfHeroes extends Script
 		String htmltext = null;
 		switch (event)
 		{
+			case "reward":
+			{
+				htmltext = (Hero.getInstance().isHero(player.getObjectId()) || player.isLegend()) ? "MonumentOfHeroes-reward.html" : "MonumentOfHeroes-weaponNo.html";
+				break;
+			}
 			case "MonumentOfHeroes-reward.html":
 			{
 				htmltext = event;
@@ -238,6 +245,24 @@ public class MonumentOfHeroes extends Script
 				else
 				{
 					htmltext = "MonumentOfHeroes-runeNo.html";
+				}
+				break;
+			}
+			case "legendCertification":
+			{
+				final StatSet legendRank = RankManager.getInstance().getOlyRankList().get(1);
+				final boolean isLegendCandidate = (legendRank != null) && (player.getObjectId() == legendRank.getInt("charId", 0));
+				if (isLegendCandidate && Hero.getInstance().isUnclaimedHero(player.getObjectId()))
+				{
+					htmltext = "MonumentOfHeroes-heroCertification.html";
+				}
+				else if (player.isLegend())
+				{
+					htmltext = "MonumentOfHeroes-heroCertificationAlready.html";
+				}
+				else
+				{
+					htmltext = "MonumentOfHeroes-legendCertificationNo.html";
 				}
 				break;
 			}

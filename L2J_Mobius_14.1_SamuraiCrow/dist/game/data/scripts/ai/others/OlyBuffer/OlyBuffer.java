@@ -41,6 +41,7 @@ public class OlyBuffer extends Script
 	{
 		CommonSkill.OLYMPIAD_HARMONY,
 		CommonSkill.OLYMPIAD_MELODY,
+		CommonSkill.OLYMPIAD_SERENITY,
 	};
 	
 	private OlyBuffer()

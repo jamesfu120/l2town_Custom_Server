@@ -19,6 +19,7 @@ package ai.others.OlyManager;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.WeekFields;
+import java.util.Calendar;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
@@ -37,7 +38,9 @@ import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
 import org.l2jmobius.gameserver.entity.zone.ZoneId;
 import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
+import org.l2jmobius.gameserver.managers.RankManager;
 import org.l2jmobius.gameserver.mechanics.olympiad.CompetitionType;
+import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
 import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
 import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameTask;
@@ -45,6 +48,7 @@ import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.mechanics.script.Script;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
+import org.l2jmobius.gameserver.util.StatSet;
 
 /**
  * Olympiad Manager AI.
@@ -57,7 +61,11 @@ public class OlyManager extends Script implements IBypassHandler
 	// NPC
 	private static final int MANAGER = 31688;
 	
+	// Items
+	private static final int LEGEND_CELEBRATION_RUNE = 48553;
+	
 	// Misc
+	private static final String LEGEND_CELEBRATION_RUNE_TIME = "LEGEND_CELEBRATION_RUNE_TIME";
 	private static final Map<CategoryType, Integer> EQUIPMENT_MULTISELL = new EnumMap<>(CategoryType.class);
 	static
 	{
@@ -101,8 +109,44 @@ public class OlyManager extends Script implements IBypassHandler
 			case "OlyManager-infoPointsCalc.html":
 			case "OlyManager-rank.html":
 			case "OlyManager-rewards.html":
+			case "OlyManager-legendRune.html":
 			{
 				htmltext = event;
+				break;
+			}
+			case "legendRune":
+			{
+				if (!hasActiveLegend())
+				{
+					htmltext = "OlyManager-legendRuneNone.html";
+					break;
+				}
+				
+				final Calendar resetCal = Calendar.getInstance();
+				resetCal.set(Calendar.HOUR_OF_DAY, 6);
+				resetCal.set(Calendar.MINUTE, 30);
+				resetCal.set(Calendar.SECOND, 0);
+				resetCal.set(Calendar.MILLISECOND, 0);
+				if (System.currentTimeMillis() < resetCal.getTimeInMillis())
+				{
+					resetCal.add(Calendar.DAY_OF_MONTH, -1);
+				}
+				
+				if (player.getVariables().getLong(LEGEND_CELEBRATION_RUNE_TIME, 0) >= resetCal.getTimeInMillis())
+				{
+					htmltext = "OlyManager-legendRuneAlready.html";
+					break;
+				}
+				
+				if (!player.isInventoryUnder80(false))
+				{
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_THE_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+					break;
+				}
+				
+				giveItems(player, LEGEND_CELEBRATION_RUNE, 1);
+				player.getVariables().set(LEGEND_CELEBRATION_RUNE_TIME, System.currentTimeMillis());
+				htmltext = "OlyManager-legendRuneSuccess.html";
 				break;
 			}
 			case "index":
@@ -118,19 +162,8 @@ public class OlyManager extends Script implements IBypassHandler
 				}
 				else
 				{
-					switch (LocalDate.now().get(WeekFields.of(DayOfWeek.MONDAY, 7).weekOfMonth()))
-					{
-						case 1: // First week is class and non-class battles
-						{
-							htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
-							break;
-						}
-						default: // Rest is only 1v1 non-class matches
-						{
-							htmltext = getHtm(player, "OlyManager-joinMatch.html");
-							break;
-						}
-					}
+					// World Olympiad uses only 1v1 all-class matches.
+					htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
 					
 					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(Olympiad.getInstance().getPeriod()));
 					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
@@ -294,6 +327,18 @@ public class OlyManager extends Script implements IBypassHandler
 		}
 		
 		return htmltext;
+	}
+	
+	private boolean hasActiveLegend()
+	{
+		final StatSet legendRank = RankManager.getInstance().getOlyRankList().get(1);
+		if (legendRank == null)
+		{
+			return false;
+		}
+		
+		final int legendId = legendRank.getInt("charId", 0);
+		return (legendId > 0) && Hero.getInstance().getHeroes().containsKey(legendId);
 	}
 	
 	@Override

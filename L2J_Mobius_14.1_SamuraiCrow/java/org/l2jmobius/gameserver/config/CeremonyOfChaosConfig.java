@@ -55,11 +55,11 @@ public class CeremonyOfChaosConfig
 	{
 		final ConfigReader config = new ConfigReader(CEREMONY_OF_CHAOS_CONFIG_FILE);
 		COC_COMPETITION_DAYS = new ArrayList<>();
-		for (String s : config.getString("CoCCompetitionDays", "3,4,5").split(","))
+		for (String s : config.getString("CoCCompetitionDays", "2,3,4,5").split(","))
 		{
 			COC_COMPETITION_DAYS.add(Integer.parseInt(s));
 		}
-		COC_START_TIME = config.getInt("CoCStartTime", 18);
+		COC_START_TIME = config.getInt("CoCStartTime", 20);
 		COC_MIN_PLAYERS = config.getInt("CoCMinPlayers", 2);
 		COC_MAX_PLAYERS = config.getInt("CoCMaxPlayers", 18);
 		COC_MAX_ARENAS = config.getInt("CoCMaxArenas", 5);
