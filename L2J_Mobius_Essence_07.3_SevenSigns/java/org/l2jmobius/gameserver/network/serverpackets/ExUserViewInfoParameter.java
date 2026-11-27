@@ -58,7 +58,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// ################################## ATTACK ##############################
 		// P. Atk. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.PHYSICAL_ATTACK, 0));
+		buffer.writeInt(calcPercentBonus(stat, Stat.PHYSICAL_ATTACK));
 		
 		// P. Atk. (num.)
 		buffer.writeShort(index++);
@@ -66,7 +66,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// M. Atk. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.MAGIC_ATTACK, 0));
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGIC_ATTACK));
 		
 		// M. Atk. (num)
 		buffer.writeShort(index++);
@@ -138,7 +138,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// Basic Power
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.AUTO_ATTACK_DAMAGE_BONUS));
 		
 		// P. Skill Power
 		buffer.writeShort(index++);
@@ -215,7 +215,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// ################################## DEFENCE ##############################
 		// P. Def. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.PHYSICAL_DEFENCE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PHYSICAL_DEFENCE));
 		
 		// P. Def. (num.)
 		buffer.writeShort(index++);
@@ -223,7 +223,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// M. Def. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.MAGICAL_DEFENCE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGICAL_DEFENCE));
 		
 		// M. Def. (num.)
 		buffer.writeShort(index++);
@@ -255,7 +255,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// PvP Damage Decrease
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVP_PHYSICAL_ATTACK_DEFENCE));
 		
 		// Received basic PvE Damage
 		buffer.writeShort(index++);
@@ -275,7 +275,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// PvE Damage Decrease
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVE_PHYSICAL_ATTACK_DEFENCE));
 		
 		// Received basic damage power
 		buffer.writeShort(index++);
@@ -355,7 +355,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// Shield Defense (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.SHIELD_DEFENCE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.SHIELD_DEFENCE));
 		
 		// Shield Defence (num.)
 		buffer.writeShort(index++);
@@ -396,7 +396,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// ################################## ACCURACY ##############################
 		// P. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.ACCURACY_COMBAT) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_COMBAT));
 		
 		// P. Accuracy (num.)
 		buffer.writeShort(index++);
@@ -404,7 +404,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// M. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.ACCURACY_MAGIC) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_MAGIC));
 		
 		// M. Accuracy (num.)
 		buffer.writeShort(index++);
@@ -593,7 +593,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// HP Recovery Rate (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.REGENERATE_HP_RATE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.REGENERATE_HP_RATE));
 		
 		// HP Recovery Rate (num.)
 		buffer.writeShort(index++);
@@ -633,7 +633,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// MP Recovery Rate (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.REGENERATE_MP_RATE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.REGENERATE_MP_RATE));
 		
 		// MP Recovery Rate (num.)
 		buffer.writeShort(index++);
@@ -673,7 +673,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// CP Recovery Rate (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.REGENERATE_CP_RATE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.REGENERATE_CP_RATE));
 		
 		// CP Recovery Rate (num.)
 		buffer.writeShort(index++);
@@ -849,5 +849,15 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// Infection Resistance (%)
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getDefenceTrait(TraitType.INFECTION) * 100);
+	}
+	
+	private int calcPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((stat.getMul(statType) - 1.0) * 10000.0);
+	}
+	
+	private int calcInvertedPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((1.0 - stat.getMul(statType)) * 10000.0);
 	}
 }

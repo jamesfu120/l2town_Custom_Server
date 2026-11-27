@@ -20,13 +20,23 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Map;
+
 import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.PlayerConfig;
+import org.l2jmobius.gameserver.data.enums.ArmorMagicalDefenceType;
+import org.l2jmobius.gameserver.data.enums.ArmorPhysicalDefenceType;
+import org.l2jmobius.gameserver.data.xml.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.entity.actor.Player;
 import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.entity.item.enums.BodyPart;
 import org.l2jmobius.gameserver.entity.item.enums.ItemGrade;
 import org.l2jmobius.gameserver.entity.item.enums.ShotType;
+import org.l2jmobius.gameserver.entity.item.instance.Item;
 import org.l2jmobius.gameserver.entity.item.type.WeaponType;
+import org.l2jmobius.gameserver.entity.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.entity.actor.transform.Transform;
+import org.l2jmobius.gameserver.mechanics.stats.IStatFunction;
 import org.l2jmobius.gameserver.mechanics.stats.Stat;
 import org.l2jmobius.gameserver.mechanics.stats.TraitType;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -37,6 +47,45 @@ import org.l2jmobius.gameserver.network.ServerPackets;
  */
 public class ExUserViewInfoParameter extends ServerPacket
 {
+	private static final IStatFunction STAT_FN = (creature, base, stat) -> 0;
+	
+	private static final int[] DEFENCE_SLOTS =
+	{
+		Inventory.PAPERDOLL_CHEST,
+		Inventory.PAPERDOLL_LEGS,
+		Inventory.PAPERDOLL_HEAD,
+		Inventory.PAPERDOLL_FEET,
+		Inventory.PAPERDOLL_GLOVES,
+		Inventory.PAPERDOLL_UNDER,
+		Inventory.PAPERDOLL_CLOAK,
+		Inventory.PAPERDOLL_HAIR
+	};
+	
+	private static final int[] ACCESSORY_SLOTS =
+	{
+		Inventory.PAPERDOLL_LFINGER,
+		Inventory.PAPERDOLL_RFINGER,
+		Inventory.PAPERDOLL_LEAR,
+		Inventory.PAPERDOLL_REAR,
+		Inventory.PAPERDOLL_NECK
+	};
+
+	private static final ArmorPhysicalDefenceType[] ARMOR_DEFENCE_SLOTS =
+	{
+		ArmorPhysicalDefenceType.HEAD,
+		ArmorPhysicalDefenceType.CHEST,
+		ArmorPhysicalDefenceType.LEGS,
+		ArmorPhysicalDefenceType.GLOVES,
+		ArmorPhysicalDefenceType.FEET
+	};
+	
+	private static final ArmorMagicalDefenceType[] ACCESSORY_DEFENCE_SLOTS =
+	{
+		ArmorMagicalDefenceType.EARRING,
+		ArmorMagicalDefenceType.RING,
+		ArmorMagicalDefenceType.NECKLACE
+	};
+	
 	private final Player _player;
 	
 	public ExUserViewInfoParameter(Player player)
@@ -47,970 +96,1239 @@ public class ExUserViewInfoParameter extends ServerPacket
 	@Override
 	public void writeImpl(GameClient client, WriteBuffer buffer)
 	{
-		
 		ServerPackets.EX_USER_VIEW_INFO_PARAMETER.writeId(this, buffer);
 		
 		final PlayerStat stat = _player.getStat();
+		final double shotsBonusPct = ((stat.getMul(Stat.SHOTS_BONUS) - 1.0) * 10000.0) + (stat.getAdd(Stat.SHOTS_BONUS) * 100.0);
 		int index = 0;
 		
 		// Number of parameters.
 		buffer.writeInt(237);
 		
 		// ################################## ATTACK ##############################
-		// P. Atk. (%)
+		// [0] P. Atk. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.PHYSICAL_ATTACK) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PHYSICAL_ATTACK));
 		
-		// P. Atk. (num.)
+		// [1] P. Atk. (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(_player.getPAtk());
+		buffer.writeInt(calcFlatPAtk(stat));
 		
-		// M. Atk. (%)
+		// [2] M. Atk. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.MAGIC_ATTACK) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGIC_ATTACK));
 		
-		// M. Atk. (num)
+		// [3] M. Atk. (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(_player.getMAtk());
+		buffer.writeInt(calcFlatMAtk(stat));
 		
-		// Soulshot Damage - Activation
+		// [4] Soulshot Damage - Activation
 		buffer.writeShort(index++);
-		buffer.writeInt((_player.isChargedShot(ShotType.BLESSED_SOULSHOTS) || _player.isChargedShot(ShotType.SOULSHOTS)) ? (10000 + (_player.getActiveRubyJewel() != null ? (int) _player.getActiveRubyJewel().getBonus() * 1000 : 0)) : 0);
+		buffer.writeInt((_player.isChargedShot(ShotType.BLESSED_SOULSHOTS) || _player.isChargedShot(ShotType.SOULSHOTS)) ? (10000 + (_player.getActiveRubyJewel() != null ? (int) (_player.getActiveRubyJewel().getBonus() * 10000) : 0)) : 0);
 		
-		// Spiritshot Damage - Activation
+		// [5] Spiritshot Damage - Activation
 		buffer.writeShort(index++);
-		buffer.writeInt((_player.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) || _player.isChargedShot(ShotType.SPIRITSHOTS)) ? (10000 + (_player.getActiveShappireJewel() != null ? (int) _player.getActiveShappireJewel().getBonus() * 1000 : 0)) : 0);
+		buffer.writeInt((_player.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) || _player.isChargedShot(ShotType.SPIRITSHOTS)) ? (10000 + (_player.getActiveShappireJewel() != null ? (int) (_player.getActiveShappireJewel().getBonus() * 10000) : 0)) : 0);
 		
-		// Soulshot Damage - Enchanted Weapons
-		buffer.writeShort(index++);
-		buffer.writeInt((((_player.getActiveWeaponInstance() != null) && _player.getActiveWeaponInstance().isEnchanted()) ? (int) (_player.getActiveWeaponInstance().getEnchantLevel() * (_player.getActiveWeaponItem().getItemGrade() == ItemGrade.S ? 1.6 : _player.getActiveWeaponItem().getItemGrade() == ItemGrade.A ? 1.4 : _player.getActiveWeaponItem().getItemGrade() == ItemGrade.B ? 0.7 : _player.getActiveWeaponItem().getItemGrade().equals(ItemGrade.C) ? 0.4 : _player.getActiveWeaponItem().getItemGrade().equals(ItemGrade.D) ? 0.4 : 0) * 100) : 0));
-		
-		// Spiritshot Damage - Enchanted Weapons
+		// [6] Soulshot Damage - Enchanted Weapons
 		buffer.writeShort(index++);
 		buffer.writeInt((((_player.getActiveWeaponInstance() != null) && _player.getActiveWeaponInstance().isEnchanted()) ? (int) (_player.getActiveWeaponInstance().getEnchantLevel() * (_player.getActiveWeaponItem().getItemGrade() == ItemGrade.S ? 1.6 : _player.getActiveWeaponItem().getItemGrade() == ItemGrade.A ? 1.4 : _player.getActiveWeaponItem().getItemGrade() == ItemGrade.B ? 0.7 : _player.getActiveWeaponItem().getItemGrade().equals(ItemGrade.C) ? 0.4 : _player.getActiveWeaponItem().getItemGrade().equals(ItemGrade.D) ? 0.4 : 0) * 100) : 0));
 		
-		// Soulshot Damage - Misc.
+		// [7] Spiritshot Damage - Enchanted Weapons
 		buffer.writeShort(index++);
-		buffer.writeInt(_player.getActiveRubyJewel() != null ? (int) (_player.getActiveRubyJewel().getBonus() * 10000) : 0);
+		buffer.writeInt((((_player.getActiveWeaponInstance() != null) && _player.getActiveWeaponInstance().isEnchanted()) ? (int) (_player.getActiveWeaponInstance().getEnchantLevel() * (_player.getActiveWeaponItem().getItemGrade() == ItemGrade.S ? 1.6 : _player.getActiveWeaponItem().getItemGrade() == ItemGrade.A ? 1.4 : _player.getActiveWeaponItem().getItemGrade() == ItemGrade.B ? 0.7 : _player.getActiveWeaponItem().getItemGrade().equals(ItemGrade.C) ? 0.4 : _player.getActiveWeaponItem().getItemGrade().equals(ItemGrade.D) ? 0.4 : 0) * 100) : 0));
 		
-		// Spiritshot Damage - Misc.
+		// [8] Soulshot damage up
 		buffer.writeShort(index++);
-		buffer.writeInt(_player.getActiveShappireJewel() != null ? (int) (_player.getActiveShappireJewel().getBonus() * 10000) : 0);
+		buffer.writeInt((int) Math.round((_player.getActiveRubyJewel() != null ? _player.getActiveRubyJewel().getBonus() * 10000.0 : 0.0) + shotsBonusPct));
 		
-		// Basic PvP Damage
+		// [9] Spiritshot damage up
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.PVP_PHYSICAL_ATTACK_DAMAGE, 100) - 100) * 100);
+		buffer.writeInt((int) Math.round((_player.getActiveShappireJewel() != null ? _player.getActiveShappireJewel().getBonus() * 10000.0 : 0.0) + shotsBonusPct));
 		
-		// P. Skill Damage in PvP
+		// [10] PvP damage from basic attacks
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.PVP_PHYSICAL_SKILL_DAMAGE, 100) - 100) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PVP_PHYSICAL_ATTACK_DAMAGE));
 		
-		// M. Skill Damage in PvP
+		// [11] P. Skill Damage in PvP
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.PVP_MAGICAL_SKILL_DAMAGE, 100) - 100) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PVP_PHYSICAL_SKILL_DAMAGE));
 		
-		// Inflicted PvP Damage
+		// [12] M. Skill Damage in PvP
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PVP_MAGICAL_SKILL_DAMAGE));
+		
+		// [13] Inflicted PvP Damage
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getValue(Stat.PVP_PHYSICAL_ATTACK_DAMAGE, 0));
 		
-		// PvP Damage Decrease Ignore
+		// [14] PvP Damage Decrease Ignore
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Basic PvE Damage
+		// [15] PvE damage from basic attacks
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.PVE_PHYSICAL_ATTACK_DAMAGE, 100) - 100) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PVE_PHYSICAL_ATTACK_DAMAGE));
 		
-		// P. Skill Damage in PvE
+		// [16] P. Skill Damage in PvE
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.PVE_PHYSICAL_SKILL_DAMAGE, 100) - 100) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PVE_PHYSICAL_SKILL_DAMAGE));
 		
-		// M. Skill Damage in PvE
+		// [17] M. Skill Damage in PvE
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.PVE_MAGICAL_SKILL_DAMAGE, 100) - 100) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PVE_MAGICAL_SKILL_DAMAGE));
 		
-		// PvE Damage
+		// [18] PvE Damage
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getValue(Stat.PVE_DAMAGE_TAKEN) * 100);
 		
-		// PvE Damage Decrease Ignore
+		// [19] PvE Damage Decrease Ignore
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getValue(Stat.PVE_PHYSICAL_SKILL_DAMAGE) * 100);
 		
-		// TODO: Basic Power
+		// [20] Basic Attack Power
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.AUTO_ATTACK_DAMAGE_BONUS));
 		
-		// P. Skill Power
+		// [21] P. Skill Power
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.PHYSICAL_SKILL_POWER, 100) - 100) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PHYSICAL_SKILL_POWER));
 		
-		// M. Skill Power
+		// [22] M. Skill Power
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.MAGICAL_SKILL_POWER, 100) - 100) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGICAL_SKILL_POWER));
 		
-		// AoE Skill Damage
+		// [23] AoE Skill Damage
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.AREA_OF_EFFECT_DAMAGE_MODIFY) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.AREA_OF_EFFECT_DAMAGE_MODIFY));
 		
-		// Damage Bonus - Sword
+		// [24] Damage Bonus - Sword
 		buffer.writeShort(index++);
 		buffer.writeInt(((_player.getActiveWeaponInstance() != null) && (_player.getActiveWeaponInstance().getItemType() == WeaponType.SWORD)) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Sword Two hand
+		// [25] Damage Bonus - Sword Two hand
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Damage Bonus - Magic Sword
+		// [26] Damage Bonus - Magic Sword
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Damage Bonus - Ancient Sword
+		// [27] Damage Bonus - Ancient Sword
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && (_player.getActiveWeaponInstance().getItemType() == WeaponType.ANCIENTSWORD) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Dagger
+		// [28] Damage Bonus - Dagger
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && (_player.getActiveWeaponInstance().getItemType() == WeaponType.DAGGER) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Rapier
+		// [29] Damage Bonus - Rapier
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && (_player.getActiveWeaponInstance().getItemType() == WeaponType.RAPIER) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Blunt Weapon (one hand)
+		// [30] Damage Bonus - Blunt Weapon (one hand)
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && ((_player.getActiveWeaponInstance().getItemType() == WeaponType.ETC) || (_player.getActiveWeaponInstance().getItemType() == WeaponType.BLUNT) || (_player.getActiveWeaponInstance().getItemType() == WeaponType.DUALBLUNT)) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Blunt Weapon (two hand)
+		// [31] Damage Bonus - Blunt Weapon (two hand)
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Damage Bonus - Magic Blunt Weapon (one hand)
+		// [32] Damage Bonus - Magic Blunt Weapon (one hand)
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Damage Bonus - Magic Blunt Weapon (two hand)
+		// [33] Damage Bonus - Magic Blunt Weapon (two hand)
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Damage Bonus - Spear
+		// [34] Damage Bonus - Spear
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && (_player.getActiveWeaponInstance().getItemType() == WeaponType.POLE) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Fists
+		// [35] Damage Bonus - Fists
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && ((_player.getActiveWeaponInstance().getItemType() == WeaponType.FIST) || (_player.getActiveWeaponInstance().getItemType() == WeaponType.DUALFIST)) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Dual Swords
+		// [36] Damage Bonus - Dual Swords
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && (_player.getActiveWeaponInstance().getItemType() == WeaponType.DUAL) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Bow
+		// [37] Damage Bonus - Bow
 		buffer.writeShort(index++);
 		buffer.writeInt((_player.getActiveWeaponInstance() != null) && ((_player.getActiveWeaponInstance().getItemType() == WeaponType.BOW) || (_player.getActiveWeaponInstance().getItemType() == WeaponType.CROSSBOW) || (_player.getActiveWeaponInstance().getItemType() == WeaponType.TWOHANDCROSSBOW)) ? stat.getWeaponBonusPAtk() : 0);
 		
-		// Damage Bonus - Firearms
+		// [38] Damage Bonus - Firearms
 		buffer.writeShort(index++);
 		
 		// ESSENCE buffer.writeInt((_player.getActiveWeaponInstance() != null) && (_player.getActiveWeaponInstance().getItemType() == WeaponType.PISTOLS) ? stat.getWeaponBonusPAtk() : 0);
 		buffer.writeInt(0);
 		
 		// ################################## DEFENCE ##############################
-		// P. Def. (%)
+		// [39] P. Def. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.PHYSICAL_DEFENCE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.PHYSICAL_DEFENCE));
 		
-		// P. Def. (num.)
+		// [40] P. Def. (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(_player.getPDef());
+		buffer.writeInt(calcFlatPDef(stat));
 		
-		// M. Def. (%)
+		// [41] M. Def. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.MAGICAL_DEFENCE) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGICAL_DEFENCE));
 		
-		// M. Def. (num.)
+		// [42] M. Def. (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(_player.getMDef());
+		buffer.writeInt(calcFlatMDef(stat));
 		
-		// Soulshot Damage Resistance
+		// [43] Soulshot Damage Resistance
 		buffer.writeShort(index++);
 		buffer.writeInt((int) (100 - (stat.getValue(Stat.SOULSHOT_RESISTANCE, 1) * 100)));
 		
-		// Spiritshot Damage Resistance
+		// [44] Spiritshot Damage Resistance
 		buffer.writeShort(index++);
 		buffer.writeInt((int) (100 - (stat.getValue(Stat.SPIRITSHOT_RESISTANCE, 1) * 100)));
 		
-		// Received PvP Damage from Basic Attacks
+		// [45] Received PvP damage from basic attacks
 		buffer.writeShort(index++);
-		buffer.writeInt(0 - ((int) (stat.getValue(Stat.PVP_PHYSICAL_ATTACK_DEFENCE, 100) - 100) * 100));
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVP_PHYSICAL_ATTACK_DEFENCE));
 		
-		// Received PvP P. Skill Damage
+		// [46] Received P. Skill Damage in PvP
 		buffer.writeShort(index++);
-		buffer.writeInt(0 - ((int) (stat.getValue(Stat.PVP_PHYSICAL_SKILL_DEFENCE, 100) - 100) * 100));
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVP_PHYSICAL_SKILL_DEFENCE));
 		
-		// Received PvP M. Skill Damage
+		// [47] Received M. Skill Damage in PvP
 		buffer.writeShort(index++);
-		buffer.writeInt(0 - ((int) (stat.getValue(Stat.PVP_MAGICAL_SKILL_DEFENCE, 100) - 100) * 100));
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVP_MAGICAL_SKILL_DEFENCE));
 		
-		// Received PvP Damage
+		// [48] Received PvP Damage
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getValue(Stat.PVP_DAMAGE_TAKEN) * 100);
 		
-		// PvP Damage Decrease
+		// [49] PvP Damage Decrease
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Received PvE Damage from Basic Attacks
+		// [50] Received PvE damage from basic attacks
 		buffer.writeShort(index++);
-		buffer.writeInt(0 - ((int) (stat.getValue(Stat.PVE_PHYSICAL_ATTACK_DEFENCE, 100) - 100) * 100));
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVE_PHYSICAL_ATTACK_DEFENCE));
 		
-		// Received PvE P. Skill Damage
+		// [51] Received P. Skill Damage in PvE
 		buffer.writeShort(index++);
-		buffer.writeInt(0 - ((int) (stat.getValue(Stat.PVE_PHYSICAL_SKILL_DEFENCE, 100) - 100) * 100));
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVE_PHYSICAL_SKILL_DEFENCE));
 		
-		// Received PvE M. Skill Damage
+		// [52] Received M. Skill Damage in PvE
 		buffer.writeShort(index++);
-		buffer.writeInt(0 - ((int) (stat.getValue(Stat.PVE_MAGICAL_SKILL_DEFENCE, 100) - 100) * 100));
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVE_MAGICAL_SKILL_DEFENCE));
 		
-		// Received PvE Damage
+		// [53] Received PvE Damage
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getValue(Stat.PVE_DAMAGE_TAKEN) * 100);
 		
-		// PvE Damage Decrease
+		// [54] PvE Damage Decrease
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Received basic damage power
+		// [55] Received basic damage power
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// P. Skill Power when hit
+		// [56] P. Skill Power when hit
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getValue(Stat.PHYSICAL_SKILL_POWER) * 100);
 		
-		// M. Skill Power when hit
+		// [57] M. Skill Power when hit
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getValue(Stat.MAGICAL_SKILL_POWER) * 100);
 		
-		// AOE Damage Resistance
+		// [58] AoE Damage Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.AREA_OF_EFFECT_DAMAGE_DEFENCE, 100) - 100) * 100));
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.AREA_OF_EFFECT_DAMAGE_DEFENCE));
 		
-		// Sword Resistance Nr. 60
+		// [59] Sword Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.SWORD) * 10000));
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.SWORD, TraitType.ANCIENTSWORD));
 		
-		// Shield Defense (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Shield Defence (num.)
+		// [60] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Shield Defence Rate
+		// [61] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Dagger Weapon Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.DAGGER) * 10000));
-		
-		// Received Damage when Immobilized
+		// [62] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Blunt Weapon Resistance
+		// [63] Dagger Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.BLUNT) * 10000));
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.DAGGER));
 		
-		// TODO: Accessory P. Def.
+		// [64] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [65] Blunt Weapon Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.BLUNT));
+		
+		// [66] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [67] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [68] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [69] Spear Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.POLE));
+		
+		// [70] Fist Weapon Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.DUALFIST, TraitType.FIST));
+		
+		// [71] Dual Swords Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.DUAL));
+		
+		// [72] Bow Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.BOW));
+		
+		// [73] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [74] Shield Defense (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.SHIELD_DEFENCE));
+		
+		// [75] Shield Defense (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.SHIELD_DEFENCE));
+		
+		// [76] Shield Defense Rate
+		buffer.writeShort(index++);
+		buffer.writeInt((int) Math.round(((stat.getMul(Stat.SHIELD_DEFENCE_RATE) - 1.0) * 10000.0) + (stat.getAdd(Stat.SHIELD_DEFENCE_RATE) * 100.0)));
+		
+		// [77] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [78] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [79] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [80] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [81] Received fixed damage
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.REAL_DAMAGE_RESIST));
+		
+		// [82] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [83] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
 		// ################################## ACCURACY / EVASION ##############################
-		// P. Accuracy (%)
+		// [84] P. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_COMBAT));
 		
-		// P. Accuracy (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Spear Weapon Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.POLE) * 10000));
-		
-		// Fists Weapon Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.DUALFIST) * 10000));
-		
-		// Dual Sword Resistance Nr. 72
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.DUAL) * 10000));
-		
-		// Bow Weapon Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.BOW) * 10000));
-		
-		// M. Evasion (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Shield Defence (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.SHIELD_DEFENCE)) * 100));
-		
-		// ################################## SPEED ##############################
-		// Shield Defence (+)
-		buffer.writeShort(index++);
-		buffer.writeInt(_player.getShldDef());
-		
-		// Shield Defence Rate
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.SHIELD_DEFENCE_RATE, 100) - 100) * 100));
-		
-		// Casting Spd. (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Casting Spd. (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Speed (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Speed (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// ################################## CRITICAL ##############################
-		// Received Fixed Damage
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.REAL_DAMAGE_RESIST, 100) - 100) * 100));
-		
-		// Basic Critical Rate (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// P. Skill Critical Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// P. Accuracy (%)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.ACCURACY_COMBAT) * 100);
-		
-		// P. Accuracy (num.)
+		// [85] P. Accuracy (+)
 		buffer.writeShort(index++);
 		buffer.writeInt(_player.getAccuracy());
 		
-		// M. Accuracy (%)
+		// [86] M. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.ACCURACY_MAGIC) * 100);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_MAGIC));
 		
-		// M. Accuracy (num.)
+		// [87] M. Accuracy (+)
 		buffer.writeShort(index++);
 		buffer.writeInt(_player.getMagicAccuracy());
 		
-		// TODO: Received basic Critical Rate (num.)
+		// [88] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Received P. Skill Critical Rate (%)
+		// [89] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// P. Evasion (%)
+		// [90] P. Evasion (%)
 		buffer.writeShort(index++);
 		buffer.writeInt(((_player.getEvasionRate() * 100) / PlayerConfig.MAX_EVASION));
 		
-		// P. Evasion (num.)
+		// [91] P. Evasion (+)
 		buffer.writeShort(index++);
 		buffer.writeInt(_player.getEvasionRate());
 		
-		// M. Evasion (%)
+		// [92] M. Evasion (%)
 		buffer.writeShort(index++);
 		buffer.writeInt(((_player.getMagicEvasionRate() * 100) / PlayerConfig.MAX_EVASION));
 		
-		// M. Evasion (num.)
+		// [93] M. Evasion (+)
 		buffer.writeShort(index++);
 		buffer.writeInt(_player.getMagicEvasionRate());
 		
-		// P. Skill Critical Damage (%)
+		// [94] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// M. Skill Critical Damage (%)
+		// [95] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Received Basic Critical Damage (%)
+		// [96] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Received P. Skill Critical Damage (%)
+		// [97] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Atk. Spd. (%)
+		// ################################## SPEED ##############################
+		// [98] Atk. Spd. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(((_player.getPAtkSpd() * 100) / PlayerConfig.MAX_PATK_SPEED));
+		buffer.writeInt(calcPercentBonus(stat, Stat.PHYSICAL_ATTACK_SPEED));
 		
-		// Atk. Spd. (num.)
+		// [99] Atk. Spd. (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(stat.getPAtkSpd());
+		buffer.writeInt(calcFlatBonus(stat, Stat.PHYSICAL_ATTACK_SPEED));
 		
-		// Casting Spd. (%)
+		// [100] Casting Spd. (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((_player.getMAtkSpd() * 100) / PlayerConfig.MAX_MATK_SPEED);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGIC_ATTACK_SPEED));
 		
-		// Casting Spd. (num.)
+		// [101] Casting Spd. (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(stat.getMAtkSpd());
+		buffer.writeInt(calcFlatBonus(stat, Stat.MAGIC_ATTACK_SPEED));
 		
-		// Speed (%)
+		// [102] Speed (%)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) ((_player.getMoveSpeed() * 100) / PlayerConfig.MAX_RUN_SPEED));
+		buffer.writeInt(calcPercentBonus(stat, Stat.RUN_SPEED));
 		
-		// Speed (num.)
+		// [103] Speed (+)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getMoveSpeed());
+		buffer.writeInt(calcFlatBonus(stat, Stat.RUN_SPEED));
 		
-		// Basic Critical Rate (%)
+		// ################################## CRITICAL ##############################
+		// [104] Critical Rate for basic attacks (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(stat.getCriticalHit());
+		buffer.writeInt(calcPercentBonus(stat, Stat.CRITICAL_RATE));
 		
-		// Basic Critical Rate (num.)
+		// [105] Critical Rate for basic attacks (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(stat.getCriticalHit());
+		buffer.writeInt(calcFlatBonus(stat, Stat.CRITICAL_RATE));
 		
-		// P. Skill Critical Rate (%)
+		// [106] P. Skill Critical Rate (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.CRITICAL_RATE_SKILL, 100) - 100) * 100));
+		buffer.writeInt(calcPercentBonus(stat, Stat.CRITICAL_RATE_SKILL));
 		
-		// TODO: P. Skill Critical Rate (num.)
+		// [107] P. Skill Critical Rate (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.CRITICAL_RATE_SKILL));
+		
+		// [108] M. Skill Critical Rate (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGIC_CRITICAL_RATE));
+		
+		// [109] M. Skill Critical Rate (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.MAGIC_CRITICAL_RATE));
+		
+		// [110] Received Critical Rate from basic attacks (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.DEFENCE_CRITICAL_RATE));
+		
+		// [111] Received Critical Rate from basic attacks (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(-(int) Math.round(stat.getAdd(Stat.DEFENCE_CRITICAL_RATE_ADD)));
+		
+		// [112] Received P. Skill Critical Rate (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_RATE));
+		
+		// [113] Received P. Skill Critical Rate (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(-(int) Math.round(stat.getAdd(Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_RATE_ADD)));
+		
+		// [114] Received M. Skill Critical Rate (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.DEFENCE_MAGIC_CRITICAL_RATE));
+		
+		// [115] Received M. Skill Critical Rate (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(-(int) Math.round(stat.getAdd(Stat.DEFENCE_MAGIC_CRITICAL_RATE_ADD)));
+		
+		// [116] Critical Damage for basic attacks
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.CRITICAL_DAMAGE));
+		
+		// [117] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// M. Skill Critical Rate (%)
+		// [118] P. Skill Critical Damage
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.MAGIC_CRITICAL_RATE, 100) - 100) * 100));
+		buffer.writeInt(calcPercentBonus(stat, Stat.PHYSICAL_SKILL_CRITICAL_DAMAGE));
 		
-		// M. Skill Critical Rate (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Received basic Critical Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.DEFENCE_CRITICAL_RATE, 100) - 100) * 100));
-		
-		// Received basic Critical Rate (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.DEFENCE_CRITICAL_RATE_ADD));
-		
-		// Received P. Skill Critical Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_RATE, 100) - 100) * 100));
-		
-		// Received P. Skill Critical Rate (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_RATE_ADD));
-		
-		// Received M. Skill Critical Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE, 100) - 100) * 100));
-		
-		// Received M. Skill Critical Rate (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE_ADD));
-		
-		// Basic Critical Damage (%)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.CRITICAL_DAMAGE) * 100);
-		
-		// MP Recovery Rate (num.)
+		// [119] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// P. Skill Critical Damage
+		// [120] M. Skill Critical Damage
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.PHYSICAL_SKILL_CRITICAL_DAMAGE, 100) - 100) * 100));
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAGIC_CRITICAL_DAMAGE));
 		
-		// CP Recovery Rate (num.)
+		// [121] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [122] Received Critical Damage from basic attacks
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.DEFENCE_CRITICAL_DAMAGE));
+		
+		// [123] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [124] Received P. Skill Critical Damage
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_DAMAGE));
+		
+		// [125] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [126] Received M. Skill Critical Damage
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.DEFENCE_MAGIC_CRITICAL_DAMAGE));
+		
+		// [127] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// ################################## RECOVERY ##############################
+		// [128] HP Recovery Potions' Effect (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ADDITIONAL_POTION_HP));
+		
+		// [129] HP Recovery Potions' Effect (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.ADDITIONAL_POTION_HP));
+		
+		// [130] MP Recovery Potions' Effect (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ADDITIONAL_POTION_MP));
+		
+		// [131] MP Recovery Potions' Effect (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.ADDITIONAL_POTION_MP));
+		
+		// [132] HP Recovery Rate (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.REGENERATE_HP_RATE));
+		
+		// [133] HP Recovery Rate (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.REGENERATE_HP_RATE));
+		
+		// [134] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [135] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [136] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [137] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [138] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [139] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [140] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [141] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [142] MP Recovery Rate (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.REGENERATE_MP_RATE));
+		
+		// [143] MP Recovery Rate (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.REGENERATE_MP_RATE));
+		
+		// [144] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [145] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [146] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [147] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [148] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [149] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [150] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [151] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [152] CP Recovery Rate (%)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcPercentBonus(stat, Stat.REGENERATE_CP_RATE));
+		
+		// [153] CP Recovery Rate (+)
+		buffer.writeShort(index++);
+		buffer.writeInt(calcFlatBonus(stat, Stat.REGENERATE_CP_RATE));
+		
+		// [154] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [155] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [156] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [157] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [158] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [159] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [160] Unused
+		buffer.writeShort(index++);
+		buffer.writeInt(0);
+		
+		// [161] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
 		// ################################## ASSIST ##############################
-		// M. Skill Critical Damage
+		// [162] P. Skill Cooldown
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.MAGIC_CRITICAL_DAMAGE, 100) - 100) * 100));
+		buffer.writeInt((int) Math.round((stat.getReuseTypeValue(0) - 1.0) * 10000.0));
 		
-		// M. Skill Cooldown (%)
+		// [163] M. Skill Cooldown
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round((stat.getReuseTypeValue(1) - 1.0) * 10000.0));
 		
-		// Received C. Damage from Basic Attacks
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 100) - 100) * 100));
-		
-		// P. Skill MP Consumption Decrease (num.)
+		// [164] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Received P. Skill Critical Damage
+		// [165] P. Skill MP Consumption (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_DAMAGE, 100) - 100) * 100));
+		buffer.writeInt((int) Math.round((stat.getMpConsumeTypeValue(0) - 1.0) * 10000.0));
 		
-		// M. Skill MP Consumption Decrease (num.)
+		// [166] M. Skill MP Consumption (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round((stat.getMpConsumeTypeValue(1) - 1.0) * 10000.0));
 		
-		// Received M. Skill Critical Damage
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.DEFENCE_MAGIC_CRITICAL_DAMAGE, 100) - 100) * 100));
-		
-		// TODO: XP
+		// [167] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// HP ReCovery Potions' Effect (%)
+		// [168] P. Skill MP Consumption (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.ADDITIONAL_POTION_HP, 100) - 100) * 100));
+		buffer.writeInt(0);
 		
-		// HP Recovery Potions' Effect (num.)
+		// [169] M. Skill MP Consumption (+)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.ADDITIONAL_POTION_HP));
+		buffer.writeInt(0);
 		
-		// MP Recovery Potions' Effect (%)
+		// [170] Unused
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.ADDITIONAL_POTION_MP, 100) - 100) * 100));
+		buffer.writeInt(0);
 		
-		// MP Recovery Potions' Effect (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.ADDITIONAL_POTION_MP));
-		
-		// HP Recovery Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.REGENERATE_HP_RATE, 100) - 100) * 100));
-		
-		// HP Recovery Rate (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt(stat.getHpRegen());
-		
-		// TODO: Skill Mastery Rate (+)
+		// [171] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
 		// ################################## DEBUFFS ##############################
-		// Debuff Resistance (%)
+		// [172] Debuff Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.RESIST_ABNORMAL_DEBUFF));
+		
+		// [173] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Debilitation Atk. Rate
+		// [174] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Confusion Atk. Rate
+		// [175] Confusion Atk. Rate
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.SHOCK));
+		
+		// [176] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Stupor Atk. Rate
+		// [177] Stupor Atk. Rate
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.SLEEP, TraitType.CHANGEBODY));
+		
+		// [178] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Danger Zone Atk. Rate
+		// [179] Pull Atk. Rate
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.PULL));
+		
+		// [180] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Pull Atk. Rate
+		// [181] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Petrification Atk. Rate
+		// [182] Obstruction Atk. Rate
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.HOLD, TraitType.PARALYZE));
+		
+		// [183] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// MP Recovery Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.REGENERATE_MP_RATE, 100) - 100) * 100));
-		
-		// MP Recovery Rate (num.)
-		buffer.writeShort(index++);
-		buffer.writeInt(stat.getMpRegen());
-		
-		// Debilitation Resistance (%)
+		// [184] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Confusion Resistance (%)
+		// [185] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Stupor Resistance (%)
+		// [186] Confusion Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.SHOCK));
+		
+		// [187] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Danger Zone Resistance (%)
+		// [188] Stupor Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.SLEEP, TraitType.CHANGEBODY));
+		
+		// [189] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Pull Resistance (%)
+		// [190] Pull Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.PULL));
+		
+		// [191] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Petrification Resistance (%)
+		// [192] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Infection Resistance (%)
+		// [193] Obstruction Resistance
+		buffer.writeShort(index++);
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.HOLD, TraitType.PARALYZE));
+		
+		// [194] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// Obstruction Resistance (%)
+		// [195] Unused
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// CP Recovery Rate (%)
+		// [196] Infection Atk. Rate
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.REGENERATE_CP_RATE, 100) - 100) * 100));
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.POISON, TraitType.BLEED));
 		
-		// CP Recovery Rate (num.) nr. 153
+		// [197] Infection Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt(stat.getCpRegen());
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.POISON, TraitType.BLEED));
 		
-		// None
+		// ################################## EXTENDED ##############################
+		// [198] Weapon P. Atk.
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.WEAPON_BONUS_PHYSICAL_ATTACK, 0)));
 		
-		// None
+		// [199] Weapon M. Atk.
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.WEAPON_BONUS_MAGIC_ATTACK, 0)));
 		
-		// None
+		// [200] Backstab damage up
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.REAR_DAMAGE_RATE));
 		
-		// None
+		// [201] Damage to immobilized targets
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.IMMOBILE_DAMAGE_BONUS));
 		
-		// None
+		// [202] Received damage when immobilized
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.IMMOBILE_DAMAGE_RESIST));
 		
-		// None
+		// [203] Armor P. Def.
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcArmorBonusPDef(stat));
 		
-		// None
+		// [204] Accessory M. Def.
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcAccessoryBonusMDef(stat));
 		
-		// None
+		// [205] Dual Blunt Weapons Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.DUALBLUNT));
 		
-		// P. Skill Cooldown (%)
+		// [206] Crossbow Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getReuseTypeValue(1) * 100);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.CROSSBOW, TraitType.TWOHANDCROSSBOW));
 		
-		// M. Skill Cooldown (%)
+		// [207] Dual Daggers Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getReuseTypeValue(2) * 100);
+		buffer.writeInt(calcWeaponResistance(stat, TraitType.DUALDAGGER));
 		
-		// None
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// P. Skill MP Consumption Decrease (%)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getMpConsumeTypeValue(1) * 100);
-		
-		// M. Skill MP Consumption Decrease (%)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getMpConsumeTypeValue(2) * 100);
-		
-		// None
+		// [208] Perfection Defense (+)
 		buffer.writeShort(index++);
 		buffer.writeInt(0);
 		
-		// P. Skill MP Consumption Decrease (num.)
+		// [209] Perfection trigger rate (+)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getMpConsumeTypeValue(1) * 100);
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.PERFECTION_RATE, 100) - 100));
 		
-		// M. Skill MP Consumption Decrease (num.)
+		// [210] Perfection Resistance (+)
 		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getMpConsumeTypeValue(2) * 100);
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.PERFECTION_RESIST, 100) - 100));
 		
-		// None
+		// [211] Perfection power (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.PERFECTION_POWER, 100) - 100));
 		
-		// None
+		// [212] Max HP (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAX_HP));
 		
-		// Debuff Resistance Nr. 173
+		// [213] Max HP (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.RESIST_ABNORMAL_DEBUFF, 100) - 100) * 100));
+		buffer.writeInt(calcMaxHpFlatBonus(stat));
 		
-		// None
+		// [214] Max MP (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAX_MP));
 		
-		// None
+		// [215] Max MP (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcMaxMpFlatBonus(stat));
 		
-		// TODO: Confusion Attack Rate
+		// [216] Max CP (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.MAX_CP));
 		
-		// None
+		// [217] Max CP (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcFlatBonus(stat, Stat.MAX_CP));
 		
-		// TODO: Stupor Attack Rate
+		// [218] Max HP limit
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round((PlayerConfig.MAX_HP * stat.getMul(Stat.HP_LIMIT)) + stat.getAdd(Stat.HP_LIMIT)));
 		
-		// None
+		// [219] Vitality bonus
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.VITALITY_EXP_RATE));
 		
-		// Pull Attack Rate
+		// [220] XP
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getAttackTrait(TraitType.PULL) * 100));
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.BONUS_EXP, 0) * 100.0));
 		
-		// None
+		// [221] SP
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.BONUS_SP, 0) * 100.0));
 		
-		// None
+		// [222] Adena drop rate
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.BONUS_DROP_ADENA));
 		
-		// TODO: Obstruction Attack Rate
+		// [223] Adena drop rate with Vitality
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.BONUS_DROP_ADENA));
 		
-		// None
+		// [224] Received Healing
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.HEAL_EFFECT));
 		
-		// None
+		// [225] Healing Power
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round(stat.getValue(Stat.HEAL_EFFECT_ADD, 0)));
 		
-		// None
+		// [226] Skill Mastery Rate (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.SKILL_MASTERY_RATE));
 		
-		// TODO: Confusion Resistance
+		// [227] Skill Mastery Rate (+)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round(stat.getAdd(Stat.SKILL_MASTERY_RATE) * 100.0));
 		
-		// None
+		// [228] Debilitation Atk. Rate
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.DERANGEMENT, TraitType.DISARM));
 		
-		// TODO: Stupor Resistance
+		// [229] Danger Zone Atk. Rate
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.ZONE));
 		
-		// None
+		// [230] Petrification Atk. Rate
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcTraitAttackBonus(stat, TraitType.TURN_STONE));
 		
-		// Pull Resistance
+		// [231] Debilitation Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.PULL) * 100));
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.DERANGEMENT, TraitType.DISARM));
 		
-		// None
+		// [232] Danger Zone Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.ZONE));
 		
-		// None
+		// [233] Petrification Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcTraitDefenceBonus(stat, TraitType.TURN_STONE));
 		
-		// TODO: Obstruction Resistance
+		// [234] P. Debuff Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round((stat.getValue(Stat.ABNORMAL_RESIST_PHYSICAL, 100) - 100.0) * 100.0));
 		
-		// None
+		// [235] M. Debuff Resistance
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt((int) Math.round((stat.getValue(Stat.ABNORMAL_RESIST_MAGICAL, 100) - 100.0) * 100.0));
 		
-		// None
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TO DO Infection Attack Rate
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TODO: Infection Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Weapon P. Atk.
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.WEAPON_BONUS_PHYSICAL_ATTACK, 0));
-		
-		// Weapon M. Atk.
-		buffer.writeShort(index++);
-		buffer.writeInt((int) stat.getValue(Stat.WEAPON_BONUS_MAGIC_ATTACK, 0));
-		
-		// TODO: Backstab Damage Up
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Damage to Immobilized Targets
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.IMMOBILE_DAMAGE_BONUS, 100) - 100) * 100);
-		
-		// TODO: NOT WORKING ??? Received Damage when Immobilized
-		buffer.writeShort(index++);
-		buffer.writeInt(0 - ((int) (stat.getValue(Stat.IMMOBILE_DAMAGE_RESIST, 100) - 100) * 100));
-		
-		// TODO: Armor P. Def
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TODO: Accessory M. Def
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Dual Blunt Weapon Resistance Nr. 206
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.DUALBLUNT) * 10000));
-		
-		// Crossbow Weapon Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.CROSSBOW) * 10000));
-		
-		// Dual Daggers Weapon Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getDefenceTrait(TraitType.DUALDAGGER) * 10000));
-		
-		// Perfection Trigger Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.PERFECTION_RATE, 100) - 100) * 100));
-		
-		// TODO: Perfection Trigger Rate (num)
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Perfection Power (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.PERFECTION_POWER, 100) - 100) * 100));
-		
-		// TODO: Perfection Power (num) Nr. 212
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// Max Hp (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.MAX_HP, 100) - 100) * 100));
-		
-		// Max Hp (num)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.MAX_HP)));
-		
-		// Max Mp (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.MAX_MP, 100) - 100) * 100));
-		
-		// Max Mp (num)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.MAX_MP)));
-		
-		// Max Cp (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.MAX_CP, 100) - 100) * 100));
-		
-		// Max Cp (num)
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.MAX_CP)));
-		
-		// Max HP
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.MAX_HP)));
-		
-		// Vitality Bonus
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.VITALITY_EXP_RATE) * 100));
-		
-		// XP
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.BONUS_EXP) * 100));
-		
-		// SP
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.BONUS_SP) * 100));
-		
-		// Adena Drop Rate
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.BONUS_DROP_ADENA) * 100));
-		
-		// Adena Drop Rate with Vitality
-		buffer.writeShort(index++);
-		buffer.writeInt((int) (stat.getValue(Stat.BONUS_DROP_ADENA) * 100));
-		
-		// Received Healing
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.HEAL_EFFECT, 100) - 100) * 100));
-		
-		// Healing Power
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.HEAL_EFFECT_ADD, 100) - 100) * 100));
-		
-		// Skill Mastery Rate (%)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.SKILL_MASTERY_RATE, 100) - 100) * 100));
-		
-		// Skill Mastery Rate (num)
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.SKILL_MASTERY, 100) - 100) * 100));
-		
-		// TODO: Debilitation Attack Rate
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TODO: Danger Zone Attack Rate
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TODO: Petrification Attack Rate Nr. 231
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TODO: Debilitation Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TODO: Danger Zone Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// TODO: Petrification Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt(0);
-		
-		// P. Debuff Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.ABNORMAL_RESIST_PHYSICAL, 100) - 100) * 100));
-		
-		// M. Debuff Resistance
-		buffer.writeShort(index++);
-		buffer.writeInt(((int) (stat.getValue(Stat.ABNORMAL_RESIST_MAGICAL, 100) - 100) * 100));
-		
-		// Accuracy Bonus
+		// [236] Accuracy Bonus (+)
 		buffer.writeShort(index++);
 		buffer.writeInt((int) Math.round(stat.getValue(Stat.ACCURACY_BONUS)));
+	}
+	
+	private int calcPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((stat.getMul(statType) - 1.0) * 10000.0);
+	}
+	
+	private int calcInvertedPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((1.0 - stat.getMul(statType)) * 10000.0);
+	}
+	
+	private int calcFlatBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round(stat.getAdd(statType) + stat.getMoveTypeValue(statType, _player.getMoveType()));
+	}
+	
+	private int calcMaxHpFlatBonus(PlayerStat stat)
+	{
+		double bonus = stat.getAdd(Stat.MAX_HP) + stat.getMoveTypeValue(Stat.MAX_HP, _player.getMoveType());
+		final Inventory inv = _player.getInventory();
+		if (inv != null)
+		{
+			for (Item item : inv.getPaperdollItems())
+			{
+				bonus += item.getTemplate().getStats(Stat.MAX_HP, 0);
+				if (item.isArmor() && item.isEnchanted())
+				{
+					final BodyPart bodyPart = item.getTemplate().getBodyPart();
+					if ((bodyPart != BodyPart.NECK) && (bodyPart != BodyPart.LR_EAR) && (bodyPart != BodyPart.LR_FINGER))
+					{
+						bonus += EnchantItemHPBonusData.getInstance().getHPBonus(item);
+					}
+				}
+			}
+		}
+		return (int) Math.round(bonus);
+	}
+	
+	private int calcMaxMpFlatBonus(PlayerStat stat)
+	{
+		double bonus = stat.getAdd(Stat.MAX_MP) + stat.getMoveTypeValue(Stat.MAX_MP, _player.getMoveType());
+		final Inventory inv = _player.getInventory();
+		if (inv != null)
+		{
+			for (Item item : inv.getPaperdollItems())
+			{
+				bonus += item.getTemplate().getStats(Stat.MAX_MP, 0);
+			}
+		}
+		return (int) Math.round(bonus);
+	}
+	
+	private int calcWeaponResistance(PlayerStat stat, TraitType... traits)
+	{
+		float best = 0.0f;
+		for (TraitType trait : traits)
+		{
+			if (stat.isInvulnerableTrait(trait))
+			{
+				return 10000;
+			}
+			if (stat.hasDefenceTrait(trait))
+			{
+				final float val = stat.getDefenceTrait(trait);
+				if (Math.abs(val) > Math.abs(best))
+				{
+					best = val;
+				}
+			}
+		}
+		return Math.round(best * 10000.0f);
+	}
+	
+	private int calcTraitAttackBonus(PlayerStat stat, TraitType... traits)
+	{
+		float best = 0.0f;
+		for (TraitType trait : traits)
+		{
+			if (stat.hasAttackTrait(trait))
+			{
+				final float val = stat.getAttackTrait(trait) - 1.0f;
+				if (Math.abs(val) > Math.abs(best))
+				{
+					best = val;
+				}
+			}
+		}
+		return Math.round(best * 100.0f);
+	}
+	
+	private int calcTraitDefenceBonus(PlayerStat stat, TraitType... traits)
+	{
+		float best = 0.0f;
+		for (TraitType trait : traits)
+		{
+			if (stat.isInvulnerableTrait(trait))
+			{
+				return 100;
+			}
+			if (stat.hasDefenceTrait(trait))
+			{
+				final float val = stat.getDefenceTrait(trait);
+				if (Math.abs(val) > Math.abs(best))
+				{
+					best = val;
+				}
+			}
+		}
+		return Math.round(best * 100.0f);
+	}
+	
+	private int calcArmorBonusPDef(PlayerStat stat)
+	{
+		final Map<ArmorPhysicalDefenceType, Integer> map = stat.getPhysicalDefenceTypes();
+		if (!map.isEmpty())
+		{
+			int sum = 0;
+			int count = 0;
+			for (ArmorPhysicalDefenceType type : ARMOR_DEFENCE_SLOTS)
+			{
+				final Integer val = map.get(type);
+				if (val != null)
+				{
+					sum += val.intValue();
+					count++;
+				}
+			}
+			if (count > 0)
+			{
+				return Math.round((float) sum / count);
+			}
+		}
+		return (int) Math.round(stat.getValue(Stat.ARMOR_BONUS_PHYSICAL_DEFENCE, 0) / 5.0);
+	}
+	
+	private int calcAccessoryBonusMDef(PlayerStat stat)
+	{
+		final Map<ArmorMagicalDefenceType, Integer> map = stat.getMagicalDefenceTypes();
+		if (!map.isEmpty())
+		{
+			int sum = 0;
+			int count = 0;
+			for (ArmorMagicalDefenceType type : ACCESSORY_DEFENCE_SLOTS)
+			{
+				final Integer val = map.get(type);
+				if (val != null)
+				{
+					sum += val.intValue();
+					count++;
+				}
+			}
+			if (count > 0)
+			{
+				return Math.round((float) sum / count);
+			}
+		}
+		return (int) Math.round(stat.getValue(Stat.ARMOR_BONUS_MAGICAL_DEFENCE, 0) / 5.0);
+	}
+	private int calcFlatPAtk(PlayerStat stat)
+	{
+		double bonus = STAT_FN.calcWeaponBaseValue(_player, Stat.PHYSICAL_ATTACK);
+		final Item weapon = _player.getActiveWeaponInstance();
+		if (weapon != null)
+		{
+			bonus += stat.getWeaponBonusPAtk();
+			bonus *= stat.getMul(Stat.WEAPON_BONUS_PHYSICAL_ATTACK_MULTIPIER, 1);
+		}
+		bonus += STAT_FN.calcEnchantedItemBonus(_player, Stat.PHYSICAL_ATTACK);
+		bonus += STAT_FN.calcEnchantBodyPart(_player, BodyPart.CHEST, BodyPart.FULL_ARMOR);
+		final Inventory inv = _player.getInventory();
+		if (inv != null)
+		{
+			for (Item item : inv.getPaperdollItems())
+			{
+				if (item != weapon)
+				{
+					bonus += item.getTemplate().getStats(Stat.PHYSICAL_ATTACK, 0);
+				}
+			}
+		}
+		bonus += stat.getAdd(Stat.PHYSICAL_ATTACK) + stat.getMoveTypeValue(Stat.PHYSICAL_ATTACK, _player.getMoveType());
+		return (int) Math.round(bonus);
+	}
+	
+	private int calcFlatMAtk(PlayerStat stat)
+	{
+		double bonus = STAT_FN.calcWeaponBaseValue(_player, Stat.MAGIC_ATTACK);
+		final Item weapon = _player.getActiveWeaponInstance();
+		if (weapon != null)
+		{
+			bonus += stat.getWeaponBonusMAtk();
+			bonus *= stat.getMul(Stat.WEAPON_BONUS_MAGIC_ATTACK_MULTIPIER, 1);
+		}
+		bonus += STAT_FN.calcEnchantedItemBonus(_player, Stat.MAGIC_ATTACK);
+		bonus += STAT_FN.calcEnchantBodyPart(_player, BodyPart.CHEST, BodyPart.FULL_ARMOR);
+		final Inventory inv = _player.getInventory();
+		if (inv != null)
+		{
+			for (Item item : inv.getPaperdollItems())
+			{
+				if (item != weapon)
+				{
+					bonus += item.getTemplate().getStats(Stat.MAGIC_ATTACK, 0);
+				}
+			}
+		}
+		bonus += stat.getAdd(Stat.MAGIC_ATTACK) + stat.getMoveTypeValue(Stat.MAGIC_ATTACK, _player.getMoveType());
+		return (int) Math.round(bonus);
+	}
+	
+	private int calcFlatPDef(PlayerStat stat)
+	{
+		double bonus = _player.getTemplate().getBaseValue(Stat.PHYSICAL_DEFENCE, 0);
+		bonus += STAT_FN.calcEnchantedItemBonus(_player, Stat.PHYSICAL_DEFENCE);
+		final Inventory inv = _player.getInventory();
+		if (inv != null)
+		{
+			for (Item item : inv.getPaperdollItems())
+			{
+				bonus += item.getTemplate().getStats(Stat.PHYSICAL_DEFENCE, 0);
+			}
+			final double armorPhysicalDefence = stat.getValue(Stat.ARMOR_BONUS_PHYSICAL_DEFENCE, 0) / 5;
+			final Transform transform = _player.getTransformation();
+			for (int slot : DEFENCE_SLOTS)
+			{
+				if (!inv.isPaperdollSlotEmpty(slot) || ((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR)))
+				{
+					bonus -= transform == null ? _player.getTemplate().getBaseDefBySlot(slot) : transform.getBaseDefBySlot(_player, slot);
+					if (armorPhysicalDefence > 0)
+					{
+						bonus += armorPhysicalDefence;
+					}
+				}
+			}
+		}
+		bonus += stat.getAdd(Stat.PHYSICAL_DEFENCE) + stat.getMoveTypeValue(Stat.PHYSICAL_DEFENCE, _player.getMoveType());
+		return (int) Math.round(bonus);
+	}
+	
+	private int calcFlatMDef(PlayerStat stat)
+	{
+		double bonus = _player.getTemplate().getBaseValue(Stat.MAGICAL_DEFENCE, 0);
+		bonus += STAT_FN.calcEnchantedItemBonus(_player, Stat.MAGICAL_DEFENCE);
+		final Inventory inv = _player.getInventory();
+		if (inv != null)
+		{
+			for (Item item : inv.getPaperdollItems())
+			{
+				bonus += item.getTemplate().getStats(Stat.MAGICAL_DEFENCE, 0);
+			}
+			final double accessoryMagicalDefence = stat.getValue(Stat.ARMOR_BONUS_MAGICAL_DEFENCE, 0) / 5;
+			final Transform transform = _player.getTransformation();
+			for (int slot : ACCESSORY_SLOTS)
+			{
+				if (!inv.isPaperdollSlotEmpty(slot))
+				{
+					bonus -= transform == null ? _player.getTemplate().getBaseDefBySlot(slot) : transform.getBaseDefBySlot(_player, slot);
+					if (accessoryMagicalDefence > 0)
+					{
+						bonus += accessoryMagicalDefence;
+					}
+				}
+			}
+		}
+		bonus += stat.getAdd(Stat.MAGICAL_DEFENCE) + stat.getMoveTypeValue(Stat.MAGICAL_DEFENCE, _player.getMoveType());
+		return (int) Math.round(bonus);
 	}
 }

@@ -343,9 +343,6 @@ public abstract class Inventory extends ItemContainer
 				item.getAugmentation().removeBonus(playable);
 			}
 			
-			// Recalculate all stats
-			playable.getStat().recalculateStats(true);
-			
 			// Clear enchant bonus
 			item.clearEnchantStats();
 			
@@ -545,6 +542,12 @@ public abstract class Inventory extends ItemContainer
 				}
 			}
 			
+			// Recalculate all stats
+			playable.getStat().recalculateStats(true);
+			
+			// Recalculate all stats
+			playable.getStat().recalculateStats(true);
+			
 			if (updateTimestamp && playable.isPlayer())
 			{
 				playable.sendPacket(new SkillCoolTime(playable.asPlayer()));
@@ -573,9 +576,6 @@ public abstract class Inventory extends ItemContainer
 			{
 				item.getAugmentation().applyBonus(playable);
 			}
-			
-			// Recalculate all stats
-			playable.getStat().recalculateStats(true);
 			
 			// Apply enchant stats
 			item.applyEnchantStats();

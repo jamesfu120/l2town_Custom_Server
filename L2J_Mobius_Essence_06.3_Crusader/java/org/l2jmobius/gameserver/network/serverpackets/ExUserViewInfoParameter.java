@@ -138,7 +138,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// Basic Power
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.AUTO_ATTACK_DAMAGE_BONUS));
 		
 		// P. Skill Power
 		buffer.writeShort(index++);
@@ -235,7 +235,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// PvP Damage Decrease
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVP_PHYSICAL_ATTACK_DEFENCE));
 		
 		// Received basic PvE Damage
 		buffer.writeShort(index++);
@@ -255,7 +255,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// PvE Damage Decrease
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcInvertedPercentBonus(stat, Stat.PVE_PHYSICAL_ATTACK_DEFENCE));
 		
 		// Received basic damage power
 		buffer.writeShort(index++);
@@ -357,7 +357,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// XXX Accuracy Section
 		// P. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_COMBAT));
 		
 		// P. Accuracy (num.)
 		buffer.writeShort(index++);
@@ -365,7 +365,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// M. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_MAGIC));
 		
 		// M. Accuracy (num.)
 		buffer.writeShort(index++);
@@ -806,5 +806,15 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// Infection Resistance (%)
 		buffer.writeShort(index++);
 		buffer.writeInt((int) stat.getDefenceTrait(TraitType.INFECTION) * 100);
+	}
+	
+	private int calcPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((stat.getMul(statType) - 1.0) * 10000.0);
+	}
+	
+	private int calcInvertedPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((1.0 - stat.getMul(statType)) * 10000.0);
 	}
 }

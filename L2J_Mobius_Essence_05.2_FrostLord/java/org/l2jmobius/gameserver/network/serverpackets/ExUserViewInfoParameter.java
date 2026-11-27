@@ -23,6 +23,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.buffer.WriteBuffer;
 import org.l2jmobius.gameserver.config.PlayerConfig;
 import org.l2jmobius.gameserver.entity.actor.Player;
+import org.l2jmobius.gameserver.entity.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.entity.item.enums.ItemGrade;
 import org.l2jmobius.gameserver.entity.item.enums.ShotType;
 import org.l2jmobius.gameserver.mechanics.stats.Stat;
@@ -47,6 +48,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 	{
 		ServerPackets.EX_USER_VIEW_INFO_PARAMETER.writeId(this, buffer);
 		
+		final PlayerStat stat = _player.getStat();
 		int index = 0;
 		
 		// Number of parameters.
@@ -228,7 +230,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// XXX Accuracy Section
 		// P. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_COMBAT));
 		
 		// P. Accuracy (num.)
 		buffer.writeShort(index++);
@@ -236,7 +238,7 @@ public class ExUserViewInfoParameter extends ServerPacket
 		
 		// M. Accuracy (%)
 		buffer.writeShort(index++);
-		buffer.writeInt(0);
+		buffer.writeInt(calcPercentBonus(stat, Stat.ACCURACY_MAGIC));
 		
 		// M. Accuracy (num.)
 		buffer.writeShort(index++);
@@ -640,5 +642,15 @@ public class ExUserViewInfoParameter extends ServerPacket
 		// Infection Resistance (%)
 		buffer.writeShort(index++);
 		buffer.writeInt((int) _player.getStat().getDefenceTrait(TraitType.INFECTION) * 100);
+	}
+	
+	private int calcPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((stat.getMul(statType) - 1.0) * 10000.0);
+	}
+	
+	private int calcInvertedPercentBonus(PlayerStat stat, Stat statType)
+	{
+		return (int) Math.round((1.0 - stat.getMul(statType)) * 10000.0);
 	}
 }
