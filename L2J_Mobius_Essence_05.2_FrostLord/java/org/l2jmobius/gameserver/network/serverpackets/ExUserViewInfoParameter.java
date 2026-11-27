@@ -648,9 +648,4 @@ public class ExUserViewInfoParameter extends ServerPacket
 	{
 		return (int) Math.round((stat.getMul(statType) - 1.0) * 10000.0);
 	}
-	
-	private int calcInvertedPercentBonus(PlayerStat stat, Stat statType)
-	{
-		return (int) Math.round((1.0 - stat.getMul(statType)) * 10000.0);
-	}
 }
