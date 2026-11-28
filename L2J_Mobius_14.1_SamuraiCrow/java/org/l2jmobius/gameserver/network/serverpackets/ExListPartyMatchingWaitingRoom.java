@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.ServerPackets;
  */
 public class ExListPartyMatchingWaitingRoom extends ServerPacket
 {
-	private static final int NUM_PER_PAGE = 64;
+	private static final int NUM_PER_PAGE = 90;
 	
 	private final int _size;
 	private final List<Player> _players = new ArrayList<>();

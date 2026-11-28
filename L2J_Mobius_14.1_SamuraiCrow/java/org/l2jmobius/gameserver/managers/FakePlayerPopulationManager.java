@@ -84,6 +84,8 @@ public class FakePlayerPopulationManager {
    private static final Pattern QUEST_BYPASS = Pattern.compile("bypass(?:\\s+-h)?\\s+Quest\\s+\\S+\\s+([^\\\"'<> ]+)", 2);
    private static final int QUEST_SCAN_RANGE = 3000;
    private static final List<Player> PLAYERS = new CopyOnWriteArrayList();
+   private static final Set<Player> AUTO_PARTY_ALLOWED = ConcurrentHashMap.newKeySet();
+   private static final int MAX_AUTO_PARTY_FAKES = 100;
    private static final Map<Player, Integer> LAST_LEVELS = new ConcurrentHashMap();
    private static final Map<Player, Long> LAST_CHAT = new ConcurrentHashMap();
    private static final Map<Player, Long> NEXT_LOOT_CHECK_AT = new ConcurrentHashMap<>();
@@ -392,6 +394,7 @@ public class FakePlayerPopulationManager {
             if (player != null && !player.isDead() && !DEATH_RESPAWN_PENDING.containsKey(player) && (!player.isOnline() || World.getPlayer(player.getObjectId()) != player)) {
                MatchingRoomManager.getInstance().removeFromWaitingList(player);
                PLAYERS.remove(player);
+			   AUTO_PARTY_ALLOWED.remove(player);
                NEXT_AI_THINK_AT.remove(player);
                NEXT_PARTY_SUPPORT_AT.remove(player);
                NEXT_PARTY_MOVE_AT.remove(player);
@@ -453,6 +456,7 @@ public class FakePlayerPopulationManager {
          }
 
          PLAYERS.remove(player);
+		 AUTO_PARTY_ALLOWED.remove(player);
          NEXT_AI_THINK_AT.remove(player);
          NEXT_PARTY_SUPPORT_AT.remove(player);
          LAST_PARTY_SUPPORT_SKILL.remove(player);
@@ -602,7 +606,9 @@ public class FakePlayerPopulationManager {
             LAST_LEVELS.put(player, level);
             configureAutomaticPotion(player);
          }
-
+            if (!shop && AUTO_PARTY_ALLOWED.size() < MAX_AUTO_PARTY_FAKES) {
+            AUTO_PARTY_ALLOWED.add(player);
+         }
          PLAYERS.add(player);
          MatchingRoomManager.getInstance().addToWaitingList(player);
          player.broadcastInfo();
@@ -1184,11 +1190,71 @@ public class FakePlayerPopulationManager {
                equipGeneratedArmor(player, tpl, desiredEnchant);
             }
          }
-
+		 
+         ensureCombatCloak(player);
+         ensureCombatJewels(player);
          ensureCombatWeapon(player);
+		 
 
          if (playerClass != null) {
             player.broadcastUserInfo();
+         }
+      }
+   }
+      private static void ensureCombatJewels(Player player) {
+      if (player == null || player.isDead() || isShopPlayer(player)) {
+         return;
+      }
+
+      int desiredEnchant = getDesiredFakeEnchant(player);
+      boolean highTier = player.getLevel() >= 95;
+
+      // 依等級選擇 赫利奧斯(95+) 或 鎮魂(85~94) 的 [項鍊, 耳環1, 耳環2, 戒指1, 戒指2]
+      int[] jewelIds = highTier
+         ? new int[]{18099, 18100, 18100, 18101, 18101}
+         : new int[]{17623, 17624, 17624, 17625, 17625};
+
+      for (int jewelId : jewelIds) {
+         ItemTemplate tpl = ItemData.getInstance().getTemplate(jewelId);
+         if (tpl != null) {
+            equipGeneratedArmor(player, tpl, desiredEnchant);
+         }
+      }
+   }
+           private static void ensureCombatCloak(Player player) {
+      if (player == null || player.isDead() || isShopPlayer(player) || player.getLevel() < 85) {
+         return;
+      }
+
+      PlayerClass playerClass = player.getPlayerClass();
+      String className = playerClass != null ? playerClass.name().toLowerCase() : "";
+      int cloakId = 30311; // 預設給帥氣的紅色提爾斗篷（適合閃耀使者/矮人/新職業）
+
+      if (className.contains("sigel") || className.contains("knight") || className.contains("templar")) {
+         cloakId = 30310; // 席格爾斗篷
+      } else if (className.contains("othell") || className.contains("adventurer") || className.contains("wind_rider") || className.contains("ghost_hunter") || className.contains("fortune_seeker")) {
+         cloakId = 30312; // 歐瑟斗篷
+      } else if (className.contains("yul_") || className.contains("sagittarius") || className.contains("moonlight_sentinel") || className.contains("ghost_sentinel") || className.contains("trickster")) {
+         cloakId = 30313; // 尤爾斗篷
+      } else if (className.contains("feoh") || className.contains("archmage") || className.contains("soultaker") || className.contains("mystic_muse") || className.contains("storm_screamer") || className.contains("soul_hound")) {
+         cloakId = 30314; // 費歐斗篷
+      } else if (className.contains("iss_") || className.contains("hierophant") || className.contains("sword_muse") || className.contains("spectral_dancer") || className.contains("dominator") || className.contains("doomcryer")) {
+         cloakId = 30315; // 伊斯斗篷
+      } else if (className.contains("wynn") || className.contains("arcana_lord") || className.contains("elemental_master") || className.contains("spectral_master")) {
+         cloakId = 30316; // 維因斗篷
+      } else if (className.contains("aeore") || className.contains("cardinal") || className.contains("eva_saint") || className.contains("shillien_saint")) {
+         cloakId = 30317; // 艾羅斗篷
+      }
+
+      ItemTemplate cloakTpl = ItemData.getInstance().getTemplate(cloakId);
+      if (cloakTpl != null) {
+         // 1. 先嘗試正常穿戴
+         if (!equipGeneratedArmor(player, cloakTpl, 0)) {
+            // 2. 若因 14.1 新職業（如閃耀使者）被舊職業條件擋住，直接生成並強制裝備到背部欄位！
+                        org.l2jmobius.gameserver.entity.item.instance.Item item = player.addItem(ItemProcessType.REWARD, cloakId, 1, player, false);
+            if (item != null) {
+               player.getInventory().equipItem(item);
+            }
          }
       }
    }
@@ -1651,13 +1717,58 @@ else if (className.contains("titan") || className.contains("destroyer") || class
 
    }
 
-   private static void syncFakePlayersToPartyMatchingList() {
-      for(Player player : PLAYERS) {
-         if (player != null && player.isOnline() && player.isSpawned() && player.getMatchingRoom() == null) {
-            MatchingRoomManager.getInstance().addToWaitingList(player);
+           private static void syncFakePlayersToPartyMatchingList() {
+      // 1. 清理已經解散或隊長離線的假人組隊房間
+      java.util.Map<Integer, org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom> existingRooms = MatchingRoomManager.getInstance().getPartyMathchingRooms();
+      int activeFakeRooms = 0;
+      if (existingRooms != null) {
+         for (org.l2jmobius.gameserver.entity.groups.matching.MatchingRoom room : new ArrayList<>(existingRooms.values())) {
+            Player roomLeader = room.getLeader();
+            if (roomLeader != null && roomLeader.isFakePlayer()) {
+               if (!roomLeader.isOnline() || !roomLeader.isSpawned() || roomLeader.isDead() || !roomLeader.isInParty()) {
+                  room.disbandRoom();
+               } else {
+                  ++activeFakeRooms;
+               }
+            }
          }
       }
 
+      // 2. 同步未組隊假人至等待名單（90 名單身假人），並將已組隊的假人隊長註冊成大廳隊伍房間（上限 15 隊）
+      for (Player player : PLAYERS) {
+         if (player == null || !player.isOnline() || !player.isSpawned()) {
+            continue;
+         }
+         if (isShopPlayer(player)) {
+            MatchingRoomManager.getInstance().removeFromWaitingList(player);
+            continue;
+         }
+
+         if (player.isInParty() && player.getParty() != null) {
+            // 已經在隊伍裡的假人，從「單人等待名單」移除
+            MatchingRoomManager.getInstance().removeFromWaitingList(player);
+
+            // 如果是該假人小隊的隊長，且尚未建立大廳房間、目前房間數未滿 15 隊 -> 自動建立組隊大廳房間！
+            Party party = player.getParty();
+            if (party.getLeader() == player && player.getMatchingRoom() == null && activeFakeRooms < 15 && party.getMemberCount() < 9) {
+               try {
+                  String roomTitle = "【L2TOWN】Lv." + player.getLevel() + " 野外自動練功團 (" + party.getMemberCount() + "/9)";
+                  org.l2jmobius.gameserver.entity.groups.matching.PartyMatchingRoom room =
+                     new org.l2jmobius.gameserver.entity.groups.matching.PartyMatchingRoom(roomTitle, 1, 9, 1, 115, player);
+                  for (Player member : party.getMembers()) {
+                     if (member != null && member != player && member.getMatchingRoom() == null) {
+                        room.addMember(member);
+                     }
+                  }
+                  ++activeFakeRooms;
+               } catch (Exception ignored) {
+               }
+            }
+         } else if (player.getMatchingRoom() == null) {
+            // 沒有組隊的單身戰鬥假人 -> 放進「等待組隊名單」供真人挑選
+            MatchingRoomManager.getInstance().addToWaitingList(player);
+         }
+      }
    }
 
       private static void think() {
@@ -1770,7 +1881,7 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                   player.abortAttack();
                }
                boolean casted = performPartySupport(player);
-               NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 1200L : 3000L));
+               NEXT_PARTY_SUPPORT_AT.put(player, now + (casted ? 25000L : 10000L));
                if (casted) {
                   player.getAI().notifyActionThink();
                   continue;
@@ -2073,28 +2184,12 @@ else if (className.contains("titan") || className.contains("destroyer") || class
             continue;
          }
 
-         // 情況 B：君主專屬血盟技能（AffectScope.PLEDGE）-> 強制同步套用給全隊
-         if (scope == AffectScope.PLEDGE || scope == AffectScope.PARTY_PLEDGE) {
-            boolean anyMemberMissing = members.stream().anyMatch(m -> player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
-            boolean realLeaderMissing = members.stream().anyMatch(m -> !m.isFakePlayer() && player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId()));
-            if (anyMemberMissing && (now >= retryDeadline || realLeaderMissing)) {
-               if (player.isAttackingNow()) player.abortAttack();
-               player.setCurrentMp(player.getMaxMp());
-               if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
-                  SUPPORT_SKILL_RETRY_AT.put(retryKey, now + 1740000L);
-                  for (Player m : members) {
-                     if (m != player && player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
-                        skill.applyEffects(player, m);
-                     }
-                     broadcastFakePartyEffects(m);
-                  }
-                  return true;
-               }
-            }
+         // 情況 B：君主專屬血盟技能（AffectScope.PLEDGE）-> 直接跳過，避免對無血盟隊友空放罰站
+         if (scope == AffectScope.PLEDGE) {
             continue;
          }
 
-                          // 情況 C：一般隊伍範圍 Buff / 戰狂 / 歌舞 / 奏鳴曲 / 四大 30 分鐘旋律 / 單體和聲
+         // 情況 C：一般隊伍範圍 Buff / 戰狂 / 歌舞 / 奏鳴曲 / 四大 30 分鐘旋律 / 單體和聲
          if (scope == AffectScope.PARTY || scope == AffectScope.RANGE || isIssSonataOrHarmony(skill)) {
             boolean isMelody = isIssThirtyMinMelody(skill);
             boolean isSonataOrHarmony = isIssSonataOrHarmony(skill);
@@ -2108,11 +2203,11 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                      if (player.calculateDistance3D(m) <= 900.0 && !m.isAffectedBySkill(skill.getId())) {
                         boolean alreadyHasHarmony = m.getEffectList().getEffects().stream()
                            .anyMatch(e -> e != null && e.getSkill() != null && (e.getSkill().getName().toLowerCase(Locale.ROOT).contains("harmony") || e.getSkill().getName().contains("和聲")));
-                        if (!alreadyHasHarmony && (now >= retryDeadline || !m.isFakePlayer())) {
+                        if (!alreadyHasHarmony && (now >= retryDeadline)) {
+                           SUPPORT_SKILL_RETRY_AT.put(retryKey, now + smartCooldownMs);
                            if (player.isAttackingNow()) player.abortAttack();
                            player.setCurrentMp(player.getMaxMp());
                            if (SkillCaster.castSkill(player, m, skill, null, SkillCastingType.NORMAL, false, false) != null) {
-                              SUPPORT_SKILL_RETRY_AT.put(retryKey, now + smartCooldownMs);
                               broadcastFakePartyEffects(m);
                               return true;
                            }
@@ -2130,17 +2225,18 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                ? (anyMissing || now >= retryDeadline)
                : (anyMissing && (now >= retryDeadline || realLeaderMissing));
 
-            if (shouldCast) {
+                       if (shouldCast) {
+               SUPPORT_SKILL_RETRY_AT.put(retryKey, now + smartCooldownMs);
                if (player.isAttackingNow()) player.abortAttack();
                player.setCurrentMp(player.getMaxMp());
                if (SkillCaster.castSkill(player, player, skill, null, SkillCastingType.NORMAL, false, false) != null) {
-                  SUPPORT_SKILL_RETRY_AT.put(retryKey, now + smartCooldownMs);
                   for (Player m : members) {
                      broadcastFakePartyEffects(m);
                   }
                   return true;
                }
             }
+
             continue;
          }
 
@@ -2160,9 +2256,9 @@ else if (className.contains("titan") || className.contains("destroyer") || class
                }
             }
          }
-	  } 
+	  }
       return false;
-   }
+     }
 
    public static void forceFakePhysicalAttack(Player player, Monster monster) {
       if (player == null || monster == null || player.isDead() || monster.isDead()) return;
@@ -2346,11 +2442,14 @@ else if (className.contains("titan") || className.contains("destroyer") || class
       }
    }
 
-   private static void autoFormFakeParty(Player leader) {
+      private static void autoFormFakeParty(Player leader) {
       if (leader == null || leader.isDead() || isShopPlayer(leader) || !FakePlayersConfig.FAKE_PLAYER_ALLOW_PARTY) {
          return;
       }
-	  long now = System.currentTimeMillis();
+      if (!AUTO_PARTY_ALLOWED.contains(leader)) {
+         return;
+      }
+      long now = System.currentTimeMillis();
       if (now < NEXT_PARTY_FORM_AT.getOrDefault(leader, 0L)) {
          return;
       }
@@ -2364,6 +2463,7 @@ else if (className.contains("titan") || className.contains("destroyer") || class
 
          List<Player> nearbyFakes = World.getVisibleObjectsInRange(leader, Player.class, 1200, p -> 
             p != null && p.isFakePlayer() && p != leader && !p.isDead() && !p.isInParty() && !isShopPlayer(p)
+            && AUTO_PARTY_ALLOWED.contains(p)
          );
 
          for (Player candidate : nearbyFakes) {

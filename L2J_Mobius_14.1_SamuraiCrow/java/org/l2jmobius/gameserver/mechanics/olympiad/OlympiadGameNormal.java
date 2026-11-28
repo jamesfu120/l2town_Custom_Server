@@ -1398,15 +1398,17 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		final Player player1 = _playerOne.getPlayer();
 		if (player1 != null)
 		{
-			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_HARMONY.getSkill());
 			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_MELODY.getSkill());
+			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_SERENITY.getSkill());
+			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_HARMONY.getSkill());
 		}
 		
 		final Player player2 = _playerTwo.getPlayer();
 		if (player2 != null)
 		{
-			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_HARMONY.getSkill());
 			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_MELODY.getSkill());
+			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_SERENITY.getSkill());
+			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_HARMONY.getSkill());
 		}
 	}
 	

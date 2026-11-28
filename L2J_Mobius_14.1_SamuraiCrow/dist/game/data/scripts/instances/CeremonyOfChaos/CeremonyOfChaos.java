@@ -93,7 +93,10 @@ public class CeremonyOfChaos extends Script
 	// Skills
 	private static final SkillHolder[] INITIAL_BUFFS =
 	{
-		new SkillHolder(7115, 1) // Energy of Chaos
+		new SkillHolder(7115, 1), // Energy of Chaos
+		new SkillHolder(39762, 1), // Fever Melody - Ceremony of Chaos
+		new SkillHolder(39896, 1), // Drumbeat of Serenity - Ceremony of Chaos
+		new SkillHolder(39515, 1) // Fantasia Harmony - Ceremony of Chaos
 	};
 	private static final SkillHolder[] END_BUFFS =
 	{
@@ -123,7 +126,7 @@ public class CeremonyOfChaos extends Script
 	
 	private void startEvent()
 	{
-		// Enabled Tuesday, Wednesday, Thursday
+		// Enabled  Monday, Tuesday, Wednesday, Thursday
 		final Calendar calendar = Calendar.getInstance();
 		final int day = calendar.get(Calendar.DAY_OF_WEEK);
 		if (!CeremonyOfChaosConfig.COC_COMPETITION_DAYS.contains(day))
@@ -131,7 +134,7 @@ public class CeremonyOfChaos extends Script
 			return;
 		}
 		
-		// Event starts at 18, should stop if past 00:00.
+		// Event starts at 20, should stop if past 00:00.
 		if (calendar.get(Calendar.HOUR_OF_DAY) < CeremonyOfChaosConfig.COC_START_TIME)
 		{
 			return;
