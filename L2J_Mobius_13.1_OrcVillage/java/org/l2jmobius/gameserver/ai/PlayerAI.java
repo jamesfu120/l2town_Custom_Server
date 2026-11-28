@@ -483,6 +483,12 @@ public class PlayerAI extends PlayableAI
 			return;
 		}
 		
+		if (_actor.isAttackingNow())
+		{
+			clientActionFailed();
+			return;
+		}
+		
 		clientStopMoving(null);
 		_actor.doAutoAttack(target.asCreature());
 	}
