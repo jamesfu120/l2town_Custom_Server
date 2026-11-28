@@ -518,7 +518,13 @@ public class Formulas
 		final double weaponAttackSpeed = Stat.weaponBaseValue(creature, Stat.PHYSICAL_ATTACK_SPEED) / armorBonus; // unk868
 		final double attackSpeedPerBonus = creature.getStat().getMul(Stat.PHYSICAL_ATTACK_SPEED);
 		final double attackSpeedDiffBonus = creature.getStat().getAdd(Stat.PHYSICAL_ATTACK_SPEED);
-		return (dexBonus * (weaponAttackSpeed / 333) * attackSpeedPerBonus) + (attackSpeedDiffBonus / 333);
+		final double multiplier = (dexBonus * (weaponAttackSpeed / 333) * attackSpeedPerBonus) + (attackSpeedDiffBonus / 333);
+		if (creature.isPlayable())
+		{
+			return Math.min(multiplier, PlayerConfig.MAX_PATK_SPEED / 333.0);
+		}
+		
+		return multiplier;
 	}
 	
 	public static double calcMAtkSpdMultiplier(Creature creature)
@@ -527,7 +533,13 @@ public class Formulas
 		final double witBonus = BaseStat.WIT.calcBonus(creature);
 		final double castingSpeedPerBonus = creature.getStat().getMul(Stat.MAGIC_ATTACK_SPEED);
 		final double castingSpeedDiffBonus = creature.getStat().getAdd(Stat.MAGIC_ATTACK_SPEED);
-		return ((1 / armorBonus) * witBonus * castingSpeedPerBonus) + (castingSpeedDiffBonus / 333);
+		final double multiplier = ((1 / armorBonus) * witBonus * castingSpeedPerBonus) + (castingSpeedDiffBonus / 333);
+		if (creature.isPlayable())
+		{
+			return Math.min(multiplier, PlayerConfig.MAX_MATK_SPEED / 333.0);
+		}
+		
+		return multiplier;
 	}
 	
 	/**
